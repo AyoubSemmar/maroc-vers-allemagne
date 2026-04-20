@@ -10,6 +10,7 @@ const categories = [
   { name: "العمل", icon: "💼", description: "ابحث عن عمل كمغربي" },
   { name: "Ausbildung", icon: "🔧", description: "برامج التدريب المهني" },
   { name: "التأشيرة والأوراق", icon: "📄", description: "التأشيرات والتصاريح والوثائق" },
+  { name: "تعلم الألمانية", icon: "📚", description: "من A1 إلى C1 — دروس تفاعلية", link: "/learn-german" },
 ];
 
 export default async function Home() {

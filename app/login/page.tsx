@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import PasswordInput from '@/components/PasswordInput'
 
 export default function LoginPage() {
@@ -11,6 +11,7 @@ export default function LoginPage() {
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
   const router = useRouter()
+  const searchParams = useSearchParams()
   const supabase = createClient()
 
   async function handleLogin(e: React.FormEvent) {
@@ -21,7 +22,8 @@ export default function LoginPage() {
     if (error) {
       setError('البريد الإلكتروني أو كلمة المرور غير صحيحة')
     } else {
-      router.push('/')
+      const next = searchParams.get('next') || '/'
+      router.push(next)
       router.refresh()
     }
     setLoading(false)
