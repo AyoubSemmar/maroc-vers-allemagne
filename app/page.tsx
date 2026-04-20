@@ -1,5 +1,6 @@
 import { supabase } from '@/lib/supabase'
 import FeaturedCarousel from '@/components/FeaturedCarousel'
+import NewsletterSignup from '@/components/NewsletterSignup'
 
 const categories = [
   { name: "البنوك", icon: "🏦", description: "افتح حساباً بنكياً في ألمانيا" },
@@ -54,6 +55,9 @@ export default async function Home() {
           ))}
         </div>
       </div>
+
+      {/* Newsletter */}
+      <NewsletterSignup />
 
       {/* Latest Articles */}
       <div className="max-w-5xl mx-auto px-4 pb-12">
