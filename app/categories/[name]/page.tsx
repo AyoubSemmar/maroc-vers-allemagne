@@ -36,11 +36,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
             <a
               key={article.id}
               href={`/articles/${article.id}`}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow block"
+              className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow flex items-center gap-4 p-4 overflow-hidden"
             >
-              <h3 className="font-semibold text-gray-900 text-lg">{article.title}</h3>
-              <p className="text-sm text-gray-500 mt-1">{article.summary}</p>
-              <p className="text-xs text-gray-400 mt-3">{article.date}</p>
+              <div className="flex-1">
+                <h3 className="font-semibold text-gray-900 text-lg">{article.title}</h3>
+                <p className="text-sm text-gray-500 mt-1">{article.summary}</p>
+                <p className="text-xs text-gray-400 mt-3">{article.date}</p>
+              </div>
+              {article.image_url && (
+                <img src={article.image_url} alt={article.title} className="w-36 h-24 object-cover rounded-lg flex-shrink-0" />
+              )}
             </a>
           ))}
         </div>

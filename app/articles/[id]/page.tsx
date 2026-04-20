@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import ArticleContent from '@/components/ArticleContent'
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -27,11 +28,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         </div>
       </nav>
 
-      {/* Article */}
       <div className="max-w-3xl mx-auto px-4 py-12">
         <a href="/" className="text-sm text-green-700 hover:underline mb-6 block">
           → العودة إلى الرئيسية
         </a>
+
+        {article.image_url && (
+          <img
+            src={article.image_url}
+            alt={article.title}
+            className="w-full h-72 object-cover rounded-xl mb-6"
+          />
+        )}
 
         <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
           {article.category}
@@ -47,9 +55,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {article.summary}
         </p>
 
-        <div className="text-gray-700 leading-8 whitespace-pre-line">
-          {article.content}
-        </div>
+        <ArticleContent content={article.content} />
       </div>
     </div>
   )
