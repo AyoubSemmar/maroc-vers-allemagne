@@ -47,10 +47,12 @@ export async function addArticle(formData) {
   const category = formData.get('category')
   const date = formData.get('date')
   const imageFile = formData.get('image')
+  const faqsRaw = formData.get('faqs')
+  const faqs = faqsRaw ? JSON.parse(faqsRaw) : []
 
   const image_url = await uploadImage(imageFile)
 
-  await supabase.from('articles').insert([{ title, summary, content, category, date, image_url }])
+  await supabase.from('articles').insert([{ title, summary, content, category, date, image_url, faqs }])
   redirect('/admin')
 }
 
@@ -62,8 +64,10 @@ export async function updateArticle(formData) {
   const category = formData.get('category')
   const date = formData.get('date')
   const imageFile = formData.get('image')
+  const faqsRaw = formData.get('faqs')
+  const faqs = faqsRaw ? JSON.parse(faqsRaw) : []
 
-  const updates = { title, summary, content, category, date }
+  const updates = { title, summary, content, category, date, faqs }
 
   const newImageUrl = await uploadImage(imageFile)
   if (newImageUrl) updates.image_url = newImageUrl

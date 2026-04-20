@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase'
 const categories = [
   { name: "البنوك", icon: "🏦", description: "افتح حساباً بنكياً في ألمانيا" },
   { name: "شرائح الاتصال", icon: "📱", description: "ابقَ متصلاً من أول يوم" },
-  { name: "السكن", icon: "🏠", description: "ابحث عن غرفة أو شقة" },
+  { name: "السكن", icon: "🏠", description: "ابحث عن غرفة أو شقة", link: "/listings" },
   { name: "الجامعات", icon: "🎓", description: "ادرس في ألمانيا" },
   { name: "العمل", icon: "💼", description: "ابحث عن عمل كمغربي" },
   { name: "Ausbildung", icon: "🔧", description: "برامج التدريب المهني" },
@@ -18,14 +18,6 @@ export default async function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
-      {/* Navbar */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold text-green-700">🇲🇦 → 🇩🇪 المغرب إلى ألمانيا</span>
-          <span className="text-sm text-gray-500">دليلك للانتقال إلى ألمانيا</span>
-        </div>
-      </nav>
-
       {/* Hero */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-4 py-16 text-center">
@@ -45,7 +37,7 @@ export default async function Home() {
           {categories.map((cat) => (
             <a
               key={cat.name}
-              href={`/categories/${encodeURIComponent(cat.name)}`}
+              href={(cat as any).link || `/categories/${encodeURIComponent(cat.name)}`}
               className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow block"
             >
               <div className="text-3xl mb-3">{cat.icon}</div>

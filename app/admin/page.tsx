@@ -2,6 +2,7 @@ import { cookies } from 'next/headers'
 import { createClient } from '@supabase/supabase-js'
 import { login, logout, addArticle, deleteArticle } from './actions'
 import ImageUploader from '@/components/ImageUploader'
+import FAQEditor from '@/components/FAQEditor'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -78,6 +79,7 @@ export default async function AdminPage() {
               <label className="text-sm text-gray-600">صورة المقال (اختياري)</label>
               <input name="image" type="file" accept="image/*" className="border border-gray-300 rounded-lg px-4 py-2" />
             </div>
+            <FAQEditor />
             <button type="submit" className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800">
               نشر المقال
             </button>

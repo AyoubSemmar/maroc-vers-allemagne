@@ -3,6 +3,7 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { updateArticle } from '../../actions'
 import ImageUploader from '@/components/ImageUploader'
+import FAQEditor from '@/components/FAQEditor'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -96,6 +97,7 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
               />
             </div>
 
+            <FAQEditor initial={article.faqs || []} />
             <button
               type="submit"
               className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800"

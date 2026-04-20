@@ -12,14 +12,6 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
 
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
-      {/* Navbar */}
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <a href="/" className="text-xl font-bold text-green-700">🇲🇦 → 🇩🇪 المغرب إلى ألمانيا</a>
-          <span className="text-sm text-gray-500">دليلك للانتقال إلى ألمانيا</span>
-        </div>
-      </nav>
-
       <div className="max-w-5xl mx-auto px-4 py-12">
         <a href="/" className="text-sm text-green-700 hover:underline mb-6 block">
           → العودة إلى الرئيسية
