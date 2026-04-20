@@ -80,6 +80,10 @@ export default async function AdminPage() {
               <input name="image" type="file" accept="image/*" className="border border-gray-300 rounded-lg px-4 py-2" />
             </div>
             <FAQEditor />
+            <label className="flex items-center gap-3 cursor-pointer">
+              <input type="checkbox" name="featured" value="true" className="w-4 h-4 accent-yellow-400" />
+              <span className="text-sm text-gray-700">⭐ مقال مميز (يظهر في أعلى الصفحة الرئيسية)</span>
+            </label>
             <button type="submit" className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800">
               نشر المقال
             </button>

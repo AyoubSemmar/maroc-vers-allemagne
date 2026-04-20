@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import FeaturedCarousel from '@/components/FeaturedCarousel'
 
 const categories = [
   { name: "البنوك", icon: "🏦", description: "افتح حساباً بنكياً في ألمانيا" },
@@ -16,6 +17,9 @@ export default async function Home() {
     .select('*')
     .order('date', { ascending: false })
 
+  const featured = articles?.filter((a) => a.featured) || []
+  const latest = articles?.filter((a) => !a.featured) || []
+
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       {/* Hero */}
@@ -30,8 +34,11 @@ export default async function Home() {
         </div>
       </div>
 
+      {/* Featured Articles Carousel */}
+      {featured.length > 0 && <FeaturedCarousel articles={featured} />}
+
       {/* Categories */}
-      <div className="max-w-5xl mx-auto px-4 py-12">
+      <div className="max-w-5xl mx-auto px-4 py-10">
         <h2 className="text-xl font-semibold text-gray-800 mb-6">تصفح حسب الفئة</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {categories.map((cat) => (
@@ -52,7 +59,7 @@ export default async function Home() {
       <div className="max-w-5xl mx-auto px-4 pb-12">
         <h2 className="text-xl font-semibold text-gray-800 mb-6">آخر المقالات</h2>
         <div className="flex flex-col gap-4">
-          {articles && articles.map((article) => (
+          {latest.map((article) => (
             <a
               key={article.id}
               href={`/articles/${article.id}`}
