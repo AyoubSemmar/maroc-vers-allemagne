@@ -7,7 +7,7 @@ export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 export const maxDuration = 300
 
-const DAILY_LIMIT = 5
+const DAILY_LIMIT = 10
 
 function todayUTC(): string {
   return new Date().toISOString().slice(0, 10)
