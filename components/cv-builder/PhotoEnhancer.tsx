@@ -315,6 +315,18 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                   عرض التفاصيل →
                 </button>
               </div>
+
+              {/* Quick "use selected in CV" action — available without opening the modal */}
+              <div style={{ marginTop: 10 }}>
+                <button
+                  type="button"
+                  className="rihla-cvb-btn-primary"
+                  onClick={accept}
+                  disabled={!selected}
+                >
+                  ✓ استخدم المحددة في السيرة
+                </button>
+              </div>
             </div>
           )}
         </div>
