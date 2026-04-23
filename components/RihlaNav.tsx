@@ -1,0 +1,155 @@
+'use client'
+
+import { useEffect, useState } from 'react'
+import { createClient } from '@/lib/supabase-browser'
+import { useRouter } from 'next/navigation'
+
+type Theme = 'light' | 'dark'
+
+type SbUser = {
+  email?: string | null
+  user_metadata?: {
+    avatar_url?: string
+    picture?: string
+    full_name?: string
+    name?: string
+  }
+}
+
+function initialFromEmail(email?: string | null) {
+  if (!email) return '؟'
+  const first = email.trim().charAt(0)
+  return first ? first.toUpperCase() : '؟'
+}
+
+export default function RihlaNav() {
+  const [user, setUser] = useState<SbUser | null>(null)
+  const [profileAvatar, setProfileAvatar] = useState<string | null>(null)
+  const [theme, setTheme] = useState<Theme>('light')
+  const [mounted, setMounted] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+    const supabase = createClient()
+    let cancelled = false
+
+    async function loadProfileAvatar(userId: string) {
+      const { data: prof } = await supabase
+        .from('profiles')
+        .select('avatar_url')
+        .eq('user_id', userId)
+        .single()
+      if (!cancelled) setProfileAvatar(prof?.avatar_url ?? null)
+    }
+
+    supabase.auth.getUser().then(({ data }) => {
+      if (cancelled) return
+      const u = data.user as SbUser | null
+      setUser(u)
+      if (data.user?.id) loadProfileAvatar(data.user.id)
+    })
+
+    const { data: listener } = supabase.auth.onAuthStateChange((_e, session) => {
+      const u = (session?.user as SbUser) ?? null
+      setUser(u)
+      if (session?.user?.id) loadProfileAvatar(session.user.id)
+      else setProfileAvatar(null)
+    })
+    const initial = (document.documentElement.dataset.theme as Theme) || 'light'
+    setTheme(initial)
+    setMounted(true)
+    return () => {
+      cancelled = true
+      listener.subscription.unsubscribe()
+    }
+  }, [])
+
+  function toggleTheme() {
+    const next: Theme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(next)
+    document.documentElement.dataset.theme = next
+    try { localStorage.setItem('theme', next) } catch {}
+  }
+
+  async function logout() {
+    const supabase = createClient()
+    await supabase.auth.signOut()
+    router.refresh()
+  }
+
+  const avatarSrc = profileAvatar || user?.user_metadata?.avatar_url || user?.user_metadata?.picture || null
+  const emailLabel = user?.email ?? ''
+
+  return (
+    <nav className="rihla-nav">
+      <div className="wrap rihla-nav-inner">
+        <a href="/" className="rihla-logo" aria-label="الصفحة الرئيسية">
+          <div className="rihla-logo-mark">MA→DE</div>
+          <span>دليلك</span>
+        </a>
+
+        <div className="rihla-nav-links">
+          <a href="/#tools">الأدوات</a>
+          <a href="/learn-german">تعلم الألمانية</a>
+          <a href="/articles">المقالات</a>
+          <a href="/cv-builder">السيرة الذاتية</a>
+          <a href="/anschreiben-generator">خطاب التحفيز</a>
+          <a href="/ausbildung-jobs">فرص Ausbildung</a>
+          <a href="/#faq">أسئلة شائعة</a>
+        </div>
+
+        <div className="rihla-nav-cta">
+          <a href="/search" className="rihla-icon-btn" aria-label="بحث" title="بحث">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+          </a>
+
+          <button
+            type="button"
+            onClick={toggleTheme}
+            className="rihla-icon-btn"
+            aria-label={theme === 'dark' ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن'}
+            title={theme === 'dark' ? 'الوضع الفاتح' : 'الوضع الداكن'}
+          >
+            {mounted && theme === 'dark' ? (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            )}
+          </button>
+
+          {mounted && user ? (
+            <>
+              {/* Desktop: email pill */}
+              <a href="/profile" className="btn btn-ghost btn-sm rihla-desktop-only" title={emailLabel}>
+                <span className="rihla-nav-email">{emailLabel}</span>
+              </a>
+              {/* Mobile: avatar circle */}
+              <a href="/profile" className="rihla-avatar rihla-mobile-only" aria-label="حسابي" title={emailLabel}>
+                {avatarSrc ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={avatarSrc} alt="" />
+                ) : (
+                  <span>{initialFromEmail(user.email)}</span>
+                )}
+              </a>
+              <button onClick={logout} className="btn btn-brand btn-sm" type="button">خروج</button>
+            </>
+          ) : (
+            <>
+              <a href="/login" className="btn btn-ghost btn-sm">دخول</a>
+              <a href="/signup" className="btn btn-brand btn-sm rihla-desktop-only">إنشاء حساب</a>
+            </>
+          )}
+        </div>
+      </div>
+    </nav>
+  )
+}

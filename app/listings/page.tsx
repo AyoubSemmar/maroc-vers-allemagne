@@ -60,9 +60,12 @@ export default async function ListingsPage({ searchParams }: { searchParams: Pro
                 <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-5xl">🏠</div>
               )}
               <div className="p-4">
-                <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
                   <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{listing.type}</span>
                   <span className="text-xs text-gray-400">{listing.city}</span>
+                  {listing.price && (
+                    <span className="text-xs font-semibold text-white bg-green-600 px-2 py-1 rounded-full">{listing.price} €/شهر</span>
+                  )}
                 </div>
                 <h3 className="font-semibold text-gray-900">{listing.title}</h3>
                 <p className="text-sm text-gray-500 mt-1 line-clamp-2">{listing.description}</p>

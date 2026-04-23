@@ -1,5 +1,4 @@
-import { levels } from '@/lib/german-data'
-import LevelCard from '@/components/learn-german/LevelCard'
+import LevelsGrid from '@/components/learn-german/LevelsGrid'
 
 export default function LearnGermanPage() {
   return (
@@ -16,11 +15,7 @@ export default function LearnGermanPage() {
 
       <div className="max-w-4xl mx-auto px-4 py-12">
         <h2 className="text-xl font-semibold text-gray-800 mb-6">اختر مستواك</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {levels.map((level, index) => (
-            <LevelCard key={level.id} level={level} index={index} />
-          ))}
-        </div>
+        <LevelsGrid />
       </div>
     </div>
   )

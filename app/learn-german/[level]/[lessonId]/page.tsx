@@ -13,7 +13,7 @@ export default async function LessonPage({
 
   if (!level || !lesson) notFound()
 
-  const currentIndex = level.lessons.findIndex((l) => l.id === lessonId)
+  const currentIndex = level.lessons.findIndex((l: { id: string }) => l.id === lessonId)
   const nextLesson = level.lessons[currentIndex + 1] ?? null
 
   return (

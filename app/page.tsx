@@ -1,17 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import FeaturedCarousel from '@/components/FeaturedCarousel'
-import NewsletterSignup from '@/components/NewsletterSignup'
-
-const categories = [
-  { name: "البنوك", icon: "🏦", description: "افتح حساباً بنكياً في ألمانيا" },
-  { name: "شرائح الاتصال", icon: "📱", description: "ابقَ متصلاً من أول يوم" },
-  { name: "السكن", icon: "🏠", description: "ابحث عن غرفة أو شقة", link: "/listings" },
-  { name: "الجامعات", icon: "🎓", description: "ادرس في ألمانيا" },
-  { name: "العمل", icon: "💼", description: "ابحث عن عمل كمغربي" },
-  { name: "Ausbildung", icon: "🔧", description: "برامج التدريب المهني" },
-  { name: "التأشيرة والأوراق", icon: "📄", description: "التأشيرات والتصاريح والوثائق" },
-  { name: "تعلم الألمانية", icon: "📚", description: "من A1 إلى C1 — دروس تفاعلية", link: "/learn-german" },
-];
+import RihlaLanding from '@/components/landing/RihlaLanding'
 
 export default async function Home() {
   const { data: articles } = await supabase
@@ -19,72 +7,8 @@ export default async function Home() {
     .select('*')
     .order('date', { ascending: false })
 
-  const featured = articles?.filter((a) => a.featured) || []
-  const latest = articles?.filter((a) => !a.featured) || []
+  const featured = (articles ?? []).filter((a) => a.featured)
+  const list = featured.length > 0 ? featured.slice(0, 3) : (articles ?? []).slice(0, 3)
 
-  return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
-      {/* Hero */}
-      <div className="bg-white border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 py-16 text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            انتقل إلى ألمانيا بثقة
-          </h1>
-          <p className="text-lg text-gray-500 max-w-xl mx-auto">
-            أدلة عملية مكتوبة للمغاربة — البنوك، السكن، التأشيرات، العمل، والمزيد.
-          </p>
-        </div>
-      </div>
-
-      {/* Featured Articles Carousel */}
-      {featured.length > 0 && <FeaturedCarousel articles={featured} />}
-
-      {/* Categories */}
-      <div className="max-w-5xl mx-auto px-4 py-10">
-        <h2 className="text-xl font-semibold text-gray-800 mb-6">تصفح حسب الفئة</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          {categories.map((cat) => (
-            <a
-              key={cat.name}
-              href={(cat as any).link || `/categories/${encodeURIComponent(cat.name)}`}
-              className="bg-white rounded-xl border border-gray-200 p-6 hover:shadow-md transition-shadow block"
-            >
-              <div className="text-3xl mb-3">{cat.icon}</div>
-              <h3 className="font-semibold text-gray-900">{cat.name}</h3>
-              <p className="text-sm text-gray-500 mt-1">{cat.description}</p>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      {/* Newsletter */}
-      <NewsletterSignup />
-
-      {/* Latest Articles */}
-      <div className="max-w-5xl mx-auto px-4 pb-12">
-        <h2 className="text-xl font-semibold text-gray-800 mb-6">آخر المقالات</h2>
-        <div className="flex flex-col gap-4">
-          {latest.map((article) => (
-            <a
-              key={article.id}
-              href={`/articles/${article.id}`}
-              className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow flex items-center gap-4 p-4 overflow-hidden"
-            >
-              <div className="flex-1">
-                <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
-                  {article.category}
-                </span>
-                <h3 className="font-semibold text-gray-900 mt-3 text-lg">{article.title}</h3>
-                <p className="text-sm text-gray-500 mt-1">{article.summary}</p>
-                <p className="text-xs text-gray-400 mt-3">{article.date}</p>
-              </div>
-              {article.image_url && (
-                <img src={article.image_url} alt={article.title} className="w-36 h-24 object-cover rounded-lg flex-shrink-0" />
-              )}
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
+  return <RihlaLanding articles={list} />
 }

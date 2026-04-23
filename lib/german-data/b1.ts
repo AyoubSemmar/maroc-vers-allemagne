@@ -1,0 +1,1192 @@
+import type { Level } from './types'
+
+export const B1: Level = {
+  id: 'B1',
+  title: 'المستوى الثالث',
+  description: 'التعبير عن الرأي، العمل، والسفر.',
+  color: 'bg-purple-500',
+  emoji: '🚀',
+  lessons: [
+    // ========================= LESSON 1 =========================
+    {
+      id: 'b1-01',
+      title: 'Konjunktiv II — الشرط والتمني',
+      order: 1,
+      grammar: {
+        title: 'Konjunktiv II: würde, wäre, hätte',
+        content: `**Konjunktiv II** يُستعمل للتعبير عن:
+- التمني (لو كنتُ...)
+- الاقتراح المهذب (هل يمكنني...)
+- الشرط غير الحقيقي (لو فعلتُ...)
+
+**القاعدة الذهبية:**
+- معظم الأفعال: **würde + Infinitiv**
+- الأفعال المساعدة والشائعة تأخذ شكلاً خاصاً: **wäre** (sein), **hätte** (haben), **könnte** (können), **müsste**, **würde**...
+
+⚠️ بعد **wenn** يأتي الفعل في **آخر الجملة**، وفي الجملة الرئيسية يأتي أولاً.`,
+        tables: [
+          {
+            title: 'أشكال Konjunktiv II الشائعة',
+            theme: 'conjugation',
+            headers: ['الضمير', 'sein → wäre', 'haben → hätte', 'werden → würde'],
+            rows: [
+              { cells: ['ich', 'wäre', 'hätte', 'würde'] },
+              { cells: ['du', 'wärst', 'hättest', 'würdest'] },
+              { cells: ['er/sie/es', 'wäre', 'hätte', 'würde'] },
+              { cells: ['wir', 'wären', 'hätten', 'würden'] },
+              { cells: ['ihr', 'wärt', 'hättet', 'würdet'] },
+              { cells: ['sie/Sie', 'wären', 'hätten', 'würden'] },
+            ],
+            note: 'لاحظ الـ Umlaut (ä, ö, ü) علامة Konjunktiv II.',
+          },
+          {
+            title: 'الأفعال المساعدة في Konjunktiv II',
+            theme: 'conjugation',
+            headers: ['الفعل', 'الشكل', 'المعنى'],
+            rows: [
+              { cells: ['können', 'könnte', 'يمكن أن'], highlight: true },
+              { cells: ['müssen', 'müsste', 'يجب أن'] },
+              { cells: ['dürfen', 'dürfte', 'يُسمح بـ'] },
+              { cells: ['sollen', 'sollte', 'ينبغي'] },
+              { cells: ['mögen', 'möchte', 'يودّ'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'würde + Infinitiv', example: 'Ich würde gerne kommen.', translation: 'أود أن آتي.' },
+          { rule: 'wenn + آخر الجملة', example: 'Wenn ich Zeit hätte, würde ich reisen.', translation: 'لو كان لدي وقت، لسافرت.' },
+          { rule: 'Höfliche Bitten', example: 'Könnten Sie mir helfen?', translation: 'هل يمكنك مساعدتي؟' },
+        ],
+        examples: [
+          'Ich hätte gern einen Kaffee. — أود فنجان قهوة.',
+          'Wenn ich reich wäre, würde ich ein Haus kaufen. — لو كنت غنياً، لاشتريت بيتاً.',
+          'Könntest du mir helfen? — هل يمكنك مساعدتي؟',
+          'An deiner Stelle würde ich das nicht machen. — لو كنت مكانك، لما فعلت ذلك.',
+          'Wir könnten ins Kino gehen. — يمكننا الذهاب للسينما.',
+          'Es wäre schön, wenn du kommst. — سيكون جميلاً لو أتيت.',
+          'Ich würde lieber bleiben. — أفضّل البقاء.',
+          'Hättest du Lust auf Pizza? — هل ترغب في بيتزا؟',
+        ],
+        tip: 'استعمل könnte و würde عند طلب شيء بأدب — الألمان يحبون اللغة المهذبة.',
+      },
+      vocabulary: [
+        { german: 'der Wunsch', arabic: 'الأمنية', plural: 'die Wünsche', type: 'noun', gender: 'der' },
+        { german: 'die Möglichkeit', arabic: 'الإمكانية', plural: 'die Möglichkeiten', type: 'noun', gender: 'die' },
+        { german: 'die Bedingung', arabic: 'الشرط', plural: 'die Bedingungen', type: 'noun', gender: 'die' },
+        { german: 'der Vorschlag', arabic: 'الاقتراح', plural: 'die Vorschläge', type: 'noun', gender: 'der' },
+        { german: 'die Bitte', arabic: 'الطلب', plural: 'die Bitten', type: 'noun', gender: 'die' },
+        { german: 'vielleicht', arabic: 'ربما', type: 'adverb' },
+        { german: 'möglich', arabic: 'ممكن', type: 'adjective' },
+        { german: 'unmöglich', arabic: 'مستحيل', type: 'adjective' },
+        { german: 'höflich', arabic: 'مهذب', type: 'adjective' },
+        { german: 'träumen', arabic: 'يحلم', example: 'Ich träume von Italien.', type: 'verb' },
+        { german: 'wünschen', arabic: 'يتمنى', type: 'verb' },
+        { german: 'vorschlagen', arabic: 'يقترح', type: 'verb' },
+        { german: 'raten', arabic: 'ينصح', type: 'verb' },
+        { german: 'an deiner Stelle', arabic: 'مكانك', type: 'phrase' },
+        { german: 'hoffentlich', arabic: 'يُؤمل أن', type: 'adverb' },
+        { german: 'sicher', arabic: 'بالتأكيد', type: 'adverb' },
+        { german: 'wahrscheinlich', arabic: 'على الأرجح', type: 'adverb' },
+        { german: 'die Zukunft', arabic: 'المستقبل', type: 'noun', gender: 'die' },
+        { german: 'die Entscheidung', arabic: 'القرار', plural: 'die Entscheidungen', type: 'noun', gender: 'die' },
+        { german: 'lieber', arabic: 'يُفضّل', type: 'adverb' },
+        { german: 'gern hätte', arabic: 'يودّ أن يكون لديه', type: 'phrase' },
+        { german: 'es wäre schön', arabic: 'سيكون جميلاً', type: 'phrase' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-01-q1', type: 'multiple-choice', question: 'لو كنت غنياً (Konjunktiv II):', options: ['Wenn ich reich bin', 'Wenn ich reich wäre', 'Wenn ich reich war', 'Wenn ich reich sein'], answer: 'Wenn ich reich wäre', hint: 'sein → wäre' },
+          { id: 'b1-01-q2', type: 'multiple-choice', question: 'طلب مهذب للقهوة:', options: ['Ich will Kaffee', 'Ich hätte gern Kaffee', 'Ich habe Kaffee', 'Gib mir Kaffee'], answer: 'Ich hätte gern Kaffee' },
+          { id: 'b1-01-q3', type: 'fill-blank', question: 'Ich ___ gern mitkommen. (würde)', answer: 'würde' },
+          { id: 'b1-01-q4', type: 'fill-blank', question: '___ du mir helfen? (مهذب - könntest)', answer: 'Könntest' },
+          { id: 'b1-01-q5', type: 'drag-drop', question: 'رتّب: [Zeit / hätte / Ich / gern / mehr]', words: ['Ich', 'hätte', 'gern', 'mehr', 'Zeit'], answer: 'Ich hätte gern mehr Zeit' },
+          { id: 'b1-01-q6', type: 'drag-drop', question: 'رتّب الجملة الشرطية: [würde / Wenn / reisen / hätte / ich / Geld / ich / , ]', words: ['Wenn', 'ich', 'Geld', 'hätte', ',', 'würde', 'ich', 'reisen'], answer: 'Wenn ich Geld hätte , würde ich reisen' },
+          { id: 'b1-01-q7', type: 'matching', question: 'صل بين الفعل وشكل Konjunktiv II:', pairs: [{ left: 'sein', right: 'wäre' }, { left: 'haben', right: 'hätte' }, { left: 'können', right: 'könnte' }, { left: 'müssen', right: 'müsste' }], answer: 'sein=wäre; haben=hätte; können=könnte; müssen=müsste' },
+          { id: 'b1-01-q8', type: 'multiple-choice', question: '"An deiner Stelle ___ ich das nicht machen."', options: ['würde', 'habe', 'bin', 'mache'], answer: 'würde' },
+          { id: 'b1-01-q9', type: 'speaking', question: 'قل: "أود أن أذهب إلى ألمانيا."', answer: 'Ich würde gern nach Deutschland gehen', hint: 'Ich würde gern...' },
+          { id: 'b1-01-q10', type: 'multiple-choice', question: 'استمع واختر الجواب الصحيح:', audioPrompt: 'Wenn ich Zeit hätte, würde ich ins Kino gehen.', options: ['سأذهب للسينما اليوم', 'لو كان لدي وقت، لذهبت للسينما', 'ذهبت للسينما', 'لن أذهب للسينما'], answer: 'لو كان لدي وقت، لذهبت للسينما' },
+        ],
+      },
+    },
+    // ========================= LESSON 2 =========================
+    {
+      id: 'b1-02',
+      title: 'Passiv — المبني للمجهول',
+      order: 2,
+      grammar: {
+        title: 'Passiv مع werden',
+        content: `**Passiv** يُستعمل عندما يكون الفاعل غير مهم أو غير معروف.
+
+**التكوين:**
+- **Passiv Präsens:** werden + Partizip II
+  مثال: Der Brief wird geschrieben. (تُكتب الرسالة)
+- **Passiv Präteritum:** wurde + Partizip II
+  مثال: Das Haus wurde gebaut. (بُني البيت)
+- **Passiv Perfekt:** ist + Partizip II + worden
+  مثال: Das Buch ist gelesen worden.
+
+**من الفاعل؟** نستعمل **von + Dativ** للشخص أو **durch + Akkusativ** للوسيلة.
+
+⚠️ في Passiv، المفعول به في الجملة النشطة يصبح فاعلاً في المبني للمجهول.`,
+        tables: [
+          {
+            title: 'werden في Präsens و Präteritum',
+            theme: 'conjugation',
+            headers: ['الضمير', 'Präsens (werden)', 'Präteritum (wurde)'],
+            rows: [
+              { cells: ['ich', 'werde', 'wurde'] },
+              { cells: ['du', 'wirst', 'wurdest'] },
+              { cells: ['er/sie/es', 'wird', 'wurde'] },
+              { cells: ['wir', 'werden', 'wurden'] },
+              { cells: ['ihr', 'werdet', 'wurdet'] },
+              { cells: ['sie/Sie', 'werden', 'wurden'] },
+            ],
+          },
+          {
+            title: 'Aktiv ↔ Passiv',
+            theme: 'default',
+            headers: ['الشكل', 'المثال'],
+            rows: [
+              { cells: ['Aktiv', 'Der Mann baut das Haus.'], highlight: true },
+              { cells: ['Passiv Präsens', 'Das Haus wird (von dem Mann) gebaut.'] },
+              { cells: ['Passiv Präteritum', 'Das Haus wurde gebaut.'] },
+              { cells: ['Passiv Perfekt', 'Das Haus ist gebaut worden.'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'Passiv Präsens: werden + PII', example: 'Der Kuchen wird gebacken.', translation: 'تُخبز الكعكة.' },
+          { rule: 'von + Dativ (الشخص)', example: 'Das Buch wird von dem Autor geschrieben.', translation: 'الكتاب يُكتب من قبل المؤلف.' },
+          { rule: 'durch + Akkusativ (الوسيلة)', example: 'Die Stadt wurde durch ein Feuer zerstört.', translation: 'دُمرت المدينة بواسطة حريق.' },
+        ],
+        examples: [
+          'Die Tür wird geöffnet. — يُفتح الباب.',
+          'Das Auto wurde gestohlen. — سُرقت السيارة.',
+          'Hier wird Deutsch gesprochen. — هنا تُتحدث الألمانية.',
+          'Der Brief wurde gestern geschickt. — أُرسلت الرسالة أمس.',
+          'Das Essen wird von meiner Mutter gekocht. — يُطبخ الطعام من قبل أمي.',
+          'Das Problem ist gelöst worden. — تم حل المشكلة.',
+          'Die Fenster werden geputzt. — تُنظّف النوافذ.',
+          'Das Paket wurde geliefert. — تم تسليم الطرد.',
+        ],
+        tip: 'في الألمانية الرسمية (الأخبار، اللوائح، التعليمات)، يُستعمل Passiv كثيراً — تعلّمه جيداً!',
+      },
+      vocabulary: [
+        { german: 'bauen', arabic: 'يبني', type: 'verb' },
+        { german: 'zerstören', arabic: 'يدمّر', type: 'verb' },
+        { german: 'öffnen', arabic: 'يفتح', type: 'verb' },
+        { german: 'schließen', arabic: 'يغلق', type: 'verb' },
+        { german: 'liefern', arabic: 'يسلّم', type: 'verb' },
+        { german: 'reparieren', arabic: 'يصلح', type: 'verb' },
+        { german: 'stehlen', arabic: 'يسرق', type: 'verb' },
+        { german: 'veröffentlichen', arabic: 'ينشر', type: 'verb' },
+        { german: 'produzieren', arabic: 'ينتج', type: 'verb' },
+        { german: 'der Prozess', arabic: 'العملية', plural: 'die Prozesse', type: 'noun', gender: 'der' },
+        { german: 'die Produktion', arabic: 'الإنتاج', type: 'noun', gender: 'die' },
+        { german: 'die Reparatur', arabic: 'الإصلاح', plural: 'die Reparaturen', type: 'noun', gender: 'die' },
+        { german: 'der Autor', arabic: 'المؤلف', plural: 'die Autoren', type: 'noun', gender: 'der' },
+        { german: 'das Paket', arabic: 'الطرد', plural: 'die Pakete', type: 'noun', gender: 'das' },
+        { german: 'die Regel', arabic: 'القاعدة', plural: 'die Regeln', type: 'noun', gender: 'die' },
+        { german: 'das Gesetz', arabic: 'القانون', plural: 'die Gesetze', type: 'noun', gender: 'das' },
+        { german: 'die Entscheidung', arabic: 'القرار', plural: 'die Entscheidungen', type: 'noun', gender: 'die' },
+        { german: 'die Nachricht', arabic: 'الخبر', plural: 'die Nachrichten', type: 'noun', gender: 'die' },
+        { german: 'durch', arabic: 'بواسطة', type: 'preposition' },
+        { german: 'von', arabic: 'من قبل', type: 'preposition' },
+        { german: 'worden', arabic: 'أصبح (في Passiv Perfekt)', type: 'verb' },
+        { german: 'bekannt', arabic: 'معروف', type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-02-q1', type: 'multiple-choice', question: 'تُبنى البيوت:', options: ['Die Häuser bauen', 'Die Häuser werden gebaut', 'Die Häuser haben gebaut', 'Die Häuser sind bauen'], answer: 'Die Häuser werden gebaut' },
+          { id: 'b1-02-q2', type: 'multiple-choice', question: 'سُرقت السيارة (Präteritum Passiv):', options: ['Das Auto wird gestohlen', 'Das Auto wurde gestohlen', 'Das Auto hat gestohlen', 'Das Auto stahl'], answer: 'Das Auto wurde gestohlen' },
+          { id: 'b1-02-q3', type: 'fill-blank', question: 'Hier ___ Deutsch gesprochen. (Passiv Präsens)', answer: 'wird' },
+          { id: 'b1-02-q4', type: 'fill-blank', question: 'Der Brief ___ gestern geschrieben. (Präteritum Passiv - wurde)', answer: 'wurde' },
+          { id: 'b1-02-q5', type: 'drag-drop', question: 'رتّب: [wird / Der Kuchen / gebacken]', words: ['Der', 'Kuchen', 'wird', 'gebacken'], answer: 'Der Kuchen wird gebacken' },
+          { id: 'b1-02-q6', type: 'drag-drop', question: 'رتّب: [Mutter / Das Essen / von / der / wird / gekocht]', words: ['Das', 'Essen', 'wird', 'von', 'der', 'Mutter', 'gekocht'], answer: 'Das Essen wird von der Mutter gekocht' },
+          { id: 'b1-02-q7', type: 'matching', question: 'صل بين الجملة في Aktiv وPassiv:', pairs: [{ left: 'Er schreibt den Brief', right: 'Der Brief wird geschrieben' }, { left: 'Sie öffnete die Tür', right: 'Die Tür wurde geöffnet' }, { left: 'Wir bauen das Haus', right: 'Das Haus wird gebaut' }], answer: 'match' },
+          { id: 'b1-02-q8', type: 'multiple-choice', question: 'أيّ حرف جر يُستعمل للفاعل الشخص؟', options: ['durch', 'von', 'mit', 'für'], answer: 'von' },
+          { id: 'b1-02-q9', type: 'speaking', question: 'قل: "تُفتح النوافذ."', answer: 'Die Fenster werden geöffnet', hint: 'werden + Partizip II' },
+          { id: 'b1-02-q10', type: 'multiple-choice', question: 'استمع واختر:', audioPrompt: 'Das Paket wurde gestern geliefert.', options: ['الطرد يُسلَّم', 'تم تسليم الطرد أمس', 'سيُسلَّم الطرد غداً', 'الطرد ضاع'], answer: 'تم تسليم الطرد أمس' },
+        ],
+      },
+    },
+    // ========================= LESSON 3 =========================
+    {
+      id: 'b1-03',
+      title: 'Genitiv — حالة الملكية',
+      order: 3,
+      grammar: {
+        title: 'Genitiv: das Auto des Mannes',
+        content: `**Genitiv** هي حالة الملكية — تُظهر من يملك ماذا.
+
+**القاعدة:**
+- المذكر/المحايد: **des** + اسم + **-s/-es**
+- المؤنث/الجمع: **der**
+
+**في اللغة اليومية** يُستبدل Genitiv غالباً بـ **von + Dativ**:
+- das Auto **des Mannes** (فصحى) = das Auto **von dem Mann** (شائع)
+
+**حروف الجر + Genitiv:**
+- **wegen** (بسبب), **trotz** (رغم), **während** (أثناء), **statt** (بدلاً من), **außerhalb** (خارج), **innerhalb** (داخل)
+
+⚠️ الأسماء المذكرة والمحايدة المفردة تأخذ **-s** أو **-es** في Genitiv.`,
+        tables: [
+          {
+            title: 'أدوات التعريف في الحالات الأربع',
+            theme: 'cases',
+            headers: ['Kasus', 'der (m)', 'die (f)', 'das (n)', 'die (pl)'],
+            rows: [
+              { cells: ['Nominativ', 'der', 'die', 'das', 'die'] },
+              { cells: ['Akkusativ', 'den', 'die', 'das', 'die'] },
+              { cells: ['Dativ', 'dem', 'der', 'dem', 'den'] },
+              { cells: ['Genitiv', 'des -(e)s', 'der', 'des -(e)s', 'der'], highlight: true },
+            ],
+          },
+          {
+            title: 'الأدوات غير المعرفة والملكية في Genitiv',
+            theme: 'cases',
+            headers: ['الجنس', 'ein/kein', 'mein', 'الاسم ينتهي بـ'],
+            rows: [
+              { cells: ['مذكر', 'eines / keines', 'meines', '-s / -es'] },
+              { cells: ['مؤنث', 'einer / keiner', 'meiner', '—'] },
+              { cells: ['محايد', 'eines / keines', 'meines', '-s / -es'] },
+              { cells: ['جمع', '— / keiner', 'meiner', '—'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'Genitiv للملكية', example: 'das Haus meines Vaters', translation: 'بيت أبي' },
+          { rule: 'wegen + Genitiv', example: 'wegen des Regens', translation: 'بسبب المطر' },
+          { rule: 'von + Dativ (بديل شائع)', example: 'das Auto von meinem Bruder', translation: 'سيارة أخي' },
+        ],
+        examples: [
+          'Das Buch des Lehrers ist interessant. — كتاب المعلم مثير.',
+          'Die Farbe der Tür ist blau. — لون الباب أزرق.',
+          'Trotz des Regens gehen wir spazieren. — رغم المطر نتنزه.',
+          'Während der Ferien reisen wir. — أثناء العطلة نسافر.',
+          'Das Ende des Films war traurig. — نهاية الفيلم كانت حزينة.',
+          'Wegen des Wetters bleiben wir zu Hause. — بسبب الطقس نبقى في البيت.',
+          'Die Tasche meiner Schwester ist neu. — حقيبة أختي جديدة.',
+          'Außerhalb der Stadt gibt es Wälder. — خارج المدينة توجد غابات.',
+        ],
+        tip: 'في الحوار اليومي، استعمل "von + Dativ" بدل Genitiv — أسهل وأكثر شيوعاً!',
+      },
+      vocabulary: [
+        { german: 'wegen', arabic: 'بسبب', type: 'preposition' },
+        { german: 'trotz', arabic: 'رغم', type: 'preposition' },
+        { german: 'während', arabic: 'أثناء', type: 'preposition' },
+        { german: 'statt', arabic: 'بدلاً من', type: 'preposition' },
+        { german: 'außerhalb', arabic: 'خارج', type: 'preposition' },
+        { german: 'innerhalb', arabic: 'داخل', type: 'preposition' },
+        { german: 'der Besitzer', arabic: 'المالك', plural: 'die Besitzer', type: 'noun', gender: 'der' },
+        { german: 'das Eigentum', arabic: 'الملكية', type: 'noun', gender: 'das' },
+        { german: 'der Vertrag', arabic: 'العقد', plural: 'die Verträge', type: 'noun', gender: 'der' },
+        { german: 'die Unterschrift', arabic: 'التوقيع', plural: 'die Unterschriften', type: 'noun', gender: 'die' },
+        { german: 'das Ende', arabic: 'النهاية', type: 'noun', gender: 'das' },
+        { german: 'der Anfang', arabic: 'البداية', plural: 'die Anfänge', type: 'noun', gender: 'der' },
+        { german: 'die Mitte', arabic: 'الوسط', type: 'noun', gender: 'die' },
+        { german: 'der Grund', arabic: 'السبب', plural: 'die Gründe', type: 'noun', gender: 'der' },
+        { german: 'die Bedeutung', arabic: 'المعنى / الأهمية', plural: 'die Bedeutungen', type: 'noun', gender: 'die' },
+        { german: 'der Titel', arabic: 'العنوان', plural: 'die Titel', type: 'noun', gender: 'der' },
+        { german: 'die Sprache', arabic: 'اللغة', plural: 'die Sprachen', type: 'noun', gender: 'die' },
+        { german: 'der Regen', arabic: 'المطر', type: 'noun', gender: 'der' },
+        { german: 'das Wetter', arabic: 'الطقس', type: 'noun', gender: 'das' },
+        { german: 'die Ferien', arabic: 'العطلة', type: 'noun', gender: 'pl' },
+        { german: 'gehören', arabic: 'يعود / يخص', example: 'Das gehört mir.', type: 'verb' },
+        { german: 'besitzen', arabic: 'يملك', type: 'verb' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-03-q1', type: 'multiple-choice', question: 'بيت أبي (Genitiv):', options: ['das Haus mein Vater', 'das Haus meines Vaters', 'das Haus von mein Vater', 'das Haus meinem Vater'], answer: 'das Haus meines Vaters' },
+          { id: 'b1-03-q2', type: 'multiple-choice', question: 'بسبب المطر:', options: ['wegen dem Regen', 'wegen der Regen', 'wegen des Regens', 'wegen den Regen'], answer: 'wegen des Regens' },
+          { id: 'b1-03-q3', type: 'fill-blank', question: 'Das Buch ___ Lehrers ist neu. (des)', answer: 'des' },
+          { id: 'b1-03-q4', type: 'fill-blank', question: 'Die Tasche ___ Schwester. (meiner)', answer: 'meiner' },
+          { id: 'b1-03-q5', type: 'drag-drop', question: 'رتّب: [der / Die / ist / Farbe / Tür / blau]', words: ['Die', 'Farbe', 'der', 'Tür', 'ist', 'blau'], answer: 'Die Farbe der Tür ist blau' },
+          { id: 'b1-03-q6', type: 'drag-drop', question: 'رتّب: [des / Trotz / Wetters / gehen / wir / spazieren]', words: ['Trotz', 'des', 'Wetters', 'gehen', 'wir', 'spazieren'], answer: 'Trotz des Wetters gehen wir spazieren' },
+          { id: 'b1-03-q7', type: 'matching', question: 'صل بين حرف الجر والمعنى:', pairs: [{ left: 'wegen', right: 'بسبب' }, { left: 'trotz', right: 'رغم' }, { left: 'während', right: 'أثناء' }, { left: 'statt', right: 'بدلاً من' }], answer: 'match' },
+          { id: 'b1-03-q8', type: 'multiple-choice', question: 'أي صيغة غير رسمية لـ "das Auto des Mannes"؟', options: ['das Auto mit dem Mann', 'das Auto von dem Mann', 'das Auto für den Mann', 'das Auto bei dem Mann'], answer: 'das Auto von dem Mann' },
+          { id: 'b1-03-q9', type: 'speaking', question: 'قل: "كتاب أختي جديد."', answer: 'Das Buch meiner Schwester ist neu', hint: 'meiner Schwester' },
+          { id: 'b1-03-q10', type: 'multiple-choice', question: 'استمع واختر:', audioPrompt: 'Während der Ferien fahre ich nach Italien.', options: ['قبل العطلة أذهب لإيطاليا', 'أثناء العطلة أذهب لإيطاليا', 'بعد العطلة', 'لا أذهب لإيطاليا'], answer: 'أثناء العطلة أذهب لإيطاليا' },
+        ],
+      },
+    },
+    // ========================= LESSON 4 =========================
+    {
+      id: 'b1-04',
+      title: 'Relativsätze — الجمل الموصولة',
+      order: 4,
+      grammar: {
+        title: 'der, die, das الموصولة',
+        content: `**Relativsatz** هي جملة تصف اسماً سابقاً. تبدأ بضمير موصول يُطابق الاسم في:
+- **الجنس** (der/die/das)
+- **العدد** (مفرد/جمع)
+- **الحالة** (حسب دوره في الجملة الموصولة)
+
+**الضمير الموصول = أداة التعريف** مع استثناءات في Dativ Plural (denen) و Genitiv.
+
+⚠️ **الفعل في الجملة الموصولة دائماً في آخرها!**
+
+**أمثلة:**
+- Der Mann, **der** dort steht, ist mein Vater. (الرجل الذي يقف هناك هو أبي)
+- Die Frau, **die** ich kenne, kommt aus Berlin. (المرأة التي أعرفها من برلين)
+- Das Kind, **dem** ich helfe, ist klein. (الطفل الذي أساعده صغير)`,
+        tables: [
+          {
+            title: 'الضمائر الموصولة',
+            theme: 'cases',
+            headers: ['Kasus', 'der (m)', 'die (f)', 'das (n)', 'die (pl)'],
+            rows: [
+              { cells: ['Nominativ', 'der', 'die', 'das', 'die'] },
+              { cells: ['Akkusativ', 'den', 'die', 'das', 'die'] },
+              { cells: ['Dativ', 'dem', 'der', 'dem', 'denen'], highlight: true },
+              { cells: ['Genitiv', 'dessen', 'deren', 'dessen', 'deren'] },
+            ],
+            note: 'لاحظ denen في Dativ Plural و dessen/deren في Genitiv — استثناءات مهمة.',
+          },
+        ],
+        rules: [
+          { rule: 'الفعل في آخر Relativsatz', example: 'Das Buch, das ich lese, ist spannend.', translation: 'الكتاب الذي أقرؤه مشوق.' },
+          { rule: 'مطابقة الجنس والعدد', example: 'Die Leute, die hier wohnen, sind nett.', translation: 'الناس الذين يسكنون هنا لطفاء.' },
+          { rule: 'حرف الجر قبل الضمير', example: 'Der Stift, mit dem ich schreibe, ist blau.', translation: 'القلم الذي أكتب به أزرق.' },
+        ],
+        examples: [
+          'Der Film, den ich gesehen habe, war gut. — الفيلم الذي شاهدته كان جيداً.',
+          'Die Stadt, in der ich wohne, ist groß. — المدينة التي أسكن فيها كبيرة.',
+          'Das Auto, das rot ist, gehört mir. — السيارة الحمراء تعود لي.',
+          'Die Freunde, mit denen ich spiele, sind nett. — الأصدقاء الذين ألعب معهم لطفاء.',
+          'Der Lehrer, dessen Buch ich lese, ist bekannt. — المعلم الذي أقرأ كتابه معروف.',
+          'Die Frau, deren Sohn Arzt ist, wohnt nebenan. — المرأة التي ابنها طبيب تسكن بجواري.',
+          'Das Kind, dem ich helfe, ist krank. — الطفل الذي أساعده مريض.',
+          'Die Schule, in die ich gehe, ist neu. — المدرسة التي أذهب إليها جديدة.',
+        ],
+        tip: 'لتحديد حالة الضمير الموصول: اسأل ما دوره داخل الجملة الموصولة (فاعل؟ مفعول؟ بعد حرف جر؟).',
+      },
+      vocabulary: [
+        { german: 'der Mann', arabic: 'الرجل', plural: 'die Männer', type: 'noun', gender: 'der' },
+        { german: 'die Frau', arabic: 'المرأة', plural: 'die Frauen', type: 'noun', gender: 'die' },
+        { german: 'das Kind', arabic: 'الطفل', plural: 'die Kinder', type: 'noun', gender: 'das' },
+        { german: 'der Freund', arabic: 'الصديق', plural: 'die Freunde', type: 'noun', gender: 'der' },
+        { german: 'die Schule', arabic: 'المدرسة', plural: 'die Schulen', type: 'noun', gender: 'die' },
+        { german: 'die Universität', arabic: 'الجامعة', plural: 'die Universitäten', type: 'noun', gender: 'die' },
+        { german: 'die Stadt', arabic: 'المدينة', plural: 'die Städte', type: 'noun', gender: 'die' },
+        { german: 'das Land', arabic: 'البلد', plural: 'die Länder', type: 'noun', gender: 'das' },
+        { german: 'der Nachbar', arabic: 'الجار', plural: 'die Nachbarn', type: 'noun', gender: 'der' },
+        { german: 'der Kollege', arabic: 'الزميل', plural: 'die Kollegen', type: 'noun', gender: 'der' },
+        { german: 'kennen', arabic: 'يعرف', type: 'verb' },
+        { german: 'treffen', arabic: 'يلتقي', type: 'verb' },
+        { german: 'wohnen', arabic: 'يسكن', type: 'verb' },
+        { german: 'besuchen', arabic: 'يزور', type: 'verb' },
+        { german: 'arbeiten', arabic: 'يعمل', type: 'verb' },
+        { german: 'spannend', arabic: 'مشوق', type: 'adjective' },
+        { german: 'interessant', arabic: 'مثير', type: 'adjective' },
+        { german: 'langweilig', arabic: 'ممل', type: 'adjective' },
+        { german: 'bekannt', arabic: 'معروف', type: 'adjective' },
+        { german: 'berühmt', arabic: 'مشهور', type: 'adjective' },
+        { german: 'nebenan', arabic: 'بجوار', type: 'adverb' },
+        { german: 'gegenüber', arabic: 'مقابل', type: 'adverb' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-04-q1', type: 'multiple-choice', question: 'Der Mann, ___ dort steht, ist mein Vater.', options: ['den', 'dem', 'der', 'das'], answer: 'der' },
+          { id: 'b1-04-q2', type: 'multiple-choice', question: 'Die Frau, ___ ich kenne, kommt aus Berlin.', options: ['den', 'die', 'der', 'das'], answer: 'die' },
+          { id: 'b1-04-q3', type: 'fill-blank', question: 'Das Buch, ___ ich lese, ist gut. (das)', answer: 'das' },
+          { id: 'b1-04-q4', type: 'fill-blank', question: 'Der Freund, ___ ich helfe, ist krank. (Dativ)', answer: 'dem' },
+          { id: 'b1-04-q5', type: 'drag-drop', question: 'رتّب: [, / Das / spannend / lese / das / Buch / ist / , / ich]', words: ['Das', 'Buch', ',', 'das', 'ich', 'lese', ',', 'ist', 'spannend'], answer: 'Das Buch , das ich lese , ist spannend' },
+          { id: 'b1-04-q6', type: 'drag-drop', question: 'رتّب: [, / Die / wohne / Stadt / ich / ist / groß / in / der / ,]', words: ['Die', 'Stadt', ',', 'in', 'der', 'ich', 'wohne', ',', 'ist', 'groß'], answer: 'Die Stadt , in der ich wohne , ist groß' },
+          { id: 'b1-04-q7', type: 'matching', question: 'صل الضمير الموصول بحالته:', pairs: [{ left: 'der (ذكر Nom)', right: 'الذي يفعل' }, { left: 'den (ذكر Akk)', right: 'الذي يتأثر' }, { left: 'dem (ذكر Dat)', right: 'الذي نُعطيه' }, { left: 'denen (جمع Dat)', right: 'الذين نُعطيهم' }], answer: 'match' },
+          { id: 'b1-04-q8', type: 'multiple-choice', question: 'Die Leute, mit ___ ich spiele, sind nett.', options: ['den', 'denen', 'der', 'die'], answer: 'denen' },
+          { id: 'b1-04-q9', type: 'speaking', question: 'قل: "الفيلم الذي شاهدته كان جيداً."', answer: 'Der Film, den ich gesehen habe, war gut', hint: 'den = Akkusativ' },
+          { id: 'b1-04-q10', type: 'multiple-choice', question: 'استمع واختر الترجمة:', audioPrompt: 'Der Kollege, der neben mir arbeitet, ist sehr nett.', options: ['زميلي الذي يعمل بعيداً ممل', 'الزميل الذي يعمل بجواري لطيف جداً', 'الزملاء لطفاء', 'أعمل مع زميل'], answer: 'الزميل الذي يعمل بجواري لطيف جداً' },
+        ],
+      },
+    },
+    // ========================= LESSON 5 =========================
+    {
+      id: 'b1-05',
+      title: 'Konnektoren — أدوات الربط المتقدمة',
+      order: 5,
+      grammar: {
+        title: 'deshalb, trotzdem, nämlich, zwar...aber',
+        content: `**Konnektoren** تربط الجمل وتُظهر العلاقة بينها. هناك ثلاث فئات:
+
+**1. أدوات الربط الموقعية (Position 0)** — لا تغيّر ترتيب الجملة:
+- **und** (و), **aber** (لكن), **oder** (أو), **denn** (لأن), **sondern** (بل)
+
+**2. الظروف الرابطة (Position 1)** — تحتل المرتبة الأولى، الفعل يأتي بعدها:
+- **deshalb / darum / deswegen** (لذلك)
+- **trotzdem** (رغم ذلك)
+- **außerdem** (علاوة على ذلك)
+- **dann / danach** (ثم / بعد ذلك)
+
+**3. أدوات الربط الثانوية (Nebensatz)** — الفعل في الآخر:
+- **weil** (لأن), **obwohl** (رغم أن), **damit** (لكي), **bevor** (قبل أن), **nachdem** (بعد أن)
+
+⚠️ **zwar ... aber** = "صحيح ... لكن"`,
+        tables: [
+          {
+            title: 'الفرق بين denn و weil',
+            theme: 'default',
+            headers: ['الأداة', 'نوعها', 'ترتيب الفعل'],
+            rows: [
+              { cells: ['denn', 'Position 0', 'عادي (Position 2)'] },
+              { cells: ['weil', 'Subjunktion', 'آخر الجملة'], highlight: true },
+              { cells: ['deshalb', 'Position 1', 'Inversion (بعدها الفعل)'] },
+              { cells: ['trotzdem', 'Position 1', 'Inversion'] },
+            ],
+          },
+          {
+            title: 'Konnektoren حسب المعنى',
+            theme: 'default',
+            headers: ['المعنى', 'Konnektor'],
+            rows: [
+              { cells: ['السبب', 'weil, denn, da'] },
+              { cells: ['النتيجة', 'deshalb, deswegen, also'] },
+              { cells: ['التناقض', 'aber, obwohl, trotzdem'] },
+              { cells: ['الهدف', 'damit, um ... zu'] },
+              { cells: ['الزمن', 'wenn, als, bevor, nachdem'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'deshalb → Inversion', example: 'Es regnet, deshalb bleibe ich zu Hause.', translation: 'المطر يسقط، لذلك أبقى في البيت.' },
+          { rule: 'weil → الفعل في الآخر', example: 'Ich bleibe zu Hause, weil es regnet.', translation: 'أبقى في البيت لأن المطر يسقط.' },
+          { rule: 'zwar ... aber', example: 'Zwar ist es kalt, aber ich gehe spazieren.', translation: 'صحيح أنه بارد لكني أتنزه.' },
+        ],
+        examples: [
+          'Ich lerne Deutsch, weil ich in Deutschland arbeiten will. — أتعلم الألمانية لأني أريد العمل في ألمانيا.',
+          'Es regnet, trotzdem gehen wir spazieren. — المطر يسقط، رغم ذلك نتنزه.',
+          'Ich bin müde, deshalb gehe ich ins Bett. — أنا متعب، لذلك أذهب للنوم.',
+          'Zwar ist Berlin groß, aber München ist schöner. — صحيح أن برلين كبيرة لكن ميونخ أجمل.',
+          'Er lernt viel, damit er die Prüfung besteht. — يدرس كثيراً لكي ينجح في الامتحان.',
+          'Bevor ich esse, wasche ich mir die Hände. — قبل أن آكل أغسل يديّ.',
+          'Nachdem er gegessen hatte, ging er schlafen. — بعد أن أكل ذهب للنوم.',
+          'Sowohl Deutsch als auch Englisch sind wichtig. — الألمانية والإنجليزية كلاهما مهم.',
+        ],
+        tip: 'تذكّر: بعد **weil** الفعل في الآخر، بعد **deshalb** Inversion (الفعل بعدها مباشرة).',
+      },
+      vocabulary: [
+        { german: 'deshalb', arabic: 'لذلك', type: 'conjunction' },
+        { german: 'darum', arabic: 'لذلك', type: 'conjunction' },
+        { german: 'deswegen', arabic: 'لذلك', type: 'conjunction' },
+        { german: 'trotzdem', arabic: 'رغم ذلك', type: 'conjunction' },
+        { german: 'außerdem', arabic: 'علاوة على ذلك', type: 'conjunction' },
+        { german: 'nämlich', arabic: 'أي / وذلك لأن', type: 'conjunction' },
+        { german: 'zwar ... aber', arabic: 'صحيح أن ... لكن', type: 'conjunction' },
+        { german: 'sowohl ... als auch', arabic: 'كلاهما', type: 'conjunction' },
+        { german: 'entweder ... oder', arabic: 'إما ... أو', type: 'conjunction' },
+        { german: 'weder ... noch', arabic: 'لا ... ولا', type: 'conjunction' },
+        { german: 'nicht nur ... sondern auch', arabic: 'ليس فقط ... بل أيضاً', type: 'conjunction' },
+        { german: 'da', arabic: 'بما أن', type: 'conjunction' },
+        { german: 'falls', arabic: 'في حال', type: 'conjunction' },
+        { german: 'solange', arabic: 'ما دام', type: 'conjunction' },
+        { german: 'sobald', arabic: 'بمجرد أن', type: 'conjunction' },
+        { german: 'der Grund', arabic: 'السبب', plural: 'die Gründe', type: 'noun', gender: 'der' },
+        { german: 'die Folge', arabic: 'النتيجة', plural: 'die Folgen', type: 'noun', gender: 'die' },
+        { german: 'der Zweck', arabic: 'الغرض', plural: 'die Zwecke', type: 'noun', gender: 'der' },
+        { german: 'der Unterschied', arabic: 'الفرق', plural: 'die Unterschiede', type: 'noun', gender: 'der' },
+        { german: 'verbinden', arabic: 'يربط', type: 'verb' },
+        { german: 'erklären', arabic: 'يشرح', type: 'verb' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-05-q1', type: 'multiple-choice', question: 'Ich bin müde, ___ gehe ich ins Bett.', options: ['weil', 'deshalb', 'obwohl', 'dass'], answer: 'deshalb' },
+          { id: 'b1-05-q2', type: 'multiple-choice', question: 'Ich gehe nach Hause, ___ es spät ist.', options: ['deshalb', 'trotzdem', 'weil', 'aber'], answer: 'weil' },
+          { id: 'b1-05-q3', type: 'fill-blank', question: 'Es regnet, ___ gehen wir spazieren. (رغم ذلك)', answer: 'trotzdem' },
+          { id: 'b1-05-q4', type: 'fill-blank', question: 'Ich lerne, ___ ich die Prüfung bestehe. (لكي - damit)', answer: 'damit' },
+          { id: 'b1-05-q5', type: 'drag-drop', question: 'رتّب: [, / zu / es / deshalb / spät / ist / Hause / Ich / gehe]', words: ['Es', 'ist', 'spät', ',', 'deshalb', 'gehe', 'ich', 'zu', 'Hause'], answer: 'Es ist spät , deshalb gehe ich zu Hause' },
+          { id: 'b1-05-q6', type: 'drag-drop', question: 'رتّب بـ weil: [regnet / , / zu / Hause / Ich / weil / bleibe / es]', words: ['Ich', 'bleibe', 'zu', 'Hause', ',', 'weil', 'es', 'regnet'], answer: 'Ich bleibe zu Hause , weil es regnet' },
+          { id: 'b1-05-q7', type: 'matching', question: 'صل الأداة بمعناها:', pairs: [{ left: 'deshalb', right: 'لذلك' }, { left: 'trotzdem', right: 'رغم ذلك' }, { left: 'außerdem', right: 'علاوة على ذلك' }, { left: 'damit', right: 'لكي' }], answer: 'match' },
+          { id: 'b1-05-q8', type: 'multiple-choice', question: '"zwar kalt, ___ schön"', options: ['und', 'aber', 'oder', 'denn'], answer: 'aber' },
+          { id: 'b1-05-q9', type: 'speaking', question: 'قل: "أتعلم الألمانية لكي أعمل في ألمانيا."', answer: 'Ich lerne Deutsch, damit ich in Deutschland arbeite', hint: 'damit + الفعل في الآخر' },
+          { id: 'b1-05-q10', type: 'multiple-choice', question: 'استمع واختر:', audioPrompt: 'Obwohl es regnet, gehen wir in den Park.', options: ['بسبب المطر نذهب للحديقة', 'رغم أن المطر يسقط نذهب للحديقة', 'لا نذهب للحديقة', 'سنذهب للحديقة غداً'], answer: 'رغم أن المطر يسقط نذهب للحديقة' },
+        ],
+      },
+    },
+    // ========================= LESSON 6 =========================
+    {
+      id: 'b1-06',
+      title: 'Arbeit und Bewerbung — العمل والترشح للوظيفة',
+      order: 6,
+      grammar: {
+        title: 'لغة العمل وتقديم الطلبات',
+        content: `في B1، تحتاج مفردات احترافية للتواصل في سوق العمل الألماني.
+
+**مكونات طلب العمل (Bewerbung):**
+- **Anschreiben** — خطاب التقديم
+- **Lebenslauf** — السيرة الذاتية
+- **Zeugnisse** — الشهادات
+- **Referenzen** — المراجع
+
+**عبارات رسمية في Anschreiben:**
+- "Sehr geehrte Damen und Herren," (السادة الأفاضل)
+- "Mit freundlichen Grüßen" (مع أطيب التحيات)
+- "Ich bewerbe mich um die Stelle als..." (أتقدم لوظيفة...)
+- "Ich freue mich auf Ihre Rückmeldung." (أتطلع لردكم)
+
+**القواعد المفتاحية:** Konjunktiv II المهذب، الجملة الفرعية بـ dass.`,
+        tables: [
+          {
+            title: 'مراحل البحث عن عمل',
+            theme: 'default',
+            headers: ['المرحلة', 'بالألمانية'],
+            rows: [
+              { cells: ['البحث', 'die Stellensuche'] },
+              { cells: ['التقديم', 'die Bewerbung'], highlight: true },
+              { cells: ['المقابلة', 'das Vorstellungsgespräch'] },
+              { cells: ['العقد', 'der Arbeitsvertrag'] },
+              { cells: ['فترة التجربة', 'die Probezeit'] },
+            ],
+          },
+          {
+            title: 'أفعال مهمة في العمل',
+            theme: 'conjugation',
+            headers: ['الفعل', 'Präsens (ich)', 'Perfekt'],
+            rows: [
+              { cells: ['sich bewerben', 'ich bewerbe mich', 'habe mich beworben'] },
+              { cells: ['einstellen', 'ich stelle ein', 'habe eingestellt'] },
+              { cells: ['kündigen', 'ich kündige', 'habe gekündigt'] },
+              { cells: ['verdienen', 'ich verdiene', 'habe verdient'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'sich bewerben um + Akk', example: 'Ich bewerbe mich um die Stelle.', translation: 'أتقدم للوظيفة.' },
+          { rule: 'arbeiten als + (بلا أداة)', example: 'Ich arbeite als Ingenieur.', translation: 'أعمل كمهندس.' },
+          { rule: 'Konjunktiv II المهذب', example: 'Ich würde mich freuen, wenn...', translation: 'سيسعدني إذا...' },
+        ],
+        examples: [
+          'Ich bewerbe mich um die Stelle als Programmierer. — أتقدم لوظيفة مبرمج.',
+          'Mein Lebenslauf ist im Anhang. — سيرتي الذاتية في المرفق.',
+          'Ich habe drei Jahre Berufserfahrung. — لدي ثلاث سنوات خبرة مهنية.',
+          'Ich spreche fließend Deutsch und Englisch. — أتحدث الألمانية والإنجليزية بطلاقة.',
+          'Ich suche eine Vollzeitstelle. — أبحث عن وظيفة بدوام كامل.',
+          'Können Sie mir einen Termin für ein Vorstellungsgespräch geben? — هل يمكنكم إعطائي موعداً لمقابلة؟',
+          'Ich habe gekündigt und suche eine neue Stelle. — استقلت وأبحث عن وظيفة جديدة.',
+          'Der Arbeitsvertrag ist unbefristet. — العقد غير محدد المدة.',
+        ],
+        tip: 'في Anschreiben، استعمل Konjunktiv II ("Ich würde gerne...", "Es wäre mir eine Ehre...") لإظهار الاحترام.',
+      },
+      vocabulary: [
+        { german: 'die Bewerbung', arabic: 'طلب التوظيف', plural: 'die Bewerbungen', type: 'noun', gender: 'die' },
+        { german: 'der Lebenslauf', arabic: 'السيرة الذاتية', plural: 'die Lebensläufe', type: 'noun', gender: 'der' },
+        { german: 'das Anschreiben', arabic: 'خطاب التقديم', type: 'noun', gender: 'das' },
+        { german: 'die Stelle', arabic: 'الوظيفة', plural: 'die Stellen', type: 'noun', gender: 'die' },
+        { german: 'der Arbeitgeber', arabic: 'صاحب العمل', plural: 'die Arbeitgeber', type: 'noun', gender: 'der' },
+        { german: 'der Arbeitnehmer', arabic: 'الموظف', plural: 'die Arbeitnehmer', type: 'noun', gender: 'der' },
+        { german: 'der Chef', arabic: 'المدير', plural: 'die Chefs', type: 'noun', gender: 'der' },
+        { german: 'die Kollegin', arabic: 'الزميلة', plural: 'die Kolleginnen', type: 'noun', gender: 'die' },
+        { german: 'das Gehalt', arabic: 'الراتب', plural: 'die Gehälter', type: 'noun', gender: 'das' },
+        { german: 'der Lohn', arabic: 'الأجر', plural: 'die Löhne', type: 'noun', gender: 'der' },
+        { german: 'die Probezeit', arabic: 'فترة التجربة', type: 'noun', gender: 'die' },
+        { german: 'der Arbeitsvertrag', arabic: 'عقد العمل', plural: 'die Arbeitsverträge', type: 'noun', gender: 'der' },
+        { german: 'das Vorstellungsgespräch', arabic: 'مقابلة العمل', plural: 'die Vorstellungsgespräche', type: 'noun', gender: 'das' },
+        { german: 'die Erfahrung', arabic: 'الخبرة', plural: 'die Erfahrungen', type: 'noun', gender: 'die' },
+        { german: 'die Qualifikation', arabic: 'المؤهل', plural: 'die Qualifikationen', type: 'noun', gender: 'die' },
+        { german: 'sich bewerben', arabic: 'يتقدم للعمل', type: 'verb' },
+        { german: 'einstellen', arabic: 'يوظّف', type: 'verb' },
+        { german: 'kündigen', arabic: 'يستقيل', type: 'verb' },
+        { german: 'verdienen', arabic: 'يكسب', type: 'verb' },
+        { german: 'unbefristet', arabic: 'غير محدد المدة', type: 'adjective' },
+        { german: 'befristet', arabic: 'محدد المدة', type: 'adjective' },
+        { german: 'die Vollzeit', arabic: 'دوام كامل', type: 'noun', gender: 'die' },
+        { german: 'die Teilzeit', arabic: 'دوام جزئي', type: 'noun', gender: 'die' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-06-q1', type: 'multiple-choice', question: 'أتقدم لوظيفة:', options: ['Ich arbeite', 'Ich bewerbe mich um die Stelle', 'Ich gehe zur Arbeit', 'Ich verdiene Geld'], answer: 'Ich bewerbe mich um die Stelle' },
+          { id: 'b1-06-q2', type: 'multiple-choice', question: 'السيرة الذاتية:', options: ['das Anschreiben', 'der Lebenslauf', 'der Vertrag', 'das Zeugnis'], answer: 'der Lebenslauf' },
+          { id: 'b1-06-q3', type: 'fill-blank', question: 'Ich arbeite ___ Ingenieur. (بدون أداة)', answer: 'als' },
+          { id: 'b1-06-q4', type: 'fill-blank', question: 'Mit freundlichen ___. (الختام الرسمي)', answer: 'Grüßen' },
+          { id: 'b1-06-q5', type: 'drag-drop', question: 'رتّب: [Ingenieur / Ich / bewerbe / als / mich / die Stelle / um]', words: ['Ich', 'bewerbe', 'mich', 'um', 'die', 'Stelle', 'als', 'Ingenieur'], answer: 'Ich bewerbe mich um die Stelle als Ingenieur' },
+          { id: 'b1-06-q6', type: 'drag-drop', question: 'رتّب البداية الرسمية: [Herren / Sehr / und / geehrte / Damen]', words: ['Sehr', 'geehrte', 'Damen', 'und', 'Herren'], answer: 'Sehr geehrte Damen und Herren' },
+          { id: 'b1-06-q7', type: 'matching', question: 'صل المفردة بمعناها:', pairs: [{ left: 'Bewerbung', right: 'طلب التوظيف' }, { left: 'Lebenslauf', right: 'السيرة الذاتية' }, { left: 'Probezeit', right: 'فترة التجربة' }, { left: 'Gehalt', right: 'الراتب' }], answer: 'match' },
+          { id: 'b1-06-q8', type: 'multiple-choice', question: 'Ich habe drei Jahre ___.', options: ['Gehalt', 'Erfahrung', 'Chef', 'Probezeit'], answer: 'Erfahrung' },
+          { id: 'b1-06-q9', type: 'speaking', question: 'قل: "أبحث عن وظيفة بدوام كامل."', answer: 'Ich suche eine Vollzeitstelle' },
+          { id: 'b1-06-q10', type: 'multiple-choice', question: 'استمع واختر:', audioPrompt: 'Können Sie mir einen Termin für ein Vorstellungsgespräch geben?', options: ['هل يمكنك إعطائي موعداً للمقابلة؟', 'هل لديك وظيفة شاغرة؟', 'متى يبدأ العمل؟', 'كم الراتب؟'], answer: 'هل يمكنك إعطائي موعداً للمقابلة؟' },
+        ],
+      },
+    },
+    // ========================= LESSON 7 =========================
+    {
+      id: 'b1-07',
+      title: 'Indirekte Rede — الكلام غير المباشر',
+      order: 7,
+      grammar: {
+        title: 'نقل الكلام في الألمانية',
+        content: `**Indirekte Rede** تُستعمل لنقل ما قاله شخص آخر دون اقتباس حرفي.
+
+**القواعد:**
+1. غالباً نستعمل **dass** أو بدون dass مع Konjunktiv I أو II
+2. في اللغة اليومية نستعمل **Konjunktiv II** أو **Präsens**
+3. في الصحافة والرسميات نستعمل **Konjunktiv I** (مثل sei, habe, komme)
+
+**أمثلة:**
+- Direkte Rede: Er sagt: "Ich bin müde."
+- Indirekte Rede: Er sagt, dass er müde sei. / Er sagt, er sei müde.
+
+⚠️ مع الأسئلة: نستعمل **ob** (أسئلة نعم/لا) أو كلمة السؤال:
+- Er fragt, **ob** ich komme.
+- Er fragt, **wann** ich komme.`,
+        tables: [
+          {
+            title: 'Konjunktiv I للأفعال المساعدة',
+            theme: 'conjugation',
+            headers: ['Infinitiv', 'er/sie/es', 'استعمال'],
+            rows: [
+              { cells: ['sein', 'sei', 'Er sagt, er sei krank.'], highlight: true },
+              { cells: ['haben', 'habe', 'Sie sagt, sie habe Zeit.'] },
+              { cells: ['werden', 'werde', 'Er sagt, er werde kommen.'] },
+              { cells: ['können', 'könne', 'Sie sagt, sie könne helfen.'] },
+            ],
+          },
+          {
+            title: 'تحويل الكلام المباشر',
+            theme: 'default',
+            headers: ['Direkte Rede', 'Indirekte Rede'],
+            rows: [
+              { cells: ['"Ich komme."', 'Er sagt, er komme / er käme.'] },
+              { cells: ['"Ich bin müde."', 'Er sagt, er sei müde.'] },
+              { cells: ['"Kommst du?"', 'Er fragt, ob ich komme.'] },
+              { cells: ['"Wann kommst du?"', 'Er fragt, wann ich komme.'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'dass + Nebensatz', example: 'Er sagt, dass er müde ist.', translation: 'يقول إنه متعب.' },
+          { rule: 'ob للأسئلة نعم/لا', example: 'Sie fragt, ob du kommst.', translation: 'تسأل إذا كنت قادماً.' },
+          { rule: 'كلمة السؤال + آخر الجملة', example: 'Er fragt, wann du kommst.', translation: 'يسأل متى ستأتي.' },
+        ],
+        examples: [
+          'Er sagt, dass er krank ist. — يقول إنه مريض.',
+          'Sie meint, das Wetter sei schön. — ترى أن الطقس جميل.',
+          'Der Chef fragt, ob ich Zeit habe. — المدير يسأل إن كان لدي وقت.',
+          'Ich weiß nicht, wo er wohnt. — لا أعرف أين يسكن.',
+          'Sie sagt, sie komme später. — تقول إنها ستأتي لاحقاً.',
+          'Er behauptet, er habe das Buch gelesen. — يدّعي أنه قرأ الكتاب.',
+          'Mein Freund erzählt, er sei in Berlin gewesen. — صديقي يحكي أنه كان في برلين.',
+          'Sie fragte mich, warum ich spät komme. — سألتني لماذا أتأخر.',
+        ],
+        tip: 'في الحوار اليومي، استعمل Konjunktiv II أو Präsens — Konjunktiv I أكثر شيوعاً في الكتابة الرسمية والأخبار.',
+      },
+      vocabulary: [
+        { german: 'sagen', arabic: 'يقول', type: 'verb' },
+        { german: 'erzählen', arabic: 'يحكي', type: 'verb' },
+        { german: 'behaupten', arabic: 'يدّعي', type: 'verb' },
+        { german: 'berichten', arabic: 'يُخبر', type: 'verb' },
+        { german: 'meinen', arabic: 'يرى / يعتقد', type: 'verb' },
+        { german: 'antworten', arabic: 'يجيب', type: 'verb' },
+        { german: 'fragen', arabic: 'يسأل', type: 'verb' },
+        { german: 'erklären', arabic: 'يشرح', type: 'verb' },
+        { german: 'denken', arabic: 'يفكر', type: 'verb' },
+        { german: 'glauben', arabic: 'يؤمن / يظن', type: 'verb' },
+        { german: 'die Aussage', arabic: 'التصريح', plural: 'die Aussagen', type: 'noun', gender: 'die' },
+        { german: 'die Antwort', arabic: 'الإجابة', plural: 'die Antworten', type: 'noun', gender: 'die' },
+        { german: 'die Frage', arabic: 'السؤال', plural: 'die Fragen', type: 'noun', gender: 'die' },
+        { german: 'die Behauptung', arabic: 'الادعاء', plural: 'die Behauptungen', type: 'noun', gender: 'die' },
+        { german: 'die Nachricht', arabic: 'الخبر', plural: 'die Nachrichten', type: 'noun', gender: 'die' },
+        { german: 'der Bericht', arabic: 'التقرير', plural: 'die Berichte', type: 'noun', gender: 'der' },
+        { german: 'das Zitat', arabic: 'الاقتباس', plural: 'die Zitate', type: 'noun', gender: 'das' },
+        { german: 'laut', arabic: 'وفقاً لـ', type: 'preposition' },
+        { german: 'angeblich', arabic: 'زعماً', type: 'adverb' },
+        { german: 'ehrlich', arabic: 'صادق', type: 'adjective' },
+        { german: 'unehrlich', arabic: 'كاذب', type: 'adjective' },
+        { german: 'richtig', arabic: 'صحيح', type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-07-q1', type: 'multiple-choice', question: 'Er sagt, ___ er krank ist.', options: ['ob', 'dass', 'wenn', 'weil'], answer: 'dass' },
+          { id: 'b1-07-q2', type: 'multiple-choice', question: 'Sie fragt, ___ ich komme. (سؤال نعم/لا)', options: ['dass', 'ob', 'wenn', 'weil'], answer: 'ob' },
+          { id: 'b1-07-q3', type: 'fill-blank', question: 'Ich weiß nicht, ___ er wohnt. (أين)', answer: 'wo' },
+          { id: 'b1-07-q4', type: 'fill-blank', question: 'Er meint, das Wetter ___ schön. (Konjunktiv I من sein)', answer: 'sei' },
+          { id: 'b1-07-q5', type: 'drag-drop', question: 'رتّب: [, / sei / er / Er / sagt / krank]', words: ['Er', 'sagt', ',', 'er', 'sei', 'krank'], answer: 'Er sagt , er sei krank' },
+          { id: 'b1-07-q6', type: 'drag-drop', question: 'رتّب السؤال غير المباشر: [, / komme / ob / Sie / ich / fragt]', words: ['Sie', 'fragt', ',', 'ob', 'ich', 'komme'], answer: 'Sie fragt , ob ich komme' },
+          { id: 'b1-07-q7', type: 'matching', question: 'صل Infinitiv بـ Konjunktiv I:', pairs: [{ left: 'sein', right: 'sei' }, { left: 'haben', right: 'habe' }, { left: 'werden', right: 'werde' }, { left: 'können', right: 'könne' }], answer: 'match' },
+          { id: 'b1-07-q8', type: 'multiple-choice', question: 'Direkte: "Ich komme." → Indirekte:', options: ['Er sagt, ich komme', 'Er sagt, er kommt', 'Er sagt, er komme', 'Er sagt, er kommen'], answer: 'Er sagt, er komme' },
+          { id: 'b1-07-q9', type: 'speaking', question: 'قل: "يقول إنه متعب." (Konjunktiv I)', answer: 'Er sagt, er sei müde', hint: 'sei = Konjunktiv I من sein' },
+          { id: 'b1-07-q10', type: 'multiple-choice', question: 'استمع:', audioPrompt: 'Sie sagt, dass sie morgen kommt.', options: ['هي قادمة الآن', 'تقول إنها ستأتي غداً', 'لن تأتي', 'أتت أمس'], answer: 'تقول إنها ستأتي غداً' },
+        ],
+      },
+    },
+    // ========================= LESSON 8 =========================
+    {
+      id: 'b1-08',
+      title: 'Plusquamperfekt — الماضي التام',
+      order: 8,
+      grammar: {
+        title: 'Plusquamperfekt: nachdem ich gegessen hatte',
+        content: `**Plusquamperfekt** يُعبّر عن فعل حدث **قبل** حدث ماضٍ آخر.
+
+**التكوين:**
+**hatte / war** (Präteritum من haben/sein) + **Partizip II**
+
+**الاستعمال الأشهر: مع nachdem**
+- Nachdem ich gegessen **hatte**, ging ich schlafen.
+  (بعد أن كنت قد أكلت، ذهبت للنوم.)
+
+**التسلسل الزمني:**
+1. Plusquamperfekt (الحدث الأول)
+2. Präteritum (الحدث الثاني)
+
+⚠️ اختيار **hatte** أو **war** يتبع نفس قواعد Perfekt (sein مع الحركة والتغيير).`,
+        tables: [
+          {
+            title: 'Plusquamperfekt — التكوين',
+            theme: 'conjugation',
+            headers: ['الضمير', 'مع haben', 'مع sein'],
+            rows: [
+              { cells: ['ich', 'hatte gegessen', 'war gegangen'] },
+              { cells: ['du', 'hattest gegessen', 'warst gegangen'] },
+              { cells: ['er/sie/es', 'hatte gegessen', 'war gegangen'], highlight: true },
+              { cells: ['wir', 'hatten gegessen', 'waren gegangen'] },
+              { cells: ['ihr', 'hattet gegessen', 'wart gegangen'] },
+              { cells: ['sie/Sie', 'hatten gegessen', 'waren gegangen'] },
+            ],
+          },
+          {
+            title: 'Zeiten im Deutschen',
+            theme: 'default',
+            headers: ['الزمن', 'المثال'],
+            rows: [
+              { cells: ['Plusquamperfekt', 'Ich hatte gegessen.'] },
+              { cells: ['Präteritum / Perfekt', 'Ich aß / Ich habe gegessen.'] },
+              { cells: ['Präsens', 'Ich esse.'] },
+              { cells: ['Futur I', 'Ich werde essen.'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'Plusquamperfekt = hatte/war + PII', example: 'Er hatte gearbeitet.', translation: 'كان قد عمل.' },
+          { rule: 'nachdem + Plusquamperfekt → Präteritum', example: 'Nachdem er gekommen war, aßen wir.', translation: 'بعد أن جاء، أكلنا.' },
+          { rule: 'sein للحركة/التغيير', example: 'Nachdem ich angekommen war...', translation: 'بعد أن وصلت...' },
+        ],
+        examples: [
+          'Nachdem ich gefrühstückt hatte, ging ich zur Arbeit. — بعد أن تناولت الفطور، ذهبت للعمل.',
+          'Als er aufwachte, war die Sonne schon aufgegangen. — عندما استيقظ كانت الشمس قد أشرقت.',
+          'Wir hatten das Haus verlassen, bevor es regnete. — غادرنا المنزل قبل أن تمطر.',
+          'Nachdem sie studiert hatte, fand sie einen Job. — بعد أن درست، وجدت عملاً.',
+          'Der Zug war schon abgefahren, als ich ankam. — كان القطار قد غادر عندما وصلت.',
+          'Ich hatte den Film schon gesehen. — كنت قد شاهدت الفيلم.',
+          'Sie war nach Berlin gezogen, bevor sie uns traf. — انتقلت إلى برلين قبل أن تلتقي بنا.',
+          'Nachdem wir gegessen hatten, gingen wir ins Kino. — بعد أن أكلنا، ذهبنا للسينما.',
+        ],
+        tip: 'الصيغة الأساسية: **Nachdem + Plusquamperfekt, + Präteritum**. تذكّر التسلسل: الحدث القديم في Plusquamperfekt.',
+      },
+      vocabulary: [
+        { german: 'nachdem', arabic: 'بعد أن', type: 'conjunction' },
+        { german: 'bevor', arabic: 'قبل أن', type: 'conjunction' },
+        { german: 'als', arabic: 'عندما (ماضٍ)', type: 'conjunction' },
+        { german: 'sobald', arabic: 'بمجرد أن', type: 'conjunction' },
+        { german: 'früher', arabic: 'سابقاً', type: 'adverb' },
+        { german: 'davor', arabic: 'قبل ذلك', type: 'adverb' },
+        { german: 'danach', arabic: 'بعد ذلك', type: 'adverb' },
+        { german: 'schon', arabic: 'بالفعل', type: 'adverb' },
+        { german: 'noch nicht', arabic: 'لم ... بعد', type: 'adverb' },
+        { german: 'aufwachen', arabic: 'يستيقظ', type: 'verb' },
+        { german: 'aufstehen', arabic: 'ينهض', type: 'verb' },
+        { german: 'abfahren', arabic: 'يغادر', type: 'verb' },
+        { german: 'ankommen', arabic: 'يصل', type: 'verb' },
+        { german: 'verlassen', arabic: 'يترك', type: 'verb' },
+        { german: 'umziehen', arabic: 'ينتقل', type: 'verb' },
+        { german: 'die Vergangenheit', arabic: 'الماضي', type: 'noun', gender: 'die' },
+        { german: 'die Erinnerung', arabic: 'الذكرى', plural: 'die Erinnerungen', type: 'noun', gender: 'die' },
+        { german: 'das Ereignis', arabic: 'الحدث', plural: 'die Ereignisse', type: 'noun', gender: 'das' },
+        { german: 'die Geschichte', arabic: 'التاريخ / القصة', plural: 'die Geschichten', type: 'noun', gender: 'die' },
+        { german: 'die Reihenfolge', arabic: 'الترتيب', type: 'noun', gender: 'die' },
+        { german: 'der Zeitpunkt', arabic: 'نقطة الزمن', plural: 'die Zeitpunkte', type: 'noun', gender: 'der' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-08-q1', type: 'multiple-choice', question: 'Plusquamperfekt من "ich esse":', options: ['ich aß', 'ich habe gegessen', 'ich hatte gegessen', 'ich werde essen'], answer: 'ich hatte gegessen' },
+          { id: 'b1-08-q2', type: 'multiple-choice', question: 'Nachdem ich ___, ging ich schlafen.', options: ['gegessen habe', 'gegessen hatte', 'essen würde', 'aß'], answer: 'gegessen hatte' },
+          { id: 'b1-08-q3', type: 'fill-blank', question: 'Der Zug ___ schon abgefahren, als ich ankam. (war)', answer: 'war' },
+          { id: 'b1-08-q4', type: 'fill-blank', question: 'Ich ___ den Film schon gesehen. (hatte)', answer: 'hatte' },
+          { id: 'b1-08-q5', type: 'drag-drop', question: 'رتّب: [, / ich / hatte / zur / Nachdem / gefrühstückt / Arbeit / ging / ich]', words: ['Nachdem', 'ich', 'gefrühstückt', 'hatte', ',', 'ging', 'ich', 'zur', 'Arbeit'], answer: 'Nachdem ich gefrühstückt hatte , ging ich zur Arbeit' },
+          { id: 'b1-08-q6', type: 'drag-drop', question: 'رتّب: [ich / den Film / hatte / gesehen / schon]', words: ['Ich', 'hatte', 'den', 'Film', 'schon', 'gesehen'], answer: 'Ich hatte den Film schon gesehen' },
+          { id: 'b1-08-q7', type: 'matching', question: 'صل الفعل بـ Plusquamperfekt:', pairs: [{ left: 'essen (ich)', right: 'hatte gegessen' }, { left: 'gehen (ich)', right: 'war gegangen' }, { left: 'sehen (er)', right: 'hatte gesehen' }, { left: 'kommen (sie)', right: 'war gekommen' }], answer: 'match' },
+          { id: 'b1-08-q8', type: 'multiple-choice', question: 'أي فعل مساعد مع "gehen" في Plusquamperfekt؟', options: ['hatte', 'war', 'hat', 'ist'], answer: 'war' },
+          { id: 'b1-08-q9', type: 'speaking', question: 'قل: "كنت قد أكلت."', answer: 'Ich hatte gegessen', hint: 'hatte + Partizip II' },
+          { id: 'b1-08-q10', type: 'multiple-choice', question: 'استمع:', audioPrompt: 'Als er ankam, war der Film schon zu Ende.', options: ['وصل والفيلم بدأ', 'عندما وصل كان الفيلم قد انتهى', 'الفيلم لم يبدأ', 'لم يذهب'], answer: 'عندما وصل كان الفيلم قد انتهى' },
+        ],
+      },
+    },
+    // ========================= LESSON 9 =========================
+    {
+      id: 'b1-09',
+      title: 'Adjektivdeklination — تصريف الصفة',
+      order: 9,
+      grammar: {
+        title: 'الصفة قبل الاسم: der große Mann',
+        content: `**Adjektivdeklination** = تصريف الصفة حسب:
+- الجنس (m/f/n/pl)
+- الحالة (Nom/Akk/Dat/Gen)
+- نوع الأداة (معرفة der / غير معرفة ein / بدون أداة)
+
+**3 مجموعات:**
+
+**1. بعد أداة التعريف (der, die, das, diese...)**: نهايات ضعيفة **-e / -en**
+
+**2. بعد أداة غير معرفة (ein, kein, mein...)**: نهايات مختلطة
+
+**3. بدون أداة**: نهايات قوية (تُشبه أداة التعريف)
+
+⚠️ لا تحفظ الجداول — ركّز على القاعدة: إذا كانت الأداة تُظهر الجنس/الحالة، الصفة تأخذ **-e/-en** فقط.`,
+        tables: [
+          {
+            title: 'مع der/die/das (Nominativ + Akkusativ)',
+            theme: 'cases',
+            headers: ['Kasus', 'der Mann', 'die Frau', 'das Kind', 'die Kinder'],
+            rows: [
+              { cells: ['Nom', 'der groß**e**', 'die groß**e**', 'das groß**e**', 'die groß**en**'] },
+              { cells: ['Akk', 'den groß**en**', 'die groß**e**', 'das groß**e**', 'die groß**en**'], highlight: true },
+              { cells: ['Dat', 'dem groß**en**', 'der groß**en**', 'dem groß**en**', 'den groß**en**'] },
+              { cells: ['Gen', 'des groß**en**', 'der groß**en**', 'des groß**en**', 'der groß**en**'] },
+            ],
+          },
+          {
+            title: 'مع ein/kein/mein (Nominativ + Akkusativ)',
+            theme: 'cases',
+            headers: ['Kasus', 'ein Mann', 'eine Frau', 'ein Kind', 'keine Kinder'],
+            rows: [
+              { cells: ['Nom', 'ein groß**er**', 'eine groß**e**', 'ein groß**es**', 'keine groß**en**'] },
+              { cells: ['Akk', 'einen groß**en**', 'eine groß**e**', 'ein groß**es**', 'keine groß**en**'] },
+              { cells: ['Dat', 'einem groß**en**', 'einer groß**en**', 'einem groß**en**', 'keinen groß**en**'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'بعد der/die/das → -e أو -en', example: 'der große Mann', translation: 'الرجل الطويل' },
+          { rule: 'بعد ein/kein/mein → -er/-e/-es', example: 'ein großer Mann', translation: 'رجل طويل' },
+          { rule: 'بدون أداة → نهايات قوية', example: 'großer Mann (Nom)', translation: 'رجل طويل' },
+        ],
+        examples: [
+          'Der große Mann spielt Fußball. — الرجل الطويل يلعب كرة.',
+          'Ich sehe einen großen Mann. — أرى رجلاً طويلاً.',
+          'Das kleine Kind schläft. — الطفل الصغير ينام.',
+          'Mit dem roten Auto fahre ich zur Arbeit. — بالسيارة الحمراء أذهب للعمل.',
+          'Eine schöne Frau kommt. — امرأة جميلة قادمة.',
+          'Die freundlichen Nachbarn wohnen nebenan. — الجيران الودودون يسكنون بجانبي.',
+          'Ich trinke kalten Tee. — أشرب شاياً بارداً. (بدون أداة)',
+          'Guter Kaffee kostet viel. — القهوة الجيدة تكلف كثيراً.',
+        ],
+        tip: 'القاعدة الذهبية: إذا الأداة واضحة (der/die/das) → صفة -e/-en. إذا غامضة (ein) → الصفة تأخذ نهاية الأداة المفقودة (-er/-es).',
+      },
+      vocabulary: [
+        { german: 'groß', arabic: 'طويل / كبير', type: 'adjective' },
+        { german: 'klein', arabic: 'صغير / قصير', type: 'adjective' },
+        { german: 'schön', arabic: 'جميل', type: 'adjective' },
+        { german: 'hässlich', arabic: 'قبيح', type: 'adjective' },
+        { german: 'freundlich', arabic: 'ودود', type: 'adjective' },
+        { german: 'unfreundlich', arabic: 'غير ودود', type: 'adjective' },
+        { german: 'interessant', arabic: 'مثير', type: 'adjective' },
+        { german: 'langweilig', arabic: 'ممل', type: 'adjective' },
+        { german: 'teuer', arabic: 'غالي', type: 'adjective' },
+        { german: 'billig', arabic: 'رخيص', type: 'adjective' },
+        { german: 'alt', arabic: 'قديم / كبير السن', type: 'adjective' },
+        { german: 'neu', arabic: 'جديد', type: 'adjective' },
+        { german: 'jung', arabic: 'شاب', type: 'adjective' },
+        { german: 'rot', arabic: 'أحمر', type: 'adjective' },
+        { german: 'blau', arabic: 'أزرق', type: 'adjective' },
+        { german: 'grün', arabic: 'أخضر', type: 'adjective' },
+        { german: 'weiß', arabic: 'أبيض', type: 'adjective' },
+        { german: 'schwarz', arabic: 'أسود', type: 'adjective' },
+        { german: 'gelb', arabic: 'أصفر', type: 'adjective' },
+        { german: 'fleißig', arabic: 'مجتهد', type: 'adjective' },
+        { german: 'faul', arabic: 'كسول', type: 'adjective' },
+        { german: 'klug', arabic: 'ذكي', type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-09-q1', type: 'multiple-choice', question: 'Der ___ Mann.', options: ['groß', 'große', 'großer', 'großen'], answer: 'große' },
+          { id: 'b1-09-q2', type: 'multiple-choice', question: 'Ein ___ Mann.', options: ['groß', 'große', 'großer', 'großen'], answer: 'großer' },
+          { id: 'b1-09-q3', type: 'fill-blank', question: 'Ich sehe einen ___ Mann. (großen)', answer: 'großen' },
+          { id: 'b1-09-q4', type: 'fill-blank', question: 'Das ___ Kind schläft. (kleine)', answer: 'kleine' },
+          { id: 'b1-09-q5', type: 'drag-drop', question: 'رتّب: [rotes / Ein / Auto / kommt]', words: ['Ein', 'rotes', 'Auto', 'kommt'], answer: 'Ein rotes Auto kommt' },
+          { id: 'b1-09-q6', type: 'drag-drop', question: 'رتّب: [kalten / Ich / Tee / trinke]', words: ['Ich', 'trinke', 'kalten', 'Tee'], answer: 'Ich trinke kalten Tee' },
+          { id: 'b1-09-q7', type: 'matching', question: 'صل نهاية الصفة بحالتها (مع der):', pairs: [{ left: 'der ___ Mann (Nom)', right: 'große' }, { left: 'den ___ Mann (Akk)', right: 'großen' }, { left: 'dem ___ Mann (Dat)', right: 'großen' }, { left: 'die ___ Frau (Nom)', right: 'große' }], answer: 'match' },
+          { id: 'b1-09-q8', type: 'multiple-choice', question: 'Mit dem ___ Auto.', options: ['rot', 'rote', 'roter', 'roten'], answer: 'roten' },
+          { id: 'b1-09-q9', type: 'speaking', question: 'قل: "رجل طويل." (مع ein)', answer: 'Ein großer Mann' },
+          { id: 'b1-09-q10', type: 'multiple-choice', question: 'استمع واختر:', audioPrompt: 'Die freundlichen Nachbarn wohnen nebenan.', options: ['جيراني يعيشون بعيداً', 'الجيران الودودون يسكنون بجانبي', 'لا أعرف جيراني', 'جيراني غير ودودين'], answer: 'الجيران الودودون يسكنون بجانبي' },
+        ],
+      },
+    },
+    // ========================= LESSON 10 =========================
+    {
+      id: 'b1-10',
+      title: 'Umwelt und Gesellschaft — البيئة والمجتمع',
+      order: 10,
+      grammar: {
+        title: 'لغة المناقشة والقضايا الحالية',
+        content: `مواضيع B1 الاجتماعية:
+- **البيئة** (Umwelt): تغير المناخ، إعادة التدوير
+- **المجتمع** (Gesellschaft): الهجرة، التنوع، التعليم
+- **التكنولوجيا** (Technologie): الإنترنت، الشبكات الاجتماعية
+
+**عبارات نقاشية:**
+- Einerseits... andererseits... (من ناحية... ومن ناحية أخرى)
+- Es ist wichtig, dass... (من المهم أن...)
+- Wir sollten... (ينبغي علينا...)
+- Das Problem ist, dass... (المشكلة هي أن...)
+- Eine Lösung wäre... (الحل سيكون...)`,
+        tables: [
+          {
+            title: 'حروف الجر الزمنية',
+            theme: 'default',
+            headers: ['Präposition', 'الاستعمال', 'مثال'],
+            rows: [
+              { cells: ['seit', 'منذ + ماضٍ مستمر', 'seit 2020'] },
+              { cells: ['vor', 'قبل', 'vor zwei Jahren'] },
+              { cells: ['nach', 'بعد', 'nach der Schule'] },
+              { cells: ['während', 'أثناء + Genitiv', 'während der Pause'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'Es gibt + Akkusativ', example: 'Es gibt viele Probleme.', translation: 'هناك مشاكل كثيرة.' },
+          { rule: 'sollten للنصيحة', example: 'Wir sollten weniger Plastik verwenden.', translation: 'ينبغي علينا استعمال بلاستيك أقل.' },
+          { rule: 'man = ضمير عام', example: 'Man muss die Umwelt schützen.', translation: 'يجب حماية البيئة.' },
+        ],
+        examples: [
+          'Der Klimawandel ist ein großes Problem. — تغير المناخ مشكلة كبيرة.',
+          'Wir müssen Müll trennen. — يجب علينا فصل النفايات.',
+          'Erneuerbare Energien sind die Zukunft. — الطاقات المتجددة هي المستقبل.',
+          'Das Internet hat unser Leben verändert. — غيّر الإنترنت حياتنا.',
+          'Viele Menschen nutzen soziale Netzwerke. — كثير من الناس يستعملون الشبكات الاجتماعية.',
+          'Bildung ist für alle wichtig. — التعليم مهم للجميع.',
+          'Integration bedeutet Teilhabe. — الاندماج يعني المشاركة.',
+          'Wir sollten Bäume pflanzen. — ينبغي علينا زرع الأشجار.',
+        ],
+        tip: 'في Goethe B1 الشفهي (Teil 3)، ستُناقش موضوعاً — احفظ 5 عبارات نقاش قوية ("Ich finde, dass...", "Einerseits...", "Das Problem ist...").',
+      },
+      vocabulary: [
+        { german: 'die Umwelt', arabic: 'البيئة', type: 'noun', gender: 'die' },
+        { german: 'der Klimawandel', arabic: 'تغير المناخ', type: 'noun', gender: 'der' },
+        { german: 'die Verschmutzung', arabic: 'التلوث', type: 'noun', gender: 'die' },
+        { german: 'der Müll', arabic: 'النفايات', type: 'noun', gender: 'der' },
+        { german: 'das Recycling', arabic: 'إعادة التدوير', type: 'noun', gender: 'das' },
+        { german: 'die Energie', arabic: 'الطاقة', plural: 'die Energien', type: 'noun', gender: 'die' },
+        { german: 'erneuerbar', arabic: 'متجدد', type: 'adjective' },
+        { german: 'nachhaltig', arabic: 'مستدام', type: 'adjective' },
+        { german: 'schützen', arabic: 'يحمي', type: 'verb' },
+        { german: 'trennen', arabic: 'يفصل', type: 'verb' },
+        { german: 'verschmutzen', arabic: 'يلوّث', type: 'verb' },
+        { german: 'sparen', arabic: 'يوفّر', type: 'verb' },
+        { german: 'die Gesellschaft', arabic: 'المجتمع', type: 'noun', gender: 'die' },
+        { german: 'die Integration', arabic: 'الاندماج', type: 'noun', gender: 'die' },
+        { german: 'die Migration', arabic: 'الهجرة', type: 'noun', gender: 'die' },
+        { german: 'die Kultur', arabic: 'الثقافة', plural: 'die Kulturen', type: 'noun', gender: 'die' },
+        { german: 'die Bildung', arabic: 'التعليم', type: 'noun', gender: 'die' },
+        { german: 'die Technologie', arabic: 'التكنولوجيا', plural: 'die Technologien', type: 'noun', gender: 'die' },
+        { german: 'das soziale Netzwerk', arabic: 'الشبكة الاجتماعية', type: 'noun', gender: 'das' },
+        { german: 'die Nachricht', arabic: 'الخبر', plural: 'die Nachrichten', type: 'noun', gender: 'die' },
+        { german: 'das Problem', arabic: 'المشكلة', plural: 'die Probleme', type: 'noun', gender: 'das' },
+        { german: 'die Lösung', arabic: 'الحل', plural: 'die Lösungen', type: 'noun', gender: 'die' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-10-q1', type: 'multiple-choice', question: 'تغير المناخ:', options: ['die Umwelt', 'der Klimawandel', 'der Müll', 'die Energie'], answer: 'der Klimawandel' },
+          { id: 'b1-10-q2', type: 'multiple-choice', question: 'يجب علينا حماية البيئة:', options: ['Wir müssen die Umwelt schützen', 'Wir haben die Umwelt', 'Die Umwelt ist krank', 'Wir sehen die Umwelt'], answer: 'Wir müssen die Umwelt schützen' },
+          { id: 'b1-10-q3', type: 'fill-blank', question: 'Wir sollten ___ trennen. (النفايات - Müll)', answer: 'Müll' },
+          { id: 'b1-10-q4', type: 'fill-blank', question: '___ Energien sind die Zukunft. (متجددة)', answer: 'Erneuerbare' },
+          { id: 'b1-10-q5', type: 'drag-drop', question: 'رتّب: [Plastik / verwenden / Wir / sollten / weniger]', words: ['Wir', 'sollten', 'weniger', 'Plastik', 'verwenden'], answer: 'Wir sollten weniger Plastik verwenden' },
+          { id: 'b1-10-q6', type: 'drag-drop', question: 'رتّب: [großes / ist / ein / Problem / Der Klimawandel]', words: ['Der', 'Klimawandel', 'ist', 'ein', 'großes', 'Problem'], answer: 'Der Klimawandel ist ein großes Problem' },
+          { id: 'b1-10-q7', type: 'matching', question: 'صل المفردة بمعناها:', pairs: [{ left: 'Umwelt', right: 'البيئة' }, { left: 'Müll', right: 'النفايات' }, { left: 'Energie', right: 'الطاقة' }, { left: 'Lösung', right: 'الحل' }], answer: 'match' },
+          { id: 'b1-10-q8', type: 'multiple-choice', question: '"Einerseits... ___"', options: ['sondern', 'andererseits', 'deshalb', 'trotzdem'], answer: 'andererseits' },
+          { id: 'b1-10-q9', type: 'speaking', question: 'قل: "الإنترنت غيّر حياتنا."', answer: 'Das Internet hat unser Leben verändert' },
+          { id: 'b1-10-q10', type: 'multiple-choice', question: 'استمع:', audioPrompt: 'Wir müssen mehr Bäume pflanzen, um die Umwelt zu schützen.', options: ['يجب قطع الأشجار', 'يجب زرع المزيد من الأشجار لحماية البيئة', 'الأشجار تلوث البيئة', 'لا نحتاج أشجار'], answer: 'يجب زرع المزيد من الأشجار لحماية البيئة' },
+        ],
+      },
+    },
+    // ========================= LESSON 11 =========================
+    {
+      id: 'b1-11',
+      title: 'Reisen und Erfahrungen — السفر والتجارب',
+      order: 11,
+      grammar: {
+        title: 'التحدث عن تجارب السفر',
+        content: `في B1 تُعبّر عن تجارب السفر بشكل مفصّل:
+- استعمال **Perfekt** لسرد الأحداث
+- **Plusquamperfekt** للأحداث السابقة
+- **Relativsätze** لوصف الأماكن
+
+**عبارات مفيدة:**
+- "Ich bin schon in ... gewesen." (كنت بالفعل في...)
+- "Das hat mich beeindruckt." (أثّر فيّ ذلك)
+- "Es hat mir sehr gefallen." (أعجبني كثيراً)
+- "Ich werde nie vergessen..." (لن أنسى أبداً...)
+
+**حروف جر للسفر:**
+- **nach** + دولة/مدينة: nach Berlin
+- **in die** + دولة مؤنثة: in die Türkei
+- **an** + بحر/بحيرة: an den See`,
+        tables: [
+          {
+            title: 'حروف الجر مع الدول والمدن',
+            theme: 'default',
+            headers: ['المكان', 'أين (Wo?)', 'إلى أين (Wohin?)'],
+            rows: [
+              { cells: ['مدينة', 'in Berlin', 'nach Berlin'] },
+              { cells: ['دولة (محايد)', 'in Deutschland', 'nach Deutschland'] },
+              { cells: ['دولة مؤنث', 'in der Türkei', 'in die Türkei'], highlight: true },
+              { cells: ['جزيرة', 'auf der Insel', 'auf die Insel'] },
+              { cells: ['بحر', 'am Meer', 'ans Meer'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'nach للمدن والدول المحايدة', example: 'Ich fliege nach Marokko.', translation: 'أسافر إلى المغرب.' },
+          { rule: 'in die للدول المؤنثة', example: 'Ich fahre in die Schweiz.', translation: 'أذهب إلى سويسرا.' },
+          { rule: 'mit للوسيلة', example: 'mit dem Zug fahren', translation: 'يسافر بالقطار' },
+        ],
+        examples: [
+          'Letztes Jahr bin ich nach Italien gefahren. — العام الماضي سافرت إلى إيطاليا.',
+          'Das Essen dort war wunderbar. — كان الطعام هناك رائعاً.',
+          'Ich habe viele Sehenswürdigkeiten besucht. — زرت كثيراً من المعالم.',
+          'Die Menschen waren sehr freundlich. — كان الناس ودودين جداً.',
+          'Ich werde diese Reise nie vergessen. — لن أنسى هذه الرحلة أبداً.',
+          'Auf meiner Reise habe ich viel gelernt. — تعلمت الكثير في رحلتي.',
+          'Das Hotel, in dem wir wohnten, war sehr schön. — الفندق الذي نزلنا فيه كان جميلاً.',
+          'Am liebsten reise ich ans Meer. — أفضّل السفر إلى البحر.',
+        ],
+        tip: 'في Goethe B1 Sprechen Teil 2، ستُقدّم موضوعاً — جهّز قصة سفر مسبقاً مع 10 جمل.',
+      },
+      vocabulary: [
+        { german: 'die Reise', arabic: 'الرحلة', plural: 'die Reisen', type: 'noun', gender: 'die' },
+        { german: 'der Urlaub', arabic: 'الإجازة', plural: 'die Urlaube', type: 'noun', gender: 'der' },
+        { german: 'die Sehenswürdigkeit', arabic: 'المعلم السياحي', plural: 'die Sehenswürdigkeiten', type: 'noun', gender: 'die' },
+        { german: 'das Abenteuer', arabic: 'المغامرة', plural: 'die Abenteuer', type: 'noun', gender: 'das' },
+        { german: 'die Kultur', arabic: 'الثقافة', plural: 'die Kulturen', type: 'noun', gender: 'die' },
+        { german: 'die Landschaft', arabic: 'المنظر الطبيعي', plural: 'die Landschaften', type: 'noun', gender: 'die' },
+        { german: 'das Meer', arabic: 'البحر', plural: 'die Meere', type: 'noun', gender: 'das' },
+        { german: 'der Berg', arabic: 'الجبل', plural: 'die Berge', type: 'noun', gender: 'der' },
+        { german: 'die Insel', arabic: 'الجزيرة', plural: 'die Inseln', type: 'noun', gender: 'die' },
+        { german: 'das Hotel', arabic: 'الفندق', plural: 'die Hotels', type: 'noun', gender: 'das' },
+        { german: 'die Unterkunft', arabic: 'السكن', plural: 'die Unterkünfte', type: 'noun', gender: 'die' },
+        { german: 'der Koffer', arabic: 'الحقيبة', plural: 'die Koffer', type: 'noun', gender: 'der' },
+        { german: 'der Reisepass', arabic: 'جواز السفر', plural: 'die Reisepässe', type: 'noun', gender: 'der' },
+        { german: 'erleben', arabic: 'يعيش تجربة', type: 'verb' },
+        { german: 'entdecken', arabic: 'يكتشف', type: 'verb' },
+        { german: 'beeindrucken', arabic: 'يُبهر', type: 'verb' },
+        { german: 'empfehlen', arabic: 'يوصي', type: 'verb' },
+        { german: 'besichtigen', arabic: 'يُعاين (للزيارة)', type: 'verb' },
+        { german: 'ausländisch', arabic: 'أجنبي', type: 'adjective' },
+        { german: 'historisch', arabic: 'تاريخي', type: 'adjective' },
+        { german: 'traumhaft', arabic: 'حلمي', type: 'adjective' },
+        { german: 'unvergesslich', arabic: 'لا يُنسى', type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-11-q1', type: 'multiple-choice', question: 'أسافر إلى إيطاليا:', options: ['Ich fahre in Italien', 'Ich fahre nach Italien', 'Ich fahre zu Italien', 'Ich fahre bei Italien'], answer: 'Ich fahre nach Italien' },
+          { id: 'b1-11-q2', type: 'multiple-choice', question: 'أسافر إلى تركيا (مؤنث):', options: ['nach die Türkei', 'in die Türkei', 'zu die Türkei', 'nach Türkei'], answer: 'in die Türkei' },
+          { id: 'b1-11-q3', type: 'fill-blank', question: 'Ich fahre ___ Meer. (ans)', answer: 'ans' },
+          { id: 'b1-11-q4', type: 'fill-blank', question: 'Ich reise mit ___ Zug. (dem)', answer: 'dem' },
+          { id: 'b1-11-q5', type: 'drag-drop', question: 'رتّب: [ich / Italien / Letztes / gefahren / Jahr / bin / nach]', words: ['Letztes', 'Jahr', 'bin', 'ich', 'nach', 'Italien', 'gefahren'], answer: 'Letztes Jahr bin ich nach Italien gefahren' },
+          { id: 'b1-11-q6', type: 'drag-drop', question: 'رتّب: [waren / Menschen / Die / freundlich / sehr]', words: ['Die', 'Menschen', 'waren', 'sehr', 'freundlich'], answer: 'Die Menschen waren sehr freundlich' },
+          { id: 'b1-11-q7', type: 'matching', question: 'صل المفردة بمعناها:', pairs: [{ left: 'Urlaub', right: 'إجازة' }, { left: 'Sehenswürdigkeit', right: 'معلم سياحي' }, { left: 'Insel', right: 'جزيرة' }, { left: 'Koffer', right: 'حقيبة' }], answer: 'match' },
+          { id: 'b1-11-q8', type: 'multiple-choice', question: '"Das hat mich ___!" (أبهرني)', options: ['gelernt', 'gefallen', 'beeindruckt', 'gesagt'], answer: 'beeindruckt' },
+          { id: 'b1-11-q9', type: 'speaking', question: 'قل: "لن أنسى هذه الرحلة أبداً."', answer: 'Ich werde diese Reise nie vergessen' },
+          { id: 'b1-11-q10', type: 'multiple-choice', question: 'استمع:', audioPrompt: 'Letzten Sommer bin ich in die Schweiz gefahren und habe die Berge gesehen.', options: ['الصيف الماضي ذهبت إلى سويسرا ورأيت الجبال', 'سأذهب إلى سويسرا', 'لم أرَ الجبال', 'أسكن في سويسرا'], answer: 'الصيف الماضي ذهبت إلى سويسرا ورأيت الجبال' },
+        ],
+      },
+    },
+    // ========================= LESSON 12 =========================
+    {
+      id: 'b1-12',
+      title: 'Wiederholung B1 — مراجعة شاملة',
+      order: 12,
+      grammar: {
+        title: 'خلاصة B1 والاستعداد لـ Goethe-Zertifikat',
+        content: `**ما تعلمته في B1:**
+
+✅ **Konjunktiv II** — التمني والشرط (wäre, hätte, würde)
+✅ **Passiv** — المبني للمجهول (werden + Partizip II)
+✅ **Genitiv** — حالة الملكية
+✅ **Relativsätze** — der, die, das, dem, denen
+✅ **Konnektoren** — deshalb, trotzdem, damit, obwohl
+✅ **Plusquamperfekt** — nachdem + hatte/war + PII
+✅ **Indirekte Rede** — dass, ob, Konjunktiv I
+✅ **Adjektivdeklination** — der große / ein großer
+
+**امتحان Goethe B1:**
+- **Lesen** (65 دقيقة): نصوص وإعلانات
+- **Hören** (40 دقيقة): حوارات وأخبار
+- **Schreiben** (60 دقيقة): إيميل + تعليق
+- **Sprechen** (15 دقيقة): تخطيط مشترك + عرض موضوع + مناقشة
+
+**نصائح:**
+- تكلم يومياً 15 دقيقة بالألمانية
+- اقرأ مقالات بسيطة (Nachrichten für Kinder)
+- استمع لبودكاست Slow German
+- احفظ 30 عبارة نقاش جاهزة`,
+        tables: [
+          {
+            title: 'خلاصة الأزمنة الستة',
+            theme: 'conjugation',
+            headers: ['Zeit', 'التكوين', 'مثال'],
+            rows: [
+              { cells: ['Präsens', 'الفعل الأساسي', 'ich gehe'] },
+              { cells: ['Perfekt', 'haben/sein + PII', 'ich bin gegangen'] },
+              { cells: ['Präteritum', 'جذع الفعل + ضمير', 'ich ging'] },
+              { cells: ['Plusquamperfekt', 'hatte/war + PII', 'ich war gegangen'], highlight: true },
+              { cells: ['Futur I', 'werden + Infinitiv', 'ich werde gehen'] },
+              { cells: ['Konjunktiv II', 'würde + Infinitiv', 'ich würde gehen'] },
+            ],
+          },
+        ],
+        rules: [
+          { rule: 'استعمل Perfekt في الحكي', example: 'Ich bin gestern ins Kino gegangen.', translation: 'ذهبت أمس للسينما.' },
+          { rule: 'استعمل Konjunktiv II للأدب', example: 'Könnten Sie mir helfen?', translation: 'هل يمكنك مساعدتي؟' },
+          { rule: 'استعمل Passiv في الرسميات', example: 'Das Formular muss ausgefüllt werden.', translation: 'يجب ملء الاستمارة.' },
+        ],
+        examples: [
+          'Wenn ich Zeit hätte, würde ich mehr lernen. — لو كان لدي وقت، لدرست أكثر.',
+          'Der Brief, den ich geschrieben habe, ist wichtig. — الرسالة التي كتبتها مهمة.',
+          'Nachdem ich gegessen hatte, ging ich spazieren. — بعد أن أكلت، تنزهت.',
+          'Das Buch wird von vielen gelesen. — الكتاب يُقرأ من قبل كثيرين.',
+          'Er sagt, er sei müde. — يقول إنه متعب.',
+          'Trotz des Regens gehen wir raus. — رغم المطر نخرج.',
+          'Ich mag den großen roten Hund. — أحب الكلب الأحمر الكبير.',
+          'Meiner Meinung nach ist das wichtig. — في رأيي، هذا مهم.',
+        ],
+        tip: 'بعد B1 تستطيع العمل والدراسة في ألمانيا! استمر لـ B2 لفهم الأخبار والمحاضرات بالكامل.',
+      },
+      vocabulary: [
+        { german: 'die Prüfung', arabic: 'الامتحان', plural: 'die Prüfungen', type: 'noun', gender: 'die' },
+        { german: 'das Zertifikat', arabic: 'الشهادة', plural: 'die Zertifikate', type: 'noun', gender: 'das' },
+        { german: 'bestehen', arabic: 'ينجح', type: 'verb' },
+        { german: 'durchfallen', arabic: 'يرسب', type: 'verb' },
+        { german: 'wiederholen', arabic: 'يُعيد', type: 'verb' },
+        { german: 'üben', arabic: 'يتدرب', type: 'verb' },
+        { german: 'vorbereiten', arabic: 'يحضّر', type: 'verb' },
+        { german: 'die Vorbereitung', arabic: 'التحضير', type: 'noun', gender: 'die' },
+        { german: 'der Fortschritt', arabic: 'التقدم', plural: 'die Fortschritte', type: 'noun', gender: 'der' },
+        { german: 'das Niveau', arabic: 'المستوى', plural: 'die Niveaus', type: 'noun', gender: 'das' },
+        { german: 'die Grammatik', arabic: 'القواعد', type: 'noun', gender: 'die' },
+        { german: 'das Vokabular', arabic: 'المفردات', type: 'noun', gender: 'das' },
+        { german: 'der Wortschatz', arabic: 'المعجم', type: 'noun', gender: 'der' },
+        { german: 'fließend', arabic: 'بطلاقة', type: 'adjective' },
+        { german: 'selbstständig', arabic: 'مستقل', type: 'adjective' },
+        { german: 'fortgeschritten', arabic: 'متقدم', type: 'adjective' },
+        { german: 'die Herausforderung', arabic: 'التحدي', plural: 'die Herausforderungen', type: 'noun', gender: 'die' },
+        { german: 'das Ziel', arabic: 'الهدف', plural: 'die Ziele', type: 'noun', gender: 'das' },
+        { german: 'der Erfolg', arabic: 'النجاح', plural: 'die Erfolge', type: 'noun', gender: 'der' },
+        { german: 'geduldig', arabic: 'صبور', type: 'adjective' },
+        { german: 'motiviert', arabic: 'متحفز', type: 'adjective' },
+        { german: 'Glückwunsch!', arabic: 'تهانينا!', type: 'phrase' },
+      ],
+      exercise: {
+        questions: [
+          { id: 'b1-12-q1', type: 'multiple-choice', question: 'Konjunktiv II من sein؟', options: ['war', 'wäre', 'sein', 'ist'], answer: 'wäre' },
+          { id: 'b1-12-q2', type: 'multiple-choice', question: 'Passiv Präsens من "bauen":', options: ['baut', 'wird gebaut', 'hat gebaut', 'baute'], answer: 'wird gebaut' },
+          { id: 'b1-12-q3', type: 'fill-blank', question: 'Das Buch, ___ ich lese, ist gut. (das)', answer: 'das' },
+          { id: 'b1-12-q4', type: 'fill-blank', question: 'Nachdem ich gegessen ___, ging ich schlafen. (hatte)', answer: 'hatte' },
+          { id: 'b1-12-q5', type: 'drag-drop', question: 'رتّب: [reisen / ich / hätte / , / Wenn / würde / ich / Zeit]', words: ['Wenn', 'ich', 'Zeit', 'hätte', ',', 'würde', 'ich', 'reisen'], answer: 'Wenn ich Zeit hätte , würde ich reisen' },
+          { id: 'b1-12-q6', type: 'drag-drop', question: 'رتّب: [von / gelesen / Buch / Das / wird / vielen]', words: ['Das', 'Buch', 'wird', 'von', 'vielen', 'gelesen'], answer: 'Das Buch wird von vielen gelesen' },
+          { id: 'b1-12-q7', type: 'matching', question: 'صل القاعدة بالمثال:', pairs: [{ left: 'Konjunktiv II', right: 'Ich würde gehen' }, { left: 'Passiv', right: 'wird gemacht' }, { left: 'Plusquamperfekt', right: 'hatte gegessen' }, { left: 'Relativsatz', right: 'der hier wohnt' }], answer: 'match' },
+          { id: 'b1-12-q8', type: 'multiple-choice', question: 'Genitiv: بيت أبي؟', options: ['das Haus mein Vater', 'das Haus meines Vaters', 'das Haus meinem Vater', 'das Haus meinen Vater'], answer: 'das Haus meines Vaters' },
+          { id: 'b1-12-q9', type: 'speaking', question: 'قل: "لو كان لدي وقت، لسافرت."', answer: 'Wenn ich Zeit hätte, würde ich reisen' },
+          { id: 'b1-12-q10', type: 'multiple-choice', question: 'استمع:', audioPrompt: 'Glückwunsch! Du hast B1 geschafft.', options: ['تهانينا! لقد أنجزت B1', 'لم تنجح', 'أعد الامتحان', 'ابدأ من جديد'], answer: 'تهانينا! لقد أنجزت B1' },
+        ],
+      },
+    },
+  ],
+}

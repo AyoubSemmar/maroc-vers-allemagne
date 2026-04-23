@@ -1,18 +1,11 @@
-import type { Level, LevelId } from './types'
+import type { Level } from './types'
 import { A1 } from './a1'
+import { A2 } from './a2'
+import { B1 } from './b1'
+import { B2 } from './b2'
+import { C1 } from './c1'
 
-// Placeholder for levels not yet built
-function comingSoon(id: LevelId, title: string, description: string, color: string, emoji: string): Level {
-  return { id, title, description, color, emoji, lessons: [] }
-}
-
-export const levels: Level[] = [
-  A1,
-  comingSoon('A2', 'المستوى الثاني', 'التعبير عن الماضي، التسوق، والاتجاهات.', 'bg-blue-500', '📘'),
-  comingSoon('B1', 'المستوى الثالث', 'التعبير عن الرأي، العمل، والسفر.', 'bg-purple-500', '🚀'),
-  comingSoon('B2', 'المستوى الرابع', 'الألمانية المتقدمة للعمل والجامعة.', 'bg-orange-500', '🎯'),
-  comingSoon('C1', 'المستوى الخامس', 'إتقان اللغة الألمانية — مستوى احترافي.', 'bg-red-500', '🏆'),
-]
+export const levels = [A1, A2, B1, B2, C1]
 
 export function getLevel(id: string): Level | undefined {
   return levels.find((l) => l.id.toLowerCase() === id.toLowerCase())

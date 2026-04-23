@@ -32,5 +32,14 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/learn-german', '/learn-german/:path*'],
+  matcher: [
+    '/learn-german',
+    '/learn-german/:path*',
+    '/cv-builder',
+    '/cv-builder/:path*',
+    '/ausbildung-jobs',
+    '/ausbildung-jobs/:path*',
+    '/anschreiben-generator',
+    '/anschreiben-generator/:path*',
+  ],
 }

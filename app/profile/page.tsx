@@ -1,35 +1,64 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
 import { useRouter } from 'next/navigation'
+import {
+  UserDocument, DocumentType,
+  DOC_TYPE_LABELS, UPLOAD_TYPES,
+  fetchDocuments, uploadDocument, deleteDocument,
+} from '@/lib/documents'
+import { STORAGE_KEY } from '@/components/cv-builder/utils'
+
+const DATE_MARKER = '>>DATE>>'
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString('ar-MA', {
+    day: 'numeric', month: 'long', year: 'numeric',
+  })
+}
 
 export default function ProfilePage() {
-  const [user, setUser] = useState<any>(null)
-  const [profile, setProfile] = useState<any>(null)
-  const [whatsapp, setWhatsapp] = useState('')
-  const [countryCode, setCountryCode] = useState('+212')
-  const [phoneNumber, setPhoneNumber] = useState('')
-  const [status, setStatus] = useState('')
-  const [avatarUrl, setAvatarUrl] = useState('')
-  const [uploading, setUploading] = useState(false)
-  const [saving, setSaving] = useState(false)
-  const [saved, setSaved] = useState(false)
-  const [phoneError, setPhoneError] = useState('')
-  const [saveError, setSaveError] = useState('')
-  const [myListings, setMyListings] = useState<any[]>([])
   const supabase = createClient()
   const router = useRouter()
+
+  // ── Profile state ─────────────────────────────────────────
+  const [user, setUser]             = useState<any>(null)
+  const [profile, setProfile]       = useState<any>(null)
+  const [whatsapp, setWhatsapp]     = useState('')
+  const [countryCode, setCountryCode] = useState('+212')
+  const [phoneNumber, setPhoneNumber] = useState('')
+  const [status, setStatus]         = useState('')
+  const [avatarUrl, setAvatarUrl]   = useState('')
+  const [uploading, setUploading]   = useState(false)
+  const [saving, setSaving]         = useState(false)
+  const [saved, setSaved]           = useState(false)
+  const [phoneError, setPhoneError] = useState('')
+  const [saveError, setSaveError]   = useState('')
+  const [myListings, setMyListings] = useState<any[]>([])
+
+  // ── Documents state ───────────────────────────────────────
+  const [docs, setDocs]                 = useState<UserDocument[]>([])
+  const [docsLoading, setDocsLoading]   = useState(true)
+  const [showUpload, setShowUpload]     = useState(false)
+  const [uploadType, setUploadType]     = useState<DocumentType>('lebenslauf')
+  const [uploadFile, setUploadFile]     = useState<File | null>(null)
+  const [uploading2, setUploading2]     = useState(false)
+  const [uploadError, setUploadError]   = useState('')
+  const [selectedLetter, setSelectedLetter] = useState<UserDocument | null>(null)
+  const [docToast, setDocToast]         = useState('')
+  const fileRef = useRef<HTMLInputElement>(null)
 
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data }) => {
       if (!data.user) { router.push('/login'); return }
       setUser(data.user)
-      const { data: prof } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('user_id', data.user.id)
-        .single()
+
+      const [{ data: prof }, { data: listings }] = await Promise.all([
+        supabase.from('profiles').select('*').eq('user_id', data.user.id).single(),
+        supabase.from('listings').select('*').eq('user_id', data.user.id).order('created_at', { ascending: false }),
+      ])
+
       if (prof) {
         setProfile(prof)
         setStatus(prof.status || '')
@@ -41,15 +70,18 @@ export default function ProfilePage() {
           setWhatsapp(prof.whatsapp)
         }
       }
-      const { data: listings } = await supabase
-        .from('listings')
-        .select('*')
-        .eq('user_id', data.user.id)
-        .order('created_at', { ascending: false })
       setMyListings(listings || [])
+
+      // Load documents
+      setDocsLoading(true)
+      fetchDocuments()
+        .then(d => setDocs(d))
+        .catch(() => {})
+        .finally(() => setDocsLoading(false))
     })
   }, [])
 
+  // ── Profile handlers ──────────────────────────────────────
   async function handleAvatarUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
     if (!file || !user) return
@@ -77,20 +109,74 @@ export default function ProfilePage() {
     e.preventDefault()
     if (!user) return
     if (phoneNumber && !validatePhone()) {
-      setPhoneError(countryCode === '+49' ? 'الرقم الألماني يجب أن يحتوي على 10 أو 11 رقماً' : 'الرقم المغربي يجب أن يحتوي على 9 أرقام')
+      setPhoneError(countryCode === '+49'
+        ? 'الرقم الألماني يجب أن يحتوي على 10 أو 11 رقماً'
+        : 'الرقم المغربي يجب أن يحتوي على 9 أرقام')
       return
     }
     setPhoneError('')
     const fullNumber = phoneNumber ? `${countryCode}${phoneNumber}` : ''
     setWhatsapp(fullNumber)
     setSaving(true)
-    const updates = { user_id: user.id, whatsapp: phoneNumber ? `${countryCode}${phoneNumber}` : '', status, avatar_url: avatarUrl }
+    const updates = {
+      user_id: user.id,
+      whatsapp: phoneNumber ? `${countryCode}${phoneNumber}` : '',
+      status,
+      avatar_url: avatarUrl,
+    }
     const { error } = await supabase.from('profiles').upsert(updates, { onConflict: 'user_id' })
     if (error) { setSaveError(error.message); setSaving(false); return }
     setProfile(updates)
     setSaving(false)
     setSaved(true)
     setTimeout(() => setSaved(false), 3000)
+  }
+
+  // ── Document handlers ─────────────────────────────────────
+  function showToast(msg: string) {
+    setDocToast(msg)
+    setTimeout(() => setDocToast(''), 3000)
+  }
+
+  async function handleDocUpload() {
+    if (!uploadFile) { setUploadError('اختر ملفاً أولاً'); return }
+    setUploading2(true)
+    setUploadError('')
+    try {
+      const label = DOC_TYPE_LABELS[uploadType]
+      const title = `${label.ar} — ${uploadFile.name.replace(/\.[^.]+$/, '')}`
+      const doc = await uploadDocument(uploadFile, title, uploadType)
+      setDocs(prev => [doc, ...prev])
+      setShowUpload(false)
+      setUploadFile(null)
+      if (fileRef.current) fileRef.current.value = ''
+      showToast('✅ تم رفع الوثيقة بنجاح')
+    } catch (e: any) {
+      setUploadError(e?.message || 'خطأ في الرفع')
+    } finally {
+      setUploading2(false)
+    }
+  }
+
+  async function handleDeleteDoc(doc: UserDocument) {
+    if (!confirm(`هل تريد حذف "${doc.title}"؟`)) return
+    try {
+      await deleteDocument(doc)
+      setDocs(prev => prev.filter(d => d.id !== doc.id))
+      showToast('✅ تم الحذف')
+    } catch (e: any) {
+      showToast('❌ ' + (e?.message || 'خطأ في الحذف'))
+    }
+  }
+
+  function handleOpenCv(doc: UserDocument) {
+    if (!doc.cv_data) return
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(doc.cv_data))
+      router.push('/cv-builder')
+    } catch {
+      showToast('❌ تعذر فتح السيرة الذاتية')
+    }
   }
 
   if (!user) return null
@@ -105,9 +191,10 @@ export default function ProfilePage() {
             خطأ: {saveError}
           </div>
         )}
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
-          <form onSubmit={handleSave} className="flex flex-col gap-6">
 
+        {/* ── Profile form ──────────────────────────────── */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6 mb-6">
+          <form onSubmit={handleSave} className="flex flex-col gap-6">
             {/* Avatar */}
             <div className="flex flex-col items-center gap-3">
               {avatarUrl ? (
@@ -121,7 +208,7 @@ export default function ProfilePage() {
               </label>
             </div>
 
-            {/* Email (read only) */}
+            {/* Email */}
             <div className="flex flex-col gap-1">
               <label className="text-sm text-gray-500">البريد الإلكتروني</label>
               <p className="text-gray-900 font-medium">{user.email}</p>
@@ -154,85 +241,264 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-2">
               <label className="text-sm text-gray-500">وضعك الحالي (اختياري)</label>
               <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => setStatus('في ألمانيا')}
-                  className={`flex-1 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                    status === 'في ألمانيا'
-                      ? 'bg-green-700 text-white border-green-700'
-                      : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
+                <button type="button" onClick={() => setStatus('في ألمانيا')}
+                  className={`flex-1 py-2 rounded-lg border text-sm font-medium transition-colors ${status === 'في ألمانيا' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700 hover:bg-gray-50'}`}>
                   🇩🇪 في ألمانيا
                 </button>
-                <button
-                  type="button"
-                  onClick={() => setStatus('أحاول القدوم')}
-                  className={`flex-1 py-2 rounded-lg border text-sm font-medium transition-colors ${
-                    status === 'أحاول القدوم'
-                      ? 'bg-green-700 text-white border-green-700'
-                      : 'border-gray-300 text-gray-700 hover:bg-gray-50'
-                  }`}
-                >
+                <button type="button" onClick={() => setStatus('أحاول القدوم')}
+                  className={`flex-1 py-2 rounded-lg border text-sm font-medium transition-colors ${status === 'أحاول القدوم' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700 hover:bg-gray-50'}`}>
                   🇲🇦 أحاول القدوم
                 </button>
               </div>
             </div>
 
-            <button
-              type="submit"
-              disabled={saving}
-              className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800 disabled:opacity-50"
-            >
+            <button type="submit" disabled={saving}
+              className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800 disabled:opacity-50">
               {saving ? 'جاري الحفظ...' : saved ? 'تم الحفظ ✓' : 'حفظ التغييرات'}
             </button>
           </form>
         </div>
-      </div>
 
-      {/* My Listings */}
-      <div className="max-w-lg mx-auto px-4 pb-12">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-lg font-semibold text-gray-900">إعلاناتي</h2>
-          <a href="/listings/new" className="bg-green-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800">
-            + إضافة إعلان
-          </a>
-        </div>
+        {/* ── My Documents ─────────────────────────────── */}
+        <div className="mb-6">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">🗂 وثائقي</h2>
+            <button
+              type="button"
+              onClick={() => { setShowUpload(v => !v); setUploadError('') }}
+              className="bg-blue-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-800"
+            >
+              {showUpload ? '✕ إلغاء' : '+ رفع وثيقة'}
+            </button>
+          </div>
 
-        {myListings.length === 0 && (
-          <p className="text-gray-400 text-sm">لم تضف أي إعلان بعد.</p>
-        )}
+          {/* Upload form */}
+          {showUpload && (
+            <div className="bg-white rounded-xl border border-blue-200 p-5 mb-4 flex flex-col gap-4">
+              <p className="text-sm font-semibold text-gray-700">رفع وثيقة جديدة</p>
 
-        <div className="flex flex-col gap-3">
-          {myListings.map(listing => {
-            const expired = listing.expires_at && new Date(listing.expires_at) < new Date()
-            return (
-              <a
-                key={listing.id}
-                href={`/listings/${listing.id}`}
-                className="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-4 hover:shadow-md transition-shadow"
-              >
-                {listing.image_url ? (
-                  <img src={listing.image_url} className="w-16 h-16 object-cover rounded-lg flex-shrink-0" />
-                ) : (
-                  <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">🏠</div>
-                )}
-                <div className="flex-1">
-                  <p className="font-medium text-gray-900">{listing.title}</p>
-                  <p className="text-xs text-gray-400">{listing.city} · {listing.type}</p>
-                  {expired ? (
-                    <span className="text-xs text-red-500">منتهي الصلاحية</span>
-                  ) : listing.expires_at ? (
-                    <span className="text-xs text-orange-500">
-                      ينتهي {new Date(listing.expires_at).getDate()}/{new Date(listing.expires_at).getMonth() + 1}/{new Date(listing.expires_at).getFullYear()}
-                    </span>
-                  ) : null}
+              {/* Type selector */}
+              <div className="flex flex-col gap-1">
+                <label className="text-xs text-gray-500">نوع الوثيقة</label>
+                <select
+                  value={uploadType}
+                  onChange={e => setUploadType(e.target.value as DocumentType)}
+                  className="border border-gray-300 rounded-lg px-3 py-2 text-gray-900 bg-white text-sm"
+                >
+                  {UPLOAD_TYPES.map(t => (
+                    <option key={t} value={t}>
+                      {DOC_TYPE_LABELS[t].icon} {DOC_TYPE_LABELS[t].de} — {DOC_TYPE_LABELS[t].ar}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* File picker */}
+              <div className="flex flex-col gap-1">
+                <label className="text-xs text-gray-500">الملف (PDF أو Word · حد أقصى 8MB)</label>
+                <div
+                  className="border-2 border-dashed border-gray-300 rounded-lg p-4 text-center cursor-pointer hover:border-blue-400 hover:bg-blue-50 transition-colors text-sm text-gray-500"
+                  onClick={() => fileRef.current?.click()}
+                  onDragOver={e => e.preventDefault()}
+                  onDrop={e => {
+                    e.preventDefault()
+                    const f = e.dataTransfer.files[0]
+                    if (f) setUploadFile(f)
+                  }}
+                >
+                  {uploadFile ? (
+                    <span className="text-green-700 font-medium">📄 {uploadFile.name}</span>
+                  ) : (
+                    <span>اسحب الملف هنا أو <span className="text-blue-600 underline">انقر للاختيار</span></span>
+                  )}
                 </div>
-              </a>
-            )
-          })}
+                <input
+                  ref={fileRef}
+                  type="file"
+                  accept=".pdf,.doc,.docx"
+                  className="hidden"
+                  onChange={e => {
+                    const f = e.target.files?.[0]
+                    if (!f) return
+                    if (f.size > 8_000_000) { setUploadError('الحجم الأقصى 8MB'); return }
+                    setUploadFile(f)
+                    setUploadError('')
+                  }}
+                />
+              </div>
+
+              {uploadError && <p className="text-red-500 text-xs">{uploadError}</p>}
+
+              <button
+                type="button"
+                onClick={handleDocUpload}
+                disabled={uploading2 || !uploadFile}
+                className="bg-blue-700 text-white rounded-lg py-2 text-sm font-semibold hover:bg-blue-800 disabled:opacity-50"
+              >
+                {uploading2 ? '⏳ جاري الرفع...' : '📤 رفع الوثيقة'}
+              </button>
+            </div>
+          )}
+
+          {/* Documents list */}
+          <div className="bg-white rounded-xl border border-gray-200 p-4">
+            {docsLoading ? (
+              <p className="text-center text-gray-400 text-sm py-6">جاري التحميل...</p>
+            ) : docs.length === 0 ? (
+              <div className="text-center py-8">
+                <p className="text-3xl mb-2">📭</p>
+                <p className="text-gray-400 text-sm">لا توجد وثائق محفوظة بعد.</p>
+                <p className="text-gray-400 text-xs mt-1">
+                  قم بإنشاء <a href="/cv-builder" className="text-blue-600 underline">سيرة ذاتية</a> أو{' '}
+                  <a href="/anschreiben-generator" className="text-blue-600 underline">خطاب تحفيز</a> أو ارفع ملفاً.
+                </p>
+              </div>
+            ) : (
+              <div className="flex flex-col gap-3">
+                {docs.map(doc => {
+                  const label = DOC_TYPE_LABELS[doc.doc_type] ?? { de: doc.doc_type, ar: '', icon: '📄' }
+                  return (
+                    <div key={doc.id} className="flex items-start gap-3 p-3 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors">
+                      <span className="text-2xl mt-0.5 flex-shrink-0">{label.icon}</span>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-gray-900 truncate">{doc.title}</p>
+                        <div className="flex items-center gap-2 mt-1 flex-wrap">
+                          <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                            doc.doc_type === 'lebenslauf'             ? 'bg-blue-100 text-blue-700' :
+                            doc.doc_type === 'motivationsschreiben'   ? 'bg-green-100 text-green-700' :
+                            doc.doc_type === 'sprachzertifikat'       ? 'bg-purple-100 text-purple-700' :
+                            doc.doc_type === 'akademisches_zertifikat'? 'bg-yellow-100 text-yellow-700' :
+                            'bg-orange-100 text-orange-700'
+                          }`}>
+                            {label.de}
+                          </span>
+                          {doc.source === 'generated' && (
+                            <span className="text-xs text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full">مولّد بالذكاء الاصطناعي</span>
+                          )}
+                          <span className="text-xs text-gray-400">{formatDate(doc.created_at)}</span>
+                        </div>
+                        {/* Action buttons */}
+                        <div className="flex gap-2 mt-2 flex-wrap">
+                          {doc.doc_type === 'lebenslauf' && doc.source === 'generated' && (
+                            <button
+                              type="button"
+                              onClick={() => handleOpenCv(doc)}
+                              className="text-xs border border-blue-300 text-blue-700 rounded px-2 py-1 hover:bg-blue-50"
+                            >
+                              ✏️ فتح في البناء
+                            </button>
+                          )}
+                          {doc.doc_type === 'motivationsschreiben' && doc.source === 'generated' && (
+                            <button
+                              type="button"
+                              onClick={() => setSelectedLetter(doc)}
+                              className="text-xs border border-green-300 text-green-700 rounded px-2 py-1 hover:bg-green-50"
+                            >
+                              👁 عرض الخطاب
+                            </button>
+                          )}
+                          {doc.source === 'upload' && doc.file_url && (
+                            <a
+                              href={doc.file_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-xs border border-gray-300 text-gray-700 rounded px-2 py-1 hover:bg-gray-50"
+                            >
+                              🔗 فتح الملف
+                            </a>
+                          )}
+                          <button
+                            type="button"
+                            onClick={() => handleDeleteDoc(doc)}
+                            className="text-xs border border-red-200 text-red-600 rounded px-2 py-1 hover:bg-red-50"
+                          >
+                            🗑 حذف
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* ── My Listings ───────────────────────────────── */}
+        <div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-gray-900">إعلاناتي</h2>
+            <a href="/listings/new" className="bg-green-700 text-white text-sm px-4 py-2 rounded-lg hover:bg-green-800">
+              + إضافة إعلان
+            </a>
+          </div>
+
+          {myListings.length === 0 && (
+            <p className="text-gray-400 text-sm">لم تضف أي إعلان بعد.</p>
+          )}
+
+          <div className="flex flex-col gap-3">
+            {myListings.map(listing => {
+              const expired = listing.expires_at && new Date(listing.expires_at) < new Date()
+              return (
+                <a key={listing.id} href={`/listings/${listing.id}`}
+                  className="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-4 hover:shadow-md transition-shadow">
+                  {listing.image_url ? (
+                    <img src={listing.image_url} className="w-16 h-16 object-cover rounded-lg flex-shrink-0" />
+                  ) : (
+                    <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center text-2xl flex-shrink-0">🏠</div>
+                  )}
+                  <div className="flex-1">
+                    <p className="font-medium text-gray-900">{listing.title}</p>
+                    <p className="text-xs text-gray-400">{listing.city} · {listing.type}</p>
+                    {expired ? (
+                      <span className="text-xs text-red-500">منتهي الصلاحية</span>
+                    ) : listing.expires_at ? (
+                      <span className="text-xs text-orange-500">
+                        ينتهي {new Date(listing.expires_at).getDate()}/{new Date(listing.expires_at).getMonth() + 1}/{new Date(listing.expires_at).getFullYear()}
+                      </span>
+                    ) : null}
+                  </div>
+                </a>
+              )
+            })}
+          </div>
         </div>
       </div>
+
+      {/* ── Letter preview modal ──────────────────────── */}
+      {selectedLetter && (
+        <div
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
+          onClick={e => { if (e.target === e.currentTarget) setSelectedLetter(null) }}
+        >
+          <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl">
+            <div className="flex items-center justify-between p-5 border-b border-gray-200">
+              <h3 className="font-bold text-gray-900 text-base">{selectedLetter.title}</h3>
+              <button type="button" onClick={() => setSelectedLetter(null)}
+                className="text-gray-500 hover:text-gray-900 border border-gray-200 rounded-lg px-3 py-1 text-sm">
+                ✕ إغلاق
+              </button>
+            </div>
+            <div className="p-6 overflow-y-auto flex-1 font-serif text-sm leading-relaxed text-gray-800" dir="ltr" lang="de">
+              {(selectedLetter.letter_text || '').split('\n').map((rawLine, i) => {
+                const isDate = rawLine.startsWith(DATE_MARKER)
+                const text = isDate ? rawLine.slice(DATE_MARKER.length).trim() : rawLine
+                if (text.trim() === '') return <div key={i} style={{ height: 10 }} />
+                if (isDate) return <p key={i} className="text-right text-gray-500 mb-3 text-xs">{text}</p>
+                return <p key={i} className="mb-0">{text}</p>
+              })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Toast ─────────────────────────────────────── */}
+      {docToast && (
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-900 text-white px-5 py-3 rounded-xl text-sm font-semibold shadow-lg z-50 pointer-events-none">
+          {docToast}
+        </div>
+      )}
     </div>
   )
 }

@@ -31,14 +31,18 @@ function writeLocal(levelId: LevelId, progress: LevelProgress) {
   localStorage.setItem(localKey(levelId), JSON.stringify(progress))
 }
 
+const ADMIN_EMAIL = 'ayoubsemmar@gmail.com'
+
 export function useProgress(levelId: LevelId) {
   const [progress, setProgress] = useState<LevelProgress>(defaultProgress())
   const [loaded, setLoaded] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
   const supabase = createClient()
 
   useEffect(() => {
     async function load() {
       const { data: { user } } = await supabase.auth.getUser()
+      if (user?.email === ADMIN_EMAIL) setIsAdmin(true)
 
       if (user) {
         // Load from Supabase
@@ -98,6 +102,7 @@ export function useProgress(levelId: LevelId) {
   }
 
   function isLessonUnlocked(lessonId: string, lessonOrder: number): boolean {
+    if (isAdmin) return true
     if (lessonOrder === 1) return true
     return progress.completedLessons.length >= lessonOrder - 1
   }
@@ -108,5 +113,5 @@ export function useProgress(levelId: LevelId) {
 
   const completedCount = progress.completedLessons.length
 
-  return { progress, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, loaded }
+  return { progress, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, loaded, isAdmin }
 }

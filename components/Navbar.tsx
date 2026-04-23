@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
 import { useRouter } from 'next/navigation'
+import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar() {
   const [user, setUser] = useState<any>(null)
@@ -32,9 +34,9 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="bg-white border-b border-gray-200" dir="rtl">
+    <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 transition-colors" dir="rtl">
       <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/" className="text-xl font-bold text-green-700 shrink-0">🇲🇦 → 🇩🇪 المغرب إلى ألمانيا</a>
+        <a href="/"><Logo /></a>
 
         {/* Search bar */}
         <form onSubmit={handleSearch} className="flex items-center w-full sm:max-w-sm">
@@ -43,7 +45,7 @@ export default function Navbar() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="ابحث عن مقال أو إعلان..."
-            className="w-full border border-gray-300 rounded-r-full px-4 py-2 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-green-500"
+            className="w-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 rounded-r-full px-4 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-green-500"
           />
           <button
             type="submit"
@@ -53,7 +55,8 @@ export default function Navbar() {
           </button>
         </form>
 
-        <div className="flex items-center gap-4 shrink-0">
+        <div className="flex items-center gap-3 shrink-0">
+          <ThemeToggle />
           {user ? (
             <div className="flex items-center gap-3">
               <a
@@ -72,7 +75,7 @@ export default function Navbar() {
             </div>
           ) : (
             <div className="flex items-center gap-3">
-              <a href="/login" className="text-sm text-gray-600 hover:text-green-700">دخول</a>
+              <a href="/login" className="text-sm text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400">دخول</a>
               <a href="/signup" className="bg-green-700 text-white text-sm px-4 py-2 rounded-full hover:bg-green-800">
                 إنشاء حساب
               </a>

@@ -15,15 +15,17 @@ export default function SignupPage() {
   async function handleSignup(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: { emailRedirectTo: `${location.origin}/auth/callback` }
     })
     if (error) {
-      setMessage('حدث خطأ: ' + error.message)
+      setMessage('error:حدث خطأ: ' + error.message)
+    } else if (data.user && data.user.identities && data.user.identities.length === 0) {
+      setMessage('error:هذا البريد الإلكتروني مرتبط بحساب موجود بالفعل. يمكنك تسجيل الدخول.')
     } else {
-      setMessage('تم إرسال رابط التحقق إلى بريدك الإلكتروني. تحقق من صندوق الوارد!')
+      setMessage('success:تم إرسال رابط التحقق إلى بريدك الإلكتروني. تحقق من صندوق الوارد!')
     }
     setLoading(false)
   }
@@ -35,13 +37,17 @@ export default function SignupPage() {
         <h1 className="text-xl font-bold text-gray-900 mb-6">إنشاء حساب جديد</h1>
 
         {message ? (
-          <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-800 text-sm">
-            {message}
+          <div className={`rounded-lg p-4 text-sm ${message.startsWith('error:') ? 'bg-red-50 border border-red-200 text-red-700' : 'bg-green-50 border border-green-200 text-green-800'}`}>
+            {message.replace(/^(error|success):/, '')}
+            {message.startsWith('error:') && (
+              <a href="/login" className="block mt-2 font-medium underline">تسجيل الدخول</a>
+            )}
           </div>
         ) : (
           <form onSubmit={handleSignup} className="flex flex-col gap-4">
             <input
               type="email"
+              dir="ltr"
               placeholder="البريد الإلكتروني"
               value={email}
               onChange={e => setEmail(e.target.value)}

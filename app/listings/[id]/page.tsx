@@ -2,6 +2,7 @@ import { supabase } from '@/lib/supabase'
 import { createClient as createServerClient } from '@/lib/supabase-server'
 import DeleteListingButton from './DeleteListingButton'
 import ImageGallery from './ImageGallery'
+import ShareButtons from '@/components/ShareButtons'
 
 export default async function ListingPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -33,16 +34,28 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
         <div className="bg-white rounded-xl border border-gray-200 p-6 mt-6">
           <div className="flex items-start justify-between mb-4">
             <div>
-              <div className="flex gap-2 mb-2">
+              <div className="flex gap-2 mb-2 flex-wrap">
                 <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{listing.type}</span>
                 <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{listing.city}</span>
+                {listing.price && (
+                  <span className="text-sm font-bold text-white bg-green-600 px-3 py-1 rounded-full">{listing.price} €/شهر</span>
+                )}
               </div>
               <h1 className="text-2xl font-bold text-gray-900">{listing.title}</h1>
             </div>
-            {isOwner && <DeleteListingButton id={listing.id} />}
+            {isOwner && (
+              <div className="flex gap-3 items-center">
+                <a href={`/listings/${listing.id}/edit`} className="text-sm text-green-700 hover:underline">
+                  تعديل
+                </a>
+                <DeleteListingButton id={listing.id} />
+              </div>
+            )}
           </div>
 
           <p className="text-gray-600 leading-8 mb-6">{listing.description}</p>
+
+          <ShareButtons title={listing.title} />
 
           {user ? (
             <a

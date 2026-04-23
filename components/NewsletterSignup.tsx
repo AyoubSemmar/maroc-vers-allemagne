@@ -46,6 +46,7 @@ export default function NewsletterSignup() {
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center">
             <input
               type="email"
+              dir="ltr"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="أدخل بريدك الإلكتروني"

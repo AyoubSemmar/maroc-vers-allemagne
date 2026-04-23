@@ -2,6 +2,7 @@ import { supabase } from '@/lib/supabase'
 import ArticleContent from '@/components/ArticleContent'
 import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
+import ShareButtons from '@/components/ShareButtons'
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
@@ -60,6 +61,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         <ArticleContent content={article.content} />
 
         <FAQAccordion faqs={article.faqs || []} />
+
+        <ShareButtons title={article.title} />
 
         <HelpfulButton
           articleId={article.id}

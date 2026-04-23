@@ -26,14 +26,22 @@ export async function logout() {
 }
 
 async function uploadImage(imageFile) {
-  if (!imageFile || imageFile.size === 0) return null
-  const filename = `${Date.now()}-${imageFile.name}`
+  if (!imageFile || typeof imageFile === 'string' || imageFile.size === 0) return null
+  // Sanitize filename — spaces / non-ascii break Supabase storage keys
+  const safeName = imageFile.name
+    .normalize('NFKD')
+    .replace(/[^\w.\-]+/g, '-')
+    .replace(/-+/g, '-')
+  const filename = `${Date.now()}-${safeName}`
   const arrayBuffer = await imageFile.arrayBuffer()
   const buffer = new Uint8Array(arrayBuffer)
   const { data, error } = await supabase.storage
     .from('article-images')
     .upload(filename, buffer, { contentType: imageFile.type })
-  if (error) return null
+  if (error) {
+    console.error('uploadImage failed:', error)
+    return null
+  }
   const { data: urlData } = supabase.storage
     .from('article-images')
     .getPublicUrl(data.path)
@@ -74,8 +82,13 @@ export async function updateArticle(formData) {
   const newImageUrl = await uploadImage(imageFile)
   if (newImageUrl) updates.image_url = newImageUrl
 
-  await supabase.from('articles').update(updates).eq('id', id)
+  const { error } = await supabase.from('articles').update(updates).eq('id', id)
+  if (error) {
+    console.error('updateArticle failed:', error)
+    throw new Error(`فشل تحديث المقال: ${error.message}`)
+  }
   revalidatePath(`/articles/${id}`)
+  revalidatePath(`/articles`)
   revalidatePath('/admin')
   redirect('/admin')
 }
@@ -83,5 +96,20 @@ export async function updateArticle(formData) {
 export async function deleteArticle(formData) {
   const id = formData.get('id')
   await supabase.from('articles').delete().eq('id', id)
+  redirect('/admin')
+}
+
+export async function deleteListing(formData) {
+  const cookieStore = await cookies()
+  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
+
+  const id = formData.get('id')
+  // Use service role key to bypass RLS and delete any user's listing
+  const adminClient = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY
+  )
+  await adminClient.from('listings').delete().eq('id', id)
+  revalidatePath('/admin')
   redirect('/admin')
 }

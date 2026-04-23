@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers'
 import { createClient } from '@supabase/supabase-js'
-import { login, logout, addArticle, deleteArticle } from './actions'
+import { login, logout, addArticle, deleteArticle, deleteListing } from './actions'
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
 
@@ -44,6 +44,11 @@ export default async function AdminPage() {
     .from('articles')
     .select('*')
     .order('date', { ascending: false })
+
+  const { data: listings } = await supabase
+    .from('listings')
+    .select('id, title, city, type, price, created_at, image_url')
+    .order('created_at', { ascending: false })
 
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
@@ -112,6 +117,43 @@ export default async function AdminPage() {
                   <a href={`/admin/edit/${article.id}`} className="text-sm text-green-700 hover:underline">تعديل</a>
                   <form action={deleteArticle}>
                     <input type="hidden" name="id" value={article.id} />
+                    <button type="submit" className="text-sm text-red-500 hover:underline">حذف</button>
+                  </form>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Listings Section */}
+        <div className="bg-white rounded-xl border border-gray-200 p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-6">
+            الإعلانات ({listings?.length || 0})
+          </h2>
+          <div className="flex flex-col gap-3">
+            {listings && listings.length === 0 && (
+              <p className="text-sm text-gray-400">لا توجد إعلانات.</p>
+            )}
+            {listings && listings.map((listing) => (
+              <div key={listing.id} className="flex items-center justify-between border border-gray-100 rounded-lg p-4">
+                <div className="flex items-center gap-4">
+                  {listing.image_url ? (
+                    <img src={listing.image_url} alt="" className="w-12 h-12 object-cover rounded-lg flex-shrink-0" />
+                  ) : (
+                    <div className="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center text-xl flex-shrink-0">🏠</div>
+                  )}
+                  <div>
+                    <p className="font-medium text-gray-900">{listing.title}</p>
+                    <p className="text-xs text-gray-400">
+                      {listing.type} · {listing.city}
+                      {listing.price ? ` · ${listing.price} €` : ''}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-4 items-center">
+                  <a href={`/listings/${listing.id}`} className="text-sm text-green-700 hover:underline">عرض</a>
+                  <form action={deleteListing}>
+                    <input type="hidden" name="id" value={listing.id} />
                     <button type="submit" className="text-sm text-red-500 hover:underline">حذف</button>
                   </form>
                 </div>

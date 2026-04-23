@@ -20,6 +20,7 @@ export default function NewListingPage() {
   const [description, setDescription] = useState('')
   const [city, setCity] = useState('')
   const [type, setType] = useState('')
+  const [price, setPrice] = useState('')
   const [imageFiles, setImageFiles] = useState<File[]>([])
   const [previews, setPreviews] = useState<string[]>([])
   const [uploading, setUploading] = useState(false)
@@ -76,6 +77,7 @@ export default function NewListingPage() {
       description,
       city,
       type,
+      price: price ? Number(price) : null,
       whatsapp: profile.whatsapp,
       image_url: imageUrls[0] || '',
       images: imageUrls,
@@ -129,6 +131,19 @@ export default function NewListingPage() {
               <option value="">اختر المدينة</option>
               {cities.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
+
+            <div className="relative">
+              <input
+                type="number"
+                placeholder="السعر الشهري (€)"
+                value={price}
+                onChange={e => setPrice(e.target.value)}
+                min="0"
+                dir="ltr"
+                className="w-full border border-gray-300 rounded-lg px-4 py-2 text-right text-gray-900 pr-10"
+              />
+              <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm">€</span>
+            </div>
 
             <div className="flex gap-3">
               <button type="button" onClick={() => setType('غرفة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'غرفة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>غرفة</button>

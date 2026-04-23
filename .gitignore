@@ -39,3 +39,12 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.vercel
+
+# claude code local session data
+.claude/
+
+# local logs
+type-errors.log
+*.log
