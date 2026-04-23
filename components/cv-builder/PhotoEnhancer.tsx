@@ -456,22 +456,6 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
               <button
                 type="button"
                 className="rihla-cvb-btn-ghost"
-                onClick={() => selected && downloadItem(selected)}
-                disabled={!selected}
-              >
-                ↓ تحميل المحددة
-              </button>
-              <button
-                type="button"
-                className="rihla-cvb-btn-ghost"
-                onClick={() => selected && shareItem(selected)}
-                disabled={!selected}
-              >
-                📤 مشاركة
-              </button>
-              <button
-                type="button"
-                className="rihla-cvb-btn-ghost"
                 onClick={run}
                 disabled={loading || !canGenerate}
               >
