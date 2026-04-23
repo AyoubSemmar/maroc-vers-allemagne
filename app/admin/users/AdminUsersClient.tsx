@@ -45,9 +45,10 @@ export default function AdminUsersClient() {
     !!user?.unlocks.find(u => u.kind === kind && u.key === key)
 
   return (
-    <div style={{ maxWidth: 860, margin: '40px auto', padding: '0 16px', fontFamily: 'system-ui, sans-serif' }}>
-      <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8 }}>Admin — Entitlements</h1>
-      <p style={{ color: '#666', marginBottom: 24, fontSize: 14 }}>
+    <div style={{ minHeight: '100vh', background: '#f5f5f5', padding: '40px 0' }}>
+    <div style={{ maxWidth: 860, margin: '0 auto', padding: '0 16px', fontFamily: 'system-ui, sans-serif', color: '#111', colorScheme: 'light' }}>
+      <h1 style={{ fontSize: 24, fontWeight: 700, marginBottom: 8, color: '#111' }}>Admin — Entitlements</h1>
+      <p style={{ color: '#333', marginBottom: 24, fontSize: 14 }}>
         Grant premium, credits, or unlocks to a user by email.
       </p>
 
@@ -57,7 +58,7 @@ export default function AdminUsersClient() {
           placeholder="user@example.com"
           value={email}
           onChange={e => setEmail(e.target.value)}
-          style={{ flex: 1, padding: '10px 12px', border: '1px solid #ccc', borderRadius: 8 }}
+          style={{ flex: 1, padding: '10px 12px', border: '1px solid #888', borderRadius: 8, color: '#111', background: '#fff' }}
         />
         <button
           onClick={() => call('lookup')}
@@ -68,13 +69,13 @@ export default function AdminUsersClient() {
         </button>
       </div>
 
-      {msg && <div style={{ marginBottom: 16, fontSize: 13, color: msg.startsWith('✅') ? '#087' : '#c33' }}>{msg}</div>}
+      {msg && <div style={{ marginBottom: 16, fontSize: 14, fontWeight: 600, color: msg.startsWith('✅') ? '#087' : '#c33' }}>{msg}</div>}
 
       {user && (
-        <div style={{ border: '1px solid #ddd', borderRadius: 10, padding: 20, background: '#fafafa' }}>
+        <div style={{ border: '1px solid #bbb', borderRadius: 10, padding: 20, background: '#fff', color: '#111' }}>
           <div style={{ marginBottom: 16 }}>
-            <div style={{ fontSize: 16, fontWeight: 600 }}>{user.email}</div>
-            <div style={{ fontSize: 12, color: '#888' }}>
+            <div style={{ fontSize: 16, fontWeight: 700, color: '#111' }}>{user.email}</div>
+            <div style={{ fontSize: 12, color: '#444' }}>
               {user.id}
               {user.is_admin && <span style={badge('#0ea5a0')}>admin</span>}
               {user.is_premium && (
@@ -141,13 +142,14 @@ export default function AdminUsersClient() {
         </div>
       )}
     </div>
+    </div>
   )
 }
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid #eee' }}>
-      <div style={{ fontSize: 13, fontWeight: 600, color: '#555', marginBottom: 8 }}>{title}</div>
+    <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid #ddd' }}>
+      <div style={{ fontSize: 14, fontWeight: 700, color: '#111', marginBottom: 10 }}>{title}</div>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>{children}</div>
     </div>
   )
@@ -156,8 +158,8 @@ function Section({ title, children }: { title: string; children: React.ReactNode
 function CreditRow({ label, value, onAdd, loading }: { label: string; value: number; onAdd: (n: number) => void; loading: boolean }) {
   return (
     <>
-      <div style={{ fontSize: 13 }}>{label}</div>
-      <div style={{ fontSize: 13, color: '#666' }}>balance: <strong>{value}</strong></div>
+      <div style={{ fontSize: 14, color: '#111', fontWeight: 600 }}>{label}</div>
+      <div style={{ fontSize: 13, color: '#222' }}>balance: <strong>{value}</strong></div>
       <div style={{ display: 'flex', gap: 4 }}>
         <button style={btnSmall} disabled={loading} onClick={() => onAdd(1)}>+1</button>
         <button style={btnSmall} disabled={loading} onClick={() => onAdd(5)}>+5</button>
@@ -168,8 +170,8 @@ function CreditRow({ label, value, onAdd, loading }: { label: string; value: num
 }
 
 const btn: React.CSSProperties = {
-  padding: '6px 12px', border: '1px solid #ccc', borderRadius: 6,
-  background: '#fff', cursor: 'pointer', fontSize: 13,
+  padding: '6px 12px', border: '1px solid #888', borderRadius: 6,
+  background: '#fff', color: '#111', cursor: 'pointer', fontSize: 13, fontWeight: 600,
 }
 const btnOn: React.CSSProperties = { ...btn, background: '#0ea5a0', color: '#fff', borderColor: '#0ea5a0' }
 const btnSmall: React.CSSProperties = { ...btn, padding: '4px 10px', fontSize: 12 }
