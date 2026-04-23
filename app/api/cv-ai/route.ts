@@ -21,15 +21,49 @@ type Payload = {
     degree: string
     fieldOfStudy: string
     description: string
+    startDate?: string
+    endDate?: string
   }>
   experience: Array<{
     jobTitle: string
     company: string
     location: string
     description: string
+    startDate?: string
+    endDate?: string
   }>
   skills: { technical: string[]; soft: string[] }
   languages: Array<{ language: string; level: string }>
+  documents?: {
+    certificates?: DocInput[]
+    diploma?: DocInput[]
+    languageCertificates?: DocInput[]
+    optionalCoverLetter?: DocInput[]
+  }
+}
+
+type DocInput = {
+  name: string
+  type: string
+  dataUrl: string
+}
+
+// Cap per-file size sent to Claude to stay within API limits (approx 3 MB base64 -> ~2.2MB raw).
+const MAX_DOC_BYTES = 3_000_000
+const DOC_CATEGORIES: Array<{
+  key: 'certificates' | 'diploma' | 'languageCertificates' | 'optionalCoverLetter'
+  label: string
+}> = [
+  { key: 'certificates',         label: 'General Certificate (Zeugnis)' },
+  { key: 'diploma',              label: 'Diploma / Academic Certificate' },
+  { key: 'languageCertificates', label: 'Language Certificate (Sprachzertifikat)' },
+  { key: 'optionalCoverLetter',  label: 'Cover Letter / Motivation (Anschreiben)' },
+]
+
+function parseDataUrl(dataUrl: string): { mediaType: string; base64: string } | null {
+  const m = /^data:([^;]+);base64,(.+)$/i.exec(dataUrl)
+  if (!m) return null
+  return { mediaType: m[1], base64: m[2] }
 }
 
 const SYSTEM = `You are an expert German Lebenslauf (CV) translator, editor, and light optimizer.
@@ -44,6 +78,19 @@ Your job:
 6) For skills, translate each item individually (short noun phrases).
 7) Generate a 2-sentence "careerGoal" (Berufsziel) based on the user's target jobTitle + experience + skills + education. Write it in first-person German, professional tone. If the user already provided a careerGoal, polish/translate it instead.
 8) Keep proper nouns (names, cities, company names, institution names) unchanged unless a widely-used German form exists (e.g. "Casablanca" stays, "المغرب" becomes "Marokko").
+
+REFERENCE DOCUMENTS (if provided):
+The user may attach scanned certificates, diplomas, language certificates, and cover letters as images or PDFs before the JSON payload. These are the SOURCE OF TRUTH for verifiable facts. READ EVERY DOCUMENT CAREFULLY — extract dates, names, titles, levels, employers, job roles, and responsibilities. When enriching the CV:
+
+- Cross-check institution names, degree titles, field of study, and dates against what appears in the diploma/certificate documents. If the user's typed value contradicts a clearly legible document, prefer the document's wording (translated to German).
+- Use language certificates to confirm or correct the language level (A1–C2). If the user didn't list a language that a certificate clearly proves, ADD it as a new entry in "languages".
+- If a work certificate (Arbeitsbescheinigung) documents a job that is NOT in the experience array, ADD a new experience entry reconstructed from the certificate: extract jobTitle, company, location, startDate (YYYY-MM), endDate (YYYY-MM or empty if still employed), and description (2–4 bullet points of the duties listed on the certificate). Return it as an additional element in the "experience" array.
+- If a diploma or academic certificate documents studies that are NOT in the education array, ADD a new education entry: extract institution, degree, fieldOfStudy, startDate, endDate, and description.
+- Merge strategy for existing entries: if a user-provided entry clearly refers to the same job/school as a document (same company/institution), ENRICH that existing entry rather than creating a duplicate. Only ADD a new entry when no existing entry matches.
+- If a cover letter is attached, use its tone/themes only as inspiration for the careerGoal (Berufsziel) — never copy sentences verbatim.
+- Dates from documents: if only a year is visible, use "YYYY-01". If the document shows a range like "2019–2022", fill both startDate and endDate.
+- Never fabricate details that are not visible in any document and not in the JSON payload. If a document is unreadable, ignore it.
+- Rule #13 above ("never invent certifications, diplomas, prizes, specific companies, specific dates") does NOT apply to details that are clearly visible in the attached documents — those are treated as verified facts, not inventions.
 
 LIGHT OPTIMIZATION (important — improve the CV, but stay grounded):
 9) For each experience entry's description: if it is empty, very short, or vague, expand it into 2–4 realistic bullet points in German that a person in that exact role would plausibly do. Use a neutral, factual tone (e.g. "Entwicklung und Wartung von Webanwendungen", "Zusammenarbeit mit interdisziplinären Teams"). Never claim specific metrics, percentages, prize wins, or achievements that weren't provided.
@@ -61,7 +108,7 @@ BULLET FORMAT (critical):
 13) Never invent: certifications, diplomas, prizes, specific companies, specific dates, specific metrics, languages not listed.
 14) Output should feel like a polished, realistic junior-to-mid professional CV — not a marketing brochure. Avoid superlatives like "außergewöhnlich", "herausragend", "einzigartig".
 
-Return ONLY a JSON object matching the exact input shape (same keys, but skills.soft and description arrays may be longer after enrichment). Do not wrap in markdown code fences. Do not add any commentary.`
+Return ONLY a JSON object matching the input shape. Arrays ("education", "experience", "languages", "skills.technical", "skills.soft") MAY contain MORE elements than the input when reference documents justify it — append new entries at the end. Do not wrap in markdown code fences. Do not add any commentary.`
 
 export async function POST(req: NextRequest) {
   try {
@@ -80,13 +127,58 @@ export async function POST(req: NextRequest) {
 
     const client = new Anthropic({ apiKey })
 
-    const userMessage = `Translate and correct the following CV data to professional German. Return JSON only.\n\n${JSON.stringify(payload, null, 2)}`
+    // Strip documents off the payload before serializing it into the JSON block,
+    // they go as separate image/document content blocks.
+    const { documents, ...textPayload } = payload
+
+    type ContentBlock =
+      | { type: 'text'; text: string }
+      | { type: 'image'; source: { type: 'base64'; media_type: string; data: string } }
+      | { type: 'document'; source: { type: 'base64'; media_type: 'application/pdf'; data: string } }
+
+    const contentBlocks: ContentBlock[] = []
+
+    if (documents) {
+      for (const cat of DOC_CATEGORIES) {
+        const list = documents[cat.key] || []
+        for (const doc of list) {
+          if (!doc?.dataUrl) continue
+          const parsed = parseDataUrl(doc.dataUrl)
+          if (!parsed) continue
+          // Rough size check: base64 length * 0.75 ≈ raw bytes
+          const approxBytes = Math.floor(parsed.base64.length * 0.75)
+          if (approxBytes > MAX_DOC_BYTES) continue
+
+          contentBlocks.push({
+            type: 'text',
+            text: `--- Reference document: "${doc.name}" (category: ${cat.label}) ---`,
+          })
+
+          if (parsed.mediaType === 'application/pdf') {
+            contentBlocks.push({
+              type: 'document',
+              source: { type: 'base64', media_type: 'application/pdf', data: parsed.base64 },
+            })
+          } else if (parsed.mediaType.startsWith('image/')) {
+            contentBlocks.push({
+              type: 'image',
+              source: { type: 'base64', media_type: parsed.mediaType, data: parsed.base64 },
+            })
+          }
+        }
+      }
+    }
+
+    contentBlocks.push({
+      type: 'text',
+      text: `Translate, correct, and enrich the following CV data into professional German. Read every reference document above thoroughly and extract ALL verifiable facts — especially any job, study, or language level documented but MISSING from the JSON below. Add those as new entries (appended to the end of the respective array). For each experience you add from a work certificate, reconstruct a realistic 2–4 bullet description from the duties listed on the certificate. Return JSON only, matching the input shape (arrays may be longer).\n\n${JSON.stringify(textPayload, null, 2)}`,
+    })
 
     const response = await client.messages.create({
       model: 'claude-sonnet-4-5',
       max_tokens: 6000,
       system: SYSTEM,
-      messages: [{ role: 'user', content: userMessage }],
+      messages: [{ role: 'user', content: contentBlocks as unknown as Anthropic.MessageParam['content'] }],
     })
 
     const text = response.content

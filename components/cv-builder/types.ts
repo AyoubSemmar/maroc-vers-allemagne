@@ -42,6 +42,13 @@ export type DocumentFile = {
   size: number
   type: string
   dataUrl: string
+  // Populated when the file has been auto-uploaded to Supabase Storage
+  // and a row inserted into user_documents.
+  storagePath?: string
+  storageUrl?: string
+  savedId?: string       // user_documents.id
+  uploading?: boolean
+  uploadError?: string
 }
 
 export type CVData = {

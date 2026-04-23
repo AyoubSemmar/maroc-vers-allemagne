@@ -1,8 +1,18 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
-import { CVData, EMPTY_CV, STEPS } from '@/components/cv-builder/types'
-import { calculateCompletion, loadFromStorage, saveToStorage } from '@/components/cv-builder/utils'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { CVData, DocumentFile, EMPTY_CV, STEPS } from '@/components/cv-builder/types'
+import { calculateCompletion, loadFromStorage, saveToStorage, clearStorage } from '@/components/cv-builder/utils'
+import { createClient as createBrowserClient } from '@/lib/supabase-browser'
+import { fetchDocuments, type DocumentType } from '@/lib/documents'
+
+type CategoryKey = keyof CVData['documents']
+const DOC_TYPE_TO_CATEGORY: Partial<Record<DocumentType, CategoryKey>> = {
+  arbeitsbescheinigung:    'certificates',
+  akademisches_zertifikat: 'diploma',
+  sprachzertifikat:        'languageCertificates',
+  motivationsschreiben:    'optionalCoverLetter',
+}
 
 import StepPersonalInfo from '@/components/cv-builder/StepPersonalInfo'
 import StepEducation    from '@/components/cv-builder/StepEducation'
@@ -16,20 +26,105 @@ export default function CVBuilderClient() {
   const [data, setData] = useState<CVData>(EMPTY_CV)
   const [step, setStep] = useState(1)
   const [mounted, setMounted] = useState(false)
+  const lastUserIdRef = useRef<string | null | undefined>(undefined)
 
-  // Load from localStorage on mount
+  // Load from localStorage on mount; also detect if the stored draft belonged
+  // to a *different* user and wipe it if so (handles account switches where
+  // the old user's cookies were replaced before we got the chance to listen).
   useEffect(() => {
-    setData(loadFromStorage())
-    setMounted(true)
+    const supabase = createBrowserClient()
+    ;(async () => {
+      const { data: { user } } = await supabase.auth.getUser()
+      const currentId = user?.id ?? null
+      lastUserIdRef.current = currentId
+
+      // Load any saved draft. The draft belongs to whoever was last logged in
+      // on this device; if that was a different user, don't show it.
+      const saved = loadFromStorage()
+      const savedOwner = (saved as CVData & { __owner?: string }).__owner
+      let base: CVData
+      if (savedOwner && savedOwner !== currentId) {
+        clearStorage()
+        base = EMPTY_CV
+      } else {
+        base = saved
+      }
+
+      // Rehydrate uploaded documents from Supabase so the Documents step still
+      // shows the files after a page reload (base64 dataUrls aren't persisted
+      // locally because they blow the localStorage quota).
+      if (currentId) {
+        try {
+          const remote = await fetchDocuments()
+          const merged = { ...base.documents }
+          for (const key of Object.keys(merged) as CategoryKey[]) {
+            const existingIds = new Set(merged[key].map(d => d.savedId).filter(Boolean))
+            const additions: DocumentFile[] = []
+            for (const doc of remote) {
+              if (doc.source !== 'upload') continue
+              const cat = DOC_TYPE_TO_CATEGORY[doc.doc_type]
+              if (cat !== key) continue
+              if (existingIds.has(doc.id)) continue
+              additions.push({
+                name: doc.title,
+                size: 0,
+                type: doc.file_path?.toLowerCase().endsWith('.pdf') ? 'application/pdf' : 'image/*',
+                dataUrl: '', // fetched on demand when needed (e.g. sending to AI)
+                savedId: doc.id,
+                storagePath: doc.file_path ?? undefined,
+                storageUrl: doc.file_url ?? undefined,
+              })
+            }
+            if (additions.length) merged[key] = [...merged[key], ...additions]
+          }
+          base = { ...base, documents: merged }
+        } catch (e) {
+          console.error('[cv-builder] rehydrate documents failed:', e)
+        }
+      }
+
+      setData(base)
+      setMounted(true)
+    })()
   }, [])
 
-  // Persist on change (skip initial mount so we don't wipe storage)
+  // Supabase auth listener: wipe CV state on logout OR account switch
+  useEffect(() => {
+    const supabase = createBrowserClient()
+    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
+      const newId = session?.user?.id ?? null
+      const prevId = lastUserIdRef.current
+
+      if (event === 'SIGNED_OUT' || (prevId !== undefined && newId !== prevId)) {
+        clearStorage()
+        setData(EMPTY_CV)
+        setStep(1)
+      }
+      lastUserIdRef.current = newId
+    })
+    return () => sub.subscription.unsubscribe()
+  }, [])
+
+  // Clear everything when the user leaves the CV builder page entirely
+  // (navigation away, tab close). Refresh will also trigger this — data loss
+  // on refresh is an accepted trade-off for shared-device privacy.
+  useEffect(() => {
+    return () => {
+      clearStorage()
+    }
+  }, [])
+
+  // Persist on change (skip initial mount so we don't wipe storage).
+  // We tag the saved draft with the current user id so we can detect
+  // if the device has been used by another account since.
   useEffect(() => {
     if (!mounted) return
-    saveToStorage(data)
+    const tagged = { ...data, __owner: lastUserIdRef.current ?? null }
+    saveToStorage(tagged as unknown as CVData)
   }, [data, mounted])
 
-  const update = (patch: Partial<CVData>) => setData(prev => ({ ...prev, ...patch }))
+  const update = (patch: Partial<CVData> | ((prev: CVData) => Partial<CVData>)) =>
+    setData(prev => ({ ...prev, ...(typeof patch === 'function' ? patch(prev) : patch) }))
   const completion = useMemo(() => calculateCompletion(data), [data])
 
   const canGoNext = step < STEPS.length

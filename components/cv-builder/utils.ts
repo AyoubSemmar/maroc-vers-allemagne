@@ -23,10 +23,27 @@ export function loadFromStorage(): CVData {
 export function saveToStorage(data: CVData) {
   if (typeof window === 'undefined') return
   try {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+    // Strip huge base64 dataUrls from documents before persisting — they blow
+    // the localStorage 5MB quota and cause silent save failures. We keep only
+    // the metadata (name/size/type/storage info) and rehydrate dataUrls either
+    // from state in the current session or from Supabase Storage after reload.
+    const slim = {
+      ...data,
+      documents: {
+        certificates:         data.documents.certificates.map(stripDataUrl),
+        diploma:              data.documents.diploma.map(stripDataUrl),
+        languageCertificates: data.documents.languageCertificates.map(stripDataUrl),
+        optionalCoverLetter:  data.documents.optionalCoverLetter.map(stripDataUrl),
+      },
+    }
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(slim))
   } catch {
     // ignore quota errors
   }
+}
+
+function stripDataUrl<T extends { dataUrl?: string }>(d: T): T {
+  return { ...d, dataUrl: '' }
 }
 
 export function clearStorage() {
@@ -51,6 +68,20 @@ export function fileToBase64(file: File): Promise<string> {
     reader.onload = () => resolve(reader.result as string)
     reader.onerror = reject
     reader.readAsDataURL(file)
+  })
+}
+
+// Fetch a remote file (from Supabase Storage public URL) and return it as a
+// base64 data URL. Used to rehydrate document dataUrls after a page reload.
+export async function urlToDataUrl(url: string): Promise<string> {
+  const res = await fetch(url)
+  if (!res.ok) throw new Error(`HTTP ${res.status}`)
+  const blob = await res.blob()
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onload = () => resolve(reader.result as string)
+    reader.onerror = reject
+    reader.readAsDataURL(blob)
   })
 }
 

@@ -49,6 +49,12 @@ export default function ProfilePage() {
   const [docToast, setDocToast]         = useState('')
   const fileRef = useRef<HTMLInputElement>(null)
 
+  // ── Delete-account state ──────────────────────────────────
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
+  const [deleteReason, setDeleteReason]           = useState('')
+  const [deleting, setDeleting]                   = useState(false)
+  const [deleteError, setDeleteError]             = useState('')
+
   useEffect(() => {
     supabase.auth.getUser().then(async ({ data }) => {
       if (!data.user) { router.push('/login'); return }
@@ -166,6 +172,28 @@ export default function ProfilePage() {
       showToast('✅ تم الحذف')
     } catch (e: any) {
       showToast('❌ ' + (e?.message || 'خطأ في الحذف'))
+    }
+  }
+
+  async function handleDeleteAccount() {
+    if (deleting) return
+    setDeleting(true)
+    setDeleteError('')
+    try {
+      const res = await fetch('/api/account/delete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ reason: deleteReason }),
+      })
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}))
+        throw new Error(err.error || `HTTP ${res.status}`)
+      }
+      // Redirect out — session is already cleared server-side.
+      window.location.href = '/'
+    } catch (e: any) {
+      setDeleteError(e?.message || 'حدث خطأ أثناء حذف الحساب')
+      setDeleting(false)
     }
   }
 
@@ -464,7 +492,59 @@ export default function ProfilePage() {
             })}
           </div>
         </div>
+
+        {/* ── Delete account button ──────────────────────── */}
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => { setShowDeleteConfirm(true); setDeleteError('') }}
+            className="inline-flex items-center gap-2 text-sm text-red-600 hover:text-red-700 hover:underline"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="3 6 5 6 21 6" />
+              <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6" />
+              <path d="M10 11v6" />
+              <path d="M14 11v6" />
+              <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2" />
+            </svg>
+            حذف حسابي
+          </button>
+        </div>
       </div>
+
+      {/* ── Delete account confirmation modal ──────────── */}
+      {showDeleteConfirm && (
+        <div
+          className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4"
+          onClick={e => { if (e.target === e.currentTarget && !deleting) setShowDeleteConfirm(false) }}
+        >
+          <div className="bg-white rounded-2xl max-w-md w-full shadow-2xl p-6" dir="rtl">
+            <h3 className="text-lg font-bold text-gray-900 mb-2">هل أنت متأكد؟</h3>
+            <p className="text-sm text-gray-600 mb-4">
+              سيتم حذف حسابك نهائياً ولن تتمكن من تسجيل الدخول مجدداً. هذا الإجراء لا يمكن التراجع عنه.
+            </p>
+            {deleteError && <p className="text-red-600 text-xs mb-3">{deleteError}</p>}
+            <div className="flex gap-2 justify-end">
+              <button
+                type="button"
+                onClick={() => setShowDeleteConfirm(false)}
+                disabled={deleting}
+                className="border border-gray-300 text-gray-700 rounded-lg px-4 py-2 text-sm hover:bg-gray-50"
+              >
+                إلغاء
+              </button>
+              <button
+                type="button"
+                onClick={handleDeleteAccount}
+                disabled={deleting}
+                className="bg-red-600 text-white rounded-lg px-4 py-2 text-sm font-semibold hover:bg-red-700 disabled:opacity-50"
+              >
+                {deleting ? '⏳ جاري الحذف...' : 'نعم، احذف الحساب'}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* ── Letter preview modal ──────────────────────── */}
       {selectedLetter && (
