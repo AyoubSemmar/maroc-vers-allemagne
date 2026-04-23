@@ -2,11 +2,21 @@ import { CVData, EMPTY_CV } from './types'
 
 export const STORAGE_KEY = 'rihla_cv_data_v1'
 
+// Drafts live in sessionStorage so the CV builder draft is automatically wiped
+// whenever the tab is closed. This way a user who logs out, comes back later,
+// and logs in again starts fresh — and draft data never leaks across browser
+// sessions even when a different person uses the same computer.
+// sessionStorage still persists across refreshes within the same tab, so the
+// user doesn't lose progress while actively filling out the form.
 export function loadFromStorage(): CVData {
   if (typeof window === 'undefined') return EMPTY_CV
   try {
-    const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (!raw) return EMPTY_CV
+    const raw = window.sessionStorage.getItem(STORAGE_KEY)
+    if (!raw) {
+      // Also clear any leftover localStorage draft from older versions of the app.
+      try { window.localStorage.removeItem(STORAGE_KEY) } catch {}
+      return EMPTY_CV
+    }
     const parsed = JSON.parse(raw) as Partial<CVData>
     return {
       ...EMPTY_CV,
@@ -36,7 +46,7 @@ export function saveToStorage(data: CVData) {
         optionalCoverLetter:  data.documents.optionalCoverLetter.map(stripDataUrl),
       },
     }
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(slim))
+    window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(slim))
   } catch {
     // ignore quota errors
   }
@@ -48,7 +58,9 @@ function stripDataUrl<T extends { dataUrl?: string }>(d: T): T {
 
 export function clearStorage() {
   if (typeof window === 'undefined') return
-  window.localStorage.removeItem(STORAGE_KEY)
+  try { window.sessionStorage.removeItem(STORAGE_KEY) } catch {}
+  // Also clear any leftover localStorage draft from older versions of the app.
+  try { window.localStorage.removeItem(STORAGE_KEY) } catch {}
 }
 
 export function formatDate(iso: string) {

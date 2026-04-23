@@ -81,24 +81,45 @@ async function main() {
     auth: { persistSession: false, autoRefreshToken: false },
   })
 
-  const seen = new Set<string>()
+  // CLI flags:
+  //   --category=<key>     Force a category key (e.g. hospitality) for rows whose title doesn't match.
+  //   --fallback=<key>     Fallback category when categorizeJob returns null. Defaults to healthcare.
+  const flagCategory = process.argv.find(a => a.startsWith('--category='))?.split('=')[1] as any
+  const flagFallback = process.argv.find(a => a.startsWith('--fallback='))?.split('=')[1] as any
+  const fallbackCategory = flagFallback || 'healthcare'
+
+  const seenCompany = new Set<string>()
+  const seenEmail = new Set<string>()
   const rows: any[] = []
-  let skipped = 0
+  let skippedNoTitle = 0
+  let skippedNoContact = 0
+  let skippedDupCompany = 0
+  let skippedDupEmail = 0
 
   for (const j of items) {
     const title = (j.title || '').trim()
     const company = (j.company || '').trim()
     const city = (j.city || '').trim()
-    if (!title) { skipped++; continue }
+    const email = (j.email || '').trim().toLowerCase()
+    const applyUrl = (j.apply_url || '').trim()
+
+    if (!title) { skippedNoTitle++; continue }
+
+    // Must be reachable — skip rows with neither an email nor an apply URL.
+    if (!email && !applyUrl) { skippedNoContact++; continue }
+
+    // Dedup by company OR email. If either is a repeat, treat as duplicate.
+    const companyKey = company.toLowerCase()
+    if (companyKey && seenCompany.has(companyKey)) { skippedDupCompany++; continue }
+    if (email       && seenEmail.has(email))       { skippedDupEmail++; continue }
+    if (companyKey) seenCompany.add(companyKey)
+    if (email)      seenEmail.add(email)
 
     // Stable hash-based external_id (no native ID in Apify export)
-    const hashInput = `${title}|${company}|${city}`
+    const hashInput = `${title}|${company}|${city}|${email}`
     const externalId = 'apify-' + crypto.createHash('sha1').update(hashInput).digest('hex').slice(0, 16)
-    if (seen.has(externalId)) { skipped++; continue }
-    seen.add(externalId)
 
-    // Fallback to 'healthcare' — all Pflege scrapes map there
-    const category = categorizeJob(title) || 'healthcare'
+    const category = flagCategory || categorizeJob(title) || fallbackCategory
 
     rows.push({
       external_id: externalId,
@@ -116,7 +137,8 @@ async function main() {
     })
   }
 
-  console.log(`🔹 ${rows.length} unique rows prepared (${skipped} skipped)`)
+  console.log(`🔹 ${rows.length} unique rows prepared`)
+  console.log(`   skipped: ${skippedNoTitle} no-title, ${skippedNoContact} no-contact, ${skippedDupCompany} dup-company, ${skippedDupEmail} dup-email`)
 
   if (rows.length === 0) {
     console.log('Nothing to insert.')

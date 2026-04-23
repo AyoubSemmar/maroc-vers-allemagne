@@ -200,7 +200,7 @@ export default function ProfilePage() {
   function handleOpenCv(doc: UserDocument) {
     if (!doc.cv_data) return
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(doc.cv_data))
+      sessionStorage.setItem(STORAGE_KEY, JSON.stringify(doc.cv_data))
       router.push('/cv-builder')
     } catch {
       showToast('❌ تعذر فتح السيرة الذاتية')
