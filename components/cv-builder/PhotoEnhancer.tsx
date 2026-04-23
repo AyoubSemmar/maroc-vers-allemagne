@@ -137,6 +137,43 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
     document.body.removeChild(a)
   }
 
+  async function shareItem(it: GalleryItem) {
+    const filename = `cv-photo-${it.profession}-${new Date(it.createdAt).toISOString().slice(0, 10)}.jpg`
+    try {
+      const res = await fetch(it.image)
+      const blob = await res.blob()
+      const file = new File([blob], filename, { type: blob.type || 'image/jpeg' })
+
+      // 1. Native share sheet (iOS/Android Safari+Chrome) — opens WhatsApp, Instagram, etc.
+      const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean }
+      if (nav.canShare && nav.canShare({ files: [file] }) && nav.share) {
+        await nav.share({
+          files: [file],
+          title: 'صورة CV احترافية',
+          text: 'تم إنشاؤها على "دليلك نحو ألمانيا" 🇩🇪',
+        })
+        return
+      }
+
+      // 2. Desktop fallback: copy the image to the clipboard.
+      const CI = (window as unknown as { ClipboardItem?: typeof ClipboardItem }).ClipboardItem
+      if (CI && navigator.clipboard && 'write' in navigator.clipboard) {
+        const item = new CI({ [blob.type || 'image/png']: blob })
+        await navigator.clipboard.write([item])
+        alert('✅ تم نسخ الصورة إلى الحافظة — الصقها في أي تطبيق (WhatsApp، Instagram، ...).')
+        return
+      }
+
+      // 3. Final fallback: just download it.
+      downloadItem(it)
+      alert('📥 تم تحميل الصورة. شاركها يدوياً في أي تطبيق.')
+    } catch (e: any) {
+      if (e?.name === 'AbortError') return // user cancelled the share dialog
+      console.error('[share]', e)
+      alert('❌ تعذر المشاركة: ' + (e?.message || 'خطأ غير معروف'))
+    }
+  }
+
   const selected = gallery.find(g => g.id === selectedId) ?? gallery[0] ?? null
   const canGenerate = remaining === null ? true : remaining > 0
 
@@ -345,6 +382,33 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                         <path d="M4 21h16" />
                       </svg>
                     </button>
+                    <button type="button"
+                      onClick={(e) => { e.stopPropagation(); shareItem(it) }}
+                      title="مشاركة"
+                      aria-label="مشاركة"
+                      style={{
+                        position: 'absolute',
+                        top: 4, insetInlineEnd: 34,
+                        background: 'rgba(255,255,255,0.95)',
+                        border: '1px solid rgba(0,0,0,0.15)',
+                        borderRadius: 6,
+                        width: 26, height: 26,
+                        padding: 0,
+                        cursor: 'pointer',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        color: '#111',
+                      }}
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" strokeWidth="2.2"
+                        strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7" />
+                        <path d="M16 6l-4-4-4 4" />
+                        <path d="M12 2v14" />
+                      </svg>
+                    </button>
                   </div>
                 ))}
               </div>
@@ -361,6 +425,14 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                 disabled={!selected}
               >
                 ↓ تحميل المحددة
+              </button>
+              <button
+                type="button"
+                className="rihla-cvb-btn-ghost"
+                onClick={() => selected && shareItem(selected)}
+                disabled={!selected}
+              >
+                📤 مشاركة
               </button>
               <button
                 type="button"
