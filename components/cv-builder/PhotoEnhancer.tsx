@@ -128,13 +128,48 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
     setModalOpen(false)
   }
 
-  function downloadItem(it: GalleryItem) {
-    const a = document.createElement('a')
-    a.href = it.image
-    a.download = `cv-photo-${it.profession}-${new Date(it.createdAt).toISOString().slice(0, 10)}.jpg`
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
+  async function downloadItem(it: GalleryItem) {
+    const filename = `cv-photo-${it.profession}-${new Date(it.createdAt).toISOString().slice(0, 10)}.jpg`
+
+    // iOS Safari ignores the <a download> attribute for data URLs and usually
+    // navigates to the image instead of saving it. The only reliable way to
+    // "save" a photo on iOS is via the native share sheet → "Save to Photos".
+    const ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''
+    const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+      (ua.includes('Mac') && typeof document !== 'undefined' && 'ontouchend' in document)
+
+    if (isIOS) {
+      try {
+        const res = await fetch(it.image)
+        const blob = await res.blob()
+        const file = new File([blob], filename, { type: blob.type || 'image/jpeg' })
+        const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean }
+        if (nav.canShare && nav.canShare({ files: [file] }) && nav.share) {
+          await nav.share({ files: [file], title: 'صورة CV' })
+          return
+        }
+      } catch (e: any) {
+        if (e?.name === 'AbortError') return
+        // fall through to blob-url fallback
+      }
+    }
+
+    // Desktop + Android: blob URL + anchor click is reliable.
+    try {
+      const res = await fetch(it.image)
+      const blob = await res.blob()
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = filename
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+      setTimeout(() => URL.revokeObjectURL(url), 1000)
+    } catch {
+      // Last-ditch fallback: open in new tab so user can long-press / right-click → save.
+      window.open(it.image, '_blank')
+    }
   }
 
   async function shareItem(it: GalleryItem) {
