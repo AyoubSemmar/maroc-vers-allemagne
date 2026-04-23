@@ -109,6 +109,7 @@ function buildPrompt(hijab: Hijab, profession: Profession): string {
       `• Clothing below the hijab drape: replace with ${clothing}`,
       `• Background: ${background}`,
       `• Lighting: soft, even, flattering professional lighting, natural color balance.`,
+      `• Composition: the person must be perfectly CENTERED in the frame, horizontally and vertically — head and shoulders framed symmetrically with equal space on the left and right sides. Head centered, eyes roughly on the upper third of the frame. No off-center framing.`,
       ``,
       `FINAL CHECK BEFORE OUTPUT: compare the output hijab to the input hijab — they must look like the same piece of fabric worn the exact same way. If they differ in drape, fold, shape, tightness, or coverage, the output is WRONG and you must fix it. Produce a photorealistic, real-photograph-looking CV portrait (not AI-generated, not plasticky, not over-smoothed — DSLR quality).`,
     ].join(' ')
@@ -131,6 +132,7 @@ function buildPrompt(hijab: Hijab, profession: Profession): string {
     `4. Clothing: replace the current clothing with ${clothing}`,
     `5. Background/scene: ${background}`,
     `6. Lighting: soft, even, flattering professional lighting appropriate to the scene. Natural color balance.`,
+    `7. Composition: the person must be perfectly CENTERED in the frame, horizontally and vertically — head and shoulders framed symmetrically with equal space on the left and right sides. Head centered, eyes roughly on the upper third of the frame. No off-center framing.`,
     ``,
     `Output: a photorealistic high-resolution portrait, sharp focus on the face, shallow but realistic depth of field, LinkedIn/CV quality, looks like a real photograph.`,
   ].join(' ')
