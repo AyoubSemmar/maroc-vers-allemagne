@@ -1,48 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Replicate from 'replicate'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
-import { createClient as createAdminClient } from '@supabase/supabase-js'
+import { checkAndConsume, refund, getStatus } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 export const maxDuration = 300
-
-const DAILY_LIMIT = 20
-
-function todayUTC(): string {
-  return new Date().toISOString().slice(0, 10)
-}
-
-function adminClient() {
-  return createAdminClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    { auth: { persistSession: false } }
-  )
-}
-
-async function getUsage(userId: string): Promise<number> {
-  const admin = adminClient()
-  const { data } = await admin
-    .from('photo_enhance_usage')
-    .select('count')
-    .eq('user_id', userId)
-    .eq('day', todayUTC())
-    .maybeSingle()
-  return data?.count ?? 0
-}
-
-async function bumpUsage(userId: string): Promise<number> {
-  const admin = adminClient()
-  const day = todayUTC()
-  const current = await getUsage(userId)
-  const next = current + 1
-  await admin.from('photo_enhance_usage').upsert(
-    { user_id: userId, day, count: next, updated_at: new Date().toISOString() },
-    { onConflict: 'user_id,day' }
-  )
-  return next
-}
 
 // flux-kontext-max is an image *editor*: it takes the input photo and applies
 // targeted edits while leaving the rest (face, identity, body) intact.
@@ -139,17 +102,30 @@ function buildPrompt(hijab: Hijab, profession: Profession): string {
 }
 
 export async function GET() {
-  // Return the user's remaining daily quota (for UI display)
+  // Return the user's current entitlement state for UI display.
   const sb = await createServerSupabase()
   const { data: { user } } = await sb.auth.getUser()
   if (!user) {
     return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 })
   }
-  const used = await getUsage(user.id)
+  const status = await getStatus(user.id, 'photo')
+  // Back-compat shape for the existing client: report `limit`, `used`, `remaining`.
+  if (status.tier === 'premium') {
+    return NextResponse.json({
+      tier: 'premium',
+      limit: status.limit,
+      used: status.used,
+      remaining: status.remaining,
+    })
+  }
+  // Free tier → credits model.
   return NextResponse.json({
-    limit: DAILY_LIMIT,
-    used,
-    remaining: Math.max(0, DAILY_LIMIT - used),
+    tier: 'free',
+    credits: status.credits ?? 0,
+    used: status.used,
+    // Legacy fields — UI shows "remaining/limit"; map credits → remaining, limit = credits + used-but-paid.
+    limit: (status.credits ?? 0),
+    remaining: (status.credits ?? 0),
   })
 }
 
@@ -173,19 +149,19 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Enforce per-user daily rate limit (server-side, tamper-proof)
-    const used = await getUsage(user.id)
-    if (used >= DAILY_LIMIT) {
+    // Entitlement gate: premium daily limit → pay-per-use credit → deny.
+    const ent = await checkAndConsume(user.id, 'photo')
+    if (!ent.allowed) {
+      const message =
+        ent.reason === 'premium_daily_limit' ? 'وصلت الحد اليومي للباقة المميزة. جرّب غداً.' :
+        ent.reason === 'no_credits'          ? 'لا تملك رصيداً كافياً. اشترِ باقة صور لتوليد صور إضافية.' :
+                                               'غير مسموح.'
       return NextResponse.json(
-        {
-          error: `Daily limit reached (${DAILY_LIMIT}/day). Try again tomorrow.`,
-          limit: DAILY_LIMIT,
-          used,
-          remaining: 0,
-        },
-        { status: 429 }
+        { error: message, reason: ent.reason },
+        { status: 402 } // 402 Payment Required — signals "needs credits/premium"
       )
     }
+    const source = ent.source
 
     const body = await req.json().catch(() => ({}))
     const image = typeof body.image === 'string' ? body.image : ''
@@ -199,6 +175,7 @@ export async function POST(req: NextRequest) {
         : 'office'
 
     if (!image || !image.startsWith('data:image/')) {
+      await refund(user.id, 'photo', source)
       return NextResponse.json(
         { error: 'Invalid image. Send a base64 data URL.' },
         { status: 400 }
@@ -207,6 +184,7 @@ export async function POST(req: NextRequest) {
 
     // Rough base64 size check (≤ 8 MB after base64 ≈ 6 MB raw)
     if (image.length > 11_000_000) {
+      await refund(user.id, 'photo', source)
       return NextResponse.json(
         { error: 'Image too large. Max 6 MB.' },
         { status: 413 }
@@ -237,6 +215,7 @@ export async function POST(req: NextRequest) {
     const startedAt = Date.now()
     while (!terminal.has(prediction.status)) {
       if (Date.now() - startedAt > 240_000) {
+        await refund(user.id, 'photo', source)
         return NextResponse.json({ error: 'Timeout waiting for Replicate.' }, { status: 504 })
       }
       await new Promise(r => setTimeout(r, 2000))
@@ -245,6 +224,7 @@ export async function POST(req: NextRequest) {
 
     if (prediction.status !== 'succeeded') {
       console.error('Replicate prediction failed:', prediction.status, prediction.error, prediction.logs)
+      await refund(user.id, 'photo', source)
       return NextResponse.json(
         { error: `Prediction ${prediction.status}: ${prediction.error || 'unknown'}` },
         { status: 502 }
@@ -274,19 +254,22 @@ export async function POST(req: NextRequest) {
     }
 
     if (!dataUrl) {
+      await refund(user.id, 'photo', source)
       return NextResponse.json(
         { error: 'Unexpected Replicate output format.' },
         { status: 502 }
       )
     }
 
-    // Success → count this against the user's quota (only paid generations are billed)
-    const newCount = await bumpUsage(user.id)
+    // Success → return the image. Entitlement was already consumed above.
+    const status = await getStatus(user.id, 'photo')
     return NextResponse.json({
       image: dataUrl,
-      limit: DAILY_LIMIT,
-      used: newCount,
-      remaining: Math.max(0, DAILY_LIMIT - newCount),
+      tier: status.tier,
+      limit: status.tier === 'premium' ? status.limit : status.credits ?? 0,
+      used: status.used,
+      remaining: status.tier === 'premium' ? status.remaining : status.credits ?? 0,
+      source,
     })
   } catch (e: any) {
     console.error('enhance-photo error:', e?.message, e?.response?.data || e)

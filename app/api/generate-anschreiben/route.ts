@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
+import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { checkAndConsume, refund } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -83,11 +85,32 @@ Ensure: no grammar mistakes, smooth flow, no repetition, feels like written by a
 Generate a convincing German "Anschreiben" that increases the user's chances of getting an Ausbildung.`
 
 export async function POST(req: NextRequest) {
+  let userIdForRefund: string | null = null
+  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free' | null = null
   try {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
       return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured.' }, { status: 500 })
     }
+
+    // Require authenticated user
+    const sb = await createServerSupabase()
+    const { data: { user } } = await sb.auth.getUser()
+    if (!user) {
+      return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 })
+    }
+
+    // Entitlement gate
+    const ent = await checkAndConsume(user.id, 'motivation')
+    if (!ent.allowed) {
+      const message =
+        ent.reason === 'premium_daily_limit' ? 'وصلت الحد اليومي للباقة المميزة لرسائل التحفيز.' :
+        ent.reason === 'no_credits'          ? 'لا تملك رصيد رسائل تحفيز. اشترِ رصيداً للمتابعة.' :
+                                               'غير مسموح.'
+      return NextResponse.json({ error: message, reason: ent.reason }, { status: 402 })
+    }
+    userIdForRefund = user.id
+    sourceForRefund = ent.source
 
     const formData = await req.formData()
     const fullName = (formData.get('full_name') as string || '').trim()
@@ -97,6 +120,7 @@ export async function POST(req: NextRequest) {
     const cvFile = formData.get('cv_file') as File | null
 
     if (!fullName || !rawPosition || !userBackground) {
+      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })
     }
 
@@ -148,9 +172,10 @@ extracted_cv_data: ${extractedCvData.slice(0, 3000)}`
 
     // Extract the expanded position from the first line of the letter if AI included it,
     // otherwise just return raw. The client shows it in the header.
-    return NextResponse.json({ letter, date: germanDate })
+    return NextResponse.json({ letter, date: germanDate, source: sourceForRefund })
   } catch (e: any) {
     console.error('generate-anschreiben error:', e)
+    if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
     return NextResponse.json({ error: e?.message || 'Internal error' }, { status: 500 })
   }
 }

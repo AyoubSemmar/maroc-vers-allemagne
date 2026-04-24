@@ -198,6 +198,38 @@ export async function checkAndConsume(userId: string, feature: Feature): Promise
 }
 
 /**
+ * Roll back a consumed entitlement after an expensive op fails (e.g. Replicate
+ * returns an error). Pass the `source` returned by checkAndConsume so we know
+ * which ledger to reverse.
+ */
+export async function refund(userId: string, feature: PaidFeature, source: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free') {
+  if (source === 'credit') {
+    const column = CREDIT_COLUMN[feature as Exclude<PaidFeature, 'ausbildung_reveal'>]
+    const { data } = await admin()
+      .from('user_credits')
+      .select(column)
+      .eq('user_id', userId)
+      .maybeSingle()
+    const current = (data as unknown as Record<string, number> | null)?.[column] ?? 0
+    await admin()
+      .from('user_credits')
+      .upsert(
+        { user_id: userId, [column]: current + 1, updated_at: new Date().toISOString() },
+        { onConflict: 'user_id' }
+      )
+  }
+  // Daily-usage rows were bumped for every success path; decrement them too.
+  const table = USAGE_TABLE[feature]
+  const current = await getDailyUsage(userId, table)
+  if (current > 0) {
+    await admin().from(table).upsert(
+      { user_id: userId, day: todayUTC(), count: current - 1, updated_at: new Date().toISOString() },
+      { onConflict: 'user_id,day' }
+    )
+  }
+}
+
+/**
  * Read-only status snapshot for the UI (e.g. "remaining today: 3/5").
  * Does not consume anything.
  */

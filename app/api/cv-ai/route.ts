@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
+import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { checkAndConsume, refund } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -111,6 +113,8 @@ BULLET FORMAT (critical):
 Return ONLY a JSON object matching the input shape. Arrays ("education", "experience", "languages", "skills.technical", "skills.soft") MAY contain MORE elements than the input when reference documents justify it — append new entries at the end. Do not wrap in markdown code fences. Do not add any commentary.`
 
 export async function POST(req: NextRequest) {
+  let userIdForRefund: string | null = null
+  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free' | null = null
   try {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
@@ -120,8 +124,28 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Require authenticated user
+    const sb = await createServerSupabase()
+    const { data: { user } } = await sb.auth.getUser()
+    if (!user) {
+      return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 })
+    }
+
+    // Entitlement gate
+    const ent = await checkAndConsume(user.id, 'cv')
+    if (!ent.allowed) {
+      const message =
+        ent.reason === 'premium_daily_limit' ? 'وصلت الحد اليومي للباقة المميزة لتحسين السيرة الذاتية.' :
+        ent.reason === 'no_credits'          ? 'لا تملك رصيد تحسين CV. اشترِ رصيداً للمتابعة.' :
+                                               'غير مسموح.'
+      return NextResponse.json({ error: message, reason: ent.reason }, { status: 402 })
+    }
+    userIdForRefund = user.id
+    sourceForRefund = ent.source
+
     const payload = (await req.json()) as Payload
     if (!payload || typeof payload !== 'object') {
+      await refund(user.id, 'cv', ent.source)
       return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
     }
 
@@ -198,15 +222,17 @@ export async function POST(req: NextRequest) {
       parsed = JSON.parse(cleaned)
     } catch (e) {
       console.error('Failed to parse AI response:', text)
+      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'cv', sourceForRefund)
       return NextResponse.json(
         { error: 'AI returned invalid JSON. Try again.' },
         { status: 502 }
       )
     }
 
-    return NextResponse.json({ data: parsed })
+    return NextResponse.json({ data: parsed, source: sourceForRefund })
   } catch (e: any) {
     console.error('cv-ai error:', e)
+    if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'cv', sourceForRefund)
     return NextResponse.json(
       { error: e?.message || 'Internal error' },
       { status: 500 }
