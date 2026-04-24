@@ -81,6 +81,54 @@
       }
     }
   },
+  "auth": {
+    "shared": {
+      "emailPlaceholder": "Email",
+      "passwordPlaceholder": "Password",
+      "backHome": "→ Back to home",
+      "backLogin": "→ Back to login"
+    },
+    "login": {
+      "title": "Log in",
+      "submit": "Log in",
+      "submitting": "Logging in...",
+      "invalidCredentials": "Email or password is incorrect",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up",
+      "forgot": "Forgot password?"
+    },
+    "signup": {
+      "title": "Create a new account",
+      "submit": "Create account",
+      "submitting": "Creating...",
+      "passwordPlaceholder": "Password (at least 6 characters)",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "error": "Something went wrong: {message}",
+      "emailExists": "This email is already linked to an existing account. You can log in.",
+      "checkInbox": "A verification link has been sent to your email. Check your inbox!"
+    },
+    "forgot": {
+      "title": "Forgot password?",
+      "sub": "Enter your email and we'll send you a link to reset your password.",
+      "submit": "Send reset link",
+      "submitting": "Sending...",
+      "success": "The reset link has been sent to your email. Check your inbox!",
+      "error": "Something went wrong. Check your email and try again."
+    },
+    "reset": {
+      "title": "Reset password",
+      "sub": "Choose a new password for your account.",
+      "newPassword": "New password",
+      "confirm": "Confirm password",
+      "submit": "Update password",
+      "submitting": "Saving...",
+      "success": "Password updated! Redirecting to the login page...",
+      "mismatch": "Passwords don't match.",
+      "tooShort": "Password must be at least 6 characters.",
+      "updateError": "Something went wrong while updating the password. Please try again."
+    }
+  },
   "language": {
     "pickerTitle": "Choose your language",
     "pickerSubtitle": "You can change it anytime",

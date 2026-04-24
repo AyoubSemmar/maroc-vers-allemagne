@@ -1,11 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
-import { useRouter } from 'next/navigation'
+import { useRouter } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 
 export default function ResetPasswordPage() {
+  const t = useTranslations('auth.reset')
+  const locale = useLocale() as AppLocale
   const [password, setPassword] = useState('')
   const [confirm, setConfirm] = useState('')
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
@@ -17,12 +21,12 @@ export default function ResetPasswordPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (password !== confirm) {
-      setErrorMsg('كلمتا المرور غير متطابقتين.')
+      setErrorMsg(t('mismatch'))
       setStatus('error')
       return
     }
     if (password.length < 6) {
-      setErrorMsg('كلمة المرور يجب أن تكون 6 أحرف على الأقل.')
+      setErrorMsg(t('tooShort'))
       setStatus('error')
       return
     }
@@ -30,7 +34,7 @@ export default function ResetPasswordPage() {
     const { error } = await supabase.auth.updateUser({ password })
     setLoading(false)
     if (error) {
-      setErrorMsg('حدث خطأ أثناء تحديث كلمة المرور. حاول مجدداً.')
+      setErrorMsg(t('updateError'))
       setStatus('error')
     } else {
       setStatus('success')
@@ -39,14 +43,14 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center" dir="rtl">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center" dir={dirFor(locale)}>
       <div className="bg-white p-8 rounded-xl border border-gray-200 w-full max-w-sm">
-        <h1 className="text-xl font-bold text-gray-900 mb-2">إعادة تعيين كلمة المرور</h1>
-        <p className="text-sm text-gray-500 mb-6">اختر كلمة مرور جديدة لحسابك.</p>
+        <h1 className="text-xl font-bold text-gray-900 mb-2">{t('title')}</h1>
+        <p className="text-sm text-gray-500 mb-6">{t('sub')}</p>
 
         {status === 'success' ? (
           <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-800 text-sm">
-            تم تحديث كلمة المرور بنجاح! سيتم توجيهك لصفحة تسجيل الدخول...
+            {t('success')}
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
@@ -56,12 +60,12 @@ export default function ResetPasswordPage() {
               </div>
             )}
             <PasswordInput
-              placeholder="كلمة المرور الجديدة"
+              placeholder={t('newPassword')}
               value={password}
               onChange={setPassword}
             />
             <PasswordInput
-              placeholder="تأكيد كلمة المرور"
+              placeholder={t('confirm')}
               value={confirm}
               onChange={setConfirm}
             />
@@ -70,7 +74,7 @@ export default function ResetPasswordPage() {
               disabled={loading}
               className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800 disabled:opacity-50"
             >
-              {loading ? 'جاري الحفظ...' : 'تحديث كلمة المرور'}
+              {loading ? t('submitting') : t('submit')}
             </button>
           </form>
         )}

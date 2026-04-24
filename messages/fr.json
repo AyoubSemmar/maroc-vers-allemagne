@@ -81,6 +81,54 @@
       }
     }
   },
+  "auth": {
+    "shared": {
+      "emailPlaceholder": "E-mail",
+      "passwordPlaceholder": "Mot de passe",
+      "backHome": "→ Retour à l'accueil",
+      "backLogin": "→ Retour à la connexion"
+    },
+    "login": {
+      "title": "Connexion",
+      "submit": "Se connecter",
+      "submitting": "Connexion...",
+      "invalidCredentials": "E-mail ou mot de passe incorrect",
+      "noAccount": "Pas encore de compte ?",
+      "signupLink": "Créer un compte",
+      "forgot": "Mot de passe oublié ?"
+    },
+    "signup": {
+      "title": "Créer un nouveau compte",
+      "submit": "Créer un compte",
+      "submitting": "Création...",
+      "passwordPlaceholder": "Mot de passe (6 caractères minimum)",
+      "haveAccount": "Vous avez déjà un compte ?",
+      "loginLink": "Se connecter",
+      "error": "Une erreur est survenue : {message}",
+      "emailExists": "Cette adresse e-mail est déjà liée à un compte existant. Vous pouvez vous connecter.",
+      "checkInbox": "Un lien de vérification a été envoyé à votre adresse e-mail. Vérifiez votre boîte de réception !"
+    },
+    "forgot": {
+      "title": "Mot de passe oublié ?",
+      "sub": "Saisissez votre e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
+      "submit": "Envoyer le lien",
+      "submitting": "Envoi...",
+      "success": "Le lien de réinitialisation a été envoyé à votre e-mail. Vérifiez votre boîte de réception !",
+      "error": "Une erreur est survenue. Vérifiez votre e-mail et réessayez."
+    },
+    "reset": {
+      "title": "Réinitialiser le mot de passe",
+      "sub": "Choisissez un nouveau mot de passe pour votre compte.",
+      "newPassword": "Nouveau mot de passe",
+      "confirm": "Confirmer le mot de passe",
+      "submit": "Mettre à jour",
+      "submitting": "Enregistrement...",
+      "success": "Mot de passe mis à jour ! Redirection vers la page de connexion...",
+      "mismatch": "Les mots de passe ne correspondent pas.",
+      "tooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+      "updateError": "Une erreur est survenue lors de la mise à jour. Réessayez."
+    }
+  },
   "language": {
     "pickerTitle": "Choisissez votre langue",
     "pickerSubtitle": "Vous pourrez la changer à tout moment",

@@ -81,6 +81,54 @@
       }
     }
   },
+  "auth": {
+    "shared": {
+      "emailPlaceholder": "E-Mail",
+      "passwordPlaceholder": "Passwort",
+      "backHome": "→ Zurück zur Startseite",
+      "backLogin": "→ Zurück zum Login"
+    },
+    "login": {
+      "title": "Anmelden",
+      "submit": "Anmelden",
+      "submitting": "Anmeldung läuft...",
+      "invalidCredentials": "E-Mail oder Passwort ist falsch",
+      "noAccount": "Noch kein Konto?",
+      "signupLink": "Konto erstellen",
+      "forgot": "Passwort vergessen?"
+    },
+    "signup": {
+      "title": "Neues Konto erstellen",
+      "submit": "Konto erstellen",
+      "submitting": "Wird erstellt...",
+      "passwordPlaceholder": "Passwort (mindestens 6 Zeichen)",
+      "haveAccount": "Schon ein Konto?",
+      "loginLink": "Anmelden",
+      "error": "Etwas ist schiefgelaufen: {message}",
+      "emailExists": "Diese E-Mail ist bereits mit einem Konto verknüpft. Du kannst dich anmelden.",
+      "checkInbox": "Ein Bestätigungslink wurde an deine E-Mail gesendet. Prüfe dein Postfach!"
+    },
+    "forgot": {
+      "title": "Passwort vergessen?",
+      "sub": "Gib deine E-Mail ein, und wir schicken dir einen Link zum Zurücksetzen des Passworts.",
+      "submit": "Link senden",
+      "submitting": "Wird gesendet...",
+      "success": "Der Link zum Zurücksetzen wurde an deine E-Mail gesendet. Prüfe dein Postfach!",
+      "error": "Etwas ist schiefgelaufen. Überprüfe deine E-Mail und versuch es erneut."
+    },
+    "reset": {
+      "title": "Passwort zurücksetzen",
+      "sub": "Wähle ein neues Passwort für dein Konto.",
+      "newPassword": "Neues Passwort",
+      "confirm": "Passwort bestätigen",
+      "submit": "Passwort aktualisieren",
+      "submitting": "Wird gespeichert...",
+      "success": "Passwort aktualisiert! Du wirst zur Anmeldeseite weitergeleitet...",
+      "mismatch": "Die Passwörter stimmen nicht überein.",
+      "tooShort": "Das Passwort muss mindestens 6 Zeichen lang sein.",
+      "updateError": "Beim Aktualisieren ist etwas schiefgelaufen. Versuch es erneut."
+    }
+  },
   "language": {
     "pickerTitle": "Wähle deine Sprache",
     "pickerSubtitle": "Du kannst sie jederzeit ändern",
