@@ -253,6 +253,79 @@
       "disclaimer": "Nous ne partagerons jamais votre e-mail · vous pouvez vous désinscrire à tout moment"
     }
   },
+  "profile": {
+    "title": "Mon profil",
+    "errorPrefix": "Erreur : ",
+    "avatar": {
+      "uploading": "Envoi en cours...",
+      "change": "Changer la photo"
+    },
+    "email": "E-mail",
+    "whatsapp": {
+      "label": "Numéro WhatsApp (facultatif)",
+      "errDe": "Le numéro allemand doit contenir 10 ou 11 chiffres",
+      "errMa": "Le numéro marocain doit contenir 9 chiffres"
+    },
+    "status": {
+      "label": "Votre situation actuelle (facultatif)",
+      "inDe": "En Allemagne",
+      "coming": "En préparation"
+    },
+    "save": {
+      "saving": "Enregistrement...",
+      "saved": "Enregistré ✓",
+      "submit": "Enregistrer les modifications"
+    },
+    "docs": {
+      "heading": "🗂 Mes documents",
+      "uploadOpen": "+ Téléverser un document",
+      "uploadClose": "✕ Annuler",
+      "formTitle": "Téléverser un nouveau document",
+      "type": "Type de document",
+      "fileLabel": "Fichier (PDF ou Word · max 8 Mo)",
+      "dropHint": "Glissez le fichier ici ou",
+      "clickSelect": "cliquez pour choisir",
+      "pickFirst": "Choisissez d'abord un fichier",
+      "uploadErr": "Erreur lors de l'envoi",
+      "sizeErr": "Taille maximale 8 Mo",
+      "uploadSuccess": "✅ Document téléversé avec succès",
+      "uploading": "⏳ Envoi en cours...",
+      "uploadBtn": "📤 Téléverser le document",
+      "loading": "Chargement...",
+      "emptyTitle": "Aucun document enregistré pour l'instant.",
+      "emptyHint": "Créez un",
+      "emptyCv": "CV",
+      "emptyOr": "ou une",
+      "emptyLetter": "lettre de motivation",
+      "emptyOrUpload": "ou téléversez un fichier.",
+      "confirmDelete": "Supprimer « {title} » ?",
+      "deleted": "✅ Supprimé",
+      "deleteErr": "❌ Erreur de suppression",
+      "aiBadge": "Généré par IA",
+      "openInBuilder": "✏️ Ouvrir dans l'éditeur",
+      "viewLetter": "👁 Voir la lettre",
+      "openFile": "🔗 Ouvrir le fichier",
+      "delete": "🗑 Supprimer",
+      "openCvErr": "❌ Impossible d'ouvrir le CV",
+      "close": "✕ Fermer"
+    },
+    "listings": {
+      "heading": "Mes annonces",
+      "add": "+ Ajouter une annonce",
+      "empty": "Vous n'avez encore publié aucune annonce.",
+      "expired": "Expirée",
+      "expiresOn": "Expire le {date}"
+    },
+    "deleteAccount": {
+      "button": "Supprimer mon compte",
+      "title": "Êtes-vous sûr ?",
+      "body": "Votre compte sera définitivement supprimé et vous ne pourrez plus vous connecter. Cette action est irréversible.",
+      "cancel": "Annuler",
+      "confirm": "Oui, supprimer le compte",
+      "deleting": "⏳ Suppression...",
+      "genericErr": "Une erreur est survenue lors de la suppression du compte"
+    }
+  },
   "search": {
     "resultsFor": "Résultats pour :",
     "count": "{n} résultat(s)",

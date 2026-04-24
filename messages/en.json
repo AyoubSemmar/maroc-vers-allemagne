@@ -253,6 +253,79 @@
       "disclaimer": "We'll never share your email · you can unsubscribe at any time"
     }
   },
+  "profile": {
+    "title": "My profile",
+    "errorPrefix": "Error: ",
+    "avatar": {
+      "uploading": "Uploading...",
+      "change": "Change photo"
+    },
+    "email": "Email",
+    "whatsapp": {
+      "label": "WhatsApp number (optional)",
+      "errDe": "German numbers must have 10 or 11 digits",
+      "errMa": "Moroccan numbers must have 9 digits"
+    },
+    "status": {
+      "label": "Your current status (optional)",
+      "inDe": "In Germany",
+      "coming": "Preparing to move"
+    },
+    "save": {
+      "saving": "Saving...",
+      "saved": "Saved ✓",
+      "submit": "Save changes"
+    },
+    "docs": {
+      "heading": "🗂 My documents",
+      "uploadOpen": "+ Upload document",
+      "uploadClose": "✕ Cancel",
+      "formTitle": "Upload a new document",
+      "type": "Document type",
+      "fileLabel": "File (PDF or Word · max 8MB)",
+      "dropHint": "Drop the file here or",
+      "clickSelect": "click to choose",
+      "pickFirst": "Pick a file first",
+      "uploadErr": "Upload error",
+      "sizeErr": "Max size 8MB",
+      "uploadSuccess": "✅ Document uploaded successfully",
+      "uploading": "⏳ Uploading...",
+      "uploadBtn": "📤 Upload document",
+      "loading": "Loading...",
+      "emptyTitle": "No documents saved yet.",
+      "emptyHint": "Create a",
+      "emptyCv": "CV",
+      "emptyOr": "or a",
+      "emptyLetter": "motivation letter",
+      "emptyOrUpload": "or upload a file.",
+      "confirmDelete": "Delete \"{title}\"?",
+      "deleted": "✅ Deleted",
+      "deleteErr": "❌ Delete error",
+      "aiBadge": "AI-generated",
+      "openInBuilder": "✏️ Open in builder",
+      "viewLetter": "👁 View letter",
+      "openFile": "🔗 Open file",
+      "delete": "🗑 Delete",
+      "openCvErr": "❌ Could not open CV",
+      "close": "✕ Close"
+    },
+    "listings": {
+      "heading": "My listings",
+      "add": "+ Add listing",
+      "empty": "You haven't posted any listings yet.",
+      "expired": "Expired",
+      "expiresOn": "Expires {date}"
+    },
+    "deleteAccount": {
+      "button": "Delete my account",
+      "title": "Are you sure?",
+      "body": "Your account will be permanently deleted and you won't be able to sign in again. This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Yes, delete account",
+      "deleting": "⏳ Deleting...",
+      "genericErr": "An error occurred while deleting the account"
+    }
+  },
   "search": {
     "resultsFor": "Search results for:",
     "count": "{n} result(s)",

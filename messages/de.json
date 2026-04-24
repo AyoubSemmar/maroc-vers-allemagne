@@ -253,6 +253,79 @@
       "disclaimer": "Wir teilen deine E-Mail nie · du kannst dich jederzeit abmelden"
     }
   },
+  "profile": {
+    "title": "Mein Profil",
+    "errorPrefix": "Fehler: ",
+    "avatar": {
+      "uploading": "Wird hochgeladen...",
+      "change": "Foto ändern"
+    },
+    "email": "E-Mail",
+    "whatsapp": {
+      "label": "WhatsApp-Nummer (optional)",
+      "errDe": "Deutsche Nummern müssen 10 oder 11 Ziffern haben",
+      "errMa": "Marokkanische Nummern müssen 9 Ziffern haben"
+    },
+    "status": {
+      "label": "Dein aktueller Status (optional)",
+      "inDe": "In Deutschland",
+      "coming": "Auf dem Weg"
+    },
+    "save": {
+      "saving": "Speichert...",
+      "saved": "Gespeichert ✓",
+      "submit": "Änderungen speichern"
+    },
+    "docs": {
+      "heading": "🗂 Meine Dokumente",
+      "uploadOpen": "+ Dokument hochladen",
+      "uploadClose": "✕ Abbrechen",
+      "formTitle": "Neues Dokument hochladen",
+      "type": "Dokumenttyp",
+      "fileLabel": "Datei (PDF oder Word · max. 8 MB)",
+      "dropHint": "Datei hier ablegen oder",
+      "clickSelect": "klicken zum Auswählen",
+      "pickFirst": "Wähle zuerst eine Datei",
+      "uploadErr": "Upload-Fehler",
+      "sizeErr": "Maximale Größe 8 MB",
+      "uploadSuccess": "✅ Dokument erfolgreich hochgeladen",
+      "uploading": "⏳ Wird hochgeladen...",
+      "uploadBtn": "📤 Dokument hochladen",
+      "loading": "Lädt...",
+      "emptyTitle": "Noch keine Dokumente gespeichert.",
+      "emptyHint": "Erstelle einen",
+      "emptyCv": "Lebenslauf",
+      "emptyOr": "oder ein",
+      "emptyLetter": "Motivationsschreiben",
+      "emptyOrUpload": "oder lade eine Datei hoch.",
+      "confirmDelete": "\"{title}\" löschen?",
+      "deleted": "✅ Gelöscht",
+      "deleteErr": "❌ Fehler beim Löschen",
+      "aiBadge": "KI-generiert",
+      "openInBuilder": "✏️ Im Editor öffnen",
+      "viewLetter": "👁 Schreiben ansehen",
+      "openFile": "🔗 Datei öffnen",
+      "delete": "🗑 Löschen",
+      "openCvErr": "❌ Lebenslauf konnte nicht geöffnet werden",
+      "close": "✕ Schließen"
+    },
+    "listings": {
+      "heading": "Meine Anzeigen",
+      "add": "+ Anzeige hinzufügen",
+      "empty": "Du hast noch keine Anzeigen veröffentlicht.",
+      "expired": "Abgelaufen",
+      "expiresOn": "Läuft ab am {date}"
+    },
+    "deleteAccount": {
+      "button": "Konto löschen",
+      "title": "Bist du sicher?",
+      "body": "Dein Konto wird endgültig gelöscht und du kannst dich nicht mehr anmelden. Diese Aktion kann nicht rückgängig gemacht werden.",
+      "cancel": "Abbrechen",
+      "confirm": "Ja, Konto löschen",
+      "deleting": "⏳ Wird gelöscht...",
+      "genericErr": "Beim Löschen des Kontos ist ein Fehler aufgetreten"
+    }
+  },
   "search": {
     "resultsFor": "Suchergebnisse für:",
     "count": "{n} Ergebnis(se)",
