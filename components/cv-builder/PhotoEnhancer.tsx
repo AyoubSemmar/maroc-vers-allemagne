@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   currentImage: string
@@ -18,19 +19,21 @@ type GalleryItem = {
   createdAt: number
 }
 
-const PROFESSIONS: { value: ProfessionChoice; label: string; icon: string }[] = [
-  { value: 'office',   label: 'مكتب / شركة',            icon: '💼' },
-  { value: 'health',   label: 'رعاية صحية / تمريض',    icon: '🩺' },
-  { value: 'lkw',      label: 'سائق شاحنة (LKW)',      icon: '🚚' },
-  { value: 'handwerk', label: 'حرفي (كهرباء، ميكانيك)', icon: '🔧' },
-  { value: 'gastronomie', label: 'مطاعم / فندقة',       icon: '🍽️' },
+const PROFESSIONS: { value: ProfessionChoice; icon: string }[] = [
+  { value: 'office',      icon: '💼' },
+  { value: 'health',      icon: '🩺' },
+  { value: 'lkw',         icon: '🚚' },
+  { value: 'handwerk',    icon: '🔧' },
+  { value: 'gastronomie', icon: '🍽️' },
 ]
 
-function professionLabel(v: ProfessionChoice): string {
-  return PROFESSIONS.find(p => p.value === v)?.label ?? v
-}
-
 export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
+  const t = useTranslations('cvBuilder.photo')
+
+  function professionLabel(v: ProfessionChoice): string {
+    return t(`pro.${v}`)
+  }
+
   const [loading, setLoading]       = useState(false)
   const [error, setError]           = useState('')
   const [modalOpen, setModalOpen]   = useState(false)
@@ -39,15 +42,12 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
   const [hijab, setHijab]           = useState<HijabChoice>('none')
   const [profession, setProfession] = useState<ProfessionChoice>('office')
 
-  // Gallery of every image the user has generated in this session
   const [gallery, setGallery]       = useState<GalleryItem[]>([])
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
-  // Always send the ORIGINAL uploaded photo to the API (prevents drift)
   const [originalImage, setOriginalImage] = useState(currentImage)
   const producedImagesRef = useRef<Set<string>>(new Set())
 
-  // Fetch server-side remaining quota on mount
   useEffect(() => {
     let cancelled = false
     ;(async () => {
@@ -63,7 +63,6 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
     return () => { cancelled = true }
   }, [])
 
-  // Track fresh uploads (not our own AI outputs)
   useEffect(() => {
     if (currentImage && !producedImagesRef.current.has(currentImage)) {
       setOriginalImage(currentImage)
@@ -72,9 +71,9 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
 
   async function run() {
     const source = originalImage || currentImage
-    if (!source) { setError('ارفع صورة أولاً'); return }
+    if (!source) { setError(t('noPhoto')); return }
     if (remaining !== null && remaining <= 0) {
-      setError(`وصلت الحد اليومي (${limit} محاولات). جرّب غداً.`)
+      setError(t('dailyLimit', { lim: limit }))
       return
     }
 
@@ -88,7 +87,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
       })
       const data = await res.json()
       if (res.status === 401) {
-        throw new Error('يجب تسجيل الدخول لاستخدام هذه الميزة.')
+        throw new Error(t('loginRequired'))
       }
       if (!res.ok || !data.image) {
         if (typeof data.remaining === 'number') setRemaining(data.remaining)
@@ -110,7 +109,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
       setSelectedId(item.id)
       setModalOpen(true)
     } catch (e: any) {
-      setError(e?.message || 'تعذر تحسين الصورة. حاول مرة أخرى.')
+      setError(e?.message || t('enhanceFail'))
     } finally {
       setLoading(false)
     }
@@ -131,9 +130,6 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
   async function downloadItem(it: GalleryItem) {
     const filename = `cv-photo-${it.profession}-${new Date(it.createdAt).toISOString().slice(0, 10)}.jpg`
 
-    // iOS Safari ignores the <a download> attribute for data URLs and usually
-    // navigates to the image instead of saving it. The only reliable way to
-    // "save" a photo on iOS is via the native share sheet → "Save to Photos".
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent : ''
     const isIOS = /iPad|iPhone|iPod/.test(ua) ||
       (ua.includes('Mac') && typeof document !== 'undefined' && 'ontouchend' in document)
@@ -145,16 +141,14 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
         const file = new File([blob], filename, { type: blob.type || 'image/jpeg' })
         const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean }
         if (nav.canShare && nav.canShare({ files: [file] }) && nav.share) {
-          await nav.share({ files: [file], title: 'صورة CV' })
+          await nav.share({ files: [file], title: t('shareTitleFile') })
           return
         }
       } catch (e: any) {
         if (e?.name === 'AbortError') return
-        // fall through to blob-url fallback
       }
     }
 
-    // Desktop + Android: blob URL + anchor click is reliable.
     try {
       const res = await fetch(it.image)
       const blob = await res.blob()
@@ -167,7 +161,6 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
       document.body.removeChild(a)
       setTimeout(() => URL.revokeObjectURL(url), 1000)
     } catch {
-      // Last-ditch fallback: open in new tab so user can long-press / right-click → save.
       window.open(it.image, '_blank')
     }
   }
@@ -179,33 +172,30 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
       const blob = await res.blob()
       const file = new File([blob], filename, { type: blob.type || 'image/jpeg' })
 
-      // 1. Native share sheet (iOS/Android Safari+Chrome) — opens WhatsApp, Instagram, etc.
       const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean }
       if (nav.canShare && nav.canShare({ files: [file] }) && nav.share) {
         await nav.share({
           files: [file],
-          title: 'صورة CV احترافية',
-          text: 'تم إنشاؤها على "دليلك نحو ألمانيا" 🇩🇪',
+          title: t('shareTitle'),
+          text: t('shareText'),
         })
         return
       }
 
-      // 2. Desktop fallback: copy the image to the clipboard.
       const CI = (window as unknown as { ClipboardItem?: typeof ClipboardItem }).ClipboardItem
       if (CI && navigator.clipboard && 'write' in navigator.clipboard) {
         const item = new CI({ [blob.type || 'image/png']: blob })
         await navigator.clipboard.write([item])
-        alert('✅ تم نسخ الصورة إلى الحافظة — الصقها في أي تطبيق (WhatsApp، Instagram، ...).')
+        alert(t('clipboardOk'))
         return
       }
 
-      // 3. Final fallback: just download it.
       downloadItem(it)
-      alert('📥 تم تحميل الصورة. شاركها يدوياً في أي تطبيق.')
+      alert(t('downloadedFallback'))
     } catch (e: any) {
-      if (e?.name === 'AbortError') return // user cancelled the share dialog
+      if (e?.name === 'AbortError') return
       console.error('[share]', e)
-      alert('❌ تعذر المشاركة: ' + (e?.message || 'خطأ غير معروف'))
+      alert(t('shareFailed', { msg: e?.message || '' }))
     }
   }
 
@@ -216,12 +206,12 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
     <>
       <div className="rihla-cvb-ai-bar">
         <div>
-          <strong>📸 تحويل الصورة إلى صورة CV احترافية</strong>
+          <strong>{t('title')}</strong>
           <p className="rihla-cvb-hint-small" style={{ margin: '4px 0 0' }}>
-            خلفية واقعية، ملابس مناسبة لمجالك، مع الحفاظ على ملامحك.
+            {t('hint')}
             {remaining !== null && (
               <> &nbsp;·&nbsp; <span style={{ color: remaining === 0 ? '#dc2626' : 'var(--ink-mute)' }}>
-                متبقي اليوم: {remaining}/{limit}
+                {t('remaining', { rem: remaining, lim: limit })}
               </span></>
             )}
           </p>
@@ -234,7 +224,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
           {/* Profession selector */}
           <div style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
             <span className="rihla-cvb-hint-small" style={{ margin: 0, fontWeight: 600 }}>
-              🎯 نوع الصورة:
+              {t('kind')}
             </span>
             {PROFESSIONS.map(p => (
               <label key={p.value}
@@ -256,7 +246,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                   checked={profession === p.value}
                   onChange={() => setProfession(p.value)}
                   style={{ display: 'none' }} />
-                <span>{p.icon} {p.label}</span>
+                <span>{p.icon} {professionLabel(p.value)}</span>
               </label>
             ))}
           </div>
@@ -264,30 +254,30 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
           {/* Hijab selector */}
           <div style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center' }}>
             <span className="rihla-cvb-hint-small" style={{ margin: 0, fontWeight: 600 }}>
-              🧕 الحجاب:
+              {t('hijabLabel')}
             </span>
             <label className="rihla-cvb-hint-small" style={{ margin: 0, display: 'inline-flex', alignItems: 'center', gap: 4, cursor: 'pointer' }}>
               <input type="radio" name="hijab" value="none"
                 checked={hijab === 'none'} onChange={() => setHijab('none')} />
-              لا أرتدي الحجاب
+              {t('hijabNone')}
             </label>
             <label className="rihla-cvb-hint-small" style={{ margin: 0, display: 'inline-flex', alignItems: 'center', gap: 4, cursor: 'pointer' }}>
               <input type="radio" name="hijab" value="keep"
                 checked={hijab === 'keep'} onChange={() => setHijab('keep')} />
-              احتفظ بالحجاب
+              {t('hijabKeep')}
             </label>
             <label className="rihla-cvb-hint-small" style={{ margin: 0, display: 'inline-flex', alignItems: 'center', gap: 4, cursor: 'pointer' }}>
               <input type="radio" name="hijab" value="remove"
                 checked={hijab === 'remove'} onChange={() => setHijab('remove')} />
-              أزل الحجاب
+              {t('hijabRemove')}
             </label>
           </div>
 
-          {/* Mini gallery (shown outside modal after at least one generation) */}
+          {/* Mini gallery */}
           {gallery.length > 0 && (
             <div style={{ marginTop: 12 }}>
               <p className="rihla-cvb-hint-small" style={{ margin: '0 0 6px', fontWeight: 600 }}>
-                🖼️ صورك المولّدة ({gallery.length}):
+                {t('gallery', { n: gallery.length })}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                 {gallery.map(it => (
@@ -312,11 +302,10 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                 <button type="button" className="rihla-cvb-btn-ghost"
                   onClick={() => setModalOpen(true)}
                   style={{ height: 72, padding: '0 12px' }}>
-                  عرض التفاصيل →
+                  {t('showDetails')}
                 </button>
               </div>
 
-              {/* Quick "use selected in CV" action — available without opening the modal */}
               <div style={{ marginTop: 10 }}>
                 <button
                   type="button"
@@ -324,7 +313,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                   onClick={accept}
                   disabled={!selected}
                 >
-                  ✓ استخدم المحددة في السيرة
+                  {t('useSelected')}
                 </button>
               </div>
             </div>
@@ -337,7 +326,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
           onClick={run}
           disabled={loading || !currentImage || !canGenerate}
         >
-          {loading ? '⏳ جاري المعالجة...' : gallery.length > 0 ? '✨ إنشاء صورة أخرى' : '✨ إنشاء صورة احترافية'}
+          {loading ? t('processing') : gallery.length > 0 ? t('generateAnother') : t('generateFirst')}
         </button>
       </div>
 
@@ -348,33 +337,32 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
         >
           <div className="rihla-photo-modal" style={{ maxWidth: 920 }}>
             <div className="rihla-photo-modal-header">
-              <h3>صورك المولّدة — اختر الأفضل</h3>
+              <h3>{t('modalTitle')}</h3>
               <button type="button" onClick={cancel} className="rihla-photo-modal-close">✕</button>
             </div>
 
             <div className="rihla-photo-compare">
               <figure>
-                <figcaption>قبل (الأصلية)</figcaption>
+                <figcaption>{t('before')}</figcaption>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={originalImage || currentImage} alt="قبل" />
+                <img src={originalImage || currentImage} alt="" />
               </figure>
               <figure>
                 <figcaption>
-                  بعد ✨ {selected && <span style={{ opacity: 0.7, fontSize: 12 }}>
+                  {t('after')} {selected && <span style={{ opacity: 0.7, fontSize: 12 }}>
                     ({professionLabel(selected.profession)})
                   </span>}
                 </figcaption>
                 {selected && (
                   /* eslint-disable-next-line @next/next/no-img-element */
-                  <img src={selected.image} alt="بعد" />
+                  <img src={selected.image} alt="" />
                 )}
               </figure>
             </div>
 
-            {/* Full-size gallery strip */}
             <div style={{ padding: '0 16px 8px' }}>
               <p className="rihla-cvb-hint-small" style={{ margin: '4px 0 8px', fontWeight: 600 }}>
-                كل الصور ({gallery.length}) — اضغط لتحديد صورة:
+                {t('allImages', { n: gallery.length })}
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                 {gallery.map(it => (
@@ -404,8 +392,8 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                     </div>
                     <button type="button"
                       onClick={(e) => { e.stopPropagation(); downloadItem(it) }}
-                      title="تحميل"
-                      aria-label="تحميل"
+                      title={t('downloadAria')}
+                      aria-label={t('downloadAria')}
                       style={{
                         position: 'absolute',
                         top: 4, insetInlineEnd: 4,
@@ -431,8 +419,8 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                     </button>
                     <button type="button"
                       onClick={(e) => { e.stopPropagation(); shareItem(it) }}
-                      title="مشاركة"
-                      aria-label="مشاركة"
+                      title={t('shareAria')}
+                      aria-label={t('shareAria')}
                       style={{
                         position: 'absolute',
                         top: 4, insetInlineEnd: 34,
@@ -463,7 +451,7 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
 
             <div className="rihla-photo-modal-footer">
               <button type="button" className="rihla-cvb-btn-ghost" onClick={cancel}>
-                ✕ إغلاق
+                {t('close')}
               </button>
               <button
                 type="button"
@@ -471,10 +459,10 @@ export default function PhotoEnhancer({ currentImage, onAccept }: Props) {
                 onClick={run}
                 disabled={loading || !canGenerate}
               >
-                {loading ? '⏳...' : '↻ إنشاء صورة أخرى'}
+                {loading ? t('regenShort') : t('regenerate')}
               </button>
               <button type="button" className="rihla-cvb-btn-primary" onClick={accept} disabled={!selected}>
-                ✓ استخدم المحددة في السيرة
+                {t('useSelected')}
               </button>
             </div>
           </div>

@@ -1,6 +1,9 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { dirFor, type AppLocale } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 
 type Article = {
   id: number
@@ -12,40 +15,64 @@ type Article = {
   featured: boolean
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  'البنوك': '🏦 البنوك',
-  'شرائح الاتصال': '📱 الاتصالات',
-  'الجامعات': '🎓 الجامعات',
-  'العمل': '💼 العمل',
-  'Ausbildung': '🛠 Ausbildung',
-  'التأشيرة والأوراق': '📄 التأشيرة',
-  'السكن': '🏠 السكن',
+const LOCALE_TO_INTL: Record<AppLocale, string> = {
+  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
 }
 
 export default function ArticlesClient({ articles }: { articles: Article[] }) {
-  const [activeCategory, setActiveCategory] = useState('الكل')
+  const t = useTranslations('articles')
+  const locale = useLocale() as AppLocale
+  const [activeCategory, setActiveCategory] = useState<string>('__ALL__')
 
-  const categories = ['الكل', ...Array.from(new Set(articles.map(a => a.category)))]
+  const categories = Array.from(new Set(articles.map(a => a.category)))
 
-  const filtered = activeCategory === 'الكل'
+  const filtered = activeCategory === '__ALL__'
     ? articles
     : articles.filter(a => a.category === activeCategory)
 
   const featured = filtered.filter(a => a.featured)
   const rest     = filtered.filter(a => !a.featured)
 
+  function catLabel(cat: string): string {
+    // t.raw to avoid an error for unknown categories — falls back to raw cat
+    try { return t(`cat.${cat}` as any) } catch { return cat }
+  }
+
+  function formatDate(d: string) {
+    if (!d) return ''
+    try {
+      return new Date(d).toLocaleDateString(LOCALE_TO_INTL[locale], {
+        year: 'numeric', month: 'long', day: 'numeric',
+      })
+    } catch { return d }
+  }
+
+  function categoryEmoji(cat: string) {
+    const map: Record<string, string> = {
+      'البنوك': '🏦', 'شرائح الاتصال': '📱', 'الجامعات': '🎓',
+      'العمل': '💼', 'Ausbildung': '🛠', 'التأشيرة والأوراق': '📄', 'السكن': '🏠',
+    }
+    return map[cat] ?? '📰'
+  }
+
   return (
-    <div dir="rtl">
+    <div dir={dirFor(locale)}>
       {/* Category filter pills */}
       <div className="rihla-articles-filter">
         <div className="rihla-articles-filter-inner">
+          <button
+            onClick={() => setActiveCategory('__ALL__')}
+            className={`rihla-cat-pill${activeCategory === '__ALL__' ? ' active' : ''}`}
+          >
+            {t('allFilter')}
+          </button>
           {categories.map(cat => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`rihla-cat-pill${activeCategory === cat ? ' active' : ''}`}
             >
-              {cat === 'الكل' ? '🗂 الكل' : (CATEGORY_LABELS[cat] ?? cat)}
+              {catLabel(cat)}
             </button>
           ))}
         </div>
@@ -57,12 +84,13 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
         {featured.length > 0 && (
           <section className="rihla-articles-section">
             <div className="rihla-articles-section-head">
-              <span className="rihla-section-badge">⭐ مميزة</span>
-              <h2>المقالات المختارة</h2>
+              <span className="rihla-section-badge">{t('featuredBadge')}</span>
+              <h2>{t('featuredHeading')}</h2>
             </div>
             <div className="rihla-articles-grid featured">
               {featured.map(a => (
-                <ArticleCard key={a.id} article={a} size="large" />
+                <ArticleCard key={a.id} article={a} size="large"
+                  catLabel={catLabel} categoryEmoji={categoryEmoji} formatDate={formatDate} />
               ))}
             </div>
           </section>
@@ -73,12 +101,13 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
           <section className="rihla-articles-section">
             {featured.length > 0 && (
               <div className="rihla-articles-section-head">
-                <h2>جميع المقالات</h2>
+                <h2>{t('allHeading')}</h2>
               </div>
             )}
             <div className="rihla-articles-grid">
               {rest.map(a => (
-                <ArticleCard key={a.id} article={a} />
+                <ArticleCard key={a.id} article={a}
+                  catLabel={catLabel} categoryEmoji={categoryEmoji} formatDate={formatDate} />
               ))}
             </div>
           </section>
@@ -87,7 +116,7 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
         {filtered.length === 0 && (
           <div className="rihla-articles-empty">
             <span>📭</span>
-            <p>لا توجد مقالات في هذه الفئة حتى الآن.</p>
+            <p>{t('emptyCategory')}</p>
           </div>
         )}
       </div>
@@ -95,9 +124,16 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
   )
 }
 
-function ArticleCard({ article, size = 'normal' }: { article: Article; size?: 'large' | 'normal' }) {
+function ArticleCard({
+  article, size = 'normal', catLabel, categoryEmoji, formatDate,
+}: {
+  article: Article; size?: 'large' | 'normal'
+  catLabel: (cat: string) => string
+  categoryEmoji: (cat: string) => string
+  formatDate: (d: string) => string
+}) {
   return (
-    <a href={`/articles/${article.id}`} className={`rihla-article-card-link${size === 'large' ? ' large' : ''}`}>
+    <Link href={`/articles/${article.id}`} className={`rihla-article-card-link${size === 'large' ? ' large' : ''}`}>
       <div className="rihla-acard-img">
         {article.image_url
           ? <img src={article.image_url} alt={article.title} />
@@ -106,26 +142,11 @@ function ArticleCard({ article, size = 'normal' }: { article: Article; size?: 'l
         {article.featured && <span className="rihla-acard-star">⭐</span>}
       </div>
       <div className="rihla-acard-body">
-        <span className="rihla-acard-cat">{CATEGORY_LABELS[article.category] ?? article.category}</span>
+        <span className="rihla-acard-cat">{catLabel(article.category)}</span>
         <h3>{article.title}</h3>
         <p>{article.summary}</p>
         <span className="rihla-acard-date">{formatDate(article.date)}</span>
       </div>
-    </a>
+    </Link>
   )
-}
-
-function categoryEmoji(cat: string) {
-  const map: Record<string, string> = {
-    'البنوك': '🏦', 'شرائح الاتصال': '📱', 'الجامعات': '🎓',
-    'العمل': '💼', 'Ausbildung': '🛠', 'التأشيرة والأوراق': '📄', 'السكن': '🏠',
-  }
-  return map[cat] ?? '📰'
-}
-
-function formatDate(d: string) {
-  if (!d) return ''
-  try {
-    return new Date(d).toLocaleDateString('ar-MA', { year: 'numeric', month: 'long', day: 'numeric' })
-  } catch { return d }
 }

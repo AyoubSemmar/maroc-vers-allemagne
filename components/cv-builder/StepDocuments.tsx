@@ -3,6 +3,7 @@
 import { CVData, DocumentFile } from './types'
 import { fileToBase64 } from './utils'
 import { uploadDocument, deleteDocument, type DocumentType, type UserDocument } from '@/lib/documents'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   data: CVData
@@ -11,11 +12,11 @@ type Props = {
 
 type CategoryKey = keyof CVData['documents']
 
-const CATEGORIES: { key: CategoryKey; label: string; de: string; docType: DocumentType }[] = [
-  { key: 'certificates',         label: 'الشهادات العامة',          de: 'Zeugnisse',         docType: 'arbeitsbescheinigung' },
-  { key: 'diploma',              label: 'الدبلومات',                de: 'Diplome',           docType: 'akademisches_zertifikat' },
-  { key: 'languageCertificates', label: 'شهادات اللغة',              de: 'Sprachzertifikate', docType: 'sprachzertifikat' },
-  { key: 'optionalCoverLetter',  label: 'خطاب التقديم (اختياري)',   de: 'Anschreiben',       docType: 'motivationsschreiben' },
+const CATEGORIES: { key: CategoryKey; de: string; docType: DocumentType }[] = [
+  { key: 'certificates',         de: 'Zeugnisse',         docType: 'arbeitsbescheinigung' },
+  { key: 'diploma',              de: 'Diplome',           docType: 'akademisches_zertifikat' },
+  { key: 'languageCertificates', de: 'Sprachzertifikate', docType: 'sprachzertifikat' },
+  { key: 'optionalCoverLetter',  de: 'Anschreiben',       docType: 'motivationsschreiben' },
 ]
 
 // Stable client-side id per newly added file so we can patch the right row
@@ -27,6 +28,8 @@ function newTmpId() {
 }
 
 export default function StepDocuments({ data, update }: Props) {
+  const t = useTranslations('cvBuilder.documents')
+
   function patchDocByTmpId(key: CategoryKey, tmpId: string, patch: Partial<DocumentFile>) {
     update(prev => ({
       documents: {
@@ -43,10 +46,9 @@ export default function StepDocuments({ data, update }: Props) {
     const category = CATEGORIES.find(c => c.key === key)
     if (!category) return
 
-    // Build the fresh entries (tagged with a _tmpId) before touching state.
     const prepared: { file: File; entry: LocalDoc }[] = []
     for (const f of Array.from(files)) {
-      if (f.size > 4_000_000) { alert(`⚠ ${f.name} أكبر من 4MB — تم تخطيه`); continue }
+      if (f.size > 4_000_000) { alert(t('tooLarge', { name: f.name })); continue }
       const dataUrl = await fileToBase64(f)
       prepared.push({
         file: f,
@@ -62,7 +64,6 @@ export default function StepDocuments({ data, update }: Props) {
     }
     if (prepared.length === 0) return
 
-    // Add them all in a single functional update — safe against stale closures.
     update(prev => ({
       documents: {
         ...prev.documents,
@@ -70,7 +71,6 @@ export default function StepDocuments({ data, update }: Props) {
       },
     }))
 
-    // Upload each one in parallel and patch state by tmpId when done.
     prepared.forEach(async ({ file, entry }) => {
       try {
         const saved = await uploadDocument(file, file.name, category.docType)
@@ -84,7 +84,7 @@ export default function StepDocuments({ data, update }: Props) {
         console.error('[cv-builder] doc upload failed:', e)
         patchDocByTmpId(key, entry._tmpId!, {
           uploading: false,
-          uploadError: e?.message || 'تعذر الحفظ',
+          uploadError: e?.message || t('saveError'),
         })
       }
     })
@@ -93,9 +93,8 @@ export default function StepDocuments({ data, update }: Props) {
   async function remove(key: CategoryKey, i: number) {
     const target = data.documents[key][i]
     if (!target) return
-    if (!confirm(`حذف "${target.name}" نهائياً؟`)) return
+    if (!confirm(t('confirmDelete', { name: target.name }))) return
 
-    // Remove from local state immediately for snappy UX.
     update(prev => ({
       documents: {
         ...prev.documents,
@@ -103,7 +102,6 @@ export default function StepDocuments({ data, update }: Props) {
       },
     }))
 
-    // If the file was already saved to Supabase, delete the DB row + storage object.
     if (target.savedId) {
       try {
         await deleteDocument({
@@ -124,16 +122,15 @@ export default function StepDocuments({ data, update }: Props) {
 
   return (
     <div className="rihla-cvb-step">
-      <h3 className="rihla-cvb-step-title">الوثائق المرفقة</h3>
+      <h3 className="rihla-cvb-step-title">{t('title')}</h3>
       <p className="rihla-cvb-step-hint">
-        ارفع نسخاً ممسوحة ضوئياً من شهاداتك — سيتم حفظها تلقائياً في حسابك وتستخدم أيضاً
-        لتحسين السيرة الذاتية عبر الذكاء الاصطناعي.
+        {t('hint')}
       </p>
 
-      {CATEGORIES.map(({ key, label, de }) => (
+      {CATEGORIES.map(({ key, de }) => (
         <div key={key} className="rihla-cvb-doc-group">
           <div className="rihla-cvb-doc-head">
-            <strong>{label}</strong>
+            <strong>{t(`cat.${key}`)}</strong>
             <span className="rihla-cvb-label-de">({de})</span>
           </div>
 
@@ -142,8 +139,8 @@ export default function StepDocuments({ data, update }: Props) {
               onChange={e => { onAdd(key, e.target.files); e.target.value = '' }}
               style={{ display: 'none' }}
             />
-            <span>📎 اختر ملفات (PDF / صور)</span>
-            <small>حد أقصى 4MB لكل ملف · يُحفظ تلقائياً في حسابك</small>
+            <span>{t('choose')}</span>
+            <small>{t('limit')}</small>
           </label>
 
           {data.documents[key].length > 0 && (
@@ -153,15 +150,15 @@ export default function StepDocuments({ data, update }: Props) {
                   <span>📄 {f.name}</span>
                   {f.size > 0 && <small>{(f.size / 1024).toFixed(0)} KB</small>}
                   {f.uploading && (
-                    <small style={{ color: 'var(--ink-mute)' }}>⏳ جاري الحفظ...</small>
+                    <small style={{ color: 'var(--ink-mute)' }}>{t('saving')}</small>
                   )}
                   {!f.uploading && f.savedId && (
-                    <small style={{ color: '#059669' }}>✓ محفوظ في حسابك</small>
+                    <small style={{ color: '#059669' }}>{t('saved')}</small>
                   )}
                   {!f.uploading && f.uploadError && (
-                    <small style={{ color: '#dc2626' }} title={f.uploadError}>⚠ لم يُحفظ</small>
+                    <small style={{ color: '#dc2626' }} title={f.uploadError}>{t('saveFailed')}</small>
                   )}
-                  <button type="button" onClick={() => remove(key, i)}>حذف</button>
+                  <button type="button" onClick={() => remove(key, i)}>{t('remove')}</button>
                 </li>
               ))}
             </ul>

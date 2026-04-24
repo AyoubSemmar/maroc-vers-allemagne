@@ -109,11 +109,11 @@ export const EMPTY_CV: CVData = {
 }
 
 export const STEPS = [
-  { id: 1, key: 'personal',   label: 'المعلومات الشخصية',  labelDe: 'Persönliche Daten' },
-  { id: 2, key: 'education',  label: 'التعليم',            labelDe: 'Ausbildung' },
-  { id: 3, key: 'experience', label: 'الخبرة المهنية',     labelDe: 'Berufserfahrung' },
-  { id: 4, key: 'skills',     label: 'المهارات',           labelDe: 'Kenntnisse' },
-  { id: 5, key: 'languages',  label: 'اللغات',             labelDe: 'Sprachen' },
-  { id: 6, key: 'documents',  label: 'الوثائق',            labelDe: 'Dokumente' },
-  { id: 7, key: 'preview',    label: 'المعاينة والتحميل',  labelDe: 'Vorschau & Download' },
+  { id: 1, key: 'personal',   labelKey: 'personal',   labelDe: 'Persönliche Daten' },
+  { id: 2, key: 'education',  labelKey: 'education',  labelDe: 'Ausbildung' },
+  { id: 3, key: 'experience', labelKey: 'experience', labelDe: 'Berufserfahrung' },
+  { id: 4, key: 'skills',     labelKey: 'skills',     labelDe: 'Kenntnisse' },
+  { id: 5, key: 'languages',  labelKey: 'languages',  labelDe: 'Sprachen' },
+  { id: 6, key: 'documents',  labelKey: 'documents',  labelDe: 'Dokumente' },
+  { id: 7, key: 'preview',    labelKey: 'preview',    labelDe: 'Vorschau & Download' },
 ] as const

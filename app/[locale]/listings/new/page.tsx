@@ -1,8 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
-import { useRouter } from 'next/navigation'
+import { useRouter, Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 
 const cities = [
   'برلين', 'ميونخ', 'هامبورغ', 'فرانكفورت', 'كولونيا', 'شتوتغارت', 'دوسلدورف',
@@ -14,6 +16,8 @@ const cities = [
 ]
 
 export default function NewListingPage() {
+  const t = useTranslations('listings')
+  const locale = useLocale() as AppLocale
   const [user, setUser] = useState<any>(null)
   const [profile, setProfile] = useState<any>(null)
   const [title, setTitle] = useState('')
@@ -54,7 +58,7 @@ export default function NewListingPage() {
     e.preventDefault()
     if (!user) return
     if (!profile?.whatsapp) {
-      setError('يجب إضافة رقم واتساب في ملفك الشخصي أولاً')
+      setError(t('form.whatsappMissing'))
       return
     }
     setUploading(true)
@@ -92,30 +96,32 @@ export default function NewListingPage() {
   if (!user) return null
 
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       <div className="max-w-lg mx-auto px-4 py-12">
-        <a href="/listings" className="text-sm text-green-700 hover:underline mb-6 block">→ العودة للإعلانات</a>
-        <h1 className="text-2xl font-bold text-gray-900 mb-8">إضافة إعلان سكن</h1>
+        <Link href="/listings" className="text-sm text-green-700 hover:underline mb-6 block">{t('backToListings')}</Link>
+        <h1 className="text-2xl font-bold text-gray-900 mb-8">{t('form.title')}</h1>
 
         {error && <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-red-700 text-sm mb-6">{error}</div>}
 
         {!profile?.whatsapp && (
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-yellow-800 text-sm mb-6">
-            ⚠️ يجب إضافة رقم واتساب في <a href="/profile" className="underline font-medium">ملفك الشخصي</a> قبل نشر إعلان.
+            {t('form.whatsappBanner')}{' '}
+            <Link href="/profile" className="underline font-medium">{t('form.whatsappBannerLink')}</Link>{' '}
+            {t('form.whatsappBannerAfter')}
           </div>
         )}
 
         <div className="bg-white rounded-xl border border-gray-200 p-6">
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
             <input
-              placeholder="عنوان الإعلان"
+              placeholder={t('form.titlePh')}
               value={title}
               onChange={e => setTitle(e.target.value)}
               required
               className="border border-gray-300 rounded-lg px-4 py-2 text-right text-gray-900"
             />
             <textarea
-              placeholder="وصف المكان (الحجم، الأثاث، الإيجار...)"
+              placeholder={t('form.descPh')}
               value={description}
               onChange={e => setDescription(e.target.value)}
               required
@@ -128,14 +134,14 @@ export default function NewListingPage() {
               required
               className="border border-gray-300 rounded-lg px-4 py-2 text-right text-gray-900"
             >
-              <option value="">اختر المدينة</option>
+              <option value="">{t('form.selectCity')}</option>
               {cities.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
 
             <div className="relative">
               <input
                 type="number"
-                placeholder="السعر الشهري (€)"
+                placeholder={t('form.pricePh')}
                 value={price}
                 onChange={e => setPrice(e.target.value)}
                 min="0"
@@ -146,13 +152,13 @@ export default function NewListingPage() {
             </div>
 
             <div className="flex gap-3">
-              <button type="button" onClick={() => setType('غرفة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'غرفة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>غرفة</button>
-              <button type="button" onClick={() => setType('شقة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'شقة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>شقة</button>
+              <button type="button" onClick={() => setType('غرفة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'غرفة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>{t('form.typeRoom')}</button>
+              <button type="button" onClick={() => setType('شقة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'شقة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>{t('form.typeApt')}</button>
             </div>
 
             {/* Image Upload */}
             <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray-500">الصور (من 1 إلى 5 صور)</label>
+              <label className="text-sm text-gray-500">{t('form.imagesLabel')}</label>
               {previews.length > 0 && (
                 <div className="grid grid-cols-3 gap-2">
                   {previews.map((src, i) => (
@@ -176,7 +182,7 @@ export default function NewListingPage() {
                   className="border border-gray-300 rounded-lg px-4 py-2"
                 />
               )}
-              <p className="text-xs text-gray-400">{imageFiles.length}/5 صور</p>
+              <p className="text-xs text-gray-400">{t('form.imagesCount', { n: imageFiles.length })}</p>
             </div>
 
             <button
@@ -184,7 +190,7 @@ export default function NewListingPage() {
               disabled={uploading || !profile?.whatsapp || !type}
               className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800 disabled:opacity-50"
             >
-              {uploading ? 'جاري النشر...' : 'نشر الإعلان'}
+              {uploading ? t('form.publishing') : t('form.publish')}
             </button>
           </form>
         </div>

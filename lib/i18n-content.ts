@@ -1,0 +1,46 @@
+import type { AppLocale } from '@/i18n/routing'
+
+/**
+ * Row shape for any Supabase record that stores per-locale translations
+ * in a `translations` JSONB column of shape:
+ *   { fr?: { title?, summary?, content?, faqs? }, en?: {...}, de?: {...} }
+ * Arabic is the source language and lives in the top-level columns.
+ */
+export type TranslatableRow = {
+  title?: string | null
+  summary?: string | null
+  content?: string | null
+  faqs?: unknown
+  translations?: Record<string, {
+    title?: string
+    summary?: string
+    content?: string
+    faqs?: unknown
+  } | null> | null
+  [k: string]: any
+}
+
+/**
+ * Returns a shallow copy of the row with `title`, `summary`, `content`, `faqs`
+ * overridden by the per-locale translation when available. Falls back to the
+ * Arabic source field when a given locale field is missing.
+ */
+export function localizeRow<T extends TranslatableRow>(row: T, locale: AppLocale): T {
+  if (!row) return row
+  if (locale === 'ar') return row
+  const tr = row.translations?.[locale] ?? null
+  if (!tr) return row
+  return {
+    ...row,
+    title: tr.title ?? row.title,
+    summary: tr.summary ?? row.summary,
+    content: tr.content ?? row.content,
+    faqs: tr.faqs ?? row.faqs,
+  }
+}
+
+export function localizeRows<T extends TranslatableRow>(rows: T[] | null | undefined, locale: AppLocale): T[] {
+  if (!rows) return []
+  if (locale === 'ar') return rows
+  return rows.map((r) => localizeRow(r, locale))
+}

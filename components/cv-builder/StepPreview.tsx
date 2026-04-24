@@ -1,6 +1,8 @@
 'use client'
 
 import { useLayoutEffect, useRef, useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { type AppLocale } from '@/i18n/routing'
 import { CVData, TEMPLATES, TemplateId, TemplateMeta } from './types'
 import CVTemplate from '../cv-templates'
 import TemplateSelector from './TemplateSelector'
@@ -16,6 +18,9 @@ type Props = {
 }
 
 export default function StepPreview({ data, update }: Props) {
+  const t = useTranslations('cvBuilder.preview')
+  const tTpl = useTranslations('cvBuilder.templates')
+  const locale = useLocale() as AppLocale
   const previewRef = useRef<HTMLDivElement>(null)
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [modalTpl, setModalTpl] = useState<TemplateMeta | null>(null)
@@ -86,7 +91,7 @@ export default function StepPreview({ data, update }: Props) {
 
   async function onTranslate() {
     if (translating) return
-    if (!confirm('سيتم إرسال بياناتك إلى خدمة الذكاء الاصطناعي لتصحيحها وترجمتها إلى الألمانية. المتابعة؟')) return
+    if (!confirm(t('aiConfirm'))) return
     setTranslating(true)
     try {
       const payload = {
@@ -185,10 +190,10 @@ export default function StepPreview({ data, update }: Props) {
         },
         languages: mergedLanguages.length ? mergedLanguages : data.languages,
       })
-      alert('✅ تم التصحيح والترجمة إلى الألمانية بنجاح.')
+      alert(t('aiSuccess'))
     } catch (e: any) {
       console.error(e)
-      alert('❌ تعذر إتمام الترجمة: ' + (e?.message || 'خطأ غير معروف'))
+      alert(t('aiFail', { msg: e?.message || t('unknownErr') }))
     } finally {
       setTranslating(false)
     }
@@ -202,20 +207,20 @@ export default function StepPreview({ data, update }: Props) {
       const supabase = createClient()
       const { data: authData } = await supabase.auth.getUser()
       if (!authData.user) {
-        if (confirm('يجب تسجيل الدخول لحفظ الوثيقة. هل تريد الانتقال لصفحة تسجيل الدخول؟')) {
-          window.location.href = '/login'
+        if (confirm(t('loginPrompt'))) {
+          window.location.href = `/${locale}/login`
         }
         return
       }
-      const name = [data.personalInfo.firstName, data.personalInfo.lastName].filter(Boolean).join(' ') || 'سيرة ذاتية'
+      const name = [data.personalInfo.firstName, data.personalInfo.lastName].filter(Boolean).join(' ') || t('defaultName')
       const pos = data.personalInfo.jobTitle || ''
       const title = pos ? `${name} — ${pos}` : name
       await saveCvDocument(title, data as unknown as Record<string, unknown>)
-      setSaveMsg('✅ تم الحفظ في حسابك')
+      setSaveMsg(t('saveOk'))
       setTimeout(() => setSaveMsg(''), 3000)
     } catch (e: any) {
       console.error(e)
-      setSaveMsg('❌ ' + (e?.message || 'خطأ في الحفظ'))
+      setSaveMsg(t('saveErr', { msg: e?.message || t('saveErrDefault') }))
       setTimeout(() => setSaveMsg(''), 4000)
     } finally {
       setSaving(false)
@@ -231,7 +236,7 @@ export default function StepPreview({ data, update }: Props) {
       const supabase = createClient()
       const { data: { user } } = await supabase.auth.getUser()
       if (user) {
-        const name = [data.personalInfo.firstName, data.personalInfo.lastName].filter(Boolean).join(' ') || 'سيرة ذاتية'
+        const name = [data.personalInfo.firstName, data.personalInfo.lastName].filter(Boolean).join(' ') || t('defaultName')
         const pos = data.personalInfo.jobTitle || ''
         const title = pos ? `${name} — ${pos}` : name
         try {
@@ -247,10 +252,10 @@ export default function StepPreview({ data, update }: Props) {
 
       // 3. Wipe local draft and send the user to the landing page
       clearStorage()
-      window.location.href = '/'
+      window.location.href = `/${locale}`
     } catch (e) {
       console.error(e)
-      alert('حدث خطأ أثناء توليد الملف. حاول مرة أخرى.')
+      alert(t('downloadErr'))
     } finally {
       setBusy(false)
     }
@@ -258,11 +263,11 @@ export default function StepPreview({ data, update }: Props) {
 
   return (
     <div className="rihla-cvb-step">
-      <h3 className="rihla-cvb-step-title">المعاينة والتحميل</h3>
-      <p className="rihla-cvb-step-hint">اختر القالب الذي يناسبك، ثم حمّل السيرة الذاتية كملف PDF.</p>
+      <h3 className="rihla-cvb-step-title">{t('title')}</h3>
+      <p className="rihla-cvb-step-hint">{t('hint')}</p>
 
       <div className="rihla-cvb-tpl-section">
-        <h4 className="rihla-cvb-subheader">اختر قالباً</h4>
+        <h4 className="rihla-cvb-subheader">{t('chooseTemplate')}</h4>
         <TemplateSelector
           selected={data.selectedTemplate}
           onSelect={selectTemplate}
@@ -273,9 +278,9 @@ export default function StepPreview({ data, update }: Props) {
 
       <div className="rihla-cvb-ai-bar">
         <div>
-          <strong>✨ تصحيح وترجمة وتحسين إلى الألمانية</strong>
+          <strong>{t('aiTitle')}</strong>
           <p className="rihla-cvb-hint-small" style={{ margin: '4px 0 0' }}>
-            اكتب بأي لغة (عربية، فرنسية، إنجليزية، ألمانية). الذكاء الاصطناعي يصحح الأخطاء، يترجم إلى ألمانية احترافية، يولّد هدفاً مهنياً، ويُثري الوصف والمهارات الناعمة بشكل واقعي دون مبالغة.
+            {t('aiHint')}
           </p>
         </div>
         <button
@@ -284,29 +289,29 @@ export default function StepPreview({ data, update }: Props) {
           disabled={translating}
           type="button"
         >
-          {translating ? '⏳ جاري المعالجة...' : '✨ تصحيح وتحسين'}
+          {translating ? t('aiProcessing') : t('aiCta')}
         </button>
       </div>
 
       <div className="rihla-cvb-actions-bar">
         <div className="rihla-cvb-actions-left">
-          <strong>القالب الحالي:</strong> {selectedMeta.nameAr}
-          {selectedMeta.isPremium && !isPremiumUnlocked && <span className="rihla-cvb-premium-badge">🔒 Premium</span>}
+          <strong>{t('currentTemplate')}</strong> {tTpl(`${selectedMeta.id}.name`)}
+          {selectedMeta.isPremium && !isPremiumUnlocked && <span className="rihla-cvb-premium-badge">{t('premiumBadge')}</span>}
         </div>
         <div className="rihla-cvb-actions-right">
           <button className="rihla-cvb-btn-ghost" onClick={() => {
-            if (confirm('هل تريد فعلاً إفراغ كل البيانات؟')) {
+            if (confirm(t('confirmClear'))) {
               clearStorage()
               location.reload()
             }
           }}>
-            إفراغ البيانات
+            {t('clear')}
           </button>
           <button className="rihla-cvb-btn-ghost" onClick={onSave} disabled={saving} type="button">
-            {saving ? '⏳...' : saveMsg || '💾 حفظ في حسابي'}
+            {saving ? t('saveBusy') : saveMsg || t('save')}
           </button>
           <button className="rihla-cvb-btn-primary" onClick={onDownload} disabled={busy}>
-            {busy ? '⏳ جاري التوليد...' : canDownload ? '📥 تحميل PDF' : '🔒 ترقية للتحميل'}
+            {busy ? t('downloadBusy') : canDownload ? t('download') : t('downloadLocked')}
           </button>
         </div>
       </div>
@@ -325,7 +330,7 @@ export default function StepPreview({ data, update }: Props) {
           // Demo: unlock without real payment. In production, integrate Stripe/Paddle here.
           setIsPremiumUnlocked(true)
           setModalTpl(null)
-          alert('✅ تم فتح القوالب المميزة (وضع تجريبي). في الإنتاج يربط مع بوابة الدفع.')
+          alert(t('upgradeDone'))
         }}
       />
     </div>

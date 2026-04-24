@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import { CVData, DocumentFile, EMPTY_CV, STEPS } from '@/components/cv-builder/types'
 import { calculateCompletion, loadFromStorage, saveToStorage, clearStorage } from '@/components/cv-builder/utils'
 import { createClient as createBrowserClient } from '@/lib/supabase-browser'
@@ -23,6 +25,8 @@ import StepDocuments    from '@/components/cv-builder/StepDocuments'
 import StepPreview      from '@/components/cv-builder/StepPreview'
 
 export default function CVBuilderClient() {
+  const t = useTranslations('cvBuilder')
+  const locale = useLocale() as AppLocale
   const [data, setData] = useState<CVData>(EMPTY_CV)
   const [step, setStep] = useState(1)
   const [mounted, setMounted] = useState(false)
@@ -133,34 +137,34 @@ export default function CVBuilderClient() {
   function validateStep(): string | null {
     if (step === 1) {
       const p = data.personalInfo
-      if (!p.firstName.trim()) return 'الاسم الأول مطلوب'
-      if (!p.lastName.trim())  return 'اسم العائلة مطلوب'
-      if (!p.email.trim())     return 'البريد الإلكتروني مطلوب'
-      if (p.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) return 'صيغة البريد غير صحيحة'
+      if (!p.firstName.trim()) return t('validation.firstName')
+      if (!p.lastName.trim())  return t('validation.lastName')
+      if (!p.email.trim())     return t('validation.emailReq')
+      if (p.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) return t('validation.emailInvalid')
     }
     return null
   }
 
   function onNext() {
     const err = validateStep()
-    if (err) { alert('⚠ ' + err); return }
+    if (err) { alert(t('warn', { msg: err })); return }
     if (canGoNext) setStep(s => s + 1)
   }
 
   return (
-    <div className="rihla-cvb-root" dir="rtl">
+    <div className="rihla-cvb-root" dir={dirFor(locale)}>
       <header className="rihla-cvb-header">
         <div className="wrap">
-          <p className="rihla-cvb-eyebrow">📄 منشئ السيرة الذاتية</p>
+          <p className="rihla-cvb-eyebrow">{t('eyebrow')}</p>
           <h1>Lebenslauf Builder</h1>
           <p className="rihla-cvb-subtitle">
-            أنشئ سيرتك الذاتية الألمانية خطوة بخطوة — معاينة فورية وتحميل PDF مجاني.
+            {t('subtitle')}
           </p>
           <div className="rihla-cvb-progress-wrap">
             <div className="rihla-cvb-progress-bar">
               <div className="rihla-cvb-progress-fill" style={{ width: `${completion}%` }} />
             </div>
-            <span className="rihla-cvb-progress-text">{completion}% مكتمل</span>
+            <span className="rihla-cvb-progress-text">{t('completion', { n: completion })}</span>
           </div>
         </div>
       </header>
@@ -176,7 +180,7 @@ export default function CVBuilderClient() {
               type="button"
             >
               <span className="rihla-cvb-step-num">{step > s.id ? '✓' : s.id}</span>
-              <span className="rihla-cvb-step-label">{s.label}</span>
+              <span className="rihla-cvb-step-label">{t(`stepLabel.${s.labelKey}`)}</span>
             </button>
           ))}
         </div>
@@ -201,10 +205,10 @@ export default function CVBuilderClient() {
                   onClick={() => canGoPrev && setStep(s => s - 1)}
                   disabled={!canGoPrev}
                 >
-                  ← السابق
+                  {t('prev')}
                 </button>
                 <button type="button" className="rihla-cvb-btn-primary" onClick={onNext}>
-                  التالي ←
+                  {t('next')}
                 </button>
               </div>
             )}

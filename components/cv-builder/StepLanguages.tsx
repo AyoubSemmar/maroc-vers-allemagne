@@ -1,6 +1,7 @@
 'use client'
 
 import { CVData, LANGUAGE_LEVELS, LanguageEntry } from './types'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   data: CVData
@@ -8,6 +9,7 @@ type Props = {
 }
 
 export default function StepLanguages({ data, update }: Props) {
+  const t = useTranslations('cvBuilder.languages')
   const list = data.languages
 
   function add() { update({ languages: [...list, { language: '', level: 'B1' }] }) }
@@ -18,18 +20,18 @@ export default function StepLanguages({ data, update }: Props) {
 
   return (
     <div className="rihla-cvb-step">
-      <h3 className="rihla-cvb-step-title">اللغات</h3>
-      <p className="rihla-cvb-step-hint">المستوى وفق الإطار الأوروبي المشترك (CEFR): A1 مبتدئ — C2 إتقان كامل.</p>
+      <h3 className="rihla-cvb-step-title">{t('title')}</h3>
+      <p className="rihla-cvb-step-hint">{t('hint')}</p>
 
       {list.length === 0 && (
-        <div className="rihla-cvb-empty"><p>لم تُضف أي لغة بعد.</p></div>
+        <div className="rihla-cvb-empty"><p>{t('empty')}</p></div>
       )}
 
       {list.map((l, i) => (
         <div key={i} className="rihla-cvb-lang-row">
           <input
             className="rihla-cvb-input"
-            placeholder="Deutsch / English / العربية..."
+            placeholder={t('placeholder')}
             value={l.language}
             onChange={e => change(i, { language: e.target.value })}
           />
@@ -40,7 +42,7 @@ export default function StepLanguages({ data, update }: Props) {
           >
             {LANGUAGE_LEVELS.map(lv => (
               <option key={lv} value={lv}>
-                {lv} {lv === 'A1' ? '— مبتدئ' : lv === 'A2' ? '— أساسي' : lv === 'B1' ? '— متوسط' : lv === 'B2' ? '— جيد' : lv === 'C1' ? '— متقدم' : lv === 'C2' ? '— إتقان' : '— لغة أم'}
+                {lv} — {t(`level.${lv}`)}
               </option>
             ))}
           </select>
@@ -49,7 +51,7 @@ export default function StepLanguages({ data, update }: Props) {
       ))}
 
       <button type="button" className="rihla-cvb-btn-add" onClick={add}>
-        + إضافة لغة
+        {t('add')}
       </button>
     </div>
   )

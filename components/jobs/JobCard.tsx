@@ -1,6 +1,6 @@
 'use client'
 
-import { formatRelativeDateAr } from '@/lib/dateFormatter'
+import { useTranslations } from 'next-intl'
 
 export type Job = {
   id: string
@@ -18,7 +18,19 @@ export type Job = {
   created_at: string
 }
 
+function formatRelative(dateStr: string, t: (key: string, v?: any) => string): string {
+  const d = new Date(dateStr)
+  if (isNaN(d.getTime())) return ''
+  const diffDays = Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24))
+  if (diffDays <= 0) return t('rel.today')
+  if (diffDays === 1) return t('rel.oneDay')
+  if (diffDays === 2) return t('rel.twoDays')
+  if (diffDays <= 10) return t('rel.fewDays', { n: diffDays })
+  return t('rel.manyDays', { n: diffDays })
+}
+
 export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job) => void }) {
+  const t = useTranslations('ausbJobs')
   const dateStr = job.published_at || job.created_at
   const d = dateStr ? new Date(dateStr) : null
   const diffDays = d ? Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24)) : 999
@@ -48,10 +60,10 @@ export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job
 
       <div className="aj-card-meta">
         <span className={`aj-card-date${isFresh ? ' fresh' : ''}`}>
-          {isFresh && '🆕 '}{formatRelativeDateAr(dateStr || new Date().toISOString())}
+          {isFresh && t('card.freshPrefix')}{formatRelative(dateStr || new Date().toISOString(), t as any)}
         </span>
         <button type="button" className="aj-card-apply" onClick={() => onApply(job)}>
-          تقديم ←
+          {t('card.apply')}
         </button>
       </div>
     </article>

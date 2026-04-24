@@ -1,6 +1,7 @@
 'use client'
 
 import { CVData, EducationEntry } from './types'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   data: CVData
@@ -12,6 +13,7 @@ const EMPTY: EducationEntry = {
 }
 
 export default function StepEducation({ data, update }: Props) {
+  const t = useTranslations('cvBuilder.education')
   const list = data.education
 
   function add() {
@@ -26,54 +28,54 @@ export default function StepEducation({ data, update }: Props) {
 
   return (
     <div className="rihla-cvb-step">
-      <h3 className="rihla-cvb-step-title">التعليم والتكوين</h3>
-      <p className="rihla-cvb-step-hint">أضف جميع شهاداتك الأكاديمية — من الأحدث إلى الأقدم.</p>
+      <h3 className="rihla-cvb-step-title">{t('title')}</h3>
+      <p className="rihla-cvb-step-hint">{t('hint')}</p>
 
       {list.length === 0 && (
         <div className="rihla-cvb-empty">
-          <p>لم تُضف أي شهادة بعد.</p>
+          <p>{t('empty')}</p>
         </div>
       )}
 
       {list.map((e, i) => (
         <div key={i} className="rihla-cvb-card">
           <div className="rihla-cvb-card-head">
-            <strong>شهادة #{i + 1}</strong>
-            <button type="button" className="rihla-cvb-btn-danger" onClick={() => remove(i)}>حذف</button>
+            <strong>{t('entry', { n: i + 1 })}</strong>
+            <button type="button" className="rihla-cvb-btn-danger" onClick={() => remove(i)}>{t('remove')}</button>
           </div>
           <div className="rihla-cvb-grid-2">
             <label className="rihla-cvb-field">
-              <span className="rihla-cvb-label">المؤسسة <span className="rihla-cvb-label-de">(Institution)</span></span>
+              <span className="rihla-cvb-label">{t('institution')} <span className="rihla-cvb-label-de">(Institution)</span></span>
               <input className="rihla-cvb-input" value={e.institution} onChange={ev => change(i, { institution: ev.target.value })} placeholder="TU Berlin" />
             </label>
             <label className="rihla-cvb-field">
-              <span className="rihla-cvb-label">الدرجة العلمية <span className="rihla-cvb-label-de">(Abschluss)</span></span>
+              <span className="rihla-cvb-label">{t('degree')} <span className="rihla-cvb-label-de">(Abschluss)</span></span>
               <input className="rihla-cvb-input" value={e.degree} onChange={ev => change(i, { degree: ev.target.value })} placeholder="Bachelor / Master / Abitur" />
             </label>
             <label className="rihla-cvb-field">
-              <span className="rihla-cvb-label">التخصص <span className="rihla-cvb-label-de">(Fachrichtung)</span></span>
+              <span className="rihla-cvb-label">{t('field')} <span className="rihla-cvb-label-de">(Fachrichtung)</span></span>
               <input className="rihla-cvb-input" value={e.fieldOfStudy} onChange={ev => change(i, { fieldOfStudy: ev.target.value })} placeholder="Informatik" />
             </label>
             <div />
             <label className="rihla-cvb-field">
-              <span className="rihla-cvb-label">تاريخ البدء <span className="rihla-cvb-label-de">(von)</span></span>
+              <span className="rihla-cvb-label">{t('start')} <span className="rihla-cvb-label-de">(von)</span></span>
               <input type="month" className="rihla-cvb-input" value={e.startDate} onChange={ev => change(i, { startDate: ev.target.value })} />
             </label>
             <label className="rihla-cvb-field">
-              <span className="rihla-cvb-label">تاريخ الانتهاء <span className="rihla-cvb-label-de">(bis — اتركه فارغاً لـ &quot;حتى الآن&quot;)</span></span>
+              <span className="rihla-cvb-label">{t('endLabel')} <span className="rihla-cvb-label-de">(bis — {t('endHint')})</span></span>
               <input type="month" className="rihla-cvb-input" value={e.endDate} onChange={ev => change(i, { endDate: ev.target.value })} />
             </label>
             <label className="rihla-cvb-field rihla-cvb-field-full">
-              <span className="rihla-cvb-label">تفاصيل إضافية <span className="rihla-cvb-label-de">(Beschreibung)</span></span>
+              <span className="rihla-cvb-label">{t('desc')} <span className="rihla-cvb-label-de">(Beschreibung)</span></span>
               <textarea className="rihla-cvb-input" rows={3} value={e.description} onChange={ev => change(i, { description: ev.target.value })}
-                placeholder="معدل التخرج، مواضيع البحث، المشاريع..." />
+                placeholder={t('descPh')} />
             </label>
           </div>
         </div>
       ))}
 
       <button type="button" className="rihla-cvb-btn-add" onClick={add}>
-        + إضافة شهادة جديدة
+        {t('add')}
       </button>
     </div>
   )

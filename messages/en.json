@@ -18,7 +18,8 @@
     "yes": "Yes",
     "no": "No",
     "error": "Something went wrong",
-    "tryAgain": "Try again"
+    "tryAgain": "Try again",
+    "tipLabel": "Tip"
   },
   "nav": {
     "home": "Home",
@@ -191,17 +192,50 @@
       "title": "Everything you need, in one place",
       "sub": "Eight sections, dozens of articles, and all the tools you'll need throughout your journey.",
       "discover": "Discover",
-      "banks": { "name": "Banks", "desc": "Open an account easily from Morocco" },
-      "housing": { "name": "Housing", "desc": "Apartments and shared flats (WG)" },
-      "universities": { "name": "Universities", "desc": "Study in Germany for free" },
-      "work": { "name": "Work", "desc": "Find the right job for you" },
-      "cv": { "name": "CV", "desc": "Professional Lebenslauf + AI" },
-      "anschreiben": { "name": "Motivation letter", "desc": "Anschreiben in German in seconds" },
-      "ausbildung": { "name": "Ausbildung", "desc": "The dual vocational training" },
-      "ausbildungJobs": { "name": "Ausbildung offers", "desc": "Real offers updated daily" },
-      "visa": { "name": "Visa", "desc": "All the paperwork and procedures" },
-      "learnGerman": { "name": "Learn German", "desc": "Lessons from A1 to C1" },
-      "sim": { "name": "SIM cards", "desc": "Stay connected from day one" }
+      "banks": {
+        "name": "Banks",
+        "desc": "Open an account easily from Morocco"
+      },
+      "housing": {
+        "name": "Housing",
+        "desc": "Apartments and shared flats (WG)"
+      },
+      "universities": {
+        "name": "Universities",
+        "desc": "Study in Germany for free"
+      },
+      "work": {
+        "name": "Work",
+        "desc": "Find the right job for you"
+      },
+      "cv": {
+        "name": "CV",
+        "desc": "Professional Lebenslauf + AI"
+      },
+      "anschreiben": {
+        "name": "Motivation letter",
+        "desc": "Anschreiben in German in seconds"
+      },
+      "ausbildung": {
+        "name": "Ausbildung",
+        "desc": "The dual vocational training"
+      },
+      "ausbildungJobs": {
+        "name": "Ausbildung offers",
+        "desc": "Real offers updated daily"
+      },
+      "visa": {
+        "name": "Visa",
+        "desc": "All the paperwork and procedures"
+      },
+      "learnGerman": {
+        "name": "Learn German",
+        "desc": "Lessons from A1 to C1"
+      },
+      "sim": {
+        "name": "SIM cards",
+        "desc": "Stay connected from day one"
+      }
     },
     "ladder": {
       "kicker": "Learn German",
@@ -214,11 +248,26 @@
       "metaInteractive": "Interactive",
       "metaMoroccans": "For Moroccans",
       "levels": {
-        "A1": { "title": "Beginner", "desc": "Greetings, numbers, introducing yourself" },
-        "A2": { "title": "Basics", "desc": "Shopping, appointments, describing people" },
-        "B1": { "title": "Intermediate", "desc": "Everyday conversations, opinions, work" },
-        "B2": { "title": "Advanced", "desc": "Complex discussions, formal texts" },
-        "C1": { "title": "Mastery", "desc": "Academic and professional level" }
+        "A1": {
+          "title": "Beginner",
+          "desc": "Greetings, numbers, introducing yourself"
+        },
+        "A2": {
+          "title": "Basics",
+          "desc": "Shopping, appointments, describing people"
+        },
+        "B1": {
+          "title": "Intermediate",
+          "desc": "Everyday conversations, opinions, work"
+        },
+        "B2": {
+          "title": "Advanced",
+          "desc": "Complex discussions, formal texts"
+        },
+        "C1": {
+          "title": "Mastery",
+          "desc": "Academic and professional level"
+        }
       }
     },
     "articles": {
@@ -457,6 +506,2273 @@
       "s5_i3": "Don't send personal data or photos of your documents to strangers online.",
       "s6_h": "After finding the apartment",
       "s6_b": "You must register at the city hall (Anmeldung) within two weeks of moving in. This step is mandatory and necessary to open a bank account and deal with German official bodies."
+    },
+    "banking": {
+      "metaTitle": "Banking in Germany — your complete guide",
+      "metaDesc": "20 articles covering everything you need to open a bank account and manage your money in Germany.",
+      "eyebrow": "Money & banking",
+      "title": "Banking and accounts in Germany",
+      "subtitle": "Everything a Moroccan needs to start their financial life in Germany — from picking a bank to transfers and fees.",
+      "intro": "20 dense articles based on real experience, covering every stage: before arrival, at arrival, and during your first years in Germany.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Why do you need a German bank account?",
+          "summary": "A bank account is not a luxury in Germany — without one you won't receive your salary, pay your rent, or complete almost any official process.",
+          "tag": "Basics",
+          "paragraph": "Germany is a country of bank transfers (Überweisung) above all. Salaries arrive by transfer, rent is pulled automatically via direct debit (Lastschrift), every bill goes through your account, even scholarships and social security need a German IBAN.",
+          "bullets": [
+            "Your employer asks for a German IBAN before your first salary.",
+            "Your landlord needs an account to set up a Lastschrift for rent.",
+            "Health insurance, taxes, electricity, internet — all run on direct debit."
+          ],
+          "tip": "Open an online account before leaving Morocco if possible, or within your first week after arrival at the latest."
+        },
+        {
+          "num": 2,
+          "title": "The difference between Girokonto, Sparkonto and Tagesgeld",
+          "summary": "Three account types in Germany, each for a different purpose. Pick wrong and you either lose yield or find your money locked up.",
+          "tag": "Account types",
+          "bullets": [
+            "**Girokonto:** current account — for receiving salary and paying bills. This is what you need first.",
+            "**Sparkonto:** traditional savings account at low interest, withdrawable any time.",
+            "**Tagesgeldkonto:** daily-access account at higher interest (2–4% currently), fully liquid, ideal for a reserve.",
+            "**Festgeld:** fixed-term deposit at higher interest, but your money is locked."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "N26 — the first choice for new arrivals",
+          "summary": "100% digital bank, opens from your phone in 15 minutes, no Schufa or branch visit needed. Perfect for your first weeks in Germany.",
+          "tag": "Digital bank",
+          "bullets": [
+            "No monthly fees on the free plan.",
+            "Does not always require Anmeldung — passport and a German address are often enough.",
+            "VideoIdent identity check not available in Arabic — but English or German works.",
+            "Maestro/Debit Mastercard arrives by post in 5–10 days.",
+            "Great app: instant notifications, auto-categorization, savings goals."
+          ],
+          "tip": "Some older German companies reject non-DE IBANs from N26 (they sometimes start with FR or ES). Check before giving it to your employer."
+        },
+        {
+          "num": 4,
+          "title": "DKB — free with a real credit card",
+          "summary": "One of the best free banks. Offers a real Visa credit card (not just Debit) with free cash withdrawals.",
+          "tag": "Free bank",
+          "paragraph": "DKB is ideal if you travel a lot or shop online in foreign currencies. The credit card enables free withdrawals from any ATM worldwide (after transferring balance to it).",
+          "bullets": [
+            "Free Girokonto with no minimum-salary requirement.",
+            "Decent app, though less polished than N26.",
+            "Requires a completed Anmeldung to sign up.",
+            "Customer service in German or English."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Sparkasse — the local bank closest to you",
+          "summary": "A huge network of regional banks. Every city has its own Sparkasse. Not the cheapest, but socially the most reassuring.",
+          "tag": "Traditional bank",
+          "paragraph": "If a lease or employer asks for an account at a \"real\" bank with a physical branch, Sparkasse is the fit. Warning though: most branches charge monthly fees (€5–10) on the current account.",
+          "bullets": [
+            "Branches everywhere, even in small villages.",
+            "Free ATMs within the Sparkasse network.",
+            "Counter (in-person) transactions for those who need face-to-face service.",
+            "Requires Anmeldung and an in-person appointment to open."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "Commerzbank and Deutsche Bank — the big banks",
+          "summary": "Suitable if you need loans or advanced investment services. Both offer free accounts for students and for those transferring a large enough salary.",
+          "tag": "Big banks",
+          "bullets": [
+            "Commerzbank: free account with salary transfer ≥ €700/month.",
+            "Deutsche Bank: good for international relationships and investment.",
+            "Some branches have staff who speak English or French.",
+            "Fees are relatively high if you don't meet the waiver conditions."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "ING and Comdirect — excellent digital alternatives",
+          "summary": "Two digital banks with virtual branches, backed by big groups (ING DiBa and Commerzbank).",
+          "tag": "Digital banks",
+          "bullets": [
+            "ING: free Girokonto with monthly income ≥ €700, free withdrawals from any ATM in the EU.",
+            "Comdirect: free for the first 3 years, then subject to monthly income.",
+            "Both support Apple Pay and Google Pay.",
+            "Support primarily in German."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "Documents required to open an account",
+          "summary": "Precise checklist of what every German bank asks for. Gather them before applying to save time.",
+          "tag": "Documents",
+          "bullets": [
+            "Passport or residence permit (Aufenthaltstitel).",
+            "Anmeldebestätigung (municipal registration confirmation).",
+            "Full residential address in Germany.",
+            "Steuer-ID (tax number) if available.",
+            "German phone number for verification.",
+            "Some banks: proof of income or a work/study contract."
+          ],
+          "tip": "Digital banks (N26, Vivid) may accept you without Anmeldung at first, but will ask for it later for full verification."
+        },
+        {
+          "num": 9,
+          "title": "VideoIdent and PostIdent — how your identity gets verified",
+          "summary": "You cannot open an account without identity verification. These are the two most common options.",
+          "tag": "Identity check",
+          "bullets": [
+            "**VideoIdent:** 5–10 min video call with an agent, available from anywhere. The fastest.",
+            "**PostIdent:** go to the nearest post office (Deutsche Post) with a printed form and your passport. Free.",
+            "Both are free if requested by the bank.",
+            "Pick VideoIdent if you're in Morocco or recently arrived."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Schufa — the German credit record",
+          "summary": "A record that defines your financial trust. It affects renting an apartment, opening some accounts, and getting loans.",
+          "tag": "Credit",
+          "paragraph": "Schufa is computed automatically from your financial activity in Germany. On arrival, your record is \"empty\" — not bad in itself, but some companies view it as risk. It improves over time as you pay your bills on time.",
+          "bullets": [
+            "Your first Schufa Auskunft (free copy) is your right each year via meineschufa.de.",
+            "Don't take unnecessary loans to build your record — regular Girokonto use is enough.",
+            "On-time rent and bill payments raise your score."
+          ],
+          "tip": "Some landlords ask for a Schufa-Bonitätscheck — get the short rental version for about €30."
+        },
+        {
+          "num": 11,
+          "title": "IBAN and SEPA — the language of European transfers",
+          "summary": "IBAN is your international account number. SEPA is the European transfer network that makes internal transfers free and fast.",
+          "tag": "Transfers",
+          "bullets": [
+            "A German IBAN starts with DE and is 22 characters long.",
+            "SEPA transfer within the EU: free, arrives in 1–2 business days.",
+            "SEPA Instant: instant transfer (10 seconds), some banks charge a small fee.",
+            "BIC is only needed in certain international cases; IBAN alone usually suffices."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Direct debit (Lastschrift) — how it works and when to reject it",
+          "summary": "Lastschrift lets a company pull money directly from your account after your authorization. A great tool — but handle with care.",
+          "tag": "Payments",
+          "bullets": [
+            "You give the company a Mandat (authorization) once, then it pulls automatically (rent, internet, insurance…).",
+            "You have the right to reverse any debit within 8 weeks, with or without reason.",
+            "Review your statement monthly — bogus charges happen.",
+            "To cancel a Mandat: email the company and notify the bank."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Standing orders (Dauerauftrag) — to pay rent automatically",
+          "summary": "The opposite of Lastschrift — you are the one ordering a fixed-amount transfer on a set date each month. Ideal for rent.",
+          "tag": "Payments",
+          "bullets": [
+            "Set up in a minute from the bank app.",
+            "Editable or cancellable at any time.",
+            "Best way to pay rent to the landlord.",
+            "Some banks charge for setting up a Dauerauftrag on paper, but it's free online."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "EC-Karte (Girocard) and credit cards in Germany",
+          "summary": "Germany is still an EC-Karte (Girocard) country. Many shops don't accept Visa/Mastercard. Understand the difference.",
+          "tag": "Cards",
+          "bullets": [
+            "Girocard (EC): local debit card, accepted in nearly every shop.",
+            "Debit Mastercard/Visa: works internationally but may be refused in some bakeries and markets.",
+            "Credit Card (real credit card): for travel and international bookings.",
+            "Many shops still prefer cash — always carry some."
+          ],
+          "tip": "Ask your digital bank for an additional Girocard if possible, or open a second account at Sparkasse for this purpose."
+        },
+        {
+          "num": 15,
+          "title": "Withdrawing cash — ATM networks and how to avoid fees",
+          "summary": "Not every ATM is free. Using a foreign ATM can cost you €5 per withdrawal.",
+          "tag": "ATMs",
+          "bullets": [
+            "**Cash Group:** Deutsche Bank + Commerzbank + Postbank + HypoVereinsbank — free for their customers.",
+            "**Cash Pool:** includes Santander + Sparda + Targobank and others.",
+            "**Sparkassen:** their own network, free for Sparkasse cards.",
+            "DKB and ING: free withdrawals at most ATMs inside the EU.",
+            "Simplest solution: use Cashback at the supermarket (Rewe, Lidl) — free."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Transferring to and from Morocco — the cheapest routes",
+          "summary": "Bank fees on international transfers are very high. Use specialized services to save dozens of euros.",
+          "tag": "International transfers",
+          "bullets": [
+            "**Wise (TransferWise):** near-mid-market exchange rate, transparent fees, fastest option.",
+            "**Revolut:** good for small recurring transfers.",
+            "**Western Union / MoneyGram:** fast but very expensive (5–8%).",
+            "Direct bank transfer (SWIFT): €15–40 fee + bad exchange rate.",
+            "Beware of tempting offers via \"a friend\" — often money laundering."
+          ],
+          "tip": "Always compare the real rate on Google before any transfer — most fees are hidden in the rate."
+        },
+        {
+          "num": 17,
+          "title": "Taxes and your bank account — what you must know",
+          "summary": "The Finanzamt is linked to your account. Any interest or profit is reported automatically. Understand the basics.",
+          "tag": "Taxes",
+          "bullets": [
+            "Freistellungsauftrag: automatic exemption on the first €1,000 of annual interest (€2,000 for couples).",
+            "Without it, the bank withholds 25% (Abgeltungssteuer) on any interest directly.",
+            "Steuer-ID (tax number) required to open any account since 2024.",
+            "Savings banks send a yearly Steuerbescheinigung for your tax return."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Online safety — protecting your account",
+          "summary": "Online banking fraud is widespread. Follow these golden rules to protect yourself.",
+          "tag": "Security",
+          "bullets": [
+            "Only enter your banking details on the official website/app.",
+            "No bank ever asks for your password by phone or email — never.",
+            "Enable 2FA (SMS or TAN app) on every operation.",
+            "Review your statement weekly — going a whole month is risky.",
+            "\"Bank\" emails asking to update your details = phishing attempt."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Joint account (Gemeinschaftskonto) for couples",
+          "summary": "Two types of joint accounts in Germany, each with different legal consequences in case of death or divorce.",
+          "tag": "Partnership",
+          "bullets": [
+            "**Oder-Konto:** each partner acts independently (the most common).",
+            "**Und-Konto:** requires both signatures for every operation.",
+            "Oder-Konto is easier day to day, but opens the door to trust risks.",
+            "In a separation, the money is presumed 50/50 owned by default.",
+            "Always keep a separate personal account alongside it."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Closing the account when leaving for good",
+          "summary": "Closing your account from Morocco is nearly impossible. Handle it before leaving to avoid problems down the line.",
+          "tag": "Closing",
+          "bullets": [
+            "Cancel every Lastschrift and Dauerauftrag before closing.",
+            "Get a final Kontoauszug and a closing letter (Kontoauflösungsbestätigung).",
+            "Notify the Finanzamt and Einwohnermeldeamt of your new address.",
+            "Some banks charge a closing fee (€10–30).",
+            "Keep all correspondence for at least 10 years."
+          ],
+          "tip": "Don't close the account until after your last salary is received and your last rent is paid. Waiting an extra month saves huge problems."
+        }
+      ]
+    },
+    "simcards": {
+      "metaTitle": "SIM cards and internet in Germany — a Moroccan's guide",
+      "metaDesc": "20 articles on SIM cards, home internet, plans, and how to avoid scams in Germany.",
+      "eyebrow": "Telecom & internet",
+      "title": "SIM cards and internet in Germany",
+      "subtitle": "A German number isn't optional, it's a necessity. Here's how to pick the right carrier, the right plan, and solutions for every situation.",
+      "intro": "20 articles answering every question: Prepaid or Vertrag? Telekom or O2? eSIM or physical card? And how to avoid long-term contract traps.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Why you need a German number from day one",
+          "summary": "Without an active German number you can't register at a bank, register at the town hall, look for a flat, or even receive a parcel.",
+          "tag": "Basics",
+          "bullets": [
+            "Banks verify your identity via SMS, only to a German number.",
+            "Flat applications get rejected without a reachable German number.",
+            "The Ausländerbehörde phones you for certain appointments.",
+            "In some cities, Anmeldung requires a local phone number."
+          ],
+          "tip": "Keep your Moroccan number active via virtual numbers (WhatsApp/Google Voice) for at least two months after arrival."
+        },
+        {
+          "num": 2,
+          "title": "Prepaid vs Vertrag — the first choice",
+          "summary": "A decision that sets your flexibility and costs for two years. Choose based on your stability, not on the headline price.",
+          "tag": "Comparison",
+          "bullets": [
+            "**Prepaid:** pay upfront, no contract, no Schufa, activated instantly.",
+            "**Vertrag:** 24-month contract, lower rates, requires Schufa + a bank account.",
+            "As a new student: start on Prepaid, then port your number to a Vertrag later.",
+            "Vertrag with an iPhone/new phone: usually pricier than buying the phone separately."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "The three big networks in Germany",
+          "summary": "Three physical networks, and dozens of brands running on them. The actual network matters more than the name.",
+          "tag": "Networks",
+          "bullets": [
+            "**Deutsche Telekom (D1):** best coverage, especially in rural areas.",
+            "**Vodafone (D2):** fastest in big cities, decent in villages.",
+            "**O2 (Telefónica):** cheapest, good coverage in cities, weak in the countryside.",
+            "Any small carrier (Aldi Talk, Lidl Connect, Congstar…) runs on one of these networks."
+          ],
+          "tip": "Before picking a carrier, check coverage at your address on breitbandmessung.de or netzabdeckung.o2online.de."
+        },
+        {
+          "num": 4,
+          "title": "Telekom (Magenta) — priciest, best coverage",
+          "summary": "If you live in a village or travel often by train, Telekom is the safe bet. High price, but worth it.",
+          "tag": "Telekom",
+          "bullets": [
+            "MagentaMobil Start: €30/month, 20 GB, unlimited calls.",
+            "Family plans (MagentaEins) excellent if you also have home internet with them.",
+            "The only network stable on fast trains (ICE).",
+            "5G available in most large cities."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Vodafone — a balanced challenger",
+          "summary": "A large carrier with a strong network and competitive plans. Ideal if you live in a large or medium-sized city.",
+          "tag": "Vodafone",
+          "bullets": [
+            "GigaMobil S: ~€25/month, 15 GB.",
+            "Unlimited plans available at reasonable prices.",
+            "5G well rolled out in Hamburg, München, Köln, Berlin.",
+            "Good \"Unterwegs\" coverage on the motorway."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "O2 — cheapest in cities",
+          "summary": "If you live in a big city and use a lot of data, O2 is the best value. Avoid it in the countryside.",
+          "tag": "O2",
+          "bullets": [
+            "o2 Mobile M: ~€20/month, 20 GB.",
+            "Genuine Free Unlimited plans (€30–40).",
+            "Weak coverage in villages and on some regional trains.",
+            "Average customer service — usually German only."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "Aldi Talk — the most popular Prepaid option",
+          "summary": "Used by hundreds of thousands. Low price, easy activation, runs on O2 in practice.",
+          "tag": "Aldi Talk",
+          "bullets": [
+            "Paket S: €7.99/2 weeks, 5 GB + unlimited calls.",
+            "Paket M: €12.99/4 weeks, 12 GB + unlimited calls.",
+            "Activation via PostIdent or VideoIdent in a few minutes.",
+            "Available in every Aldi Süd and Aldi Nord store."
+          ],
+          "tip": "Your phone needs NFC for online activation. If it doesn't have it, walk into an Aldi store with your passport."
+        },
+        {
+          "num": 8,
+          "title": "Lidl Connect — the Aldi Talk alternative",
+          "summary": "Runs on the Vodafone network, so better rural coverage than Aldi Talk.",
+          "tag": "Lidl",
+          "bullets": [
+            "Smart S: €7.99/4 weeks, 5 GB.",
+            "Smart L: €17.99/4 weeks, 25 GB.",
+            "Sold in Lidl stores and online.",
+            "Activation via VideoIdent or in-store."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Congstar — Telekom at lower prices",
+          "summary": "Telekom's budget brand. You get the same excellent network for 30–40% less.",
+          "tag": "Congstar",
+          "bullets": [
+            "Allnet Flat M: €17/month, 10 GB.",
+            "24-month or monthly contract (slightly pricier).",
+            "Call quality identical to Telekom.",
+            "Good German-language customer service."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Blau — Vodafone at a discount",
+          "summary": "Vodafone's budget brand. Ideal for anyone who wants a strong network without paying Vodafone's list price.",
+          "tag": "Blau",
+          "bullets": [
+            "Blau Allnet L: €15/4 weeks, 15 GB.",
+            "Monthly option available without a contract.",
+            "Free roaming across the whole European Union.",
+            "Fast activation via the app."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Identity verification (PostIdent / VideoIdent)",
+          "summary": "You can't buy a SIM without proving your identity. Germany has taken this seriously since 2017.",
+          "tag": "Verification",
+          "bullets": [
+            "VideoIdent: 5-minute video call, passport + good lighting, available with most carriers.",
+            "PostIdent: visit a post office with a printed form — free for the carrier.",
+            "In-store: bring your passport, activation is done in 10 minutes.",
+            "A Moroccan number isn't accepted for verification — you need an email."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Porting your number between carriers (Rufnummermitnahme)",
+          "summary": "You can keep your number when switching carriers. The process is almost free.",
+          "tag": "Porting",
+          "bullets": [
+            "Give the new carrier: your old number + Kundennummer + Kündigungstermin.",
+            "The new carrier handles almost everything.",
+            "Port time: 1–7 days.",
+            "Since 2020, the legal fee is capped at €6.82."
+          ],
+          "tip": "Port your number 3 months before the contract ends to avoid any break or loss of the number."
+        },
+        {
+          "num": 13,
+          "title": "eSIM — the modern digital alternative",
+          "summary": "eSIM is available in Germany from most carriers. Ideal for recent phones and for travel.",
+          "tag": "eSIM",
+          "bullets": [
+            "Telekom, Vodafone, O2, Congstar, 1&1 all support eSIM.",
+            "Aldi Talk started supporting it in 2024.",
+            "iPhone XS+ and Samsung Galaxy S20+ support eSIM.",
+            "You can activate two lines at once (physical SIM + eSIM)."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Roaming in the European Union",
+          "summary": "Since 2017, roaming within the EU is free on any German SIM. But there are limits.",
+          "tag": "Roaming",
+          "bullets": [
+            "Fair Use: if you spend too long outside Germany, the carrier can throttle your usage.",
+            "Daily use in France/Spain/Italy works just like in Germany, at no extra cost.",
+            "Morocco = outside the EU = paid roaming (€10–20 per MB).",
+            "Travelling to Morocco: buy a temporary travel eSIM (Holafly, Airalo)."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Home internet (DSL, Kabel, Glasfaser)",
+          "summary": "Three technologies, a wide range of prices, and contracts that lock you in for 24 months. Take your time before signing.",
+          "tag": "Home internet",
+          "bullets": [
+            "**DSL:** the most widespread, speeds 50–250 Mbit.",
+            "**Kabel:** Vodafone + Pyur, speeds 100–1000 Mbit.",
+            "**Glasfaser:** fibre, the fastest (1 GB+), but not available in every neighbourhood.",
+            "Check your address on verfügbarkeit-check.de before signing.",
+            "Activation time: 2–8 weeks — don't delay the order."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Temporary internet solutions (LTE router)",
+          "summary": "If you're waiting for DSL hookup, an LTE router with a SIM gets you online right away. Handy for student housing.",
+          "tag": "LTE",
+          "bullets": [
+            "Mobile router (MiFi) + 50 GB/month SIM: ~€30/month.",
+            "Congstar Homespot and Telekom SpeedStick are well-known options.",
+            "Suitable for short stays (one-month Airbnb, long hotel stay).",
+            "Not a long-term fix — more expensive than DSL over time."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "How to cancel the contract (Kündigung)",
+          "summary": "Every contract in Germany waits for a written Kündigung. Without an official letter, it renews automatically.",
+          "tag": "Cancellation",
+          "bullets": [
+            "Legal notice period: 3 months before the contract ends (maximum).",
+            "Send the Kündigung in writing via Einschreiben (registered mail) or through the carrier's website.",
+            "Ask for written confirmation (Kündigungsbestätigung).",
+            "Since 2022, companies must provide a direct cancel button on their website."
+          ],
+          "tip": "The site kuendigung.org generates a legal, official letter and sends it on your behalf — very reliable."
+        },
+        {
+          "num": 18,
+          "title": "Student and youth deals",
+          "summary": "Many carriers offer discounts to student card holders or to anyone under 28.",
+          "tag": "Discounts",
+          "bullets": [
+            "Telekom MagentaMobil Young: 30% off until age 28.",
+            "Vodafone Young: 10 GB for €15 instead of €25.",
+            "O2 My Young: similar terms.",
+            "Apply for the discount via the carrier's website and upload your Studierendenausweis.",
+            "The discount lasts until the day you turn 28."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "SIM cards without a German address",
+          "summary": "What to do if you arrive in Germany without a fixed address yet. Limited options, but they exist.",
+          "tag": "No address",
+          "bullets": [
+            "Lycamobile and Lebara Prepaid: accept registration with a hotel or Airbnb address.",
+            "Aldi Talk: may accept a temporary address, to be updated later.",
+            "Vodafone CallYa: buy in-store with just your passport.",
+            "Once Anmeldung is done, update your address in the app."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Watch out for scams and fraud",
+          "summary": "Telecom shops in train stations and some websites sell contracts with hidden terms. A real risk.",
+          "tag": "Warnings",
+          "bullets": [
+            "Never sign a document in German that you don't understand 100%.",
+            "Avoid phone shops in big train stations — inflated prices.",
+            "Beware calls from \"the carrier\" asking for personal data — fraud is widespread.",
+            "Have a German friend read the contract before you sign.",
+            "Keep the contract and any receipts for at least 3 years."
+          ],
+          "tip": "Best approach: open the contract online on the carrier's official site. No middleman, no trouble down the line."
+        }
+      ]
+    },
+    "universities": {
+      "metaTitle": "Universities and studying in Germany — the complete guide",
+      "metaDesc": "20 articles on applying to German universities, scholarships, visas, and student life.",
+      "eyebrow": "University studies",
+      "title": "Universities in Germany",
+      "subtitle": "A full roadmap for every Moroccan student considering university in Germany — from baccalaureate recognition to master's graduation.",
+      "intro": "20 concise articles answering the real questions thousands of Moroccans ask every year: how do I choose a university? How long does it take? How do I fund myself? Is my language level enough?",
+      "items": [
+        {
+          "num": 1,
+          "title": "Why Germany and not another European country?",
+          "summary": "Studying in Germany is nearly free, and the job market opens its doors to graduates straight away. But you need to know what to expect.",
+          "tag": "Introduction",
+          "bullets": [
+            "Public universities charge no tuition fees (except Baden-Württemberg for international students: €1500/semester).",
+            "The Semesterbeitrag (semester fee) is €150–350 and often includes a free transport pass in some states.",
+            "A globally recognised degree and a German job market hungry for skills.",
+            "An 18-month residence permit guaranteed after graduation to look for work."
+          ],
+          "tip": "Canada and France have shorter application processes, but Germany is cheaper over 5 years of study."
+        },
+        {
+          "num": 2,
+          "title": "Universität vs Fachhochschule (FH/HAW)",
+          "summary": "The difference is fundamental and affects your career. Choose based on your field and ambition, not on the name.",
+          "tag": "Types",
+          "bullets": [
+            "**Universität (Uni):** research-oriented, theoretical, leads to a PhD, suited for fundamental sciences, medicine and law.",
+            "**Fachhochschule (FH/HAW):** applied, real projects, compulsory internship, faster route to the job market.",
+            "Kunsthochschule / Musikhochschule: for artists and musicians, with a specific entrance exam.",
+            "Duale Hochschule: combines university and a company (a paid track)."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "The best-known German universities and their rankings",
+          "summary": "The top universities aren't the easiest to get into. Check the rankings but choose based on your programme.",
+          "tag": "Ranking",
+          "bullets": [
+            "**TU München, LMU München:** strongest in sciences and technology.",
+            "**Heidelberg, Göttingen, Tübingen:** deep research tradition in medicine and the humanities.",
+            "**RWTH Aachen, KIT Karlsruhe, TU Berlin:** engineering and computer science.",
+            "**Humboldt, FU Berlin:** social sciences and humanities.",
+            "**Mannheim, Frankfurt:** economics and finance."
+          ],
+          "tip": "Shanghai and THE rankings are useful for information, but German hiring panels rarely pay them much attention."
+        },
+        {
+          "num": 4,
+          "title": "Recognising the Moroccan baccalaureate (uni-assist)",
+          "summary": "Before applying anywhere, you must have your diploma evaluated via uni-assist or directly by the university. This is always the first step.",
+          "tag": "Recognition",
+          "bullets": [
+            "The Moroccan baccalaureate usually doesn't equal the German Abitur directly — you'll need a Studienkolleg or a university year.",
+            "uni-assist evaluates your file and issues a VPD (Vorprüfungsdokumentation) you can reuse across applications.",
+            "Fees: €75 for the first university + €30 per additional university in the same semester.",
+            "Some universities (TUM, Heidelberg) evaluate in-house without uni-assist."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Studienkolleg — the mandatory preparatory year",
+          "summary": "If you haven't done a university year in Morocco, you'll need a Studienkolleg first. An intensive year ending in the Feststellungsprüfung exam.",
+          "tag": "Preparatory",
+          "bullets": [
+            "Duration: one year, free at public universities.",
+            "Tracks: T (technical), M (medical), W (economics), G (languages), S (social sciences).",
+            "You need B1-B2 German for admission + an entrance exam (Aufnahmeprüfung).",
+            "After passing the Feststellungsprüfung, your diploma is treated as a German Abitur."
+          ],
+          "tip": "If you successfully completed a university year in Morocco, you may skip the Studienkolleg and enter a bachelor's programme directly."
+        },
+        {
+          "num": 6,
+          "title": "Language requirements: DSH, TestDaF, TELC, Goethe",
+          "summary": "B2 usually isn't enough for German-taught programmes. You'll need a certified C1 through one of these tests.",
+          "tag": "Language",
+          "bullets": [
+            "**TestDaF:** the most recognised internationally, accepted by every university. Required level: TDN 4 in every section.",
+            "**DSH-2 or DSH-3:** an exam run by the university itself, often free.",
+            "**Goethe-Zertifikat C1/C2:** broadly accepted, relatively expensive (€230).",
+            "**TELC C1 Hochschule:** a good alternative, cheaper.",
+            "Some universities waive the exam if you have a C1 certificate + a specified TOEFL level for mixed-language programmes."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "English-taught programmes — the fast alternative",
+          "summary": "Over 2000 German programmes are offered in English, especially at master's level. No German required for admission.",
+          "tag": "English",
+          "bullets": [
+            "DAAD.de has a full database of English-taught programmes.",
+            "IELTS 6.5 or TOEFL 90 is the usual minimum.",
+            "There are far more master's programmes in English than bachelor's.",
+            "Most common fields: engineering, computer science, economics, environmental sciences."
+          ],
+          "tip": "Even if you study in English, learn German in parallel — you'll need it for daily life and part-time work."
+        },
+        {
+          "num": 8,
+          "title": "Application steps — a timeline",
+          "summary": "A realistic plan: start about a year before classes begin to avoid stress and mistakes.",
+          "tag": "Steps",
+          "bullets": [
+            "12 months before: research programmes, start learning the language.",
+            "9 months before: translate and certify your documents + uni-assist.",
+            "6 months before: submit applications (Wintersemester deadline: 15 July).",
+            "4 months before: book your embassy appointment + prepare your financial proof.",
+            "2 months before: book student housing + health insurance."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "The motivation letter (Motivationsschreiben)",
+          "summary": "The most important document in your file. It should tell a clear story: why you, why this programme, why this university.",
+          "tag": "File",
+          "bullets": [
+            "One page (400–500 words) in German or English, depending on the programme language.",
+            "Start with a personal event that sparked your interest — not with \"I have always been interested\".",
+            "Connect every paragraph to specific courses in the programme.",
+            "End with a 5-year plan after graduation."
+          ],
+          "tip": "Have your letter reviewed by a professor + a friend + a native German speaker before sending — language mistakes are fatal."
+        },
+        {
+          "num": 10,
+          "title": "Proof of funding (Finanzierungsnachweis)",
+          "summary": "Germany requires proof you can live for a full year. Without it, no visa. The amount is fixed and updated yearly.",
+          "tag": "Funding",
+          "bullets": [
+            "Current amount: €11,904 (2024) in a Sperrkonto (blocked account) in your name.",
+            "The blocked account allows only monthly withdrawals (~€992/month).",
+            "Alternatives: official scholarship, commitment by a German resident (Verpflichtungserklärung), bank guarantee.",
+            "Most used Sperrkonto services: Expatrio, Fintiba, Coracle (all approved)."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "The DAAD scholarship — the biggest and best-known",
+          "summary": "The German Academic Exchange Service offers hundreds of scholarships every year. Competitive but realistic.",
+          "tag": "Scholarships",
+          "bullets": [
+            "Full master's scholarships (€850/month + fees + insurance + ticket).",
+            "PhD scholarships (€1200/month + family).",
+            "Short research grants (3–6 months) during your studies.",
+            "You usually apply a year before the scholarship starts."
+          ],
+          "tip": "The key to your DAAD file: the research proposal. Read your potential supervisor's work before writing it."
+        },
+        {
+          "num": 12,
+          "title": "Political foundation scholarships (Stiftungen)",
+          "summary": "13 German political foundations offer scholarships to international students. Less competitive than DAAD, just as generous.",
+          "tag": "Scholarships",
+          "bullets": [
+            "**Konrad-Adenauer:** Christian-democratic.",
+            "**Friedrich-Ebert:** social-democratic.",
+            "**Heinrich-Böll:** green/ecological.",
+            "**Rosa-Luxemburg:** left-wing.",
+            "**Friedrich-Naumann:** liberal.",
+            "Every foundation expects ideological alignment + academic excellence + volunteer work."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "The student visa — from application to issue",
+          "summary": "The study visa (C or D) is issued by the German embassy. Waiting times can reach 3 months during peak summer.",
+          "tag": "Visa",
+          "bullets": [
+            "Two types: Visum zur Studienbewerbung (application-stage) and Visum zu Studienzwecken (admission confirmed).",
+            "Book the appointment via maroc.diplo.de — very early.",
+            "Documents: university admission, proof of funding, health insurance, translations of every document.",
+            "Fee: €75. Usually issued for 3 months, then converted into an Aufenthaltstitel."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Student health insurance",
+          "summary": "Health insurance is mandatory to enrol at university. Under 30: public (GKV). Over 30: private (PKV).",
+          "tag": "Insurance",
+          "bullets": [
+            "Public insurance (TK, AOK, Barmer): ~€120/month for students, covering almost everything.",
+            "Private insurance: sometimes cheaper, but limited in scope.",
+            "Travel insurances (Mawista, Dr. Walter) are only accepted for up to 2 months, then you must switch.",
+            "TK is the most popular among international students — decent English website and support."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Student housing (Studentenwohnheim)",
+          "summary": "The cheapest option, but waiting lists are long. Apply as soon as you receive your admission letter.",
+          "tag": "Housing",
+          "bullets": [
+            "The Studierendenwerk runs it — every city has its own website.",
+            "Rent: €180–400 all bills included.",
+            "Waiting lists: 3–12 months in big cities.",
+            "Alternatives: WG (shared flat) via wg-gesucht.de.",
+            "Beware of scams — never pay before visiting the flat or seeing the contract."
+          ],
+          "tip": "For your first week, book a Jugendherberge or an Airbnb, and never accept a flat under time pressure. A rushed decision = a long nightmare."
+        },
+        {
+          "num": 16,
+          "title": "Semester enrolment and student card",
+          "summary": "Once you arrive, you must complete the Immatrikulation (official enrolment). You'll receive a Studentenausweis and a transport card.",
+          "tag": "Enrolment",
+          "bullets": [
+            "Bring: passport, visa, Anmeldung, insurance proof, Semesterbeitrag payment receipt.",
+            "Enrolment gives you a Matrikelnummer — keep it for life.",
+            "The student card gives discounts at museums, cinemas and sports clubs.",
+            "In many states: free semester transport pass within the region."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "Working during your studies — the legal limits",
+          "summary": "International students can work 140 full days or 280 half-days per year. Going beyond that = problems renewing your residence permit.",
+          "tag": "Work",
+          "bullets": [
+            "Werkstudent: a specific student contract, up to 20 hours/week during the semester.",
+            "Minijob: up to €538/month with no tax or insurance contributions.",
+            "HiWi (research assistant): the best job inside the university, decent pay and experience.",
+            "During holidays, you can work Vollzeit (full-time) for up to two full months."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "BAföG for international students",
+          "summary": "A government financial aid — half grant, half interest-free loan. Strict conditions for foreigners, but possible.",
+          "tag": "Funding",
+          "bullets": [
+            "International students qualify after 5 years of work in Germany or with a resident parent.",
+            "Refugees and holders of a Niederlassungserlaubnis qualify directly.",
+            "Monthly ceiling: ~€934 (2024).",
+            "Repayment starts 5 years after the end of studies."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Aufenthaltstitel after graduation",
+          "summary": "After finishing your studies, you're entitled to 18 months to find a job. Make the most of that window.",
+          "tag": "After graduation",
+          "bullets": [
+            "Submit the residence-permit conversion 6 weeks before your study visa expires.",
+            "Bring: diploma, proof of funding (Sperrkonto or job).",
+            "During the search, you can work without restrictions (Vollzeit).",
+            "Once you find a job matching your field, you switch to a Blaue Karte EU (easier conditions than the standard permit)."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Fatal mistakes to avoid",
+          "summary": "These mistakes repeat every year and end study dreams. Avoid them carefully.",
+          "tag": "Warnings",
+          "bullets": [
+            "Leaving language learning until the last minute — you'll need it for enrolment and daily life.",
+            "Applying to only one university — aim for 5 to 10 at the very least.",
+            "Having documents translated by a non-sworn translator — they will be rejected.",
+            "Delaying opening a Sperrkonto — no embassy appointment is possible without it.",
+            "Working more than 140 days and declaring it on your taxes = permit renewal refused.",
+            "Missing the Anmeldung within two weeks of arrival — fines up to €1000."
+          ],
+          "tip": "Join Facebook groups for Moroccan students in Germany — 90% of mistakes are spotted with a single question before they happen."
+        }
+      ]
+    },
+    "jobs": {
+      "metaTitle": "The German job market — a Moroccan's guide",
+      "metaDesc": "20 articles on job hunting, the Bewerbung, salaries, contracts, workers' rights and taxes in Germany.",
+      "eyebrow": "Job market",
+      "title": "Working in Germany",
+      "subtitle": "Everything you need to know to find a job, negotiate, and build a successful career in the German market.",
+      "intro": "20 dense articles: from writing your first Bewerbung to understanding the payslip and negotiating a promotion, with tips tailored for Moroccans.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Why does Germany need you?",
+          "summary": "The Fachkräftemangel (skilled-labour shortage) is a real issue, not a slogan. Germany is short by 400,000 professionals every year.",
+          "tag": "Intro",
+          "bullets": [
+            "Sectors with the highest demand: nursing, IT, engineering, trades, teaching, logistics.",
+            "The 2024 immigration law has eased entry for professionals (Chancenkarte, Blaue Karte).",
+            "German companies now speak more English in technical interviews.",
+            "Average salary for a qualified professional: €3,500–5,500 gross per month."
+          ],
+          "tip": "Even without German, you can start in IT or a start-up. But learning it later is essential to progress."
+        },
+        {
+          "num": 2,
+          "title": "The top 10 platforms for finding a job",
+          "summary": "They're not all equal. Each is specialised in a sector or level.",
+          "tag": "Platforms",
+          "bullets": [
+            "**StepStone.de:** the best-known, suited to every sector.",
+            "**Indeed.de:** huge volume, excellent filters.",
+            "**LinkedIn:** strongest for IT and international companies.",
+            "**Xing:** the German version of LinkedIn, still active.",
+            "**Arbeitsagentur.de:** official, precise, includes postings not advertised privately.",
+            "**Make-it-in-Germany.com:** aimed at foreigners.",
+            "**Glassdoor:** company reviews + real salaries.",
+            "**Kimeta, Jobware, Monster:** solid alternatives."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "Writing a convincing German Bewerbung",
+          "summary": "The German application file follows a strict protocol. Any deviation leads to immediate rejection.",
+          "tag": "Application",
+          "bullets": [
+            "**Anschreiben:** one page, intro + why me + why you + closing.",
+            "**Lebenslauf:** reverse-chronological, professional photo, 1–2 pages.",
+            "**Zeugnisse:** diplomas and certified translations.",
+            "**Arbeitszeugnisse:** previous employment references.",
+            "The whole file as a single PDF, named: Bewerbung_Vorname_Nachname.pdf"
+          ],
+          "tip": "The cover letter must be tailored to each job — \"copy-paste\" is spotted immediately."
+        },
+        {
+          "num": 4,
+          "title": "Lebenslauf — the proper German template",
+          "summary": "CV elements differ from the American or French format. Stick to the template.",
+          "tag": "CV",
+          "bullets": [
+            "Header: full name, address, phone, email, date of birth, nationality.",
+            "Photo: professional (white/grey background, formal clothing).",
+            "Berufserfahrung (experience): date – company – role – 3–5 bullets.",
+            "Ausbildung (education): qualifications with dates and grades.",
+            "Sprachen: CEFR scale (A1–C2), not \"fluent\" or \"basic\".",
+            "Kenntnisse (skills): software, technologies, certifications."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Anschreiben — the cover letter step by step",
+          "summary": "A document read in 30 seconds. Every line must convince the reader you're the right person.",
+          "tag": "Anschreiben",
+          "bullets": [
+            "Betreff (subject): \"Bewerbung als [role], Referenz [number]\".",
+            "Anrede: \"Sehr geehrte Frau X\" or \"Sehr geehrter Herr Y\".",
+            "Opening: say where you saw the ad and why it caught your eye.",
+            "Paragraph 2: what makes you the best fit? Link your experience to the requirements.",
+            "Paragraph 3: why this company specifically? (Find something concrete about them.)",
+            "Closing: \"Über ein persönliches Gespräch freue ich mich sehr\"."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "The job interview (Vorstellungsgespräch)",
+          "summary": "The German interview is structured and direct. Prepare for every question and be straightforward.",
+          "tag": "Interview",
+          "bullets": [
+            "Duration: 45–90 minutes typically.",
+            "First round: with HR + a technical manager.",
+            "Typical questions: \"tell me about yourself\", \"your strengths/weaknesses\", \"why us?\".",
+            "A pause after a question is not a flaw — think before you answer.",
+            "Ask your own questions at the end — they show the seriousness of your interest."
+          ],
+          "tip": "Dress code: a formal suit for traditional sectors (banking/law), Business Casual for IT and start-ups."
+        },
+        {
+          "num": 7,
+          "title": "Negotiating salary",
+          "summary": "Negotiation is accepted in Germany but done professionally. Research, prepare your numbers, and don't cave at the first offer.",
+          "tag": "Salary",
+          "bullets": [
+            "Research on gehalt.de, kununu.com, glassdoor.de to know the market.",
+            "Ask for 10–15% above what you actually want.",
+            "State the \"gross annual\" figure, not the monthly: e.g. €55,000 brutto.",
+            "Bring up extra perks: 30 days of leave, Home Office, fast promotion.",
+            "Don't mention your old salary in Germany — companies usually don't ask."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "Understanding the payslip (Lohnabrechnung)",
+          "summary": "Net pay is much lower than gross. Understand every deduction before signing a contract.",
+          "tag": "Salary",
+          "bullets": [
+            "**Brutto:** gross salary (before deductions).",
+            "**Lohnsteuer:** income tax (14–42% depending on the bracket).",
+            "**Solidaritätszuschlag:** 5.5% — abolished for most employees in 2021.",
+            "**Kirchensteuer:** 8–9% (for practising Christians only).",
+            "**Rentenversicherung:** 9.3%.",
+            "**Krankenversicherung:** ~7.3–8.1%.",
+            "**Arbeitslosenversicherung:** 1.3%.",
+            "**Pflegeversicherung:** 1.7–2.3%.",
+            "Netto is typically ~55–65% of Brutto for single people."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Tax classes (Steuerklassen)",
+          "summary": "Six tax classes determine what's withheld from your pay. Your choice can save you, or cost you, thousands of euros a year.",
+          "tag": "Taxes",
+          "bullets": [
+            "**Klasse 1:** single, divorced, widowed, no children.",
+            "**Klasse 2:** single parent.",
+            "**Klasse 3:** married with a higher income than your spouse.",
+            "**Klasse 4:** married with similar incomes.",
+            "**Klasse 5:** the other partner in the 3/5 combination.",
+            "**Klasse 6:** second job."
+          ],
+          "tip": "The 3/5 combo benefits couples when the income gap is large. Consult an accountant (Steuerberater) before switching."
+        },
+        {
+          "num": 10,
+          "title": "The German contract (Arbeitsvertrag)",
+          "summary": "Read every clause carefully. DeepL is not enough — have a lawyer or legal-savvy friend review it.",
+          "tag": "Contract",
+          "bullets": [
+            "Probezeit (probation): 6 months, can be ended on 2 weeks' notice.",
+            "Gehalt: the salary + any bonus.",
+            "Arbeitszeit: weekly working hours.",
+            "Urlaub: number of leave days (minimum 20, average 25–30).",
+            "Kündigungsfrist: notice period for resignation/dismissal.",
+            "Wettbewerbsverbot: non-compete clause after leaving."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Basic workers' rights",
+          "summary": "German law protects workers strongly. Know your rights before a company exploits you.",
+          "tag": "Rights",
+          "bullets": [
+            "Mindestlohn (minimum wage): €12.41/hour (2024).",
+            "Paid leave: 24 working days = 4 weeks minimum.",
+            "Paid sick leave for up to 6 weeks.",
+            "Elternzeit: 3 years of guaranteed parental leave after birth.",
+            "You cannot be dismissed without cause after 6 months at companies with 10+ employees.",
+            "Joining a union (Gewerkschaft) is guaranteed by law."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Blaue Karte EU — the fast track",
+          "summary": "If you're an engineer, doctor or developer with a sufficient salary, this visa speeds everything up.",
+          "tag": "Blue Card",
+          "bullets": [
+            "Minimum salary (2024): €45,300/year, €38,688 in shortage occupations.",
+            "A university degree recognised on Anabin is required.",
+            "Permanent residence after just 27 months (21 with B1).",
+            "Free movement within the EU after 18 months.",
+            "Family reunification with no language test."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Remote work (Home Office) in Germany",
+          "summary": "Since 2020, Home Office has become the norm in most IT companies and offices. Clear conditions apply.",
+          "tag": "Home Office",
+          "bullets": [
+            "Not a general legal right — defined in the contract or a Betriebsvereinbarung.",
+            "Most IT companies: 2–3 days/week.",
+            "Taxes: home-office costs are deductible (Homeoffice-Pauschale).",
+            "Working \"temporarily\" from Morocco: legal, but under strict conditions (usually 30 days/year)."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "The annual tax return (Einkommensteuererklärung)",
+          "summary": "Most employees get back €800–1,500 a year through their tax return. Don't miss it.",
+          "tag": "Taxes",
+          "bullets": [
+            "Not mandatory for most workers, but advisable.",
+            "Deadline: 31 July (or 30 September with an accountant).",
+            "Use ELSTER (free) or Taxfix / WISO / Lohnsteuer kompakt.",
+            "Common deductions: commuting, home office, training, language courses, work equipment.",
+            "Accountant (Steuerberater): €150–300, but worth it for complex cases."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Recognition of foreign qualifications (Anabin)",
+          "summary": "Your Moroccan diploma may need an official assessment before it's accepted on the German job market.",
+          "tag": "Qualifications",
+          "bullets": [
+            "anabin.kmk.org: the official database for foreign-qualification assessment.",
+            "ZAB: the official evaluating body, issues the Zeugnisbewertung (€80).",
+            "For regulated professions (medicine, nursing, teaching): Anerkennung from the Land is required.",
+            "Private companies don't always ask for it — but it's mandatory in the public sector."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "German at work",
+          "summary": "Your language level sets your salary ceiling. That's the general rule.",
+          "tag": "Language",
+          "bullets": [
+            "A2–B1: manual jobs, logistics, restaurants.",
+            "B2: nursing, office work, customer service, much of IT.",
+            "C1: management, teaching, consulting, law.",
+            "International / IT companies: English is enough, but don't expect fast promotion without German.",
+            "Learn via Goethe, VHS, Volkshochschule, or platforms like Babbel/Lingoda."
+          ],
+          "tip": "Ask your company to cover the course as Weiterbildung — many companies do."
+        },
+        {
+          "num": 17,
+          "title": "Racial discrimination on the job market",
+          "summary": "It exists, but your legal tools are strong. Don't stay silent on clear injustice.",
+          "tag": "Challenges",
+          "bullets": [
+            "The AGG (Equal Treatment Act) protects you from discrimination based on origin or religion.",
+            "You can complain to the federal anti-discrimination agency (Antidiskriminierungsstelle).",
+            "If you feel discriminated against in an interview: note the details immediately.",
+            "Many large companies have \"Diversity & Inclusion\" officers.",
+            "A Moroccan first name can reduce responses — some use a culturally neutral shortened name."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Resignation and dismissal (Kündigung)",
+          "summary": "Strict rules apply to both sides at the end of the contract. Know them before you need them.",
+          "tag": "Ending",
+          "bullets": [
+            "Basic Kündigungsfrist: 4 weeks to the end of the month.",
+            "It increases with seniority (2 years = 2 months, 10 years = 4 months).",
+            "Resignation must be in writing — no SMS, no email.",
+            "On dismissal: ask for an Aufhebungsvertrag + Abfindung (severance).",
+            "Register for Arbeitslosengeld at the Arbeitsagentur within 3 days to avoid a suspension."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Arbeitslosengeld — unemployment insurance",
+          "summary": "If you've worked 12 consecutive months, you're entitled to 60–67% of your net salary for up to 12 months.",
+          "tag": "Unemployment",
+          "bullets": [
+            "Registering at the Arbeitsagentur within 3 days of learning about dismissal is essential.",
+            "Arbeitslosengeld I: 60% (67% for parents) of the last net salary.",
+            "Duration: 6–24 months depending on your age and years of contributions.",
+            "You must actively look for work and report it monthly.",
+            "Arbeitslosengeld II (Bürgergeld) after I runs out."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Fatal mistakes Moroccans make",
+          "summary": "These mistakes recur and cost those who make them years of lost opportunity.",
+          "tag": "Warnings",
+          "bullets": [
+            "Applying with a Moroccan CV not adapted to the German format — automatic rejection.",
+            "Self-translated diplomas — not officially accepted.",
+            "Accepting the first salary offer — the market leaves 10–20% room for negotiation.",
+            "Not reading the full Arbeitsvertrag — \"non-compete\" traps are costly.",
+            "Dropping German because \"the company is English-speaking\" — it caps your promotion.",
+            "Resigning before finding a new job — delays Arbeitslosengeld by 12 weeks.",
+            "Not filing a tax return — losing €800–1,500 a year."
+          ],
+          "tip": "After 3 months in your job, ask for an interim Arbeitszeugnis under any pretext. Many companies withhold it in bad faith after a resignation."
+        }
+      ]
+    },
+    "ausbildung": {
+      "metaTitle": "Ausbildung in Germany — complete guide",
+      "metaDesc": "20 articles on dual vocational training: top professions, wages, applications, and post-graduation opportunities.",
+      "eyebrow": "Vocational training",
+      "title": "Ausbildung in Germany",
+      "subtitle": "Dual vocational training — your route into the German job market without a university degree, earning a salary from day one.",
+      "intro": "20 articles answering everything Moroccans ask about the Ausbildung: eligibility, applications, best sectors, wages, and how to build a long career.",
+      "cta": {
+        "title": "🔍 Looking for real Ausbildung offers right now?",
+        "description": "",
+        "buttonLabel": "Browse offers ←",
+        "href": "/ausbildung-jobs"
+      },
+      "items": [
+        {
+          "num": 1,
+          "title": "What is the Ausbildung, really?",
+          "summary": "A unique system: company plus vocational school at the same time, you learn by working and get paid. A pillar of the German economy.",
+          "tag": "Basics",
+          "bullets": [
+            "Duration: two to three and a half years depending on the profession.",
+            "Weekly split: 2–4 days at the company + 1–2 days at the Berufsschule.",
+            "Ausbildungsvertrag signed with the company and registered with the IHK or HWK.",
+            "The salary (Ausbildungsvergütung) is mandatory and rises every year.",
+            "Ends with the IHK Abschlussprüfung exam and a qualification recognised across Germany."
+          ]
+        },
+        {
+          "num": 2,
+          "title": "Duale vs Schulische Ausbildung",
+          "summary": "Two types of vocational training, with very different financial outcomes. The first is what most Moroccans aim for.",
+          "tag": "Types",
+          "bullets": [
+            "**Duale Ausbildung:** company + school, with salary — by far the most common.",
+            "**Schulische Ausbildung:** at a vocational school only, often unpaid (nursing, physiotherapy).",
+            "The schulische Ausbildung sometimes charges fees (€200–400/month).",
+            "Since 2020, nursing moved into the duale model and now pays well."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "The 10 most in-demand professions for Moroccans",
+          "summary": "These professions accept at a high rate and hire you straight after graduation.",
+          "tag": "Sectors",
+          "bullets": [
+            "**Pflegefachkraft:** nursing — highest demand and pay (~€1,300/month starting).",
+            "**Fachkraft für Lagerlogistik:** warehouse logistics.",
+            "**Elektroniker:** electrical technician.",
+            "**Kfz-Mechatroniker:** car mechanics.",
+            "**Fachinformatiker:** IT (applications / systems).",
+            "**Kaufmann für Büromanagement:** office management.",
+            "**Koch / Köchin:** professional cooking and restaurant work.",
+            "**Anlagenmechaniker (SHK):** sanitary and heating installation.",
+            "**Industriemechaniker:** industrial mechanics.",
+            "**Fachverkäufer:** specialist sales (bakery, butcher, pharmacy…)."
+          ]
+        },
+        {
+          "num": 4,
+          "title": "Wages during the Ausbildung years",
+          "summary": "The salary rises every year. Banking and industry pay far more than hospitality, for example.",
+          "tag": "Wages",
+          "bullets": [
+            "First year: €620–1,100 on average.",
+            "Second year: €720–1,200.",
+            "Third year: €850–1,400.",
+            "Premium sectors (banks, industry): up to €1,600 in the final year.",
+            "Low sectors (hospitality, retail): close to minimum."
+          ],
+          "tip": "The salary supports a modest life in mid-sized cities (Leipzig, Dortmund), but is very hard to manage in Munich or Hamburg without support."
+        },
+        {
+          "num": 5,
+          "title": "The required language level",
+          "summary": "B1 is the theoretical minimum, but reality differs. B2 is what you actually need to succeed.",
+          "tag": "Language",
+          "bullets": [
+            "B1: you grasp basic instructions, communicate with difficulty.",
+            "B2: solid enough to read professional textbooks and follow the teacher at school.",
+            "C1: ideal for healthcare and administrative professions.",
+            "Goethe B2, telc B2 or TestDaF certificates are accepted by all companies."
+          ],
+          "tip": "Before applying, watch a YouTube video of a Berufsschule class in your field — if you understand it, your language is ready."
+        },
+        {
+          "num": 6,
+          "title": "Where to search for an Ausbildung",
+          "summary": "Dozens of platforms, but only a few are genuinely effective. Focus your energy there.",
+          "tag": "Search",
+          "bullets": [
+            "**Make-it-in-Germany.com:** the official platform for skilled migration.",
+            "**Ausbildung.de:** the biggest specialised platform.",
+            "**Arbeitsagentur.de:** the state job bank, very accurate.",
+            "**AZUBIYO.de:** good for identifying the right profession for you.",
+            "**LinkedIn:** surprisingly, it works for the Ausbildung too.",
+            "Applying directly via a company website: the highest acceptance rate."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "Writing a convincing Bewerbung",
+          "summary": "The German application file differs completely from the Moroccan one. Here are the essential elements.",
+          "tag": "File",
+          "bullets": [
+            "**Anschreiben:** a single page, explaining why you fit this specific profession and this specific company.",
+            "**Lebenslauf:** German CV: education + experience + languages + skills, professional photo.",
+            "**Zeugnisse:** Baccalauréat certificate and any prior training, translated.",
+            "**Zertifikate:** language certificates + any courses taken."
+          ],
+          "tip": "Make it one well-organised PDF, not 10 separate files. The filename must be: Bewerbung_FirstName_LastName.pdf"
+        },
+        {
+          "num": 8,
+          "title": "The German Lebenslauf — the right template",
+          "summary": "No selfies, no flashy colours. Simplicity and strict order.",
+          "tag": "File",
+          "bullets": [
+            "Header: name, address, phone, email, date of birth, nationality.",
+            "Photo: professional, white background, formal attire.",
+            "Reverse chronological order: most recent first.",
+            "Length: one or two pages only.",
+            "Signature and date at the bottom."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Vorstellungsgespräch — the job interview",
+          "summary": "If you reach this stage, your chances are 50%. Good preparation doubles them.",
+          "tag": "Interview",
+          "bullets": [
+            "Know everything about the company: founding year, products, values.",
+            "Prepare answers to the classics: why us? why Germany? why this profession?",
+            "Formal dress (Business Casual at minimum).",
+            "Arrive 10 minutes before the appointment, no earlier, no later.",
+            "Ask questions at the end — it shows genuine interest."
+          ],
+          "tip": "Many companies start with a short video call before the in-person interview. Take it just as seriously."
+        },
+        {
+          "num": 10,
+          "title": "Ausbildungsvisum — the training visa",
+          "summary": "A visa dedicated to the Ausbildung. Its conditions are clearer than those of other visas.",
+          "tag": "Visa",
+          "bullets": [
+            "Documents: signed Ausbildungsvertrag + B1 language certificate + housing.",
+            "No Sperrkonto required if the training salary is enough (~€934/month).",
+            "Fee: €75.",
+            "Issued for one year and renewable until the end of the training."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "The Chancenkarte (opportunity card) to search for an Ausbildung",
+          "summary": "Since 2024, you can come to Germany for 12 months to search for training, if you meet enough points.",
+          "tag": "New",
+          "bullets": [
+            "Points system: language + age + education + experience.",
+            "German A1 certificate at minimum + 6 points.",
+            "Lets you work 20 hours/week while searching.",
+            "Converts to an Ausbildungsvisum as soon as you find training."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Einstiegsqualifizierung (EQ) — the bridge before the Ausbildung",
+          "summary": "A 6–12 month trial programme before the Ausbildung, for those not quite ready yet.",
+          "tag": "Preparatory",
+          "bullets": [
+            "Partial salary (~€250–300/month) from the Arbeitsagentur.",
+            "Gives the company a chance to evaluate you before a 3-year contract.",
+            "70% of those who complete the EQ get an Ausbildung at the same company.",
+            "An excellent option for those whose language is still relatively weak."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "The Ausbildung in nursing",
+          "summary": "The most in-demand sector for Moroccans. High salary, fast acceptance, and a direct route to residency.",
+          "tag": "Nursing",
+          "bullets": [
+            "Pflegefachkraft: the unified title since 2020, combining the three old branches.",
+            "3 years of training, salary ~€1,300 in the first year.",
+            "Most hospitals offer subsidised housing.",
+            "After graduation: ~€2,800–3,200 gross monthly.",
+            "Constant demand — unemployment in this sector is rare."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "The Ausbildung in IT",
+          "summary": "Fachinformatiker is the most popular path. You graduate at €3,000+ starting salary into a hungry market.",
+          "tag": "IT",
+          "bullets": [
+            "Three specialisations: Anwendungsentwicklung (development), Systemintegration (networks), Daten- und Prozessanalyse.",
+            "Training salary ~€1,100 at the start, ~€1,300 at the end.",
+            "Admissions favour those with prior skills (HTML/Python/Linux).",
+            "After graduation: €3,200–4,500 monthly, with the option to move into full-time development."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "The Ausbildung in mechanics and industry",
+          "summary": "Germany = industry. Every major company (BMW, Bosch, Siemens, Mercedes) takes on apprentices every year.",
+          "tag": "Industry",
+          "bullets": [
+            "Industriemechaniker, Mechatroniker, Elektroniker are the most common.",
+            "Contracts with big groups = higher salaries + perks (free train, subsidised meals).",
+            "At Mercedes and BMW, applications open about a year in advance.",
+            "After training: €3,000–4,000 starting, with rapid progression."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Daily life as an Azubi",
+          "summary": "Typical challenges every Moroccan apprentice lives through. Prepare yourself mentally.",
+          "tag": "Life",
+          "bullets": [
+            "Work pressure (40 hours) + study + homework = exhaustion in the first two months.",
+            "German colleagues tend to be younger (18–20) — the cultural gap is real.",
+            "Halal food at the Kantine is rare — bring your own meals.",
+            "Islamic holidays are not official holidays — plan your leave in advance."
+          ],
+          "tip": "Find a Moroccan community in your city before you arrive. Weekly gatherings protect your mental health more than anything else."
+        },
+        {
+          "num": 17,
+          "title": "Apprentice rights (Azubi-Rechte)",
+          "summary": "German law strongly protects the apprentice. Don't accept exploitation — you have clear rights.",
+          "tag": "Rights",
+          "bullets": [
+            "Paid leave: 24–30 days per year.",
+            "Working hours: max 8/day, with a 30-minute break after 6 hours.",
+            "No night shifts or public holiday work if you're under 18.",
+            "Your employer may not assign you tasks unrelated to the training.",
+            "You are entitled to a final work certificate (Zeugnis)."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "The final IHK exam (Abschlussprüfung)",
+          "summary": "The exam that gives you the qualification. Theoretical + practical + sometimes oral. Failure is possible, but you can retake it.",
+          "tag": "Exam",
+          "bullets": [
+            "Organised by the IHK (chamber of industry) or HWK (crafts).",
+            "Two parts: interim (end of second year) + final.",
+            "National pass rate: ~90%.",
+            "You can retake the exam twice.",
+            "The company is required to give you time to revise."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "After the Ausbildung — what happens?",
+          "summary": "70% of apprentices get a permanent contract at the same company. The others find work within months.",
+          "tag": "After",
+          "bullets": [
+            "**Übernahme:** direct hire on a permanent contract at the same company.",
+            "**Meister:** higher-level qualification (1–3 years), enabling you to open your own business.",
+            "**Weiterbildung:** complementary technical specialisation.",
+            "**Studium:** you can enter university without Abitur after 3 years of work.",
+            "Your visa converts to a work residence permit, then to permanent after just 2 years (instead of 5)."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Common mistakes Moroccans make",
+          "summary": "Repeated across dozens of Moroccan stories. Learn from them and don't repeat them.",
+          "tag": "Warnings",
+          "bullets": [
+            "Applying to a profession you don't like just because it accepts faster — a 3-year path is hard to cancel.",
+            "Applying with a Moroccan CV not adapted to the German template — instant rejection.",
+            "Leaving your German at B1 — the vocational school will crush you.",
+            "Not reading the contract before signing — some companies slip in unfair clauses.",
+            "Not keeping a copy of the Anmeldung and Aufenthaltstitel on you at all times — the police ask for them.",
+            "Neglecting homework at the Berufsschule — you'll fail the official exam."
+          ],
+          "tip": "Join the \"Ausbildung für Marokkaner\" groups on Facebook and Telegram — the right info comes from real experience."
+        }
+      ]
+    },
+    "visa": {
+      "metaTitle": "Visa and official paperwork for Germany",
+      "metaDesc": "20 articles on visa types, Anmeldung, Aufenthaltstitel, Blaue Karte, Chancenkarte and every piece of paperwork.",
+      "eyebrow": "Visa & paperwork",
+      "title": "Visa and official paperwork",
+      "subtitle": "Everything you need to know about German visas and the bureaucracy waiting for you after arrival.",
+      "intro": "20 analytical articles covering your paperwork journey: from booking your embassy appointment in Rabat to obtaining German citizenship.",
+      "items": [
+        {
+          "num": 1,
+          "title": "The main visa types for Germany",
+          "summary": "The right visa defines your future in Germany. Do not apply for any type before understanding the alternatives.",
+          "tag": "Introduction",
+          "bullets": [
+            "**Studienvisum:** for students admitted to a university.",
+            "**Ausbildungsvisum:** for dual vocational training.",
+            "**Arbeitsvisum:** for anyone with a confirmed work contract.",
+            "**Blaue Karte EU:** for qualified professionals meeting a salary threshold.",
+            "**Jobsuchevisum:** 6 months to search for a job (university graduate).",
+            "**Chancenkarte:** opportunity card — 12 months on a points system.",
+            "**Familienzusammenführung:** family reunification."
+          ]
+        },
+        {
+          "num": 2,
+          "title": "Booking the embassy appointment in Morocco",
+          "summary": "Practically the hardest step. Slots are rare and open without warning. Follow this method to secure an appointment in a reasonable time.",
+          "tag": "Embassy",
+          "bullets": [
+            "Official embassy site: maroc.diplo.de — the only reliable source.",
+            "Slots usually open between 8:00 and 10:00 (German time).",
+            "Each visa type has a different \"portal\" — read carefully.",
+            "Beware of brokers — they sell appointments for 200–500 €, all scams.",
+            "Use a clean browser (Incognito) and check every day."
+          ],
+          "tip": "If you get a slot, confirm immediately and record the booking details — changing any data can cancel the booking."
+        },
+        {
+          "num": 3,
+          "title": "Schengen vs national visa",
+          "summary": "A decisive difference. The first is short-stay, the second is for living. Do not mix up the files.",
+          "tag": "Basics",
+          "bullets": [
+            "**Schengen (type C):** up to 90 days, tourism/visit/business.",
+            "**National (type D):** more than 90 days, study/work/reunification.",
+            "A Schengen visa cannot be converted into residency inside Germany.",
+            "A D visa grants you 3–12 months of stay, then converts into an Aufenthaltstitel."
+          ]
+        },
+        {
+          "num": 4,
+          "title": "Proof of funds (Finanzierungsnachweis)",
+          "summary": "Germany wants a guarantee that you can live without becoming a burden on the state. The accepted methods are few.",
+          "tag": "Funds",
+          "bullets": [
+            "Sperrkonto: the most common method. Currently 11,904 € (2024), released monthly (992 €).",
+            "Verpflichtungserklärung: a person in Germany commits to covering your expenses.",
+            "Official scholarship (DAAD, Erasmus, a German foundation).",
+            "Work contract with sufficient income (for a work visa).",
+            "Bank guarantee from a Moroccan bank (rarely accepted)."
+          ],
+          "tip": "Leading Sperrkonto providers: Expatrio, Fintiba, Coracle, Deutsche Bank. The embassy accepts them all."
+        },
+        {
+          "num": 5,
+          "title": "Mandatory health insurance before travel",
+          "summary": "No insurance, no visa. But not every insurance is accepted, and there is a difference between short travel and long-term stay.",
+          "tag": "Insurance",
+          "bullets": [
+            "Travel insurance (Reiseversicherung) is accepted only for the first 3 months.",
+            "After that, statutory insurance (GKV) is compulsory: TK, AOK, Barmer, DAK.",
+            "Dr. Walter, Mawista, Care Concept are the most popular transitional insurers.",
+            "Students under 30 = GKV. Over 30 = private insurance.",
+            "State insurance for employees: ~15.5% of salary, half paid by the employer."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "Document translation — the sworn translator",
+          "summary": "The embassy does not accept ordinary translations. The translation must be produced by a judicially certified translator.",
+          "tag": "Translation",
+          "bullets": [
+            "Vereidigter Übersetzer in Germany, or a translator registered with the German embassy in Morocco.",
+            "Every translated paper must bear the translator's stamp and number.",
+            "Rates: 25–60 € per page depending on specialisation.",
+            "Essential documents to translate: diplomas, birth certificate, criminal record."
+          ],
+          "tip": "Some embassies accept translations certified in Morocco (Moroccan sworn translator), others do not. Ask beforehand."
+        },
+        {
+          "num": 7,
+          "title": "Document legalisation (Apostille / Legalisation)",
+          "summary": "Legalisation is the international proof of a document's authenticity. Required for nearly every official paper.",
+          "tag": "Legalisation",
+          "bullets": [
+            "Morocco joined the Apostille convention in 2016 — the procedure has become easier.",
+            "The Apostille is issued by the Moroccan Ministry of Foreign Affairs.",
+            "Some documents need additional legalisation from the German embassy (Legalisation).",
+            "Turnaround: 1–3 weeks in normal cases."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "Anmeldung — the first step after arrival",
+          "summary": "Within 14 days of entering Germany, you must register your address at the Bürgeramt or Einwohnermeldeamt. Nothing works without it.",
+          "tag": "Registration",
+          "bullets": [
+            "Book an appointment before arrival — or on your first day.",
+            "Documents: passport + Wohnungsgeberbestätigung from your landlord.",
+            "The resulting paper (Anmeldebestätigung) is used to open a bank account, a phone line, for taxes.",
+            "Delay of more than 14 days = fines of up to 1,000 €."
+          ],
+          "tip": "If you cannot find a Bürgeramt slot, go in early without an appointment to a small branch outside the centre — they often accept you."
+        },
+        {
+          "num": 9,
+          "title": "Steuer-ID and Sozialversicherungsnummer",
+          "summary": "Two numbers that follow you throughout your life in Germany. Without them you will not receive a salary.",
+          "tag": "Numbers",
+          "bullets": [
+            "**Steuer-ID:** arrives by post within two weeks of the Anmeldung.",
+            "**Sozialversicherungsnummer:** sent by your first health insurance provider or by Deutsche Rentenversicherung.",
+            "Keep them somewhere safe — getting two more free copies is not easy.",
+            "They are requested for every new work contract and every new insurance."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Aufenthaltstitel — the residence permit",
+          "summary": "After your first visa, your stay is converted into an Aufenthaltstitel (an ID-card-style residence card). This is where your official life begins.",
+          "tag": "Residence",
+          "bullets": [
+            "Submit the application to the Ausländerbehörde 6 weeks before your visa expires.",
+            "Documents: passport, Anmeldung, proof of work/studies, health insurance, proof of income.",
+            "Fee: around 100 €.",
+            "The card arrives in 4–8 weeks.",
+            "It is usually renewed for two or three years depending on your situation."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Blaue Karte EU — for qualified professionals",
+          "summary": "The fastest track residence permit to reach citizenship. Strict conditions but very significant benefits.",
+          "tag": "Blue Card",
+          "bullets": [
+            "2024 salary threshold: 45,300 €/year (38,688 € in shortage occupations).",
+            "Degree requirement: a university degree from an institution recognised in Anabin.",
+            "Valid for five years, renewable.",
+            "Permanent residency after just 27 months (21 with German B1 level).",
+            "Allows free travel and work throughout the European Union."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Chancenkarte (opportunity card)",
+          "summary": "New since 2024. The easiest way for Moroccans to come to Germany and look for work, even without a prior contract.",
+          "tag": "New",
+          "bullets": [
+            "Points system (Punktesystem): education + experience + age + language + connection to Germany.",
+            "6 points minimum + A1 German certificate or B2 English.",
+            "12-month visa, allows 20 hours of work/week.",
+            "As soon as you find work, it converts into a regular work residence permit or Blaue Karte.",
+            "Proof of funds required: ~12,000 € or a part-time work contract."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Arbeitsvisum — the classic work visa",
+          "summary": "If you signed a contract before travelling, this is your visa. The bureaucracy is faster than people say.",
+          "tag": "Work",
+          "bullets": [
+            "Documents: work contract + degree + Zustimmung der Arbeitsagentur (employment agency approval).",
+            "Usual processing: 2–3 months from the appointment date.",
+            "Fee: 75 €.",
+            "Issued for the duration of the contract, up to 4 years max.",
+            "Renewable as long as the contract continues."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Family reunification (Familienzusammenführung)",
+          "summary": "For the spouse or children of someone already residing in Germany. The conditions are precise but the outcome is clear.",
+          "tag": "Family",
+          "bullets": [
+            "Spouse: A1 German certificate before travel (with a few exceptions).",
+            "Children: under 16 years old, no language requirement.",
+            "The resident must prove sufficient income + adequate housing.",
+            "Processing: 2–4 months in most cases.",
+            "One-year visa, converted into a full residence permit after arrival."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Renewing the Moroccan driving licence",
+          "summary": "The Moroccan licence is valid for 6 months from the Anmeldung. After that you must exchange it or pass an exam.",
+          "tag": "Driving",
+          "bullets": [
+            "Direct exchange is not available for Morocco — you must pass a theoretical + practical exam.",
+            "The exam is available in Arabic and English in many Länder.",
+            "Approximate cost: 1,500–2,500 € including lessons.",
+            "Preparation time: 2–4 months.",
+            "A Fahrschule (driving school) in your area is the starting point."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Integrationskurs — integration course",
+          "summary": "600–900-hour course (language + civic culture). Speeds up permanent residency by a full year.",
+          "tag": "Integration",
+          "bullets": [
+            "600 hours of German (A1 → B1) + 100 hours of \"Orientierungskurs\".",
+            "Partially or fully funded by BAMF — a symbolic fee of 1.95 €/hour.",
+            "The course can be compulsory depending on your residence permit.",
+            "The \"Zertifikat Integrationskurs\" waives some requirements for citizenship."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "Niederlassungserlaubnis (permanent residency)",
+          "summary": "After a certain number of years you obtain permanent residency without renewal. This is the ceiling every immigrant aspires to.",
+          "tag": "Permanent",
+          "bullets": [
+            "General rule: 5 years of legal residence + employment + Rente contributions ≥ 60 months.",
+            "Blaue Karte: only 27 months (21 with B1 language level).",
+            "German graduates: only 24 months.",
+            "Spouses of Germans: 3 years.",
+            "Key requirement: B1 certificate + Leben in Deutschland course."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "German citizenship (Einbürgerung)",
+          "summary": "The 2024 reform accelerated citizenship for most residents. 5 years normally, 3 for the fully integrated.",
+          "tag": "Citizenship",
+          "bullets": [
+            "Usual duration: 5 years (was 8) + B1 certificate + independent income.",
+            "Fast track of 3 years for those with C1 + social contributions (volunteering…).",
+            "Moroccan citizenship is no longer lost — dual nationality is now permitted.",
+            "Leben in Deutschland test is mandatory (33 questions, easy with some study).",
+            "Application fee: ~255 €."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Ausländerbehörde — dealing with the foreigners' office",
+          "summary": "Your relationship with this office will last for years. Understand its culture before your first visit.",
+          "tag": "Foreigners' office",
+          "bullets": [
+            "Appointments are hard — book very early (2–3 months in advance).",
+            "Staff are overloaded — be precise and concise with your paperwork.",
+            "Speaking German is not mandatory but speeds things up.",
+            "Do not argue about a law you do not know — ask for the alternative.",
+            "Keep every letter and every written receipt."
+          ],
+          "tip": "Always bring extra copies of every document. Originals + copy + backup copy — it is not overkill."
+        },
+        {
+          "num": 20,
+          "title": "Paperwork mistakes that can cost you everything",
+          "summary": "These six mistakes recur among Moroccans and lead to residency refusal or deportation.",
+          "tag": "Warnings",
+          "bullets": [
+            "Skipping the Anmeldung: fine + inability to open a bank account = everything stops.",
+            "Letting your visa expire before filing the Aufenthaltstitel renewal: your status becomes irregular.",
+            "Changing address without Ummeldung within 14 days: 500 € fine and blocked official mail.",
+            "Losing the Aufenthaltstitel without reporting immediately: later renewal refusal.",
+            "Working illegally (beyond the student limit): possible deportation.",
+            "Not opening health insurance as soon as work starts: huge accumulated debts."
+          ]
+        }
+      ]
+    }
+  },
+  "cvBuilder": {
+    "eyebrow": "📄 CV Builder",
+    "subtitle": "Build your German CV step by step — instant preview and free PDF download.",
+    "completion": "{n}% complete",
+    "next": "Next →",
+    "prev": "← Back",
+    "warn": "⚠ {msg}",
+    "stepLabel": {
+      "personal": "Personal Info",
+      "education": "Education",
+      "experience": "Work Experience",
+      "skills": "Skills",
+      "languages": "Languages",
+      "documents": "Documents",
+      "preview": "Preview & Download"
+    },
+    "validation": {
+      "firstName": "First name is required",
+      "lastName": "Last name is required",
+      "emailReq": "Email is required",
+      "emailInvalid": "Invalid email format"
+    },
+    "personal": {
+      "title": "Personal Information",
+      "hint": "Start with the basics — these appear at the top of your CV.",
+      "changePhoto": "Change photo",
+      "uploadPhoto": "Upload photo",
+      "delete": "Remove",
+      "photoHint": "JPG / PNG — max 2MB. Recommended for German applications.",
+      "photoTooLarge": "⚠ Photo is too large (max 2MB)",
+      "firstName": "First name *",
+      "lastName": "Last name *",
+      "jobTitle": "Target position",
+      "nationality": "Nationality",
+      "dob": "Date of birth",
+      "pob": "Place of birth",
+      "email": "Email *",
+      "phone": "Phone *",
+      "address": "Address",
+      "postal": "Postal code",
+      "city": "City",
+      "careerGoal": "Career objective",
+      "careerGoalPh": "e.g. Motivierter Softwareentwickler mit Fokus auf Full-Stack-Entwicklung, suche eine Position, in der ich moderne Webtechnologien einsetzen und wachsen kann.",
+      "careerGoalHint": "Leave empty to auto-generate with AI from the \"Correct & translate to German\" button in the last step.",
+      "jobTitlePh": "e.g. Softwareentwickler"
+    },
+    "education": {
+      "title": "Education & Training",
+      "hint": "Add all your academic qualifications — most recent first.",
+      "empty": "No qualifications added yet.",
+      "entry": "Qualification #{n}",
+      "remove": "Remove",
+      "add": "+ Add qualification",
+      "institution": "Institution",
+      "degree": "Degree",
+      "field": "Field of study",
+      "start": "Start date",
+      "endLabel": "End date",
+      "endHint": "Leave empty for \"present\"",
+      "desc": "Additional details",
+      "descPh": "Final grade, research topics, projects..."
+    },
+    "experience": {
+      "title": "Work Experience",
+      "hint": "Add your previous roles — focus on achievements, not just duties.",
+      "empty": "No experience added yet.",
+      "entry": "Experience #{n}",
+      "remove": "Remove",
+      "add": "+ Add experience",
+      "jobTitle": "Job title",
+      "company": "Company",
+      "location": "Location",
+      "start": "Start date",
+      "endLabel": "End date",
+      "endHint": "Leave empty for \"present\"",
+      "tasks": "Tasks & achievements",
+      "tasksHint": "One line per bullet",
+      "tasksPh": "Developed REST APIs\nImproved performance by 40%\nLed a team of 4 developers",
+      "preview": "Preview:"
+    },
+    "skills": {
+      "title": "Skills",
+      "hint": "Add technical and soft skills — press Enter or comma to add each one.",
+      "technical": "Technical skills",
+      "technicalPh": "JavaScript, Python, SAP, Excel...",
+      "soft": "Soft skills",
+      "softPh": "Teamarbeit, Zuverlässigkeit, Kommunikation...",
+      "inputHint": "Press Enter or , to add a skill · Backspace to remove the last one"
+    },
+    "languages": {
+      "title": "Languages",
+      "hint": "Levels follow the European framework (CEFR): A1 beginner — C2 full mastery.",
+      "empty": "No languages added yet.",
+      "add": "+ Add language",
+      "placeholder": "Deutsch / English / العربية...",
+      "level": {
+        "A1": "Beginner",
+        "A2": "Elementary",
+        "B1": "Intermediate",
+        "B2": "Upper-Intermediate",
+        "C1": "Advanced",
+        "C2": "Mastery",
+        "Native": "Native"
+      }
+    },
+    "documents": {
+      "title": "Attached Documents",
+      "hint": "Upload scanned copies of your certificates — they'll be saved to your account automatically and used to enrich your CV via AI.",
+      "tooLarge": "⚠ {name} is larger than 4MB — skipped",
+      "choose": "📎 Choose files (PDF / images)",
+      "limit": "Max 4MB per file · saved automatically to your account",
+      "saving": "⏳ Saving...",
+      "saved": "✓ Saved to your account",
+      "saveFailed": "⚠ Not saved",
+      "saveError": "Could not save",
+      "remove": "Remove",
+      "confirmDelete": "Permanently delete \"{name}\"?",
+      "cat": {
+        "certificates": "General certificates",
+        "diploma": "Diplomas",
+        "languageCertificates": "Language certificates",
+        "optionalCoverLetter": "Cover letter (optional)"
+      }
+    },
+    "preview": {
+      "title": "Preview & Download",
+      "hint": "Pick the template that suits you, then download your CV as a PDF.",
+      "chooseTemplate": "Choose a template",
+      "currentTemplate": "Current template:",
+      "premiumBadge": "🔒 Premium",
+      "aiTitle": "✨ Correct, translate & enhance into German",
+      "aiHint": "Write in any language (Arabic, French, English, German). The AI corrects mistakes, translates into professional German, generates a career objective and realistically enriches descriptions and soft skills without exaggeration.",
+      "aiCta": "✨ Correct & enhance",
+      "aiProcessing": "⏳ Processing...",
+      "aiConfirm": "Your data will be sent to the AI service to be corrected and translated into German. Continue?",
+      "aiSuccess": "✅ Successfully corrected and translated to German.",
+      "aiFail": "❌ Translation failed: {msg}",
+      "unknownErr": "Unknown error",
+      "clear": "Clear data",
+      "confirmClear": "Really clear all data?",
+      "save": "💾 Save to my account",
+      "saveBusy": "⏳...",
+      "saveOk": "✅ Saved to your account",
+      "saveErr": "❌ {msg}",
+      "saveErrDefault": "Save error",
+      "loginPrompt": "You must sign in to save the document. Go to the sign-in page?",
+      "defaultName": "CV",
+      "download": "📥 Download PDF",
+      "downloadBusy": "⏳ Generating...",
+      "downloadLocked": "🔒 Upgrade to download",
+      "downloadErr": "An error occurred while generating the file. Try again.",
+      "upgradeDone": "✅ Premium templates unlocked (demo mode). In production this links to the payment gateway."
+    },
+    "templates": {
+      "classic": {
+        "name": "German Classic",
+        "desc": "Traditional German layout — fits every field"
+      },
+      "modern": {
+        "name": "Modern Blue",
+        "desc": "Modern design with an elegant blue tone"
+      },
+      "minimal": {
+        "name": "Minimal Clean",
+        "desc": "Simple and clean — content-focused"
+      },
+      "dark": {
+        "name": "Professional Dark",
+        "desc": "Dark template for creative and tech careers"
+      },
+      "compact": {
+        "name": "Compact One-Page",
+        "desc": "Compact design that fits on a single page"
+      }
+    },
+    "upgrade": {
+      "closeAria": "Close",
+      "title": "Premium template",
+      "body": "The <strong>{name}</strong> template is only available with the upgrade. You can preview it now, but PDF download requires a subscription.",
+      "f1": "✓ Access to all five templates",
+      "f2": "✓ Unlimited high-quality PDF downloads",
+      "f3": "✓ Future updates and new templates",
+      "f4": "✓ Priority support",
+      "cta": "Upgrade now — 4.99€",
+      "later": "Maybe later"
+    },
+    "photo": {
+      "title": "📸 Turn your photo into a professional CV photo",
+      "hint": "Realistic background, clothing appropriate for your field, features preserved.",
+      "remaining": "Remaining today: {rem}/{lim}",
+      "kind": "🎯 Photo type:",
+      "hijabLabel": "🧕 Hijab:",
+      "hijabNone": "I don't wear a hijab",
+      "hijabKeep": "Keep the hijab",
+      "hijabRemove": "Remove the hijab",
+      "pro": {
+        "office": "Office / corporate",
+        "health": "Healthcare / nursing",
+        "lkw": "Truck driver (LKW)",
+        "handwerk": "Skilled trades (electrics, mechanics)",
+        "gastronomie": "Restaurant / hospitality"
+      },
+      "gallery": "🖼️ Your generated photos ({n}):",
+      "showDetails": "Show details →",
+      "useSelected": "✓ Use the selected one in the CV",
+      "generateFirst": "✨ Generate a professional photo",
+      "generateAnother": "✨ Generate another",
+      "processing": "⏳ Processing...",
+      "noPhoto": "Upload a photo first",
+      "dailyLimit": "You've hit the daily limit ({lim} attempts). Try again tomorrow.",
+      "loginRequired": "You must sign in to use this feature.",
+      "enhanceFail": "Could not enhance the photo. Try again.",
+      "modalTitle": "Your generated photos — pick the best one",
+      "before": "Before (original)",
+      "after": "After ✨",
+      "allImages": "All photos ({n}) — click to select:",
+      "close": "✕ Close",
+      "regenerate": "↻ Generate another",
+      "regenShort": "⏳...",
+      "downloadAria": "Download",
+      "shareAria": "Share",
+      "shareTitle": "Professional CV photo",
+      "shareText": "Created on \"Your Guide to Germany\" 🇩🇪",
+      "clipboardOk": "✅ Photo copied to clipboard — paste it into any app (WhatsApp, Instagram, ...).",
+      "downloadedFallback": "📥 Photo downloaded. Share it manually in any app.",
+      "shareFailed": "❌ Share failed: {msg}",
+      "shareTitleFile": "CV photo"
+    },
+    "metaTitle": "CV Builder — Morocco to Germany",
+    "metaDesc": "Easily build a professional German CV (Lebenslauf) — multiple templates and free PDF export."
+  },
+  "anschreiben": {
+    "eyebrow": "✍️ Cover letter generator",
+    "subtitle": "Enter your details in the language of your choice — the AI writes a professional German cover letter tailored for an Ausbildung application.",
+    "emptyHint": "Your letter will appear here after you click the Generate button.",
+    "loadingTitle": "The AI is writing your letter...",
+    "loadingHint": "This usually takes 5–15 seconds",
+    "unknownErr": "An unknown error occurred. Please try again.",
+    "banner": {
+      "premiumUnlimited": "✨ Premium plan — unlimited generation",
+      "premiumRemaining": "✨ Premium plan — remaining today: {rem}/{lim}",
+      "freeTryTitle": "🎁 You have one free trial!",
+      "freeTryBody": " Try the cover letter generator for free once — after that you'll need credits.",
+      "creditsTitleOne": "Your balance: {n} letter",
+      "creditsTitleMany": "Your balance: {n} letters",
+      "creditsBody": " One credit will be deducted for each successful generation.",
+      "emptyTitle": "❌ No credits",
+      "emptyBody": " You've used your free trial. Buy credits or upgrade to the premium plan to continue.",
+      "buyCreditsSoon": "💳 Buy credits (coming soon)"
+    },
+    "form": {
+      "section": "Your personal details",
+      "fullName": "Full name",
+      "fullNamePh": "e.g. Ahmed El Mansouri",
+      "gender": "Gender",
+      "male": "👨 Male",
+      "female": "👩 Female",
+      "position": "Target Ausbildung position",
+      "positionPh": "e.g. Pflegefachmann · Mechatroniker · Kaufmann im Einzelhandel",
+      "background": "Describe your background, experience and goals",
+      "backgroundPh": "Write about your experience, interests and goals. You can write in Arabic, French or English — the AI will understand and translate automatically.",
+      "cvLabel": "CV (PDF)",
+      "cvDrop": "Drop a PDF here or",
+      "cvClick": "click to choose",
+      "cvHint": "PDF only · 5MB max · optional but improves the result",
+      "pdfOnly": "⚠ PDF files only.",
+      "tooLarge": "⚠ Max size 5MB.",
+      "generating": "Generating...",
+      "needCredit": "🔒 Credits or premium plan required",
+      "generate": "✨ Generate cover letter"
+    },
+    "preview": {
+      "title": "Cover letter",
+      "subtitle": "Bewerbungsanschreiben · {pos}",
+      "copy": "📋 Copy",
+      "copied": "✅ Copied",
+      "save": "💾 Save",
+      "saveBusy": "⏳...",
+      "saveOk": "✅ Saved!",
+      "saveErr": "❌ {msg}",
+      "saveErrDefault": "Error",
+      "loginPrompt": "You must sign in to save the document. Go to the sign-in page?",
+      "defaultName": "Anschreiben",
+      "downloadBusy": "⏳ ...",
+      "download": "📥 PDF",
+      "downloadErr": "An error occurred during download. Please try again."
+    },
+    "metaTitle": "Cover Letter Generator — Morocco to Germany",
+    "metaDesc": "Write a professional German cover letter for an Ausbildung with AI help — free and fast."
+  },
+  "articles": {
+    "metaTitle": "Articles — Morocco to Germany",
+    "metaDesc": "Comprehensive articles on immigration, work, study and life in Germany for Moroccans.",
+    "eyebrow": "📚 Trusted content",
+    "title": "Articles",
+    "subtitle": "The Moroccan guide to Germany — practical articles on banking, work, universities, Ausbildung and more.",
+    "stats": {
+      "articles": "📝 {n} articles",
+      "featured": "⭐ {n} featured"
+    },
+    "backToHome": "→ Back to home",
+    "allFilter": "🗂 All",
+    "featuredBadge": "⭐ Featured",
+    "featuredHeading": "Featured articles",
+    "allHeading": "All articles",
+    "emptyCategory": "No articles in this category yet.",
+    "notFound": "Article not found",
+    "related": "Read also",
+    "cat": {
+      "البنوك": "🏦 Banking",
+      "شرائح الاتصال": "📱 Mobile plans",
+      "الجامعات": "🎓 Universities",
+      "العمل": "💼 Work",
+      "Ausbildung": "🛠 Ausbildung",
+      "التأشيرة والأوراق": "📄 Visa",
+      "السكن": "🏠 Housing"
+    }
+  },
+  "listings": {
+    "pageTitle": "Housing in Germany",
+    "addListing": "+ Add listing",
+    "backToListings": "← Back to listings",
+    "emptyState": "No listings yet",
+    "priceSuffix": "€/month",
+    "expires": "Expires {date}",
+    "notFound": "Listing not found",
+    "types": {
+      "all": "All",
+      "room": "Room",
+      "apartment": "Apartment"
+    },
+    "cityAll": "All cities",
+    "detail": {
+      "edit": "Edit",
+      "whatsappCta": "💬 Contact via WhatsApp",
+      "loginPromptBody": "Log in to see the owner's WhatsApp number",
+      "login": "Log in",
+      "signup": "Sign up"
+    },
+    "del": {
+      "confirm": "Are you sure you want to delete this listing?",
+      "button": "Delete listing"
+    },
+    "form": {
+      "title": "Add a housing listing",
+      "whatsappMissing": "You must add a WhatsApp number to your profile first",
+      "whatsappBanner": "⚠️ You must add a WhatsApp number in",
+      "whatsappBannerLink": "your profile",
+      "whatsappBannerAfter": "before posting a listing.",
+      "titlePh": "Listing title",
+      "descPh": "Description (size, furniture, rent...)",
+      "selectCity": "Select city",
+      "pricePh": "Monthly rent (€)",
+      "typeRoom": "Room",
+      "typeApt": "Apartment",
+      "imagesLabel": "Photos (1 to 5 images)",
+      "imagesCount": "{n}/5 photos",
+      "publishing": "Publishing...",
+      "publish": "Publish listing"
+    },
+    "edit": {
+      "loading": "Loading...",
+      "noPermission": "You do not have permission to edit this listing",
+      "backToListing": "← Back to listing",
+      "title": "Edit housing listing",
+      "available": "Listing available",
+      "existingImages": "Current photos:",
+      "newImages": "New photos:",
+      "saveErr": "Error saving: {msg}",
+      "saving": "Saving...",
+      "save": "Save changes"
+    }
+  },
+  "learnGerman": {
+    "pageTitle": "Learn German",
+    "pageSubtitle": "From zero to pro — lessons built for Moroccans, from A1 to C1.",
+    "chooseLevel": "Choose your level",
+    "levels": {
+      "lessonsCount": "{n} lessons",
+      "comingSoon": "Coming soon",
+      "resume": "Continue →",
+      "start": "Start now →",
+      "completeFirst": "Finish {prev} first",
+      "progressCount": "{done} / {total} lessons"
+    },
+    "level": {
+      "backToLevels": "← Back to levels",
+      "lessonsHeading": "Lessons",
+      "progress": "Progress",
+      "progressCount": "{done} / {total} lessons",
+      "resumeHere": "▶ Resume where you stopped — {title}",
+      "lessonMeta": {
+        "grammar": "📖 Grammar",
+        "vocab": "📝 Vocabulary ({n})",
+        "exercise": "✏️ Exercise ({n} questions)"
+      }
+    },
+    "lesson": {
+      "breadcrumbAria": "breadcrumb",
+      "tabs": {
+        "grammar": "Grammar",
+        "vocab": "Vocabulary",
+        "exercise": "Exercises"
+      },
+      "meta": "Lesson {n} · {vocab} words · {q} exercises",
+      "grammarCard": {
+        "subtitle": "Lesson grammar",
+        "tables": "Grammar tables",
+        "rules": "Core rules",
+        "tipTitle": "Golden tip",
+        "examples": "Worked examples",
+        "nextVocab": "Next: Vocabulary"
+      },
+      "vocabCard": {
+        "heading": "Vocabulary",
+        "sub": "{n} words · tap any card to see the translation",
+        "searchPh": "Search...",
+        "noResults": "No results",
+        "nextEx": "Next: Exercises",
+        "gender": {
+          "der": "masculine",
+          "die": "feminine",
+          "das": "neuter",
+          "pl": "plural"
+        }
+      },
+      "types": {
+        "noun": "noun",
+        "verb": "verb",
+        "adjective": "adjective",
+        "adverb": "adverb",
+        "phrase": "phrase",
+        "preposition": "preposition",
+        "conjunction": "conjunction",
+        "pronoun": "pronoun",
+        "number": "number"
+      },
+      "exerciseCard": {
+        "progress": "Progress",
+        "types": {
+          "mcq": "Multiple choice",
+          "fill": "Fill the blank",
+          "drag": "Arrange the words",
+          "match": "Match",
+          "speak": "🎤 Speak"
+        },
+        "fillPh": "Type your answer here...",
+        "correctAnswer": "✅ Correct answer: ",
+        "correct": "✅ Correct!",
+        "submit": "Check answers ({done}/{total})",
+        "scoreExcellent": "Excellent! You nailed this lesson 🌟",
+        "scorePass": "Nice! You can move to the next lesson.",
+        "scoreRetry": "Review the grammar and vocabulary, then try again.",
+        "nextLesson": "Next lesson: {title} →",
+        "levelDone": "🎉 Level complete! Back →",
+        "tryAgain": "Try again",
+        "reviewAnswers": "Review answers"
+      }
+    },
+    "dragDrop": {
+      "hint": "Tap the words to build the sentence...",
+      "correctAnswer": "✅ Correct answer: ",
+      "excellent": "✅ Excellent! Correct order."
+    },
+    "matching": {
+      "de": "🇩🇪 Deutsch",
+      "ar": "🇲🇦 English"
+    },
+    "speaking": {
+      "press": "Tap and speak in German",
+      "listening": "Listening... tap to stop",
+      "success": "Excellent! Correct pronunciation",
+      "retry": "Try again",
+      "heard": "Heard: ",
+      "retryBtn": "Retry",
+      "tryAgain": "Try again",
+      "unsupported": "⚠️ Your browser doesn't support speech recognition. Try Chrome or Edge."
+    },
+    "audio": {
+      "listen": "Listen to pronunciation"
+    },
+    "data": {
+      "levels": {
+        "A1": {
+          "title": "Level 1",
+          "description": "Learn the basics of German — from zero to everyday communication."
+        },
+        "A2": {
+          "title": "Level 2",
+          "description": "Past tense, comparisons, complex sentences and daily communication."
+        },
+        "B1": {
+          "title": "Level 3",
+          "description": "Expressing opinions, work and travel."
+        },
+        "B2": {
+          "title": "Level 4",
+          "description": "Advanced German for work and university."
+        },
+        "C1": {
+          "title": "Level 5",
+          "description": "Mastering German — professional level."
+        }
+      },
+      "lessons": {
+        "a1-01": "Introducing yourself — Sich vorstellen",
+        "a1-02": "Numbers and prices — Zahlen und Preise",
+        "a1-03": "My daily life in Germany — Mein Alltag",
+        "a1-04": "At the restaurant and shop — Im Restaurant",
+        "a1-05": "Family and possession — Familie und Possessivpronomen",
+        "a1-06": "Home and housing — Wohnen und Wohnung",
+        "a1-07": "Professions and negation — Berufe und Negation",
+        "a1-08": "Time and date — Uhrzeit und Datum",
+        "a1-09": "Shopping and colors — Einkaufen und Farben",
+        "a1-10": "Health and body — Gesundheit und Körper",
+        "a1-11": "Separable verbs — Trennbare Verben",
+        "a1-12": "Review and daily conversation — Kommunikation und Wiederholung",
+        "a2-01": "Past tense with haben — Perfekt mit haben",
+        "a2-02": "Past tense with sein — Perfekt mit sein",
+        "a2-03": "The dative case — Dativ",
+        "a2-04": "Two-way prepositions — Wechselpräpositionen",
+        "a2-05": "Comparative and superlative — Komparativ und Superlativ",
+        "a2-06": "Subordinate clauses — Nebensätze",
+        "a2-07": "Reflexive verbs — Reflexive Verben",
+        "a2-08": "Simple past — Präteritum",
+        "a2-09": "Travel and transport — Reisen und Verkehr",
+        "a2-10": "Weather and seasons — Wetter und Jahreszeiten",
+        "a2-11": "Health and nutrition — Gesundheit und Ernährung",
+        "a2-12": "Review and conversation — Wiederholung und Kommunikation",
+        "b1-01": "Konjunktiv II — conditional and wishes",
+        "b1-02": "Passiv — passive voice",
+        "b1-03": "Genitiv — genitive case",
+        "b1-04": "Relativsätze — relative clauses",
+        "b1-05": "Konnektoren — advanced connectors",
+        "b1-06": "Arbeit und Bewerbung — work and applications",
+        "b1-07": "Indirekte Rede — reported speech",
+        "b1-08": "Plusquamperfekt — past perfect",
+        "b1-09": "Adjektivdeklination — adjective declension",
+        "b1-10": "Umwelt und Gesellschaft — environment and society",
+        "b1-11": "Reisen und Erfahrungen — travel and experiences",
+        "b1-12": "Wiederholung B1 — full review",
+        "b2-01": "Nominalisierung — nominalization",
+        "b2-02": "Partizip I & II als Attribute — participial attributes",
+        "b2-03": "Finalsätze — purpose clauses (um…zu / damit)",
+        "b2-04": "Modalverben subjektiv — subjective modal use",
+        "b2-05": "Passiv mit Modalverben — passive with modals",
+        "b2-06": "Verben mit Präpositionen — verbs with prepositions",
+        "b2-07": "Adjektive mit Präpositionen — adjectives with prepositions",
+        "b2-08": "Konnektoren B2 — sodass, je…desto, anstatt",
+        "b2-09": "Arbeitswelt und Karriere — work world and career",
+        "b2-10": "Bildung und Studium — education and studies",
+        "b2-11": "Meinung und Argumentation — opinion and argumentation",
+        "b2-12": "Wiederholung B2 — full review",
+        "c1-01": "Konjunktiv II past — wishes and regrets",
+        "c1-02": "n-Deklination — weak noun declension",
+        "c1-03": "Passive alternatives — Passiversatzformen",
+        "c1-04": "Conditionals without wenn — Konditional ohne \"wenn\"",
+        "c1-05": "Funktionsverbgefüge — functional verb phrases",
+        "c1-06": "Extended participial attributes — Erweiterte Partizipialattribute",
+        "c1-07": "Academic language — Wissenschaftliche Sprache",
+        "c1-08": "Idiomatic expressions — Redewendungen",
+        "c1-09": "Economy and politics — Wirtschaft und Politik",
+        "c1-10": "Literature and culture — Literatur und Kultur",
+        "c1-11": "Presentation and discussion — Präsentation und Diskussion",
+        "c1-12": "Full review — Wiederholung C1"
+      }
+    }
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "Log in",
+    "password": "Password",
+    "site": "Site",
+    "logout": "Log out",
+    "addArticleHeading": "Add new article",
+    "titlePh": "Title",
+    "summaryPh": "Summary",
+    "contentPh": "Full content",
+    "selectCategory": "Select category",
+    "imageLabel": "Article image (optional)",
+    "imageEditLabel": "Article image (leave empty to keep current image)",
+    "featured": "⭐ Featured article (shows at top of homepage)",
+    "publishArticle": "Publish article",
+    "articlesHeading": "Articles ({n})",
+    "edit": "Edit",
+    "del": "Delete",
+    "listingsHeading": "Listings ({n})",
+    "listingsEmpty": "No listings.",
+    "view": "View",
+    "editArticleTitle": "Edit article",
+    "backToDashboard": "Back to dashboard",
+    "save": "Save changes"
+  },
+  "ausbJobs": {
+    "metaTitle": "Ausbildung Jobs — Vocational Training Offers | Your Guide to Germany",
+    "metaDesc": "Ausbildung offers in Germany updated daily from the Bundesagentur für Arbeit, sorted by sector.",
+    "eyebrow": "🔍 Ausbildung Offers",
+    "title": "Ausbildung Jobs",
+    "subtitle": "Latest vocational training offers from the German Federal Employment Agency (Bundesagentur für Arbeit), sorted by sector. Apply directly with an AI-generated email.",
+    "offersCount": "📊 {n} offers available",
+    "lastUpdated": "🔄 Last updated: {date}",
+    "all": "All ({n})",
+    "emptyTitle": "No offers available right now.",
+    "emptyHint": "Offers are updated daily. Come back tomorrow.",
+    "catEmpty": "No offers available in this sector right now. Check back later.",
+    "cats": {
+      "hospitality": "Hospitality",
+      "handwerk": "Skilled Trades",
+      "it": "IT",
+      "healthcare": "Healthcare"
+    },
+    "card": {
+      "apply": "Apply →",
+      "freshPrefix": "🆕 "
+    },
+    "rel": {
+      "today": "Today",
+      "oneDay": "1 day ago",
+      "twoDays": "2 days ago",
+      "fewDays": "{n} days ago",
+      "manyDays": "{n} days ago"
+    },
+    "modal": {
+      "howTo": "📬 How to apply",
+      "noContact": "The employer did not provide an email or application link. You can search for the company directly.",
+      "emailLabel": "📧 Application email",
+      "copy": "📋 Copy",
+      "copied": "✅ Email copied",
+      "copyFail": "❌ Copy failed",
+      "urlLabel": "🌐 Application link",
+      "openApply": "Open application page",
+      "tipPrefix": "💡 Tip: prepare your CV and cover letter in German before contacting the employer. You can use the free",
+      "tipLink": "CV Builder",
+      "tipSuffix": "."
     }
   }
 }

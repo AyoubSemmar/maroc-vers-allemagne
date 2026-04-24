@@ -2,6 +2,7 @@
 
 import { CVData } from './types'
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 type Props = {
   data: CVData
@@ -9,23 +10,26 @@ type Props = {
 }
 
 export default function StepSkills({ data, update }: Props) {
+  const t = useTranslations('cvBuilder.skills')
   return (
     <div className="rihla-cvb-step">
-      <h3 className="rihla-cvb-step-title">المهارات</h3>
-      <p className="rihla-cvb-step-hint">أضف المهارات التقنية والشخصية — اضغط Enter أو فاصلة لإضافة كل مهارة.</p>
+      <h3 className="rihla-cvb-step-title">{t('title')}</h3>
+      <p className="rihla-cvb-step-hint">{t('hint')}</p>
 
       <TagGroup
-        label="المهارات التقنية"
+        label={t('technical')}
         de="Fachkenntnisse"
-        placeholder="JavaScript, Python, SAP, Excel..."
+        placeholder={t('technicalPh')}
+        inputHint={t('inputHint')}
         tags={data.skills.technical}
         onChange={technical => update({ skills: { ...data.skills, technical } })}
       />
 
       <TagGroup
-        label="المهارات الشخصية"
+        label={t('soft')}
         de="Soft Skills"
-        placeholder="Teamarbeit, Zuverlässigkeit, Kommunikation..."
+        placeholder={t('softPh')}
+        inputHint={t('inputHint')}
         tags={data.skills.soft}
         onChange={soft => update({ skills: { ...data.skills, soft } })}
       />
@@ -34,9 +38,9 @@ export default function StepSkills({ data, update }: Props) {
 }
 
 function TagGroup({
-  label, de, placeholder, tags, onChange,
+  label, de, placeholder, inputHint, tags, onChange,
 }: {
-  label: string; de: string; placeholder: string; tags: string[]; onChange: (t: string[]) => void
+  label: string; de: string; placeholder: string; inputHint: string; tags: string[]; onChange: (t: string[]) => void
 }) {
   const [input, setInput] = useState('')
 
@@ -78,7 +82,7 @@ function TagGroup({
           onBlur={() => addTag(input)}
         />
       </div>
-      <p className="rihla-cvb-hint-small">اضغط Enter أو , لإضافة مهارة · اضغط Backspace لحذف آخر مهارة</p>
+      <p className="rihla-cvb-hint-small">{inputHint}</p>
     </div>
   )
 }

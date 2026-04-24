@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface AudioButtonProps {
   text: string
@@ -10,12 +11,35 @@ interface AudioButtonProps {
 }
 
 export default function AudioButton({ text, lang = 'de-DE', size = 'md', className = '' }: AudioButtonProps) {
+  const t = useTranslations('learnGerman.audio')
   const [playing, setPlaying] = useState(false)
+
+  // Lesson strings often mix German and a translation separated by an em-dash
+  // (either order, e.g. "Ich bin Ahmed. — I am Ahmed." or
+  // "التعريف بالنفس — Sich vorstellen"). Pick only the German half for TTS.
+  function germanOnly(s: string): string {
+    const parts = s.split(/\s+[—–]\s+/)
+    if (parts.length < 2) return s.trim()
+    const score = (p: string) => {
+      let n = 0
+      if (/[äöüÄÖÜß]/.test(p)) n += 5
+      if (/\b(ich|du|er|sie|es|wir|ihr|Sie|der|die|das|den|dem|ein|eine|ist|bin|bist|sind|seid|habe|hast|hat|haben|nicht|und|oder|mit|von|auf|zu|in|aus|für|über|nach|bei|Ich|Du|Er|Sie|Wir|Wie|Was|Wo|Woher|Wann|Warum|Mein|Dein|kommen|heißen|wohnen|sprechen|lernen|sein)\b/.test(p)) n += 3
+      if (/[A-Za-zÄÖÜäöüß]/.test(p)) n += 1
+      if (/[\u0600-\u06FF]/.test(p)) n -= 5 // Arabic penalty
+      return n
+    }
+    let best = parts[0], bestScore = -Infinity
+    for (const p of parts) {
+      const sc = score(p)
+      if (sc > bestScore) { bestScore = sc; best = p }
+    }
+    return best.trim()
+  }
 
   function speak() {
     if (!('speechSynthesis' in window)) return
     window.speechSynthesis.cancel()
-    const utterance = new SpeechSynthesisUtterance(text)
+    const utterance = new SpeechSynthesisUtterance(germanOnly(text))
     utterance.lang = lang
     utterance.rate = 0.82
     utterance.pitch = 1
@@ -32,7 +56,7 @@ export default function AudioButton({ text, lang = 'de-DE', size = 'md', classNa
   return (
     <button
       onClick={(e) => { e.stopPropagation(); speak() }}
-      title="استمع للنطق"
+      title={t('listen')}
       className={`${sizeClass} rounded-full flex items-center justify-center transition-all shrink-0
         ${playing
           ? 'bg-green-600 text-white scale-110 shadow-lg shadow-green-200'

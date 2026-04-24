@@ -1,26 +1,52 @@
-import ArticleHub, { ArticleItem, Bullets, Tip } from '@/components/ArticleHub'
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
+import ContentHub, { type HubData, type HubItem } from '@/components/ContentHub'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 
-export const metadata = {
-  title: 'الأوزبيلدونغ في ألمانيا — دليل كامل',
-  description: '20 مقالاً حول التدريب المهني المزدوج، أفضل المهن، الأجور، التقديم، والفرص بعد التخرّج.',
+type Props = { params: Promise<{ locale: AppLocale }> }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'static.ausbildung' })
+  return { title: t('metaTitle'), description: t('metaDesc') }
 }
 
-export default function AusbildungPage() {
+export default async function AusbildungPage({ params }: Props) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'static.ausbildung' })
+  const data: HubData = {
+    eyebrow: t('eyebrow'),
+    title: t('title'),
+    subtitle: t('subtitle'),
+    intro: t('intro'),
+    items: t.raw('items') as HubItem[],
+  }
+  const ctaHref = t('cta.href')
   return (
     <>
-      {/* CTA to jobs page */}
-      <div dir="rtl" style={{
-        background: 'linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%)',
-        color: '#fff',
-        padding: '20px 16px',
-        textAlign: 'center',
-      }}>
-        <div style={{ maxWidth: 860, margin: '0 auto', display: 'flex', alignItems: 'center', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-          <span style={{ fontSize: 15, fontWeight: 700 }}>
-            🔍 هل تبحث عن عروض Ausbildung حقيقية الآن؟
-          </span>
+      <div
+        dir={dirFor(locale)}
+        style={{
+          background: 'linear-gradient(135deg, #0f172a 0%, #1d4ed8 100%)',
+          color: '#fff',
+          padding: '20px 16px',
+          textAlign: 'center',
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 860,
+            margin: '0 auto',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 16,
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+          }}
+        >
+          <span style={{ fontSize: 15, fontWeight: 700 }}>{t('cta.title')}</span>
           <a
-            href="/ausbildung-jobs"
+            href={ctaHref}
             style={{
               background: '#fbbf24',
               color: '#0f172a',
@@ -31,321 +57,12 @@ export default function AusbildungPage() {
               textDecoration: 'none',
             }}
           >
-            تصفح العروض ←
+            {t('cta.buttonLabel')}
           </a>
         </div>
       </div>
 
-    <ArticleHub
-      eyebrow="التدريب المهني"
-      title="الأوزبيلدونغ في ألمانيا"
-      subtitle="التدريب المهني المزدوج — طريقك إلى سوق العمل الألماني بدون جامعة، براتب من اليوم الأول."
-      intro="20 مقالاً للإجابة على كل ما يسأل عنه المغاربة حول الأوزبيلدونغ: الأهلية، التقديم، أفضل القطاعات، الأجور، وكيف تبني مسيرة عمل طويلة."
-    >
-      <ArticleItem
-        num={1}
-        title="ما هو الأوزبيلدونغ فعلياً؟"
-        summary="نظام فريد من نوعه: شركة + مدرسة مهنية في الوقت نفسه، تتعلّم بالعمل وتقبض راتباً. ركيزة الاقتصاد الألماني."
-        tag="أساسيات"
-      >
-        <Bullets items={[
-          'المدة: من سنتين إلى ثلاث سنوات ونصف حسب المهنة.',
-          'التقسيم الأسبوعي: 2–4 أيام في الشركة + 1–2 يوم في Berufsschule.',
-          'عقد Ausbildungsvertrag موقّع مع الشركة ومسجّل في IHK أو HWK.',
-          'الراتب (Ausbildungsvergütung) إلزامي ويتزايد كل سنة.',
-          'ينتهي بامتحان IHK Abschlussprüfung وشهادة معترف بها في كل ألمانيا.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={2}
-        title="Duale vs Schulische Ausbildung"
-        summary="نوعان من التدريب المهني، بنتائج مادية مختلفة جداً. الأول هو ما يسعى إليه معظم المغاربة."
-        tag="أنواع"
-      >
-        <Bullets items={[
-          <><strong>Duale Ausbildung:</strong> شركة + مدرسة، براتب، الأكثر شيوعاً.</>,
-          <><strong>Schulische Ausbildung:</strong> في مدرسة مهنية فقط، غالباً بدون راتب (التمريض، العلاج الطبيعي).</>,
-          'الأوزبيلدونغ المدرسية أحياناً مدفوعة الرسوم (200–400€/شهر).',
-          'بعد 2020، قطاع التمريض دخل Duale وأصبح براتب جيد.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={3}
-        title="أكثر 10 مهن طلباً للمغاربة"
-        summary="هذه المهن تقبل بنسبة عالية وتوظّف فوراً بعد التخرّج."
-        tag="قطاعات"
-      >
-        <Bullets items={[
-          <><strong>Pflegefachkraft:</strong> تمريض — الأعلى طلباً وأجراً (~1300€/شهر كبداية).</>,
-          <><strong>Fachkraft für Lagerlogistik:</strong> لوجستيات المستودعات.</>,
-          <><strong>Elektroniker:</strong> تقني كهرباء.</>,
-          <><strong>Kfz-Mechatroniker:</strong> ميكانيكا سيارات.</>,
-          <><strong>Fachinformatiker:</strong> تقنيات المعلومات (تطبيقات / نظم).</>,
-          <><strong>Kaufmann für Büromanagement:</strong> إدارة مكتبية.</>,
-          <><strong>Koch / Köchin:</strong> طهي واحتراف مطاعم.</>,
-          <><strong>Anlagenmechaniker (SHK):</strong> تركيبات صحية وتدفئة.</>,
-          <><strong>Industriemechaniker:</strong> ميكانيكا صناعية.</>,
-          <><strong>Fachverkäufer:</strong> البيع المتخصّص (مخابز، لحوم، صيدلة...).</>,
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={4}
-        title="الأجور خلال سنوات الأوزبيلدونغ"
-        summary="الراتب يتزايد كل سنة. القطاع المالي والصناعي أعلى بكثير من قطاع الفندقة مثلاً."
-        tag="أجور"
-      >
-        <Bullets items={[
-          'السنة الأولى: 620–1100€ متوسّط.',
-          'السنة الثانية: 720–1200€.',
-          'السنة الثالثة: 850–1400€.',
-          'قطاعات مميزة (بنوك، صناعة): تصل 1600€ في السنة الأخيرة.',
-          'قطاعات منخفضة (فندقة، بيع): قريبة من الحد الأدنى.',
-        ]} />
-        <Tip>الراتب يكفي معيشة متواضعة في مدن متوسطة (Leipzig, Dortmund)، لكن صعب جداً في München أو Hamburg بدون دعم.</Tip>
-      </ArticleItem>
-
-      <ArticleItem
-        num={5}
-        title="مستوى اللغة المطلوب"
-        summary="B1 هو الحد الأدنى النظري، لكن الواقع مختلف. B2 هو ما تحتاجه فعلاً لتنجح."
-        tag="لغة"
-      >
-        <Bullets items={[
-          'B1: تفهم التعليمات الأساسية، تتواصل بصعوبة.',
-          'B2: مستوى معقول لقراءة الكتب المهنية وفهم الأستاذ في المدرسة.',
-          'C1: مثالي للمهن الصحية والإدارية.',
-          'شهادة Goethe B2 أو telc B2 أو TestDaF مقبولة عند كل الشركات.',
-        ]} />
-        <Tip>قبل التقديم، شاهد فيديو YouTube لـ Berufsschule في تخصّصك — إن فهمته، لغتك جاهزة.</Tip>
-      </ArticleItem>
-
-      <ArticleItem
-        num={6}
-        title="من أين تبحث عن الأوزبيلدونغ؟"
-        summary="عشرات المنصّات، لكن الأكثر فعالية قليلة. ركّز طاقتك عليها."
-        tag="بحث"
-      >
-        <Bullets items={[
-          <><strong>Make-it-in-Germany.com:</strong> المنصة الرسمية للهجرة المهنية.</>,
-          <><strong>Ausbildung.de:</strong> الأكبر تخصّصاً.</>,
-          <><strong>Arbeitsagentur.de:</strong> بنك وظائف الدولة، دقيق جداً.</>,
-          <><strong>AZUBIYO.de:</strong> مناسب لتحديد المهنة المناسبة.</>,
-          <><strong>LinkedIn:</strong> مفاجئ أنه يعمل للأوزبيلدونغ أيضاً.</>,
-          'التقديم المباشر عبر موقع الشركة: أعلى نسبة قبول.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={7}
-        title="كتابة Bewerbung مقنعة"
-        summary="ملف التقديم الألماني يختلف تماماً عن المغربي. هذه عناصره الأساسية."
-        tag="ملف"
-      >
-        <Bullets items={[
-          <><strong>Anschreiben:</strong> صفحة واحدة، تشرح لماذا أنت لهذه المهنة وهذه الشركة بالذات.</>,
-          <><strong>Lebenslauf:</strong> CV ألماني: تعليم + خبرة + لغات + مهارات، صورة مهنية.</>,
-          <><strong>Zeugnisse:</strong> شهادات الباكالوريا وأي تدريب سابق، مترجمة.</>,
-          <><strong>Zertifikate:</strong> شهادات اللغة + أي دورات.</>,
-        ]} />
-        <Tip>اجعل ملفك PDF واحد منظّم، لا 10 ملفات منفصلة. الاسم يجب أن يكون: Bewerbung_VorName_Nachname.pdf</Tip>
-      </ArticleItem>
-
-      <ArticleItem
-        num={8}
-        title="Lebenslauf الألماني — النموذج الصحيح"
-        summary="لا صورة سيلفي، لا ألوان مبهرجة. بساطة وتنظيم صارم."
-        tag="ملف"
-      >
-        <Bullets items={[
-          'الرأس: اسم، عنوان، هاتف، إيميل، تاريخ الميلاد، الجنسية.',
-          'الصورة: احترافية، خلفية بيضاء، ملابس رسمية.',
-          'ترتيب زمني عكسي: الأحدث أولاً.',
-          'حجم: صفحة أو صفحتين فقط.',
-          'التوقيع والتاريخ في الأسفل.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={9}
-        title="Vorstellungsgespräch — المقابلة الشخصية"
-        summary="إذا وصلت لهذه المرحلة، فرصتك 50%. التحضير الجيد يضاعفها."
-        tag="مقابلة"
-      >
-        <Bullets items={[
-          'اعرف كل شيء عن الشركة: سنة التأسيس، المنتجات، القيم.',
-          'حضّر إجابات لأسئلة كلاسيكية: لماذا نحن؟ لماذا ألمانيا؟ لماذا هذه المهنة؟',
-          'لباس رسمي (Business Casual كحد أدنى).',
-          'الوصول 10 دقائق قبل الموعد، لا أقل ولا أكثر.',
-          'اسأل أسئلة في النهاية — يدل على اهتمامك.',
-        ]} />
-        <Tip>كثير من الشركات تبدأ بمكالمة فيديو قصيرة قبل المقابلة الحضورية. عاملها بجدية كاملة.</Tip>
-      </ArticleItem>
-
-      <ArticleItem
-        num={10}
-        title="Ausbildungsvisum — تأشيرة التدريب"
-        summary="تأشيرة مخصّصة للأوزبيلدونغ. شروطها أوضح من تأشيرات أخرى."
-        tag="تأشيرة"
-      >
-        <Bullets items={[
-          'وثائق: عقد Ausbildungsvertrag موقّع + شهادة لغة B1 + سكن.',
-          'لا تحتاج Sperrkonto إذا كان راتب التدريب يكفي (~934€/شهر).',
-          'الرسم 75€.',
-          'تُصدر لسنة كاملة وتُجدّد حتى نهاية التدريب.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={11}
-        title="كارت الفرص (Chancenkarte) للبحث عن Ausbildung"
-        summary="منذ 2024، يمكنك المجيء لألمانيا 12 شهراً للبحث عن تدريب، إن استوفيت نقاطاً كافية."
-        tag="جديد"
-      >
-        <Bullets items={[
-          'نظام نقاط: لغة + عمر + تعليم + خبرة.',
-          'شهادة ألمانية A1 كحدّ أدنى + 6 نقاط.',
-          'يسمح بعمل 20 ساعة/أسبوع أثناء البحث.',
-          'تُحوَّل إلى Ausbildungsvisum فور إيجاد التدريب.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={12}
-        title="Einstiegsqualifizierung (EQ) — الجسر قبل الأوزبيلدونغ"
-        summary="برنامج 6–12 شهراً للعمل التجريبي قبل الأوزبيلدونغ، لمن ليس مستعداً تماماً."
-        tag="تحضيري"
-      >
-        <Bullets items={[
-          'راتب جزئي (~250–300€/شهر) من Arbeitsagentur.',
-          'يمنح الشركة الفرصة لتقييمك قبل عقد 3 سنوات.',
-          '70% من مَن يكمل EQ يحصل على Ausbildung في نفس الشركة.',
-          'خيار ممتاز لمن لغته ضعيفة نسبياً.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={13}
-        title="الأوزبيلدونغ في التمريض"
-        summary="القطاع الأكثر طلباً للمغاربة. راتب عالٍ، قبول سريع، وطريق مباشر للإقامة."
-        tag="تمريض"
-      >
-        <Bullets items={[
-          'Pflegefachkraft: المسمى الجديد منذ 2020، يجمع الثلاث شُعَب القديمة.',
-          '3 سنوات تدريب، راتب ~1300€ في السنة الأولى.',
-          'معظم المستشفيات توفّر سكناً مدعوماً.',
-          'بعد التخرّج: ~2800–3200€ شهرياً إجمالي.',
-          'طلب دائم على الموظفين — نادراً بطالة في هذا القطاع.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={14}
-        title="الأوزبيلدونغ في IT"
-        summary="Fachinformatiker هو المسار الأشهر. تخرّج براتب ابتدائي 3000€+ في سوق متعطّش."
-        tag="IT"
-      >
-        <Bullets items={[
-          'ثلاث تخصّصات: Anwendungsentwicklung (تطوير)، Systemintegration (شبكات)، Daten- und Prozessanalyse.',
-          'راتب التدريب ~1100€ بداية، ~1300€ نهاية.',
-          'القبول يفضّل من لديهم مهارات مسبقة (HTML/Python/Linux).',
-          'بعد التخرّج: 3200–4500€ شهرياً، مع إمكانية الانتقال للبرمجة الكاملة.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={15}
-        title="الأوزبيلدونغ في الميكانيكا والصناعة"
-        summary="ألمانيا = صناعة. كل شركة كبرى (BMW, Bosch, Siemens, Mercedes) تقبل متدرّبين سنوياً."
-        tag="صناعة"
-      >
-        <Bullets items={[
-          'Industriemechaniker, Mechatroniker, Elektroniker هي الأكثر شيوعاً.',
-          'عقود مع شركات كبرى = رواتب أعلى + مزايا (قطار مجاني، طعام مدعوم).',
-          'القبول في Mercedes و BMW يبدأ قبل سنة تقريباً.',
-          'بعد التدريب: 3000–4000€ ابتدائي، مع تطوّر سريع.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={16}
-        title="الحياة اليومية كـ Azubi"
-        summary="تحدّيات نمطية يعيشها كل متدرّب مغربي. استعد لها ذهنياً."
-        tag="حياة"
-      >
-        <Bullets items={[
-          'ضغط الدوام (40 ساعة) + الدراسة + الفروض المدرسية = إرهاق أول شهرين.',
-          'الزملاء الألمان أصغر سناً عادة (18–20) — الفجوة الثقافية حقيقية.',
-          'الأكل الحلال في Kantine نادر — جهّز طعامك.',
-          'الأعياد الإسلامية ليست رسمية — خطّط إجازاتك مسبقاً.',
-        ]} />
-        <Tip>ابحث عن جالية مغربية في المدينة قبل الوصول. الجمعات أسبوعياً تحمي صحتك النفسية أكثر من أي شيء.</Tip>
-      </ArticleItem>
-
-      <ArticleItem
-        num={17}
-        title="حقوق المتدرّب (Azubi-Rechte)"
-        summary="قانون ألمانيا يحمي المتدرّب بشدة. لا تقبل استغلالاً — لك حقوق واضحة."
-        tag="حقوق"
-      >
-        <Bullets items={[
-          'إجازة مدفوعة: 24–30 يوماً سنوياً.',
-          'ساعات العمل: حتى 8/يوم كحد أقصى، مع استراحة 30 دقيقة بعد 6 ساعات.',
-          'لا عمل ليلي ولا أعياد إذا كان سنّك أقل من 18.',
-          'لا يحق لصاحب العمل تكليفك بأعمال لا علاقة لها بالتدريب.',
-          'من حقك الحصول على شهادة عمل (Zeugnis) نهائية.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={18}
-        title="امتحان IHK النهائي (Abschlussprüfung)"
-        summary="الامتحان الذي يمنحك الشهادة. نظري + عملي + شفهي أحياناً. الرسوب ممكن لكن يمكن الإعادة."
-        tag="امتحان"
-      >
-        <Bullets items={[
-          'يُعقد عبر IHK (غرفة الصناعة) أو HWK (الحرف).',
-          'جزءان: نصفي (نهاية السنة الثانية) + نهائي.',
-          'معدل النجاح الوطني ~ 90%.',
-          'يمكن إعادة الامتحان مرتين.',
-          'الشركة ملزمة بإعطائك وقتاً للمراجعة.',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={19}
-        title="بعد الأوزبيلدونغ — ماذا يحدث؟"
-        summary="70% من المتدرّبين يحصلون على عقد دائم في نفس الشركة. الآخرون يجدون عملاً خلال أشهر."
-        tag="ما بعد"
-      >
-        <Bullets items={[
-          <><strong>Übernahme:</strong> التعيين المباشر بعقد دائم في نفس الشركة.</>,
-          <><strong>Meister:</strong> شهادة تدريبية عليا (1–3 سنوات)، تمكّنك من فتح مشروعك.</>,
-          <><strong>Weiterbildung:</strong> تخصّص تقني مكمّل.</>,
-          <><strong>Studium:</strong> يمكنك دخول الجامعة بدون Abitur بعد 3 سنوات عمل.</>,
-          'تأشيرتك تُحوَّل إلى إقامة عمل، ثم إلى دائمة بعد سنتين فقط (بدل 5).',
-        ]} />
-      </ArticleItem>
-
-      <ArticleItem
-        num={20}
-        title="أخطاء شائعة يقع فيها المغاربة"
-        summary="تكرّرت في تجارب عشرات المغاربة. تعلّم منهم ولا تعدها."
-        tag="تحذيرات"
-      >
-        <Bullets items={[
-          'التقديم لمهنة لا يحبها فقط لأنها تقبل أسرع — مسار 3 سنوات يصعب إلغاؤه.',
-          'التقديم بـ CV مغربي غير معدّل للنموذج الألماني — رفض فوري.',
-          'ترك اللغة الألمانية عند مستوى B1 — المدرسة المهنية ستسحقك.',
-          'عدم قراءة العقد قبل التوقيع — بعض الشركات تضع شروطاً غير عادلة.',
-          'عدم الاحتفاظ بنسخة Anmeldung و Aufenthaltstitel في كل تحرّك — الشرطة تطلبها.',
-          'إهمال الفروض في Berufsschule — ستُرسَب في الامتحان الرسمي.',
-        ]} />
-        <Tip>اشترك في مجموعات "Ausbildung für Marokkaner" على فيسبوك وتيليغرام — المعلومة الصحيحة تأتي من تجربة حقيقية.</Tip>
-      </ArticleItem>
-    </ArticleHub>
+      <ContentHub data={data} locale={locale} />
     </>
   )
 }

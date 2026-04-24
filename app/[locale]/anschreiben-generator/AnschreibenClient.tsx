@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import AnschreibenForm, { FormState } from '@/components/anschreiben/AnschreibenForm'
 import AnschreibenPreview from '@/components/anschreiben/AnschreibenPreview'
 
@@ -29,14 +31,14 @@ type EntitlementStatus =
   | { tier: 'free'; credits: number; used: number; freeLifetimeAvailable?: boolean }
 
 function canGenerate(ent: EntitlementStatus | null): boolean {
-  // If we haven't loaded entitlements yet, let the user click; the API will
-  // enforce and return a 402 if they really can't.
   if (!ent) return true
   if (ent.tier === 'premium') return ent.remaining === null || ent.remaining > 0
   return !!ent.freeLifetimeAvailable || ent.credits > 0
 }
 
 export default function AnschreibenClient() {
+  const t = useTranslations('anschreiben')
+  const locale = useLocale() as AppLocale
   const [form, setForm] = useState<FormState>(EMPTY)
   const [mounted, setMounted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -94,26 +96,25 @@ export default function AnschreibenClient() {
       setLetter(json.letter)
       refreshEntitlements()
 
-      // Scroll to result
       setTimeout(() => {
         document.getElementById('ansch-result')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }, 100)
     } catch (e: any) {
-      setError(e?.message || 'حدث خطأ غير معروف. حاول مرة أخرى.')
+      setError(e?.message || t('unknownErr'))
     } finally {
       setLoading(false)
     }
   }
 
   return (
-    <div className="ansch-root" dir="rtl">
+    <div className="ansch-root" dir={dirFor(locale)}>
       {/* Header */}
       <header className="ansch-header">
         <div className="wrap">
-          <p className="ansch-eyebrow">✍️ مولّد خطاب التحفيز</p>
+          <p className="ansch-eyebrow">{t('eyebrow')}</p>
           <h1>Anschreiben Generator</h1>
           <p className="ansch-subtitle">
-            أدخل بياناتك باللغة التي تريد — الذكاء الاصطناعي يكتب لك خطاباً احترافياً بالألمانية خصصاً لطلب Ausbildung.
+            {t('subtitle')}
           </p>
         </div>
       </header>
@@ -155,7 +156,7 @@ export default function AnschreibenClient() {
         {!letter && !loading && (
           <div className="ansch-empty-hint">
             <div className="ansch-empty-icon">📨</div>
-            <p>خطابك سيظهر هنا بعد الضغط على زر التوليد</p>
+            <p>{t('emptyHint')}</p>
           </div>
         )}
 
@@ -163,8 +164,8 @@ export default function AnschreibenClient() {
         {loading && (
           <div className="ansch-loading-state">
             <div className="ansch-loading-icon">⚙️</div>
-            <p>الذكاء الاصطناعي يكتب خطابك...</p>
-            <p className="ansch-hint-small">يستغرق عادةً 5–15 ثانية</p>
+            <p>{t('loadingTitle')}</p>
+            <p className="ansch-hint-small">{t('loadingHint')}</p>
             <div className="ansch-skeleton-lines">
               {[100, 90, 95, 80, 100, 70, 85, 60].map((w, i) => (
                 <div key={i} className="ansch-skeleton-line" style={{ width: `${w}%` }} />
@@ -178,12 +179,14 @@ export default function AnschreibenClient() {
 }
 
 function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
+  const t = useTranslations('anschreiben.banner')
+
   // Premium users
   if (ent.tier === 'premium') {
     const r = ent.remaining
     const label = r === null
-      ? '✨ باقة مميزة — توليد غير محدود'
-      : `✨ باقة مميزة — متبقي اليوم: ${r}/${ent.limit}`
+      ? t('premiumUnlimited')
+      : t('premiumRemaining', { rem: r, lim: ent.limit ?? 0 })
     return (
       <div style={bannerStyle('premium')}>
         <strong>{label}</strong>
@@ -195,9 +198,9 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
   if (ent.freeLifetimeAvailable) {
     return (
       <div style={bannerStyle('free')}>
-        <strong>🎁 لديك محاولة مجانية واحدة!</strong>
+        <strong>{t('freeTryTitle')}</strong>
         <span style={{ fontSize: 13, color: '#166534' }}>
-          &nbsp;جرّب مولّد خطاب التحفيز مجاناً مرة واحدة — بعدها تحتاج رصيداً.
+          &nbsp;{t('freeTryBody')}
         </span>
       </div>
     )
@@ -207,9 +210,9 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
   if (ent.credits > 0) {
     return (
       <div style={bannerStyle('credits')}>
-        <strong>رصيدك: {ent.credits} {ent.credits === 1 ? 'رسالة' : 'رسائل'}</strong>
+        <strong>{ent.credits === 1 ? t('creditsTitleOne', { n: ent.credits }) : t('creditsTitleMany', { n: ent.credits })}</strong>
         <span style={{ fontSize: 13, color: '#78350f' }}>
-          &nbsp;سيُخصم رصيد واحد عند كل توليد ناجح.
+          &nbsp;{t('creditsBody')}
         </span>
       </div>
     )
@@ -218,9 +221,9 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
   // Free users with nothing
   return (
     <div style={bannerStyle('empty')}>
-      <strong>❌ لا تملك رصيداً</strong>
+      <strong>{t('emptyTitle')}</strong>
       <span style={{ fontSize: 13, color: '#7f1d1d' }}>
-        &nbsp;لقد استخدمت محاولتك المجانية. اشترِ رصيداً أو ترقَّ إلى الباقة المميزة للمتابعة.
+        &nbsp;{t('emptyBody')}
       </span>
       <div style={{ marginTop: 8 }}>
         <button type="button" disabled
@@ -228,7 +231,7 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
             padding: '8px 14px', borderRadius: 8, border: '1px solid #d1d5db',
             background: '#f3f4f6', color: '#9ca3af', cursor: 'not-allowed', fontWeight: 600, fontSize: 13,
           }}>
-          💳 شراء رصيد (قريباً)
+          {t('buyCreditsSoon')}
         </button>
       </div>
     </div>

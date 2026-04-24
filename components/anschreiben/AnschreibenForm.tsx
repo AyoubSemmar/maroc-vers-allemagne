@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef } from 'react'
+import { useTranslations } from 'next-intl'
 
 export type FormState = {
   fullName: string
@@ -21,6 +22,7 @@ type Props = {
 const MAX_BG = 1200
 
 export default function AnschreibenForm({ state, onChange, onSubmit, loading, canGenerate = true }: Props) {
+  const t = useTranslations('anschreiben.form')
   const fileRef = useRef<HTMLInputElement>(null)
 
   function handleSubmit(e: React.FormEvent) {
@@ -30,11 +32,11 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
 
   return (
     <form className="ansch-form-card" onSubmit={handleSubmit} noValidate>
-      <h2 className="ansch-section-title">بياناتك الشخصية</h2>
+      <h2 className="ansch-section-title">{t('section')}</h2>
 
       <div className="ansch-field">
         <label className="ansch-label">
-          الاسم الكامل <span className="ansch-label-de">(Vollständiger Name)</span>
+          {t('fullName')} <span className="ansch-label-de">(Vollständiger Name)</span>
           <span className="ansch-required">*</span>
         </label>
         <input
@@ -42,14 +44,14 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
           type="text"
           value={state.fullName}
           onChange={e => onChange({ fullName: e.target.value })}
-          placeholder="مثال: Ahmed El Mansouri"
+          placeholder={t('fullNamePh')}
           required
         />
       </div>
 
       <div className="ansch-field">
         <label className="ansch-label">
-          الجنس <span className="ansch-label-de">(Geschlecht)</span>
+          {t('gender')} <span className="ansch-label-de">(Geschlecht)</span>
           <span className="ansch-required">*</span>
         </label>
         <div className="ansch-gender-row">
@@ -60,7 +62,7 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
               className={`ansch-gender-btn${state.gender === g ? ' active' : ''}`}
               onClick={() => onChange({ gender: g })}
             >
-              {g === 'male' ? '👨 ذكر' : '👩 أنثى'}
+              {g === 'male' ? t('male') : t('female')}
             </button>
           ))}
         </div>
@@ -68,7 +70,7 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
 
       <div className="ansch-field">
         <label className="ansch-label">
-          منصب التدريب المهني <span className="ansch-label-de">(Ausbildung Position)</span>
+          {t('position')} <span className="ansch-label-de">(Ausbildung Position)</span>
           <span className="ansch-required">*</span>
         </label>
         <input
@@ -76,14 +78,14 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
           type="text"
           value={state.ausbildungPosition}
           onChange={e => onChange({ ausbildungPosition: e.target.value })}
-          placeholder="مثال: Pflegefachmann · Mechatroniker · Kaufmann im Einzelhandel"
+          placeholder={t('positionPh')}
           required
         />
       </div>
 
       <div className="ansch-field">
         <label className="ansch-label">
-          وصف خلفيتك وتجربتك وأهدافك
+          {t('background')}
           <span className="ansch-label-de"> (Hintergrund)</span>
           <span className="ansch-required">*</span>
         </label>
@@ -92,7 +94,7 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
           value={state.background}
           onChange={e => onChange({ background: e.target.value.slice(0, MAX_BG) })}
           rows={6}
-          placeholder="اكتب عن تجربتك، اهتماماتك، وأهدافك. يمكنك الكتابة بالعربية أو الفرنسية أو الإنجليزية — الذكاء الاصطناعي سيفهم ويترجم تلقائياً."
+          placeholder={t('backgroundPh')}
           required
         />
         <div className="ansch-char-count">
@@ -105,7 +107,7 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
 
       <div className="ansch-field">
         <label className="ansch-label">
-          السيرة الذاتية (PDF) <span className="ansch-label-de">(Lebenslauf — optional)</span>
+          {t('cvLabel')} <span className="ansch-label-de">(Lebenslauf — optional)</span>
         </label>
         <div
           className={`ansch-upload-zone${state.cvFile ? ' has-file' : ''}`}
@@ -131,8 +133,8 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
           ) : (
             <>
               <div className="ansch-upload-icon">📎</div>
-              <p>اسحب ملف PDF هنا أو <span className="ansch-upload-link">انقر للاختيار</span></p>
-              <p className="ansch-hint-small">PDF فقط · حد أقصى 5MB · اختياري لكن يُحسّن النتيجة</p>
+              <p>{t('cvDrop')} <span className="ansch-upload-link">{t('cvClick')}</span></p>
+              <p className="ansch-hint-small">{t('cvHint')}</p>
             </>
           )}
         </div>
@@ -144,8 +146,8 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
           onChange={e => {
             const f = e.target.files?.[0]
             if (!f) return
-            if (f.type !== 'application/pdf') { alert('⚠ يُقبل ملف PDF فقط.'); return }
-            if (f.size > 5_000_000) { alert('⚠ الحجم الأقصى 5MB.'); return }
+            if (f.type !== 'application/pdf') { alert(t('pdfOnly')); return }
+            if (f.size > 5_000_000) { alert(t('tooLarge')); return }
             onChange({ cvFile: f })
           }}
         />
@@ -157,11 +159,11 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading, ca
         disabled={loading || !canGenerate || !state.fullName.trim() || !state.ausbildungPosition.trim() || !state.background.trim()}
       >
         {loading ? (
-          <><span className="ansch-spinner" /> جاري التوليد...</>
+          <><span className="ansch-spinner" /> {t('generating')}</>
         ) : !canGenerate ? (
-          '🔒 يتطلب رصيداً أو باقة مميزة'
+          t('needCredit')
         ) : (
-          '✨ توليد خطاب التحفيز'
+          t('generate')
         )}
       </button>
     </form>

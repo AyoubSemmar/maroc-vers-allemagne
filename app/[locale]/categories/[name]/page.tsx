@@ -1,7 +1,11 @@
+import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 
-export default async function CategoryPage({ params }: { params: Promise<{ name: string }> }) {
-  const { name } = await params
+export default async function CategoryPage({ params }: { params: Promise<{ name: string; locale: AppLocale }> }) {
+  const { name, locale } = await params
+  const t = await getTranslations({ locale, namespace: 'articles' })
   const categoryName = decodeURIComponent(name)
 
   const { data: articles } = await supabase
@@ -10,22 +14,25 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
     .eq('category', categoryName)
     .order('date', { ascending: false })
 
-  return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
-      <div className="max-w-5xl mx-auto px-4 py-12">
-        <a href="/" className="text-sm text-green-700 hover:underline mb-6 block">
-          → العودة إلى الرئيسية
-        </a>
+  let catLabel: string = categoryName
+  try { catLabel = t(`cat.${categoryName}` as any) } catch {}
 
-        <h1 className="text-2xl font-bold text-gray-900 mb-8">{categoryName}</h1>
+  return (
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
+          {t('backToHome')}
+        </Link>
+
+        <h1 className="text-2xl font-bold text-gray-900 mb-8">{catLabel}</h1>
 
         {articles && articles.length === 0 && (
-          <p className="text-gray-500">لا توجد مقالات في هذه الفئة بعد.</p>
+          <p className="text-gray-500">{t('emptyCategory')}</p>
         )}
 
         <div className="flex flex-col gap-4">
           {articles && articles.map((article) => (
-            <a
+            <Link
               key={article.id}
               href={`/articles/${article.id}`}
               className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow flex items-center gap-4 p-4 overflow-hidden"
@@ -38,7 +45,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
               {article.image_url && (
                 <img src={article.image_url} alt={article.title} className="w-36 h-24 object-cover rounded-lg flex-shrink-0" />
               )}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

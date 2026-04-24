@@ -1,6 +1,9 @@
+import { getTranslations } from 'next-intl/server'
 import { createClient } from '@supabase/supabase-js'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import { updateArticle } from '../../actions'
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
@@ -15,26 +18,33 @@ const categories = [
   "الجامعات", "العمل", "Ausbildung", "التأشيرة والأوراق"
 ]
 
-export default async function EditArticlePage({ params }: { params: Promise<{ id: string }> }) {
+export default async function EditArticlePage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
+  const { id, locale } = await params
+  const t = await getTranslations({ locale, namespace: 'admin' })
+  const tCat = await getTranslations({ locale, namespace: 'articles.cat' })
+
   const cookieStore = await cookies()
   const isAuthenticated = cookieStore.get('admin_auth')?.value === 'true'
-  if (!isAuthenticated) redirect('/admin')
+  if (!isAuthenticated) redirect(`/${locale}/admin`)
 
-  const { id } = await params
   const { data: article } = await supabase
     .from('articles')
     .select('*')
     .eq('id', id)
     .single()
 
-  if (!article) redirect('/admin')
+  if (!article) redirect(`/${locale}/admin`)
+
+  function catLabel(cat: string): string {
+    try { return tCat(cat as any) } catch { return cat }
+  }
 
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       <nav className="bg-white border-b border-gray-200">
         <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold text-green-700">تعديل المقال</span>
-          <a href="/admin" className="text-sm text-gray-500 hover:underline">العودة للوحة التحكم</a>
+          <span className="text-xl font-bold text-green-700">{t('editArticleTitle')}</span>
+          <Link href="/admin" className="text-sm text-gray-500 hover:underline">{t('backToDashboard')}</Link>
         </div>
       </nav>
 
@@ -46,21 +56,21 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
             <input
               name="title"
               defaultValue={article.title}
-              placeholder="العنوان"
+              placeholder={t('titlePh')}
               required
               className="border border-gray-300 rounded-lg px-4 py-2 text-right"
             />
             <input
               name="summary"
               defaultValue={article.summary}
-              placeholder="الملخص"
+              placeholder={t('summaryPh')}
               required
               className="border border-gray-300 rounded-lg px-4 py-2 text-right"
             />
             <textarea
               name="content"
               defaultValue={article.content}
-              placeholder="المحتوى الكامل"
+              placeholder={t('contentPh')}
               required
               rows={8}
               className="border border-gray-300 rounded-lg px-4 py-2 text-right"
@@ -71,9 +81,9 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
               defaultValue={article.category}
               className="border border-gray-300 rounded-lg px-4 py-2 text-right"
             >
-              <option value="">اختر الفئة</option>
+              <option value="">{t('selectCategory')}</option>
               {categories.map(cat => (
-                <option key={cat} value={cat}>{cat}</option>
+                <option key={cat} value={cat}>{catLabel(cat)}</option>
               ))}
             </select>
             <input
@@ -85,7 +95,7 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
             />
 
             <div className="flex flex-col gap-2">
-              <label className="text-sm text-gray-600">صورة المقال (اتركها فارغة للإبقاء على الصورة الحالية)</label>
+              <label className="text-sm text-gray-600">{t('imageEditLabel')}</label>
               {article.image_url && (
                 <img src={article.image_url} alt="current" className="w-full h-48 object-cover rounded-lg mb-2" />
               )}
@@ -106,13 +116,13 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
                 defaultChecked={article.featured === true}
                 className="w-4 h-4 accent-yellow-400"
               />
-              <span className="text-sm text-gray-700">⭐ مقال مميز (يظهر في أعلى الصفحة الرئيسية)</span>
+              <span className="text-sm text-gray-700">{t('featured')}</span>
             </label>
             <button
               type="submit"
               className="bg-green-700 text-white rounded-lg px-4 py-2 hover:bg-green-800"
             >
-              حفظ التعديلات
+              {t('save')}
             </button>
           </form>
           <div className="mt-6">

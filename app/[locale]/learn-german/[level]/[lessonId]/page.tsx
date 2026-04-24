@@ -1,20 +1,26 @@
 import { getLevel, getLesson } from '@/lib/german-data'
+import { localizeLesson, localizeLevel } from '@/lib/german-data/localize'
 import { notFound } from 'next/navigation'
+import type { AppLocale } from '@/i18n/routing'
 import LessonClient from './LessonClient'
 
 export default async function LessonPage({
   params,
 }: {
-  params: Promise<{ level: string; lessonId: string }>
+  params: Promise<{ level: string; lessonId: string; locale: AppLocale }>
 }) {
-  const { level: levelParam, lessonId } = await params
-  const level = getLevel(levelParam)
-  const lesson = getLesson(levelParam, lessonId)
+  const { level: levelParam, lessonId, locale } = await params
+  const rawLevel = getLevel(levelParam)
+  const rawLesson = getLesson(levelParam, lessonId)
 
-  if (!level || !lesson) notFound()
+  if (!rawLevel || !rawLesson) notFound()
 
-  const currentIndex = level.lessons.findIndex((l: { id: string }) => l.id === lessonId)
-  const nextLesson = level.lessons[currentIndex + 1] ?? null
+  const level  = localizeLevel(rawLevel, locale)
+  const lesson = localizeLesson(rawLesson, rawLevel.id, locale)
+
+  const currentIndex = level.lessons.findIndex((l) => l.id === lessonId)
+  const rawNext = level.lessons[currentIndex + 1] ?? null
+  const nextLesson = rawNext ?? null
 
   return (
     <LessonClient

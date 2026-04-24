@@ -1,8 +1,11 @@
+import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import ListingsFilters from './ListingsFilters'
 
 const cities = [
-  'كل المدن', 'برلين', 'ميونخ', 'هامبورغ', 'فرانكفورت', 'كولونيا', 'شتوتغارت', 'دوسلدورف',
+  'برلين', 'ميونخ', 'هامبورغ', 'فرانكفورت', 'كولونيا', 'شتوتغارت', 'دوسلدورف',
   'لايبزيغ', 'دورتموند', 'إيسن', 'بريمن', 'درسدن', 'هانوفر', 'نورنبرغ', 'دويسبورغ',
   'بوخوم', 'فوبرتال', 'بيليفيلد', 'بون', 'مونستر', 'مانهايم', 'كارلسروه',
   'أوغسبورغ', 'فيسبادن', 'غلزنكيرشن', 'آخن', 'براونشفايغ', 'كيل', 'كيمنيتس',
@@ -10,32 +13,56 @@ const cities = [
   'زاربروكن', 'هايدلبرغ', 'بوتسدام', 'أخرى'
 ]
 
-function formatExpiry(dateStr: string) {
-  const date = new Date(dateStr)
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
-  return `${day}/${month}/${year}`
+const LOCALE_TO_INTL: Record<AppLocale, string> = {
+  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
 }
 
-export default async function ListingsPage({ searchParams }: { searchParams: Promise<{ city?: string, type?: string }> }) {
+function formatExpiry(dateStr: string, locale: AppLocale) {
+  try {
+    return new Date(dateStr).toLocaleDateString(LOCALE_TO_INTL[locale], {
+      year: 'numeric', month: 'numeric', day: 'numeric',
+    })
+  } catch {
+    return dateStr
+  }
+}
+
+export default async function ListingsPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ locale: AppLocale }>
+  searchParams: Promise<{ city?: string; type?: string }>
+}) {
+  const { locale } = await params
   const { city, type } = await searchParams
+  const t = await getTranslations({ locale, namespace: 'listings' })
 
   const now = new Date().toISOString()
-  let query = supabase.from('listings').select('*').or(`expires_at.gt.${now},expires_at.is.null`).order('created_at', { ascending: false })
-  if (city && city !== 'كل المدن') query = query.eq('city', city)
+  let query = supabase
+    .from('listings')
+    .select('*')
+    .or(`expires_at.gt.${now},expires_at.is.null`)
+    .order('created_at', { ascending: false })
+  if (city && city !== '__ALL__') query = query.eq('city', city)
   if (type) query = query.eq('type', type)
 
   const { data: listings } = await query
 
+  function typeLabel(dbType: string): string {
+    if (dbType === 'غرفة') return t('types.room')
+    if (dbType === 'شقة') return t('types.apartment')
+    return dbType
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       <div className="max-w-5xl mx-auto px-4 py-12">
         <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">السكن في ألمانيا</h1>
-          <a href="/listings/new" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">
-            + إضافة إعلان
-          </a>
+          <h1 className="text-2xl font-bold text-gray-900">{t('pageTitle')}</h1>
+          <Link href="/listings/new" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">
+            {t('addListing')}
+          </Link>
         </div>
 
         <ListingsFilters cities={cities} currentCity={city} currentType={type} />
@@ -43,13 +70,13 @@ export default async function ListingsPage({ searchParams }: { searchParams: Pro
         {listings && listings.length === 0 && (
           <div className="text-center py-20 text-gray-400">
             <p className="text-4xl mb-4">🏠</p>
-            <p>لا توجد إعلانات بعد</p>
+            <p>{t('emptyState')}</p>
           </div>
         )}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {listings && listings.map(listing => (
-            <a
+            <Link
               key={listing.id}
               href={`/listings/${listing.id}`}
               className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"
@@ -61,19 +88,19 @@ export default async function ListingsPage({ searchParams }: { searchParams: Pro
               )}
               <div className="p-4">
                 <div className="flex items-center gap-2 mb-2 flex-wrap">
-                  <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{listing.type}</span>
+                  <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{typeLabel(listing.type)}</span>
                   <span className="text-xs text-gray-400">{listing.city}</span>
                   {listing.price && (
-                    <span className="text-xs font-semibold text-white bg-green-600 px-2 py-1 rounded-full">{listing.price} €/شهر</span>
+                    <span className="text-xs font-semibold text-white bg-green-600 px-2 py-1 rounded-full">{listing.price} {t('priceSuffix')}</span>
                   )}
                 </div>
                 <h3 className="font-semibold text-gray-900">{listing.title}</h3>
                 <p className="text-sm text-gray-500 mt-1 line-clamp-2">{listing.description}</p>
                 {listing.expires_at && (
-                  <p className="text-xs text-orange-500 mt-2">ينتهي {formatExpiry(listing.expires_at)}</p>
+                  <p className="text-xs text-orange-500 mt-2">{t('expires', { date: formatExpiry(listing.expires_at, locale) })}</p>
                 )}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

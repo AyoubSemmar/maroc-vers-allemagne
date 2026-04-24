@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import AnschreibenClient from './AnschreibenClient'
+import type { AppLocale } from '@/i18n/routing'
 import './anschreiben.css'
 
-export const metadata: Metadata = {
-  title: 'مولّد خطاب التحفيز — مغرب نحو ألمانيا',
-  description: 'اكتب خطاب تحفيز احترافي بالألمانية لطلب Ausbildung بمساعدة الذكاء الاصطناعي — مجاني وسريع.',
+export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'anschreiben' })
+  return { title: t('metaTitle'), description: t('metaDesc') }
 }
 
 export default function AnschreibenPage() {

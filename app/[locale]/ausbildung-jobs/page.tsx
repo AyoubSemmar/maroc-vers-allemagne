@@ -1,15 +1,21 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { createClient } from '@supabase/supabase-js'
 import AusbildungJobsClient from './AusbildungJobsClient'
 import { Job } from '@/components/jobs/JobCard'
-
-export const metadata: Metadata = {
-  title: 'Ausbildung Jobs — فرص التدريب المهني | دليلك نحو ألمانيا',
-  description: 'عروض Ausbildung في ألمانيا محدّثة يومياً من Bundesagentur für Arbeit، مصنّفة حسب القطاع.',
-}
+import type { AppLocale } from '@/i18n/routing'
 
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'ausbJobs' })
+  return {
+    title: t('metaTitle'),
+    description: t('metaDesc'),
+  }
+}
 
 async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL

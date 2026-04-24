@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Job } from './JobCard'
 
 type Props = {
@@ -9,6 +10,7 @@ type Props = {
 }
 
 export default function ApplyModal({ job, onClose }: Props) {
+  const t = useTranslations('ausbJobs.modal')
   const [toast, setToast] = useState('')
 
   // ── Lock body scroll while open ─────────────────────────
@@ -27,9 +29,9 @@ export default function ApplyModal({ job, onClose }: Props) {
     if (!job.contact_email) return
     try {
       await navigator.clipboard.writeText(job.contact_email)
-      showToast('✅ تم نسخ الإيميل')
+      showToast(t('copied'))
     } catch {
-      showToast('❌ تعذر النسخ')
+      showToast(t('copyFail'))
     }
   }
 
@@ -58,23 +60,21 @@ export default function ApplyModal({ job, onClose }: Props) {
 
         <div className="aj-modal-body">
           <div className="aj-section">
-            <h3 className="aj-section-title">📬 طريقة التقديم</h3>
+            <h3 className="aj-section-title">{t('howTo')}</h3>
 
             {!hasAny && (
-              <div className="aj-attach-empty">
-                لم يُوفّر صاحب العمل إيميل أو رابط تقديم. يمكنك البحث عن الشركة مباشرة.
-              </div>
+              <div className="aj-attach-empty">{t('noContact')}</div>
             )}
 
             {hasEmail && (
               <div className="aj-contact-block">
-                <div className="aj-contact-label">📧 Email للتقديم</div>
+                <div className="aj-contact-label">{t('emailLabel')}</div>
                 <div className="aj-contact-row">
                   <a href={`mailto:${job.contact_email}`} className="aj-contact-value" dir="ltr">
                     {job.contact_email}
                   </a>
                   <button type="button" className="aj-btn-ghost aj-btn-sm" onClick={copyEmail}>
-                    📋 نسخ
+                    {t('copy')}
                   </button>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function ApplyModal({ job, onClose }: Props) {
 
             {hasUrl && (
               <div className="aj-contact-block">
-                <div className="aj-contact-label">🌐 رابط التقديم</div>
+                <div className="aj-contact-label">{t('urlLabel')}</div>
                 <a
                   href={job.apply_url!}
                   target="_blank"
@@ -91,7 +91,7 @@ export default function ApplyModal({ job, onClose }: Props) {
                 >
                   <span className="aj-offer-link-icon">🔗</span>
                   <span className="aj-offer-link-text">
-                    <span className="aj-offer-link-title">فتح صفحة التقديم</span>
+                    <span className="aj-offer-link-title">{t('openApply')}</span>
                     <span className="aj-offer-link-sub">{job.apply_url}</span>
                   </span>
                 </a>
@@ -100,8 +100,7 @@ export default function ApplyModal({ job, onClose }: Props) {
           </div>
 
           <p className="aj-email-hint" style={{ marginTop: 12 }}>
-            💡 نصيحة: جهّز سيرتك الذاتية ورسالة الدوافع بالألمانية قبل التواصل مع صاحب العمل.
-            يمكنك استخدام <a href="/cv-builder" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>باني السيرة الذاتية</a> المجاني.
+            {t('tipPrefix')} <a href="/cv-builder" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>{t('tipLink')}</a> {t('tipSuffix')}
           </p>
         </div>
 

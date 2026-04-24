@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useTranslations } from 'next-intl'
 import AudioButton from './AudioButton'
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export default function SpeakingExercise({ target, hint, onResult }: Props) {
+  const t = useTranslations('learnGerman.speaking')
   const [state, setState] = useState<'idle' | 'listening' | 'success' | 'retry' | 'unsupported'>('idle')
   const [transcript, setTranscript] = useState('')
   const recogRef = useRef<any>(null)
@@ -66,7 +68,6 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Target sentence */}
       <div className="bg-blue-50 border border-blue-100 rounded-xl p-4 flex items-center justify-between gap-3" dir="ltr">
         <p className="font-semibold text-blue-900 text-base">{target}</p>
         <AudioButton text={target} size="md" />
@@ -76,7 +77,6 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
         <p className="text-xs text-gray-400 text-right">💡 {hint}</p>
       )}
 
-      {/* Controls */}
       <div className="flex flex-col items-center gap-3">
         {state === 'idle' && (
           <button
@@ -84,7 +84,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
             className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-all shadow-md"
           >
             <MicIcon className="w-5 h-5" />
-            اضغط وتكلم بالألمانية
+            {t('press')}
           </button>
         )}
 
@@ -94,36 +94,36 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
             className="flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full font-medium hover:bg-red-600 transition-all shadow-md animate-pulse"
           >
             <MicIcon className="w-5 h-5" />
-            جاري الاستماع... اضغط للإيقاف
+            {t('listening')}
           </button>
         )}
 
         {state === 'success' && (
           <div className="text-center">
             <div className="text-4xl mb-2">🎉</div>
-            <p className="text-green-700 font-semibold">ممتاز! النطق صحيح</p>
+            <p className="text-green-700 font-semibold">{t('success')}</p>
             {transcript && <p className="text-xs text-gray-400 mt-1 dir-ltr">{transcript}</p>}
-            <button onClick={reset} className="mt-3 text-sm text-blue-600 hover:underline">حاول مجدداً</button>
+            <button onClick={reset} className="mt-3 text-sm text-blue-600 hover:underline">{t('tryAgain')}</button>
           </div>
         )}
 
         {state === 'retry' && (
           <div className="text-center">
             <div className="text-3xl mb-2">🎤</div>
-            <p className="text-orange-600 font-medium">حاول مرة أخرى</p>
+            <p className="text-orange-600 font-medium">{t('retry')}</p>
             {transcript && (
-              <p className="text-xs text-gray-500 mt-1">سمعت: <span dir="ltr" className="font-medium">{transcript}</span></p>
+              <p className="text-xs text-gray-500 mt-1">{t('heard')}<span dir="ltr" className="font-medium">{transcript}</span></p>
             )}
             <button onClick={reset} className="mt-3 flex items-center gap-2 mx-auto bg-orange-500 text-white px-5 py-2 rounded-full text-sm hover:bg-orange-600">
               <MicIcon className="w-4 h-4" />
-              إعادة المحاولة
+              {t('retryBtn')}
             </button>
           </div>
         )}
 
         {state === 'unsupported' && (
           <p className="text-sm text-gray-500 text-center bg-gray-100 rounded-xl px-4 py-3">
-            ⚠️ متصفحك لا يدعم التعرف على الكلام. جرب Chrome أو Edge.
+            {t('unsupported')}
           </p>
         )}
       </div>

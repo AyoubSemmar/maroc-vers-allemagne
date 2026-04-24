@@ -1,0 +1,4401 @@
+{
+  "lessons": {
+    "b1-01": {
+      "id": "b1-01",
+      "title": "Konjunktiv II — Le conditionnel et le souhait",
+      "order": 1,
+      "grammar": {
+        "title": "Konjunktiv II: würde, wäre, hätte",
+        "content": "**Konjunktiv II** s'utilise pour exprimer :\n- Le souhait (si j'étais...)\n- La suggestion polie (pourrais-je...)\n- La condition irréelle (si je faisais...)\n\n**La règle d'or :**\n- La plupart des verbes : **würde + Infinitiv**\n- Les verbes auxiliaires et courants prennent une forme spéciale : **wäre** (sein), **hätte** (haben), **könnte** (können), **müsste**, **würde**...\n\n⚠️ Après **wenn**, le verbe se place en **fin de phrase**, et dans la proposition principale il vient en premier.",
+        "tables": [
+          {
+            "title": "Formes courantes du Konjunktiv II",
+            "theme": "conjugation",
+            "headers": [
+              "Pronom",
+              "sein → wäre",
+              "haben → hätte",
+              "werden → würde"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "hätte",
+                  "würde"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "hättest",
+                  "würdest"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "wäre",
+                  "hätte",
+                  "würde"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "hätten",
+                  "würden"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "hättet",
+                  "würdet"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "wären",
+                  "hätten",
+                  "würden"
+                ]
+              }
+            ],
+            "note": "Remarque l'Umlaut (ä, ö, ü), signe du Konjunktiv II."
+          },
+          {
+            "title": "Les verbes auxiliaires au Konjunktiv II",
+            "theme": "conjugation",
+            "headers": [
+              "Verbe",
+              "Forme",
+              "Sens"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "können",
+                  "könnte",
+                  "pourrait"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "müssen",
+                  "müsste",
+                  "devrait"
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "dürfte",
+                  "serait autorisé à"
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "sollte",
+                  "devrait"
+                ]
+              },
+              {
+                "cells": [
+                  "mögen",
+                  "möchte",
+                  "aimerait"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "würde + Infinitiv",
+            "example": "Ich würde gerne kommen.",
+            "translation": "J'aimerais venir."
+          },
+          {
+            "rule": "wenn + fin de phrase",
+            "example": "Wenn ich Zeit hätte, würde ich reisen.",
+            "translation": "Si j'avais du temps, je voyagerais."
+          },
+          {
+            "rule": "Höfliche Bitten",
+            "example": "Könnten Sie mir helfen?",
+            "translation": "Pourriez-vous m'aider ?"
+          }
+        ],
+        "examples": [
+          "Ich hätte gern einen Kaffee. — J'aimerais un café.",
+          "Wenn ich reich wäre, würde ich ein Haus kaufen. — Si j'étais riche, j'achèterais une maison.",
+          "Könntest du mir helfen? — Pourrais-tu m'aider ?",
+          "An deiner Stelle würde ich das nicht machen. — À ta place, je ne ferais pas ça.",
+          "Wir könnten ins Kino gehen. — On pourrait aller au cinéma.",
+          "Es wäre schön, wenn du kommst. — Ce serait bien si tu venais.",
+          "Ich würde lieber bleiben. — Je préférerais rester.",
+          "Hättest du Lust auf Pizza? — Aurais-tu envie d'une pizza ?"
+        ],
+        "tip": "Utilise könnte et würde pour demander quelque chose poliment — les Allemands apprécient le langage courtois."
+      },
+      "vocabulary": [
+        {
+          "german": "der Wunsch",
+          "arabic": "Le souhait",
+          "plural": "die Wünsche",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Möglichkeit",
+          "arabic": "La possibilité",
+          "plural": "die Möglichkeiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "La condition",
+          "plural": "die Bedingungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Vorschlag",
+          "arabic": "La proposition",
+          "plural": "die Vorschläge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Bitte",
+          "arabic": "La demande",
+          "plural": "die Bitten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "Peut-être",
+          "type": "adverb"
+        },
+        {
+          "german": "möglich",
+          "arabic": "Possible",
+          "type": "adjective"
+        },
+        {
+          "german": "unmöglich",
+          "arabic": "Impossible",
+          "type": "adjective"
+        },
+        {
+          "german": "höflich",
+          "arabic": "Poli",
+          "type": "adjective"
+        },
+        {
+          "german": "träumen",
+          "arabic": "Rêver",
+          "example": "Ich träume von Italien.",
+          "type": "verb"
+        },
+        {
+          "german": "wünschen",
+          "arabic": "Souhaiter",
+          "type": "verb"
+        },
+        {
+          "german": "vorschlagen",
+          "arabic": "Proposer",
+          "type": "verb"
+        },
+        {
+          "german": "raten",
+          "arabic": "Conseiller",
+          "type": "verb"
+        },
+        {
+          "german": "an deiner Stelle",
+          "arabic": "À ta place",
+          "type": "phrase"
+        },
+        {
+          "german": "hoffentlich",
+          "arabic": "Espérons que",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "Certainement",
+          "type": "adverb"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "Probablement",
+          "type": "adverb"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "L'avenir",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "La décision",
+          "plural": "die Entscheidungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "lieber",
+          "arabic": "Préférer",
+          "type": "adverb"
+        },
+        {
+          "german": "gern hätte",
+          "arabic": "Aimerait avoir",
+          "type": "phrase"
+        },
+        {
+          "german": "es wäre schön",
+          "arabic": "Ce serait bien",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-01-q1",
+            "type": "multiple-choice",
+            "question": "Si j'étais riche (Konjunktiv II) :",
+            "options": [
+              "Wenn ich reich bin",
+              "Wenn ich reich wäre",
+              "Wenn ich reich war",
+              "Wenn ich reich sein"
+            ],
+            "answer": "Wenn ich reich wäre",
+            "hint": "sein → wäre"
+          },
+          {
+            "id": "b1-01-q2",
+            "type": "multiple-choice",
+            "question": "Demande polie pour un café :",
+            "options": [
+              "Ich will Kaffee",
+              "Ich hätte gern Kaffee",
+              "Ich habe Kaffee",
+              "Gib mir Kaffee"
+            ],
+            "answer": "Ich hätte gern Kaffee"
+          },
+          {
+            "id": "b1-01-q3",
+            "type": "fill-blank",
+            "question": "Ich ___ gern mitkommen. (würde)",
+            "answer": "würde"
+          },
+          {
+            "id": "b1-01-q4",
+            "type": "fill-blank",
+            "question": "___ du mir helfen? (poli - könntest)",
+            "answer": "Könntest"
+          },
+          {
+            "id": "b1-01-q5",
+            "type": "drag-drop",
+            "question": "Ordonne : [Zeit / hätte / Ich / gern / mehr]",
+            "words": [
+              "Ich",
+              "hätte",
+              "gern",
+              "mehr",
+              "Zeit"
+            ],
+            "answer": "Ich hätte gern mehr Zeit"
+          },
+          {
+            "id": "b1-01-q6",
+            "type": "drag-drop",
+            "question": "Ordonne la phrase conditionnelle : [würde / Wenn / reisen / hätte / ich / Geld / ich / , ]",
+            "words": [
+              "Wenn",
+              "ich",
+              "Geld",
+              "hätte",
+              ",",
+              "würde",
+              "ich",
+              "reisen"
+            ],
+            "answer": "Wenn ich Geld hätte , würde ich reisen"
+          },
+          {
+            "id": "b1-01-q7",
+            "type": "matching",
+            "question": "Associe le verbe et sa forme au Konjunktiv II :",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "wäre"
+              },
+              {
+                "left": "haben",
+                "right": "hätte"
+              },
+              {
+                "left": "können",
+                "right": "könnte"
+              },
+              {
+                "left": "müssen",
+                "right": "müsste"
+              }
+            ],
+            "answer": "sein=wäre; haben=hätte; können=könnte; müssen=müsste"
+          },
+          {
+            "id": "b1-01-q8",
+            "type": "multiple-choice",
+            "question": "\"An deiner Stelle ___ ich das nicht machen.\"",
+            "options": [
+              "würde",
+              "habe",
+              "bin",
+              "mache"
+            ],
+            "answer": "würde"
+          },
+          {
+            "id": "b1-01-q9",
+            "type": "speaking",
+            "question": "Dis : \"J'aimerais aller en Allemagne.\"",
+            "answer": "Ich würde gern nach Deutschland gehen",
+            "hint": "Ich würde gern..."
+          },
+          {
+            "id": "b1-01-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis la bonne réponse :",
+            "audioPrompt": "Wenn ich Zeit hätte, würde ich ins Kino gehen.",
+            "options": [
+              "J'irai au cinéma aujourd'hui",
+              "Si j'avais du temps, j'irais au cinéma",
+              "Je suis allé au cinéma",
+              "Je n'irai pas au cinéma"
+            ],
+            "answer": "Si j'avais du temps, j'irais au cinéma"
+          }
+        ]
+      }
+    },
+    "b1-02": {
+      "id": "b1-02",
+      "title": "Passiv — Le passif",
+      "order": 2,
+      "grammar": {
+        "title": "Passiv avec werden",
+        "content": "**Passiv** est utilisé lorsque le sujet de l'action n'est pas important ou n'est pas connu.\n\n**Formation :**\n- **Passiv Präsens:** werden + Partizip II\n  Exemple : Der Brief wird geschrieben. (La lettre est écrite)\n- **Passiv Präteritum:** wurde + Partizip II\n  Exemple : Das Haus wurde gebaut. (La maison a été construite)\n- **Passiv Perfekt:** ist + Partizip II + worden\n  Exemple : Das Buch ist gelesen worden.\n\n**Par qui ?** On utilise **von + Dativ** pour la personne ou **durch + Akkusativ** pour le moyen.\n\n⚠️ Au Passiv, le complément d'objet de la phrase active devient sujet au passif.",
+        "tables": [
+          {
+            "title": "werden au Präsens et Präteritum",
+            "theme": "conjugation",
+            "headers": [
+              "Pronom",
+              "Präsens (werden)",
+              "Präteritum (wurde)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "werde",
+                  "wurde"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wirst",
+                  "wurdest"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "wird",
+                  "wurde"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "werden",
+                  "wurden"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "werdet",
+                  "wurdet"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "werden",
+                  "wurden"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Aktiv ↔ Passiv",
+            "theme": "default",
+            "headers": [
+              "Forme",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Aktiv",
+                  "Der Mann baut das Haus."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Passiv Präsens",
+                  "Das Haus wird (von dem Mann) gebaut."
+                ]
+              },
+              {
+                "cells": [
+                  "Passiv Präteritum",
+                  "Das Haus wurde gebaut."
+                ]
+              },
+              {
+                "cells": [
+                  "Passiv Perfekt",
+                  "Das Haus ist gebaut worden."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Passiv Präsens: werden + PII",
+            "example": "Der Kuchen wird gebacken.",
+            "translation": "Le gâteau est cuit."
+          },
+          {
+            "rule": "von + Dativ (la personne)",
+            "example": "Das Buch wird von dem Autor geschrieben.",
+            "translation": "Le livre est écrit par l'auteur."
+          },
+          {
+            "rule": "durch + Akkusativ (le moyen)",
+            "example": "Die Stadt wurde durch ein Feuer zerstört.",
+            "translation": "La ville a été détruite par un incendie."
+          }
+        ],
+        "examples": [
+          "Die Tür wird geöffnet. — La porte est ouverte.",
+          "Das Auto wurde gestohlen. — La voiture a été volée.",
+          "Hier wird Deutsch gesprochen. — Ici on parle allemand.",
+          "Der Brief wurde gestern geschickt. — La lettre a été envoyée hier.",
+          "Das Essen wird von meiner Mutter gekocht. — Le repas est cuisiné par ma mère.",
+          "Das Problem ist gelöst worden. — Le problème a été résolu.",
+          "Die Fenster werden geputzt. — Les fenêtres sont nettoyées.",
+          "Das Paket wurde geliefert. — Le colis a été livré."
+        ],
+        "tip": "En allemand formel (journaux, règlements, instructions), le Passiv est très utilisé — apprenez-le bien !"
+      },
+      "vocabulary": [
+        {
+          "german": "bauen",
+          "arabic": "construire",
+          "type": "verb"
+        },
+        {
+          "german": "zerstören",
+          "arabic": "détruire",
+          "type": "verb"
+        },
+        {
+          "german": "öffnen",
+          "arabic": "ouvrir",
+          "type": "verb"
+        },
+        {
+          "german": "schließen",
+          "arabic": "fermer",
+          "type": "verb"
+        },
+        {
+          "german": "liefern",
+          "arabic": "livrer",
+          "type": "verb"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "réparer",
+          "type": "verb"
+        },
+        {
+          "german": "stehlen",
+          "arabic": "voler",
+          "type": "verb"
+        },
+        {
+          "german": "veröffentlichen",
+          "arabic": "publier",
+          "type": "verb"
+        },
+        {
+          "german": "produzieren",
+          "arabic": "produire",
+          "type": "verb"
+        },
+        {
+          "german": "der Prozess",
+          "arabic": "le processus",
+          "plural": "die Prozesse",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Produktion",
+          "arabic": "la production",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Reparatur",
+          "arabic": "la réparation",
+          "plural": "die Reparaturen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Autor",
+          "arabic": "l'auteur",
+          "plural": "die Autoren",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Paket",
+          "arabic": "le colis",
+          "plural": "die Pakete",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Regel",
+          "arabic": "la règle",
+          "plural": "die Regeln",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gesetz",
+          "arabic": "la loi",
+          "plural": "die Gesetze",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "la décision",
+          "plural": "die Entscheidungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Nachricht",
+          "arabic": "la nouvelle",
+          "plural": "die Nachrichten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "durch",
+          "arabic": "par, au moyen de",
+          "type": "preposition"
+        },
+        {
+          "german": "von",
+          "arabic": "par, de",
+          "type": "preposition"
+        },
+        {
+          "german": "worden",
+          "arabic": "devenu (au Passiv Perfekt)",
+          "type": "verb"
+        },
+        {
+          "german": "bekannt",
+          "arabic": "connu",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-02-q1",
+            "type": "multiple-choice",
+            "question": "Les maisons sont construites :",
+            "options": [
+              "Die Häuser bauen",
+              "Die Häuser werden gebaut",
+              "Die Häuser haben gebaut",
+              "Die Häuser sind bauen"
+            ],
+            "answer": "Die Häuser werden gebaut"
+          },
+          {
+            "id": "b1-02-q2",
+            "type": "multiple-choice",
+            "question": "La voiture a été volée (Präteritum Passiv) :",
+            "options": [
+              "Das Auto wird gestohlen",
+              "Das Auto wurde gestohlen",
+              "Das Auto hat gestohlen",
+              "Das Auto stahl"
+            ],
+            "answer": "Das Auto wurde gestohlen"
+          },
+          {
+            "id": "b1-02-q3",
+            "type": "fill-blank",
+            "question": "Hier ___ Deutsch gesprochen. (Passiv Präsens)",
+            "answer": "wird"
+          },
+          {
+            "id": "b1-02-q4",
+            "type": "fill-blank",
+            "question": "Der Brief ___ gestern geschrieben. (Präteritum Passiv - wurde)",
+            "answer": "wurde"
+          },
+          {
+            "id": "b1-02-q5",
+            "type": "drag-drop",
+            "question": "Ordonne : [wird / Der Kuchen / gebacken]",
+            "words": [
+              "Der",
+              "Kuchen",
+              "wird",
+              "gebacken"
+            ],
+            "answer": "Der Kuchen wird gebacken"
+          },
+          {
+            "id": "b1-02-q6",
+            "type": "drag-drop",
+            "question": "Ordonne : [Mutter / Das Essen / von / der / wird / gekocht]",
+            "words": [
+              "Das",
+              "Essen",
+              "wird",
+              "von",
+              "der",
+              "Mutter",
+              "gekocht"
+            ],
+            "answer": "Das Essen wird von der Mutter gekocht"
+          },
+          {
+            "id": "b1-02-q7",
+            "type": "matching",
+            "question": "Associe la phrase à l'Aktiv avec son Passiv :",
+            "pairs": [
+              {
+                "left": "Er schreibt den Brief",
+                "right": "Der Brief wird geschrieben"
+              },
+              {
+                "left": "Sie öffnete die Tür",
+                "right": "Die Tür wurde geöffnet"
+              },
+              {
+                "left": "Wir bauen das Haus",
+                "right": "Das Haus wird gebaut"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-02-q8",
+            "type": "multiple-choice",
+            "question": "Quelle préposition est utilisée pour l'agent (la personne) ?",
+            "options": [
+              "durch",
+              "von",
+              "mit",
+              "für"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b1-02-q9",
+            "type": "speaking",
+            "question": "Dis : \"Les fenêtres sont ouvertes.\"",
+            "answer": "Die Fenster werden geöffnet",
+            "hint": "werden + Partizip II"
+          },
+          {
+            "id": "b1-02-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis :",
+            "audioPrompt": "Das Paket wurde gestern geliefert.",
+            "options": [
+              "Le colis est livré",
+              "Le colis a été livré hier",
+              "Le colis sera livré demain",
+              "Le colis a été perdu"
+            ],
+            "answer": "Le colis a été livré hier"
+          }
+        ]
+      }
+    },
+    "b1-03": {
+      "id": "b1-03",
+      "title": "Genitiv — Le cas possessif",
+      "order": 3,
+      "grammar": {
+        "title": "Genitiv: das Auto des Mannes",
+        "content": "**Genitiv** est le cas de la possession — il indique qui possède quoi.\n\n**La règle :**\n- Masculin/Neutre : **des** + nom + **-s/-es**\n- Féminin/Pluriel : **der**\n\n**Dans la langue courante**, le Genitiv est souvent remplacé par **von + Dativ** :\n- das Auto **des Mannes** (formel) = das Auto **von dem Mann** (courant)\n\n**Prépositions + Genitiv :**\n- **wegen** (à cause de), **trotz** (malgré), **während** (pendant), **statt** (au lieu de), **außerhalb** (en dehors de), **innerhalb** (à l'intérieur de)\n\n⚠️ Les noms masculins et neutres au singulier prennent **-s** ou **-es** au Genitiv.",
+        "tables": [
+          {
+            "title": "Les articles définis aux quatre cas",
+            "theme": "cases",
+            "headers": [
+              "Kasus",
+              "der (m)",
+              "die (f)",
+              "das (n)",
+              "die (pl)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ",
+                  "der",
+                  "die",
+                  "das",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "den",
+                  "die",
+                  "das",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ",
+                  "dem",
+                  "der",
+                  "dem",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv",
+                  "des -(e)s",
+                  "der",
+                  "des -(e)s",
+                  "der"
+                ],
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "title": "Les articles indéfinis et possessifs au Genitiv",
+            "theme": "cases",
+            "headers": [
+              "Genre",
+              "ein/kein",
+              "mein",
+              "Le nom se termine par"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculin",
+                  "eines / keines",
+                  "meines",
+                  "-s / -es"
+                ]
+              },
+              {
+                "cells": [
+                  "Féminin",
+                  "einer / keiner",
+                  "meiner",
+                  "—"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutre",
+                  "eines / keines",
+                  "meines",
+                  "-s / -es"
+                ]
+              },
+              {
+                "cells": [
+                  "Pluriel",
+                  "— / keiner",
+                  "meiner",
+                  "—"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Genitiv pour la possession",
+            "example": "das Haus meines Vaters",
+            "translation": "la maison de mon père"
+          },
+          {
+            "rule": "wegen + Genitiv",
+            "example": "wegen des Regens",
+            "translation": "à cause de la pluie"
+          },
+          {
+            "rule": "von + Dativ (alternative courante)",
+            "example": "das Auto von meinem Bruder",
+            "translation": "la voiture de mon frère"
+          }
+        ],
+        "examples": [
+          "Das Buch des Lehrers ist interessant. — Le livre du professeur est intéressant.",
+          "Die Farbe der Tür ist blau. — La couleur de la porte est bleue.",
+          "Trotz des Regens gehen wir spazieren. — Malgré la pluie, nous nous promenons.",
+          "Während der Ferien reisen wir. — Pendant les vacances, nous voyageons.",
+          "Das Ende des Films war traurig. — La fin du film était triste.",
+          "Wegen des Wetters bleiben wir zu Hause. — À cause du temps, nous restons à la maison.",
+          "Die Tasche meiner Schwester ist neu. — Le sac de ma sœur est neuf.",
+          "Außerhalb der Stadt gibt es Wälder. — En dehors de la ville, il y a des forêts."
+        ],
+        "tip": "Dans la conversation quotidienne, utilisez \"von + Dativ\" au lieu du Genitiv — c'est plus facile et plus courant !"
+      },
+      "vocabulary": [
+        {
+          "german": "wegen",
+          "arabic": "à cause de",
+          "type": "preposition"
+        },
+        {
+          "german": "trotz",
+          "arabic": "malgré",
+          "type": "preposition"
+        },
+        {
+          "german": "während",
+          "arabic": "pendant",
+          "type": "preposition"
+        },
+        {
+          "german": "statt",
+          "arabic": "au lieu de",
+          "type": "preposition"
+        },
+        {
+          "german": "außerhalb",
+          "arabic": "en dehors de",
+          "type": "preposition"
+        },
+        {
+          "german": "innerhalb",
+          "arabic": "à l'intérieur de",
+          "type": "preposition"
+        },
+        {
+          "german": "der Besitzer",
+          "arabic": "le propriétaire",
+          "plural": "die Besitzer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Eigentum",
+          "arabic": "la propriété",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Vertrag",
+          "arabic": "le contrat",
+          "plural": "die Verträge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Unterschrift",
+          "arabic": "la signature",
+          "plural": "die Unterschriften",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Ende",
+          "arabic": "la fin",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Anfang",
+          "arabic": "le début",
+          "plural": "die Anfänge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Mitte",
+          "arabic": "le milieu",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Grund",
+          "arabic": "la raison",
+          "plural": "die Gründe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "la signification / l'importance",
+          "plural": "die Bedeutungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Titel",
+          "arabic": "le titre",
+          "plural": "die Titel",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "la langue",
+          "plural": "die Sprachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Regen",
+          "arabic": "la pluie",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Wetter",
+          "arabic": "le temps (météo)",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "les vacances",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "gehören",
+          "arabic": "appartenir à",
+          "example": "Das gehört mir.",
+          "type": "verb"
+        },
+        {
+          "german": "besitzen",
+          "arabic": "posséder",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-03-q1",
+            "type": "multiple-choice",
+            "question": "La maison de mon père (Genitiv) :",
+            "options": [
+              "das Haus mein Vater",
+              "das Haus meines Vaters",
+              "das Haus von mein Vater",
+              "das Haus meinem Vater"
+            ],
+            "answer": "das Haus meines Vaters"
+          },
+          {
+            "id": "b1-03-q2",
+            "type": "multiple-choice",
+            "question": "À cause de la pluie :",
+            "options": [
+              "wegen dem Regen",
+              "wegen der Regen",
+              "wegen des Regens",
+              "wegen den Regen"
+            ],
+            "answer": "wegen des Regens"
+          },
+          {
+            "id": "b1-03-q3",
+            "type": "fill-blank",
+            "question": "Das Buch ___ Lehrers ist neu. (des)",
+            "answer": "des"
+          },
+          {
+            "id": "b1-03-q4",
+            "type": "fill-blank",
+            "question": "Die Tasche ___ Schwester. (meiner)",
+            "answer": "meiner"
+          },
+          {
+            "id": "b1-03-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [der / Die / ist / Farbe / Tür / blau]",
+            "words": [
+              "Die",
+              "Farbe",
+              "der",
+              "Tür",
+              "ist",
+              "blau"
+            ],
+            "answer": "Die Farbe der Tür ist blau"
+          },
+          {
+            "id": "b1-03-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [des / Trotz / Wetters / gehen / wir / spazieren]",
+            "words": [
+              "Trotz",
+              "des",
+              "Wetters",
+              "gehen",
+              "wir",
+              "spazieren"
+            ],
+            "answer": "Trotz des Wetters gehen wir spazieren"
+          },
+          {
+            "id": "b1-03-q7",
+            "type": "matching",
+            "question": "Associe la préposition à sa signification :",
+            "pairs": [
+              {
+                "left": "wegen",
+                "right": "à cause de"
+              },
+              {
+                "left": "trotz",
+                "right": "malgré"
+              },
+              {
+                "left": "während",
+                "right": "pendant"
+              },
+              {
+                "left": "statt",
+                "right": "au lieu de"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-03-q8",
+            "type": "multiple-choice",
+            "question": "Quelle est la forme informelle de \"das Auto des Mannes\" ?",
+            "options": [
+              "das Auto mit dem Mann",
+              "das Auto von dem Mann",
+              "das Auto für den Mann",
+              "das Auto bei dem Mann"
+            ],
+            "answer": "das Auto von dem Mann"
+          },
+          {
+            "id": "b1-03-q9",
+            "type": "speaking",
+            "question": "Dis : \"Le livre de ma sœur est neuf.\"",
+            "answer": "Das Buch meiner Schwester ist neu",
+            "hint": "meiner Schwester"
+          },
+          {
+            "id": "b1-03-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis :",
+            "audioPrompt": "Während der Ferien fahre ich nach Italien.",
+            "options": [
+              "Avant les vacances, je vais en Italie",
+              "Pendant les vacances, je vais en Italie",
+              "Après les vacances",
+              "Je ne vais pas en Italie"
+            ],
+            "answer": "Pendant les vacances, je vais en Italie"
+          }
+        ]
+      }
+    },
+    "b1-04": {
+      "id": "b1-04",
+      "title": "Relativsätze — Les propositions relatives",
+      "order": 4,
+      "grammar": {
+        "title": "der, die, das relatifs",
+        "content": "**Relativsatz** est une proposition qui décrit un nom précédent. Elle commence par un pronom relatif qui s'accorde avec le nom en :\n- **genre** (der/die/das)\n- **nombre** (singulier/pluriel)\n- **cas** (selon son rôle dans la proposition relative)\n\n**Le pronom relatif = l'article défini** avec des exceptions au Dativ Plural (denen) et au Genitiv.\n\n⚠️ **Le verbe dans la proposition relative se place toujours à la fin !**\n\n**Exemples :**\n- Der Mann, **der** dort steht, ist mein Vater. (L'homme qui se tient là-bas est mon père)\n- Die Frau, **die** ich kenne, kommt aus Berlin. (La femme que je connais vient de Berlin)\n- Das Kind, **dem** ich helfe, ist klein. (L'enfant que j'aide est petit)",
+        "tables": [
+          {
+            "title": "Les pronoms relatifs",
+            "theme": "cases",
+            "headers": [
+              "Kasus",
+              "der (m)",
+              "die (f)",
+              "das (n)",
+              "die (pl)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ",
+                  "der",
+                  "die",
+                  "das",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "den",
+                  "die",
+                  "das",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ",
+                  "dem",
+                  "der",
+                  "dem",
+                  "denen"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Genitiv",
+                  "dessen",
+                  "deren",
+                  "dessen",
+                  "deren"
+                ]
+              }
+            ],
+            "note": "Notez denen au Dativ Plural et dessen/deren au Genitiv — des exceptions importantes."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Le verbe à la fin de la Relativsatz",
+            "example": "Das Buch, das ich lese, ist spannend.",
+            "translation": "Le livre que je lis est passionnant."
+          },
+          {
+            "rule": "Accord en genre et en nombre",
+            "example": "Die Leute, die hier wohnen, sind nett.",
+            "translation": "Les gens qui habitent ici sont gentils."
+          },
+          {
+            "rule": "Préposition avant le pronom",
+            "example": "Der Stift, mit dem ich schreibe, ist blau.",
+            "translation": "Le stylo avec lequel j'écris est bleu."
+          }
+        ],
+        "examples": [
+          "Der Film, den ich gesehen habe, war gut. — Le film que j'ai vu était bien.",
+          "Die Stadt, in der ich wohne, ist groß. — La ville dans laquelle j'habite est grande.",
+          "Das Auto, das rot ist, gehört mir. — La voiture qui est rouge m'appartient.",
+          "Die Freunde, mit denen ich spiele, sind nett. — Les amis avec qui je joue sont gentils.",
+          "Der Lehrer, dessen Buch ich lese, ist bekannt. — Le professeur dont je lis le livre est connu.",
+          "Die Frau, deren Sohn Arzt ist, wohnt nebenan. — La femme dont le fils est médecin habite à côté.",
+          "Das Kind, dem ich helfe, ist krank. — L'enfant que j'aide est malade.",
+          "Die Schule, in die ich gehe, ist neu. — L'école dans laquelle je vais est nouvelle."
+        ],
+        "tip": "Pour déterminer le cas du pronom relatif : demandez-vous quel est son rôle dans la proposition relative (sujet ? complément d'objet ? après une préposition ?)."
+      },
+      "vocabulary": [
+        {
+          "german": "der Mann",
+          "arabic": "l'homme",
+          "plural": "die Männer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Frau",
+          "arabic": "la femme",
+          "plural": "die Frauen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Kind",
+          "arabic": "l'enfant",
+          "plural": "die Kinder",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "l'ami",
+          "plural": "die Freunde",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "l'école",
+          "plural": "die Schulen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "l'université",
+          "plural": "die Universitäten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Stadt",
+          "arabic": "la ville",
+          "plural": "die Städte",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Land",
+          "arabic": "le pays",
+          "plural": "die Länder",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Nachbar",
+          "arabic": "le voisin",
+          "plural": "die Nachbarn",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Kollege",
+          "arabic": "le collègue",
+          "plural": "die Kollegen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "kennen",
+          "arabic": "connaître",
+          "type": "verb"
+        },
+        {
+          "german": "treffen",
+          "arabic": "rencontrer",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "habiter",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "visiter",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "travailler",
+          "type": "verb"
+        },
+        {
+          "german": "spannend",
+          "arabic": "passionnant",
+          "type": "adjective"
+        },
+        {
+          "german": "interessant",
+          "arabic": "intéressant",
+          "type": "adjective"
+        },
+        {
+          "german": "langweilig",
+          "arabic": "ennuyeux",
+          "type": "adjective"
+        },
+        {
+          "german": "bekannt",
+          "arabic": "connu",
+          "type": "adjective"
+        },
+        {
+          "german": "berühmt",
+          "arabic": "célèbre",
+          "type": "adjective"
+        },
+        {
+          "german": "nebenan",
+          "arabic": "à côté",
+          "type": "adverb"
+        },
+        {
+          "german": "gegenüber",
+          "arabic": "en face",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-04-q1",
+            "type": "multiple-choice",
+            "question": "Der Mann, ___ dort steht, ist mein Vater.",
+            "options": [
+              "den",
+              "dem",
+              "der",
+              "das"
+            ],
+            "answer": "der"
+          },
+          {
+            "id": "b1-04-q2",
+            "type": "multiple-choice",
+            "question": "Die Frau, ___ ich kenne, kommt aus Berlin.",
+            "options": [
+              "den",
+              "die",
+              "der",
+              "das"
+            ],
+            "answer": "die"
+          },
+          {
+            "id": "b1-04-q3",
+            "type": "fill-blank",
+            "question": "Das Buch, ___ ich lese, ist gut. (das)",
+            "answer": "das"
+          },
+          {
+            "id": "b1-04-q4",
+            "type": "fill-blank",
+            "question": "Der Freund, ___ ich helfe, ist krank. (Dativ)",
+            "answer": "dem"
+          },
+          {
+            "id": "b1-04-q5",
+            "type": "drag-drop",
+            "question": "Ordonne : [, / Das / spannend / lese / das / Buch / ist / , / ich]",
+            "words": [
+              "Das",
+              "Buch",
+              ",",
+              "das",
+              "ich",
+              "lese",
+              ",",
+              "ist",
+              "spannend"
+            ],
+            "answer": "Das Buch , das ich lese , ist spannend"
+          },
+          {
+            "id": "b1-04-q6",
+            "type": "drag-drop",
+            "question": "Ordonne : [, / Die / wohne / Stadt / ich / ist / groß / in / der / ,]",
+            "words": [
+              "Die",
+              "Stadt",
+              ",",
+              "in",
+              "der",
+              "ich",
+              "wohne",
+              ",",
+              "ist",
+              "groß"
+            ],
+            "answer": "Die Stadt , in der ich wohne , ist groß"
+          },
+          {
+            "id": "b1-04-q7",
+            "type": "matching",
+            "question": "Associe le pronom relatif à son cas :",
+            "pairs": [
+              {
+                "left": "der (masc. Nom)",
+                "right": "celui qui fait"
+              },
+              {
+                "left": "den (masc. Akk)",
+                "right": "celui qui est affecté"
+              },
+              {
+                "left": "dem (masc. Dat)",
+                "right": "celui à qui on donne"
+              },
+              {
+                "left": "denen (plur. Dat)",
+                "right": "ceux à qui on donne"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-04-q8",
+            "type": "multiple-choice",
+            "question": "Die Leute, mit ___ ich spiele, sind nett.",
+            "options": [
+              "den",
+              "denen",
+              "der",
+              "die"
+            ],
+            "answer": "denen"
+          },
+          {
+            "id": "b1-04-q9",
+            "type": "speaking",
+            "question": "Dis : \"Le film que j'ai vu était bien.\"",
+            "answer": "Der Film, den ich gesehen habe, war gut",
+            "hint": "den = Akkusativ"
+          },
+          {
+            "id": "b1-04-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis la traduction :",
+            "audioPrompt": "Der Kollege, der neben mir arbeitet, ist sehr nett.",
+            "options": [
+              "Mon collègue qui travaille loin est ennuyeux",
+              "Le collègue qui travaille à côté de moi est très gentil",
+              "Les collègues sont gentils",
+              "Je travaille avec un collègue"
+            ],
+            "answer": "Le collègue qui travaille à côté de moi est très gentil"
+          }
+        ]
+      }
+    },
+    "b1-05": {
+      "id": "b1-05",
+      "title": "Konnektoren — Connecteurs avancés",
+      "order": 5,
+      "grammar": {
+        "title": "deshalb, trotzdem, nämlich, zwar...aber",
+        "content": "Les **Konnektoren** relient les phrases et montrent la relation entre elles. Il existe trois catégories :\n\n**1. Connecteurs de position 0 (Position 0)** — ne changent pas l'ordre de la phrase :\n- **und** (et), **aber** (mais), **oder** (ou), **denn** (car), **sondern** (mais plutôt)\n\n**2. Adverbes de liaison (Position 1)** — occupent la première position, le verbe vient après :\n- **deshalb / darum / deswegen** (c'est pourquoi)\n- **trotzdem** (malgré cela)\n- **außerdem** (en plus)\n- **dann / danach** (puis / après cela)\n\n**3. Conjonctions de subordination (Nebensatz)** — le verbe à la fin :\n- **weil** (parce que), **obwohl** (bien que), **damit** (afin que), **bevor** (avant que), **nachdem** (après que)\n\n⚠️ **zwar ... aber** = \"certes ... mais\"",
+        "tables": [
+          {
+            "title": "Différence entre denn et weil",
+            "theme": "default",
+            "headers": [
+              "Le connecteur",
+              "Son type",
+              "Position du verbe"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "denn",
+                  "Position 0",
+                  "normal (Position 2)"
+                ]
+              },
+              {
+                "cells": [
+                  "weil",
+                  "Subjunktion",
+                  "fin de phrase"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "deshalb",
+                  "Position 1",
+                  "Inversion (verbe après)"
+                ]
+              },
+              {
+                "cells": [
+                  "trotzdem",
+                  "Position 1",
+                  "Inversion"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Konnektoren selon le sens",
+            "theme": "default",
+            "headers": [
+              "Le sens",
+              "Konnektor"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "La cause",
+                  "weil, denn, da"
+                ]
+              },
+              {
+                "cells": [
+                  "La conséquence",
+                  "deshalb, deswegen, also"
+                ]
+              },
+              {
+                "cells": [
+                  "L'opposition",
+                  "aber, obwohl, trotzdem"
+                ]
+              },
+              {
+                "cells": [
+                  "Le but",
+                  "damit, um ... zu"
+                ]
+              },
+              {
+                "cells": [
+                  "Le temps",
+                  "wenn, als, bevor, nachdem"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "deshalb → Inversion",
+            "example": "Es regnet, deshalb bleibe ich zu Hause.",
+            "translation": "Il pleut, c'est pourquoi je reste à la maison."
+          },
+          {
+            "rule": "weil → le verbe à la fin",
+            "example": "Ich bleibe zu Hause, weil es regnet.",
+            "translation": "Je reste à la maison parce qu'il pleut."
+          },
+          {
+            "rule": "zwar ... aber",
+            "example": "Zwar ist es kalt, aber ich gehe spazieren.",
+            "translation": "Certes il fait froid mais je vais me promener."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, weil ich in Deutschland arbeiten will. — J'apprends l'allemand parce que je veux travailler en Allemagne.",
+          "Es regnet, trotzdem gehen wir spazieren. — Il pleut, malgré cela nous allons nous promener.",
+          "Ich bin müde, deshalb gehe ich ins Bett. — Je suis fatigué, c'est pourquoi je vais me coucher.",
+          "Zwar ist Berlin groß, aber München ist schöner. — Certes Berlin est grande mais Munich est plus belle.",
+          "Er lernt viel, damit er die Prüfung besteht. — Il étudie beaucoup afin de réussir l'examen.",
+          "Bevor ich esse, wasche ich mir die Hände. — Avant de manger je me lave les mains.",
+          "Nachdem er gegessen hatte, ging er schlafen. — Après avoir mangé il est allé dormir.",
+          "Sowohl Deutsch als auch Englisch sind wichtig. — L'allemand et l'anglais sont tous deux importants."
+        ],
+        "tip": "Rappelle-toi : après **weil** le verbe à la fin, après **deshalb** Inversion (le verbe directement après)."
+      },
+      "vocabulary": [
+        {
+          "german": "deshalb",
+          "arabic": "c'est pourquoi",
+          "type": "conjunction"
+        },
+        {
+          "german": "darum",
+          "arabic": "c'est pourquoi",
+          "type": "conjunction"
+        },
+        {
+          "german": "deswegen",
+          "arabic": "c'est pourquoi",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "malgré cela",
+          "type": "conjunction"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "en plus",
+          "type": "conjunction"
+        },
+        {
+          "german": "nämlich",
+          "arabic": "à savoir / c'est-à-dire",
+          "type": "conjunction"
+        },
+        {
+          "german": "zwar ... aber",
+          "arabic": "certes ... mais",
+          "type": "conjunction"
+        },
+        {
+          "german": "sowohl ... als auch",
+          "arabic": "aussi bien ... que",
+          "type": "conjunction"
+        },
+        {
+          "german": "entweder ... oder",
+          "arabic": "soit ... soit",
+          "type": "conjunction"
+        },
+        {
+          "german": "weder ... noch",
+          "arabic": "ni ... ni",
+          "type": "conjunction"
+        },
+        {
+          "german": "nicht nur ... sondern auch",
+          "arabic": "non seulement ... mais aussi",
+          "type": "conjunction"
+        },
+        {
+          "german": "da",
+          "arabic": "étant donné que",
+          "type": "conjunction"
+        },
+        {
+          "german": "falls",
+          "arabic": "au cas où",
+          "type": "conjunction"
+        },
+        {
+          "german": "solange",
+          "arabic": "tant que",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "dès que",
+          "type": "conjunction"
+        },
+        {
+          "german": "der Grund",
+          "arabic": "la raison",
+          "plural": "die Gründe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "la conséquence",
+          "plural": "die Folgen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zweck",
+          "arabic": "le but",
+          "plural": "die Zwecke",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Unterschied",
+          "arabic": "la différence",
+          "plural": "die Unterschiede",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "verbinden",
+          "arabic": "relier",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-05-q1",
+            "type": "multiple-choice",
+            "question": "Ich bin müde, ___ gehe ich ins Bett.",
+            "options": [
+              "weil",
+              "deshalb",
+              "obwohl",
+              "dass"
+            ],
+            "answer": "deshalb"
+          },
+          {
+            "id": "b1-05-q2",
+            "type": "multiple-choice",
+            "question": "Ich gehe nach Hause, ___ es spät ist.",
+            "options": [
+              "deshalb",
+              "trotzdem",
+              "weil",
+              "aber"
+            ],
+            "answer": "weil"
+          },
+          {
+            "id": "b1-05-q3",
+            "type": "fill-blank",
+            "question": "Es regnet, ___ gehen wir spazieren. (malgré cela)",
+            "answer": "trotzdem"
+          },
+          {
+            "id": "b1-05-q4",
+            "type": "fill-blank",
+            "question": "Ich lerne, ___ ich die Prüfung bestehe. (afin que - damit)",
+            "answer": "damit"
+          },
+          {
+            "id": "b1-05-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [, / zu / es / deshalb / spät / ist / Hause / Ich / gehe]",
+            "words": [
+              "Es",
+              "ist",
+              "spät",
+              ",",
+              "deshalb",
+              "gehe",
+              "ich",
+              "zu",
+              "Hause"
+            ],
+            "answer": "Es ist spät , deshalb gehe ich zu Hause"
+          },
+          {
+            "id": "b1-05-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre avec weil : [regnet / , / zu / Hause / Ich / weil / bleibe / es]",
+            "words": [
+              "Ich",
+              "bleibe",
+              "zu",
+              "Hause",
+              ",",
+              "weil",
+              "es",
+              "regnet"
+            ],
+            "answer": "Ich bleibe zu Hause , weil es regnet"
+          },
+          {
+            "id": "b1-05-q7",
+            "type": "matching",
+            "question": "Relie le connecteur à sa signification :",
+            "pairs": [
+              {
+                "left": "deshalb",
+                "right": "c'est pourquoi"
+              },
+              {
+                "left": "trotzdem",
+                "right": "malgré cela"
+              },
+              {
+                "left": "außerdem",
+                "right": "en plus"
+              },
+              {
+                "left": "damit",
+                "right": "afin que"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-05-q8",
+            "type": "multiple-choice",
+            "question": "\"zwar kalt, ___ schön\"",
+            "options": [
+              "und",
+              "aber",
+              "oder",
+              "denn"
+            ],
+            "answer": "aber"
+          },
+          {
+            "id": "b1-05-q9",
+            "type": "speaking",
+            "question": "Dis : \"J'apprends l'allemand afin de travailler en Allemagne.\"",
+            "answer": "Ich lerne Deutsch, damit ich in Deutschland arbeite",
+            "hint": "damit + le verbe à la fin"
+          },
+          {
+            "id": "b1-05-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis :",
+            "audioPrompt": "Obwohl es regnet, gehen wir in den Park.",
+            "options": [
+              "À cause de la pluie nous allons au parc",
+              "Bien qu'il pleuve nous allons au parc",
+              "Nous n'allons pas au parc",
+              "Nous irons au parc demain"
+            ],
+            "answer": "Bien qu'il pleuve nous allons au parc"
+          }
+        ]
+      }
+    },
+    "b1-06": {
+      "id": "b1-06",
+      "title": "Arbeit und Bewerbung — Travail et candidature",
+      "order": 6,
+      "grammar": {
+        "title": "Langage du travail et candidatures",
+        "content": "Au niveau B1, vous avez besoin d'un vocabulaire professionnel pour communiquer sur le marché du travail allemand.\n\n**Composants d'une candidature (Bewerbung) :**\n- **Anschreiben** — lettre de motivation\n- **Lebenslauf** — CV\n- **Zeugnisse** — certificats\n- **Referenzen** — références\n\n**Formules officielles dans Anschreiben :**\n- \"Sehr geehrte Damen und Herren,\" (Madame, Monsieur)\n- \"Mit freundlichen Grüßen\" (Cordialement)\n- \"Ich bewerbe mich um die Stelle als...\" (Je postule au poste de...)\n- \"Ich freue mich auf Ihre Rückmeldung.\" (J'attends votre réponse avec intérêt)\n\n**Règles grammaticales clés :** Konjunktiv II poli, proposition subordonnée avec dass.",
+        "tables": [
+          {
+            "title": "Étapes de la recherche d'emploi",
+            "theme": "default",
+            "headers": [
+              "Étape",
+              "En allemand"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Recherche",
+                  "die Stellensuche"
+                ]
+              },
+              {
+                "cells": [
+                  "Candidature",
+                  "die Bewerbung"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Entretien",
+                  "das Vorstellungsgespräch"
+                ]
+              },
+              {
+                "cells": [
+                  "Contrat",
+                  "der Arbeitsvertrag"
+                ]
+              },
+              {
+                "cells": [
+                  "Période d'essai",
+                  "die Probezeit"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Verbes importants dans le travail",
+            "theme": "conjugation",
+            "headers": [
+              "Verbe",
+              "Präsens (ich)",
+              "Perfekt"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sich bewerben",
+                  "ich bewerbe mich",
+                  "habe mich beworben"
+                ]
+              },
+              {
+                "cells": [
+                  "einstellen",
+                  "ich stelle ein",
+                  "habe eingestellt"
+                ]
+              },
+              {
+                "cells": [
+                  "kündigen",
+                  "ich kündige",
+                  "habe gekündigt"
+                ]
+              },
+              {
+                "cells": [
+                  "verdienen",
+                  "ich verdiene",
+                  "habe verdient"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "sich bewerben um + Akk",
+            "example": "Ich bewerbe mich um die Stelle.",
+            "translation": "Je postule au poste."
+          },
+          {
+            "rule": "arbeiten als + (sans article)",
+            "example": "Ich arbeite als Ingenieur.",
+            "translation": "Je travaille comme ingénieur."
+          },
+          {
+            "rule": "Konjunktiv II poli",
+            "example": "Ich würde mich freuen, wenn...",
+            "translation": "Je serais ravi(e) si..."
+          }
+        ],
+        "examples": [
+          "Ich bewerbe mich um die Stelle als Programmierer. — Je postule au poste de programmeur.",
+          "Mein Lebenslauf ist im Anhang. — Mon CV est en pièce jointe.",
+          "Ich habe drei Jahre Berufserfahrung. — J'ai trois ans d'expérience professionnelle.",
+          "Ich spreche fließend Deutsch und Englisch. — Je parle couramment allemand et anglais.",
+          "Ich suche eine Vollzeitstelle. — Je cherche un poste à temps plein.",
+          "Können Sie mir einen Termin für ein Vorstellungsgespräch geben? — Pouvez-vous me donner un rendez-vous pour un entretien ?",
+          "Ich habe gekündigt und suche eine neue Stelle. — J'ai démissionné et je cherche un nouveau poste.",
+          "Der Arbeitsvertrag ist unbefristet. — Le contrat de travail est à durée indéterminée."
+        ],
+        "tip": "Dans le Anschreiben, utilisez le Konjunktiv II (\"Ich würde gerne...\", \"Es wäre mir eine Ehre...\") pour montrer le respect."
+      },
+      "vocabulary": [
+        {
+          "german": "die Bewerbung",
+          "arabic": "la candidature",
+          "plural": "die Bewerbungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Lebenslauf",
+          "arabic": "le CV",
+          "plural": "die Lebensläufe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Anschreiben",
+          "arabic": "la lettre de motivation",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Stelle",
+          "arabic": "le poste",
+          "plural": "die Stellen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Arbeitgeber",
+          "arabic": "l'employeur",
+          "plural": "die Arbeitgeber",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Arbeitnehmer",
+          "arabic": "l'employé",
+          "plural": "die Arbeitnehmer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Chef",
+          "arabic": "le patron",
+          "plural": "die Chefs",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Kollegin",
+          "arabic": "la collègue",
+          "plural": "die Kolleginnen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gehalt",
+          "arabic": "le salaire",
+          "plural": "die Gehälter",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Lohn",
+          "arabic": "le salaire / la paie",
+          "plural": "die Löhne",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Probezeit",
+          "arabic": "la période d'essai",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Arbeitsvertrag",
+          "arabic": "le contrat de travail",
+          "plural": "die Arbeitsverträge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Vorstellungsgespräch",
+          "arabic": "l'entretien d'embauche",
+          "plural": "die Vorstellungsgespräche",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Erfahrung",
+          "arabic": "l'expérience",
+          "plural": "die Erfahrungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Qualifikation",
+          "arabic": "la qualification",
+          "plural": "die Qualifikationen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "sich bewerben",
+          "arabic": "postuler",
+          "type": "verb"
+        },
+        {
+          "german": "einstellen",
+          "arabic": "embaucher",
+          "type": "verb"
+        },
+        {
+          "german": "kündigen",
+          "arabic": "démissionner",
+          "type": "verb"
+        },
+        {
+          "german": "verdienen",
+          "arabic": "gagner",
+          "type": "verb"
+        },
+        {
+          "german": "unbefristet",
+          "arabic": "à durée indéterminée",
+          "type": "adjective"
+        },
+        {
+          "german": "befristet",
+          "arabic": "à durée déterminée",
+          "type": "adjective"
+        },
+        {
+          "german": "die Vollzeit",
+          "arabic": "temps plein",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Teilzeit",
+          "arabic": "temps partiel",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-06-q1",
+            "type": "multiple-choice",
+            "question": "Je postule à un poste :",
+            "options": [
+              "Ich arbeite",
+              "Ich bewerbe mich um die Stelle",
+              "Ich gehe zur Arbeit",
+              "Ich verdiene Geld"
+            ],
+            "answer": "Ich bewerbe mich um die Stelle"
+          },
+          {
+            "id": "b1-06-q2",
+            "type": "multiple-choice",
+            "question": "Le CV :",
+            "options": [
+              "das Anschreiben",
+              "der Lebenslauf",
+              "der Vertrag",
+              "das Zeugnis"
+            ],
+            "answer": "der Lebenslauf"
+          },
+          {
+            "id": "b1-06-q3",
+            "type": "fill-blank",
+            "question": "Ich arbeite ___ Ingenieur. (sans article)",
+            "answer": "als"
+          },
+          {
+            "id": "b1-06-q4",
+            "type": "fill-blank",
+            "question": "Mit freundlichen ___. (formule de clôture officielle)",
+            "answer": "Grüßen"
+          },
+          {
+            "id": "b1-06-q5",
+            "type": "drag-drop",
+            "question": "Mettez en ordre : [Ingenieur / Ich / bewerbe / als / mich / die Stelle / um]",
+            "words": [
+              "Ich",
+              "bewerbe",
+              "mich",
+              "um",
+              "die",
+              "Stelle",
+              "als",
+              "Ingenieur"
+            ],
+            "answer": "Ich bewerbe mich um die Stelle als Ingenieur"
+          },
+          {
+            "id": "b1-06-q6",
+            "type": "drag-drop",
+            "question": "Mettez en ordre la formule d'ouverture officielle : [Herren / Sehr / und / geehrte / Damen]",
+            "words": [
+              "Sehr",
+              "geehrte",
+              "Damen",
+              "und",
+              "Herren"
+            ],
+            "answer": "Sehr geehrte Damen und Herren"
+          },
+          {
+            "id": "b1-06-q7",
+            "type": "matching",
+            "question": "Reliez le mot à sa signification :",
+            "pairs": [
+              {
+                "left": "Bewerbung",
+                "right": "candidature"
+              },
+              {
+                "left": "Lebenslauf",
+                "right": "CV"
+              },
+              {
+                "left": "Probezeit",
+                "right": "période d'essai"
+              },
+              {
+                "left": "Gehalt",
+                "right": "salaire"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-06-q8",
+            "type": "multiple-choice",
+            "question": "Ich habe drei Jahre ___.",
+            "options": [
+              "Gehalt",
+              "Erfahrung",
+              "Chef",
+              "Probezeit"
+            ],
+            "answer": "Erfahrung"
+          },
+          {
+            "id": "b1-06-q9",
+            "type": "speaking",
+            "question": "Dites : \"Je cherche un poste à temps plein.\"",
+            "answer": "Ich suche eine Vollzeitstelle"
+          },
+          {
+            "id": "b1-06-q10",
+            "type": "multiple-choice",
+            "question": "Écoutez et choisissez :",
+            "audioPrompt": "Können Sie mir einen Termin für ein Vorstellungsgespräch geben?",
+            "options": [
+              "Pouvez-vous me donner un rendez-vous pour un entretien ?",
+              "Avez-vous un poste vacant ?",
+              "Quand commence le travail ?",
+              "Quel est le salaire ?"
+            ],
+            "answer": "Pouvez-vous me donner un rendez-vous pour un entretien ?"
+          }
+        ]
+      }
+    },
+    "b1-07": {
+      "id": "b1-07",
+      "title": "Indirekte Rede — Le discours indirect",
+      "order": 7,
+      "grammar": {
+        "title": "Rapporter un discours en allemand",
+        "content": "**Indirekte Rede** s'utilise pour rapporter ce que quelqu'un a dit sans citation directe.\n\n**Règles :**\n1. On utilise généralement **dass** ou sans dass avec Konjunktiv I ou II\n2. Dans la langue courante, on utilise **Konjunktiv II** ou **Präsens**\n3. Dans la presse et les contextes formels, on utilise **Konjunktiv I** (comme sei, habe, komme)\n\n**Exemples :**\n- Direkte Rede: Er sagt: \"Ich bin müde.\"\n- Indirekte Rede: Er sagt, dass er müde sei. / Er sagt, er sei müde.\n\n⚠️ Avec les questions : on utilise **ob** (questions oui/non) ou le mot interrogatif :\n- Er fragt, **ob** ich komme.\n- Er fragt, **wann** ich komme.",
+        "tables": [
+          {
+            "title": "Konjunktiv I des verbes auxiliaires",
+            "theme": "conjugation",
+            "headers": [
+              "Infinitiv",
+              "er/sie/es",
+              "Utilisation"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sein",
+                  "sei",
+                  "Er sagt, er sei krank."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "haben",
+                  "habe",
+                  "Sie sagt, sie habe Zeit."
+                ]
+              },
+              {
+                "cells": [
+                  "werden",
+                  "werde",
+                  "Er sagt, er werde kommen."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "könne",
+                  "Sie sagt, sie könne helfen."
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Transformation du discours direct",
+            "theme": "default",
+            "headers": [
+              "Direkte Rede",
+              "Indirekte Rede"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "\"Ich komme.\"",
+                  "Er sagt, er komme / er käme."
+                ]
+              },
+              {
+                "cells": [
+                  "\"Ich bin müde.\"",
+                  "Er sagt, er sei müde."
+                ]
+              },
+              {
+                "cells": [
+                  "\"Kommst du?\"",
+                  "Er fragt, ob ich komme."
+                ]
+              },
+              {
+                "cells": [
+                  "\"Wann kommst du?\"",
+                  "Er fragt, wann ich komme."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "dass + proposition subordonnée",
+            "example": "Er sagt, dass er müde ist.",
+            "translation": "Il dit qu'il est fatigué."
+          },
+          {
+            "rule": "ob pour les questions oui/non",
+            "example": "Sie fragt, ob du kommst.",
+            "translation": "Elle demande si tu viens."
+          },
+          {
+            "rule": "Mot interrogatif + fin de phrase",
+            "example": "Er fragt, wann du kommst.",
+            "translation": "Il demande quand tu viendras."
+          }
+        ],
+        "examples": [
+          "Er sagt, dass er krank ist. — Il dit qu'il est malade.",
+          "Sie meint, das Wetter sei schön. — Elle pense que le temps est beau.",
+          "Der Chef fragt, ob ich Zeit habe. — Le chef demande si j'ai du temps.",
+          "Ich weiß nicht, wo er wohnt. — Je ne sais pas où il habite.",
+          "Sie sagt, sie komme später. — Elle dit qu'elle viendra plus tard.",
+          "Er behauptet, er habe das Buch gelesen. — Il prétend avoir lu le livre.",
+          "Mein Freund erzählt, er sei in Berlin gewesen. — Mon ami raconte qu'il était à Berlin.",
+          "Sie fragte mich, warum ich spät komme. — Elle m'a demandé pourquoi j'arrive en retard."
+        ],
+        "tip": "Dans la conversation courante, utilise Konjunktiv II ou Präsens — Konjunktiv I est plus courant à l'écrit formel et dans les actualités."
+      },
+      "vocabulary": [
+        {
+          "german": "sagen",
+          "arabic": "dire",
+          "type": "verb"
+        },
+        {
+          "german": "erzählen",
+          "arabic": "raconter",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "prétendre / affirmer",
+          "type": "verb"
+        },
+        {
+          "german": "berichten",
+          "arabic": "rapporter / informer",
+          "type": "verb"
+        },
+        {
+          "german": "meinen",
+          "arabic": "penser / croire",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "répondre",
+          "type": "verb"
+        },
+        {
+          "german": "fragen",
+          "arabic": "demander",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "type": "verb"
+        },
+        {
+          "german": "denken",
+          "arabic": "penser",
+          "type": "verb"
+        },
+        {
+          "german": "glauben",
+          "arabic": "croire",
+          "type": "verb"
+        },
+        {
+          "german": "die Aussage",
+          "arabic": "la déclaration",
+          "plural": "die Aussagen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "la réponse",
+          "plural": "die Antworten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "la question",
+          "plural": "die Fragen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Behauptung",
+          "arabic": "l'affirmation / la prétention",
+          "plural": "die Behauptungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Nachricht",
+          "arabic": "la nouvelle / le message",
+          "plural": "die Nachrichten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Bericht",
+          "arabic": "le rapport",
+          "plural": "die Berichte",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Zitat",
+          "arabic": "la citation",
+          "plural": "die Zitate",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "laut",
+          "arabic": "selon",
+          "type": "preposition"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "soi-disant / prétendument",
+          "type": "adverb"
+        },
+        {
+          "german": "ehrlich",
+          "arabic": "honnête",
+          "type": "adjective"
+        },
+        {
+          "german": "unehrlich",
+          "arabic": "malhonnête",
+          "type": "adjective"
+        },
+        {
+          "german": "richtig",
+          "arabic": "correct / juste",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-07-q1",
+            "type": "multiple-choice",
+            "question": "Er sagt, ___ er krank ist.",
+            "options": [
+              "ob",
+              "dass",
+              "wenn",
+              "weil"
+            ],
+            "answer": "dass"
+          },
+          {
+            "id": "b1-07-q2",
+            "type": "multiple-choice",
+            "question": "Sie fragt, ___ ich komme. (question oui/non)",
+            "options": [
+              "dass",
+              "ob",
+              "wenn",
+              "weil"
+            ],
+            "answer": "ob"
+          },
+          {
+            "id": "b1-07-q3",
+            "type": "fill-blank",
+            "question": "Ich weiß nicht, ___ er wohnt. (où)",
+            "answer": "wo"
+          },
+          {
+            "id": "b1-07-q4",
+            "type": "fill-blank",
+            "question": "Er meint, das Wetter ___ schön. (Konjunktiv I de sein)",
+            "answer": "sei"
+          },
+          {
+            "id": "b1-07-q5",
+            "type": "drag-drop",
+            "question": "Mets en ordre : [, / sei / er / Er / sagt / krank]",
+            "words": [
+              "Er",
+              "sagt",
+              ",",
+              "er",
+              "sei",
+              "krank"
+            ],
+            "answer": "Er sagt , er sei krank"
+          },
+          {
+            "id": "b1-07-q6",
+            "type": "drag-drop",
+            "question": "Mets en ordre la question indirecte : [, / komme / ob / Sie / ich / fragt]",
+            "words": [
+              "Sie",
+              "fragt",
+              ",",
+              "ob",
+              "ich",
+              "komme"
+            ],
+            "answer": "Sie fragt , ob ich komme"
+          },
+          {
+            "id": "b1-07-q7",
+            "type": "matching",
+            "question": "Relie Infinitiv avec Konjunktiv I :",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "sei"
+              },
+              {
+                "left": "haben",
+                "right": "habe"
+              },
+              {
+                "left": "werden",
+                "right": "werde"
+              },
+              {
+                "left": "können",
+                "right": "könne"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-07-q8",
+            "type": "multiple-choice",
+            "question": "Direkte: \"Ich komme.\" → Indirekte:",
+            "options": [
+              "Er sagt, ich komme",
+              "Er sagt, er kommt",
+              "Er sagt, er komme",
+              "Er sagt, er kommen"
+            ],
+            "answer": "Er sagt, er komme"
+          },
+          {
+            "id": "b1-07-q9",
+            "type": "speaking",
+            "question": "Dis : \"Il dit qu'il est fatigué.\" (Konjunktiv I)",
+            "answer": "Er sagt, er sei müde",
+            "hint": "sei = Konjunktiv I de sein"
+          },
+          {
+            "id": "b1-07-q10",
+            "type": "multiple-choice",
+            "question": "Écoute :",
+            "audioPrompt": "Sie sagt, dass sie morgen kommt.",
+            "options": [
+              "Elle vient maintenant",
+              "Elle dit qu'elle viendra demain",
+              "Elle ne viendra pas",
+              "Elle est venue hier"
+            ],
+            "answer": "Elle dit qu'elle viendra demain"
+          }
+        ]
+      }
+    },
+    "b1-08": {
+      "id": "b1-08",
+      "title": "Plusquamperfekt — Le plus-que-parfait",
+      "order": 8,
+      "grammar": {
+        "title": "Plusquamperfekt: nachdem ich gegessen hatte",
+        "content": "**Plusquamperfekt** exprime une action qui s'est produite **avant** une autre action au passé.\n\n**Formation:**\n**hatte / war** (Präteritum de haben/sein) + **Partizip II**\n\n**Usage le plus courant: avec nachdem**\n- Nachdem ich gegessen **hatte**, ging ich schlafen.\n  (Après avoir mangé, je suis allé dormir.)\n\n**La chronologie:**\n1. Plusquamperfekt (la première action)\n2. Präteritum (la deuxième action)\n\n⚠️ Le choix entre **hatte** et **war** suit les mêmes règles que le Perfekt (sein avec le mouvement et le changement).",
+        "tables": [
+          {
+            "title": "Plusquamperfekt — Formation",
+            "theme": "conjugation",
+            "headers": [
+              "Pronom",
+              "avec haben",
+              "avec sein"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hatte gegessen",
+                  "war gegangen"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hattest gegessen",
+                  "warst gegangen"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "hatte gegessen",
+                  "war gegangen"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hatten gegessen",
+                  "waren gegangen"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hattet gegessen",
+                  "wart gegangen"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "hatten gegessen",
+                  "waren gegangen"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Zeiten im Deutschen",
+            "theme": "default",
+            "headers": [
+              "Temps",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Plusquamperfekt",
+                  "Ich hatte gegessen."
+                ]
+              },
+              {
+                "cells": [
+                  "Präteritum / Perfekt",
+                  "Ich aß / Ich habe gegessen."
+                ]
+              },
+              {
+                "cells": [
+                  "Präsens",
+                  "Ich esse."
+                ]
+              },
+              {
+                "cells": [
+                  "Futur I",
+                  "Ich werde essen."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Plusquamperfekt = hatte/war + PII",
+            "example": "Er hatte gearbeitet.",
+            "translation": "Il avait travaillé."
+          },
+          {
+            "rule": "nachdem + Plusquamperfekt → Präteritum",
+            "example": "Nachdem er gekommen war, aßen wir.",
+            "translation": "Après qu'il soit venu, nous avons mangé."
+          },
+          {
+            "rule": "sein pour le mouvement/changement",
+            "example": "Nachdem ich angekommen war...",
+            "translation": "Après que je sois arrivé..."
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt hatte, ging ich zur Arbeit. — Après avoir pris le petit-déjeuner, je suis allé au travail.",
+          "Als er aufwachte, war die Sonne schon aufgegangen. — Quand il s'est réveillé, le soleil s'était déjà levé.",
+          "Wir hatten das Haus verlassen, bevor es regnete. — Nous avions quitté la maison avant qu'il ne pleuve.",
+          "Nachdem sie studiert hatte, fand sie einen Job. — Après avoir étudié, elle a trouvé un emploi.",
+          "Der Zug war schon abgefahren, als ich ankam. — Le train était déjà parti quand je suis arrivé.",
+          "Ich hatte den Film schon gesehen. — J'avais déjà vu le film.",
+          "Sie war nach Berlin gezogen, bevor sie uns traf. — Elle avait déménagé à Berlin avant de nous rencontrer.",
+          "Nachdem wir gegessen hatten, gingen wir ins Kino. — Après avoir mangé, nous sommes allés au cinéma."
+        ],
+        "tip": "La structure de base: **Nachdem + Plusquamperfekt, + Präteritum**. Rappelle-toi l'ordre: l'action la plus ancienne au Plusquamperfekt."
+      },
+      "vocabulary": [
+        {
+          "german": "nachdem",
+          "arabic": "après que",
+          "type": "conjunction"
+        },
+        {
+          "german": "bevor",
+          "arabic": "avant que",
+          "type": "conjunction"
+        },
+        {
+          "german": "als",
+          "arabic": "quand (passé)",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "dès que",
+          "type": "conjunction"
+        },
+        {
+          "german": "früher",
+          "arabic": "autrefois",
+          "type": "adverb"
+        },
+        {
+          "german": "davor",
+          "arabic": "avant cela",
+          "type": "adverb"
+        },
+        {
+          "german": "danach",
+          "arabic": "après cela",
+          "type": "adverb"
+        },
+        {
+          "german": "schon",
+          "arabic": "déjà",
+          "type": "adverb"
+        },
+        {
+          "german": "noch nicht",
+          "arabic": "pas encore",
+          "type": "adverb"
+        },
+        {
+          "german": "aufwachen",
+          "arabic": "se réveiller",
+          "type": "verb"
+        },
+        {
+          "german": "aufstehen",
+          "arabic": "se lever",
+          "type": "verb"
+        },
+        {
+          "german": "abfahren",
+          "arabic": "partir",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "arriver",
+          "type": "verb"
+        },
+        {
+          "german": "verlassen",
+          "arabic": "quitter",
+          "type": "verb"
+        },
+        {
+          "german": "umziehen",
+          "arabic": "déménager",
+          "type": "verb"
+        },
+        {
+          "german": "die Vergangenheit",
+          "arabic": "le passé",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Erinnerung",
+          "arabic": "le souvenir",
+          "plural": "die Erinnerungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Ereignis",
+          "arabic": "l'événement",
+          "plural": "die Ereignisse",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Geschichte",
+          "arabic": "l'histoire / le récit",
+          "plural": "die Geschichten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Reihenfolge",
+          "arabic": "l'ordre",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zeitpunkt",
+          "arabic": "le moment",
+          "plural": "die Zeitpunkte",
+          "type": "noun",
+          "gender": "der"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-08-q1",
+            "type": "multiple-choice",
+            "question": "Plusquamperfekt de \"ich esse\":",
+            "options": [
+              "ich aß",
+              "ich habe gegessen",
+              "ich hatte gegessen",
+              "ich werde essen"
+            ],
+            "answer": "ich hatte gegessen"
+          },
+          {
+            "id": "b1-08-q2",
+            "type": "multiple-choice",
+            "question": "Nachdem ich ___, ging ich schlafen.",
+            "options": [
+              "gegessen habe",
+              "gegessen hatte",
+              "essen würde",
+              "aß"
+            ],
+            "answer": "gegessen hatte"
+          },
+          {
+            "id": "b1-08-q3",
+            "type": "fill-blank",
+            "question": "Der Zug ___ schon abgefahren, als ich ankam. (war)",
+            "answer": "war"
+          },
+          {
+            "id": "b1-08-q4",
+            "type": "fill-blank",
+            "question": "Ich ___ den Film schon gesehen. (hatte)",
+            "answer": "hatte"
+          },
+          {
+            "id": "b1-08-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre: [, / ich / hatte / zur / Nachdem / gefrühstückt / Arbeit / ging / ich]",
+            "words": [
+              "Nachdem",
+              "ich",
+              "gefrühstückt",
+              "hatte",
+              ",",
+              "ging",
+              "ich",
+              "zur",
+              "Arbeit"
+            ],
+            "answer": "Nachdem ich gefrühstückt hatte , ging ich zur Arbeit"
+          },
+          {
+            "id": "b1-08-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre: [ich / den Film / hatte / gesehen / schon]",
+            "words": [
+              "Ich",
+              "hatte",
+              "den",
+              "Film",
+              "schon",
+              "gesehen"
+            ],
+            "answer": "Ich hatte den Film schon gesehen"
+          },
+          {
+            "id": "b1-08-q7",
+            "type": "matching",
+            "question": "Relie le verbe à son Plusquamperfekt:",
+            "pairs": [
+              {
+                "left": "essen (ich)",
+                "right": "hatte gegessen"
+              },
+              {
+                "left": "gehen (ich)",
+                "right": "war gegangen"
+              },
+              {
+                "left": "sehen (er)",
+                "right": "hatte gesehen"
+              },
+              {
+                "left": "kommen (sie)",
+                "right": "war gekommen"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-08-q8",
+            "type": "multiple-choice",
+            "question": "Quel auxiliaire avec \"gehen\" au Plusquamperfekt?",
+            "options": [
+              "hatte",
+              "war",
+              "hat",
+              "ist"
+            ],
+            "answer": "war"
+          },
+          {
+            "id": "b1-08-q9",
+            "type": "speaking",
+            "question": "Dis: \"J'avais mangé.\"",
+            "answer": "Ich hatte gegessen",
+            "hint": "hatte + Partizip II"
+          },
+          {
+            "id": "b1-08-q10",
+            "type": "multiple-choice",
+            "question": "Écoute:",
+            "audioPrompt": "Als er ankam, war der Film schon zu Ende.",
+            "options": [
+              "Il est arrivé et le film a commencé",
+              "Quand il est arrivé, le film était déjà terminé",
+              "Le film n'avait pas commencé",
+              "Il n'est pas allé"
+            ],
+            "answer": "Quand il est arrivé, le film était déjà terminé"
+          }
+        ]
+      }
+    },
+    "b1-09": {
+      "id": "b1-09",
+      "title": "Adjektivdeklination — Déclinaison de l'adjectif",
+      "order": 9,
+      "grammar": {
+        "title": "L'adjectif devant le nom : der große Mann",
+        "content": "**Adjektivdeklination** = déclinaison de l'adjectif selon :\n- le genre (m/f/n/pl)\n- le cas (Nom/Akk/Dat/Gen)\n- le type d'article (défini der / indéfini ein / sans article)\n\n**3 groupes :**\n\n**1. Après l'article défini (der, die, das, diese...)** : terminaisons faibles **-e / -en**\n\n**2. Après un article indéfini (ein, kein, mein...)** : terminaisons mixtes\n\n**3. Sans article** : terminaisons fortes (semblables à l'article défini)\n\n⚠️ Ne pas mémoriser les tableaux — concentrez-vous sur la règle : si l'article montre le genre/cas, l'adjectif prend seulement **-e/-en**.",
+        "tables": [
+          {
+            "title": "Avec der/die/das (Nominativ + Akkusativ)",
+            "theme": "cases",
+            "headers": [
+              "Kasus",
+              "der Mann",
+              "die Frau",
+              "das Kind",
+              "die Kinder"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nom",
+                  "der groß**e**",
+                  "die groß**e**",
+                  "das groß**e**",
+                  "die groß**en**"
+                ]
+              },
+              {
+                "cells": [
+                  "Akk",
+                  "den groß**en**",
+                  "die groß**e**",
+                  "das groß**e**",
+                  "die groß**en**"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Dat",
+                  "dem groß**en**",
+                  "der groß**en**",
+                  "dem groß**en**",
+                  "den groß**en**"
+                ]
+              },
+              {
+                "cells": [
+                  "Gen",
+                  "des groß**en**",
+                  "der groß**en**",
+                  "des groß**en**",
+                  "der groß**en**"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Avec ein/kein/mein (Nominativ + Akkusativ)",
+            "theme": "cases",
+            "headers": [
+              "Kasus",
+              "ein Mann",
+              "eine Frau",
+              "ein Kind",
+              "keine Kinder"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nom",
+                  "ein groß**er**",
+                  "eine groß**e**",
+                  "ein groß**es**",
+                  "keine groß**en**"
+                ]
+              },
+              {
+                "cells": [
+                  "Akk",
+                  "einen groß**en**",
+                  "eine groß**e**",
+                  "ein groß**es**",
+                  "keine groß**en**"
+                ]
+              },
+              {
+                "cells": [
+                  "Dat",
+                  "einem groß**en**",
+                  "einer groß**en**",
+                  "einem groß**en**",
+                  "keinen groß**en**"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Après der/die/das → -e ou -en",
+            "example": "der große Mann",
+            "translation": "le grand homme"
+          },
+          {
+            "rule": "Après ein/kein/mein → -er/-e/-es",
+            "example": "ein großer Mann",
+            "translation": "un grand homme"
+          },
+          {
+            "rule": "Sans article → terminaisons fortes",
+            "example": "großer Mann (Nom)",
+            "translation": "grand homme"
+          }
+        ],
+        "examples": [
+          "Der große Mann spielt Fußball. — Le grand homme joue au foot.",
+          "Ich sehe einen großen Mann. — Je vois un grand homme.",
+          "Das kleine Kind schläft. — Le petit enfant dort.",
+          "Mit dem roten Auto fahre ich zur Arbeit. — Avec la voiture rouge je vais au travail.",
+          "Eine schöne Frau kommt. — Une belle femme arrive.",
+          "Die freundlichen Nachbarn wohnen nebenan. — Les voisins sympathiques habitent à côté.",
+          "Ich trinke kalten Tee. — Je bois du thé froid. (sans article)",
+          "Guter Kaffee kostet viel. — Le bon café coûte cher."
+        ],
+        "tip": "La règle d'or : si l'article est clair (der/die/das) → adjectif -e/-en. Si ambigu (ein) → l'adjectif prend la terminaison de l'article manquant (-er/-es)."
+      },
+      "vocabulary": [
+        {
+          "german": "groß",
+          "arabic": "grand / haut",
+          "type": "adjective"
+        },
+        {
+          "german": "klein",
+          "arabic": "petit",
+          "type": "adjective"
+        },
+        {
+          "german": "schön",
+          "arabic": "beau / belle",
+          "type": "adjective"
+        },
+        {
+          "german": "hässlich",
+          "arabic": "laid(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "sympathique / aimable",
+          "type": "adjective"
+        },
+        {
+          "german": "unfreundlich",
+          "arabic": "peu aimable / antipathique",
+          "type": "adjective"
+        },
+        {
+          "german": "interessant",
+          "arabic": "intéressant(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "langweilig",
+          "arabic": "ennuyeux / ennuyeuse",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "cher / chère",
+          "type": "adjective"
+        },
+        {
+          "german": "billig",
+          "arabic": "bon marché / pas cher",
+          "type": "adjective"
+        },
+        {
+          "german": "alt",
+          "arabic": "vieux / vieille / âgé(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "neu",
+          "arabic": "nouveau / nouvelle / neuf",
+          "type": "adjective"
+        },
+        {
+          "german": "jung",
+          "arabic": "jeune",
+          "type": "adjective"
+        },
+        {
+          "german": "rot",
+          "arabic": "rouge",
+          "type": "adjective"
+        },
+        {
+          "german": "blau",
+          "arabic": "bleu(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "grün",
+          "arabic": "vert(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "weiß",
+          "arabic": "blanc / blanche",
+          "type": "adjective"
+        },
+        {
+          "german": "schwarz",
+          "arabic": "noir(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "gelb",
+          "arabic": "jaune",
+          "type": "adjective"
+        },
+        {
+          "german": "fleißig",
+          "arabic": "travailleur / appliqué(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "faul",
+          "arabic": "paresseux / paresseuse",
+          "type": "adjective"
+        },
+        {
+          "german": "klug",
+          "arabic": "intelligent(e) / malin",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-09-q1",
+            "type": "multiple-choice",
+            "question": "Der ___ Mann.",
+            "options": [
+              "groß",
+              "große",
+              "großer",
+              "großen"
+            ],
+            "answer": "große"
+          },
+          {
+            "id": "b1-09-q2",
+            "type": "multiple-choice",
+            "question": "Ein ___ Mann.",
+            "options": [
+              "groß",
+              "große",
+              "großer",
+              "großen"
+            ],
+            "answer": "großer"
+          },
+          {
+            "id": "b1-09-q3",
+            "type": "fill-blank",
+            "question": "Ich sehe einen ___ Mann. (großen)",
+            "answer": "großen"
+          },
+          {
+            "id": "b1-09-q4",
+            "type": "fill-blank",
+            "question": "Das ___ Kind schläft. (kleine)",
+            "answer": "kleine"
+          },
+          {
+            "id": "b1-09-q5",
+            "type": "drag-drop",
+            "question": "Ordonne : [rotes / Ein / Auto / kommt]",
+            "words": [
+              "Ein",
+              "rotes",
+              "Auto",
+              "kommt"
+            ],
+            "answer": "Ein rotes Auto kommt"
+          },
+          {
+            "id": "b1-09-q6",
+            "type": "drag-drop",
+            "question": "Ordonne : [kalten / Ich / Tee / trinke]",
+            "words": [
+              "Ich",
+              "trinke",
+              "kalten",
+              "Tee"
+            ],
+            "answer": "Ich trinke kalten Tee"
+          },
+          {
+            "id": "b1-09-q7",
+            "type": "matching",
+            "question": "Relie la terminaison de l'adjectif avec son cas (avec der) :",
+            "pairs": [
+              {
+                "left": "der ___ Mann (Nom)",
+                "right": "große"
+              },
+              {
+                "left": "den ___ Mann (Akk)",
+                "right": "großen"
+              },
+              {
+                "left": "dem ___ Mann (Dat)",
+                "right": "großen"
+              },
+              {
+                "left": "die ___ Frau (Nom)",
+                "right": "große"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-09-q8",
+            "type": "multiple-choice",
+            "question": "Mit dem ___ Auto.",
+            "options": [
+              "rot",
+              "rote",
+              "roter",
+              "roten"
+            ],
+            "answer": "roten"
+          },
+          {
+            "id": "b1-09-q9",
+            "type": "speaking",
+            "question": "Dis : \"un grand homme.\" (avec ein)",
+            "answer": "Ein großer Mann"
+          },
+          {
+            "id": "b1-09-q10",
+            "type": "multiple-choice",
+            "question": "Écoute et choisis :",
+            "audioPrompt": "Die freundlichen Nachbarn wohnen nebenan.",
+            "options": [
+              "Mes voisins habitent loin",
+              "Les voisins sympathiques habitent à côté",
+              "Je ne connais pas mes voisins",
+              "Mes voisins sont antipathiques"
+            ],
+            "answer": "Les voisins sympathiques habitent à côté"
+          }
+        ]
+      }
+    },
+    "b1-10": {
+      "id": "b1-10",
+      "title": "Umwelt und Gesellschaft — Environnement et société",
+      "order": 10,
+      "grammar": {
+        "title": "Langage de discussion et enjeux actuels",
+        "content": "Thèmes sociaux B1 :\n- **L'environnement** (Umwelt) : changement climatique, recyclage\n- **La société** (Gesellschaft) : migration, diversité, éducation\n- **La technologie** (Technologie) : Internet, réseaux sociaux\n\n**Expressions de discussion :**\n- Einerseits... andererseits... (d'un côté... de l'autre côté)\n- Es ist wichtig, dass... (il est important que...)\n- Wir sollten... (nous devrions...)\n- Das Problem ist, dass... (le problème c'est que...)\n- Eine Lösung wäre... (une solution serait...)",
+        "tables": [
+          {
+            "title": "Prépositions temporelles",
+            "theme": "default",
+            "headers": [
+              "Präposition",
+              "Utilisation",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "seit",
+                  "depuis + passé continu",
+                  "seit 2020"
+                ]
+              },
+              {
+                "cells": [
+                  "vor",
+                  "il y a",
+                  "vor zwei Jahren"
+                ]
+              },
+              {
+                "cells": [
+                  "nach",
+                  "après",
+                  "nach der Schule"
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "pendant + Genitiv",
+                  "während der Pause"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Es gibt + Akkusativ",
+            "example": "Es gibt viele Probleme.",
+            "translation": "Il y a beaucoup de problèmes."
+          },
+          {
+            "rule": "sollten pour le conseil",
+            "example": "Wir sollten weniger Plastik verwenden.",
+            "translation": "Nous devrions utiliser moins de plastique."
+          },
+          {
+            "rule": "man = pronom général",
+            "example": "Man muss die Umwelt schützen.",
+            "translation": "Il faut protéger l'environnement."
+          }
+        ],
+        "examples": [
+          "Der Klimawandel ist ein großes Problem. — Le changement climatique est un grand problème.",
+          "Wir müssen Müll trennen. — Nous devons trier les déchets.",
+          "Erneuerbare Energien sind die Zukunft. — Les énergies renouvelables sont l'avenir.",
+          "Das Internet hat unser Leben verändert. — Internet a changé notre vie.",
+          "Viele Menschen nutzen soziale Netzwerke. — Beaucoup de gens utilisent les réseaux sociaux.",
+          "Bildung ist für alle wichtig. — L'éducation est importante pour tous.",
+          "Integration bedeutet Teilhabe. — L'intégration signifie la participation.",
+          "Wir sollten Bäume pflanzen. — Nous devrions planter des arbres."
+        ],
+        "tip": "Dans la partie orale du Goethe B1 (Teil 3), vous discuterez d'un sujet — mémorisez 5 expressions de discussion solides (\"Ich finde, dass...\", \"Einerseits...\", \"Das Problem ist...\")."
+      },
+      "vocabulary": [
+        {
+          "german": "die Umwelt",
+          "arabic": "l'environnement",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Klimawandel",
+          "arabic": "le changement climatique",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Verschmutzung",
+          "arabic": "la pollution",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Müll",
+          "arabic": "les déchets",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Recycling",
+          "arabic": "le recyclage",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Energie",
+          "arabic": "l'énergie",
+          "plural": "die Energien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "erneuerbar",
+          "arabic": "renouvelable",
+          "type": "adjective"
+        },
+        {
+          "german": "nachhaltig",
+          "arabic": "durable",
+          "type": "adjective"
+        },
+        {
+          "german": "schützen",
+          "arabic": "protéger",
+          "type": "verb"
+        },
+        {
+          "german": "trennen",
+          "arabic": "séparer / trier",
+          "type": "verb"
+        },
+        {
+          "german": "verschmutzen",
+          "arabic": "polluer",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "économiser",
+          "type": "verb"
+        },
+        {
+          "german": "die Gesellschaft",
+          "arabic": "la société",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Integration",
+          "arabic": "l'intégration",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Migration",
+          "arabic": "la migration",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Kultur",
+          "arabic": "la culture",
+          "plural": "die Kulturen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Bildung",
+          "arabic": "l'éducation / la formation",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Technologie",
+          "arabic": "la technologie",
+          "plural": "die Technologien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das soziale Netzwerk",
+          "arabic": "le réseau social",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Nachricht",
+          "arabic": "la nouvelle / l'information",
+          "plural": "die Nachrichten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "le problème",
+          "plural": "die Probleme",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "la solution",
+          "plural": "die Lösungen",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-10-q1",
+            "type": "multiple-choice",
+            "question": "Le changement climatique :",
+            "options": [
+              "die Umwelt",
+              "der Klimawandel",
+              "der Müll",
+              "die Energie"
+            ],
+            "answer": "der Klimawandel"
+          },
+          {
+            "id": "b1-10-q2",
+            "type": "multiple-choice",
+            "question": "Nous devons protéger l'environnement :",
+            "options": [
+              "Wir müssen die Umwelt schützen",
+              "Wir haben die Umwelt",
+              "Die Umwelt ist krank",
+              "Wir sehen die Umwelt"
+            ],
+            "answer": "Wir müssen die Umwelt schützen"
+          },
+          {
+            "id": "b1-10-q3",
+            "type": "fill-blank",
+            "question": "Wir sollten ___ trennen. (les déchets - Müll)",
+            "answer": "Müll"
+          },
+          {
+            "id": "b1-10-q4",
+            "type": "fill-blank",
+            "question": "___ Energien sind die Zukunft. (renouvelables)",
+            "answer": "Erneuerbare"
+          },
+          {
+            "id": "b1-10-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [Plastik / verwenden / Wir / sollten / weniger]",
+            "words": [
+              "Wir",
+              "sollten",
+              "weniger",
+              "Plastik",
+              "verwenden"
+            ],
+            "answer": "Wir sollten weniger Plastik verwenden"
+          },
+          {
+            "id": "b1-10-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [großes / ist / ein / Problem / Der Klimawandel]",
+            "words": [
+              "Der",
+              "Klimawandel",
+              "ist",
+              "ein",
+              "großes",
+              "Problem"
+            ],
+            "answer": "Der Klimawandel ist ein großes Problem"
+          },
+          {
+            "id": "b1-10-q7",
+            "type": "matching",
+            "question": "Associe le mot à sa signification :",
+            "pairs": [
+              {
+                "left": "Umwelt",
+                "right": "l'environnement"
+              },
+              {
+                "left": "Müll",
+                "right": "les déchets"
+              },
+              {
+                "left": "Energie",
+                "right": "l'énergie"
+              },
+              {
+                "left": "Lösung",
+                "right": "la solution"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-10-q8",
+            "type": "multiple-choice",
+            "question": "\"Einerseits... ___\"",
+            "options": [
+              "sondern",
+              "andererseits",
+              "deshalb",
+              "trotzdem"
+            ],
+            "answer": "andererseits"
+          },
+          {
+            "id": "b1-10-q9",
+            "type": "speaking",
+            "question": "Dis : \"Internet a changé notre vie.\"",
+            "answer": "Das Internet hat unser Leben verändert"
+          },
+          {
+            "id": "b1-10-q10",
+            "type": "multiple-choice",
+            "question": "Écoute :",
+            "audioPrompt": "Wir müssen mehr Bäume pflanzen, um die Umwelt zu schützen.",
+            "options": [
+              "Il faut couper les arbres",
+              "Il faut planter plus d'arbres pour protéger l'environnement",
+              "Les arbres polluent l'environnement",
+              "Nous n'avons pas besoin d'arbres"
+            ],
+            "answer": "Il faut planter plus d'arbres pour protéger l'environnement"
+          }
+        ]
+      }
+    },
+    "b1-11": {
+      "id": "b1-11",
+      "title": "Reisen und Erfahrungen — Voyages et expériences",
+      "order": 11,
+      "grammar": {
+        "title": "Parler d'expériences de voyage",
+        "content": "En B1, tu exprimes tes expériences de voyage en détail :\n- Utilisation du **Perfekt** pour raconter les événements\n- **Plusquamperfekt** pour les événements antérieurs\n- **Relativsätze** pour décrire les lieux\n\n**Expressions utiles :**\n- \"Ich bin schon in ... gewesen.\" (J'ai déjà été à...)\n- \"Das hat mich beeindruckt.\" (Cela m'a impressionné)\n- \"Es hat mir sehr gefallen.\" (Ça m'a beaucoup plu)\n- \"Ich werde nie vergessen...\" (Je n'oublierai jamais...)\n\n**Prépositions pour les voyages :**\n- **nach** + pays/ville : nach Berlin\n- **in die** + pays féminin : in die Türkei\n- **an** + mer/lac : an den See",
+        "tables": [
+          {
+            "title": "Prépositions avec pays et villes",
+            "theme": "default",
+            "headers": [
+              "Lieu",
+              "Où (Wo?)",
+              "Vers où (Wohin?)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Ville",
+                  "in Berlin",
+                  "nach Berlin"
+                ]
+              },
+              {
+                "cells": [
+                  "Pays (neutre)",
+                  "in Deutschland",
+                  "nach Deutschland"
+                ]
+              },
+              {
+                "cells": [
+                  "Pays féminin",
+                  "in der Türkei",
+                  "in die Türkei"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Île",
+                  "auf der Insel",
+                  "auf die Insel"
+                ]
+              },
+              {
+                "cells": [
+                  "Mer",
+                  "am Meer",
+                  "ans Meer"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "nach pour les villes et pays neutres",
+            "example": "Ich fliege nach Marokko.",
+            "translation": "Je vole vers le Maroc."
+          },
+          {
+            "rule": "in die pour les pays féminins",
+            "example": "Ich fahre in die Schweiz.",
+            "translation": "Je vais en Suisse."
+          },
+          {
+            "rule": "mit pour le moyen de transport",
+            "example": "mit dem Zug fahren",
+            "translation": "voyager en train"
+          }
+        ],
+        "examples": [
+          "Letztes Jahr bin ich nach Italien gefahren. — L'année dernière, je suis allé(e) en Italie.",
+          "Das Essen dort war wunderbar. — La nourriture là-bas était merveilleuse.",
+          "Ich habe viele Sehenswürdigkeiten besucht. — J'ai visité beaucoup de sites touristiques.",
+          "Die Menschen waren sehr freundlich. — Les gens étaient très sympathiques.",
+          "Ich werde diese Reise nie vergessen. — Je n'oublierai jamais ce voyage.",
+          "Auf meiner Reise habe ich viel gelernt. — J'ai beaucoup appris pendant mon voyage.",
+          "Das Hotel, in dem wir wohnten, war sehr schön. — L'hôtel dans lequel nous logions était très beau.",
+          "Am liebsten reise ich ans Meer. — Je préfère voyager à la mer."
+        ],
+        "tip": "Pour le Goethe B1 Sprechen Teil 2, tu présenteras un sujet — prépare à l'avance un récit de voyage avec 10 phrases."
+      },
+      "vocabulary": [
+        {
+          "german": "die Reise",
+          "arabic": "le voyage",
+          "plural": "die Reisen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Urlaub",
+          "arabic": "les vacances",
+          "plural": "die Urlaube",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Sehenswürdigkeit",
+          "arabic": "le site touristique",
+          "plural": "die Sehenswürdigkeiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Abenteuer",
+          "arabic": "l'aventure",
+          "plural": "die Abenteuer",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Kultur",
+          "arabic": "la culture",
+          "plural": "die Kulturen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Landschaft",
+          "arabic": "le paysage",
+          "plural": "die Landschaften",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Meer",
+          "arabic": "la mer",
+          "plural": "die Meere",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Berg",
+          "arabic": "la montagne",
+          "plural": "die Berge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Insel",
+          "arabic": "l'île",
+          "plural": "die Inseln",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "l'hôtel",
+          "plural": "die Hotels",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Unterkunft",
+          "arabic": "le logement",
+          "plural": "die Unterkünfte",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Koffer",
+          "arabic": "la valise",
+          "plural": "die Koffer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Reisepass",
+          "arabic": "le passeport",
+          "plural": "die Reisepässe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "erleben",
+          "arabic": "vivre une expérience",
+          "type": "verb"
+        },
+        {
+          "german": "entdecken",
+          "arabic": "découvrir",
+          "type": "verb"
+        },
+        {
+          "german": "beeindrucken",
+          "arabic": "impressionner",
+          "type": "verb"
+        },
+        {
+          "german": "empfehlen",
+          "arabic": "recommander",
+          "type": "verb"
+        },
+        {
+          "german": "besichtigen",
+          "arabic": "visiter (un site)",
+          "type": "verb"
+        },
+        {
+          "german": "ausländisch",
+          "arabic": "étranger",
+          "type": "adjective"
+        },
+        {
+          "german": "historisch",
+          "arabic": "historique",
+          "type": "adjective"
+        },
+        {
+          "german": "traumhaft",
+          "arabic": "de rêve",
+          "type": "adjective"
+        },
+        {
+          "german": "unvergesslich",
+          "arabic": "inoubliable",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-11-q1",
+            "type": "multiple-choice",
+            "question": "Je vais en Italie :",
+            "options": [
+              "Ich fahre in Italien",
+              "Ich fahre nach Italien",
+              "Ich fahre zu Italien",
+              "Ich fahre bei Italien"
+            ],
+            "answer": "Ich fahre nach Italien"
+          },
+          {
+            "id": "b1-11-q2",
+            "type": "multiple-choice",
+            "question": "Je vais en Turquie (féminin) :",
+            "options": [
+              "nach die Türkei",
+              "in die Türkei",
+              "zu die Türkei",
+              "nach Türkei"
+            ],
+            "answer": "in die Türkei"
+          },
+          {
+            "id": "b1-11-q3",
+            "type": "fill-blank",
+            "question": "Ich fahre ___ Meer. (ans)",
+            "answer": "ans"
+          },
+          {
+            "id": "b1-11-q4",
+            "type": "fill-blank",
+            "question": "Ich reise mit ___ Zug. (dem)",
+            "answer": "dem"
+          },
+          {
+            "id": "b1-11-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [ich / Italien / Letztes / gefahren / Jahr / bin / nach]",
+            "words": [
+              "Letztes",
+              "Jahr",
+              "bin",
+              "ich",
+              "nach",
+              "Italien",
+              "gefahren"
+            ],
+            "answer": "Letztes Jahr bin ich nach Italien gefahren"
+          },
+          {
+            "id": "b1-11-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [waren / Menschen / Die / freundlich / sehr]",
+            "words": [
+              "Die",
+              "Menschen",
+              "waren",
+              "sehr",
+              "freundlich"
+            ],
+            "answer": "Die Menschen waren sehr freundlich"
+          },
+          {
+            "id": "b1-11-q7",
+            "type": "matching",
+            "question": "Associe le mot à sa signification :",
+            "pairs": [
+              {
+                "left": "Urlaub",
+                "right": "vacances"
+              },
+              {
+                "left": "Sehenswürdigkeit",
+                "right": "site touristique"
+              },
+              {
+                "left": "Insel",
+                "right": "île"
+              },
+              {
+                "left": "Koffer",
+                "right": "valise"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-11-q8",
+            "type": "multiple-choice",
+            "question": "\"Das hat mich ___!\" (m'a impressionné)",
+            "options": [
+              "gelernt",
+              "gefallen",
+              "beeindruckt",
+              "gesagt"
+            ],
+            "answer": "beeindruckt"
+          },
+          {
+            "id": "b1-11-q9",
+            "type": "speaking",
+            "question": "Dis : \"Je n'oublierai jamais ce voyage.\"",
+            "answer": "Ich werde diese Reise nie vergessen"
+          },
+          {
+            "id": "b1-11-q10",
+            "type": "multiple-choice",
+            "question": "Écoute :",
+            "audioPrompt": "Letzten Sommer bin ich in die Schweiz gefahren und habe die Berge gesehen.",
+            "options": [
+              "L'été dernier, je suis allé(e) en Suisse et j'ai vu les montagnes",
+              "J'irai en Suisse",
+              "Je n'ai pas vu les montagnes",
+              "J'habite en Suisse"
+            ],
+            "answer": "L'été dernier, je suis allé(e) en Suisse et j'ai vu les montagnes"
+          }
+        ]
+      }
+    },
+    "b1-12": {
+      "id": "b1-12",
+      "title": "Wiederholung B1 — Révision complète",
+      "order": 12,
+      "grammar": {
+        "title": "Résumé du B1 et préparation au Goethe-Zertifikat",
+        "content": "**Ce que tu as appris en B1 :**\n\n✅ **Konjunktiv II** — Le conditionnel et la supposition (wäre, hätte, würde)\n✅ **Passiv** — La voix passive (werden + Partizip II)\n✅ **Genitiv** — Le cas possessif\n✅ **Relativsätze** — der, die, das, dem, denen\n✅ **Konnektoren** — deshalb, trotzdem, damit, obwohl\n✅ **Plusquamperfekt** — nachdem + hatte/war + PII\n✅ **Indirekte Rede** — dass, ob, Konjunktiv I\n✅ **Adjektivdeklination** — der große / ein großer\n\n**Examen Goethe B1 :**\n- **Lesen** (65 minutes) : textes et annonces\n- **Hören** (40 minutes) : dialogues et actualités\n- **Schreiben** (60 minutes) : email + commentaire\n- **Sprechen** (15 minutes) : planification commune + présentation d'un sujet + discussion\n\n**Conseils :**\n- Parle quotidiennement 15 minutes en allemand\n- Lis des articles simples (Nachrichten für Kinder)\n- Écoute le podcast Slow German\n- Mémorise 30 phrases de discussion toutes prêtes",
+        "tables": [
+          {
+            "title": "Résumé des six temps",
+            "theme": "conjugation",
+            "headers": [
+              "Zeit",
+              "Formation",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Präsens",
+                  "verbe de base",
+                  "ich gehe"
+                ]
+              },
+              {
+                "cells": [
+                  "Perfekt",
+                  "haben/sein + PII",
+                  "ich bin gegangen"
+                ]
+              },
+              {
+                "cells": [
+                  "Präteritum",
+                  "radical du verbe + pronom",
+                  "ich ging"
+                ]
+              },
+              {
+                "cells": [
+                  "Plusquamperfekt",
+                  "hatte/war + PII",
+                  "ich war gegangen"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Futur I",
+                  "werden + Infinitiv",
+                  "ich werde gehen"
+                ]
+              },
+              {
+                "cells": [
+                  "Konjunktiv II",
+                  "würde + Infinitiv",
+                  "ich würde gehen"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Utilise le Perfekt à l'oral",
+            "example": "Ich bin gestern ins Kino gegangen.",
+            "translation": "Je suis allé(e) au cinéma hier."
+          },
+          {
+            "rule": "Utilise le Konjunktiv II pour la politesse",
+            "example": "Könnten Sie mir helfen?",
+            "translation": "Pourriez-vous m'aider ?"
+          },
+          {
+            "rule": "Utilise le Passiv dans les contextes formels",
+            "example": "Das Formular muss ausgefüllt werden.",
+            "translation": "Le formulaire doit être rempli."
+          }
+        ],
+        "examples": [
+          "Wenn ich Zeit hätte, würde ich mehr lernen. — Si j'avais du temps, j'étudierais davantage.",
+          "Der Brief, den ich geschrieben habe, ist wichtig. — La lettre que j'ai écrite est importante.",
+          "Nachdem ich gegessen hatte, ging ich spazieren. — Après avoir mangé, je me suis promené(e).",
+          "Das Buch wird von vielen gelesen. — Le livre est lu par beaucoup de gens.",
+          "Er sagt, er sei müde. — Il dit qu'il est fatigué.",
+          "Trotz des Regens gehen wir raus. — Malgré la pluie, nous sortons.",
+          "Ich mag den großen roten Hund. — J'aime le grand chien rouge.",
+          "Meiner Meinung nach ist das wichtig. — À mon avis, c'est important."
+        ],
+        "tip": "Après le B1, tu peux travailler et étudier en Allemagne ! Continue vers le B2 pour comprendre entièrement les actualités et les cours magistraux."
+      },
+      "vocabulary": [
+        {
+          "german": "die Prüfung",
+          "arabic": "l'examen",
+          "plural": "die Prüfungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Zertifikat",
+          "arabic": "le certificat",
+          "plural": "die Zertifikate",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "bestehen",
+          "arabic": "réussir",
+          "type": "verb"
+        },
+        {
+          "german": "durchfallen",
+          "arabic": "échouer",
+          "type": "verb"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "répéter / recommencer",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "s'exercer",
+          "type": "verb"
+        },
+        {
+          "german": "vorbereiten",
+          "arabic": "préparer",
+          "type": "verb"
+        },
+        {
+          "german": "die Vorbereitung",
+          "arabic": "la préparation",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Fortschritt",
+          "arabic": "le progrès",
+          "plural": "die Fortschritte",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Niveau",
+          "arabic": "le niveau",
+          "plural": "die Niveaus",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Grammatik",
+          "arabic": "la grammaire",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Vokabular",
+          "arabic": "le vocabulaire",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Wortschatz",
+          "arabic": "le lexique",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "fließend",
+          "arabic": "couramment",
+          "type": "adjective"
+        },
+        {
+          "german": "selbstständig",
+          "arabic": "autonome",
+          "type": "adjective"
+        },
+        {
+          "german": "fortgeschritten",
+          "arabic": "avancé(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "die Herausforderung",
+          "arabic": "le défi",
+          "plural": "die Herausforderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Ziel",
+          "arabic": "l'objectif",
+          "plural": "die Ziele",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Erfolg",
+          "arabic": "le succès",
+          "plural": "die Erfolge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "geduldig",
+          "arabic": "patient(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "motiviert",
+          "arabic": "motivé(e)",
+          "type": "adjective"
+        },
+        {
+          "german": "Glückwunsch!",
+          "arabic": "Félicitations !",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b1-12-q1",
+            "type": "multiple-choice",
+            "question": "Konjunktiv II de sein ?",
+            "options": [
+              "war",
+              "wäre",
+              "sein",
+              "ist"
+            ],
+            "answer": "wäre"
+          },
+          {
+            "id": "b1-12-q2",
+            "type": "multiple-choice",
+            "question": "Passiv Präsens de \"bauen\" :",
+            "options": [
+              "baut",
+              "wird gebaut",
+              "hat gebaut",
+              "baute"
+            ],
+            "answer": "wird gebaut"
+          },
+          {
+            "id": "b1-12-q3",
+            "type": "fill-blank",
+            "question": "Das Buch, ___ ich lese, ist gut. (das)",
+            "answer": "das"
+          },
+          {
+            "id": "b1-12-q4",
+            "type": "fill-blank",
+            "question": "Nachdem ich gegessen ___, ging ich schlafen. (hatte)",
+            "answer": "hatte"
+          },
+          {
+            "id": "b1-12-q5",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [reisen / ich / hätte / , / Wenn / würde / ich / Zeit]",
+            "words": [
+              "Wenn",
+              "ich",
+              "Zeit",
+              "hätte",
+              ",",
+              "würde",
+              "ich",
+              "reisen"
+            ],
+            "answer": "Wenn ich Zeit hätte , würde ich reisen"
+          },
+          {
+            "id": "b1-12-q6",
+            "type": "drag-drop",
+            "question": "Mets dans l'ordre : [von / gelesen / Buch / Das / wird / vielen]",
+            "words": [
+              "Das",
+              "Buch",
+              "wird",
+              "von",
+              "vielen",
+              "gelesen"
+            ],
+            "answer": "Das Buch wird von vielen gelesen"
+          },
+          {
+            "id": "b1-12-q7",
+            "type": "matching",
+            "question": "Associe la règle à l'exemple :",
+            "pairs": [
+              {
+                "left": "Konjunktiv II",
+                "right": "Ich würde gehen"
+              },
+              {
+                "left": "Passiv",
+                "right": "wird gemacht"
+              },
+              {
+                "left": "Plusquamperfekt",
+                "right": "hatte gegessen"
+              },
+              {
+                "left": "Relativsatz",
+                "right": "der hier wohnt"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b1-12-q8",
+            "type": "multiple-choice",
+            "question": "Genitiv : la maison de mon père ?",
+            "options": [
+              "das Haus mein Vater",
+              "das Haus meines Vaters",
+              "das Haus meinem Vater",
+              "das Haus meinen Vater"
+            ],
+            "answer": "das Haus meines Vaters"
+          },
+          {
+            "id": "b1-12-q9",
+            "type": "speaking",
+            "question": "Dis : \"Si j'avais du temps, je voyagerais.\"",
+            "answer": "Wenn ich Zeit hätte, würde ich reisen"
+          },
+          {
+            "id": "b1-12-q10",
+            "type": "multiple-choice",
+            "question": "Écoute :",
+            "audioPrompt": "Glückwunsch! Du hast B1 geschafft.",
+            "options": [
+              "Félicitations ! Tu as réussi le B1",
+              "Tu n'as pas réussi",
+              "Repasse l'examen",
+              "Recommence depuis le début"
+            ],
+            "answer": "Félicitations ! Tu as réussi le B1"
+          }
+        ]
+      }
+    }
+  },
+  "title": "Niveau Trois",
+  "description": "Exprimer son opinion, le travail et les voyages."
+}

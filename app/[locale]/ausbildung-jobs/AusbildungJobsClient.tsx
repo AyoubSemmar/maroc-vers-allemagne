@@ -1,10 +1,12 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
 import { CATEGORIES, CATEGORIES_ORDER, CategoryKey } from '@/lib/jobCategories'
 import CategorySection from '@/components/jobs/CategorySection'
 import ApplyModal from '@/components/jobs/ApplyModal'
 import { Job } from '@/components/jobs/JobCard'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import './ausbildung-jobs.css'
 
 type Props = {
@@ -12,7 +14,11 @@ type Props = {
   lastUpdated?: string | null
 }
 
+const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE' }
+
 export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
+  const t = useTranslations('ausbJobs')
+  const locale = useLocale() as AppLocale
   const [filter, setFilter] = useState<CategoryKey | 'all'>('all')
   const [applyJob, setApplyJob] = useState<Job | null>(null)
 
@@ -32,18 +38,16 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   const visibleCategories = filter === 'all' ? CATEGORIES_ORDER : [filter]
 
   return (
-    <div className="aj-root" dir="rtl">
+    <div className="aj-root" dir={dirFor(locale)}>
       {/* Header */}
       <header className="aj-header">
         <div className="wrap">
-          <p className="aj-eyebrow">🔍 فرص Ausbildung</p>
-          <h1>Ausbildung Jobs</h1>
-          <p className="aj-subtitle">
-            آخر عروض التدريب المهني من وكالة العمل الألمانية (Bundesagentur für Arbeit)، مصنّفة حسب القطاع. قدّم مباشرة بإيميل مولّد بالذكاء الاصطناعي.
-          </p>
+          <p className="aj-eyebrow">{t('eyebrow')}</p>
+          <h1>{t('title')}</h1>
+          <p className="aj-subtitle">{t('subtitle')}</p>
           <div className="aj-header-meta">
-            <span>📊 {total} عرض متاح</span>
-            {lastUpdated && <span>🔄 آخر تحديث: {new Date(lastUpdated).toLocaleDateString('ar-MA')}</span>}
+            <span>{t('offersCount', { n: total })}</span>
+            {lastUpdated && <span>{t('lastUpdated', { date: new Date(lastUpdated).toLocaleDateString(INTL[locale]) })}</span>}
           </div>
         </div>
       </header>
@@ -56,7 +60,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
             className={`aj-filter-btn${filter === 'all' ? ' active' : ''}`}
             onClick={() => setFilter('all')}
           >
-            الكل ({total})
+            {t('all', { n: total })}
           </button>
           {CATEGORIES_ORDER.map(k => {
             const cat = CATEGORIES[k]
@@ -68,7 +72,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
                 className={`aj-filter-btn${filter === k ? ' active' : ''}`}
                 onClick={() => setFilter(k)}
               >
-                {cat.icon} {cat.nameAr} ({count})
+                {cat.icon} {t(`cats.${k}` as any)} ({count})
               </button>
             )
           })}
@@ -78,15 +82,14 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
         {total === 0 ? (
           <div className="aj-empty">
             <div className="aj-empty-icon">📭</div>
-            <p>لا توجد عروض متاحة حالياً.</p>
-            <p style={{ fontSize: 12.5, marginTop: 8 }}>
-              يتم تحديث العروض يومياً. عد غداً.
-            </p>
+            <p>{t('emptyTitle')}</p>
+            <p style={{ fontSize: 12.5, marginTop: 8 }}>{t('emptyHint')}</p>
           </div>
         ) : (
           visibleCategories.map(k => (
             <CategorySection
               key={k}
+              categoryKey={k}
               category={CATEGORIES[k]}
               jobs={jobsByCategory[k]}
               onApply={j => setApplyJob(j)}

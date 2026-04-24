@@ -1,16 +1,21 @@
+import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { createClient as createServerClient } from '@/lib/supabase-server'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import DeleteListingButton from './DeleteListingButton'
 import ImageGallery from './ImageGallery'
 import ShareButtons from '@/components/ShareButtons'
 
-export default async function ListingPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params
+export default async function ListingPage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
+  const { id, locale } = await params
+  const t = await getTranslations({ locale, namespace: 'listings' })
+
   const { data: listing } = await supabase.from('listings').select('*').eq('id', id).single()
 
   if (!listing) return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center" dir="rtl">
-      <p className="text-gray-500">الإعلان غير موجود</p>
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center" dir={dirFor(locale)}>
+      <p className="text-gray-500">{t('notFound')}</p>
     </div>
   )
 
@@ -20,10 +25,16 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
 
   const images = listing.images?.length ? listing.images : listing.image_url ? [listing.image_url] : []
 
+  function typeLabel(dbType: string): string {
+    if (dbType === 'غرفة') return t('types.room')
+    if (dbType === 'شقة') return t('types.apartment')
+    return dbType
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       <div className="max-w-3xl mx-auto px-4 py-12">
-        <a href="/listings" className="text-sm text-green-700 hover:underline mb-6 block">→ العودة للإعلانات</a>
+        <Link href="/listings" className="text-sm text-green-700 hover:underline mb-6 block">{t('backToListings')}</Link>
 
         {images.length > 0 ? (
           <ImageGallery images={images} />
@@ -35,19 +46,19 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
           <div className="flex items-start justify-between mb-4">
             <div>
               <div className="flex gap-2 mb-2 flex-wrap">
-                <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{listing.type}</span>
+                <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{typeLabel(listing.type)}</span>
                 <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{listing.city}</span>
                 {listing.price && (
-                  <span className="text-sm font-bold text-white bg-green-600 px-3 py-1 rounded-full">{listing.price} €/شهر</span>
+                  <span className="text-sm font-bold text-white bg-green-600 px-3 py-1 rounded-full">{listing.price} {t('priceSuffix')}</span>
                 )}
               </div>
               <h1 className="text-2xl font-bold text-gray-900">{listing.title}</h1>
             </div>
             {isOwner && (
               <div className="flex gap-3 items-center">
-                <a href={`/listings/${listing.id}/edit`} className="text-sm text-green-700 hover:underline">
-                  تعديل
-                </a>
+                <Link href={`/listings/${listing.id}/edit`} className="text-sm text-green-700 hover:underline">
+                  {t('detail.edit')}
+                </Link>
                 <DeleteListingButton id={listing.id} />
               </div>
             )}
@@ -63,14 +74,14 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
               target="_blank"
               className="flex items-center justify-center gap-2 bg-green-600 text-white rounded-xl py-3 px-6 hover:bg-green-700 font-medium"
             >
-              💬 تواصل عبر واتساب
+              {t('detail.whatsappCta')}
             </a>
           ) : (
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
-              <p className="text-gray-600 text-sm mb-3">سجل دخولك لرؤية رقم واتساب صاحب الإعلان</p>
+              <p className="text-gray-600 text-sm mb-3">{t('detail.loginPromptBody')}</p>
               <div className="flex gap-3 justify-center">
-                <a href="/login" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">دخول</a>
-                <a href="/signup" className="border border-green-700 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-50">إنشاء حساب</a>
+                <Link href="/login" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">{t('detail.login')}</Link>
+                <Link href="/signup" className="border border-green-700 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-50">{t('detail.signup')}</Link>
               </div>
             </div>
           )}

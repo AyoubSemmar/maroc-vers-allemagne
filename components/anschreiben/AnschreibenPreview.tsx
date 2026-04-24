@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { type AppLocale } from '@/i18n/routing'
 import { saveAnschreibenDocument } from '@/lib/documents'
 import { createClient } from '@/lib/supabase-browser'
 
@@ -21,6 +23,8 @@ function parseLine(line: string): { text: string; isDate: boolean } {
 }
 
 export default function AnschreibenPreview({ letter, fullName, position }: Props) {
+  const t = useTranslations('anschreiben.preview')
+  const locale = useLocale() as AppLocale
   const [copied, setCopied] = useState(false)
   const [downloading, setDownloading] = useState(false)
   const [saving, setSaving] = useState(false)
@@ -54,19 +58,19 @@ export default function AnschreibenPreview({ letter, fullName, position }: Props
       const supabase = createClient()
       const { data: authData } = await supabase.auth.getUser()
       if (!authData.user) {
-        if (confirm('يجب تسجيل الدخول لحفظ الوثيقة. هل تريد الانتقال لصفحة تسجيل الدخول؟')) {
-          window.location.href = '/login'
+        if (confirm(t('loginPrompt'))) {
+          window.location.href = `/${locale}/login`
         }
         return
       }
       const title = fullName
-        ? `${fullName} — ${position || 'Anschreiben'}`
-        : (position || 'Anschreiben')
+        ? `${fullName} — ${position || t('defaultName')}`
+        : (position || t('defaultName'))
       await saveAnschreibenDocument(title, letter)
-      setSaveMsg('✅ محفوظ!')
+      setSaveMsg(t('saveOk'))
       setTimeout(() => setSaveMsg(''), 3000)
     } catch (e: any) {
-      setSaveMsg('❌ ' + (e?.message || 'خطأ'))
+      setSaveMsg(t('saveErr', { msg: e?.message || t('saveErrDefault') }))
       setTimeout(() => setSaveMsg(''), 4000)
     } finally {
       setSaving(false)
@@ -130,7 +134,7 @@ export default function AnschreibenPreview({ letter, fullName, position }: Props
       pdf.save(`Anschreiben_${safeName}_${safePos}.pdf`)
     } catch (e) {
       console.error(e)
-      alert('حدث خطأ أثناء التحميل. حاول مرة أخرى.')
+      alert(t('downloadErr'))
     } finally {
       setDownloading(false)
     }
@@ -140,18 +144,18 @@ export default function AnschreibenPreview({ letter, fullName, position }: Props
     <div className="ansch-preview-card">
       <div className="ansch-preview-header">
         <div>
-          <h2 className="ansch-section-title" style={{ margin: 0 }}>خطاب التحفيز</h2>
-          <p className="ansch-hint-small" style={{ marginTop: 4 }}>Bewerbungsanschreiben · {position}</p>
+          <h2 className="ansch-section-title" style={{ margin: 0 }}>{t('title')}</h2>
+          <p className="ansch-hint-small" style={{ marginTop: 4 }}>{t('subtitle', { pos: position })}</p>
         </div>
         <div className="ansch-preview-actions">
           <button type="button" className="ansch-btn-ghost" onClick={handleCopy}>
-            {copied ? '✅ تم النسخ' : '📋 نسخ'}
+            {copied ? t('copied') : t('copy')}
           </button>
           <button type="button" className="ansch-btn-ghost" onClick={handleSave} disabled={saving}>
-            {saving ? '⏳...' : saveMsg || '💾 حفظ'}
+            {saving ? t('saveBusy') : saveMsg || t('save')}
           </button>
           <button type="button" className="ansch-btn-brand" onClick={handleDownload} disabled={downloading}>
-            {downloading ? '⏳ ...' : '📥 PDF'}
+            {downloading ? t('downloadBusy') : t('download')}
           </button>
         </div>
       </div>

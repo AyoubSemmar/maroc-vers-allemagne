@@ -1,6 +1,9 @@
 'use client'
 
 import { useState, type ReactNode } from 'react'
+import { useTranslations, useLocale } from 'next-intl'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 import type { Lesson, Level, GrammarTable, VocabItem, Gender } from '@/lib/german-data/types'
 import { useProgress } from '@/lib/useProgress'
 import AudioButton from '@/components/learn-german/AudioButton'
@@ -10,11 +13,7 @@ import SpeakingExercise from '@/components/learn-german/SpeakingExercise'
 
 type Tab = 'grammar' | 'vocab' | 'exercise'
 
-// Renders mixed Arabic/German text with proper bidi isolation.
-// Any quoted phrase or inline Latin run is wrapped in <bdi dir="ltr"> so
-// punctuation (., ?, !) stays attached correctly to the German phrase.
 function BidiText({ text, className }: { text: string; className?: string }) {
-  // Match quoted runs (various quote styles) OR runs of Latin letters + punctuation
   const regex = /"[^"]+"|„[^"]+(?:"|")|«[^»]+»|'[^']+'|[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß0-9 ,.\-!?':;()]*[A-Za-zÄÖÜäöüß.!?]/g
   const parts: ReactNode[] = []
   let lastIndex = 0
@@ -112,7 +111,7 @@ function GrammarTableRenderer({ table }: { table: GrammarTable }) {
   )
 }
 
-function VocabCard({ item, index }: { item: VocabItem; index: number }) {
+function VocabCard({ item, typeLabel }: { item: VocabItem; typeLabel: (t: string) => string }) {
   const [flipped, setFlipped] = useState(false)
   const g = item.gender ? GENDER_STYLES[item.gender] : null
 
@@ -123,7 +122,6 @@ function VocabCard({ item, index }: { item: VocabItem; index: number }) {
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
-          {/* German word + gender badge + audio */}
           <div className="flex items-center gap-2 flex-wrap">
             {g && (
               <span className={`text-xs font-bold px-2 py-0.5 rounded-md ${g.bg} ${g.text}`}>
@@ -139,17 +137,14 @@ function VocabCard({ item, index }: { item: VocabItem; index: number }) {
             <AudioButton text={item.german} size="sm" />
           </div>
 
-          {/* Type badge */}
           {item.type && (
             <span className="text-xs text-gray-400 mt-0.5 block">{typeLabel(item.type)}</span>
           )}
 
-          {/* Translation */}
           <div className={`mt-2 transition-all ${flipped ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
             <span className="text-green-700 font-medium">{item.arabic}</span>
           </div>
 
-          {/* Example */}
           {item.example && (
             <div className="mt-2 pt-2 border-t border-gray-100">
               <div className="flex items-center gap-2">
@@ -163,7 +158,6 @@ function VocabCard({ item, index }: { item: VocabItem; index: number }) {
           )}
         </div>
 
-        {/* Flip hint */}
         {!flipped && (
           <div className="shrink-0 text-gray-300 group-hover:text-green-400 transition-colors text-xs mt-1">
             <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
@@ -176,21 +170,6 @@ function VocabCard({ item, index }: { item: VocabItem; index: number }) {
   )
 }
 
-function typeLabel(t: string): string {
-  const map: Record<string, string> = {
-    noun: 'اسم',
-    verb: 'فعل',
-    adjective: 'صفة',
-    adverb: 'ظرف',
-    phrase: 'عبارة',
-    preposition: 'حرف جر',
-    conjunction: 'أداة ربط',
-    pronoun: 'ضمير',
-    number: 'رقم',
-  }
-  return map[t] ?? t
-}
-
 export default function LessonClient({
   lesson,
   level,
@@ -200,6 +179,11 @@ export default function LessonClient({
   level: Level
   nextLesson: Lesson | null
 }) {
+  const t = useTranslations('learnGerman.lesson')
+  const tData = useTranslations('learnGerman.data')
+  const lessonTitle = (() => { try { return tData(`lessons.${lesson.id}` as any) } catch { return lesson.title } })()
+  const nextLessonTitle = nextLesson ? (() => { try { return tData(`lessons.${nextLesson.id}` as any) } catch { return nextLesson.title } })() : ''
+  const locale = useLocale() as AppLocale
   const [tab, setTab] = useState<Tab>('grammar')
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [matchingResults, setMatchingResults] = useState<Record<string, boolean>>({})
@@ -207,10 +191,14 @@ export default function LessonClient({
   const [vocabSearch, setVocabSearch] = useState('')
   const { completeLesson, isAdmin } = useProgress(level.id)
 
-  const tabs: { id: Tab; label: string; emoji: string }[] = [
-    { id: 'grammar', label: 'القواعد', emoji: '📖' },
-    { id: 'vocab', label: 'المفردات', emoji: '📝' },
-    { id: 'exercise', label: 'التمارين', emoji: '✏️' },
+  function typeLabel(key: string): string {
+    try { return t(`types.${key}` as any) } catch { return key }
+  }
+
+  const tabs: { id: Tab; labelKey: string; emoji: string }[] = [
+    { id: 'grammar', labelKey: 'grammar', emoji: '📖' },
+    { id: 'vocab', labelKey: 'vocab', emoji: '📝' },
+    { id: 'exercise', labelKey: 'exercise', emoji: '✏️' },
   ]
 
   const questions = lesson.exercise.questions
@@ -221,7 +209,7 @@ export default function LessonClient({
       if (q.type === 'matching') {
         if (matchingResults[q.id]) correct++
       } else if (q.type === 'speaking') {
-        correct++ // speaking always counts if attempted
+        correct++
       } else {
         const ans = (answers[q.id] ?? '').trim().toLowerCase()
         const expected = q.answer.trim().toLowerCase()
@@ -261,20 +249,28 @@ export default function LessonClient({
     v.arabic.includes(vocabSearch)
   )
 
+  function questionTypeLabel(type: string): string {
+    if (type === 'multiple-choice') return t('exerciseCard.types.mcq')
+    if (type === 'fill-blank')      return t('exerciseCard.types.fill')
+    if (type === 'drag-drop')       return t('exerciseCard.types.drag')
+    if (type === 'matching')        return t('exerciseCard.types.match')
+    return t('exerciseCard.types.speak')
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50" dir="rtl">
+    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
 
       {/* ── Header ── */}
       <div className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
         <div className="max-w-3xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-3">
-            <a
+            <Link
               href={`/learn-german/${level.id.toLowerCase()}`}
               className="flex items-center gap-1 text-sm text-gray-500 hover:text-green-700 transition-colors"
             >
               <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
               {level.id}
-            </a>
+            </Link>
             <span className="text-gray-300">/</span>
             <span className={`text-xs font-bold text-white px-2.5 py-1 rounded-lg ${level.color}`}>
               {level.id}
@@ -283,27 +279,29 @@ export default function LessonClient({
 
           <div className="flex items-start justify-between gap-3">
             <div>
-              <h1 className="text-lg font-bold text-gray-900 leading-snug">{lesson.title}</h1>
-              <p className="text-xs text-gray-400 mt-0.5">درس {lesson.order} · {lesson.vocabulary.length} كلمة · {questions.length} تمرين</p>
+              <h1 className="text-lg font-bold text-gray-900 leading-snug">{lessonTitle}</h1>
+              <p className="text-xs text-gray-400 mt-0.5">
+                {t('meta', { n: lesson.order, vocab: lesson.vocabulary.length, q: questions.length })}
+              </p>
             </div>
-            <AudioButton text={lesson.title} size="sm" className="mt-1 shrink-0" />
+            <AudioButton text={lessonTitle} size="sm" className="mt-1 shrink-0" />
           </div>
 
           {/* Tab bar */}
           <div className="flex gap-2 mt-4">
-            {tabs.map((t) => (
+            {tabs.map((tb) => (
               <button
-                key={t.id}
-                onClick={() => setTab(t.id)}
+                key={tb.id}
+                onClick={() => setTab(tb.id)}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all
-                  ${tab === t.id
+                  ${tab === tb.id
                     ? 'bg-green-700 text-white shadow-sm'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
-                <span>{t.emoji}</span> {t.label}
-                {t.id === 'vocab' && <span className="text-xs opacity-70">({lesson.vocabulary.length})</span>}
-                {t.id === 'exercise' && <span className="text-xs opacity-70">({questions.length})</span>}
+                <span>{tb.emoji}</span> {t(`tabs.${tb.labelKey}` as any)}
+                {tb.id === 'vocab' && <span className="text-xs opacity-70">({lesson.vocabulary.length})</span>}
+                {tb.id === 'exercise' && <span className="text-xs opacity-70">({questions.length})</span>}
               </button>
             ))}
           </div>
@@ -316,7 +314,6 @@ export default function LessonClient({
         {tab === 'grammar' && (
           <div className="flex flex-col gap-6">
 
-            {/* Grammar title card */}
             <div className={`rounded-2xl p-5 ${level.color} bg-opacity-10 border border-opacity-20`}
               style={{ backgroundColor: 'var(--tw-bg-opacity)' }}>
               <div className="flex items-center gap-3">
@@ -325,24 +322,22 @@ export default function LessonClient({
                 </div>
                 <div>
                   <h2 className="text-xl font-bold text-gray-900">{lesson.grammar.title}</h2>
-                  <p className="text-xs text-gray-500 mt-0.5">قواعد الدرس</p>
+                  <p className="text-xs text-gray-500 mt-0.5">{t('grammarCard.subtitle')}</p>
                 </div>
               </div>
             </div>
 
-            {/* Main explanation */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
               <div className="text-gray-700 leading-relaxed text-sm whitespace-pre-line">
                 <BidiText text={lesson.grammar.content} />
               </div>
             </div>
 
-            {/* Grammar tables */}
             {lesson.grammar.tables && lesson.grammar.tables.length > 0 && (
               <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="font-bold text-gray-800 mb-1 flex items-center gap-2">
                   <span className="w-6 h-6 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-xs">📊</span>
-                  جداول القواعد
+                  {t('grammarCard.tables')}
                 </h3>
                 {lesson.grammar.tables.map((table, i) => (
                   <GrammarTableRenderer key={i} table={table} />
@@ -350,12 +345,11 @@ export default function LessonClient({
               </div>
             )}
 
-            {/* Rules cards */}
             {lesson.grammar.rules && lesson.grammar.rules.length > 0 && (
               <div className="flex flex-col gap-3">
                 <h3 className="font-bold text-gray-800 flex items-center gap-2">
                   <span className="w-6 h-6 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center text-xs">📌</span>
-                  القواعد الأساسية
+                  {t('grammarCard.rules')}
                 </h3>
                 {lesson.grammar.rules.map((rule, i) => (
                   <div key={i} className="bg-orange-50 border border-orange-100 rounded-xl p-4">
@@ -374,12 +368,11 @@ export default function LessonClient({
               </div>
             )}
 
-            {/* Golden tip */}
             {lesson.grammar.tip && (
               <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-5 flex gap-3">
                 <span className="text-2xl shrink-0">💡</span>
                 <div>
-                  <p className="font-bold text-yellow-900 text-sm mb-1">نصيحة ذهبية</p>
+                  <p className="font-bold text-yellow-900 text-sm mb-1">{t('grammarCard.tipTitle')}</p>
                   <p className="text-yellow-800 text-sm leading-relaxed">
                     <BidiText text={lesson.grammar.tip} />
                   </p>
@@ -387,11 +380,10 @@ export default function LessonClient({
               </div>
             )}
 
-            {/* Examples */}
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
               <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
                 <span className="w-6 h-6 bg-green-100 text-green-700 rounded-lg flex items-center justify-center text-xs">✍️</span>
-                أمثلة تطبيقية
+                {t('grammarCard.examples')}
               </h3>
               <div className="flex flex-col gap-3">
                 {lesson.grammar.examples.map((ex, i) => (
@@ -410,7 +402,7 @@ export default function LessonClient({
               onClick={() => setTab('vocab')}
               className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
             >
-              التالي: المفردات
+              {t('grammarCard.nextVocab')}
               <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/></svg>
             </button>
           </div>
@@ -420,15 +412,14 @@ export default function LessonClient({
         {tab === 'vocab' && (
           <div className="flex flex-col gap-4">
 
-            {/* Header + search */}
             <div className="flex items-center justify-between gap-3 flex-wrap">
               <div>
-                <h2 className="text-lg font-bold text-gray-900">المفردات</h2>
-                <p className="text-xs text-gray-400">{lesson.vocabulary.length} كلمة · اضغط على أي بطاقة لرؤية الترجمة</p>
+                <h2 className="text-lg font-bold text-gray-900">{t('vocabCard.heading')}</h2>
+                <p className="text-xs text-gray-400">{t('vocabCard.sub', { n: lesson.vocabulary.length })}</p>
               </div>
               <input
                 type="text"
-                placeholder="ابحث..."
+                placeholder={t('vocabCard.searchPh')}
                 value={vocabSearch}
                 onChange={e => setVocabSearch(e.target.value)}
                 className="border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:border-green-400 w-44"
@@ -439,27 +430,26 @@ export default function LessonClient({
             <div className="flex items-center gap-3 flex-wrap">
               {(Object.entries(GENDER_STYLES) as [Gender, typeof GENDER_STYLES[Gender]][]).map(([g, s]) => (
                 <span key={g} className={`text-xs px-2.5 py-1 rounded-md font-semibold ${s.bg} ${s.text}`}>
-                  {s.label} — {g === 'der' ? 'مذكر' : g === 'die' ? 'مؤنث' : g === 'das' ? 'محايد' : 'جمع'}
+                  {s.label} — {t(`vocabCard.gender.${g}` as any)}
                 </span>
               ))}
             </div>
 
-            {/* Cards grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {filteredVocab.map((item, i) => (
-                <VocabCard key={i} item={item} index={i} />
+                <VocabCard key={i} item={item} typeLabel={typeLabel} />
               ))}
             </div>
 
             {filteredVocab.length === 0 && (
-              <p className="text-center text-gray-400 py-8">لا توجد نتائج للبحث</p>
+              <p className="text-center text-gray-400 py-8">{t('vocabCard.noResults')}</p>
             )}
 
             <button
               onClick={() => setTab('exercise')}
               className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2 mt-2"
             >
-              التالي: التمارين
+              {t('vocabCard.nextEx')}
               <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/></svg>
             </button>
           </div>
@@ -469,10 +459,9 @@ export default function LessonClient({
         {tab === 'exercise' && (
           <div className="flex flex-col gap-6">
 
-            {/* Progress bar */}
             <div className="bg-white rounded-2xl border border-gray-200 p-4">
               <div className="flex items-center justify-between text-sm mb-2">
-                <span className="font-semibold text-gray-700">التقدم</span>
+                <span className="font-semibold text-gray-700">{t('exerciseCard.progress')}</span>
                 <span className="text-gray-400">{answeredCount} / {questions.length}</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -483,7 +472,6 @@ export default function LessonClient({
               </div>
             </div>
 
-            {/* Questions */}
             {questions.map((q, i) => {
               const selected = answers[q.id] ?? ''
               const isCorrect = submitted && q.type !== 'matching' && q.type !== 'speaking' &&
@@ -499,7 +487,6 @@ export default function LessonClient({
                       : 'border-gray-200'
                     }`}
                 >
-                  {/* Question header */}
                   <div className="flex items-start gap-3 mb-4">
                     <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0 mt-0.5
                       ${submitted && q.type !== 'matching' && q.type !== 'speaking'
@@ -516,11 +503,7 @@ export default function LessonClient({
                             q.type === 'drag-drop' ? 'bg-purple-50 text-purple-600' :
                             q.type === 'matching' ? 'bg-teal-50 text-teal-600' :
                             'bg-pink-50 text-pink-600'}`}>
-                          {q.type === 'multiple-choice' ? 'اختيار من متعدد' :
-                           q.type === 'fill-blank' ? 'أكمل الفراغ' :
-                           q.type === 'drag-drop' ? 'رتب الكلمات' :
-                           q.type === 'matching' ? 'صل بين الكلمات' :
-                           '🎤 تحدث'}
+                          {questionTypeLabel(q.type)}
                         </span>
                         {q.audioPrompt && <AudioButton text={q.audioPrompt} size="sm" />}
                       </div>
@@ -533,7 +516,6 @@ export default function LessonClient({
                     </div>
                   </div>
 
-                  {/* ── Multiple choice ── */}
                   {q.type === 'multiple-choice' && (
                     <div className="flex flex-col gap-2 mr-10">
                       {q.options?.map((opt) => {
@@ -558,14 +540,13 @@ export default function LessonClient({
                     </div>
                   )}
 
-                  {/* ── Fill blank ── */}
                   {q.type === 'fill-blank' && (
                     <div className="mr-10">
                       <input
                         type="text"
                         value={selected}
                         onChange={e => !submitted && handleAnswer(q.id, e.target.value)}
-                        placeholder="اكتب إجابتك هنا..."
+                        placeholder={t('exerciseCard.fillPh')}
                         className={`w-full border-2 rounded-xl px-4 py-3 text-sm focus:outline-none transition-colors
                           ${submitted
                             ? isCorrect
@@ -576,15 +557,14 @@ export default function LessonClient({
                         dir="ltr"
                       />
                       {submitted && isWrong && (
-                        <p className="text-sm text-green-700 mt-2">✅ الإجابة الصحيحة: <strong dir="ltr">{q.answer}</strong></p>
+                        <p className="text-sm text-green-700 mt-2">{t('exerciseCard.correctAnswer')}<strong dir="ltr">{q.answer}</strong></p>
                       )}
                       {submitted && isCorrect && (
-                        <p className="text-sm text-green-600 mt-2">✅ إجابة صحيحة!</p>
+                        <p className="text-sm text-green-600 mt-2">{t('exerciseCard.correct')}</p>
                       )}
                     </div>
                   )}
 
-                  {/* ── Drag-drop ── */}
                   {q.type === 'drag-drop' && q.words && (
                     <div className="mr-10">
                       <DragDropExercise
@@ -597,7 +577,6 @@ export default function LessonClient({
                     </div>
                   )}
 
-                  {/* ── Matching ── */}
                   {q.type === 'matching' && q.pairs && (
                     <div className="mr-4">
                       <MatchingExercise
@@ -608,7 +587,6 @@ export default function LessonClient({
                     </div>
                   )}
 
-                  {/* ── Speaking ── */}
                   {q.type === 'speaking' && (
                     <div className="mr-10">
                       <SpeakingExercise
@@ -621,14 +599,13 @@ export default function LessonClient({
               )
             })}
 
-            {/* Submit / Score */}
             {!submitted ? (
               <button
                 onClick={handleSubmit}
                 disabled={answeredCount < questions.filter(q => q.type !== 'matching' && q.type !== 'speaking').length}
                 className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
               >
-                تحقق من الإجابات ({answeredCount}/{questions.length})
+                {t('exerciseCard.submit', { done: answeredCount, total: questions.length })}
               </button>
             ) : (
               <div className={`rounded-3xl p-8 text-center border-2 ${score! >= 70 ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
@@ -641,7 +618,6 @@ export default function LessonClient({
                   <div className={`text-4xl font-black ${score! >= 70 ? 'text-green-700' : 'text-orange-600'}`}>
                     {score}%
                   </div>
-                  {/* Mini circular progress */}
                   <svg viewBox="0 0 36 36" className="w-12 h-12 -rotate-90">
                     <circle cx="18" cy="18" r="15.9" fill="none" stroke="#e5e7eb" strokeWidth="3"/>
                     <circle
@@ -653,27 +629,27 @@ export default function LessonClient({
                   </svg>
                 </div>
                 <p className="text-gray-700 font-medium">
-                  {score! >= 90 ? 'ممتاز! أتقنت هذا الدرس بجدارة 🌟' :
-                   score! >= 70 ? 'أحسنت! يمكنك الانتقال للدرس التالي.' :
-                   'حاول مراجعة القواعد والمفردات والمحاولة مجدداً.'}
+                  {score! >= 90 ? t('exerciseCard.scoreExcellent') :
+                   score! >= 70 ? t('exerciseCard.scorePass') :
+                   t('exerciseCard.scoreRetry')}
                 </p>
 
                 <div className="flex flex-wrap gap-3 justify-center mt-5">
                   {nextLesson && score! >= 70 && (
-                    <a
+                    <Link
                       href={`/learn-german/${level.id.toLowerCase()}/${nextLesson.id}`}
                       className="bg-green-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-800"
                     >
-                      الدرس التالي: {nextLesson.title} ←
-                    </a>
+                      {t('exerciseCard.nextLesson', { title: nextLessonTitle })}
+                    </Link>
                   )}
                   {!nextLesson && score! >= 70 && (
-                    <a
+                    <Link
                       href={`/learn-german/${level.id.toLowerCase()}`}
                       className="bg-green-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-800"
                     >
-                      🎉 أكملت المستوى! العودة ←
-                    </a>
+                      {t('exerciseCard.levelDone')}
+                    </Link>
                   )}
                   <button
                     onClick={() => { setSubmitted(false); setAnswers({}); setMatchingResults({}) }}
@@ -682,7 +658,7 @@ export default function LessonClient({
                         ? 'bg-orange-500 text-white hover:bg-orange-600'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                   >
-                    {score! < 70 ? 'حاول مجدداً' : 'راجع الإجابات'}
+                    {score! < 70 ? t('exerciseCard.tryAgain') : t('exerciseCard.reviewAnswers')}
                   </button>
                 </div>
               </div>

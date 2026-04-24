@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { TEMPLATES, TemplateId, TemplateMeta } from './types'
 
 type Props = {
@@ -10,31 +11,32 @@ type Props = {
 }
 
 export default function TemplateSelector({ selected, onSelect, onPremiumClick, isPremiumUnlocked }: Props) {
+  const tTpl = useTranslations('cvBuilder.templates')
   return (
     <div className="rihla-cvb-tpl-grid">
-      {TEMPLATES.map(t => {
-        const locked = t.isPremium && !isPremiumUnlocked
-        const active = selected === t.id
+      {TEMPLATES.map(tpl => {
+        const locked = tpl.isPremium && !isPremiumUnlocked
+        const active = selected === tpl.id
         return (
           <button
             type="button"
-            key={t.id}
+            key={tpl.id}
             className={`rihla-cvb-tpl-card${active ? ' active' : ''}${locked ? ' locked' : ''}`}
             onClick={() => {
-              if (locked) onPremiumClick(t)
-              else onSelect(t.id)
+              if (locked) onPremiumClick(tpl)
+              else onSelect(tpl.id)
             }}
           >
-            <div className="rihla-cvb-tpl-thumb" style={{ background: t.accentColor }}>
-              <TemplateThumbPreview id={t.id} />
+            <div className="rihla-cvb-tpl-thumb" style={{ background: tpl.accentColor }}>
+              <TemplateThumbPreview id={tpl.id} />
               {locked && <span className="rihla-cvb-lock">🔒</span>}
               {active && <span className="rihla-cvb-active-badge">✓</span>}
             </div>
             <div className="rihla-cvb-tpl-meta">
-              <strong>{t.nameAr}</strong>
-              <small>{t.name}</small>
-              <p>{t.description}</p>
-              {t.isPremium && <span className="rihla-cvb-premium-badge">Premium</span>}
+              <strong>{tTpl(`${tpl.id}.name`)}</strong>
+              <small>{tpl.name}</small>
+              <p>{tTpl(`${tpl.id}.desc`)}</p>
+              {tpl.isPremium && <span className="rihla-cvb-premium-badge">Premium</span>}
             </div>
           </button>
         )

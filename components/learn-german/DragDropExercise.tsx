@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface Props {
   words: string[]
@@ -11,10 +12,10 @@ interface Props {
 }
 
 export default function DragDropExercise({ words, answer, onCorrect, submitted, onAnswer }: Props) {
+  const t = useTranslations('learnGerman.dragDrop')
   const [bank, setBank] = useState<string[]>([])
   const [placed, setPlaced] = useState<string[]>([])
 
-  // Shuffle words on mount
   useEffect(() => {
     setBank([...words].sort(() => Math.random() - 0.5))
     setPlaced([])
@@ -44,14 +45,13 @@ export default function DragDropExercise({ words, answer, onCorrect, submitted, 
 
   return (
     <div className="flex flex-col gap-3">
-      {/* Answer area */}
       <div
         className={`min-h-14 rounded-xl border-2 border-dashed p-3 flex flex-wrap gap-2 items-center transition-colors
           ${isCorrect ? 'border-green-400 bg-green-50' : isWrong ? 'border-red-300 bg-red-50' : 'border-gray-300 bg-gray-50'}`}
         dir="ltr"
       >
         {placed.length === 0 && (
-          <span className="text-gray-400 text-sm select-none">اضغط على الكلمات لترتيب الجملة...</span>
+          <span className="text-gray-400 text-sm select-none">{t('hint')}</span>
         )}
         {placed.map((word, i) => (
           <button
@@ -71,7 +71,6 @@ export default function DragDropExercise({ words, answer, onCorrect, submitted, 
         ))}
       </div>
 
-      {/* Word bank */}
       <div className="flex flex-wrap gap-2" dir="ltr">
         {bank.map((word, i) => (
           <button
@@ -88,11 +87,11 @@ export default function DragDropExercise({ words, answer, onCorrect, submitted, 
 
       {submitted && isWrong && (
         <p className="text-sm text-green-700 mt-1">
-          ✅ الإجابة الصحيحة: <strong dir="ltr">{answer}</strong>
+          {t('correctAnswer')}<strong dir="ltr">{answer}</strong>
         </p>
       )}
       {submitted && isCorrect && (
-        <p className="text-sm text-green-600 mt-1">✅ ممتاز! الترتيب صحيح.</p>
+        <p className="text-sm text-green-600 mt-1">{t('excellent')}</p>
       )}
     </div>
   )

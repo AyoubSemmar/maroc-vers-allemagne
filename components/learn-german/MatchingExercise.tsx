@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 
 interface Pair { left: string; right: string }
 
@@ -11,6 +12,7 @@ interface Props {
 }
 
 export default function MatchingExercise({ pairs, submitted, onAnswer }: Props) {
+  const t = useTranslations('learnGerman.matching')
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null)
   const [matched, setMatched] = useState<Record<number, number>>({}) // leftIdx → rightIdx
   const [shuffledRight, setShuffledRight] = useState<Pair[]>([])
@@ -99,7 +101,7 @@ export default function MatchingExercise({ pairs, submitted, onAnswer }: Props) 
     <div className="grid grid-cols-2 gap-3" dir="ltr">
       {/* Left column: German */}
       <div className="flex flex-col gap-2">
-        <p className="text-xs font-semibold text-gray-400 text-center mb-1">🇩🇪 Deutsch</p>
+        <p className="text-xs font-semibold text-gray-400 text-center mb-1">{t('de')}</p>
         {pairs.map((pair, i) => (
           <button
             key={i}
@@ -118,7 +120,7 @@ export default function MatchingExercise({ pairs, submitted, onAnswer }: Props) 
 
       {/* Right column: Arabic */}
       <div className="flex flex-col gap-2" dir="rtl">
-        <p className="text-xs font-semibold text-gray-400 text-center mb-1">🇲🇦 العربية</p>
+        <p className="text-xs font-semibold text-gray-400 text-center mb-1">{t('ar')}</p>
         {shuffledRight.map((pair, ri) => (
           <button
             key={ri}
