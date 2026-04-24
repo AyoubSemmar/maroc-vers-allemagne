@@ -2,6 +2,7 @@
   "common": {
     "appName": "Von Marokko nach Deutschland",
     "tagline": "Dein Leitfaden für den Umzug nach Deutschland",
+    "brandSubtitle": "Dein Leitfaden",
     "loading": "Wird geladen...",
     "save": "Speichern",
     "cancel": "Abbrechen",
@@ -21,18 +22,64 @@
   },
   "nav": {
     "home": "Startseite",
+    "homeAria": "Startseite",
     "about": "Über uns",
     "articles": "Artikel",
     "jobs": "Jobs",
+    "tools": "Werkzeuge",
+    "faq": "FAQ",
     "ausbildung": "Ausbildung",
+    "ausbildungJobs": "Ausbildungsangebote",
     "learnGerman": "Deutsch lernen",
     "cvBuilder": "Lebenslauf-Generator",
-    "anschreiben": "Anschreiben-Generator",
+    "anschreiben": "Anschreiben",
     "profile": "Profil",
+    "myAccount": "Mein Konto",
     "login": "Anmelden",
     "signup": "Konto erstellen",
     "logout": "Abmelden",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "lightMode": "Heller Modus",
+    "darkMode": "Dunkler Modus",
+    "enableLight": "Hellen Modus aktivieren",
+    "enableDark": "Dunklen Modus aktivieren"
+  },
+  "footer": {
+    "warning": "⚠️ Die hier bereitgestellten Informationen dienen nur zur Orientierung und stellen keine rechtliche oder offizielle Beratung dar. Bitte immer mit offiziellen Quellen abgleichen.",
+    "brandTag": "Dein umfassender Leitfaden für Einwanderung, Arbeit und Studium in Deutschland — speziell für Marokkaner.",
+    "contactMail": "✉️ Schreib uns",
+    "copyright": "© {year} MA→DE · Von Marokko nach Deutschland",
+    "disclaimer": "Informationen nur zur Orientierung · Immer mit offiziellen Quellen abgleichen",
+    "sections": {
+      "about": {
+        "heading": "Über uns",
+        "aboutUs": "Wer wir sind",
+        "mission": "Unsere Mission",
+        "contact": "Kontakt"
+      },
+      "guides": {
+        "heading": "Praktische Leitfäden",
+        "housing": "Wohnen",
+        "banking": "Banken & Konten",
+        "simcards": "SIM-Karten & Internet",
+        "universities": "Universitäten",
+        "jobs": "Arbeitsmarkt",
+        "ausbildung": "Ausbildung",
+        "visa": "Visum & Dokumente"
+      },
+      "resources": {
+        "heading": "Ressourcen",
+        "learnGerman": "Deutsch lernen",
+        "articles": "Artikel",
+        "usefulLinks": "Nützliche Links"
+      },
+      "legal": {
+        "heading": "Rechtliches",
+        "terms": "Nutzungsbedingungen",
+        "privacy": "Datenschutzerklärung",
+        "disclaimer": "Haftungsausschluss"
+      }
+    }
   },
   "language": {
     "pickerTitle": "Wähle deine Sprache",

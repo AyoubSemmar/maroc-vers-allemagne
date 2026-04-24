@@ -1,8 +1,9 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
-import { useRouter } from 'next/navigation'
+import { Link, useRouter } from '@/i18n/navigation'
 import LanguageSwitcher from './LanguageSwitcher'
 
 type Theme = 'light' | 'dark'
@@ -18,12 +19,14 @@ type SbUser = {
 }
 
 function initialFromEmail(email?: string | null) {
-  if (!email) return '؟'
+  if (!email) return '?'
   const first = email.trim().charAt(0)
-  return first ? first.toUpperCase() : '؟'
+  return first ? first.toUpperCase() : '?'
 }
 
 export default function RihlaNav() {
+  const tNav = useTranslations('nav')
+  const tCommon = useTranslations('common')
   const [user, setUser] = useState<SbUser | null>(null)
   const [profileAvatar, setProfileAvatar] = useState<string | null>(null)
   const [theme, setTheme] = useState<Theme>('light')
@@ -84,28 +87,28 @@ export default function RihlaNav() {
   return (
     <nav className="rihla-nav">
       <div className="wrap rihla-nav-inner">
-        <a href="/" className="rihla-logo" aria-label="الصفحة الرئيسية">
+        <Link href="/" className="rihla-logo" aria-label={tNav('homeAria')}>
           <div className="rihla-logo-mark">MA→DE</div>
-          <span>دليلك</span>
-        </a>
+          <span>{tCommon('brandSubtitle')}</span>
+        </Link>
 
         <div className="rihla-nav-links">
-          <a href="/#tools">الأدوات</a>
-          <a href="/learn-german">تعلم الألمانية</a>
-          <a href="/articles">المقالات</a>
-          <a href="/cv-builder">السيرة الذاتية</a>
-          <a href="/anschreiben-generator">خطاب التحفيز</a>
-          <a href="/ausbildung-jobs">فرص Ausbildung</a>
-          <a href="/#faq">أسئلة شائعة</a>
+          <Link href="/#tools">{tNav('tools')}</Link>
+          <Link href="/learn-german">{tNav('learnGerman')}</Link>
+          <Link href="/articles">{tNav('articles')}</Link>
+          <Link href="/cv-builder">{tNav('cvBuilder')}</Link>
+          <Link href="/anschreiben-generator">{tNav('anschreiben')}</Link>
+          <Link href="/ausbildung-jobs">{tNav('ausbildungJobs')}</Link>
+          <Link href="/#faq">{tNav('faq')}</Link>
         </div>
 
         <div className="rihla-nav-cta">
-          <a href="/search" className="rihla-icon-btn" aria-label="بحث" title="بحث">
+          <Link href="/search" className="rihla-icon-btn" aria-label={tCommon('search')} title={tCommon('search')}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <circle cx="11" cy="11" r="7" />
               <path d="m21 21-4.3-4.3" />
             </svg>
-          </a>
+          </Link>
 
           <LanguageSwitcher />
 
@@ -113,8 +116,8 @@ export default function RihlaNav() {
             type="button"
             onClick={toggleTheme}
             className="rihla-icon-btn"
-            aria-label={theme === 'dark' ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن'}
-            title={theme === 'dark' ? 'الوضع الفاتح' : 'الوضع الداكن'}
+            aria-label={theme === 'dark' ? tNav('enableLight') : tNav('enableDark')}
+            title={theme === 'dark' ? tNav('lightMode') : tNav('darkMode')}
           >
             {mounted && theme === 'dark' ? (
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -131,24 +134,24 @@ export default function RihlaNav() {
           {mounted && user ? (
             <>
               {/* Desktop: email pill */}
-              <a href="/profile" className="btn btn-ghost btn-sm rihla-desktop-only" title={emailLabel}>
+              <Link href="/profile" className="btn btn-ghost btn-sm rihla-desktop-only" title={emailLabel}>
                 <span className="rihla-nav-email">{emailLabel}</span>
-              </a>
+              </Link>
               {/* Mobile: avatar circle */}
-              <a href="/profile" className="rihla-avatar rihla-mobile-only" aria-label="حسابي" title={emailLabel}>
+              <Link href="/profile" className="rihla-avatar rihla-mobile-only" aria-label={tNav('myAccount')} title={emailLabel}>
                 {avatarSrc ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={avatarSrc} alt="" />
                 ) : (
                   <span>{initialFromEmail(user.email)}</span>
                 )}
-              </a>
-              <button onClick={logout} className="btn btn-brand btn-sm" type="button">خروج</button>
+              </Link>
+              <button onClick={logout} className="btn btn-brand btn-sm" type="button">{tNav('logout')}</button>
             </>
           ) : (
             <>
-              <a href="/login" className="btn btn-ghost btn-sm">دخول</a>
-              <a href="/signup" className="btn btn-brand btn-sm rihla-desktop-only">إنشاء حساب</a>
+              <Link href="/login" className="btn btn-ghost btn-sm">{tNav('login')}</Link>
+              <Link href="/signup" className="btn btn-brand btn-sm rihla-desktop-only">{tNav('signup')}</Link>
             </>
           )}
         </div>

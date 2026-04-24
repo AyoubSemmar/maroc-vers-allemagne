@@ -2,6 +2,7 @@
   "common": {
     "appName": "Du Maroc vers l'Allemagne",
     "tagline": "Votre guide pour s'installer en Allemagne",
+    "brandSubtitle": "Votre guide",
     "loading": "Chargement...",
     "save": "Enregistrer",
     "cancel": "Annuler",
@@ -21,18 +22,64 @@
   },
   "nav": {
     "home": "Accueil",
+    "homeAria": "Page d'accueil",
     "about": "À propos",
     "articles": "Articles",
     "jobs": "Emplois",
+    "tools": "Outils",
+    "faq": "FAQ",
     "ausbildung": "Ausbildung",
+    "ausbildungJobs": "Offres Ausbildung",
     "learnGerman": "Apprendre l'allemand",
     "cvBuilder": "Créateur de CV",
-    "anschreiben": "Générateur de lettre de motivation",
+    "anschreiben": "Lettre de motivation",
     "profile": "Profil",
-    "login": "Se connecter",
+    "myAccount": "Mon compte",
+    "login": "Connexion",
     "signup": "Créer un compte",
-    "logout": "Se déconnecter",
-    "contact": "Contact"
+    "logout": "Déconnexion",
+    "contact": "Contact",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre",
+    "enableLight": "Activer le mode clair",
+    "enableDark": "Activer le mode sombre"
+  },
+  "footer": {
+    "warning": "⚠️ Les informations fournies ici sont uniquement à titre indicatif et ne constituent pas un conseil juridique ou officiel. Veuillez toujours vérifier auprès des sources officielles.",
+    "brandTag": "Votre guide complet pour l'immigration, le travail et les études en Allemagne — pensé pour les Marocains.",
+    "contactMail": "✉️ Écrivez-nous",
+    "copyright": "© {year} MA→DE · Du Maroc vers l'Allemagne",
+    "disclaimer": "Informations à titre indicatif · Vérifiez toujours les sources officielles",
+    "sections": {
+      "about": {
+        "heading": "À propos",
+        "aboutUs": "Qui sommes-nous",
+        "mission": "Notre mission",
+        "contact": "Contactez-nous"
+      },
+      "guides": {
+        "heading": "Guides pratiques",
+        "housing": "Logement",
+        "banking": "Banques & comptes",
+        "simcards": "Cartes SIM & internet",
+        "universities": "Universités",
+        "jobs": "Marché du travail",
+        "ausbildung": "Ausbildung",
+        "visa": "Visa & documents"
+      },
+      "resources": {
+        "heading": "Ressources",
+        "learnGerman": "Apprendre l'allemand",
+        "articles": "Articles",
+        "usefulLinks": "Liens utiles"
+      },
+      "legal": {
+        "heading": "Mentions légales",
+        "terms": "Conditions d'utilisation",
+        "privacy": "Politique de confidentialité",
+        "disclaimer": "Avertissement"
+      }
+    }
   },
   "language": {
     "pickerTitle": "Choisissez votre langue",
