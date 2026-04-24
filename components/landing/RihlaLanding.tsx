@@ -1,7 +1,10 @@
 'use client'
 
 import { useEffect, useState, useRef } from 'react'
+import { useLocale, useTranslations } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
+import { Link } from '@/i18n/navigation'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 
 type Article = {
   id: string
@@ -12,58 +15,17 @@ type Article = {
   read_time?: string | null
 }
 
-const tools = [
-  { name: 'البنوك',         desc: 'افتح حساباً بسهولة من المغرب', icon: '🏦', href: '/banking',     c: 'brand' as const },
-  { name: 'السكن',          desc: 'شقق وغرف مشتركة WG',        icon: '🏠', href: '/listings',    c: 'gold'  as const },
-  { name: 'الجامعات',       desc: 'ادرس في ألمانيا مجاناً',     icon: '🎓', href: '/universities', c: 'teal'  as const },
-  { name: 'العمل',          desc: 'ابحث عن وظيفتك المناسبة',   icon: '💼', href: '/jobs',        c: 'berry' as const },
-  { name: 'السيرة الذاتية', desc: 'Lebenslauf احترافي + ذكاء اصطناعي', icon: '📄', href: '/cv-builder', c: 'brand' as const },
-  { name: 'خطاب التحفيز', desc: 'Anschreiben بالألمانية في ثوانٍ',  icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
-  { name: 'Ausbildung',     desc: 'التدريب المهني المزدوج',     icon: '🔧', href: '/ausbildung',  c: 'gold'  as const },
-  { name: 'فرص Ausbildung', desc: 'عروض حقيقية محدّثة يومياً',    icon: '🔍', href: '/ausbildung-jobs', c: 'brand' as const },
-  { name: 'التأشيرة',       desc: 'كل الأوراق والإجراءات',      icon: '📄', href: '/visa',        c: 'brand' as const },
-  { name: 'تعلم الألمانية', desc: 'دروس من A1 إلى C1',          icon: '📚', href: '/learn-german', c: 'teal'  as const },
-  { name: 'شرائح SIM',      desc: 'ابقَ متصلاً من اليوم الأول',  icon: '📱', href: '/categories/شرائح الاتصال', c: 'berry' as const },
-]
-
-const levels: Array<{ id: string; title: string; desc: string; state: 'done' | 'active' | '' }> = [
-  { id: 'A1', title: 'المبتدئ',  desc: 'السلام، الأرقام، تقديم النفس',     state: 'done' },
-  { id: 'A2', title: 'أساسيات', desc: 'تسوق، مواعيد، وصف الأشخاص',        state: 'done' },
-  { id: 'B1', title: 'متوسط',   desc: 'محادثات يومية، آراء، عمل',          state: 'active' },
-  { id: 'B2', title: 'متقدم',   desc: 'نقاشات معقدة، نصوص رسمية',         state: '' },
-  { id: 'C1', title: 'إتقان',    desc: 'مستوى أكاديمي ومهني',              state: '' },
-]
-
-const faqs = [
-  {
-    q: 'هل الموقع مجاني فعلاً؟',
-    a: 'نعم، الوصول الكامل لجميع المقالات والأدوات ودروس الألمانية من A1 إلى C1 مجاني تماماً. هدفنا هو مساعدة المغاربة على الانتقال بثقة، بدون عوائق.',
-    open: true,
-  },
-  {
-    q: 'هل أحتاج لمعرفة الألمانية قبل السفر؟',
-    a: 'يُفضّل معرفة المستوى B1 على الأقل للعمل والدراسة الجامعية، و A2 للـ Ausbildung. لكن الكثير من البرامج تقبل المبتدئين وتوفّر كورسات لغة مدمجة. دروسنا تغطي كل المستويات.',
-  },
-  {
-    q: 'ما الفرق بين Studium و Ausbildung؟',
-    a: 'الـ Studium هو الدراسة الجامعية الأكاديمية، بينما الـ Ausbildung هو تدريب مهني مزدوج (نظري + عملي) مدفوع الأجر، يؤهّلك لمهنة محددة خلال 2-3 سنوات. كلاهما مسارات ممتازة للهجرة.',
-  },
-  {
-    q: 'كم من الوقت تستغرق إجراءات التأشيرة؟',
-    a: 'تختلف حسب نوع التأشيرة والسفارة، لكنها عموماً تتراوح بين 4 و 12 أسبوعاً. ننصح دائماً ببدء التحضير قبل 4-6 أشهر من الموعد المطلوب. نوفّر دليلاً كاملاً لكل نوع تأشيرة.',
-  },
-  {
-    q: 'هل المعلومات محدّثة ورسمية؟',
-    a: 'نحرص على تحديث المحتوى بشكل مستمر بناءً على المصادر الرسمية الألمانية والسفارات. لكن للقرارات الرسمية، ننصح دائماً بالتحقق من الجهات الرسمية المختصة. معلوماتنا إرشادية.',
-  },
-]
-
-const marqueeItems = [
-  '🏦 البنوك الألمانية', '🎓 Studium & Universität', '📄 Visa & Aufenthalt', '💼 سوق العمل',
-  '🔧 Ausbildung', '🏠 Wohnung & WG', '📚 من A1 إلى C1', '📱 شرائح SIM',
-]
-
-function Stat({ target, suffix, label, text }: { target?: number; suffix?: string; label: string; text?: string }) {
+function Stat({
+  target,
+  suffix,
+  label,
+  text,
+}: {
+  target?: number
+  suffix?: string
+  label: string
+  text?: string
+}) {
   const ref = useRef<HTMLDivElement>(null)
   const [val, setVal] = useState(target ? 0 : null)
 
@@ -71,20 +33,23 @@ function Stat({ target, suffix, label, text }: { target?: number; suffix?: strin
     if (target === undefined) return
     const el = ref.current
     if (!el) return
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (!en.isIntersecting) return
-        const start = performance.now()
-        const dur = 1400
-        const tick = (now: number) => {
-          const t = Math.min(1, (now - start) / dur)
-          setVal(Math.round(target * (1 - Math.pow(1 - t, 3))))
-          if (t < 1) requestAnimationFrame(tick)
-        }
-        requestAnimationFrame(tick)
-        io.unobserve(el)
-      })
-    }, { threshold: 0.5 })
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return
+          const start = performance.now()
+          const dur = 1400
+          const tick = (now: number) => {
+            const t = Math.min(1, (now - start) / dur)
+            setVal(Math.round(target * (1 - Math.pow(1 - t, 3))))
+            if (t < 1) requestAnimationFrame(tick)
+          }
+          requestAnimationFrame(tick)
+          io.unobserve(el)
+        })
+      },
+      { threshold: 0.5 },
+    )
     io.observe(el)
     return () => io.disconnect()
   }, [target])
@@ -92,7 +57,11 @@ function Stat({ target, suffix, label, text }: { target?: number; suffix?: strin
   return (
     <div ref={ref} className="reveal">
       <div className="stat-num">
-        {text ? <span style={{ fontFamily: 'var(--font-ar)' }}>{text}</span> : `${val ?? 0}${suffix ?? ''}`}
+        {text ? (
+          <span style={{ fontFamily: 'var(--font-ar)' }}>{text}</span>
+        ) : (
+          `${val ?? 0}${suffix ?? ''}`
+        )}
       </div>
       <div className="stat-label">{label}</div>
     </div>
@@ -100,20 +69,67 @@ function Stat({ target, suffix, label, text }: { target?: number; suffix?: strin
 }
 
 export default function RihlaLanding({ articles }: { articles: Article[] }) {
+  const t = useTranslations('landing')
+  const locale = useLocale() as AppLocale
+  const dir = dirFor(locale)
+
   const [email, setEmail] = useState('')
-  const [nlStatus, setNlStatus] = useState<'idle' | 'loading' | 'success' | 'error' | 'duplicate'>('idle')
+  const [nlStatus, setNlStatus] = useState<
+    'idle' | 'loading' | 'success' | 'error' | 'duplicate'
+  >('idle')
   const [openFaq, setOpenFaq] = useState<number | null>(0)
+
+  const tools = [
+    { key: 'banks', icon: '🏦', href: '/banking', c: 'brand' as const },
+    { key: 'housing', icon: '🏠', href: '/listings', c: 'gold' as const },
+    { key: 'universities', icon: '🎓', href: '/universities', c: 'teal' as const },
+    { key: 'work', icon: '💼', href: '/jobs', c: 'berry' as const },
+    { key: 'cv', icon: '📄', href: '/cv-builder', c: 'brand' as const },
+    { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
+    { key: 'ausbildung', icon: '🔧', href: '/ausbildung', c: 'gold' as const },
+    { key: 'ausbildungJobs', icon: '🔍', href: '/ausbildung-jobs', c: 'brand' as const },
+    { key: 'visa', icon: '📄', href: '/visa', c: 'brand' as const },
+    { key: 'learnGerman', icon: '📚', href: '/learn-german', c: 'teal' as const },
+    { key: 'sim', icon: '📱', href: '/categories/شرائح الاتصال', c: 'berry' as const },
+  ] as const
+
+  const levels: Array<{
+    id: 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
+    state: 'done' | 'active' | ''
+  }> = [
+    { id: 'A1', state: 'done' },
+    { id: 'A2', state: 'done' },
+    { id: 'B1', state: 'active' },
+    { id: 'B2', state: '' },
+    { id: 'C1', state: '' },
+  ]
+
+  const faqIds = [1, 2, 3, 4, 5] as const
+
+  const marqueeKeys = [
+    'banks',
+    'studium',
+    'visa',
+    'jobs',
+    'ausbildung',
+    'housing',
+    'levels',
+    'sim',
+  ] as const
 
   useEffect(() => {
     // reveal-on-scroll
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((en) => {
-        if (en.isIntersecting) {
-          en.target.classList.add('in')
-          io.unobserve(en.target)
-        }
-      })
-    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' })
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (en.isIntersecting) {
+            en.target.classList.add('in')
+            io.unobserve(en.target)
+          }
+        })
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' },
+    )
     document.querySelectorAll('.rihla .reveal').forEach((el) => io.observe(el))
 
     // tool hover tracking
@@ -142,15 +158,17 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     const { error } = await supabase
       .from('newsletter_subscribers')
       .insert([{ email: email.trim().toLowerCase() }])
-    if (!error) { setNlStatus('success'); setEmail('') }
-    else if (error.code === '23505') setNlStatus('duplicate')
+    if (!error) {
+      setNlStatus('success')
+      setEmail('')
+    } else if (error.code === '23505') setNlStatus('duplicate')
     else setNlStatus('error')
   }
 
   const articleList = articles.slice(0, 3)
 
   return (
-    <div className="rihla" dir="rtl">
+    <div className="rihla" dir={dir}>
       {/* ============ HERO ============ */}
       <section className="hero">
         <div className="hero-mesh"></div>
@@ -158,33 +176,48 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
           <div className="hero-copy">
             <span className="eyebrow">
               <span className="eyebrow-dot"></span>
-              MA→DE · الدليل الأول للمغاربة في ألمانيا
+              {t('hero.eyebrow')}
             </span>
             <h1 className="hero-title">
-              رحلتك إلى <span className="gradient-text">ألمانيا</span><br />
-              تبدأ من هنا
+              {t('hero.titleLine1')}{' '}
+              <span className="gradient-text">{t('hero.titleHighlight')}</span>
+              <br />
+              {t('hero.titleLine2')}
             </h1>
-            <p className="hero-sub">
-              أدوات عملية، دروس ألمانية تفاعلية، وإعلانات سكن — كل ما تحتاجه للانتقال بثقة وبدون تعقيد، في مكان واحد.
-            </p>
+            <p className="hero-sub">{t('hero.sub')}</p>
             <div className="hero-ctas">
-              <a href="/learn-german" className="btn btn-primary">
-                ابدأ رحلتك
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"><path d="M19 12H5M12 5l-7 7 7 7" /></svg>
+              <Link href="/learn-german" className="btn btn-primary">
+                {t('hero.ctaStart')}
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                >
+                  <path d="M19 12H5M12 5l-7 7 7 7" />
+                </svg>
+              </Link>
+              <a href="#tools" className="btn btn-ghost">
+                {t('hero.ctaBrowse')}
               </a>
-              <a href="#tools" className="btn btn-ghost">تصفح الأدوات</a>
             </div>
             <div className="hero-trust">
               <div className="avatars">
-                <div>ي</div><div>س</div><div>ك</div><div>+</div>
+                <div>ي</div>
+                <div>س</div>
+                <div>ك</div>
+                <div>+</div>
               </div>
-              <span>انضم لآلاف المغاربة في رحلتهم نحو ألمانيا</span>
+              <span>{t('hero.trust')}</span>
             </div>
           </div>
 
           {/* JOURNEY VISUAL */}
           <div className="journey">
-            <div className="journey-title">رحلتك</div>
+            <div className="journey-title">{t('hero.journeyTitle')}</div>
 
             <svg className="journey-svg" viewBox="0 0 500 500" preserveAspectRatio="none">
               <defs>
@@ -202,26 +235,41 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                   </feMerge>
                 </filter>
               </defs>
-              <path className="path-bg" d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73" />
-              <path className="path-fg" d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73" filter="url(#neonGlow)" />
+              <path
+                className="path-bg"
+                d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73"
+              />
+              <path
+                className="path-fg"
+                d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73"
+                filter="url(#neonGlow)"
+              />
             </svg>
 
             <div className="flag flag-start">MA</div>
-            <div className="stop stop-contract" data-label="عقد">📝</div>
-            <div className="stop stop-visa" data-label="التأشيرة">📄</div>
-            <div className="stop stop-house" data-label="سكن">🏠</div>
+            <div className="stop stop-contract" data-label={t('hero.stopContract')}>
+              📝
+            </div>
+            <div className="stop stop-visa" data-label={t('hero.stopVisa')}>
+              📄
+            </div>
+            <div className="stop stop-house" data-label={t('hero.stopHouse')}>
+              🏠
+            </div>
             <div className="flag flag-end">DE</div>
             <div className="plane">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M2 12l20-8-8 20-2-9-10-3z" /></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M2 12l20-8-8 20-2-9-10-3z" />
+              </svg>
             </div>
 
             <div className="word-chip chip-willkommen">
               Willkommen
-              <small>welcome · أهلاً</small>
+              <small>{t('hero.willkommenSub')}</small>
             </div>
             <div className="word-chip chip-gutentag">
               Guten Tag
-              <small>hello · مرحباً</small>
+              <small>{t('hero.gutenTagSub')}</small>
             </div>
           </div>
         </div>
@@ -230,8 +278,10 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       {/* ============ MARQUEE ============ */}
       <div className="marquee">
         <div className="marquee-track">
-          {[...marqueeItems, ...marqueeItems].map((it, i) => (
-            <span key={i} className="marquee-item">{it}</span>
+          {[...marqueeKeys, ...marqueeKeys].map((k, i) => (
+            <span key={i} className="marquee-item">
+              {t(`marquee.${k}`)}
+            </span>
           ))}
         </div>
       </div>
@@ -239,10 +289,18 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       {/* ============ STATS ============ */}
       <section className="stats">
         <div className="wrap stats-grid">
-          <Stat target={20} suffix="+" label="مقال ودليل عملي" />
-          <Stat target={5} suffix=" مستويات" label="دروس ألمانية من A1 إلى C1" />
-          <Stat target={8} suffix=" فئات" label="أدوات عملية مُنظّمة" />
-          <Stat text="مجاناً" label="الوصول الكامل، دائماً" />
+          <Stat target={20} suffix="+" label={t('stats.articlesLabel')} />
+          <Stat
+            target={5}
+            suffix={t('stats.levelsSuffix')}
+            label={t('stats.levelsLabel')}
+          />
+          <Stat
+            target={8}
+            suffix={t('stats.categoriesSuffix')}
+            label={t('stats.categoriesLabel')}
+          />
+          <Stat text={t('stats.freeText')} label={t('stats.freeLabel')} />
         </div>
       </section>
 
@@ -250,35 +308,36 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       <section id="how">
         <div className="wrap">
           <div className="section-head reveal">
-            <span className="kicker">كيف يعمل</span>
-            <h2>ثلاث خطوات للانطلاق</h2>
-            <p className="section-sub">من البحث عن أداة، إلى تعلّم اللغة، إلى الوصول — كل شيء مُبسّط.</p>
+            <span className="kicker">{t('how.kicker')}</span>
+            <h2>{t('how.title')}</h2>
+            <p className="section-sub">{t('how.sub')}</p>
           </div>
           <div className="steps">
-            <div className="step reveal">
-              <div className="step-num">الخطوة 01</div>
-              <div className="step-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.42 0.15 32)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.35-4.35" /></svg>
+            {([1, 2, 3] as const).map((n) => (
+              <div key={n} className="step reveal">
+                <div className="step-num">{t('how.step', { n: String(n).padStart(2, '0') })}</div>
+                <div className="step-icon">
+                  {n === 1 && (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.42 0.15 32)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="11" cy="11" r="8" />
+                      <path d="m21 21-4.35-4.35" />
+                    </svg>
+                  )}
+                  {n === 2 && (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.15 75)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                    </svg>
+                  )}
+                  {n === 3 && (
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.50 0.11 200)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+                    </svg>
+                  )}
+                </div>
+                <h3>{t(`how.step${n}Title`)}</h3>
+                <p>{t(`how.step${n}Desc`)}</p>
               </div>
-              <h3>ابحث عن أداتك</h3>
-              <p>من السكن والبنوك إلى التأشيرات — كل ما تحتاجه منظم وواضح في فئات سهلة التصفح.</p>
-            </div>
-            <div className="step reveal">
-              <div className="step-num">الخطوة 02</div>
-              <div className="step-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.15 75)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
-              </div>
-              <h3>تعلم الألمانية</h3>
-              <p>دروس تفاعلية مبنية خصيصاً للمغاربة، مع مفردات وقواعد وتمارين من A1 إلى C1.</p>
-            </div>
-            <div className="step reveal">
-              <div className="step-num">الخطوة 03</div>
-              <div className="step-icon">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.50 0.11 200)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" /></svg>
-              </div>
-              <h3>انطلق بثقة</h3>
-              <p>مسلحاً بالمعرفة والأدوات والمجتمع، ابدأ حياتك الجديدة في ألمانيا بدون تعقيد.</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -287,18 +346,25 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       <section id="tools" style={{ background: 'var(--bg-warm)' }}>
         <div className="wrap">
           <div className="section-head reveal">
-            <span className="kicker">الأدوات العملية</span>
-            <h2>كل ما تحتاجه، في مكان واحد</h2>
-            <p className="section-sub">ثمانية أقسام، عشرات المقالات، وكل الأدوات التي ستحتاجها طوال رحلتك.</p>
+            <span className="kicker">{t('tools.kicker')}</span>
+            <h2>{t('tools.title')}</h2>
+            <p className="section-sub">{t('tools.sub')}</p>
           </div>
           <div className="tools">
-            {tools.map((t) => (
-              <a key={t.name} href={t.href} className="tool reveal" data-c={t.c}>
-                <div className="tool-icon">{t.icon}</div>
-                <h3>{t.name}</h3>
-                <p>{t.desc}</p>
-                <div className="tool-link">اكتشف <span>←</span></div>
-              </a>
+            {tools.map((tool) => (
+              <Link
+                key={tool.key}
+                href={tool.href}
+                className="tool reveal"
+                data-c={tool.c}
+              >
+                <div className="tool-icon">{tool.icon}</div>
+                <h3>{t(`tools.${tool.key}.name`)}</h3>
+                <p>{t(`tools.${tool.key}.desc`)}</p>
+                <div className="tool-link">
+                  {t('tools.discover')} <span>←</span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -309,22 +375,36 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
         <div className="wrap">
           <div className="ladder-wrap reveal">
             <div className="ladder-copy">
-              <span className="kicker">تعلم الألمانية</span>
-              <h2>من <span className="gradient-text">A1</span> إلى <span className="gradient-text">C1</span> — خطوة بخطوة</h2>
-              <p>قواعد، مفردات، وتمارين تفاعلية مُصمّمة خصيصاً للمتحدثين بالعربية. تقدم بالسرعة التي تناسبك مع تتبع فوري لتقدمك.</p>
-              <a href="/learn-german" className="btn btn-primary">ابدأ التعلم مجاناً</a>
+              <span className="kicker">{t('ladder.kicker')}</span>
+              <h2>
+                {t('ladder.titlePrefix')}{' '}
+                <span className="gradient-text">A1</span>{' '}
+                {t('ladder.titleBetween')}{' '}
+                <span className="gradient-text">C1</span>{' '}
+                {t('ladder.titleSuffix')}
+              </h2>
+              <p>{t('ladder.sub')}</p>
+              <Link href="/learn-german" className="btn btn-primary">
+                {t('ladder.cta')}
+              </Link>
               <div className="ladder-meta">
                 <div>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M5 13l4 4L19 7" /></svg>
-                  مجاني تماماً
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaFree')}
                 </div>
                 <div>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M5 13l4 4L19 7" /></svg>
-                  تفاعلي
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaInteractive')}
                 </div>
                 <div>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round"><path d="M5 13l4 4L19 7" /></svg>
-                  للمغاربة
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaMoroccans')}
                 </div>
               </div>
             </div>
@@ -333,14 +413,24 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
               {levels.map((l, i) => {
                 const card = (
                   <div className="level-card">
-                    <div className="lvl-title">{l.title}</div>
-                    <div className="lvl-desc">{l.desc}</div>
+                    <div className="lvl-title">{t(`ladder.levels.${l.id}.title`)}</div>
+                    <div className="lvl-desc">{t(`ladder.levels.${l.id}.desc`)}</div>
                   </div>
                 )
                 const dot = <div className="level-dot">{l.id}</div>
                 return (
                   <div key={l.id} className={`level ${l.state}`}>
-                    {i % 2 === 0 ? <>{card}{dot}</> : <>{dot}{card}</>}
+                    {i % 2 === 0 ? (
+                      <>
+                        {card}
+                        {dot}
+                      </>
+                    ) : (
+                      <>
+                        {dot}
+                        {card}
+                      </>
+                    )}
                   </div>
                 )
               })}
@@ -354,12 +444,16 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
         <section id="articles" style={{ background: 'var(--bg-warm)' }}>
           <div className="wrap">
             <div className="section-head reveal">
-              <span className="kicker">مقالات مميزة</span>
-              <h2>أحدث الأدلة والنصائح</h2>
+              <span className="kicker">{t('articles.kicker')}</span>
+              <h2>{t('articles.title')}</h2>
             </div>
             <div className="articles">
               {articleList.map((a) => (
-                <a key={a.id} href={`/articles/${a.id}`} className="article reveal">
+                <Link
+                  key={a.id}
+                  href={`/articles/${a.id}`}
+                  className="article reveal"
+                >
                   <div className="article-img">
                     {a.image_url ? (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -372,11 +466,15 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                   <div className="article-body">
                     <h3>{a.title}</h3>
                     <div className="article-meta">
-                      <span>{a.read_time ? `قراءة · ${a.read_time}` : 'اقرأ المزيد'}</span>
+                      <span>
+                        {a.read_time
+                          ? t('articles.readTime', { time: a.read_time })
+                          : t('articles.readMore')}
+                      </span>
                       <span>{a.date ?? ''}</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -387,13 +485,13 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       <section id="faq">
         <div className="wrap">
           <div className="section-head reveal">
-            <span className="kicker">أسئلة شائعة</span>
-            <h2>كل ما تريد معرفته</h2>
+            <span className="kicker">{t('faq.kicker')}</span>
+            <h2>{t('faq.title')}</h2>
           </div>
           <div className="faq-list">
-            {faqs.map((f, i) => (
+            {faqIds.map((n, i) => (
               <details
-                key={i}
+                key={n}
                 className="faq reveal"
                 open={openFaq === i}
                 onToggle={(e) => {
@@ -402,10 +500,10 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                 }}
               >
                 <summary>
-                  {f.q}
+                  {t(`faq.q${n}`)}
                   <span className="faq-icon"></span>
                 </summary>
-                <p>{f.a}</p>
+                <p>{t(`faq.a${n}`)}</p>
               </details>
             ))}
           </div>
@@ -416,11 +514,11 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       <section style={{ paddingTop: 20 }}>
         <div className="wrap">
           <div className="newsletter reveal">
-            <h2>ابقَ على اطلاع دائم</h2>
-            <p>نشرة أسبوعية فيها أحدث الأدلة، فرص العمل، والنصائح العملية للانتقال إلى ألمانيا.</p>
+            <h2>{t('newsletter.title')}</h2>
+            <p>{t('newsletter.sub')}</p>
             {nlStatus === 'success' ? (
               <div style={{ background: 'oklch(1 0 0 / 0.2)', backdropFilter: 'blur(12px)', padding: '14px 24px', borderRadius: 999, maxWidth: 480, margin: '0 auto', fontWeight: 700 }}>
-                ✓ تم الاشتراك بنجاح!
+                {t('newsletter.success')}
               </div>
             ) : (
               <form className="newsletter-form" onSubmit={submitNewsletter}>
@@ -428,18 +526,24 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="بريدك الإلكتروني"
+                  placeholder={t('newsletter.placeholder')}
                   required
                   dir="ltr"
                 />
                 <button type="submit" disabled={nlStatus === 'loading'}>
-                  {nlStatus === 'loading' ? '...' : 'اشترك'}
+                  {nlStatus === 'loading' ? t('newsletter.submitting') : t('newsletter.submit')}
                 </button>
               </form>
             )}
-            {nlStatus === 'duplicate' && <small style={{ color: 'oklch(0.95 0.08 90)' }}>هذا البريد مسجل مسبقاً</small>}
-            {nlStatus === 'error' && <small>حدث خطأ، حاول مرة أخرى</small>}
-            {nlStatus !== 'duplicate' && nlStatus !== 'error' && <small>لن نشارك بريدك مع أي جهة · يمكنك إلغاء الاشتراك في أي وقت</small>}
+            {nlStatus === 'duplicate' && (
+              <small style={{ color: 'oklch(0.95 0.08 90)' }}>
+                {t('newsletter.duplicate')}
+              </small>
+            )}
+            {nlStatus === 'error' && <small>{t('newsletter.error')}</small>}
+            {nlStatus !== 'duplicate' && nlStatus !== 'error' && (
+              <small>{t('newsletter.disclaimer')}</small>
+            )}
           </div>
         </div>
       </section>
