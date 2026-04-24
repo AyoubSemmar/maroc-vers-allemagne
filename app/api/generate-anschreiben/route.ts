@@ -1,10 +1,18 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
-import { checkAndConsume, refund } from '@/lib/entitlements'
+import { checkAndConsume, refund, getStatus } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
+
+export async function GET() {
+  const sb = await createServerSupabase()
+  const { data: { user } } = await sb.auth.getUser()
+  if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+  const status = await getStatus(user.id, 'motivation')
+  return NextResponse.json(status)
+}
 
 const SYSTEM_PROMPT = `You are a professional German career assistant specialized in writing high-quality "Bewerbungsanschreiben" (motivation letters) for Ausbildung positions in Germany.
 

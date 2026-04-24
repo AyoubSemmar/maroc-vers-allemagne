@@ -278,6 +278,14 @@ export async function getStatus(userId: string, feature: PaidFeature) {
     .eq('user_id', userId)
     .maybeSingle()
   const credits = (data as unknown as Record<string, number> | null)?.[column] ?? 0
+
+  // Motivation letter: expose the one-time free-lifetime try flag so the UI
+  // can show "1 free try available" before the user spends a credit.
+  if (feature === 'motivation') {
+    const freeAvailable = !(profile as any)?.motivation_free_used
+    return { tier: 'free' as const, credits, used, freeLifetimeAvailable: freeAvailable }
+  }
+
   return { tier: 'free' as const, credits, used }
 }
 

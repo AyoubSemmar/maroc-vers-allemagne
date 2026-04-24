@@ -15,11 +15,12 @@ type Props = {
   onChange: (patch: Partial<FormState>) => void
   onSubmit: () => void
   loading: boolean
+  canGenerate?: boolean
 }
 
 const MAX_BG = 1200
 
-export default function AnschreibenForm({ state, onChange, onSubmit, loading }: Props) {
+export default function AnschreibenForm({ state, onChange, onSubmit, loading, canGenerate = true }: Props) {
   const fileRef = useRef<HTMLInputElement>(null)
 
   function handleSubmit(e: React.FormEvent) {
@@ -153,10 +154,12 @@ export default function AnschreibenForm({ state, onChange, onSubmit, loading }: 
       <button
         type="submit"
         className="ansch-btn-submit"
-        disabled={loading || !state.fullName.trim() || !state.ausbildungPosition.trim() || !state.background.trim()}
+        disabled={loading || !canGenerate || !state.fullName.trim() || !state.ausbildungPosition.trim() || !state.background.trim()}
       >
         {loading ? (
           <><span className="ansch-spinner" /> جاري التوليد...</>
+        ) : !canGenerate ? (
+          '🔒 يتطلب رصيداً أو باقة مميزة'
         ) : (
           '✨ توليد خطاب التحفيز'
         )}

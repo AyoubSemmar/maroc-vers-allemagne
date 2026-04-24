@@ -24,16 +24,38 @@ function loadSaved(): FormState {
   } catch { return EMPTY }
 }
 
+type EntitlementStatus =
+  | { tier: 'premium'; limit: number | null; used: number; remaining: number | null }
+  | { tier: 'free'; credits: number; used: number; freeLifetimeAvailable?: boolean }
+
+function canGenerate(ent: EntitlementStatus | null): boolean {
+  // If we haven't loaded entitlements yet, let the user click; the API will
+  // enforce and return a 402 if they really can't.
+  if (!ent) return true
+  if (ent.tier === 'premium') return ent.remaining === null || ent.remaining > 0
+  return !!ent.freeLifetimeAvailable || ent.credits > 0
+}
+
 export default function AnschreibenClient() {
   const [form, setForm] = useState<FormState>(EMPTY)
   const [mounted, setMounted] = useState(false)
   const [loading, setLoading] = useState(false)
   const [letter, setLetter] = useState('')
   const [error, setError] = useState('')
+  const [ent, setEnt] = useState<EntitlementStatus | null>(null)
+
+  async function refreshEntitlements() {
+    try {
+      const res = await fetch('/api/generate-anschreiben', { method: 'GET' })
+      if (!res.ok) return
+      setEnt(await res.json())
+    } catch {}
+  }
 
   useEffect(() => {
     setForm(loadSaved())
     setMounted(true)
+    refreshEntitlements()
   }, [])
 
   useEffect(() => {
@@ -70,6 +92,7 @@ export default function AnschreibenClient() {
 
       if (!res.ok || json.error) throw new Error(json.error || `HTTP ${res.status}`)
       setLetter(json.letter)
+      refreshEntitlements()
 
       // Scroll to result
       setTimeout(() => {
@@ -96,6 +119,9 @@ export default function AnschreibenClient() {
       </header>
 
       <div className="ansch-body wrap">
+        {/* Entitlement banner */}
+        {ent && <EntitlementBanner ent={ent} />}
+
         <div className={`ansch-layout${letter ? ' has-result' : ''}`}>
           {/* Form */}
           <div className="ansch-form-col">
@@ -104,6 +130,7 @@ export default function AnschreibenClient() {
               onChange={update}
               onSubmit={handleSubmit}
               loading={loading}
+              canGenerate={canGenerate(ent)}
             />
             {error && (
               <div className="ansch-error">
@@ -148,4 +175,80 @@ export default function AnschreibenClient() {
       </div>
     </div>
   )
+}
+
+function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
+  // Premium users
+  if (ent.tier === 'premium') {
+    const r = ent.remaining
+    const label = r === null
+      ? '✨ باقة مميزة — توليد غير محدود'
+      : `✨ باقة مميزة — متبقي اليوم: ${r}/${ent.limit}`
+    return (
+      <div style={bannerStyle('premium')}>
+        <strong>{label}</strong>
+      </div>
+    )
+  }
+
+  // Free users with a lifetime free try still available
+  if (ent.freeLifetimeAvailable) {
+    return (
+      <div style={bannerStyle('free')}>
+        <strong>🎁 لديك محاولة مجانية واحدة!</strong>
+        <span style={{ fontSize: 13, color: '#166534' }}>
+          &nbsp;جرّب مولّد خطاب التحفيز مجاناً مرة واحدة — بعدها تحتاج رصيداً.
+        </span>
+      </div>
+    )
+  }
+
+  // Free users with paid credits
+  if (ent.credits > 0) {
+    return (
+      <div style={bannerStyle('credits')}>
+        <strong>رصيدك: {ent.credits} {ent.credits === 1 ? 'رسالة' : 'رسائل'}</strong>
+        <span style={{ fontSize: 13, color: '#78350f' }}>
+          &nbsp;سيُخصم رصيد واحد عند كل توليد ناجح.
+        </span>
+      </div>
+    )
+  }
+
+  // Free users with nothing
+  return (
+    <div style={bannerStyle('empty')}>
+      <strong>❌ لا تملك رصيداً</strong>
+      <span style={{ fontSize: 13, color: '#7f1d1d' }}>
+        &nbsp;لقد استخدمت محاولتك المجانية. اشترِ رصيداً أو ترقَّ إلى الباقة المميزة للمتابعة.
+      </span>
+      <div style={{ marginTop: 8 }}>
+        <button type="button" disabled
+          style={{
+            padding: '8px 14px', borderRadius: 8, border: '1px solid #d1d5db',
+            background: '#f3f4f6', color: '#9ca3af', cursor: 'not-allowed', fontWeight: 600, fontSize: 13,
+          }}>
+          💳 شراء رصيد (قريباً)
+        </button>
+      </div>
+    </div>
+  )
+}
+
+function bannerStyle(kind: 'premium' | 'free' | 'credits' | 'empty'): React.CSSProperties {
+  const colors = {
+    premium: { bg: '#ede9fe', border: '#c4b5fd', text: '#5b21b6' },
+    free:    { bg: '#dcfce7', border: '#86efac', text: '#166534' },
+    credits: { bg: '#fef3c7', border: '#fcd34d', text: '#78350f' },
+    empty:   { bg: '#fee2e2', border: '#fca5a5', text: '#7f1d1d' },
+  }[kind]
+  return {
+    background: colors.bg,
+    border: `1px solid ${colors.border}`,
+    color: colors.text,
+    borderRadius: 12,
+    padding: '10px 14px',
+    marginBottom: 16,
+    fontSize: 14,
+  }
 }
