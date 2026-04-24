@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
-import { usePathname, useRouter } from '@/i18n/navigation'
+import { usePathname } from '@/i18n/navigation'
 import { routing, type AppLocale } from '@/i18n/routing'
 import { LOCALE_OPTIONS } from './LanguageSwitcher'
 
@@ -20,7 +20,6 @@ export default function LanguagePicker() {
   const locale = useLocale() as AppLocale
   const t = useTranslations('language')
   const pathname = usePathname()
-  const router = useRouter()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -41,10 +40,10 @@ export default function LanguagePicker() {
       document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=${60 * 60 * 24 * 365}`
     } catch {}
     setVisible(false)
-    if (next !== locale) {
-      router.replace(pathname, { locale: next })
-      router.refresh()
-    }
+    if (next === locale) return
+    // Hard nav so the <html lang/dir> attrs + theme init script re-run.
+    const cleanPath = pathname === '/' ? '' : pathname
+    window.location.href = `/${next}${cleanPath}${window.location.search}${window.location.hash}`
   }
 
   if (!visible) return null

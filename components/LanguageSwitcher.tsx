@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
-import { usePathname, useRouter } from '@/i18n/navigation'
+import { usePathname } from '@/i18n/navigation'
 import { routing, type AppLocale } from '@/i18n/routing'
 
 type LocaleOption = {
@@ -22,7 +22,6 @@ export default function LanguageSwitcher() {
   const locale = useLocale() as AppLocale
   const t = useTranslations('language')
   const pathname = usePathname()
-  const router = useRouter()
   const [open, setOpen] = useState(false)
   const wrapRef = useRef<HTMLDivElement | null>(null)
 
@@ -52,8 +51,11 @@ export default function LanguageSwitcher() {
       localStorage.setItem('langChosen', '1')
       document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=${60 * 60 * 24 * 365}`
     } catch {}
-    router.replace(pathname, { locale: next })
-    router.refresh()
+    // Hard navigation so the <html lang/dir> attributes and the inline
+    // theme init script re-run cleanly. A soft navigation loses the
+    // data-theme attribute set by the init script.
+    const cleanPath = pathname === '/' ? '' : pathname
+    window.location.href = `/${next}${cleanPath}${window.location.search}${window.location.hash}`
   }
 
   const current =
