@@ -6,6 +6,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import "../globals.css";
 import RihlaNav from "@/components/RihlaNav";
 import RihlaFooter from "@/components/RihlaFooter";
+import LanguagePicker from "@/components/LanguagePicker";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -69,6 +70,7 @@ export default async function LocaleLayout({
           <RihlaNav />
           <main className="flex-1">{children}</main>
           <RihlaFooter />
+          <LanguagePicker />
         </NextIntlClientProvider>
       </body>
     </html>

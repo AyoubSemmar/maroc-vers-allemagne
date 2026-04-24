@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
 import { useRouter } from 'next/navigation'
+import LanguageSwitcher from './LanguageSwitcher'
 
 type Theme = 'light' | 'dark'
 
@@ -105,6 +106,8 @@ export default function RihlaNav() {
               <path d="m21 21-4.3-4.3" />
             </svg>
           </a>
+
+          <LanguageSwitcher />
 
           <button
             type="button"
