@@ -1,4 +1,6 @@
 import React from 'react'
+import { useLocale } from 'next-intl'
+import { dirFor, type AppLocale } from '@/i18n/routing'
 
 interface StaticPageProps {
   title: string
@@ -7,8 +9,9 @@ interface StaticPageProps {
 }
 
 export default function StaticPage({ title, subtitle, children }: StaticPageProps) {
+  const locale = useLocale() as AppLocale
   return (
-    <div dir="rtl">
+    <div dir={dirFor(locale)}>
       <div className="bg-green-50 border-b border-green-100 py-14 text-center">
         <h1 className="text-3xl font-bold text-green-900">{title}</h1>
         {subtitle && (
@@ -35,7 +38,7 @@ export function SectionText({ children }: { children: React.ReactNode }) {
   return <p className="text-gray-600 leading-relaxed">{children}</p>
 }
 
-export function SectionList({ items }: { items: string[] }) {
+export function SectionList({ items }: { items: React.ReactNode[] }) {
   return (
     <ul className="list-disc list-inside space-y-1 text-gray-600">
       {items.map((item, i) => (

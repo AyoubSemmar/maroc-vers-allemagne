@@ -1,39 +1,26 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import StaticPage, { Section, SectionText } from '@/components/StaticPage'
 
 export default function ContactPage() {
+  const t = useTranslations('static.contact')
   return (
-    <StaticPage
-      title="تواصل معنا"
-      subtitle="نحن هنا للمساعدة"
-    >
-      <Section heading="البريد الإلكتروني">
-        <SectionText>
-          للاستفسارات العامة: contact@maroc-vers-allemagne.com
-        </SectionText>
+    <StaticPage title={t('title')} subtitle={t('subtitle')}>
+      <Section heading={t('s1_h')}>
+        <SectionText>{t('s1_b')}</SectionText>
       </Section>
-
-      <Section heading="للمحتوى والمقالات">
-        <SectionText>
-          هل لديك تجربة تود مشاركتها أو مقال تريد نشره؟ راسلنا على: content@maroc-vers-allemagne.com — نرحب بكل المساهمات الجادة والمفيدة.
-        </SectionText>
+      <Section heading={t('s2_h')}>
+        <SectionText>{t('s2_b')}</SectionText>
       </Section>
-
-      <Section heading="للشراكات">
-        <SectionText>
-          إذا كنت مدرسة، مؤسسة، أو خدمة تود التعاون معنا: partners@maroc-vers-allemagne.com — نسعد بمناقشة فرص الشراكة المثمرة.
-        </SectionText>
+      <Section heading={t('s3_h')}>
+        <SectionText>{t('s3_b')}</SectionText>
       </Section>
-
-      <Section heading="وقت الرد">
-        <SectionText>
-          نرد عادةً خلال 2–3 أيام عمل. إذا لم تتلقَّ رداً خلال هذه المدة، تحقق من مجلد البريد العشوائي.
-        </SectionText>
+      <Section heading={t('s4_h')}>
+        <SectionText>{t('s4_b')}</SectionText>
       </Section>
-
-      <Section heading="ملاحظة">
-        <SectionText>
-          نحن فريق صغير نعمل بشغف. شكراً لصبرك وتفهمك!
-        </SectionText>
+      <Section heading={t('s5_h')}>
+        <SectionText>{t('s5_b')}</SectionText>
       </Section>
     </StaticPage>
   )

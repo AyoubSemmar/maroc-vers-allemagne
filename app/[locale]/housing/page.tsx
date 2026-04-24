@@ -1,63 +1,29 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import StaticPage, { Section, SectionText, SectionList } from '@/components/StaticPage'
 
 export default function HousingPage() {
+  const t = useTranslations('static.housing')
   return (
-    <StaticPage
-      title="دليل السكن في ألمانيا"
-      subtitle="كيف تجد شقة أو غرفة في ألمانيا"
-    >
-      <Section heading="أنواع السكن المتاح">
-        <SectionList
-          items={[
-            'شقة مستقلة (Wohnung): تستأجر الشقة كاملاً لنفسك.',
-            'غرفة في شقة مشتركة (WG - Wohngemeinschaft): تتشارك الشقة مع أشخاص آخرين وتدفع فقط تكلفة غرفتك.',
-            'سكن الطلبة (Studentenwohnheim): خاص بالطلاب المسجلين في الجامعات، أسعاره مدعومة في الغالب.',
-          ]}
-        />
+    <StaticPage title={t('title')} subtitle={t('subtitle')}>
+      <Section heading={t('s1_h')}>
+        <SectionList items={[t('s1_i1'), t('s1_i2'), t('s1_i3')]} />
       </Section>
-
-      <Section heading="WG أم شقة مستقلة؟">
-        <SectionText>
-          WG أرخص وأسهل للحصول عليها كوافد جديد. الشقة المستقلة تتطلب تاريخ ائتمان (Schufa) وضمانات أكثر، مما يجعلها أصعب على من وصل حديثاً إلى ألمانيا.
-        </SectionText>
+      <Section heading={t('s2_h')}>
+        <SectionText>{t('s2_b')}</SectionText>
       </Section>
-
-      <Section heading="أهم مواقع البحث">
-        <SectionList
-          items={[
-            'ImmobilienScout24.de — الموقع الأشهر للشقق المستقلة',
-            'WG-Gesucht.de — الأفضل للبحث عن غرف في شقق مشتركة',
-            'eBay Kleinanzeigen — إعلانات متنوعة ومباشرة من الملاك',
-            'Studenten-WG.de — مخصص للطلاب',
-          ]}
-        />
+      <Section heading={t('s3_h')}>
+        <SectionList items={[t('s3_i1'), t('s3_i2'), t('s3_i3'), t('s3_i4')]} />
       </Section>
-
-      <Section heading="الوثائق المطلوبة عادةً">
-        <SectionList
-          items={[
-            'جواز السفر أو بطاقة الإقامة',
-            'آخر 3 كشوفات راتب (أو خطاب قبول جامعي للطلاب)',
-            'Schufa-Auskunft (تقرير الجدارة الائتمانية)',
-            'Mietschuldenfreiheitsbescheinigung (شهادة عدم وجود ديون إيجار سابقة)',
-          ]}
-        />
+      <Section heading={t('s4_h')}>
+        <SectionList items={[t('s4_i1'), t('s4_i2'), t('s4_i3'), t('s4_i4')]} />
       </Section>
-
-      <Section heading="تحذيرات من الاحتيال">
-        <SectionList
-          items={[
-            'لا تدفع إيداعاً (Kaution) قبل رؤية الشقة شخصياً.',
-            'تجنب العروض الرخيصة جداً مقارنة بأسعار السوق.',
-            'لا ترسل بياناتك الشخصية أو صور وثائقك لغرباء عبر الإنترنت.',
-          ]}
-        />
+      <Section heading={t('s5_h')}>
+        <SectionList items={[t('s5_i1'), t('s5_i2'), t('s5_i3')]} />
       </Section>
-
-      <Section heading="بعد العثور على الشقة">
-        <SectionText>
-          يجب التسجيل في بلدية الإقامة (Anmeldung) خلال أسبوعين من الانتقال. هذا الإجراء إلزامي وضروري لفتح حساب بنكي والتعامل مع الجهات الرسمية في ألمانيا.
-        </SectionText>
+      <Section heading={t('s6_h')}>
+        <SectionText>{t('s6_b')}</SectionText>
       </Section>
     </StaticPage>
   )

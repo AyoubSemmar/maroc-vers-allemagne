@@ -1,39 +1,26 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import StaticPage, { Section, SectionText } from '@/components/StaticPage'
 
 export default function PrivacyPolicyPage() {
+  const t = useTranslations('static.privacy')
   return (
-    <StaticPage
-      title="سياسة الخصوصية"
-      subtitle="كيف نتعامل مع بياناتك الشخصية"
-    >
-      <Section heading="ما البيانات التي نجمعها؟">
-        <SectionText>
-          نجمع البريد الإلكتروني عند التسجيل، وبيانات الاستخدام الأساسية مثل الصفحات التي تزورها والإجراءات التي تقوم بها داخل الموقع.
-        </SectionText>
+    <StaticPage title={t('title')} subtitle={t('subtitle')}>
+      <Section heading={t('s1_h')}>
+        <SectionText>{t('s1_b')}</SectionText>
       </Section>
-
-      <Section heading="كيف نستخدم بياناتك؟">
-        <SectionText>
-          نستخدم بياناتك لتحسين تجربتك على الموقع وإرسال تحديثات مفيدة إذا اشتركت في النشرة البريدية. لن نستخدم بياناتك لأي غرض آخر دون موافقتك.
-        </SectionText>
+      <Section heading={t('s2_h')}>
+        <SectionText>{t('s2_b')}</SectionText>
       </Section>
-
-      <Section heading="هل نشارك بياناتك؟">
-        <SectionText>
-          لا. لا نبيع بياناتك ولا نشاركها مع أطراف ثالثة لأغراض تجارية. بياناتك تبقى محفوظة لدينا فقط.
-        </SectionText>
+      <Section heading={t('s3_h')}>
+        <SectionText>{t('s3_b')}</SectionText>
       </Section>
-
-      <Section heading="التخزين والأمان">
-        <SectionText>
-          نستخدم Supabase لتخزين البيانات بشكل آمن. تخضع البيانات لتشفير قياسي ويتم التعامل معها وفق أفضل ممارسات الأمن المعلوماتي.
-        </SectionText>
+      <Section heading={t('s4_h')}>
+        <SectionText>{t('s4_b')}</SectionText>
       </Section>
-
-      <Section heading="حقوقك">
-        <SectionText>
-          يمكنك طلب حذف حسابك وبياناتك في أي وقت بالتواصل معنا عبر البريد الإلكتروني. سنعالج طلبك خلال مدة معقولة.
-        </SectionText>
+      <Section heading={t('s5_h')}>
+        <SectionText>{t('s5_b')}</SectionText>
       </Section>
     </StaticPage>
   )

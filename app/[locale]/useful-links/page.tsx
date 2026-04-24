@@ -1,67 +1,29 @@
+'use client'
+
+import { useTranslations } from 'next-intl'
 import StaticPage, { Section, SectionText, SectionList } from '@/components/StaticPage'
 
 export default function UsefulLinksPage() {
+  const t = useTranslations('static.usefulLinks')
   return (
-    <StaticPage
-      title="روابط مفيدة"
-      subtitle="مواقع رسمية وموارد مهمة للمقيمين والوافدين"
-    >
-      <Section heading="الجهات الرسمية الألمانية">
-        <SectionList
-          items={[
-            'Make-it-in-Germany.com — البوابة الرسمية للعمل والهجرة إلى ألمانيا',
-            'BAMF.de — المكتب الاتحادي للهجرة واللاجئين',
-            'Arbeitsagentur.de — وكالة العمل الاتحادية',
-            'DAAD.de — منح الدراسة في ألمانيا للطلاب الأجانب',
-          ]}
-        />
+    <StaticPage title={t('title')} subtitle={t('subtitle')}>
+      <Section heading={t('s1_h')}>
+        <SectionList items={[t('s1_i1'), t('s1_i2'), t('s1_i3'), t('s1_i4')]} />
       </Section>
-
-      <Section heading="السكن">
-        <SectionList
-          items={[
-            'ImmobilienScout24.de — الموقع الأشهر للشقق والمنازل',
-            'WG-Gesucht.de — الأفضل للغرف في الشقق المشتركة',
-            'eBay Kleinanzeigen — إعلانات مباشرة من الملاك والأفراد',
-          ]}
-        />
+      <Section heading={t('s2_h')}>
+        <SectionList items={[t('s2_i1'), t('s2_i2'), t('s2_i3')]} />
       </Section>
-
-      <Section heading="تعلم الألمانية">
-        <SectionList
-          items={[
-            'Goethe Institut (goethe.de) — مراكز رسمية لتعلم الألمانية وإجراء الامتحانات',
-            'Deutsche Welle (dw.com/ar) — موارد تعليمية باللغة العربية',
-            'DuoLingo وBabbel — تطبيقات مفيدة للمبتدئين',
-          ]}
-        />
+      <Section heading={t('s3_h')}>
+        <SectionList items={[t('s3_i1'), t('s3_i2'), t('s3_i3')]} />
       </Section>
-
-      <Section heading="مواقع العمل والأوزبيلدونغ">
-        <SectionList
-          items={[
-            'Ausbildung.de — أكبر موقع للبحث عن مناصب الأوزبيلدونغ',
-            'StepStone.de — من أكبر بوابات العمل في ألمانيا',
-            'Indeed.de — محرك بحث شامل للوظائف',
-            'LinkedIn — شبكة مهنية عالمية',
-          ]}
-        />
+      <Section heading={t('s4_h')}>
+        <SectionList items={[t('s4_i1'), t('s4_i2'), t('s4_i3'), t('s4_i4')]} />
       </Section>
-
-      <Section heading="التأمين الصحي">
-        <SectionList
-          items={[
-            'TK (tk.de) — Techniker Krankenkasse، من أفضل صناديق التأمين',
-            'AOK (aok.de) — منتشرة في جميع الولايات الألمانية',
-            'Barmer (barmer.de) — خيار شائع للطلاب والموظفين',
-          ]}
-        />
+      <Section heading={t('s5_h')}>
+        <SectionList items={[t('s5_i1'), t('s5_i2'), t('s5_i3')]} />
       </Section>
-
-      <Section heading="المجتمعات العربية">
-        <SectionText>
-          ابحث عن مجموعات "مغاربة في ألمانيا" على Facebook وWhatsApp — مجتمعات رائعة للمساعدة والنصائح العملية من أشخاص مروا بنفس التجربة. التواصل مع من سبقوك يوفّر عليك الكثير.
-        </SectionText>
+      <Section heading={t('s6_h')}>
+        <SectionText>{t('s6_b')}</SectionText>
       </Section>
     </StaticPage>
   )
