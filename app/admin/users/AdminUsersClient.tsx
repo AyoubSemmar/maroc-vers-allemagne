@@ -8,6 +8,7 @@ type UserSnapshot = {
   is_admin: boolean
   is_premium: boolean
   premium_until: string | null
+  motivation_free_used: boolean
   credits: { photo: number; cv: number; motivation: number }
   unlocks: { kind: 'template' | 'german_level'; key: string }[]
 }
@@ -56,7 +57,7 @@ export default function AdminUsersClient() {
       { label: 'Premium',           value: premiumLabel,                                          active: premiumActive },
       { label: 'Photo AI',          value: premiumActive ? '5/day (premium)'       : `${u.credits.photo} credit(s)`,      active: premiumActive || u.credits.photo > 0 },
       { label: 'CV enhance',        value: premiumActive ? '2/day (premium)'       : `${u.credits.cv} credit(s)`,         active: premiumActive || u.credits.cv > 0 },
-      { label: 'Motivation letter', value: premiumActive ? '2/day (premium)'       : `${u.credits.motivation} credit(s)`, active: premiumActive || u.credits.motivation > 0 },
+      { label: 'Motivation letter', value: premiumActive ? '2/day (premium)'       : `${u.credits.motivation} credit(s)` + (u.motivation_free_used ? '' : ' + 1 free try available'), active: premiumActive || u.credits.motivation > 0 || !u.motivation_free_used },
       { label: 'Ausbildung jobs',   value: premiumActive ? 'Unlimited (premium)'   : '10 reveals/day (free)',              active: true },
       { label: 'Pro templates',     value: premiumActive ? 'All (premium)'         : unlocksForKind(u, 'template').join(', ') || 'None unlocked', active: premiumActive || unlocksForKind(u, 'template').length > 0 },
       { label: 'German levels',     value: premiumActive ? 'All (premium)'         : ('A1 (free) ' + (unlocksForKind(u, 'german_level').length ? '+ ' + unlocksForKind(u, 'german_level').join(', ') : '')), active: true },
@@ -161,6 +162,20 @@ export default function AdminUsersClient() {
               <CreditRow label="Photo AI"          value={user.credits.photo}      onAdd={n => call('addCredits', { feature: 'photo',      amount: n })} loading={loading} />
               <CreditRow label="CV enhance"        value={user.credits.cv}         onAdd={n => call('addCredits', { feature: 'cv',         amount: n })} loading={loading} />
               <CreditRow label="Motivation letter" value={user.credits.motivation} onAdd={n => call('addCredits', { feature: 'motivation', amount: n })} loading={loading} />
+            </div>
+            <div style={{ marginTop: 14, padding: '10px 12px', background: '#f9fafb', border: '1px solid #d1d5db', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10 }}>
+              <div style={{ fontSize: 13 }}>
+                <strong>Motivation letter — free lifetime try:</strong>{' '}
+                <span style={{ color: user.motivation_free_used ? '#b91c1c' : '#166534', fontWeight: 700 }}>
+                  {user.motivation_free_used ? '✕ Used' : '✓ Available'}
+                </span>
+              </div>
+              {user.motivation_free_used && (
+                <button style={btn} disabled={loading}
+                  onClick={() => call('resetMotivationFreeTry')}>
+                  ↻ Restore free try
+                </button>
+              )}
             </div>
           </Section>
 

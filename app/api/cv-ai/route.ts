@@ -114,7 +114,7 @@ Return ONLY a JSON object matching the input shape. Arrays ("education", "experi
 
 export async function POST(req: NextRequest) {
   let userIdForRefund: string | null = null
-  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free' | null = null
+  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'free_lifetime' | 'unlock' | 'always_free' | null = null
   try {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {

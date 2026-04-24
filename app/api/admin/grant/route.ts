@@ -7,6 +7,7 @@ import {
   addCredits,
   grantUnlock,
   revokeUnlock,
+  resetMotivationFreeTry,
 } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
@@ -71,6 +72,11 @@ export async function POST(req: NextRequest) {
         const key = String(body.key || '').trim()
         if (!key) return NextResponse.json({ error: 'key required' }, { status: 400 })
         await grantUnlock(target.id, kind, key)
+        break
+      }
+
+      case 'resetMotivationFreeTry': {
+        await resetMotivationFreeTry(target.id)
         break
       }
 

@@ -45,7 +45,7 @@ export type UnlockFeature = `template:${string}` | `german:${string}`
 export type Feature = PaidFeature | UnlockFeature
 
 export type CheckResult =
-  | { allowed: true;  source: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free'; remaining?: number }
+  | { allowed: true;  source: 'premium' | 'credit' | 'free_daily' | 'free_lifetime' | 'unlock' | 'always_free'; remaining?: number }
   | { allowed: false; reason: 'not_authenticated' | 'premium_daily_limit' | 'free_daily_limit' | 'no_credits' | 'not_unlocked'; remaining?: number }
 
 // ── Usage table routing per paid feature ───────────────────────
@@ -66,7 +66,7 @@ const CREDIT_COLUMN: Record<Exclude<PaidFeature, 'ausbildung_reveal'>, string> =
 async function getProfile(userId: string) {
   const { data } = await admin()
     .from('profiles')
-    .select('is_admin, is_premium, premium_until')
+    .select('is_admin, is_premium, premium_until, motivation_free_used')
     .eq('user_id', userId)
     .maybeSingle()
   return data
@@ -177,7 +177,17 @@ export async function checkAndConsume(userId: string, feature: Feature): Promise
     return { allowed: true, source: 'premium', remaining: Math.max(0, limit - next) }
   }
 
-  // 2. Free daily quota (ausbildung_reveal only)
+  // 2. Free lifetime quota (motivation only — every account gets 1 free use)
+  if (paid === 'motivation' && !(profile as any)?.motivation_free_used) {
+    await admin()
+      .from('profiles')
+      .update({ motivation_free_used: true })
+      .eq('user_id', userId)
+    await bumpDailyUsage(userId, USAGE_TABLE.motivation)
+    return { allowed: true, source: 'free_lifetime' }
+  }
+
+  // 3. Free daily quota (ausbildung_reveal only)
   if (paid === 'ausbildung_reveal') {
     const limit = FREE_DAILY_LIMITS.ausbildung_reveal
     const used = await getDailyUsage(userId, USAGE_TABLE.ausbildung_reveal)
@@ -202,7 +212,14 @@ export async function checkAndConsume(userId: string, feature: Feature): Promise
  * returns an error). Pass the `source` returned by checkAndConsume so we know
  * which ledger to reverse.
  */
-export async function refund(userId: string, feature: PaidFeature, source: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free') {
+export async function refund(userId: string, feature: PaidFeature, source: 'premium' | 'credit' | 'free_daily' | 'free_lifetime' | 'unlock' | 'always_free') {
+  if (source === 'free_lifetime' && feature === 'motivation') {
+    // Give back the lifetime try
+    await admin()
+      .from('profiles')
+      .update({ motivation_free_used: false })
+      .eq('user_id', userId)
+  }
   if (source === 'credit') {
     const column = CREDIT_COLUMN[feature as Exclude<PaidFeature, 'ausbildung_reveal'>]
     const { data } = await admin()
@@ -336,6 +353,7 @@ export async function findUserByEmail(email: string) {
     is_admin: !!profile?.is_admin,
     is_premium: !!profile?.is_premium,
     premium_until: profile?.premium_until ?? null,
+    motivation_free_used: !!(profile as any)?.motivation_free_used,
     credits: {
       photo: credits?.photo_credits ?? 0,
       cv: credits?.cv_enhance_credits ?? 0,
@@ -343,4 +361,12 @@ export async function findUserByEmail(email: string) {
     },
     unlocks: (unlocks ?? []).map(u => ({ kind: u.kind as 'template' | 'german_level', key: u.key })),
   }
+}
+
+/** Admin-only: restore the one-time free motivation letter try. */
+export async function resetMotivationFreeTry(userId: string) {
+  await admin()
+    .from('profiles')
+    .update({ motivation_free_used: false })
+    .eq('user_id', userId)
 }

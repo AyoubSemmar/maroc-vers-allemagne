@@ -86,7 +86,7 @@ Generate a convincing German "Anschreiben" that increases the user's chances of 
 
 export async function POST(req: NextRequest) {
   let userIdForRefund: string | null = null
-  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'unlock' | 'always_free' | null = null
+  let sourceForRefund: 'premium' | 'credit' | 'free_daily' | 'free_lifetime' | 'unlock' | 'always_free' | null = null
   try {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
