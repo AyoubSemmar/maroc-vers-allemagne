@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useTranslations } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
 import { Link, useRouter } from '@/i18n/navigation'
@@ -33,8 +34,10 @@ export default function RihlaNav() {
   const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
   const [learnOpen, setLearnOpen] = useState(false)
+  const [learnPos, setLearnPos] = useState<{ top: number; left: number } | null>(null)
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
   const learnRef = useRef<HTMLDivElement | null>(null)
+  const learnTriggerRef = useRef<HTMLButtonElement | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -132,19 +135,33 @@ export default function RihlaNav() {
           {/* Learn dropdown */}
           <div ref={learnRef} className={`tools-dd ${learnOpen ? 'is-open' : ''}`}>
             <button
+              ref={learnTriggerRef}
               type="button"
               className={`tools-dd-trigger ${learnOpen ? 'is-open' : ''}`}
               aria-haspopup="menu"
               aria-expanded={learnOpen}
-              onClick={() => setLearnOpen(v => !v)}
+              onClick={() => {
+                setLearnOpen(v => {
+                  const next = !v
+                  if (next && learnTriggerRef.current) {
+                    const r = learnTriggerRef.current.getBoundingClientRect()
+                    setLearnPos({ top: r.bottom + 8, left: r.left })
+                  }
+                  return next
+                })
+              }}
             >
               {tNav('learn')}
               <svg className="tools-dd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="m6 9 6 6 6-6" />
               </svg>
             </button>
-            {learnOpen && (
-              <div className="tools-dd-menu" role="menu">
+            {learnOpen && mounted && createPortal(
+              <div
+                className="tools-dd-menu tools-dd-menu-portal"
+                role="menu"
+                style={learnPos ? { top: learnPos.top, left: learnPos.left } : undefined}
+              >
                 <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('learnGerman')}
                 </Link>
@@ -157,7 +174,8 @@ export default function RihlaNav() {
                 <Link href="/#faq" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('faq')}
                 </Link>
-              </div>
+              </div>,
+              document.body,
             )}
           </div>
 
