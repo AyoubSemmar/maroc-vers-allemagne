@@ -56,7 +56,7 @@ export async function generateMetadata({
       description,
     },
     verification: {
-      google: "YSXALPa4rggTZjtkhbrg6_7dpnpVp5hQOLGuKlAmWw0",
+      google: "6nkUvguFw7fx5-A9jtaKpAT6L9bcllDaYR6ACntlfKI",
     },
   };
 }
