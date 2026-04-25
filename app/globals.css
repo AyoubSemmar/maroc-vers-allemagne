@@ -429,6 +429,26 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   .rihla-nav-links { font-size: 12.5px; gap: 12px; }
 }
 
+/* Mobile: Learn dropdown becomes a fixed full-width sheet that escapes
+   the horizontally-scrolling nav-links container (which would otherwise
+   clip an absolutely-positioned menu). */
+@media (max-width: 820px) {
+  .rihla-nav-links .tools-dd { position: static; }
+  .rihla-nav-links .tools-dd-menu {
+    position: fixed;
+    top: 64px;
+    left: 12px;
+    right: 12px;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    z-index: 60;
+    box-shadow: 0 18px 50px -12px rgba(0,0,0,0.30);
+  }
+  html[dir="rtl"] .rihla-nav-links .tools-dd-menu { left: 12px; right: 12px; }
+  .rihla-nav-links .tools-dd-item { padding: 14px 14px; font-size: 15px; }
+}
+
 /* ===== Language switcher menu (flags only) ===== */
 .lang-menu {
   position: absolute;
