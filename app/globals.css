@@ -2287,15 +2287,27 @@ html[data-theme="dark"] .dashshell-sidebar {
   min-width: 0;
 }
 .dashshell-logo-mark {
+  position: relative;
   width: 34px; height: 34px;
   display: grid; place-items: center;
-  font-size: 10px; font-weight: 800;
   color: white;
   border-radius: 10px;
-  /* Single-hue brand gradient — avoids muddy red→teal transition */
   background: linear-gradient(135deg, oklch(0.72 0.26 25), oklch(0.78 0.2 45));
-  letter-spacing: 0.02em;
   flex: none;
+  overflow: hidden;
+  box-shadow: 0 6px 18px -6px color-mix(in oklch, oklch(0.72 0.26 25) 70%, transparent),
+              inset 0 1px 0 0 color-mix(in oklch, white 30%, transparent);
+}
+.dashshell-logo-mark svg { width: 20px; height: 20px; display: block; }
+.dashshell-logo-mark::after {
+  content: '';
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: linear-gradient(to right,
+    #000 0 33.33%,
+    #DD0000 33.33% 66.66%,
+    #FFCE00 66.66% 100%);
+  opacity: 0.95;
 }
 .dashshell-logo-text {
   font-size: 17px; font-weight: 800; letter-spacing: -0.01em;

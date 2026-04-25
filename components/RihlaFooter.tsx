@@ -57,8 +57,13 @@ export default function RihlaFooter() {
       <div className="wrap rihla-foot-grid">
         <div className="rihla-foot-brand">
           <Link href="/" className="rihla-logo">
-            <div className="rihla-logo-mark">MA→DE</div>
-            <span>{tCommon('brandSubtitle')}</span>
+            <div className="rihla-logo-mark" aria-hidden>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M19 8.5A8 8 0 1 0 19.6 15" />
+                <path d="M13 12.5h6.5V18" />
+              </svg>
+            </div>
+            <span>GoGermany</span>
           </Link>
           <p>{t('brandTag')}</p>
           <a href="mailto:contact@maroc-vers-allemagne.com" className="rihla-foot-mail">

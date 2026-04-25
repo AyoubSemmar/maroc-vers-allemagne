@@ -164,8 +164,13 @@ export default function DashSidebar({
       {/* Logo row */}
       <div className="dashshell-sidebar-head">
         <Link href="/" className="dashshell-logo" aria-label={tCommon('appName')}>
-          <div className="dashshell-logo-mark">MA→DE</div>
-          <span className="dashshell-logo-text">Rihla</span>
+          <div className="dashshell-logo-mark" aria-hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 8.5A8 8 0 1 0 19.6 15" />
+              <path d="M13 12.5h6.5V18" />
+            </svg>
+          </div>
+          <span className="dashshell-logo-text">GoGermany</span>
         </Link>
         <button
           type="button"
