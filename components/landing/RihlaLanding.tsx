@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { useCatLabel } from '@/lib/article-cat'
 
 type Article = {
   id: string
@@ -72,6 +73,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   const t = useTranslations('landing')
   const locale = useLocale() as AppLocale
   const dir = dirFor(locale)
+  const catLabel = useCatLabel()
 
   const [email, setEmail] = useState('')
   const [nlStatus, setNlStatus] = useState<
@@ -515,7 +517,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                     ) : (
                       <div style={{ width: '100%', height: '100%', display: 'grid', placeItems: 'center', fontSize: 48 }}>📰</div>
                     )}
-                    {a.category && <span className="article-tag">{a.category}</span>}
+                    {a.category && <span className="article-tag">{catLabel(a.category)}</span>}
                   </div>
                   <div className="article-body">
                     <h3>{a.title}</h3>

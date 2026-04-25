@@ -44,6 +44,14 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
   const s = await getTranslations({ locale, namespace: 'landing.pathHub.shared' })
   const tt = await getTranslations({ locale, namespace: 'landing.tools' })
   const ta = await getTranslations({ locale, namespace: 'landing.articles' })
+  const tc = await getTranslations({ locale, namespace: 'articles' })
+  const catLabel = (cat: string) => {
+    if (!cat) return ''
+    try {
+      const v = tc(`cat.${cat}` as any)
+      return v && v !== `cat.${cat}` ? v : cat
+    } catch { return cat }
+  }
 
   const chips = (t.raw('chips') as string[]) ?? []
 
@@ -190,7 +198,7 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
                         📰
                       </div>
                     )}
-                    {a.category && <span className="article-tag">{a.category}</span>}
+                    {a.category && <span className="article-tag">{catLabel(a.category)}</span>}
                   </div>
                   <div className="article-body">
                     <h3>{a.title}</h3>

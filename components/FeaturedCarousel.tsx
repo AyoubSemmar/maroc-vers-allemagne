@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useCatLabel } from '@/lib/article-cat'
 
 type Article = {
   id: string
@@ -20,6 +21,7 @@ const OFFSET_VW = 50 - CARD_VW / 2
 
 export default function FeaturedCarousel({ articles }: { articles: Article[] }) {
   const [current, setCurrent] = useState(Math.floor(articles.length / 2))
+  const catLabel = useCatLabel()
 
   if (!articles || articles.length === 0) return null
 
@@ -82,7 +84,7 @@ export default function FeaturedCarousel({ articles }: { articles: Article[] }) 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-3" dir="rtl">
                   <span className="text-xs text-white/90 bg-white/20 px-2 py-0.5 rounded-full">
-                    {article.category}
+                    {catLabel(article.category)}
                   </span>
                   <h3 className="text-white font-bold leading-snug mt-1 text-sm line-clamp-2">
                     {article.title}

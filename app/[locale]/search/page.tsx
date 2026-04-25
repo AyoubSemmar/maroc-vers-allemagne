@@ -16,6 +16,14 @@ export default async function SearchPage({ params, searchParams }: Props) {
   const { q: rawQ } = await searchParams
   const q = rawQ?.trim() || ''
   const t = await getTranslations({ locale, namespace: 'search' })
+  const tc = await getTranslations({ locale, namespace: 'articles' })
+  const catLabel = (cat: string) => {
+    if (!cat) return ''
+    try {
+      const v = tc(`cat.${cat}` as any)
+      return v && v !== `cat.${cat}` ? v : cat
+    } catch { return cat }
+  }
 
   let articles: any[] = []
   let listings: any[] = []
@@ -64,7 +72,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
                 >
                   <div className="flex-1">
                     <span className="text-xs font-medium text-green-700 bg-green-50 px-2 py-1 rounded-full">
-                      {article.category}
+                      {catLabel(article.category)}
                     </span>
                     <h3 className="font-semibold text-gray-900 mt-2">{article.title}</h3>
                     <p className="text-sm text-gray-500 mt-1">{article.summary}</p>
