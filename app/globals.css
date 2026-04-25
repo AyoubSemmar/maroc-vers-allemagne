@@ -2065,14 +2065,18 @@ html[data-theme="dark"] .dash-path-pill.is-active[data-c="teal"]  { color: oklch
 .dash-card-head {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 18px; gap: 12px;
+  flex-wrap: wrap;
 }
 .dash-card-head h2 {
   font-size: 18px; font-weight: 700; letter-spacing: -0.01em;
   margin: 0;
+  min-width: 0;
 }
 .dash-card-link {
   font-size: 13px; font-weight: 600; color: var(--muted);
   text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 .dash-card-link:hover { color: var(--text); }
 
@@ -2666,7 +2670,7 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
   .dashshell-topbar-actions { gap: 6px; }
   .dashshell-icon-btn { width: 34px; height: 34px; }
   .dashshell-topbar-avatar { width: 34px; height: 34px; }
-  .dashshell-content { padding: 16px 12px 60px; }
+  .dashshell-content { padding: 16px 16px 60px; }
 }
 /* Very narrow phones: drop the help button to prevent overflow */
 @media (max-width: 380px) {
