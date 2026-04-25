@@ -2047,10 +2047,10 @@ html[data-theme="dark"] .dash-path-pill.is-active[data-c="teal"]  { color: oklch
 .dash-body { padding: 40px 0 80px; }
 .dash-grid {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
   gap: 20px;
 }
-@media (max-width: 900px) { .dash-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .dash-grid { grid-template-columns: minmax(0, 1fr); } }
 
 .dash-card {
   background: var(--surface);
@@ -2317,7 +2317,7 @@ html[dir="rtl"] .dash-tool:hover .dash-tool-arrow { transform: scaleX(-1) transl
    ============================================================ */
 .dashshell {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 280px minmax(0, 1fr);
   min-height: 100vh;
   min-height: 100dvh;
   background: var(--bg);
@@ -2325,9 +2325,11 @@ html[dir="rtl"] .dash-tool:hover .dash-tool-arrow { transform: scaleX(-1) transl
   max-width: 100%;
   overflow-x: hidden;
 }
-.dashshell-main { max-width: 100%; overflow-x: hidden; }
-.dashshell-content { max-width: 100%; }
+.dashshell-main { min-width: 0; max-width: 100%; overflow-x: hidden; }
+.dashshell-content { min-width: 0; max-width: 100%; }
 .dashshell-view { max-width: 100%; min-width: 0; }
+.dash-grid { min-width: 0; }
+.dash-card { min-width: 0; }
 .dashshell-loading {
   grid-column: 1 / -1;
   display: grid; place-items: center;
@@ -2646,7 +2648,7 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
 
 /* Responsive */
 @media (max-width: 960px) {
-  .dashshell { grid-template-columns: 1fr; }
+  .dashshell { grid-template-columns: minmax(0, 1fr); }
   .dashshell-sidebar {
     position: fixed;
     top: 0; inset-inline-start: 0;
