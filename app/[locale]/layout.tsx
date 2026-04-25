@@ -27,9 +27,34 @@ export async function generateMetadata({
     return {};
   }
   const t = await getTranslations({ locale, namespace: "common" });
+  const title = t("appName");
+  const description = t("tagline");
   return {
-    title: t("appName"),
-    description: t("tagline"),
+    metadataBase: new URL("https://gogermany.ma"),
+    title,
+    description,
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        ar: "/ar",
+        fr: "/fr",
+        en: "/en",
+        de: "/de",
+      },
+    },
+    openGraph: {
+      type: "website",
+      url: `https://gogermany.ma/${locale}`,
+      title,
+      description,
+      siteName: "GoGermany",
+      locale,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
