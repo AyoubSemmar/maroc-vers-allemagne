@@ -58,7 +58,7 @@ function Stat({
     <div ref={ref} className="reveal">
       <div className="stat-num">
         {text ? (
-          <span style={{ fontFamily: 'var(--font-ar)' }}>{text}</span>
+          <span>{text}</span>
         ) : (
           `${val ?? 0}${suffix ?? ''}`
         )}
@@ -79,17 +79,13 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   >('idle')
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
+  // Shrunk tools list — path-specific CTAs moved to Choose Your Path / Opportunities / Housing
   const tools = [
-    { key: 'banks', icon: '🏦', href: '/banking', c: 'brand' as const },
-    { key: 'housing', icon: '🏠', href: '/listings', c: 'gold' as const },
-    { key: 'universities', icon: '🎓', href: '/universities', c: 'teal' as const },
-    { key: 'work', icon: '💼', href: '/jobs', c: 'berry' as const },
     { key: 'cv', icon: '📄', href: '/cv-builder', c: 'brand' as const },
     { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
-    { key: 'ausbildung', icon: '🔧', href: '/ausbildung', c: 'gold' as const },
-    { key: 'ausbildungJobs', icon: '🔍', href: '/ausbildung-jobs', c: 'brand' as const },
     { key: 'visa', icon: '📄', href: '/visa', c: 'brand' as const },
-    { key: 'learnGerman', icon: '📚', href: '/learn-german', c: 'teal' as const },
+    { key: 'banks', icon: '🏦', href: '/banking', c: 'brand' as const },
+    { key: 'work', icon: '💼', href: '/jobs', c: 'berry' as const },
     { key: 'sim', icon: '📱', href: '/categories/شرائح الاتصال', c: 'berry' as const },
   ] as const
 
@@ -181,28 +177,27 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
             <h1 className="hero-title">
               {t('hero.titleLine1')}{' '}
               <span className="gradient-text">{t('hero.titleHighlight')}</span>
-              <br />
-              {t('hero.titleLine2')}
+              {t('hero.titleLine2') ? (
+                <>
+                  <br />
+                  {t('hero.titleLine2')}
+                </>
+              ) : null}
             </h1>
             <p className="hero-sub">{t('hero.sub')}</p>
             <div className="hero-ctas">
-              <Link href="/learn-german" className="btn btn-primary">
+              <Link href="/ausbildung" className="btn btn-primary">
                 {t('hero.ctaStart')}
-                <svg
-                  width="18"
-                  height="18"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                >
-                  <path d="M19 12H5M12 5l-7 7 7 7" />
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
-              <a href="#tools" className="btn btn-ghost">
+              <Link href="/studium" className="btn btn-primary">
                 {t('hero.ctaBrowse')}
-              </a>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
             <div className="hero-trust">
               <div className="avatars">
@@ -289,55 +284,38 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       {/* ============ STATS ============ */}
       <section className="stats">
         <div className="wrap stats-grid">
-          <Stat target={20} suffix="+" label={t('stats.articlesLabel')} />
-          <Stat
-            target={5}
-            suffix={t('stats.levelsSuffix')}
-            label={t('stats.levelsLabel')}
-          />
-          <Stat
-            target={8}
-            suffix={t('stats.categoriesSuffix')}
-            label={t('stats.categoriesLabel')}
-          />
-          <Stat text={t('stats.freeText')} label={t('stats.freeLabel')} />
+          <Stat text={t('stats.jobs.num')} label={t('stats.jobs.label')} />
+          <Stat text={t('stats.universities.num')} label={t('stats.universities.label')} />
+          <Stat text={t('stats.stipend.text')} label={t('stats.stipend.label')} />
+          <Stat text={t('stats.tuition.text')} label={t('stats.tuition.label')} />
         </div>
       </section>
 
-      {/* ============ HOW IT WORKS ============ */}
-      <section id="how">
+      {/* ============ CHOOSE YOUR PATH ============ */}
+      <section id="paths">
         <div className="wrap">
           <div className="section-head reveal">
-            <span className="kicker">{t('how.kicker')}</span>
-            <h2>{t('how.title')}</h2>
-            <p className="section-sub">{t('how.sub')}</p>
+            <span className="kicker">{t('paths.kicker')}</span>
+            <h2>{t('paths.title')}</h2>
+            <p className="section-sub">{t('paths.sub')}</p>
           </div>
-          <div className="steps">
-            {([1, 2, 3] as const).map((n) => (
-              <div key={n} className="step reveal">
-                <div className="step-num">{t('how.step', { n: String(n).padStart(2, '0') })}</div>
-                <div className="step-icon">
-                  {n === 1 && (
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.42 0.15 32)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="11" cy="11" r="8" />
-                      <path d="m21 21-4.35-4.35" />
-                    </svg>
-                  )}
-                  {n === 2 && (
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.55 0.15 75)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-                    </svg>
-                  )}
-                  {n === 3 && (
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="oklch(0.50 0.11 200)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
-                    </svg>
-                  )}
-                </div>
-                <h3>{t(`how.step${n}Title`)}</h3>
-                <p>{t(`how.step${n}Desc`)}</p>
+          <div className="tools" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <Link href="/ausbildung" className="tool reveal" data-c="brand">
+              <div className="tool-icon">🔧</div>
+              <h3>{t('paths.ausbildung.title')}</h3>
+              <p>{t('paths.ausbildung.desc')}</p>
+              <div className="tool-link">
+                {t('paths.ausbildung.cta')} <span>←</span>
               </div>
-            ))}
+            </Link>
+            <Link href="/studium" className="tool reveal" data-c="teal">
+              <div className="tool-icon">🎓</div>
+              <h3>{t('paths.studium.title')}</h3>
+              <p>{t('paths.studium.desc')}</p>
+              <div className="tool-link">
+                {t('paths.studium.cta')} <span>←</span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>
@@ -366,6 +344,82 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                 </div>
               </Link>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ OPPORTUNITIES ============ */}
+      <section id="opportunities">
+        <div className="wrap">
+          <div className="section-head reveal">
+            <span className="kicker">{t('opportunities.kicker')}</span>
+            <h2>{t('opportunities.title')}</h2>
+            <p className="section-sub">{t('opportunities.sub')}</p>
+          </div>
+          <div className="tools" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <Link href="/ausbildung-jobs" className="tool reveal" data-c="gold">
+              <div className="tool-icon">🔍</div>
+              <h3>{t('opportunities.ausbildungJobs.title')}</h3>
+              <p>{t('opportunities.ausbildungJobs.desc')}</p>
+              <div className="tool-link">
+                {t('opportunities.ausbildungJobs.cta')} <span>←</span>
+              </div>
+            </Link>
+            <Link href="/universities" className="tool reveal" data-c="teal">
+              <div className="tool-icon">🎓</div>
+              <h3>{t('opportunities.universities.title')}</h3>
+              <p>{t('opportunities.universities.desc')}</p>
+              <div className="tool-link">
+                {t('opportunities.universities.cta')} <span>←</span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ HOUSING ============ */}
+      <section id="housing" style={{ background: 'var(--bg-warm)' }}>
+        <div className="wrap">
+          <div className="ladder-wrap reveal">
+            <div className="ladder-copy">
+              <span className="kicker">{t('housing.kicker')}</span>
+              <h2>{t('housing.title')}</h2>
+              <p>{t('housing.sub')}</p>
+              <Link href="/listings" className="btn btn-primary">
+                {t('housing.cta')}
+              </Link>
+              <div className="ladder-meta">
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature1')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature2')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature3')}
+                </div>
+              </div>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                placeItems: 'center',
+                fontSize: 140,
+                opacity: 0.9,
+              }}
+              aria-hidden
+            >
+              🏠
+            </div>
           </div>
         </div>
       </section>
@@ -439,13 +493,13 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
         </div>
       </section>
 
-      {/* ============ ARTICLES ============ */}
+      {/* ============ GUIDES / ARTICLES ============ */}
       {articleList.length > 0 && (
         <section id="articles" style={{ background: 'var(--bg-warm)' }}>
           <div className="wrap">
             <div className="section-head reveal">
-              <span className="kicker">{t('articles.kicker')}</span>
-              <h2>{t('articles.title')}</h2>
+              <span className="kicker">{t('guides.kicker')}</span>
+              <h2>{t('guides.title')}</h2>
             </div>
             <div className="articles">
               {articleList.map((a) => (

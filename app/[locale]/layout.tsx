@@ -7,6 +7,8 @@ import "../globals.css";
 import RihlaNav from "@/components/RihlaNav";
 import RihlaFooter from "@/components/RihlaFooter";
 import LanguagePicker from "@/components/LanguagePicker";
+import AnnouncementBanner from "@/components/AnnouncementBanner";
+import HideOnDashboard from "@/components/HideOnDashboard";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -67,9 +69,10 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={typedLocale} messages={messages}>
-          <RihlaNav />
+          <HideOnDashboard><AnnouncementBanner /></HideOnDashboard>
+          <HideOnDashboard><RihlaNav /></HideOnDashboard>
           <main className="flex-1">{children}</main>
-          <RihlaFooter />
+          <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           <LanguagePicker />
         </NextIntlClientProvider>
       </body>

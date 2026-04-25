@@ -1,10 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
 import { Link, useRouter } from '@/i18n/navigation'
 import LanguageSwitcher from './LanguageSwitcher'
+import OpportunitiesPicker from './OpportunitiesPicker'
 
 type Theme = 'light' | 'dark'
 
@@ -31,6 +32,9 @@ export default function RihlaNav() {
   const [profileAvatar, setProfileAvatar] = useState<string | null>(null)
   const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
+  const [learnOpen, setLearnOpen] = useState(false)
+  const [oppPickerOpen, setOppPickerOpen] = useState(false)
+  const learnRef = useRef<HTMLDivElement | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -68,6 +72,22 @@ export default function RihlaNav() {
     }
   }, [])
 
+  // Close Learn dropdown on outside click / Esc.
+  useEffect(() => {
+    if (!learnOpen) return
+    function onDocClick(e: MouseEvent) {
+      if (!learnRef.current) return
+      if (!learnRef.current.contains(e.target as Node)) setLearnOpen(false)
+    }
+    function onEsc(e: KeyboardEvent) { if (e.key === 'Escape') setLearnOpen(false) }
+    document.addEventListener('mousedown', onDocClick)
+    document.addEventListener('keydown', onEsc)
+    return () => {
+      document.removeEventListener('mousedown', onDocClick)
+      document.removeEventListener('keydown', onEsc)
+    }
+  }, [learnOpen])
+
   function toggleTheme() {
     const next: Theme = theme === 'dark' ? 'light' : 'dark'
     setTheme(next)
@@ -87,29 +107,66 @@ export default function RihlaNav() {
   return (
     <nav className="rihla-nav">
       <div className="wrap rihla-nav-inner">
+        {/* Brand — same in every language */}
         <Link href="/" className="rihla-logo" aria-label={tNav('homeAria')}>
-          <div className="rihla-logo-mark">MA→DE</div>
-          <span>{tCommon('brandSubtitle')}</span>
+          <div className="rihla-logo-mark" aria-hidden>
+            {/* Classy "G" monogram with arrow tail — symbolises the journey to Germany */}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M19 8.5A8 8 0 1 0 19.6 15" />
+              <path d="M13 12.5h6.5V18" />
+            </svg>
+          </div>
+          <span>GoGermany</span>
         </Link>
 
         <div className="rihla-nav-links">
-          <Link href="/#tools">{tNav('tools')}</Link>
-          <Link href="/learn-german">{tNav('learnGerman')}</Link>
-          <Link href="/articles">{tNav('articles')}</Link>
-          <Link href="/cv-builder">{tNav('cvBuilder')}</Link>
-          <Link href="/anschreiben-generator">{tNav('anschreiben')}</Link>
-          <Link href="/ausbildung-jobs">{tNav('ausbildungJobs')}</Link>
-          <Link href="/#faq">{tNav('faq')}</Link>
+          <Link href="/">{tNav('home')}</Link>
+          <button
+            type="button"
+            className="rihla-nav-linkbtn"
+            onClick={() => setOppPickerOpen(true)}
+          >
+            {tNav('opportunities')}
+          </button>
+
+          {/* Learn dropdown */}
+          <div ref={learnRef} className={`tools-dd ${learnOpen ? 'is-open' : ''}`}>
+            <button
+              type="button"
+              className={`tools-dd-trigger ${learnOpen ? 'is-open' : ''}`}
+              aria-haspopup="menu"
+              aria-expanded={learnOpen}
+              onClick={() => setLearnOpen(v => !v)}
+            >
+              {tNav('learn')}
+              <svg className="tools-dd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            {learnOpen && (
+              <div className="tools-dd-menu" role="menu">
+                <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+                  {tNav('learnGerman')}
+                </Link>
+                <Link href="/#tools" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+                  {tNav('tools')}
+                </Link>
+                <Link href="/articles" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+                  {tNav('articles')}
+                </Link>
+                <Link href="/#faq" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+                  {tNav('faq')}
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {mounted && user && (
+            <Link href="/dashboard">{tNav('dashboard')}</Link>
+          )}
         </div>
 
         <div className="rihla-nav-cta">
-          <Link href="/search" className="rihla-icon-btn" aria-label={tCommon('search')} title={tCommon('search')}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <circle cx="11" cy="11" r="7" />
-              <path d="m21 21-4.3-4.3" />
-            </svg>
-          </Link>
-
           <LanguageSwitcher />
 
           <button
@@ -133,12 +190,8 @@ export default function RihlaNav() {
 
           {mounted && user ? (
             <>
-              {/* Desktop: email pill */}
-              <Link href="/profile" className="btn btn-ghost btn-sm rihla-desktop-only" title={emailLabel}>
-                <span className="rihla-nav-email">{emailLabel}</span>
-              </Link>
-              {/* Mobile: avatar circle */}
-              <Link href="/profile" className="rihla-avatar rihla-mobile-only" aria-label={tNav('myAccount')} title={emailLabel}>
+              {/* Avatar circle — same on desktop and mobile */}
+              <Link href="/profile" className="rihla-avatar" aria-label={tNav('myAccount')} title={emailLabel}>
                 {avatarSrc ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={avatarSrc} alt="" />
@@ -156,6 +209,7 @@ export default function RihlaNav() {
           )}
         </div>
       </div>
+      <OpportunitiesPicker open={oppPickerOpen} onClose={() => setOppPickerOpen(false)} />
     </nav>
   )
 }

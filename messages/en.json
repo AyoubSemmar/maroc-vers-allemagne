@@ -43,7 +43,10 @@
     "lightMode": "Light mode",
     "darkMode": "Dark mode",
     "enableLight": "Enable light mode",
-    "enableDark": "Enable dark mode"
+    "enableDark": "Enable dark mode",
+    "dashboard": "Dashboard",
+    "learn": "Learn",
+    "opportunities": "Opportunities"
   },
   "footer": {
     "warning": "⚠️ The information provided here is for guidance only and does not constitute legal or official advice. Please always verify with official sources.",
@@ -141,13 +144,13 @@
   },
   "landing": {
     "hero": {
-      "eyebrow": "MA→DE · The first guide for Moroccans in Germany",
-      "titleLine1": "Your journey to",
-      "titleHighlight": "Germany",
-      "titleLine2": "starts here",
-      "sub": "Practical tools, interactive German lessons, and housing listings — everything you need to move with confidence and no complications, all in one place.",
-      "ctaStart": "Start your journey",
-      "ctaBrowse": "Browse the tools",
+      "eyebrow": "From Morocco to Germany · 2026",
+      "titleLine1": "Ausbildung & Studium in Germany —",
+      "titleHighlight": "€1,100/mo and free tuition",
+      "titleLine2": "",
+      "sub": "Apply to real verified Ausbildung jobs and German universities open to Moroccans — CV, cover letter, visa and housing in one place.",
+      "ctaStart": "Start Ausbildung",
+      "ctaBrowse": "Study in Germany",
       "trust": "Join thousands of Moroccans on their way to Germany",
       "journeyTitle": "Your journey",
       "stopContract": "Contract",
@@ -173,7 +176,23 @@
       "categoriesSuffix": " categories",
       "categoriesLabel": "Organized practical tools",
       "freeText": "Free",
-      "freeLabel": "Full access, always"
+      "freeLabel": "Full access, always",
+      "jobs": {
+        "num": "5K+",
+        "label": "verified Ausbildung jobs"
+      },
+      "universities": {
+        "num": "400+",
+        "label": "German universities for international students"
+      },
+      "stipend": {
+        "text": "€1,100",
+        "label": "average monthly stipend"
+      },
+      "tuition": {
+        "text": "€250",
+        "label": "tuition to study in Germany"
+      }
     },
     "how": {
       "kicker": "How it works",
@@ -300,6 +319,150 @@
       "duplicate": "This email is already subscribed",
       "error": "Something went wrong, please try again",
       "disclaimer": "We'll never share your email · you can unsubscribe at any time"
+    },
+    "paths": {
+      "kicker": "Choose Your Path",
+      "title": "Two routes to Germany",
+      "sub": "Pick the one that fits you — we’ll guide you step by step.",
+      "ausbildung": {
+        "title": "Ausbildung (Vocational training)",
+        "desc": "Learn and work at the same time with a monthly salary and a formal contract in Germany.",
+        "cta": "Start Ausbildung"
+      },
+      "studium": {
+        "title": "Study in Germany",
+        "desc": "Apply to German universities and study for free or at very low cost.",
+        "cta": "Explore universities"
+      }
+    },
+    "opportunities": {
+      "kicker": "Opportunities",
+      "title": "Real jobs and programs waiting for you",
+      "sub": "Browse live Ausbildung offers and universities open to Moroccans.",
+      "ausbildungJobs": {
+        "title": "Ausbildung offers",
+        "desc": "Thousands of training positions with a formal contract across Germany.",
+        "cta": "Browse offers"
+      },
+      "universities": {
+        "title": "German universities",
+        "desc": "A complete guide to universities and admission requirements for Moroccan applicants.",
+        "cta": "Explore"
+      }
+    },
+    "housing": {
+      "kicker": "Housing",
+      "title": "Find a place to live in Germany",
+      "sub": "Rooms and apartment listings tailored for students and apprentices coming from Morocco.",
+      "cta": "Browse listings",
+      "feature1": "Real listings, updated daily",
+      "feature2": "Direct contact with the landlord",
+      "feature3": "Suited for students and apprentices"
+    },
+    "guides": {
+      "kicker": "Guides",
+      "title": "Guides & articles for your journey"
+    },
+    "banner": {
+      "messages": [
+        "🇲🇦 → 🇩🇪 New: 1,200+ Ausbildung offers this week",
+        "📄 Free CV & cover letter — no signup",
+        "🎓 Universities: Winter 2026 intake is open"
+      ],
+      "dismiss": "Dismiss"
+    },
+    "pathHub": {
+      "shared": {
+        "articlesTitle": "Articles & guides",
+        "articlesCta": "All articles",
+        "toolsTitle": "AI tools",
+        "toolsCta": "See all tools",
+        "nextStepTitle": "Next step",
+        "consultTitle": "Book a consultation",
+        "consultSub": "Our advisors guide you step by step — in Arabic or French.",
+        "consultName": "Full name",
+        "consultEmail": "Email",
+        "consultPhone": "Phone",
+        "consultMsg": "Tell us about your project",
+        "consultSubmit": "Book my consultation",
+        "consultSending": "Sending…",
+        "consultSuccess": "Thanks! We’ll be in touch shortly.",
+        "consultError": "Couldn’t send, please try again.",
+        "ctaTools": "See the tools",
+        "ctaConsult": "Book a consultation",
+        "pillarsKicker": "Three steps",
+        "pillarsTitleAus": "Your Ausbildung in three steps",
+        "pillarsTitleStud": "Your studies in three steps",
+        "stepLabel": "Step",
+        "discover": "Discover",
+        "comingSoon": "Coming soon"
+      },
+      "ausbildung": {
+        "eyebrow": "Ausbildung path",
+        "title": "Everything for your Ausbildung in Germany",
+        "sub": "CV, cover letter, German learning, real offers and personal consultation — all in one place.",
+        "ctaOffers": "Browse Ausbildung offers",
+        "offersKicker": "Offers",
+        "offersTitle": "5,000+ real Ausbildung offers",
+        "offersDesc": "Find training positions with an official contract across Germany, updated daily.",
+        "offersCta": "See offers",
+        "heroPre": "Earn ",
+        "heroHighlight": "€1,100/mo",
+        "heroPost": " while training in Germany",
+        "subNew": "Official contract, paid training, 5,000+ Ausbildung offers open to Moroccans.",
+        "chips": [
+          "📋 Official contract",
+          "💶 Monthly salary",
+          "🇩🇪 Legal residency"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Learn German",
+            "desc": "From A1 to C1 — interactive, free lessons made for Moroccans."
+          },
+          "find": {
+            "title": "Find your Ausbildung",
+            "desc": "Browse 5,000+ training positions with an official contract across Germany."
+          },
+          "visa": {
+            "title": "Get your visa",
+            "desc": "Step-by-step guide for the Ausbildung visa from Morocco."
+          }
+        }
+      },
+      "studium": {
+        "eyebrow": "Studium path",
+        "title": "Everything to study in Germany",
+        "sub": "CV, motivation letter, university directory, German learning and consultation — all in one place.",
+        "ctaUnis": "Explore universities",
+        "unisKicker": "Universities",
+        "unisTitle": "German universities open to Moroccans",
+        "unisDesc": "Complete directory with admission requirements, programs and fees.",
+        "unisCta": "Explore the directory",
+        "heroPre": "Study ",
+        "heroHighlight": "for free",
+        "heroPost": " at a German university",
+        "subNew": "Near-zero tuition, 400+ universities open to Moroccans, and a diploma recognized worldwide.",
+        "chips": [
+          "🎓 Near-zero tuition",
+          "🌍 400+ universities",
+          "📜 Recognized diploma"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Learn German",
+            "desc": "From A1 to C1 — interactive, free lessons made for Moroccans."
+          },
+          "find": {
+            "title": "Pick your university",
+            "desc": "Browse 400+ universities with admission requirements and programs."
+          },
+          "visa": {
+            "title": "Get your student visa",
+            "desc": "Step-by-step guide for the student visa from Morocco."
+          }
+        }
+      }
     }
   },
   "profile": {
@@ -373,6 +536,13 @@
       "confirm": "Yes, delete account",
       "deleting": "⏳ Deleting...",
       "genericErr": "An error occurred while deleting the account"
+    },
+    "name": {
+      "heading": "Name",
+      "firstLabel": "First name",
+      "lastLabel": "Last name",
+      "firstPlaceholder": "e.g. Ahmed",
+      "lastPlaceholder": "e.g. El Alaoui"
     }
   },
   "search": {
@@ -2774,5 +2944,164 @@
       "tipLink": "CV Builder",
       "tipSuffix": "."
     }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeBack": "Welcome back",
+    "greeting": "Hello, {name}",
+    "subtitle": "Here are your next steps on the road to Germany",
+    "path": {
+      "label": "Your path",
+      "ausbildung": "Ausbildung path",
+      "studium": "Studium path",
+      "unset": "Choose your path",
+      "chooseAus": "Choose Ausbildung",
+      "chooseStud": "Choose Studium"
+    },
+    "profile": {
+      "title": "Profile completion",
+      "percent": "{p}% complete",
+      "complete": "Great! Your profile is complete 🎉",
+      "nextStep": "Next step",
+      "items": {
+        "avatar": "Add a profile picture",
+        "whatsapp": "Add your WhatsApp number",
+        "status": "Set your current status",
+        "cv": "Build your CV",
+        "letter": "Generate a motivation letter"
+      },
+      "fix": "Fix"
+    },
+    "journey": {
+      "title": "Your journey in 3 steps",
+      "status": {
+        "todo": "Not started",
+        "doing": "In progress",
+        "done": "Done",
+        "soon": "Coming soon"
+      },
+      "continue": "Continue",
+      "start": "Start"
+    },
+    "docs": {
+      "title": "My documents",
+      "count": "{n} document(s)",
+      "countZero": "No documents yet",
+      "empty": "Start by creating your CV or motivation letter",
+      "viewAll": "View all"
+    },
+    "tools": {
+      "title": "Quick tools",
+      "cv": "CV Builder",
+      "cvDesc": "A professional German CV in minutes",
+      "letter": "Motivation Letter Generator",
+      "letterDesc": "Persuasive motivation letters with AI"
+    },
+    "cta": {
+      "profile": "Manage profile",
+      "consult": "Book a consultation"
+    },
+    "sidebar": {
+      "myProfile": "My Profile",
+      "tapToComplete": "Tap to complete",
+      "sectionMarketplace": "Marketplace",
+      "sectionPreparation": "Preparation",
+      "sectionTools": "Tools",
+      "browse": "Browse Opportunities",
+      "saved": "Saved Opportunities",
+      "applyForMe": "Apply For Me",
+      "newBadge": "New",
+      "dashboard": "Dashboard",
+      "germanLearning": "German Learning",
+      "interviewPrep": "Interview Prep",
+      "videoStudio": "Video Studio",
+      "culture": "Culture",
+      "eligibility": "Eligibility",
+      "timeline": "Timeline",
+      "cvBuilder": "CV Builder",
+      "coverLetter": "Cover Letter",
+      "whatsappSupport": "WhatsApp Support",
+      "services": "Services",
+      "help": "Help & Docs",
+      "complete": "Complete"
+    },
+    "topbar": {
+      "help": "Help",
+      "whatsapp": "WhatsApp",
+      "notifications": "Notifications",
+      "account": "Account",
+      "themeLight": "Light mode",
+      "themeDark": "Dark mode"
+    },
+    "profilePage": {
+      "heroBannerTitle": "Your profile is {pct}% complete",
+      "heroBannerSub": "Fill the missing fields below to increase your completion.",
+      "unlockNext": "{pct}% more to unlock:",
+      "unlockTargetGerman": "German Learning",
+      "quickUpdate": "Quick Update via CV",
+      "updateManually": "Update Manually",
+      "goalPct": "Goal: 100%",
+      "completionLabel": "Profile Completion: {pct}%",
+      "completeness": "Profile Completeness",
+      "completenessCompleteSuffix": "complete",
+      "strength": "Profile Strength",
+      "strengthPoints": "points",
+      "strengthComparison": "Stronger than 50% of candidates",
+      "tier": "Tier",
+      "incomplete": "Incomplete",
+      "weak": "Weak",
+      "good": "Good",
+      "strong": "Strong",
+      "mostFieldsEmpty": "Most fields empty",
+      "gettingThere": "25% — Getting there",
+      "nextGoal": "Next Goal",
+      "tierWeak": "Weak Profile",
+      "tierFair": "Fair Profile",
+      "tierStrong": "Strong Profile",
+      "missing": {
+        "photo": "Upload a profile photo",
+        "phone": "Add your phone number",
+        "dob": "Add date of birth",
+        "status": "Set your current status",
+        "cv": "Build your CV",
+        "letter": "Generate a motivation letter",
+        "firstName": "Add your first name",
+        "lastName": "Add your last name",
+        "email": "Add your email"
+      },
+      "sections": {
+        "education": "Education",
+        "experience": "Experience",
+        "languages": "Languages",
+        "skills": "Skills",
+        "personal": "Personal Information",
+        "contact": "Contact Information",
+        "add": "Add",
+        "comingSoon": "Coming soon"
+      },
+      "promo": {
+        "title": "Let our team apply for you",
+        "body": "Our Apply-For-Me service sends applications to dozens of matching opportunities automatically.",
+        "cta": "Discover the service"
+      }
+    },
+    "stubs": {
+      "savedTitle": "Saved Opportunities",
+      "savedEmpty": "You haven’t saved any opportunities yet. Browse the marketplace and click the bookmark icon to collect them here.",
+      "applyTitle": "Apply For Me",
+      "applyBody": "We’ll send applications to opportunities matching your profile. Launching soon.",
+      "lockedTitle": "{feature} — Coming soon",
+      "lockedBody": "This feature is under development. We’ll let you know when it’s available.",
+      "browseCta": "Browse Opportunities"
+    }
+  },
+  "opportunitiesPicker": {
+    "title": "What are you looking for?",
+    "subtitle": "Pick the kind of opportunity you want to browse.",
+    "ausbildung": "Ausbildung offers",
+    "ausbildungDesc": "Paid training positions with an official contract in Germany.",
+    "universities": "Universities",
+    "universitiesDesc": "Degree programs and study fields across Germany.",
+    "close": "Close"
   }
 }

@@ -43,7 +43,10 @@
     "lightMode": "Mode clair",
     "darkMode": "Mode sombre",
     "enableLight": "Activer le mode clair",
-    "enableDark": "Activer le mode sombre"
+    "enableDark": "Activer le mode sombre",
+    "dashboard": "Tableau de bord",
+    "learn": "Apprendre",
+    "opportunities": "Opportunités"
   },
   "footer": {
     "warning": "⚠️ Les informations fournies ici sont uniquement à titre indicatif et ne constituent pas un conseil juridique ou officiel. Veuillez toujours vérifier auprès des sources officielles.",
@@ -141,13 +144,13 @@
   },
   "landing": {
     "hero": {
-      "eyebrow": "MA→DE · Le premier guide pour les Marocains en Allemagne",
-      "titleLine1": "Votre voyage vers",
-      "titleHighlight": "l'Allemagne",
-      "titleLine2": "commence ici",
-      "sub": "Outils pratiques, cours d'allemand interactifs et annonces de logement — tout ce qu'il vous faut pour partir en toute confiance, au même endroit.",
-      "ctaStart": "Commencer",
-      "ctaBrowse": "Voir les outils",
+      "eyebrow": "Du Maroc vers l’Allemagne · 2026",
+      "titleLine1": "Ausbildung & études en Allemagne",
+      "titleHighlight": "€1 100/mois et études gratuites",
+      "titleLine2": "",
+      "sub": "Postule à de vraies offres d’Ausbildung et aux universités allemandes ouvertes aux Marocains — CV, lettre, visa et logement au même endroit.",
+      "ctaStart": "Commencer une Ausbildung",
+      "ctaBrowse": "Étudier en Allemagne",
       "trust": "Rejoignez des milliers de Marocains sur la route de l'Allemagne",
       "journeyTitle": "Votre parcours",
       "stopContract": "Contrat",
@@ -173,7 +176,23 @@
       "categoriesSuffix": " catégories",
       "categoriesLabel": "Outils pratiques organisés",
       "freeText": "Gratuit",
-      "freeLabel": "Accès complet, toujours"
+      "freeLabel": "Accès complet, toujours",
+      "jobs": {
+        "num": "5K+",
+        "label": "offres d’Ausbildung vérifiées"
+      },
+      "universities": {
+        "num": "400+",
+        "label": "universités allemandes ouvertes aux internationaux"
+      },
+      "stipend": {
+        "text": "€1 100",
+        "label": "salaire mensuel moyen"
+      },
+      "tuition": {
+        "text": "€250",
+        "label": "frais de scolarité en Allemagne"
+      }
     },
     "how": {
       "kicker": "Comment ça marche",
@@ -300,6 +319,150 @@
       "duplicate": "Cet e-mail est déjà inscrit",
       "error": "Une erreur est survenue, réessayez",
       "disclaimer": "Nous ne partagerons jamais votre e-mail · vous pouvez vous désinscrire à tout moment"
+    },
+    "paths": {
+      "kicker": "Choisis ton parcours",
+      "title": "Deux voies vers l’Allemagne",
+      "sub": "Choisis ce qui te correspond — on t’accompagne étape par étape.",
+      "ausbildung": {
+        "title": "Formation pro (Ausbildung)",
+        "desc": "Apprends et travaille en même temps avec un salaire mensuel et un contrat officiel en Allemagne.",
+        "cta": "Commencer"
+      },
+      "studium": {
+        "title": "Études en Allemagne",
+        "desc": "Postule dans les universités allemandes et étudie gratuitement ou à très faible coût.",
+        "cta": "Voir les universités"
+      }
+    },
+    "opportunities": {
+      "kicker": "Opportunités",
+      "title": "Des postes et des études qui t’attendent",
+      "sub": "Parcoure des offres réelles d’Ausbildung et les universités ouvertes aux Marocains.",
+      "ausbildungJobs": {
+        "title": "Offres Ausbildung",
+        "desc": "Des milliers de postes de formation avec contrat officiel partout en Allemagne.",
+        "cta": "Voir les offres"
+      },
+      "universities": {
+        "title": "Universités allemandes",
+        "desc": "Un guide complet des universités et des conditions d’admission pour les Marocains.",
+        "cta": "Découvrir"
+      }
+    },
+    "housing": {
+      "kicker": "Logement",
+      "title": "Trouve ton logement en Allemagne",
+      "sub": "Annonces de chambres et d’appartements pensées pour étudiants et apprentis venus du Maroc.",
+      "cta": "Voir les annonces",
+      "feature1": "Annonces réelles, mises à jour chaque jour",
+      "feature2": "Contact direct avec le propriétaire",
+      "feature3": "Adapté aux étudiants et apprentis"
+    },
+    "guides": {
+      "kicker": "Guides",
+      "title": "Guides et articles pour ton parcours"
+    },
+    "banner": {
+      "messages": [
+        "🇲🇦 → 🇩🇪 Nouveau : +1 200 offres d’Ausbildung cette semaine",
+        "📄 CV et lettre de motivation gratuits — sans compte",
+        "🎓 Universités : rentrée hiver 2026 ouverte"
+      ],
+      "dismiss": "Fermer"
+    },
+    "pathHub": {
+      "shared": {
+        "articlesTitle": "Articles & guides",
+        "articlesCta": "Tous les articles",
+        "toolsTitle": "Outils IA",
+        "toolsCta": "Voir tous les outils",
+        "nextStepTitle": "Prochaine étape",
+        "consultTitle": "Prends un rendez-vous",
+        "consultSub": "Nos conseillers t’accompagnent étape par étape — en arabe ou en français.",
+        "consultName": "Nom complet",
+        "consultEmail": "Email",
+        "consultPhone": "Téléphone",
+        "consultMsg": "Parle-nous de ton projet",
+        "consultSubmit": "Réserver ma consultation",
+        "consultSending": "Envoi…",
+        "consultSuccess": "Merci ! On te recontacte très vite.",
+        "consultError": "Envoi impossible, réessaie.",
+        "ctaTools": "Voir les outils",
+        "ctaConsult": "Prendre rendez-vous",
+        "pillarsKicker": "Trois étapes",
+        "pillarsTitleAus": "Ton Ausbildung en trois étapes",
+        "pillarsTitleStud": "Tes études en trois étapes",
+        "stepLabel": "Étape",
+        "discover": "Découvrir",
+        "comingSoon": "Bientôt"
+      },
+      "ausbildung": {
+        "eyebrow": "Parcours Ausbildung",
+        "title": "Tout pour réussir ton Ausbildung en Allemagne",
+        "sub": "CV, lettre de motivation, apprentissage de l’allemand, vraies offres et consultation personnalisée — au même endroit.",
+        "ctaOffers": "Voir les offres Ausbildung",
+        "offersKicker": "Offres",
+        "offersTitle": "5 000+ vraies offres d’Ausbildung",
+        "offersDesc": "Trouve des postes avec contrat officiel partout en Allemagne, mis à jour chaque jour.",
+        "offersCta": "Voir les offres",
+        "heroPre": "Gagne ",
+        "heroHighlight": "1 100€/mois",
+        "heroPost": " en te formant en Allemagne",
+        "subNew": "Contrat officiel, formation rémunérée, plus de 5 000 offres d’Ausbildung ouvertes aux Marocains.",
+        "chips": [
+          "📋 Contrat officiel",
+          "💶 Salaire mensuel",
+          "🇩🇪 Titre de séjour"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Apprends l’allemand",
+            "desc": "Du niveau A1 à C1 — cours interactifs, gratuits et pensés pour les Marocains."
+          },
+          "find": {
+            "title": "Trouve ton Ausbildung",
+            "desc": "Parcoure plus de 5 000 offres avec contrat officiel partout en Allemagne."
+          },
+          "visa": {
+            "title": "Obtiens ton visa",
+            "desc": "Guide pas à pas pour la demande de visa Ausbildung depuis le Maroc."
+          }
+        }
+      },
+      "studium": {
+        "eyebrow": "Parcours études",
+        "title": "Tout pour étudier en Allemagne",
+        "sub": "CV, lettre de motivation, annuaire des universités, apprentissage de l’allemand et consultation — au même endroit.",
+        "ctaUnis": "Voir les universités",
+        "unisKicker": "Universités",
+        "unisTitle": "Universités allemandes ouvertes aux Marocains",
+        "unisDesc": "Annuaire complet avec conditions d’admission, spécialités et coûts.",
+        "unisCta": "Voir l’annuaire",
+        "heroPre": "Étudie ",
+        "heroHighlight": "gratuitement",
+        "heroPost": " dans une université allemande",
+        "subNew": "Frais de scolarité proches de 0€, plus de 400 universités ouvertes aux Marocains, diplôme reconnu dans le monde entier.",
+        "chips": [
+          "🎓 Frais proches de 0€",
+          "🌍 400+ universités",
+          "📜 Diplôme reconnu"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Apprends l’allemand",
+            "desc": "Du niveau A1 à C1 — cours interactifs, gratuits et pensés pour les Marocains."
+          },
+          "find": {
+            "title": "Choisis ton université",
+            "desc": "Parcoure plus de 400 universités avec conditions d’admission et spécialités."
+          },
+          "visa": {
+            "title": "Obtiens ton visa étudiant",
+            "desc": "Guide pas à pas pour la demande de visa étudiant depuis le Maroc."
+          }
+        }
+      }
     }
   },
   "cvBuilder": {
@@ -604,6 +767,13 @@
       "confirm": "Oui, supprimer le compte",
       "deleting": "⏳ Suppression...",
       "genericErr": "Une erreur est survenue lors de la suppression du compte"
+    },
+    "name": {
+      "heading": "Nom",
+      "firstLabel": "Prénom",
+      "lastLabel": "Nom de famille",
+      "firstPlaceholder": "Ex. Ahmed",
+      "lastPlaceholder": "Ex. El Alaoui"
     }
   },
   "search": {
@@ -2774,5 +2944,164 @@
       "tipLink": "le générateur de CV",
       "tipSuffix": "gratuit."
     }
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcomeBack": "Bon retour",
+    "greeting": "Bonjour, {name}",
+    "subtitle": "Voici vos prochaines étapes vers l’Allemagne",
+    "path": {
+      "label": "Votre parcours",
+      "ausbildung": "Parcours Ausbildung",
+      "studium": "Parcours Études",
+      "unset": "Choisissez votre parcours",
+      "chooseAus": "Choisir Ausbildung",
+      "chooseStud": "Choisir Études"
+    },
+    "profile": {
+      "title": "Profil complété",
+      "percent": "{p}% complet",
+      "complete": "Parfait ! Votre profil est complet 🎉",
+      "nextStep": "Prochaine étape",
+      "items": {
+        "avatar": "Ajouter une photo de profil",
+        "whatsapp": "Ajouter votre WhatsApp",
+        "status": "Définir votre statut actuel",
+        "cv": "Créer votre CV",
+        "letter": "Créer votre lettre de motivation"
+      },
+      "fix": "Compléter"
+    },
+    "journey": {
+      "title": "Votre parcours en 3 étapes",
+      "status": {
+        "todo": "À faire",
+        "doing": "En cours",
+        "done": "Terminé",
+        "soon": "Bientôt"
+      },
+      "continue": "Continuer",
+      "start": "Commencer"
+    },
+    "docs": {
+      "title": "Mes documents",
+      "count": "{n} document(s)",
+      "countZero": "Aucun document",
+      "empty": "Commencez par créer votre CV ou votre lettre de motivation",
+      "viewAll": "Tout voir"
+    },
+    "tools": {
+      "title": "Outils rapides",
+      "cv": "Créateur de CV",
+      "cvDesc": "Un CV allemand professionnel en minutes",
+      "letter": "Générateur de lettre",
+      "letterDesc": "Lettre de motivation convaincante avec l’IA"
+    },
+    "cta": {
+      "profile": "Gérer le profil",
+      "consult": "Réserver une consultation"
+    },
+    "sidebar": {
+      "myProfile": "Mon profil",
+      "tapToComplete": "Cliquez pour compléter",
+      "sectionMarketplace": "Marketplace",
+      "sectionPreparation": "Préparation",
+      "sectionTools": "Outils",
+      "browse": "Parcourir les opportunités",
+      "saved": "Opportunités sauvegardées",
+      "applyForMe": "Postulez pour moi",
+      "newBadge": "Nouveau",
+      "dashboard": "Tableau de bord",
+      "germanLearning": "Apprendre l’allemand",
+      "interviewPrep": "Préparation entretien",
+      "videoStudio": "Studio vidéo",
+      "culture": "Culture",
+      "eligibility": "Éligibilité",
+      "timeline": "Chronologie",
+      "cvBuilder": "Créateur de CV",
+      "coverLetter": "Lettre de motivation",
+      "whatsappSupport": "Support WhatsApp",
+      "services": "Services",
+      "help": "Aide",
+      "complete": "Complet"
+    },
+    "topbar": {
+      "help": "Aide",
+      "whatsapp": "WhatsApp",
+      "notifications": "Notifications",
+      "account": "Mon compte",
+      "themeLight": "Mode clair",
+      "themeDark": "Mode sombre"
+    },
+    "profilePage": {
+      "heroBannerTitle": "Votre profil est complété à {pct}%",
+      "heroBannerSub": "Complétez les champs ci-dessous pour progresser.",
+      "unlockNext": "{pct}% de plus pour débloquer :",
+      "unlockTargetGerman": "Apprentissage de l’allemand",
+      "quickUpdate": "Mise à jour via CV",
+      "updateManually": "Mise à jour manuelle",
+      "goalPct": "Objectif : 100%",
+      "completionLabel": "Complétion : {pct}%",
+      "completeness": "Complétude du profil",
+      "completenessCompleteSuffix": "complet",
+      "strength": "Force du profil",
+      "strengthPoints": "points",
+      "strengthComparison": "Plus fort que 50% des candidats",
+      "tier": "Niveau",
+      "incomplete": "Incomplet",
+      "weak": "Faible",
+      "good": "Bon",
+      "strong": "Fort",
+      "mostFieldsEmpty": "La plupart des champs sont vides",
+      "gettingThere": "25% — En bonne voie",
+      "nextGoal": "Prochain objectif",
+      "tierWeak": "Profil faible",
+      "tierFair": "Profil moyen",
+      "tierStrong": "Profil fort",
+      "missing": {
+        "photo": "Ajoutez une photo de profil",
+        "phone": "Ajoutez votre numéro",
+        "dob": "Ajoutez votre date de naissance",
+        "status": "Définissez votre statut",
+        "cv": "Créez votre CV",
+        "letter": "Créez votre lettre de motivation",
+        "firstName": "Ajoutez votre prénom",
+        "lastName": "Ajoutez votre nom",
+        "email": "Ajoutez votre email"
+      },
+      "sections": {
+        "education": "Formation",
+        "experience": "Expérience",
+        "languages": "Langues",
+        "skills": "Compétences",
+        "personal": "Informations personnelles",
+        "contact": "Coordonnées",
+        "add": "Ajouter",
+        "comingSoon": "Bientôt"
+      },
+      "promo": {
+        "title": "Laissez-nous postuler à votre place",
+        "body": "Notre service « Postulez pour moi » envoie vos candidatures automatiquement.",
+        "cta": "Découvrir le service"
+      }
+    },
+    "stubs": {
+      "savedTitle": "Opportunités sauvegardées",
+      "savedEmpty": "Aucune opportunité sauvegardée. Parcourez les offres et cliquez sur l’icône de sauvegarde.",
+      "applyTitle": "Postulez pour moi",
+      "applyBody": "Nous envoyons vos candidatures pour les opportunités correspondant à votre profil. Bientôt disponible.",
+      "lockedTitle": "{feature} — Bientôt",
+      "lockedBody": "Cette fonctionnalité est en cours de développement.",
+      "browseCta": "Parcourir les opportunités"
+    }
+  },
+  "opportunitiesPicker": {
+    "title": "Que cherchez-vous ?",
+    "subtitle": "Choisissez le type d’opportunité à explorer.",
+    "ausbildung": "Offres d’Ausbildung",
+    "ausbildungDesc": "Formations rémunérées avec contrat officiel en Allemagne.",
+    "universities": "Universités",
+    "universitiesDesc": "Filières et programmes universitaires en Allemagne.",
+    "close": "Fermer"
   }
 }

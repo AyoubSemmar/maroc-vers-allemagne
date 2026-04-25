@@ -9,15 +9,15 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'landing.pathHub.ausbildung' })
+  const t = await getTranslations({ locale, namespace: 'landing.pathHub.studium' })
   return { title: t('title'), description: t('sub') }
 }
 
-const AUSBILDUNG_CATEGORIES = ['Ausbildung', 'العمل']
+const STUDIUM_CATEGORIES = ['الجامعات']
 
 const PILLARS: [PathPillar, PathPillar, PathPillar] = [
   { key: 'learnGerman', icon: '📚', href: '/learn-german' },
-  { key: 'find', icon: '🔍', href: '/ausbildung-jobs' },
+  { key: 'find', icon: '🎓', href: '/universities', comingSoon: true },
   { key: 'visa', icon: '🛂', href: '/visa', comingSoon: true },
 ]
 
@@ -32,13 +32,13 @@ const TOOLS: PathTool[] = [
   },
 ]
 
-export default async function AusbildungPage({ params }: Props) {
+export default async function StudiumPage({ params }: Props) {
   const { locale } = await params
 
   const { data: rawArticles } = await supabase
     .from('articles')
     .select('id, title, category, date, image_url, read_time, translations')
-    .in('category', AUSBILDUNG_CATEGORIES)
+    .in('category', STUDIUM_CATEGORIES)
     .order('date', { ascending: false })
     .limit(12)
 
@@ -47,7 +47,7 @@ export default async function AusbildungPage({ params }: Props) {
   return (
     <PathHub
       config={{
-        path: 'ausbildung',
+        path: 'studium',
         pillars: PILLARS,
         tools: TOOLS,
         articles: articles.map((a) => ({

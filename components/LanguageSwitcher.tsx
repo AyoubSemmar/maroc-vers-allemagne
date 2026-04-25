@@ -71,32 +71,9 @@ export default function LanguageSwitcher() {
         aria-haspopup="menu"
         aria-expanded={open}
         title={t('change')}
-        style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}
+        style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: 0, overflow: 'hidden' }}
       >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <circle cx="12" cy="12" r="10" />
-          <path d="M2 12h20" />
-          <path d="M12 2a15 15 0 0 1 0 20a15 15 0 0 1 0-20" />
-        </svg>
-        <span
-          style={{
-            fontSize: 11,
-            fontWeight: 600,
-            textTransform: 'uppercase',
-            letterSpacing: 0.5,
-          }}
-        >
-          {current.code}
-        </span>
+        <span style={{ fontSize: 20, lineHeight: 1 }} aria-hidden>{current.flag}</span>
       </button>
 
       {open && (

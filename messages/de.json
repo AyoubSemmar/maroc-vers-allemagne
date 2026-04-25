@@ -43,7 +43,10 @@
     "lightMode": "Heller Modus",
     "darkMode": "Dunkler Modus",
     "enableLight": "Hellen Modus aktivieren",
-    "enableDark": "Dunklen Modus aktivieren"
+    "enableDark": "Dunklen Modus aktivieren",
+    "dashboard": "Dashboard",
+    "learn": "Lernen",
+    "opportunities": "Möglichkeiten"
   },
   "footer": {
     "warning": "⚠️ Die hier bereitgestellten Informationen dienen nur zur Orientierung und stellen keine rechtliche oder offizielle Beratung dar. Bitte immer mit offiziellen Quellen abgleichen.",
@@ -141,13 +144,13 @@
   },
   "landing": {
     "hero": {
-      "eyebrow": "MA→DE · Der erste Leitfaden für Marokkaner in Deutschland",
-      "titleLine1": "Deine Reise nach",
-      "titleHighlight": "Deutschland",
-      "titleLine2": "beginnt hier",
-      "sub": "Praktische Werkzeuge, interaktive Deutschkurse und Wohnungsanzeigen — alles, was du für einen sicheren und unkomplizierten Umzug brauchst, an einem Ort.",
-      "ctaStart": "Los geht's",
-      "ctaBrowse": "Werkzeuge ansehen",
+      "eyebrow": "Von Marokko nach Deutschland · 2026",
+      "titleLine1": "Ausbildung & Studium in Deutschland —",
+      "titleHighlight": "€1.100/Monat und gebührenfrei studieren",
+      "titleLine2": "",
+      "sub": "Bewirb dich auf echte Ausbildungsstellen und deutsche Universitäten, die für Marokkaner offen sind — Lebenslauf, Anschreiben, Visum und Unterkunft an einem Ort.",
+      "ctaStart": "Ausbildung starten",
+      "ctaBrowse": "In Deutschland studieren",
       "trust": "Schließ dich Tausenden Marokkanern auf dem Weg nach Deutschland an",
       "journeyTitle": "Deine Reise",
       "stopContract": "Vertrag",
@@ -173,7 +176,23 @@
       "categoriesSuffix": " Kategorien",
       "categoriesLabel": "Praktische Werkzeuge, gut sortiert",
       "freeText": "Kostenlos",
-      "freeLabel": "Voller Zugang, immer"
+      "freeLabel": "Voller Zugang, immer",
+      "jobs": {
+        "num": "5K+",
+        "label": "geprüfte Ausbildungsstellen"
+      },
+      "universities": {
+        "num": "400+",
+        "label": "deutsche Universitäten für Internationale"
+      },
+      "stipend": {
+        "text": "€1.100",
+        "label": "durchschnittliches Monatsgehalt"
+      },
+      "tuition": {
+        "text": "€250",
+        "label": "Studiengebühren in Deutschland"
+      }
     },
     "how": {
       "kicker": "So funktioniert's",
@@ -300,6 +319,150 @@
       "duplicate": "Diese E-Mail ist bereits registriert",
       "error": "Etwas ist schiefgelaufen, bitte erneut versuchen",
       "disclaimer": "Wir teilen deine E-Mail nie · du kannst dich jederzeit abmelden"
+    },
+    "paths": {
+      "kicker": "Wähle deinen Weg",
+      "title": "Zwei Wege nach Deutschland",
+      "sub": "Wähle, was zu dir passt — wir begleiten dich Schritt für Schritt.",
+      "ausbildung": {
+        "title": "Ausbildung",
+        "desc": "Lernen und arbeiten gleichzeitig — mit monatlichem Gehalt und offiziellem Vertrag in Deutschland.",
+        "cta": "Ausbildung starten"
+      },
+      "studium": {
+        "title": "Studium in Deutschland",
+        "desc": "Bewirb dich an deutschen Universitäten und studiere kostenlos oder sehr günstig.",
+        "cta": "Universitäten entdecken"
+      }
+    },
+    "opportunities": {
+      "kicker": "Chancen",
+      "title": "Echte Stellen und Studienplätze warten auf dich",
+      "sub": "Entdecke aktuelle Ausbildungsstellen und Universitäten, die für Marokkaner offen sind.",
+      "ausbildungJobs": {
+        "title": "Ausbildungsstellen",
+        "desc": "Tausende Ausbildungsstellen mit offiziellem Vertrag in ganz Deutschland.",
+        "cta": "Angebote ansehen"
+      },
+      "universities": {
+        "title": "Deutsche Universitäten",
+        "desc": "Ein kompletter Leitfaden zu Universitäten und Zulassungsbedingungen für marokkanische Bewerber.",
+        "cta": "Entdecken"
+      }
+    },
+    "housing": {
+      "kicker": "Wohnen",
+      "title": "Finde eine Unterkunft in Deutschland",
+      "sub": "Zimmer- und Wohnungsangebote, zugeschnitten auf Studierende und Azubis aus Marokko.",
+      "cta": "Anzeigen ansehen",
+      "feature1": "Echte Anzeigen, täglich aktualisiert",
+      "feature2": "Direkter Kontakt zum Vermieter",
+      "feature3": "Geeignet für Studierende und Azubis"
+    },
+    "guides": {
+      "kicker": "Ratgeber",
+      "title": "Ratgeber & Artikel für deinen Weg"
+    },
+    "banner": {
+      "messages": [
+        "🇲🇦 → 🇩🇪 Neu: 1.200+ Ausbildungsstellen diese Woche",
+        "📄 Kostenloser Lebenslauf & Anschreiben — ohne Anmeldung",
+        "🎓 Universitäten: Wintersemester 2026 geöffnet"
+      ],
+      "dismiss": "Schließen"
+    },
+    "pathHub": {
+      "shared": {
+        "articlesTitle": "Artikel & Ratgeber",
+        "articlesCta": "Alle Artikel",
+        "toolsTitle": "KI-Werkzeuge",
+        "toolsCta": "Alle Werkzeuge",
+        "nextStepTitle": "Nächster Schritt",
+        "consultTitle": "Beratung buchen",
+        "consultSub": "Unsere Berater begleiten dich Schritt für Schritt — auf Arabisch oder Französisch.",
+        "consultName": "Vollständiger Name",
+        "consultEmail": "E-Mail",
+        "consultPhone": "Telefon",
+        "consultMsg": "Erzähl uns von deinem Projekt",
+        "consultSubmit": "Beratung reservieren",
+        "consultSending": "Senden…",
+        "consultSuccess": "Danke! Wir melden uns bald bei dir.",
+        "consultError": "Senden nicht möglich, bitte erneut versuchen.",
+        "ctaTools": "Werkzeuge ansehen",
+        "ctaConsult": "Beratung buchen",
+        "pillarsKicker": "Drei Schritte",
+        "pillarsTitleAus": "Deine Ausbildung in drei Schritten",
+        "pillarsTitleStud": "Dein Studium in drei Schritten",
+        "stepLabel": "Schritt",
+        "discover": "Entdecken",
+        "comingSoon": "Bald verfügbar"
+      },
+      "ausbildung": {
+        "eyebrow": "Ausbildungs-Pfad",
+        "title": "Alles für deine Ausbildung in Deutschland",
+        "sub": "Lebenslauf, Anschreiben, Deutsch lernen, echte Stellen und persönliche Beratung — an einem Ort.",
+        "ctaOffers": "Ausbildungsstellen ansehen",
+        "offersKicker": "Stellen",
+        "offersTitle": "5.000+ echte Ausbildungsstellen",
+        "offersDesc": "Finde Ausbildungsplätze mit offiziellem Vertrag in ganz Deutschland, täglich aktualisiert.",
+        "offersCta": "Stellen ansehen",
+        "heroPre": "Verdiene ",
+        "heroHighlight": "1.100€/Monat",
+        "heroPost": " in deiner Ausbildung in Deutschland",
+        "subNew": "Offizieller Vertrag, bezahlte Ausbildung, über 5.000 Ausbildungsstellen für Marokkaner.",
+        "chips": [
+          "📋 Offizieller Vertrag",
+          "💶 Monatliches Gehalt",
+          "🇩🇪 Legaler Aufenthalt"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Deutsch lernen",
+            "desc": "Von A1 bis C1 — kostenlose, interaktive Kurse für Marokkaner."
+          },
+          "find": {
+            "title": "Finde deine Ausbildung",
+            "desc": "Über 5.000 Ausbildungsstellen mit offiziellem Vertrag in ganz Deutschland."
+          },
+          "visa": {
+            "title": "Erhalte dein Visum",
+            "desc": "Schritt-für-Schritt-Anleitung zum Ausbildungsvisum aus Marokko."
+          }
+        }
+      },
+      "studium": {
+        "eyebrow": "Studium-Pfad",
+        "title": "Alles fürs Studium in Deutschland",
+        "sub": "Lebenslauf, Motivationsschreiben, Universitätsverzeichnis, Deutsch lernen und Beratung — an einem Ort.",
+        "ctaUnis": "Universitäten entdecken",
+        "unisKicker": "Universitäten",
+        "unisTitle": "Deutsche Universitäten für Marokkaner",
+        "unisDesc": "Komplettes Verzeichnis mit Zulassungsbedingungen, Studiengängen und Kosten.",
+        "unisCta": "Verzeichnis ansehen",
+        "heroPre": "Studiere ",
+        "heroHighlight": "gebührenfrei",
+        "heroPost": " an einer deutschen Universität",
+        "subNew": "Kaum Studiengebühren, über 400 Universitäten für Marokkaner, weltweit anerkannter Abschluss.",
+        "chips": [
+          "🎓 Kaum Gebühren",
+          "🌍 400+ Universitäten",
+          "📜 Anerkannter Abschluss"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Deutsch lernen",
+            "desc": "Von A1 bis C1 — kostenlose, interaktive Kurse für Marokkaner."
+          },
+          "find": {
+            "title": "Wähle deine Universität",
+            "desc": "Über 400 Universitäten mit Zulassungsbedingungen und Studiengängen."
+          },
+          "visa": {
+            "title": "Hol dir dein Studentenvisum",
+            "desc": "Schritt-für-Schritt-Anleitung zum Studentenvisum aus Marokko."
+          }
+        }
+      }
     }
   },
   "profile": {
@@ -373,6 +536,13 @@
       "confirm": "Ja, Konto löschen",
       "deleting": "⏳ Wird gelöscht...",
       "genericErr": "Beim Löschen des Kontos ist ein Fehler aufgetreten"
+    },
+    "name": {
+      "heading": "Name",
+      "firstLabel": "Vorname",
+      "lastLabel": "Nachname",
+      "firstPlaceholder": "z. B. Ahmed",
+      "lastPlaceholder": "z. B. El Alaoui"
     }
   },
   "search": {
@@ -2774,5 +2944,164 @@
       "tipLink": "Lebenslauf-Generator",
       "tipSuffix": "nutzen."
     }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcomeBack": "Willkommen zurück",
+    "greeting": "Hallo, {name}",
+    "subtitle": "Hier sind deine nächsten Schritte nach Deutschland",
+    "path": {
+      "label": "Dein Weg",
+      "ausbildung": "Ausbildungsweg",
+      "studium": "Studiumsweg",
+      "unset": "Wähle deinen Weg",
+      "chooseAus": "Ausbildung wählen",
+      "chooseStud": "Studium wählen"
+    },
+    "profile": {
+      "title": "Profilvollständigkeit",
+      "percent": "{p}% vollständig",
+      "complete": "Super! Dein Profil ist vollständig 🎉",
+      "nextStep": "Nächster Schritt",
+      "items": {
+        "avatar": "Profilbild hinzufügen",
+        "whatsapp": "WhatsApp-Nummer hinzufügen",
+        "status": "Aktuellen Status festlegen",
+        "cv": "Lebenslauf erstellen",
+        "letter": "Motivationsschreiben erstellen"
+      },
+      "fix": "Erledigen"
+    },
+    "journey": {
+      "title": "Deine Reise in 3 Schritten",
+      "status": {
+        "todo": "Nicht begonnen",
+        "doing": "In Arbeit",
+        "done": "Erledigt",
+        "soon": "Bald verfügbar"
+      },
+      "continue": "Fortsetzen",
+      "start": "Starten"
+    },
+    "docs": {
+      "title": "Meine Dokumente",
+      "count": "{n} Dokument(e)",
+      "countZero": "Noch keine Dokumente",
+      "empty": "Starte mit deinem Lebenslauf oder Motivationsschreiben",
+      "viewAll": "Alle anzeigen"
+    },
+    "tools": {
+      "title": "Schnellzugriff-Tools",
+      "cv": "Lebenslauf-Builder",
+      "cvDesc": "Ein professioneller deutscher CV in Minuten",
+      "letter": "Motivationsschreiben-Generator",
+      "letterDesc": "Überzeugende Anschreiben mit KI"
+    },
+    "cta": {
+      "profile": "Profil verwalten",
+      "consult": "Beratung buchen"
+    },
+    "sidebar": {
+      "myProfile": "Mein Profil",
+      "tapToComplete": "Zum Vervollständigen tippen",
+      "sectionMarketplace": "Marktplatz",
+      "sectionPreparation": "Vorbereitung",
+      "sectionTools": "Werkzeuge",
+      "browse": "Angebote durchsuchen",
+      "saved": "Gespeicherte Angebote",
+      "applyForMe": "Für mich bewerben",
+      "newBadge": "Neu",
+      "dashboard": "Dashboard",
+      "germanLearning": "Deutsch lernen",
+      "interviewPrep": "Interview-Vorbereitung",
+      "videoStudio": "Video-Studio",
+      "culture": "Kultur",
+      "eligibility": "Berechtigung",
+      "timeline": "Zeitplan",
+      "cvBuilder": "Lebenslauf-Builder",
+      "coverLetter": "Anschreiben",
+      "whatsappSupport": "WhatsApp-Support",
+      "services": "Dienste",
+      "help": "Hilfe & Docs",
+      "complete": "Abgeschlossen"
+    },
+    "topbar": {
+      "help": "Hilfe",
+      "whatsapp": "WhatsApp",
+      "notifications": "Benachrichtigungen",
+      "account": "Konto",
+      "themeLight": "Heller Modus",
+      "themeDark": "Dunkler Modus"
+    },
+    "profilePage": {
+      "heroBannerTitle": "Dein Profil ist zu {pct}% vollständig",
+      "heroBannerSub": "Fülle die fehlenden Felder aus, um dein Profil zu vervollständigen.",
+      "unlockNext": "{pct}% mehr zum Freischalten:",
+      "unlockTargetGerman": "Deutsch lernen",
+      "quickUpdate": "Schnell-Update per Lebenslauf",
+      "updateManually": "Manuell aktualisieren",
+      "goalPct": "Ziel: 100%",
+      "completionLabel": "Profilvollständigkeit: {pct}%",
+      "completeness": "Profilvollständigkeit",
+      "completenessCompleteSuffix": "vollständig",
+      "strength": "Profilstärke",
+      "strengthPoints": "Punkte",
+      "strengthComparison": "Stärker als 50% der Kandidaten",
+      "tier": "Stufe",
+      "incomplete": "Unvollständig",
+      "weak": "Schwach",
+      "good": "Gut",
+      "strong": "Stark",
+      "mostFieldsEmpty": "Die meisten Felder sind leer",
+      "gettingThere": "25% — auf gutem Weg",
+      "nextGoal": "Nächstes Ziel",
+      "tierWeak": "Schwaches Profil",
+      "tierFair": "Mittleres Profil",
+      "tierStrong": "Starkes Profil",
+      "missing": {
+        "photo": "Profilbild hochladen",
+        "phone": "Telefonnummer hinzufügen",
+        "dob": "Geburtsdatum hinzufügen",
+        "status": "Aktuellen Status festlegen",
+        "cv": "Lebenslauf erstellen",
+        "letter": "Motivationsschreiben erstellen",
+        "firstName": "Vornamen hinzufügen",
+        "lastName": "Nachnamen hinzufügen",
+        "email": "E-Mail hinzufügen"
+      },
+      "sections": {
+        "education": "Ausbildung",
+        "experience": "Erfahrung",
+        "languages": "Sprachen",
+        "skills": "Fähigkeiten",
+        "personal": "Persönliche Informationen",
+        "contact": "Kontakt",
+        "add": "Hinzufügen",
+        "comingSoon": "Bald"
+      },
+      "promo": {
+        "title": "Lass unser Team für dich bewerben",
+        "body": "Unser „Für mich bewerben\"-Service sendet Bewerbungen automatisch an passende Angebote.",
+        "cta": "Service entdecken"
+      }
+    },
+    "stubs": {
+      "savedTitle": "Gespeicherte Angebote",
+      "savedEmpty": "Noch keine Angebote gespeichert. Durchsuche den Marktplatz und klicke auf das Lesezeichen-Symbol.",
+      "applyTitle": "Für mich bewerben",
+      "applyBody": "Wir senden Bewerbungen an passende Angebote. Bald verfügbar.",
+      "lockedTitle": "{feature} — Bald verfügbar",
+      "lockedBody": "Diese Funktion ist in Entwicklung.",
+      "browseCta": "Angebote durchsuchen"
+    }
+  },
+  "opportunitiesPicker": {
+    "title": "Wonach suchst du?",
+    "subtitle": "Wähle, welche Art von Möglichkeit du sehen möchtest.",
+    "ausbildung": "Ausbildungsplätze",
+    "ausbildungDesc": "Bezahlte Ausbildungen mit offiziellem Vertrag in Deutschland.",
+    "universities": "Universitäten",
+    "universitiesDesc": "Studiengänge und Fachrichtungen in Deutschland.",
+    "close": "Schließen"
   }
 }
