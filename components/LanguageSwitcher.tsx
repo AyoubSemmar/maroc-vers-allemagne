@@ -77,22 +77,7 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div
-          role="menu"
-          style={{
-            position: 'absolute',
-            top: 'calc(100% + 6px)',
-            insetInlineEnd: 0,
-            minWidth: 180,
-            background: 'var(--rihla-surface, #fff)',
-            color: 'var(--rihla-fg, #111)',
-            border: '1px solid var(--rihla-border, rgba(0,0,0,.1))',
-            borderRadius: 10,
-            boxShadow: '0 8px 24px rgba(0,0,0,.12)',
-            padding: 6,
-            zIndex: 60,
-          }}
-        >
+        <div role="menu" className="lang-menu">
           {(routing.locales as readonly AppLocale[]).map((loc) => {
             const opt = LOCALE_OPTIONS.find((o) => o.code === loc)!
             const active = loc === locale
@@ -101,31 +86,11 @@ export default function LanguageSwitcher() {
                 key={loc}
                 role="menuitem"
                 onClick={() => pickLocale(loc)}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  width: '100%',
-                  padding: '8px 10px',
-                  background: active
-                    ? 'var(--rihla-brand-soft, rgba(0,120,120,.08))'
-                    : 'transparent',
-                  color: 'inherit',
-                  border: 'none',
-                  borderRadius: 6,
-                  cursor: 'pointer',
-                  fontSize: 14,
-                  fontWeight: active ? 700 : 500,
-                  textAlign: 'start',
-                }}
+                aria-label={opt.label}
+                title={opt.label}
+                className={`lang-menu-item ${active ? 'is-active' : ''}`}
               >
-                <span style={{ fontSize: 18, lineHeight: 1 }}>{opt.flag}</span>
-                <span>{opt.label}</span>
-                {active && (
-                  <span style={{ marginInlineStart: 'auto', fontSize: 12, opacity: 0.7 }}>
-                    ✓
-                  </span>
-                )}
+                <span style={{ fontSize: 22, lineHeight: 1 }}>{opt.flag}</span>
               </button>
             )
           })}
