@@ -9,6 +9,7 @@ import RihlaFooter from "@/components/RihlaFooter";
 import LanguagePicker from "@/components/LanguagePicker";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HideOnDashboard from "@/components/HideOnDashboard";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -104,6 +105,9 @@ export default async function LocaleLayout({
           <LanguagePicker />
         </NextIntlClientProvider>
       </body>
+      {process.env.NODE_ENV === "production" && (
+        <GoogleAnalytics gaId="G-4E4HLM5JHJ" />
+      )}
     </html>
   );
 }
