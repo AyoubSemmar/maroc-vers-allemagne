@@ -2252,9 +2252,15 @@ html[dir="rtl"] .dash-tool:hover .dash-tool-arrow { transform: scaleX(-1) transl
   display: grid;
   grid-template-columns: 280px 1fr;
   min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
 }
+.dashshell-main { max-width: 100%; overflow-x: hidden; }
+.dashshell-content { max-width: 100%; }
+.dashshell-view { max-width: 100%; min-width: 0; }
 .dashshell-loading {
   grid-column: 1 / -1;
   display: grid; place-items: center;
@@ -2578,6 +2584,7 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
     position: fixed;
     top: 0; inset-inline-start: 0;
     height: 100vh;
+    height: 100dvh;
     z-index: 60;
     width: 280px;
     transform: translateX(-100%);
@@ -2588,7 +2595,19 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
   .dashshell-sidebar.is-open { transform: translateX(0); }
   .dashshell-backdrop { display: block; }
   .dashshell-topbar-menu { display: grid; }
-  .dashshell-content { padding: 20px 16px 60px; }
+  .dashshell-content { padding: 20px 14px 60px; }
+}
+/* Phone-specific: tighten topbar so all icons fit on narrow screens */
+@media (max-width: 560px) {
+  .dashshell-topbar { height: 56px; padding: 0 12px; gap: 6px; }
+  .dashshell-topbar-actions { gap: 6px; }
+  .dashshell-icon-btn { width: 34px; height: 34px; }
+  .dashshell-topbar-avatar { width: 34px; height: 34px; }
+  .dashshell-content { padding: 16px 12px 60px; }
+}
+/* Very narrow phones: drop the help button to prevent overflow */
+@media (max-width: 380px) {
+  .dashshell-topbar-actions .dashshell-icon-btn:not(.dashshell-icon-wa):first-of-type { display: none; }
 }
 
 /* ============================================================
