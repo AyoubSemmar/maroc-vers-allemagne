@@ -68,7 +68,7 @@ SELECT DISTINCT ?uni
        (SAMPLE(?nameEn) AS ?name_en)
        (SAMPLE(?nameAr) AS ?name_ar)
        (SAMPLE(?nameFr) AS ?name_fr)
-       (SAMPLE(?cityLabel) AS ?city)
+       (COALESCE(SAMPLE(?cityLabel), SAMPLE(?cityHQLabel)) AS ?city)
        (SAMPLE(?stateLabel) AS ?state)
        (SAMPLE(?founded) AS ?founded)
        (SAMPLE(?students) AS ?students)
@@ -93,9 +93,12 @@ WHERE {
   OPTIONAL { ?uni rdfs:label ?nameFr FILTER(LANG(?nameFr) = "fr"). }
 
   OPTIONAL {
-    ?uni (wdt:P276|wdt:P131|wdt:P159) ?city .
-    ?city wdt:P31/wdt:P279* wd:Q515 .       # is a city
+    ?uni wdt:P276 ?city .
     ?city rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "de").
+  }
+  OPTIONAL {
+    ?uni wdt:P159 ?cityHQ .
+    ?cityHQ rdfs:label ?cityHQLabel FILTER(LANG(?cityHQLabel) = "de").
   }
   OPTIONAL {
     ?uni wdt:P131 ?state .
@@ -116,18 +119,39 @@ GROUP BY ?uni
 ORDER BY ?name_de
 `
 
-async function fetchWikidata() {
-  const url = 'https://query.wikidata.org/sparql?format=json&query=' + encodeURIComponent(SPARQL)
-  console.log('▸ Querying Wikidata SPARQL endpoint...')
-  const res = await fetch(url, {
-    headers: {
-      'Accept': 'application/sparql-results+json',
-      'User-Agent': 'GoGermany/1.0 (https://gogermany.ma; contact@gogermany.ma)',
-    },
-  })
-  if (!res.ok) throw new Error(`Wikidata returned ${res.status}: ${await res.text()}`)
-  const json = await res.json()
-  return json.results.bindings
+async function fetchWikidata(attempt = 1) {
+  console.log(`▸ Querying Wikidata SPARQL endpoint... (attempt ${attempt})`)
+  try {
+    const res = await fetch('https://query.wikidata.org/sparql', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/sparql-results+json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'User-Agent': 'GoGermany/1.0 (https://gogermany.ma; contact@gogermany.ma)',
+      },
+      body: 'query=' + encodeURIComponent(SPARQL),
+    })
+    if (!res.ok) {
+      const body = await res.text()
+      if ((res.status === 504 || res.status === 503 || res.status === 429) && attempt < 4) {
+        const wait = attempt * 5000
+        console.log(`  ⚠ ${res.status} — retrying in ${wait/1000}s...`)
+        await new Promise(r => setTimeout(r, wait))
+        return fetchWikidata(attempt + 1)
+      }
+      throw new Error(`Wikidata returned ${res.status}: ${body.slice(0, 300)}`)
+    }
+    const json = await res.json()
+    return json.results.bindings
+  } catch (err) {
+    if (attempt < 4) {
+      const wait = attempt * 5000
+      console.log(`  ⚠ ${err.message} — retrying in ${wait/1000}s...`)
+      await new Promise(r => setTimeout(r, wait))
+      return fetchWikidata(attempt + 1)
+    }
+    throw err
+  }
 }
 
 // ── Helpers ─────────────────────────────────────────────────────
