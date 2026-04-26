@@ -100,7 +100,7 @@ export default async function UniversityDetailPage({ params }: Props) {
           <h2>{td('programsTitle')}</h2>
           <div className="uni-level-grid">
             <a
-              href={hochschulkompassSearchUrl(name, 'bachelor', locale)}
+              href={programSearchUrl(row.website, 'bachelor', locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="uni-level-card uni-level-card--bachelor uni-level-card--link"
@@ -108,12 +108,12 @@ export default async function UniversityDetailPage({ params }: Props) {
               <div className="uni-level-icon" aria-hidden>🎓</div>
               <div className="uni-level-body">
                 <h3>{td('bachelorTitle')}</h3>
-                <p>{td('bachelorDescLive')}</p>
-                <span className="uni-level-cta">{td('searchOnHochschulkompass')} ↗</span>
+                <p>{td('bachelorDescOnSite')}</p>
+                <span className="uni-level-cta">{td('seeOnUniSite')} ↗</span>
               </div>
             </a>
             <a
-              href={hochschulkompassSearchUrl(name, 'master', locale)}
+              href={programSearchUrl(row.website, 'master', locale)}
               target="_blank"
               rel="noopener noreferrer"
               className="uni-level-card uni-level-card--master uni-level-card--link"
@@ -121,12 +121,12 @@ export default async function UniversityDetailPage({ params }: Props) {
               <div className="uni-level-icon" aria-hidden>📚</div>
               <div className="uni-level-body">
                 <h3>{td('masterTitle')}</h3>
-                <p>{td('masterDescLive')}</p>
-                <span className="uni-level-cta">{td('searchOnHochschulkompass')} ↗</span>
+                <p>{td('masterDescOnSite')}</p>
+                <span className="uni-level-cta">{td('seeOnUniSite')} ↗</span>
               </div>
             </a>
           </div>
-          <p className="uni-level-note">{td('hochschulkompassNote')}</p>
+          <p className="uni-level-note">{td('googleSearchNote')}</p>
         </section>
       </div>
     </div>
@@ -137,15 +137,21 @@ function pick<T extends Record<string, any>>(row: T, base: string, locale: AppLo
   return row[`${base}_${locale}`] || row[`${base}_en`] || row[`${base}_de`] || ''
 }
 
-// Hochschulkompass free-text search prefilled with university name + level.
-// Locale picks /en/ or /de/ entry point for the search results page.
-function hochschulkompassSearchUrl(uniName: string, level: 'bachelor' | 'master', locale: AppLocale): string {
-  const langPath = locale === 'de' ? '' : 'en/'
-  const query = `${uniName} ${level}`
-  // The site's search field is `tx_szhrksearch_pi1[suche]`. Prefilling
-  // it just runs a query when the user lands.
-  const params = new URLSearchParams()
-  params.set('tx_szhrksearch_pi1[search]', '1')
-  params.set('tx_szhrksearch_pi1[suche]', query)
-  return `https://www.hochschulkompass.de/${langPath}study/study-programs/study-program-finder.html?${params}`
+// Google site-search restricted to the uni's own domain — finds the
+// actual program page on whichever URL pattern the uni uses, without
+// us needing to hand-curate one entry per institution.
+function programSearchUrl(websiteUrl: string | null, level: 'bachelor' | 'master', locale: AppLocale): string {
+  // Localized keyword + the German "Studiengang" so we hit pages that
+  // talk about study programs in either language.
+  const levelWord = level === 'bachelor'
+    ? { ar: 'بكالوريوس bachelor', fr: 'licence bachelor', en: 'bachelor', de: 'bachelor' }[locale]
+    : { ar: 'ماستر master', fr: 'master', en: 'master', de: 'master' }[locale]
+  let host = ''
+  try {
+    host = new URL(websiteUrl ?? '').hostname.replace(/^www\./, '')
+  } catch {}
+  const q = host
+    ? `site:${host} ${levelWord} studiengang`
+    : `${levelWord} studiengang`
+  return `https://www.google.com/search?q=${encodeURIComponent(q)}`
 }
