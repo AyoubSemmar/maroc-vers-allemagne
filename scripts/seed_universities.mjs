@@ -48,6 +48,105 @@ function slugify(s) {
     .slice(0, 80)
 }
 
+// "Karlsruher" → "Karlsruhe", "Münchner" → "München", etc.
+const CITY_NORMALIZE = {
+  'Karlsruher': 'Karlsruhe',
+  'Hamburger': 'Hamburg',
+  'Berliner': 'Berlin',
+  'Münchner': 'München',
+  'Münchener': 'München',
+  'Frankfurter': 'Frankfurt am Main',
+  'Stuttgarter': 'Stuttgart',
+  'Dresdner': 'Dresden',
+  'Leipziger': 'Leipzig',
+  'Kölner': 'Köln',
+  'Bonner': 'Bonn',
+  'Heidelberger': 'Heidelberg',
+  'Mainzer': 'Mainz',
+  'Tübinger': 'Tübingen',
+  'Würzburger': 'Würzburg',
+  'Nürnberger': 'Nürnberg',
+  'Erlanger': 'Erlangen',
+  'Bremer': 'Bremen',
+  'Hannoveraner': 'Hannover',
+  'Bochumer': 'Bochum',
+  'Duisburger': 'Duisburg',
+  'Essener': 'Essen',
+  'Aachener': 'Aachen',
+  'Augsburger': 'Augsburg',
+  'Bayreuther': 'Bayreuth',
+  'Bielefelder': 'Bielefeld',
+  'Braunschweiger': 'Braunschweig',
+  'Chemnitzer': 'Chemnitz',
+  'Dortmunder': 'Dortmund',
+  'Düsseldorfer': 'Düsseldorf',
+  'Freiburger': 'Freiburg im Breisgau',
+  'Gießener': 'Gießen',
+  'Göttinger': 'Göttingen',
+  'Greifswalder': 'Greifswald',
+  'Hallenser': 'Halle',
+  'Jenaer': 'Jena',
+  'Kasseler': 'Kassel',
+  'Kieler': 'Kiel',
+  'Konstanzer': 'Konstanz',
+  'Magdeburger': 'Magdeburg',
+  'Marburger': 'Marburg',
+  'Münsteraner': 'Münster',
+  'Oldenburger': 'Oldenburg',
+  'Osnabrücker': 'Osnabrück',
+  'Paderborner': 'Paderborn',
+  'Passauer': 'Passau',
+  'Potsdamer': 'Potsdam',
+  'Regensburger': 'Regensburg',
+  'Rostocker': 'Rostock',
+  'Saarbrücker': 'Saarbrücken',
+  'Saarländer': 'Saarbrücken',
+  'Siegener': 'Siegen',
+  'Trierer': 'Trier',
+  'Ulmer': 'Ulm',
+  'Wiesbadener': 'Wiesbaden',
+  'Weimarer': 'Weimar',
+  'Wuppertaler': 'Wuppertal',
+}
+
+// Hard-coded city overrides for famous unis whose name doesn't carry the city.
+const CITY_OVERRIDE = {
+  'charite-universitatsmedizin-berlin': 'Berlin',
+  'charite': 'Berlin',
+  'hertie-school-of-governance': 'Berlin',
+  'esmt-european-school-of-management-and-technology': 'Berlin',
+  'bauhaus-universitat-weimar': 'Weimar',
+  'jacobs-university-bremen': 'Bremen',
+  'constructor-university': 'Bremen',
+  'rwth-aachen-university': 'Aachen',
+  'kit-karlsruher-institut-fur-technologie': 'Karlsruhe',
+}
+
+function extractCity(name) {
+  if (!name) return null
+  // 1. "Universität Heidelberg" / "Universität zu Köln" / "Universität in München"
+  let m = name.match(/Universität\s+(?:zu\s+|in\s+|der\s+|des\s+)?([A-ZÄÖÜ][a-zäöüß-]+(?:\s+(?:am|an|im|auf|der|des)\s+(?:[A-Z][a-zäöüß-]+|der\s+[A-Z][a-zäöüß-]+))?)/)
+  if (m) return m[1]
+  // 2. "Hochschule X" or "Hochschule für Y in Z"
+  m = name.match(/Hochschule\s+(?:für\s+[\w\s]+?\s+)?(?:in\s+)?([A-ZÄÖÜ][a-zäöüß-]+)/)
+  if (m && !/^für$|^für$/.test(m[1])) return m[1]
+  // 3. Acronyms: "TU München", "RWTH Aachen", "FH Köln", "TH Köln"
+  m = name.match(/^(?:TU|TH|FH|RWTH|HAW|HfM|HfBK|UdK)\s+([A-ZÄÖÜ][a-zäöüß-]+)/)
+  if (m) return m[1]
+  // 4. "X-er Institut" / "Karlsruher Institut für Technologie"
+  m = name.match(/([A-ZÄÖÜ][a-zäöüß]+er)\s+(?:Institut|Akademie|Hochschule)/)
+  if (m && CITY_NORMALIZE[m[1]]) return CITY_NORMALIZE[m[1]]
+  // 5. Universitätsmedizin / Universitätsklinik X
+  m = name.match(/Universitäts(?:medizin|klinikum)\s+([A-ZÄÖÜ][a-zäöüß-]+)/)
+  if (m) return m[1]
+  return null
+}
+
+// Google favicon service — works for any domain, returns 128px PNG.
+function googleFavicon(domain) {
+  return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=128`
+}
+
 function classifyType(name) {
   const s = name.toLowerCase()
   if (/fachhochschule|hochschule für angewandte|university of applied/.test(s)) return 'applied_sciences'
@@ -248,6 +347,36 @@ async function main() {
     if (!bySlug.has(rec.id)) bySlug.set(rec.id, rec)
   }
   const records = [...bySlug.values()]
+
+  // Fallbacks: extract city from name if Wikidata didn't provide one,
+  // and always populate logo_url with the Google favicon as a guaranteed
+  // image (Wikidata logo wins when present).
+  let cityFromName = 0
+  let cityFromOverride = 0
+  let logoFromGoogle = 0
+  for (const rec of records) {
+    if (!rec.city) {
+      if (CITY_OVERRIDE[rec.id]) {
+        rec.city = CITY_OVERRIDE[rec.id]
+        cityFromOverride++
+      } else {
+        const c = extractCity(rec.name_de)
+        if (c) {
+          rec.city = c
+          cityFromName++
+        }
+      }
+    }
+    if (!rec.logo_url) {
+      try {
+        const host = new URL(rec.website).hostname.replace(/^www\./, '')
+        rec.logo_url = googleFavicon(host)
+        logoFromGoogle++
+      } catch {}
+    }
+  }
+  console.log(`▸ Backfilled ${cityFromName} cities from name, ${cityFromOverride} from override`)
+  console.log(`▸ Backfilled ${logoFromGoogle} logos via Google favicon service`)
   console.log(`▸ ${records.length} final records (${enriched} enriched from Wikidata)`)
   console.log(`  – public: ${records.filter(r => r.is_public).length}`)
   console.log(`  – private: ${records.filter(r => !r.is_public).length}`)
