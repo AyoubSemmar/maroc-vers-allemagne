@@ -93,27 +93,40 @@ export default async function UniversityDetailPage({ params }: Props) {
           </a>
         )}
 
-        {/* Bachelor / Master entry points (programs filled in Phase 2) */}
+        {/* Bachelor / Master — deep-link to Hochschulkompass (the official
+            German government catalog) prefilled with this university's name.
+            Free-text query handles all 558 unis without needing per-uni IDs. */}
         <section className="uni-detail-section">
           <h2>{td('programsTitle')}</h2>
           <div className="uni-level-grid">
-            <div className="uni-level-card uni-level-card--bachelor">
+            <a
+              href={hochschulkompassSearchUrl(name, 'bachelor', locale)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="uni-level-card uni-level-card--bachelor uni-level-card--link"
+            >
               <div className="uni-level-icon" aria-hidden>🎓</div>
               <div className="uni-level-body">
                 <h3>{td('bachelorTitle')}</h3>
-                <p>{td('bachelorDesc')}</p>
-                <span className="uni-level-status">{td('comingSoon')}</span>
+                <p>{td('bachelorDescLive')}</p>
+                <span className="uni-level-cta">{td('searchOnHochschulkompass')} ↗</span>
               </div>
-            </div>
-            <div className="uni-level-card uni-level-card--master">
+            </a>
+            <a
+              href={hochschulkompassSearchUrl(name, 'master', locale)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="uni-level-card uni-level-card--master uni-level-card--link"
+            >
               <div className="uni-level-icon" aria-hidden>📚</div>
               <div className="uni-level-body">
                 <h3>{td('masterTitle')}</h3>
-                <p>{td('masterDesc')}</p>
-                <span className="uni-level-status">{td('comingSoon')}</span>
+                <p>{td('masterDescLive')}</p>
+                <span className="uni-level-cta">{td('searchOnHochschulkompass')} ↗</span>
               </div>
-            </div>
+            </a>
           </div>
+          <p className="uni-level-note">{td('hochschulkompassNote')}</p>
         </section>
       </div>
     </div>
@@ -122,4 +135,17 @@ export default async function UniversityDetailPage({ params }: Props) {
 
 function pick<T extends Record<string, any>>(row: T, base: string, locale: AppLocale): string {
   return row[`${base}_${locale}`] || row[`${base}_en`] || row[`${base}_de`] || ''
+}
+
+// Hochschulkompass free-text search prefilled with university name + level.
+// Locale picks /en/ or /de/ entry point for the search results page.
+function hochschulkompassSearchUrl(uniName: string, level: 'bachelor' | 'master', locale: AppLocale): string {
+  const langPath = locale === 'de' ? '' : 'en/'
+  const query = `${uniName} ${level}`
+  // The site's search field is `tx_szhrksearch_pi1[suche]`. Prefilling
+  // it just runs a query when the user lands.
+  const params = new URLSearchParams()
+  params.set('tx_szhrksearch_pi1[search]', '1')
+  params.set('tx_szhrksearch_pi1[suche]', query)
+  return `https://www.hochschulkompass.de/${langPath}study/study-programs/study-program-finder.html?${params}`
 }

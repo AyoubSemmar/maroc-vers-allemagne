@@ -662,6 +662,35 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   text-transform: uppercase;
   width: fit-content;
 }
+/* Linked variants of the bachelor/master cards */
+.uni-level-card--link {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+.uni-level-card--link:hover {
+  border-color: transparent;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -12px rgba(0,0,0,0.18);
+}
+.uni-level-card--bachelor.uni-level-card--link:hover { box-shadow: 0 16px 36px -12px color-mix(in oklch, var(--brand) 50%, transparent); }
+.uni-level-card--master.uni-level-card--link:hover { box-shadow: 0 16px 36px -12px color-mix(in oklch, oklch(0.62 0.18 255) 50%, transparent); }
+.uni-level-cta {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin-top: 8px;
+  font-size: 12.5px; font-weight: 700;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+.uni-level-card--bachelor .uni-level-cta { color: var(--brand); }
+.uni-level-card--master .uni-level-cta { color: oklch(0.55 0.18 255); }
+.uni-level-note {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  text-align: center;
+  font-style: italic;
+}
 
 /* Portaled Learn dropdown — rendered into document.body to escape the
    nav's backdrop-filter containing block. Position is set inline via
