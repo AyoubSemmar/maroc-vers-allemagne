@@ -1,17 +1,17 @@
 // scripts/seed_universities.mjs
 //
-// Phase 1: seed the `universities` table from Wikidata.
+// Seeds the `universities` table from the open-source "university-domains-list"
+// (https://github.com/Hipo/university-domains-list) — a curated, community-
+// maintained JSON list of universities worldwide. Filters to Germany and
+// upserts into Supabase.
 //
-// Run with:
-//   node scripts/seed_universities.mjs
+// Run:
+//   node scripts/seed_universities.mjs            # incremental upsert
+//   node scripts/seed_universities.mjs --reset    # wipe + reseed
 //
-// Requires env vars in .env.local (or shell):
+// Requires .env.local with:
 //   NEXT_PUBLIC_SUPABASE_URL
-//   SUPABASE_SERVICE_ROLE_KEY   ← needed to bypass RLS for inserts
-//
-// Pulls every higher-education institution in Germany from the public
-// Wikidata SPARQL endpoint, normalizes the rows, and upserts into
-// Supabase by wikidata_id. Safe to re-run — only changes diffs apply.
+//   SUPABASE_SERVICE_ROLE_KEY
 
 import { createClient } from '@supabase/supabase-js'
 import { readFileSync } from 'node:fs'
@@ -20,7 +20,7 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-// Tiny .env.local loader (no extra dep). Skips quietly if absent.
+// ── env ─────────────────────────────────────────────────────────
 try {
   const env = readFileSync(resolve(__dirname, '..', '.env.local'), 'utf8')
   for (const line of env.split('\n')) {
@@ -30,227 +30,158 @@ try {
 } catch {}
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL
-const SERVICE_KEY  = process.env.SUPABASE_SERVICE_ROLE_KEY
+const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
 if (!SUPABASE_URL || !SERVICE_KEY) {
-  console.error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY.')
-  console.error('Add SUPABASE_SERVICE_ROLE_KEY to .env.local (find it in Supabase → Project Settings → API).')
+  console.error('Missing NEXT_PUBLIC_SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY in .env.local.')
   process.exit(1)
 }
+const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSession: false } })
 
-const supabase = createClient(SUPABASE_URL, SERVICE_KEY, {
-  auth: { persistSession: false },
-})
-
-// ── Wikidata SPARQL ────────────────────────────────────────────
-//
-// Restricted to a curated set of *specific* higher-ed classes (university,
-// Fachhochschule, Kunsthochschule, Musikhochschule, Technische Universität,
-// Pädagogische Hochschule), excluding dissolved entities and requiring
-// either a website or a known student count to weed out tiny seminaries
-// and individual research institutes that pollute the broader Q38723 tree.
-const HE_CLASSES = [
-  'wd:Q3918',        // university
-  'wd:Q875538',      // public university
-  'wd:Q1244442',     // school district / Fachhochschule (HAW)
-  'wd:Q1059546',     // university of applied sciences
-  'wd:Q1469925',     // Pädagogische Hochschule
-  'wd:Q1146291',     // Kunsthochschule
-  'wd:Q955824',      // Musikhochschule (school of music)
-  'wd:Q1321960',     // Technische Hochschule
-  'wd:Q1322441',     // Technische Universität
-  'wd:Q1814884',     // Berufsakademie
-  'wd:Q4358176',     // Hochschule (German higher-ed institution generic)
-].join(' ')
-
-const SPARQL = `
-SELECT DISTINCT ?uni
-       (SAMPLE(?nameDe) AS ?name_de)
-       (SAMPLE(?nameEn) AS ?name_en)
-       (SAMPLE(?nameAr) AS ?name_ar)
-       (SAMPLE(?nameFr) AS ?name_fr)
-       (COALESCE(SAMPLE(?cityLabel), SAMPLE(?cityHQLabel)) AS ?city)
-       (SAMPLE(?stateLabel) AS ?state)
-       (SAMPLE(?founded) AS ?founded)
-       (SAMPLE(?students) AS ?students)
-       (SAMPLE(?website) AS ?website)
-       (SAMPLE(?logo) AS ?logo)
-       (SAMPLE(?coords) AS ?coords)
-       (SAMPLE(?typeLabel) AS ?type_label)
-WHERE {
-  VALUES ?heClass { ${HE_CLASSES} }
-  ?uni wdt:P31 ?heClass .
-  ?uni wdt:P17 wd:Q183 .
-
-  # Exclude dissolved / historical institutions
-  FILTER NOT EXISTS { ?uni wdt:P576 ?dissolved . }
-
-  # Require at least a website OR a student count — drops phantom entries
-  ?uni wdt:P856|wdt:P2196 ?_anchor .
-
-  OPTIONAL { ?uni rdfs:label ?nameDe FILTER(LANG(?nameDe) = "de"). }
-  OPTIONAL { ?uni rdfs:label ?nameEn FILTER(LANG(?nameEn) = "en"). }
-  OPTIONAL { ?uni rdfs:label ?nameAr FILTER(LANG(?nameAr) = "ar"). }
-  OPTIONAL { ?uni rdfs:label ?nameFr FILTER(LANG(?nameFr) = "fr"). }
-
-  OPTIONAL {
-    ?uni wdt:P276 ?city .
-    ?city rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "de").
-  }
-  OPTIONAL {
-    ?uni wdt:P159 ?cityHQ .
-    ?cityHQ rdfs:label ?cityHQLabel FILTER(LANG(?cityHQLabel) = "de").
-  }
-  OPTIONAL {
-    ?uni wdt:P131 ?state .
-    ?state wdt:P31 wd:Q1221156 .
-    ?state rdfs:label ?stateLabel FILTER(LANG(?stateLabel) = "de").
-  }
-  OPTIONAL { ?uni wdt:P571 ?founded . }
-  OPTIONAL { ?uni wdt:P2196 ?students . }
-  OPTIONAL { ?uni wdt:P856 ?website . }
-  OPTIONAL { ?uni wdt:P154 ?logo . }
-  OPTIONAL { ?uni wdt:P625 ?coords . }
-  OPTIONAL {
-    ?uni wdt:P31 ?t .
-    ?t rdfs:label ?typeLabel FILTER(LANG(?typeLabel) = "en").
-  }
-}
-GROUP BY ?uni
-ORDER BY ?name_de
-`
-
-async function fetchWikidata(attempt = 1) {
-  console.log(`▸ Querying Wikidata SPARQL endpoint... (attempt ${attempt})`)
-  try {
-    const res = await fetch('https://query.wikidata.org/sparql', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/sparql-results+json',
-        'Content-Type': 'application/x-www-form-urlencoded',
-        'User-Agent': 'GoGermany/1.0 (https://gogermany.ma; contact@gogermany.ma)',
-      },
-      body: 'query=' + encodeURIComponent(SPARQL),
-    })
-    if (!res.ok) {
-      const body = await res.text()
-      if ((res.status === 504 || res.status === 503 || res.status === 429) && attempt < 4) {
-        const wait = attempt * 5000
-        console.log(`  ⚠ ${res.status} — retrying in ${wait/1000}s...`)
-        await new Promise(r => setTimeout(r, wait))
-        return fetchWikidata(attempt + 1)
-      }
-      throw new Error(`Wikidata returned ${res.status}: ${body.slice(0, 300)}`)
-    }
-    const json = await res.json()
-    return json.results.bindings
-  } catch (err) {
-    if (attempt < 4) {
-      const wait = attempt * 5000
-      console.log(`  ⚠ ${err.message} — retrying in ${wait/1000}s...`)
-      await new Promise(r => setTimeout(r, wait))
-      return fetchWikidata(attempt + 1)
-    }
-    throw err
-  }
-}
-
-// ── Helpers ─────────────────────────────────────────────────────
-
+// ── helpers ─────────────────────────────────────────────────────
 function slugify(s) {
   return s
     .toLowerCase()
-    .normalize('NFD').replace(/[̀-ͯ]/g, '') // strip diacritics
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/ß/g, 'ss')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
     .slice(0, 80)
 }
 
-function classifyType(typeLabel) {
-  if (!typeLabel) return 'university'
-  const s = typeLabel.toLowerCase()
-  if (s.includes('applied sciences') || s.includes('fachhochschule')) return 'applied_sciences'
-  if (s.includes('art') || s.includes('kunst')) return 'art'
-  if (s.includes('music') || s.includes('musik')) return 'music'
-  if (s.includes('technical') || s.includes('technische')) return 'technical'
-  if (s.includes('medical') || s.includes('medizin')) return 'medical'
-  if (s.includes('theological') || s.includes('theologische')) return 'theological'
-  if (s.includes('pedagogical') || s.includes('pädagogische')) return 'pedagogical'
-  if (s.includes('dual')) return 'dual'
+function classifyType(name) {
+  const s = name.toLowerCase()
+  if (/fachhochschule|hochschule für angewandte|university of applied/.test(s)) return 'applied_sciences'
+  if (/technische universität|technische hochschule|^tu |^th /.test(s)) return 'technical'
+  if (/kunsthochschule|hochschule für (?:bildende )?kunst|academy of fine arts|akademie der bildenden/.test(s)) return 'art'
+  if (/musikhochschule|hochschule für musik|conservatory|musikakademie/.test(s)) return 'music'
+  if (/medizinische hochschule|medical school/.test(s)) return 'medical'
+  if (/pädagogische hochschule|university of education/.test(s)) return 'pedagogical'
+  if (/theologische hochschule|hochschule für theolog|theological/.test(s)) return 'theological'
+  if (/duale hochschule|cooperative state/.test(s)) return 'dual'
   return 'university'
 }
 
-function parseCoords(wkt) {
-  // Wikidata returns "Point(LON LAT)"
-  if (!wkt) return { lat: null, lng: null }
-  const m = wkt.match(/Point\(([-\d.]+)\s+([-\d.]+)\)/)
-  if (!m) return { lat: null, lng: null }
-  return { lng: parseFloat(m[1]), lat: parseFloat(m[2]) }
-}
-
-function parseYear(iso) {
-  if (!iso) return null
-  const m = iso.match(/(-?\d+)-/)
-  return m ? parseInt(m[1], 10) : null
-}
-
-// Known German private universities — flagged so we can exclude them
-// from the public-only filter on the frontend.
-const KNOWN_PRIVATE = new Set([
-  'iu-internationale-hochschule',
-  'hochschule-fresenius',
-  'jacobs-university',
-  'constructor-university',
-  'witten-herdecke-universitaet',
-  'private-universitaet-witten-herdecke',
-  'bucerius-law-school',
-  'frankfurt-school-of-finance-management',
-  'esmt-berlin',
-  'hertie-school',
-  'wfi-ingolstadt',
-  'whu-otto-beisheim-school-of-management',
-  'zeppelin-universitaet',
-  'sigmund-freud-privatuniversitat',
-  'ebs-universitaet-fur-wirtschaft-und-recht',
-  'hochschule-fur-philosophie-munchen',
-  'cbs-international-business-school',
-  'fom-hochschule',
-  'ism-international-school-of-management',
-  'munich-business-school',
-  'macromedia-hochschule',
-  'srh-hochschule',
-  'steinbeis-hochschule',
+const KNOWN_PRIVATE_DOMAIN = new Set([
+  'iu.de', 'iubh.de', 'iu-internationale-hochschule.de',
+  'fh-fresenius.de', 'hs-fresenius.de',
+  'jacobs-university.de', 'constructor.university',
+  'uni-wh.de', 'witten-herdecke.de',
+  'law-school.de',
+  'frankfurt-school.de',
+  'esmt.berlin', 'esmt.org',
+  'hertie-school.org',
+  'whu.edu',
+  'ku.de',                        // KU Eichstätt-Ingolstadt (private but Catholic state-equivalent — close call)
+  'sfu.ac.at', 'sfu-berlin.de',  // Sigmund Freud
+  'ebs.edu',
+  'cbs.de',
+  'fom.de',
+  'ism.de',
+  'munich-business-school.de',
+  'macromedia.de',
+  'srh.de',
+  'steinbeis-hochschule.de',
 ])
 
-// ── Quality filter ──────────────────────────────────────────────
-// Wikidata's higher-ed classes pull a lot of noise (private vocational
-// schools, branch campuses, generic "Schule X" stubs). Require:
-// non-trivial name + a real city. Keyword filtering was tried but
-// dropped legit cases like "RWTH Aachen" / "Charité" whose primary
-// German label has no "Universität" word.
+// ── source list ─────────────────────────────────────────────────
+const SOURCE_URL = 'https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json'
 
-const STUB_PREFIXES = /^(Schule|Privatschule|Berufsschule|Realschule|Gymnasium|Grundschule|Volksschule|Kindergarten|Kita|Internat)\b/i
-
-function isLegitInstitution(rec) {
-  if (!rec.name_de || rec.name_de.length < 6) return false
-  if (STUB_PREFIXES.test(rec.name_de)) return false
-  // Need at least a website OR a city OR a known student count — anything
-  // less is a phantom Wikidata stub.
-  if (!rec.website && !rec.city && (!rec.student_count || rec.student_count < 500)) return false
-  return true
+async function fetchSourceList() {
+  console.log('▸ Fetching curated university list (Hipo / university-domains-list)...')
+  const res = await fetch(SOURCE_URL)
+  if (!res.ok) throw new Error(`Source list fetch failed: ${res.status}`)
+  const all = await res.json()
+  const de = all.filter(u => u.alpha_two_code === 'DE' || u.country === 'Germany')
+  console.log(`  ✓ ${de.length} German entries in source`)
+  return de
 }
 
-function websiteHost(url) {
-  try {
-    return new URL(url).hostname.replace(/^www\./, '').toLowerCase()
-  } catch { return null }
+// ── optional Wikidata enrichment by domain ─────────────────────
+// Single small SPARQL query that joins the names we have to Wikidata
+// via the website domain (much narrower than scanning all higher-ed).
+async function enrichFromWikidata(domains) {
+  if (domains.length === 0) return new Map()
+  console.log(`▸ Enriching ${domains.length} entries from Wikidata (by domain)...`)
+
+  // Wikidata can match P856 to a literal URL prefix.
+  // We chunk to keep the query small.
+  const enrichment = new Map()
+  const CHUNK = 60
+  for (let i = 0; i < domains.length; i += CHUNK) {
+    const chunk = domains.slice(i, i + CHUNK)
+    const filters = chunk.map(d => `CONTAINS(LCASE(STR(?website)), "${d.toLowerCase()}")`).join(' || ')
+    const sparql = `
+SELECT ?uni ?website ?nameDe ?nameEn ?nameAr ?nameFr ?cityLabel ?stateLabel ?founded ?students ?logo
+WHERE {
+  ?uni wdt:P856 ?website .
+  FILTER( ${filters} )
+  OPTIONAL { ?uni rdfs:label ?nameDe FILTER(LANG(?nameDe) = "de"). }
+  OPTIONAL { ?uni rdfs:label ?nameEn FILTER(LANG(?nameEn) = "en"). }
+  OPTIONAL { ?uni rdfs:label ?nameAr FILTER(LANG(?nameAr) = "ar"). }
+  OPTIONAL { ?uni rdfs:label ?nameFr FILTER(LANG(?nameFr) = "fr"). }
+  OPTIONAL {
+    ?uni wdt:P276 ?city .
+    ?city rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "de").
+  }
+  OPTIONAL {
+    ?uni wdt:P131 ?state .
+    ?state rdfs:label ?stateLabel FILTER(LANG(?stateLabel) = "de").
+  }
+  OPTIONAL { ?uni wdt:P571 ?founded . }
+  OPTIONAL { ?uni wdt:P2196 ?students . }
+  OPTIONAL { ?uni wdt:P154 ?logo . }
+}
+LIMIT 500
+`
+    try {
+      const res = await fetch('https://query.wikidata.org/sparql', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/sparql-results+json',
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'User-Agent': 'GoGermany/1.0 (https://gogermany.ma; contact@gogermany.ma)',
+        },
+        body: 'query=' + encodeURIComponent(sparql),
+      })
+      if (!res.ok) {
+        console.log(`  ⚠ Wikidata enrichment chunk ${i/CHUNK} failed (${res.status}), continuing without`)
+        continue
+      }
+      const json = await res.json()
+      for (const r of json.results.bindings) {
+        const host = (() => {
+          try { return new URL(r.website.value).hostname.replace(/^www\./, '').toLowerCase() }
+          catch { return null }
+        })()
+        if (!host) continue
+        // Match by suffix so 'tum.de' matches 'www.tum.de'
+        const matched = chunk.find(d => host === d || host.endsWith('.' + d))
+        if (!matched) continue
+        const existing = enrichment.get(matched) ?? {}
+        enrichment.set(matched, {
+          name_de: existing.name_de || r.nameDe?.value,
+          name_en: existing.name_en || r.nameEn?.value,
+          name_ar: existing.name_ar || r.nameAr?.value,
+          name_fr: existing.name_fr || r.nameFr?.value,
+          city: existing.city || r.cityLabel?.value,
+          state: existing.state || r.stateLabel?.value,
+          founded: existing.founded || (r.founded?.value?.match(/(-?\d+)-/)?.[1]),
+          student_count: existing.student_count || (r.students?.value ? parseInt(r.students.value, 10) : null),
+          logo_url: existing.logo_url || r.logo?.value,
+          wikidata_id: r.uni.value.split('/').pop(),
+        })
+      }
+    } catch (e) {
+      console.log(`  ⚠ enrichment chunk ${i/CHUNK} threw: ${e.message}`)
+    }
+    process.stdout.write(`\r  enriched ${Math.min(i + CHUNK, domains.length)}/${domains.length}`)
+  }
+  console.log(`\n  ✓ Got Wikidata data for ${enrichment.size} entries`)
+  return enrichment
 }
 
-// ── Main ────────────────────────────────────────────────────────
-
+// ── main ────────────────────────────────────────────────────────
 async function main() {
-  // Pass --reset to wipe the table before re-seeding (use after tightening
-  // the SPARQL filter so stale rows from a broader earlier query are dropped).
   if (process.argv.includes('--reset')) {
     console.log('▸ Resetting universities table (--reset)...')
     const { error } = await supabase.from('universities').delete().neq('id', '___never___')
@@ -258,82 +189,77 @@ async function main() {
     console.log('  ✓ Cleared.')
   }
 
-  const rows = await fetchWikidata()
-  console.log(`▸ Got ${rows.length} institutions from Wikidata`)
+  const source = await fetchSourceList()
 
-  const records = []
-  const seenSlug = new Set()
-  const seenHost = new Map() // host -> existing record (keep the one with more data)
-  let droppedNoData = 0
-  let droppedNotLegit = 0
+  // Build candidate records keyed by primary domain.
+  const candidates = new Map() // domain -> rec
+  for (const u of source) {
+    const domain = (u.domains?.[0] || '').toLowerCase()
+    const website = u.web_pages?.[0] || (domain ? `https://${domain}` : null)
+    if (!domain || !website) continue
+    if (candidates.has(domain)) continue
 
-  for (const r of rows) {
-    const wikidataId = r.uni.value.split('/').pop()
-    const nameDe = r.name_de?.value || r.name_en?.value
-    if (!nameDe) { droppedNoData++; continue }
+    const id = slugify(u.name)
+    if (!id) continue
 
-    const { lat, lng } = parseCoords(r.coords?.value)
-    const candidate = {
-      id: slugify(nameDe),
-      wikidata_id: wikidataId,
-      name_de: nameDe,
-      name_en: r.name_en?.value ?? null,
-      name_ar: r.name_ar?.value ?? null,
-      name_fr: r.name_fr?.value ?? null,
-      city: r.city?.value ?? null,
-      state: r.state?.value ?? null,
+    candidates.set(domain, {
+      id,
+      wikidata_id: null,
+      name_de: u.name,
+      name_en: u.name,
+      name_ar: null,
+      name_fr: null,
+      city: null,
+      state: null,
       country_code: 'DE',
-      type: classifyType(r.type_label?.value),
-      is_public: true,
-      founded: parseYear(r.founded?.value),
-      student_count: r.students?.value ? parseInt(r.students.value, 10) : null,
-      website: r.website?.value ?? null,
-      logo_url: r.logo?.value ?? null,
-      lat, lng,
-    }
-    candidate.is_public = !KNOWN_PRIVATE.has(candidate.id)
+      type: classifyType(u.name),
+      is_public: !KNOWN_PRIVATE_DOMAIN.has(domain),
+      founded: null,
+      student_count: null,
+      website,
+      logo_url: null,
+      lat: null, lng: null,
+    })
+  }
+  console.log(`▸ ${candidates.size} unique German institutions from source`)
 
-    if (!isLegitInstitution(candidate)) { droppedNotLegit++; continue }
-
-    // Dedupe by slug
-    if (seenSlug.has(candidate.id)) continue
-
-    // Dedupe by website host — same domain almost certainly same uni.
-    // Keep whichever has more populated fields.
-    const host = websiteHost(candidate.website)
-    if (host && seenHost.has(host)) {
-      const existing = seenHost.get(host)
-      const score = (rec) => Object.values(rec).filter(v => v != null && v !== '').length
-      if (score(candidate) <= score(existing)) continue
-      // candidate is better; replace
-      const idx = records.indexOf(existing)
-      if (idx >= 0) records.splice(idx, 1)
-      seenSlug.delete(existing.id)
-    }
-
-    seenSlug.add(candidate.id)
-    if (host) seenHost.set(host, candidate)
-    records.push(candidate)
+  // Enrich with Wikidata where possible.
+  const enrichment = await enrichFromWikidata([...candidates.keys()])
+  let enriched = 0
+  for (const [domain, rec] of candidates) {
+    const e = enrichment.get(domain)
+    if (!e) continue
+    rec.wikidata_id = e.wikidata_id ?? rec.wikidata_id
+    rec.name_de = e.name_de || rec.name_de
+    rec.name_en = e.name_en || rec.name_en
+    rec.name_ar = e.name_ar || rec.name_ar
+    rec.name_fr = e.name_fr || rec.name_fr
+    rec.city = e.city ?? rec.city
+    rec.state = e.state ?? rec.state
+    rec.founded = e.founded ? parseInt(e.founded, 10) : rec.founded
+    rec.student_count = e.student_count ?? rec.student_count
+    rec.logo_url = e.logo_url ?? rec.logo_url
+    enriched++
   }
 
-  console.log(`▸ Kept ${records.length} institutions after quality filter`)
-  console.log(`  – dropped (no name): ${droppedNoData}`)
-  console.log(`  – dropped (not real higher-ed): ${droppedNotLegit}`)
+  // De-dupe by id (slug collisions across re-namings).
+  const bySlug = new Map()
+  for (const rec of candidates.values()) {
+    if (!bySlug.has(rec.id)) bySlug.set(rec.id, rec)
+  }
+  const records = [...bySlug.values()]
+  console.log(`▸ ${records.length} final records (${enriched} enriched from Wikidata)`)
   console.log(`  – public: ${records.filter(r => r.is_public).length}`)
   console.log(`  – private: ${records.filter(r => !r.is_public).length}`)
 
-  // Upsert in chunks of 100 to keep payload sizes reasonable.
-  const chunkSize = 100
+  // Upsert in chunks.
   let inserted = 0
-  for (let i = 0; i < records.length; i += chunkSize) {
-    const chunk = records.slice(i, i + chunkSize)
+  for (let i = 0; i < records.length; i += 100) {
+    const chunk = records.slice(i, i + 100)
     const { error } = await supabase
       .from('universities')
       .upsert(chunk, { onConflict: 'id' })
-    if (error) {
-      console.error('Supabase error:', error)
-      process.exit(1)
-    }
+    if (error) { console.error('Supabase error:', error); process.exit(1) }
     inserted += chunk.length
     process.stdout.write(`\r▸ Upserted ${inserted}/${records.length}`)
   }
