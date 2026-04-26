@@ -107,11 +107,14 @@ async function main() {
   }
 
   // De-dupe within this batch:
-  //   1. exact external_id collisions
+  //   1. exact external_id collisions (same title+company+city+email+url)
   //   2. same contact_email (one job posting per email)
   //   3. same apply_url (one job posting per application URL)
   const byId = new Map()
   for (const rec of records) byId.set(rec.external_id, rec)
+  if (records.length !== byId.size) {
+    console.log(`▸ Dedupe by external_id (same posting): ${records.length} → ${byId.size}`)
+  }
   const seenEmails = new Set()
   const seenUrls = new Set()
   const dedupedInBatch = []
