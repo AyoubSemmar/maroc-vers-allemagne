@@ -89,20 +89,60 @@ function parseDuration(val) {
   return m ? parseInt(m[1], 10) : null
 }
 
-// ── BA Studiensuche endpoint ────────────────────────────────────
-const BA_URL = 'https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v1/studienangebot'
+// ── BA Studiensuche endpoint discovery ──────────────────────────
+//
+// BA renames endpoint paths between API versions. Try a list of known
+// candidates and use whichever returns 200 + JSON.
+const CANDIDATES = [
+  // Format: [url, header-key-value]
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v1/studienangebot', 'studiensuche'],
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v2/studienangebot', 'studiensuche'],
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v1/studienangebote', 'studiensuche'],
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/v1/studienangebot', 'studiensuche'],
+  ['https://rest.arbeitsagentur.de/studiensuche/pc/v1/studienangebot', 'studiensuche'],
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v1/studienangebot', 'infosysbub-studiensuche'],
+  ['https://rest.arbeitsagentur.de/infosysbub/studiensuche/pc/v1/studienangebot', 'jobboerse-jobsuche'],
+  ['https://rest.arbeitsagentur.de/studienangebot/pc/v1/studienangebote', 'studienangebot'],
+]
+
+let CHOSEN_URL = null
+let CHOSEN_KEY = null
 const PER_PAGE = 100
-const HEADERS = {
-  'X-API-Key': 'studiensuche',
-  'Accept': 'application/json',
+
+async function discoverEndpoint() {
+  console.log('▸ Discovering working BA Studiensuche endpoint...')
+  for (const [url, key] of CANDIDATES) {
+    const test = new URL(url)
+    test.searchParams.set('size', '1')
+    test.searchParams.set('page', '0')
+    try {
+      const res = await fetch(test.toString(), {
+        headers: { 'X-API-Key': key, 'Accept': 'application/json' },
+      })
+      const body = await res.text()
+      const isJson = body.trim().startsWith('{') || body.trim().startsWith('[')
+      console.log(`  [${res.status}] ${url} (key="${key}") ${isJson ? '✓ JSON' : '✗ HTML'}`)
+      if (res.ok && isJson) {
+        CHOSEN_URL = url
+        CHOSEN_KEY = key
+        return JSON.parse(body)
+      }
+    } catch (e) {
+      console.log(`  [ERR] ${url} — ${e.message}`)
+    }
+  }
+  return null
 }
 
 async function fetchPage(page) {
-  const url = new URL(BA_URL)
+  if (!CHOSEN_URL) throw new Error('No working endpoint discovered')
+  const url = new URL(CHOSEN_URL)
   url.searchParams.set('size', String(PER_PAGE))
   url.searchParams.set('page', String(page))
-  const res = await fetch(url.toString(), { headers: HEADERS })
-  if (!res.ok) throw new Error(`BA Studiensuche ${res.status} on page ${page}: ${(await res.text()).slice(0, 300)}`)
+  const res = await fetch(url.toString(), {
+    headers: { 'X-API-Key': CHOSEN_KEY, 'Accept': 'application/json' },
+  })
+  if (!res.ok) throw new Error(`${res.status} on page ${page}: ${(await res.text()).slice(0, 300)}`)
   return res.json()
 }
 
@@ -147,18 +187,35 @@ async function main() {
   const limit = limitIdx >= 0 ? parseInt(args[limitIdx + 1], 10) : Infinity
 
   if (probe) {
-    console.log('▸ Probing BA Studiensuche endpoint...')
-    const json = await fetchPage(0)
+    console.log('▸ Probing BA Studiensuche endpoint...\n')
+    const json = await discoverEndpoint()
+    if (!json) {
+      console.log('\n✗ None of the candidate endpoints returned JSON.')
+      console.log('  The Studiensuche API likely requires OAuth2 client credentials.')
+      console.log('  Register at https://oauth.arbeitsagentur.de to get a client_id/secret.')
+      return
+    }
+    console.log(`\n✓ Working endpoint: ${CHOSEN_URL}`)
+    console.log(`✓ Auth key: ${CHOSEN_KEY}\n`)
     console.log('Top-level keys:', Object.keys(json))
-    const arr = json.studienangebote || json.embedded || json._embedded?.studienangebote || []
-    console.log(`Records on page 0: ${arr.length}`)
-    if (json.maxErgebnisse !== undefined) console.log(`Total available: ${json.maxErgebnisse}`)
+    const arr = json.studienangebote || json.embedded || json._embedded?.studienangebote || json.docs || json.results || []
+    console.log(`Records returned: ${arr.length}`)
+    if (json.maxErgebnisse !== undefined) console.log(`Total: ${json.maxErgebnisse}`)
+    if (json.totalElements !== undefined) console.log(`Total: ${json.totalElements}`)
     if (arr[0]) {
-      console.log('First record keys:', Object.keys(arr[0]))
-      console.log('First record:')
+      console.log('\nFirst record keys:', Object.keys(arr[0]))
+      console.log('\nFirst record:')
       console.log(JSON.stringify(arr[0], null, 2).slice(0, 3000))
     }
     return
+  }
+  // Auto-discover for non-probe runs too.
+  if (!CHOSEN_URL) {
+    const ok = await discoverEndpoint()
+    if (!ok) {
+      console.error('No working BA Studiensuche endpoint found. Run --probe to investigate.')
+      process.exit(1)
+    }
   }
 
   if (reset) {
