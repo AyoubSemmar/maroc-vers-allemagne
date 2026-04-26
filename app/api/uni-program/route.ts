@@ -24,8 +24,21 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'Missing or invalid uni/level' }, { status: 400 })
   }
 
-  const query = `${uni} ${level} studiengang`
-  const target = await firstSearchResult(query)
+  // Restrict to the uni's own domain (so we don't land on Wikipedia/etc.)
+  // and bias toward listing pages with multiple program-related keywords.
+  let domain = ''
+  try {
+    if (fallback) domain = new URL(fallback).hostname.replace(/^www\./, '')
+  } catch {}
+
+  const keywords = level === 'bachelor'
+    ? 'bachelor studiengänge studienangebot'
+    : 'master studiengänge studienangebot'
+  const query = domain
+    ? `site:${domain} ${keywords}`
+    : `${uni} ${keywords}`
+
+  const target = await firstSubPageResult(query, domain, fallback)
 
   const dest = target ?? fallback
   if (!dest) {
@@ -41,41 +54,69 @@ export async function GET(req: NextRequest) {
   })
 }
 
-async function firstSearchResult(query: string): Promise<string | null> {
-  // 1) DuckDuckGo HTML endpoint — scrapable, no API key
+// Walks all result links from DDG / Bing, filters to the uni's domain
+// (when known), and skips the bare homepage so we land on a real
+// sub-page that talks about programs.
+function isAcceptable(url: string, domain: string, fallback: string | null): boolean {
+  try {
+    const u = new URL(url)
+    const host = u.hostname.replace(/^www\./, '')
+    // Must be on the uni's domain (when we know it).
+    if (domain && host !== domain && !host.endsWith('.' + domain)) return false
+    // Reject the bare homepage — `https://uni.de/` or `https://uni.de`
+    const path = u.pathname.replace(/\/$/, '')
+    if (path === '' || path === '/') return false
+    // Reject obvious non-program paths
+    if (/\/(impressum|datenschutz|kontakt|news|presse|aktuelles)/i.test(u.pathname)) return false
+    // Reject pages that are literally the fallback URL
+    if (fallback) {
+      try {
+        const f = new URL(fallback)
+        if (u.href.replace(/\/$/, '') === f.href.replace(/\/$/, '')) return false
+      } catch {}
+    }
+    return true
+  } catch { return false }
+}
+
+function unwrapDdg(href: string): string | null {
+  try {
+    let raw = href
+    if (raw.startsWith('//')) raw = 'https:' + raw
+    if (raw.startsWith('/l/') || raw.includes('duckduckgo.com/l/')) {
+      const u = new URL(raw, 'https://duckduckgo.com')
+      const wrapped = u.searchParams.get('uddg')
+      if (wrapped) raw = decodeURIComponent(wrapped)
+    }
+    return /^https?:\/\//i.test(raw) ? raw : null
+  } catch { return null }
+}
+
+async function firstSubPageResult(query: string, domain: string, fallback: string | null): Promise<string | null> {
+  // 1) DuckDuckGo HTML
   try {
     const ddg = await fetch(
       'https://html.duckduckgo.com/html/?q=' + encodeURIComponent(query),
       {
         headers: {
-          // DDG bot-checks bare clients; pretend to be a real browser.
           'User-Agent':
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
             '(KHTML, like Gecko) Chrome/120.0 Safari/537.36',
-          'Accept-Language': 'en-US,en;q=0.9,de;q=0.8',
+          'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
         },
       },
     )
     if (ddg.ok) {
       const html = await ddg.text()
-      // <a class="result__a" href="https://www.tum.de/studium/...">
-      const m = html.match(/<a[^>]+class="result__a"[^>]+href="([^"]+)"/i)
-      if (m) {
-        let raw = m[1]
-        // DDG may wrap results in /l/?uddg=<encoded-url>
-        if (raw.startsWith('/l/') || raw.includes('duckduckgo.com/l/')) {
-          const u = new URL(raw, 'https://duckduckgo.com')
-          const wrapped = u.searchParams.get('uddg')
-          if (wrapped) raw = decodeURIComponent(wrapped)
-        }
-        if (/^https?:\/\//i.test(raw)) return raw
+      const matches = [...html.matchAll(/<a[^>]+class="result__a"[^>]+href="([^"]+)"/gi)]
+      for (const m of matches) {
+        const url = unwrapDdg(m[1])
+        if (url && isAcceptable(url, domain, fallback)) return url
       }
     }
-  } catch {
-    // fall through
-  }
+  } catch {}
 
-  // 2) Bing fallback — also scrapable
+  // 2) Bing fallback
   try {
     const bing = await fetch(
       'https://www.bing.com/search?q=' + encodeURIComponent(query),
@@ -89,13 +130,12 @@ async function firstSearchResult(query: string): Promise<string | null> {
     )
     if (bing.ok) {
       const html = await bing.text()
-      // <li class="b_algo"><h2><a href="https://...">
-      const m = html.match(/<li class="b_algo"[^>]*>[\s\S]*?<h2>\s*<a[^>]+href="([^"]+)"/i)
-      if (m && /^https?:\/\//i.test(m[1])) return m[1]
+      const matches = [...html.matchAll(/<li class="b_algo"[^>]*>[\s\S]*?<a[^>]+href="(https?:\/\/[^"]+)"/gi)]
+      for (const m of matches) {
+        if (isAcceptable(m[1], domain, fallback)) return m[1]
+      }
     }
-  } catch {
-    // fall through
-  }
+  } catch {}
 
   return null
 }
