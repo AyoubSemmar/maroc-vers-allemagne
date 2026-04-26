@@ -43,9 +43,25 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY, {
 
 // ── Wikidata SPARQL ────────────────────────────────────────────
 //
-// Pulls everything that's a subclass of "higher education institution"
-// (Q38723) and located in Germany (P17 = Q183). Multi-lingual labels
-// + structured fields. ~250 rows expected.
+// Restricted to a curated set of *specific* higher-ed classes (university,
+// Fachhochschule, Kunsthochschule, Musikhochschule, Technische Universität,
+// Pädagogische Hochschule), excluding dissolved entities and requiring
+// either a website or a known student count to weed out tiny seminaries
+// and individual research institutes that pollute the broader Q38723 tree.
+const HE_CLASSES = [
+  'wd:Q3918',        // university
+  'wd:Q875538',      // public university
+  'wd:Q1244442',     // school district / Fachhochschule (HAW)
+  'wd:Q1059546',     // university of applied sciences
+  'wd:Q1469925',     // Pädagogische Hochschule
+  'wd:Q1146291',     // Kunsthochschule
+  'wd:Q955824',      // Musikhochschule (school of music)
+  'wd:Q1321960',     // Technische Hochschule
+  'wd:Q1322441',     // Technische Universität
+  'wd:Q1814884',     // Berufsakademie
+  'wd:Q4358176',     // Hochschule (German higher-ed institution generic)
+].join(' ')
+
 const SPARQL = `
 SELECT DISTINCT ?uni
        (SAMPLE(?nameDe) AS ?name_de)
@@ -61,8 +77,15 @@ SELECT DISTINCT ?uni
        (SAMPLE(?coords) AS ?coords)
        (SAMPLE(?typeLabel) AS ?type_label)
 WHERE {
-  ?uni wdt:P31/wdt:P279* wd:Q38723 .
+  VALUES ?heClass { ${HE_CLASSES} }
+  ?uni wdt:P31 ?heClass .
   ?uni wdt:P17 wd:Q183 .
+
+  # Exclude dissolved / historical institutions
+  FILTER NOT EXISTS { ?uni wdt:P576 ?dissolved . }
+
+  # Require at least a website OR a student count — drops phantom entries
+  ?uni wdt:P856|wdt:P2196 ?_anchor .
 
   OPTIONAL { ?uni rdfs:label ?nameDe FILTER(LANG(?nameDe) = "de"). }
   OPTIONAL { ?uni rdfs:label ?nameEn FILTER(LANG(?nameEn) = "en"). }
@@ -75,7 +98,7 @@ WHERE {
   }
   OPTIONAL {
     ?uni wdt:P131 ?state .
-    ?state wdt:P31 wd:Q1221156 .  # is a German state
+    ?state wdt:P31 wd:Q1221156 .
     ?state rdfs:label ?stateLabel FILTER(LANG(?stateLabel) = "de").
   }
   OPTIONAL { ?uni wdt:P571 ?founded . }
@@ -177,6 +200,15 @@ const KNOWN_PRIVATE = new Set([
 // ── Main ────────────────────────────────────────────────────────
 
 async function main() {
+  // Pass --reset to wipe the table before re-seeding (use after tightening
+  // the SPARQL filter so stale rows from a broader earlier query are dropped).
+  if (process.argv.includes('--reset')) {
+    console.log('▸ Resetting universities table (--reset)...')
+    const { error } = await supabase.from('universities').delete().neq('id', '___never___')
+    if (error) { console.error('Reset failed:', error); process.exit(1) }
+    console.log('  ✓ Cleared.')
+  }
+
   const rows = await fetchWikidata()
   console.log(`▸ Got ${rows.length} institutions from Wikidata`)
 
