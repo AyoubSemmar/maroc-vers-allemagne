@@ -7,6 +7,7 @@ import { useSearchParams } from 'next/navigation'
 import { Link, useRouter } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
+import GoogleSignInButton from '@/components/GoogleSignInButton'
 
 function LoginForm() {
   const t = useTranslations('auth.login')
@@ -43,6 +44,14 @@ function LoginForm() {
           {error}
         </div>
       )}
+
+      <GoogleSignInButton next={searchParams.get('next') || '/dashboard'} />
+
+      <div className="flex items-center gap-3 my-4">
+        <div className="flex-1 h-px bg-gray-200" />
+        <span className="text-xs text-gray-400 uppercase tracking-wider">{tShared('or')}</span>
+        <div className="flex-1 h-px bg-gray-200" />
+      </div>
 
       <form onSubmit={handleLogin} className="flex flex-col gap-4">
         <input

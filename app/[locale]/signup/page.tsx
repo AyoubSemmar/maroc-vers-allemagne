@@ -6,6 +6,7 @@ import { createClient } from '@/lib/supabase-browser'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
+import GoogleSignInButton from '@/components/GoogleSignInButton'
 
 type Msg = { kind: 'error' | 'success'; text: string } | null
 
@@ -51,6 +52,13 @@ export default function SignupPage() {
             )}
           </div>
         ) : (
+          <>
+          <GoogleSignInButton next="/dashboard" />
+          <div className="flex items-center gap-3 my-4">
+            <div className="flex-1 h-px bg-gray-200" />
+            <span className="text-xs text-gray-400 uppercase tracking-wider">{tShared('or')}</span>
+            <div className="flex-1 h-px bg-gray-200" />
+          </div>
           <form onSubmit={handleSignup} className="flex flex-col gap-4">
             <input
               type="email"
@@ -78,6 +86,7 @@ export default function SignupPage() {
               <Link href="/login" className="text-green-700 hover:underline">{t('loginLink')}</Link>
             </p>
           </form>
+          </>
         )}
       </div>
     </div>

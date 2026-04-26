@@ -25,5 +25,7 @@ export async function GET(request) {
     await supabase.auth.exchangeCodeForSession(code)
   }
 
-  return NextResponse.redirect(`${origin}/profile`)
+  const next = searchParams.get('next')
+  const target = next && next.startsWith('/') ? next : '/dashboard'
+  return NextResponse.redirect(`${origin}${target}`)
 }
