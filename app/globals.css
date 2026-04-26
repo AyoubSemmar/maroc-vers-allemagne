@@ -691,6 +691,25 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   text-align: center;
   font-style: italic;
 }
+.uni-assist-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px;
+  margin: 0 0 12px;
+  background: color-mix(in oklch, oklch(0.66 0.15 195) 12%, transparent);
+  color: oklch(0.42 0.13 195);
+  border: 1px solid color-mix(in oklch, oklch(0.66 0.15 195) 25%, transparent);
+  border-radius: 999px;
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.uni-assist-badge > span:first-child {
+  width: 14px; height: 14px;
+  display: inline-grid; place-items: center;
+  background: oklch(0.55 0.16 195);
+  color: white;
+  border-radius: 999px;
+  font-size: 9px; font-weight: 900;
+}
 
 /* Portaled Learn dropdown — rendered into document.body to escape the
    nav's backdrop-filter containing block. Position is set inline via
