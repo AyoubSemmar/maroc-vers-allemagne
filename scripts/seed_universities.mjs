@@ -176,7 +176,10 @@ async function main() {
       founded: null,                                     // OpenAlex doesn't have this
       student_count: null,                               // nor this directly
       website: homepage,
-      logo_url: inst.image_thumbnail_url || inst.image_url || null,
+      logo_url:
+        inst.image_thumbnail_url ||
+        inst.image_url ||
+        (host ? `https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=128` : null),
       lat: geo.latitude ?? null,
       lng: geo.longitude ?? null,
     })
