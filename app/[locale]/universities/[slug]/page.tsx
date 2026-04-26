@@ -72,24 +72,47 @@ export default async function UniversityDetailPage({ params }: Props) {
               {row.founded && <span>{td('founded')}: {row.founded}</span>}
               {row.student_count && <span>{td('students')}: {row.student_count.toLocaleString(locale)}</span>}
             </div>
-            {row.website && (
-              <a href={row.website} target="_blank" rel="noopener noreferrer" className="uni-detail-site">
-                🌐 {row.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
-              </a>
-            )}
           </div>
         </div>
 
+        {/* Big primary CTA — official website */}
+        {row.website && (
+          <a
+            href={row.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="uni-website-cta"
+          >
+            <div className="uni-website-cta-text">
+              <span className="uni-website-cta-label">{td('officialWebsite')}</span>
+              <span className="uni-website-cta-url">
+                {row.website.replace(/^https?:\/\//, '').replace(/\/$/, '')}
+              </span>
+            </div>
+            <span className="uni-website-cta-arrow" aria-hidden>↗</span>
+          </a>
+        )}
+
+        {/* Bachelor / Master entry points (programs filled in Phase 2) */}
         <section className="uni-detail-section">
           <h2>{td('programsTitle')}</h2>
-          <div className="uni-detail-soon">
-            <span aria-hidden style={{ fontSize: 28 }}>📚</span>
-            <p>{td('programsSoon')}</p>
-            {row.website && (
-              <a href={row.website} target="_blank" rel="noopener noreferrer" className="btn btn-ghost btn-sm">
-                {td('visitOfficialSite')} →
-              </a>
-            )}
+          <div className="uni-level-grid">
+            <div className="uni-level-card uni-level-card--bachelor">
+              <div className="uni-level-icon" aria-hidden>🎓</div>
+              <div className="uni-level-body">
+                <h3>{td('bachelorTitle')}</h3>
+                <p>{td('bachelorDesc')}</p>
+                <span className="uni-level-status">{td('comingSoon')}</span>
+              </div>
+            </div>
+            <div className="uni-level-card uni-level-card--master">
+              <div className="uni-level-icon" aria-hidden>📚</div>
+              <div className="uni-level-body">
+                <h3>{td('masterTitle')}</h3>
+                <p>{td('masterDesc')}</p>
+                <span className="uni-level-status">{td('comingSoon')}</span>
+              </div>
+            </div>
           </div>
         </section>
       </div>
