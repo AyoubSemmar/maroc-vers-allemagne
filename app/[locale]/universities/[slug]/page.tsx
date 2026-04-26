@@ -93,51 +93,9 @@ export default async function UniversityDetailPage({ params }: Props) {
           </a>
         )}
 
-        {/* Bachelor / Master cards. For uni-assist member unis (5 hardcoded
-            for now), deep-links to uni-assist's course finder filtered to
-            that uni + level — shows real programs accepting international
-            applicants, with deadlines and fees. For other unis, links to
-            the homepage. */}
-        <section className="uni-detail-section">
-          <h2>{td('programsTitle')}</h2>
-          {isUniAssistMember(slug) && (
-            <div className="uni-assist-badge">
-              <span aria-hidden>✓</span> {td('viaUniAssist')}
-            </div>
-          )}
-          <div className="uni-level-grid">
-            <a
-              href={programLinkUrl(slug, name, 'bachelor', row.website)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="uni-level-card uni-level-card--bachelor uni-level-card--link"
-            >
-              <div className="uni-level-icon" aria-hidden>🎓</div>
-              <div className="uni-level-body">
-                <h3>{td('bachelorTitle')}</h3>
-                <p>{isUniAssistMember(slug) ? td('bachelorDescUniAssist') : td('bachelorDescOnSite')}</p>
-                <span className="uni-level-cta">
-                  {isUniAssistMember(slug) ? td('seeOnUniAssist') : td('seeOnUniSite')} ↗
-                </span>
-              </div>
-            </a>
-            <a
-              href={programLinkUrl(slug, name, 'master', row.website)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="uni-level-card uni-level-card--master uni-level-card--link"
-            >
-              <div className="uni-level-icon" aria-hidden>📚</div>
-              <div className="uni-level-body">
-                <h3>{td('masterTitle')}</h3>
-                <p>{isUniAssistMember(slug) ? td('masterDescUniAssist') : td('masterDescOnSite')}</p>
-                <span className="uni-level-cta">
-                  {isUniAssistMember(slug) ? td('seeOnUniAssist') : td('seeOnUniSite')} ↗
-                </span>
-              </div>
-            </a>
-          </div>
-        </section>
+        {/* Programs section intentionally minimal: the website CTA above
+            is the canonical place to see this uni's offerings. Adding a
+            curated program catalog is a future-phase project. */}
       </div>
     </div>
   )
@@ -147,33 +105,3 @@ function pick<T extends Record<string, any>>(row: T, base: string, locale: AppLo
   return row[`${base}_${locale}`] || row[`${base}_en`] || row[`${base}_de`] || ''
 }
 
-// THIN-SLICE TEST: deep-link to uni-assist's course finder for 5 known
-// member unis. Other unis fall back to the homepage. If clicking on the
-// 5 below lands on a useful filtered list, we expand to all ~170
-// uni-assist member unis. If not, we adjust the URL pattern.
-//
-// uni-assist filters its course finder by "Hochschulname" (string match).
-const UNI_ASSIST_MEMBERS: Record<string, string> = {
-  'technische-universitat-munchen':         'Technische Universität München',
-  'rwth-aachen-university':                  'RWTH Aachen',
-  'ruprecht-karls-universitat-heidelberg':   'Universität Heidelberg',
-  'ludwig-maximilians-universitat-munchen':  'Ludwig-Maximilians-Universität München',
-  'freie-universitat-berlin':                'Freie Universität Berlin',
-}
-
-function programLinkUrl(uniSlug: string, fallbackName: string, level: 'bachelor' | 'master', websiteUrl: string | null): string {
-  // Use uni-assist for known member unis
-  const uniAssistName = UNI_ASSIST_MEMBERS[uniSlug]
-  if (uniAssistName) {
-    const params = new URLSearchParams()
-    params.set('tx_uacoursefinder_pi1[searchword]', uniAssistName)
-    params.set('tx_uacoursefinder_pi1[degree]', level === 'bachelor' ? '1' : '2')
-    return `https://www.uni-assist.de/en/tools/course-finder/?${params}`
-  }
-  // Fallback for non-member unis: just the homepage
-  return websiteUrl ?? '#'
-}
-
-function isUniAssistMember(uniSlug: string): boolean {
-  return uniSlug in UNI_ASSIST_MEMBERS
-}
