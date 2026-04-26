@@ -93,7 +93,8 @@ WHERE {
   OPTIONAL { ?uni rdfs:label ?nameFr FILTER(LANG(?nameFr) = "fr"). }
 
   OPTIONAL {
-    ?uni wdt:P276 ?city .
+    ?uni (wdt:P276|wdt:P131|wdt:P159) ?city .
+    ?city wdt:P31/wdt:P279* wd:Q515 .       # is a city
     ?city rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "de").
   }
   OPTIONAL {
@@ -208,12 +209,10 @@ const STUB_PREFIXES = /^(Schule|Privatschule|Berufsschule|Realschule|Gymnasium|G
 
 function isLegitInstitution(rec) {
   if (!rec.name_de || rec.name_de.length < 6) return false
-  if (!rec.city) return false
   if (STUB_PREFIXES.test(rec.name_de)) return false
-  // Must have at least website OR student_count > 500 to weed out phantom
-  // entries — very small specialized institutions still pass if they have
-  // a website even without student count.
-  if (!rec.website && (!rec.student_count || rec.student_count < 500)) return false
+  // Need at least a website OR a city OR a known student count — anything
+  // less is a phantom Wikidata stub.
+  if (!rec.website && !rec.city && (!rec.student_count || rec.student_count < 500)) return false
   return true
 }
 
