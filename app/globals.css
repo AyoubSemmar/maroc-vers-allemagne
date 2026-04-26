@@ -2360,7 +2360,12 @@ html[dir="rtl"] .dash-tool:hover .dash-tool-arrow { transform: scaleX(-1) transl
   font-family: var(--font-geist-sans), system-ui, sans-serif;
   max-width: 100%;
   overflow-x: hidden;
+  transition: grid-template-columns .25s ease;
 }
+/* Desktop collapsed state: hide sidebar entirely, content reclaims space */
+.dashshell:has(.dashshell-sidebar.is-collapsed) { grid-template-columns: 0 minmax(0, 1fr); }
+.dashshell-sidebar.is-collapsed { transform: translateX(-100%); transition: transform .25s ease; }
+html[dir="rtl"] .dashshell-sidebar.is-collapsed { transform: translateX(100%); }
 .dashshell-main { min-width: 0; max-width: 100%; overflow-x: hidden; }
 .dashshell-content { min-width: 0; max-width: 100%; }
 .dashshell-view { max-width: 100%; min-width: 0; }
@@ -2595,6 +2600,8 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
   color: var(--text);
   place-items: center;
 }
+/* Desktop: hamburger appears whenever the sidebar is collapsed */
+.dashshell:has(.dashshell-sidebar.is-collapsed) .dashshell-topbar-menu { display: grid; }
 .dashshell-topbar-spacer { flex: 1; }
 .dashshell-topbar-actions {
   display: flex; align-items: center; gap: 10px;
@@ -2697,7 +2704,12 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
     box-shadow: 0 10px 40px rgba(0,0,0,0.25);
   }
   html[dir="rtl"] .dashshell-sidebar { transform: translateX(100%); }
-  .dashshell-sidebar.is-open { transform: translateX(0); }
+  .dashshell-sidebar.is-open,
+  html[dir="rtl"] .dashshell-sidebar.is-open { transform: translateX(0); }
+  /* Mobile: collapsed/closed state hides drawer in either direction */
+  .dashshell-sidebar.is-collapsed,
+  html[dir="rtl"] .dashshell-sidebar.is-collapsed { transform: translateX(-100%); }
+  html[dir="rtl"] .dashshell-sidebar.is-collapsed { transform: translateX(100%); }
   .dashshell-backdrop { display: block; }
   .dashshell-topbar-menu { display: grid; }
   .dashshell-content { padding: 20px 14px 60px; }

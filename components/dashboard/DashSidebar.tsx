@@ -119,16 +119,19 @@ export default function DashSidebar({
   completionPct,
   userInitial: _userInitial,
   isMobileOpen,
+  collapsed,
+  onClose,
 }: {
   completionPct: number
   userInitial: string
   isMobileOpen?: boolean
+  collapsed?: boolean
+  onClose?: () => void
 }) {
   const t = useTranslations('dashboard.sidebar')
   const tCommon = useTranslations('common')
   const pathname = usePathname()
   const locale = useLocale()
-  const [collapsed, setCollapsed] = useState(false)
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
 
   // Strip the locale prefix when comparing: pathname from next-intl's
@@ -175,7 +178,7 @@ export default function DashSidebar({
         <button
           type="button"
           className="dashshell-collapse"
-          onClick={() => setCollapsed(v => !v)}
+          onClick={() => onClose?.()}
           aria-label="Collapse sidebar"
         >
           {I.collapse}

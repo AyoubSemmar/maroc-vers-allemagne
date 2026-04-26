@@ -88,6 +88,7 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
   const [bumpKey, setBumpKey] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [collapsed, setCollapsed] = useState(false)
 
   // Auto-close the mobile drawer whenever the route changes.
   useEffect(() => { setMobileOpen(false) }, [pathname])
@@ -162,6 +163,15 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
           completionPct={pct}
           userInitial={userInitial}
           isMobileOpen={mobileOpen}
+          collapsed={collapsed}
+          onClose={() => {
+            // On phone, close the drawer. On desktop, collapse.
+            if (typeof window !== 'undefined' && window.matchMedia('(max-width: 960px)').matches) {
+              setMobileOpen(false)
+            } else {
+              setCollapsed(true)
+            }
+          }}
         />
         {mobileOpen && (
           <button
@@ -175,7 +185,13 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
           <DashTopbar
             avatarSrc={avatarSrc}
             userInitial={userInitial}
-            onMobileMenu={() => setMobileOpen(v => !v)}
+            onMobileMenu={() => {
+              if (typeof window !== 'undefined' && window.matchMedia('(max-width: 960px)').matches) {
+                setMobileOpen(v => !v)
+              } else {
+                setCollapsed(false)
+              }
+            }}
           />
           <div className="dashshell-content">
             <div key={pathname} className="dashshell-view">
