@@ -79,8 +79,13 @@ export default function RihlaNav() {
   useEffect(() => {
     if (!learnOpen) return
     function onDocClick(e: MouseEvent) {
-      if (!learnRef.current) return
-      if (!learnRef.current.contains(e.target as Node)) setLearnOpen(false)
+      const target = e.target as Node
+      // Trigger lives in learnRef; menu is portaled to body, so also
+      // ignore clicks that land inside any .tools-dd-menu-portal.
+      if (learnRef.current && learnRef.current.contains(target)) return
+      const portal = (target instanceof Element ? target.closest('.tools-dd-menu-portal') : null)
+      if (portal) return
+      setLearnOpen(false)
     }
     function onEsc(e: KeyboardEvent) { if (e.key === 'Escape') setLearnOpen(false) }
     document.addEventListener('mousedown', onDocClick)
