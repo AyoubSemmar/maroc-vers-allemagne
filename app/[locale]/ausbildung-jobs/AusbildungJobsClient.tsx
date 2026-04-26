@@ -25,7 +25,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   // Group jobs by category
   const jobsByCategory = useMemo(() => {
     const map: Record<CategoryKey, Job[]> = {
-      hospitality: [], handwerk: [], it: [], healthcare: [],
+      hospitality: [], handwerk: [], it: [], healthcare: [], logistics: [],
     }
     for (const j of jobs) {
       const key = j.category as CategoryKey

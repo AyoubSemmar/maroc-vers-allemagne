@@ -106,10 +106,56 @@ async function main() {
     })
   }
 
-  // De-dupe within this batch by external_id (in case the source had dupes)
+  // De-dupe within this batch:
+  //   1. exact external_id collisions
+  //   2. same contact_email (one job posting per email)
+  //   3. same apply_url (one job posting per application URL)
   const byId = new Map()
   for (const rec of records) byId.set(rec.external_id, rec)
-  const final = [...byId.values()]
+  const seenEmails = new Set()
+  const seenUrls = new Set()
+  const dedupedInBatch = []
+  let dropDupEmail = 0, dropDupUrl = 0
+  for (const rec of byId.values()) {
+    const emailKey = (rec.contact_email || '').toLowerCase().trim()
+    const urlKey = (rec.apply_url || '').toLowerCase().trim()
+    if (emailKey && seenEmails.has(emailKey)) { dropDupEmail++; continue }
+    if (urlKey && seenUrls.has(urlKey)) { dropDupUrl++; continue }
+    if (emailKey) seenEmails.add(emailKey)
+    if (urlKey) seenUrls.add(urlKey)
+    dedupedInBatch.push(rec)
+  }
+  console.log(`▸ Dedupe within batch: dropped ${dropDupEmail} same-email, ${dropDupUrl} same-url`)
+
+  // De-dupe against existing rows already in the DB.
+  const emailsToCheck = [...seenEmails]
+  const urlsToCheck = [...seenUrls]
+  const existingEmails = new Set()
+  const existingUrls = new Set()
+  if (emailsToCheck.length > 0) {
+    const { data } = await supabase
+      .from('ausbildung_jobs')
+      .select('contact_email')
+      .in('contact_email', emailsToCheck)
+    for (const r of data ?? []) if (r.contact_email) existingEmails.add(r.contact_email.toLowerCase().trim())
+  }
+  if (urlsToCheck.length > 0) {
+    const { data } = await supabase
+      .from('ausbildung_jobs')
+      .select('apply_url')
+      .in('apply_url', urlsToCheck)
+    for (const r of data ?? []) if (r.apply_url) existingUrls.add(r.apply_url.toLowerCase().trim())
+  }
+  const final = []
+  let dropDbEmail = 0, dropDbUrl = 0
+  for (const rec of dedupedInBatch) {
+    const emailKey = (rec.contact_email || '').toLowerCase().trim()
+    const urlKey = (rec.apply_url || '').toLowerCase().trim()
+    if (emailKey && existingEmails.has(emailKey)) { dropDbEmail++; continue }
+    if (urlKey && existingUrls.has(urlKey)) { dropDbUrl++; continue }
+    final.push(rec)
+  }
+  console.log(`▸ Dedupe vs DB: dropped ${dropDbEmail} email-already-exists, ${dropDbUrl} url-already-exists`)
 
   console.log(`▸ Built ${final.length} records (skipped ${skipped})`)
   const cats = {}
