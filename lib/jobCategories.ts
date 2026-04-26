@@ -2,7 +2,7 @@
 // Maps categories to German Ausbildung job title keywords used for
 // both the Bundesagentur API search queries and post-fetch categorization.
 
-export type CategoryKey = 'hospitality' | 'handwerk' | 'it' | 'healthcare'
+export type CategoryKey = 'hospitality' | 'handwerk' | 'it' | 'healthcare' | 'logistics'
 
 export type Category = {
   key: CategoryKey
@@ -50,9 +50,22 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
     ],
     color: 'berry',
   },
+  logistics: {
+    key: 'logistics',
+    nameEn: 'Logistics & Transport',
+    nameAr: 'النقل واللوجستيك',
+    icon: '🚚',
+    keywords: [
+      'LKW-Fahrer', 'LKW-Fahrerin', 'LKW Fahrer', 'LKW Fahrerin',
+      'Berufskraftfahrer', 'Berufskraftfahrerin',
+      'Kraftfahrer', 'Kraftfahrerin',
+      'Fachkraft für Lagerlogistik',
+    ],
+    color: 'teal',
+  },
 }
 
-export const CATEGORIES_ORDER: CategoryKey[] = ['healthcare', 'it', 'handwerk', 'hospitality']
+export const CATEGORIES_ORDER: CategoryKey[] = ['healthcare', 'it', 'handwerk', 'hospitality', 'logistics']
 
 // Build the list of search queries used by the daily fetch cron
 export function buildSearchQueries(): string[] {
