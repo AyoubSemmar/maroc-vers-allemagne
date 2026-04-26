@@ -197,6 +197,35 @@ const KNOWN_PRIVATE = new Set([
   'steinbeis-hochschule',
 ])
 
+// ── Quality filter ──────────────────────────────────────────────
+// Wikidata's higher-ed classes pull a lot of noise (private vocational
+// schools, branch campuses, dissolved-but-undated entities, generic
+// "Schule X" stubs). Require: real institutional keyword in the name,
+// non-empty city + website, name length sane.
+
+const INSTITUTION_KEYWORD = /\b(Universität|Hochschule|Akademie|Konservatorium|Universities|University|Conservatory|Conservatoire|TU |TH |FH )/i
+
+function isLegitInstitution(rec) {
+  if (!rec.name_de || rec.name_de.length < 6) return false
+  if (!rec.city) return false
+  if (!rec.website) return false
+  // Drop generic / stub names
+  if (/^Schule\b/i.test(rec.name_de)) return false
+  if (/^Privatschule\b/i.test(rec.name_de)) return false
+  if (/^Berufsschule\b/i.test(rec.name_de)) return false
+  if (/^Realschule\b/i.test(rec.name_de)) return false
+  if (/^Gymnasium\b/i.test(rec.name_de)) return false
+  // Must contain a real higher-ed keyword
+  if (!INSTITUTION_KEYWORD.test(rec.name_de)) return false
+  return true
+}
+
+function websiteHost(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '').toLowerCase()
+  } catch { return null }
+}
+
 // ── Main ────────────────────────────────────────────────────────
 
 async function main() {
@@ -213,18 +242,19 @@ async function main() {
   console.log(`▸ Got ${rows.length} institutions from Wikidata`)
 
   const records = []
-  const seen = new Set()
+  const seenSlug = new Set()
+  const seenHost = new Map() // host -> existing record (keep the one with more data)
+  let droppedNoData = 0
+  let droppedNotLegit = 0
+
   for (const r of rows) {
     const wikidataId = r.uni.value.split('/').pop()
     const nameDe = r.name_de?.value || r.name_en?.value
-    if (!nameDe) continue
-    const id = slugify(nameDe)
-    if (seen.has(id)) continue
-    seen.add(id)
+    if (!nameDe) { droppedNoData++; continue }
 
     const { lat, lng } = parseCoords(r.coords?.value)
-    records.push({
-      id,
+    const candidate = {
+      id: slugify(nameDe),
       wikidata_id: wikidataId,
       name_de: nameDe,
       name_en: r.name_en?.value ?? null,
@@ -234,17 +264,41 @@ async function main() {
       state: r.state?.value ?? null,
       country_code: 'DE',
       type: classifyType(r.type_label?.value),
-      is_public: !KNOWN_PRIVATE.has(id),
+      is_public: true,
       founded: parseYear(r.founded?.value),
       student_count: r.students?.value ? parseInt(r.students.value, 10) : null,
       website: r.website?.value ?? null,
       logo_url: r.logo?.value ?? null,
-      lat,
-      lng,
-    })
+      lat, lng,
+    }
+    candidate.is_public = !KNOWN_PRIVATE.has(candidate.id)
+
+    if (!isLegitInstitution(candidate)) { droppedNotLegit++; continue }
+
+    // Dedupe by slug
+    if (seenSlug.has(candidate.id)) continue
+
+    // Dedupe by website host — same domain almost certainly same uni.
+    // Keep whichever has more populated fields.
+    const host = websiteHost(candidate.website)
+    if (host && seenHost.has(host)) {
+      const existing = seenHost.get(host)
+      const score = (rec) => Object.values(rec).filter(v => v != null && v !== '').length
+      if (score(candidate) <= score(existing)) continue
+      // candidate is better; replace
+      const idx = records.indexOf(existing)
+      if (idx >= 0) records.splice(idx, 1)
+      seenSlug.delete(existing.id)
+    }
+
+    seenSlug.add(candidate.id)
+    if (host) seenHost.set(host, candidate)
+    records.push(candidate)
   }
 
-  console.log(`▸ Normalized ${records.length} unique rows`)
+  console.log(`▸ Kept ${records.length} institutions after quality filter`)
+  console.log(`  – dropped (no name): ${droppedNoData}`)
+  console.log(`  – dropped (not real higher-ed): ${droppedNotLegit}`)
   console.log(`  – public: ${records.filter(r => r.is_public).length}`)
   console.log(`  – private: ${records.filter(r => !r.is_public).length}`)
 
