@@ -176,6 +176,48 @@
   color: #16a34a;
   border-color: oklch(from #16a34a l c h / 0.3);
 }
+.aj-badge-salary {
+  background: color-mix(in oklch, oklch(0.66 0.17 152) 14%, transparent);
+  color: oklch(0.42 0.16 152);
+  border-color: color-mix(in oklch, oklch(0.66 0.17 152) 30%, transparent);
+}
+.aj-badge-duration {
+  background: color-mix(in oklch, oklch(0.62 0.18 255) 12%, transparent);
+  color: oklch(0.42 0.16 255);
+  border-color: color-mix(in oklch, oklch(0.62 0.18 255) 30%, transparent);
+}
+.aj-badge-lang {
+  background: color-mix(in oklch, oklch(0.78 0.18 75) 14%, transparent);
+  color: oklch(0.46 0.18 65);
+  border-color: color-mix(in oklch, oklch(0.78 0.18 75) 30%, transparent);
+}
+
+.aj-card-learn {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.aj-card-learn li {
+  position: relative;
+  padding-inline-start: 14px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.aj-card-learn li::before {
+  content: '✓';
+  position: absolute;
+  inset-inline-start: 0;
+  color: var(--brand);
+  font-weight: 800;
+  font-size: 11px;
+}
+.aj-card--enriched {
+  border-color: color-mix(in oklch, var(--brand) 25%, var(--line));
+  box-shadow: 0 0 0 1px color-mix(in oklch, var(--brand) 8%, transparent) inset;
+}
 
 .aj-card-meta {
   display: flex;
