@@ -1,17 +1,18 @@
 // scripts/seed_universities.mjs
 //
-// Seeds the `universities` table from the open-source "university-domains-list"
-// (https://github.com/Hipo/university-domains-list) — a curated, community-
-// maintained JSON list of universities worldwide. Filters to Germany and
-// upserts into Supabase.
+// Seeds the `universities` table from OpenAlex
+// (https://docs.openalex.org/api-entities/institutions). OpenAlex is a free,
+// well-maintained scholarly knowledge graph with structured data on every
+// recognized educational institution worldwide. Each row already has:
+//   - multilingual display_name (de/en/fr/ar)
+//   - geo.city, geo.region, geo.latitude, geo.longitude
+//   - homepage_url, image_thumbnail_url
+//   - type (education / healthcare / government / ...)
+//   - ROR ID (research organization registry)
 //
 // Run:
-//   node scripts/seed_universities.mjs            # incremental upsert
-//   node scripts/seed_universities.mjs --reset    # wipe + reseed
-//
-// Requires .env.local with:
-//   NEXT_PUBLIC_SUPABASE_URL
-//   SUPABASE_SERVICE_ROLE_KEY
+//   node scripts/seed_universities.mjs           # incremental upsert
+//   node scripts/seed_universities.mjs --reset   # wipe + reseed
 
 import { createClient } from '@supabase/supabase-js'
 import { readFileSync } from 'node:fs'
@@ -48,112 +49,13 @@ function slugify(s) {
     .slice(0, 80)
 }
 
-// "Karlsruher" → "Karlsruhe", "Münchner" → "München", etc.
-const CITY_NORMALIZE = {
-  'Karlsruher': 'Karlsruhe',
-  'Hamburger': 'Hamburg',
-  'Berliner': 'Berlin',
-  'Münchner': 'München',
-  'Münchener': 'München',
-  'Frankfurter': 'Frankfurt am Main',
-  'Stuttgarter': 'Stuttgart',
-  'Dresdner': 'Dresden',
-  'Leipziger': 'Leipzig',
-  'Kölner': 'Köln',
-  'Bonner': 'Bonn',
-  'Heidelberger': 'Heidelberg',
-  'Mainzer': 'Mainz',
-  'Tübinger': 'Tübingen',
-  'Würzburger': 'Würzburg',
-  'Nürnberger': 'Nürnberg',
-  'Erlanger': 'Erlangen',
-  'Bremer': 'Bremen',
-  'Hannoveraner': 'Hannover',
-  'Bochumer': 'Bochum',
-  'Duisburger': 'Duisburg',
-  'Essener': 'Essen',
-  'Aachener': 'Aachen',
-  'Augsburger': 'Augsburg',
-  'Bayreuther': 'Bayreuth',
-  'Bielefelder': 'Bielefeld',
-  'Braunschweiger': 'Braunschweig',
-  'Chemnitzer': 'Chemnitz',
-  'Dortmunder': 'Dortmund',
-  'Düsseldorfer': 'Düsseldorf',
-  'Freiburger': 'Freiburg im Breisgau',
-  'Gießener': 'Gießen',
-  'Göttinger': 'Göttingen',
-  'Greifswalder': 'Greifswald',
-  'Hallenser': 'Halle',
-  'Jenaer': 'Jena',
-  'Kasseler': 'Kassel',
-  'Kieler': 'Kiel',
-  'Konstanzer': 'Konstanz',
-  'Magdeburger': 'Magdeburg',
-  'Marburger': 'Marburg',
-  'Münsteraner': 'Münster',
-  'Oldenburger': 'Oldenburg',
-  'Osnabrücker': 'Osnabrück',
-  'Paderborner': 'Paderborn',
-  'Passauer': 'Passau',
-  'Potsdamer': 'Potsdam',
-  'Regensburger': 'Regensburg',
-  'Rostocker': 'Rostock',
-  'Saarbrücker': 'Saarbrücken',
-  'Saarländer': 'Saarbrücken',
-  'Siegener': 'Siegen',
-  'Trierer': 'Trier',
-  'Ulmer': 'Ulm',
-  'Wiesbadener': 'Wiesbaden',
-  'Weimarer': 'Weimar',
-  'Wuppertaler': 'Wuppertal',
-}
-
-// Hard-coded city overrides for famous unis whose name doesn't carry the city.
-const CITY_OVERRIDE = {
-  'charite-universitatsmedizin-berlin': 'Berlin',
-  'charite': 'Berlin',
-  'hertie-school-of-governance': 'Berlin',
-  'esmt-european-school-of-management-and-technology': 'Berlin',
-  'bauhaus-universitat-weimar': 'Weimar',
-  'jacobs-university-bremen': 'Bremen',
-  'constructor-university': 'Bremen',
-  'rwth-aachen-university': 'Aachen',
-  'kit-karlsruher-institut-fur-technologie': 'Karlsruhe',
-}
-
-function extractCity(name) {
-  if (!name) return null
-  // 1. "Universität Heidelberg" / "Universität zu Köln" / "Universität in München"
-  let m = name.match(/Universität\s+(?:zu\s+|in\s+|der\s+|des\s+)?([A-ZÄÖÜ][a-zäöüß-]+(?:\s+(?:am|an|im|auf|der|des)\s+(?:[A-Z][a-zäöüß-]+|der\s+[A-Z][a-zäöüß-]+))?)/)
-  if (m) return m[1]
-  // 2. "Hochschule X" or "Hochschule für Y in Z"
-  m = name.match(/Hochschule\s+(?:für\s+[\w\s]+?\s+)?(?:in\s+)?([A-ZÄÖÜ][a-zäöüß-]+)/)
-  if (m && !/^für$|^für$/.test(m[1])) return m[1]
-  // 3. Acronyms: "TU München", "RWTH Aachen", "FH Köln", "TH Köln"
-  m = name.match(/^(?:TU|TH|FH|RWTH|HAW|HfM|HfBK|UdK)\s+([A-ZÄÖÜ][a-zäöüß-]+)/)
-  if (m) return m[1]
-  // 4. "X-er Institut" / "Karlsruher Institut für Technologie"
-  m = name.match(/([A-ZÄÖÜ][a-zäöüß]+er)\s+(?:Institut|Akademie|Hochschule)/)
-  if (m && CITY_NORMALIZE[m[1]]) return CITY_NORMALIZE[m[1]]
-  // 5. Universitätsmedizin / Universitätsklinik X
-  m = name.match(/Universitäts(?:medizin|klinikum)\s+([A-ZÄÖÜ][a-zäöüß-]+)/)
-  if (m) return m[1]
-  return null
-}
-
-// Google favicon service — works for any domain, returns 128px PNG.
-function googleFavicon(domain) {
-  return `https://www.google.com/s2/favicons?domain=${encodeURIComponent(domain)}&sz=128`
-}
-
 function classifyType(name) {
-  const s = name.toLowerCase()
+  const s = (name || '').toLowerCase()
   if (/fachhochschule|hochschule für angewandte|university of applied/.test(s)) return 'applied_sciences'
-  if (/technische universität|technische hochschule|^tu |^th /.test(s)) return 'technical'
-  if (/kunsthochschule|hochschule für (?:bildende )?kunst|academy of fine arts|akademie der bildenden/.test(s)) return 'art'
+  if (/technische universität|technische hochschule|^tu\b|^th\b/.test(s)) return 'technical'
+  if (/kunsthochschule|hochschule für (?:bildende )?kunst|academy of fine arts|akademie der bildenden|kunstakademie/.test(s)) return 'art'
   if (/musikhochschule|hochschule für musik|conservatory|musikakademie/.test(s)) return 'music'
-  if (/medizinische hochschule|medical school/.test(s)) return 'medical'
+  if (/medizinische hochschule|medical school|charité/.test(s)) return 'medical'
   if (/pädagogische hochschule|university of education/.test(s)) return 'pedagogical'
   if (/theologische hochschule|hochschule für theolog|theological/.test(s)) return 'theological'
   if (/duale hochschule|cooperative state/.test(s)) return 'dual'
@@ -161,17 +63,16 @@ function classifyType(name) {
 }
 
 const KNOWN_PRIVATE_DOMAIN = new Set([
-  'iu.de', 'iubh.de', 'iu-internationale-hochschule.de',
+  'iu.de', 'iubh.de',
   'fh-fresenius.de', 'hs-fresenius.de',
   'jacobs-university.de', 'constructor.university',
-  'uni-wh.de', 'witten-herdecke.de',
+  'uni-wh.de',
   'law-school.de',
   'frankfurt-school.de',
   'esmt.berlin', 'esmt.org',
   'hertie-school.org',
   'whu.edu',
-  'ku.de',                        // KU Eichstätt-Ingolstadt (private but Catholic state-equivalent — close call)
-  'sfu.ac.at', 'sfu-berlin.de',  // Sigmund Freud
+  'sfu-berlin.de',
   'ebs.edu',
   'cbs.de',
   'fom.de',
@@ -182,101 +83,42 @@ const KNOWN_PRIVATE_DOMAIN = new Set([
   'steinbeis-hochschule.de',
 ])
 
-// ── source list ─────────────────────────────────────────────────
-const SOURCE_URL = 'https://raw.githubusercontent.com/Hipo/university-domains-list/master/world_universities_and_domains.json'
-
-async function fetchSourceList() {
-  console.log('▸ Fetching curated university list (Hipo / university-domains-list)...')
-  const res = await fetch(SOURCE_URL)
-  if (!res.ok) throw new Error(`Source list fetch failed: ${res.status}`)
-  const all = await res.json()
-  const de = all.filter(u => u.alpha_two_code === 'DE' || u.country === 'Germany')
-  console.log(`  ✓ ${de.length} German entries in source`)
-  return de
+function hostOf(url) {
+  try { return new URL(url).hostname.replace(/^www\./, '').toLowerCase() }
+  catch { return null }
 }
 
-// ── optional Wikidata enrichment by domain ─────────────────────
-// Single small SPARQL query that joins the names we have to Wikidata
-// via the website domain (much narrower than scanning all higher-ed).
-async function enrichFromWikidata(domains) {
-  if (domains.length === 0) return new Map()
-  console.log(`▸ Enriching ${domains.length} entries from Wikidata (by domain)...`)
+// ── OpenAlex fetch ──────────────────────────────────────────────
+const OPENALEX_BASE = 'https://api.openalex.org/institutions'
+// type:education = universities + colleges (not hospitals/govt/companies)
+const FILTER = 'country_code:de,type:education'
+const PER_PAGE = 200
 
-  // Wikidata can match P856 to a literal URL prefix.
-  // We chunk to keep the query small.
-  const enrichment = new Map()
-  const CHUNK = 60
-  for (let i = 0; i < domains.length; i += CHUNK) {
-    const chunk = domains.slice(i, i + CHUNK)
-    const filters = chunk.map(d => `CONTAINS(LCASE(STR(?website)), "${d.toLowerCase()}")`).join(' || ')
-    const sparql = `
-SELECT ?uni ?website ?nameDe ?nameEn ?nameAr ?nameFr ?cityLabel ?stateLabel ?founded ?students ?logo
-WHERE {
-  ?uni wdt:P856 ?website .
-  FILTER( ${filters} )
-  OPTIONAL { ?uni rdfs:label ?nameDe FILTER(LANG(?nameDe) = "de"). }
-  OPTIONAL { ?uni rdfs:label ?nameEn FILTER(LANG(?nameEn) = "en"). }
-  OPTIONAL { ?uni rdfs:label ?nameAr FILTER(LANG(?nameAr) = "ar"). }
-  OPTIONAL { ?uni rdfs:label ?nameFr FILTER(LANG(?nameFr) = "fr"). }
-  OPTIONAL {
-    ?uni wdt:P276 ?city .
-    ?city rdfs:label ?cityLabel FILTER(LANG(?cityLabel) = "de").
-  }
-  OPTIONAL {
-    ?uni wdt:P131 ?state .
-    ?state rdfs:label ?stateLabel FILTER(LANG(?stateLabel) = "de").
-  }
-  OPTIONAL { ?uni wdt:P571 ?founded . }
-  OPTIONAL { ?uni wdt:P2196 ?students . }
-  OPTIONAL { ?uni wdt:P154 ?logo . }
-}
-LIMIT 500
-`
-    try {
-      const res = await fetch('https://query.wikidata.org/sparql', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/sparql-results+json',
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'User-Agent': 'GoGermany/1.0 (https://gogermany.ma; contact@gogermany.ma)',
-        },
-        body: 'query=' + encodeURIComponent(sparql),
-      })
-      if (!res.ok) {
-        console.log(`  ⚠ Wikidata enrichment chunk ${i/CHUNK} failed (${res.status}), continuing without`)
-        continue
-      }
-      const json = await res.json()
-      for (const r of json.results.bindings) {
-        const host = (() => {
-          try { return new URL(r.website.value).hostname.replace(/^www\./, '').toLowerCase() }
-          catch { return null }
-        })()
-        if (!host) continue
-        // Match by suffix so 'tum.de' matches 'www.tum.de'
-        const matched = chunk.find(d => host === d || host.endsWith('.' + d))
-        if (!matched) continue
-        const existing = enrichment.get(matched) ?? {}
-        enrichment.set(matched, {
-          name_de: existing.name_de || r.nameDe?.value,
-          name_en: existing.name_en || r.nameEn?.value,
-          name_ar: existing.name_ar || r.nameAr?.value,
-          name_fr: existing.name_fr || r.nameFr?.value,
-          city: existing.city || r.cityLabel?.value,
-          state: existing.state || r.stateLabel?.value,
-          founded: existing.founded || (r.founded?.value?.match(/(-?\d+)-/)?.[1]),
-          student_count: existing.student_count || (r.students?.value ? parseInt(r.students.value, 10) : null),
-          logo_url: existing.logo_url || r.logo?.value,
-          wikidata_id: r.uni.value.split('/').pop(),
-        })
-      }
-    } catch (e) {
-      console.log(`  ⚠ enrichment chunk ${i/CHUNK} threw: ${e.message}`)
+async function fetchOpenAlex() {
+  console.log('▸ Fetching German educational institutions from OpenAlex...')
+  const all = []
+  let cursor = '*'
+  let page = 0
+  while (cursor) {
+    page++
+    const url = `${OPENALEX_BASE}?filter=${FILTER}&per_page=${PER_PAGE}&cursor=${encodeURIComponent(cursor)}`
+    const res = await fetch(url, {
+      headers: {
+        // Polite-pool: passing a contact email gets us the higher rate-limit tier
+        'User-Agent': 'GoGermany/1.0 (mailto:contact@gogermany.ma)',
+      },
+    })
+    if (!res.ok) {
+      throw new Error(`OpenAlex returned ${res.status}: ${await res.text()}`)
     }
-    process.stdout.write(`\r  enriched ${Math.min(i + CHUNK, domains.length)}/${domains.length}`)
+    const json = await res.json()
+    all.push(...json.results)
+    process.stdout.write(`\r  page ${page}: ${all.length}/${json.meta.count} loaded`)
+    cursor = json.meta.next_cursor
+    if (!cursor || json.results.length === 0) break
   }
-  console.log(`\n  ✓ Got Wikidata data for ${enrichment.size} entries`)
-  return enrichment
+  console.log()
+  return all
 }
 
 // ── main ────────────────────────────────────────────────────────
@@ -288,100 +130,70 @@ async function main() {
     console.log('  ✓ Cleared.')
   }
 
-  const source = await fetchSourceList()
+  const raw = await fetchOpenAlex()
+  console.log(`▸ ${raw.length} institutions returned by OpenAlex`)
 
-  // Build candidate records keyed by primary domain.
-  const candidates = new Map() // domain -> rec
-  for (const u of source) {
-    const domain = (u.domains?.[0] || '').toLowerCase()
-    const website = u.web_pages?.[0] || (domain ? `https://${domain}` : null)
-    if (!domain || !website) continue
-    if (candidates.has(domain)) continue
+  const records = []
+  const seenSlug = new Set()
+  const seenHost = new Set()
+  let skippedNoHome = 0
+  let skippedNoName = 0
 
-    const id = slugify(u.name)
-    if (!id) continue
+  for (const inst of raw) {
+    const homepage = inst.homepage_url
+    if (!homepage) { skippedNoHome++; continue }
 
-    candidates.set(domain, {
+    const nameDe =
+      inst.international?.display_name?.de ||
+      inst.display_name
+    const nameEn =
+      inst.international?.display_name?.en ||
+      inst.display_name
+    if (!nameDe || nameDe.length < 4) { skippedNoName++; continue }
+
+    const id = slugify(nameDe)
+    if (!id || seenSlug.has(id)) continue
+
+    const host = hostOf(homepage)
+    if (host && seenHost.has(host)) continue
+
+    const geo = inst.geo || {}
+    const wikidataUrl = inst.ids?.wikidata
+    const wikidataId = wikidataUrl ? wikidataUrl.split('/').pop() : null
+
+    records.push({
       id,
-      wikidata_id: null,
-      name_de: u.name,
-      name_en: u.name,
-      name_ar: null,
-      name_fr: null,
-      city: null,
-      state: null,
+      wikidata_id: wikidataId,
+      name_de: nameDe,
+      name_en: nameEn !== nameDe ? nameEn : null,
+      name_ar: inst.international?.display_name?.ar || null,
+      name_fr: inst.international?.display_name?.fr || null,
+      city: geo.city ?? null,
+      state: geo.region ?? null,
       country_code: 'DE',
-      type: classifyType(u.name),
-      is_public: !KNOWN_PRIVATE_DOMAIN.has(domain),
-      founded: null,
-      student_count: null,
-      website,
-      logo_url: null,
-      lat: null, lng: null,
+      type: classifyType(nameDe),
+      is_public: !(host && KNOWN_PRIVATE_DOMAIN.has(host)),
+      founded: null,                                     // OpenAlex doesn't have this
+      student_count: null,                               // nor this directly
+      website: homepage,
+      logo_url: inst.image_thumbnail_url || inst.image_url || null,
+      lat: geo.latitude ?? null,
+      lng: geo.longitude ?? null,
     })
-  }
-  console.log(`▸ ${candidates.size} unique German institutions from source`)
-
-  // Enrich with Wikidata where possible.
-  const enrichment = await enrichFromWikidata([...candidates.keys()])
-  let enriched = 0
-  for (const [domain, rec] of candidates) {
-    const e = enrichment.get(domain)
-    if (!e) continue
-    rec.wikidata_id = e.wikidata_id ?? rec.wikidata_id
-    rec.name_de = e.name_de || rec.name_de
-    rec.name_en = e.name_en || rec.name_en
-    rec.name_ar = e.name_ar || rec.name_ar
-    rec.name_fr = e.name_fr || rec.name_fr
-    rec.city = e.city ?? rec.city
-    rec.state = e.state ?? rec.state
-    rec.founded = e.founded ? parseInt(e.founded, 10) : rec.founded
-    rec.student_count = e.student_count ?? rec.student_count
-    rec.logo_url = e.logo_url ?? rec.logo_url
-    enriched++
+    seenSlug.add(id)
+    if (host) seenHost.add(host)
   }
 
-  // De-dupe by id (slug collisions across re-namings).
-  const bySlug = new Map()
-  for (const rec of candidates.values()) {
-    if (!bySlug.has(rec.id)) bySlug.set(rec.id, rec)
-  }
-  const records = [...bySlug.values()]
-
-  // Fallbacks: extract city from name if Wikidata didn't provide one,
-  // and always populate logo_url with the Google favicon as a guaranteed
-  // image (Wikidata logo wins when present).
-  let cityFromName = 0
-  let cityFromOverride = 0
-  let logoFromGoogle = 0
-  for (const rec of records) {
-    if (!rec.city) {
-      if (CITY_OVERRIDE[rec.id]) {
-        rec.city = CITY_OVERRIDE[rec.id]
-        cityFromOverride++
-      } else {
-        const c = extractCity(rec.name_de)
-        if (c) {
-          rec.city = c
-          cityFromName++
-        }
-      }
-    }
-    if (!rec.logo_url) {
-      try {
-        const host = new URL(rec.website).hostname.replace(/^www\./, '')
-        rec.logo_url = googleFavicon(host)
-        logoFromGoogle++
-      } catch {}
-    }
-  }
-  console.log(`▸ Backfilled ${cityFromName} cities from name, ${cityFromOverride} from override`)
-  console.log(`▸ Backfilled ${logoFromGoogle} logos via Google favicon service`)
-  console.log(`▸ ${records.length} final records (${enriched} enriched from Wikidata)`)
+  console.log(`▸ ${records.length} clean records ready`)
+  console.log(`  – with city: ${records.filter(r => r.city).length}`)
+  console.log(`  – with logo: ${records.filter(r => r.logo_url).length}`)
+  console.log(`  – with state/region: ${records.filter(r => r.state).length}`)
   console.log(`  – public: ${records.filter(r => r.is_public).length}`)
   console.log(`  – private: ${records.filter(r => !r.is_public).length}`)
+  console.log(`  – skipped (no homepage): ${skippedNoHome}`)
+  console.log(`  – skipped (no name): ${skippedNoName}`)
 
-  // Upsert in chunks.
+  // Upsert in chunks of 100.
   let inserted = 0
   for (let i = 0; i < records.length; i += 100) {
     const chunk = records.slice(i, i + 100)
