@@ -19,6 +19,7 @@ export async function GET(req: NextRequest) {
   const uni = url.searchParams.get('uni')?.trim()
   const level = url.searchParams.get('level')?.trim() as 'bachelor' | 'master' | null
   const fallback = url.searchParams.get('fallback')?.trim() ?? null
+  const debug = url.searchParams.get('debug') === '1'
 
   if (!uni || (level !== 'bachelor' && level !== 'master')) {
     return NextResponse.json({ error: 'Missing or invalid uni/level' }, { status: 400 })
@@ -38,9 +39,18 @@ export async function GET(req: NextRequest) {
     ? `site:${domain} ${keywords}`
     : `${uni} ${keywords}`
 
-  const target = await firstSubPageResult(query, domain, fallback)
+  const debugInfo: any = { uni, level, domain, query }
+  const target = await firstSubPageResult(query, domain, fallback, debugInfo)
 
   const dest = target ?? fallback
+  if (debug) {
+    return NextResponse.json({
+      ...debugInfo,
+      target,
+      fallbackUsed: !target,
+      finalDestination: dest,
+    }, { status: 200, headers: { 'Cache-Control': 'no-store' } })
+  }
   if (!dest) {
     return NextResponse.json({ error: 'Could not resolve a program page' }, { status: 502 })
   }
@@ -48,8 +58,8 @@ export async function GET(req: NextRequest) {
   return NextResponse.redirect(dest, {
     status: 302,
     headers: {
-      // 24h CDN cache so subsequent clicks are instant.
-      'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800',
+      // Short cache during testing; bump back to 86400 once stable.
+      'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=3600',
     },
   })
 }
@@ -92,10 +102,17 @@ function unwrapDdg(href: string): string | null {
   } catch { return null }
 }
 
-async function firstSubPageResult(query: string, domain: string, fallback: string | null): Promise<string | null> {
+async function firstSubPageResult(
+  query: string,
+  domain: string,
+  fallback: string | null,
+  debug: any,
+): Promise<string | null> {
+  debug.attempts = []
+
   // 1) DuckDuckGo HTML
   try {
-    const ddg = await fetch(
+    const res = await fetch(
       'https://html.duckduckgo.com/html/?q=' + encodeURIComponent(query),
       {
         headers: {
@@ -106,19 +123,31 @@ async function firstSubPageResult(query: string, domain: string, fallback: strin
         },
       },
     )
-    if (ddg.ok) {
-      const html = await ddg.text()
+    const ddg: any = { source: 'ddg', status: res.status }
+    if (res.ok) {
+      const html = await res.text()
       const matches = [...html.matchAll(/<a[^>]+class="result__a"[^>]+href="([^"]+)"/gi)]
-      for (const m of matches) {
+      ddg.rawCount = matches.length
+      ddg.candidates = []
+      for (const m of matches.slice(0, 10)) {
         const url = unwrapDdg(m[1])
-        if (url && isAcceptable(url, domain, fallback)) return url
+        if (!url) continue
+        const accepted = isAcceptable(url, domain, fallback)
+        ddg.candidates.push({ url, accepted })
+        if (accepted) {
+          debug.attempts.push(ddg)
+          return url
+        }
       }
     }
-  } catch {}
+    debug.attempts.push(ddg)
+  } catch (e: any) {
+    debug.attempts.push({ source: 'ddg', error: e.message })
+  }
 
   // 2) Bing fallback
   try {
-    const bing = await fetch(
+    const res = await fetch(
       'https://www.bing.com/search?q=' + encodeURIComponent(query),
       {
         headers: {
@@ -128,14 +157,25 @@ async function firstSubPageResult(query: string, domain: string, fallback: strin
         },
       },
     )
-    if (bing.ok) {
-      const html = await bing.text()
+    const bing: any = { source: 'bing', status: res.status }
+    if (res.ok) {
+      const html = await res.text()
       const matches = [...html.matchAll(/<li class="b_algo"[^>]*>[\s\S]*?<a[^>]+href="(https?:\/\/[^"]+)"/gi)]
-      for (const m of matches) {
-        if (isAcceptable(m[1], domain, fallback)) return m[1]
+      bing.rawCount = matches.length
+      bing.candidates = []
+      for (const m of matches.slice(0, 10)) {
+        const accepted = isAcceptable(m[1], domain, fallback)
+        bing.candidates.push({ url: m[1], accepted })
+        if (accepted) {
+          debug.attempts.push(bing)
+          return m[1]
+        }
       }
     }
-  } catch {}
+    debug.attempts.push(bing)
+  } catch (e: any) {
+    debug.attempts.push({ source: 'bing', error: e.message })
+  }
 
   return null
 }
