@@ -45,11 +45,12 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
       .order('published_at', { ascending: false, nullsFirst: false })
       .limit(400)
   }
-  let { data, error } = await fetchEnriched()
-  if (error) {
-    // 42703 = column does not exist (migration not run yet)
+  const enrichedRes = await fetchEnriched()
+  let data: any[] | null = enrichedRes.data as any[] | null
+  if (enrichedRes.error) {
+    // 42703 = column does not exist (migration not run yet) — fall back
     const fallback = await fetchPlain()
-    data = fallback.data
+    data = fallback.data as any[] | null
   }
 
   const jobs = (data || []) as Job[]
