@@ -199,24 +199,21 @@ const KNOWN_PRIVATE = new Set([
 
 // ── Quality filter ──────────────────────────────────────────────
 // Wikidata's higher-ed classes pull a lot of noise (private vocational
-// schools, branch campuses, dissolved-but-undated entities, generic
-// "Schule X" stubs). Require: real institutional keyword in the name,
-// non-empty city + website, name length sane.
+// schools, branch campuses, generic "Schule X" stubs). Require:
+// non-trivial name + a real city. Keyword filtering was tried but
+// dropped legit cases like "RWTH Aachen" / "Charité" whose primary
+// German label has no "Universität" word.
 
-const INSTITUTION_KEYWORD = /\b(Universität|Hochschule|Akademie|Konservatorium|Universities|University|Conservatory|Conservatoire|TU |TH |FH )/i
+const STUB_PREFIXES = /^(Schule|Privatschule|Berufsschule|Realschule|Gymnasium|Grundschule|Volksschule|Kindergarten|Kita|Internat)\b/i
 
 function isLegitInstitution(rec) {
   if (!rec.name_de || rec.name_de.length < 6) return false
   if (!rec.city) return false
-  if (!rec.website) return false
-  // Drop generic / stub names
-  if (/^Schule\b/i.test(rec.name_de)) return false
-  if (/^Privatschule\b/i.test(rec.name_de)) return false
-  if (/^Berufsschule\b/i.test(rec.name_de)) return false
-  if (/^Realschule\b/i.test(rec.name_de)) return false
-  if (/^Gymnasium\b/i.test(rec.name_de)) return false
-  // Must contain a real higher-ed keyword
-  if (!INSTITUTION_KEYWORD.test(rec.name_de)) return false
+  if (STUB_PREFIXES.test(rec.name_de)) return false
+  // Must have at least website OR student_count > 500 to weed out phantom
+  // entries — very small specialized institutions still pass if they have
+  // a website even without student count.
+  if (!rec.website && (!rec.student_count || rec.student_count < 500)) return false
   return true
 }
 
