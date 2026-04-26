@@ -26,13 +26,31 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
     auth: { persistSession: false, autoRefreshToken: false },
   })
 
-  const { data } = await supabase
-    .from('ausbildung_jobs')
-    .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,anstellungsart,published_at,created_at,enrichment_json')
-    .or('contact_email.not.is.null,apply_url.not.is.null')
-    .order('enriched_at', { ascending: false, nullsFirst: false })
-    .order('published_at', { ascending: false, nullsFirst: false })
-    .limit(400)
+  // Try the enriched query first; fall back to the original columns if
+  // the migration hasn't been run yet (so the page never goes blank).
+  async function fetchEnriched() {
+    return supabase
+      .from('ausbildung_jobs')
+      .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,anstellungsart,published_at,created_at,enrichment_json')
+      .or('contact_email.not.is.null,apply_url.not.is.null')
+      .order('enriched_at', { ascending: false, nullsFirst: false })
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .limit(400)
+  }
+  async function fetchPlain() {
+    return supabase
+      .from('ausbildung_jobs')
+      .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,anstellungsart,published_at,created_at')
+      .or('contact_email.not.is.null,apply_url.not.is.null')
+      .order('published_at', { ascending: false, nullsFirst: false })
+      .limit(400)
+  }
+  let { data, error } = await fetchEnriched()
+  if (error) {
+    // 42703 = column does not exist (migration not run yet)
+    const fallback = await fetchPlain()
+    data = fallback.data
+  }
 
   const jobs = (data || []) as Job[]
   const lastUpdated = jobs[0]?.created_at || null
