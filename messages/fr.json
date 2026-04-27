@@ -2725,7 +2725,9 @@
       "resume": "Continuer →",
       "start": "Commencer →",
       "completeFirst": "Terminez d'abord {prev}",
-      "progressCount": "{done} / {total} leçons"
+      "progressCount": "{done} / {total} leçons",
+      "completed": "Terminé",
+      "tipNotAuthed": "La leçon 1 de chaque niveau est gratuite. Connectez-vous pour débloquer la suite et sauvegarder votre progression."
     },
     "level": {
       "backToLevels": "← Retour aux niveaux",
@@ -2737,7 +2739,10 @@
         "grammar": "📖 Grammaire",
         "vocab": "📝 Vocabulaire ({n})",
         "exercise": "✏️ Exercice ({n} questions)"
-      }
+      },
+      "authNudgeTitle": "Connectez-vous pour débloquer le niveau complet",
+      "authNudgeBody": "La leçon 1 est gratuite. Pour sauvegarder votre progression et continuer, créez un compte gratuit.",
+      "authNudgeCta": "Se connecter"
     },
     "lesson": {
       "breadcrumbAria": "fil d'Ariane",
@@ -2908,7 +2913,12 @@
         "c1-11": "Présentation et discussion — Präsentation und Diskussion",
         "c1-12": "Révision complète — Wiederholung C1"
       }
-    }
+    },
+    "pageEyebrow": "🇩🇪 Apprendre l'allemand",
+    "badgeGrammar": "Grammaire",
+    "badgeVocab": "Vocabulaire",
+    "badgeExercises": "Exercices",
+    "badgeFree": "Leçon 1 gratuite"
   },
   "admin": {
     "dashboard": "Tableau de bord",

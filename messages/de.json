@@ -2725,7 +2725,9 @@
       "resume": "Fortsetzen →",
       "start": "Jetzt starten →",
       "completeFirst": "Schließe zuerst {prev} ab",
-      "progressCount": "{done} / {total} Lektionen"
+      "progressCount": "{done} / {total} Lektionen",
+      "completed": "Abgeschlossen",
+      "tipNotAuthed": "Lektion 1 jeder Stufe ist kostenlos. Melde dich an, um den Rest freizuschalten und deinen Fortschritt geräteübergreifend zu speichern."
     },
     "level": {
       "backToLevels": "← Zurück zu den Niveaus",
@@ -2737,7 +2739,10 @@
         "grammar": "📖 Grammatik",
         "vocab": "📝 Vokabeln ({n})",
         "exercise": "✏️ Übung ({n} Fragen)"
-      }
+      },
+      "authNudgeTitle": "Melde dich an, um die ganze Stufe freizuschalten",
+      "authNudgeBody": "Lektion 1 ist kostenlos. Um deinen Fortschritt zu speichern und weiterzumachen, erstelle ein kostenloses Konto.",
+      "authNudgeCta": "Anmelden"
     },
     "lesson": {
       "breadcrumbAria": "Brotkrümel",
@@ -2908,7 +2913,12 @@
         "c1-11": "Präsentation und Diskussion",
         "c1-12": "Wiederholung C1"
       }
-    }
+    },
+    "pageEyebrow": "🇩🇪 Deutsch lernen",
+    "badgeGrammar": "Grammatik",
+    "badgeVocab": "Wortschatz",
+    "badgeExercises": "Übungen",
+    "badgeFree": "Lektion 1 gratis"
   },
   "admin": {
     "dashboard": "Dashboard",

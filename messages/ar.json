@@ -2725,7 +2725,9 @@
       "resume": "متابعة ←",
       "start": "ابدأ الآن ←",
       "completeFirst": "أكمل {prev} أولاً",
-      "progressCount": "{done} / {total} دروس"
+      "progressCount": "{done} / {total} دروس",
+      "completed": "مكتمل",
+      "tipNotAuthed": "الدرس الأول من كل مستوى مجاني. سجّل الدخول لفتح بقية الدروس وحفظ تقدمك عبر أجهزتك."
     },
     "level": {
       "backToLevels": "→ العودة إلى المستويات",
@@ -2737,7 +2739,10 @@
         "grammar": "📖 قواعد",
         "vocab": "📝 مفردات ({n})",
         "exercise": "✏️ تمرين ({n} أسئلة)"
-      }
+      },
+      "authNudgeTitle": "سجّل الدخول لفتح المستوى كاملاً",
+      "authNudgeBody": "الدرس الأول مجاني. لحفظ تقدّمك ومواصلة المستوى، أنشئ حساباً مجانياً.",
+      "authNudgeCta": "تسجيل الدخول"
     },
     "lesson": {
       "breadcrumbAria": "breadcrumb",
@@ -2908,7 +2913,12 @@
         "c1-11": "العرض والمناقشة — Präsentation und Diskussion",
         "c1-12": "مراجعة شاملة — Wiederholung C1"
       }
-    }
+    },
+    "pageEyebrow": "🇩🇪 تعلّم الألمانية",
+    "badgeGrammar": "القواعد",
+    "badgeVocab": "المفردات",
+    "badgeExercises": "تمارين",
+    "badgeFree": "الدرس الأول مجاني"
   },
   "admin": {
     "dashboard": "لوحة التحكم",

@@ -2725,7 +2725,9 @@
       "resume": "Continue →",
       "start": "Start now →",
       "completeFirst": "Finish {prev} first",
-      "progressCount": "{done} / {total} lessons"
+      "progressCount": "{done} / {total} lessons",
+      "completed": "Completed",
+      "tipNotAuthed": "Lesson 1 of every level is free. Sign in to unlock the rest and save your progress across devices."
     },
     "level": {
       "backToLevels": "← Back to levels",
@@ -2737,7 +2739,10 @@
         "grammar": "📖 Grammar",
         "vocab": "📝 Vocabulary ({n})",
         "exercise": "✏️ Exercise ({n} questions)"
-      }
+      },
+      "authNudgeTitle": "Sign in to unlock the full level",
+      "authNudgeBody": "Lesson 1 is free. To save your progress and continue beyond it, create a free account.",
+      "authNudgeCta": "Sign in"
     },
     "lesson": {
       "breadcrumbAria": "breadcrumb",
@@ -2908,7 +2913,12 @@
         "c1-11": "Presentation and discussion — Präsentation und Diskussion",
         "c1-12": "Full review — Wiederholung C1"
       }
-    }
+    },
+    "pageEyebrow": "🇩🇪 Learn German",
+    "badgeGrammar": "Grammar",
+    "badgeVocab": "Vocabulary",
+    "badgeExercises": "Exercises",
+    "badgeFree": "Lesson 1 free"
   },
   "admin": {
     "dashboard": "Dashboard",
