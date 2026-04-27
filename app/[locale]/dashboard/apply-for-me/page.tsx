@@ -1,21 +1,57 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 
 export default function ApplyForMePage() {
-  const t = useTranslations('dashboard.stubs')
+  const t = useTranslations('dashboard.applyForMe')
 
   return (
     <div className="dashpage">
-      <div className="dashstub">
-        <div className="dashstub-icon" aria-hidden>
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+      <div className="afm-soon">
+        <span className="afm-soon-pill">
+          <span className="afm-soon-dot" />
+          {t('comingSoonPill')}
+        </span>
+
+        <div className="afm-soon-icon" aria-hidden>
+          <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
             <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15z" />
           </svg>
         </div>
-        <h1>{t('applyTitle')}</h1>
-        <p>{t('applyBody')}</p>
+
+        <h1 className="afm-soon-title">{t('title')}</h1>
+        <p className="afm-soon-sub">{t('subtitle')}</p>
+
+        <div className="afm-soon-features">
+          <div className="afm-feature">
+            <span className="afm-feature-icon" aria-hidden>📥</span>
+            <h3>{t('feat1Title')}</h3>
+            <p>{t('feat1Body')}</p>
+          </div>
+          <div className="afm-feature">
+            <span className="afm-feature-icon" aria-hidden>✍️</span>
+            <h3>{t('feat2Title')}</h3>
+            <p>{t('feat2Body')}</p>
+          </div>
+          <div className="afm-feature">
+            <span className="afm-feature-icon" aria-hidden>📨</span>
+            <h3>{t('feat3Title')}</h3>
+            <p>{t('feat3Body')}</p>
+          </div>
+        </div>
+
+        <div className="afm-soon-cta">
+          <Link href="/dashboard/saved" className="btn btn-primary">
+            {t('inMeantime')}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+
+        <p className="afm-soon-foot">{t('etaHint')}</p>
       </div>
     </div>
   )

@@ -1823,6 +1823,152 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   border-radius: 999px;
 }
 
+/* ── Apply For Me — coming soon ──────────────────────────── */
+.afm-soon {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+  text-align: center;
+}
+.afm-soon-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: color-mix(in oklch, var(--brand) 10%, var(--bg-warm));
+  border: 1px solid color-mix(in oklch, var(--brand) 30%, var(--line));
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 28px;
+}
+.afm-soon-dot {
+  width: 7px; height: 7px;
+  background: var(--brand);
+  border-radius: 50%;
+  animation: afm-pulse 1.6s ease-in-out infinite;
+}
+@keyframes afm-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.8); }
+}
+.afm-soon-icon {
+  width: 96px; height: 96px;
+  margin: 0 auto 24px;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, color-mix(in oklch, var(--brand) 15%, var(--bg-elev)) 0%, var(--bg-elev) 100%);
+  border: 1.5px solid color-mix(in oklch, var(--brand) 30%, var(--line));
+  border-radius: 28px;
+  color: var(--brand);
+  box-shadow: 0 18px 40px -16px color-mix(in oklch, var(--brand) 50%, transparent);
+}
+.afm-soon-title {
+  font-size: clamp(32px, 5vw, 44px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0 0 16px;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--brand) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.afm-soon-sub {
+  font-size: 17px;
+  color: var(--ink-soft);
+  max-width: 580px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+.afm-soon-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
+}
+@media (max-width: 720px) {
+  .afm-soon-features { grid-template-columns: 1fr; }
+}
+.afm-feature {
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: start;
+}
+.afm-feature-icon {
+  display: inline-flex;
+  width: 44px; height: 44px;
+  align-items: center; justify-content: center;
+  background: color-mix(in oklch, var(--brand) 12%, var(--bg-warm));
+  border-radius: 14px;
+  font-size: 22px;
+  margin-bottom: 14px;
+}
+.afm-feature h3 {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.afm-feature p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+.afm-soon-cta {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.afm-soon-foot {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 0;
+}
+
+/* ── Save / bookmark button ──────────────────────────────── */
+.save-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: var(--bg);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-soft);
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  font: inherit;
+}
+.save-btn:hover {
+  border-color: color-mix(in oklch, var(--brand) 60%, var(--line));
+  color: var(--brand-ink);
+  transform: translateY(-1px);
+}
+.save-btn.is-saved {
+  background: color-mix(in oklch, var(--brand) 10%, var(--bg));
+  border-color: var(--brand);
+  color: var(--brand);
+}
+.save-btn:disabled { opacity: 0.5; cursor: wait; }
+.save-btn--compact { padding: 6px 12px; font-size: 12.5px; }
+.save-btn--compact .save-btn-text { display: none; }
+
+.uni-modal-actions, .aj-modal-actions {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line-soft);
+  display: flex;
+  justify-content: flex-end;
+}
+
 /* View-mode toggle (grid ⇄ list) — same component as ausbildung-jobs */
 .rihla-articles-view {
   display: inline-flex;

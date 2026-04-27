@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 import UniLogo from './UniLogo'
+import SaveButton from '@/components/SaveButton'
 import type { UniversityRow } from './UniversitiesClient'
 
 const TYPE_LABEL_KEYS: Record<string, string> = {
@@ -82,6 +83,10 @@ export default function UniModal({ uni, locale, onClose }: Props) {
             <span className="uni-website-cta-arrow" aria-hidden>↗</span>
           </a>
         )}
+
+        <div className="uni-modal-actions">
+          <SaveButton itemType="university" itemId={uni.id} />
+        </div>
       </div>
     </div>
   )
