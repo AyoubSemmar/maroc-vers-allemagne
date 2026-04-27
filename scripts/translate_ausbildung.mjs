@@ -55,7 +55,7 @@ Rules:
 - For Arabic, use Modern Standard Arabic (فصحى).
 - Return ONLY a JSON object, no prose, no markdown fences. The object must have exactly three string fields: ar, fr, en. Each value is the full translated description as a single string.`
 
-async function translateOne(description) {
+async function translateOne(description, attempt = 1) {
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
@@ -65,7 +65,7 @@ async function translateOne(description) {
     },
     body: JSON.stringify({
       model: 'claude-haiku-4-5',
-      max_tokens: 8000,
+      max_tokens: 4000,
       system: SYSTEM_PROMPT,
       messages: [{
         role: 'user',
@@ -73,6 +73,15 @@ async function translateOne(description) {
       }],
     }),
   })
+  // Adaptive backoff on 429 (output-tokens-per-minute limit). Honors
+  // Retry-After when present, otherwise grows: 30s, 60s, 90s, 120s.
+  if (res.status === 429 && attempt <= 5) {
+    const retryAfter = parseInt(res.headers.get('retry-after') || '0', 10)
+    const wait = (retryAfter > 0 ? retryAfter : 30 * attempt) * 1000
+    process.stdout.write(`\n  ⏸ 429 rate-limited, sleeping ${wait / 1000}s (attempt ${attempt})\n`)
+    await new Promise(r => setTimeout(r, wait))
+    return translateOne(description, attempt + 1)
+  }
   if (!res.ok) {
     throw new Error(`Anthropic ${res.status}: ${(await res.text()).slice(0, 400)}`)
   }
@@ -131,7 +140,7 @@ async function main() {
       failed++
       console.log(`\n  ✗ ${job.id} (${(job.title || '').slice(0, 40)}): ${e.message}`)
     }
-    await new Promise(r => setTimeout(r, 250))
+    await new Promise(r => setTimeout(r, 5000))
   }
   console.log(`\n✓ Done. ok=${ok} failed=${failed}`)
 }
