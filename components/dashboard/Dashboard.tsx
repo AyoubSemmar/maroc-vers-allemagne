@@ -37,8 +37,8 @@ export default function Dashboard() {
     const isAus = path === 'ausbildung'
     return [
       { key: 'learnGerman', icon: '📚', href: '/dashboard/learn-german', status: 'doing' },
-      { key: 'find', icon: isAus ? '🔍' : '🎓', href: isAus ? '/dashboard/browse' : '/universities', status: isAus ? 'todo' : 'soon' },
-      { key: 'visa', icon: '🛂', href: isAus ? '/visa/ausbildung' : '/visa/studium', status: 'todo' },
+      { key: 'find', icon: isAus ? '🔍' : '🎓', href: isAus ? '/dashboard/browse' : '/dashboard/universities', status: 'todo' },
+      { key: 'visa', icon: '🛂', href: isAus ? '/dashboard/visa/ausbildung' : '/dashboard/visa/studium', status: 'todo' },
     ]
   }, [path])
 
