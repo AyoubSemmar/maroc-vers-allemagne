@@ -131,6 +131,11 @@
   background: var(--brand);
   color: #fff;
 }
+/* On mobile the toggle pushed the row past the viewport edge, and grid
+   vs list look nearly identical at narrow widths anyway. Hide it. */
+@media (max-width: 720px) {
+  .aj-view-toggle { display: none; }
+}
 
 /* ── Job Grid ────────────────────────────────────────────── */
 .aj-grid {
