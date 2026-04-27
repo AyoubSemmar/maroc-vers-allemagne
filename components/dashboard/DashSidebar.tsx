@@ -169,6 +169,7 @@ export default function DashSidebar({
     { href: '/dashboard/cover-letter',          label: t('coverLetter'),  icon: I.edit },
     { href: '/tools/living-cost-calculator',    label: t('livingCost'),       icon: I.euro },
     { href: '/tools/migration-timeline',        label: t('migrationTimeline'), icon: I.calendar },
+    { href: '/tools/document-checklist',        label: t('documentChecklist'), icon: I.check },
   ]
 
   return (

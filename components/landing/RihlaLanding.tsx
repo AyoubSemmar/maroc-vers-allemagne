@@ -87,6 +87,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
     { key: 'livingCost', icon: '💶', href: '/tools/living-cost-calculator', c: 'gold' as const },
     { key: 'migrationTimeline', icon: '🗓', href: '/tools/migration-timeline', c: 'teal' as const },
+    { key: 'documentChecklist', icon: '📋', href: '/tools/document-checklist', c: 'berry' as const },
     { key: 'visa', icon: '📄', href: '/visa', c: 'brand' as const },
     { key: 'banks', icon: '🏦', href: '/banking', c: 'brand' as const },
     { key: 'work', icon: '💼', href: '/jobs', c: 'berry' as const },

@@ -265,6 +265,10 @@
       "migrationTimeline": {
         "name": "Délai de migration",
         "desc": "Estimez votre délai Maroc→Allemagne phase par phase"
+      },
+      "documentChecklist": {
+        "name": "Checklist documents",
+        "desc": "Liste personnalisée de tous les documents pour le visa allemand, en MAD/EUR"
       }
     },
     "ladder": {
@@ -3060,7 +3064,8 @@
       "help": "Aide",
       "complete": "Complet",
       "livingCost": "Coût de la vie",
-      "migrationTimeline": "Délai de migration"
+      "migrationTimeline": "Délai de migration",
+      "documentChecklist": "Checklist documents"
     },
     "topbar": {
       "help": "Aide",
@@ -3470,5 +3475,219 @@
   "bookConsult": {
     "cta": "Réserver une consultation",
     "price": "16 € · 30 min"
+  },
+  "documentChecklist": {
+    "metaTitle": "Générateur de checklist documents — Maroc vers Allemagne",
+    "metaDesc": "Liste personnalisée de tous les documents qu'un Marocain doit fournir pour le visa Ausbildung ou Studium en Allemagne — où les obtenir, coûts réels en MAD/EUR, et délais.",
+    "eyebrow": "Candidature & documents",
+    "title": "Générateur de checklist documents",
+    "subtitle": "Obtenez la liste exacte des documents que les Marocains doivent fournir pour le visa Ausbildung ou Studium — où obtenir chacun, coûts réels en MAD et EUR, et délais réalistes depuis Casablanca et Rabat.",
+    "formTitle": "Votre profil de candidature",
+    "pathLabel": "Parcours",
+    "educationLabel": "Niveau d'études",
+    "familyLabel": "Situation familiale",
+    "vorabTitle": "J'ai déjà l'accord Vorab",
+    "vorabHint": "Pré-approbation de la Bundesagentur für Arbeit. Accélère le visa.",
+    "apsDoneTitle": "J'ai déjà mon certificat APS",
+    "apsDoneHint": "Délivré par l'ambassade d'Allemagne à Rabat. Obligatoire pour le Studium.",
+    "germanCertTitle": "J'ai déjà mon certificat allemand B1/B2",
+    "germanCertHint": "Certificat Goethe, telc ou ÖSD.",
+    "bringFamilyTitle": "Je ferai venir ma famille plus tard",
+    "bringFamilyHint": "Ajoute les documents de regroupement familial (visa séparé).",
+    "summaryEyebrow": "Votre checklist",
+    "documents": "documents",
+    "summarySub": "Pour votre demande de visa {path}",
+    "totalCost": "Coût total estimé",
+    "apostilleCount": "Apostille sur {n} documents",
+    "translationPages": "Traduction assermentée · {n} pages",
+    "estimatedTimeline": "Délai réaliste",
+    "progressLabel": "{done} sur {total} obtenus",
+    "listTitle": "Liste des documents",
+    "free": "Gratuit",
+    "days": "jours",
+    "weeks": "semaines",
+    "sameDay": "Même jour",
+    "showTip": "Conseils",
+    "hideTip": "Masquer",
+    "mandatory": "Obligatoire",
+    "orAlternative": "Alternative",
+    "apostille": "Apostille",
+    "swornTranslation": "Traduction assermentée",
+    "ctaTitle": "Besoin d'aide pour valider votre dossier ?",
+    "ctaSub": "Réservez une consultation de 30 minutes avec notre spécialiste de l'immigration. Nous vérifions chaque document, repérons les manques et vous donnons un plan d'action personnalisé.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "education": {
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "family": {
+      "single": "Célibataire",
+      "married": "Marié(e)",
+      "married_kids": "Marié(e) avec enfants"
+    },
+    "category": {
+      "identity": "Identité & état civil",
+      "academic": "Académique",
+      "language": "Langue allemande",
+      "application": "Dossier de candidature",
+      "employer": "Documents de l'employeur",
+      "university": "Admission universitaire",
+      "financial": "Preuve financière",
+      "health": "Assurance santé",
+      "housing": "Hébergement",
+      "visa_procedure": "Procédure visa"
+    },
+    "docs": {
+      "passport": {
+        "name": "Passeport (validité ≥ 12 mois)",
+        "where": "Préfecture de votre ville de résidence",
+        "notes": "Renouvelez si expiration dans les 12 mois. La Ausländerbehörde exige une validité supérieure à celle du visa."
+      },
+      "biometric_photos": {
+        "name": "Photos biométriques (×6)",
+        "where": "Photographe local — format 35×45mm biométrique",
+        "notes": "Commandez 6 photos : 2 pour le visa, le reste pour le titre de séjour et l'Anmeldung."
+      },
+      "birth_certificate": {
+        "name": "Acte de naissance",
+        "where": "Bureau d'État Civil de votre lieu de naissance",
+        "notes": "Demandez un extrait plurilingue si possible — économise la traduction. Apostille à la Cour d'Appel."
+      },
+      "police_clearance": {
+        "name": "Casier judiciaire (Bulletin n°3)",
+        "where": "Tribunal de 1ère Instance OU en ligne : service-public.ma",
+        "notes": "Doit être délivré dans les 3 mois précédant le RDV visa. Demandez 2 copies."
+      },
+      "marriage_certificate": {
+        "name": "Acte de mariage",
+        "where": "Bureau d'État Civil du lieu de mariage",
+        "notes": "Nécessaire seulement pour le regroupement familial ultérieur. Apostillé + traduit."
+      },
+      "children_birth_certs": {
+        "name": "Actes de naissance des enfants",
+        "where": "Bureau d'État Civil du lieu d'enregistrement de chaque enfant",
+        "notes": "Apostille + traduction assermentée par enfant. Uniquement si vous les emmenez."
+      },
+      "bac_diploma": {
+        "name": "Diplôme du Baccalauréat",
+        "where": "Académie Régionale de l'Éducation et de la Formation",
+        "notes": "Original ou copie certifiée. Un duplicata doit aussi être apostillé."
+      },
+      "bac_transcripts": {
+        "name": "Relevés de notes du Bac",
+        "where": "Même Académie Régionale",
+        "notes": "Les deux années sont requises. Apostiller chaque page."
+      },
+      "higher_ed_diploma": {
+        "name": "Diplôme d'enseignement supérieur",
+        "where": "Bureau de la scolarité de votre université",
+        "notes": "Licence / Master / DUT / etc. Original + apostille + traduction assermentée."
+      },
+      "higher_ed_transcripts": {
+        "name": "Relevés universitaires",
+        "where": "Votre université",
+        "notes": "Toutes les années. La moyenne cumulée aide pour l'évaluation APS."
+      },
+      "aps_certificate": {
+        "name": "Certificat APS (Akademische Prüfstelle)",
+        "where": "Ambassade d'Allemagne à Rabat — bureau APS",
+        "notes": "Obligatoire pour les Marocains pour le Studium. ~30 € + 250 MAD. Délai 6 à 8 semaines. Joignez TOUS les documents académiques depuis le lycée."
+      },
+      "anabin_check": {
+        "name": "Vérification Anabin",
+        "where": "anabin.kmk.org (en ligne, gratuit)",
+        "notes": "Vérifiez que votre université et votre diplôme sont listés H+. Faites une capture d'écran — pas de certificat formel nécessaire."
+      },
+      "studienkolleg": {
+        "name": "Admission Studienkolleg (si le Bac ne qualifie pas directement)",
+        "where": "Demande via votre université allemande cible",
+        "notes": "La plupart des Bacs Sciences marocains qualifient directement. Bac Lettres / SVT peut nécessiter un Studienkolleg."
+      },
+      "german_b1": {
+        "name": "Certificat allemand B1 (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca/Rabat, ou écoles agréées telc",
+        "notes": "B1 est le minimum pour le visa Ausbildung. La plupart des employeurs préfèrent B2."
+      },
+      "german_b2": {
+        "name": "Certificat allemand B2 (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca/Rabat, ou écoles agréées telc",
+        "notes": "Requis pour la plupart des Studium. Certains exigent TestDaF ou DSH-2."
+      },
+      "visa_application_form": {
+        "name": "Formulaire de visa national (D)",
+        "where": "Téléchargez sur rk.diplo.de ou de.tlscontact.com/ma",
+        "notes": "Remplissez 2 copies en allemand ou anglais. Signez chaque page."
+      },
+      "cv_german": {
+        "name": "CV en allemand (Lebenslauf)",
+        "where": "À préparer — utilisez le CV builder de ce site",
+        "notes": "Format tabulaire uniquement. Photo en haut à droite. Signez et datez en bas."
+      },
+      "motivation_letter": {
+        "name": "Lettre de motivation (Anschreiben) en allemand",
+        "where": "À préparer — utilisez le générateur d'Anschreiben de ce site",
+        "notes": "Une page maximum. Adressée au consul allemand ou à votre futur employeur/université."
+      },
+      "ausbildungsvertrag": {
+        "name": "Ausbildungsvertrag (contrat d'apprentissage signé)",
+        "where": "De votre futur employeur allemand",
+        "notes": "Doit indiquer la date de début, le salaire, la durée et le n° d'enregistrement IHK/HWK."
+      },
+      "taetigkeitsbeschreibung": {
+        "name": "Tätigkeitsbeschreibung (description du poste)",
+        "where": "De votre futur employeur",
+        "notes": "Nécessaire pour le contrôle Vorab de la Bundesagentur. Formulaire standardisé rempli par l'employeur."
+      },
+      "vorab_zustimmung": {
+        "name": "Vorab-Zustimmung (pré-approbation)",
+        "where": "Bundesagentur für Arbeit (demande faite par l'employeur)",
+        "notes": "Réduit le délai visa de ~8 mois à ~2 mois. Vaut la peine d'insister auprès de l'employeur."
+      },
+      "university_admission": {
+        "name": "Lettre d'admission universitaire (Zulassung)",
+        "where": "Bureau des admissions de votre université allemande",
+        "notes": "Zulassung finale ou Bedingungszulassung acceptées. Original + 2 copies."
+      },
+      "sperrkonto": {
+        "name": "Sperrkonto (compte bloqué de 11 904 €)",
+        "where": "En ligne : Fintiba, Expatrio, Coracle (le plus populaire au Maroc)",
+        "notes": "Obligatoire pour le Studium. Apprentis Ausbildung avec salaire < 934 €/mois aussi. Frais d'ouverture ~89 € + 11 904 € de dépôt (vous est restitué en mensualités après l'arrivée)."
+      },
+      "verpflichtungserklaerung": {
+        "name": "Verpflichtungserklärung (déclaration de prise en charge)",
+        "where": "Votre sponsor en Allemagne va à sa Ausländerbehörde locale",
+        "notes": "Alternative au Sperrkonto. Le sponsor doit prouver des revenus suffisants. ~29 € payés par lui."
+      },
+      "bank_statements": {
+        "name": "Relevés bancaires (3 derniers mois)",
+        "where": "Votre banque marocaine",
+        "notes": "Parfois demandés comme preuve complémentaire même avec un Sperrkonto."
+      },
+      "travel_health_insurance": {
+        "name": "Assurance santé voyage (90 premiers jours)",
+        "where": "En ligne : Coracle, MAWISTA, DR-WALTER",
+        "notes": "Doit couvrir ≥ 30 000 € de frais médicaux et toute la période avant le titre de séjour."
+      },
+      "accommodation_proof": {
+        "name": "Preuve de logement (Wohnungsgeberbestätigung ou réservation hôtel)",
+        "where": "Votre futur bailleur allemand OU site de réservation hôtelière",
+        "notes": "Une Wohnungsgeberbestätigung signée est l'idéal. Une résa hôtel pour 4 semaines est acceptable."
+      },
+      "tls_appointment": {
+        "name": "RDV TLScontact",
+        "where": "de.tlscontact.com/ma — centre Casablanca ou Rabat",
+        "notes": "Réservez tôt — délais 1 à 3 mois, parfois plus en été. Frais de service séparés du visa."
+      },
+      "visa_fee": {
+        "name": "Frais visa national D (75 €)",
+        "where": "Payés en MAD au RDV TLS",
+        "notes": "Non remboursables. Espèces ou carte le jour du RDV."
+      }
+    }
   }
 }

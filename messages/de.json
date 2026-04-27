@@ -265,6 +265,10 @@
       "migrationTimeline": {
         "name": "Migrations-Timeline",
         "desc": "Schätze deine Marokko→Deutschland-Timeline phasenweise"
+      },
+      "documentChecklist": {
+        "name": "Dokumenten-Checkliste",
+        "desc": "Persönliche Liste aller Dokumente fürs deutsche Visum, in MAD/EUR"
       }
     },
     "ladder": {
@@ -3060,7 +3064,8 @@
       "help": "Hilfe & Docs",
       "complete": "Abgeschlossen",
       "livingCost": "Lebenskosten",
-      "migrationTimeline": "Migrations-Timeline"
+      "migrationTimeline": "Migrations-Timeline",
+      "documentChecklist": "Dokumenten-Checkliste"
     },
     "topbar": {
       "help": "Hilfe",
@@ -3470,5 +3475,219 @@
   "bookConsult": {
     "cta": "Beratung buchen",
     "price": "16 € · 30 Min."
+  },
+  "documentChecklist": {
+    "metaTitle": "Dokumenten-Checkliste — Marokko nach Deutschland",
+    "metaDesc": "Personalisierte Liste aller Dokumente, die Marokkaner für das Ausbildungs- oder Studiumsvisum brauchen — wo zu beschaffen, echte Kosten in MAD/EUR, und Zeitplan.",
+    "eyebrow": "Bewerbung & Unterlagen",
+    "title": "Dokumenten-Checkliste",
+    "subtitle": "Erhalte die genaue Liste aller Dokumente, die marokkanische Bewerber für das deutsche Ausbildungs- oder Studiumsvisum brauchen — mit Bezugsquellen, echten Kosten in MAD und EUR, sowie realistischen Zeitplänen aus Casablanca und Rabat.",
+    "formTitle": "Dein Bewerbungsprofil",
+    "pathLabel": "Weg",
+    "educationLabel": "Bildungsstand",
+    "familyLabel": "Familienstand",
+    "vorabTitle": "Ich habe bereits eine Vorab-Zustimmung",
+    "vorabHint": "Vorab-Zustimmung der Bundesagentur für Arbeit. Beschleunigt das Visum.",
+    "apsDoneTitle": "Ich habe bereits mein APS-Zertifikat",
+    "apsDoneHint": "Ausgestellt von der Deutschen Botschaft Rabat. Pflicht fürs Studium.",
+    "germanCertTitle": "Ich habe bereits mein B1/B2-Zertifikat",
+    "germanCertHint": "Goethe-, telc- oder ÖSD-Zertifikat.",
+    "bringFamilyTitle": "Ich werde meine Familie später nachholen",
+    "bringFamilyHint": "Fügt Dokumente für Familiennachzug hinzu (separates Visum).",
+    "summaryEyebrow": "Deine Checkliste",
+    "documents": "Dokumente",
+    "summarySub": "Für deinen {path}-Visumsantrag",
+    "totalCost": "Geschätzte Gesamtkosten",
+    "apostilleCount": "Apostille auf {n} Dokumenten",
+    "translationPages": "Beglaubigte Übersetzung · {n} Seiten",
+    "estimatedTimeline": "Realistischer Zeitplan",
+    "progressLabel": "{done} von {total} besorgt",
+    "listTitle": "Dokumentenliste",
+    "free": "Kostenlos",
+    "days": "Tage",
+    "weeks": "Wochen",
+    "sameDay": "Gleicher Tag",
+    "showTip": "Tipps",
+    "hideTip": "Ausblenden",
+    "mandatory": "Pflicht",
+    "orAlternative": "Alternative",
+    "apostille": "Apostille",
+    "swornTranslation": "Beglaubigte Übersetzung",
+    "ctaTitle": "Brauchst du Hilfe bei der Aktenprüfung?",
+    "ctaSub": "Buche eine 30-minütige Beratung mit unserem deutschen Migrationsspezialisten. Wir prüfen jedes Dokument, finden Lücken und erstellen einen individuellen Aktionsplan.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "education": {
+      "bac": "Abitur (Bac)",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "family": {
+      "single": "Ledig",
+      "married": "Verheiratet",
+      "married_kids": "Verheiratet mit Kindern"
+    },
+    "category": {
+      "identity": "Identität & Personenstand",
+      "academic": "Akademisch",
+      "language": "Deutschkenntnisse",
+      "application": "Bewerbungsmappe",
+      "employer": "Unterlagen vom Arbeitgeber",
+      "university": "Hochschulzulassung",
+      "financial": "Finanzieller Nachweis",
+      "health": "Krankenversicherung",
+      "housing": "Unterkunft",
+      "visa_procedure": "Visumverfahren"
+    },
+    "docs": {
+      "passport": {
+        "name": "Reisepass (≥ 12 Monate gültig)",
+        "where": "Präfektur in deiner Wohnstadt",
+        "notes": "Erneuere, wenn er innerhalb von 12 Monaten abläuft. Die Ausländerbehörde verlangt längere Gültigkeit als das Visum."
+      },
+      "biometric_photos": {
+        "name": "Biometrische Passfotos (×6)",
+        "where": "Lokaler Fotograf — biometrisches Format 35×45mm verlangen",
+        "notes": "6 Stück bestellen: Visumantrag braucht 2, weitere für Aufenthaltstitel + Anmeldung in Deutschland."
+      },
+      "birth_certificate": {
+        "name": "Geburtsurkunde",
+        "where": "Standesamt deines Geburtsorts",
+        "notes": "Mehrsprachiger Auszug spart Übersetzungskosten. Apostille bei der Cour d'Appel."
+      },
+      "police_clearance": {
+        "name": "Polizeiliches Führungszeugnis (Bulletin n°3)",
+        "where": "Tribunal de 1ère Instance ODER online: service-public.ma",
+        "notes": "Muss innerhalb von 3 Monaten vor dem Visumtermin ausgestellt werden. 2 Kopien anfordern."
+      },
+      "marriage_certificate": {
+        "name": "Heiratsurkunde",
+        "where": "Standesamt der Eheschließung",
+        "notes": "Nur für späteren Familiennachzug nötig. Apostilliert + übersetzt."
+      },
+      "children_birth_certs": {
+        "name": "Geburtsurkunden der Kinder",
+        "where": "Standesamt der jeweiligen Geburt",
+        "notes": "Apostille + beglaubigte Übersetzung pro Kind. Nur wenn Kinder mitgenommen werden."
+      },
+      "bac_diploma": {
+        "name": "Bac-Diplom (Abitur)",
+        "where": "Académie Régionale, an der das Bac abgelegt wurde",
+        "notes": "Original oder beglaubigte Kopie. Auch ein Duplikat braucht eine Apostille."
+      },
+      "bac_transcripts": {
+        "name": "Bac-Notenübersichten",
+        "where": "Gleiche Académie Régionale",
+        "notes": "Beide Bac-Jahre erforderlich. Jede Seite apostillieren."
+      },
+      "higher_ed_diploma": {
+        "name": "Hochschuldiplom",
+        "where": "Bureau de la scolarité deiner Universität",
+        "notes": "Licence / Master / DUT etc. Original + Apostille + beglaubigte Übersetzung."
+      },
+      "higher_ed_transcripts": {
+        "name": "Hochschul-Notenübersichten",
+        "where": "Deine Universität",
+        "notes": "Alle Jahre. Kumulativer Notendurchschnitt hilft bei der APS-Bewertung."
+      },
+      "aps_certificate": {
+        "name": "APS-Zertifikat (Akademische Prüfstelle)",
+        "where": "Deutsche Botschaft Rabat — APS-Stelle",
+        "notes": "Pflicht für marokkanische Studium-Bewerber. ~30 € + 250 MAD. Bearbeitung 6–8 Wochen. Alle Bildungsunterlagen seit der Oberstufe einreichen."
+      },
+      "anabin_check": {
+        "name": "Anabin-Anerkennungs-Check",
+        "where": "anabin.kmk.org (online, kostenlos)",
+        "notes": "Prüfe, ob deine Uni und dein Abschluss als H+ in Anabin gelistet sind. Screenshot machen — kein formales Zertifikat nötig."
+      },
+      "studienkolleg": {
+        "name": "Studienkolleg-Zulassung (falls Bac nicht direkt qualifiziert)",
+        "where": "Bewerbung über deine Wunschuni",
+        "notes": "Die meisten marokkanischen Bac-Sciences qualifizieren direkt. Bac Lettres / SVT kann Studienkolleg erfordern."
+      },
+      "german_b1": {
+        "name": "Deutsch-Zertifikat B1 (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca/Rabat oder telc-Lizenzschulen",
+        "notes": "B1 ist das Minimum fürs Ausbildungsvisum. Die meisten Arbeitgeber bevorzugen B2."
+      },
+      "german_b2": {
+        "name": "Deutsch-Zertifikat B2 (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca/Rabat oder telc-Lizenzschulen",
+        "notes": "Für die meisten Studiengänge erforderlich. Einige verlangen TestDaF oder DSH-2."
+      },
+      "visa_application_form": {
+        "name": "Antragsformular nationales D-Visum",
+        "where": "Download bei rk.diplo.de oder de.tlscontact.com/ma",
+        "notes": "2 Kopien auf Deutsch oder Englisch ausfüllen. Jede Seite unterschreiben."
+      },
+      "cv_german": {
+        "name": "Lebenslauf auf Deutsch",
+        "where": "Selbst erstellt — den CV-Builder auf dieser Seite nutzen",
+        "notes": "Nur tabellarisch. Foto oben rechts. Unten Datum und Unterschrift."
+      },
+      "motivation_letter": {
+        "name": "Anschreiben auf Deutsch",
+        "where": "Selbst erstellt — den Anschreiben-Generator nutzen",
+        "notes": "Maximal eine Seite. An den deutschen Konsul oder den Arbeitgeber/Hochschule adressiert."
+      },
+      "ausbildungsvertrag": {
+        "name": "Ausbildungsvertrag (unterschrieben)",
+        "where": "Vom künftigen deutschen Arbeitgeber",
+        "notes": "Muss Startdatum, Vergütung, Ausbildungsdauer und IHK/HWK-Registriernummer enthalten."
+      },
+      "taetigkeitsbeschreibung": {
+        "name": "Tätigkeitsbeschreibung",
+        "where": "Vom künftigen Arbeitgeber",
+        "notes": "Erforderlich für die Vorab-Prüfung der Bundesagentur. Standardformular vom Arbeitgeber."
+      },
+      "vorab_zustimmung": {
+        "name": "Vorab-Zustimmung",
+        "where": "Bundesagentur für Arbeit (Arbeitgeber beantragt)",
+        "notes": "Verkürzt die Visumbearbeitung von ~8 Monaten auf ~2. Lohnt sich, beim Arbeitgeber drauf zu drängen."
+      },
+      "university_admission": {
+        "name": "Hochschulzulassung (Zulassung)",
+        "where": "Zulassungsbüro deiner deutschen Hochschule",
+        "notes": "Zulassung oder Bedingungszulassung beide akzeptiert. Original + 2 Kopien."
+      },
+      "sperrkonto": {
+        "name": "Sperrkonto (11.904 € Sperrbetrag)",
+        "where": "Online: Fintiba, Expatrio, Coracle (am beliebtesten)",
+        "notes": "Pflicht fürs Studium. Auch Auszubildende mit Vergütung < 934 €/Monat. Einrichtung ~89 € + 11.904 € Einzahlung (wird in monatlichen Raten zurückgezahlt)."
+      },
+      "verpflichtungserklaerung": {
+        "name": "Verpflichtungserklärung",
+        "where": "Bürge in Deutschland geht zur lokalen Ausländerbehörde",
+        "notes": "Alternative zum Sperrkonto. Bürge muss ausreichendes Einkommen nachweisen. ~29 €."
+      },
+      "bank_statements": {
+        "name": "Kontoauszüge (letzte 3 Monate)",
+        "where": "Deine marokkanische Bank",
+        "notes": "Manchmal als ergänzender Nachweis trotz Sperrkonto verlangt."
+      },
+      "travel_health_insurance": {
+        "name": "Reisekrankenversicherung (erste 90 Tage)",
+        "where": "Online: Coracle, MAWISTA, DR-WALTER",
+        "notes": "Muss ≥ 30.000 € Behandlungskosten abdecken und den gesamten Zeitraum vor dem Aufenthaltstitel."
+      },
+      "accommodation_proof": {
+        "name": "Unterkunftsnachweis (Wohnungsgeberbestätigung oder Hotelreservierung)",
+        "where": "Künftiger Vermieter in Deutschland ODER Hotelbuchungsseite",
+        "notes": "Eine unterschriebene Wohnungsgeberbestätigung ist optimal. Hotelres. für 4 Wochen wird akzeptiert."
+      },
+      "tls_appointment": {
+        "name": "TLScontact-Termin",
+        "where": "de.tlscontact.com/ma — Casablanca oder Rabat",
+        "notes": "Früh buchen — Termine 1–3 Monate, im Sommer länger. Servicegebühr separat vom Visum."
+      },
+      "visa_fee": {
+        "name": "Nationales D-Visum (75 €)",
+        "where": "Bei TLS-Termin in MAD bezahlt",
+        "notes": "Nicht erstattungsfähig. Bar oder Karte am Tag des Termins."
+      }
+    }
   }
 }

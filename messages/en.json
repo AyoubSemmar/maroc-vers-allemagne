@@ -265,6 +265,10 @@
       "migrationTimeline": {
         "name": "Migration timeline",
         "desc": "Estimate your Morocco→Germany timeline phase by phase"
+      },
+      "documentChecklist": {
+        "name": "Document checklist",
+        "desc": "Personalised list of every doc you need for the German visa, with costs in MAD/EUR"
       }
     },
     "ladder": {
@@ -3060,7 +3064,8 @@
       "help": "Help & Docs",
       "complete": "Complete",
       "livingCost": "Living costs",
-      "migrationTimeline": "Migration timeline"
+      "migrationTimeline": "Migration timeline",
+      "documentChecklist": "Document checklist"
     },
     "topbar": {
       "help": "Help",
@@ -3470,5 +3475,219 @@
   "bookConsult": {
     "cta": "Book a consultation",
     "price": "€16 · 30 min"
+  },
+  "documentChecklist": {
+    "metaTitle": "Document Checklist Generator — Morocco to Germany",
+    "metaDesc": "Personalised checklist of every document a Moroccan needs for the German Ausbildung or Studium visa — with where to obtain, real costs in MAD/EUR, and timelines.",
+    "eyebrow": "Application & paperwork",
+    "title": "Document Checklist Generator",
+    "subtitle": "Get the exact list of documents Moroccan applicants need for the German Ausbildung or Studium visa — with where to obtain each one, real costs in MAD and EUR, and realistic timelines from Casablanca and Rabat.",
+    "formTitle": "Your application profile",
+    "pathLabel": "Path",
+    "educationLabel": "Education level",
+    "familyLabel": "Family status",
+    "vorabTitle": "I already have Vorab approval",
+    "vorabHint": "Pre-approval from the Bundesagentur für Arbeit. Speeds up the visa.",
+    "apsDoneTitle": "I already have my APS certificate",
+    "apsDoneHint": "Issued by the German Embassy in Rabat. Mandatory for Studium.",
+    "germanCertTitle": "I already have my German B1/B2 certificate",
+    "germanCertHint": "Goethe, telc or ÖSD certificate.",
+    "bringFamilyTitle": "I'll apply to bring my family later",
+    "bringFamilyHint": "Adds family-reunification documents (separate visa).",
+    "summaryEyebrow": "Your checklist",
+    "documents": "documents",
+    "summarySub": "For your {path} visa application",
+    "totalCost": "Estimated total cost",
+    "apostilleCount": "Apostille on {n} documents",
+    "translationPages": "Sworn translation · {n} pages",
+    "estimatedTimeline": "Realistic timeline",
+    "progressLabel": "{done} of {total} obtained",
+    "listTitle": "Document list",
+    "free": "Free",
+    "days": "days",
+    "weeks": "weeks",
+    "sameDay": "Same day",
+    "showTip": "Tips",
+    "hideTip": "Hide",
+    "mandatory": "Required",
+    "orAlternative": "Alternative",
+    "apostille": "Apostille",
+    "swornTranslation": "Sworn translation",
+    "ctaTitle": "Need help validating your file?",
+    "ctaSub": "Book a 30-minute consultation with our German immigration specialist. We review every document, flag missing pieces, and give you a personalised action plan.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "education": {
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "family": {
+      "single": "Single",
+      "married": "Married",
+      "married_kids": "Married with children"
+    },
+    "category": {
+      "identity": "Identity & civil status",
+      "academic": "Academic",
+      "language": "German language",
+      "application": "Application file",
+      "employer": "Employer documents",
+      "university": "University admission",
+      "financial": "Financial proof",
+      "health": "Health insurance",
+      "housing": "Accommodation",
+      "visa_procedure": "Visa procedure"
+    },
+    "docs": {
+      "passport": {
+        "name": "Passport (≥ 12 months validity)",
+        "where": "Préfecture in your city of residence",
+        "notes": "Renew if expiring within 12 months. Ausländerbehörde requires longer validity than visa duration."
+      },
+      "biometric_photos": {
+        "name": "Biometric photos (×6)",
+        "where": "Local photographer — request 35×45mm biometric format",
+        "notes": "Order 6: visa form needs 2, more for residence permit + Anmeldung in Germany."
+      },
+      "birth_certificate": {
+        "name": "Birth certificate (Acte de naissance)",
+        "where": "Bureau d'État Civil at your birthplace",
+        "notes": "Get a multilingual extract if available — saves translation cost. Apostille at Cour d'Appel."
+      },
+      "police_clearance": {
+        "name": "Police clearance (Bulletin n°3)",
+        "where": "Tribunal de 1ère Instance OR online: service-public.ma",
+        "notes": "Must be issued within 3 months of visa appointment. Request 2 copies."
+      },
+      "marriage_certificate": {
+        "name": "Marriage certificate",
+        "where": "Bureau d'État Civil where marriage was registered",
+        "notes": "Only needed if applying for family reunification later. Apostilled + translated."
+      },
+      "children_birth_certs": {
+        "name": "Children's birth certificates",
+        "where": "Bureau d'État Civil where each child was registered",
+        "notes": "Apostille + sworn translation per child. Only if bringing children."
+      },
+      "bac_diploma": {
+        "name": "Bac diploma",
+        "where": "Académie Régionale de l'Éducation et de la Formation (where you sat the Bac)",
+        "notes": "Original or certified copy. If you only have a duplicata, it must be apostilled too."
+      },
+      "bac_transcripts": {
+        "name": "Bac transcripts (Relevés de notes)",
+        "where": "Same as diploma — Académie Régionale",
+        "notes": "Both years of Bac required. Apostille each page."
+      },
+      "higher_ed_diploma": {
+        "name": "Higher-education diploma",
+        "where": "Your university's Bureau de la Scolarité",
+        "notes": "Bachelor / Master / DUT / etc. Original + apostille + sworn translation."
+      },
+      "higher_ed_transcripts": {
+        "name": "Higher-education transcripts",
+        "where": "Your university",
+        "notes": "All years. Cumulative GPA helps for APS evaluation."
+      },
+      "aps_certificate": {
+        "name": "APS certificate (Akademische Prüfstelle)",
+        "where": "German Embassy Rabat — APS office",
+        "notes": "Mandatory for Moroccan applicants for Studium. ~30 EUR fee + 250 MAD application. 6–8 weeks processing. Submit ALL academic records since high school."
+      },
+      "anabin_check": {
+        "name": "Anabin recognition lookup",
+        "where": "anabin.kmk.org (online, free)",
+        "notes": "Verify your university and degree are listed as H+ in the Anabin database. Take a screenshot for your records — no formal certificate needed."
+      },
+      "studienkolleg": {
+        "name": "Studienkolleg admission (if Bac doesn't directly qualify)",
+        "where": "Apply via your target German university",
+        "notes": "Most Moroccan Bac Sciences directly qualify. Bac Lettres / SVT may need Studienkolleg in some fields."
+      },
+      "german_b1": {
+        "name": "German B1 certificate (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca or Rabat, or telc-licensed schools",
+        "notes": "B1 is the minimum for Ausbildung visa. Most employers prefer B2."
+      },
+      "german_b2": {
+        "name": "German B2 certificate (Goethe / telc / ÖSD)",
+        "where": "Goethe Institut Casablanca or Rabat, or telc-licensed schools",
+        "notes": "Required for most Studium programmes. Some require TestDaF or DSH-2 instead."
+      },
+      "visa_application_form": {
+        "name": "National D-visa application form",
+        "where": "Download from rk.diplo.de or de.tlscontact.com/ma",
+        "notes": "Fill 2 copies in German or English. Sign each page."
+      },
+      "cv_german": {
+        "name": "CV in German (Lebenslauf)",
+        "where": "Self-prepared — use the CV builder on this site",
+        "notes": "Tabular format only. Photo top-right. Sign and date at the bottom."
+      },
+      "motivation_letter": {
+        "name": "Motivation letter (Anschreiben) in German",
+        "where": "Self-prepared — use the Anschreiben generator on this site",
+        "notes": "One page max. Address it to the German consul or your future employer/university."
+      },
+      "ausbildungsvertrag": {
+        "name": "Ausbildungsvertrag (signed Ausbildung contract)",
+        "where": "From your future German employer",
+        "notes": "Must include start date, salary, training duration, IHK/HWK registration number."
+      },
+      "taetigkeitsbeschreibung": {
+        "name": "Tätigkeitsbeschreibung (job description)",
+        "where": "From your future employer",
+        "notes": "Required for the Bundesagentur Vorab check. Employer fills the standardized form."
+      },
+      "vorab_zustimmung": {
+        "name": "Vorab-Zustimmung (pre-approval)",
+        "where": "Bundesagentur für Arbeit (employer requests it)",
+        "notes": "Cuts visa processing from ~8 months to ~2 months. Worth pushing your employer to obtain."
+      },
+      "university_admission": {
+        "name": "University admission letter (Zulassung)",
+        "where": "Your German university's admissions office",
+        "notes": "Final Zulassung or Bedingungszulassung both accepted. Original + 2 copies."
+      },
+      "sperrkonto": {
+        "name": "Sperrkonto (€11,904 blocked account)",
+        "where": "Online: Fintiba, Expatrio, Coracle (most popular for Moroccans)",
+        "notes": "Mandatory for Studium. Ausbildung trainees with salary < €934/mo also need it. €89 setup fee + the €11,904 deposit (returned to you in monthly instalments after arrival)."
+      },
+      "verpflichtungserklaerung": {
+        "name": "Verpflichtungserklärung (sponsor declaration)",
+        "where": "Sponsor in Germany goes to their local Ausländerbehörde",
+        "notes": "Alternative to Sperrkonto. Sponsor must prove sufficient income. ~€29 fee paid by sponsor."
+      },
+      "bank_statements": {
+        "name": "Bank statements (last 3 months)",
+        "where": "Your Moroccan bank",
+        "notes": "Sometimes requested as supporting evidence even when Sperrkonto is in place."
+      },
+      "travel_health_insurance": {
+        "name": "Travel health insurance (first 90 days)",
+        "where": "Online: Coracle, MAWISTA, DR-WALTER",
+        "notes": "Must cover ≥ €30,000 of medical costs and the entire pre-residence-permit period."
+      },
+      "accommodation_proof": {
+        "name": "Accommodation proof (Wohnungsgeberbestätigung or hotel reservation)",
+        "where": "Your future German landlord OR hotel booking site",
+        "notes": "A signed Wohnungsgeberbestätigung is best. Hotel reservation for the first 4 weeks is acceptable while you find a long-term flat."
+      },
+      "tls_appointment": {
+        "name": "TLScontact appointment",
+        "where": "de.tlscontact.com/ma — Casablanca or Rabat centre",
+        "notes": "Book early — slots are 1–3 months out, sometimes longer in summer. Service fee separate from visa fee."
+      },
+      "visa_fee": {
+        "name": "National D-visa fee (€75)",
+        "where": "Paid in MAD at TLS appointment",
+        "notes": "Non-refundable. Pay in cash or by card on the day of your appointment."
+      }
+    }
   }
 }
