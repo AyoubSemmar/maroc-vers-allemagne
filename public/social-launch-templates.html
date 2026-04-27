@@ -35,9 +35,43 @@
     gap: 36px;
   }
   .card-wrap { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .card-header {
+    display: flex; align-items: center; gap: 14px;
+  }
   .card-label {
     color: #aaa; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;
   }
+  .download-btn {
+    background: linear-gradient(135deg, #E27940 0%, #F4C842 100%);
+    color: #1a1a1a;
+    border: 0;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 13px; font-weight: 800;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 6px 20px -8px rgba(232,121,64,0.6);
+    transition: transform 0.12s, box-shadow 0.12s;
+  }
+  .download-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 26px -10px rgba(232,121,64,0.7);
+  }
+  .download-btn:disabled {
+    opacity: 0.6; cursor: wait;
+  }
+  .download-all-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(28,28,28,0.92);
+    backdrop-filter: blur(8px);
+    padding: 16px 0;
+    margin: -32px -16px 24px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .download-all-bar .download-btn { padding: 12px 28px; font-size: 14px; }
 
   /* ── Canvas ─────────────────────────────────────────────── */
   /* Each post is 1080×1080. Scaled down for screen viewing via transform; actual
@@ -535,8 +569,12 @@
 </style>
 </head>
 <body>
+  <div class="download-all-bar">
+    <button id="download-all" class="download-btn">⬇ Download all 4 posts</button>
+  </div>
+
   <h1 class="page-title">GoGermany — 4 launch posts (1080 × 1080)</h1>
-  <p class="page-sub">Each card is rendered at full Instagram size. Scroll, screenshot at 100% zoom — or use the export tip at the bottom.</p>
+  <p class="page-sub">Click <strong>Download PNG</strong> on any post to save it instantly at Instagram size.</p>
 
   <div class="grid">
 
@@ -544,7 +582,10 @@
          POST 1 — Launch hook (yellow border)
          ════════════════════════════════════════════════════════ -->
     <div class="card-wrap">
-      <div class="card-label">Post 1 — Launch hook</div>
+      <div class="card-header">
+        <div class="card-label">Post 1 — Launch hook</div>
+        <button class="download-btn" data-target="post1" data-name="gogermany-post-1-launch">⬇ Download PNG</button>
+      </div>
       <article class="post" id="post1">
         <div class="p1-frame"></div>
 
@@ -575,7 +616,10 @@
          POST 2 — Studium fun fact (full diagonal)
          ════════════════════════════════════════════════════════ -->
     <div class="card-wrap">
-      <div class="card-label">Post 2 — Studium fun fact</div>
+      <div class="card-header">
+        <div class="card-label">Post 2 — Studium fun fact</div>
+        <button class="download-btn" data-target="post2" data-name="gogermany-post-2-studium">⬇ Download PNG</button>
+      </div>
       <article class="post" id="post2">
         <div class="p2-diagonal"></div>
 
@@ -608,7 +652,10 @@
          POST 3 — Ausbildung explainer (half diagonal)
          ════════════════════════════════════════════════════════ -->
     <div class="card-wrap">
-      <div class="card-label">Post 3 — Ausbildung explainer</div>
+      <div class="card-header">
+        <div class="card-label">Post 3 — Ausbildung explainer</div>
+        <button class="download-btn" data-target="post3" data-name="gogermany-post-3-ausbildung">⬇ Download PNG</button>
+      </div>
       <article class="post" id="post3">
         <div class="p3-tri"></div>
 
@@ -650,7 +697,10 @@
          POST 4 — Cost of living (browser frame)
          ════════════════════════════════════════════════════════ -->
     <div class="card-wrap">
-      <div class="card-label">Post 4 — Cost of living reality check</div>
+      <div class="card-header">
+        <div class="card-label">Post 4 — Cost of living reality check</div>
+        <button class="download-btn" data-target="post4" data-name="gogermany-post-4-budget">⬇ Download PNG</button>
+      </div>
       <article class="post" id="post4">
         <div class="logo">
           <div class="logo-mark"><span class="g">G</span></div>
@@ -707,17 +757,88 @@
 
   </div>
 
-  <div class="hint">
-    <h3>How to export each post as a PNG (1080×1080)</h3>
-    <p><strong>Easiest — Chrome screenshot:</strong></p>
-    <ol>
-      <li>Open this file in Chrome.</li>
-      <li>Open DevTools (<code>Ctrl+Shift+I</code> / <code>Cmd+Opt+I</code>).</li>
-      <li>Press <code>Ctrl+Shift+P</code> / <code>Cmd+Shift+P</code> → type <code>Capture node screenshot</code>.</li>
-      <li>Click the <code>&lt;article class="post"&gt;</code> you want in the Elements panel, run the command — Chrome saves a perfect 1080×1080 PNG.</li>
-    </ol>
-    <p><strong>Or print to PDF</strong> — <code>Ctrl+P</code>, choose A4, and each post lands on its own page (the print stylesheet handles it).</p>
-  </div>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@1.5.8/dist/html2canvas-pro.min.js"></script>
+  <script>
+    // Export a single post element as a 1080x1080 PNG.
+    async function exportPost(targetId, fileName) {
+      const el = document.getElementById(targetId)
+      if (!el) return
+      // Temporarily strip the screen-only scaling transform so html2canvas
+      // captures the post at its true 1080x1080 size.
+      const prevTransform = el.style.transform
+      const prevMargin = el.style.marginBottom
+      el.style.transform = 'none'
+      el.style.marginBottom = '0'
+      // Force a reflow before capturing.
+      void el.offsetWidth
+
+      try {
+        const canvas = await html2canvas(el, {
+          width: 1080,
+          height: 1080,
+          backgroundColor: '#0E1A36',
+          scale: 1,
+          useCORS: true,
+          allowTaint: true,
+        })
+        const url = canvas.toDataURL('image/png')
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `${fileName}.png`
+        document.body.appendChild(a)
+        a.click()
+        a.remove()
+      } finally {
+        el.style.transform = prevTransform
+        el.style.marginBottom = prevMargin
+      }
+    }
+
+    // Per-post download buttons.
+    document.querySelectorAll('.download-btn[data-target]').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const original = btn.textContent
+        btn.disabled = true
+        btn.textContent = '⏳ Generating…'
+        try {
+          await exportPost(btn.dataset.target, btn.dataset.name)
+          btn.textContent = '✅ Downloaded'
+          setTimeout(() => { btn.textContent = original; btn.disabled = false }, 1400)
+        } catch (e) {
+          console.error(e)
+          btn.textContent = '⚠️ Try again'
+          setTimeout(() => { btn.textContent = original; btn.disabled = false }, 1800)
+        }
+      })
+    })
+
+    // Download-all button: export the 4 posts back-to-back.
+    document.getElementById('download-all').addEventListener('click', async (e) => {
+      const btn = e.currentTarget
+      btn.disabled = true
+      const original = btn.textContent
+      const targets = [
+        ['post1', 'gogermany-post-1-launch'],
+        ['post2', 'gogermany-post-2-studium'],
+        ['post3', 'gogermany-post-3-ausbildung'],
+        ['post4', 'gogermany-post-4-budget'],
+      ]
+      try {
+        for (let i = 0; i < targets.length; i++) {
+          btn.textContent = `⏳ ${i + 1} / ${targets.length}…`
+          await exportPost(targets[i][0], targets[i][1])
+          // tiny pause so the browser doesn't bunch the downloads
+          await new Promise(r => setTimeout(r, 250))
+        }
+        btn.textContent = '✅ All 4 downloaded'
+      } catch (err) {
+        console.error(err)
+        btn.textContent = '⚠️ Error — try one at a time'
+      } finally {
+        setTimeout(() => { btn.textContent = original; btn.disabled = false }, 2000)
+      }
+    })
+  </script>
 
 </body>
 </html>
