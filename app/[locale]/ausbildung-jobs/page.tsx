@@ -35,7 +35,7 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
       .or('contact_email.not.is.null,apply_url.not.is.null')
       .order('enriched_at', { ascending: false, nullsFirst: false })
       .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(400)
+      .limit(2000)
   }
   async function fetchPlain() {
     return supabase
@@ -43,7 +43,7 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
       .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,phone,anstellungsart,published_at,created_at')
       .or('contact_email.not.is.null,apply_url.not.is.null')
       .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(400)
+      .limit(2000)
   }
   const enrichedRes = await fetchEnriched()
   let data: any[] | null = enrichedRes.data as any[] | null
