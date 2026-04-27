@@ -26,32 +26,46 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
     auth: { persistSession: false, autoRefreshToken: false },
   })
 
-  // Try the enriched query first; fall back to the original columns if
-  // the migration hasn't been run yet (so the page never goes blank).
-  async function fetchEnriched() {
-    return supabase
+  // PostgREST has a default max_rows of 1000 per request, so a single
+  // `.limit(N)` is silently clipped to 1000. We page in 1000-row chunks
+  // until the table is exhausted.
+  const CHUNK = 1000
+  const MAX_PAGES = 10 // safety cap (≤ 10k rows fetched)
+
+  async function fetchPage(useEnriched: boolean, from: number, to: number) {
+    const cols = useEnriched
+      ? 'id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,phone,anstellungsart,published_at,created_at,enrichment_json'
+      : 'id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,phone,anstellungsart,published_at,created_at'
+    let q = supabase
       .from('ausbildung_jobs')
-      .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,phone,anstellungsart,published_at,created_at,enrichment_json')
+      .select(cols)
       .or('contact_email.not.is.null,apply_url.not.is.null')
-      .order('enriched_at', { ascending: false, nullsFirst: false })
-      .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(2000)
+    if (useEnriched) q = q.order('enriched_at', { ascending: false, nullsFirst: false })
+    q = q.order('published_at', { ascending: false, nullsFirst: false })
+    return q.range(from, to)
   }
-  async function fetchPlain() {
-    return supabase
-      .from('ausbildung_jobs')
-      .select('id,external_id,title,company,location,description,category,external_url,apply_url,contact_email,phone,anstellungsart,published_at,created_at')
-      .or('contact_email.not.is.null,apply_url.not.is.null')
-      .order('published_at', { ascending: false, nullsFirst: false })
-      .limit(2000)
+
+  let useEnriched = true
+  const all: any[] = []
+  for (let page = 0; page < MAX_PAGES; page++) {
+    const from = page * CHUNK
+    const to = from + CHUNK - 1
+    const res = await fetchPage(useEnriched, from, to)
+    if (res.error) {
+      // 42703 = column does not exist (migration not run) — fall back to plain
+      // shape on the first page only and restart from page 0.
+      if (useEnriched && page === 0) {
+        useEnriched = false
+        page = -1
+        continue
+      }
+      break
+    }
+    const rows = res.data ?? []
+    all.push(...rows)
+    if (rows.length < CHUNK) break
   }
-  const enrichedRes = await fetchEnriched()
-  let data: any[] | null = enrichedRes.data as any[] | null
-  if (enrichedRes.error) {
-    // 42703 = column does not exist (migration not run yet) — fall back
-    const fallback = await fetchPlain()
-    data = fallback.data as any[] | null
-  }
+  const data = all
 
   const jobs = (data || []) as Job[]
   const lastUpdated = jobs[0]?.created_at || null
