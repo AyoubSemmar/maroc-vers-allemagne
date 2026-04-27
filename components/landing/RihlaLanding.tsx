@@ -81,7 +81,8 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   >('idle')
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
-  // Shrunk tools list — path-specific CTAs moved to Choose Your Path / Opportunities / Housing
+  // Real interactive tools only. Resource pages (visa, banking, jobs,
+  // simcards) live elsewhere on the site — they're not "tools".
   const tools = [
     { key: 'cv', icon: '📄', href: '/cv-builder', c: 'brand' as const },
     { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
@@ -89,10 +90,6 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     { key: 'migrationTimeline', icon: '🗓', href: '/tools/migration-timeline', c: 'teal' as const },
     { key: 'documentChecklist', icon: '📋', href: '/tools/document-checklist', c: 'berry' as const },
     { key: 'eligibilityChecker', icon: '✅', href: '/tools/eligibility-checker', c: 'brand' as const },
-    { key: 'visa', icon: '📄', href: '/visa', c: 'brand' as const },
-    { key: 'banks', icon: '🏦', href: '/banking', c: 'brand' as const },
-    { key: 'work', icon: '💼', href: '/jobs', c: 'berry' as const },
-    { key: 'sim', icon: '📱', href: '/categories/شرائح الاتصال', c: 'berry' as const },
   ] as const
 
   const levels: Array<{
