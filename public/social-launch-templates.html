@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GoGermany — Launch posts (4 templates × FR/AR)</title>
+<style>
+  /* ── Page chrome ────────────────────────────────────────── */
+  :root {
+    --navy: #0E1A36;
+    --navy-deep: #0A1429;
+    --navy-soft: #142244;
+    --brand: #E27940;
+    --brand-warm: #F08A2E;
+    --gold: #F4C842;
+    --red: #C8252C;
+    --black: #1A1A1A;
+    --line: rgba(255,255,255,0.08);
+    --ink: #FFFFFF;
+    --ink-soft: rgba(255,255,255,0.72);
+    --ink-mute: rgba(255,255,255,0.5);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #1c1c1c; color: #eee;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif; }
+
+  body { padding: 32px 16px 80px; }
+  h1.page-title { text-align: center; font-size: 22px; margin: 0 0 8px; font-weight: 700; letter-spacing: -0.01em; }
+  p.page-sub { text-align: center; color: #aaa; margin: 0 0 32px; font-size: 14px; }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .card-wrap { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+  .card-label {
+    color: #aaa; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;
+  }
+
+  /* ── Canvas ─────────────────────────────────────────────── */
+  /* Each post is 1080×1080. Scaled down for screen viewing via transform; actual
+     pixel size preserved so a screenshot at 100% gives the right dimensions. */
+  .post {
+    position: relative;
+    width: 1080px;
+    height: 1080px;
+    background: var(--navy);
+    color: var(--ink);
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 8px;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.6);
+    transform-origin: top center;
+  }
+  /* Scaling for screen so they fit a normal monitor. Remove for screenshot. */
+  @media (max-width: 1200px) { .post { transform: scale(0.55); margin-bottom: -480px; } }
+  @media (min-width: 1201px) { .post { transform: scale(0.78); margin-bottom: -240px; } }
+
+  /* Subtle dot grid background — present on all 4 */
+  .post::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1.4px);
+    background-size: 24px 24px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* ── Logo (top-right, identical on all posts) ───────────── */
+  .logo {
+    position: absolute;
+    top: 64px;
+    right: 64px;
+    display: flex; align-items: center; gap: 18px;
+    z-index: 30;
+  }
+  .logo-mark {
+    width: 92px; height: 92px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #E78B3D 0%, #D9542B 100%);
+    box-shadow: 0 14px 32px -10px rgba(232,124,55,0.6);
+    position: relative;
+    display: grid; place-items: center;
+    overflow: hidden;
+  }
+  .logo-mark::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 16px;
+    background: linear-gradient(to bottom,
+      var(--black) 0%, var(--black) 33.33%,
+      var(--red) 33.33%, var(--red) 66.66%,
+      var(--gold) 66.66%, var(--gold) 100%);
+  }
+  .logo-mark .g {
+    color: white;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-top: -8px;
+    font-family: "SF Pro Display", -apple-system, system-ui, sans-serif;
+  }
+  .logo-text {
+    color: white;
+    font-weight: 800;
+    font-size: 38px;
+    letter-spacing: -0.02em;
+  }
+
+  /* ── Footer URL (bottom-right, all posts) ───────────────── */
+  .url {
+    position: absolute;
+    bottom: 56px;
+    right: 64px;
+    font-size: 18px;
+    letter-spacing: 0.34em;
+    color: var(--ink-mute);
+    text-transform: uppercase;
+    z-index: 30;
+    font-weight: 600;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     POST 1 — Yellow→orange rounded border
+     ───────────────────────────────────────────────────────── */
+  .p1-frame {
+    position: absolute; inset: 36px;
+    border-radius: 32px;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    z-index: 5;
+    pointer-events: none;
+  }
+  .p1-frame::before {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: 32px;
+    background: var(--navy);
+  }
+  .p1-content {
+    position: absolute;
+    inset: 36px;
+    display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+    padding: 96px 72px;
+    z-index: 10;
+  }
+  .p1-tag {
+    font-size: 16px;
+    color: var(--gold);
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    padding: 10px 20px;
+    background: rgba(244, 200, 66, 0.12);
+    border: 1.5px solid rgba(244, 200, 66, 0.35);
+    border-radius: 999px;
+  }
+  .p1-headline {
+    font-size: 76px;
+    font-weight: 900;
+    line-height: 1.04;
+    letter-spacing: -0.025em;
+    margin: 0 0 24px;
+    max-width: 800px;
+  }
+  .p1-headline em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .p1-ar {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--ink-soft);
+    margin: 0 0 56px;
+    max-width: 880px;
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", "SF Arabic", system-ui, sans-serif;
+  }
+  .p1-stat-row {
+    display: flex; gap: 56px; margin-top: 12px;
+    align-items: center;
+  }
+  .p1-stat-num {
+    font-size: 132px;
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    letter-spacing: -0.03em;
+  }
+  .p1-stat-label {
+    font-size: 22px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    max-width: 380px;
+  }
+  .p1-stat-label strong { color: white; font-size: 24px; display: block; margin-bottom: 4px; }
+
+  /* ─────────────────────────────────────────────────────────
+     POST 2 — Full orange diagonal (right half)
+     ───────────────────────────────────────────────────────── */
+  .p2-diagonal {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  .p2-diagonal::before {
+    /* The orange wedge from top-right corner down-left to bottom-left area. */
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    clip-path: polygon(40% 0, 100% 0, 100% 100%, 70% 100%);
+  }
+  .p2-flag {
+    /* Full-width German flag bar across the bottom. */
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 18px;
+    background: linear-gradient(to right,
+      var(--black) 0%, var(--black) 33.33%,
+      var(--red) 33.33%, var(--red) 66.66%,
+      var(--gold) 66.66%, var(--gold) 100%);
+    z-index: 25;
+  }
+  .p2-content {
+    position: absolute;
+    inset: 0;
+    padding: 140px 110px 120px;
+    z-index: 10;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .p2-tag {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .p2-stat {
+    margin-top: 80px;
+    max-width: 540px;
+  }
+  .p2-num {
+    font-size: 320px;
+    line-height: 0.95;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+    letter-spacing: -0.06em;
+  }
+  .p2-num-sub {
+    font-size: 24px;
+    color: var(--ink-soft);
+    margin-top: 16px;
+    max-width: 460px;
+    line-height: 1.4;
+  }
+  .p2-bottom { display: flex; flex-direction: column; gap: 18px; max-width: 540px; }
+  .p2-fr {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+  }
+  .p2-ar {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", system-ui, sans-serif;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     POST 3 — Half diagonal (corner triangle)
+     ───────────────────────────────────────────────────────── */
+  .p3-tri {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+  .p3-tri::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, var(--brand-warm) 0%, var(--gold) 100%);
+    clip-path: polygon(55% 0, 100% 0, 100% 95%);
+  }
+  .p3-flag {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    height: 14px;
+    background: linear-gradient(to right,
+      var(--black) 0%, var(--black) 33.33%,
+      var(--red) 33.33%, var(--red) 66.66%,
+      var(--gold) 66.66%, var(--gold) 100%);
+    z-index: 25;
+  }
+  .p3-content {
+    position: absolute;
+    left: 90px; right: 90px;
+    top: 240px; bottom: 130px;
+    z-index: 10;
+    display: flex; flex-direction: column; justify-content: center;
+    max-width: 720px;
+  }
+  .p3-tag {
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+  }
+  .p3-q {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin: 0 0 8px;
+  }
+  .p3-q-ar {
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    margin: 0 0 36px;
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", system-ui, sans-serif;
+  }
+  .p3-big {
+    font-size: 88px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 14px;
+  }
+  .p3-big em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .p3-big-ar {
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--ink-soft);
+    line-height: 1.3;
+    margin: 0 0 32px;
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", system-ui, sans-serif;
+  }
+  .p3-stats { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+  .p3-stat {
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 16px 22px;
+  }
+  .p3-stat-num {
+    font-size: 28px; font-weight: 900;
+    color: var(--gold);
+    line-height: 1; display: block; margin-bottom: 4px;
+  }
+  .p3-stat-lbl { font-size: 14px; color: var(--ink-soft); line-height: 1.3; }
+
+  /* ─────────────────────────────────────────────────────────
+     POST 4 — Browser-window frame
+     ───────────────────────────────────────────────────────── */
+  .p4-window {
+    position: absolute;
+    left: 130px; right: 130px;
+    top: 320px; bottom: 220px;
+    background: var(--navy-deep);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    z-index: 5;
+    overflow: hidden;
+    box-shadow: 0 30px 80px -20px rgba(0,0,0,0.5);
+  }
+  .p4-window::before {
+    /* Top edge tricolor (subtle, just the rim). */
+    content: '';
+    position: absolute; left: 0; right: 0; top: 0;
+    height: 6px;
+    background: linear-gradient(to right,
+      var(--black) 0%, var(--black) 33.33%,
+      var(--red) 33.33%, var(--red) 66.66%,
+      var(--gold) 66.66%, var(--gold) 100%);
+  }
+  .p4-dots {
+    position: absolute;
+    top: 22px; right: 22px;
+    display: flex; gap: 8px;
+    z-index: 6;
+  }
+  .p4-dot { width: 12px; height: 12px; border-radius: 50%; }
+  .p4-dot.grey { background: #5a5a5a; }
+  .p4-dot.gold { background: var(--gold); }
+  .p4-dot.orange { background: var(--brand); }
+  .p4-window-content {
+    position: absolute;
+    inset: 60px 50px 30px;
+    display: flex; flex-direction: column;
+    gap: 14px;
+  }
+  .p4-line {
+    display: flex; align-items: center; gap: 18px;
+    padding: 14px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+  }
+  .p4-line:last-child { border-bottom: 0; }
+  .p4-line-icon {
+    font-size: 28px; flex: none; width: 44px; text-align: center;
+  }
+  .p4-line-fr {
+    flex: 1;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+  }
+  .p4-line-fr small {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    margin-top: 2px;
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", system-ui, sans-serif;
+  }
+  .p4-line-val {
+    font-size: 24px;
+    font-weight: 900;
+    color: var(--gold);
+    flex: none;
+    font-variant-numeric: tabular-nums;
+  }
+  .p4-total {
+    margin-top: 6px;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, rgba(232,124,55,0.18) 0%, rgba(244,200,66,0.12) 100%);
+    border: 1.5px solid rgba(244,200,66,0.4);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .p4-total-label {
+    font-size: 18px; font-weight: 800; color: white; letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .p4-total-num {
+    font-size: 38px; font-weight: 900;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .p4-headline-wrap {
+    position: absolute;
+    left: 130px; right: 130px;
+    top: 80px;
+    z-index: 8;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .p4-tag {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .p4-headline {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+    max-width: 760px;
+  }
+  .p4-headline em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+  .p4-headline-ar {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--ink-soft);
+    line-height: 1.35;
+    direction: rtl;
+    font-family: "Tajawal", "Cairo", system-ui, sans-serif;
+    margin: 4px 0 0;
+  }
+
+  /* ── Print/screenshot helper ─────────────────────────────── */
+  .hint {
+    margin: 60px auto 0;
+    max-width: 720px;
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 22px 26px;
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .hint h3 { margin: 0 0 8px; font-size: 16px; color: white; }
+  .hint code { background: #1a1a1a; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .grid { gap: 0; }
+    .post { transform: none; margin: 0; box-shadow: none; page-break-after: always; }
+    h1.page-title, p.page-sub, .card-label, .hint { display: none; }
+  }
+</style>
+</head>
+<body>
+  <h1 class="page-title">GoGermany — 4 launch posts (1080 × 1080)</h1>
+  <p class="page-sub">Each card is rendered at full Instagram size. Scroll, screenshot at 100% zoom — or use the export tip at the bottom.</p>
+
+  <div class="grid">
+
+    <!-- ════════════════════════════════════════════════════════
+         POST 1 — Launch hook (yellow border)
+         ════════════════════════════════════════════════════════ -->
+    <div class="card-wrap">
+      <div class="card-label">Post 1 — Launch hook</div>
+      <article class="post" id="post1">
+        <div class="p1-frame"></div>
+
+        <div class="logo">
+          <div class="logo-mark"><span class="g">G</span></div>
+          <span class="logo-text">GoGermany</span>
+        </div>
+
+        <div class="p1-content">
+          <span class="p1-tag">📍 GoGermany.ma · Lancement</span>
+          <h2 class="p1-headline">L'Allemagne ouvre ses portes <em>aux Marocains.</em></h2>
+          <p class="p1-ar">ألمانيا تفتح أبوابها للمغاربة.</p>
+
+          <div class="p1-stat-row">
+            <div class="p1-stat-num">400K+</div>
+            <div class="p1-stat-label">
+              <strong>places non pourvues en 2025</strong>
+              منصب شاغر في 2025 — تكوين مهني وجامعات
+            </div>
+          </div>
+        </div>
+
+        <div class="url">www.gogermany.ma</div>
+      </article>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+         POST 2 — Studium fun fact (full diagonal)
+         ════════════════════════════════════════════════════════ -->
+    <div class="card-wrap">
+      <div class="card-label">Post 2 — Studium fun fact</div>
+      <article class="post" id="post2">
+        <div class="p2-diagonal"></div>
+
+        <div class="logo">
+          <div class="logo-mark"><span class="g">G</span></div>
+          <span class="logo-text">GoGermany</span>
+        </div>
+
+        <div class="p2-content">
+          <div>
+            <div class="p2-tag">💡 Fun fact · معلومة</div>
+            <div class="p2-stat">
+              <div class="p2-num">0€</div>
+              <p class="p2-num-sub">Frais d'inscription dans une université publique allemande — pour les étudiants marocains aussi.</p>
+            </div>
+          </div>
+
+          <div class="p2-bottom">
+            <p class="p2-fr">Les unis publiques en Allemagne sont gratuites.</p>
+            <p class="p2-ar">الجامعات العمومية بألمانيا مجانية حتى للطلبة المغاربة.</p>
+          </div>
+        </div>
+
+        <div class="p2-flag"></div>
+        <div class="url" style="bottom: 80px;">www.gogermany.ma</div>
+      </article>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+         POST 3 — Ausbildung explainer (half diagonal)
+         ════════════════════════════════════════════════════════ -->
+    <div class="card-wrap">
+      <div class="card-label">Post 3 — Ausbildung explainer</div>
+      <article class="post" id="post3">
+        <div class="p3-tri"></div>
+
+        <div class="logo">
+          <div class="logo-mark"><span class="g">G</span></div>
+          <span class="logo-text">GoGermany</span>
+        </div>
+
+        <div class="p3-content">
+          <div class="p3-tag">📚 L'Ausbildung · التكوين المهني</div>
+          <h2 class="p3-q">L'Ausbildung, c'est quoi ?</h2>
+          <p class="p3-q-ar">شنو هو الـ Ausbildung؟</p>
+
+          <h3 class="p3-big"><em>Travailler</em> + apprendre + être payé.</h3>
+          <p class="p3-big-ar">العمل + التعلّم + الأجر.</p>
+
+          <div class="p3-stats">
+            <div class="p3-stat">
+              <span class="p3-stat-num">3 ans</span>
+              <span class="p3-stat-lbl">Formation duale<br>تكوين مزدوج</span>
+            </div>
+            <div class="p3-stat">
+              <span class="p3-stat-num">800–1400€</span>
+              <span class="p3-stat-lbl">brut / mois<br>إجمالي شهرياً</span>
+            </div>
+            <div class="p3-stat">
+              <span class="p3-stat-num">~ 75%</span>
+              <span class="p3-stat-lbl">embauchés après<br>يُوظَّفون بعد التكوين</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p3-flag"></div>
+        <div class="url" style="bottom: 60px;">www.gogermany.ma</div>
+      </article>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════════
+         POST 4 — Cost of living (browser frame)
+         ════════════════════════════════════════════════════════ -->
+    <div class="card-wrap">
+      <div class="card-label">Post 4 — Cost of living reality check</div>
+      <article class="post" id="post4">
+        <div class="logo">
+          <div class="logo-mark"><span class="g">G</span></div>
+          <span class="logo-text">GoGermany</span>
+        </div>
+
+        <div class="p4-headline-wrap">
+          <div class="p4-tag">💸 Budget · ميزانية</div>
+          <h2 class="p4-headline">Vivre en Allemagne avec <em>1 000 € / mois</em></h2>
+          <p class="p4-headline-ar">العيش بألمانيا بـ 1.000 € في الشهر</p>
+        </div>
+
+        <div class="p4-window">
+          <div class="p4-dots">
+            <span class="p4-dot grey"></span>
+            <span class="p4-dot gold"></span>
+            <span class="p4-dot orange"></span>
+          </div>
+
+          <div class="p4-window-content">
+            <div class="p4-line">
+              <span class="p4-line-icon">🏠</span>
+              <span class="p4-line-fr">Loyer (chambre WG)<small>السكن (غرفة في WG)</small></span>
+              <span class="p4-line-val">300–450 €</span>
+            </div>
+            <div class="p4-line">
+              <span class="p4-line-icon">🍝</span>
+              <span class="p4-line-fr">Courses + restos<small>المأكولات والمطاعم</small></span>
+              <span class="p4-line-val">200–280 €</span>
+            </div>
+            <div class="p4-line">
+              <span class="p4-line-icon">🚆</span>
+              <span class="p4-line-fr">Transport (Deutschlandticket)<small>النقل العمومي</small></span>
+              <span class="p4-line-val">49 €</span>
+            </div>
+            <div class="p4-line">
+              <span class="p4-line-icon">📱</span>
+              <span class="p4-line-fr">Forfait + assurance<small>الهاتف + التأمين</small></span>
+              <span class="p4-line-val">120–150 €</span>
+            </div>
+
+            <div class="p4-total">
+              <span class="p4-total-label">Total · المجموع</span>
+              <span class="p4-total-num">~ 900 €</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="url">www.gogermany.ma</div>
+      </article>
+    </div>
+
+  </div>
+
+  <div class="hint">
+    <h3>How to export each post as a PNG (1080×1080)</h3>
+    <p><strong>Easiest — Chrome screenshot:</strong></p>
+    <ol>
+      <li>Open this file in Chrome.</li>
+      <li>Open DevTools (<code>Ctrl+Shift+I</code> / <code>Cmd+Opt+I</code>).</li>
+      <li>Press <code>Ctrl+Shift+P</code> / <code>Cmd+Shift+P</code> → type <code>Capture node screenshot</code>.</li>
+      <li>Click the <code>&lt;article class="post"&gt;</code> you want in the Elements panel, run the command — Chrome saves a perfect 1080×1080 PNG.</li>
+    </ol>
+    <p><strong>Or print to PDF</strong> — <code>Ctrl+P</code>, choose A4, and each post lands on its own page (the print stylesheet handles it).</p>
+  </div>
+
+</body>
+</html>
