@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import UniLogo from '@/components/universities/UniLogo'
 
 type Props = { params: Promise<{ locale: AppLocale; slug: string }> }
 
@@ -57,12 +58,7 @@ export default async function UniversityDetailPage({ params }: Props) {
 
         <div className="uni-detail-head">
           <div className="uni-detail-logo" aria-hidden>
-            {row.logo_url ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={row.logo_url} alt="" />
-            ) : (
-              <span>{name.charAt(0)}</span>
-            )}
+            <UniLogo src={row.logo_url} fallback={name.charAt(0)} />
           </div>
           <div>
             <h1 className="uni-detail-title">{name}</h1>

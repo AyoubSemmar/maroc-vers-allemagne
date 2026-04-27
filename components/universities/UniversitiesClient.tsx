@@ -17,6 +17,8 @@ export type UniversityRow = {
   logoUrl: string | null
 }
 
+import UniLogo from '@/components/universities/UniLogo'
+
 const TYPE_LABEL_KEYS: Record<string, string> = {
   university:        'typeUniversity',
   applied_sciences:  'typeAppliedSciences',
@@ -124,12 +126,7 @@ export default function UniversitiesClient({
               {filtered.map((u) => (
                 <Link key={u.id} href={`/universities/${u.id}`} className="unis-card">
                   <div className="unis-card-logo" aria-hidden>
-                    {u.logoUrl ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={u.logoUrl} alt="" loading="lazy" />
-                    ) : (
-                      <span>{u.name.charAt(0)}</span>
-                    )}
+                    <UniLogo src={u.logoUrl} fallback={u.name.charAt(0)} fallbackClassName="unis-card-logo-fallback" />
                   </div>
                   <div className="unis-card-body">
                     <h3 className="unis-card-name">{u.name}</h3>

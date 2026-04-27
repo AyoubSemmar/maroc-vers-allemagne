@@ -504,17 +504,25 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   box-shadow: 0 12px 30px -10px color-mix(in oklch, var(--brand) 40%, transparent);
 }
 .unis-card-logo {
-  width: 56px; height: 56px;
+  width: 64px; height: 64px;
   display: grid; place-items: center;
-  background: var(--bg-warm);
+  background: #fff;
   border-radius: 12px;
   border: 1px solid var(--line);
   flex: none;
   overflow: hidden;
-  font-weight: 800; font-size: 22px;
+  padding: 6px;
+  box-sizing: border-box;
+}
+.unis-card-logo img {
+  max-width: 100%; max-height: 100%;
+  width: auto; height: auto;
+  object-fit: contain;
+}
+.unis-card-logo-fallback {
+  font-weight: 800; font-size: 24px;
   color: var(--brand);
 }
-.unis-card-logo img { max-width: 80%; max-height: 80%; object-fit: contain; }
 .unis-card-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .unis-card-name {
   font-size: 16px; font-weight: 800; letter-spacing: -0.01em;
