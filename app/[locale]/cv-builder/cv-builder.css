@@ -3,36 +3,63 @@
 /* ═══════════════════════════════════════════════════════════ */
 
 .rihla-cvb-root {
-  background: var(--bg-warm);
+  background: var(--bg);
   min-height: 100vh;
 }
 
 .rihla-cvb-header {
-  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-ink) 100%);
-  color: #fff;
-  padding: 48px 0 36px;
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--brand) 8%, var(--bg-warm)) 0%,
+    var(--bg-warm) 60%,
+    var(--bg) 100%);
+  color: var(--ink);
+  padding: 56px 0 44px;
   text-align: center;
-  border-bottom: 4px solid var(--gold);
+  border-bottom: 1px solid var(--line);
 }
 .rihla-cvb-header .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
-.rihla-cvb-eyebrow { font-size: 14px; opacity: 0.9; margin: 0 0 8px; font-weight: 600; letter-spacing: 1px; }
-.rihla-cvb-header h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; font-weight: 900; letter-spacing: -0.5px; }
-.rihla-cvb-subtitle { font-size: 15px; opacity: 0.95; max-width: 600px; margin: 0 auto 22px; line-height: 1.6; }
+.rihla-cvb-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--brand);
+  margin: 0 0 12px;
+}
+.rihla-cvb-eyebrow::before {
+  content: ''; width: 6px; height: 6px;
+  background: var(--brand); border-radius: 50%;
+}
+.rihla-cvb-header h1 {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 12px;
+  font-weight: 900; letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.rihla-cvb-subtitle {
+  font-size: clamp(15px, 2vw, 17px);
+  color: var(--ink-soft);
+  max-width: 600px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
 
 .rihla-cvb-progress-wrap {
   display: flex; align-items: center; gap: 12px; justify-content: center;
   max-width: 500px; margin: 0 auto;
 }
 .rihla-cvb-progress-bar {
-  flex: 1; height: 10px; background: rgba(255,255,255,0.25);
+  flex: 1; height: 8px; background: var(--line-soft);
   border-radius: 999px; overflow: hidden;
 }
 .rihla-cvb-progress-fill {
-  height: 100%; background: var(--gold);
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand) 0%, oklch(0.66 0.15 152) 100%);
   transition: width 400ms cubic-bezier(.2,.9,.3,1.2);
-  box-shadow: 0 0 12px rgba(255, 220, 130, 0.5);
 }
-.rihla-cvb-progress-text { font-size: 13px; font-weight: 700; white-space: nowrap; }
+.rihla-cvb-progress-text {
+  font-size: 13px; font-weight: 800; white-space: nowrap;
+  color: var(--ink-soft);
+}
 
 /* Stepper */
 .rihla-cvb-stepper {
