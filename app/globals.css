@@ -1756,11 +1756,18 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   padding: 12px 20px;
   display: flex;
   gap: 8px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  flex-direction: row-reverse;
+  flex-wrap: wrap;
 }
-.rihla-articles-filter-inner::-webkit-scrollbar { display: none; }
+/* On narrow screens, chips become a horizontal scroll strip again so the
+   filter row doesn't eat half the viewport when there are 14+ chips. */
+@media (max-width: 720px) {
+  .rihla-articles-filter-inner {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .rihla-articles-filter-inner::-webkit-scrollbar { display: none; }
+}
 .rihla-cat-pill {
   flex-shrink: 0;
   padding: 7px 16px;
