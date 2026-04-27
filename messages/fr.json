@@ -269,6 +269,10 @@
       "documentChecklist": {
         "name": "Checklist documents",
         "desc": "Liste personnalisée de tous les documents pour le visa allemand, en MAD/EUR"
+      },
+      "eligibilityChecker": {
+        "name": "Vérificateur d'éligibilité",
+        "desc": "Voyez où vous en êtes pour le visa allemand — score et blocages précis"
       }
     },
     "ladder": {
@@ -3065,7 +3069,8 @@
       "complete": "Complet",
       "livingCost": "Coût de la vie",
       "migrationTimeline": "Délai de migration",
-      "documentChecklist": "Checklist documents"
+      "documentChecklist": "Checklist documents",
+      "eligibilityChecker": "Éligibilité"
     },
     "topbar": {
       "help": "Aide",
@@ -3688,6 +3693,160 @@
         "where": "Payés en MAD au RDV TLS",
         "notes": "Non remboursables. Espèces ou carte le jour du RDV."
       }
+    }
+  },
+  "eligibilityChecker": {
+    "metaTitle": "Vérificateur d'éligibilité visa — Maroc vers Allemagne",
+    "metaDesc": "Vérifiez votre éligibilité au visa Ausbildung ou Studium en Allemagne en tant que candidat marocain — score, blocages et étapes personnalisées.",
+    "eyebrow": "Éligibilité visa",
+    "title": "Vérificateur d'éligibilité au visa",
+    "subtitle": "Découvrez exactement où vous en êtes pour le visa Ausbildung ou Studium en Allemagne — ce qui vous bloque et ce qui débloque le visa.",
+    "formTitle": "Votre profil",
+    "pathLabel": "Parcours",
+    "studiumGoalLabel": "Objectif Studium",
+    "ageLabel": "Âge",
+    "educationLabel": "Niveau d'études",
+    "germanLabel": "Niveau d'allemand actuel",
+    "bacAverageLabel": "Moyenne du Bac",
+    "bacAverageHint": "Les universités allemandes attendent ≥ 14/20 pour une admission directe en Licence. 12–13.99 nécessite généralement un Studienkolleg. En dessous de 12, en général non éligible.",
+    "hasContractTitle": "J'ai un Ausbildungsvertrag signé",
+    "hasContractHint": "Contrat signé d'un employeur allemand enregistré IHK ou HWK.",
+    "hasAdmissionTitle": "J'ai une Zulassung d'une université allemande",
+    "hasAdmissionHint": "Lettre d'admission finale ou conditionnelle (Zulassung / Bedingungszulassung).",
+    "hasApsTitle": "J'ai mon certificat APS",
+    "hasApsHint": "Obligatoire pour les Marocains pour le Studium. Délivré par APS Rabat.",
+    "englishProgramTitle": "Mon programme cible est en anglais",
+    "englishProgramHint": "Certains Masters sont 100% anglais. Cela assouplit le niveau allemand requis.",
+    "financialLabel": "Preuve financière",
+    "passportTitle": "Mon passeport est valide ≥ 12 mois",
+    "passportHint": "Exigé au moment de l'entretien visa.",
+    "cleanRecordTitle": "Mon casier judiciaire est vierge",
+    "cleanRecordHint": "Pas de condamnations sérieuses.",
+    "overall": {
+      "eligible": "Vous êtes éligible ✅",
+      "eligibleSub": "Aucun blocage critique. Vous pouvez procéder à votre demande de visa.",
+      "conditional": "Presque prêt ⚠️",
+      "conditionalSub": "Pas de blocage visa, mais quelques points à régler avant de postuler.",
+      "notYet": "Pas encore éligible ❌",
+      "notYetSub": "Il existe des blocages critiques. Voir la liste ci-dessous."
+    },
+    "readinessLabel": "Score de préparation",
+    "countPass": "Points forts",
+    "countWarn": "Avertissements",
+    "countBlocker": "Blocages",
+    "blockersTitle": "Ce qui bloque votre visa aujourd'hui",
+    "blockersSub": "Ces points doivent être résolus avant de soumettre votre demande.",
+    "warningsTitle": "À surveiller",
+    "warningsSub": "Pas des blocages, mais peuvent ralentir votre dossier ou risquer un refus.",
+    "passesTitle": "Ce que vous avez déjà",
+    "ctaTitle": "Vous voulez un plan personnalisé ?",
+    "ctaSub": "Réservez une consultation de 30 minutes avec notre spécialiste. Nous identifions vos lacunes, vous donnons une feuille de route précise et le délai réaliste.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "studiumGoal": {
+      "bachelor": "Licence",
+      "master": "Master"
+    },
+    "education": {
+      "no_bac": "Pas encore le Bac",
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "financial": {
+      "sperrkonto": "Sperrkonto (11 904 € prêts)",
+      "sponsor": "Sponsor en Allemagne (Verpflichtungserklärung)",
+      "salary_covers": "Mon salaire d'Ausbildung couvre mes frais",
+      "family_support": "Ma famille me soutiendra depuis le Maroc",
+      "need_help": "Je n'ai pas encore de plan financier"
+    },
+    "rules": {
+      "german_level_ausbildung": {
+        "title": "Allemand B1 minimum (Ausbildung)"
+      },
+      "german_level_studium": {
+        "title": "Allemand B2 minimum (Studium)"
+      },
+      "education_ausbildung": {
+        "title": "Niveau d'études"
+      },
+      "education_studium_bachelor": {
+        "title": "Bac requis pour Licence"
+      },
+      "education_studium_master": {
+        "title": "Bac+3 requis pour Master"
+      },
+      "bac_grade_studium": {
+        "title": "Moyenne Bac ≥ 14/20"
+      },
+      "contract_ausbildung": {
+        "title": "Ausbildungsvertrag signé"
+      },
+      "admission_studium": {
+        "title": "Admission universitaire (Zulassung)"
+      },
+      "aps_studium": {
+        "title": "Certificat APS (Rabat)"
+      },
+      "financial_proof": {
+        "title": "Preuve financière"
+      },
+      "passport": {
+        "title": "Passeport valide"
+      },
+      "clean_record": {
+        "title": "Casier judiciaire vierge"
+      },
+      "age_ausbildung": {
+        "title": "Âge (Ausbildung)"
+      }
+    },
+    "explain": {
+      "german_level_ausbildung.b2_strong": "Très bien : B2 dépasse le B1 minimum. Les employeurs apprécient.",
+      "german_level_ausbildung.b1_min": "OK : B1 est le minimum légal pour le visa Ausbildung. B2 serait plus sûr.",
+      "german_level_ausbildung.a2_close": "Proche : A2 est juste sous le minimum. Comptez 4–6 mois de cours intensif pour atteindre B1.",
+      "german_level_ausbildung.below": "Bloqué : il vous faut au moins B1 (Goethe / telc / ÖSD) pour le visa. 8–14 mois depuis A0/A1.",
+      "german_level_studium.c1_strong": "Excellent : C1 couvre toutes les exigences universitaires.",
+      "german_level_studium.b2_min": "OK : B2 est le standard universitaire. Certains programmes exigent TestDaF ou DSH-2.",
+      "german_level_studium.b1_close": "Proche : B1 est juste sous la plupart des minima Studium. 4–6 mois pour atteindre B2.",
+      "german_level_studium.below": "Bloqué : il vous faut au moins B2 pour un Studium en allemand. Goethe / telc / ÖSD / TestDaF / DSH acceptés.",
+      "german_level_studium.english_program": "OK : pour un programme en anglais, A1 suffit souvent — certaines universités acceptent tout niveau.",
+      "german_level_studium.english_program_a1": "Recommandé : même pour un programme anglais, A1 facilite la vie quotidienne.",
+      "education_ausbildung.no_bac": "Certains employeurs acceptent sans le Bac, mais la majorité le préfère. À compléter si possible.",
+      "education_ausbildung.bac_ok": "Votre niveau qualifie pour toute Ausbildung.",
+      "education_studium_bachelor.no_bac": "Bloqué : Le Bac (ou équivalent reconnu) est requis pour la Licence en Allemagne.",
+      "education_studium_bachelor.bac_ok": "Votre Bac qualifie pour la Licence.",
+      "education_studium_master.licence_ok": "Votre niveau qualifie pour le Master.",
+      "education_studium_master.bac_plus_2": "Bac+2 est en dessous de la plupart des Masters allemands — il faut généralement une Licence (180 ECTS).",
+      "education_studium_master.below": "Bloqué : Une Licence (Bac+3) est le minimum pour un Master allemand.",
+      "bac_grade_studium.tres_bien": "Très bien : ≥ 14/20 (mention 'Bien' ou plus) qualifie pour une admission directe en Licence.",
+      "bac_grade_studium.assez_bien": "Limite : 12–13.99 (mention 'Assez Bien') nécessite généralement un Studienkolleg avant la Licence.",
+      "bac_grade_studium.passable": "Insuffisant : 10–11.99 ne qualifie généralement pas pour les universités allemandes, même via Studienkolleg.",
+      "bac_grade_studium.failing": "Sous la moyenne : un Bac sous 10 ne qualifie pas en Allemagne.",
+      "contract_ausbildung.have": "Vous tenez l'élément clé — le contrat est le document le plus important pour l'Ausbildung.",
+      "contract_ausbildung.missing": "Bloqué : Pas de visa sans Ausbildungsvertrag signé. 1 100+ offres ouvertes sur /ausbildung-jobs.",
+      "admission_studium.have": "Vous avez votre Zulassung — le document le plus important du Studium.",
+      "admission_studium.missing": "Bloqué : Vous avez besoin d'une Zulassung. Postulez via Uni-Assist ou directement à votre université cible.",
+      "aps_studium.have": "Vous avez le certificat APS obligatoire.",
+      "aps_studium.missing": "Bloqué : APS obligatoire pour les Marocains. 6–8 semaines à l'ambassade allemande à Rabat. Commencez maintenant.",
+      "financial_proof.sperrkonto": "Sperrkonto est la preuve standard et la plus sûre. 11 904 €/an, restitués en mensualités après l'arrivée.",
+      "financial_proof.sponsor": "Verpflichtungserklärung acceptée. Vérifiez que votre sponsor a les preuves de revenus prêtes.",
+      "financial_proof.salary_ausbildung": "Votre salaire d'Ausbildung couvre le minimum s'il est ≥ 934 €/mois. Apportez le contrat.",
+      "financial_proof.family": "Les lettres de soutien familial sont une preuve faible seules. Recommandation forte : ajoutez un Sperrkonto.",
+      "financial_proof.need_help": "Bloqué : Il vous faut Sperrkonto, Verpflichtungserklärung, ou preuve de salaire. Sans cela, visa refusé.",
+      "financial_proof.studium_no_salary": "Bloqué : Pour le Studium, on ne peut pas se baser sur un futur salaire. Sperrkonto ou Verpflichtungserklärung obligatoire.",
+      "financial_proof.unclear": "Définissez clairement votre preuve financière avant de postuler.",
+      "passport.valid": "Votre passeport remplit les exigences de validité.",
+      "passport.expiring": "Bloqué : Renouvelez votre passeport avant de postuler. Validité doit dépasser la durée du visa.",
+      "clean_record.clean": "Votre casier est vierge — pas de souci.",
+      "clean_record.case_by_case": "Chaque cas examiné individuellement. Infractions mineures souvent OK ; condamnations sérieuses peuvent bloquer.",
+      "age_ausbildung.young": "Tranche idéale — la majorité des employeurs préfèrent moins de 30 ans pour 3 ans d'Ausbildung.",
+      "age_ausbildung.mid": "Dans la fourchette. Pas de problème légal, juste un peu moins courant.",
+      "age_ausbildung.older": "Possible mais plus difficile — certains employeurs préfèrent plus jeunes. Vos compétences/expérience comptent davantage.",
+      "age_ausbildung.much_older": "Possible mais rare. Visez les secteurs qui valorisent les profils mûrs (santé, commerce, hôtellerie)."
     }
   }
 }

@@ -269,6 +269,10 @@
       "documentChecklist": {
         "name": "Dokumenten-Checkliste",
         "desc": "Persönliche Liste aller Dokumente fürs deutsche Visum, in MAD/EUR"
+      },
+      "eligibilityChecker": {
+        "name": "Eignungsprüfer",
+        "desc": "Sieh, wo du fürs deutsche Visum stehst — Score und genaue Blocker"
       }
     },
     "ladder": {
@@ -3065,7 +3069,8 @@
       "complete": "Abgeschlossen",
       "livingCost": "Lebenskosten",
       "migrationTimeline": "Migrations-Timeline",
-      "documentChecklist": "Dokumenten-Checkliste"
+      "documentChecklist": "Dokumenten-Checkliste",
+      "eligibilityChecker": "Eignung"
     },
     "topbar": {
       "help": "Hilfe",
@@ -3688,6 +3693,160 @@
         "where": "Bei TLS-Termin in MAD bezahlt",
         "notes": "Nicht erstattungsfähig. Bar oder Karte am Tag des Termins."
       }
+    }
+  },
+  "eligibilityChecker": {
+    "metaTitle": "Visum-Eignungsprüfer — Marokko nach Deutschland",
+    "metaDesc": "Prüfe deine Eignung fürs deutsche Ausbildungs- oder Studiumsvisum als marokkanischer Bewerber — Score, Blocker und persönliche nächste Schritte.",
+    "eyebrow": "Visumseignung",
+    "title": "Visum-Eignungsprüfer",
+    "subtitle": "Finde heraus, wo du genau für das deutsche Ausbildungs- oder Studiumsvisum stehst — was dich blockiert und was das Visum freischaltet.",
+    "formTitle": "Dein Profil",
+    "pathLabel": "Weg",
+    "studiumGoalLabel": "Studium-Ziel",
+    "ageLabel": "Alter",
+    "educationLabel": "Höchster Abschluss",
+    "germanLabel": "Aktuelles Deutschniveau",
+    "bacAverageLabel": "Bac-Durchschnitt",
+    "bacAverageHint": "Deutsche Hochschulen erwarten ≥ 14/20 für direkte Bachelor-Zulassung. 12–13.99 erfordert meist Studienkolleg. Unter 12 in der Regel nicht qualifiziert.",
+    "hasContractTitle": "Ich habe einen unterschriebenen Ausbildungsvertrag",
+    "hasContractHint": "Vertrag eines bei IHK oder HWK eingetragenen deutschen Arbeitgebers.",
+    "hasAdmissionTitle": "Ich habe eine Zulassung einer deutschen Hochschule",
+    "hasAdmissionHint": "Endgültige oder bedingte Zulassung (Zulassung / Bedingungszulassung).",
+    "hasApsTitle": "Ich habe mein APS-Zertifikat",
+    "hasApsHint": "Pflicht für marokkanische Studium-Bewerber. Ausgestellt von APS Rabat.",
+    "englishProgramTitle": "Mein Wunschprogramm wird auf Englisch unterrichtet",
+    "englishProgramHint": "Manche Masterprogramme sind 100% Englisch. Lockert die Deutschanforderung.",
+    "financialLabel": "Finanzieller Nachweis",
+    "passportTitle": "Mein Reisepass ist ≥ 12 Monate gültig",
+    "passportHint": "Erforderlich beim Visumtermin.",
+    "cleanRecordTitle": "Mein Führungszeugnis ist sauber",
+    "cleanRecordHint": "Keine schweren Straftaten.",
+    "overall": {
+      "eligible": "Du bist berechtigt ✅",
+      "eligibleSub": "Keine kritischen Blocker. Du kannst mit dem Visumantrag fortfahren.",
+      "conditional": "Fast geschafft ⚠️",
+      "conditionalSub": "Keine Visumblocker, aber ein paar Punkte vor dem Antrag zu klären.",
+      "notYet": "Noch nicht berechtigt ❌",
+      "notYetSub": "Es gibt kritische Blocker. Siehe Liste unten."
+    },
+    "readinessLabel": "Bereitschaftswert",
+    "countPass": "Stärken",
+    "countWarn": "Hinweise",
+    "countBlocker": "Blocker",
+    "blockersTitle": "Was dein Visum heute blockiert",
+    "blockersSub": "Diese Punkte müssen vor dem Visumantrag gelöst werden.",
+    "warningsTitle": "Zu beachten",
+    "warningsSub": "Keine Blocker, aber sie können verzögern oder eine Ablehnung riskieren.",
+    "passesTitle": "Was du schon hast",
+    "ctaTitle": "Brauchst du einen persönlichen Plan?",
+    "ctaSub": "Buche eine 30-minütige Beratung mit unserem Spezialisten. Wir identifizieren deine Lücken und geben dir einen genauen Fahrplan.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "studiumGoal": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    },
+    "education": {
+      "no_bac": "Noch kein Bac",
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "financial": {
+      "sperrkonto": "Sperrkonto (11.904 € bereit)",
+      "sponsor": "Bürge in Deutschland (Verpflichtungserklärung)",
+      "salary_covers": "Meine Ausbildungsvergütung deckt meine Kosten",
+      "family_support": "Familie unterstützt mich aus Marokko",
+      "need_help": "Ich habe noch keinen Finanzplan"
+    },
+    "rules": {
+      "german_level_ausbildung": {
+        "title": "Mindestens B1 (Ausbildung)"
+      },
+      "german_level_studium": {
+        "title": "Mindestens B2 (Studium)"
+      },
+      "education_ausbildung": {
+        "title": "Bildungsstand"
+      },
+      "education_studium_bachelor": {
+        "title": "Bac für Bachelor"
+      },
+      "education_studium_master": {
+        "title": "Bac+3 für Master"
+      },
+      "bac_grade_studium": {
+        "title": "Bac-Schnitt ≥ 14/20"
+      },
+      "contract_ausbildung": {
+        "title": "Ausbildungsvertrag unterschrieben"
+      },
+      "admission_studium": {
+        "title": "Hochschulzulassung"
+      },
+      "aps_studium": {
+        "title": "APS-Zertifikat (Rabat)"
+      },
+      "financial_proof": {
+        "title": "Finanznachweis"
+      },
+      "passport": {
+        "title": "Gültiger Reisepass"
+      },
+      "clean_record": {
+        "title": "Sauberes Führungszeugnis"
+      },
+      "age_ausbildung": {
+        "title": "Alter (Ausbildung)"
+      }
+    },
+    "explain": {
+      "german_level_ausbildung.b2_strong": "Stark: B2 liegt deutlich über B1.",
+      "german_level_ausbildung.b1_min": "OK: B1 ist das gesetzliche Minimum.",
+      "german_level_ausbildung.a2_close": "Knapp: 4–6 Monate Intensivkurs zum B1.",
+      "german_level_ausbildung.below": "Blockiert: Mindestens B1 nötig. 8–14 Monate von A0/A1 zu B1.",
+      "german_level_studium.c1_strong": "Exzellent: C1 deckt alle Anforderungen.",
+      "german_level_studium.b2_min": "OK: B2 ist Standard. Manche Programme verlangen TestDaF oder DSH-2.",
+      "german_level_studium.b1_close": "Knapp: 4–6 Monate Intensivkurs zum B2.",
+      "german_level_studium.below": "Blockiert: Mindestens B2 für deutschsprachiges Studium.",
+      "german_level_studium.english_program": "OK: A1 reicht oft für englischsprachige Programme.",
+      "german_level_studium.english_program_a1": "Empfohlen: A1 erleichtert den Alltag.",
+      "education_ausbildung.no_bac": "Manche Arbeitgeber akzeptieren ohne Bac, aber die meisten bevorzugen es.",
+      "education_ausbildung.bac_ok": "Dein Bildungsstand qualifiziert für jede Ausbildung.",
+      "education_studium_bachelor.no_bac": "Blockiert: Bac ist Pflicht für Bachelor in Deutschland.",
+      "education_studium_bachelor.bac_ok": "Dein Bac qualifiziert für den Bachelor.",
+      "education_studium_master.licence_ok": "Dein Bildungsstand qualifiziert für den Master.",
+      "education_studium_master.bac_plus_2": "Bac+2 reicht für die meisten deutschen Master nicht — Licence (Bac+3, 180 ECTS) ist nötig.",
+      "education_studium_master.below": "Blockiert: Licence (Bac+3) ist Mindestvoraussetzung.",
+      "bac_grade_studium.tres_bien": "Sehr gut: ≥ 14/20 reicht für direkte Bachelor-Zulassung.",
+      "bac_grade_studium.assez_bien": "Grenzwertig: 12–13,99 erfordert meist Studienkolleg.",
+      "bac_grade_studium.passable": "Unzureichend: 10–11,99 reicht meist nicht.",
+      "bac_grade_studium.failing": "Unter Bestehensgrenze: Bac unter 10 qualifiziert nicht.",
+      "contract_ausbildung.have": "Du hast den entscheidenden Punkt — der Vertrag ist das wichtigste Ausbildungsdokument.",
+      "contract_ausbildung.missing": "Blockiert: Kein Visum ohne Ausbildungsvertrag. 1.100+ offene Stellen unter /ausbildung-jobs.",
+      "admission_studium.have": "Du hast deine Zulassung.",
+      "admission_studium.missing": "Blockiert: Zulassung nötig. Bewerbung über Uni-Assist oder direkt bei der Wunschuni.",
+      "aps_studium.have": "Du hast das APS-Zertifikat.",
+      "aps_studium.missing": "Blockiert: APS ist Pflicht. 6–8 Wochen Bearbeitungszeit in Rabat. Jetzt starten.",
+      "financial_proof.sperrkonto": "Sperrkonto ist der Standardnachweis. 11.904 €/Jahr, in Monatsraten zurückerstattet.",
+      "financial_proof.sponsor": "Verpflichtungserklärung wird akzeptiert.",
+      "financial_proof.salary_ausbildung": "Deine Vergütung deckt das Minimum bei ≥ 934 €/Monat.",
+      "financial_proof.family": "Familienunterstützungsbriefe alleine sind schwacher Nachweis.",
+      "financial_proof.need_help": "Blockiert: Ohne Sperrkonto, Verpflichtungserklärung oder Gehaltsnachweis wird das Visum abgelehnt.",
+      "financial_proof.studium_no_salary": "Blockiert: Fürs Studium reicht ein zukünftiges Gehalt nicht.",
+      "financial_proof.unclear": "Kläre deinen Finanznachweis vor dem Antrag.",
+      "passport.valid": "Reisepass erfüllt die Anforderung.",
+      "passport.expiring": "Blockiert: Pass vor dem Antrag erneuern.",
+      "clean_record.clean": "Führungszeugnis ist sauber.",
+      "clean_record.case_by_case": "Jeder Fall einzeln geprüft. Kleinere Vergehen meist OK; schwere Verurteilungen können blockieren.",
+      "age_ausbildung.young": "Idealalter — die meisten Arbeitgeber bevorzugen unter 30.",
+      "age_ausbildung.mid": "Im Rahmen. Kein rechtliches Problem.",
+      "age_ausbildung.older": "Möglich, aber schwieriger.",
+      "age_ausbildung.much_older": "Möglich, aber selten. Sektoren, die reife Bewerber schätzen (Pflege, Handel, Gastgewerbe)."
     }
   }
 }

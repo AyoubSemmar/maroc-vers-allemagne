@@ -170,6 +170,7 @@ export default function DashSidebar({
     { href: '/tools/living-cost-calculator',    label: t('livingCost'),       icon: I.euro },
     { href: '/tools/migration-timeline',        label: t('migrationTimeline'), icon: I.calendar },
     { href: '/tools/document-checklist',        label: t('documentChecklist'), icon: I.check },
+    { href: '/tools/eligibility-checker',       label: t('eligibilityChecker'), icon: I.sparkles },
   ]
 
   return (
