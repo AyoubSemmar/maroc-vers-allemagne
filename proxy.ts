@@ -30,10 +30,10 @@ function isProtected(pathname: string): boolean {
   )
 }
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
 
-  // Run the intl middleware first — it handles locale detection / redirects.
+  // Run the intl proxy first — it handles locale detection / redirects.
   const intlResponse = intlMiddleware(request)
 
   // If the intl middleware is redirecting (e.g. adding a locale prefix),

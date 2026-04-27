@@ -66,21 +66,3 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
 }
 
 export const CATEGORIES_ORDER: CategoryKey[] = ['healthcare', 'it', 'handwerk', 'hospitality', 'logistics']
-
-// Build the list of search queries used by the daily fetch cron
-export function buildSearchQueries(): string[] {
-  const queries: string[] = []
-  for (const cat of Object.values(CATEGORIES)) {
-    // Only use the first (masculine) form per keyword root to avoid duplicates
-    const roots = new Set<string>()
-    for (const kw of cat.keywords) {
-      // Strip suffixes "in", "frau", etc. to get root for dedup
-      const root = kw.replace(/(in|frau)$/i, '').trim()
-      roots.add(root)
-    }
-    for (const root of roots) {
-      queries.push(`${root} Ausbildung`)
-    }
-  }
-  return queries
-}
