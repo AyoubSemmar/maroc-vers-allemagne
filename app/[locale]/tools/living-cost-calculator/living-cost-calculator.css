@@ -358,3 +358,57 @@
   color: var(--brand);
   font-weight: 800;
 }
+
+/* ─── Mobile (< 600px): tighten everything ───────────────── */
+@media (max-width: 600px) {
+  .lcc-hero { padding: 36px 0 28px; }
+  .lcc-title { font-size: 26px; margin: 8px 0; }
+  .lcc-subtitle { font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
+  .lcc-hero-badge { padding: 4px 10px; font-size: 11.5px; }
+
+  .lcc-body { padding: 24px 0 0; }
+  .lcc-grid { gap: 16px; }
+
+  .lcc-form-card,
+  .lcc-result-card,
+  .lcc-info-card { padding: 18px; border-radius: var(--r-md); }
+
+  .lcc-section-title { font-size: 16px; margin-bottom: 14px; }
+  .lcc-field { margin-bottom: 16px; }
+  .lcc-label { font-size: 12.5px; margin-bottom: 8px; }
+  .lcc-select { padding: 10px 12px; padding-inline-end: 32px; font-size: 14px; }
+
+  /* Pills: keep 2-up for accommodation, drop lifestyle to 1 column for clarity */
+  .lcc-pill { padding: 10px 12px; }
+  .lcc-pill-icon { font-size: 18px; }
+  .lcc-pill-label { font-size: 12.5px; }
+  .lcc-pill-sub { font-size: 11px; }
+
+  /* Stipend + toggle */
+  .lcc-stipend-input { font-size: 16px; padding: 10px 0; }
+  .lcc-stipend-prefix { font-size: 16px; }
+  .lcc-toggle { padding: 12px 14px; gap: 12px; }
+  .lcc-toggle-title { font-size: 13px; }
+  .lcc-toggle-sub { font-size: 11.5px; }
+
+  /* Result card */
+  .lcc-result-eyebrow { font-size: 11px; }
+  .lcc-result-total { font-size: 38px; margin: 4px 0 2px; }
+  .lcc-result-sub { font-size: 13px; margin-bottom: 16px; }
+
+  .lcc-donut { width: 180px; height: 180px; }
+  .lcc-donut-wrap { margin-bottom: 18px; }
+
+  .lcc-coverage { padding: 12px 14px; margin-bottom: 18px; }
+  .lcc-coverage-row { font-size: 13px; }
+  .lcc-coverage-row--big { font-size: 14px; }
+  .lcc-coverage-row--big strong { font-size: 18px; }
+  .lcc-coverage-hint { font-size: 11.5px; }
+
+  .lcc-breakdown-title { font-size: 12.5px; margin-bottom: 8px; }
+  .lcc-breakdown-row { font-size: 13px; padding: 6px 0; gap: 8px; }
+  .lcc-breakdown-pct { font-size: 11.5px; min-width: 28px; }
+  .lcc-breakdown-value { min-width: 50px; }
+
+  .lcc-info-list li { font-size: 13px; padding-inline-start: 20px; }
+}
