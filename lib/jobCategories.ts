@@ -13,6 +13,8 @@ export type CategoryKey =
   | 'public_service'
   | 'retail'
   | 'automotive'
+  | 'engineering'
+  | 'finance'
 
 export type Category = {
   key: CategoryKey
@@ -34,10 +36,19 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
   },
   handwerk: {
     key: 'handwerk',
-    nameEn: 'Skilled Trades',
-    nameAr: 'الحرف المهنية',
-    icon: '🔧',
-    keywords: ['Elektroniker', 'Elektronikerin', 'Anlagenmechaniker', 'Anlagenmechanikerin', 'Mechatroniker', 'Mechatronikerin'],
+    nameEn: 'Construction & Trades',
+    nameAr: 'البناء والحرف',
+    icon: '👷',
+    keywords: [
+      'Elektroniker', 'Elektronikerin',
+      'Anlagenmechaniker', 'Anlagenmechanikerin',
+      'Mechatroniker', 'Mechatronikerin',
+      'Maurer', 'Maurerin',
+      'Zimmerer', 'Zimmerin',
+      'Tischler', 'Tischlerin',
+      'Maler und Lackierer', 'Malerin und Lackiererin',
+      'Bauzeichner', 'Bauzeichnerin',
+    ],
     color: 'brand',
   },
   it: {
@@ -142,9 +153,38 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
     ],
     color: 'brand',
   },
+  engineering: {
+    key: 'engineering',
+    nameEn: 'Engineering & Technology',
+    nameAr: 'الهندسة والتكنولوجيا',
+    icon: '⚙️',
+    keywords: [
+      'Industriemechaniker', 'Industriemechanikerin',
+      'Werkzeugmechaniker', 'Werkzeugmechanikerin',
+      'Konstruktionsmechaniker', 'Konstruktionsmechanikerin',
+      'Verfahrensmechaniker', 'Verfahrensmechanikerin',
+      'Technische Produktdesigner', 'Technische Produktdesignerin',
+      'Technischer Produktdesigner', 'Technische Produktdesigner',
+    ],
+    color: 'teal',
+  },
+  finance: {
+    key: 'finance',
+    nameEn: 'Finance & Banking',
+    nameAr: 'المالية والبنوك',
+    icon: '💰',
+    keywords: [
+      'Bankkaufmann', 'Bankkauffrau',
+      'Versicherungskaufmann', 'Versicherungskauffrau',
+      'Kaufmann für Versicherungen und Finanzanlagen', 'Kauffrau für Versicherungen und Finanzanlagen',
+      'Steuerfachangestellte', 'Steuerfachangestellter',
+    ],
+    color: 'gold',
+  },
 }
 
 export const CATEGORIES_ORDER: CategoryKey[] = [
-  'healthcare', 'it', 'handwerk', 'hospitality', 'logistics',
-  'education', 'media', 'public_service', 'retail', 'automotive',
+  'healthcare', 'it', 'engineering', 'handwerk', 'automotive',
+  'hospitality', 'logistics', 'retail', 'public_service',
+  'finance', 'education', 'media',
 ]
