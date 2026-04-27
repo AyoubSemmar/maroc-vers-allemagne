@@ -1,15 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- Rounded brand tile -->
-  <rect width="32" height="32" rx="7" fill="#d96d3c"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FF8B6B"/>
+      <stop offset="100%" stop-color="#E85F2C"/>
+    </linearGradient>
+  </defs>
 
-  <!-- G + arrow mark, shifted up to leave room for the flag stripes -->
-  <g transform="translate(-1, -3.5)">
-    <path d="M22 11A8 8 0 1 0 22.5 18" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M16 15.5h6.5V21" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  </g>
+  <!-- Rounded brand tile with vertical orange→red gradient -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
 
-  <!-- German flag stripes at the bottom — black, red, gold -->
-  <rect x="6"  y="25" width="20" height="2" fill="#000000"/>
-  <rect x="6"  y="27" width="20" height="2" fill="#DD0000"/>
-  <rect x="6"  y="29" width="20" height="2" fill="#FFCE00"/>
+  <!-- Chunky white G — almost-full circle (open on the right) with a
+       short horizontal spur coming in to the centre. -->
+  <path
+    d="M 20.5 10.5 A 5.5 5.5 0 1 0 20.5 17.5 L 17 17.5"
+    stroke="white"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"/>
+
+  <!-- German flag stripes (black / red / gold) inset from the sides -->
+  <rect x="7" y="25"   width="18" height="1.6" rx="0.5" fill="#000000"/>
+  <rect x="7" y="27.2" width="18" height="1.6" rx="0.5" fill="#DD0000"/>
+  <rect x="7" y="29.4" width="18" height="1.6" rx="0.5" fill="#FFCE00"/>
 </svg>
