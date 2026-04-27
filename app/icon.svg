@@ -1,5 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Rounded brand tile -->
   <rect width="32" height="32" rx="7" fill="#d96d3c"/>
-  <path d="M22 11A8 8 0 1 0 22.5 18" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M16 15.5h6.5V21" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- G + arrow mark, shifted up to leave room for the flag stripes -->
+  <g transform="translate(-1, -3.5)">
+    <path d="M22 11A8 8 0 1 0 22.5 18" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M16 15.5h6.5V21" fill="none" stroke="white" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- German flag stripes at the bottom — black, red, gold -->
+  <rect x="6"  y="25" width="20" height="2" fill="#000000"/>
+  <rect x="6"  y="27" width="20" height="2" fill="#DD0000"/>
+  <rect x="6"  y="29" width="20" height="2" fill="#FFCE00"/>
 </svg>
