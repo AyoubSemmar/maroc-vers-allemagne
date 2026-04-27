@@ -133,7 +133,7 @@ export default function InterviewPrep({ locale }: { locale: AppLocale }) {
         <section className="ip-cta">
           <h2 className="ip-cta-title">{t('ctaTitle')}</h2>
           <p className="ip-cta-sub">{t('ctaSub')}</p>
-          <BookConsultationButton variant="on-cta" />
+          <BookConsultationButton variant="on-cta" topic="interview-prep" />
         </section>
       </div>
     </div>

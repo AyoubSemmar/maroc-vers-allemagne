@@ -41,7 +41,7 @@ export default function ApplyForMePage() {
           <h2 className="afm-buy-title">{t('buyTitle')}</h2>
           <p className="afm-buy-sub">{t('buySub')}</p>
           <div className="afm-buy-cta-row">
-            <BookConsultationButton variant="on-cta" />
+            <BookConsultationButton variant="on-cta" topic="apply-for-me" />
           </div>
         </div>
 

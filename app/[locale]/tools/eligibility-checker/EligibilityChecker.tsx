@@ -302,7 +302,7 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
         <section className="ec-cta">
           <h2 className="ec-cta-title">{t('ctaTitle')}</h2>
           <p className="ec-cta-sub">{t('ctaSub')}</p>
-          <BookConsultationButton variant="on-cta" />
+          <BookConsultationButton variant="on-cta" topic="eligibility" />
         </section>
       </div>
     </div>

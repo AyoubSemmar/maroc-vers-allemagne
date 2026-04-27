@@ -242,7 +242,7 @@ export default function MigrationTimeline({ locale }: { locale: AppLocale }) {
         <section className="mtl-cta">
           <h2 className="mtl-cta-title">{t('ctaTitle')}</h2>
           <p className="mtl-cta-sub">{t('ctaSub')}</p>
-          <BookConsultationButton variant="on-cta" />
+          <BookConsultationButton variant="on-cta" topic="migration-timeline" />
         </section>
       </div>
     </div>

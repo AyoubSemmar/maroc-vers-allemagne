@@ -246,7 +246,7 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
         <section className="dcl-cta">
           <h2 className="dcl-cta-title">{t('ctaTitle')}</h2>
           <p className="dcl-cta-sub">{t('ctaSub')}</p>
-          <BookConsultationButton variant="on-cta" />
+          <BookConsultationButton variant="on-cta" topic="document-checklist" />
         </section>
       </div>
     </div>
