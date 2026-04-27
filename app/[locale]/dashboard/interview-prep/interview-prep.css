@@ -1,0 +1,300 @@
+/* ─── Interview Prep ─────────────────────────────────────── */
+.ip-root {
+  background: var(--bg);
+  color: var(--ink);
+  min-height: 100vh;
+  padding-bottom: 80px;
+}
+.ip-root .wrap { max-width: 1080px; margin: 0 auto; padding-inline: 20px; }
+@media (max-width: 640px) { .ip-root .wrap { padding-inline: 16px; } }
+.ip-root h1, .ip-root h2, .ip-root h3, .ip-root h4 { margin: 0; }
+
+/* Hero */
+.ip-hero {
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--brand) 8%, var(--bg-warm)) 0%,
+    var(--bg-warm) 60%,
+    var(--bg) 100%);
+  padding: 60px 0 50px;
+  border-bottom: 1px solid var(--line);
+}
+.ip-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--brand);
+}
+.ip-eyebrow-dot { width: 6px; height: 6px; background: var(--brand); border-radius: 50%; }
+.ip-title { font-size: clamp(28px, 4.5vw, 44px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin: 12px 0 12px; }
+.ip-subtitle { font-size: clamp(15px, 2vw, 17px); color: var(--ink-soft); max-width: 660px; line-height: 1.6; margin: 0 0 24px; }
+.ip-hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.ip-hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12.5px; font-weight: 700; color: var(--ink-soft);
+}
+
+/* Body */
+.ip-body { padding: 36px 0 0; }
+
+/* Filter */
+.ip-filter {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: 28px;
+}
+.ip-pill {
+  padding: 8px 16px;
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: 999px;
+  font: inherit; font-size: 13px; font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.ip-pill:hover { border-color: color-mix(in oklch, var(--brand) 50%, var(--line)); color: var(--ink); }
+.ip-pill.is-active {
+  background: var(--brand); color: #fff; border-color: var(--brand);
+  box-shadow: 0 6px 16px -8px color-mix(in oklch, var(--brand) 60%, transparent);
+}
+
+/* List */
+.ip-list { display: flex; flex-direction: column; gap: 16px; }
+
+/* Card */
+.ip-card {
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(20px, 3vw, 28px);
+  transition: border-color 0.15s;
+}
+.ip-card--diff-3 { border-color: color-mix(in oklch, oklch(0.62 0.20 25) 30%, var(--line)); }
+
+.ip-card-head {
+  display: flex; align-items: center; gap: 14px;
+  margin-bottom: 14px;
+}
+.ip-card-num {
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: color-mix(in oklch, var(--brand) 10%, var(--bg-warm));
+  color: var(--brand);
+  border-radius: 50%;
+  font-size: 13px; font-weight: 900;
+  flex: none;
+}
+.ip-card-meta {
+  display: flex; align-items: center; gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.ip-card-cat {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 10px;
+  background: color-mix(in oklch, var(--brand) 10%, transparent);
+  color: var(--brand);
+  border-radius: 999px;
+  font-size: 12px; font-weight: 700;
+}
+.ip-card-diff { font-size: 13px; }
+
+.ip-question-de {
+  font-size: clamp(17px, 2.4vw, 22px);
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.ip-question-trans {
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+.ip-why-toggle {
+  background: transparent; border: none; padding: 0;
+  font: inherit;
+  color: var(--brand);
+  font-size: 13px; font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+.ip-why-toggle:hover { text-decoration: underline; }
+.ip-why-box {
+  background: color-mix(in oklch, var(--brand) 8%, var(--bg-warm));
+  border: 1px solid color-mix(in oklch, var(--brand) 25%, var(--line));
+  border-radius: var(--r-md);
+  padding: 12px 16px;
+  margin-bottom: 14px;
+}
+.ip-why-box p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); }
+
+/* Reveal button */
+.ip-answer-wrapper { margin-top: 14px; }
+.ip-reveal-btn {
+  width: 100%;
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, var(--brand) 0%, oklch(0.55 0.17 320) 100%);
+  color: #fff;
+  border: none; border-radius: var(--r-md);
+  font: inherit; font-size: 14px; font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 8px 20px -10px color-mix(in oklch, var(--brand) 60%, transparent);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.ip-reveal-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -10px color-mix(in oklch, var(--brand) 60%, transparent); }
+.ip-reveal-icon { font-size: 18px; }
+
+/* Answer (revealed) — anti-steal protected */
+.ip-answer-protected {
+  position: relative;
+  background: color-mix(in oklch, var(--brand) 4%, var(--bg-warm));
+  border: 1.5px dashed color-mix(in oklch, var(--brand) 35%, var(--line));
+  border-radius: var(--r-md);
+  padding: 22px 22px 60px;
+  overflow: hidden;
+  /* Disable text selection */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+/* Repeating watermark overlay */
+.ip-answer-protected::before {
+  content: attr(data-watermark);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  color: rgba(217, 109, 60, 0.08);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transform: rotate(-12deg) scale(1.4);
+  pointer-events: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  z-index: 0;
+}
+.ip-answer-protected::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(45deg,
+      transparent 0,
+      transparent 80px,
+      rgba(217, 109, 60, 0.02) 80px,
+      rgba(217, 109, 60, 0.02) 82px);
+  pointer-events: none;
+  z-index: 0;
+}
+.ip-answer-section {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 16px;
+}
+.ip-answer-label {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+  margin: 0 0 6px;
+}
+.ip-answer-label.ip-do { color: oklch(0.46 0.16 152); }
+.ip-answer-label.ip-dont { color: oklch(0.50 0.18 25); }
+.ip-answer-text {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--ink);
+  margin: 0;
+  white-space: pre-line;
+}
+
+.ip-collapse-btn {
+  position: absolute;
+  bottom: 14px;
+  inset-inline-end: 14px;
+  background: rgba(0,0,0,0.06);
+  border: none; border-radius: 999px;
+  padding: 6px 14px;
+  font: inherit; font-size: 12px; font-weight: 700;
+  color: var(--ink-soft);
+  cursor: pointer;
+  z-index: 2;
+}
+.ip-collapse-btn:hover { background: rgba(0,0,0,0.1); }
+
+/* Locked state */
+.ip-locked {
+  position: relative;
+  background: var(--bg-warm);
+  border: 1.5px dashed var(--line);
+  border-radius: var(--r-md);
+  padding: 28px 24px;
+  text-align: center;
+  margin-top: 14px;
+}
+.ip-locked-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.ip-locked-title {
+  font-size: 16px; font-weight: 800;
+  margin: 0 0 6px;
+}
+.ip-locked-body {
+  font-size: 13.5px; color: var(--ink-soft);
+  margin: 0 auto 16px;
+  max-width: 380px;
+  line-height: 1.5;
+}
+.ip-locked-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 22px;
+  background: var(--brand); color: #fff;
+  border-radius: 999px;
+  font-size: 13.5px; font-weight: 800;
+  text-decoration: none;
+}
+.ip-locked-cta:hover { transform: translateY(-1px); }
+
+/* CTA */
+.ip-cta {
+  background: linear-gradient(135deg, var(--brand) 0%, oklch(0.55 0.17 320) 100%);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: clamp(28px, 5vw, 48px);
+  margin-top: 36px;
+  text-align: center;
+  box-shadow: 0 20px 50px -20px color-mix(in oklch, var(--brand) 60%, transparent);
+}
+.ip-cta-title { font-size: clamp(22px, 3vw, 30px); font-weight: 900; letter-spacing: -0.02em; margin: 0 0 8px; color: #fff; }
+.ip-cta-sub { font-size: 14px; color: color-mix(in srgb, #fff 88%, transparent); margin: 0 auto 22px; max-width: 520px; line-height: 1.55; }
+
+/* Hide answers in print mode (anti-steal) */
+@media print {
+  .ip-answer-protected,
+  .ip-reveal-btn,
+  .ip-cta { display: none !important; }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .ip-hero { padding: 36px 0 28px; }
+  .ip-title { font-size: 24px; line-height: 1.15; }
+  .ip-card { padding: 18px; border-radius: var(--r-md); }
+  .ip-card-num { width: 30px; height: 30px; font-size: 12px; }
+  .ip-question-de { font-size: 16px; }
+  .ip-pill { padding: 6px 12px; font-size: 12.5px; }
+  .ip-answer-protected { padding: 18px 16px 56px; }
+}

@@ -158,7 +158,7 @@ export default function DashSidebar({
   const preparation: NavItem[] = [
     { href: '/dashboard',                 label: t('dashboard'),       icon: I.grid },
     { href: '/dashboard/learn-german',    label: t('germanLearning'),  icon: I.lang },
-    { href: '/dashboard/interview-prep',  label: t('interviewPrep'),   icon: I.mic,    locked: true },
+    { href: '/dashboard/interview-prep',  label: t('interviewPrep'),   icon: I.mic,    badge: t('newBadge') },
     { href: '/dashboard/video-studio',    label: t('videoStudio'),     icon: I.video,  locked: true },
   ]
   const tools: NavItem[] = [
