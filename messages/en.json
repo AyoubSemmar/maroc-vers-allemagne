@@ -257,6 +257,10 @@
       "sim": {
         "name": "SIM cards",
         "desc": "Stay connected from day one"
+      },
+      "livingCost": {
+        "name": "Living Cost Calculator",
+        "desc": "Estimate monthly costs in 15 cities"
       }
     },
     "ladder": {
@@ -3167,6 +3171,116 @@
       "bachelorDescUniAssist": "Bachelor programs open to international applicants via uni-assist, with deadlines and admission requirements.",
       "masterDescUniAssist": "Master programs open to international applicants via uni-assist, with deadlines and admission requirements.",
       "seeOnUniAssist": "See on uni-assist"
+    }
+  },
+  "livingCost": {
+    "metaTitle": "Living Cost Calculator — Estimate monthly costs in Germany",
+    "metaDesc": "Estimate your monthly living costs as an Ausbildung trainee across 15 German cities — rent, food, transport, insurance, and more.",
+    "eyebrow": "Financial planning",
+    "title": "Living Cost Calculator",
+    "subtitle": "Estimate your monthly living expenses across 15 German cities. Compare rent, food, transport, and insurance against your Ausbildung stipend.",
+    "badgeOfficial": "2026 figures",
+    "badgeDestatis": "DAAD + Destatis",
+    "badgeFree": "Free",
+    "formTitle": "Tell us about you",
+    "cityLabel": "German city",
+    "accommodationLabel": "Accommodation type",
+    "lifestyleLabel": "Lifestyle",
+    "sectorLabel": "Ausbildung sector",
+    "stipendLabel": "Monthly stipend",
+    "stipendHint": "Your expected monthly Ausbildung salary. Auto-filled from your sector — feel free to adjust.",
+    "perMonth": "month",
+    "partnerLabel": "Partner or dependent",
+    "partnerHint": "Includes a partner sharing accommodation. Adds about {pct}% to total monthly cost.",
+    "resultEyebrow": "Estimated monthly cost",
+    "resultSubtitle": "For a typical Ausbildung trainee living in {city}",
+    "stipendShort": "Stipend",
+    "costsShort": "Living costs",
+    "surplus": "Surplus",
+    "deficit": "Deficit",
+    "surplusHint": "Your stipend covers your monthly costs with money left over for savings or extras.",
+    "deficitHint": "You may need a part-time job (up to 20h/week is allowed during Ausbildung) or family support to close this gap.",
+    "breakdownTitle": "Where the money goes",
+    "infoTitle": "Good to know",
+    "infoBlocked": "The €992/month blocked-account requirement for the German visa is separate from these monthly living costs.",
+    "infoSetup": "First-month setup costs (security deposit, registration, basics) typically add €2,500–4,500 on top.",
+    "infoEstimate": "These are 2026 estimates from public DAAD and Destatis data. Actual costs vary by neighborhood and personal habits.",
+    "tier": {
+      "1": "Tier 1 · most expensive",
+      "2": "Tier 2 · high",
+      "3": "Tier 3 · moderate",
+      "4": "Tier 4 · most affordable"
+    },
+    "city": {
+      "munich": "Munich",
+      "frankfurt": "Frankfurt",
+      "hamburg": "Hamburg",
+      "stuttgart": "Stuttgart",
+      "dusseldorf": "Düsseldorf",
+      "cologne": "Cologne",
+      "berlin": "Berlin",
+      "hannover": "Hannover",
+      "bremen": "Bremen",
+      "nuremberg": "Nuremberg",
+      "dortmund": "Dortmund",
+      "leipzig": "Leipzig",
+      "dresden": "Dresden",
+      "bochum": "Bochum",
+      "chemnitz": "Chemnitz"
+    },
+    "accommodation": {
+      "dormitory": {
+        "name": "Student dorm",
+        "hint": "Cheapest option, but waiting lists in popular cities can be 6–12 months."
+      },
+      "shared": {
+        "name": "Shared (WG)",
+        "hint": "Most popular among trainees — affordable, social, flexible."
+      },
+      "studio": {
+        "name": "Studio",
+        "hint": "Private space; expect a higher rent and a 1–3 month deposit."
+      },
+      "apartment": {
+        "name": "1-bed apartment",
+        "hint": "Most space and privacy — also the highest monthly rent."
+      }
+    },
+    "lifestyle": {
+      "budget": {
+        "name": "Budget",
+        "sub": "~€{food}/mo food"
+      },
+      "moderate": {
+        "name": "Moderate",
+        "sub": "~€{food}/mo food"
+      },
+      "comfortable": {
+        "name": "Comfortable",
+        "sub": "~€{food}/mo food"
+      }
+    },
+    "sector": {
+      "healthcare": "Healthcare",
+      "it": "IT",
+      "engineering": "Engineering",
+      "automotive": "Automotive",
+      "handwerk": "Construction & trades",
+      "hospitality": "Hospitality",
+      "retail": "Retail",
+      "education": "Education",
+      "media": "Media",
+      "public_service": "Public service",
+      "finance": "Finance",
+      "logistics": "Logistics"
+    },
+    "category": {
+      "rent": "Rent",
+      "food": "Food & groceries",
+      "transport": "Transport",
+      "utilities": "Utilities & internet",
+      "insurance": "Health insurance",
+      "entertainment": "Entertainment & misc"
     }
   }
 }

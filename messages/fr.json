@@ -257,6 +257,10 @@
       "sim": {
         "name": "Cartes SIM",
         "desc": "Restez connecté dès le premier jour"
+      },
+      "livingCost": {
+        "name": "Coût de la vie",
+        "desc": "Estimez vos dépenses dans 15 villes"
       }
     },
     "ladder": {
@@ -3167,6 +3171,116 @@
       "bachelorDescUniAssist": "Licences ouvertes aux candidats internationaux via uni-assist, avec délais et conditions d admission.",
       "masterDescUniAssist": "Masters ouverts aux candidats internationaux via uni-assist, avec délais et conditions d admission.",
       "seeOnUniAssist": "Voir sur uni-assist"
+    }
+  },
+  "livingCost": {
+    "metaTitle": "Calculateur de coût de la vie — Allemagne",
+    "metaDesc": "Estimez vos dépenses mensuelles en tant qu'apprenti Ausbildung dans 15 villes allemandes — loyer, alimentation, transport, assurance, etc.",
+    "eyebrow": "Planification financière",
+    "title": "Calculateur de coût de la vie",
+    "subtitle": "Estimez vos dépenses mensuelles dans 15 villes allemandes. Comparez loyer, alimentation, transport et assurance avec votre indemnité d'apprentissage.",
+    "badgeOfficial": "Chiffres 2026",
+    "badgeDestatis": "DAAD + Destatis",
+    "badgeFree": "Gratuit",
+    "formTitle": "Parlez-nous de vous",
+    "cityLabel": "Ville allemande",
+    "accommodationLabel": "Type de logement",
+    "lifestyleLabel": "Style de vie",
+    "sectorLabel": "Secteur d'Ausbildung",
+    "stipendLabel": "Indemnité mensuelle",
+    "stipendHint": "Votre salaire d'apprentissage prévu. Pré-rempli selon votre secteur — modifiable.",
+    "perMonth": "mois",
+    "partnerLabel": "Partenaire ou personne à charge",
+    "partnerHint": "Inclut un partenaire partageant le logement. Ajoute environ {pct} % au coût mensuel total.",
+    "resultEyebrow": "Coût mensuel estimé",
+    "resultSubtitle": "Pour un apprenti Ausbildung typique vivant à {city}",
+    "stipendShort": "Indemnité",
+    "costsShort": "Coût de la vie",
+    "surplus": "Excédent",
+    "deficit": "Déficit",
+    "surplusHint": "Votre indemnité couvre vos dépenses mensuelles avec un reste pour épargner ou pour des extras.",
+    "deficitHint": "Un emploi à temps partiel (jusqu'à 20h/semaine pendant l'Ausbildung) ou un soutien familial pourrait combler ce manque.",
+    "breakdownTitle": "Répartition des dépenses",
+    "infoTitle": "Bon à savoir",
+    "infoBlocked": "L'exigence de compte bloqué de 992 €/mois pour le visa allemand est distincte de ces frais mensuels.",
+    "infoSetup": "Les frais d'installation du premier mois (caution, inscription, équipements) ajoutent généralement 2 500–4 500 €.",
+    "infoEstimate": "Estimations 2026 à partir des données publiques DAAD et Destatis. Les coûts réels varient selon le quartier et les habitudes.",
+    "tier": {
+      "1": "Catégorie 1 · le plus cher",
+      "2": "Catégorie 2 · élevé",
+      "3": "Catégorie 3 · modéré",
+      "4": "Catégorie 4 · abordable"
+    },
+    "city": {
+      "munich": "Munich",
+      "frankfurt": "Francfort",
+      "hamburg": "Hambourg",
+      "stuttgart": "Stuttgart",
+      "dusseldorf": "Düsseldorf",
+      "cologne": "Cologne",
+      "berlin": "Berlin",
+      "hannover": "Hanovre",
+      "bremen": "Brême",
+      "nuremberg": "Nuremberg",
+      "dortmund": "Dortmund",
+      "leipzig": "Leipzig",
+      "dresden": "Dresde",
+      "bochum": "Bochum",
+      "chemnitz": "Chemnitz"
+    },
+    "accommodation": {
+      "dormitory": {
+        "name": "Résidence étudiante",
+        "hint": "L'option la moins chère, mais 6–12 mois d'attente dans les villes populaires."
+      },
+      "shared": {
+        "name": "Colocation (WG)",
+        "hint": "La plus populaire chez les apprentis — abordable, sociale, flexible."
+      },
+      "studio": {
+        "name": "Studio",
+        "hint": "Espace privé ; loyer plus élevé et caution de 1–3 mois."
+      },
+      "apartment": {
+        "name": "Appartement T1",
+        "hint": "Plus d'espace et d'intimité — aussi le loyer le plus élevé."
+      }
+    },
+    "lifestyle": {
+      "budget": {
+        "name": "Économe",
+        "sub": "~{food} €/mois alim."
+      },
+      "moderate": {
+        "name": "Modéré",
+        "sub": "~{food} €/mois alim."
+      },
+      "comfortable": {
+        "name": "Confortable",
+        "sub": "~{food} €/mois alim."
+      }
+    },
+    "sector": {
+      "healthcare": "Santé",
+      "it": "Informatique",
+      "engineering": "Ingénierie",
+      "automotive": "Automobile",
+      "handwerk": "Construction & artisanat",
+      "hospitality": "Hôtellerie",
+      "retail": "Commerce",
+      "education": "Éducation",
+      "media": "Médias",
+      "public_service": "Service public",
+      "finance": "Finance",
+      "logistics": "Logistique"
+    },
+    "category": {
+      "rent": "Loyer",
+      "food": "Alimentation",
+      "transport": "Transport",
+      "utilities": "Charges & internet",
+      "insurance": "Assurance santé",
+      "entertainment": "Loisirs & divers"
     }
   }
 }

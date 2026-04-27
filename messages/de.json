@@ -257,6 +257,10 @@
       "sim": {
         "name": "SIM-Karten",
         "desc": "Bleib ab dem ersten Tag verbunden"
+      },
+      "livingCost": {
+        "name": "Lebenshaltungsrechner",
+        "desc": "Monatskosten in 15 Städten schätzen"
       }
     },
     "ladder": {
@@ -3167,6 +3171,116 @@
       "bachelorDescUniAssist": "Für internationale Bewerber:innen offene Bachelor-Studiengänge über uni-assist, mit Fristen und Zulassungsvoraussetzungen.",
       "masterDescUniAssist": "Für internationale Bewerber:innen offene Master-Studiengänge über uni-assist, mit Fristen und Zulassungsvoraussetzungen.",
       "seeOnUniAssist": "Auf uni-assist ansehen"
+    }
+  },
+  "livingCost": {
+    "metaTitle": "Lebenshaltungsrechner — Deutschland",
+    "metaDesc": "Schätze deine monatlichen Lebenshaltungskosten als Ausbildungs-Azubi in 15 deutschen Städten — Miete, Essen, Verkehr, Versicherung u. v. m.",
+    "eyebrow": "Finanzplanung",
+    "title": "Lebenshaltungsrechner",
+    "subtitle": "Schätze deine monatlichen Ausgaben in 15 deutschen Städten. Vergleiche Miete, Essen, Verkehr und Versicherung mit deiner Ausbildungsvergütung.",
+    "badgeOfficial": "2026er Zahlen",
+    "badgeDestatis": "DAAD + Destatis",
+    "badgeFree": "Kostenlos",
+    "formTitle": "Erzähl uns von dir",
+    "cityLabel": "Deutsche Stadt",
+    "accommodationLabel": "Wohnform",
+    "lifestyleLabel": "Lebensstil",
+    "sectorLabel": "Ausbildungsbereich",
+    "stipendLabel": "Monatliche Vergütung",
+    "stipendHint": "Deine erwartete Ausbildungsvergütung. Wird aus deinem Bereich vorausgefüllt — anpassbar.",
+    "perMonth": "Monat",
+    "partnerLabel": "Partner/in oder Angehörige",
+    "partnerHint": "Inklusive Partner/in, die/der die Wohnung teilt. Erhöht die Gesamtkosten um etwa {pct} %.",
+    "resultEyebrow": "Geschätzte Monatskosten",
+    "resultSubtitle": "Für eine typische Ausbildung in {city}",
+    "stipendShort": "Vergütung",
+    "costsShort": "Lebenskosten",
+    "surplus": "Überschuss",
+    "deficit": "Fehlbetrag",
+    "surplusHint": "Deine Vergütung deckt die monatlichen Kosten — mit Reserve fürs Sparen oder Extras.",
+    "deficitHint": "Ein Nebenjob (bis 20 Std./Woche während der Ausbildung erlaubt) oder familiäre Unterstützung könnte die Lücke schließen.",
+    "breakdownTitle": "Wohin das Geld fließt",
+    "infoTitle": "Gut zu wissen",
+    "infoBlocked": "Die 992 €/Monat Sperrkonto-Anforderung für das deutsche Visum ist getrennt von diesen monatlichen Lebenskosten.",
+    "infoSetup": "Einrichtungskosten im ersten Monat (Kaution, Anmeldung, Ausstattung) liegen typischerweise bei 2.500–4.500 € extra.",
+    "infoEstimate": "2026er Schätzungen aus öffentlichen DAAD- und Destatis-Daten. Tatsächliche Kosten variieren je nach Viertel und Lebensstil.",
+    "tier": {
+      "1": "Stufe 1 · am teuersten",
+      "2": "Stufe 2 · hoch",
+      "3": "Stufe 3 · moderat",
+      "4": "Stufe 4 · am günstigsten"
+    },
+    "city": {
+      "munich": "München",
+      "frankfurt": "Frankfurt",
+      "hamburg": "Hamburg",
+      "stuttgart": "Stuttgart",
+      "dusseldorf": "Düsseldorf",
+      "cologne": "Köln",
+      "berlin": "Berlin",
+      "hannover": "Hannover",
+      "bremen": "Bremen",
+      "nuremberg": "Nürnberg",
+      "dortmund": "Dortmund",
+      "leipzig": "Leipzig",
+      "dresden": "Dresden",
+      "bochum": "Bochum",
+      "chemnitz": "Chemnitz"
+    },
+    "accommodation": {
+      "dormitory": {
+        "name": "Wohnheim",
+        "hint": "Günstigste Option, aber Wartelisten von 6–12 Monaten in beliebten Städten."
+      },
+      "shared": {
+        "name": "WG",
+        "hint": "Beliebteste Wahl unter Azubis — bezahlbar, sozial, flexibel."
+      },
+      "studio": {
+        "name": "Studio",
+        "hint": "Privater Raum; höhere Miete und 1–3 Monate Kaution erwarten."
+      },
+      "apartment": {
+        "name": "1-Zi.-Wohnung",
+        "hint": "Mehr Platz und Privatsphäre — auch die höchste Miete."
+      }
+    },
+    "lifestyle": {
+      "budget": {
+        "name": "Sparsam",
+        "sub": "~{food} €/Mon. Essen"
+      },
+      "moderate": {
+        "name": "Moderat",
+        "sub": "~{food} €/Mon. Essen"
+      },
+      "comfortable": {
+        "name": "Komfortabel",
+        "sub": "~{food} €/Mon. Essen"
+      }
+    },
+    "sector": {
+      "healthcare": "Gesundheit",
+      "it": "IT",
+      "engineering": "Technik",
+      "automotive": "Automobil",
+      "handwerk": "Bauwesen & Handwerk",
+      "hospitality": "Gastgewerbe",
+      "retail": "Handel",
+      "education": "Erziehung",
+      "media": "Medien",
+      "public_service": "Öffentlicher Dienst",
+      "finance": "Finanzwesen",
+      "logistics": "Logistik"
+    },
+    "category": {
+      "rent": "Miete",
+      "food": "Essen & Lebensmittel",
+      "transport": "Verkehr",
+      "utilities": "Nebenkosten & Internet",
+      "insurance": "Krankenversicherung",
+      "entertainment": "Freizeit & Sonstiges"
     }
   }
 }
