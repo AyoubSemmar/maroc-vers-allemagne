@@ -548,18 +548,32 @@
   .hint code { background: #1a1a1a; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
 
   @media print {
-    body { background: white; padding: 0; }
-    .grid { gap: 0; }
-    .post { transform: none; margin: 0; box-shadow: none; page-break-after: always; }
-    h1.page-title, p.page-sub, .card-label, .hint { display: none; }
+    @page { size: 1080px 1080px; margin: 0; }
+    html, body { background: white !important; padding: 0 !important; margin: 0 !important; }
+    .grid { gap: 0 !important; }
+    .card-wrap { gap: 0 !important; margin: 0 !important; padding: 0 !important; }
+    .post {
+      transform: none !important;
+      margin: 0 !important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      page-break-after: always;
+      break-after: page;
+    }
+    .post:last-of-type { page-break-after: auto; break-after: auto; }
+    h1.page-title, p.page-sub, .card-label, .card-header,
+    .download-all-bar, #error-box, #fallback-card { display: none !important; }
   }
 </style>
 </head>
 <body>
   <div class="download-all-bar">
     <button id="download-all" class="download-btn">⬇ Download all 4 posts</button>
-    <button id="show-fallback" class="download-btn" style="background: #2a2a2a; color: #ddd; box-shadow: none; margin-left: 10px;">📷 Pixel-perfect method</button>
+    <button id="print-pdf" class="download-btn" style="background: #1d4ed8; color: white; box-shadow: none; margin-left: 10px;">🖨 Print 4 PDFs (always works)</button>
+    <button id="show-fallback" class="download-btn" style="background: #2a2a2a; color: #ddd; box-shadow: none; margin-left: 10px;">📷 DevTools method</button>
   </div>
+
+  <div id="error-box" style="display:none; max-width: 720px; margin: 0 auto 20px; background: #5a1a1a; border: 1px solid #c14242; border-radius: 12px; padding: 18px 22px; color: #ffd0d0; font-size: 13.5px; line-height: 1.5; font-family: monospace; white-space: pre-wrap; word-break: break-word;"></div>
 
   <div id="fallback-card" style="display:none; max-width: 720px; margin: 0 auto 32px; background: #2a2a2a; border-radius: 12px; padding: 22px 26px; color: #ddd; font-size: 14px; line-height: 1.65;">
     <h3 style="margin: 0 0 10px; color: white; font-size: 16px;">Pixel-perfect method (always works)</h3>
@@ -759,20 +773,45 @@
 
   <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js"></script>
   <script>
-    // Export a post element as a 1080x1080 PNG. We use html-to-image which
-    // works in every modern browser without requiring any build step.
+    // Show an error on-page so the user can read it without it being dismissed.
+    function showError(msg) {
+      const box = document.getElementById('error-box')
+      box.textContent = msg
+      box.style.display = 'block'
+      box.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    function clearError() {
+      const box = document.getElementById('error-box')
+      box.style.display = 'none'
+      box.textContent = ''
+    }
+
+    // Detect file:// — most exports fail there because of CORS.
+    if (location.protocol === 'file:') {
+      window.addEventListener('DOMContentLoaded', () => {
+        showError(
+          '⚠ You opened this file directly from your filesystem (file://).\n' +
+          'Browsers block image-export libraries on file:// because of CORS.\n\n' +
+          'Either:\n' +
+          '  1. Use the "🖨 Print 4 PDFs (always works)" button at the top.\n' +
+          '  2. Use the "📷 DevTools method" — also always works.\n' +
+          '  3. Open this page from https://gogermany.ma/social-launch-templates.html instead.'
+        )
+      })
+    }
+
     async function exportPost(targetId, fileName) {
+      clearError()
       const el = document.getElementById(targetId)
       if (!el) {
-        alert('Post element not found: ' + targetId)
+        showError('Post element not found: ' + targetId)
         return
       }
       if (typeof htmlToImage === 'undefined' || !htmlToImage.toPng) {
-        alert('Export library failed to load. Check your internet connection and refresh the page (Ctrl+F5).')
+        showError('Export library failed to load.\nCheck your internet connection, then hard-refresh (Ctrl+F5).')
         throw new Error('html-to-image not loaded')
       }
 
-      // Drop the screen-preview scale transform during capture.
       const prevTransform = el.style.transform
       const prevMargin = el.style.marginBottom
       el.style.transform = 'none'
@@ -783,9 +822,11 @@
         const dataUrl = await htmlToImage.toPng(el, {
           width: 1080,
           height: 1080,
-          pixelRatio: 2,           // crisp 2x output (2160x2160) downsampled by IG
+          pixelRatio: 2,
           backgroundColor: '#0E1A36',
           cacheBust: true,
+          skipFonts: true,             // avoid CORS-tainted Google Fonts fetch
+          fontEmbedCSS: '',            // skip the implicit font embed step
           style: { transform: 'none', margin: '0' },
         })
         const a = document.createElement('a')
@@ -796,13 +837,26 @@
         a.remove()
       } catch (err) {
         console.error('Export failed for', targetId, err)
-        alert('Couldn\'t export this post.\n\nReason: ' + (err && err.message ? err.message : err) + '\n\nUse the "📷 Pixel-perfect method" button above for the manual Chrome DevTools approach — it always works.')
+        const detail = (err && err.message) ? err.message : String(err)
+        showError(
+          'Couldn\'t export "' + targetId + '".\n\n' +
+          'Reason: ' + detail + '\n\n' +
+          'Reliable alternatives:\n' +
+          '  • Click "🖨 Print 4 PDFs (always works)" — produces a PDF you can convert to PNG.\n' +
+          '  • Click "📷 DevTools method" — uses Chrome\'s built-in screenshot, always pixel-perfect.'
+        )
         throw err
       } finally {
         el.style.transform = prevTransform
         el.style.marginBottom = prevMargin
       }
     }
+
+    // Print to PDF: uses the browser's native print engine, which renders
+    // gradient text, clip-paths, emojis perfectly because it IS the browser.
+    document.getElementById('print-pdf').addEventListener('click', () => {
+      window.print()
+    })
 
     // Toggle the pixel-perfect-method instructions card.
     document.getElementById('show-fallback').addEventListener('click', () => {
