@@ -261,6 +261,10 @@
       "livingCost": {
         "name": "Living Cost Calculator",
         "desc": "Estimate monthly costs in 15 cities"
+      },
+      "migrationTimeline": {
+        "name": "Migration timeline",
+        "desc": "Estimate your Morocco→Germany timeline phase by phase"
       }
     },
     "ladder": {
@@ -3055,7 +3059,8 @@
       "services": "Services",
       "help": "Help & Docs",
       "complete": "Complete",
-      "livingCost": "Living costs"
+      "livingCost": "Living costs",
+      "migrationTimeline": "Migration timeline"
     },
     "topbar": {
       "help": "Help",
@@ -3382,5 +3387,84 @@
     "save": "Save",
     "saved": "Saved",
     "unsave": "Saved — click to remove"
+  },
+  "migrationTimeline": {
+    "metaTitle": "Germany Migration Timeline Calculator",
+    "metaDesc": "Estimate how long it takes to move from Morocco to Germany for Ausbildung or Studium — phase-by-phase, based on real BAMF and DAAD timelines.",
+    "eyebrow": "Planning · timeline",
+    "title": "Germany Migration Timeline Calculator",
+    "subtitle": "Estimate your full timeline from Morocco to Germany — German learning, application, visa, and relocation — based on real 2026 BAMF / DAAD figures.",
+    "formTitle": "Your migration profile",
+    "pathLabel": "Path",
+    "levelLabel": "Current German level",
+    "levelHint": "Target for this path: {target}.",
+    "intensityLabel": "Learning intensity",
+    "educationLabel": "Education level",
+    "vorabLabel": "I have Vorab approval (Pre-approval)",
+    "vorabHint": "Cuts visa processing from ~8 months to ~2 months.",
+    "months": "months",
+    "mo": "mo",
+    "fast": "Fast",
+    "average": "Average",
+    "slow": "Slow",
+    "resultEyebrow": "Estimated total timeline",
+    "avgScenario": "Average scenario: {n} months",
+    "phasesTitle": "Phase breakdown",
+    "insightsTitle": "What slows you down",
+    "tipsTitle": "How to reduce your timeline",
+    "ctaTitle": "Want a faster path?",
+    "ctaSub": "Book a free 30-minute consultation. We map your exact next steps and remove the bottlenecks slowing your timeline.",
+    "ctaButton": "Book a free consultation",
+    "path": {
+      "ausbildung": {
+        "name": "Ausbildung",
+        "sub": "Vocational training",
+        "target": "B1"
+      },
+      "studium": {
+        "name": "Studium",
+        "sub": "University studies",
+        "target": "B2"
+      }
+    },
+    "intensity": {
+      "slow": {
+        "name": "Slow",
+        "sub": "4–6 h/week"
+      },
+      "normal": {
+        "name": "Normal",
+        "sub": "8–12 h/week"
+      },
+      "intensive": {
+        "name": "Intensive",
+        "sub": "20+ h/week"
+      }
+    },
+    "education": {
+      "bac": "Baccalaureate",
+      "university": "University degree",
+      "other": "Other"
+    },
+    "phase": {
+      "german": "German learning",
+      "application": "Application",
+      "visa": "Visa processing",
+      "relocation": "Relocation"
+    },
+    "insights": {
+      "lowGerman": "Low German level — language is the longest single phase.",
+      "noVorab": "Without Vorab approval, visa processing takes 6–10 months instead of 2–3.",
+      "slowPace": "A slow learning pace adds 30% to the German phase.",
+      "studyDocs": "Studium needs APS, Uni-Assist, and APS docs validated — paperwork is denser than Ausbildung."
+    },
+    "tips": {
+      "intensiveCourse": "Take an intensive German course (Goethe / DSH-Kurs / online) — 4 hours a day cuts months off Phase 1.",
+      "getVorab": "Ask your future employer for Vorab approval at the contract stage. Skip 6 months of visa wait.",
+      "switchPace": "Move to at least normal intensity (8–12 h/week) — biggest single lever on total timeline.",
+      "uniAssistEarly": "Submit to Uni-Assist 6+ months before the semester. Avoid the spring-deadline crunch.",
+      "startDocs": "Start gathering documents (apostilled diploma, passport, bank statement) NOW — they expire and re-issuance is slow.",
+      "bookConsult": "Book a free consultation: a personalised checklist removes ambiguity and cuts wasted weeks."
+    }
   }
 }

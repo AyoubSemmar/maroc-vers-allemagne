@@ -261,6 +261,10 @@
       "livingCost": {
         "name": "Lebenshaltungsrechner",
         "desc": "Monatskosten in 15 Städten schätzen"
+      },
+      "migrationTimeline": {
+        "name": "Migrations-Timeline",
+        "desc": "Schätze deine Marokko→Deutschland-Timeline phasenweise"
       }
     },
     "ladder": {
@@ -3055,7 +3059,8 @@
       "services": "Dienste",
       "help": "Hilfe & Docs",
       "complete": "Abgeschlossen",
-      "livingCost": "Lebenskosten"
+      "livingCost": "Lebenskosten",
+      "migrationTimeline": "Migrations-Timeline"
     },
     "topbar": {
       "help": "Hilfe",
@@ -3382,5 +3387,84 @@
     "save": "Speichern",
     "saved": "Gespeichert",
     "unsave": "Gespeichert — klicken zum Entfernen"
+  },
+  "migrationTimeline": {
+    "metaTitle": "Auswanderungs-Timeline-Rechner Deutschland",
+    "metaDesc": "Schätze, wie lange der Umzug von Marokko nach Deutschland für Ausbildung oder Studium dauert — phasenweise, basierend auf echten BAMF- und DAAD-Zeiten.",
+    "eyebrow": "Planung · Zeitplan",
+    "title": "Auswanderungs-Timeline-Rechner",
+    "subtitle": "Schätze deine gesamte Zeitachse von Marokko nach Deutschland — Sprachlernen, Bewerbung, Visum, Umzug — basierend auf echten BAMF-/DAAD-Zahlen 2026.",
+    "formTitle": "Dein Migrationsprofil",
+    "pathLabel": "Weg",
+    "levelLabel": "Aktuelles Deutschniveau",
+    "levelHint": "Ziel für diesen Weg: {target}.",
+    "intensityLabel": "Lernintensität",
+    "educationLabel": "Bildungsstand",
+    "vorabLabel": "Ich habe eine Vorab-Zustimmung",
+    "vorabHint": "Verkürzt die Visumbearbeitung von ~8 Monaten auf ~2 Monate.",
+    "months": "Monate",
+    "mo": "Mon.",
+    "fast": "Schnell",
+    "average": "Mittel",
+    "slow": "Langsam",
+    "resultEyebrow": "Geschätzte Gesamtdauer",
+    "avgScenario": "Mittleres Szenario: {n} Monate",
+    "phasesTitle": "Phasen-Aufschlüsselung",
+    "insightsTitle": "Was dich verlangsamt",
+    "tipsTitle": "So verkürzt du deine Timeline",
+    "ctaTitle": "Schneller ankommen?",
+    "ctaSub": "Buche eine kostenlose 30-Minuten-Beratung. Wir planen deine konkreten nächsten Schritte und beseitigen Engpässe.",
+    "ctaButton": "Kostenlose Beratung buchen",
+    "path": {
+      "ausbildung": {
+        "name": "Ausbildung",
+        "sub": "Berufsausbildung",
+        "target": "B1"
+      },
+      "studium": {
+        "name": "Studium",
+        "sub": "Hochschulstudium",
+        "target": "B2"
+      }
+    },
+    "intensity": {
+      "slow": {
+        "name": "Langsam",
+        "sub": "4–6 Std./Woche"
+      },
+      "normal": {
+        "name": "Normal",
+        "sub": "8–12 Std./Woche"
+      },
+      "intensive": {
+        "name": "Intensiv",
+        "sub": "20+ Std./Woche"
+      }
+    },
+    "education": {
+      "bac": "Abitur (Bac)",
+      "university": "Hochschulabschluss",
+      "other": "Anderes"
+    },
+    "phase": {
+      "german": "Deutsch lernen",
+      "application": "Bewerbung",
+      "visa": "Visumbearbeitung",
+      "relocation": "Umzug"
+    },
+    "insights": {
+      "lowGerman": "Niedriges Deutschniveau — Sprache ist die längste Einzelphase.",
+      "noVorab": "Ohne Vorab dauert das Visum 6–10 Monate statt 2–3.",
+      "slowPace": "Langsames Tempo verlängert die Sprachphase um 30 %.",
+      "studyDocs": "Studium braucht APS, Uni-Assist und beglaubigte Dokumente — mehr Papierkram als Ausbildung."
+    },
+    "tips": {
+      "intensiveCourse": "Mach einen Intensivkurs (Goethe / DSH / online) — 4 Std./Tag spart Monate in Phase 1.",
+      "getVorab": "Bitte deinen künftigen Arbeitgeber direkt nach Vertragsunterzeichnung um Vorab. Spart 6 Monate Wartezeit.",
+      "switchPace": "Wechsle mindestens zu normalem Tempo (8–12 Std./Woche) — größter Einzelhebel auf die Gesamtdauer.",
+      "uniAssistEarly": "Reiche bei Uni-Assist 6+ Monate vor Semesterstart ein. Vermeide den Frühjahrs-Deadline-Stau.",
+      "startDocs": "Sammle Unterlagen (apostilliertes Zeugnis, Pass, Kontoauszüge) JETZT — sie verfallen und Neuausstellung dauert.",
+      "bookConsult": "Buche eine kostenlose Beratung: eine persönliche Checkliste spart Wochen."
+    }
   }
 }

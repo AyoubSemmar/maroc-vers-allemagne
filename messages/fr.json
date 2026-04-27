@@ -261,6 +261,10 @@
       "livingCost": {
         "name": "Coût de la vie",
         "desc": "Estimez vos dépenses dans 15 villes"
+      },
+      "migrationTimeline": {
+        "name": "Délai de migration",
+        "desc": "Estimez votre délai Maroc→Allemagne phase par phase"
       }
     },
     "ladder": {
@@ -3055,7 +3059,8 @@
       "services": "Services",
       "help": "Aide",
       "complete": "Complet",
-      "livingCost": "Coût de la vie"
+      "livingCost": "Coût de la vie",
+      "migrationTimeline": "Délai de migration"
     },
     "topbar": {
       "help": "Aide",
@@ -3382,5 +3387,84 @@
     "save": "Sauvegarder",
     "saved": "Sauvegardé",
     "unsave": "Sauvegardé — cliquez pour retirer"
+  },
+  "migrationTimeline": {
+    "metaTitle": "Calculateur de délai de migration vers l'Allemagne",
+    "metaDesc": "Estimez le temps nécessaire pour passer du Maroc à l'Allemagne pour une Ausbildung ou un Studium — phase par phase, selon les délais réels BAMF et DAAD.",
+    "eyebrow": "Planification · délais",
+    "title": "Calculateur de délai de migration",
+    "subtitle": "Estimez votre délai complet du Maroc vers l'Allemagne — apprentissage de l'allemand, candidature, visa, installation — basé sur les chiffres BAMF / DAAD 2026.",
+    "formTitle": "Votre profil de migration",
+    "pathLabel": "Parcours",
+    "levelLabel": "Niveau d'allemand actuel",
+    "levelHint": "Objectif pour ce parcours : {target}.",
+    "intensityLabel": "Intensité d'apprentissage",
+    "educationLabel": "Niveau d'études",
+    "vorabLabel": "J'ai l'accord Vorab (pré-approbation)",
+    "vorabHint": "Réduit le délai visa de ~8 mois à ~2 mois.",
+    "months": "mois",
+    "mo": "mois",
+    "fast": "Rapide",
+    "average": "Moyen",
+    "slow": "Lent",
+    "resultEyebrow": "Délai total estimé",
+    "avgScenario": "Scénario moyen : {n} mois",
+    "phasesTitle": "Détail des phases",
+    "insightsTitle": "Ce qui vous ralentit",
+    "tipsTitle": "Comment réduire votre délai",
+    "ctaTitle": "Vous voulez aller plus vite ?",
+    "ctaSub": "Réservez une consultation gratuite de 30 minutes. Nous traçons vos étapes exactes et supprimons les blocages qui ralentissent votre délai.",
+    "ctaButton": "Réserver une consultation gratuite",
+    "path": {
+      "ausbildung": {
+        "name": "Ausbildung",
+        "sub": "Formation pro",
+        "target": "B1"
+      },
+      "studium": {
+        "name": "Studium",
+        "sub": "Études universitaires",
+        "target": "B2"
+      }
+    },
+    "intensity": {
+      "slow": {
+        "name": "Lent",
+        "sub": "4–6 h/sem."
+      },
+      "normal": {
+        "name": "Normal",
+        "sub": "8–12 h/sem."
+      },
+      "intensive": {
+        "name": "Intensif",
+        "sub": "20+ h/sem."
+      }
+    },
+    "education": {
+      "bac": "Baccalauréat",
+      "university": "Études supérieures",
+      "other": "Autre"
+    },
+    "phase": {
+      "german": "Apprentissage allemand",
+      "application": "Candidature",
+      "visa": "Traitement du visa",
+      "relocation": "Installation"
+    },
+    "insights": {
+      "lowGerman": "Niveau d'allemand faible — la langue est la phase la plus longue.",
+      "noVorab": "Sans Vorab, le visa prend 6–10 mois au lieu de 2–3.",
+      "slowPace": "Un rythme lent ajoute 30 % à la phase d'allemand.",
+      "studyDocs": "Le Studium exige APS, Uni-Assist et la validation des documents — plus de paperasse que l'Ausbildung."
+    },
+    "tips": {
+      "intensiveCourse": "Prenez un cours intensif (Goethe / DSH / en ligne) — 4 h/jour économise des mois sur la phase 1.",
+      "getVorab": "Demandez le Vorab à votre futur employeur dès la signature du contrat. Économisez 6 mois.",
+      "switchPace": "Passez au moins au rythme normal (8–12 h/sem.) — le levier le plus efficace sur le délai total.",
+      "uniAssistEarly": "Soumettez à Uni-Assist 6 mois avant le semestre. Évitez la cohue des deadlines de printemps.",
+      "startDocs": "Commencez à rassembler vos documents (diplôme apostillé, passeport, relevés) MAINTENANT — ils expirent et la ré-émission est lente.",
+      "bookConsult": "Réservez une consultation gratuite : une checklist personnalisée supprime l'ambiguïté et fait gagner des semaines."
+    }
   }
 }

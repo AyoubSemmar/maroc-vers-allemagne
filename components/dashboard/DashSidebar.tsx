@@ -167,7 +167,8 @@ export default function DashSidebar({
     { href: '/dashboard/timeline',              label: t('timeline'),     icon: I.calendar, locked: true },
     { href: '/dashboard/cv-builder',            label: t('cvBuilder'),    icon: I.doc },
     { href: '/dashboard/cover-letter',          label: t('coverLetter'),  icon: I.edit },
-    { href: '/tools/living-cost-calculator',    label: t('livingCost'),   icon: I.euro },
+    { href: '/tools/living-cost-calculator',    label: t('livingCost'),       icon: I.euro },
+    { href: '/tools/migration-timeline',        label: t('migrationTimeline'), icon: I.calendar },
   ]
 
   return (
