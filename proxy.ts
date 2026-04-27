@@ -7,8 +7,10 @@ import { routing } from './i18n/routing'
 const intlMiddleware = createIntlMiddleware(routing)
 
 // Paths (without locale prefix) that require an authenticated user.
+// /learn-german is intentionally NOT here — the level listing and the
+// first lesson of every level are public. The auth gate for lesson 2+
+// happens in the LessonsList client component.
 const PROTECTED_PATHS = [
-  '/learn-german',
   '/cv-builder',
   '/ausbildung-jobs',
   '/anschreiben-generator',

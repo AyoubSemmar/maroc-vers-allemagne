@@ -4,10 +4,7 @@ import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { levels } from '@/lib/german-data'
-import type { Level } from '@/lib/german-data/types'
 import { createClient } from '@/lib/supabase-browser'
-
-const ADMIN_EMAIL = 'ayoubsemmar@gmail.com'
 
 type ProgressMap = Record<string, number>
 
@@ -25,12 +22,12 @@ function readAllProgress(): ProgressMap {
   return map
 }
 
-function isLevelUnlocked(level: Level, index: number, progressMap: ProgressMap, isAdmin: boolean): boolean {
-  if (isAdmin) return true
-  if (index === 0) return true
-  const prev = levels[index - 1]
-  if (prev.lessons.length === 0) return false
-  return (progressMap[prev.id] ?? 0) >= prev.lessons.length
+const LEVEL_BG: Record<string, string> = {
+  A1: 'lg-level--a1',
+  A2: 'lg-level--a2',
+  B1: 'lg-level--b1',
+  B2: 'lg-level--b2',
+  C1: 'lg-level--c1',
 }
 
 export default function LevelsGrid() {
@@ -38,13 +35,13 @@ export default function LevelsGrid() {
   const tData = useTranslations('learnGerman.data')
   const [progressMap, setProgressMap] = useState<ProgressMap>({})
   const [loaded, setLoaded] = useState(false)
-  const [isAdmin, setIsAdmin] = useState(false)
+  const [isAuthed, setIsAuthed] = useState(false)
 
   useEffect(() => {
     setProgressMap(readAllProgress())
     const supabase = createClient()
     supabase.auth.getUser().then(({ data: { user } }) => {
-      setIsAdmin(user?.email === ADMIN_EMAIL)
+      setIsAuthed(!!user)
       setLoaded(true)
     })
   }, [])
@@ -52,71 +49,67 @@ export default function LevelsGrid() {
   if (!loaded) return null
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {levels.map((level, index) => {
+    <div className="lg-levels-grid">
+      {levels.map((level) => {
         const isAvailable = level.lessons.length > 0
-        const unlocked = isLevelUnlocked(level, index, progressMap, isAdmin)
         const completedCount = progressMap[level.id] ?? 0
-        const pct = isAvailable ? Math.round((completedCount / level.lessons.length) * 100) : 0
-        const allDone = isAvailable && completedCount >= level.lessons.length
+        const total = level.lessons.length
+        const pct = isAvailable ? Math.round((completedCount / total) * 100) : 0
+        const allDone = isAvailable && completedCount >= total
 
-        const locked = !unlocked
-        const comingSoon = unlocked && !isAvailable
-
-        const href = isAvailable && unlocked ? `/learn-german/${level.id.toLowerCase()}` : '#'
+        const href = isAvailable ? `/learn-german/${level.id.toLowerCase()}` : '#'
+        const localizedTitle = (() => { try { return tData(`levels.${level.id}.title` as any) } catch { return level.title } })()
+        const localizedDesc  = (() => { try { return tData(`levels.${level.id}.description` as any) } catch { return level.description } })()
 
         return (
           <Link
             key={level.id}
             href={href}
-            className={`relative bg-white rounded-2xl border-2 p-6 transition-all block
-              ${isAvailable && unlocked ? 'border-gray-200 hover:shadow-lg hover:-translate-y-1 cursor-pointer' : ''}
-              ${locked ? 'opacity-50 cursor-not-allowed border-gray-100' : ''}
-              ${comingSoon ? 'border-dashed border-gray-300 cursor-default' : ''}
-              ${allDone ? 'border-green-200' : ''}
-            `}
+            className={`lg-level-card${!isAvailable ? ' is-coming-soon' : ''}${allDone ? ' is-done' : ''}`}
+            aria-disabled={!isAvailable}
           >
-            {locked  && <span className="absolute top-4 left-4 text-gray-400 text-xl">🔒</span>}
-            {allDone && <span className="absolute top-4 left-4 text-green-500 text-xl">✅</span>}
-            {comingSoon && <span className="absolute top-4 left-4 text-blue-400 text-xs font-medium bg-blue-50 px-2 py-1 rounded-full">{t('comingSoon')}</span>}
-
-            <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl text-white font-bold text-lg mb-4 ${level.color}`}>
-              {level.id}
-            </div>
-
-            <div className="flex items-start justify-between">
-              <div>
-                <h3 className="font-bold text-gray-900 text-lg">{(() => { try { return tData(`levels.${level.id}.title` as any) } catch { return level.title } })()}</h3>
-                <p className="text-sm text-gray-500 mt-1">{(() => { try { return tData(`levels.${level.id}.description` as any) } catch { return level.description } })()}</p>
-              </div>
-              <span className="text-2xl mr-2">{level.emoji}</span>
-            </div>
-
-            {isAvailable && unlocked && (
-              <div className="mt-4">
-                <div className="w-full bg-gray-100 rounded-full h-2">
-                  <div className="bg-green-500 h-2 rounded-full transition-all" style={{ width: `${pct}%` }} />
-                </div>
-                <p className="text-xs text-gray-400 mt-1">{t('progressCount', { done: completedCount, total: level.lessons.length })}</p>
-              </div>
+            {!isAvailable && (
+              <span className="lg-level-pill lg-level-pill--coming">{t('comingSoon')}</span>
+            )}
+            {allDone && (
+              <span className="lg-level-pill lg-level-pill--done">✓ {t('completed') ?? 'Completed'}</span>
             )}
 
-            <div className="mt-3 pt-3 border-t border-gray-100 flex items-center justify-between">
-              <span className="text-xs text-gray-400">
-                {isAvailable ? t('lessonsCount', { n: level.lessons.length }) : t('comingSoon')}
-              </span>
-              {isAvailable && unlocked && (
-                <span className="text-xs font-medium text-green-700 bg-green-50 px-3 py-1 rounded-full">
-                  {pct > 0 ? t('resume') : t('start')}
-                </span>
-              )}
-              {locked && (
-                <span className="text-xs text-gray-400">{t('completeFirst', { prev: levels[index - 1]?.id ?? '' })}</span>
-              )}
+            <div className={`lg-level-badge ${LEVEL_BG[level.id] ?? ''}`}>
+              <span className="lg-level-badge-id">{level.id}</span>
+              <span className="lg-level-badge-emoji" aria-hidden>{level.emoji}</span>
             </div>
+
+            <h3 className="lg-level-title">{localizedTitle}</h3>
+            <p className="lg-level-desc">{localizedDesc}</p>
+
+            {isAvailable && (
+              <>
+                <div className="lg-level-progress">
+                  <div className="lg-level-progress-bar"><div className="lg-level-progress-fill" style={{ width: `${pct}%` }} /></div>
+                  <span className="lg-level-progress-label">
+                    {t('progressCount', { done: completedCount, total })}
+                  </span>
+                </div>
+
+                <div className="lg-level-foot">
+                  <span className="lg-level-meta">{t('lessonsCount', { n: total })}</span>
+                  <span className="lg-level-cta">
+                    {pct > 0 ? t('resume') : t('start')} →
+                  </span>
+                </div>
+              </>
+            )}
           </Link>
         )
       })}
+
+      {!isAuthed && (
+        <div className="lg-levels-tip">
+          <span className="lg-levels-tip-icon" aria-hidden>💡</span>
+          <p>{t('tipNotAuthed') ?? 'Lesson 1 of every level is free. Sign in to unlock the rest and save your progress across devices.'}</p>
+        </div>
+      )}
     </div>
   )
 }

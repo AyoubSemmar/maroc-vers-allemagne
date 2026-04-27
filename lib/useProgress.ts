@@ -37,11 +37,13 @@ export function useProgress(levelId: LevelId) {
   const [progress, setProgress] = useState<LevelProgress>(defaultProgress())
   const [loaded, setLoaded] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
+  const [isAuthed, setIsAuthed] = useState(false)
   const supabase = createClient()
 
   useEffect(() => {
     async function load() {
       const { data: { user } } = await supabase.auth.getUser()
+      setIsAuthed(!!user)
       if (user?.email === ADMIN_EMAIL) setIsAdmin(true)
 
       if (user) {
@@ -101,10 +103,16 @@ export function useProgress(levelId: LevelId) {
     }
   }
 
-  function isLessonUnlocked(lessonId: string, lessonOrder: number): boolean {
+  /**
+   * Lesson 1 is always free (no auth, no completion check).
+   * Lesson 2+ requires the user to be authenticated — the auth gate is
+   * what gives them progress saving across devices. Once authed, ALL
+   * lessons in the level are accessible (no more sequential blocking).
+   */
+  function isLessonUnlocked(_lessonId: string, lessonOrder: number): boolean {
     if (isAdmin) return true
     if (lessonOrder === 1) return true
-    return progress.completedLessons.length >= lessonOrder - 1
+    return isAuthed
   }
 
   function isLessonCompleted(lessonId: string): boolean {
@@ -113,5 +121,5 @@ export function useProgress(levelId: LevelId) {
 
   const completedCount = progress.completedLessons.length
 
-  return { progress, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, loaded, isAdmin }
+  return { progress, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, loaded, isAdmin, isAuthed }
 }
