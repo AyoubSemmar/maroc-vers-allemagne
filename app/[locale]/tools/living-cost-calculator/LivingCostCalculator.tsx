@@ -292,7 +292,6 @@ export default function LivingCostCalculator({ locale }: { locale: AppLocale }) 
         <section className="lcc-info-card">
           <h2 className="lcc-section-title">{t('infoTitle')}</h2>
           <ul className="lcc-info-list">
-            <li>{t('infoBlocked')}</li>
             <li>{t('infoSetup')}</li>
             <li>{t('infoEstimate')}</li>
           </ul>
@@ -312,8 +311,8 @@ export default function LivingCostCalculator({ locale }: { locale: AppLocale }) 
 function FAQSection() {
   const t = useTranslations('livingCost')
   const [open, setOpen] = useState<number | null>(0)
-  // 10 entries — keys are 0..9 in messages/*.json under livingCost.faqs[].q/.a
-  const ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  // 9 entries — keys are 0..8 in messages/*.json under livingCost.faqs[].q/.a
+  const ids = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   return (
     <section className="lcc-faq-card">
       <h2 className="lcc-section-title">{t('faqTitle')}</h2>
