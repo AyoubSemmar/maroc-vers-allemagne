@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/contact-gogermany/30min'
 
@@ -30,18 +30,65 @@ export type ConsultTopic =
   | 'visa'
   | 'german-tutoring'
 
-const TOPIC_LABEL: Record<ConsultTopic, string> = {
-  'general':              'General consultation',
-  'apply-for-me':         'Apply For Me service',
-  'interview-prep':       'Interview prep / mock Vorstellungsgespräch',
-  'migration-timeline':   'Migration timeline review',
-  'document-checklist':   'Document checklist help',
-  'eligibility':          'Eligibility check',
-  'cv-anschreiben':       'CV / Anschreiben review',
-  'studium':              'Studium (university) guidance',
-  'ausbildung':           'Ausbildung guidance',
-  'visa':                 'Visa appointment help',
-  'german-tutoring':      'German tutoring (A1–B2)',
+type LocaleKey = 'en' | 'fr' | 'ar' | 'de'
+
+/**
+ * Localised label for the prefill answer in Calendly. Keep each label short —
+ * it appears in the booking form's first text field exactly as written.
+ */
+const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
+  en: {
+    'general':            'General consultation',
+    'apply-for-me':       'Apply For Me',
+    'interview-prep':     'Interview Prep',
+    'migration-timeline': 'Migration Timeline',
+    'document-checklist': 'Document Checklist',
+    'eligibility':        'Eligibility Check',
+    'cv-anschreiben':     'CV / Anschreiben',
+    'studium':            'Studium (University)',
+    'ausbildung':         'Ausbildung',
+    'visa':               'Visa',
+    'german-tutoring':    'German Tutoring (A1–B2)',
+  },
+  fr: {
+    'general':            'Consultation générale',
+    'apply-for-me':       'Apply For Me',
+    'interview-prep':     'Préparation entretien',
+    'migration-timeline': 'Timeline de migration',
+    'document-checklist': 'Checklist documents',
+    'eligibility':        'Test d’éligibilité',
+    'cv-anschreiben':     'CV / Lettre de motivation',
+    'studium':            'Studium (université)',
+    'ausbildung':         'Ausbildung',
+    'visa':               'Visa',
+    'german-tutoring':    'Cours d’allemand (A1–B2)',
+  },
+  ar: {
+    'general':            'استشارة عامة',
+    'apply-for-me':       'خدمة Apply For Me',
+    'interview-prep':     'تحضير المقابلة',
+    'migration-timeline': 'الجدول الزمني للهجرة',
+    'document-checklist': 'لائحة الوثائق',
+    'eligibility':        'فحص الأهلية',
+    'cv-anschreiben':     'السيرة الذاتية / رسالة التحفيز',
+    'studium':            'الدراسة الجامعية',
+    'ausbildung':         'التكوين المهني (Ausbildung)',
+    'visa':               'التأشيرة',
+    'german-tutoring':    'دروس الألمانية (A1–B2)',
+  },
+  de: {
+    'general':            'Allgemeine Beratung',
+    'apply-for-me':       'Apply For Me',
+    'interview-prep':     'Interview-Vorbereitung',
+    'migration-timeline': 'Migrations-Timeline',
+    'document-checklist': 'Dokumenten-Checkliste',
+    'eligibility':        'Eignungsprüfung',
+    'cv-anschreiben':     'Lebenslauf / Anschreiben',
+    'studium':            'Studium (Universität)',
+    'ausbildung':         'Ausbildung',
+    'visa':               'Visum',
+    'german-tutoring':    'Deutsch-Nachhilfe (A1–B2)',
+  },
 }
 
 type Props = {
@@ -65,19 +112,22 @@ export default function BookConsultationButton({
   topic = 'general',
 }: Props) {
   const t = useTranslations('bookConsult')
+  const rawLocale = useLocale()
+  const locale: LocaleKey = (['en', 'fr', 'ar', 'de'] as const).includes(rawLocale as LocaleKey)
+    ? (rawLocale as LocaleKey)
+    : 'en'
+  const label = TOPIC_LABEL[locale][topic]
 
-  // Compose Calendly URL with UTM params + a prefill "additional notes" line
-  // so the host always sees which request the user is booking for, even when
-  // multiple CTAs share the same event type.
+  // Compose Calendly URL with UTM params + a prefill answer for the first
+  // intake question, so the host immediately sees which service the user
+  // is booking for. The label is in the user's site language.
   const url = (() => {
     try {
       const u = new URL(CALENDLY_URL)
       u.searchParams.set('utm_source', 'gogermany.ma')
-      u.searchParams.set('utm_campaign', topic)
-      u.searchParams.set('utm_content', TOPIC_LABEL[topic])
-      // Pre-seed the "Notes" / first additional answer field with the topic.
-      // Calendly accepts a1..aN to prefill custom questions in declared order.
-      u.searchParams.set('a1', `Booking from: ${TOPIC_LABEL[topic]}`)
+      u.searchParams.set('utm_campaign', topic)         // stable, language-agnostic
+      u.searchParams.set('utm_content', TOPIC_LABEL.en[topic]) // English for analytics
+      u.searchParams.set('a1', label)                   // localised prefill
       return u.toString()
     } catch {
       return CALENDLY_URL
