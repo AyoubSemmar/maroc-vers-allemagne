@@ -253,10 +253,15 @@
     font-size: 320px;
     line-height: 0.95;
     font-weight: 900;
+    color: #FFFFFF;
+    letter-spacing: -0.06em;
+    text-shadow: 0 6px 30px rgba(0,0,0,0.35);
+  }
+  .p2-num em {
+    font-style: normal;
     background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
     -webkit-background-clip: text; background-clip: text;
     color: transparent;
-    letter-spacing: -0.06em;
   }
   .p2-num-sub {
     font-size: 24px;
@@ -378,7 +383,7 @@
   .p4-window {
     position: absolute;
     left: 130px; right: 130px;
-    top: 420px; bottom: 180px;
+    top: 410px; bottom: 130px;
     background: var(--navy-deep);
     border: 1.5px solid rgba(255,255,255,0.1);
     border-radius: 20px;
@@ -408,13 +413,13 @@
   .p4-dot.orange { background: var(--brand); }
   .p4-window-content {
     position: absolute;
-    inset: 60px 50px 30px;
+    inset: 50px 50px 26px;
     display: flex; flex-direction: column;
-    gap: 14px;
+    gap: 8px;
   }
   .p4-line {
     display: flex; align-items: center; gap: 18px;
-    padding: 14px 0;
+    padding: 10px 0;
     border-bottom: 1px dashed rgba(255,255,255,0.1);
   }
   .p4-line:last-child { border-bottom: 0; }
@@ -444,8 +449,8 @@
     font-variant-numeric: tabular-nums;
   }
   .p4-total {
-    margin-top: 6px;
-    padding: 18px 22px;
+    margin-top: 4px;
+    padding: 14px 22px;
     background: linear-gradient(135deg, rgba(232,124,55,0.18) 0%, rgba(244,200,66,0.12) 100%);
     border: 1.5px solid rgba(244,200,66,0.4);
     border-radius: 14px;
@@ -575,7 +580,7 @@
           <div>
             <div class="p2-tag">💡 Fun fact · معلومة</div>
             <div class="p2-stat">
-              <div class="p2-num" style="font-size: 220px;">~250€</div>
+              <div class="p2-num" style="font-size: 220px;">~<em>250€</em></div>
               <p class="p2-num-sub">Frais semestriels en université publique allemande — souvent transports inclus. Pour les étudiants marocains aussi.</p>
             </div>
           </div>
