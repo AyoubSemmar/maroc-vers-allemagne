@@ -232,7 +232,10 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.whatsapp}</span>
           <span className="dashshell-nav-label">{t('whatsappSupport')}</span>
         </a>
-        <Link href={`/${locale}/#pricing` as any} className="dashshell-nav-item">
+        <Link
+          href="/dashboard/services"
+          className={`dashshell-nav-item ${isActive('/dashboard/services') ? 'is-active' : ''}`}
+        >
           <span className="dashshell-nav-icon">{I.services}</span>
           <span className="dashshell-nav-label">{t('services')}</span>
         </Link>
