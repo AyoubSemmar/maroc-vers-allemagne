@@ -52,7 +52,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
   },
   fr: {
     'general':            'Consultation générale',
-    'apply-for-me':       'Apply For Me',
+    'apply-for-me':       'Postulez pour moi',
     'interview-prep':     'Préparation entretien',
     'migration-timeline': 'Timeline de migration',
     'document-checklist': 'Checklist documents',
@@ -65,7 +65,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
   },
   ar: {
     'general':            'استشارة عامة',
-    'apply-for-me':       'خدمة Apply For Me',
+    'apply-for-me':       'قدّم نيابة عني',
     'interview-prep':     'تحضير المقابلة',
     'migration-timeline': 'الجدول الزمني للهجرة',
     'document-checklist': 'لائحة الوثائق',
@@ -78,7 +78,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
   },
   de: {
     'general':            'Allgemeine Beratung',
-    'apply-for-me':       'Apply For Me',
+    'apply-for-me':       'Für mich bewerben',
     'interview-prep':     'Interview-Vorbereitung',
     'migration-timeline': 'Migrations-Timeline',
     'document-checklist': 'Dokumenten-Checkliste',
