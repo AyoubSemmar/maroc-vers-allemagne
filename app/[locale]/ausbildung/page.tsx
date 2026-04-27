@@ -18,7 +18,7 @@ const AUSBILDUNG_CATEGORIES = ['Ausbildung', 'العمل']
 const PILLARS: [PathPillar, PathPillar, PathPillar] = [
   { key: 'learnGerman', icon: '📚', href: '/learn-german' },
   { key: 'find', icon: '🔍', href: '/ausbildung-jobs' },
-  { key: 'visa', icon: '🛂', href: '/visa', comingSoon: true },
+  { key: 'visa', icon: '🛂', href: '/visa/ausbildung' },
 ]
 
 const TOOLS: PathTool[] = [

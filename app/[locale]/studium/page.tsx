@@ -18,7 +18,7 @@ const STUDIUM_CATEGORIES = ['الجامعات']
 const PILLARS: [PathPillar, PathPillar, PathPillar] = [
   { key: 'learnGerman', icon: '📚', href: '/learn-german' },
   { key: 'find', icon: '🎓', href: '/universities', comingSoon: true },
-  { key: 'visa', icon: '🛂', href: '/visa', comingSoon: true },
+  { key: 'visa', icon: '🛂', href: '/visa/studium' },
 ]
 
 const TOOLS: PathTool[] = [

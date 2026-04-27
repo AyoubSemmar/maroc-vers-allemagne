@@ -4456,5 +4456,488 @@
         "hint": "Wandel der Arbeitswelt, Eigenverantwortung, Weiterbildungsförderung"
       }
     }
+  },
+  "visaGuide": {
+    "shared": {
+      "badgeWhere": "TLScontact الدار البيضاء / الرباط",
+      "badgeProcessing": "معالجة 4 إلى 12 أسبوعاً",
+      "badgeFee": "رسوم 75 €",
+      "stepsTitle": "خطوة بخطوة — ماذا تفعل وبأي ترتيب",
+      "stepsSub": "جدول زمني واقعي لمترشح مغربي. ابدأ من الخطوة 1 إلى 10 أو 11. تخطّي أي خطوة هو السبب الأول للتأخير.",
+      "docsTitle": "الوثائق المطلوب تحضيرها",
+      "docsSub": "احمل الأصل ونسختين من كل وثيقة. القنصلية الألمانية صارمة جداً — وثيقة ناقصة = موعد جديد.",
+      "legendCritical": "🔴 ضرورية",
+      "legendImportant": "🟡 مهمة",
+      "legendRecommended": "⚪ مستحسنة",
+      "legendApostille": "تتطلب الأبوستيل",
+      "legendTranslation": "تتطلب ترجمة محلَّفة",
+      "flagApostille": "أبوستيل (MAEC)",
+      "flagTranslation": "ترجمة محلَّفة (DE)",
+      "importance": {
+        "critical": "إلزامية",
+        "important": "مهمة",
+        "recommended": "مستحسنة"
+      },
+      "costsTitle": "ميزانية واقعية — خاصة بالمغاربة",
+      "costsSub": "تقديرات 2026. الـSperrkonto (الحساب المجمَّد) هو أكبر بند وأكثر سؤال يُطرح. الإلزامي أولاً، الاختياري في الأسفل.",
+      "optional": "اختياري",
+      "totalLabel": "المجموع الإلزامي",
+      "costsNote": "الأسعار قابلة للتغير. مبلغ الـSperrkonto يحدّد سنوياً عبر الـBafög — 11.904 € لسنة 2026 (≈ 130.000 درهم بسعر 1 € ≈ 10,9 درهم).",
+      "rejectionsTitle": "لماذا تُرفض التأشيرات — وكيف تتجنب الرفض",
+      "rejectionsSub": "هاد هي الأسباب الحقيقية للرفض اللي كنشوفوها في TLScontact الدار البيضاء. كلها قابلة للتجنب.",
+      "severity": {
+        "high": "خطر عالٍ",
+        "medium": "خطر متوسط"
+      },
+      "midCtaTitle": "تايقاً في خطوة؟ تحدّث إلى مختصّ.",
+      "midCtaSub": "30 دقيقة، أجوبة ملموسة، بالعربية أو الفرنسية أو الألمانية. 16 € — تحويل بنكي.",
+      "finalCtaEyebrow": "مرافقة شخصية",
+      "finalCta1": "نراجع ملفّك معاً، وثيقة بوثيقة",
+      "finalCta2": "نحدّد ما ينقص وما يحتاج تصحيحاً وما الأولوية",
+      "finalCta3": "محاكاة لمقابلة القنصلية إن كان موعدك قريباً",
+      "finalCta4": "لائحة مهام ملموسة تخرج بها من الجلسة",
+      "toolsTitle": "أدوات مجانية مفيدة",
+      "toolsSub": "استعملها بالموازاة مع هذا الدليل — مصمّمة خصيصاً لمسار المغرب-ألمانيا.",
+      "toolDocs": "لائحة الوثائق",
+      "toolDocsDesc": "تتبّع كل وثيقة بقائمة شخصية",
+      "toolTimeline": "الجدول الزمني للهجرة",
+      "toolTimelineDesc": "خطّط أشهرك الـ12 المقبلة شهراً بشهر",
+      "toolEligibility": "فحص الأهلية",
+      "toolEligibilityDesc": "13 قاعدة: الباكالوريا، الألمانية، المالية…",
+      "toolCost": "حاسبة تكلفة المعيشة",
+      "toolCostDesc": "ميزانية شهرية واقعية لكل مدينة ألمانية"
+    },
+    "studium": {
+      "metaTitle": "تأشيرة الدراسة بألمانيا للمغاربة — دليل D-Visa Studium 2026",
+      "metaDesc": "دليل خطوة بخطوة لتأشيرة الدراسة (§16b AufenthG) للطلبة المغاربة عبر TLScontact الدار البيضاء/الرباط — الوثائق، التكاليف، الجدول الزمني، أسباب الرفض الشائعة.",
+      "eyebrow": "الدراسة الجامعية · تأشيرة وطنية D",
+      "title": "تأشيرة الدراسة بألمانيا للمغاربة، خطوة بخطوة",
+      "subtitle": "الإجراء الفعلي تحت §16b AufenthG. الطلب من خلال TLScontact الدار البيضاء أو الرباط. كل خطوة، كل وثيقة، كل تكلفة — بأثمان دقيقة بالدرهم ونصائح مغربية لا توفّرها الأدلة العامة.",
+      "finalCtaTitle": "بغيتي مختصّ يراجع لك ملف التأشيرة؟",
+      "finalCtaSub": "أغلب أسباب الرفض قابلة للتجنب. 30 دقيقة مع مختصّ يقرأ يومياً قرارات القنصلية الألمانية — 16 €، بلغتك.",
+      "steps": {
+        "aps": {
+          "title": "1. احصل على شهادة APS",
+          "desc": "Akademische Prüfstelle بالرباط يتحقق من باكالورياك وشواهدك العليا. إلزامية قبل أن تتقدم لأي جامعة ألمانية. الطلب على aps.diplo.de ثم المقابلة بالسفارة الألمانية بالرباط.",
+          "duration": "من 6 إلى 12 أسبوعاً"
+        },
+        "language": {
+          "title": "2. الوصول لمستوى الألمانية المطلوب",
+          "desc": "أغلب البكالوريوس بالألمانية تتطلب C1 (TestDaF/DSH). البرامج بالإنجليزية تتطلب C1 إنجليزية (IELTS 6.5+ / TOEFL 90+). Goethe-Institut الدار البيضاء/الرباط هو مركز الاختبار المعتاد.",
+          "duration": "من 6 إلى 18 شهراً حسب المستوى"
+        },
+        "apply_uni": {
+          "title": "3. التسجيل بالجامعة والحصول على القبول",
+          "desc": "استعمل uni-assist لأغلب الجامعات. الآجال: 15 يوليوز (الفصل الشتوي) / 15 يناير (الفصل الصيفي). Zulassungsbescheid (شهادة القبول) هي الوثيقة المطلوبة.",
+          "duration": "4 إلى 12 أسبوعاً بعد الإيداع"
+        },
+        "sperrkonto": {
+          "title": "4. فتح Sperrkonto بـ 11.904 €",
+          "desc": "لسنة 2026: 11.904 € = 992 €/شهر × 12. افتحه عند Fintiba أو Expatrio أو Coracle (الكل يقبل المغاربة). شهادة البنك تثبت قدرتك على تمويل دراستك.",
+          "duration": "من 1 إلى 4 أسابيع"
+        },
+        "insurance": {
+          "title": "5. تأمين صحي للسفر",
+          "desc": "تأمين صالح من يوم وصولك لألمانيا. Mawista أو Care Concept أو DR-WALTER هي الأرخص (~30–60 €/شهر). تنتقل للتأمين العمومي بعد التسجيل.",
+          "duration": "أسبوع واحد"
+        },
+        "apostille": {
+          "title": "6. الأبوستيل والترجمة المحلَّفة",
+          "desc": "الباكالوريا، النقاط، عقد الازدياد إلى MAEC للأبوستيل (50–100 درهم/وثيقة). ثم ترجمة محلَّفة (عربية→ألمانية). القنصلية تقبل فقط الترجمات المنجزة في المغرب من طرف مترجم معتمد.",
+          "duration": "من 1 إلى 4 أسابيع"
+        },
+        "tls_appt": {
+          "title": "7. حجز موعد TLScontact",
+          "desc": "على fr.tlscontact.com/maMA2DE. المواعيد قليلة — احجز فور حصولك على القبول. احفظ التأكيد. رسوم الإلغاء حقيقية.",
+          "duration": "انتظار من 1 إلى 3 أشهر"
+        },
+        "submit": {
+          "title": "8. إيداع الملف في TLScontact",
+          "desc": "الأصل + نسختين من كل وثيقة، حسب ترتيب لائحة TLS. أداء 75 € بالدرهم في الموقع (نقداً أو ببطاقة). أخذ الصور البيومترية والبصمات.",
+          "duration": "في نفس اليوم"
+        },
+        "decision": {
+          "title": "9. انتظر قرار القنصلية الألمانية",
+          "desc": "TLScontact يجمع الملفات فقط — القرار من القنصلية (الدار البيضاء للجنوب، الرباط للشمال). يتواصلون مع جامعتك للتحقق.",
+          "duration": "من 4 إلى 12 أسبوعاً"
+        },
+        "pickup": {
+          "title": "10. استلام جواز السفر بالتأشيرة",
+          "desc": "يتصل بك TLScontact بالبريد. خذ معك الإيصال والبطاقة الوطنية. التأشيرة الملصقة صالحة 3 إلى 6 أشهر — ادخل ألمانيا داخل هذه المدة ثم حوّلها إلى تصريح إقامة.",
+          "duration": "في نفس اليوم"
+        }
+      },
+      "docs": {
+        "passport": {
+          "title": "جواز سفر صالح",
+          "desc": "صالح 12 شهراً على الأقل بعد موعد التأشيرة. صفحتان فارغتان على الأقل.",
+          "tip": "إذا انتهت صلاحية الجواز خلال 18 شهراً، جدّده قبل حجز موعد TLS — الرقم لازم يطابق الملف."
+        },
+        "photos": {
+          "title": "صور بيومترية (2)",
+          "desc": "الصيغة الألمانية: 35×45 ملم، خلفية بيضاء، بدون نظارات، بدون ابتسامة، أُنجزت قبل أقل من 6 أشهر.",
+          "tip": "استوديوهات الصور بالمغرب تعرف \"format allemand\". قرب السفارة بالرباط: 30–50 درهم لنسختين."
+        },
+        "aps_certificate": {
+          "title": "شهادة APS",
+          "desc": "تحقق إجباري من شواهدك المغربية. الطلب على aps.diplo.de ثم مقابلة بالسفارة الألمانية بالرباط.",
+          "tip": "بدون APS، الملف يُرفض من اليوم الأول. ابدأ 3–4 أشهر قبل موعد TLS. ~250 € (≈ 2.700 درهم)، صالحة مدى الحياة."
+        },
+        "admission_letter": {
+          "title": "شهادة القبول (Zulassungsbescheid)",
+          "desc": "شهادة القبول الرسمية من جامعتك الألمانية. القبول المشروط مقبول لكنه يقلل فرص التأشيرة.",
+          "tip": "احرص على القبول النهائي. احفظ PDF والنسخة الموقّعة المطبوعة. بعض الجامعات ترسل توقيعاً رقمياً فقط — اطبعه أيضاً."
+        },
+        "sperrkonto_proof": {
+          "title": "إثبات Sperrkonto",
+          "desc": "حساب Fintiba/Expatrio/Coracle مودع فيه 11.904 € (2026) لتغطية 12 شهراً. البنك يصدر الشهادة.",
+          "tip": "Fintiba هو الأكثر استعمالاً عند المغاربة — يقبل تحويلات BMCE وAttijariwafa وCIH. احتسب أسبوعين لوصول SWIFT."
+        },
+        "health_insurance": {
+          "title": "تأمين صحي للسفر",
+          "desc": "تغطية من تاريخ الوصول إلى التسجيل في التأمين العمومي. الحد الأدنى 30.000 €.",
+          "tip": "Mawista Student VISUM هو الأرخص المقبول (~33 €/شهر). اشتره بعد قبول التأشيرة إذا كانت السيولة محدودة."
+        },
+        "language_cert": {
+          "title": "شهادة الألمانية أو الإنجليزية",
+          "desc": "للبرامج بالألمانية: TestDaF (TDN 4×4) أو DSH 2 أو telc Hochschule. للإنجليزية: IELTS 6.5+ أو TOEFL 90+.",
+          "tip": "TestDaF: 6 جلسات/سنة في Goethe الدار البيضاء/الرباط. التسجيل قبل 8 أسابيع — المقاعد قليلة في ماي–يوليوز."
+        },
+        "bac_diploma": {
+          "title": "الباكالوريا",
+          "desc": "الأصل + أبوستيل MAEC + ترجمة محلَّفة بالألمانية. القنصلية تطلب أحياناً كذلك كشف النقط.",
+          "tip": "الشهادة لازم تظهر معدّلك. إن لم يكن عليها، اطلب نسخة طبق الأصل من أكاديميتك — 1–2 أسابيع في CRE الدار البيضاء."
+        },
+        "transcripts": {
+          "title": "كشوف نقاط الدراسة العليا",
+          "desc": "لمن أتمّوا الكلية/CPGE/IUT — كل الكشوف السنوية، مع الأبوستيل والترجمة.",
+          "tip": "CPGE: اطلب شهادة السنتين حتى لو لم تجتز الـconcours. الكلية: اطلب الكشف النهائي وليس فقط السنوي."
+        },
+        "birth_certificate": {
+          "title": "عقد الازدياد (≤ 3 أشهر)",
+          "desc": "يصدر خلال الـ3 أشهر السابقة لموعد TLS. أبوستيل MAEC + ترجمة محلَّفة.",
+          "tip": "مكتب الحالة المدنية ببلديتك — 20 درهم/نسخة. اطلب 4 نسخ: واحدة للقنصلية، أخرى للترجمة، احتياطية، ورابعة للإجراءات بألمانيا بعد الوصول."
+        },
+        "cv": {
+          "title": "سيرة ذاتية بصيغة ألمانية",
+          "desc": "Lebenslauf يسرد الدراسات والتجربة، الصورة في الأعلى يميناً، موقّعة في الأسفل.",
+          "tip": "استعمل CV Builder المجاني عندنا — يعطي الصيغة الألمانية بحقولها وأقسامها الصحيحة. وقّع بحبر أزرق."
+        },
+        "motivation_letter": {
+          "title": "رسالة تحفيز بالألمانية",
+          "desc": "صفحة على الأقل: لماذا هذا البرنامج، هذه الجامعة، ألمانيا، خطّتك بعد التخرّج بالمغرب أو في مسارك المهني.",
+          "tip": "زاوية \"العودة للمغرب\" مفتاحية لتفادي رفض \"الشكّ في العودة\". كن دقيقاً حول ما ستفعل بعد التخرّج."
+        },
+        "criminal_record": {
+          "title": "بطاقة السوابق العدلية رقم 3",
+          "desc": "تصدرها محكمة الاستئناف بمقاطعتك، أقدم من 3 أشهر، بأبوستيل وترجمة. مجانية.",
+          "tip": "الدار البيضاء: محكمة الاستئناف بأنفا، 3–7 أيام عمل. الرباط: ساحة Pietri، أحياناً نفس اليوم."
+        },
+        "application_form": {
+          "title": "استمارة VIDEX",
+          "desc": "تُملأ على videx-national.diplo.de، مطبوعة، موقّعة مرتين (في الأسفل وفي صفحة حماية البيانات).",
+          "tip": "استعمل أحدث نسخة (2024+). النسخ القديمة مرفوضة. اطبعها بعد حجز موعد TLS حتى يطابق التاريخ."
+        },
+        "declaration_truth": {
+          "title": "إقرار صدق المعلومات (§54 AufenthG)",
+          "desc": "إقرار موقّع بأن كل المعلومات في الملف صحيحة. النموذج توفّره القنصلية.",
+          "tip": "الكذب هنا = حظر دائم من فضاء Schengen. حتى الإغفالات الصغيرة تُكشف."
+        }
+      },
+      "costs": {
+        "visa_fee": {
+          "label": "رسم التأشيرة (القنصلية)"
+        },
+        "sperrkonto_setup": {
+          "label": "فتح Sperrkonto (Fintiba/Expatrio)"
+        },
+        "sperrkonto_block": {
+          "label": "إيداع Sperrkonto (11.904 € / السنة — 2026)"
+        },
+        "health_insurance": {
+          "label": "تأمين السفر (3 أشهر)"
+        },
+        "language_test": {
+          "label": "TestDaF أو telc Hochschule"
+        },
+        "aps_fee": {
+          "label": "APS الرباط (السفارة الألمانية)"
+        },
+        "apostille_total": {
+          "label": "أبوستيل لـ ~6 وثائق (MAEC)"
+        },
+        "sworn_translation": {
+          "label": "ترجمات محلَّفة (~10–15 صفحة)"
+        },
+        "tls_service_fee": {
+          "label": "رسم خدمة TLScontact"
+        },
+        "photos": {
+          "label": "صور بيومترية (2)"
+        },
+        "passport": {
+          "label": "جواز سفر مغربي جديد (إن لزم)"
+        }
+      },
+      "rejections": {
+        "weak_finances": {
+          "title": "إثبات مالي ضعيف أو غير مقنع",
+          "desc": "Sperrkonto أقل من 11.904 €، أو مصدر الإيداع غير واضح (تحويل غير مفسَّر من طرف ثالث).",
+          "fix": "أودع المبلغ كاملاً. إن جاء المال من العائلة: شهادة كفالة موثّقة + مترجمة بالألمانية."
+        },
+        "doubt_return": {
+          "title": "الشكّ في العودة للمغرب بعد الدراسة",
+          "desc": "تشكّ القنصلية أن المرشح يخطط للبقاء. مؤشّرات: تحفيز غامض، لا روابط عائلية، لا مشروع مهني، سن غير معتاد للبرنامج.",
+          "fix": "يجب أن تذكر رسالة التحفيز صراحة خطّتك بعد التخرّج بالمغرب أو مسارك المهني. اذكر الروابط العائلية."
+        },
+        "weak_motivation": {
+          "title": "رسالة تحفيز عامة أو منسوخة",
+          "desc": "عبارات عامة (\"ألمانيا تملك أحسن الجامعات\")، لا تفاصيل عن البرنامج/الأستاذ/المختبر، لا ربط بحاجة مغربية.",
+          "fix": "اذكر اسمين من الأساتذة/المختبرات/المواد، واشرح كيف ستترجم الشهادة إلى مسار مغربي أو دولي."
+        },
+        "language_below": {
+          "title": "شهادة لغة أقل من حدّ البرنامج",
+          "desc": "TestDaF TDN 3 لبرنامج TDN 4، أو B2 لبرنامج C1. رفض تلقائي.",
+          "fix": "أعد الامتحان. Goethe الدار البيضاء يوفّر TestDaF 6 مرّات/سنة. إن كان موعدك قريباً، اطلب التأجيل — أحسن من رفض في الملف."
+        },
+        "fake_documents": {
+          "title": "وثائق مزوّرة أو مُعدَّلة",
+          "desc": "باكالوريا مزوّرة، كشوف بنكية مزيّفة، شهادات أصحاب العمل وهمية. القنصلية تتقاطع مع السلطات المغربية.",
+          "fix": "لا أبداً. الكشف = حظر Schengen. إن كانت وثيقة غير ملائمة، تناولها بصراحة في رسالة التحفيز — الصدق محترم."
+        },
+        "no_aps": {
+          "title": "APS مفقودة أو غير مقدَّمة",
+          "desc": "بدون APS، لا يُدرس الملف. APS لا تنتهي صلاحيتها لكن الأصل إجباري.",
+          "fix": "الطلب على aps.diplo.de قبل 4 أشهر من موعد TLS. خذ معك PDF والأصل الموقّع."
+        },
+        "incomplete_file": {
+          "title": "ملف ناقص أو غير مرتّب",
+          "desc": "وثيقة ناقصة، أو ترتيب خاطئ، أو نسخ بدل الأصول. القنصلية لا تسأل — ترفض الملف بأكمله.",
+          "fix": "اتبع لائحة TLScontact بدقة. الترتيب: جواز السفر، الصور، الاستمارة، ثم APS، القبول، المالية، اللغة، الدراسة، الحالة المدنية. افصل بفواصل."
+        },
+        "health_insurance": {
+          "title": "تأمين غير مقبول من القنصلية",
+          "desc": "بعض التأمينات غير معترف بها. فترة التغطية مهمّة كذلك: لازم تغطّي من الوصول إلى التسجيل.",
+          "fix": "استعمل Mawista أو Care Concept أو DR-WALTER — كلها مقبولة صراحة. التغطية لا تقل عن 30.000 €، صالحة من تاريخ السفر."
+        },
+        "apostille_missing": {
+          "title": "وثائق بدون أبوستيل أو ترجمة غير سليمة",
+          "desc": "شهادة بدون أبوستيل MAEC، أو ترجمة من طرف مترجم غير محلَّف. القنصلية تطلب الاثنين.",
+          "fix": "أبوستيل في MAEC الرباط (أو فرع الدار البيضاء) — 50–100 درهم/وثيقة، 24–48 ساعة. مترجم محلَّف من اللائحة الرسمية (~150–300 درهم/صفحة)."
+        }
+      }
+    },
+    "ausbildung": {
+      "metaTitle": "تأشيرة Ausbildung بألمانيا للمغاربة — D-Visa التكوين 2026",
+      "metaDesc": "دليل خطوة بخطوة لتأشيرة التكوين المهني (§16a AufenthG) للمغاربة — الوثائق، التكاليف، موافقة BA-ZAV، الجدول الزمني، أسباب الرفض.",
+      "eyebrow": "التكوين المهني · تأشيرة وطنية D",
+      "title": "تأشيرة Ausbildung بألمانيا للمغاربة، خطوة بخطوة",
+      "subtitle": "الإجراء الفعلي تحت §16a AufenthG. تأشيرة Ausbildung تتطلب عقداً وموافقة BA-ZAV معاً. كل خطوة، كل وثيقة، كل تكلفة — بأسعار حقيقية بالدرهم ونصائح خاصة بالمغاربة.",
+      "finalCtaTitle": "بغيتي مختصّ يراجع لك ملف التكوين المهني؟",
+      "finalCtaSub": "القناصلة كيركّزوا على شهادة اللغة وصحّة العقد. 30 دقيقة مع شخص كيشوف هاد الملفات كل أسبوع — 16 €.",
+      "steps": {
+        "language_b1": {
+          "title": "1. Reach German B1 (minimum)",
+          "desc": "B1 is the minimum for most Ausbildungen. Some healthcare and hospitality positions accept A2 entry with B1 by Berufsschule. Get certified at Goethe-Institut Casablanca/Rabat.",
+          "duration": "6–12 months"
+        },
+        "find_employer": {
+          "title": "2. Find an employer with an Ausbildungsplatz",
+          "desc": "Apply via Make-it-in-Germany, BIBB, IHK portals, Hwk, or directly to companies. Categories with the highest acceptance: healthcare (Pflege), hospitality (Hotelfach), trades (Metall/Elektro), IT, logistics.",
+          "duration": "1–6 months"
+        },
+        "sign_contract": {
+          "title": "3. Sign the Ausbildungsvertrag",
+          "desc": "A 3-year contract with monthly Vergütung (800–1,400 € gross). The contract must be officially registered with IHK or Hwk before you submit the visa file.",
+          "duration": "1–4 weeks"
+        },
+        "finances": {
+          "title": "4. Prove you can finance the gap",
+          "desc": "Your salary covers most needs but the consulate often wants proof for the first 3 months. Either a Sperrkonto (~6,000 €) OR a parental support letter (Verpflichtungserklärung) from a relative in Germany.",
+          "duration": "1–4 weeks"
+        },
+        "insurance": {
+          "title": "5. Get health insurance for arrival",
+          "desc": "Same as Studium: travel insurance from arrival until you join the public system through your employer. Mawista, Care Concept, DR-WALTER (~30–60 €/month).",
+          "duration": "1 week"
+        },
+        "apostille": {
+          "title": "6. Apostille + sworn translation of diplomas",
+          "desc": "Bac (or equivalent) + birth certificate + criminal record at MAEC for apostille. Then sworn translation Arabic→German.",
+          "duration": "1–4 weeks"
+        },
+        "tls_appt": {
+          "title": "7. Book TLScontact appointment",
+          "desc": "Same portal as Studium: fr.tlscontact.com/maMA2DE. Indicate \"Ausbildung / Berufsausbildung\" in the visa type.",
+          "duration": "1–3 months wait"
+        },
+        "submit": {
+          "title": "8. Submit your file at TLScontact",
+          "desc": "Originals + 2 copies of every document. Pay 75 € in MAD on site. Biometric photos and fingerprints.",
+          "duration": "Same day"
+        },
+        "ba_zav": {
+          "title": "9. BA-ZAV (Bundesagentur für Arbeit) approval",
+          "desc": "For Ausbildung the German Federal Employment Agency must also approve. Done in parallel with consulate review. Required check: contract terms match labour law (no exploitation).",
+          "duration": "2–6 weeks"
+        },
+        "decision": {
+          "title": "10. Final decision",
+          "desc": "Once both BA-ZAV and the consulate clear the file, the visa is issued. The Konsulat is the decision authority.",
+          "duration": "4–12 weeks total"
+        },
+        "pickup": {
+          "title": "11. Pick up your passport",
+          "desc": "TLScontact emails when ready. Visa is valid 3–6 months — enter Germany within that window. Convert to Aufenthaltserlaubnis at the local Ausländerbehörde within 90 days of arrival.",
+          "duration": "Same day"
+        }
+      },
+      "docs": {
+        "passport": {
+          "title": "Valid passport",
+          "desc": "Valid for at least 12 months from your visa appointment. At least 2 blank pages.",
+          "tip": "Keep your old passport too — German bureaucracy sometimes asks for previous travel history."
+        },
+        "photos": {
+          "title": "Biometric photos (2)",
+          "desc": "German biometric format: 35×45 mm, white background.",
+          "tip": "Same studios as for Studium. Allow extras — your Anmeldung in Germany will need 2 more."
+        },
+        "ausbildung_contract": {
+          "title": "Ausbildungsvertrag (registered)",
+          "desc": "Signed by employer + IHK/Hwk-stamped contract. Must mention salary, duration (3 years), Berufsschule, and your role.",
+          "tip": "Without IHK/Hwk registration, the visa is rejected. Your employer's HR knows the process; if they don't, that's a red flag."
+        },
+        "language_cert": {
+          "title": "German language certificate (B1 minimum)",
+          "desc": "Goethe B1, telc B1, or ÖSD B1. Some healthcare/hospitality positions accept A2 with B1 by start.",
+          "tip": "Goethe Casablanca offers B1 monthly. Cost ~155 €. Register 6 weeks ahead — slots fill in spring/summer."
+        },
+        "finances_proof": {
+          "title": "Financial proof for first 3 months",
+          "desc": "Either a Sperrkonto with ~6,000 €, OR a Verpflichtungserklärung (formal sponsorship from a relative in Germany), OR salary advance proof from employer.",
+          "tip": "If you have a relative in Germany with stable income, the Verpflichtungserklärung at their local Ausländerbehörde is faster and cheaper than a Sperrkonto."
+        },
+        "health_insurance": {
+          "title": "Travel/expat health insurance",
+          "desc": "Coverage from arrival until your employer registers you in the public health system (~2–4 weeks).",
+          "tip": "Mawista, Care Concept, DR-WALTER. ~30 €/month is enough."
+        },
+        "school_diploma": {
+          "title": "Bac or equivalent diploma",
+          "desc": "Original + apostille + sworn translation. Some Ausbildungen don't require Bac (e.g. handwerk) but the consulate still wants your highest diploma.",
+          "tip": "If you have a CAP/BTS marocain, that's often even better than Bac for technical Ausbildungen — request the certified copy from your training centre."
+        },
+        "birth_certificate": {
+          "title": "Acte de naissance (≤ 3 months)",
+          "desc": "Apostilled and translated, same as Studium.",
+          "tip": "20 MAD/copy at your commune. 4 copies recommended."
+        },
+        "cv": {
+          "title": "CV in German",
+          "desc": "Lebenslauf with your studies and any work experience.",
+          "tip": "Use our free CV Builder. For Ausbildung, prioritise any internship or part-time job — even informal — to show work-readiness."
+        },
+        "motivation_letter": {
+          "title": "Motivation letter in German",
+          "desc": "Why this Beruf, why this employer, why Germany. Mention your German learning journey and post-Ausbildung plan.",
+          "tip": "For Ausbildung, the consulate wants to see commitment. Mention you'll stay with the employer after Ausbildung if possible."
+        },
+        "criminal_record": {
+          "title": "Bulletin n°3",
+          "desc": "Cour d'Appel, ≤ 3 months, apostilled, translated. Free.",
+          "tip": "Casablanca: Cour d'Appel d'Anfa, 3–7 days. Rabat: Place Pietri."
+        },
+        "application_form": {
+          "title": "VIDEX application form",
+          "desc": "videx-national.diplo.de, printed, signed twice.",
+          "tip": "Indicate \"Berufsausbildung\" as visa purpose. Use latest VIDEX (2024+)."
+        },
+        "declaration_truth": {
+          "title": "Declaration of truth (§54 AufenthG)",
+          "desc": "Signed declaration that file info is correct.",
+          "tip": "Lying = permanent Schengen ban."
+        },
+        "professional_recognition": {
+          "title": "Professional qualification recognition (if applicable)",
+          "desc": "For regulated professions (e.g. nursing, electrician), Anerkennung from the Anerkennungsbescheid is needed before or during the Ausbildung.",
+          "tip": "Most simple Ausbildungen don't need this. Healthcare: yes, request via the Anerkennung-Finder website."
+        }
+      },
+      "costs": {
+        "visa_fee": {
+          "label": "Visa fee (consulate)"
+        },
+        "language_courses": {
+          "label": "German B1 courses (12 months)"
+        },
+        "language_test": {
+          "label": "Goethe B1 / telc B1"
+        },
+        "sperrkonto_block": {
+          "label": "Sperrkonto (~6,000 € — 3 months coverage, optional if Verpflichtungserklärung)"
+        },
+        "health_insurance": {
+          "label": "Travel insurance (3 months)"
+        },
+        "apostille_total": {
+          "label": "Apostille for ~5 documents (MAEC)"
+        },
+        "sworn_translation": {
+          "label": "Sworn translations (~8–10 pages)"
+        },
+        "tls_service_fee": {
+          "label": "TLScontact service fee"
+        },
+        "photos": {
+          "label": "Biometric photos (2)"
+        },
+        "passport": {
+          "label": "New Moroccan passport (if needed)"
+        }
+      },
+      "rejections": {
+        "weak_finances": {
+          "title": "Financial proof for the gap before first paycheck",
+          "desc": "No Sperrkonto, no Verpflichtungserklärung, and Ausbildung salary alone doesn't reassure for the first 1–3 months.",
+          "fix": "Sperrkonto with 6,000 € OR Verpflichtungserklärung from a German-resident relative OR an employer letter confirming a salary advance."
+        },
+        "language_below": {
+          "title": "German below B1",
+          "desc": "Bringing A2 to a B1-required Ausbildung. Auto-rejection (or contingent).",
+          "fix": "Re-take B1 at Goethe — 6 sessions per year. If your appointment is close, postpone — better than a \"language insufficient\" stamp."
+        },
+        "contract_doubts": {
+          "title": "Doubts about the Ausbildung contract",
+          "desc": "Contract not registered with IHK/Hwk, salary below tariff (less than €730 in 2026), employer not previously known to BA-ZAV.",
+          "fix": "Verify your contract is IHK/Hwk-registered. If salary is below tariff, ask your employer to fix it. Reputable employers know."
+        },
+        "doubt_return": {
+          "title": "Doubt the candidate plans to stay illegally",
+          "desc": "Triggers: weak family ties, age outside Ausbildung norm (35+), motivation letter saying \"I want to stay in Germany forever\".",
+          "fix": "Reframe motivation as \"I want to learn this profession, then evaluate\". Mention family ties to Morocco. Don't bury the post-Ausbildung plan."
+        },
+        "fake_documents": {
+          "title": "Fake/altered documents",
+          "desc": "Fake employer attestation, fake bank statements, fake school diplomas.",
+          "fix": "Never. Schengen-wide ban."
+        },
+        "incomplete_file": {
+          "title": "Incomplete or disordered file",
+          "desc": "Missing 1 document, or photocopies in place of originals.",
+          "fix": "Use TLScontact's exact checklist. Tab-divide."
+        },
+        "apostille_missing": {
+          "title": "Documents not apostilled or not properly translated",
+          "desc": "Bac/diploma without MAEC apostille, or non-sworn translation.",
+          "fix": "Apostille at MAEC Rabat — 50–100 MAD/document, 24–48h. Sworn translator only."
+        },
+        "school_diploma": {
+          "title": "Inadequate school diploma",
+          "desc": "For some Ausbildungen, no Bac and no Brevet shown.",
+          "fix": "Even partial schooling counts. Provide whatever you have. CAP/BTS for technical Ausbildungen is often preferred."
+        }
+      }
+    }
   }
 }
