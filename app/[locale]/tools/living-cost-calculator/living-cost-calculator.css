@@ -13,6 +13,11 @@
   padding-bottom: 80px;
 }
 
+/* Tighter container — the default .rihla .wrap is 1240px; this tool is
+   form-heavy and reads better at a narrower max-width. */
+.lcc-root .wrap { max-width: 1080px; padding-inline: 20px; }
+@media (max-width: 640px) { .lcc-root .wrap { padding-inline: 16px; } }
+
 /* ── Hero ──────────────────────────────────────────────── */
 .lcc-hero {
   background: linear-gradient(135deg,

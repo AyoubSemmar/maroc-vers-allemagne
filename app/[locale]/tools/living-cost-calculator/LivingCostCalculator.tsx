@@ -78,7 +78,7 @@ export default function LivingCostCalculator({ locale }: { locale: AppLocale }) 
   let cumulative = 0
 
   return (
-    <div className="lcc-root" dir={dir}>
+    <div className="rihla lcc-root" dir={dir}>
       {/* Hero */}
       <header className="lcc-hero">
         <div className="wrap">
