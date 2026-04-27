@@ -162,8 +162,8 @@ export default function MigrationTimeline({ locale }: { locale: AppLocale }) {
               <span className="mtl-result-eyebrow">{t('resultEyebrow')}</span>
               <h2 className="mtl-result-total">
                 {fmtMonths(result.totalFast)}–{fmtMonths(result.totalSlow)}
-                <span className="mtl-result-unit"> {t('months')}</span>
               </h2>
+              <p className="mtl-result-unit-line">{t('months')}</p>
               <p className="mtl-result-sub">
                 {t('avgScenario', { n: fmtMonths(result.totalAverage) })}
               </p>
