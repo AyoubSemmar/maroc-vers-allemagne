@@ -163,20 +163,34 @@
 .aj-grid--list .aj-card-meta { margin-top: 4px; }
 
 @media (min-width: 720px) {
-  /* On wider screens, render each row truly horizontally with a fixed
-     row height so wrapping never breaks alignment. */
+  /* On wider screens, lay out each row as a grid so every row's
+     columns line up exactly — independent of how many badges a given
+     posting has. minmax(0, …) is essential so columns can shrink and
+     trigger the text-overflow ellipsis. */
   .aj-grid--list .aj-card {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns:
+      minmax(0, 1fr)        /* title — fills remaining */
+      minmax(0, 220px)      /* company */
+      minmax(0, 140px)      /* location */
+      auto                  /* badges */
+      auto;                 /* meta / apply button */
     align-items: center;
     gap: 16px;
     padding: 10px 16px;
     min-height: 56px;
   }
-  .aj-grid--list .aj-card-title    { flex: 1 1 32%; margin: 0; }
-  .aj-grid--list .aj-card-company  { flex: 0 1 24%; margin: 0; display: flex; align-items: center; gap: 6px; }
-  .aj-grid--list .aj-card-location { flex: 0 1 16%; margin: 0; display: flex; align-items: center; gap: 4px; }
-  /* Inner spans of company/location need their own truncation so the
-     icon doesn't get pushed out and the text gets the ellipsis. */
+  .aj-grid--list .aj-card-title    { margin: 0; min-width: 0; }
+  .aj-grid--list .aj-card-company,
+  .aj-grid--list .aj-card-location {
+    margin: 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  /* The text span (after the building / pin icon) needs its own
+     truncation so the icon stays put and the text gets the …. */
   .aj-grid--list .aj-card-company > span:last-child,
   .aj-grid--list .aj-card-location > span:last-child {
     overflow: hidden;
@@ -185,8 +199,8 @@
     min-width: 0;
     flex: 1 1 auto;
   }
-  .aj-grid--list .aj-card-badges { flex: 0 0 auto; margin: 0; }
-  .aj-grid--list .aj-card-meta   { flex: 0 0 auto; margin: 0; }
+  .aj-grid--list .aj-card-badges,
+  .aj-grid--list .aj-card-meta { margin: 0; }
 }
 
 /* ── Job Card ────────────────────────────────────────────── */
