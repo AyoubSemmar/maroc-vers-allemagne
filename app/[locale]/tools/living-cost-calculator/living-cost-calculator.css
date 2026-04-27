@@ -482,66 +482,106 @@
   transform: translate(-2px, -2px);
 }
 
-/* ─── Mobile (< 600px): tighten everything ───────────────── */
-@media (max-width: 600px) {
-  .lcc-hero { padding: 36px 0 28px; }
-  .lcc-title { font-size: 26px; margin: 8px 0; }
-  .lcc-subtitle { font-size: 14px; line-height: 1.5; margin-bottom: 16px; }
-  .lcc-hero-badge { padding: 4px 10px; font-size: 11.5px; }
+/* ─── Tablet (≤ 720px) ───────────────────────────────────── */
+@media (max-width: 720px) {
+  .lcc-hero { padding: 32px 0 24px; }
+  .lcc-title { font-size: 24px; line-height: 1.15; margin: 6px 0; }
+  .lcc-subtitle { font-size: 13.5px; line-height: 1.5; margin-bottom: 14px; }
+  .lcc-hero-badge { padding: 3px 9px; font-size: 11px; gap: 4px; }
+  .lcc-eyebrow { font-size: 11px; }
 
-  .lcc-body { padding: 24px 0 0; }
-  .lcc-grid { gap: 16px; }
+  .lcc-body { padding: 20px 0 0; }
+  .lcc-grid { gap: 14px; }
 
   .lcc-form-card,
   .lcc-result-card,
-  .lcc-info-card { padding: 18px; border-radius: var(--r-md); }
+  .lcc-info-card,
+  .lcc-faq-card,
+  .lcc-related-card { padding: 16px; border-radius: var(--r-md); margin-top: 14px; }
+  .lcc-form-card,
+  .lcc-result-card { margin-top: 0; }
 
-  .lcc-section-title { font-size: 16px; margin-bottom: 14px; }
-  .lcc-field { margin-bottom: 16px; }
-  .lcc-label { font-size: 12.5px; margin-bottom: 8px; }
-  .lcc-select { padding: 10px 12px; padding-inline-end: 32px; font-size: 14px; }
+  .lcc-section-title { font-size: 15px; margin-bottom: 12px; }
+  .lcc-field { margin-bottom: 14px; }
+  .lcc-label { font-size: 12px; margin-bottom: 6px; }
+  .lcc-label-icon { font-size: 14px; }
+  .lcc-select { padding: 9px 12px; padding-inline-end: 30px; font-size: 13.5px; }
 
-  /* Pills: keep 2-up for accommodation, drop lifestyle to 1 column for clarity */
-  .lcc-pill { padding: 10px 12px; }
-  .lcc-pill-icon { font-size: 18px; }
-  .lcc-pill-label { font-size: 12.5px; }
-  .lcc-pill-sub { font-size: 11px; }
+  /* Pills: drop lifestyle from 3-up to 2-up so each pill has room */
+  .lcc-pill-grid { gap: 8px; }
+  .lcc-pill-grid--3 { grid-template-columns: repeat(2, 1fr); }
+  .lcc-pill { padding: 8px 10px; gap: 2px; }
+  .lcc-pill-icon { font-size: 16px; }
+  .lcc-pill-label { font-size: 12px; }
+  .lcc-pill-sub { font-size: 10.5px; }
+
+  .lcc-hint { font-size: 11.5px; }
 
   /* Stipend + toggle */
-  .lcc-stipend-input { font-size: 16px; padding: 10px 0; }
-  .lcc-stipend-prefix { font-size: 16px; }
-  .lcc-toggle { padding: 12px 14px; gap: 12px; }
-  .lcc-toggle-title { font-size: 13px; }
-  .lcc-toggle-sub { font-size: 11.5px; }
+  .lcc-stipend { padding: 0 12px; }
+  .lcc-stipend-prefix { font-size: 14px; }
+  .lcc-stipend-input { font-size: 15px; padding: 9px 0; }
+  .lcc-stipend-suffix { font-size: 11.5px; }
+  .lcc-toggle { padding: 10px 12px; gap: 10px; }
+  .lcc-toggle-track { width: 36px; height: 20px; }
+  .lcc-toggle-track::after { width: 16px; height: 16px; }
+  .lcc-toggle input:checked ~ .lcc-toggle-track::after { transform: translateX(16px); }
+  [dir="rtl"] .lcc-toggle input:checked ~ .lcc-toggle-track::after { transform: translateX(-16px); }
+  .lcc-toggle-title { font-size: 12.5px; }
+  .lcc-toggle-sub { font-size: 11px; }
 
   /* Result card */
-  .lcc-result-eyebrow { font-size: 11px; }
-  .lcc-result-total { font-size: 38px; margin: 4px 0 2px; }
-  .lcc-result-sub { font-size: 13px; margin-bottom: 16px; }
+  .lcc-result-eyebrow { font-size: 10.5px; letter-spacing: 0.1em; }
+  .lcc-result-total { font-size: 30px; margin: 4px 0 0; letter-spacing: -0.02em; }
+  .lcc-result-sub { font-size: 12.5px; margin-bottom: 12px; }
 
-  .lcc-donut { width: 180px; height: 180px; }
-  .lcc-donut-wrap { margin-bottom: 18px; }
+  .lcc-donut { width: 150px; height: 150px; }
+  .lcc-donut-num { font-size: 18px; }
+  .lcc-donut-label { font-size: 9.5px; }
+  .lcc-donut-wrap { margin-bottom: 14px; }
 
-  .lcc-coverage { padding: 12px 14px; margin-bottom: 18px; }
-  .lcc-coverage-row { font-size: 13px; }
-  .lcc-coverage-row--big { font-size: 14px; }
-  .lcc-coverage-row--big strong { font-size: 18px; }
-  .lcc-coverage-hint { font-size: 11.5px; }
+  .lcc-coverage { padding: 10px 12px; margin-bottom: 14px; }
+  .lcc-coverage-row { font-size: 12.5px; padding: 3px 0; }
+  .lcc-coverage-row--big { font-size: 13px; padding-top: 8px; }
+  .lcc-coverage-row--big strong { font-size: 16px; }
+  .lcc-coverage-hint { font-size: 11px; }
 
-  .lcc-breakdown-title { font-size: 12.5px; margin-bottom: 8px; }
-  .lcc-breakdown-row { font-size: 13px; padding: 6px 0; gap: 8px; }
-  .lcc-breakdown-pct { font-size: 11.5px; min-width: 28px; }
-  .lcc-breakdown-value { min-width: 50px; }
+  .lcc-breakdown-title { font-size: 11.5px; margin-bottom: 6px; }
+  .lcc-breakdown-row { font-size: 12.5px; padding: 5px 0; gap: 6px;
+    grid-template-columns: 10px 1fr auto auto; }
+  .lcc-breakdown-dot { width: 8px; height: 8px; }
+  .lcc-breakdown-pct { font-size: 11px; min-width: 26px; }
+  .lcc-breakdown-value { font-size: 12.5px; min-width: 46px; }
 
-  .lcc-info-list li { font-size: 13px; padding-inline-start: 20px; }
+  .lcc-info-list { gap: 8px; }
+  .lcc-info-list li { font-size: 12.5px; padding-inline-start: 18px; line-height: 1.5; }
 
+  .lcc-faq-q { font-size: 13px; padding: 11px 14px; gap: 12px; }
+  .lcc-faq-a { padding: 10px 14px 12px; font-size: 12.5px; line-height: 1.55; }
+  .lcc-faq-chev { width: 22px; height: 22px; }
+  .lcc-faq-chev svg { width: 12px; height: 12px; }
+
+  .lcc-related-head { margin-bottom: 12px; }
+  .lcc-related-sub { font-size: 12.5px; margin-top: -8px; }
+  .lcc-related-tile { padding: 12px; gap: 10px; }
+  .lcc-related-icon { width: 36px; height: 36px; font-size: 17px; border-radius: 10px; }
+  .lcc-related-name { font-size: 13px; }
+  .lcc-related-desc { font-size: 11.5px; }
+  .lcc-related-arrow { font-size: 16px; }
+}
+
+/* ─── Small phones (≤ 380px) ─────────────────────────────── */
+@media (max-width: 380px) {
+  .lcc-title { font-size: 22px; }
+  .lcc-form-card,
+  .lcc-result-card,
+  .lcc-info-card,
   .lcc-faq-card,
-  .lcc-related-card { padding: 18px; border-radius: var(--r-md); margin-top: 16px; }
-  .lcc-faq-q { font-size: 13.5px; padding: 12px 14px; }
-  .lcc-faq-a { padding: 12px 14px 14px; font-size: 13px; }
-  .lcc-faq-chev { width: 24px; height: 24px; }
-  .lcc-related-tile { padding: 14px; gap: 12px; }
-  .lcc-related-icon { width: 38px; height: 38px; font-size: 18px; }
-  .lcc-related-name { font-size: 14px; }
-  .lcc-related-desc { font-size: 12px; }
+  .lcc-related-card { padding: 14px; }
+  .lcc-result-total { font-size: 26px; }
+  .lcc-donut { width: 130px; height: 130px; }
+  .lcc-donut-num { font-size: 15px; }
+  .lcc-pill { padding: 7px 8px; }
+  .lcc-pill-label { font-size: 11.5px; }
+  .lcc-pill-sub { font-size: 10px; }
 }
