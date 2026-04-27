@@ -160,7 +160,6 @@ export default function DashSidebar({
     { href: '/dashboard/learn-german',    label: t('germanLearning'),  icon: I.lang },
     { href: '/dashboard/interview-prep',  label: t('interviewPrep'),   icon: I.mic,    locked: true },
     { href: '/dashboard/video-studio',    label: t('videoStudio'),     icon: I.video,  locked: true },
-    { href: '/dashboard/culture',         label: t('culture'),         icon: I.people, locked: true },
   ]
   const tools: NavItem[] = [
     { href: '/dashboard/eligibility',          label: t('eligibility'),       icon: I.check },

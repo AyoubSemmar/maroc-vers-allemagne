@@ -9,11 +9,6 @@ export default function ApplyForMePage() {
   return (
     <div className="dashpage">
       <div className="afm-soon">
-        <span className="afm-soon-pill">
-          <span className="afm-soon-dot" />
-          {t('comingSoonPill')}
-        </span>
-
         <div className="afm-soon-icon" aria-hidden>
           <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
             <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" />
