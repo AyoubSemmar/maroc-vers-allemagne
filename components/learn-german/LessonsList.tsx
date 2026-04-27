@@ -5,7 +5,9 @@ import { Link, useRouter } from '@/i18n/navigation'
 import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
 import WritingExercise from './WritingExercise'
+import ReadingExercise from './ReadingExercise'
 import type { WritingLevel } from '@/lib/writingExerciseData'
+import type { ReadingLevel } from '@/lib/readingExerciseData'
 
 export default function LessonsList({ level }: { level: Level }) {
   const t = useTranslations('learnGerman.level')
@@ -100,6 +102,9 @@ export default function LessonsList({ level }: { level: Level }) {
           )
         })}
       </ul>
+
+      {/* Daily reading exercise — fresh AI-generated text + MCQs every UTC day. */}
+      <ReadingExercise level={level.id as ReadingLevel} />
 
       {/* Daily writing exercise — one chance per UTC day per level. */}
       <WritingExercise level={level.id as WritingLevel} />
