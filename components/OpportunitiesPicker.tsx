@@ -16,10 +16,15 @@ import { Link } from '@/i18n/navigation'
 export default function OpportunitiesPicker({
   open,
   onClose,
+  inDashboard = false,
 }: {
   open: boolean
   onClose: () => void
+  /** When true, route to dashboard-shell pages instead of the public ones. */
+  inDashboard?: boolean
 }) {
+  const ausbildungHref = inDashboard ? '/dashboard/browse' : '/ausbildung-jobs'
+  const universitiesHref = inDashboard ? '/dashboard/universities' : '/universities'
   const t = useTranslations('opportunitiesPicker')
   const [mounted, setMounted] = useState(false)
   useEffect(() => { setMounted(true) }, [])
@@ -49,11 +54,11 @@ export default function OpportunitiesPicker({
     >
       <div className="opp-picker-card">
         <div className="opp-picker-grid">
-          <Link href="/ausbildung-jobs" className="opp-picker-option opp-picker-option--ausb" onClick={onClose}>
+          <Link href={ausbildungHref as any} className="opp-picker-option opp-picker-option--ausb" onClick={onClose}>
             <span className="opp-picker-icon" aria-hidden>🔧</span>
             <span className="opp-picker-option-title">{t('ausbildung')}</span>
           </Link>
-          <Link href="/universities" className="opp-picker-option opp-picker-option--uni" onClick={onClose}>
+          <Link href={universitiesHref as any} className="opp-picker-option opp-picker-option--uni" onClick={onClose}>
             <span className="opp-picker-icon" aria-hidden>🎓</span>
             <span className="opp-picker-option-title">{t('universities')}</span>
           </Link>

@@ -241,7 +241,7 @@ export default function DashSidebar({
           <span className="dashshell-nav-label">{t('help')}</span>
         </Link>
       </div>
-      <OpportunitiesPicker open={oppPickerOpen} onClose={() => setOppPickerOpen(false)} />
+      <OpportunitiesPicker open={oppPickerOpen} onClose={() => setOppPickerOpen(false)} inDashboard />
     </aside>
   )
 }
