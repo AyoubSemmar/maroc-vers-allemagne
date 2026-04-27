@@ -142,24 +142,51 @@
 /* ── List view: single column, compact cards ─────────────── */
 .aj-grid--list { grid-template-columns: 1fr; gap: 8px; }
 .aj-grid--list .aj-card { padding: 12px 16px; gap: 6px; flex-direction: column; }
-.aj-grid--list .aj-card-title { -webkit-line-clamp: 1; font-size: 14px; }
 .aj-grid--list .aj-card-excerpt { display: none; }
+
+/* Single-line truncation for the three text columns. Override the
+   line-clamp / multi-line rules from the grid view. */
+.aj-grid--list .aj-card-title,
+.aj-grid--list .aj-card-company,
+.aj-grid--list .aj-card-location {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: unset;
+  -webkit-box-orient: unset;
+  min-width: 0;
+}
+.aj-grid--list .aj-card-title { font-size: 14px; }
 .aj-grid--list .aj-card-company,
 .aj-grid--list .aj-card-location { font-size: 12px; }
 .aj-grid--list .aj-card-meta { margin-top: 4px; }
+
 @media (min-width: 720px) {
-  /* On wider screens, render each row truly horizontally. */
+  /* On wider screens, render each row truly horizontally with a fixed
+     row height so wrapping never breaks alignment. */
   .aj-grid--list .aj-card {
     flex-direction: row;
     align-items: center;
     gap: 16px;
     padding: 10px 16px;
+    min-height: 56px;
   }
-  .aj-grid--list .aj-card-title { flex: 1 1 30%; min-width: 0; margin: 0; }
-  .aj-grid--list .aj-card-company { flex: 0 1 22%; min-width: 0; margin: 0; }
-  .aj-grid--list .aj-card-location { flex: 0 1 18%; min-width: 0; margin: 0; }
+  .aj-grid--list .aj-card-title    { flex: 1 1 32%; margin: 0; }
+  .aj-grid--list .aj-card-company  { flex: 0 1 24%; margin: 0; display: flex; align-items: center; gap: 6px; }
+  .aj-grid--list .aj-card-location { flex: 0 1 16%; margin: 0; display: flex; align-items: center; gap: 4px; }
+  /* Inner spans of company/location need their own truncation so the
+     icon doesn't get pushed out and the text gets the ellipsis. */
+  .aj-grid--list .aj-card-company > span:last-child,
+  .aj-grid--list .aj-card-location > span:last-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1 1 auto;
+  }
   .aj-grid--list .aj-card-badges { flex: 0 0 auto; margin: 0; }
-  .aj-grid--list .aj-card-meta { flex: 0 0 auto; margin: 0; }
+  .aj-grid--list .aj-card-meta   { flex: 0 0 auto; margin: 0; }
 }
 
 /* ── Job Card ────────────────────────────────────────────── */
