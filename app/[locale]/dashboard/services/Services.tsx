@@ -62,7 +62,7 @@ export default function Services({ locale }: { locale: AppLocale }) {
           ))}
         </div>
 
-        <section className="svc-faq">
+        <section id="svc-faq" className="svc-faq">
           <h2 className="svc-faq-title">{t('faqTitle')}</h2>
           <div className="svc-faq-list">
             <FaqItem q={t('faq1Q')} a={t('faq1A')} />

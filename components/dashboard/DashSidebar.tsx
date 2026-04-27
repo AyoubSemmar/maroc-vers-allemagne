@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
-import { useLocale } from 'next-intl'
 import OpportunitiesPicker from '@/components/OpportunitiesPicker'
 
 type NavItem = {
@@ -138,7 +137,6 @@ export default function DashSidebar({
   const t = useTranslations('dashboard.sidebar')
   const tCommon = useTranslations('common')
   const pathname = usePathname()
-  const locale = useLocale()
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
 
   // Strip the locale prefix when comparing: pathname from next-intl's
@@ -239,7 +237,7 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.services}</span>
           <span className="dashshell-nav-label">{t('services')}</span>
         </Link>
-        <Link href={`/${locale}/#faq` as any} className="dashshell-nav-item">
+        <Link href="/dashboard/services#svc-faq" className="dashshell-nav-item">
           <span className="dashshell-nav-icon">{I.help}</span>
           <span className="dashshell-nav-label">{t('help')}</span>
         </Link>
