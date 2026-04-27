@@ -1,6 +1,7 @@
 'use client'
 
 import { useLocale, useTranslations } from 'next-intl'
+import SaveButton from '@/components/SaveButton'
 
 export type JobEnrichment = {
   summary?: { de?: string; fr?: string; en?: string; ar?: string } | null
@@ -93,6 +94,7 @@ export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job
       </div>
 
       <div className="aj-card-meta aj-card-meta--right">
+        <SaveButton itemType="ausbildung_job" itemId={job.id} size="compact" />
         <button type="button" className="aj-card-apply" onClick={() => onApply(job)}>
           {t('card.apply')}
         </button>

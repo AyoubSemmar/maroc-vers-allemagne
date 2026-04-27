@@ -53,7 +53,10 @@ export default function SaveButton({ itemType, itemId, className = '', size = 'n
     return () => { cancelled = true }
   }, [itemType, itemId])
 
-  async function toggle() {
+  async function toggle(e?: React.MouseEvent) {
+    // Stop the click bubbling up to a parent clickable card.
+    e?.stopPropagation()
+    e?.preventDefault()
     if (busy) return
     if (authed === false) {
       // Not logged in — bounce to login with a return path.
@@ -90,7 +93,7 @@ export default function SaveButton({ itemType, itemId, className = '', size = 'n
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={(e) => toggle(e)}
       disabled={authed === null}
       className={`save-btn ${size === 'compact' ? 'save-btn--compact' : ''} ${saved ? 'is-saved' : ''} ${className}`}
       aria-pressed={saved}

@@ -528,6 +528,12 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   font-weight: 800; font-size: 24px;
   color: var(--brand);
 }
+.unis-card { position: relative; }
+.unis-card-save {
+  position: absolute;
+  bottom: 12px;
+  inset-inline-end: 12px;
+}
 
 /* ─── Universities modal ─────────────────────────────────────── */
 .uni-modal-overlay {

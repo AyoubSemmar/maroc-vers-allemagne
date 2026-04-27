@@ -18,6 +18,7 @@ export type UniversityRow = {
 }
 
 import UniLogo from '@/components/universities/UniLogo'
+import SaveButton from '@/components/SaveButton'
 
 const TYPE_LABEL_KEYS: Record<string, string> = {
   university:        'typeUniversity',
@@ -125,11 +126,13 @@ export default function UniversitiesClient({
           ) : (
             <div className="unis-grid">
               {filtered.map((u) => (
-                <button
-                  type="button"
+                <div
                   key={u.id}
+                  role="button"
+                  tabIndex={0}
                   className="unis-card"
                   onClick={() => setSelectedUni(u)}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSelectedUni(u) } }}
                 >
                   <div className="unis-card-logo" aria-hidden>
                     <UniLogo src={u.logoUrl} fallback={u.name.charAt(0)} fallbackClassName="unis-card-logo-fallback" />
@@ -150,7 +153,10 @@ export default function UniversitiesClient({
                       </p>
                     )}
                   </div>
-                </button>
+                  <div className="unis-card-save">
+                    <SaveButton itemType="university" itemId={u.id} size="compact" />
+                  </div>
+                </div>
               ))}
             </div>
           )}
