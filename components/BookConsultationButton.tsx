@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { useTranslations } from 'next-intl'
 
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/gogermany/consultation'
+const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/contact-gogermany/30min'
 
 declare global {
   interface Window {
