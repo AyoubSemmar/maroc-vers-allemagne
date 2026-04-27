@@ -173,13 +173,16 @@
       minmax(0, 1fr)        /* title — fills remaining */
       minmax(0, 220px)      /* company */
       minmax(0, 140px)      /* location */
-      auto                  /* badges */
-      auto;                 /* meta / apply button */
+      120px                 /* badges — fixed so columns align across rows */
+      110px;                /* apply button */
     align-items: center;
     gap: 16px;
     padding: 10px 16px;
     min-height: 56px;
   }
+  /* Badges left-align inside their fixed slot, button right-aligns. */
+  .aj-grid--list .aj-card-badges { justify-content: flex-start; }
+  .aj-grid--list .aj-card-meta { justify-content: flex-end; }
   .aj-grid--list .aj-card-title    { margin: 0; min-width: 0; }
   .aj-grid--list .aj-card-company,
   .aj-grid--list .aj-card-location {
