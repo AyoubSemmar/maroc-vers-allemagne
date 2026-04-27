@@ -196,6 +196,14 @@
   color: oklch(0.42 0.16 152);
   border-color: color-mix(in oklch, oklch(0.66 0.17 152) 30%, transparent);
 }
+.aj-badge-link {
+  background: color-mix(in oklch, oklch(0.62 0.18 255) 12%, transparent);
+  color: oklch(0.42 0.16 255);
+  border-color: color-mix(in oklch, oklch(0.62 0.18 255) 30%, transparent);
+}
+.aj-card-meta--right {
+  justify-content: flex-end;
+}
 .aj-card-excerpt {
   font-size: 13px;
   line-height: 1.5;

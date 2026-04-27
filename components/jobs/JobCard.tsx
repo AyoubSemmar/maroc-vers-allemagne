@@ -53,24 +53,9 @@ function cleanExcerpt(md: string, max = 160): string {
   return stripped.length > max ? stripped.slice(0, max).trimEnd() + '…' : stripped
 }
 
-function formatRelative(dateStr: string, t: (key: string, v?: any) => string): string {
-  const d = new Date(dateStr)
-  if (isNaN(d.getTime())) return ''
-  const diffDays = Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24))
-  if (diffDays <= 0) return t('rel.today')
-  if (diffDays === 1) return t('rel.oneDay')
-  if (diffDays === 2) return t('rel.twoDays')
-  if (diffDays <= 10) return t('rel.fewDays', { n: diffDays })
-  return t('rel.manyDays', { n: diffDays })
-}
-
 export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job) => void }) {
   const t = useTranslations('ausbJobs')
   const locale = useLocale()
-  const dateStr = job.published_at || job.created_at
-  const d = dateStr ? new Date(dateStr) : null
-  const diffDays = d ? Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24)) : 999
-  const isFresh = diffDays <= 3
   const e = job.enrichment_json
   const translated = (locale === 'ar' || locale === 'fr' || locale === 'en')
     ? e?.translations?.[locale]
@@ -102,14 +87,12 @@ export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job
           <span className="aj-badge aj-badge-type">⏱ {job.anstellungsart}</span>
         )}
         {job.phone && <span className="aj-badge aj-badge-phone">📞</span>}
+        {job.contact_email && <span className="aj-badge aj-badge-email">✉️</span>}
+        {job.apply_url && <span className="aj-badge aj-badge-link">🔗</span>}
         {e?.duration_months && <span className="aj-badge aj-badge-duration">⏳ {e.duration_months} mo</span>}
-        {e && <span className="aj-badge aj-badge-lang">🗣 B2</span>}
       </div>
 
-      <div className="aj-card-meta">
-        <span className={`aj-card-date${isFresh ? ' fresh' : ''}`}>
-          {isFresh && t('card.freshPrefix')}{formatRelative(dateStr || new Date().toISOString(), t as any)}
-        </span>
+      <div className="aj-card-meta aj-card-meta--right">
         <button type="button" className="aj-card-apply" onClick={() => onApply(job)}>
           {t('card.apply')}
         </button>
