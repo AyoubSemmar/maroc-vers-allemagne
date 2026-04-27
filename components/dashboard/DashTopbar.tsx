@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 
@@ -9,13 +9,14 @@ export default function DashTopbar({
   avatarSrc,
   userInitial,
   onMobileMenu,
+  onHelpOpen,
 }: {
   avatarSrc: string | null
   userInitial: string
   onMobileMenu?: () => void
+  onHelpOpen?: () => void
 }) {
   const t = useTranslations('dashboard.topbar')
-  const locale = useLocale()
 
   // Theme toggle (matches ThemeToggle.tsx pattern)
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -51,8 +52,9 @@ export default function DashTopbar({
       <div className="dashshell-topbar-actions">
         <LanguageSwitcher />
 
-        <a
-          href={`/${locale}/#faq`}
+        <button
+          type="button"
+          onClick={onHelpOpen}
           className="dashshell-icon-btn"
           aria-label={t('help')}
           title={t('help')}
@@ -60,7 +62,7 @@ export default function DashTopbar({
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
             <circle cx="12" cy="12" r="9" /><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 1.5-2.5 2-2.5 3.5" /><circle cx="12" cy="17" r=".5" />
           </svg>
-        </a>
+        </button>
 
         <button
           type="button"

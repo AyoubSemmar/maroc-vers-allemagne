@@ -127,12 +127,14 @@ export default function DashSidebar({
   isMobileOpen,
   collapsed,
   onClose,
+  onHelpOpen,
 }: {
   completionPct: number
   userInitial: string
   isMobileOpen?: boolean
   collapsed?: boolean
   onClose?: () => void
+  onHelpOpen?: () => void
 }) {
   const t = useTranslations('dashboard.sidebar')
   const tCommon = useTranslations('common')
@@ -237,10 +239,14 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.services}</span>
           <span className="dashshell-nav-label">{t('services')}</span>
         </Link>
-        <Link href="/dashboard/services#svc-faq" className="dashshell-nav-item">
+        <button
+          type="button"
+          onClick={onHelpOpen}
+          className="dashshell-nav-item"
+        >
           <span className="dashshell-nav-icon">{I.help}</span>
           <span className="dashshell-nav-label">{t('help')}</span>
-        </Link>
+        </button>
       </div>
       <OpportunitiesPicker open={oppPickerOpen} onClose={() => setOppPickerOpen(false)} inDashboard />
     </aside>

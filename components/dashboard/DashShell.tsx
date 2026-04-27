@@ -9,6 +9,7 @@ import { createClient } from '@/lib/supabase-browser'
 import { fetchDocuments, type UserDocument } from '@/lib/documents'
 import DashSidebar from './DashSidebar'
 import DashTopbar from './DashTopbar'
+import HelpModal from './HelpModal'
 
 export type ShellProfile = {
   whatsapp?: string | null
@@ -89,6 +90,7 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
   const [bumpKey, setBumpKey] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [collapsed, setCollapsed] = useState(false)
+  const [helpOpen, setHelpOpen] = useState(false)
 
   // Auto-close the mobile drawer whenever the route changes.
   useEffect(() => { setMobileOpen(false) }, [pathname])
@@ -164,6 +166,7 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
           userInitial={userInitial}
           isMobileOpen={mobileOpen}
           collapsed={collapsed}
+          onHelpOpen={() => setHelpOpen(true)}
           onClose={() => {
             // On phone, close the drawer. On desktop, collapse.
             if (typeof window !== 'undefined' && window.matchMedia('(max-width: 960px)').matches) {
@@ -185,6 +188,7 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
           <DashTopbar
             avatarSrc={avatarSrc}
             userInitial={userInitial}
+            onHelpOpen={() => setHelpOpen(true)}
             onMobileMenu={() => {
               if (typeof window !== 'undefined' && window.matchMedia('(max-width: 960px)').matches) {
                 setMobileOpen(v => !v)
@@ -199,6 +203,7 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
             </div>
           </div>
         </div>
+        <HelpModal open={helpOpen} onClose={() => setHelpOpen(false)} />
       </div>
     </ShellCtx.Provider>
   )
