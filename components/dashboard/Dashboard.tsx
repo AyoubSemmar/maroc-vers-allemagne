@@ -38,7 +38,7 @@ export default function Dashboard() {
     return [
       { key: 'learnGerman', icon: '📚', href: '/dashboard/learn-german', status: 'doing' },
       { key: 'find', icon: isAus ? '🔍' : '🎓', href: isAus ? '/dashboard/browse' : '/universities', status: isAus ? 'todo' : 'soon' },
-      { key: 'visa', icon: '🛂', href: '/visa', status: 'soon' },
+      { key: 'visa', icon: '🛂', href: isAus ? '/visa/ausbildung' : '/visa/studium', status: 'todo' },
     ]
   }, [path])
 
