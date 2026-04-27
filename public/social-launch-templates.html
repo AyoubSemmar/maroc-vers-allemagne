@@ -757,16 +757,22 @@
 
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/modern-screenshot@4.6.0/dist/index.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.13/dist/html-to-image.js"></script>
   <script>
-    // Export a single post element as a 1080x1080 PNG using modern-screenshot,
-    // which handles clip-path, gradient text, and emojis far better than
-    // html2canvas. We capture the post at its native 1080x1080 size, then
-    // restore the CSS scale transform we use for screen preview.
+    // Export a post element as a 1080x1080 PNG. We use html-to-image which
+    // works in every modern browser without requiring any build step.
     async function exportPost(targetId, fileName) {
       const el = document.getElementById(targetId)
-      if (!el) return
+      if (!el) {
+        alert('Post element not found: ' + targetId)
+        return
+      }
+      if (typeof htmlToImage === 'undefined' || !htmlToImage.toPng) {
+        alert('Export library failed to load. Check your internet connection and refresh the page (Ctrl+F5).')
+        throw new Error('html-to-image not loaded')
+      }
 
+      // Drop the screen-preview scale transform during capture.
       const prevTransform = el.style.transform
       const prevMargin = el.style.marginBottom
       el.style.transform = 'none'
@@ -774,22 +780,24 @@
       void el.offsetWidth
 
       try {
-        // 2x device pixel ratio gives a crisp 2160x2160 PNG that downsamples
-        // beautifully to 1080x1080 in Instagram's compressor.
-        const dataUrl = await modernScreenshot.domToPng(el, {
+        const dataUrl = await htmlToImage.toPng(el, {
           width: 1080,
           height: 1080,
-          scale: 2,
+          pixelRatio: 2,           // crisp 2x output (2160x2160) downsampled by IG
           backgroundColor: '#0E1A36',
-          quality: 1,
+          cacheBust: true,
           style: { transform: 'none', margin: '0' },
         })
         const a = document.createElement('a')
         a.href = dataUrl
-        a.download = `${fileName}.png`
+        a.download = fileName + '.png'
         document.body.appendChild(a)
         a.click()
         a.remove()
+      } catch (err) {
+        console.error('Export failed for', targetId, err)
+        alert('Couldn\'t export this post.\n\nReason: ' + (err && err.message ? err.message : err) + '\n\nUse the "📷 Pixel-perfect method" button above for the manual Chrome DevTools approach — it always works.')
+        throw err
       } finally {
         el.style.transform = prevTransform
         el.style.marginBottom = prevMargin
