@@ -10,6 +10,9 @@ export type CategoryKey =
   | 'logistics'
   | 'education'
   | 'media'
+  | 'public_service'
+  | 'retail'
+  | 'automotive'
 
 export type Category = {
   key: CategoryKey
@@ -97,8 +100,51 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
     ],
     color: 'gold',
   },
+  public_service: {
+    key: 'public_service',
+    nameEn: 'Public Service & Administration',
+    nameAr: 'الخدمة العامة والإدارة',
+    icon: '🏛️',
+    keywords: [
+      'Verwaltungsfachangestellte', 'Verwaltungsfachangestellter',
+      'Notarfachangestellte', 'Notarfachangestellter',
+      'Kaufmann für Büromanagement', 'Kauffrau für Büromanagement',
+      'Industriekaufmann', 'Industriekauffrau',
+    ],
+    color: 'teal',
+  },
+  retail: {
+    key: 'retail',
+    nameEn: 'Sales & Retail',
+    nameAr: 'البيع والتجارة',
+    icon: '🛒',
+    keywords: [
+      'Kaufmann im Einzelhandel', 'Kauffrau im Einzelhandel',
+      'Verkäufer', 'Verkäuferin',
+      'E-Commerce',
+      'Groß- und Außenhandel',
+      'Handelsfachwirt', 'Handelsfachwirtin',
+      'Gestalter für visuelles Marketing', 'Gestalterin für visuelles Marketing',
+    ],
+    color: 'gold',
+  },
+  automotive: {
+    key: 'automotive',
+    nameEn: 'Automotive & Vehicles',
+    nameAr: 'السيارات والمركبات',
+    icon: '🚗',
+    keywords: [
+      'Kfz-Mechatroniker', 'Kfz-Mechatronikerin',
+      'Kraftfahrzeugmechatroniker', 'Kraftfahrzeugmechatronikerin',
+      'Fahrzeuglackierer', 'Fahrzeuglackiererin',
+      'Karosserie- und Fahrzeugbaumechaniker', 'Karosserie- und Fahrzeugbaumechanikerin',
+      'Nutzfahrzeugtechnik',
+    ],
+    color: 'brand',
+  },
 }
 
 export const CATEGORIES_ORDER: CategoryKey[] = [
-  'healthcare', 'it', 'handwerk', 'hospitality', 'logistics', 'education', 'media',
+  'healthcare', 'it', 'handwerk', 'hospitality', 'logistics',
+  'education', 'media', 'public_service', 'retail', 'automotive',
 ]

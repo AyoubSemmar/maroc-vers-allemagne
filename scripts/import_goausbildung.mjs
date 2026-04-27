@@ -41,6 +41,7 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY, { auth: { persistSessio
 
 const VALID_CATEGORIES = new Set([
   'hospitality', 'handwerk', 'it', 'healthcare', 'logistics', 'education', 'media',
+  'public_service', 'retail', 'automotive',
 ])
 
 // goausbildung.com uses `hello@goausbildung.com` as a relay when the employer

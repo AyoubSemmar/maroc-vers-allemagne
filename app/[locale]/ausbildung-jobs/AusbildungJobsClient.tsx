@@ -26,6 +26,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   const jobsByCategory = useMemo(() => {
     const map: Record<CategoryKey, Job[]> = {
       hospitality: [], handwerk: [], it: [], healthcare: [], logistics: [], education: [], media: [],
+      public_service: [], retail: [], automotive: [],
     }
     for (const j of jobs) {
       const key = j.category as CategoryKey
