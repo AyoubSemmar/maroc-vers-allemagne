@@ -103,11 +103,63 @@
   font-weight: 700;
 }
 
+/* ── View-mode toggle (grid ⇄ list) ───────────────────────── */
+.aj-view-toggle {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+.aj-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  color: var(--ink-mute);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.aj-view-btn:hover { color: var(--ink); }
+.aj-view-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
 /* ── Job Grid ────────────────────────────────────────────── */
 .aj-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 14px;
+}
+
+/* ── List view: single column, compact cards ─────────────── */
+.aj-grid--list { grid-template-columns: 1fr; gap: 8px; }
+.aj-grid--list .aj-card { padding: 12px 16px; gap: 6px; flex-direction: column; }
+.aj-grid--list .aj-card-title { -webkit-line-clamp: 1; font-size: 14px; }
+.aj-grid--list .aj-card-excerpt { display: none; }
+.aj-grid--list .aj-card-company,
+.aj-grid--list .aj-card-location { font-size: 12px; }
+.aj-grid--list .aj-card-meta { margin-top: 4px; }
+@media (min-width: 720px) {
+  /* On wider screens, render each row truly horizontally. */
+  .aj-grid--list .aj-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+  }
+  .aj-grid--list .aj-card-title { flex: 1 1 30%; min-width: 0; margin: 0; }
+  .aj-grid--list .aj-card-company { flex: 0 1 22%; min-width: 0; margin: 0; }
+  .aj-grid--list .aj-card-location { flex: 0 1 18%; min-width: 0; margin: 0; }
+  .aj-grid--list .aj-card-badges { flex: 0 0 auto; margin: 0; }
+  .aj-grid--list .aj-card-meta { flex: 0 0 auto; margin: 0; }
 }
 
 /* ── Job Card ────────────────────────────────────────────── */

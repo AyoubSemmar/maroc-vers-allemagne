@@ -20,6 +20,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   const t = useTranslations('ausbJobs')
   const locale = useLocale() as AppLocale
   const [filter, setFilter] = useState<CategoryKey | 'all'>('all')
+  const [view, setView] = useState<'grid' | 'list'>('grid')
   const [applyJob, setApplyJob] = useState<Job | null>(null)
 
   // Group jobs by category
@@ -79,6 +80,39 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
           })}
         </div>
 
+        {/* View-mode toggle: grid ⇄ list */}
+        <div className="aj-view-toggle" role="group" aria-label="View mode">
+          <button
+            type="button"
+            className={`aj-view-btn${view === 'grid' ? ' active' : ''}`}
+            onClick={() => setView('grid')}
+            aria-label="Grid view"
+            aria-pressed={view === 'grid'}
+            title="Grid"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="9" y="1.5" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="1.5" y="9" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="9" y="9" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            className={`aj-view-btn${view === 'list' ? ' active' : ''}`}
+            onClick={() => setView('list')}
+            aria-label="List view"
+            aria-pressed={view === 'list'}
+            title="List"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+              <line x1="2" y1="3.5" x2="14" y2="3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <line x1="2" y1="8" x2="14" y2="8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <line x1="2" y1="12.5" x2="14" y2="12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
+
         {/* Categories */}
         {total === 0 ? (
           <div className="aj-empty">
@@ -93,6 +127,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
               categoryKey={k}
               category={CATEGORIES[k]}
               jobs={jobsByCategory[k]}
+              view={view}
               onApply={j => setApplyJob(j)}
             />
           ))

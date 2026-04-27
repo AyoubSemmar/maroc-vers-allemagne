@@ -8,10 +8,11 @@ type Props = {
   category: Category
   categoryKey: CategoryKey
   jobs: Job[]
+  view?: 'grid' | 'list'
   onApply: (job: Job) => void
 }
 
-export default function CategorySection({ category, categoryKey, jobs, onApply }: Props) {
+export default function CategorySection({ category, categoryKey, jobs, view = 'grid', onApply }: Props) {
   const t = useTranslations('ausbJobs')
   return (
     <section className="aj-category">
@@ -26,7 +27,7 @@ export default function CategorySection({ category, categoryKey, jobs, onApply }
       {jobs.length === 0 ? (
         <div className="aj-cat-empty">{t('catEmpty')}</div>
       ) : (
-        <div className="aj-grid">
+        <div className={`aj-grid${view === 'list' ? ' aj-grid--list' : ''}`}>
           {jobs.map(j => <JobCard key={j.id} job={j} onApply={onApply} />)}
         </div>
       )}
