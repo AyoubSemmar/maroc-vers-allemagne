@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import ReactMarkdown from 'react-markdown'
 import { Job } from './JobCard'
 
@@ -12,7 +12,13 @@ type Props = {
 
 export default function ApplyModal({ job, onClose }: Props) {
   const t = useTranslations('ausbJobs.modal')
+  const locale = useLocale()
   const [toast, setToast] = useState('')
+
+  const translated = (locale === 'ar' || locale === 'fr' || locale === 'en')
+    ? job.enrichment_json?.translations?.[locale]
+    : null
+  const description = translated || job.description
 
   // ── Lock body scroll while open ─────────────────────────
   useEffect(() => {
@@ -110,11 +116,11 @@ export default function ApplyModal({ job, onClose }: Props) {
             )}
           </div>
 
-          {job.description && (
+          {description && (
             <div className="aj-section">
               <h3 className="aj-section-title">{t('descriptionLabel')}</h3>
               <div className="aj-description-md">
-                <ReactMarkdown>{job.description}</ReactMarkdown>
+                <ReactMarkdown>{description}</ReactMarkdown>
               </div>
             </div>
           )}

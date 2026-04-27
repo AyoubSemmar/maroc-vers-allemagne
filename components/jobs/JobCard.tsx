@@ -1,9 +1,10 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 export type JobEnrichment = {
   summary?: { de?: string; fr?: string; en?: string; ar?: string } | null
+  translations?: { ar?: string; fr?: string; en?: string } | null
   salary?: {
     min_monthly_eur?: number | null
     max_monthly_eur?: number | null
@@ -65,11 +66,16 @@ function formatRelative(dateStr: string, t: (key: string, v?: any) => string): s
 
 export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job) => void }) {
   const t = useTranslations('ausbJobs')
+  const locale = useLocale()
   const dateStr = job.published_at || job.created_at
   const d = dateStr ? new Date(dateStr) : null
   const diffDays = d ? Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24)) : 999
   const isFresh = diffDays <= 3
   const e = job.enrichment_json
+  const translated = (locale === 'ar' || locale === 'fr' || locale === 'en')
+    ? e?.translations?.[locale]
+    : null
+  const description = translated || job.description
 
   return (
     <article className={`aj-card ${e ? 'aj-card--enriched' : ''}`}>
@@ -87,8 +93,8 @@ export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job
         </p>
       )}
 
-      {job.description && (
-        <p className="aj-card-excerpt">{cleanExcerpt(job.description)}</p>
+      {description && (
+        <p className="aj-card-excerpt">{cleanExcerpt(description)}</p>
       )}
 
       <div className="aj-card-badges">
