@@ -43,6 +43,20 @@
   line-height: 1.6;
 }
 
+.rihla-cvb-badges {
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  margin: 0 auto 22px;
+}
+.rihla-cvb-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12.5px; font-weight: 700;
+  color: var(--ink-soft);
+}
+
 .rihla-cvb-progress-wrap {
   display: flex; align-items: center; gap: 12px; justify-content: center;
   max-width: 500px; margin: 0 auto;

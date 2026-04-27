@@ -116,6 +116,12 @@ export default function AnschreibenClient() {
           <p className="ansch-subtitle">
             {t('subtitle')}
           </p>
+          <div className="ansch-badges">
+            <span className="ansch-badge">✍️ AI-tailored</span>
+            <span className="ansch-badge">🇩🇪 German</span>
+            <span className="ansch-badge">📄 PDF export</span>
+            <span className="ansch-badge">🆓 Free</span>
+          </div>
         </div>
       </header>
 

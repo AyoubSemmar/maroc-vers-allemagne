@@ -160,6 +160,12 @@ export default function CVBuilderClient() {
           <p className="rihla-cvb-subtitle">
             {t('subtitle')}
           </p>
+          <div className="rihla-cvb-badges">
+            <span className="rihla-cvb-badge">📄 PDF</span>
+            <span className="rihla-cvb-badge">🇩🇪 German format</span>
+            <span className="rihla-cvb-badge">🤖 AI polish</span>
+            <span className="rihla-cvb-badge">🆓 Free</span>
+          </div>
           <div className="rihla-cvb-progress-wrap">
             <div className="rihla-cvb-progress-bar">
               <div className="rihla-cvb-progress-fill" style={{ width: `${completion}%` }} />
