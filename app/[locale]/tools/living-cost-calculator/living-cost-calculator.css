@@ -13,10 +13,15 @@
   padding-bottom: 80px;
 }
 
-/* Tighter container — the default .rihla .wrap is 1240px; this tool is
-   form-heavy and reads better at a narrower max-width. */
-.lcc-root .wrap { max-width: 1080px; padding-inline: 20px; }
+/* Self-contained container — we don't inherit .rihla on purpose so the
+   global heading rules (.rihla h2 etc.) don't leak in. */
+.lcc-root .wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-inline: 20px;
+}
 @media (max-width: 640px) { .lcc-root .wrap { padding-inline: 16px; } }
+.lcc-root h1, .lcc-root h2, .lcc-root h3 { margin: 0; }
 
 /* ── Hero ──────────────────────────────────────────────── */
 .lcc-hero {
