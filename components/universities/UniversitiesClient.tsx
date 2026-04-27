@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import UniModal from '@/components/universities/UniModal'
 
 export type UniversityRow = {
   id: string
@@ -42,6 +42,7 @@ export default function UniversitiesClient({
   const [query, setQuery] = useState('')
   const [city, setCity] = useState<string>('')
   const [type, setType] = useState<string>('')
+  const [selectedUni, setSelectedUni] = useState<UniversityRow | null>(null)
   const dir = dirFor(locale)
 
   // Distinct cities + types found in the dataset, sorted by frequency.
@@ -124,7 +125,12 @@ export default function UniversitiesClient({
           ) : (
             <div className="unis-grid">
               {filtered.map((u) => (
-                <Link key={u.id} href={`/universities/${u.id}`} className="unis-card">
+                <button
+                  type="button"
+                  key={u.id}
+                  className="unis-card"
+                  onClick={() => setSelectedUni(u)}
+                >
                   <div className="unis-card-logo" aria-hidden>
                     <UniLogo src={u.logoUrl} fallback={u.name.charAt(0)} fallbackClassName="unis-card-logo-fallback" />
                   </div>
@@ -144,12 +150,16 @@ export default function UniversitiesClient({
                       </p>
                     )}
                   </div>
-                </Link>
+                </button>
               ))}
             </div>
           )}
         </div>
       </section>
+
+      {selectedUni && (
+        <UniModal uni={selectedUni} locale={locale} onClose={() => setSelectedUni(null)} />
+      )}
     </div>
   )
 }

@@ -497,6 +497,11 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   color: var(--ink);
   transition: all .2s ease;
   min-width: 0;
+  /* Reset button defaults so the card behaves like the previous <Link>. */
+  font: inherit;
+  text-align: inherit;
+  cursor: pointer;
+  width: 100%;
 }
 .unis-card:hover {
   border-color: var(--brand);
@@ -522,6 +527,75 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .unis-card-logo-fallback {
   font-weight: 800; font-size: 24px;
   color: var(--brand);
+}
+
+/* ─── Universities modal ─────────────────────────────────────── */
+.uni-modal-overlay {
+  position: fixed; inset: 0;
+  background: color-mix(in oklch, #000 55%, transparent);
+  backdrop-filter: blur(4px);
+  display: grid; place-items: center;
+  padding: 20px;
+  z-index: 100;
+  animation: uni-modal-fade .15s ease-out;
+}
+@keyframes uni-modal-fade { from { opacity: 0 } to { opacity: 1 } }
+.uni-modal {
+  position: relative;
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%; max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px -20px color-mix(in oklch, #000 60%, transparent);
+  animation: uni-modal-rise .2s ease-out;
+}
+@keyframes uni-modal-rise { from { opacity: 0; transform: translateY(8px) } to { opacity: 1; transform: translateY(0) } }
+.uni-modal-close {
+  position: absolute; top: 14px; inset-inline-end: 14px;
+  width: 32px; height: 32px;
+  display: grid; place-items: center;
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  cursor: pointer;
+  font-size: 14px;
+  transition: all .15s ease;
+}
+.uni-modal-close:hover { background: var(--bg-warm); color: var(--ink); }
+.uni-modal-head { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 20px; padding-inline-end: 36px; }
+.uni-modal-logo {
+  width: 80px; height: 80px;
+  display: grid; place-items: center;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  flex: none;
+  overflow: hidden;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.uni-modal-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.uni-modal-logo-fallback { font-weight: 800; font-size: 32px; color: var(--brand); }
+.uni-modal-headline { min-width: 0; flex: 1; }
+.uni-modal-title {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.01em;
+  margin: 0 0 8px;
+  line-height: 1.25;
+}
+.uni-modal-meta {
+  display: flex; flex-wrap: wrap; gap: 8px 14px;
+  font-size: 13px; color: var(--ink-soft);
+}
+.uni-modal-type {
+  padding: 2px 8px;
+  background: color-mix(in oklch, var(--brand) 12%, transparent);
+  color: var(--brand);
+  border-radius: 999px;
+  font-weight: 700; font-size: 11.5px;
 }
 .unis-card-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .unis-card-name {
