@@ -23,6 +23,7 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
   const t = useTranslations('articles')
   const locale = useLocale() as AppLocale
   const [activeCategory, setActiveCategory] = useState<string>('__ALL__')
+  const [view, setView] = useState<'grid' | 'list'>('grid')
 
   const categories = Array.from(new Set(articles.map(a => a.category)))
 
@@ -79,6 +80,38 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
       </div>
 
       <div className="rihla-articles-body wrap">
+        {/* View-mode toggle: grid ⇄ list */}
+        <div className="rihla-articles-view" role="group" aria-label="View mode">
+          <button
+            type="button"
+            className={`rihla-view-btn${view === 'grid' ? ' active' : ''}`}
+            onClick={() => setView('grid')}
+            aria-pressed={view === 'grid'}
+            aria-label="Grid view"
+            title="Grid"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="9" y="1.5" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="1.5" y="9" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+              <rect x="9" y="9" width="5.5" height="5.5" rx="1" stroke="currentColor" strokeWidth="1.5" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            className={`rihla-view-btn${view === 'list' ? ' active' : ''}`}
+            onClick={() => setView('list')}
+            aria-pressed={view === 'list'}
+            aria-label="List view"
+            title="List"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden>
+              <line x1="2" y1="3.5" x2="14" y2="3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <line x1="2" y1="8" x2="14" y2="8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              <line x1="2" y1="12.5" x2="14" y2="12.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+            </svg>
+          </button>
+        </div>
 
         {/* Featured articles */}
         {featured.length > 0 && (
@@ -87,9 +120,9 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
               <span className="rihla-section-badge">{t('featuredBadge')}</span>
               <h2>{t('featuredHeading')}</h2>
             </div>
-            <div className="rihla-articles-grid featured">
+            <div className={`rihla-articles-grid featured${view === 'list' ? ' list' : ''}`}>
               {featured.map(a => (
-                <ArticleCard key={a.id} article={a} size="large"
+                <ArticleCard key={a.id} article={a} size={view === 'list' ? 'normal' : 'large'} view={view}
                   catLabel={catLabel} categoryEmoji={categoryEmoji} formatDate={formatDate} />
               ))}
             </div>
@@ -104,9 +137,9 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
                 <h2>{t('allHeading')}</h2>
               </div>
             )}
-            <div className="rihla-articles-grid">
+            <div className={`rihla-articles-grid${view === 'list' ? ' list' : ''}`}>
               {rest.map(a => (
-                <ArticleCard key={a.id} article={a}
+                <ArticleCard key={a.id} article={a} view={view}
                   catLabel={catLabel} categoryEmoji={categoryEmoji} formatDate={formatDate} />
               ))}
             </div>
@@ -125,15 +158,15 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
 }
 
 function ArticleCard({
-  article, size = 'normal', catLabel, categoryEmoji, formatDate,
+  article, size = 'normal', view = 'grid', catLabel, categoryEmoji, formatDate,
 }: {
-  article: Article; size?: 'large' | 'normal'
+  article: Article; size?: 'large' | 'normal'; view?: 'grid' | 'list'
   catLabel: (cat: string) => string
   categoryEmoji: (cat: string) => string
   formatDate: (d: string) => string
 }) {
   return (
-    <Link href={`/articles/${article.id}`} className={`rihla-article-card-link${size === 'large' ? ' large' : ''}`}>
+    <Link href={`/articles/${article.id}`} className={`rihla-article-card-link${size === 'large' ? ' large' : ''}${view === 'list' ? ' list' : ''}`}>
       <div className="rihla-acard-img">
         {article.image_url
           ? <img src={article.image_url} alt={article.title} />

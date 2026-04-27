@@ -1823,6 +1823,35 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   border-radius: 999px;
 }
 
+/* View-mode toggle (grid ⇄ list) — same component as ausbildung-jobs */
+.rihla-articles-view {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 3px;
+  gap: 2px;
+}
+.rihla-view-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 28px;
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  color: var(--ink-mute);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.rihla-view-btn:hover { color: var(--ink); }
+.rihla-view-btn.active {
+  background: var(--brand);
+  color: #fff;
+}
+
 .rihla-articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1830,6 +1859,45 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
 }
 .rihla-articles-grid.featured {
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* List view: single column of horizontal rows */
+.rihla-articles-grid.list,
+.rihla-articles-grid.featured.list { grid-template-columns: 1fr; gap: 10px; }
+.rihla-article-card-link.list {
+  flex-direction: row;
+  align-items: stretch;
+}
+.rihla-article-card-link.list .rihla-acard-img {
+  width: 140px;
+  flex: none;
+  aspect-ratio: auto;
+  height: auto;
+}
+.rihla-article-card-link.list .rihla-acard-body {
+  padding: 14px 16px;
+  gap: 6px;
+  justify-content: center;
+}
+.rihla-article-card-link.list h3 {
+  font-size: 15px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rihla-article-card-link.list .rihla-acard-body p {
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 13px;
+}
+@media (max-width: 560px) {
+  .rihla-article-card-link.list .rihla-acard-img { width: 100px; }
+  .rihla-article-card-link.list h3 { font-size: 14px; }
+  .rihla-article-card-link.list .rihla-acard-body p { display: none; }
+  .rihla-article-card-link.list .rihla-acard-body { padding: 10px 12px; }
 }
 @media (max-width: 900px) {
   .rihla-articles-grid,
