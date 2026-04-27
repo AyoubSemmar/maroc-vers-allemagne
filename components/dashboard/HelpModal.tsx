@@ -18,7 +18,10 @@ export default function HelpModal({
   open: boolean
   onClose: () => void
 }) {
-  const t = useTranslations('dashboardServices')
+  // Pull from the site-wide FAQ (landing.faq) so the dashboard Help and
+  // the public homepage stay in sync — single source of truth.
+  const t = useTranslations('landing.faq')
+  const tSvc = useTranslations('dashboardServices')
 
   // Close on Escape + lock body scroll while open.
   useEffect(() => {
@@ -50,9 +53,9 @@ export default function HelpModal({
           <div className="hlp-head-text">
             <span className="hlp-eyebrow">
               <span className="hlp-eyebrow-dot" />
-              {t('eyebrow')}
+              {t('kicker')}
             </span>
-            <h2 id="hlp-title" className="hlp-title">{t('faqTitle')}</h2>
+            <h2 id="hlp-title" className="hlp-title">{t('title')}</h2>
           </div>
           <button
             type="button"
@@ -67,10 +70,11 @@ export default function HelpModal({
         </header>
 
         <div className="hlp-body">
-          <FaqItem q={t('faq1Q')} a={t('faq1A')} defaultOpen />
-          <FaqItem q={t('faq2Q')} a={t('faq2A')} />
-          <FaqItem q={t('faq3Q')} a={t('faq3A')} />
-          <FaqItem q={t('faq4Q')} a={t('faq4A')} />
+          <FaqItem q={t('q1')} a={t('a1')} defaultOpen />
+          <FaqItem q={t('q2')} a={t('a2')} />
+          <FaqItem q={t('q3')} a={t('a3')} />
+          <FaqItem q={t('q4')} a={t('a4')} />
+          <FaqItem q={t('q5')} a={t('a5')} />
         </div>
 
         <footer className="hlp-foot">
@@ -79,7 +83,7 @@ export default function HelpModal({
             className="hlp-cta"
             onClick={onClose}
           >
-            {t('title')} →
+            {tSvc('title')} →
           </Link>
         </footer>
       </div>
