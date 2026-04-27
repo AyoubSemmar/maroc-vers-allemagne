@@ -163,14 +163,12 @@ export default function DashSidebar({
     { href: '/dashboard/culture',         label: t('culture'),         icon: I.people, locked: true },
   ]
   const tools: NavItem[] = [
-    { href: '/dashboard/eligibility',           label: t('eligibility'),  icon: I.check,    locked: true },
-    { href: '/dashboard/timeline',              label: t('timeline'),     icon: I.calendar, locked: true },
-    { href: '/dashboard/cv-builder',            label: t('cvBuilder'),    icon: I.doc },
-    { href: '/dashboard/cover-letter',          label: t('coverLetter'),  icon: I.edit },
-    { href: '/tools/living-cost-calculator',    label: t('livingCost'),       icon: I.euro },
-    { href: '/tools/migration-timeline',        label: t('migrationTimeline'), icon: I.calendar },
-    { href: '/tools/document-checklist',        label: t('documentChecklist'), icon: I.check },
-    { href: '/tools/eligibility-checker',       label: t('eligibilityChecker'), icon: I.sparkles },
+    { href: '/dashboard/eligibility',          label: t('eligibility'),       icon: I.check },
+    { href: '/dashboard/timeline',             label: t('timeline'),          icon: I.calendar },
+    { href: '/dashboard/document-checklist',   label: t('documentChecklist'), icon: I.doc },
+    { href: '/dashboard/living-cost-calculator', label: t('livingCost'),      icon: I.euro },
+    { href: '/dashboard/cv-builder',           label: t('cvBuilder'),         icon: I.doc },
+    { href: '/dashboard/cover-letter',         label: t('coverLetter'),       icon: I.edit },
   ]
 
   return (

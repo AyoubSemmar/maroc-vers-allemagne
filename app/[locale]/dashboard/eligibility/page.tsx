@@ -1,8 +1,11 @@
-'use client'
-import { useTranslations } from 'next-intl'
-import LockedStub from '@/components/dashboard/LockedStub'
+// Renders the Eligibility Checker tool inside the dashboard shell.
+// Re-uses the same client component as /tools/eligibility-checker.
+import type { AppLocale } from '@/i18n/routing'
+import EligibilityChecker from '../../tools/eligibility-checker/EligibilityChecker'
 
-export default function EligibilityPage() {
-  const t = useTranslations('dashboard.sidebar')
-  return <LockedStub feature={t('eligibility')} />
+type Props = { params: Promise<{ locale: AppLocale }> }
+
+export default async function DashboardEligibilityPage({ params }: Props) {
+  const { locale } = await params
+  return <EligibilityChecker locale={locale} />
 }
