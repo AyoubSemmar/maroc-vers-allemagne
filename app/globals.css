@@ -2043,6 +2043,32 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   justify-content: center;
   margin-bottom: 18px;
 }
+.afm-buy-card {
+  background: linear-gradient(135deg, var(--brand) 0%, oklch(0.55 0.17 320) 100%);
+  color: #fff;
+  border-radius: var(--r-lg);
+  padding: clamp(24px, 4vw, 36px);
+  margin: 8px 0 18px;
+  text-align: center;
+  box-shadow: 0 20px 50px -20px color-mix(in oklch, var(--brand) 60%, transparent);
+}
+.afm-buy-title {
+  font-size: clamp(20px, 2.6vw, 26px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.afm-buy-sub {
+  font-size: 14px;
+  color: color-mix(in srgb, #fff 88%, transparent);
+  margin: 0 auto 18px;
+  max-width: 520px;
+  line-height: 1.55;
+}
+.afm-buy-cta-row {
+  display: flex; justify-content: center;
+}
 .afm-soon-foot {
   font-size: 13px;
   color: var(--ink-mute);

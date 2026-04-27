@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import BookConsultationButton from '@/components/BookConsultationButton'
 
 export default function ApplyForMePage() {
   const t = useTranslations('dashboard.applyForMe')
@@ -42,13 +42,12 @@ export default function ApplyForMePage() {
           </div>
         </div>
 
-        <div className="afm-soon-cta">
-          <Link href="/dashboard/saved" className="btn btn-primary">
-            {t('inMeantime')}
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
+        <div className="afm-buy-card">
+          <h2 className="afm-buy-title">{t('buyTitle')}</h2>
+          <p className="afm-buy-sub">{t('buySub')}</p>
+          <div className="afm-buy-cta-row">
+            <BookConsultationButton variant="on-cta" />
+          </div>
         </div>
 
         <p className="afm-soon-foot">{t('etaHint')}</p>
