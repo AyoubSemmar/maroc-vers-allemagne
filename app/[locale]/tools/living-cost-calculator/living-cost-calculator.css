@@ -359,6 +359,129 @@
   font-weight: 800;
 }
 
+/* ── FAQ ───────────────────────────────────────────────── */
+.lcc-faq-card {
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(20px, 3vw, 32px);
+  margin-top: 24px;
+}
+.lcc-faq-list { display: flex; flex-direction: column; gap: 8px; }
+.lcc-faq-item {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.lcc-faq-item.is-open {
+  border-color: color-mix(in oklch, var(--brand) 35%, var(--line));
+  box-shadow: 0 6px 20px -10px color-mix(in oklch, var(--brand) 35%, transparent);
+}
+.lcc-faq-q {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 14px 18px;
+  background: transparent;
+  border: none;
+  font: inherit;
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--ink);
+  text-align: start;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.lcc-faq-q:hover { background: var(--bg-warm); }
+.lcc-faq-chev {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 28px; height: 28px;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--brand) 12%, transparent);
+  color: var(--brand);
+  flex: none;
+  transition: transform 0.2s ease;
+}
+.lcc-faq-item.is-open .lcc-faq-chev { transform: rotate(180deg); }
+.lcc-faq-a {
+  padding: 0 18px 16px;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line-soft);
+  margin-top: -1px;
+  padding-top: 14px;
+}
+
+/* ── Related tools ─────────────────────────────────────── */
+.lcc-related-card {
+  background: var(--bg-warm);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(20px, 3vw, 32px);
+  margin-top: 24px;
+}
+.lcc-related-head { margin-bottom: 18px; }
+.lcc-related-sub {
+  font-size: 14px;
+  color: var(--ink-soft);
+  margin: -12px 0 0;
+}
+.lcc-related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+}
+.lcc-related-tile {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px;
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-md);
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.18s ease;
+}
+.lcc-related-tile:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 32px -16px color-mix(in oklch, var(--brand) 50%, transparent);
+}
+.lcc-related-icon {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  background: color-mix(in oklch, var(--brand) 12%, transparent);
+  border-radius: 12px;
+  font-size: 22px;
+  flex: none;
+}
+.lcc-related-body { flex: 1; min-width: 0; }
+.lcc-related-name {
+  font-size: 15px; font-weight: 800;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.lcc-related-desc {
+  font-size: 12.5px;
+  color: var(--ink-mute);
+  line-height: 1.45;
+  margin: 0;
+}
+.lcc-related-arrow {
+  font-size: 18px;
+  color: var(--ink-mute);
+  flex: none;
+  transition: transform 0.15s, color 0.15s;
+}
+.lcc-related-tile:hover .lcc-related-arrow {
+  color: var(--brand);
+  transform: translate(2px, -2px);
+}
+[dir="rtl"] .lcc-related-tile:hover .lcc-related-arrow {
+  transform: translate(-2px, -2px);
+}
+
 /* ─── Mobile (< 600px): tighten everything ───────────────── */
 @media (max-width: 600px) {
   .lcc-hero { padding: 36px 0 28px; }
@@ -411,4 +534,14 @@
   .lcc-breakdown-value { min-width: 50px; }
 
   .lcc-info-list li { font-size: 13px; padding-inline-start: 20px; }
+
+  .lcc-faq-card,
+  .lcc-related-card { padding: 18px; border-radius: var(--r-md); margin-top: 16px; }
+  .lcc-faq-q { font-size: 13.5px; padding: 12px 14px; }
+  .lcc-faq-a { padding: 12px 14px 14px; font-size: 13px; }
+  .lcc-faq-chev { width: 24px; height: 24px; }
+  .lcc-related-tile { padding: 14px; gap: 12px; }
+  .lcc-related-icon { width: 38px; height: 38px; font-size: 18px; }
+  .lcc-related-name { font-size: 14px; }
+  .lcc-related-desc { font-size: 12px; }
 }

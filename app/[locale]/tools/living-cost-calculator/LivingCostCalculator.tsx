@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import {
   CITIES,
@@ -296,7 +297,81 @@ export default function LivingCostCalculator({ locale }: { locale: AppLocale }) 
             <li>{t('infoEstimate')}</li>
           </ul>
         </section>
+
+        {/* FAQ */}
+        <FAQSection />
+
+        {/* Related tools */}
+        <RelatedTools />
       </div>
     </div>
+  )
+}
+
+// ── FAQ accordion ─────────────────────────────────────────────
+function FAQSection() {
+  const t = useTranslations('livingCost')
+  const [open, setOpen] = useState<number | null>(0)
+  // 10 entries — keys are 0..9 in messages/*.json under livingCost.faqs[].q/.a
+  const ids = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  return (
+    <section className="lcc-faq-card">
+      <h2 className="lcc-section-title">{t('faqTitle')}</h2>
+      <div className="lcc-faq-list">
+        {ids.map(i => {
+          const isOpen = open === i
+          return (
+            <div key={i} className={`lcc-faq-item${isOpen ? ' is-open' : ''}`}>
+              <button
+                type="button"
+                className="lcc-faq-q"
+                aria-expanded={isOpen}
+                onClick={() => setOpen(isOpen ? null : i)}
+              >
+                <span>{t(`faqs.${i}.q` as any)}</span>
+                <span className="lcc-faq-chev" aria-hidden>
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M3 5l4 4 4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+              </button>
+              {isOpen && (
+                <div className="lcc-faq-a">{t(`faqs.${i}.a` as any)}</div>
+              )}
+            </div>
+          )
+        })}
+      </div>
+    </section>
+  )
+}
+
+// ── Related tools ─────────────────────────────────────────────
+function RelatedTools() {
+  const t = useTranslations('livingCost')
+  const tools = [
+    { key: 'cv',          icon: '📄', href: '/cv-builder' },
+    { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator' },
+    { key: 'jobs',        icon: '💼', href: '/ausbildung-jobs' },
+  ] as const
+  return (
+    <section className="lcc-related-card">
+      <div className="lcc-related-head">
+        <h2 className="lcc-section-title">{t('relatedTitle')}</h2>
+        <p className="lcc-related-sub">{t('relatedSub')}</p>
+      </div>
+      <div className="lcc-related-grid">
+        {tools.map(tool => (
+          <Link key={tool.key} href={tool.href} className="lcc-related-tile">
+            <span className="lcc-related-icon" aria-hidden>{tool.icon}</span>
+            <div className="lcc-related-body">
+              <h3 className="lcc-related-name">{t(`related.${tool.key}.name` as any)}</h3>
+              <p className="lcc-related-desc">{t(`related.${tool.key}.desc` as any)}</p>
+            </div>
+            <span className="lcc-related-arrow" aria-hidden>↗</span>
+          </Link>
+        ))}
+      </div>
+    </section>
   )
 }
