@@ -571,10 +571,23 @@
 <body>
   <div class="download-all-bar">
     <button id="download-all" class="download-btn">⬇ Download all 4 posts</button>
+    <button id="show-fallback" class="download-btn" style="background: #2a2a2a; color: #ddd; box-shadow: none; margin-left: 10px;">📷 Pixel-perfect method</button>
+  </div>
+
+  <div id="fallback-card" style="display:none; max-width: 720px; margin: 0 auto 32px; background: #2a2a2a; border-radius: 12px; padding: 22px 26px; color: #ddd; font-size: 14px; line-height: 1.65;">
+    <h3 style="margin: 0 0 10px; color: white; font-size: 16px;">Pixel-perfect method (always works)</h3>
+    <p style="margin: 0 0 12px;">If the auto-download looks off (emojis missing, gradients flat, clip-paths broken), use Chrome's built-in screenshot — it captures the actual browser rendering, so it's always perfect.</p>
+    <ol style="margin: 0; padding-left: 20px;">
+      <li>Press <code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">F12</code> (or <code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">Ctrl+Shift+I</code>) to open DevTools.</li>
+      <li>Press <code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">Ctrl+Shift+P</code> (Mac: <code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">Cmd+Shift+P</code>) — a command palette opens.</li>
+      <li>Type <strong>node screenshot</strong>, press Enter on "<em>Capture node screenshot</em>".</li>
+      <li>In the Elements panel, click the <code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">&lt;article class="post"&gt;</code> for the post you want — Chrome saves a perfect 1080×1080 PNG.</li>
+    </ol>
+    <p style="margin: 12px 0 0; color: #aaa; font-size: 13px;">Tip: while the post is selected, you can re-run the command (<code style="background:#1a1a1a;padding:2px 6px;border-radius:4px;">Ctrl+Shift+P</code> → "node screenshot") for each one without re-selecting.</p>
   </div>
 
   <h1 class="page-title">GoGermany — 4 launch posts (1080 × 1080)</h1>
-  <p class="page-sub">Click <strong>Download PNG</strong> on any post to save it instantly at Instagram size.</p>
+  <p class="page-sub">Click <strong>Download PNG</strong> on any post to save it instantly at Instagram size. <br>If anything looks off in the export, use the <strong>Pixel-perfect method</strong> button above.</p>
 
   <div class="grid">
 
@@ -757,33 +770,35 @@
 
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@1.5.8/dist/html2canvas-pro.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/modern-screenshot@4.6.0/dist/index.umd.js"></script>
   <script>
-    // Export a single post element as a 1080x1080 PNG.
+    // Export a single post element as a 1080x1080 PNG using modern-screenshot,
+    // which handles clip-path, gradient text, and emojis far better than
+    // html2canvas. We capture the post at its native 1080x1080 size, then
+    // restore the CSS scale transform we use for screen preview.
     async function exportPost(targetId, fileName) {
       const el = document.getElementById(targetId)
       if (!el) return
-      // Temporarily strip the screen-only scaling transform so html2canvas
-      // captures the post at its true 1080x1080 size.
+
       const prevTransform = el.style.transform
       const prevMargin = el.style.marginBottom
       el.style.transform = 'none'
       el.style.marginBottom = '0'
-      // Force a reflow before capturing.
       void el.offsetWidth
 
       try {
-        const canvas = await html2canvas(el, {
+        // 2x device pixel ratio gives a crisp 2160x2160 PNG that downsamples
+        // beautifully to 1080x1080 in Instagram's compressor.
+        const dataUrl = await modernScreenshot.domToPng(el, {
           width: 1080,
           height: 1080,
+          scale: 2,
           backgroundColor: '#0E1A36',
-          scale: 1,
-          useCORS: true,
-          allowTaint: true,
+          quality: 1,
+          style: { transform: 'none', margin: '0' },
         })
-        const url = canvas.toDataURL('image/png')
         const a = document.createElement('a')
-        a.href = url
+        a.href = dataUrl
         a.download = `${fileName}.png`
         document.body.appendChild(a)
         a.click()
@@ -793,6 +808,12 @@
         el.style.marginBottom = prevMargin
       }
     }
+
+    // Toggle the pixel-perfect-method instructions card.
+    document.getElementById('show-fallback').addEventListener('click', () => {
+      const card = document.getElementById('fallback-card')
+      card.style.display = card.style.display === 'none' ? 'block' : 'none'
+    })
 
     // Per-post download buttons.
     document.querySelectorAll('.download-btn[data-target]').forEach(btn => {
