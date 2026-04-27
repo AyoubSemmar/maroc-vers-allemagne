@@ -191,6 +191,36 @@
   color: oklch(0.46 0.18 65);
   border-color: color-mix(in oklch, oklch(0.78 0.18 75) 30%, transparent);
 }
+.aj-badge-phone {
+  background: color-mix(in oklch, oklch(0.66 0.17 152) 14%, transparent);
+  color: oklch(0.42 0.16 152);
+  border-color: color-mix(in oklch, oklch(0.66 0.17 152) 30%, transparent);
+}
+.aj-card-excerpt {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ink-mute);
+  margin: 4px 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.aj-description-md {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.aj-description-md h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 14px 0 6px;
+  color: var(--ink-soft);
+}
+.aj-description-md p { margin: 6px 0; }
+.aj-description-md ul, .aj-description-md ol { margin: 6px 0; padding-inline-start: 20px; }
+.aj-description-md li { margin: 2px 0; }
+.aj-description-md strong { font-weight: 700; }
 
 .aj-card-learn {
   list-style: none;

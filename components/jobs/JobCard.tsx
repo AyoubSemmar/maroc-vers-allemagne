@@ -32,10 +32,24 @@ export type Job = {
   external_url: string | null
   apply_url?: string | null
   contact_email?: string | null
+  phone?: string | null
   anstellungsart?: string | null
   published_at: string | null
   created_at: string
   enrichment_json?: JobEnrichment | null
+}
+
+// Strip the goausbildung.com markdown boilerplate ("### Über diese Ausbildung\nWillkommen bei …")
+// and produce a 2-line preview suitable for the card.
+function cleanExcerpt(md: string, max = 160): string {
+  const stripped = md
+    .replace(/^### Über diese Ausbildung\n/i, '')
+    .replace(/Willkommen bei [^!]+!\s*/i, '')
+    .replace(/^### .+$/gm, '')
+    .replace(/[*_`]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+  return stripped.length > max ? stripped.slice(0, max).trimEnd() + '…' : stripped
 }
 
 function formatRelative(dateStr: string, t: (key: string, v?: any) => string): string {
@@ -73,10 +87,15 @@ export default function JobCard({ job, onApply }: { job: Job; onApply: (job: Job
         </p>
       )}
 
+      {job.description && (
+        <p className="aj-card-excerpt">{cleanExcerpt(job.description)}</p>
+      )}
+
       <div className="aj-card-badges">
         {job.anstellungsart && (
           <span className="aj-badge aj-badge-type">⏱ {job.anstellungsart}</span>
         )}
+        {job.phone && <span className="aj-badge aj-badge-phone">📞</span>}
         {e?.duration_months && <span className="aj-badge aj-badge-duration">⏳ {e.duration_months} mo</span>}
         {e && <span className="aj-badge aj-badge-lang">🗣 B2</span>}
       </div>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ReactMarkdown from 'react-markdown'
 import { Job } from './JobCard'
 
 type Props = {
@@ -37,7 +38,8 @@ export default function ApplyModal({ job, onClose }: Props) {
 
   const hasEmail = !!job.contact_email
   const hasUrl = !!job.apply_url
-  const hasAny = hasEmail || hasUrl
+  const hasPhone = !!job.phone
+  const hasAny = hasEmail || hasUrl || hasPhone
 
   return (
     <div
@@ -80,6 +82,15 @@ export default function ApplyModal({ job, onClose }: Props) {
               </div>
             )}
 
+            {hasPhone && (
+              <div className="aj-contact-block">
+                <div className="aj-contact-label">{t('phoneLabel')}</div>
+                <a href={`tel:${(job.phone || '').replace(/\s+/g, '')}`} className="aj-contact-value" dir="ltr">
+                  📞 {job.phone}
+                </a>
+              </div>
+            )}
+
             {hasUrl && (
               <div className="aj-contact-block">
                 <div className="aj-contact-label">{t('urlLabel')}</div>
@@ -98,6 +109,15 @@ export default function ApplyModal({ job, onClose }: Props) {
               </div>
             )}
           </div>
+
+          {job.description && (
+            <div className="aj-section">
+              <h3 className="aj-section-title">{t('descriptionLabel')}</h3>
+              <div className="aj-description-md">
+                <ReactMarkdown>{job.description}</ReactMarkdown>
+              </div>
+            </div>
+          )}
 
           <p className="aj-email-hint" style={{ marginTop: 12 }}>
             {t('tipPrefix')} <a href="/cv-builder" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>{t('tipLink')}</a> {t('tipSuffix')}

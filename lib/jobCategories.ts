@@ -2,7 +2,14 @@
 // Maps categories to German Ausbildung job title keywords used for
 // both the Bundesagentur API search queries and post-fetch categorization.
 
-export type CategoryKey = 'hospitality' | 'handwerk' | 'it' | 'healthcare' | 'logistics'
+export type CategoryKey =
+  | 'hospitality'
+  | 'handwerk'
+  | 'it'
+  | 'healthcare'
+  | 'logistics'
+  | 'education'
+  | 'media'
 
 export type Category = {
   key: CategoryKey
@@ -63,6 +70,35 @@ export const CATEGORIES: Record<CategoryKey, Category> = {
     ],
     color: 'teal',
   },
+  education: {
+    key: 'education',
+    nameEn: 'Education & Training',
+    nameAr: 'التعليم والتدريب',
+    icon: '📚',
+    keywords: [
+      'Erzieher', 'Erzieherin',
+      'Sozialassistent', 'Sozialassistentin',
+      'Kinderpfleger', 'Kinderpflegerin',
+      'Heilerziehungspfleger', 'Heilerziehungspflegerin',
+    ],
+    color: 'berry',
+  },
+  media: {
+    key: 'media',
+    nameEn: 'Media & Communication',
+    nameAr: 'الإعلام والاتصال',
+    icon: '🎬',
+    keywords: [
+      'Mediengestalter', 'Mediengestalterin',
+      'Kaufmann für Marketingkommunikation', 'Kauffrau für Marketingkommunikation',
+      'Fachkraft für Veranstaltungstechnik',
+      'Audiovisuelle Medien',
+      'Contentmanager', 'Contentmanagerin',
+    ],
+    color: 'gold',
+  },
 }
 
-export const CATEGORIES_ORDER: CategoryKey[] = ['healthcare', 'it', 'handwerk', 'hospitality', 'logistics']
+export const CATEGORIES_ORDER: CategoryKey[] = [
+  'healthcare', 'it', 'handwerk', 'hospitality', 'logistics', 'education', 'media',
+]
