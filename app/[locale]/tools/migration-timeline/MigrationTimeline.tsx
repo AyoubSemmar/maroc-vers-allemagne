@@ -2,8 +2,8 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import BookConsultationButton from '@/components/BookConsultationButton'
 import {
   calculate,
   fmtMonths,
@@ -242,10 +242,7 @@ export default function MigrationTimeline({ locale }: { locale: AppLocale }) {
         <section className="mtl-cta">
           <h2 className="mtl-cta-title">{t('ctaTitle')}</h2>
           <p className="mtl-cta-sub">{t('ctaSub')}</p>
-          <Link href="/contact" className="mtl-cta-btn">
-            {t('ctaButton')}
-            <span aria-hidden>→</span>
-          </Link>
+          <BookConsultationButton variant="on-cta" />
         </section>
       </div>
     </div>

@@ -2049,6 +2049,58 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   margin: 0;
 }
 
+/* ── Book Consultation button ────────────────────────────── */
+.bcb {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.bcb:hover { transform: translateY(-2px); }
+
+.bcb-price {
+  background: rgba(0,0,0,0.18);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+/* Filled brand variant — for hero / Apply For Me / standalone CTAs */
+.bcb--primary {
+  background: var(--brand);
+  color: #fff;
+  box-shadow: 0 10px 24px -10px color-mix(in oklch, var(--brand) 70%, transparent);
+}
+.bcb--primary:hover { box-shadow: 0 14px 32px -10px color-mix(in oklch, var(--brand) 70%, transparent); }
+
+/* Outlined variant — for inline content links */
+.bcb--ghost {
+  background: var(--bg-elev);
+  border: 1.5px solid var(--brand);
+  color: var(--brand);
+}
+.bcb--ghost .bcb-price { background: color-mix(in oklch, var(--brand) 18%, transparent); color: var(--brand); }
+
+/* "On gradient CTA card" — for use INSIDE a colored hero like the
+   migration-timeline final card. Inverts colors. */
+.bcb--on-cta {
+  background: #fff;
+  color: var(--brand);
+}
+.bcb--on-cta .bcb-price {
+  background: color-mix(in oklch, var(--brand) 14%, transparent);
+  color: var(--brand);
+}
+
 /* ── Save / bookmark button ──────────────────────────────── */
 .save-btn {
   display: inline-flex;
