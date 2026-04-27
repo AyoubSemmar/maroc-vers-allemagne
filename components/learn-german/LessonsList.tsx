@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl'
 import { Link, useRouter } from '@/i18n/navigation'
 import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
+import WritingExercise from './WritingExercise'
+import type { WritingLevel } from '@/lib/writingExerciseData'
 
 export default function LessonsList({ level }: { level: Level }) {
   const t = useTranslations('learnGerman.level')
@@ -64,7 +66,7 @@ export default function LessonsList({ level }: { level: Level }) {
       )}
 
       {/* Lessons */}
-      <ul className="lg-lessons-list">
+      <ul className="lg-lessons-list" data-level={level.id}>
         {level.lessons.map((lesson) => {
           const unlocked = isLessonUnlocked(lesson.id, lesson.order)
           const completed = isLessonCompleted(lesson.id)
@@ -98,6 +100,9 @@ export default function LessonsList({ level }: { level: Level }) {
           )
         })}
       </ul>
+
+      {/* Daily writing exercise — one chance per UTC day per level. */}
+      <WritingExercise level={level.id as WritingLevel} />
     </div>
   )
 }

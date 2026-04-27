@@ -4125,5 +4125,336 @@
         "bullet3": "Kein Druck — passt keiner, sagen wir das ehrlich"
       }
     }
+  },
+  "writingExercise": {
+    "eyebrow": "Tägliches Schreiben",
+    "title": "Heutige Schreib-Aufgabe",
+    "subtitle": "{level} · Schreibe {min}–{max} Wörter. Abschicken und korrigierten Text mit Erklärungen erhalten.",
+    "themeBadge": "Thema heute",
+    "wordsShort": "Wörter",
+    "placeholder": "Schreibe deinen Text hier auf Deutsch…",
+    "submit": "Zur Korrektur abschicken",
+    "submitting": "Korrektur läuft…",
+    "errorGeneric": "Etwas ist schiefgegangen. Bitte gleich nochmal versuchen.",
+    "inRange": "im Bereich",
+    "outOfRange": "ziele auf {min}–{max}",
+    "mistakesTitle": "{n} {n, plural, one {Fehler gefunden} other {Fehler gefunden}}",
+    "mistakesSub": "Jeder unterstrichene Teil ist ein Fehler. Mit der Maus drüber oder Liste unten lesen.",
+    "correctedTitle": "Korrigierte Fassung",
+    "correctedSub": "Dein Text in korrektem Deutsch — auf deinem Niveau gehalten.",
+    "comeBackTomorrow": "Komm morgen für ein neues Thema wieder",
+    "signInTitle": "Melde dich an zum Schreiben",
+    "signInBody": "Die tägliche Schreibübung ist kostenlos — mit kostenlosem Konto können wir deinen Fortschritt speichern und ein faires Tageslimit anwenden.",
+    "signInCta": "Einloggen",
+    "doneTitle": "Du hast die heutige Übung gemacht",
+    "doneBody": "Komm in {hours} {hours, plural, one {Stunde} other {Stunden}} wieder fürs Thema von morgen.",
+    "grade": {
+      "excellent": "Ausgezeichnet!",
+      "good": "Gut gemacht",
+      "ok": "Weiter so",
+      "practice": "Mehr üben"
+    },
+    "themes": {
+      "a1_self": {
+        "title": "Stell dich vor",
+        "instruction_de": "Stelle dich vor: Name, Alter, Herkunft, Beruf oder Studium, eine Sache, die du gerne machst. Schreibe in vollständigen Sätzen.",
+        "instruction": "Stelle dich vor: Name, Alter, Herkunft, Beruf oder Studium, eine Sache, die du gerne machst. Schreibe in vollständigen Sätzen.",
+        "hint": "Verwende: ich heiße, ich bin … Jahre alt, ich komme aus, ich mag"
+      },
+      "a1_family": {
+        "title": "Meine Familie",
+        "instruction_de": "Beschreibe deine Familie: Wer gehört dazu? Wie heißen sie? Wie alt sind sie? Was machen sie?",
+        "instruction": "Beschreibe deine Familie: Wer gehört dazu? Wie heißen sie? Wie alt sind sie? Was machen sie?",
+        "hint": "Nützlich: Mutter, Vater, Bruder, Schwester, mein/meine"
+      },
+      "a1_daily": {
+        "title": "Ein normaler Tag",
+        "instruction_de": "Beschreibe einen normalen Tag: Was machst du am Morgen, am Mittag und am Abend? Schreibe einfache Sätze.",
+        "instruction": "Beschreibe einen normalen Tag: Was machst du am Morgen, am Mittag und am Abend? Schreibe einfache Sätze.",
+        "hint": "Verwende: aufstehen, frühstücken, arbeiten, essen, schlafen"
+      },
+      "a1_hobby": {
+        "title": "Meine Hobbys",
+        "instruction_de": "Was sind deine Hobbys? Was machst du gerne in deiner Freizeit? Wann und wo machst du das?",
+        "instruction": "Was sind deine Hobbys? Was machst du gerne in deiner Freizeit? Wann und wo machst du das?",
+        "hint": "Verwende ich spiele, ich lese, ich höre, gerne"
+      },
+      "a1_weekend": {
+        "title": "Mein Wochenende",
+        "instruction_de": "Was machst du am Wochenende? Wo gehst du hin? Mit wem? Wie lange?",
+        "instruction": "Was machst du am Wochenende? Wo gehst du hin? Mit wem? Wie lange?",
+        "hint": "am Samstag / am Sonntag, mit Freunden, ich gehe"
+      },
+      "a1_food": {
+        "title": "Mein Essen",
+        "instruction_de": "Was isst und trinkst du gerne? Was magst du nicht? Was isst du heute?",
+        "instruction": "Was isst und trinkst du gerne? Was magst du nicht? Was isst du heute?",
+        "hint": "ich esse / trinke gern, ich mag … nicht"
+      },
+      "a1_room": {
+        "title": "Mein Zimmer",
+        "instruction_de": "Beschreibe dein Zimmer: Was gibt es dort? Welche Farben? Wo stehen die Möbel?",
+        "instruction": "Beschreibe dein Zimmer: Was gibt es dort? Welche Farben? Wo stehen die Möbel?",
+        "hint": "es gibt, links, rechts, vor, neben"
+      },
+      "a1_weather": {
+        "title": "Wetter heute",
+        "instruction_de": "Wie ist das Wetter heute? Was trägst du? Was machst du bei diesem Wetter?",
+        "instruction": "Wie ist das Wetter heute? Was trägst du? Was machst du bei diesem Wetter?",
+        "hint": "es ist sonnig / regnerisch / kalt / warm"
+      },
+      "a1_friend": {
+        "title": "Mein bester Freund",
+        "instruction_de": "Beschreibe deinen besten Freund oder deine beste Freundin: Name, Alter, Charakter, was ihr zusammen macht.",
+        "instruction": "Beschreibe deinen besten Freund oder deine beste Freundin: Name, Alter, Charakter, was ihr zusammen macht.",
+        "hint": "er/sie ist nett, lustig, wir machen zusammen"
+      },
+      "a1_city": {
+        "title": "Meine Stadt",
+        "instruction_de": "Beschreibe deine Stadt: Wie heißt sie? Was gibt es dort? Was magst du, was magst du nicht?",
+        "instruction": "Beschreibe deine Stadt: Wie heißt sie? Was gibt es dort? Was magst du, was magst du nicht?",
+        "hint": "meine Stadt heißt, es gibt, ich finde … schön"
+      },
+      "a2_holiday": {
+        "title": "Mein letzter Urlaub",
+        "instruction_de": "Beschreibe deinen letzten Urlaub: Wohin bist du gefahren? Mit wem? Was hast du gemacht? Wie war es?",
+        "instruction": "Beschreibe deinen letzten Urlaub: Wohin bist du gefahren? Mit wem? Was hast du gemacht? Wie war es?",
+        "hint": "Verwende Perfekt: ich bin gefahren, ich habe gesehen"
+      },
+      "a2_school_day": {
+        "title": "Ein Tag in Schule/Arbeit",
+        "instruction_de": "Wie war dein Tag in der Schule oder bei der Arbeit? Was hast du gemacht? Wer war dabei?",
+        "instruction": "Wie war dein Tag in der Schule oder bei der Arbeit? Was hast du gemacht? Wer war dabei?",
+        "hint": "Perfekt + Zeitangaben: zuerst, dann, danach"
+      },
+      "a2_shopping": {
+        "title": "Einkauf neulich",
+        "instruction_de": "Beschreibe einen Einkauf: Wo warst du? Was hast du gekauft? Wie viel hat es gekostet? War es gut?",
+        "instruction": "Beschreibe einen Einkauf: Wo warst du? Was hast du gekauft? Wie viel hat es gekostet? War es gut?",
+        "hint": "kosten, Euro, ich habe gekauft, billig/teuer"
+      },
+      "a2_doctor": {
+        "title": "Beim Arzt",
+        "instruction_de": "Du warst beim Arzt. Was tat dir weh? Was hast du gemacht? Was hat der Arzt gesagt?",
+        "instruction": "Du warst beim Arzt. Was tat dir weh? Was hast du gemacht? Was hat der Arzt gesagt?",
+        "hint": "mir tut … weh, der Arzt hat gesagt, Tabletten"
+      },
+      "a2_birthday": {
+        "title": "Ein Geburtstag",
+        "instruction_de": "Beschreibe einen Geburtstag, den du gefeiert hast: Wer war da? Was habt ihr gemacht? Was war das Geschenk?",
+        "instruction": "Beschreibe einen Geburtstag, den du gefeiert hast: Wer war da? Was habt ihr gemacht? Was war das Geschenk?",
+        "hint": "Geschenk, feiern, Kuchen, eingeladen"
+      },
+      "a2_dream_trip": {
+        "title": "Meine Traumreise",
+        "instruction_de": "Wohin möchtest du in den nächsten Sommer fahren? Mit wem? Was möchtest du dort machen? Schreibe deine Pläne.",
+        "instruction": "Wohin möchtest du in den nächsten Sommer fahren? Mit wem? Was möchtest du dort machen? Schreibe deine Pläne.",
+        "hint": "Zukunft: ich werde, ich möchte"
+      },
+      "a2_work_day": {
+        "title": "Mein Arbeitstag",
+        "instruction_de": "Wie sieht dein Arbeitstag aus? Was machst du? Welche Kollegen hast du? Was magst du an deiner Arbeit?",
+        "instruction": "Wie sieht dein Arbeitstag aus? Was machst du? Welche Kollegen hast du? Was magst du an deiner Arbeit?",
+        "hint": "Kollege, Chef, Aufgaben, ich beginne"
+      },
+      "a2_apartment": {
+        "title": "Meine Wohnung",
+        "instruction_de": "Beschreibe deine Wohnung: Wie viele Zimmer? Welche Möbel? Was ist gut, was ist nicht so gut?",
+        "instruction": "Beschreibe deine Wohnung: Wie viele Zimmer? Welche Möbel? Was ist gut, was ist nicht so gut?",
+        "hint": "Zimmer, Küche, Bad, Balkon, Möbel"
+      },
+      "a2_movie": {
+        "title": "Ein gesehener Film",
+        "instruction_de": "Beschreibe einen Film, den du gesehen hast. Worum ging es? Wer hat gespielt? Hat er dir gefallen? Warum?",
+        "instruction": "Beschreibe einen Film, den du gesehen hast. Worum ging es? Wer hat gespielt? Hat er dir gefallen? Warum?",
+        "hint": "es geht um, der Hauptdarsteller, mir hat … gefallen"
+      },
+      "a2_germany_first": {
+        "title": "Mein erster Tag in DE",
+        "instruction_de": "Was würdest du als Erstes in Deutschland machen? Wohin würdest du gehen? Was möchtest du essen, sehen, lernen?",
+        "instruction": "Was würdest du als Erstes in Deutschland machen? Wohin würdest du gehen? Was möchtest du essen, sehen, lernen?",
+        "hint": "ich möchte, zuerst, dann, danach"
+      },
+      "b1_opinion_phone": {
+        "title": "Smartphones für Jugendliche",
+        "instruction_de": "Schreibe deine Meinung: Sind Smartphones für Jugendliche gut oder schlecht? Gib zwei Argumente und ein Beispiel.",
+        "instruction": "Schreibe deine Meinung: Sind Smartphones für Jugendliche gut oder schlecht? Gib zwei Argumente und ein Beispiel.",
+        "hint": "meiner Meinung nach, einerseits, andererseits, zum Beispiel"
+      },
+      "b1_complaint": {
+        "title": "Beschwerde an ein Hotel",
+        "instruction_de": "Schreibe eine kurze Beschwerde-E-Mail an ein Hotel: Du warst unzufrieden mit deinem Zimmer. Erkläre das Problem und was du dir wünschst.",
+        "instruction": "Schreibe eine kurze Beschwerde-E-Mail an ein Hotel: Du warst unzufrieden mit deinem Zimmer. Erkläre das Problem und was du dir wünschst.",
+        "hint": "Sehr geehrte Damen und Herren, leider, ich erwarte"
+      },
+      "b1_email_friend": {
+        "title": "E-Mail an einen Freund",
+        "instruction_de": "Schreibe eine E-Mail an einen Freund in Deutschland: Du planst einen Besuch. Erkläre, wann du kommst und was du gerne machen möchtest.",
+        "instruction": "Schreibe eine E-Mail an einen Freund in Deutschland: Du planst einen Besuch. Erkläre, wann du kommst und was du gerne machen möchtest.",
+        "hint": "Hallo …, ich plane, vielleicht können wir, freue mich"
+      },
+      "b1_pros_cons_city": {
+        "title": "Stadt oder Land?",
+        "instruction_de": "Lebt man besser in der Stadt oder auf dem Land? Nenne je zwei Vorteile und Nachteile und gib deine Meinung.",
+        "instruction": "Lebt man besser in der Stadt oder auf dem Land? Nenne je zwei Vorteile und Nachteile und gib deine Meinung.",
+        "hint": "der Vorteil, der Nachteil, im Gegensatz dazu"
+      },
+      "b1_my_career": {
+        "title": "Meine Karriere",
+        "instruction_de": "Beschreibe deine Karrierepläne: Was möchtest du beruflich machen? Warum? Welche Schritte hast du schon gemacht?",
+        "instruction": "Beschreibe deine Karrierepläne: Was möchtest du beruflich machen? Warum? Welche Schritte hast du schon gemacht?",
+        "hint": "mein Ziel ist, ich plane, weil, deshalb"
+      },
+      "b1_health_tip": {
+        "title": "Gesundheits-Tipps",
+        "instruction_de": "Gib einer Freundin Tipps: Sie fühlt sich gestresst und schläft schlecht. Was sollte sie tun? Erkläre warum.",
+        "instruction": "Gib einer Freundin Tipps: Sie fühlt sich gestresst und schläft schlecht. Was sollte sie tun? Erkläre warum.",
+        "hint": "du solltest, es ist wichtig, weil, sonst"
+      },
+      "b1_bad_day": {
+        "title": "Ein schlechter Tag",
+        "instruction_de": "Erzähle einen schlechten Tag aus deinem Leben: Was ist passiert? Wie hast du reagiert? Was hast du daraus gelernt?",
+        "instruction": "Erzähle einen schlechten Tag aus deinem Leben: Was ist passiert? Wie hast du reagiert? Was hast du daraus gelernt?",
+        "hint": "plötzlich, danach, schließlich, ich habe gelernt"
+      },
+      "b1_culture_shock": {
+        "title": "Kulturschock",
+        "instruction_de": "Was findest du in der deutschen Kultur überraschend oder anders als in deinem Land? Gib zwei konkrete Beispiele.",
+        "instruction": "Was findest du in der deutschen Kultur überraschend oder anders als in deinem Land? Gib zwei konkrete Beispiele.",
+        "hint": "im Vergleich zu, ich war überrascht, dass"
+      },
+      "b1_environment": {
+        "title": "Umwelt schützen",
+        "instruction_de": "Was kann jeder Mensch im Alltag tun, um die Umwelt zu schützen? Nenne drei konkrete Tipps.",
+        "instruction": "Was kann jeder Mensch im Alltag tun, um die Umwelt zu schützen? Nenne drei konkrete Tipps.",
+        "hint": "man sollte, statt, indem, deshalb"
+      },
+      "b1_app_review": {
+        "title": "App-Bewertung",
+        "instruction_de": "Beschreibe eine App oder Website, die du oft benutzt: Was kann man damit machen? Was findest du gut und nicht so gut?",
+        "instruction": "Beschreibe eine App oder Website, die du oft benutzt: Was kann man damit machen? Was findest du gut und nicht so gut?",
+        "hint": "damit kann man, ich finde gut, allerdings"
+      },
+      "b2_social_media": {
+        "title": "Soziale Medien",
+        "instruction_de": "Diskutiere: Wie verändern soziale Medien das Verhalten junger Menschen? Nenne positive und negative Aspekte und gib deine begründete Meinung.",
+        "instruction": "Diskutiere: Wie verändern soziale Medien das Verhalten junger Menschen? Nenne positive und negative Aspekte und gib deine begründete Meinung.",
+        "hint": "darüber hinaus, dennoch, infolgedessen"
+      },
+      "b2_remote_work": {
+        "title": "Dauerhaftes Homeoffice",
+        "instruction_de": "Sollten Unternehmen Mitarbeiter dauerhaft im Homeoffice arbeiten lassen? Argumentiere mit Vor- und Nachteilen für beide Seiten.",
+        "instruction": "Sollten Unternehmen Mitarbeiter dauerhaft im Homeoffice arbeiten lassen? Argumentiere mit Vor- und Nachteilen für beide Seiten.",
+        "hint": "einerseits/andererseits, zudem, allerdings"
+      },
+      "b2_immigration": {
+        "title": "Fachkräfte-Zuwanderung",
+        "instruction_de": "Welche Vorteile bringt qualifizierte Zuwanderung für Deutschland? Welche Herausforderungen gibt es? Gib eine begründete Stellungnahme.",
+        "instruction": "Welche Vorteile bringt qualifizierte Zuwanderung für Deutschland? Welche Herausforderungen gibt es? Gib eine begründete Stellungnahme.",
+        "hint": "zur Folge haben, beitragen zu, voraussetzen"
+      },
+      "b2_climate": {
+        "title": "Klimaverantwortung",
+        "instruction_de": "Wer trägt mehr Verantwortung für den Klimaschutz: der einzelne Bürger oder die Politik? Begründe deine Position mit Beispielen.",
+        "instruction": "Wer trägt mehr Verantwortung für den Klimaschutz: der einzelne Bürger oder die Politik? Begründe deine Position mit Beispielen.",
+        "hint": "verantwortlich für, im Vergleich zu, letztendlich"
+      },
+      "b2_education_reform": {
+        "title": "Schule der Zukunft",
+        "instruction_de": "Wie sollte die Schule der Zukunft aussehen? Schlage zwei konkrete Reformen vor und begründe sie.",
+        "instruction": "Wie sollte die Schule der Zukunft aussehen? Schlage zwei konkrete Reformen vor und begründe sie.",
+        "hint": "es bedarf, ich schlage vor, vorausgesetzt, dass"
+      },
+      "b2_ai_jobs": {
+        "title": "KI und Arbeit",
+        "instruction_de": "Wird KI mehr Arbeitsplätze schaffen oder vernichten? Argumentiere differenziert mit zwei Beispielen aus verschiedenen Branchen.",
+        "instruction": "Wird KI mehr Arbeitsplätze schaffen oder vernichten? Argumentiere differenziert mit zwei Beispielen aus verschiedenen Branchen.",
+        "hint": "ersetzen, automatisieren, neu entstehen"
+      },
+      "b2_consumerism": {
+        "title": "Konsumgesellschaft",
+        "instruction_de": "Konsumieren wir zu viel? Diskutiere die Folgen unseres Konsumverhaltens und schlage Lösungen vor.",
+        "instruction": "Konsumieren wir zu viel? Diskutiere die Folgen unseres Konsumverhaltens und schlage Lösungen vor.",
+        "hint": "der Konsum, das Bewusstsein, nachhaltig"
+      },
+      "b2_generation_gap": {
+        "title": "Generationsunterschied",
+        "instruction_de": "Worin unterscheiden sich die Werte der Generation deiner Eltern und deiner eigenen Generation? Gib konkrete Beispiele.",
+        "instruction": "Worin unterscheiden sich die Werte der Generation deiner Eltern und deiner eigenen Generation? Gib konkrete Beispiele.",
+        "hint": "im Gegensatz zu, früher, heutzutage"
+      },
+      "b2_health_systems": {
+        "title": "Gesundheitssysteme",
+        "instruction_de": "Was unterscheidet ein gutes Gesundheitssystem von einem schlechten? Vergleiche zwei Aspekte aus Marokko und Deutschland.",
+        "instruction": "Was unterscheidet ein gutes Gesundheitssystem von einem schlechten? Vergleiche zwei Aspekte aus Marokko und Deutschland.",
+        "hint": "während, hingegen, der Zugang zu"
+      },
+      "b2_minimum_wage": {
+        "title": "Mindestlohn-Debatte",
+        "instruction_de": "Sollte der Mindestlohn weiter erhöht werden? Diskutiere die wirtschaftlichen und sozialen Folgen mit Pro- und Contra-Argumenten.",
+        "instruction": "Sollte der Mindestlohn weiter erhöht werden? Diskutiere die wirtschaftlichen und sozialen Folgen mit Pro- und Contra-Argumenten.",
+        "hint": "erhöhen, sich auswirken auf, Arbeitsmarkt"
+      },
+      "c1_digitalisation": {
+        "title": "Digitalisierung & Gesellschaft",
+        "instruction_de": "Erörtere, inwiefern die Digitalisierung des Alltags die soziale Interaktion verändert hat. Gehe auf positive und negative Aspekte ein und nimm begründet Stellung.",
+        "instruction": "Erörtere, inwiefern die Digitalisierung des Alltags die soziale Interaktion verändert hat. Gehe auf positive und negative Aspekte ein und nimm begründet Stellung.",
+        "hint": "eine ambivalente Entwicklung, gleichwohl, sich gewahr werden"
+      },
+      "c1_demography": {
+        "title": "Demografischer Wandel",
+        "instruction_de": "Diskutiere die Folgen des demografischen Wandels für die deutsche Sozialversicherung. Welche Maßnahmen hältst du für erforderlich?",
+        "instruction": "Diskutiere die Folgen des demografischen Wandels für die deutsche Sozialversicherung. Welche Maßnahmen hältst du für erforderlich?",
+        "hint": "Überalterung, generationengerecht, struktureller Reformbedarf"
+      },
+      "c1_freedom_security": {
+        "title": "Freiheit & Sicherheit",
+        "instruction_de": "Wie lässt sich das Spannungsfeld zwischen Freiheit und Sicherheit im modernen Staat ausbalancieren? Begründe deine Position kritisch.",
+        "instruction": "Wie lässt sich das Spannungsfeld zwischen Freiheit und Sicherheit im modernen Staat ausbalancieren? Begründe deine Position kritisch.",
+        "hint": "Grundrechte abwägen, ungeachtet dessen, einen Kompromiss erfordern"
+      },
+      "c1_globalisation": {
+        "title": "Globalisierung",
+        "instruction_de": "Inwiefern profitieren Schwellenländer von der Globalisierung – und welche Risiken trägt sie? Erörtere mit fundierten Argumenten.",
+        "instruction": "Inwiefern profitieren Schwellenländer von der Globalisierung – und welche Risiken trägt sie? Erörtere mit fundierten Argumenten.",
+        "hint": "Schwellenländer, Wertschöpfungskette, einseitige Abhängigkeit"
+      },
+      "c1_meritocracy": {
+        "title": "Leistungsgerechtigkeit",
+        "instruction_de": "Ist Leistung wirklich ein gerechtes Kriterium für sozialen Erfolg? Diskutiere kritisch unter Berücksichtigung struktureller Ungleichheiten.",
+        "instruction": "Ist Leistung wirklich ein gerechtes Kriterium für sozialen Erfolg? Diskutiere kritisch unter Berücksichtigung struktureller Ungleichheiten.",
+        "hint": "Chancengleichheit, soziale Mobilität, vermeintlich"
+      },
+      "c1_arts_funding": {
+        "title": "Kulturförderung",
+        "instruction_de": "Sollte der Staat Kunst und Kultur stärker fördern, oder sollte sich Kultur am Markt selbst tragen? Begründe deine Position.",
+        "instruction": "Sollte der Staat Kunst und Kultur stärker fördern, oder sollte sich Kultur am Markt selbst tragen? Begründe deine Position.",
+        "hint": "kulturelle Vielfalt, marktwirtschaftlich, gemeinwohlorientiert"
+      },
+      "c1_renewables": {
+        "title": "Energiewende",
+        "instruction_de": "Diskutiere die Energiewende in Deutschland: Welche Erfolge gibt es, welche Hindernisse bleiben? Welche politischen Maßnahmen wären sinnvoll?",
+        "instruction": "Diskutiere die Energiewende in Deutschland: Welche Erfolge gibt es, welche Hindernisse bleiben? Welche politischen Maßnahmen wären sinnvoll?",
+        "hint": "erneuerbare Energien, Versorgungssicherheit, Netzausbau"
+      },
+      "c1_journalism": {
+        "title": "Qualitätsjournalismus",
+        "instruction_de": "Welche Rolle spielen Qualitätsmedien in einer Demokratie und wie wirken sich soziale Medien auf diese Rolle aus? Argumentiere differenziert.",
+        "instruction": "Welche Rolle spielen Qualitätsmedien in einer Demokratie und wie wirken sich soziale Medien auf diese Rolle aus? Argumentiere differenziert.",
+        "hint": "vierte Gewalt, Filterblase, Diskursqualität"
+      },
+      "c1_urban_rural": {
+        "title": "Stadt-Land-Kluft",
+        "instruction_de": "Erörtere die wachsende Kluft zwischen Stadt und Land in entwickelten Ländern. Welche politischen Maßnahmen könnten Abhilfe schaffen?",
+        "instruction": "Erörtere die wachsende Kluft zwischen Stadt und Land in entwickelten Ländern. Welche politischen Maßnahmen könnten Abhilfe schaffen?",
+        "hint": "strukturschwache Regionen, Daseinsvorsorge, Abwanderung"
+      },
+      "c1_lifelong_learning": {
+        "title": "Lebenslanges Lernen",
+        "instruction_de": "Welche Bedeutung hat lebenslanges Lernen im 21. Jahrhundert? Welche Verantwortung tragen Staat, Arbeitgeber und Individuum?",
+        "instruction": "Welche Bedeutung hat lebenslanges Lernen im 21. Jahrhundert? Welche Verantwortung tragen Staat, Arbeitgeber und Individuum?",
+        "hint": "Wandel der Arbeitswelt, Eigenverantwortung, Weiterbildungsförderung"
+      }
+    }
   }
 }
