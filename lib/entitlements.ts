@@ -337,12 +337,22 @@ export async function isAdmin(userId: string): Promise<boolean> {
  * to avoid exposing auth.users to RLS.
  */
 export async function findUserByEmail(email: string) {
-  // Supabase admin listUsers doesn't support filtering by email directly in v2;
-  // we paginate the first page (up to 1000) and match client-side.
-  // For a small user base this is fine.
-  const { data } = await admin().auth.admin.listUsers({ page: 1, perPage: 1000 })
+  // Supabase admin listUsers doesn't support email filtering in v2, so we
+  // paginate through auth.users until we find the user. Previous version
+  // only fetched page 1 (up to 1000) which missed users on later pages —
+  // a Gmail/OAuth signup that landed on page 2 would silently not appear
+  // in the admin search even though they exist.
+  const a = admin()
   const needle = email.trim().toLowerCase()
-  const user = data?.users.find(u => (u.email ?? '').toLowerCase() === needle)
+  const PER_PAGE = 1000
+  const MAX_PAGES = 10 // safety cap = 10k users
+  let user: any = null
+  for (let page = 1; page <= MAX_PAGES; page++) {
+    const { data } = await a.auth.admin.listUsers({ page, perPage: PER_PAGE })
+    const found = data?.users?.find(u => (u.email ?? '').toLowerCase() === needle)
+    if (found) { user = found; break }
+    if (!data?.users || data.users.length < PER_PAGE) break // last page
+  }
   if (!user) return null
 
   const profile = await getProfile(user.id)
@@ -376,8 +386,22 @@ export async function findUserByEmail(email: string) {
  *  users (default 200) ordered by signup date desc. Server-rendered for
  *  the admin users dashboard. */
 export async function listAllUsers(limit = 200) {
-  const { data: pageData } = await admin().auth.admin.listUsers({ page: 1, perPage: Math.min(limit, 1000) })
-  const users = pageData?.users ?? []
+  // Paginate auth.users until we have `limit` rows or we hit the last
+  // page. The previous version only fetched page 1 — Supabase listUsers
+  // pages at 1000 per call, so accounts past row #1000 silently never
+  // appeared in the admin user list (and therefore in its email search).
+  const a = admin()
+  const PER_PAGE = 1000
+  const MAX_PAGES = 10 // safety cap = 10k users
+  const users: any[] = []
+  for (let page = 1; page <= MAX_PAGES && users.length < limit; page++) {
+    const { data } = await a.auth.admin.listUsers({ page, perPage: PER_PAGE })
+    const got = data?.users ?? []
+    users.push(...got)
+    if (got.length < PER_PAGE) break // reached the last page
+  }
+  // Trim to requested limit (we may have over-fetched on the final page).
+  if (users.length > limit) users.length = limit
 
   if (users.length === 0) return []
 

@@ -118,14 +118,21 @@ export async function GET() {
       remaining: status.remaining,
     })
   }
-  // Free tier → credits model.
+  // Free tier — total available = today's free quota + any purchased credits.
+  // The previous version reported only credits, which made fresh signups
+  // see "0 remaining" even though they had their 2 daily uses untouched.
+  const dailyLimit     = (status as any).dailyLimit ?? 0
+  const dailyRemaining = (status as any).dailyRemaining ?? 0
+  const credits        = (status as any).credits ?? 0
   return NextResponse.json({
     tier: 'free',
-    credits: status.credits ?? 0,
+    credits,
     used: status.used,
-    // Legacy fields — UI shows "remaining/limit"; map credits → remaining, limit = credits + used-but-paid.
-    limit: (status.credits ?? 0),
-    remaining: (status.credits ?? 0),
+    dailyLimit,
+    dailyRemaining,
+    // Legacy fields used by the existing PhotoEnhancer UI.
+    limit:     dailyLimit + credits,
+    remaining: dailyRemaining + credits,
   })
 }
 
