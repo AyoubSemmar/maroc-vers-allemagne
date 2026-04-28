@@ -5,10 +5,28 @@ import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
 
+// Anon-key client. Used only for Supabase Storage uploads where the
+// bucket policy already controls access — reading the resulting public
+// URL doesn't need elevated rights.
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
 )
+
+// Service-role client. Bypasses RLS, so it can write to articles,
+// ausbildung_jobs, universities, listings, etc. — all of which now
+// have RLS enabled with read-only public policies (see migration
+// 2026-04-28_lock_down_articles_jobs_unis.sql). Every write action in
+// this file MUST go through this client and MUST be preceded by a
+// requireAdmin() cookie check, since the service-role key bypasses
+// every database-level guard.
+function adminClient() {
+  return createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY,
+    { auth: { persistSession: false, autoRefreshToken: false } },
+  )
+}
 
 export async function login(formData) {
   const password = formData.get('password')
@@ -88,7 +106,7 @@ export async function addArticle(formData) {
 
   const image_url = await uploadImage(imageFile)
 
-  await supabase.from('articles').insert([{ title, summary, content, category, date, image_url, faqs, featured }])
+  await adminClient().from('articles').insert([{ title, summary, content, category, date, image_url, faqs, featured }])
   redirect('/admin')
 }
 
@@ -110,7 +128,7 @@ export async function updateArticle(formData) {
   const newImageUrl = await uploadImage(imageFile)
   if (newImageUrl) updates.image_url = newImageUrl
 
-  const { error } = await supabase.from('articles').update(updates).eq('id', id)
+  const { error } = await adminClient().from('articles').update(updates).eq('id', id)
   if (error) {
     console.error('updateArticle failed:', error)
     throw new Error(`فشل تحديث المقال: ${error.message}`)
@@ -124,7 +142,7 @@ export async function updateArticle(formData) {
 export async function deleteArticle(formData) {
   await requireAdmin()
   const id = formData.get('id')
-  await supabase.from('articles').delete().eq('id', id)
+  await adminClient().from('articles').delete().eq('id', id)
   redirect('/admin')
 }
 
@@ -133,12 +151,8 @@ export async function deleteListing(formData) {
   if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
 
   const id = formData.get('id')
-  // Use service role key to bypass RLS and delete any user's listing
-  const adminClient = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
-  )
-  await adminClient.from('listings').delete().eq('id', id)
+  // service_role bypasses RLS so we can delete any user's listing.
+  await adminClient().from('listings').delete().eq('id', id)
   revalidatePath('/admin')
   revalidatePath('/admin/content')
   redirect('/admin/content')
@@ -157,10 +171,7 @@ export async function addListing(formData) {
   const cookieStore = await cookies()
   if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
 
-  const adminClient = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY,
-  )
+  const db = adminClient()
 
   const title       = (formData.get('title')       || '').toString().trim()
   const description = (formData.get('description') || '').toString().trim()
@@ -186,7 +197,7 @@ export async function addListing(formData) {
 
   const adminUserId = process.env.ADMIN_LISTING_USER_ID || null
 
-  await adminClient.from('listings').insert([{
+  await db.from('listings').insert([{
     user_id: adminUserId,
     title,
     description,
@@ -267,14 +278,15 @@ export async function addUniversity(formData) {
   // Stable slug; if a collision exists, suffix with a short timestamp.
   let id = slugify(row.name_de)
   if (!id) id = `uni-${Date.now()}`
-  const { data: existing } = await supabase
+  const db = adminClient()
+  const { data: existing } = await db
     .from('universities').select('id').eq('id', id).maybeSingle()
   if (existing) id = `${id}-${Date.now().toString(36).slice(-4)}`
 
   const logoFile = formData.get('logo')
   const logo_url = await uploadLogo(logoFile)
 
-  const { error } = await supabase.from('universities').insert([{ id, ...row, logo_url }])
+  const { error } = await db.from('universities').insert([{ id, ...row, logo_url }])
   if (error) {
     console.error('addUniversity failed:', error)
     throw new Error(`فشل إضافة الجامعة: ${error.message}`)
@@ -295,7 +307,7 @@ export async function updateUniversity(formData) {
   const newLogo = await uploadLogo(logoFile)
   if (newLogo) updates.logo_url = newLogo
 
-  const { error } = await supabase.from('universities').update(updates).eq('id', id)
+  const { error } = await adminClient().from('universities').update(updates).eq('id', id)
   if (error) {
     console.error('updateUniversity failed:', error)
     throw new Error(`فشل تحديث الجامعة: ${error.message}`)
@@ -311,7 +323,7 @@ export async function deleteUniversity(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
   if (!id) redirect('/admin/unis')
-  const { error } = await supabase.from('universities').delete().eq('id', id)
+  const { error } = await adminClient().from('universities').delete().eq('id', id)
   if (error) {
     console.error('deleteUniversity failed:', error)
     throw new Error(`فشل حذف الجامعة: ${error.message}`)
@@ -365,7 +377,7 @@ export async function addJob(formData) {
     redirect('/admin/jobs?err=missing')
   }
   const external_id = `manual-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-  const { error } = await supabase
+  const { error } = await adminClient()
     .from('ausbildung_jobs')
     .insert([{ ...row, external_id }])
   if (error) {
@@ -383,7 +395,7 @@ export async function updateJob(formData) {
   const id = (formData.get('id') || '').toString()
   if (!id) redirect('/admin/jobs')
   const updates = jobFromForm(formData)
-  const { error } = await supabase
+  const { error } = await adminClient()
     .from('ausbildung_jobs')
     .update(updates)
     .eq('id', id)
@@ -401,7 +413,7 @@ export async function deleteJob(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
   if (!id) redirect('/admin/jobs')
-  const { error } = await supabase.from('ausbildung_jobs').delete().eq('id', id)
+  const { error } = await adminClient().from('ausbildung_jobs').delete().eq('id', id)
   if (error) {
     console.error('deleteJob failed:', error)
     throw new Error(`فشل حذف العرض: ${error.message}`)
