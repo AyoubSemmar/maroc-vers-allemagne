@@ -4593,3 +4593,65 @@ body { line-height: 1.65; }
 .rihla section + section {
   border-block-start: 1px solid var(--line-soft);
 }
+
+/* ─── PAGER (shared) ─────────────────────────────────────────────
+   Used by /articles, /universities, and /ausbildung-jobs categories.
+   Page size is responsive (10 mobile / 20 desktop) — see Pager.tsx. */
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-block-start: 24px;
+  flex-wrap: wrap;
+}
+.pager-pages {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.pager-btn,
+.pager-num {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--r-sm, 8px);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  min-height: 38px;
+}
+.pager-num { padding: 8px 12px; min-width: 38px; text-align: center; }
+.pager-btn:hover:not(:disabled),
+.pager-num:hover:not(.is-current) {
+  background: var(--bg-warm, var(--bg-elev));
+  border-color: var(--ink);
+}
+.pager-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.pager-num.is-current {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  cursor: default;
+}
+.pager-ellipsis {
+  padding: 0 4px;
+  color: var(--ink-mute, var(--ink));
+  opacity: 0.6;
+  font-size: 13.5px;
+  user-select: none;
+}
+@media (max-width: 640px) {
+  .pager-btn { padding: 7px 10px; font-size: 12.5px; }
+  .pager-num { padding: 7px 9px; min-width: 32px; font-size: 12.5px; }
+}

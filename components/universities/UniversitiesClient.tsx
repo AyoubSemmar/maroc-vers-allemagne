@@ -1,9 +1,10 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import UniModal from '@/components/universities/UniModal'
+import Pager, { usePageSize } from '@/components/Pager'
 
 export type UniversityRow = {
   id: string
@@ -72,6 +73,14 @@ export default function UniversitiesClient({
     })
   }, [universities, query, city, type])
 
+  // Paginate filtered list — 10 mobile / 20 desktop. Reset to page 1
+  // whenever the filter set changes so we never land on an empty page.
+  const pageSize = usePageSize()
+  const [page, setPage] = useState(1)
+  useEffect(() => { setPage(1) }, [query, city, type])
+  const totalPages = Math.max(1, Math.ceil(filtered.length / pageSize))
+  const pageItems = filtered.slice((page - 1) * pageSize, page * pageSize)
+
   return (
     <div className="rihla unis-page" dir={dir}>
       <section className="unis-hero">
@@ -116,7 +125,7 @@ export default function UniversitiesClient({
         </div>
       </section>
 
-      <section className="unis-list">
+      <section id="unis-list" className="unis-list">
         <div className="wrap">
           {filtered.length === 0 ? (
             <div className="unis-empty">
@@ -125,7 +134,7 @@ export default function UniversitiesClient({
             </div>
           ) : (
             <div className="unis-grid">
-              {filtered.map((u) => (
+              {pageItems.map((u) => (
                 <div
                   key={u.id}
                   role="button"
@@ -159,6 +168,9 @@ export default function UniversitiesClient({
                 </div>
               ))}
             </div>
+          )}
+          {filtered.length > 0 && (
+            <Pager page={page} total={totalPages} onChange={setPage} scrollToId="unis-list" />
           )}
         </div>
       </section>

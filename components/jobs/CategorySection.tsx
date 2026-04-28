@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Category, CategoryKey } from '@/lib/jobCategories'
 import JobCard, { Job } from './JobCard'
+import Pager, { usePageSize } from '@/components/Pager'
 
 type Props = {
   category: Category
@@ -13,20 +14,23 @@ type Props = {
   onApply: (job: Job) => void
 }
 
-// Cap the initial render at this many cards per category. The user reveals
-// the rest with "Show more" — this keeps mobile hydration cheap when a
-// category has hundreds of listings.
-const INITIAL_VISIBLE = 12
-
 export default function CategorySection({ category, categoryKey, jobs, view = 'grid', onApply }: Props) {
   const t = useTranslations('ausbJobs')
-  const [expanded, setExpanded] = useState(false)
   const total = jobs.length
-  const visible = expanded || total <= INITIAL_VISIBLE ? jobs : jobs.slice(0, INITIAL_VISIBLE)
-  const hidden = total - visible.length
+
+  // Paginate cards: 10 mobile / 20 desktop. The category-section anchor
+  // id lets the Pager scroll the user back to the top of this category
+  // after a page change so they don't end up mid-list.
+  const pageSize = usePageSize()
+  const [page, setPage] = useState(1)
+  useEffect(() => { setPage(1) }, [categoryKey, total])
+  const totalPages = Math.max(1, Math.ceil(total / pageSize))
+  const visible = jobs.slice((page - 1) * pageSize, page * pageSize)
+
+  const anchorId = `aj-cat-${categoryKey}`
 
   return (
-    <section className="aj-category">
+    <section id={anchorId} className="aj-category">
       <header className="aj-category-header">
         <span className="aj-category-icon">{category.icon}</span>
         <h2 className="aj-category-title">
@@ -42,17 +46,7 @@ export default function CategorySection({ category, categoryKey, jobs, view = 'g
           <div className={`aj-grid${view === 'list' ? ' aj-grid--list' : ''}`}>
             {visible.map(j => <JobCard key={j.id} job={j} onApply={onApply} />)}
           </div>
-          {total > INITIAL_VISIBLE && (
-            <div className="aj-cat-more">
-              <button
-                type="button"
-                className="aj-cat-more-btn"
-                onClick={() => setExpanded(e => !e)}
-              >
-                {expanded ? t('showLess') : t('showMore', { n: hidden })}
-              </button>
-            </div>
-          )}
+          <Pager page={page} total={totalPages} onChange={setPage} scrollToId={anchorId} />
         </>
       )}
     </section>

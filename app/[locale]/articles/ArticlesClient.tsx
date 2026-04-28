@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
+import Pager, { usePageSize } from '@/components/Pager'
 
 type Article = {
   id: number
@@ -33,6 +34,15 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
 
   const featured = filtered.filter(a => a.featured)
   const rest     = filtered.filter(a => !a.featured)
+
+  // Paginate the non-featured list (10 mobile / 20 desktop). Reset to
+  // page 1 whenever the filter changes so the user doesn't end up on a
+  // page that no longer exists.
+  const pageSize = usePageSize()
+  const [page, setPage] = useState(1)
+  useEffect(() => { setPage(1) }, [activeCategory])
+  const totalPages = Math.max(1, Math.ceil(rest.length / pageSize))
+  const pageRest = rest.slice((page - 1) * pageSize, page * pageSize)
 
   function catLabel(cat: string): string {
     // t.raw to avoid an error for unknown categories — falls back to raw cat
@@ -129,20 +139,21 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
           </section>
         )}
 
-        {/* All other articles */}
+        {/* All other articles (paginated: 10 mobile / 20 desktop) */}
         {rest.length > 0 && (
-          <section className="rihla-articles-section">
+          <section id="articles-rest" className="rihla-articles-section">
             {featured.length > 0 && (
               <div className="rihla-articles-section-head">
                 <h2>{t('allHeading')}</h2>
               </div>
             )}
             <div className={`rihla-articles-grid${view === 'list' ? ' list' : ''}`}>
-              {rest.map(a => (
+              {pageRest.map(a => (
                 <ArticleCard key={a.id} article={a} view={view}
                   catLabel={catLabel} categoryEmoji={categoryEmoji} formatDate={formatDate} />
               ))}
             </div>
+            <Pager page={page} total={totalPages} onChange={setPage} scrollToId="articles-rest" />
           </section>
         )}
 
