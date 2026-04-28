@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import ReactMarkdown from 'react-markdown'
 import { Job } from './JobCard'
 import SaveButton from '@/components/SaveButton'
+import { Link } from '@/i18n/navigation'
 
 type Props = {
   job: Job
@@ -127,7 +128,7 @@ export default function ApplyModal({ job, onClose }: Props) {
           )}
 
           <p className="aj-email-hint" style={{ marginTop: 12 }}>
-            {t('tipPrefix')} <a href="/cv-builder" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>{t('tipLink')}</a> {t('tipSuffix')}
+            {t('tipPrefix')} <Link href="/cv-builder" style={{ color: 'var(--brand)', textDecoration: 'underline' }}>{t('tipLink')}</Link> {t('tipSuffix')}
           </p>
 
           <div className="aj-modal-actions">

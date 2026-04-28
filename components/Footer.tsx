@@ -1,3 +1,5 @@
+import { Link } from '@/i18n/navigation'
+
 const columns = [
   {
     heading: 'عن المشروع',
@@ -52,14 +54,14 @@ export default function Footer() {
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <a href="/" className="flex items-center gap-2 mb-4">
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex items-center gap-0.5 font-black text-xl" dir="ltr">
                 <span className="text-red-400">MA</span>
                 <span className="text-gray-500 font-light mx-0.5">→</span>
                 <span className="text-green-400">DE</span>
               </div>
               <span className="bg-green-600 text-white text-xs px-2 py-0.5 rounded-md font-bold">دليلك</span>
-            </a>
+            </Link>
             <p className="text-sm text-gray-400 leading-relaxed">
               دليلك الشامل للهجرة والعمل والدراسة في ألمانيا — مبني خصيصاً للمغاربة.
             </p>
@@ -80,12 +82,12 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {col.links.map((link) => (
                   <li key={link.label}>
-                    <a
-                      href={link.href}
+                    <Link
+                      href={link.href as any}
                       className="text-sm text-gray-400 hover:text-green-400 transition-colors duration-150"
                     >
                       {link.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -99,11 +101,11 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-gray-500">
           <span>© {new Date().getFullYear()} مغرب نحو ألمانيا. جميع الحقوق محفوظة.</span>
           <div className="flex items-center gap-4">
-            <a href="/terms-of-use" className="hover:text-gray-300 transition-colors">شروط الاستخدام</a>
+            <Link href="/terms-of-use" className="hover:text-gray-300 transition-colors">شروط الاستخدام</Link>
             <span>·</span>
-            <a href="/privacy-policy" className="hover:text-gray-300 transition-colors">الخصوصية</a>
+            <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">الخصوصية</Link>
             <span>·</span>
-            <a href="/disclaimer" className="hover:text-gray-300 transition-colors">إخلاء المسؤولية</a>
+            <Link href="/disclaimer" className="hover:text-gray-300 transition-colors">إخلاء المسؤولية</Link>
           </div>
         </div>
       </div>

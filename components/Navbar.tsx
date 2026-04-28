@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
-import { useRouter } from 'next/navigation'
+import { Link, useRouter } from '@/i18n/navigation'
 import Logo from './Logo'
 import ThemeToggle from './ThemeToggle'
 
@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 transition-colors" dir="rtl">
       <div className="max-w-5xl mx-auto px-4 py-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <a href="/"><Logo /></a>
+        <Link href="/"><Logo /></Link>
 
         {/* Search bar */}
         <form onSubmit={handleSearch} className="flex items-center w-full sm:max-w-sm">
@@ -59,13 +59,13 @@ export default function Navbar() {
           <ThemeToggle />
           {user ? (
             <div className="flex items-center gap-3">
-              <a
+              <Link
                 href="/profile"
                 className="flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-2 text-sm text-green-800 hover:bg-green-100"
               >
                 <span>👤</span>
                 <span className="max-w-32 truncate">{user.email}</span>
-              </a>
+              </Link>
               <button
                 onClick={handleLogout}
                 className="text-sm text-red-500 hover:underline"
@@ -75,10 +75,10 @@ export default function Navbar() {
             </div>
           ) : (
             <div className="flex items-center gap-3">
-              <a href="/login" className="text-sm text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400">دخول</a>
-              <a href="/signup" className="bg-green-700 text-white text-sm px-4 py-2 rounded-full hover:bg-green-800">
+              <Link href="/login" className="text-sm text-gray-600 dark:text-gray-300 hover:text-green-700 dark:hover:text-green-400">دخول</Link>
+              <Link href="/signup" className="bg-green-700 text-white text-sm px-4 py-2 rounded-full hover:bg-green-800">
                 إنشاء حساب
-              </a>
+              </Link>
             </div>
           )}
         </div>
