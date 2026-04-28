@@ -2,8 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import { useTranslations } from 'next-intl'
-import { Link } from '@/i18n/navigation'
+import { Link, useRouter } from '@/i18n/navigation'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import { createClient } from '@/lib/supabase-browser'
+import { useShell } from './DashShell'
 
 export default function DashTopbar({
   avatarSrc,
@@ -17,6 +19,17 @@ export default function DashTopbar({
   onHelpOpen?: () => void
 }) {
   const t = useTranslations('dashboard.topbar')
+  const { user } = useShell()
+  const router = useRouter()
+  const supabase = createClient()
+
+  async function handleLogout() {
+    await supabase.auth.signOut()
+    // Bounce to home so the user lands on a non-protected page after the
+    // sign-out — also forces the layout tree to re-evaluate auth state.
+    router.push('/')
+    router.refresh()
+  }
 
   // Theme toggle (matches ThemeToggle.tsx pattern)
   const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -82,6 +95,22 @@ export default function DashTopbar({
             </svg>
           )}
         </button>
+
+        {user && (
+          <button
+            type="button"
+            onClick={handleLogout}
+            className="dashshell-icon-btn"
+            aria-label={t('logout')}
+            title={t('logout')}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+              <polyline points="16 17 21 12 16 7" />
+              <line x1="21" y1="12" x2="9" y2="12" />
+            </svg>
+          </button>
+        )}
 
         <Link href="/dashboard/profile" className="dashshell-topbar-avatar" aria-label={t('account')}>
           {avatarSrc ? (
