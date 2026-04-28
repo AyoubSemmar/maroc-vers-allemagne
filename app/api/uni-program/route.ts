@@ -14,12 +14,35 @@ export const revalidate = 86400
  *
  * Falls back to the uni's homepage if scraping fails.
  */
+/** Allowlist of TLDs we consider acceptable redirect targets. German
+ *  university domains end in .de almost universally; .at + .ch covers
+ *  the few Austrian/Swiss institutions our DB references; .org is for
+ *  occasional umbrella bodies (DAAD, Studienkollegs). Any other TLD —
+ *  including .com — is rejected to prevent the endpoint being abused
+ *  as an open-redirect for phishing under your TLS cert. */
+const ALLOWED_TLDS = ['.de', '.at', '.ch', '.org', '.eu']
+
+function isSafeRedirectUrl(raw: string): boolean {
+  try {
+    const u = new URL(raw)
+    if (u.protocol !== 'https:' && u.protocol !== 'http:') return false
+    const host = u.hostname.toLowerCase()
+    return ALLOWED_TLDS.some(tld => host.endsWith(tld))
+  } catch {
+    return false
+  }
+}
+
 export async function GET(req: NextRequest) {
   const url = new URL(req.url)
   const uni = url.searchParams.get('uni')?.trim()
   const level = url.searchParams.get('level')?.trim() as 'bachelor' | 'master' | null
-  const fallback = url.searchParams.get('fallback')?.trim() ?? null
+  const fallbackRaw = url.searchParams.get('fallback')?.trim() ?? null
   const debug = url.searchParams.get('debug') === '1'
+
+  // Validate fallback URL before doing anything with it. Rejects open-redirect
+  // attempts (?fallback=https://evil.com).
+  const fallback = fallbackRaw && isSafeRedirectUrl(fallbackRaw) ? fallbackRaw : null
 
   if (!uni || (level !== 'bachelor' && level !== 'master')) {
     return NextResponse.json({ error: 'Missing or invalid uni/level' }, { status: 400 })
@@ -53,6 +76,12 @@ export async function GET(req: NextRequest) {
   }
   if (!dest) {
     return NextResponse.json({ error: 'Could not resolve a program page' }, { status: 502 })
+  }
+  // Final defence-in-depth: even if the scraper found a target, validate
+  // it before redirecting. Stops a compromised/poisoned DuckDuckGo result
+  // from sending users off-domain.
+  if (!isSafeRedirectUrl(dest)) {
+    return NextResponse.json({ error: 'Resolved URL is not in the allowed domain set' }, { status: 502 })
   }
 
   return NextResponse.redirect(dest, {

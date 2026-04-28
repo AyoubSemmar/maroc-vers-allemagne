@@ -14,7 +14,17 @@ export async function login(formData) {
   const password = formData.get('password')
   if (password === process.env.ADMIN_PASSWORD) {
     const cookieStore = await cookies()
-    cookieStore.set('admin_auth', 'true', { httpOnly: true, maxAge: 60 * 60 * 24 })
+    // httpOnly: not readable by JS (anti-XSS).
+    // secure: only sent over HTTPS.
+    // sameSite: 'lax' blocks cross-site CSRF on state-changing actions while
+    //           still allowing top-level navigations from Calendly/email links.
+    cookieStore.set('admin_auth', 'true', {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === 'production',
+      sameSite: 'lax',
+      path: '/',
+      maxAge: 60 * 60 * 24,
+    })
   }
   redirect('/admin')
 }
@@ -48,7 +58,19 @@ async function uploadImage(imageFile) {
   return urlData.publicUrl
 }
 
+/** Throw a redirect to the admin login if the caller doesn't have the
+ *  admin_auth cookie. Used to gate every server action below — Next.js
+ *  server actions are RPC endpoints reachable by anyone who knows the
+ *  internal hash, so cookie auth must be checked inside each one. */
+async function requireAdmin() {
+  const cookieStore = await cookies()
+  if (cookieStore.get('admin_auth')?.value !== 'true') {
+    redirect('/admin')
+  }
+}
+
 export async function addArticle(formData) {
+  await requireAdmin()
   const title = formData.get('title')
   const summary = formData.get('summary')
   const content = formData.get('content')
@@ -66,6 +88,7 @@ export async function addArticle(formData) {
 }
 
 export async function updateArticle(formData) {
+  await requireAdmin()
   const id = formData.get('id')
   const title = formData.get('title')
   const summary = formData.get('summary')
@@ -94,6 +117,7 @@ export async function updateArticle(formData) {
 }
 
 export async function deleteArticle(formData) {
+  await requireAdmin()
   const id = formData.get('id')
   await supabase.from('articles').delete().eq('id', id)
   redirect('/admin')
