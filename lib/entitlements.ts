@@ -372,6 +372,92 @@ export async function findUserByEmail(email: string) {
   }
 }
 
+/** List all users with their entitlement snapshots. Returns up to `limit`
+ *  users (default 200) ordered by signup date desc. Server-rendered for
+ *  the admin users dashboard. */
+export async function listAllUsers(limit = 200) {
+  const { data: pageData } = await admin().auth.admin.listUsers({ page: 1, perPage: Math.min(limit, 1000) })
+  const users = pageData?.users ?? []
+
+  if (users.length === 0) return []
+
+  const ids = users.map(u => u.id)
+
+  // Batch-fetch profiles
+  const { data: profiles } = await admin()
+    .from('profiles')
+    .select('user_id, is_admin, is_premium, premium_until, motivation_free_used, status')
+    .in('user_id', ids)
+  const profilesById: Record<string, any> = {}
+  for (const p of profiles ?? []) profilesById[p.user_id] = p
+
+  // Batch-fetch credits
+  const { data: credits } = await admin()
+    .from('user_credits')
+    .select('user_id, photo_credits, cv_enhance_credits, motivation_credits')
+    .in('user_id', ids)
+  const creditsById: Record<string, any> = {}
+  for (const c of credits ?? []) creditsById[c.user_id] = c
+
+  // Batch-fetch unlocks
+  const { data: unlocks } = await admin()
+    .from('user_unlocks')
+    .select('user_id, kind, key')
+    .in('user_id', ids)
+  const unlocksById: Record<string, { kind: 'template' | 'german_level'; key: string }[]> = {}
+  for (const u of unlocks ?? []) {
+    if (!unlocksById[u.user_id]) unlocksById[u.user_id] = []
+    unlocksById[u.user_id].push({ kind: u.kind as 'template' | 'german_level', key: u.key })
+  }
+
+  return users.map(u => {
+    const p = profilesById[u.id] || {}
+    const c = creditsById[u.id] || {}
+    return {
+      id: u.id,
+      email: u.email ?? '',
+      created_at: u.created_at ?? null,
+      last_sign_in_at: u.last_sign_in_at ?? null,
+      banned_until: (u as any).banned_until ?? null,
+      is_admin: !!p.is_admin,
+      is_premium: !!p.is_premium,
+      premium_until: p.premium_until ?? null,
+      motivation_free_used: !!p.motivation_free_used,
+      status: p.status ?? null,
+      credits: {
+        photo: c.photo_credits ?? 0,
+        cv: c.cv_enhance_credits ?? 0,
+        motivation: c.motivation_credits ?? 0,
+      },
+      unlocks: unlocksById[u.id] ?? [],
+    }
+  }).sort((a, b) => {
+    const ad = a.created_at ? new Date(a.created_at).getTime() : 0
+    const bd = b.created_at ? new Date(b.created_at).getTime() : 0
+    return bd - ad
+  })
+}
+
+/** Admin-only: ban or unban a user. duration in hours, 0 to unban,
+ *  Number.POSITIVE_INFINITY for permanent. */
+export async function setBan(userId: string, hours: number) {
+  if (!hours || hours <= 0) {
+    await admin().auth.admin.updateUserById(userId, { ban_duration: 'none' as any })
+    return
+  }
+  if (!Number.isFinite(hours)) {
+    // ~100 years
+    await admin().auth.admin.updateUserById(userId, { ban_duration: '876000h' as any })
+    return
+  }
+  await admin().auth.admin.updateUserById(userId, { ban_duration: `${Math.round(hours)}h` as any })
+}
+
+/** Admin-only: hard-delete a user (cascades through profiles/credits/etc). */
+export async function deleteUser(userId: string) {
+  await admin().auth.admin.deleteUser(userId)
+}
+
 /** Admin-only: restore the one-time free motivation letter try. */
 export async function resetMotivationFreeTry(userId: string) {
   await admin()

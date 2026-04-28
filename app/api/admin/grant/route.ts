@@ -3,11 +3,14 @@ import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import {
   isAdmin,
   findUserByEmail,
+  listAllUsers,
   setPremium,
   addCredits,
   grantUnlock,
   revokeUnlock,
   resetMotivationFreeTry,
+  setBan,
+  deleteUser,
 } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
@@ -36,6 +39,14 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json().catch(() => ({}))
   const action = String(body.action || '')
+
+  // listUsers needs no email — it returns the global directory.
+  if (action === 'listUsers') {
+    const limit = Math.min(Math.max(Number(body.limit) || 200, 1), 1000)
+    const users = await listAllUsers(limit)
+    return NextResponse.json({ users })
+  }
+
   const email  = String(body.email || '').trim()
   if (!email) return NextResponse.json({ error: 'email required' }, { status: 400 })
 
@@ -86,6 +97,21 @@ export async function POST(req: NextRequest) {
         if (!key) return NextResponse.json({ error: 'key required' }, { status: 400 })
         await revokeUnlock(target.id, kind, key)
         break
+      }
+
+      case 'ban': {
+        // duration: 'forever' | hours number | 0 to unban
+        const dur = body.duration
+        const hours = dur === 'forever'
+          ? Number.POSITIVE_INFINITY
+          : Number(dur ?? 0)
+        await setBan(target.id, hours)
+        break
+      }
+
+      case 'deleteUser': {
+        await deleteUser(target.id)
+        return NextResponse.json({ deleted: true })
       }
 
       default:
