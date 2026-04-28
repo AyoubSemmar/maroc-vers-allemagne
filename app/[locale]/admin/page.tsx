@@ -33,6 +33,7 @@ export default async function AdminOverviewPage({
     articlesTotal, listingsTotal, jobsTotal, unisTotal,
     profilesTotal, savedTotal,
     cvCallsToday, anschreibenCallsToday, photoCallsToday,
+    readingCallsToday, writingCallsToday,
     profilesLast7d, listingsLast7d,
   ] = await Promise.all([
     count('articles'),
@@ -44,6 +45,8 @@ export default async function AdminOverviewPage({
     count('cv_enhance_usage', { col: 'day', gte: todayUtc() }),
     count('motivation_usage', { col: 'day', gte: todayUtc() }),
     count('photo_enhance_usage', { col: 'day', gte: todayUtc() }),
+    count('reading_exercise_usage', { col: 'day', gte: todayUtc() }),
+    count('writing_exercise_usage', { col: 'day', gte: todayUtc() }),
     count('profiles', { col: 'created_at', gte: isoNDaysAgo(7) }),
     count('listings', { col: 'created_at', gte: isoNDaysAgo(7) }),
   ])
@@ -53,7 +56,7 @@ export default async function AdminOverviewPage({
     cvCallsToday * 0.08 +
     anschreibenCallsToday * 0.05 +
     photoCallsToday * 0.04 +
-    /* haiku exercises are negligible at $0.002 each */ 0
+    (readingCallsToday + writingCallsToday) * 0.002
 
   // Recent items
   const { data: recentListings } = await supabase
@@ -140,6 +143,16 @@ export default async function AdminOverviewPage({
           <div className="adm-kpi-label">Photo enhancements</div>
           <div className="adm-kpi-value">{photoCallsToday}</div>
           <div className="adm-kpi-sub">Replicate · $0.04 each</div>
+        </div>
+        <div className="adm-kpi adm-kpi--green">
+          <div className="adm-kpi-label">Lesen exercises</div>
+          <div className="adm-kpi-value">{readingCallsToday}</div>
+          <div className="adm-kpi-sub">Haiku · $0.002 each</div>
+        </div>
+        <div className="adm-kpi adm-kpi--green">
+          <div className="adm-kpi-label">Schreiben exercises</div>
+          <div className="adm-kpi-value">{writingCallsToday}</div>
+          <div className="adm-kpi-sub">Haiku · $0.002 each</div>
         </div>
       </div>
 

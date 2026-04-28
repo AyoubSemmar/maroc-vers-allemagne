@@ -92,7 +92,7 @@ async function getDailyUsage(userId: string, table: string): Promise<number> {
   return data?.count ?? 0
 }
 
-async function bumpDailyUsage(userId: string, table: string): Promise<number> {
+export async function bumpDailyUsage(userId: string, table: string): Promise<number> {
   const day = todayUTC()
   const current = await getDailyUsage(userId, table)
   const next = current + 1

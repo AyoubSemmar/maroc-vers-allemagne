@@ -12,24 +12,32 @@ const COST_PER_CALL = {
   cv: 0.08,
   motivation: 0.05,
   photo: 0.04,
+  reading: 0.002,
+  writing: 0.002,
 }
 
-const DAILY_LIMIT = {
-  cv: 1,
-  motivation: 1,
-  photo: 2,
+const DAILY_LIMIT_LABEL: Record<string, string> = {
+  cv: '1 / day',
+  motivation: '1 / day',
+  photo: '2 / day',
+  reading: '2 / level / day',
+  writing: '2 / level / day',
 }
 
 const TABLES: Record<string, string> = {
   cv: 'cv_enhance_usage',
   motivation: 'motivation_usage',
   photo: 'photo_enhance_usage',
+  reading: 'reading_exercise_usage',
+  writing: 'writing_exercise_usage',
 }
 
 const LABEL: Record<string, string> = {
   cv: 'CV-AI improvement',
   motivation: 'Anschreiben generation',
   photo: 'Photo enhancement',
+  reading: 'Daily reading (Lesen)',
+  writing: 'Daily writing (Schreiben)',
 }
 
 async function sumDay(table: string, day: string): Promise<{ users: number; calls: number }> {
@@ -63,7 +71,7 @@ export default async function AdminAiOpsPage({
 }: { params: Promise<{ locale: AppLocale }> }) {
   await params
 
-  const features = ['cv', 'motivation', 'photo'] as const
+  const features = ['cv', 'motivation', 'photo', 'reading', 'writing'] as const
 
   const today = await Promise.all(features.map(f => sumDay(TABLES[f], todayUtc())))
   const week  = await Promise.all(features.map(f => sumLastNDays(TABLES[f], 7)))
@@ -132,7 +140,7 @@ export default async function AdminAiOpsPage({
               return (
                 <tr key={f}>
                   <td><strong>{LABEL[f]}</strong></td>
-                  <td>{(DAILY_LIMIT as any)[f]} / day</td>
+                  <td>{DAILY_LIMIT_LABEL[f]}</td>
                   <td>{today[i].calls}</td>
                   <td>{today[i].users}</td>
                   <td>{week[i].calls}</td>
@@ -147,7 +155,7 @@ export default async function AdminAiOpsPage({
       </section>
 
       <div className="adm-banner adm-banner--info" style={{ marginTop: 18 }}>
-        💡 Reading + writing daily exercises (Haiku) cost ~$0.002/call and aren't tracked in this ledger. They&rsquo;re effectively free at any realistic scale — the local-storage daily lock is enough abuse protection.
+        💡 Reading + writing exercises (Haiku) are tracked here for analytics only. The actual rate-limit lives in localStorage on the client (2 / level / UTC day) — the per-call cost is so low we don&rsquo;t bother enforcing it server-side.
       </div>
     </>
   )

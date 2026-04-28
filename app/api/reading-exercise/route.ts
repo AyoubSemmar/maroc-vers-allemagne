@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { READING_SPECS, type ReadingLevel } from '@/lib/readingExerciseData'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { bumpDailyUsage } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const maxDuration = 30
@@ -158,6 +159,9 @@ export async function POST(req: NextRequest) {
     }
 
     const wc = countWords(parsed.text)
+    // Analytics — best-effort, don't fail the request if it errors.
+    try { await bumpDailyUsage(user.id, 'reading_exercise_usage') } catch {}
+
     return NextResponse.json({ ...parsed, wordCount: wc })
   } catch (err: any) {
     console.error('[reading-exercise]', err?.message || err)

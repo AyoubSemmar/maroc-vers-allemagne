@@ -2,6 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { LEVEL_SPECS, type WritingLevel } from '@/lib/writingExerciseData'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { bumpDailyUsage } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const maxDuration = 30
@@ -151,6 +152,9 @@ export async function POST(req: NextRequest) {
     parsed.wordCountOk = realWc >= spec.minWords && realWc <= spec.maxWords
     parsed.mistakes = Array.isArray(parsed.mistakes) ? parsed.mistakes.slice(0, 8) : []
     parsed.score = Math.max(0, Math.min(100, Number(parsed.score) || 0))
+
+    // Analytics — best-effort, don't fail the request if it errors.
+    try { await bumpDailyUsage(user.id, 'writing_exercise_usage') } catch {}
 
     return NextResponse.json(parsed)
   } catch (err: any) {
