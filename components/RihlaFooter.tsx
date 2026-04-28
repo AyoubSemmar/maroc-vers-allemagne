@@ -66,7 +66,7 @@ export default function RihlaFooter() {
             <span>GoGermany</span>
           </Link>
           <p>{t('brandTag')}</p>
-          <a href="mailto:contact@maroc-vers-allemagne.com" className="rihla-foot-mail">
+          <a href="mailto:contact@gogermany.ma" className="rihla-foot-mail">
             {t('contactMail')}
           </a>
         </div>

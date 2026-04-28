@@ -65,7 +65,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-3 mt-5">
               <a
-                href="mailto:contact@maroc-vers-allemagne.com"
+                href="mailto:contact@gogermany.ma"
                 className="text-xs text-gray-400 hover:text-white transition-colors"
               >
                 ✉️ راسلنا

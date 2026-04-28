@@ -10,9 +10,10 @@ const intlMiddleware = createIntlMiddleware(routing)
 // /learn-german is intentionally NOT here — the level listing and the
 // first lesson of every level are public. The auth gate for lesson 2+
 // happens in the LessonsList client component.
+// /ausbildung-jobs is also public — anyone can browse offers without an
+// account.
 const PROTECTED_PATHS = [
   '/cv-builder',
-  '/ausbildung-jobs',
   '/anschreiben-generator',
 ]
 
