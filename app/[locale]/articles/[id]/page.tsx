@@ -1,12 +1,76 @@
+import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
-import { dirFor, type AppLocale } from '@/i18n/routing'
+import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import ArticleContent from '@/components/ArticleContent'
 import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
 import ShareButtons from '@/components/ShareButtons'
+
+const SITE_URL = 'https://gogermany.ma'
+
+/** Per-article metadata pulls the localised title/summary/image straight
+ *  from the DB row so each of the 136 articles × 4 locales gets a
+ *  unique <title>, description, OG image and canonical. Hreflang
+ *  alternates declared for all 4 locales (the translations JSONB has
+ *  the same article in each language). Without this, Google sees 544
+ *  pages with the same generic GoGermany title — none of them rank. */
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ id: string; locale: AppLocale }> }): Promise<Metadata> {
+  const { id, locale } = await params
+
+  const { data: row } = await supabase
+    .from('articles')
+    .select('id, title, summary, image_url, date, category, translations')
+    .eq('id', id)
+    .single()
+
+  if (!row) {
+    return { title: 'Article not found — GoGermany' }
+  }
+
+  const article: any = localizeRow(row as any, locale)
+  const title       = `${article.title} — GoGermany`
+  const description = (article.summary as string)?.slice(0, 158) || `Read on GoGermany — guides for Moroccans moving to Germany.`
+  const canonical   = `${SITE_URL}/${locale}/articles/${id}`
+  const image       = article.image_url || `${SITE_URL}/opengraph-image`
+
+  // Hreflang alternates — every locale has its own URL for this same
+  // article (the translations JSONB serves the right language per locale).
+  const languages: Record<string, string> = {}
+  for (const l of routing.locales) {
+    languages[l] = `${SITE_URL}/${l}/articles/${id}`
+  }
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical,
+      languages,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: 'article',
+      siteName: 'GoGermany',
+      locale,
+      images: image ? [{ url: image, width: 1200, height: 630, alt: article.title }] : undefined,
+      publishedTime: article.date || undefined,
+      section: article.category || undefined,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: image ? [image] : undefined,
+    },
+  }
+}
 
 export default async function ArticlePage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
   const { id, locale } = await params

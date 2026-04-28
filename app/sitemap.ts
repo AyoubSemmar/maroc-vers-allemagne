@@ -4,21 +4,34 @@ import { supabase } from '@/lib/supabase'
 
 const SITE = 'https://gogermany.ma'
 
-// Static routes that exist in every locale.
+// Static routes that exist in every locale. Auth pages intentionally
+// excluded — they're noindex (see app/[locale]/login + signup metadata).
 const STATIC_PATHS = [
   '',
+  '/about',
+  '/contact',
   '/articles',
+  '/ausbildung',
   '/ausbildung-jobs',
+  '/studium',
   '/universities',
   '/learn-german',
   '/jobs',
-  '/visa',
+  '/housing',
   '/banking',
   '/simcards',
+  '/visa',
+  '/visa/ausbildung',
+  '/visa/studium',
+  '/tools/eligibility-checker',
+  '/tools/document-checklist',
+  '/tools/migration-timeline',
+  '/tools/living-cost-calculator',
   '/cv-builder',
   '/anschreiben-generator',
-  '/login',
-  '/signup',
+  '/useful-links',
+  '/documents',
+  '/categories',
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
