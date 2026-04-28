@@ -4,7 +4,7 @@ import { getTranslations } from 'next-intl/server'
 import { createClient } from '@supabase/supabase-js'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
-import { addArticle, deleteArticle, deleteListing } from '../actions.js'
+import { addArticle, addListing, deleteArticle, deleteListing } from '../actions.js'
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
 
@@ -107,6 +107,57 @@ export default async function AdminContentPage({
           </div>
         </section>
       </div>
+
+      {/* Add listing form */}
+      <section className="adm-card" style={{ marginTop: 18 }}>
+        <div className="adm-card-head">
+          <h3 className="adm-card-title">Post a new apartment listing</h3>
+          <span style={{ fontSize: 12, color: 'var(--adm-ink-mute)' }}>WhatsApp number can be anyone&rsquo;s — your own or a third party&rsquo;s</span>
+        </div>
+        <form action={addListing} encType="multipart/form-data" style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+          <input name="title" className="adm-input" placeholder="Title (e.g. ‘Furnished room near TU Munich’)" required />
+          <textarea name="description" className="adm-textarea" placeholder="Description — neighbourhood, bills, deposit, who it suits…" rows={5} required />
+
+          <div className="adm-row">
+            <div>
+              <label className="adm-label">City</label>
+              <input name="city" className="adm-input" placeholder="München / Berlin / …" required />
+            </div>
+            <div>
+              <label className="adm-label">Type</label>
+              <select name="type" className="adm-select" defaultValue="شقة">
+                <option value="شقة">Apartment / شقة</option>
+                <option value="غرفة">Room / غرفة</option>
+              </select>
+            </div>
+            <div>
+              <label className="adm-label">Price (€/mo)</label>
+              <input name="price" type="number" min="0" className="adm-input" placeholder="Optional" />
+            </div>
+          </div>
+
+          <div>
+            <label className="adm-label">WhatsApp number (with country code, e.g. +212600000000)</label>
+            <input
+              name="whatsapp"
+              className="adm-input"
+              placeholder="+212 600 00 00 00 — owner / agent / contact for this listing"
+              required
+              dir="ltr"
+            />
+            <p style={{ fontSize: 11, color: 'var(--adm-ink-mute)', marginTop: 4 }}>
+              This is the number users will see and contact for this specific listing. It can be different from your own.
+            </p>
+          </div>
+
+          <div>
+            <label className="adm-label">Images (you can select multiple — first one becomes the cover)</label>
+            <input name="images" type="file" accept="image/*" multiple className="adm-input" />
+          </div>
+
+          <button type="submit" className="adm-btn">📋 Publish listing</button>
+        </form>
+      </section>
 
       {/* Listings — full width below */}
       <section className="adm-card" style={{ marginTop: 18 }}>

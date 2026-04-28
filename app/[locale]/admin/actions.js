@@ -111,5 +111,67 @@ export async function deleteListing(formData) {
   )
   await adminClient.from('listings').delete().eq('id', id)
   revalidatePath('/admin')
-  redirect('/admin')
+  revalidatePath('/admin/content')
+  redirect('/admin/content')
+}
+
+/**
+ * Add an apartment listing from the admin panel. Unlike the public
+ * /listings/new flow (which uses the user's profile.whatsapp), the
+ * admin form lets you type any WhatsApp number — useful when posting
+ * on behalf of a third party.
+ *
+ * Service role bypasses RLS; user_id is set to ADMIN_LISTING_USER_ID
+ * env var or null. Images are uploaded to the article-images bucket.
+ */
+export async function addListing(formData) {
+  const cookieStore = await cookies()
+  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
+
+  const adminClient = createClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL,
+    process.env.SUPABASE_SERVICE_ROLE_KEY,
+  )
+
+  const title       = (formData.get('title')       || '').toString().trim()
+  const description = (formData.get('description') || '').toString().trim()
+  const city        = (formData.get('city')        || '').toString().trim()
+  const type        = (formData.get('type')        || 'شقة').toString().trim()
+  const priceRaw    = (formData.get('price')       || '').toString().trim()
+  const whatsappRaw = (formData.get('whatsapp')    || '').toString().trim()
+
+  if (!title || !description || !city || !whatsappRaw) {
+    redirect('/admin/content?err=missing')
+  }
+
+  // Normalise WhatsApp: strip everything except digits + leading +.
+  const whatsapp = whatsappRaw.replace(/[^\d+]/g, '')
+
+  // Upload images (multiple supported).
+  const imageUrls = []
+  const files = formData.getAll('images').filter((f) => f && typeof f !== 'string' && f.size > 0)
+  for (const file of files) {
+    const url = await uploadImage(file)
+    if (url) imageUrls.push(url)
+  }
+
+  const adminUserId = process.env.ADMIN_LISTING_USER_ID || null
+
+  await adminClient.from('listings').insert([{
+    user_id: adminUserId,
+    title,
+    description,
+    city,
+    type,
+    price: priceRaw ? Number(priceRaw) : null,
+    whatsapp,
+    image_url: imageUrls[0] || '',
+    images: imageUrls,
+    available: true,
+    expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days
+  }])
+
+  revalidatePath('/admin/content')
+  revalidatePath('/listings')
+  redirect('/admin/content')
 }
