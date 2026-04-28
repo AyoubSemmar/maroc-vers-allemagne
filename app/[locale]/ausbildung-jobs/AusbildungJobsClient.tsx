@@ -1,11 +1,11 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { CATEGORIES, CATEGORIES_ORDER, CategoryKey } from '@/lib/jobCategories'
-import CategorySection from '@/components/jobs/CategorySection'
+import JobCard, { Job } from '@/components/jobs/JobCard'
 import ApplyModal from '@/components/jobs/ApplyModal'
-import { Job } from '@/components/jobs/JobCard'
+import Pager, { usePageSize } from '@/components/Pager'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import './ausbildung-jobs.css'
 
@@ -23,21 +23,37 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [applyJob, setApplyJob] = useState<Job | null>(null)
 
-  // Group jobs by category
-  const jobsByCategory = useMemo(() => {
-    const map: Record<CategoryKey, Job[]> = {
-      hospitality: [], handwerk: [], it: [], healthcare: [], logistics: [], education: [], media: [],
-      public_service: [], retail: [], automotive: [], engineering: [], finance: [],
+  // Per-category counts only — used to label the filter pills. The list
+  // itself is rendered as a single flat paginated grid (20 desktop /
+  // 10 mobile per page), regardless of which categories are present.
+  const countsByCategory = useMemo(() => {
+    const map: Record<CategoryKey, number> = {
+      hospitality: 0, handwerk: 0, it: 0, healthcare: 0, logistics: 0, education: 0, media: 0,
+      public_service: 0, retail: 0, automotive: 0, engineering: 0, finance: 0,
     }
     for (const j of jobs) {
       const key = j.category as CategoryKey
-      if (map[key]) map[key].push(j)
+      if (key in map) map[key] += 1
     }
     return map
   }, [jobs])
 
+  // Active filter applied to the full list — order preserved from the
+  // server (enriched_at DESC, then published_at DESC).
+  const filteredJobs = useMemo(
+    () => (filter === 'all' ? jobs : jobs.filter(j => j.category === filter)),
+    [jobs, filter],
+  )
+
+  // Pagination: 20 desktop / 10 mobile across the whole filtered list.
+  // Resets to page 1 whenever the user changes the filter.
+  const pageSize = usePageSize()
+  const [page, setPage] = useState(1)
+  useEffect(() => { setPage(1) }, [filter])
+  const totalPages = Math.max(1, Math.ceil(filteredJobs.length / pageSize))
+  const visibleJobs = filteredJobs.slice((page - 1) * pageSize, page * pageSize)
+
   const total = jobs.length
-  const visibleCategories = filter === 'all' ? CATEGORIES_ORDER : [filter]
 
   return (
     <div className="aj-root" dir={dirFor(locale)}>
@@ -66,7 +82,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
           </button>
           {CATEGORIES_ORDER.map(k => {
             const cat = CATEGORIES[k]
-            const count = jobsByCategory[k].length
+            const count = countsByCategory[k]
             return (
               <button
                 key={k}
@@ -113,24 +129,24 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
           </button>
         </div>
 
-        {/* Categories */}
+        {/* Flat paginated grid — 20 desktop / 10 mobile per page */}
         {total === 0 ? (
           <div className="aj-empty">
             <div className="aj-empty-icon">📭</div>
             <p>{t('emptyTitle')}</p>
             <p style={{ fontSize: 12.5, marginTop: 8 }}>{t('emptyHint')}</p>
           </div>
+        ) : filteredJobs.length === 0 ? (
+          <div className="aj-cat-empty">{t('catEmpty')}</div>
         ) : (
-          visibleCategories.map(k => (
-            <CategorySection
-              key={k}
-              categoryKey={k}
-              category={CATEGORIES[k]}
-              jobs={jobsByCategory[k]}
-              view={view}
-              onApply={j => setApplyJob(j)}
-            />
-          ))
+          <section id="aj-results">
+            <div className={`aj-grid${view === 'list' ? ' aj-grid--list' : ''}`}>
+              {visibleJobs.map(j => (
+                <JobCard key={j.id} job={j} onApply={setApplyJob} />
+              ))}
+            </div>
+            <Pager page={page} total={totalPages} onChange={setPage} scrollToId="aj-results" />
+          </section>
         )}
       </div>
 
