@@ -47,6 +47,42 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ users })
   }
 
+  // getUsage — today's usage across all daily-capped features for ONE user.
+  // Pulls counts from the per-feature usage tables.
+  if (action === 'getUsage') {
+    const targetEmail = String(body.email || '').trim()
+    if (!targetEmail) return NextResponse.json({ error: 'email required' }, { status: 400 })
+    const t = await findUserByEmail(targetEmail)
+    if (!t) return NextResponse.json({ error: 'User not found' }, { status: 404 })
+
+    const today = new Date().toISOString().slice(0, 10)
+    const tables = [
+      ['photo', 'photo_enhance_usage'],
+      ['cv', 'cv_enhance_usage'],
+      ['motivation', 'motivation_usage'],
+      ['reading', 'reading_exercise_usage'],
+      ['writing', 'writing_exercise_usage'],
+    ] as const
+
+    const { createClient } = await import('@supabase/supabase-js')
+    const sbAdmin = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+    )
+
+    const usage: Record<string, number> = {}
+    for (const [key, table] of tables) {
+      const { data } = await sbAdmin
+        .from(table)
+        .select('count')
+        .eq('user_id', t.id)
+        .eq('day', today)
+        .maybeSingle()
+      usage[key] = (data as any)?.count ?? 0
+    }
+    return NextResponse.json({ usage })
+  }
+
   const email  = String(body.email || '').trim()
   if (!email) return NextResponse.json({ error: 'email required' }, { status: 400 })
 

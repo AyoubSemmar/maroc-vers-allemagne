@@ -22,15 +22,33 @@ const GERMAN_LEVELS = ['A2', 'B1', 'B2', 'C1']
 
 type Filter = 'all' | 'premium' | 'free' | 'admin' | 'has-credits' | 'banned'
 
+type DailyUsage = { photo: number; cv: number; motivation: number; reading: number; writing: number }
+
 export default function AdminUsersClient() {
   const [users, setUsers]       = useState<UserSnapshot[] | null>(null)
   const [selected, setSelected] = useState<UserSnapshot | null>(null)
+  const [usage, setUsage]       = useState<DailyUsage | null>(null)
   const [search, setSearch]     = useState('')
   const [filter, setFilter]     = useState<Filter>('all')
   const [loading, setLoading]   = useState(false)
   const [actionLoading, setActionLoading] = useState(false)
   const [msg, setMsg]           = useState('')
   const [error, setError]       = useState('')
+
+  // Fetch today's usage whenever a user is selected.
+  useEffect(() => {
+    if (!selected) { setUsage(null); return }
+    let cancelled = false
+    fetch('/api/admin/grant', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ action: 'getUsage', email: selected.email }),
+    }).then(r => r.json()).then(data => {
+      if (cancelled) return
+      if (data.usage) setUsage(data.usage)
+    }).catch(() => {})
+    return () => { cancelled = true }
+  }, [selected?.email])
 
   // Initial load — fetch all users on mount.
   useEffect(() => { reload() }, []) // eslint-disable-line react-hooks/exhaustive-deps
@@ -275,6 +293,7 @@ export default function AdminUsersClient() {
       {selected && (
         <UserDetailPanel
           user={selected}
+          usage={usage}
           loading={actionLoading}
           msg={msg}
           onAction={action}
@@ -287,9 +306,10 @@ export default function AdminUsersClient() {
 
 // ─── Detail panel ─────────────────────────────────────────
 function UserDetailPanel({
-  user, loading, msg, onAction, onClose,
+  user, usage, loading, msg, onAction, onClose,
 }: {
   user: UserSnapshot
+  usage: DailyUsage | null
   loading: boolean
   msg: string
   onAction: (action: string, payload?: Record<string, any>) => void
@@ -353,38 +373,37 @@ function UserDetailPanel({
         </div>
       </Section>
 
+      {/* Today's free usage */}
+      <Section title="📊 Today's free usage (UTC)">
+        <p style={{ fontSize: 12, color: 'var(--adm-ink-soft)', marginTop: -4, marginBottom: 10 }}>
+          Every signed-in user gets a free daily allowance. After the cap they fall through to paid credits (below).
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(170px, 1fr))', gap: 8 }}>
+          <UsageTile label="📷 Photo enhance" used={usage?.photo ?? 0}      cap={2} unit="/ day" />
+          <UsageTile label="📄 CV improve"    used={usage?.cv ?? 0}         cap={1} unit="/ day" />
+          <UsageTile label="✍️ Motivation"     used={usage?.motivation ?? 0} cap={1} unit="/ day" />
+          <UsageTile label="📖 Lesen (reading)"     used={usage?.reading ?? 0} cap={10} unit="/ day · 2/level × 5" />
+          <UsageTile label="✍️ Schreiben (writing)" used={usage?.writing ?? 0} cap={10} unit="/ day · 2/level × 5" />
+        </div>
+      </Section>
+
       {/* Credits */}
-      <Section title="💳 Pay-per-use credits">
+      <Section title="💳 Extra paid credits (after the free daily cap)">
         <div style={{ display: 'grid', gridTemplateColumns: 'max-content 1fr auto', gap: '12px 18px', alignItems: 'center' }}>
           <CreditRow label="Photo AI"          value={user.credits.photo}      onAdd={n => onAction('addCredits', { feature: 'photo',      amount: n })} loading={loading} />
           <CreditRow label="CV enhance"        value={user.credits.cv}         onAdd={n => onAction('addCredits', { feature: 'cv',         amount: n })} loading={loading} />
           <CreditRow label="Motivation letter" value={user.credits.motivation} onAdd={n => onAction('addCredits', { feature: 'motivation', amount: n })} loading={loading} />
         </div>
-        <div style={{
-          marginTop: 14, padding: '10px 14px',
-          background: 'var(--adm-bg-elev)', border: '1px solid var(--adm-line)', borderRadius: 8,
-          display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap',
-        }}>
-          <div style={{ fontSize: 13, color: 'var(--adm-ink-soft)' }}>
-            <strong style={{ color: 'var(--adm-ink)' }}>Motivation letter — free lifetime try:</strong>{' '}
-            <span style={{ color: user.motivation_free_used ? 'var(--adm-red)' : 'var(--adm-green)', fontWeight: 700 }}>
-              {user.motivation_free_used ? '✕ Used' : '✓ Available'}
-            </span>
-          </div>
-          {user.motivation_free_used && (
-            <button className="adm-btn adm-btn--ghost" disabled={loading}
-              onClick={() => onAction('resetMotivationFreeTry')}>
-              ↻ Restore free try
-            </button>
-          )}
-        </div>
       </Section>
 
       {/* Unlocks */}
-      <Section title="🎨 Pro CV templates">
+      <Section title="🎨 Pro CV templates (paid one-time unlocks)">
         <UnlockGrid items={TEMPLATE_KEYS} kind="template" hasUnlock={hasUnlock} loading={loading} onAction={onAction} />
       </Section>
-      <Section title="🇩🇪 German levels (A1 free for everyone)">
+      <Section title="🇩🇪 German levels — legacy">
+        <p style={{ fontSize: 12, color: 'var(--adm-ink-soft)', marginTop: -4, marginBottom: 10, lineHeight: 1.5 }}>
+          ℹ All German lessons are 100% free for any signed-in user — these per-level unlocks are from the older paid model and no longer gate access. Kept here in case the field is read elsewhere; safe to leave at "locked".
+        </p>
         <UnlockGrid items={GERMAN_LEVELS} kind="german_level" hasUnlock={hasUnlock} loading={loading} onAction={onAction} />
       </Section>
 
@@ -436,6 +455,41 @@ function Section({ title, children }: { title: string; children: React.ReactNode
     <div style={{ paddingBlock: 14, borderTop: '1px solid var(--adm-line)' }}>
       <div style={{ fontSize: 13, fontWeight: 800, color: 'var(--adm-ink)', marginBottom: 10 }}>{title}</div>
       <div>{children}</div>
+    </div>
+  )
+}
+
+function UsageTile({ label, used, cap, unit }: { label: string; used: number; cap: number; unit: string }) {
+  const pct = Math.min(100, Math.round((used / cap) * 100))
+  const exhausted = used >= cap
+  const accent = exhausted ? 'var(--adm-red)' : (used > 0 ? 'var(--adm-gold)' : 'var(--adm-green)')
+  return (
+    <div style={{
+      padding: '10px 12px',
+      background: 'var(--adm-bg-elev)',
+      border: '1px solid var(--adm-line)',
+      borderRadius: 8,
+    }}>
+      <div style={{ fontSize: 11, color: 'var(--adm-ink-mute)', fontWeight: 700, letterSpacing: 0.04, marginBottom: 4 }}>{label}</div>
+      <div style={{ display: 'flex', alignItems: 'baseline', gap: 4 }}>
+        <span style={{ fontSize: 20, fontWeight: 900, color: accent, fontVariantNumeric: 'tabular-nums' }}>{used}</span>
+        <span style={{ fontSize: 13, color: 'var(--adm-ink-mute)' }}>/ {cap}</span>
+      </div>
+      <div style={{ fontSize: 10.5, color: 'var(--adm-ink-mute)', marginTop: 2 }}>{unit}</div>
+      <div style={{
+        marginTop: 6,
+        height: 4,
+        background: 'rgba(255,255,255,0.08)',
+        borderRadius: 999,
+        overflow: 'hidden',
+      }}>
+        <div style={{
+          width: `${pct}%`,
+          height: '100%',
+          background: accent,
+          transition: 'width 0.2s',
+        }} />
+      </div>
     </div>
   )
 }
