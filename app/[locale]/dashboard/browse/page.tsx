@@ -50,17 +50,27 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
     if (rows.length < CHUNK) break
   }
 
-  // See /ausbildung-jobs/page.tsx — keep enrichment_json minimal (only the
-  // two fields rendered on the card + modal) to slim the wire payload.
+  // See /ausbildung-jobs/page.tsx — slim each row (preview-trim description
+  // and translations to 280 chars, drop unused enrichment fields) before
+  // shipping to the client.
+  const PREVIEW = 280
+  const trimText = (s: unknown) =>
+    typeof s === 'string' && s.length > PREVIEW ? s.slice(0, PREVIEW) : (s ?? null)
   const jobs = all.map((r: any) => {
     const e = r.enrichment_json
-    if (!e) return r as Job
+    const trans = e?.translations
+      ? {
+          ar: trimText(e.translations.ar),
+          fr: trimText(e.translations.fr),
+          en: trimText(e.translations.en),
+        }
+      : null
     return {
       ...r,
-      enrichment_json: {
-        translations: e.translations ?? null,
-        duration_months: e.duration_months ?? null,
-      },
+      description: trimText(r.description),
+      enrichment_json: e
+        ? { translations: trans, duration_months: e.duration_months ?? null }
+        : null,
     } as Job
   })
   const lastUpdated = jobs[0]?.created_at || null

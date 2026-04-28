@@ -754,6 +754,22 @@
 }
 @keyframes aj-toast-in { from { opacity: 0; transform: translateX(-50%) translateY(10px) } }
 
+/* "Show more" pagination button under each category */
+.aj-cat-more { display: flex; justify-content: center; margin-block-start: 18px; }
+.aj-cat-more-btn {
+  appearance: none;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+  padding: 9px 18px;
+  border-radius: var(--r-sm);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.aj-cat-more-btn:hover { background: var(--bg-warm); border-color: var(--ink); }
+
 /* Dark mode */
 html[data-theme="dark"] .aj-card,
 html[data-theme="dark"] .aj-modal { background: var(--bg-elev); }

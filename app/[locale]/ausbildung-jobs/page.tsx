@@ -70,20 +70,35 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
   }
   const data = all
 
-  // Trim enrichment_json to ONLY the two fields the card + modal actually
-  // read (translations, duration_months). The full blob includes large
-  // arrays (what_youll_learn, requirements, benefits, summary, salary,
-  // tags…) — none rendered on the listing — so dropping them shrinks the
-  // payload sent to mobile clients dramatically.
+  // Slim each row before it goes over the wire to the client:
+  //  • description trimmed to a 280-char preview (the card only renders a
+  //    160-char excerpt, and the full markdown body is loaded from the
+  //    detail/modal anyway). Description is the heaviest text column —
+  //    without this trim each row averages a few KB of unused markdown.
+  //  • enrichment_json reduced to the two fields actually read on the
+  //    card + apply modal (translations.title preview + duration_months).
+  //    The full blob contains large arrays (what_youll_learn,
+  //    requirements, benefits, summary, salary, tags…) that are not
+  //    rendered on the listing.
+  // For the same reason, translations are also previewed at 280 chars.
+  const PREVIEW = 280
+  const trimText = (s: unknown) =>
+    typeof s === 'string' && s.length > PREVIEW ? s.slice(0, PREVIEW) : (s ?? null)
   const jobs = (data || []).map((r: any) => {
     const e = r.enrichment_json
-    if (!e) return r as Job
+    const trans = e?.translations
+      ? {
+          ar: trimText(e.translations.ar),
+          fr: trimText(e.translations.fr),
+          en: trimText(e.translations.en),
+        }
+      : null
     return {
       ...r,
-      enrichment_json: {
-        translations: e.translations ?? null,
-        duration_months: e.duration_months ?? null,
-      },
+      description: trimText(r.description),
+      enrichment_json: e
+        ? { translations: trans, duration_months: e.duration_months ?? null }
+        : null,
     } as Job
   })
   const lastUpdated = jobs[0]?.created_at || null
