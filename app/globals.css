@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Tajawal:wght@400;500;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 /* Enable class-based dark variant driven by data-theme on <html> */
@@ -35,9 +35,18 @@
   --r-lg: 28px;
   --r-xl: 40px;
 
-  --font-ar: 'Tajawal', system-ui, sans-serif;
-  --font-en: 'Space Grotesk', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  /* Typography stack — refreshed Apr 2026.
+     - Fraunces (variable opsz) for display: hero, h1/h2/h3, stat numbers,
+       FAQ questions, card titles. Italic style is reserved for accent words.
+     - Inter for Latin body text, buttons, navigation, forms.
+     - IBM Plex Sans Arabic for everything in Arabic locales (Tajawal stays
+       as a fallback for users who already have it cached).
+     - JetBrains Mono for eyebrows, kickers, step labels, status pills. */
+  --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
+  --font-body:    'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-ar:      'IBM Plex Sans Arabic', 'Tajawal', system-ui, sans-serif;
+  --font-en:      var(--font-body); /* legacy alias — kept for compat */
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', Consolas, monospace;
 
   --background: #ffffff;
   --foreground: #171717;
@@ -75,9 +84,30 @@ html, body { max-width: 100%; overflow-x: clip; }
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-ar);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Arabic locale uses IBM Plex Sans Arabic across body + headings —
+   Fraunces and Inter don't ship Arabic glyphs. */
+html[lang="ar"] body,
+html[dir="rtl"] body {
+  font-family: var(--font-ar);
+}
+
+/* Display headings: Fraunces serif on Latin pages. Arabic locales
+   fall back to --font-ar via the rule below so the hero, FAQ
+   questions, etc. still render in IBM Plex Arabic. */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.015em;
+}
+html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3,
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 {
+  font-family: var(--font-ar);
+  letter-spacing: 0;
 }
 
 /* ============ GLOBAL GREEN → BRAND-ORANGE REBRAND ============
@@ -197,12 +227,13 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 
 /* ============ RIHLA LANDING SCOPED STYLES ============ */
 .rihla {
-  font-family: var(--font-ar);
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--ink);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
+.rihla[dir="rtl"] { font-family: var(--font-ar); }
 .rihla * { box-sizing: border-box; }
 .rihla a { color: inherit; text-decoration: none; }
 
