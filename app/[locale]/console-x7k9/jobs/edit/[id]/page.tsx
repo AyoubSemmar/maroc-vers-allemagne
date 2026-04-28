@@ -35,7 +35,7 @@ export default async function EditJobPage({ params }: { params: Promise<{ id: st
     .eq('id', id)
     .single()
 
-  if (!job) redirect(`/${locale}/admin/jobs`)
+  if (!job) redirect(`/${locale}/console-x7k9/jobs`)
 
   // <input type="date"> wants YYYY-MM-DD — strip time portion if present.
   const publishedDate = job.published_at ? String(job.published_at).slice(0, 10) : ''
@@ -47,7 +47,7 @@ export default async function EditJobPage({ params }: { params: Promise<{ id: st
           <h1 className="adm-page-title">Edit offer</h1>
           <p className="adm-page-sub">{job.title} <span style={{ color: 'var(--adm-ink-mute)' }}>· {job.external_id}</span></p>
         </div>
-        <Link href="/admin/jobs" className="adm-btn adm-btn--ghost">← Back to jobs</Link>
+        <Link href="/console-x7k9/jobs" className="adm-btn adm-btn--ghost">← Back to jobs</Link>
       </header>
 
       <div style={{ maxWidth: 820 }}>

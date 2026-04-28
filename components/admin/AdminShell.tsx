@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { Link, usePathname } from '@/i18n/navigation'
-import { logout } from '@/app/[locale]/admin/actions.js'
-import './admin.css'
+import { logout } from '@/app/[locale]/console-x7k9/actions.js'
+import './console-x7k9.css'
 
 type Section = {
   href: string
@@ -23,13 +23,13 @@ const I = {
 }
 
 const SECTIONS: Section[] = [
-  { href: '/admin', label: 'Overview', icon: I.overview },
-  { href: '/admin/users', label: 'Users', icon: I.users },
-  { href: '/admin/content', label: 'Articles & Listings', icon: I.content },
-  { href: '/admin/jobs', label: 'Ausbildung Jobs', icon: I.jobs },
-  { href: '/admin/unis', label: 'Universities', icon: I.unis },
-  { href: '/admin/ai-ops', label: 'AI Ops & Costs', icon: I.ai },
-  { href: '/admin/settings', label: 'Settings', icon: I.settings },
+  { href: '/console-x7k9', label: 'Overview', icon: I.overview },
+  { href: '/console-x7k9/users', label: 'Users', icon: I.users },
+  { href: '/console-x7k9/content', label: 'Articles & Listings', icon: I.content },
+  { href: '/console-x7k9/jobs', label: 'Ausbildung Jobs', icon: I.jobs },
+  { href: '/console-x7k9/unis', label: 'Universities', icon: I.unis },
+  { href: '/console-x7k9/ai-ops', label: 'AI Ops & Costs', icon: I.ai },
+  { href: '/console-x7k9/settings', label: 'Settings', icon: I.settings },
 ]
 
 export default function AdminShell({ children }: { children: React.ReactNode }) {
@@ -37,7 +37,7 @@ export default function AdminShell({ children }: { children: React.ReactNode }) 
   const [mobileOpen, setMobileOpen] = useState(false)
 
   function isActive(href: string) {
-    if (href === '/admin') return pathname === '/admin'
+    if (href === '/console-x7k9') return pathname === '/console-x7k9'
     return pathname === href || pathname.startsWith(href + '/')
   }
 

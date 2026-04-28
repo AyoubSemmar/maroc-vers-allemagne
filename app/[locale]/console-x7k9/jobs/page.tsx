@@ -148,7 +148,7 @@ export default async function AdminJobsPage({
                   </div>
                 </div>
                 <div className="adm-row-item-actions">
-                  <Link href={`/admin/jobs/edit/${j.id}` as any} className="adm-link">Edit</Link>
+                  <Link href={`/console-x7k9/jobs/edit/${j.id}` as any} className="adm-link">Edit</Link>
                   <form action={deleteJob}>
                     <input type="hidden" name="id" value={j.id} />
                     <button type="submit" className="adm-link adm-link--danger" style={{ background: 'none', border: 0, cursor: 'pointer' }}>

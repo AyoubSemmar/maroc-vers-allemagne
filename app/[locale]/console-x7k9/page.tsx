@@ -1,5 +1,5 @@
 // Admin overview — KPIs, recent activity, quick links. Auth is handled
-// by app/[locale]/admin/layout.tsx; this file just renders content.
+// by app/[locale]/console-x7k9/layout.tsx; this file just renders content.
 import { createClient } from '@supabase/supabase-js'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
@@ -79,8 +79,8 @@ export default async function AdminOverviewPage({
           <p className="adm-page-sub">Real-time pulse of the platform — content, traffic, AI usage and costs. All numbers update on page reload.</p>
         </div>
         <div style={{ display: 'flex', gap: 8 }}>
-          <Link href="/admin/users" className="adm-btn adm-btn--ghost">Manage users →</Link>
-          <Link href="/admin/ai-ops" className="adm-btn">AI Ops →</Link>
+          <Link href="/console-x7k9/users" className="adm-btn adm-btn--ghost">Manage users →</Link>
+          <Link href="/console-x7k9/ai-ops" className="adm-btn">AI Ops →</Link>
         </div>
       </header>
 
@@ -161,7 +161,7 @@ export default async function AdminOverviewPage({
         <section className="adm-card">
           <div className="adm-card-head">
             <h3 className="adm-card-title">Latest apartment listings</h3>
-            <Link href="/admin/content" className="adm-card-link">Manage all →</Link>
+            <Link href="/console-x7k9/content" className="adm-card-link">Manage all →</Link>
           </div>
           <div className="adm-row-list">
             {recentListings?.length === 0 && <p style={{ color: 'var(--adm-ink-mute)', fontSize: 13 }}>No recent listings.</p>}
@@ -183,7 +183,7 @@ export default async function AdminOverviewPage({
         <section className="adm-card">
           <div className="adm-card-head">
             <h3 className="adm-card-title">Latest user signups</h3>
-            <Link href="/admin/users" className="adm-card-link">Manage users →</Link>
+            <Link href="/console-x7k9/users" className="adm-card-link">Manage users →</Link>
           </div>
           <div className="adm-row-list">
             {recentProfiles?.length === 0 && <p style={{ color: 'var(--adm-ink-mute)', fontSize: 13 }}>No recent users.</p>}
@@ -207,10 +207,10 @@ export default async function AdminOverviewPage({
       <section className="adm-card" style={{ marginTop: 18 }}>
         <div className="adm-card-head"><h3 className="adm-card-title">Quick actions</h3></div>
         <div className="adm-row" style={{ alignItems: 'stretch' }}>
-          <Link href="/admin/users" className="adm-btn adm-btn--ghost">👥 Grant credits / Premium</Link>
-          <Link href="/admin/content" className="adm-btn adm-btn--ghost">📰 Publish article</Link>
-          <Link href="/admin/ai-ops" className="adm-btn adm-btn--ghost">⚡ AI cost report</Link>
-          <Link href="/admin/settings" className="adm-btn adm-btn--ghost">⚙ Settings</Link>
+          <Link href="/console-x7k9/users" className="adm-btn adm-btn--ghost">👥 Grant credits / Premium</Link>
+          <Link href="/console-x7k9/content" className="adm-btn adm-btn--ghost">📰 Publish article</Link>
+          <Link href="/console-x7k9/ai-ops" className="adm-btn adm-btn--ghost">⚡ AI cost report</Link>
+          <Link href="/console-x7k9/settings" className="adm-btn adm-btn--ghost">⚙ Settings</Link>
           <a href="/cost-report.html" target="_blank" className="adm-btn adm-btn--ghost">📄 Cost PDF</a>
         </div>
       </section>

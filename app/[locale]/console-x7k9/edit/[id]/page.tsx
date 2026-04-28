@@ -22,14 +22,14 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
   const t = await getTranslations({ locale, namespace: 'admin' })
   const tCat = await getTranslations({ locale, namespace: 'articles.cat' })
 
-  // Auth handled by app/[locale]/admin/layout.tsx — no need to re-check here.
+  // Auth handled by app/[locale]/console-x7k9/layout.tsx — no need to re-check here.
   const { data: article } = await supabase
     .from('articles')
     .select('*')
     .eq('id', id)
     .single()
 
-  if (!article) redirect(`/${locale}/admin`)
+  if (!article) redirect(`/${locale}/console-x7k9`)
 
   function catLabel(cat: string): string {
     try { return tCat(cat as any) } catch { return cat }
@@ -41,7 +41,7 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
         <div>
           <h1 className="adm-page-title">{t('editArticleTitle') ?? 'Edit article'}</h1>
         </div>
-        <Link href="/admin/content" className="adm-btn adm-btn--ghost">← {t('backToDashboard') ?? 'Back to articles'}</Link>
+        <Link href="/console-x7k9/content" className="adm-btn adm-btn--ghost">← {t('backToDashboard') ?? 'Back to articles'}</Link>
       </header>
 
       <div style={{ maxWidth: 720 }}>

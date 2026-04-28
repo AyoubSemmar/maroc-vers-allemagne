@@ -30,7 +30,7 @@ export default async function EditUniversityPage({ params }: { params: Promise<{
     .eq('id', id)
     .single()
 
-  if (!u) redirect(`/${locale}/admin/unis`)
+  if (!u) redirect(`/${locale}/console-x7k9/unis`)
 
   return (
     <>
@@ -39,7 +39,7 @@ export default async function EditUniversityPage({ params }: { params: Promise<{
           <h1 className="adm-page-title">Edit university</h1>
           <p className="adm-page-sub">{u.name_de} <span style={{ color: 'var(--adm-ink-mute)' }}>· {u.id}</span></p>
         </div>
-        <Link href="/admin/unis" className="adm-btn adm-btn--ghost">← Back to universities</Link>
+        <Link href="/console-x7k9/unis" className="adm-btn adm-btn--ghost">← Back to universities</Link>
       </header>
 
       <div style={{ maxWidth: 820 }}>

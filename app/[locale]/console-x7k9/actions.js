@@ -37,7 +37,7 @@ export async function login(formData) {
     // sameSite: 'strict' — admin actions never need to be triggered by
     //           cross-site links, and nothing in the admin UI relies on
     //           inbound nav from external surfaces (Calendly etc. land
-    //           on public pages, not /admin). Strict beats lax here.
+    //           on public pages, not /console-x7k9). Strict beats lax here.
     // maxAge: 4h. Was 24h; shorter window limits blast radius if the
     //         cookie ever leaks (XSS, shared device, browser extension).
     //         Re-login every working session is cheap.
@@ -49,13 +49,13 @@ export async function login(formData) {
       maxAge: 60 * 60 * 4,
     })
   }
-  redirect('/admin')
+  redirect('/console-x7k9')
 }
 
 export async function logout() {
   const cookieStore = await cookies()
   cookieStore.delete('admin_auth')
-  redirect('/admin')
+  redirect('/console-x7k9')
 }
 
 async function uploadImage(imageFile, bucket = 'article-images') {
@@ -88,7 +88,7 @@ async function uploadImage(imageFile, bucket = 'article-images') {
 async function requireAdmin() {
   const cookieStore = await cookies()
   if (cookieStore.get('admin_auth')?.value !== 'true') {
-    redirect('/admin')
+    redirect('/console-x7k9')
   }
 }
 
@@ -107,7 +107,7 @@ export async function addArticle(formData) {
   const image_url = await uploadImage(imageFile)
 
   await adminClient().from('articles').insert([{ title, summary, content, category, date, image_url, faqs, featured }])
-  redirect('/admin')
+  redirect('/console-x7k9')
 }
 
 export async function updateArticle(formData) {
@@ -135,27 +135,27 @@ export async function updateArticle(formData) {
   }
   revalidatePath(`/articles/${id}`)
   revalidatePath(`/articles`)
-  revalidatePath('/admin')
-  redirect('/admin')
+  revalidatePath('/console-x7k9')
+  redirect('/console-x7k9')
 }
 
 export async function deleteArticle(formData) {
   await requireAdmin()
   const id = formData.get('id')
   await adminClient().from('articles').delete().eq('id', id)
-  redirect('/admin')
+  redirect('/console-x7k9')
 }
 
 export async function deleteListing(formData) {
   const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
+  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/console-x7k9')
 
   const id = formData.get('id')
   // service_role bypasses RLS so we can delete any user's listing.
   await adminClient().from('listings').delete().eq('id', id)
-  revalidatePath('/admin')
-  revalidatePath('/admin/content')
-  redirect('/admin/content')
+  revalidatePath('/console-x7k9')
+  revalidatePath('/console-x7k9/content')
+  redirect('/console-x7k9/content')
 }
 
 /**
@@ -169,7 +169,7 @@ export async function deleteListing(formData) {
  */
 export async function addListing(formData) {
   const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/admin')
+  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/console-x7k9')
 
   const db = adminClient()
 
@@ -181,7 +181,7 @@ export async function addListing(formData) {
   const whatsappRaw = (formData.get('whatsapp')    || '').toString().trim()
 
   if (!title || !description || !city || !whatsappRaw) {
-    redirect('/admin/content?err=missing')
+    redirect('/console-x7k9/content?err=missing')
   }
 
   // Normalise WhatsApp: strip everything except digits + leading +.
@@ -211,9 +211,9 @@ export async function addListing(formData) {
     expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days
   }])
 
-  revalidatePath('/admin/content')
+  revalidatePath('/console-x7k9/content')
   revalidatePath('/listings')
-  redirect('/admin/content')
+  redirect('/console-x7k9/content')
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -273,7 +273,7 @@ function uniFromForm(formData) {
 export async function addUniversity(formData) {
   await requireAdmin()
   const row = uniFromForm(formData)
-  if (!row.name_de) redirect('/admin/unis?err=missing_name')
+  if (!row.name_de) redirect('/console-x7k9/unis?err=missing_name')
 
   // Stable slug; if a collision exists, suffix with a short timestamp.
   let id = slugify(row.name_de)
@@ -291,16 +291,16 @@ export async function addUniversity(formData) {
     console.error('addUniversity failed:', error)
     throw new Error(`فشل إضافة الجامعة: ${error.message}`)
   }
-  revalidatePath('/admin/unis')
+  revalidatePath('/console-x7k9/unis')
   revalidatePath('/universities')
   revalidatePath('/dashboard/universities')
-  redirect('/admin/unis')
+  redirect('/console-x7k9/unis')
 }
 
 export async function updateUniversity(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
-  if (!id) redirect('/admin/unis')
+  if (!id) redirect('/console-x7k9/unis')
   const updates = uniFromForm(formData)
 
   const logoFile = formData.get('logo')
@@ -312,26 +312,26 @@ export async function updateUniversity(formData) {
     console.error('updateUniversity failed:', error)
     throw new Error(`فشل تحديث الجامعة: ${error.message}`)
   }
-  revalidatePath('/admin/unis')
+  revalidatePath('/console-x7k9/unis')
   revalidatePath(`/universities/${id}`)
   revalidatePath('/universities')
   revalidatePath('/dashboard/universities')
-  redirect('/admin/unis')
+  redirect('/console-x7k9/unis')
 }
 
 export async function deleteUniversity(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
-  if (!id) redirect('/admin/unis')
+  if (!id) redirect('/console-x7k9/unis')
   const { error } = await adminClient().from('universities').delete().eq('id', id)
   if (error) {
     console.error('deleteUniversity failed:', error)
     throw new Error(`فشل حذف الجامعة: ${error.message}`)
   }
-  revalidatePath('/admin/unis')
+  revalidatePath('/console-x7k9/unis')
   revalidatePath('/universities')
   revalidatePath('/dashboard/universities')
-  redirect('/admin/unis')
+  redirect('/console-x7k9/unis')
 }
 
 // ─────────────────────────────────────────────────────────────────
@@ -374,7 +374,7 @@ export async function addJob(formData) {
   await requireAdmin()
   const row = jobFromForm(formData)
   if (!row.title || !row.company || !row.category) {
-    redirect('/admin/jobs?err=missing')
+    redirect('/console-x7k9/jobs?err=missing')
   }
   const external_id = `manual-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
   const { error } = await adminClient()
@@ -384,16 +384,16 @@ export async function addJob(formData) {
     console.error('addJob failed:', error)
     throw new Error(`فشل إضافة العرض: ${error.message}`)
   }
-  revalidatePath('/admin/jobs')
+  revalidatePath('/console-x7k9/jobs')
   revalidatePath('/ausbildung-jobs')
   revalidatePath('/dashboard/browse')
-  redirect('/admin/jobs')
+  redirect('/console-x7k9/jobs')
 }
 
 export async function updateJob(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
-  if (!id) redirect('/admin/jobs')
+  if (!id) redirect('/console-x7k9/jobs')
   const updates = jobFromForm(formData)
   const { error } = await adminClient()
     .from('ausbildung_jobs')
@@ -403,23 +403,23 @@ export async function updateJob(formData) {
     console.error('updateJob failed:', error)
     throw new Error(`فشل تحديث العرض: ${error.message}`)
   }
-  revalidatePath('/admin/jobs')
+  revalidatePath('/console-x7k9/jobs')
   revalidatePath('/ausbildung-jobs')
   revalidatePath('/dashboard/browse')
-  redirect('/admin/jobs')
+  redirect('/console-x7k9/jobs')
 }
 
 export async function deleteJob(formData) {
   await requireAdmin()
   const id = (formData.get('id') || '').toString()
-  if (!id) redirect('/admin/jobs')
+  if (!id) redirect('/console-x7k9/jobs')
   const { error } = await adminClient().from('ausbildung_jobs').delete().eq('id', id)
   if (error) {
     console.error('deleteJob failed:', error)
     throw new Error(`فشل حذف العرض: ${error.message}`)
   }
-  revalidatePath('/admin/jobs')
+  revalidatePath('/console-x7k9/jobs')
   revalidatePath('/ausbildung-jobs')
   revalidatePath('/dashboard/browse')
-  redirect('/admin/jobs')
+  redirect('/console-x7k9/jobs')
 }

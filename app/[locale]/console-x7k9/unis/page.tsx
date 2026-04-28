@@ -165,7 +165,7 @@ export default async function AdminUnisPage({
                 </div>
               </div>
               <div className="adm-row-item-actions">
-                <Link href={`/admin/unis/edit/${u.id}` as any} className="adm-link">Edit</Link>
+                <Link href={`/console-x7k9/unis/edit/${u.id}` as any} className="adm-link">Edit</Link>
                 <form action={deleteUniversity}>
                   <input type="hidden" name="id" value={u.id} />
                   <button type="submit" className="adm-link adm-link--danger" style={{ background: 'none', border: 0, cursor: 'pointer' }}>

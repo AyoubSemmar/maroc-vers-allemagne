@@ -46,21 +46,21 @@ export async function proxy(request: NextRequest) {
   }
 
   // ── Admin gate ──────────────────────────────────────────────────
-  // Stop unauthenticated requests at the edge so /admin/* sub-pages
+  // Stop unauthenticated requests at the edge so /console-x7k9/* sub-pages
   // never run their server-side data fetching. Without this guard,
-  // hitting /admin/settings (or /admin/users) would still trigger
+  // hitting /console-x7k9/settings (or /console-x7k9/users) would still trigger
   // every Supabase query in the page component before the layout
   // chose to render the login screen — leaking timing + query
   // counts and giving the URL itself a fingerprint.
   //
-  // /admin (the login screen) stays public; everything below it
-  // bounces back to /admin until the admin_auth cookie is present.
+  // /console-x7k9 (the login screen) stays public; everything below it
+  // bounces back to /console-x7k9 until the admin_auth cookie is present.
   const { locale: pathLocale, rest } = stripLocale(pathname)
-  if (rest.startsWith('/admin')) {
+  if (rest.startsWith('/console-x7k9')) {
     const cookie = request.cookies.get('admin_auth')?.value
-    if (cookie !== 'true' && rest !== '/admin' && rest !== '/admin/') {
+    if (cookie !== 'true' && rest !== '/console-x7k9' && rest !== '/console-x7k9/') {
       const effLocale = pathLocale ?? routing.defaultLocale
-      return NextResponse.redirect(new URL(`/${effLocale}/admin`, request.url))
+      return NextResponse.redirect(new URL(`/${effLocale}/console-x7k9`, request.url))
     }
   }
 
