@@ -35,7 +35,7 @@ export async function logout() {
   redirect('/admin')
 }
 
-async function uploadImage(imageFile) {
+async function uploadImage(imageFile, bucket = 'article-images') {
   if (!imageFile || typeof imageFile === 'string' || imageFile.size === 0) return null
   // Sanitize filename — spaces / non-ascii break Supabase storage keys
   const safeName = imageFile.name
@@ -46,14 +46,14 @@ async function uploadImage(imageFile) {
   const arrayBuffer = await imageFile.arrayBuffer()
   const buffer = new Uint8Array(arrayBuffer)
   const { data, error } = await supabase.storage
-    .from('article-images')
+    .from(bucket)
     .upload(filename, buffer, { contentType: imageFile.type })
   if (error) {
     console.error('uploadImage failed:', error)
     return null
   }
   const { data: urlData } = supabase.storage
-    .from('article-images')
+    .from(bucket)
     .getPublicUrl(data.path)
   return urlData.publicUrl
 }
@@ -198,4 +198,211 @@ export async function addListing(formData) {
   revalidatePath('/admin/content')
   revalidatePath('/listings')
   redirect('/admin/content')
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Universities CRUD (admin panel)
+//
+// `id` on the universities table is a slug (text PK). For manual entries
+// we derive the slug from name_de — same shape used by the import script.
+// Logos go to the `university-logos` storage bucket; if the bucket is
+// missing we fall back to article-images so the upload always succeeds.
+// ─────────────────────────────────────────────────────────────────
+
+function slugify(s) {
+  return (s || '')
+    .normalize('NFKD')
+    .replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80)
+}
+
+async function uploadLogo(file) {
+  // Try the dedicated bucket first — fall back to article-images so admins
+  // never get a silent failure if the bucket hasn't been created yet.
+  const url = await uploadImage(file, 'university-logos')
+  if (url) return url
+  return uploadImage(file, 'article-images')
+}
+
+function uniFromForm(formData) {
+  const get = (k) => (formData.get(k) || '').toString().trim()
+  const num = (k) => {
+    const v = get(k)
+    return v ? Number(v) : null
+  }
+  return {
+    name_de: get('name_de'),
+    name_en: get('name_en') || null,
+    name_ar: get('name_ar') || null,
+    name_fr: get('name_fr') || null,
+    city: get('city') || null,
+    state: get('state') || null,
+    type: get('type') || null,
+    is_public: formData.get('is_public') === 'true',
+    founded: num('founded'),
+    student_count: num('student_count'),
+    website: get('website') || null,
+    lat: num('lat'),
+    lng: num('lng'),
+    description_de: get('description_de') || null,
+    description_en: get('description_en') || null,
+    description_ar: get('description_ar') || null,
+    description_fr: get('description_fr') || null,
+  }
+}
+
+export async function addUniversity(formData) {
+  await requireAdmin()
+  const row = uniFromForm(formData)
+  if (!row.name_de) redirect('/admin/unis?err=missing_name')
+
+  // Stable slug; if a collision exists, suffix with a short timestamp.
+  let id = slugify(row.name_de)
+  if (!id) id = `uni-${Date.now()}`
+  const { data: existing } = await supabase
+    .from('universities').select('id').eq('id', id).maybeSingle()
+  if (existing) id = `${id}-${Date.now().toString(36).slice(-4)}`
+
+  const logoFile = formData.get('logo')
+  const logo_url = await uploadLogo(logoFile)
+
+  const { error } = await supabase.from('universities').insert([{ id, ...row, logo_url }])
+  if (error) {
+    console.error('addUniversity failed:', error)
+    throw new Error(`فشل إضافة الجامعة: ${error.message}`)
+  }
+  revalidatePath('/admin/unis')
+  revalidatePath('/universities')
+  revalidatePath('/dashboard/universities')
+  redirect('/admin/unis')
+}
+
+export async function updateUniversity(formData) {
+  await requireAdmin()
+  const id = (formData.get('id') || '').toString()
+  if (!id) redirect('/admin/unis')
+  const updates = uniFromForm(formData)
+
+  const logoFile = formData.get('logo')
+  const newLogo = await uploadLogo(logoFile)
+  if (newLogo) updates.logo_url = newLogo
+
+  const { error } = await supabase.from('universities').update(updates).eq('id', id)
+  if (error) {
+    console.error('updateUniversity failed:', error)
+    throw new Error(`فشل تحديث الجامعة: ${error.message}`)
+  }
+  revalidatePath('/admin/unis')
+  revalidatePath(`/universities/${id}`)
+  revalidatePath('/universities')
+  revalidatePath('/dashboard/universities')
+  redirect('/admin/unis')
+}
+
+export async function deleteUniversity(formData) {
+  await requireAdmin()
+  const id = (formData.get('id') || '').toString()
+  if (!id) redirect('/admin/unis')
+  const { error } = await supabase.from('universities').delete().eq('id', id)
+  if (error) {
+    console.error('deleteUniversity failed:', error)
+    throw new Error(`فشل حذف الجامعة: ${error.message}`)
+  }
+  revalidatePath('/admin/unis')
+  revalidatePath('/universities')
+  revalidatePath('/dashboard/universities')
+  redirect('/admin/unis')
+}
+
+// ─────────────────────────────────────────────────────────────────
+// Ausbildung jobs CRUD (admin panel)
+//
+// Manual entries get an external_id of the form `manual-<ts>-<rand>`
+// so the unique-constraint scraper deduper never collides with them.
+// `enrichment_json` is left null — the listing renders fine without it.
+// ─────────────────────────────────────────────────────────────────
+
+function jobFromForm(formData) {
+  const get = (k) => {
+    const v = formData.get(k)
+    return v ? v.toString().trim() : ''
+  }
+  const requireOne = ['apply_url', 'contact_email', 'phone']
+  const apply_url     = get('apply_url')     || null
+  const contact_email = get('contact_email') || null
+  const phone         = get('phone')         || null
+  if (!apply_url && !contact_email && !phone) {
+    throw new Error(`At least one of ${requireOne.join(' / ')} is required`)
+  }
+  const publishedRaw = get('published_at')
+  return {
+    title:          get('title'),
+    company:        get('company'),
+    location:       get('location') || null,
+    description:    get('description') || null,
+    category:       get('category'),
+    anstellungsart: get('anstellungsart') || null,
+    external_url:   get('external_url') || null,
+    apply_url,
+    contact_email,
+    phone,
+    published_at:   publishedRaw ? new Date(publishedRaw).toISOString() : null,
+  }
+}
+
+export async function addJob(formData) {
+  await requireAdmin()
+  const row = jobFromForm(formData)
+  if (!row.title || !row.company || !row.category) {
+    redirect('/admin/jobs?err=missing')
+  }
+  const external_id = `manual-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
+  const { error } = await supabase
+    .from('ausbildung_jobs')
+    .insert([{ ...row, external_id }])
+  if (error) {
+    console.error('addJob failed:', error)
+    throw new Error(`فشل إضافة العرض: ${error.message}`)
+  }
+  revalidatePath('/admin/jobs')
+  revalidatePath('/ausbildung-jobs')
+  revalidatePath('/dashboard/browse')
+  redirect('/admin/jobs')
+}
+
+export async function updateJob(formData) {
+  await requireAdmin()
+  const id = (formData.get('id') || '').toString()
+  if (!id) redirect('/admin/jobs')
+  const updates = jobFromForm(formData)
+  const { error } = await supabase
+    .from('ausbildung_jobs')
+    .update(updates)
+    .eq('id', id)
+  if (error) {
+    console.error('updateJob failed:', error)
+    throw new Error(`فشل تحديث العرض: ${error.message}`)
+  }
+  revalidatePath('/admin/jobs')
+  revalidatePath('/ausbildung-jobs')
+  revalidatePath('/dashboard/browse')
+  redirect('/admin/jobs')
+}
+
+export async function deleteJob(formData) {
+  await requireAdmin()
+  const id = (formData.get('id') || '').toString()
+  if (!id) redirect('/admin/jobs')
+  const { error } = await supabase.from('ausbildung_jobs').delete().eq('id', id)
+  if (error) {
+    console.error('deleteJob failed:', error)
+    throw new Error(`فشل حذف العرض: ${error.message}`)
+  }
+  revalidatePath('/admin/jobs')
+  revalidatePath('/ausbildung-jobs')
+  revalidatePath('/dashboard/browse')
+  redirect('/admin/jobs')
 }
