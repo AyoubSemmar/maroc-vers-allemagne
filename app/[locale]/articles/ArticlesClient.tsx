@@ -169,7 +169,8 @@ function ArticleCard({
     <Link href={`/articles/${article.id}`} className={`rihla-article-card-link${size === 'large' ? ' large' : ''}${view === 'list' ? ' list' : ''}`}>
       <div className="rihla-acard-img">
         {article.image_url
-          ? <img src={article.image_url} alt={article.title} />
+          ? // eslint-disable-next-line @next/next/no-img-element
+            <img src={article.image_url} alt={article.title} loading="lazy" decoding="async" />
           : <div className="rihla-acard-img-placeholder">{categoryEmoji(article.category)}</div>
         }
         {article.featured && <span className="rihla-acard-star">⭐</span>}

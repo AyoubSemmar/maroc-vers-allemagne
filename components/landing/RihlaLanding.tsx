@@ -528,7 +528,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                   <div className="article-img">
                     {a.image_url ? (
                       // eslint-disable-next-line @next/next/no-img-element
-                      <img src={a.image_url} alt={a.title} />
+                      <img src={a.image_url} alt={a.title} loading="lazy" decoding="async" />
                     ) : (
                       <div style={{ width: '100%', height: '100%', display: 'grid', placeItems: 'center', fontSize: 48 }}>📰</div>
                     )}

@@ -207,7 +207,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
                     <p className="text-xs text-gray-400 mt-2">{r.date}</p>
                   </div>
                   {r.image_url && (
-                    <img src={r.image_url} alt={r.title} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={r.image_url} alt={r.title} loading="lazy" decoding="async" width={96} height={64} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
                   )}
                 </Link>
               ))}

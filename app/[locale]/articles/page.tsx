@@ -26,9 +26,13 @@ export default async function ArticlesPage({ params }: Props) {
     .order('featured', { ascending: false })
     .order('date',     { ascending: false })
 
-  const articles = localizeRows(rawArticles as any, locale)
-  const total = articles?.length ?? 0
-  const featCount = articles?.filter((a: any) => a.featured).length ?? 0
+  // localizeRow has already overridden title/summary with the per-locale
+  // text, so the translations JSONB blob (which still carries `content`
+  // and `faqs` for every other locale) is dead weight on the wire.
+  const localized = localizeRows(rawArticles as any, locale) as any[]
+  const articles = localized.map(({ translations, ...rest }) => rest)
+  const total = articles.length
+  const featCount = articles.filter((a: any) => a.featured).length
 
   return (
     <div dir={dirFor(locale)}>

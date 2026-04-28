@@ -39,9 +39,10 @@ export default async function ListingsPage({
   const t = await getTranslations({ locale, namespace: 'listings' })
 
   const now = new Date().toISOString()
+  // Only the grid card fields — detail page fetches the full row separately.
   let query = supabase
     .from('listings')
-    .select('*')
+    .select('id, title, description, image_url, type, city, price, expires_at, created_at')
     .or(`expires_at.gt.${now},expires_at.is.null`)
     .order('created_at', { ascending: false })
   if (city && city !== '__ALL__') query = query.eq('city', city)
@@ -82,7 +83,8 @@ export default async function ListingsPage({
               className="bg-white rounded-xl border border-gray-200 hover:shadow-md transition-shadow overflow-hidden block"
             >
               {listing.image_url ? (
-                <img src={listing.image_url} alt={listing.title} className="w-full h-48 object-cover" />
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={listing.image_url} alt={listing.title} loading="lazy" decoding="async" width={400} height={192} className="w-full h-48 object-cover" />
               ) : (
                 <div className="w-full h-48 bg-gray-100 flex items-center justify-center text-5xl">🏠</div>
               )}

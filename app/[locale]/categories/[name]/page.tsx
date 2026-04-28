@@ -8,9 +8,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
   const t = await getTranslations({ locale, namespace: 'articles' })
   const categoryName = decodeURIComponent(name)
 
+  // Only the card list fields — avoids shipping body markdown +
+  // translations content for every article in the category.
   const { data: articles } = await supabase
     .from('articles')
-    .select('*')
+    .select('id, title, summary, image_url, date')
     .eq('category', categoryName)
     .order('date', { ascending: false })
 
@@ -43,7 +45,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
                 <p className="text-xs text-gray-400 mt-3">{article.date}</p>
               </div>
               {article.image_url && (
-                <img src={article.image_url} alt={article.title} className="w-36 h-24 object-cover rounded-lg flex-shrink-0" />
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={article.image_url} alt={article.title} loading="lazy" decoding="async" width={144} height={96} className="w-36 h-24 object-cover rounded-lg flex-shrink-0" />
               )}
             </Link>
           ))}

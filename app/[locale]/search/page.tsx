@@ -29,17 +29,20 @@ export default async function SearchPage({ params, searchParams }: Props) {
   let listings: any[] = []
 
   if (q) {
+    // Only the card list fields — full bodies aren't rendered here.
     const { data: articleResults } = await supabase
       .from('articles')
-      .select('*')
+      .select('id, title, summary, category, image_url')
       .or(`title.ilike.%${q}%,summary.ilike.%${q}%`)
       .order('date', { ascending: false })
+      .limit(50)
 
     const { data: listingResults } = await supabase
       .from('listings')
-      .select('*')
+      .select('id, title, description, type, city, image_url')
       .or(`title.ilike.%${q}%,description.ilike.%${q}%`)
       .order('created_at', { ascending: false })
+      .limit(50)
 
     articles = articleResults || []
     listings = listingResults || []
@@ -79,7 +82,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
                   </div>
                   {article.image_url && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={article.image_url} alt={article.title} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
+                    <img src={article.image_url} alt={article.title} loading="lazy" decoding="async" width={96} height={64} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
                   )}
                 </Link>
               ))}
@@ -108,7 +111,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
                   </div>
                   {listing.image_url && (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={listing.image_url} alt={listing.title} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
+                    <img src={listing.image_url} alt={listing.title} loading="lazy" decoding="async" width={96} height={64} className="w-24 h-16 object-cover rounded-lg flex-shrink-0" />
                   )}
                 </Link>
               ))}
