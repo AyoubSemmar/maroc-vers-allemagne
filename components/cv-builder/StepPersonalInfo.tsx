@@ -23,7 +23,7 @@ export default function StepPersonalInfo({ data, update }: Props) {
   async function onImageChange(e: React.ChangeEvent<HTMLInputElement>) {
     const f = e.target.files?.[0]
     if (!f) return
-    if (f.size > 2_000_000) { alert(t('photoTooLarge')); return }
+    if (f.size > 5_000_000) { alert(t('photoTooLarge')); return }
     const b64 = await fileToBase64(f)
     set('profileImage', b64)
   }
