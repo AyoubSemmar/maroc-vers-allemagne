@@ -3,7 +3,24 @@
 import { useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 
-const CALENDLY_URL = process.env.NEXT_PUBLIC_CALENDLY_URL || 'https://calendly.com/contact-gogermany/30min'
+// ── Five Calendly events, each with its own duration + price ──────
+// Maps to the events the user created in their upgraded Calendly:
+//   /quick-check     15 min · €8   (eligibility / planning / docs)
+//   /cv-interview    30 min · €16  (CV review or interview prep)
+//   /path-planning   45 min · €25  (visa / Studium / Ausbildung deep dive)
+//   /apply-for-me    60 min · €40  (flagship — full application package)
+//   /german-tutoring 60 min · €30  (language lessons + exam prep)
+// Payment is collected manually by bank transfer after booking; the
+// confirmation email (configured in Calendly) carries the IBAN + the
+// per-tier reference code so we can match wires to bookings.
+const TIERS = {
+  quick:  { url: 'https://calendly.com/contact-gogermany/quick-check',     priceEur:  8, durationMin: 15 },
+  cv:     { url: 'https://calendly.com/contact-gogermany/cv-interview',    priceEur: 16, durationMin: 30 },
+  path:   { url: 'https://calendly.com/contact-gogermany/path-planning',   priceEur: 25, durationMin: 45 },
+  apply:  { url: 'https://calendly.com/contact-gogermany/apply-for-me',    priceEur: 40, durationMin: 60 },
+  german: { url: 'https://calendly.com/contact-gogermany/german-tutoring', priceEur: 30, durationMin: 60 },
+} as const
+type TierKey = keyof typeof TIERS
 
 declare global {
   interface Window {
@@ -30,6 +47,22 @@ export type ConsultTopic =
   | 'visa'
   | 'german-tutoring'
   | 'german-exam-prep'
+
+// Each of the 12 site topics maps to one of the 5 Calendly events.
+const TOPIC_TIER: Record<ConsultTopic, TierKey> = {
+  'general':            'path',
+  'apply-for-me':       'apply',
+  'interview-prep':     'cv',
+  'migration-timeline': 'quick',
+  'document-checklist': 'quick',
+  'eligibility':        'quick',
+  'cv-anschreiben':     'cv',
+  'studium':            'path',
+  'ausbildung':         'path',
+  'visa':               'path',
+  'german-tutoring':    'german',
+  'german-exam-prep':   'german',
+}
 
 type LocaleKey = 'en' | 'fr' | 'ar' | 'de'
 
@@ -108,8 +141,10 @@ type Props = {
  * Opens Calendly's popup widget on click. Loads the Calendly script
  * lazily on first render so it doesn't block initial paint elsewhere.
  *
- * Price (€16) and "Book consultation" labels come from the bookConsult
- * i18n namespace.
+ * The button shows the price + duration of the tier the topic maps to
+ * (€8/15min, €16/30min, €25/45min, €30/60min, or €40/60min). Labels
+ * come from the bookConsult i18n namespace with {price}/{duration}
+ * placeholders so each locale renders its own number+unit format.
  */
 export default function BookConsultationButton({
   variant = 'primary',
@@ -122,20 +157,21 @@ export default function BookConsultationButton({
     ? (rawLocale as LocaleKey)
     : 'en'
   const label = TOPIC_LABEL[locale][topic]
+  const tier = TIERS[TOPIC_TIER[topic] ?? 'path']
 
   // Compose Calendly URL with UTM params + a prefill answer for the first
   // intake question, so the host immediately sees which service the user
   // is booking for. The label is in the user's site language.
   const url = (() => {
     try {
-      const u = new URL(CALENDLY_URL)
+      const u = new URL(tier.url)
       u.searchParams.set('utm_source', 'gogermany.ma')
       u.searchParams.set('utm_campaign', topic)         // stable, language-agnostic
       u.searchParams.set('utm_content', TOPIC_LABEL.en[topic]) // English for analytics
       u.searchParams.set('a1', label)                   // localised prefill
       return u.toString()
     } catch {
-      return CALENDLY_URL
+      return tier.url
     }
   })()
 
@@ -173,7 +209,7 @@ export default function BookConsultationButton({
   return (
     <button type="button" onClick={open} className={cls}>
       <span className="bcb-label">{t('cta')}</span>
-      <span className="bcb-price">{t('price')}</span>
+      <span className="bcb-price">{t('price', { price: tier.priceEur, duration: tier.durationMin })}</span>
     </button>
   )
 }
