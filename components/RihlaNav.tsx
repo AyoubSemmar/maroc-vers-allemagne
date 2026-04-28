@@ -184,7 +184,9 @@ export default function RihlaNav() {
             )}
           </div>
 
-          {mounted && user && (
+          {/* Dashboard is now visible to guests too — the dashboard renders
+              a guest banner asking them to sign in. */}
+          {mounted && (
             <Link href="/dashboard">{tNav('dashboard')}</Link>
           )}
         </div>
