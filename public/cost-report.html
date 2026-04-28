@@ -396,7 +396,7 @@
     </div>
     <div class="cover-meta-block">
       <label>Document version</label>
-      <strong>v1.0</strong>
+      <strong>v1.1 — tightened daily limits</strong>
     </div>
   </div>
 </section>
@@ -409,36 +409,36 @@
   </header>
 
   <h1 class="section"><span class="num">1</span>Executive summary</h1>
-  <p class="lead">gogermany.ma has six paid integrations that bill per-use. Two of them — CV improvement and Anschreiben generation — drive ~80% of variable cost. Everything else is negligible at any realistic scale. One paid consultation booking covers ~50+ heavy users for a full day.</p>
+  <p class="lead">gogermany.ma has six paid integrations that bill per-use. Daily free quotas have been tightened (v1.1) so heavy users now cap at ~$0.25/day — a 39% reduction from v1.0. CV and Anschreiben endpoints (Sonnet) remain the dominant variable cost. One paid consultation booking covers ~70+ heavy users for a full day.</p>
 
   <div class="stat-row">
     <div class="stat">
       <div class="stat-label">Heavy user / day</div>
-      <div class="stat-value">~$0.41</div>
-      <div class="stat-foot">Worst-case for one maximally-engaged user</div>
+      <div class="stat-value">~$0.25</div>
+      <div class="stat-foot">v1.1 worst-case after tighter daily caps</div>
     </div>
     <div class="stat">
       <div class="stat-label">Average user / day</div>
-      <div class="stat-value">~$0.07</div>
+      <div class="stat-value">~$0.05</div>
       <div class="stat-foot">Realistic mix of free-tier consumption</div>
     </div>
     <div class="stat">
       <div class="stat-label">Break-even per booking</div>
-      <div class="stat-value">~50 DAU</div>
-      <div class="stat-foot">€16 covers ~50 heavy users per day</div>
+      <div class="stat-value">~70 DAU</div>
+      <div class="stat-foot">€16 now covers ~70 heavy-user days</div>
     </div>
   </div>
 
   <h2 class="sub">Key findings</h2>
   <ul style="padding-left: 18px;">
-    <li><strong>Two endpoints dominate cost</strong> — <code>/api/cv-ai</code> and <code>/api/generate-anschreiben</code> use Claude Sonnet 4.5 ($3 / $15 per million input/output tokens). One CV-AI call ≈ 40× the cost of one writing-correction call.</li>
-    <li><strong>The daily reading + writing exercises are essentially free</strong> — Claude Haiku 4.5 at ~$0.002 per call, capped at one per level per UTC day (5 maximum per user per day per exercise type).</li>
-    <li><strong>Photo enhancement is bounded</strong> — Replicate's <code>google/nano-banana</code> at ~$0.04 per call, behind an entitlement gate (paid credits required after the daily quota).</li>
-    <li><strong>One €16 consultation pays for ~80 to 800 heavy-user days</strong> of API spend. The economics work even at a 1% conversion rate.</li>
+    <li><strong>Two endpoints dominate cost</strong> — <code>/api/cv-ai</code> and <code>/api/generate-anschreiben</code> use Claude Sonnet 4.5 ($3 / $15 per million input/output tokens). One CV-AI call ≈ 40× the cost of one writing-correction call. Both are now strictly capped at <strong>1 free per day</strong>.</li>
+    <li><strong>The daily reading + writing exercises remain cheap</strong> — Claude Haiku 4.5 at ~$0.002 per call, capped at <strong>2 per level per UTC day</strong> (10 max per user per day per exercise type). Doubled the cap from v1.0 because Haiku is cheap enough that it doesn't move the needle.</li>
+    <li><strong>Photo enhancement is bounded</strong> — Replicate's <code>google/nano-banana</code> at ~$0.04 per call, capped at <strong>2 free per day</strong> (down from 3). Paid credits required afterwards.</li>
+    <li><strong>One €16 consultation pays for ~70 to 1,000 heavy-user days</strong> of API spend. The economics work even at a 1% conversion rate.</li>
   </ul>
 
   <div class="callout callout--good">
-    <strong>Bottom line.</strong> The platform's variable cost is small, well-bounded by entitlements, and easily covered by consultation revenue. The biggest cost lever — if needed — is tightening the daily free quota on Sonnet endpoints.
+    <strong>Bottom line.</strong> v1.1 daily caps cut worst-case user cost by ~39% while keeping the user experience generous. Sonnet endpoints (the cost driver) are now strictly 1/day. Haiku endpoints (high-engagement) doubled to 2/day at near-zero marginal cost.
   </div>
 
   <div class="page-foot">
@@ -474,28 +474,28 @@
         <td>Logged-in users<br>(entitlement-gated)</td>
         <td><span class="badge badge--sonnet">Sonnet 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 6 000</span></td>
         <td class="num">~$0.08</td>
-        <td class="num">~$0.24<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+        <td class="num">~$0.08<br><span style="color: var(--ink-mute); font-size: 9pt;">1 free / day</span></td>
       </tr>
       <tr>
         <td><strong>/api/generate-anschreiben</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Anschreiben (cover letter) generator</span></td>
         <td>Logged-in users<br>(entitlement-gated)</td>
         <td><span class="badge badge--sonnet">Sonnet 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 000</span></td>
         <td class="num">~$0.05</td>
-        <td class="num">~$0.15<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+        <td class="num">~$0.05<br><span style="color: var(--ink-mute); font-size: 9pt;">1 free / day</span></td>
       </tr>
       <tr>
         <td><strong>/api/writing-correction</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Daily writing exercise (Learn German)</span></td>
         <td>Logged-in users<br>(daily lock)</td>
         <td><span class="badge badge--haiku">Haiku 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 000</span></td>
         <td class="num">~$0.002</td>
-        <td class="num">~$0.01<br><span style="color: var(--ink-mute); font-size: 9pt;">1 / level / day</span></td>
+        <td class="num">~$0.02<br><span style="color: var(--ink-mute); font-size: 9pt;">2 / level / day</span></td>
       </tr>
       <tr>
         <td><strong>/api/reading-exercise</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Daily reading exercise (Learn German)</span></td>
         <td>Logged-in users<br>(daily lock)</td>
         <td><span class="badge badge--haiku">Haiku 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 200</span></td>
         <td class="num">~$0.002</td>
-        <td class="num">~$0.01<br><span style="color: var(--ink-mute); font-size: 9pt;">1 / level / day</span></td>
+        <td class="num">~$0.02<br><span style="color: var(--ink-mute); font-size: 9pt;">2 / level / day</span></td>
       </tr>
     </tbody>
   </table>
@@ -525,7 +525,7 @@
         <td>Logged-in users<br>(entitlement-gated)</td>
         <td><span class="badge badge--replicate">nano-banana</span><br><span style="color: var(--ink-mute); font-size: 9pt;">Gemini 2.5 Flash Image</span></td>
         <td class="num">~$0.04</td>
-        <td class="num">~$0.12<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+        <td class="num">~$0.08<br><span style="color: var(--ink-mute); font-size: 9pt;">2 free / day</span></td>
       </tr>
     </tbody>
   </table>
@@ -562,7 +562,7 @@
   </header>
 
   <h1 class="section"><span class="num">3</span>Volume scaling forecasts</h1>
-  <p class="lead">All forecasts assume an <em>average</em> user (not maximally heavy) at ~$0.07/day in API calls. Sonnet endpoints (CV + Anschreiben) drive 80%+ of variable cost.</p>
+  <p class="lead">v1.1 forecasts. Assumes an <em>average</em> user (not maximally heavy) at ~$0.05/day in API calls — down from $0.07 in v1.0. Sonnet endpoints (CV + Anschreiben) still drive ~75% of variable cost despite the tighter caps.</p>
 
   <table>
     <thead>
@@ -577,38 +577,38 @@
     <tbody>
       <tr>
         <td><strong>50 DAU</strong> · pre-launch / early adopters</td>
-        <td class="num">$3.50</td>
-        <td class="num">$105</td>
-        <td class="num">$1 260</td>
-        <td class="num">7</td>
+        <td class="num">$2.50</td>
+        <td class="num">$75</td>
+        <td class="num">$900</td>
+        <td class="num">5</td>
       </tr>
       <tr>
         <td><strong>200 DAU</strong> · early traction</td>
-        <td class="num">$14</td>
-        <td class="num">$420</td>
-        <td class="num">$5 040</td>
-        <td class="num">26</td>
+        <td class="num">$10</td>
+        <td class="num">$300</td>
+        <td class="num">$3 600</td>
+        <td class="num">19</td>
       </tr>
       <tr>
         <td><strong>500 DAU</strong> · growing community</td>
-        <td class="num">$35</td>
-        <td class="num">$1 050</td>
-        <td class="num">$12 600</td>
-        <td class="num">66</td>
+        <td class="num">$25</td>
+        <td class="num">$750</td>
+        <td class="num">$9 000</td>
+        <td class="num">47</td>
       </tr>
       <tr>
         <td><strong>1 000 DAU</strong> · established</td>
-        <td class="num">$70</td>
-        <td class="num">$2 100</td>
-        <td class="num">$25 200</td>
-        <td class="num">131</td>
+        <td class="num">$50</td>
+        <td class="num">$1 500</td>
+        <td class="num">$18 000</td>
+        <td class="num">94</td>
       </tr>
       <tr>
         <td><strong>5 000 DAU</strong> · scale</td>
-        <td class="num">$350</td>
-        <td class="num">$10 500</td>
-        <td class="num">$126 000</td>
-        <td class="num">656</td>
+        <td class="num">$250</td>
+        <td class="num">$7 500</td>
+        <td class="num">$90 000</td>
+        <td class="num">469</td>
       </tr>
     </tbody>
   </table>
@@ -617,8 +617,8 @@
     <strong>Reading these numbers.</strong> "Bookings to break even" = monthly paid consultations needed to cover that month's API bill (€16 ≈ $17). At every scale, this is a fraction of a percent of DAU.
   </div>
 
-  <h2 class="sub">3.1 — Worst-case per-user breakdown</h2>
-  <p>A maximally engaged user — daily exercises across all 5 levels, full free quota on premium endpoints, photo enhancement — costs you:</p>
+  <h2 class="sub">3.1 — Worst-case per-user breakdown (v1.1)</h2>
+  <p>A maximally engaged user under the new caps — full daily quotas across the board, both reading + writing exercises on all 5 levels — costs you:</p>
   <table>
     <thead>
       <tr>
@@ -629,19 +629,23 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>CV improvement (free quota)</td><td class="num">3</td><td class="num">$0.08</td><td class="num">$0.24</td></tr>
-      <tr><td>Anschreiben generation (free quota)</td><td class="num">3</td><td class="num">$0.05</td><td class="num">$0.15</td></tr>
-      <tr><td>Photo enhancement (free quota)</td><td class="num">3</td><td class="num">$0.04</td><td class="num">$0.12</td></tr>
-      <tr><td>Daily reading (5 levels)</td><td class="num">5</td><td class="num">$0.002</td><td class="num">$0.01</td></tr>
-      <tr><td>Daily writing (5 levels)</td><td class="num">5</td><td class="num">$0.002</td><td class="num">$0.01</td></tr>
+      <tr><td>CV improvement (free quota)</td><td class="num">1</td><td class="num">$0.08</td><td class="num">$0.08</td></tr>
+      <tr><td>Anschreiben generation (free quota)</td><td class="num">1</td><td class="num">$0.05</td><td class="num">$0.05</td></tr>
+      <tr><td>Photo enhancement (free quota)</td><td class="num">2</td><td class="num">$0.04</td><td class="num">$0.08</td></tr>
+      <tr><td>Daily reading (2 × 5 levels)</td><td class="num">10</td><td class="num">$0.002</td><td class="num">$0.02</td></tr>
+      <tr><td>Daily writing (2 × 5 levels)</td><td class="num">10</td><td class="num">$0.002</td><td class="num">$0.02</td></tr>
       <tr style="background: var(--bg-warm) !important; font-weight: 800;">
         <td><strong>Worst-case total per heavy user / day</strong></td>
-        <td class="num">19</td>
+        <td class="num">24</td>
         <td class="num">—</td>
-        <td class="num">$0.53</td>
+        <td class="num">$0.25</td>
       </tr>
     </tbody>
   </table>
+
+  <div class="callout callout--good">
+    <strong>v1.0 → v1.1 delta.</strong> Worst-case daily user cost dropped from $0.53 to $0.25 (-53%) thanks to tighter Sonnet/photo caps. Total daily call count actually rose from 19 to 24 because Haiku exercises doubled — but Haiku is so cheap the dollar impact is invisible.
+  </div>
 
   <div class="page-foot">
     <span>GoGermany — Per-Use Cost Report</span>
@@ -693,9 +697,9 @@
       <p>Daily Anthropic spend (split Sonnet vs Haiku); Replicate spend; CV/Anschreiben call counts; free-quota exhaustion rate; weekly bookings.</p>
     </div>
     <div class="rec">
-      <div class="rec-num">Cost lever 1</div>
-      <strong>Tighten Sonnet free quota</strong>
-      <p>If costs grow uncomfortable, drop the daily free quota on CV/Anschreiben from 3 to 1, then introduce paid credits (€2 / extra call). Haiku endpoints stay generous.</p>
+      <div class="rec-num">Cost lever 1 — applied ✅</div>
+      <strong>Sonnet daily quota now 1/day</strong>
+      <p>Previously 3/day for CV/Anschreiben. v1.1 dropped it to 1/day. Paid credits (€2 / extra call) take over after the daily allowance — generates revenue from heavy users.</p>
     </div>
     <div class="rec">
       <div class="rec-num">Cost lever 2</div>
