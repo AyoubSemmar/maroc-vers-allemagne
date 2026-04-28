@@ -16,44 +16,57 @@ type Article = {
   read_time?: string | null
 }
 
-/* Lucide-thin icon set, inlined to avoid a dep — stroke 1.5 for editorial feel */
-const Icon = {
-  arrow: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-  ),
-  compass: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-2 5-5 2 2-5 5-2z"/></svg>
-  ),
-  book: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M4 5h16"/><path d="M4 12h12"/><path d="M4 19h8"/></svg>
-  ),
-  send: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M14 3h7v7"/><path d="M10 14 21 3"/><path d="M21 14v7H3V3h7"/></svg>
-  ),
-  pin: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M12 21s-7-6.5-7-12a7 7 0 1 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
-  ),
-  hammer: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M14 6V4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v2"/><rect x="5" y="6" width="14" height="4" rx="1"/><path d="M12 10v11"/><path d="M9 21h6"/></svg>
-  ),
-  cap: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="m22 9-10 4L2 9l10-4 10 4z"/><path d="M6 11v5c0 2 3 3 6 3s6-1 6-3v-5"/></svg>
-  ),
-  doc: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-  ),
-  euro: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M4 10h12"/><path d="M4 14h12"/><path d="M19 5a8 8 0 1 0 0 14"/></svg>
-  ),
-  cal: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18"/><path d="M8 3v4"/><path d="M16 3v4"/></svg>
-  ),
-  check: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M5 12l4 4L19 7"/></svg>
-  ),
-  list: (p: React.SVGProps<SVGSVGElement>) => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>
-  ),
+function Stat({
+  target,
+  suffix,
+  label,
+  text,
+}: {
+  target?: number
+  suffix?: string
+  label: string
+  text?: string
+}) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [val, setVal] = useState(target ? 0 : null)
+
+  useEffect(() => {
+    if (target === undefined) return
+    const el = ref.current
+    if (!el) return
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((en) => {
+          if (!en.isIntersecting) return
+          const start = performance.now()
+          const dur = 1400
+          const tick = (now: number) => {
+            const t = Math.min(1, (now - start) / dur)
+            setVal(Math.round(target * (1 - Math.pow(1 - t, 3))))
+            if (t < 1) requestAnimationFrame(tick)
+          }
+          requestAnimationFrame(tick)
+          io.unobserve(el)
+        })
+      },
+      { threshold: 0.5 },
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [target])
+
+  return (
+    <div ref={ref} className="reveal">
+      <div className="stat-num">
+        {text ? (
+          <span>{text}</span>
+        ) : (
+          `${val ?? 0}${suffix ?? ''}`
+        )}
+      </div>
+      <div className="stat-label">{label}</div>
+    </div>
+  )
 }
 
 export default function RihlaLanding({ articles }: { articles: Article[] }) {
@@ -68,28 +81,16 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   >('idle')
   const [openFaq, setOpenFaq] = useState<number | null>(0)
 
+  // Real interactive tools only. Resource pages (visa, banking, jobs,
+  // simcards) live elsewhere on the site — they're not "tools".
   const tools = [
-    { key: 'cv',                  Icon: Icon.doc,    href: '/cv-builder' },
-    { key: 'anschreiben',         Icon: Icon.send,   href: '/anschreiben-generator' },
-    { key: 'livingCost',          Icon: Icon.euro,   href: '/tools/living-cost-calculator' },
-    { key: 'migrationTimeline',   Icon: Icon.cal,    href: '/tools/migration-timeline' },
-    { key: 'documentChecklist',   Icon: Icon.list,   href: '/tools/document-checklist' },
-    { key: 'eligibilityChecker',  Icon: Icon.check,  href: '/tools/eligibility-checker' },
+    { key: 'cv', icon: '📄', href: '/cv-builder', c: 'brand' as const },
+    { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
+    { key: 'livingCost', icon: '💶', href: '/tools/living-cost-calculator', c: 'gold' as const },
+    { key: 'migrationTimeline', icon: '🗓', href: '/tools/migration-timeline', c: 'teal' as const },
+    { key: 'documentChecklist', icon: '📋', href: '/tools/document-checklist', c: 'berry' as const },
+    { key: 'eligibilityChecker', icon: '✅', href: '/tools/eligibility-checker', c: 'brand' as const },
   ] as const
-
-  type JourneyStep = {
-    Icon: (p: React.SVGProps<SVGSVGElement>) => React.ReactElement
-    metaKey: string
-    titleKey: string
-    noteKey: string
-    accent?: boolean
-  }
-  const journeySteps: JourneyStep[] = [
-    { Icon: Icon.compass, metaKey: 'journeyStep1Meta', titleKey: 'hero.stopChoose',  noteKey: 'journeyStep1Note' },
-    { Icon: Icon.book,    metaKey: 'journeyStep2Meta', titleKey: 'hero.stopGerman',  noteKey: 'journeyStep2Note' },
-    { Icon: Icon.send,    metaKey: 'journeyStep3Meta', titleKey: 'hero.stopVisa',    noteKey: 'journeyStep3Note' },
-    { Icon: Icon.pin,     metaKey: 'journeyStep4Meta', titleKey: 'hero.stopArrival', noteKey: 'journeyStep4Note', accent: true },
-  ]
 
   const levels: Array<{
     id: 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
@@ -105,11 +106,18 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   const faqIds = [1, 2, 3, 4, 5] as const
 
   const marqueeKeys = [
-    'banks', 'studium', 'visa', 'jobs',
-    'ausbildung', 'housing', 'levels', 'sim',
+    'banks',
+    'studium',
+    'visa',
+    'jobs',
+    'ausbildung',
+    'housing',
+    'levels',
+    'sim',
   ] as const
 
   useEffect(() => {
+    // reveal-on-scroll
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((en) => {
@@ -122,7 +130,23 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       { threshold: 0.12, rootMargin: '0px 0px -60px 0px' },
     )
     document.querySelectorAll('.rihla .reveal').forEach((el) => io.observe(el))
-    return () => io.disconnect()
+
+    // tool hover tracking
+    const handlers: Array<() => void> = []
+    document.querySelectorAll<HTMLElement>('.rihla .tool').forEach((t) => {
+      const onMove = (e: MouseEvent) => {
+        const r = t.getBoundingClientRect()
+        t.style.setProperty('--mx', `${((e.clientX - r.left) / r.width) * 100}%`)
+        t.style.setProperty('--my', `${((e.clientY - r.top) / r.height) * 100}%`)
+      }
+      t.addEventListener('mousemove', onMove)
+      handlers.push(() => t.removeEventListener('mousemove', onMove))
+    })
+
+    return () => {
+      io.disconnect()
+      handlers.forEach((h) => h())
+    }
   }, [])
 
   async function submitNewsletter(e: React.FormEvent) {
@@ -141,70 +165,111 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
   }
 
   const articleList = articles.slice(0, 3)
-  const isAr = dir === 'rtl'
 
   return (
-    <div className="rihla rihla--editorial" dir={dir}>
+    <div className="rihla" dir={dir}>
       {/* ============ HERO ============ */}
-      <section className="hero hero--calm">
-        <div className="hero-dotgrid" aria-hidden />
+      <section className="hero">
+        <div className="hero-mesh"></div>
         <div className="wrap hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow eyebrow--mono">
-              <span className="eyebrow-dot" />
+            <span className="eyebrow">
+              <span className="eyebrow-dot"></span>
               {t('hero.eyebrow')}
             </span>
-            <h1 className="hero-title hero-title--serif">
+            <h1 className="hero-title">
               {t('hero.titleLine1')}{' '}
-              <em className="accent-gold">{t('hero.titleHighlight')}</em>
-              {t.raw('hero.titleLine2') ? (
+              <span className="gradient-text">{t('hero.titleHighlight')}</span>
+              {t('hero.titleLine2') ? (
                 <>
                   <br />
-                  <em className="accent-italic">{t('hero.titleLine2')}</em>
+                  {t('hero.titleLine2')}
                 </>
               ) : null}
             </h1>
-            <p className="hero-sub hero-sub--editorial">{t('hero.sub')}</p>
+            <p className="hero-sub">{t('hero.sub')}</p>
             <div className="hero-ctas">
               <Link href="/ausbildung" className="btn btn-primary">
-                {t('hero.ctaAusbildung')}
-                <Icon.arrow width="16" height="16" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+                {t('hero.ctaStart')}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </Link>
-              <Link href="/studium" className="btn btn-ghost">
-                {t('hero.ctaStudium')}
-                <Icon.arrow width="16" height="16" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+              <Link href="/studium" className="btn btn-primary">
+                {t('hero.ctaBrowse')}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </Link>
             </div>
             <div className="hero-trust">
-              <div className="avatars" aria-hidden>
-                <div>ي</div><div>س</div><div>ك</div><div>+</div>
+              <div className="avatars">
+                <div>ي</div>
+                <div>س</div>
+                <div>ك</div>
+                <div>+</div>
               </div>
               <span>{t('hero.trust')}</span>
             </div>
           </div>
 
-          {/* JOURNEY CARD — replaces the busy SVG map */}
-          <aside className="hero-card hero-card--journey reveal" aria-label={t('hero.journeyTitle')}>
-            <div className="hero-card-eyebrow">{t('hero.journeyEyebrow')}</div>
-            <div className="hero-card-title">
-              {t('hero.journeyHeadline')}
+          {/* JOURNEY VISUAL */}
+          <div className="journey">
+            <div className="journey-title">{t('hero.journeyTitle')}</div>
+
+            <svg className="journey-svg" viewBox="0 0 500 500" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="rihlaPathGrad" x1="100%" y1="100%" x2="0" y2="0">
+                  <stop offset="0" stopColor="oklch(0.72 0.26 25)" />
+                  <stop offset="0.5" stopColor="oklch(0.78 0.24 45)" />
+                  <stop offset="1" stopColor="oklch(0.84 0.22 75)" />
+                </linearGradient>
+                <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="4" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+              <path
+                className="path-bg"
+                d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73"
+              />
+              <path
+                className="path-fg"
+                d="M 427 443 C 360 430, 330 410, 340 370 S 390 310, 300 280 S 180 290, 210 220 S 340 180, 256 150 S 110 110, 56 73"
+                filter="url(#neonGlow)"
+              />
+            </svg>
+
+            <div className="flag flag-start">MA</div>
+            <div className="stop stop-contract" data-label={t('hero.stopContract')}>
+              📝
             </div>
-            <div className="hero-card-sub">{t('hero.journeySub')}</div>
-            <ol className="journey">
-              {journeySteps.map((s, i) => (
-                <li key={i} className="journey-step">
-                  <span className={`journey-dot ${s.accent ? 'journey-dot--end' : ''}`} aria-hidden>
-                    <s.Icon />
-                  </span>
-                  <div className="journey-body">
-                    <span className="journey-meta">{t(s.metaKey)}</span>
-                    <span className="journey-name">{t(s.titleKey)}</span>
-                    <span className="journey-note">{t(s.noteKey)}</span>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </aside>
+            <div className="stop stop-visa" data-label={t('hero.stopVisa')}>
+              📄
+            </div>
+            <div className="stop stop-house" data-label={t('hero.stopHouse')}>
+              🏠
+            </div>
+            <div className="flag flag-end">DE</div>
+            <div className="plane">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M2 12l20-8-8 20-2-9-10-3z" />
+              </svg>
+            </div>
+
+            <div className="word-chip chip-willkommen">
+              Willkommen
+              <small>{t('hero.willkommenSub')}</small>
+            </div>
+            <div className="word-chip chip-gutentag">
+              Guten Tag
+              <small>{t('hero.gutenTagSub')}</small>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -212,81 +277,73 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       <div className="marquee">
         <div className="marquee-track">
           {[...marqueeKeys, ...marqueeKeys].map((k, i) => (
-            <span key={i} className="marquee-item">{t(`marquee.${k}`)}</span>
+            <span key={i} className="marquee-item">
+              {t(`marquee.${k}`)}
+            </span>
           ))}
         </div>
       </div>
 
-      {/* ============ STATS — light editorial grid (replaces the dark stripe) ============ */}
-      <section className="stats stats--editorial">
+      {/* ============ STATS ============ */}
+      <section className="stats">
         <div className="wrap stats-grid">
-          <div className="stat reveal">
-            <div className="stat-num">{t('stats.jobs.num')}</div>
-            <div className="stat-label">{t('stats.jobs.label')}</div>
-          </div>
-          <div className="stat reveal">
-            <div className="stat-num">{t('stats.universities.num')}</div>
-            <div className="stat-label">{t('stats.universities.label')}</div>
-          </div>
-          <div className="stat reveal">
-            <div className="stat-num">{t('stats.stipend.text')}</div>
-            <div className="stat-label">{t('stats.stipend.label')}</div>
-          </div>
-          <div className="stat reveal">
-            <div className="stat-num">{t('stats.tuition.text')}</div>
-            <div className="stat-label">{t('stats.tuition.label')}</div>
-          </div>
+          <Stat text={t('stats.jobs.num')} label={t('stats.jobs.label')} />
+          <Stat text={t('stats.universities.num')} label={t('stats.universities.label')} />
+          <Stat text={t('stats.stipend.text')} label={t('stats.stipend.label')} />
+          <Stat text={t('stats.tuition.text')} label={t('stats.tuition.label')} />
         </div>
       </section>
 
       {/* ============ CHOOSE YOUR PATH ============ */}
-      <section id="paths" className="r-section">
+      <section id="paths">
         <div className="wrap">
           <div className="section-head reveal">
             <span className="kicker">{t('paths.kicker')}</span>
-            <h2 className="section-title section-title--serif">{t('paths.title')}</h2>
+            <h2>{t('paths.title')}</h2>
             <p className="section-sub">{t('paths.sub')}</p>
           </div>
-          <div className="cards cards--two">
-            <Link href="/ausbildung" className="card card-feature reveal">
-              <span className="card-icon"><Icon.hammer /></span>
-              <h3 className="card-title">{t('paths.ausbildung.title')}</h3>
-              <p className="card-desc">{t('paths.ausbildung.desc')}</p>
-              <div className="card-link">
-                {t('paths.ausbildung.cta')}
-                <Icon.arrow width="14" height="14" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+          <div className="tools" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <Link href="/ausbildung" className="tool reveal" data-c="brand">
+              <div className="tool-icon">🔧</div>
+              <h3>{t('paths.ausbildung.title')}</h3>
+              <p>{t('paths.ausbildung.desc')}</p>
+              <div className="tool-link">
+                {t('paths.ausbildung.cta')} <span>←</span>
               </div>
             </Link>
-            <Link href="/studium" className="card card-feature reveal">
-              <span className="card-icon card-icon--gold"><Icon.cap /></span>
-              <h3 className="card-title">{t('paths.studium.title')}</h3>
-              <p className="card-desc">{t('paths.studium.desc')}</p>
-              <div className="card-link">
-                {t('paths.studium.cta')}
-                <Icon.arrow width="14" height="14" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+            <Link href="/studium" className="tool reveal" data-c="teal">
+              <div className="tool-icon">🎓</div>
+              <h3>{t('paths.studium.title')}</h3>
+              <p>{t('paths.studium.desc')}</p>
+              <div className="tool-link">
+                {t('paths.studium.cta')} <span>←</span>
               </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ============ TOOLS ============ */}
-      <section id="tools" className="r-section r-section--warm">
+      {/* ============ TOOLS GRID ============ */}
+      <section id="tools" style={{ background: 'var(--bg-warm)' }}>
         <div className="wrap">
           <div className="section-head reveal">
             <span className="kicker">{t('tools.kicker')}</span>
-            <h2 className="section-title section-title--serif">{t('tools.title')}</h2>
+            <h2>{t('tools.title')}</h2>
             <p className="section-sub">{t('tools.sub')}</p>
           </div>
-          <div className="cards cards--three">
+          <div className="tools">
             {tools.map((tool) => (
-              <Link key={tool.key} href={tool.href} className="card reveal">
-                <span className="card-icon"><tool.Icon /></span>
-                <h3 className="card-title">{t(`tools.${tool.key}.name`)}</h3>
-                <p className="card-desc">{t(`tools.${tool.key}.desc`)}</p>
-                <div className="card-link">
-                  {t('tools.discover')}
-                  <Icon.arrow width="14" height="14" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+              <Link
+                key={tool.key}
+                href={tool.href}
+                className="tool reveal"
+                data-c={tool.c}
+              >
+                <div className="tool-icon">{tool.icon}</div>
+                <h3>{t(`tools.${tool.key}.name`)}</h3>
+                <p>{t(`tools.${tool.key}.desc`)}</p>
+                <div className="tool-link">
+                  {t('tools.discover')} <span>←</span>
                 </div>
               </Link>
             ))}
@@ -294,91 +351,172 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
         </div>
       </section>
 
-      {/* ============ OPPORTUNITIES (Ausbildung-jobs + Universities) ============ */}
-      <section id="opportunities" className="r-section">
+      {/* ============ OPPORTUNITIES ============ */}
+      <section id="opportunities">
         <div className="wrap">
           <div className="section-head reveal">
             <span className="kicker">{t('opportunities.kicker')}</span>
-            <h2 className="section-title section-title--serif">{t('opportunities.title')}</h2>
+            <h2>{t('opportunities.title')}</h2>
             <p className="section-sub">{t('opportunities.sub')}</p>
           </div>
-          <div className="cards cards--two">
-            <Link href="/ausbildung-jobs" className="card card-feature reveal">
-              <span className="card-icon"><Icon.compass /></span>
-              <h3 className="card-title">{t('opportunities.ausbildungJobs.title')}</h3>
-              <p className="card-desc">{t('opportunities.ausbildungJobs.desc')}</p>
-              <div className="card-link">
-                {t('opportunities.ausbildungJobs.cta')}
-                <Icon.arrow width="14" height="14" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+          <div className="tools" style={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
+            <Link href="/ausbildung-jobs" className="tool reveal" data-c="gold">
+              <div className="tool-icon">🔍</div>
+              <h3>{t('opportunities.ausbildungJobs.title')}</h3>
+              <p>{t('opportunities.ausbildungJobs.desc')}</p>
+              <div className="tool-link">
+                {t('opportunities.ausbildungJobs.cta')} <span>←</span>
               </div>
             </Link>
-            <Link href="/universities" className="card card-feature reveal">
-              <span className="card-icon card-icon--gold"><Icon.cap /></span>
-              <h3 className="card-title">{t('opportunities.universities.title')}</h3>
-              <p className="card-desc">{t('opportunities.universities.desc')}</p>
-              <div className="card-link">
-                {t('opportunities.universities.cta')}
-                <Icon.arrow width="14" height="14" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
+            <Link href="/universities" className="tool reveal" data-c="teal">
+              <div className="tool-icon">🎓</div>
+              <h3>{t('opportunities.universities.title')}</h3>
+              <p>{t('opportunities.universities.desc')}</p>
+              <div className="tool-link">
+                {t('opportunities.universities.cta')} <span>←</span>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ HOUSING ============ */}
+      <section id="housing" style={{ background: 'var(--bg-warm)' }}>
+        <div className="wrap">
+          <div className="ladder-wrap reveal">
+            <div className="ladder-copy">
+              <span className="kicker">{t('housing.kicker')}</span>
+              <h2>{t('housing.title')}</h2>
+              <p>{t('housing.sub')}</p>
+              <Link href="/listings" className="btn btn-primary">
+                {t('housing.cta')}
+              </Link>
+              <div className="ladder-meta">
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature1')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature2')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('housing.feature3')}
+                </div>
+              </div>
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                placeItems: 'center',
+                fontSize: 140,
+                opacity: 0.9,
+              }}
+              aria-hidden
+            >
+              🏠
+            </div>
           </div>
         </div>
       </section>
 
       {/* ============ GERMAN LADDER ============ */}
-      <section id="learn" className="r-section r-section--warm">
+      <section id="learn">
         <div className="wrap">
           <div className="ladder-wrap reveal">
             <div className="ladder-copy">
               <span className="kicker">{t('ladder.kicker')}</span>
-              <h2 className="section-title section-title--serif">
+              <h2>
                 {t('ladder.titlePrefix')}{' '}
-                <em className="accent-gold">A1</em>{' '}
+                <span className="gradient-text">A1</span>{' '}
                 {t('ladder.titleBetween')}{' '}
-                <em className="accent-gold">C1</em>{' '}
+                <span className="gradient-text">C1</span>{' '}
                 {t('ladder.titleSuffix')}
               </h2>
               <p>{t('ladder.sub')}</p>
               <Link href="/learn-german" className="btn btn-primary">
                 {t('ladder.cta')}
-                <Icon.arrow width="16" height="16" style={isAr ? { transform: 'scaleX(-1)' } : undefined} />
               </Link>
+              <div className="ladder-meta">
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaFree')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaInteractive')}
+                </div>
+                <div>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  {t('ladder.metaMoroccans')}
+                </div>
+              </div>
             </div>
-            <ol className="ladder-list">
-              {levels.map((l) => (
-                <li key={l.id} className={`ladder-item ladder-item--${l.state || 'next'}`}>
-                  <span className="ladder-chip">{l.id}</span>
-                  <div className="ladder-body">
-                    <div className="ladder-info-title">{t(`ladder.levels.${l.id}.title`)}</div>
-                    <div className="ladder-info-desc">{t(`ladder.levels.${l.id}.desc`)}</div>
+            <div className="ladder" style={{ ['--progress' as string]: '55%' } as React.CSSProperties}>
+              <div className="ladder-line"></div>
+              {levels.map((l, i) => {
+                const card = (
+                  <div className="level-card">
+                    <div className="lvl-title">{t(`ladder.levels.${l.id}.title`)}</div>
+                    <div className="lvl-desc">{t(`ladder.levels.${l.id}.desc`)}</div>
                   </div>
-                  <span className="ladder-status">
-                    {l.state === 'done' ? 'DONE' : l.state === 'active' ? 'NOW' : 'NEXT'}
-                  </span>
-                </li>
-              ))}
-            </ol>
+                )
+                const dot = <div className="level-dot">{l.id}</div>
+                return (
+                  <div key={l.id} className={`level ${l.state}`}>
+                    {i % 2 === 0 ? (
+                      <>
+                        {card}
+                        {dot}
+                      </>
+                    ) : (
+                      <>
+                        {dot}
+                        {card}
+                      </>
+                    )}
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ============ ARTICLES ============ */}
+      {/* ============ GUIDES / ARTICLES ============ */}
       {articleList.length > 0 && (
-        <section id="articles" className="r-section">
+        <section id="articles" style={{ background: 'var(--bg-warm)' }}>
           <div className="wrap">
             <div className="section-head reveal">
               <span className="kicker">{t('guides.kicker')}</span>
-              <h2 className="section-title section-title--serif">{t('guides.title')}</h2>
+              <h2>{t('guides.title')}</h2>
             </div>
             <div className="articles">
               {articleList.map((a) => (
-                <Link key={a.id} href={`/articles/${a.id}`} className="article reveal">
+                <Link
+                  key={a.id}
+                  href={`/articles/${a.id}`}
+                  className="article reveal"
+                >
                   <div className="article-img">
                     {a.image_url ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={a.image_url} alt={a.title} />
                     ) : (
-                      <div className="article-img-fallback" aria-hidden />
+                      <div style={{ width: '100%', height: '100%', display: 'grid', placeItems: 'center', fontSize: 48 }}>📰</div>
                     )}
                     {a.category && <span className="article-tag">{catLabel(a.category)}</span>}
                   </div>
@@ -401,11 +539,11 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
       )}
 
       {/* ============ FAQ ============ */}
-      <section id="faq" className="r-section r-section--warm">
-        <div className="wrap wrap--narrow">
+      <section id="faq">
+        <div className="wrap">
           <div className="section-head reveal">
             <span className="kicker">{t('faq.kicker')}</span>
-            <h2 className="section-title section-title--serif">{t('faq.title')}</h2>
+            <h2>{t('faq.title')}</h2>
           </div>
           <div className="faq-list">
             {faqIds.map((n, i) => (
@@ -420,7 +558,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
               >
                 <summary>
                   {t(`faq.q${n}`)}
-                  <span className="faq-icon" aria-hidden />
+                  <span className="faq-icon"></span>
                 </summary>
                 <p>{t(`faq.a${n}`)}</p>
               </details>
@@ -429,15 +567,16 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
         </div>
       </section>
 
-      {/* ============ NEWSLETTER — navy panel with tricolor stripe ============ */}
-      <section className="r-section r-section--newsletter">
+      {/* ============ NEWSLETTER ============ */}
+      <section style={{ paddingTop: 20 }}>
         <div className="wrap">
-          <div className="newsletter newsletter--editorial reveal">
-            <div className="newsletter-stripe" aria-hidden />
-            <h2 className="section-title section-title--serif">{t('newsletter.title')}</h2>
+          <div className="newsletter reveal">
+            <h2>{t('newsletter.title')}</h2>
             <p>{t('newsletter.sub')}</p>
             {nlStatus === 'success' ? (
-              <div className="newsletter-success">{t('newsletter.success')}</div>
+              <div style={{ background: 'oklch(1 0 0 / 0.2)', backdropFilter: 'blur(12px)', padding: '14px 24px', borderRadius: 999, maxWidth: 480, margin: '0 auto', fontWeight: 700 }}>
+                {t('newsletter.success')}
+              </div>
             ) : (
               <form className="newsletter-form" onSubmit={submitNewsletter}>
                 <input
@@ -453,7 +592,11 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
                 </button>
               </form>
             )}
-            {nlStatus === 'duplicate' && <small>{t('newsletter.duplicate')}</small>}
+            {nlStatus === 'duplicate' && (
+              <small style={{ color: 'oklch(0.95 0.08 90)' }}>
+                {t('newsletter.duplicate')}
+              </small>
+            )}
             {nlStatus === 'error' && <small>{t('newsletter.error')}</small>}
             {nlStatus !== 'duplicate' && nlStatus !== 'error' && (
               <small>{t('newsletter.disclaimer')}</small>
