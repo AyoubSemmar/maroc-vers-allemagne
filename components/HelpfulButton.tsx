@@ -1,8 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@/lib/supabase-browser'
 
+// Posts the vote to /api/articles/helpful — the server route owns the
+// service_role write so the public anon key never touches the articles
+// table. The previous version ran the UPDATE in the browser with the
+// anon key, which let any visitor PATCH arbitrary columns of any
+// article (the hole a tester demonstrated with curl).
 export default function HelpfulButton({
   articleId,
   initialYes,
@@ -15,18 +19,25 @@ export default function HelpfulButton({
   const [yes, setYes] = useState(initialYes)
   const [no, setNo] = useState(initialNo)
   const [voted, setVoted] = useState<'yes' | 'no' | null>(null)
-  const supabase = createClient()
 
   async function vote(type: 'yes' | 'no') {
     if (voted) return
     setVoted(type)
+    // Optimistic update — keep the UI snappy; the server is the source
+    // of truth, but a flaky network shouldn't make the vote feel broken.
+    if (type === 'yes') setYes(v => v + 1)
+    else setNo(v => v + 1)
 
-    if (type === 'yes') {
-      setYes((v) => v + 1)
-      await supabase.from('articles').update({ helpful_yes: yes + 1 }).eq('id', articleId)
-    } else {
-      setNo((v) => v + 1)
-      await supabase.from('articles').update({ helpful_no: no + 1 }).eq('id', articleId)
+    try {
+      await fetch('/api/articles/helpful', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ articleId, vote: type }),
+      })
+    } catch {
+      // Best-effort — silently swallow. Worst case the vote isn't
+      // counted server-side; the optimistic UI already showed +1 to
+      // the user.
     }
   }
 
