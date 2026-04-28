@@ -4524,3 +4524,72 @@ body { line-height: 1.65; }
 .adm-input, .adm-select, .adm-textarea {
   border-width: 1px;
 }
+
+
+/* =====================================================================
+   BOLDER POLISH — Apr 2026 (round 2)
+   Pushes the editorial direction further. Each rule is its own
+   commented block so you can delete just the parts you don't like.
+   Revert all = delete this whole block.
+   ===================================================================== */
+
+/* ── 1. SQUARE BUTTONS ────────────────────────────────────────────────
+   Pills (border-radius: 999px) read as friendly/social. Squarer corners
+   read as tool-like / editorial. Primary CTA stays slightly rounder
+   for clickability; secondary + ghost go fully square-ish.
+   Revert: delete this section. */
+.rihla .btn { border-radius: 12px; }
+.rihla .btn-primary { border-radius: 14px; }
+.rihla .btn-sm { border-radius: 10px; }
+
+/* ── 2. SLIGHTLY HIGHER BODY CONTRAST ─────────────────────────────────
+   Soft body text (--ink-soft) was 0.42 — bump to 0.36 for sharper
+   reading without going harsh. Section subs and card descriptions
+   feel more grounded.
+   Revert: delete this section. */
+:root {
+  --ink-soft: oklch(0.36 0.030 260);
+}
+:root[data-theme="dark"] {
+  --ink-soft: oklch(0.84 0.012 85);
+}
+
+/* ── 3. NO DOT-GRID MESH ON THE HERO ──────────────────────────────────
+   The radial dot-grid behind the hero adds texture but also visual
+   noise. Solid background is the calmer/sharper choice for editorial
+   layouts.
+   Revert: delete this rule. */
+.rihla .hero-mesh,
+.rihla .hero-dotgrid,
+.rihla .hero::before { display: none; }
+
+/* ── 4. LEFT-ALIGNED SECTION HEADS ────────────────────────────────────
+   Centered section heads feel marketing-y. Left-aligned reads as
+   editorial / Stripe-docs / Linear. Sub-text wraps narrower so the
+   page still feels structured.
+   Revert: delete this section. */
+.rihla .section-head,
+.rihla .r-section-head {
+  text-align: start;
+  align-items: flex-start;
+  margin-inline: 0;
+}
+.rihla .section-head .section-title,
+.rihla .r-section-head h2,
+.rihla .r-section-head .section-title { text-align: start; }
+.rihla .section-sub { margin-inline: 0; max-width: 640px; }
+.rihla[dir="rtl"] .section-head,
+.rihla[dir="rtl"] .r-section-head { text-align: right; }
+
+/* ── 5. UNIFIED BACKGROUND (no warm-cream alternation) ────────────────
+   Removes the alternating --bg / --bg-warm section bands. Hairlines
+   between sections do the visual separation instead — cleaner, more
+   editorial.
+   Revert: delete this section. */
+.rihla section.surface-warm,
+.rihla section.surface-bg {
+  background: var(--bg);
+}
+.rihla section + section {
+  border-block-start: 1px solid var(--line-soft);
+}
