@@ -80,8 +80,18 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
               <p className="text-gray-600 text-sm mb-3">{t('detail.loginPromptBody')}</p>
               <div className="flex gap-3 justify-center">
-                <Link href="/login" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">{t('detail.login')}</Link>
-                <Link href="/signup" className="border border-green-700 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-50">{t('detail.signup')}</Link>
+                <Link
+                  href={`/login?next=${encodeURIComponent(`/${locale}/listings/${listing.id}`)}` as any}
+                  className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800"
+                >
+                  {t('detail.login')}
+                </Link>
+                <Link
+                  href={`/signup?next=${encodeURIComponent(`/${locale}/listings/${listing.id}`)}` as any}
+                  className="border border-green-700 text-green-700 px-4 py-2 rounded-lg text-sm hover:bg-green-50"
+                >
+                  {t('detail.signup')}
+                </Link>
               </div>
             </div>
           )}
