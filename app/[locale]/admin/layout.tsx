@@ -9,20 +9,19 @@ import AdminShell from '@/components/admin/AdminShell'
 import { login } from './actions.js'
 import '@/components/admin/admin.css'
 
-export default async function AdminLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: React.ReactNode
-  params: Promise<{ locale: AppLocale }>
-}) {
+  params: Promise<{ locale: string }>
+}
+
+export default async function AdminLayout({ children, params }: Props) {
   const { locale } = await params
   const cookieStore = await cookies()
   const isAuthenticated = cookieStore.get('admin_auth')?.value === 'true'
 
   if (!isAuthenticated) {
     return (
-      <div className="adm-login-wrap" dir={dirFor(locale)}>
+      <div className="adm-login-wrap" dir={dirFor(locale as AppLocale)}>
         <div className="adm-login-card">
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 22 }}>
             <div style={{
@@ -57,7 +56,7 @@ export default async function AdminLayout({
   }
 
   return (
-    <div dir={dirFor(locale)}>
+    <div dir={dirFor(locale as AppLocale)}>
       <AdminShell>{children}</AdminShell>
     </div>
   )
