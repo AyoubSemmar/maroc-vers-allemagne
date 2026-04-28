@@ -19,7 +19,7 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
             <span className="lg-hero-badge">📖 {t('badgeGrammar') ?? 'Grammar'}</span>
             <span className="lg-hero-badge">💬 {t('badgeVocab') ?? 'Vocabulary'}</span>
             <span className="lg-hero-badge">✏️ {t('badgeExercises') ?? 'Exercises'}</span>
-            <span className="lg-hero-badge">🎯 {t('badgeFree') ?? 'Lesson 1 free'}</span>
+            <span className="lg-hero-badge">🎯 {t('badgeFree') ?? '100% free'}</span>
           </div>
         </div>
       </header>

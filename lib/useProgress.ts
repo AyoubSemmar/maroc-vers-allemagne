@@ -104,10 +104,11 @@ export function useProgress(levelId: LevelId) {
   }
 
   /**
-   * Lesson 1 is always free (no auth, no completion check).
-   * Lesson 2+ requires the user to be authenticated — the auth gate is
-   * what gives them progress saving across devices. Once authed, ALL
-   * lessons in the level are accessible (no more sequential blocking).
+   * All lessons are free. Lesson 1 is open to anyone (no account needed
+   * to taste the experience). Lesson 2+ requires the user to be signed
+   * in — not because the content is paid, but so we can save their
+   * progress and sync across devices. Once authed, ALL lessons in the
+   * level are accessible (no sequential blocking).
    */
   function isLessonUnlocked(_lessonId: string, lessonOrder: number): boolean {
     if (isAdmin) return true

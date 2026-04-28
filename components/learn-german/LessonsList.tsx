@@ -58,8 +58,8 @@ export default function LessonsList({ level }: { level: Level }) {
         <div className="lg-auth-nudge">
           <span aria-hidden>🔓</span>
           <div>
-            <h3>{t('authNudgeTitle') ?? 'Sign in to unlock the full level'}</h3>
-            <p>{t('authNudgeBody') ?? 'Lesson 1 is free. To save your progress and continue beyond it, create a free account.'}</p>
+            <h3>{t('authNudgeTitle') ?? 'Sign in to save your progress'}</h3>
+            <p>{t('authNudgeBody') ?? 'All German lessons are 100% free. Create a free account so we can save where you left off and sync across your devices.'}</p>
           </div>
           <Link href={`/login?next=${typeof window !== 'undefined' ? encodeURIComponent(window.location.pathname) : ''}`} className="lg-auth-nudge-btn">
             {t('authNudgeCta') ?? 'Sign in'}
