@@ -7,14 +7,23 @@ import { routing } from './i18n/routing'
 const intlMiddleware = createIntlMiddleware(routing)
 
 // Paths (without locale prefix) that require an authenticated user.
+//
 // /learn-german is intentionally NOT here — the level listing and the
 // first lesson of every level are public. The auth gate for lesson 2+
 // happens in the LessonsList client component.
 // /ausbildung-jobs is also public — anyone can browse offers without an
 // account.
+// /dashboard itself is open to guests (DashShell renders a sign-in
+// banner) — but the pages below that actually call paid AI endpoints
+// (Anthropic + Replicate) MUST require auth, otherwise a guest can
+// burn through API credits before even hitting the API-level 401.
 const PROTECTED_PATHS = [
   '/cv-builder',
   '/anschreiben-generator',
+  '/dashboard/cv-builder',
+  '/dashboard/cover-letter',
+  '/dashboard/video-studio',
+  '/dashboard/apply-for-me',
 ]
 
 function stripLocale(pathname: string): { locale: string | null; rest: string } {
