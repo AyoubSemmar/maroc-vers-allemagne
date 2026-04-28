@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Link, usePathname } from '@/i18n/navigation'
 import { logout } from '@/app/[locale]/console-x7k9/actions.js'
-import './console-x7k9.css'
+import './admin.css'
 
 type Section = {
   href: string
