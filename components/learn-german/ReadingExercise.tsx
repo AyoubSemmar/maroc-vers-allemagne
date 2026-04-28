@@ -40,8 +40,11 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
   const locale = useLocale() as UILocale
 
   const spec = READING_SPECS[level]
-  const lockKey = `reading_done_${level}`
-  const cacheKey = (date: string) => `reading_text_${level}_${date}`
+  const MAX_PER_DAY = 2
+  const dateKey = todayKey()
+  const countKey = `reading_count_${level}_${dateKey}`
+  const cacheKey = (date: string, attempt: number) =>
+    `reading_text_${level}_${date}_${attempt}`
 
   const [authed, setAuthed] = useState<boolean | null>(null)
   const [loading, setLoading] = useState(false)
@@ -49,7 +52,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
   const [answers, setAnswers] = useState<Record<number, number>>({})
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [doneTodayAt, setDoneTodayAt] = useState<number | null>(null)
+  const [count, setCount] = useState(0)
   const [tick, setTick] = useState(0)
 
   // Auth check.
@@ -60,37 +63,40 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
     })
   }, [])
 
-  // Read the daily lock + cached exercise on mount.
+  // Read today's attempt counter + restore the in-flight cached exercise.
   useEffect(() => {
     if (typeof window === 'undefined') return
-    const raw = localStorage.getItem(lockKey)
-    if (raw) {
-      const ts = Number(raw)
-      if (Number.isFinite(ts) && ts > Date.now()) setDoneTodayAt(ts)
+    const raw = localStorage.getItem(countKey)
+    const n = Number(raw)
+    const c = Number.isFinite(n) && n > 0 ? n : 0
+    setCount(c)
+    // Restore the current attempt's cached exercise (each attempt has its
+    // own cache slot so refreshing mid-attempt doesn't re-roll).
+    if (c < MAX_PER_DAY) {
+      const cached = localStorage.getItem(cacheKey(dateKey, c))
+      if (cached) {
+        try { setExercise(JSON.parse(cached)) } catch {}
+      }
     }
-    // If we have a cached exercise for today, restore it (so a user refreshing
-    // mid-attempt doesn't re-roll).
-    const cached = localStorage.getItem(cacheKey(todayKey()))
-    if (cached) {
-      try { setExercise(JSON.parse(cached)) } catch {}
-    }
-  }, [lockKey])
+  }, [countKey, dateKey])
 
-  // Tick every minute to refresh the "next attempt in N hours" countdown.
+  const lockedOut = count >= MAX_PER_DAY
+
+  // Tick every minute to refresh the "come back in N hours" countdown.
   useEffect(() => {
-    if (!doneTodayAt) return
+    if (!lockedOut) return
     const id = setInterval(() => setTick(x => x + 1), 60 * 1000)
     return () => clearInterval(id)
-  }, [doneTodayAt])
+  }, [lockedOut])
 
   async function startExercise() {
     if (!authed) return
+    if (lockedOut) return
     setError(null)
     setLoading(true)
     try {
-      const date = todayKey()
-      // Try cache first.
-      const cached = localStorage.getItem(cacheKey(date))
+      // Cache slot for the current attempt.
+      const cached = localStorage.getItem(cacheKey(dateKey, count))
       if (cached) {
         try {
           setExercise(JSON.parse(cached))
@@ -98,10 +104,13 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
           return
         } catch {}
       }
+      // Each attempt seeds the API with a different dateKey suffix so it
+      // generates a fresh text, not the same one twice in one day.
+      const seed = `${dateKey}#${count}`
       const res = await fetch('/api/reading-exercise', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ level, uiLocale: locale, dateKey: date }),
+        body: JSON.stringify({ level, uiLocale: locale, dateKey: seed }),
       })
       const data = await res.json()
       if (!res.ok) {
@@ -109,7 +118,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
         return
       }
       setExercise(data as Exercise)
-      try { localStorage.setItem(cacheKey(date), JSON.stringify(data)) } catch {}
+      try { localStorage.setItem(cacheKey(dateKey, count), JSON.stringify(data)) } catch {}
     } catch (e: any) {
       setError(t('errorGeneric'))
     } finally {
@@ -137,13 +146,14 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
     if (!exercise) return
     if (Object.keys(answers).length < exercise.questions.length) return
     setSubmitted(true)
-    // Lock until next UTC midnight.
-    const reset = nextResetUtcMs()
-    try { localStorage.setItem(lockKey, String(reset)) } catch {}
-    setDoneTodayAt(reset)
+    // Increment today's attempt counter.
+    const next = count + 1
+    try { localStorage.setItem(countKey, String(next)) } catch {}
+    setCount(next)
   }
 
-  function resetForTomorrow() {
+  /** Reset the form so the user can do another attempt today (if any left). */
+  function tryAnotherToday() {
     setExercise(null)
     setAnswers({})
     setSubmitted(false)
@@ -177,16 +187,16 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
       )}
 
       {/* Done state — only shown if no exercise was generated this session */}
-      {authed && doneTodayAt && !exercise && (
+      {authed && lockedOut && !exercise && (
         <div className="re-done" key={tick}>
           <span className="re-done-icon" aria-hidden>✅</span>
           <h4>{t('doneTitle')}</h4>
-          <p>{t('doneBody', { hours: hoursUntil(doneTodayAt) })}</p>
+          <p>{t('doneBody', { hours: hoursUntil(nextResetUtcMs()) })}</p>
         </div>
       )}
 
       {/* Idle — start button */}
-      {authed && !exercise && !doneTodayAt && (
+      {authed && !exercise && !lockedOut && (
         <div className="re-start">
           <p className="re-start-text">{t('startBody')}</p>
           <button type="button" className="re-start-btn" onClick={startExercise} disabled={loading}>
@@ -279,9 +289,15 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
                 <strong>{t(`grade.${score.pct >= 80 ? 'excellent' : score.pct >= 60 ? 'good' : score.pct >= 40 ? 'ok' : 'practice'}`)}</strong>
                 <span>{score.pct}% — {t('correct', { n: score.correct })}</span>
               </div>
-              <button type="button" className="re-again" onClick={resetForTomorrow}>
-                {t('comeBackTomorrow')}
-              </button>
+              {count < MAX_PER_DAY ? (
+                <button type="button" className="re-again" onClick={tryAnotherToday}>
+                  ↻ {t('tryAnotherToday', { n: MAX_PER_DAY - count })}
+                </button>
+              ) : (
+                <p className="re-again" style={{ cursor: 'default', textAlign: 'center', margin: 0 }}>
+                  {t('comeBackTomorrow')}
+                </p>
+              )}
             </div>
           )}
         </div>

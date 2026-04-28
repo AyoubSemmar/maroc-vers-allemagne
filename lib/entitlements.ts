@@ -35,8 +35,12 @@ export const PREMIUM_DAILY_LIMITS = {
   ausbildung_reveal: Infinity,
 } as const
 
-// ── Daily cap for free users (ausbildung reveal only) ──────────
+// ── Daily cap for free (signed-in) users ───────────────────────
+// After these limits, the user must buy credits or upgrade to premium.
 export const FREE_DAILY_LIMITS = {
+  photo: 2,
+  cv: 1,
+  motivation: 1,
   ausbildung_reveal: 10,
 } as const
 
@@ -177,28 +181,24 @@ export async function checkAndConsume(userId: string, feature: Feature): Promise
     return { allowed: true, source: 'premium', remaining: Math.max(0, limit - next) }
   }
 
-  // 2. Free lifetime quota (motivation only — every account gets 1 free use)
-  if (paid === 'motivation' && !(profile as any)?.motivation_free_used) {
-    await admin()
-      .from('profiles')
-      .update({ motivation_free_used: true })
-      .eq('user_id', userId)
-    await bumpDailyUsage(userId, USAGE_TABLE.motivation)
-    return { allowed: true, source: 'free_lifetime' }
-  }
-
-  // 3. Free daily quota (ausbildung_reveal only)
-  if (paid === 'ausbildung_reveal') {
-    const limit = FREE_DAILY_LIMITS.ausbildung_reveal
-    const used = await getDailyUsage(userId, USAGE_TABLE.ausbildung_reveal)
-    if (used >= limit) {
+  // 2. Free daily quota — every signed-in user gets a small daily allowance
+  //    on photo/cv/motivation/ausbildung_reveal. After the limit, they must
+  //    buy credits or upgrade to premium.
+  if (paid in FREE_DAILY_LIMITS) {
+    const limit = FREE_DAILY_LIMITS[paid as keyof typeof FREE_DAILY_LIMITS]
+    const used = await getDailyUsage(userId, USAGE_TABLE[paid])
+    if (used < limit) {
+      const next = await bumpDailyUsage(userId, USAGE_TABLE[paid])
+      return { allowed: true, source: 'free_daily', remaining: Math.max(0, limit - next) }
+    }
+    // Daily allowance exhausted. For ausbildung_reveal there are no paid
+    // credits, so reject. For photo/cv/motivation, fall through to credits.
+    if (paid === 'ausbildung_reveal') {
       return { allowed: false, reason: 'free_daily_limit', remaining: 0 }
     }
-    const next = await bumpDailyUsage(userId, USAGE_TABLE.ausbildung_reveal)
-    return { allowed: true, source: 'free_daily', remaining: Math.max(0, limit - next) }
   }
 
-  // 3. Pay-per-use credits
+  // 3. Pay-per-use credits (photo/cv/motivation only)
   const column = CREDIT_COLUMN[paid as Exclude<PaidFeature, 'ausbildung_reveal'>]
   const ok = await decrementCredit(userId, column)
   if (!ok) return { allowed: false, reason: 'no_credits' }
@@ -270,7 +270,9 @@ export async function getStatus(userId: string, feature: PaidFeature) {
     return { tier: 'free' as const, limit, used, remaining: Math.max(0, limit - used) }
   }
 
-  // Credit-based
+  // photo / cv / motivation — free daily allowance + (optional) paid credits
+  const dailyLimit = FREE_DAILY_LIMITS[feature as keyof typeof FREE_DAILY_LIMITS] ?? 0
+  const dailyRemaining = Math.max(0, dailyLimit - used)
   const column = CREDIT_COLUMN[feature as Exclude<PaidFeature, 'ausbildung_reveal'>]
   const { data } = await admin()
     .from('user_credits')
@@ -279,14 +281,13 @@ export async function getStatus(userId: string, feature: PaidFeature) {
     .maybeSingle()
   const credits = (data as unknown as Record<string, number> | null)?.[column] ?? 0
 
-  // Motivation letter: expose the one-time free-lifetime try flag so the UI
-  // can show "1 free try available" before the user spends a credit.
-  if (feature === 'motivation') {
-    const freeAvailable = !(profile as any)?.motivation_free_used
-    return { tier: 'free' as const, credits, used, freeLifetimeAvailable: freeAvailable }
+  return {
+    tier: 'free' as const,
+    dailyLimit,
+    dailyRemaining,
+    used,
+    credits,
   }
-
-  return { tier: 'free' as const, credits, used }
 }
 
 /**

@@ -10,6 +10,7 @@ import {
   nextResetUtcMs,
   type WritingLevel,
 } from '@/lib/writingExerciseData'
+import { todayKey } from '@/lib/readingExerciseData'
 import './writing-exercise.css'
 
 type Mistake = {
@@ -42,7 +43,9 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
   const locale = useLocale() as UILocale
 
   const spec = LEVEL_SPECS[level]
-  const lockKey = `writing_done_${level}`
+  const MAX_PER_DAY = 2
+  const dateKey = todayKey()
+  const countKey = `writing_count_${level}_${dateKey}`
 
   const [authed, setAuthed] = useState<boolean | null>(null)
   const [userKey, setUserKey] = useState<string>('anon')
@@ -50,7 +53,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult] = useState<Result | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const [doneTodayAt, setDoneTodayAt] = useState<number | null>(null)
+  const [count, setCount] = useState(0)
   const [tick, setTick] = useState(0)
 
   // Auth + user key (used as theme seed so different users get different
@@ -63,21 +66,21 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
     })
   }, [])
 
-  // Read the daily lock from localStorage on mount.
+  // Read today's attempt counter on mount.
   useEffect(() => {
     if (typeof window === 'undefined') return
-    const raw = localStorage.getItem(lockKey)
-    if (!raw) return
-    const ts = Number(raw)
-    if (Number.isFinite(ts) && ts > Date.now()) setDoneTodayAt(ts)
-  }, [lockKey])
+    const raw = localStorage.getItem(countKey)
+    const n = Number(raw)
+    if (Number.isFinite(n) && n > 0) setCount(n)
+  }, [countKey])
 
-  // Tick every minute so the "next attempt in N hours" countdown updates.
+  // Tick every minute so the "come back in N hours" countdown updates.
+  const lockedOut = count >= MAX_PER_DAY
   useEffect(() => {
-    if (!doneTodayAt) return
+    if (!lockedOut) return
     const id = setInterval(() => setTick(x => x + 1), 60 * 1000)
     return () => clearInterval(id)
-  }, [doneTodayAt])
+  }, [lockedOut])
 
   const theme = useMemo(() => pickTodaysTheme(level, userKey), [level, userKey])
 
@@ -111,10 +114,10 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
         return
       }
       setResult(data as Result)
-      // Lock until next UTC midnight.
-      const reset = nextResetUtcMs()
-      try { localStorage.setItem(lockKey, String(reset)) } catch {}
-      setDoneTodayAt(reset)
+      // Increment today's attempt counter.
+      const next = count + 1
+      try { localStorage.setItem(countKey, String(next)) } catch {}
+      setCount(next)
     } catch (e: any) {
       setError(t('errorGeneric'))
     } finally {
@@ -122,7 +125,8 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
     }
   }
 
-  function tryAgainTomorrow() {
+  /** Reset the form so the user can do another attempt today (if any left). */
+  function tryAnotherToday() {
     setResult(null)
     setText('')
   }
@@ -154,17 +158,17 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
         </div>
       )}
 
-      {/* Daily-done state */}
-      {authed && doneTodayAt && !result && (
+      {/* Daily-done state — both attempts used and result already cleared */}
+      {authed && lockedOut && !result && (
         <div className="we-done" key={tick}>
           <span className="we-done-icon" aria-hidden>✅</span>
           <h4>{t('doneTitle')}</h4>
-          <p>{t('doneBody', { hours: hoursUntil(doneTodayAt) })}</p>
+          <p>{t('doneBody', { hours: hoursUntil(nextResetUtcMs()) })}</p>
         </div>
       )}
 
       {/* Active form / result */}
-      {authed && (!doneTodayAt || result) && (
+      {authed && (!lockedOut || result) && (
         <>
           <div className="we-prompt">
             <div className="we-prompt-meta">
@@ -214,7 +218,8 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
               originalText={text}
               t={t}
               spec={spec}
-              onAgain={tryAgainTomorrow}
+              attemptsLeft={Math.max(0, MAX_PER_DAY - count)}
+              onAnotherToday={tryAnotherToday}
             />
           )}
         </>
@@ -224,13 +229,14 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
 }
 
 function ResultView({
-  result, originalText, t, spec, onAgain,
+  result, originalText, t, spec, attemptsLeft, onAnotherToday,
 }: {
   result: Result
   originalText: string
   t: ReturnType<typeof useTranslations>
   spec: typeof LEVEL_SPECS[WritingLevel]
-  onAgain: () => void
+  attemptsLeft: number
+  onAnotherToday: () => void
 }) {
   const grade =
     result.score >= 90 ? 'excellent' :
@@ -291,9 +297,15 @@ function ResultView({
         <p>{result.tip}</p>
       </div>
 
-      <button type="button" className="we-again" onClick={onAgain}>
-        {t('comeBackTomorrow')}
-      </button>
+      {attemptsLeft > 0 ? (
+        <button type="button" className="we-again" onClick={onAnotherToday}>
+          ↻ {t('tryAnotherToday', { n: attemptsLeft })}
+        </button>
+      ) : (
+        <p className="we-again" style={{ cursor: 'default', textAlign: 'center' }}>
+          {t('comeBackTomorrow')}
+        </p>
+      )}
     </div>
   )
 }
