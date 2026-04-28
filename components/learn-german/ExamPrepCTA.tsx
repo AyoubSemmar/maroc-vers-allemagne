@@ -40,7 +40,6 @@ export default function ExamPrepCTA({ compact = false }: { compact?: boolean }) 
       </div>
       <div className="epc-cta">
         <BookConsultationButton variant="primary" topic="german-exam-prep" />
-        <span className="epc-cta-note">⏱ 30 min · 💶 €16</span>
       </div>
     </section>
   )
