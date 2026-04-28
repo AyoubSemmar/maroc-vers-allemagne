@@ -1,0 +1,95 @@
+/* ─── Exam Prep CTA card ─────────────────────────── */
+.epc-card {
+  margin: 36px 0 16px;
+  padding: clamp(22px, 3vw, 32px) clamp(22px, 3vw, 36px);
+  border-radius: var(--r-lg);
+  background:
+    radial-gradient(circle at top right,
+      color-mix(in oklch, var(--brand) 24%, transparent) 0%,
+      transparent 60%),
+    linear-gradient(135deg,
+      color-mix(in oklch, var(--brand) 10%, var(--bg-warm)) 0%,
+      var(--bg-warm) 100%);
+  border: 1.5px solid color-mix(in oklch, var(--brand) 28%, var(--line));
+  display: flex; align-items: center; gap: clamp(20px, 4vw, 40px);
+  flex-wrap: wrap;
+}
+
+.epc-card--compact {
+  margin: 18px 0 28px;
+  padding: 20px 22px;
+}
+
+.epc-text {
+  flex: 1;
+  min-width: 240px;
+}
+
+.epc-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11.5px; font-weight: 800;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 10px;
+}
+.epc-eyebrow-dot { width: 6px; height: 6px; background: var(--brand); border-radius: 50%; }
+
+.epc-title {
+  font-size: clamp(20px, 2.6vw, 28px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.epc-sub {
+  font-size: clamp(14px, 1.6vw, 15.5px);
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0 0 16px;
+  max-width: 600px;
+}
+
+.epc-list {
+  list-style: none;
+  margin: 0 0 18px;
+  padding: 0;
+  display: flex; flex-direction: column; gap: 6px;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.epc-exams {
+  display: flex; flex-wrap: wrap;
+  gap: 6px;
+}
+.epc-pill {
+  display: inline-flex; align-items: center;
+  padding: 5px 11px;
+  background: var(--bg-elev);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.epc-cta {
+  flex: none;
+  display: flex; flex-direction: column; gap: 10px;
+  align-items: center;
+}
+.epc-cta .bcb { min-width: 220px; }
+.epc-cta-note {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .epc-card { padding: 22px; }
+  .epc-cta { width: 100%; }
+  .epc-cta .bcb { width: 100%; }
+}

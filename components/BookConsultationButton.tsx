@@ -29,6 +29,7 @@ export type ConsultTopic =
   | 'ausbildung'
   | 'visa'
   | 'german-tutoring'
+  | 'german-exam-prep'
 
 type LocaleKey = 'en' | 'fr' | 'ar' | 'de'
 
@@ -49,6 +50,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
     'ausbildung':         'Ausbildung',
     'visa':               'Visa',
     'german-tutoring':    'German Tutoring (A1–B2)',
+    'german-exam-prep':   'Goethe / telc Exam Prep',
   },
   fr: {
     'general':            'Consultation générale',
@@ -62,6 +64,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
     'ausbildung':         'Ausbildung',
     'visa':               'Visa',
     'german-tutoring':    'Cours d’allemand (A1–B2)',
+    'german-exam-prep':   'Préparation Goethe / telc',
   },
   ar: {
     'general':            'استشارة عامة',
@@ -75,6 +78,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
     'ausbildung':         'التكوين المهني (Ausbildung)',
     'visa':               'التأشيرة',
     'german-tutoring':    'دروس الألمانية (A1–B2)',
+    'german-exam-prep':   'تحضير امتحان Goethe / telc',
   },
   de: {
     'general':            'Allgemeine Beratung',
@@ -88,6 +92,7 @@ const TOPIC_LABEL: Record<LocaleKey, Record<ConsultTopic, string>> = {
     'ausbildung':         'Ausbildung',
     'visa':               'Visum',
     'german-tutoring':    'Deutsch-Nachhilfe (A1–B2)',
+    'german-exam-prep':   'Goethe / telc Prüfungsvorbereitung',
   },
 }
 

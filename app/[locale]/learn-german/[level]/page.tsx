@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import LessonsList from '@/components/learn-german/LessonsList'
+import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import '../learn-german.css'
 
 export default async function LevelPage({ params }: { params: Promise<{ level: string; locale: AppLocale }> }) {
@@ -36,6 +37,7 @@ export default async function LevelPage({ params }: { params: Promise<{ level: s
       </header>
 
       <div className="lg-body wrap">
+        <ExamPrepCTA compact />
         <h2 className="lg-section-title">{t('lessonsHeading')}</h2>
         <LessonsList level={level} />
       </div>

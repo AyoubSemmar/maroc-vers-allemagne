@@ -30,6 +30,7 @@ const SERVICES: ServiceDef[] = [
   { topic: 'ausbildung',         icon: '🛠️', bulletCount: 3, accent: 'mint' },
   { topic: 'visa',               icon: '🛂', bulletCount: 3, accent: 'berry' },
   { topic: 'german-tutoring',    icon: '🇩🇪', bulletCount: 3, accent: 'gold' },
+  { topic: 'german-exam-prep',   icon: '🎓', bulletCount: 3, accent: 'violet' },
   { topic: 'general',            icon: '💬', bulletCount: 3, accent: 'brand' },
 ]
 

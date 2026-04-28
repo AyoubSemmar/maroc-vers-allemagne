@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
+import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import './learn-german.css'
 
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
@@ -26,6 +27,8 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       <div className="lg-body wrap">
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />
+
+        <ExamPrepCTA />
       </div>
     </div>
   )
