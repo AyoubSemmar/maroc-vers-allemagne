@@ -270,12 +270,19 @@ export async function POST(req: NextRequest) {
 
     // Success → return the image. Entitlement was already consumed above.
     const status = await getStatus(user.id, 'photo')
+    // Same shape as GET — for free tier we sum the daily quota + paid
+    // credits so the UI shows the actual remaining uses, not just the
+    // credit balance (which is 0 for users who never paid).
+    const isPremium = status.tier === 'premium'
+    const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
+    const dailyRemaining = isPremium ? 0 : ((status as any).dailyRemaining ?? 0)
+    const credits        = (status as any).credits ?? 0
     return NextResponse.json({
       image: dataUrl,
       tier: status.tier,
-      limit: status.tier === 'premium' ? status.limit : status.credits ?? 0,
+      limit:     isPremium ? status.limit     : dailyLimit + credits,
       used: status.used,
-      remaining: status.tier === 'premium' ? status.remaining : status.credits ?? 0,
+      remaining: isPremium ? status.remaining : dailyRemaining + credits,
       source,
     })
   } catch (e: any) {
