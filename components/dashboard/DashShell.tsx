@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
-import { useRouter } from '@/i18n/navigation'
+import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { createClient } from '@/lib/supabase-browser'
 import { fetchDocuments, type UserDocument } from '@/lib/documents'
@@ -70,8 +70,8 @@ export function computeCompletion(
 export default function DashShell({ children }: { children: React.ReactNode }) {
   const locale = useLocale() as AppLocale
   const supabase = createClient()
-  const router = useRouter()
   const pathname = usePathname()
+  const tBanner = useTranslations('dashboard.guestBanner')
 
   // Read labels from i18n directly — the provider is mounted in root layout.
   const tMiss = useTranslations('dashboard.profilePage.missing')
@@ -99,8 +99,15 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
     let cancelled = false
     supabase.auth.getUser().then(async ({ data }) => {
       if (cancelled) return
+      // No auth → render the dashboard chrome anyway with user=null. Pages
+      // that strictly need a user can detect via useShell().user === null
+      // and show their own sign-in CTA. The persistent guest banner below
+      // already nudges visitors to sign in.
       if (!data.user) {
-        router.push('/login')
+        setUser(null)
+        setProfile(null)
+        setDocs([])
+        setLoading(false)
         return
       }
       setUser(data.user)
@@ -198,6 +205,14 @@ export default function DashShell({ children }: { children: React.ReactNode }) {
             }}
           />
           <div className="dashshell-content">
+            {!user && (
+              <div className="dashshell-guest-banner" role="status">
+                <span className="dashshell-guest-banner-text">{tBanner('text')}</span>
+                <Link href="/login" className="dashshell-guest-banner-cta">
+                  {tBanner('action')} →
+                </Link>
+              </div>
+            )}
             <div key={pathname} className="dashshell-view">
               {children}
             </div>

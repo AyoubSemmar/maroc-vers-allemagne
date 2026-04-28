@@ -3500,6 +3500,47 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
   display: flex; flex-direction: column; gap: 24px;
 }
 
+/* Guest banner — shown when a non-logged-in visitor browses the dashboard.
+   Sits above the page content so the sign-in nudge is the first thing read. */
+.dashshell-guest-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: linear-gradient(135deg, rgba(226, 121, 64, 0.08), rgba(244, 200, 66, 0.08));
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 12px);
+  padding: 14px 18px;
+  margin-block-end: 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.dashshell-guest-banner-text {
+  color: var(--ink);
+  flex: 1;
+  min-width: 240px;
+}
+.dashshell-guest-banner-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--ink);
+  color: var(--bg);
+  padding: 8px 18px;
+  border-radius: var(--r-sm, 8px);
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+}
+.dashshell-guest-banner-cta:hover { opacity: 0.85; }
+@media (max-width: 640px) {
+  .dashshell-guest-banner { padding: 12px 14px; font-size: 13px; }
+  .dashshell-guest-banner-cta { width: 100%; justify-content: center; }
+}
+
 /* Smooth cross-fade when the content view changes */
 .dashshell-view {
   animation: dashshell-fade .22s ease both;
