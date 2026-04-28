@@ -6,6 +6,7 @@ export const C1: Level = {
   description: 'إتقان اللغة الألمانية — مستوى احترافي.',
   color: 'bg-red-500',
   emoji: '🏆',
+  iconName: 'trophy',
   lessons: [
     {
       id: 'c1-01',

@@ -6,6 +6,7 @@ export const A1: Level = {
   description: 'تعلم أساسيات اللغة الألمانية — من الصفر إلى التواصل اليومي.',
   color: 'bg-green-500',
   emoji: '🌱',
+  iconName: 'sprout',
   lessons: [
     // ─────────────────────────────────────────────
     // LESSON 1 — التعريف بالنفس

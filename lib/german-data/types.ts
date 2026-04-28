@@ -76,6 +76,7 @@ export type Level = {
   title: string
   description: string
   color: string    // tailwind bg color class
-  emoji: string
+  emoji: string    // legacy — kept for compat, no longer rendered
+  iconName?: 'sprout' | 'book' | 'rocket' | 'target' | 'trophy'
   lessons: Lesson[]
 }

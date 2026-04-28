@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { localizeRows } from '@/lib/i18n-content'
 import PathHub, { type PathTool, type PathPillar } from '@/components/path-hub/PathHub'
+import Icon from '@/components/ui/Icon'
 import type { AppLocale } from '@/i18n/routing'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
@@ -16,20 +17,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const STUDIUM_CATEGORIES = ['الجامعات']
 
 const PILLARS: [PathPillar, PathPillar, PathPillar] = [
-  { key: 'learnGerman', icon: '📚', href: '/learn-german' },
-  { key: 'find', icon: '🎓', href: '/universities', comingSoon: true },
-  { key: 'visa', icon: '🛂', href: '/visa/studium' },
+  { key: 'learnGerman', icon: <Icon name="book"       size={28} />, href: '/learn-german' },
+  { key: 'find',        icon: <Icon name="graduation" size={28} />, href: '/universities', comingSoon: true },
+  { key: 'visa',        icon: <Icon name="visa"       size={28} />, href: '/visa/studium' },
 ]
 
 const TOOLS: PathTool[] = [
-  { key: 'cv', icon: '📄', href: '/cv-builder', nameKey: 'cv.name', descKey: 'cv.desc' },
-  {
-    key: 'anschreiben',
-    icon: '✍️',
-    href: '/anschreiben-generator',
-    nameKey: 'anschreiben.name',
-    descKey: 'anschreiben.desc',
-  },
+  { key: 'cv',          icon: <Icon name="document" size={26} />, href: '/cv-builder',           nameKey: 'cv.name',          descKey: 'cv.desc' },
+  { key: 'anschreiben', icon: <Icon name="pen"      size={26} />, href: '/anschreiben-generator', nameKey: 'anschreiben.name', descKey: 'anschreiben.desc' },
 ]
 
 export default async function StudiumPage({ params }: Props) {

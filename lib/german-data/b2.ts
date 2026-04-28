@@ -6,6 +6,7 @@ export const B2: Level = {
   description: 'الألمانية المتقدمة للعمل والجامعة.',
   color: 'bg-orange-500',
   emoji: '🎯',
+  iconName: 'target',
   lessons: [
     // ========================= LESSON 1 =========================
     {

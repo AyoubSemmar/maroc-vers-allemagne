@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import LessonsList from '@/components/learn-german/LessonsList'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
+import Icon from '@/components/ui/Icon'
 import '../learn-german.css'
 
 export default async function LevelPage({ params }: { params: Promise<{ level: string; locale: AppLocale }> }) {
@@ -26,7 +27,9 @@ export default async function LevelPage({ params }: { params: Promise<{ level: s
           <div className="lg-level-hero-row">
             <div className={`lg-level-badge lg-level--${level.id.toLowerCase()}`}>
               <span className="lg-level-badge-id">{level.id}</span>
-              <span className="lg-level-badge-emoji" aria-hidden>{level.emoji}</span>
+              <span className="lg-level-badge-emoji" aria-hidden>
+                {level.iconName ? <Icon name={level.iconName} size={26} /> : level.emoji}
+              </span>
             </div>
             <div>
               <h1 className="lg-level-title-h1">{localizedTitle}</h1>

@@ -6,6 +6,7 @@ export const B1: Level = {
   description: 'التعبير عن الرأي، العمل، والسفر.',
   color: 'bg-purple-500',
   emoji: '🚀',
+  iconName: 'rocket',
   lessons: [
     // ========================= LESSON 1 =========================
     {

@@ -6,6 +6,7 @@ export const A2: Level = {
   description: 'الماضي، المقارنات، الجمل المركبة والتواصل اليومي.',
   color: 'bg-blue-500',
   emoji: '📘',
+  iconName: 'book',
   lessons: [
     // ─────────────────────────────────────────────
     // LESSON 1 — Perfekt مع haben

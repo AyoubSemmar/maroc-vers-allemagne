@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { levels } from '@/lib/german-data'
 import { createClient } from '@/lib/supabase-browser'
+import Icon from '@/components/ui/Icon'
 
 type ProgressMap = Record<string, number>
 
@@ -77,7 +78,9 @@ export default function LevelsGrid() {
 
             <div className={`lg-level-badge ${LEVEL_BG[level.id] ?? ''}`}>
               <span className="lg-level-badge-id">{level.id}</span>
-              <span className="lg-level-badge-emoji" aria-hidden>{level.emoji}</span>
+              <span className="lg-level-badge-emoji" aria-hidden>
+                {level.iconName ? <Icon name={level.iconName} size={22} /> : level.emoji}
+              </span>
             </div>
 
             <h3 className="lg-level-title">{localizedTitle}</h3>

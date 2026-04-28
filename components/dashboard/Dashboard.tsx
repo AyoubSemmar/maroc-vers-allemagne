@@ -5,13 +5,15 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { useShell } from './DashShell'
 import { DOC_TYPE_LABELS } from '@/lib/documents'
+import Icon from '@/components/ui/Icon'
 
 type PathKey = 'ausbildung' | 'studium'
 
 type JourneyStatus = 'todo' | 'doing' | 'done' | 'soon'
 type JourneyStep = {
   key: 'learnGerman' | 'find' | 'visa'
-  icon: string
+  /** Lucide <Icon /> node */
+  icon: React.ReactNode
   href: string
   status: JourneyStatus
 }
@@ -36,9 +38,9 @@ export default function Dashboard() {
   const journey = useMemo<JourneyStep[]>(() => {
     const isAus = path === 'ausbildung'
     return [
-      { key: 'learnGerman', icon: '📚', href: '/dashboard/learn-german', status: 'doing' },
-      { key: 'find', icon: isAus ? '🔍' : '🎓', href: isAus ? '/dashboard/browse' : '/dashboard/universities', status: 'todo' },
-      { key: 'visa', icon: '🛂', href: isAus ? '/dashboard/visa/ausbildung' : '/dashboard/visa/studium', status: 'todo' },
+      { key: 'learnGerman', icon: <Icon name="book"   size={26} />, href: '/dashboard/learn-german', status: 'doing' },
+      { key: 'find',        icon: <Icon name={isAus ? 'search' : 'graduation'} size={26} />, href: isAus ? '/dashboard/browse' : '/dashboard/universities', status: 'todo' },
+      { key: 'visa',        icon: <Icon name="visa"   size={26} />, href: isAus ? '/dashboard/visa/ausbildung' : '/dashboard/visa/studium', status: 'todo' },
     ]
   }, [path])
 

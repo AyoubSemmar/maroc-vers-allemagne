@@ -2,6 +2,7 @@
 
 import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
+import Icon from '@/components/ui/Icon'
 
 export default function LevelCard({ level, index }: { level: Level; index: number }) {
   const { completedCount, loaded } = useProgress(level.id)
@@ -18,7 +19,11 @@ export default function LevelCard({ level, index }: { level: Level; index: numbe
           : 'border-gray-100 opacity-60 cursor-not-allowed'
         }`}
     >
-      {isLocked && <span className="absolute top-4 left-4 text-gray-400 text-xl">🔒</span>}
+      {isLocked && (
+        <span className="absolute top-4 left-4 text-gray-400">
+          <Icon name="lock" size={18} />
+        </span>
+      )}
 
       <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl text-white font-bold text-lg mb-4 ${level.color}`}>
         {level.id}
@@ -29,7 +34,9 @@ export default function LevelCard({ level, index }: { level: Level; index: numbe
           <h3 className="font-bold text-gray-900 text-lg">{level.title}</h3>
           <p className="text-sm text-gray-500 mt-1">{level.description}</p>
         </div>
-        <span className="text-2xl mr-2">{level.emoji}</span>
+        <span className="text-gray-700 mr-2">
+          {level.iconName ? <Icon name={level.iconName} size={28} /> : level.emoji}
+        </span>
       </div>
 
       {isAvailable && loaded && (

@@ -6,7 +6,9 @@ import PathHubReveal from './PathHubReveal'
 
 export type PathTool = {
   key: string
-  icon: string
+  /** Pass a Lucide <Icon name="..." /> for the new icon system, or a
+   *  string emoji for legacy. Both render via {tool.icon}. */
+  icon: React.ReactNode
   href: string
   nameKey: string
   descKey: string
@@ -24,7 +26,8 @@ export type PathArticle = {
 export type PathPillar = {
   /** i18n key under landing.pathHub.<path>.pillars */
   key: 'learnGerman' | 'find' | 'visa'
-  icon: string
+  /** Lucide <Icon /> or string emoji */
+  icon: React.ReactNode
   href: string
   /** If true, shows a "Coming soon" badge on the card */
   comingSoon?: boolean

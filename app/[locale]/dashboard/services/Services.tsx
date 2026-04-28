@@ -5,12 +5,13 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton, {
   type ConsultTopic,
 } from '@/components/BookConsultationButton'
+import Icon, { type IconName } from '@/components/ui/Icon'
 import './services.css'
 
 type ServiceDef = {
   topic: ConsultTopic
-  /** Emoji shown in the card header. */
-  icon: string
+  /** Lucide icon name shown in the card header (replaces old emoji). */
+  iconName: IconName
   /** Number of bullet points pulled from i18n (services.<topic>.bulletN). */
   bulletCount: number
   /** Optional accent class for visual variation. */
@@ -20,18 +21,18 @@ type ServiceDef = {
 }
 
 const SERVICES: ServiceDef[] = [
-  { topic: 'apply-for-me',       icon: '✨', bulletCount: 3, accent: 'brand',  ribbon: true },
-  { topic: 'interview-prep',     icon: '🎙️', bulletCount: 3, accent: 'berry' },
-  { topic: 'cv-anschreiben',     icon: '📝', bulletCount: 3, accent: 'sky' },
-  { topic: 'eligibility',        icon: '✅', bulletCount: 3, accent: 'mint' },
-  { topic: 'migration-timeline', icon: '🗺️', bulletCount: 3, accent: 'gold' },
-  { topic: 'document-checklist', icon: '📋', bulletCount: 3, accent: 'violet' },
-  { topic: 'studium',            icon: '🎓', bulletCount: 3, accent: 'sky' },
-  { topic: 'ausbildung',         icon: '🛠️', bulletCount: 3, accent: 'mint' },
-  { topic: 'visa',               icon: '🛂', bulletCount: 3, accent: 'berry' },
-  { topic: 'german-tutoring',    icon: '🇩🇪', bulletCount: 3, accent: 'gold' },
-  { topic: 'german-exam-prep',   icon: '🎓', bulletCount: 3, accent: 'violet' },
-  { topic: 'general',            icon: '💬', bulletCount: 3, accent: 'brand' },
+  { topic: 'apply-for-me',       iconName: 'sparkles',     bulletCount: 3, accent: 'brand',  ribbon: true },
+  { topic: 'interview-prep',     iconName: 'mic',          bulletCount: 3, accent: 'berry' },
+  { topic: 'cv-anschreiben',     iconName: 'pen',          bulletCount: 3, accent: 'sky' },
+  { topic: 'eligibility',        iconName: 'check-square', bulletCount: 3, accent: 'mint' },
+  { topic: 'migration-timeline', iconName: 'map',          bulletCount: 3, accent: 'gold' },
+  { topic: 'document-checklist', iconName: 'list',         bulletCount: 3, accent: 'violet' },
+  { topic: 'studium',            iconName: 'graduation',   bulletCount: 3, accent: 'sky' },
+  { topic: 'ausbildung',         iconName: 'hammer',       bulletCount: 3, accent: 'mint' },
+  { topic: 'visa',               iconName: 'visa',         bulletCount: 3, accent: 'berry' },
+  { topic: 'german-tutoring',    iconName: 'language',     bulletCount: 3, accent: 'gold' },
+  { topic: 'german-exam-prep',   iconName: 'trophy',       bulletCount: 3, accent: 'violet' },
+  { topic: 'general',            iconName: 'message',      bulletCount: 3, accent: 'brand' },
 ]
 
 export default function Services({ locale }: { locale: AppLocale }) {
@@ -93,7 +94,7 @@ function ServiceCard({
     <article className={`svc-card svc-card--${def.accent}`}>
       {def.ribbon && <span className="svc-ribbon">{t(k('ribbon'))}</span>}
       <div className="svc-card-icon" aria-hidden>
-        {def.icon}
+        <Icon name={def.iconName} size={28} />
       </div>
       <h3 className="svc-card-title">{t(k('name'))}</h3>
       <p className="svc-card-blurb">{t(k('blurb'))}</p>
