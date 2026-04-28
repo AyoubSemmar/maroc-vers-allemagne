@@ -12,28 +12,24 @@ const COST_PER_CALL = {
   cv: 0.08,
   motivation: 0.05,
   photo: 0.04,
-  ausbildung_reveal: 0,
 }
 
 const DAILY_LIMIT = {
   cv: 1,
   motivation: 1,
   photo: 2,
-  ausbildung_reveal: 10,
 }
 
 const TABLES: Record<string, string> = {
   cv: 'cv_enhance_usage',
   motivation: 'motivation_usage',
   photo: 'photo_enhance_usage',
-  ausbildung_reveal: 'ausbildung_reveals_usage',
 }
 
 const LABEL: Record<string, string> = {
   cv: 'CV-AI improvement',
   motivation: 'Anschreiben generation',
   photo: 'Photo enhancement',
-  ausbildung_reveal: 'Ausbildung email reveals',
 }
 
 async function sumDay(table: string, day: string): Promise<{ users: number; calls: number }> {
@@ -67,7 +63,7 @@ export default async function AdminAiOpsPage({
 }: { params: Promise<{ locale: AppLocale }> }) {
   await params
 
-  const features = ['cv', 'motivation', 'photo', 'ausbildung_reveal'] as const
+  const features = ['cv', 'motivation', 'photo'] as const
 
   const today = await Promise.all(features.map(f => sumDay(TABLES[f], todayUtc())))
   const week  = await Promise.all(features.map(f => sumLastNDays(TABLES[f], 7)))
@@ -136,7 +132,7 @@ export default async function AdminAiOpsPage({
               return (
                 <tr key={f}>
                   <td><strong>{LABEL[f]}</strong></td>
-                  <td>{(DAILY_LIMIT as any)[f]} {f.includes('reveal') ? '/ day' : '/ day'}</td>
+                  <td>{(DAILY_LIMIT as any)[f]} / day</td>
                   <td>{today[i].calls}</td>
                   <td>{today[i].users}</td>
                   <td>{week[i].calls}</td>

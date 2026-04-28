@@ -45,7 +45,6 @@ export default async function AdminSettingsPage({
               <tr><td>Photo enhancement</td><td><span className="adm-pill adm-pill--brand">2 / day</span></td></tr>
               <tr><td>Reading exercise</td><td><span className="adm-pill adm-pill--good">2 / level / day</span></td></tr>
               <tr><td>Writing exercise</td><td><span className="adm-pill adm-pill--good">2 / level / day</span></td></tr>
-              <tr><td>Ausbildung reveals</td><td><span className="adm-pill adm-pill--good">10 / day</span></td></tr>
             </tbody>
           </table>
           <p style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 12, lineHeight: 1.5 }}>
