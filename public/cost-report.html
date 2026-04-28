@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>GoGermany — Per-Use Cost Report</title>
+<style>
+  /* ── Print-first design: A4 portrait, brand-themed ─────────── */
+  :root {
+    --navy: #0E1A36;
+    --navy-deep: #0A1429;
+    --ink: #1a1a1a;
+    --ink-soft: #555;
+    --ink-mute: #777;
+    --line: #e6e6e6;
+    --line-strong: #c8c8c8;
+    --bg: #ffffff;
+    --bg-soft: #fafafa;
+    --bg-warm: #fdf8f3;
+    --brand: #E27940;
+    --brand-warm: #F08A2E;
+    --gold: #F4C842;
+    --green: #2c8a4f;
+    --red: #c4492c;
+    --amber: #c98423;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: #f0f0f0;
+    color: var(--ink);
+    font-family: "Helvetica Neue", "Segoe UI", -apple-system, system-ui, sans-serif;
+    font-size: 11pt;
+    line-height: 1.55;
+  }
+
+  /* Page wrapper sized to A4 */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 18mm 18mm;
+    margin: 12px auto;
+    background: white;
+    position: relative;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    page-break-after: always;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* ── Cover page ─────────────────────────────────────────────── */
+  .cover {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a2a52 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 22mm;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; right: 0;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle at top right,
+      color-mix(in srgb, var(--brand) 35%, transparent) 0%,
+      transparent 70%);
+    pointer-events: none;
+  }
+  .cover-top {
+    display: flex; align-items: center; gap: 14px;
+    z-index: 2;
+  }
+  .cover-logo {
+    width: 64px; height: 64px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%);
+    display: grid; place-items: center;
+    color: white;
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover-logo::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0; bottom: 0;
+    height: 10px;
+    background: linear-gradient(to bottom, #000 33%, var(--red) 33%, var(--red) 66%, var(--gold) 66%);
+  }
+  .cover-brand {
+    font-size: 22pt; font-weight: 800; letter-spacing: -0.01em;
+  }
+  .cover-brand small {
+    display: block;
+    font-size: 10pt; font-weight: 400;
+    color: rgba(255,255,255,0.7);
+    margin-top: 2px;
+    letter-spacing: 0.04em;
+  }
+  .cover-mid {
+    z-index: 2;
+    display: flex; flex-direction: column; gap: 18px;
+  }
+  .cover-eyebrow {
+    font-size: 10pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gold);
+  }
+  .cover-title {
+    font-size: 36pt;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1.05;
+    margin: 0;
+  }
+  .cover-sub {
+    font-size: 13pt;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.55;
+    max-width: 90%;
+    margin: 0;
+  }
+  .cover-meta {
+    z-index: 2;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 10mm;
+    padding-top: 14mm;
+    border-top: 1px solid rgba(255,255,255,0.18);
+  }
+  .cover-meta-block label {
+    display: block;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 4px;
+  }
+  .cover-meta-block strong {
+    font-size: 12pt;
+    color: white;
+    font-weight: 700;
+  }
+
+  /* ── Standard page header / footer ──────────────────────────── */
+  .page-head {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-bottom: 6mm;
+    margin-bottom: 8mm;
+    border-bottom: 2px solid var(--brand);
+  }
+  .page-head-brand {
+    display: flex; align-items: center; gap: 10px;
+    font-weight: 800;
+    font-size: 11pt;
+    color: var(--ink);
+  }
+  .page-head-mini-logo {
+    width: 22px; height: 22px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, var(--brand-warm), var(--gold));
+    display: grid; place-items: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .page-head-section {
+    font-size: 9pt;
+    color: var(--ink-mute);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .page-foot {
+    position: absolute;
+    bottom: 10mm; left: 18mm; right: 18mm;
+    display: flex; justify-content: space-between;
+    font-size: 8.5pt;
+    color: var(--ink-mute);
+    border-top: 1px solid var(--line);
+    padding-top: 4mm;
+  }
+
+  /* ── Typography ─────────────────────────────────────────────── */
+  h1.section { margin: 0 0 4mm; font-size: 20pt; font-weight: 900; letter-spacing: -0.02em; color: var(--ink); }
+  h1.section .num {
+    display: inline-block;
+    background: var(--brand);
+    color: white;
+    width: 1.4em; height: 1.4em;
+    line-height: 1.4em;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 0.7em;
+    font-weight: 900;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  h2.sub { margin: 8mm 0 3mm; font-size: 13pt; font-weight: 800; color: var(--ink); letter-spacing: -0.01em; }
+  h3.sub2 { margin: 5mm 0 2mm; font-size: 11pt; font-weight: 800; color: var(--ink); }
+  p { margin: 0 0 3mm; }
+  .lead {
+    font-size: 12pt;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 6mm;
+  }
+
+  /* ── Boxes ──────────────────────────────────────────────────── */
+  .callout {
+    background: var(--bg-warm);
+    border-left: 4px solid var(--brand);
+    padding: 4mm 5mm;
+    border-radius: 4px;
+    margin: 4mm 0;
+    font-size: 10.5pt;
+  }
+  .callout strong { color: var(--brand); }
+  .callout--good { background: #f0f9f3; border-color: var(--green); }
+  .callout--good strong { color: var(--green); }
+  .callout--warn { background: #fff8eb; border-color: var(--amber); }
+  .callout--warn strong { color: var(--amber); }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4mm;
+    margin: 4mm 0 6mm;
+  }
+  .stat {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4mm;
+  }
+  .stat-label {
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--ink-mute);
+    font-weight: 700;
+    margin-bottom: 2mm;
+  }
+  .stat-value {
+    font-size: 16pt;
+    font-weight: 900;
+    color: var(--brand);
+    line-height: 1;
+  }
+  .stat-foot {
+    font-size: 8.5pt;
+    color: var(--ink-mute);
+    margin-top: 1.5mm;
+  }
+
+  /* ── Tables ────────────────────────────────────────────────── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3mm 0 6mm;
+    font-size: 10pt;
+  }
+  thead th {
+    background: var(--navy);
+    color: white;
+    text-align: left;
+    padding: 3mm 4mm;
+    font-weight: 700;
+    font-size: 9.5pt;
+    letter-spacing: 0.02em;
+  }
+  thead th:first-child { border-top-left-radius: 4px; }
+  thead th:last-child { border-top-right-radius: 4px; }
+  tbody td {
+    padding: 3mm 4mm;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  tbody tr:nth-child(even) td { background: var(--bg-soft); }
+  tbody tr:last-child td { border-bottom: 0; }
+  tbody td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 700; }
+  .badge {
+    display: inline-block;
+    padding: 1px 8px;
+    border-radius: 999px;
+    font-size: 8.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge--sonnet { background: #fce8e0; color: var(--red); }
+  .badge--haiku { background: #e6f4eb; color: var(--green); }
+  .badge--replicate { background: #ebf0fc; color: #3a5a9c; }
+  .badge--free { background: #f0f0f0; color: var(--ink-soft); }
+
+  /* ── Recommendation cards ──────────────────────────────────── */
+  .rec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+    margin-top: 4mm;
+  }
+  .rec {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4mm 5mm;
+    page-break-inside: avoid;
+  }
+  .rec-num {
+    font-size: 9pt;
+    font-weight: 900;
+    color: var(--brand);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .rec strong { display: block; font-size: 11pt; margin: 1.5mm 0 2mm; color: var(--ink); }
+  .rec p { font-size: 9.5pt; color: var(--ink-soft); margin: 0; line-height: 1.5; }
+
+  /* ── Print button (screen-only) ────────────────────────────── */
+  .print-bar {
+    position: fixed;
+    top: 16px; right: 16px;
+    z-index: 100;
+    display: flex; gap: 8px;
+  }
+  .print-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, var(--brand-warm), var(--gold));
+    color: var(--ink);
+    border: 0;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 8px 22px -8px rgba(232,124,55,0.5);
+  }
+  .print-btn:hover { transform: translateY(-1px); }
+
+  /* ── Print output ──────────────────────────────────────────── */
+  @media print {
+    @page { size: A4 portrait; margin: 0; }
+    html, body { background: white; margin: 0; padding: 0; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      max-height: 297mm;
+      overflow: hidden;
+      margin: 0;
+      box-shadow: none;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child { page-break-after: auto; }
+    .print-bar { display: none; }
+    .cover { padding: 22mm; }
+  }
+</style>
+</head>
+<body>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">📄 Save as PDF</button>
+</div>
+
+<!-- ════════════════════ PAGE 1 — COVER ════════════════════ -->
+<section class="page cover">
+  <div class="cover-top">
+    <div class="cover-logo">G</div>
+    <div class="cover-brand">
+      GoGermany
+      <small>gogermany.ma</small>
+    </div>
+  </div>
+
+  <div class="cover-mid">
+    <div class="cover-eyebrow">Internal Cost Audit · Confidential</div>
+    <h1 class="cover-title">Per-Use Cost &amp; Variable-Spend Report</h1>
+    <p class="cover-sub">A complete map of every paid integration on the platform — what costs money each time it's used, by whom, and how much. With volume forecasts and cost-control levers.</p>
+  </div>
+
+  <div class="cover-meta">
+    <div class="cover-meta-block">
+      <label>Prepared for</label>
+      <strong>Ayoub Semmar — Founder</strong>
+    </div>
+    <div class="cover-meta-block">
+      <label>Issued</label>
+      <strong>April 2026</strong>
+    </div>
+    <div class="cover-meta-block">
+      <label>Reporting period</label>
+      <strong>Production-ready snapshot</strong>
+    </div>
+    <div class="cover-meta-block">
+      <label>Document version</label>
+      <strong>v1.0</strong>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ PAGE 2 — EXECUTIVE SUMMARY ════════════════════ -->
+<section class="page">
+  <header class="page-head">
+    <div class="page-head-brand"><div class="page-head-mini-logo">G</div> GoGermany — Cost Report</div>
+    <div class="page-head-section">Executive Summary</div>
+  </header>
+
+  <h1 class="section"><span class="num">1</span>Executive summary</h1>
+  <p class="lead">gogermany.ma has six paid integrations that bill per-use. Two of them — CV improvement and Anschreiben generation — drive ~80% of variable cost. Everything else is negligible at any realistic scale. One paid consultation booking covers ~50+ heavy users for a full day.</p>
+
+  <div class="stat-row">
+    <div class="stat">
+      <div class="stat-label">Heavy user / day</div>
+      <div class="stat-value">~$0.41</div>
+      <div class="stat-foot">Worst-case for one maximally-engaged user</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Average user / day</div>
+      <div class="stat-value">~$0.07</div>
+      <div class="stat-foot">Realistic mix of free-tier consumption</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Break-even per booking</div>
+      <div class="stat-value">~50 DAU</div>
+      <div class="stat-foot">€16 covers ~50 heavy users per day</div>
+    </div>
+  </div>
+
+  <h2 class="sub">Key findings</h2>
+  <ul style="padding-left: 18px;">
+    <li><strong>Two endpoints dominate cost</strong> — <code>/api/cv-ai</code> and <code>/api/generate-anschreiben</code> use Claude Sonnet 4.5 ($3 / $15 per million input/output tokens). One CV-AI call ≈ 40× the cost of one writing-correction call.</li>
+    <li><strong>The daily reading + writing exercises are essentially free</strong> — Claude Haiku 4.5 at ~$0.002 per call, capped at one per level per UTC day (5 maximum per user per day per exercise type).</li>
+    <li><strong>Photo enhancement is bounded</strong> — Replicate's <code>google/nano-banana</code> at ~$0.04 per call, behind an entitlement gate (paid credits required after the daily quota).</li>
+    <li><strong>One €16 consultation pays for ~80 to 800 heavy-user days</strong> of API spend. The economics work even at a 1% conversion rate.</li>
+  </ul>
+
+  <div class="callout callout--good">
+    <strong>Bottom line.</strong> The platform's variable cost is small, well-bounded by entitlements, and easily covered by consultation revenue. The biggest cost lever — if needed — is tightening the daily free quota on Sonnet endpoints.
+  </div>
+
+  <div class="page-foot">
+    <span>GoGermany — Per-Use Cost Report</span>
+    <span>Page 2 of 5</span>
+  </div>
+</section>
+
+<!-- ════════════════════ PAGE 3 — ANTHROPIC + REPLICATE ════════════════════ -->
+<section class="page">
+  <header class="page-head">
+    <div class="page-head-brand"><div class="page-head-mini-logo">G</div> GoGermany — Cost Report</div>
+    <div class="page-head-section">AI &amp; Image API Costs</div>
+  </header>
+
+  <h1 class="section"><span class="num">2</span>Per-use API costs</h1>
+  <p class="lead">All AI endpoints require an authenticated user. Sonnet endpoints are entitlement-gated (free daily quota, then paid credits). Haiku endpoints have a daily lock per level.</p>
+
+  <h2 class="sub">2.1 — Anthropic Claude</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Endpoint</th>
+        <th style="width: 24%;">Used by</th>
+        <th>Model</th>
+        <th class="num">Per call</th>
+        <th class="num">Daily cap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>/api/cv-ai</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">CV Builder "AI improve" button</span></td>
+        <td>Logged-in users<br>(entitlement-gated)</td>
+        <td><span class="badge badge--sonnet">Sonnet 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 6 000</span></td>
+        <td class="num">~$0.08</td>
+        <td class="num">~$0.24<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+      </tr>
+      <tr>
+        <td><strong>/api/generate-anschreiben</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Anschreiben (cover letter) generator</span></td>
+        <td>Logged-in users<br>(entitlement-gated)</td>
+        <td><span class="badge badge--sonnet">Sonnet 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 000</span></td>
+        <td class="num">~$0.05</td>
+        <td class="num">~$0.15<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+      </tr>
+      <tr>
+        <td><strong>/api/writing-correction</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Daily writing exercise (Learn German)</span></td>
+        <td>Logged-in users<br>(daily lock)</td>
+        <td><span class="badge badge--haiku">Haiku 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 000</span></td>
+        <td class="num">~$0.002</td>
+        <td class="num">~$0.01<br><span style="color: var(--ink-mute); font-size: 9pt;">1 / level / day</span></td>
+      </tr>
+      <tr>
+        <td><strong>/api/reading-exercise</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">Daily reading exercise (Learn German)</span></td>
+        <td>Logged-in users<br>(daily lock)</td>
+        <td><span class="badge badge--haiku">Haiku 4.5</span><br><span style="color: var(--ink-mute); font-size: 9pt;">max_tokens 2 200</span></td>
+        <td class="num">~$0.002</td>
+        <td class="num">~$0.01<br><span style="color: var(--ink-mute); font-size: 9pt;">1 / level / day</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Pricing reference (Anthropic, current).</strong>
+    <ul style="margin: 1mm 0 0 0; padding-left: 18px;">
+      <li>Sonnet 4.5: <strong>$3</strong> per M input tokens · <strong>$15</strong> per M output tokens</li>
+      <li>Haiku 4.5: <strong>$0.80</strong> per M input · <strong>$4</strong> per M output (~20× cheaper than Sonnet)</li>
+    </ul>
+  </div>
+
+  <h2 class="sub">2.2 — Replicate (image AI)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Endpoint</th>
+        <th style="width: 24%;">Used by</th>
+        <th>Model</th>
+        <th class="num">Per call</th>
+        <th class="num">Daily cap</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>/api/enhance-photo</strong><br><span style="color: var(--ink-mute); font-size: 9pt;">CV photo enhancement</span></td>
+        <td>Logged-in users<br>(entitlement-gated)</td>
+        <td><span class="badge badge--replicate">nano-banana</span><br><span style="color: var(--ink-mute); font-size: 9pt;">Gemini 2.5 Flash Image</span></td>
+        <td class="num">~$0.04</td>
+        <td class="num">~$0.12<br><span style="color: var(--ink-mute); font-size: 9pt;">3 free / day</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="sub">2.3 — Other endpoints (free)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Endpoint</th>
+        <th>Description</th>
+        <th class="num">Per call</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>/api/uni-program</strong></td>
+        <td>DuckDuckGo HTML scraping for university program URLs. Edge-cached 24 h.</td>
+        <td class="num"><span class="badge badge--free">$0</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-foot">
+    <span>GoGermany — Per-Use Cost Report</span>
+    <span>Page 3 of 5</span>
+  </div>
+</section>
+
+<!-- ════════════════════ PAGE 4 — VOLUME SCALING ════════════════════ -->
+<section class="page">
+  <header class="page-head">
+    <div class="page-head-brand"><div class="page-head-mini-logo">G</div> GoGermany — Cost Report</div>
+    <div class="page-head-section">Volume Forecasts</div>
+  </header>
+
+  <h1 class="section"><span class="num">3</span>Volume scaling forecasts</h1>
+  <p class="lead">All forecasts assume an <em>average</em> user (not maximally heavy) at ~$0.07/day in API calls. Sonnet endpoints (CV + Anschreiben) drive 80%+ of variable cost.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 28%;">Daily active users</th>
+        <th class="num">Daily AI cost</th>
+        <th class="num">Monthly AI cost</th>
+        <th class="num">Annual AI cost</th>
+        <th class="num">Bookings / mo to break even</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>50 DAU</strong> · pre-launch / early adopters</td>
+        <td class="num">$3.50</td>
+        <td class="num">$105</td>
+        <td class="num">$1 260</td>
+        <td class="num">7</td>
+      </tr>
+      <tr>
+        <td><strong>200 DAU</strong> · early traction</td>
+        <td class="num">$14</td>
+        <td class="num">$420</td>
+        <td class="num">$5 040</td>
+        <td class="num">26</td>
+      </tr>
+      <tr>
+        <td><strong>500 DAU</strong> · growing community</td>
+        <td class="num">$35</td>
+        <td class="num">$1 050</td>
+        <td class="num">$12 600</td>
+        <td class="num">66</td>
+      </tr>
+      <tr>
+        <td><strong>1 000 DAU</strong> · established</td>
+        <td class="num">$70</td>
+        <td class="num">$2 100</td>
+        <td class="num">$25 200</td>
+        <td class="num">131</td>
+      </tr>
+      <tr>
+        <td><strong>5 000 DAU</strong> · scale</td>
+        <td class="num">$350</td>
+        <td class="num">$10 500</td>
+        <td class="num">$126 000</td>
+        <td class="num">656</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout--good">
+    <strong>Reading these numbers.</strong> "Bookings to break even" = monthly paid consultations needed to cover that month's API bill (€16 ≈ $17). At every scale, this is a fraction of a percent of DAU.
+  </div>
+
+  <h2 class="sub">3.1 — Worst-case per-user breakdown</h2>
+  <p>A maximally engaged user — daily exercises across all 5 levels, full free quota on premium endpoints, photo enhancement — costs you:</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Activity</th>
+        <th class="num">Calls</th>
+        <th class="num">Per call</th>
+        <th class="num">Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>CV improvement (free quota)</td><td class="num">3</td><td class="num">$0.08</td><td class="num">$0.24</td></tr>
+      <tr><td>Anschreiben generation (free quota)</td><td class="num">3</td><td class="num">$0.05</td><td class="num">$0.15</td></tr>
+      <tr><td>Photo enhancement (free quota)</td><td class="num">3</td><td class="num">$0.04</td><td class="num">$0.12</td></tr>
+      <tr><td>Daily reading (5 levels)</td><td class="num">5</td><td class="num">$0.002</td><td class="num">$0.01</td></tr>
+      <tr><td>Daily writing (5 levels)</td><td class="num">5</td><td class="num">$0.002</td><td class="num">$0.01</td></tr>
+      <tr style="background: var(--bg-warm) !important; font-weight: 800;">
+        <td><strong>Worst-case total per heavy user / day</strong></td>
+        <td class="num">19</td>
+        <td class="num">—</td>
+        <td class="num">$0.53</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-foot">
+    <span>GoGermany — Per-Use Cost Report</span>
+    <span>Page 4 of 5</span>
+  </div>
+</section>
+
+<!-- ════════════════════ PAGE 5 — FIXED COSTS + RECOMMENDATIONS ════════════════════ -->
+<section class="page">
+  <header class="page-head">
+    <div class="page-head-brand"><div class="page-head-mini-logo">G</div> GoGermany — Cost Report</div>
+    <div class="page-head-section">Fixed Costs &amp; Recommendations</div>
+  </header>
+
+  <h1 class="section"><span class="num">4</span>Fixed monthly costs</h1>
+  <p class="lead">Distinct from per-use, these are predictable line items.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 32%;">Service</th>
+        <th>Plan</th>
+        <th class="num">Monthly</th>
+        <th class="num">Annual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Domain</strong> · gogermany.ma at Hostino</td><td>—</td><td class="num">~$1.50</td><td class="num">~$15–20</td></tr>
+      <tr><td><strong>Vercel</strong> hosting</td><td>Hobby (free)</td><td class="num">$0</td><td class="num">$0</td></tr>
+      <tr><td><strong>Supabase</strong> Postgres + Auth</td><td>Free tier</td><td class="num">$0</td><td class="num">$0</td></tr>
+      <tr><td><strong>Google Workspace</strong> · contact@</td><td>Business Starter</td><td class="num">~$6</td><td class="num">~$72</td></tr>
+      <tr><td><strong>Calendly</strong></td><td>Free tier</td><td class="num">$0</td><td class="num">$0</td></tr>
+      <tr style="background: var(--bg-warm) !important; font-weight: 800;">
+        <td><strong>Total fixed</strong></td><td>—</td><td class="num">~$7.50</td><td class="num">~$87–92</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout--warn">
+    <strong>Scale triggers.</strong> Vercel Hobby caps at 100 GB bandwidth + 100 K function invocations / month. Supabase Free at 500 MB DB + 5 GB egress. Crossing either bumps you to Pro: <strong>$20</strong> Vercel + <strong>$25</strong> Supabase = <strong>+$45/mo</strong>.
+  </div>
+
+  <h1 class="section" style="margin-top: 10mm;"><span class="num">5</span>Recommendations</h1>
+
+  <div class="rec-grid">
+    <div class="rec">
+      <div class="rec-num">Cost monitoring</div>
+      <strong>Track 5 KPIs weekly</strong>
+      <p>Daily Anthropic spend (split Sonnet vs Haiku); Replicate spend; CV/Anschreiben call counts; free-quota exhaustion rate; weekly bookings.</p>
+    </div>
+    <div class="rec">
+      <div class="rec-num">Cost lever 1</div>
+      <strong>Tighten Sonnet free quota</strong>
+      <p>If costs grow uncomfortable, drop the daily free quota on CV/Anschreiben from 3 to 1, then introduce paid credits (€2 / extra call). Haiku endpoints stay generous.</p>
+    </div>
+    <div class="rec">
+      <div class="rec-num">Cost lever 2</div>
+      <strong>Cache aggressively</strong>
+      <p>Daily exercises already cache per-day per user in localStorage. Consider edge-caching CV-AI prompts where the same input recurs — minimal but helpful at scale.</p>
+    </div>
+    <div class="rec">
+      <div class="rec-num">Revenue lever</div>
+      <strong>Surface consultations more</strong>
+      <p>Every €16 booking = ~50–500× a heavy user-day. Even modest conversion rate improvements outpace any cost-cutting effort.</p>
+    </div>
+    <div class="rec">
+      <div class="rec-num">Watch threshold</div>
+      <strong>Vercel Pro at 60 K invocations</strong>
+      <p>Set an alert at 60 K monthly invocations (60% of free cap). Same for Supabase row-reads / egress. Gives you 2–3 weeks runway to upgrade smoothly.</p>
+    </div>
+    <div class="rec">
+      <div class="rec-num">Long-term</div>
+      <strong>Move to Cal.com when ready</strong>
+      <p>If you ever need multiple Calendly event types, switch to Cal.com (free, unlimited event types) instead of upgrading Calendly to Standard ($120/yr).</p>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>GoGermany — Per-Use Cost Report · v1.0</span>
+    <span>Page 5 of 5</span>
+  </div>
+</section>
+
+</body>
+</html>
