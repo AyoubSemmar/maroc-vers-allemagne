@@ -6,27 +6,37 @@
 
 /* ============ RIHLA DESIGN TOKENS ============ */
 :root {
-  /* Colors — Moroccan terracotta + German gold + warm ivory */
-  --ink:        oklch(0.22 0.02 50);
-  --ink-soft:   oklch(0.38 0.02 50);
-  --ink-mute:   oklch(0.55 0.02 50);
-  --bg:         oklch(0.985 0.008 85);
-  --bg-elev:    oklch(1 0 0);
-  --bg-warm:    oklch(0.965 0.018 75);
-  --line:       oklch(0.90 0.012 70);
-  --line-soft:  oklch(0.94 0.010 70);
+  /* Palette — refreshed Apr 2026.
+     Mirrors the dark-mode navy aesthetic: text leans navy (cool, hue 260)
+     against a warm off-white page so the cool/warm contrast is the same as
+     light text on dark navy. Brand orange (#E27940) is the primary accent;
+     gold (#F4C842) is the secondary, used for emphasis words and stat
+     numbers that match the dark-mode gold highlight. */
 
-  /* Dashboard surface tokens — cards sit on a slightly darker tone than the page in light mode */
-  --surface:    oklch(0.955 0.012 75);
-  --surface-2:  oklch(0.935 0.014 70);
-  --text:       oklch(0.22 0.02 50);
-  --muted:      oklch(0.50 0.015 60);
-  --border:     oklch(0.88 0.012 70);
+  /* Ink — navy-tinted darks for body text, soft + mute scale */
+  --ink:        oklch(0.20 0.04 260);   /* ≈ #0E1A33 — same hue as the dark-mode page bg */
+  --ink-soft:   oklch(0.42 0.03 260);
+  --ink-mute:   oklch(0.58 0.022 260);
 
-  --brand:      oklch(0.62 0.17 35);
-  --brand-ink:  oklch(0.42 0.15 32);
-  --gold:       oklch(0.80 0.14 85);
-  --gold-deep:  oklch(0.68 0.15 75);
+  /* Surfaces — warm off-white system */
+  --bg:         oklch(0.985 0.006 80);  /* ≈ #FAF8F4 page */
+  --bg-elev:    oklch(1 0 0);           /* #FFFFFF cards */
+  --bg-warm:    oklch(0.965 0.012 75);  /* ≈ #F5F1EA secondary surface */
+  --line:       oklch(0.91 0.008 70);   /* ≈ #E5E0D8 hairline */
+  --line-soft:  oklch(0.94 0.006 70);
+
+  /* Dashboard surface tokens — cards sit on a slightly darker tone than the page */
+  --surface:    oklch(0.955 0.010 80);
+  --surface-2:  oklch(0.935 0.012 75);
+  --text:       oklch(0.20 0.04 260);
+  --muted:      oklch(0.50 0.022 260);
+  --border:     oklch(0.88 0.008 70);
+
+  /* Brand accents */
+  --brand:      oklch(0.68 0.16 45);    /* ≈ #E27940 warm orange — primary */
+  --brand-ink:  oklch(0.50 0.15 40);    /* deeper for hover/active */
+  --gold:       oklch(0.84 0.15 88);    /* ≈ #F4C842 gold-yellow — secondary, emphasis words */
+  --gold-deep:  oklch(0.72 0.14 80);    /* gold for strong text on light */
   --teal:       oklch(0.65 0.11 200);
   --berry:      oklch(0.52 0.18 15);
 
@@ -53,21 +63,35 @@
 }
 
 :root[data-theme="dark"] {
-  --ink:        oklch(0.96 0.012 85);
-  --ink-soft:   oklch(0.82 0.012 85);
-  --ink-mute:   oklch(0.62 0.012 85);
-  --bg:         oklch(0.17 0.012 50);
-  --bg-elev:    oklch(0.22 0.014 50);
-  --bg-warm:    oklch(0.20 0.016 50);
-  --line:       oklch(0.30 0.012 50);
-  --line-soft:  oklch(0.26 0.012 50);
+  /* Deep navy palette per the brand spec.
+     bg is a slightly warm-cool navy (~#0B1834), bg-elev steps up to
+     ~#0E1A33 for cards. Text is warm cream so the page reads
+     editorial-magazine, not corporate-glassy. */
 
-  /* Dashboard surface tokens — cards sit a step lighter than the page in dark mode */
-  --surface:    oklch(0.235 0.014 55);
-  --surface-2:  oklch(0.275 0.014 55);
+  /* Ink — warm cream against navy keeps the Moroccan-warmth even in dark */
+  --ink:        oklch(0.96 0.012 85);
+  --ink-soft:   oklch(0.80 0.012 85);
+  --ink-mute:   oklch(0.62 0.012 85);
+
+  /* Surfaces — navy hue 260, slightly cool */
+  --bg:         oklch(0.16 0.040 260);  /* ≈ #0B1834 page */
+  --bg-elev:    oklch(0.20 0.038 260);  /* ≈ #0E1A33 cards */
+  --bg-warm:    oklch(0.18 0.040 260);
+  --line:       oklch(0.30 0.025 260);
+  --line-soft:  oklch(0.26 0.022 260);
+
+  /* Dashboard surface tokens — cards sit a step lighter than the page */
+  --surface:    oklch(0.22 0.038 260);
+  --surface-2:  oklch(0.26 0.038 260);
   --text:       oklch(0.96 0.012 85);
   --muted:      oklch(0.70 0.012 85);
-  --border:     oklch(0.32 0.012 50);
+  --border:     oklch(0.32 0.025 260);
+
+  /* Brand accents — slightly brighter on dark surface */
+  --brand:      oklch(0.72 0.17 45);    /* warmer orange for navy bg */
+  --brand-ink:  oklch(0.62 0.16 42);
+  --gold:       oklch(0.86 0.16 88);    /* bright gold for emphasis on dark */
+  --gold-deep:  oklch(0.78 0.15 82);
 }
 
 @theme inline {
