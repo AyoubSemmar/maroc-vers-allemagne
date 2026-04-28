@@ -6,8 +6,10 @@ import UniversitiesClient, { type UniversityRow } from '@/components/universitie
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ISR: universities are slow-moving reference data (state/founding/website
+// rarely change). 1-hour cache is plenty fresh and avoids re-querying the
+// full ~400-row list on every dashboard click.
+export const revalidate = 3600
 
 export default async function DashboardUniversitiesPage({ params }: Props) {
   const { locale } = await params

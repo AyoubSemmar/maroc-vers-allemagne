@@ -4,8 +4,9 @@ import { createClient } from '@supabase/supabase-js'
 import AusbildungJobsClient from '../../ausbildung-jobs/AusbildungJobsClient'
 import type { Job } from '@/components/jobs/JobCard'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+// ISR: matches /ausbildung-jobs — 5-min cached HTML, background refresh.
+// Same job dataset, so same caching strategy.
+export const revalidate = 300
 
 async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }> {
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL
@@ -49,7 +50,19 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
     if (rows.length < CHUNK) break
   }
 
-  const jobs = all as Job[]
+  // See /ausbildung-jobs/page.tsx — keep enrichment_json minimal (only the
+  // two fields rendered on the card + modal) to slim the wire payload.
+  const jobs = all.map((r: any) => {
+    const e = r.enrichment_json
+    if (!e) return r as Job
+    return {
+      ...r,
+      enrichment_json: {
+        translations: e.translations ?? null,
+        duration_months: e.duration_months ?? null,
+      },
+    } as Job
+  })
   const lastUpdated = jobs[0]?.created_at || null
   return { jobs, lastUpdated }
 }
