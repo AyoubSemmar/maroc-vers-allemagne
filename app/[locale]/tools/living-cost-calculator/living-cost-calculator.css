@@ -262,24 +262,15 @@
   font-weight: 900;
   letter-spacing: -0.03em;
   margin: 8px 0 4px;
-  /* Solid brand color is the source of truth — bulletproof. The
-     gradient-text effect below is progressive enhancement: if the
-     browser supports background-clip: text properly, the number
-     renders as the brand→violet gradient; if not, the solid color
-     above keeps the number readable. Previously the gradient text
-     was failing in some Cloudflare-cached / WebKit contexts and the
-     entire H2 box rendered as a solid gradient with the number
-     invisible. */
+  /* Solid brand color. Earlier we tried a gradient-text effect via
+     background-clip: text + color: transparent — clip failed in some
+     Cloudflare-cached contexts and the whole H2 rendered as a solid
+     gradient block with no visible number. Solid color is bulletproof
+     across every browser/cache combination; the visual loss vs the
+     gradient effect is small. */
   color: var(--brand);
-}
-@supports ((-webkit-background-clip: text) or (background-clip: text)) {
-  .lcc-result-total {
-    background: linear-gradient(135deg, var(--brand) 0%, oklch(0.55 0.18 320) 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-  }
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 .lcc-result-sub { font-size: 14px; color: var(--ink-soft); margin: 0 0 24px; }
 
