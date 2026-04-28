@@ -1,9 +1,8 @@
 import { getTranslations } from 'next-intl/server'
 import { createClient } from '@supabase/supabase-js'
-import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
-import { dirFor, type AppLocale } from '@/i18n/routing'
+import type { AppLocale } from '@/i18n/routing'
 import { updateArticle } from '../../actions'
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
@@ -23,10 +22,7 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
   const t = await getTranslations({ locale, namespace: 'admin' })
   const tCat = await getTranslations({ locale, namespace: 'articles.cat' })
 
-  const cookieStore = await cookies()
-  const isAuthenticated = cookieStore.get('admin_auth')?.value === 'true'
-  if (!isAuthenticated) redirect(`/${locale}/admin`)
-
+  // Auth handled by app/[locale]/admin/layout.tsx — no need to re-check here.
   const { data: article } = await supabase
     .from('articles')
     .select('*')
@@ -40,16 +36,16 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
   }
 
   return (
-    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <nav className="bg-white border-b border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-          <span className="text-xl font-bold text-green-700">{t('editArticleTitle')}</span>
-          <Link href="/admin" className="text-sm text-gray-500 hover:underline">{t('backToDashboard')}</Link>
+    <>
+      <header className="adm-page-head">
+        <div>
+          <h1 className="adm-page-title">{t('editArticleTitle') ?? 'Edit article'}</h1>
         </div>
-      </nav>
+        <Link href="/admin/content" className="adm-btn adm-btn--ghost">← {t('backToDashboard') ?? 'Back to articles'}</Link>
+      </header>
 
-      <div className="max-w-3xl mx-auto px-4 py-12">
-        <div className="bg-white rounded-xl border border-gray-200 p-6">
+      <div style={{ maxWidth: 720 }}>
+        <div className="adm-card">
           <form action={updateArticle} className="flex flex-col gap-4" encType="multipart/form-data">
             <input type="hidden" name="id" value={article.id} />
 
@@ -130,6 +126,6 @@ export default async function EditArticlePage({ params }: { params: Promise<{ id
           </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
