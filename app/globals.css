@@ -4388,3 +4388,65 @@ html[data-theme="dark"] .dashprof-danger h3 { color: oklch(0.88 0.1 35); }
   color: var(--text);
   transform: rotate(90deg);
 }
+
+
+/* =====================================================================
+   AIRY DENSITY OVERRIDE — Apr 2026
+   Bumps spacing site-wide for a calmer editorial feel. Uses an additive
+   selector pattern (no values overwritten in their original blocks) so
+   reverting is one block-delete.
+   ===================================================================== */
+
+/* Slightly larger base for body copy — 17px feels airier than 16. */
+html { font-size: 17px; }
+body { line-height: 1.65; }
+
+/* Generous reading measure on prose-heavy pages */
+.rihla, .dashpage, main, article {
+  --measure: 68ch;
+}
+
+/* Homepage section rhythm — more breathing room between sections */
+.rihla section            { padding: 112px 0; }
+.rihla section.r-section  { padding: 120px 0; }
+.rihla .hero              { padding: 88px 0 120px; }
+@media (max-width: 720px) {
+  .rihla section, .rihla section.r-section { padding: 72px 0; }
+  .rihla .hero { padding: 56px 0 72px; }
+}
+
+/* Wider container gutters */
+.rihla .wrap { max-width: 1280px; padding-inline: 32px; }
+@media (max-width: 720px) { .rihla .wrap { padding-inline: 20px; } }
+
+/* Card breathing room — applies to cards that opted into the brand
+   token system (most do). Specifically targets common card classes
+   without breaking dashboard/admin which use their own padding. */
+.rihla .tool,
+.rihla .article,
+.rihla .path-card,
+.rihla .opportunity-card,
+.rihla .card {
+  padding: 32px;
+}
+@media (max-width: 720px) {
+  .rihla .tool,
+  .rihla .article,
+  .rihla .path-card,
+  .rihla .opportunity-card,
+  .rihla .card { padding: 24px; }
+}
+
+/* Article body: longer line-height for readable long-form */
+.rihla .article-body { padding: 28px; }
+
+/* Stack rhythm — more whitespace between section heads and content */
+.rihla .section-head,
+.rihla .r-section-head { margin-bottom: 56px; }
+
+/* FAQ entries — taller hit area, calmer pacing */
+.rihla details.faq { padding: 28px 0; }
+
+/* Buttons feel airier with slightly more horizontal padding */
+.rihla .btn         { padding: 14px 26px; }
+.rihla .btn-sm      { padding: 10px 18px; }

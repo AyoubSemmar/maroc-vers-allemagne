@@ -83,13 +83,27 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
 
   // Real interactive tools only. Resource pages (visa, banking, jobs,
   // simcards) live elsewhere on the site — they're not "tools".
+  // Lucide-thin inline SVGs (stroke 1.5) — modern outline style, currentColor.
+  const SVG = (path: React.ReactNode) => (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      {path}
+    </svg>
+  )
+  const ICONS = {
+    cv:                  SVG(<><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M9 13h6M9 17h4"/></>),
+    anschreiben:         SVG(<><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4z"/></>),
+    livingCost:          SVG(<><path d="M4 10h12"/><path d="M4 14h9"/><path d="M19 6a7.5 7.5 0 1 0 0 12"/></>),
+    migrationTimeline:   SVG(<><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></>),
+    documentChecklist:   SVG(<><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></>),
+    eligibilityChecker:  SVG(<><rect x="3" y="3" width="18" height="18" rx="2"/><path d="m9 11 3 3L22 4"/></>),
+  } as const
   const tools = [
-    { key: 'cv', icon: '📄', href: '/cv-builder', c: 'brand' as const },
-    { key: 'anschreiben', icon: '✍️', href: '/anschreiben-generator', c: 'teal' as const },
-    { key: 'livingCost', icon: '💶', href: '/tools/living-cost-calculator', c: 'gold' as const },
-    { key: 'migrationTimeline', icon: '🗓', href: '/tools/migration-timeline', c: 'teal' as const },
-    { key: 'documentChecklist', icon: '📋', href: '/tools/document-checklist', c: 'berry' as const },
-    { key: 'eligibilityChecker', icon: '✅', href: '/tools/eligibility-checker', c: 'brand' as const },
+    { key: 'cv',                 icon: ICONS.cv,                 href: '/cv-builder',                  c: 'brand' as const },
+    { key: 'anschreiben',        icon: ICONS.anschreiben,        href: '/anschreiben-generator',       c: 'teal'  as const },
+    { key: 'livingCost',         icon: ICONS.livingCost,         href: '/tools/living-cost-calculator',c: 'gold'  as const },
+    { key: 'migrationTimeline',  icon: ICONS.migrationTimeline,  href: '/tools/migration-timeline',    c: 'teal'  as const },
+    { key: 'documentChecklist',  icon: ICONS.documentChecklist,  href: '/tools/document-checklist',    c: 'berry' as const },
+    { key: 'eligibilityChecker', icon: ICONS.eligibilityChecker, href: '/tools/eligibility-checker',   c: 'brand' as const },
   ] as const
 
   const levels: Array<{

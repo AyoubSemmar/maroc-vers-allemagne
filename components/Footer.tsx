@@ -68,9 +68,13 @@ export default function Footer() {
             <div className="flex items-center gap-3 mt-5">
               <a
                 href="mailto:contact@gogermany.ma"
-                className="text-xs text-gray-400 hover:text-white transition-colors"
+                className="inline-flex items-center gap-2 text-xs text-gray-400 hover:text-white transition-colors"
               >
-                ✉️ راسلنا
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <rect x="3" y="5" width="18" height="14" rx="2"/>
+                  <path d="m3 7 9 7 9-7"/>
+                </svg>
+                <span>راسلنا</span>
               </a>
             </div>
           </div>
