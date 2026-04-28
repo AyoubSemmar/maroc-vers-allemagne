@@ -4450,3 +4450,77 @@ body { line-height: 1.65; }
 /* Buttons feel airier with slightly more horizontal padding */
 .rihla .btn         { padding: 14px 26px; }
 .rihla .btn-sm      { padding: 10px 18px; }
+
+
+/* =====================================================================
+   SHARP POLISH — Apr 2026
+   Subtle but cumulative refinements: tighter radii, crisper hairlines,
+   more contrast on headings, lighter shadows, no hover-lift on cards.
+   Each rule is one declaration so it's easy to dial back individually.
+   Revert = delete this whole block.
+   ===================================================================== */
+
+:root {
+  /* Tighter radii — less rounded = more architectural */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 20px;
+  --r-xl: 28px;
+
+  /* Crisper hairlines (bump saturation slightly so 1px reads as a real edge) */
+  --line:      oklch(0.89 0.010 70);
+  --line-soft: oklch(0.93 0.008 70);
+}
+:root[data-theme="dark"] {
+  --line:      oklch(0.32 0.030 260);
+  --line-soft: oklch(0.28 0.025 260);
+}
+
+/* Headings: tighter letter-spacing, slightly more weight to land sharper */
+.rihla h1, .rihla h2, .rihla h3,
+.dashpage h1, .dashpage h2, .dashpage h3 {
+  letter-spacing: -0.025em;
+}
+
+/* Cards — sharper hover (border darkens, no Y-lift), thinner shadow */
+.rihla .tool,
+.rihla .article,
+.rihla .path-card,
+.rihla .opportunity-card,
+.rihla .card {
+  border-width: 1px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  transition: border-color 0.15s ease, box-shadow 0.18s ease;
+}
+.rihla .tool:hover,
+.rihla .article:hover,
+.rihla .path-card:hover,
+.rihla .opportunity-card:hover,
+.rihla .card:hover {
+  border-color: color-mix(in oklch, var(--ink) 40%, var(--line));
+  transform: none;                  /* kill the Y-lift — editorial stillness */
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04),
+              0 8px 24px -16px rgba(15, 23, 42, 0.18);
+}
+
+/* Hero card: same lighter shadow profile (instead of the heavier always-on) */
+.rihla .hero-card {
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04),
+              0 12px 32px -22px rgba(15, 23, 42, 0.22);
+}
+
+/* Article images: slightly less aggressive zoom on hover */
+.rihla .article:hover .article-img img,
+.rihla .article-img img:hover { transform: scale(1.02); }
+
+/* Buttons: 1px border (not 1.5px) for crisper edges on retina */
+.rihla .btn-ghost,
+.adm-btn--ghost {
+  border-width: 1px;
+}
+
+/* Crisper input borders */
+.rihla input, .rihla textarea, .rihla select,
+.adm-input, .adm-select, .adm-textarea {
+  border-width: 1px;
+}
