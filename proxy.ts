@@ -45,6 +45,25 @@ export async function proxy(request: NextRequest) {
     return intlResponse
   }
 
+  // ── Admin gate ──────────────────────────────────────────────────
+  // Stop unauthenticated requests at the edge so /admin/* sub-pages
+  // never run their server-side data fetching. Without this guard,
+  // hitting /admin/settings (or /admin/users) would still trigger
+  // every Supabase query in the page component before the layout
+  // chose to render the login screen — leaking timing + query
+  // counts and giving the URL itself a fingerprint.
+  //
+  // /admin (the login screen) stays public; everything below it
+  // bounces back to /admin until the admin_auth cookie is present.
+  const { locale: pathLocale, rest } = stripLocale(pathname)
+  if (rest.startsWith('/admin')) {
+    const cookie = request.cookies.get('admin_auth')?.value
+    if (cookie !== 'true' && rest !== '/admin' && rest !== '/admin/') {
+      const effLocale = pathLocale ?? routing.defaultLocale
+      return NextResponse.redirect(new URL(`/${effLocale}/admin`, request.url))
+    }
+  }
+
   // If this isn't a protected path, just return the intl response as-is.
   if (!isProtected(pathname)) {
     return intlResponse

@@ -16,14 +16,19 @@ export async function login(formData) {
     const cookieStore = await cookies()
     // httpOnly: not readable by JS (anti-XSS).
     // secure: only sent over HTTPS.
-    // sameSite: 'lax' blocks cross-site CSRF on state-changing actions while
-    //           still allowing top-level navigations from Calendly/email links.
+    // sameSite: 'strict' — admin actions never need to be triggered by
+    //           cross-site links, and nothing in the admin UI relies on
+    //           inbound nav from external surfaces (Calendly etc. land
+    //           on public pages, not /admin). Strict beats lax here.
+    // maxAge: 4h. Was 24h; shorter window limits blast radius if the
+    //         cookie ever leaks (XSS, shared device, browser extension).
+    //         Re-login every working session is cheap.
     cookieStore.set('admin_auth', 'true', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      sameSite: 'lax',
+      sameSite: 'strict',
       path: '/',
-      maxAge: 60 * 60 * 24,
+      maxAge: 60 * 60 * 4,
     })
   }
   redirect('/admin')

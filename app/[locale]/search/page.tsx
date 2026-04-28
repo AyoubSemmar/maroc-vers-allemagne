@@ -14,7 +14,17 @@ export default async function SearchPage({ params, searchParams }: Props) {
     ? rawLocale
     : routing.defaultLocale) as AppLocale
   const { q: rawQ } = await searchParams
-  const q = rawQ?.trim() || ''
+  // Sanitize the query before it goes into the .or() filter expression.
+  // PostgREST treats `,` `(` `)` as syntax separators, and `%` `_` are
+  // SQL LIKE wildcards. A user typing `foo,deleted_at=is.null` could
+  // otherwise break out of the filter and reach unintended rows.
+  // Allowlist: unicode letters / digits / spaces / dashes — covers
+  // Arabic, French, German, Latin without giving up search utility.
+  const q = (rawQ ?? '')
+    .normalize('NFKC')
+    .replace(/[^\p{L}\p{N}\s\-]/gu, '')
+    .trim()
+    .slice(0, 80)
   const t = await getTranslations({ locale, namespace: 'search' })
   const tc = await getTranslations({ locale, namespace: 'articles' })
   const catLabel = (cat: string) => {

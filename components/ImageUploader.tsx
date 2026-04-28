@@ -1,17 +1,17 @@
 'use client'
 
 import { useState } from 'react'
-import { createClient } from '@supabase/supabase-js'
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-)
-
+// Admin-only inline image uploader. Posts to /api/admin/upload-image,
+// which re-validates the admin_auth cookie + file shape server-side
+// before writing to Supabase storage. The previous version uploaded
+// directly with the public anon key, which leaked write access to
+// anyone on the internet (the anon key ships in every page).
 export default function ImageUploader() {
   const [uploading, setUploading] = useState(false)
   const [markdown, setMarkdown] = useState('')
   const [copied, setCopied] = useState(false)
+  const [error, setError] = useState('')
 
   async function handleUpload(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0]
@@ -19,24 +19,25 @@ export default function ImageUploader() {
 
     setUploading(true)
     setMarkdown('')
+    setError('')
 
-    const filename = `${Date.now()}-${file.name}`
-    const { data, error } = await supabase.storage
-      .from('article-images')
-      .upload(filename, file, { contentType: file.type })
+    const fd = new FormData()
+    fd.append('file', file)
 
-    if (error) {
-      alert('فشل الرفع، حاول مجدداً')
+    try {
+      const res = await fetch('/api/admin/upload-image', { method: 'POST', body: fd })
+      const json = await res.json().catch(() => ({}))
+      if (!res.ok || !json.url) {
+        setError(json.error || 'فشل الرفع، حاول مجدداً')
+        setUploading(false)
+        return
+      }
+      setMarkdown(`![](${json.url})`)
+    } catch {
+      setError('فشل الرفع، حاول مجدداً')
+    } finally {
       setUploading(false)
-      return
     }
-
-    const { data: urlData } = supabase.storage
-      .from('article-images')
-      .getPublicUrl(data.path)
-
-    setMarkdown(`![](${urlData.publicUrl})`)
-    setUploading(false)
   }
 
   function copyToClipboard() {
@@ -58,6 +59,10 @@ export default function ImageUploader() {
 
       {uploading && (
         <p className="text-sm text-gray-500 mt-3">جاري الرفع...</p>
+      )}
+
+      {error && (
+        <p className="text-sm text-red-600 mt-3">{error}</p>
       )}
 
       {markdown && (
