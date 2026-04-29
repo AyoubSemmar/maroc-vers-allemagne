@@ -184,7 +184,13 @@ function ArticleCard({
             <img src={article.image_url} alt={article.title} loading="lazy" decoding="async" />
           : <div className="rihla-acard-img-placeholder">{categoryEmoji(article.category)}</div>
         }
-        {article.featured && <span className="rihla-acard-star">⭐</span>}
+        {article.featured && (
+          <span className="rihla-acard-star" aria-label="Featured" title="Featured">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
+              <path d="M12 2.5l2.94 6.34 6.95.74-5.21 4.74 1.46 6.83L12 17.6l-6.14 3.55 1.46-6.83-5.21-4.74 6.95-.74L12 2.5z" />
+            </svg>
+          </span>
+        )}
       </div>
       <div className="rihla-acard-body">
         <span className="rihla-acard-cat">{catLabel(article.category)}</span>
