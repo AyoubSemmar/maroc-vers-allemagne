@@ -80,12 +80,18 @@ export type TemplateMeta = {
   accentColor: string
 }
 
+// All five templates are free during launch — flipped from the
+// previous classic+modern free / minimal+dark+compact paid split so
+// every user can pick whatever style fits their CV. The `isPremium`
+// field is kept on the type (and on every row, all set to false) so
+// the existing premium-gating UI keeps compiling. If a paid tier is
+// re-introduced later, just flip individual rows back to true.
 export const TEMPLATES: TemplateMeta[] = [
   { id: 'classic',  name: 'Classic German',   nameAr: 'الكلاسيكي الألماني', description: 'القالب التقليدي الألماني — مناسب لكل المجالات', isPremium: false, accentColor: '#1f2937' },
   { id: 'modern',   name: 'Modern Blue',      nameAr: 'الحديث الأزرق',       description: 'تصميم حديث بلون أزرق أنيق',                  isPremium: false, accentColor: '#2563eb' },
-  { id: 'minimal',  name: 'Minimal Clean',    nameAr: 'الأدنى النظيف',       description: 'بسيط ونظيف — يركز على المحتوى',               isPremium: true,  accentColor: '#0f172a' },
-  { id: 'dark',     name: 'Professional Dark',nameAr: 'الاحترافي الداكن',    description: 'قالب داكن للمهن الإبداعية والتقنية',         isPremium: true,  accentColor: '#18181b' },
-  { id: 'compact',  name: 'Compact One-Page', nameAr: 'المضغوط صفحة واحدة',  description: 'تصميم مضغوط يناسب الصفحة الواحدة',          isPremium: true,  accentColor: '#dc2626' },
+  { id: 'minimal',  name: 'Minimal Clean',    nameAr: 'الأدنى النظيف',       description: 'بسيط ونظيف — يركز على المحتوى',               isPremium: false, accentColor: '#0f172a' },
+  { id: 'dark',     name: 'Professional Dark',nameAr: 'الاحترافي الداكن',    description: 'قالب داكن للمهن الإبداعية والتقنية',         isPremium: false, accentColor: '#18181b' },
+  { id: 'compact',  name: 'Compact One-Page', nameAr: 'المضغوط صفحة واحدة',  description: 'تصميم مضغوط يناسب الصفحة الواحدة',          isPremium: false, accentColor: '#dc2626' },
 ]
 
 export const LANGUAGE_LEVELS: LanguageEntry['level'][] = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'Native']
