@@ -7,6 +7,7 @@ import type { AppLocale } from '@/i18n/routing'
 import { addArticle, addListing, deleteArticle, deleteListing } from '../actions.js'
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
+import AdminAiArticleGenerator from '@/components/AdminAiArticleGenerator'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -79,6 +80,8 @@ export default async function AdminContentPage({
           <div style={{ marginTop: 6 }}>Scroll down to see it in the list.</div>
         </div>
       )}
+
+      <AdminAiArticleGenerator />
 
       <div className="adm-grid-2">
         {/* Add article form */}
