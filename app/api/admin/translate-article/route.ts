@@ -76,9 +76,13 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Haiku-4.5 for translation too — fast enough to fit 3 languages of a
+    // ~700-word article inside the function deadline, and translation
+    // quality is plenty for admin-reviewed content. The temperature is
+    // low (0.4) so wording stays close to the source.
     const client = new Anthropic({ apiKey })
     const resp = await client.messages.create({
-      model: 'claude-sonnet-4-5',
+      model: 'claude-haiku-4-5',
       max_tokens: 6000,
       temperature: 0.4,
       messages: [{ role: 'user', content: buildPrompt(title, summary, content, faqs) }],
