@@ -29,6 +29,9 @@ export default function EditListingPage() {
   const [type, setType] = useState('')
   const [price, setPrice] = useState('')
   const [available, setAvailable] = useState(true)
+  // Tri-state Anmeldung — '' for null/unspecified (the default for
+  // legacy listings that pre-date this field).
+  const [anmeldung, setAnmeldung] = useState<'true' | 'false' | ''>('')
   const [existingImages, setExistingImages] = useState<string[]>([])
   const [newImageFiles, setNewImageFiles] = useState<File[]>([])
   const [newPreviews, setNewPreviews] = useState<string[]>([])
@@ -62,6 +65,11 @@ export default function EditListingPage() {
       setType(listing.type ?? '')
       setPrice(listing.price != null ? String(listing.price) : '')
       setAvailable(listing.available ?? true)
+      setAnmeldung(
+        listing.with_anmeldung === true  ? 'true'  :
+        listing.with_anmeldung === false ? 'false' :
+                                           ''
+      )
       const imgs = listing.images?.length ? listing.images : listing.image_url ? [listing.image_url] : []
       setExistingImages(imgs)
       setLoading(false)
@@ -114,6 +122,7 @@ export default function EditListingPage() {
         type,
         price: price ? Number(price) : null,
         available,
+        with_anmeldung: anmeldung === 'true' ? true : anmeldung === 'false' ? false : null,
         image_url: finalImages[0] || '',
         images: finalImages,
       })
@@ -200,6 +209,26 @@ export default function EditListingPage() {
             <div className="flex gap-3">
               <button type="button" onClick={() => setType('غرفة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'غرفة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>{t('form.typeRoom')}</button>
               <button type="button" onClick={() => setType('شقة')} className={`flex-1 py-2 rounded-lg border text-sm font-medium ${type === 'شقة' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>{t('form.typeApt')}</button>
+            </div>
+
+            {/* Anmeldung tri-state — same UX as the create form */}
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-gray-500">{t('form.anmeldungLabel')}</label>
+              <div className="flex gap-3">
+                <button type="button" onClick={() => setAnmeldung('true')}
+                  className={`flex-1 py-2 rounded-lg border text-sm font-medium ${anmeldung === 'true' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>
+                  ✅ {t('form.anmeldungYes')}
+                </button>
+                <button type="button" onClick={() => setAnmeldung('false')}
+                  className={`flex-1 py-2 rounded-lg border text-sm font-medium ${anmeldung === 'false' ? 'bg-red-600 text-white border-red-600' : 'border-gray-300 text-gray-700'}`}>
+                  ❌ {t('form.anmeldungNo')}
+                </button>
+                <button type="button" onClick={() => setAnmeldung('')}
+                  className={`flex-1 py-2 rounded-lg border text-sm font-medium ${anmeldung === '' ? 'bg-gray-600 text-white border-gray-600' : 'border-gray-300 text-gray-700'}`}>
+                  ❔ {t('form.anmeldungSkip')}
+                </button>
+              </div>
+              <p className="text-xs text-gray-400">{t('form.anmeldungHint')}</p>
             </div>
 
             <label className="flex items-center gap-2 text-sm text-gray-700">
