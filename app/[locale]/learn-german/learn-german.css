@@ -100,22 +100,49 @@
 .lg-level-pill--coming { background: color-mix(in oklch, var(--brand) 12%, transparent); color: var(--brand); }
 .lg-level-pill--done   { background: color-mix(in oklch, oklch(0.66 0.15 152) 16%, transparent); color: oklch(0.42 0.15 152); }
 
-/* Level badge */
+/* Level badge — minimal, type-driven. The level ID (A1/A2/…/C1) is the
+   focal point; a slim coloured accent stripe at the bottom signals the
+   level's tier without the previous childish gradient + emoji combo.
+   Monochrome card, brand-tinted text, accent stripe per level. */
 .lg-level-badge {
   width: 64px; height: 64px;
   display: grid; place-items: center;
   border-radius: var(--r-md);
-  color: #fff;
+  border: 1px solid var(--line);
+  background: var(--bg-elev);
+  color: var(--ink);
   position: relative;
   flex: none;
+  overflow: hidden;
 }
-.lg-level-badge-id { font-size: 22px; font-weight: 900; letter-spacing: -0.02em; line-height: 1; }
-.lg-level-badge-emoji { position: absolute; bottom: -6px; right: -6px; font-size: 22px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2)); }
-.lg-level--a1 { background: linear-gradient(135deg, oklch(0.66 0.16 152) 0%, oklch(0.55 0.16 152) 100%); }
-.lg-level--a2 { background: linear-gradient(135deg, oklch(0.62 0.16 200) 0%, oklch(0.50 0.16 200) 100%); }
-.lg-level--b1 { background: linear-gradient(135deg, oklch(0.62 0.17 35) 0%, oklch(0.52 0.17 35) 100%); }
-.lg-level--b2 { background: linear-gradient(135deg, oklch(0.66 0.14 75) 0%, oklch(0.55 0.14 75) 100%); }
-.lg-level--c1 { background: linear-gradient(135deg, oklch(0.55 0.17 320) 0%, oklch(0.45 0.17 320) 100%); }
+.lg-level-badge-id {
+  font-family: var(--font-display, inherit);
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+/* Hide the old emoji corner — kept in JSX for backwards compat but
+   now hidden visually. The level ID alone carries the meaning. */
+.lg-level-badge-emoji { display: none; }
+/* Slim coloured accent stripe at the bottom — the only chromatic cue. */
+.lg-level-badge::after {
+  content: "";
+  position: absolute;
+  inset-inline-start: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--lg-accent, var(--brand));
+  opacity: 0.85;
+}
+.lg-level--a1 { --lg-accent: oklch(0.66 0.16 152); }  /* green  — beginner */
+.lg-level--a2 { --lg-accent: oklch(0.62 0.16 200); }  /* teal */
+.lg-level--b1 { --lg-accent: oklch(0.62 0.17 35); }   /* orange */
+.lg-level--b2 { --lg-accent: oklch(0.66 0.14 75); }   /* gold */
+.lg-level--c1 { --lg-accent: oklch(0.55 0.17 320); }  /* violet — advanced */
 
 .lg-level-title { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
 .lg-level-desc { font-size: 13.5px; color: var(--ink-soft); line-height: 1.5; margin: 0; }
@@ -271,7 +298,8 @@
   .lg-section-title { font-size: 16px; margin-bottom: 16px; }
   .lg-level-card { padding: 16px; }
   .lg-level-badge { width: 52px; height: 52px; }
-  .lg-level-badge-id { font-size: 18px; }
+  .lg-level-badge-id { font-size: 21px; }
+  .lg-level-badge::after { width: 22px; height: 2px; bottom: 5px; }
   .lg-lessons-progress { padding: 16px; }
   .lg-lesson-row { padding: 12px 14px; grid-template-columns: 36px 1fr auto; }
   .lg-lesson-num { width: 32px; height: 32px; font-size: 13px; }
