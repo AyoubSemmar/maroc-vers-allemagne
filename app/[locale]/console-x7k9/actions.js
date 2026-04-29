@@ -212,7 +212,13 @@ export async function addListing(formData) {
 
   const adminUserId = process.env.ADMIN_LISTING_USER_ID || null
 
-  await db.from('listings').insert([{
+  // Build the row and only include the new columns if they have a value.
+  // Defensive: if the SQL migration for with_anmeldung or gender_target
+  // hasn't been run yet in this Supabase project, sending those keys
+  // makes Postgres reject the whole INSERT with "column does not exist".
+  // Skipping null values lets the action keep working on a DB that's
+  // a migration behind, while still saving the value when set.
+  const row = {
     user_id: adminUserId,
     title,
     description,
@@ -220,13 +226,19 @@ export async function addListing(formData) {
     type,
     price: priceRaw ? Number(priceRaw) : null,
     whatsapp,
-    with_anmeldung,
-    gender_target,
     image_url: imageUrls[0] || '',
     images: imageUrls,
     available: true,
     expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days
-  }])
+  }
+  if (with_anmeldung !== null) row.with_anmeldung = with_anmeldung
+  if (gender_target  !== null) row.gender_target  = gender_target
+
+  const { error } = await db.from('listings').insert([row])
+  if (error) {
+    console.error('[admin/addListing] insert failed:', error)
+    throw new Error(`Failed to publish listing: ${error.message}`)
+  }
 
   revalidatePath('/console-x7k9/content')
   revalidatePath('/listings')
