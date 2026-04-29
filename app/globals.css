@@ -212,11 +212,14 @@ html[data-theme="dark"] {
 }
 html[data-theme="dark"] body { background: var(--background); color: var(--foreground); }
 
-/* Surfaces */
-html[data-theme="dark"] .bg-white        { background-color: oklch(0.22 0.014 50) !important; }
-html[data-theme="dark"] .bg-gray-50      { background-color: oklch(0.19 0.012 50) !important; }
-html[data-theme="dark"] .bg-gray-100     { background-color: oklch(0.24 0.014 50) !important; }
-html[data-theme="dark"] .bg-gray-200     { background-color: oklch(0.28 0.012 50) !important; }
+/* Surfaces — hue 260 matches the navy --bg / --bg-elev / --bg-warm
+   variables. Previous values used hue 50 (brown/tan) which clashed
+   with the rest of dark mode and made article + listing pages read
+   "warm brown" instead of the brand navy. */
+html[data-theme="dark"] .bg-white        { background-color: oklch(0.22 0.014 260) !important; }
+html[data-theme="dark"] .bg-gray-50      { background-color: oklch(0.19 0.012 260) !important; }
+html[data-theme="dark"] .bg-gray-100     { background-color: oklch(0.24 0.014 260) !important; }
+html[data-theme="dark"] .bg-gray-200     { background-color: oklch(0.28 0.012 260) !important; }
 
 /* Text */
 html[data-theme="dark"] .text-gray-900   { color: oklch(0.96 0.012 85) !important; }
