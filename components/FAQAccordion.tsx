@@ -1,17 +1,19 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 type FAQ = { q: string; a: string }
 
 export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
+  const t = useTranslations('articles.faq')
   const [open, setOpen] = useState<number | null>(null)
 
   if (!faqs || faqs.length === 0) return null
 
   return (
     <div className="mt-12 border-t border-gray-200 pt-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-6">الأسئلة الشائعة</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-6">{t('title')}</h2>
       <div className="flex flex-col gap-3">
         {faqs.map((faq, i) => (
           <div key={i} className="border border-gray-200 rounded-xl overflow-hidden">

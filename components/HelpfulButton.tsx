@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 // Posts the vote to /api/articles/helpful — the server route owns the
 // service_role write so the public anon key never touches the articles
@@ -16,6 +17,7 @@ export default function HelpfulButton({
   initialYes: number
   initialNo: number
 }) {
+  const t = useTranslations('articles.helpful')
   const [yes, setYes] = useState(initialYes)
   const [no, setNo] = useState(initialNo)
   const [voted, setVoted] = useState<'yes' | 'no' | null>(null)
@@ -43,7 +45,7 @@ export default function HelpfulButton({
 
   return (
     <div className="mt-12 border-t border-gray-200 pt-8 text-center">
-      <p className="text-gray-600 font-medium mb-4">هل كان هذا المقال مفيداً؟</p>
+      <p className="text-gray-600 font-medium mb-4">{t('question')}</p>
       <div className="flex justify-center gap-4">
         <button
           onClick={() => vote('yes')}
@@ -54,7 +56,7 @@ export default function HelpfulButton({
               : 'border-gray-300 text-gray-700 hover:border-green-500 hover:text-green-700'
             } disabled:cursor-default`}
         >
-          👍 نعم {yes > 0 && <span className="bg-white/30 rounded-full px-2">{yes}</span>}
+          👍 {t('yes')} {yes > 0 && <span className="bg-white/30 rounded-full px-2">{yes}</span>}
         </button>
         <button
           onClick={() => vote('no')}
@@ -65,11 +67,11 @@ export default function HelpfulButton({
               : 'border-gray-300 text-gray-700 hover:border-red-400 hover:text-red-500'
             } disabled:cursor-default`}
         >
-          👎 لا {no > 0 && <span className="bg-white/30 rounded-full px-2">{no}</span>}
+          👎 {t('no')} {no > 0 && <span className="bg-white/30 rounded-full px-2">{no}</span>}
         </button>
       </div>
       {voted && (
-        <p className="text-sm text-gray-400 mt-4">شكراً على رأيك! 🙏</p>
+        <p className="text-sm text-gray-400 mt-4">{t('thanks')}</p>
       )}
     </div>
   )

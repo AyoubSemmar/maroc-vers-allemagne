@@ -1,8 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 
 export default function ShareButtons({ title }: { title: string }) {
+  const t = useTranslations('articles.share')
   const [copied, setCopied] = useState(false)
 
   function getUrl() {
@@ -32,28 +34,28 @@ export default function ShareButtons({ title }: { title: string }) {
 
   return (
     <div className="mt-8 pt-6 border-t border-gray-200">
-      <p className="text-sm font-medium text-gray-700 mb-3">شارك مع أصدقائك</p>
+      <p className="text-sm font-medium text-gray-700 mb-3">{t('title')}</p>
       <div className="flex flex-wrap gap-2">
 
         <button
           onClick={() => share('whatsapp')}
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-[#25D366] text-white hover:opacity-90 transition-opacity"
         >
-          <WhatsAppIcon /> واتساب
+          <WhatsAppIcon /> {t('whatsapp')}
         </button>
 
         <button
           onClick={() => share('facebook')}
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-[#1877F2] text-white hover:opacity-90 transition-opacity"
         >
-          <FacebookIcon /> فيسبوك
+          <FacebookIcon /> {t('facebook')}
         </button>
 
         <button
           onClick={() => share('telegram')}
           className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-[#229ED9] text-white hover:opacity-90 transition-opacity"
         >
-          <TelegramIcon /> تيليغرام
+          <TelegramIcon /> {t('telegram')}
         </button>
 
         <button
@@ -69,7 +71,7 @@ export default function ShareButtons({ title }: { title: string }) {
             ${copied ? 'bg-green-50 border-green-300 text-green-700' : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'}`}
         >
           <LinkIcon />
-          {copied ? 'تم النسخ ✓' : 'نسخ الرابط'}
+          {copied ? t('copied') : t('copyLink')}
         </button>
 
       </div>
