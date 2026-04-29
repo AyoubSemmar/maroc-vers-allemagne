@@ -59,9 +59,20 @@ export default function AdminAiArticleGenerator() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}),
       })
-      const data = await resp.json()
-      if (!resp.ok) {
-        setError(data?.error || `Generation failed (${resp.status})`)
+      // Read as text first; the server *should* return JSON, but on a
+      // platform-level timeout/crash Vercel returns its own HTML page —
+      // parsing that as JSON gives "Unexpected token 'A'…" which is
+      // useless to the admin. Surface a real message instead.
+      const raw = await resp.text()
+      let data: any = null
+      try { data = raw ? JSON.parse(raw) : null } catch { /* HTML error page */ }
+      if (!resp.ok || !data) {
+        const msg =
+          data?.error ||
+          (resp.status === 504
+            ? 'The generator timed out (server limit). Try again — the second run is usually faster.'
+            : `Generation failed (HTTP ${resp.status}). The server returned a non-JSON response.`)
+        setError(msg)
         return
       }
       setDraft(data.draft)

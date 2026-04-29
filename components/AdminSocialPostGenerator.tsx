@@ -485,9 +485,18 @@ export default function AdminSocialPostGenerator() {
           templateType: templateType === 'random' ? undefined : templateType,
         }),
       })
-      const data = await resp.json()
-      if (!resp.ok) {
-        setError(data?.error || `Generation failed (${resp.status})`)
+      // Defensive parse — see AdminAiArticleGenerator for why we don't
+      // call resp.json() directly.
+      const raw = await resp.text()
+      let data: any = null
+      try { data = raw ? JSON.parse(raw) : null } catch { /* HTML error page */ }
+      if (!resp.ok || !data) {
+        const msg =
+          data?.error ||
+          (resp.status === 504
+            ? 'The generator timed out. Try again.'
+            : `Generation failed (HTTP ${resp.status}).`)
+        setError(msg)
         return
       }
       setDraft(data.draft)
