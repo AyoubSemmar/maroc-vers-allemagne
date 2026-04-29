@@ -8,6 +8,7 @@ import { addArticle, addListing, deleteArticle, deleteListing } from '../actions
 import ImageUploader from '@/components/ImageUploader'
 import FAQEditor from '@/components/FAQEditor'
 import AdminAiArticleGenerator from '@/components/AdminAiArticleGenerator'
+import AdminSocialPostGenerator from '@/components/AdminSocialPostGenerator'
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -82,6 +83,7 @@ export default async function AdminContentPage({
       )}
 
       <AdminAiArticleGenerator />
+      <AdminSocialPostGenerator />
 
       <div className="adm-grid-2">
         {/* Add article form */}
