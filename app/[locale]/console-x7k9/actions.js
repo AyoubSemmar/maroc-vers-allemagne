@@ -187,6 +187,13 @@ export async function addListing(formData) {
     anmeldungRaw === 'true'  ? true  :
     anmeldungRaw === 'false' ? false :
                                null
+  // Gender preference — male/female/any (null = unspecified). Validated
+  // here AND at the DB layer (check constraint in the migration).
+  const genderRaw = (formData.get('gender_target') || '').toString().trim()
+  const gender_target =
+    genderRaw === 'male' || genderRaw === 'female' || genderRaw === 'any'
+      ? genderRaw
+      : null
 
   if (!title || !description || !city || !whatsappRaw) {
     redirect('/console-x7k9/content?err=missing')
@@ -214,6 +221,7 @@ export async function addListing(formData) {
     price: priceRaw ? Number(priceRaw) : null,
     whatsapp,
     with_anmeldung,
+    gender_target,
     image_url: imageUrls[0] || '',
     images: imageUrls,
     available: true,

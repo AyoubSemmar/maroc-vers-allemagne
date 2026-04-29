@@ -55,6 +55,12 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
                 {listing.with_anmeldung === false && (
                   <span className="text-xs font-medium bg-red-50 text-red-700 px-2 py-1 rounded-full">❌ {t('withoutAnmeldung')}</span>
                 )}
+                {listing.gender_target === 'male' && (
+                  <span className="text-xs font-medium bg-blue-50 text-blue-700 px-2 py-1 rounded-full">👨 {t('genderMaleBadge')}</span>
+                )}
+                {listing.gender_target === 'female' && (
+                  <span className="text-xs font-medium bg-pink-50 text-pink-700 px-2 py-1 rounded-full">👩 {t('genderFemaleBadge')}</span>
+                )}
                 {listing.price && (
                   <span className="text-sm font-bold text-white bg-green-600 px-3 py-1 rounded-full">{listing.price} {t('priceSuffix')}</span>
                 )}

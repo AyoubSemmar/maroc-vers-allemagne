@@ -171,6 +171,29 @@ export default async function AdminContentPage({
           </div>
 
           <div>
+            <label className="adm-label">Tenant gender preference</label>
+            <div style={{ display: 'flex', gap: 16, fontSize: 13, marginTop: 6 }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="gender_target" value="any" defaultChecked /> 🧑‍🤝‍🧑 Any (mixed)
+              </label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="gender_target" value="male" /> 👨 Men only
+              </label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="gender_target" value="female" /> 👩 Women only
+              </label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="gender_target" value="" /> ❔ Not specified
+              </label>
+            </div>
+            <p style={{ fontSize: 11, color: 'var(--adm-ink-mute)', marginTop: 4 }}>
+              Frauen-WGs and Männer-WGs are common in Germany — surface this
+              up-front so tenants don&rsquo;t waste time on a place that can&rsquo;t
+              accept them.
+            </p>
+          </div>
+
+          <div>
             <label className="adm-label">Images (you can select multiple — first one becomes the cover)</label>
             <input name="images" type="file" accept="image/*" multiple className="adm-input" />
           </div>

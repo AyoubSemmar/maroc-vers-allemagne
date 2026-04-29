@@ -27,6 +27,10 @@ export default function NewListingPage() {
   // allows tenants to register their residence there. Important
   // signal for the platform's audience (visa-bound migrants).
   const [anmeldung, setAnmeldung] = useState<'true' | 'false' | ''>('')
+  // Gender preference: 'any' = both, 'male' = men only, 'female' = women
+  // only, '' = unspecified. Default 'any' since the typical listing
+  // welcomes anyone.
+  const [genderTarget, setGenderTarget] = useState<'male' | 'female' | 'any' | ''>('any')
   const supabase = createClient()
   const router = useRouter()
 
@@ -82,6 +86,7 @@ export default function NewListingPage() {
       price: price ? Number(price) : null,
       whatsapp: profile.whatsapp,
       with_anmeldung: anmeldung === 'true' ? true : anmeldung === 'false' ? false : null,
+      gender_target: genderTarget || null,
       image_url: imageUrls[0] || '',
       images: imageUrls,
       available: true,
@@ -173,6 +178,26 @@ export default function NewListingPage() {
                 </button>
               </div>
               <p className="text-xs text-gray-400">{t('form.anmeldungHint')}</p>
+            </div>
+
+            {/* Gender target — mixed / men only / women only */}
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-gray-500">{t('form.genderLabel')}</label>
+              <div className="flex gap-3 flex-wrap">
+                <button type="button" onClick={() => setGenderTarget('any')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'any' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>
+                  🧑‍🤝‍🧑 {t('form.genderAny')}
+                </button>
+                <button type="button" onClick={() => setGenderTarget('male')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'male' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 text-gray-700'}`}>
+                  👨 {t('form.genderMale')}
+                </button>
+                <button type="button" onClick={() => setGenderTarget('female')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'female' ? 'bg-pink-600 text-white border-pink-600' : 'border-gray-300 text-gray-700'}`}>
+                  👩 {t('form.genderFemale')}
+                </button>
+              </div>
+              <p className="text-xs text-gray-400">{t('form.genderHint')}</p>
             </div>
 
             {/* Image Upload */}

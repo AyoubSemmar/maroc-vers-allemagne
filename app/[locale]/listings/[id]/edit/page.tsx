@@ -26,6 +26,7 @@ export default function EditListingPage() {
   // Tri-state Anmeldung — '' for null/unspecified (the default for
   // legacy listings that pre-date this field).
   const [anmeldung, setAnmeldung] = useState<'true' | 'false' | ''>('')
+  const [genderTarget, setGenderTarget] = useState<'male' | 'female' | 'any' | ''>('any')
   const [existingImages, setExistingImages] = useState<string[]>([])
   const [newImageFiles, setNewImageFiles] = useState<File[]>([])
   const [newPreviews, setNewPreviews] = useState<string[]>([])
@@ -63,6 +64,12 @@ export default function EditListingPage() {
         listing.with_anmeldung === true  ? 'true'  :
         listing.with_anmeldung === false ? 'false' :
                                            ''
+      )
+      setGenderTarget(
+        listing.gender_target === 'male'   ? 'male'   :
+        listing.gender_target === 'female' ? 'female' :
+        listing.gender_target === 'any'    ? 'any'    :
+                                             ''
       )
       const imgs = listing.images?.length ? listing.images : listing.image_url ? [listing.image_url] : []
       setExistingImages(imgs)
@@ -117,6 +124,7 @@ export default function EditListingPage() {
         price: price ? Number(price) : null,
         available,
         with_anmeldung: anmeldung === 'true' ? true : anmeldung === 'false' ? false : null,
+        gender_target: genderTarget || null,
         image_url: finalImages[0] || '',
         images: finalImages,
       })
@@ -223,6 +231,26 @@ export default function EditListingPage() {
                 </button>
               </div>
               <p className="text-xs text-gray-400">{t('form.anmeldungHint')}</p>
+            </div>
+
+            {/* Gender target — same UX as the create form */}
+            <div className="flex flex-col gap-2">
+              <label className="text-sm text-gray-500">{t('form.genderLabel')}</label>
+              <div className="flex gap-3 flex-wrap">
+                <button type="button" onClick={() => setGenderTarget('any')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'any' ? 'bg-green-700 text-white border-green-700' : 'border-gray-300 text-gray-700'}`}>
+                  🧑‍🤝‍🧑 {t('form.genderAny')}
+                </button>
+                <button type="button" onClick={() => setGenderTarget('male')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'male' ? 'bg-blue-600 text-white border-blue-600' : 'border-gray-300 text-gray-700'}`}>
+                  👨 {t('form.genderMale')}
+                </button>
+                <button type="button" onClick={() => setGenderTarget('female')}
+                  className={`flex-1 min-w-[90px] py-2 rounded-lg border text-sm font-medium ${genderTarget === 'female' ? 'bg-pink-600 text-white border-pink-600' : 'border-gray-300 text-gray-700'}`}>
+                  👩 {t('form.genderFemale')}
+                </button>
+              </div>
+              <p className="text-xs text-gray-400">{t('form.genderHint')}</p>
             </div>
 
             <label className="flex items-center gap-2 text-sm text-gray-700">

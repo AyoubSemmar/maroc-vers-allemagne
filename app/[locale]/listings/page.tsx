@@ -36,7 +36,7 @@ export default async function ListingsPage({
   // Only the grid card fields — detail page fetches the full row separately.
   let query = supabase
     .from('listings')
-    .select('id, title, description, image_url, type, city, price, with_anmeldung, expires_at, created_at')
+    .select('id, title, description, image_url, type, city, price, with_anmeldung, gender_target, expires_at, created_at')
     .or(`expires_at.gt.${now},expires_at.is.null`)
     .order('created_at', { ascending: false })
   if (city && city !== '__ALL__') query = query.eq('city', city)
@@ -94,6 +94,12 @@ export default async function ListingsPage({
                   )}
                   {listing.with_anmeldung === false && (
                     <span className="text-xs bg-red-50 text-red-700 px-2 py-1 rounded-full">❌ {t('withoutAnmeldung')}</span>
+                  )}
+                  {listing.gender_target === 'male' && (
+                    <span className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded-full">👨 {t('genderMaleBadge')}</span>
+                  )}
+                  {listing.gender_target === 'female' && (
+                    <span className="text-xs bg-pink-50 text-pink-700 px-2 py-1 rounded-full">👩 {t('genderFemaleBadge')}</span>
                   )}
                 </div>
                 <h3 className="font-semibold text-gray-900">{listing.title}</h3>
