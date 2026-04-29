@@ -20,7 +20,7 @@ interface StaticPageProps {
 export default function StaticPage({ title, subtitle, children }: StaticPageProps) {
   const locale = useLocale() as AppLocale
   return (
-    <div dir={dirFor(locale)} className="rihla-static">
+    <div dir={dirFor(locale)} className="rihla rihla-static">
       <header className="rihla-static-hero">
         <div className="wrap">
           <h1 className="rihla-static-title">{title}</h1>
