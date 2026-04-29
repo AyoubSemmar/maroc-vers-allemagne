@@ -4749,3 +4749,85 @@ body { line-height: 1.65; }
   .pager-btn { padding: 7px 10px; font-size: 12.5px; }
   .pager-num { padding: 7px 9px; min-width: 32px; font-size: 12.5px; }
 }
+
+/* ─── STATIC PAGES (about / contact / housing / useful-links) ────
+   Editorial wrapper used by all static-content pages. Brand-aligned:
+   warm hero, Fraunces display heading, soft body text via CSS vars
+   so both light and dark mode work without per-class overrides. */
+.rihla-static-hero {
+  background: var(--bg-warm);
+  border-block-end: 1px solid var(--line);
+  padding: 64px 0 52px;
+  text-align: center;
+}
+.rihla-static-title {
+  font-family: var(--font-display, inherit);
+  font-size: clamp(32px, 4.2vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.1;
+}
+.rihla-static-sub {
+  font-size: 16px;
+  line-height: 1.55;
+  color: color-mix(in oklch, var(--ink) 65%, transparent);
+  max-width: 620px;
+  margin: 14px auto 0;
+}
+.rihla-static-body {
+  padding: 56px 0 96px;
+  background: var(--bg);
+}
+.rihla-static-body .wrap {
+  max-width: 720px;
+}
+.rihla-static-section {
+  margin-block-end: 28px;
+}
+.rihla-static-h2 {
+  font-family: var(--font-display, inherit);
+  font-size: clamp(20px, 2.4vw, 26px);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+  margin: 36px 0 14px;
+  line-height: 1.25;
+}
+.rihla-static-section:first-child .rihla-static-h2 { margin-block-start: 0; }
+.rihla-static-text {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: color-mix(in oklch, var(--ink) 78%, transparent);
+  margin: 0 0 14px;
+}
+.rihla-static-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rihla-static-list li {
+  position: relative;
+  padding-inline-start: 22px;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: color-mix(in oklch, var(--ink) 78%, transparent);
+}
+.rihla-static-list li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 6px;
+  top: 0.65em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--brand);
+}
+@media (max-width: 640px) {
+  .rihla-static-hero { padding: 44px 0 36px; }
+  .rihla-static-body { padding: 40px 0 64px; }
+}
