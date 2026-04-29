@@ -383,9 +383,27 @@ export default function AdminAiArticleGenerator() {
               </div>
             )}
             <div style={{ flex: 1, minWidth: 220 }}>
-              <div style={{ fontSize: 12, color: 'var(--adm-ink-mute)' }}>Category</div>
-              <div style={{ fontSize: 15, fontWeight: 600 }}>{draft.category}</div>
-              <div style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 6 }}>Date</div>
+              <div style={{ fontSize: 12, color: 'var(--adm-ink-mute)' }}>Category (editable before publishing)</div>
+              <select
+                value={draft.category}
+                onChange={(e) => setDraft(d => d ? { ...d, category: e.target.value } : d)}
+                style={{
+                  fontSize: 14, fontWeight: 600, padding: '6px 10px', borderRadius: 8,
+                  border: '1px solid #d4d4d8', background: 'white', minWidth: 220,
+                }}
+              >
+                {/* Pull from the canonical 7 + always include the current
+                    value (in case the API returned something off-list) so
+                    the admin sees what was generated and can correct it. */}
+                {Array.from(new Set([
+                  draft.category,
+                  'البنوك', 'شرائح الاتصال', 'السكن',
+                  'الجامعات', 'العمل', 'Ausbildung', 'التأشيرة والأوراق',
+                ])).map(c => (
+                  <option key={c} value={c}>{c}</option>
+                ))}
+              </select>
+              <div style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 8 }}>Date</div>
               <div style={{ fontSize: 14 }}>{draft.date}</div>
               <div style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 6 }}>Image prompt</div>
               <div style={{ fontSize: 12, fontFamily: 'monospace', color: '#374151' }}>{draft.image_prompt_used}</div>

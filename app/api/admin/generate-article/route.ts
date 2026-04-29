@@ -88,6 +88,8 @@ function buildPrompt(category: string, categoryEn: string, existingTitles: strin
 
 Category: ${category} (${categoryEn})
 
+⚠ CRITICAL: The article's TOPIC must clearly belong to this category. If the category is "السكن" (housing), do NOT write about taxes or jobs — even tangentially. Stay tightly on-topic so admins filtering by category get relevant results. The category in the output is fixed by the system; your job is to make sure the CONTENT matches it.
+
 Audience: Moroccan readers (Darija/Arabic-first), often young, planning Ausbildung, university, work, or family migration to Germany. They care about practical steps, real costs, paperwork, deadlines, and avoiding scams.
 
 Quality bar:

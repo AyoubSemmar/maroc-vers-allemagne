@@ -35,6 +35,20 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Draft is missing required fields.' }, { status: 400 })
     }
 
+    // Reject categories outside the canonical list. Otherwise an off-list
+    // value (AI hallucination, manual edit, copy-paste accident) would
+    // leak into the DB and create a phantom filter pill on /articles.
+    const VALID_CATEGORIES = [
+      'البنوك', 'شرائح الاتصال', 'السكن',
+      'الجامعات', 'العمل', 'Ausbildung', 'التأشيرة والأوراق',
+    ]
+    if (!VALID_CATEGORIES.includes(d.category)) {
+      return NextResponse.json(
+        { error: `Category "${d.category}" is not in the canonical list. Edit the category in the preview pane and try again.` },
+        { status: 400 },
+      )
+    }
+
     const supabase = createClient(
       process.env.NEXT_PUBLIC_SUPABASE_URL!,
       process.env.SUPABASE_SERVICE_ROLE_KEY!,
