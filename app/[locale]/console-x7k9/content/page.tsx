@@ -23,10 +23,10 @@ export default async function AdminContentPage({
   searchParams,
 }: {
   params: Promise<{ locale: AppLocale }>
-  searchParams: Promise<{ err?: string }>
+  searchParams: Promise<{ err?: string; ok?: string }>
 }) {
   const { locale } = await params
-  const { err } = await searchParams
+  const { err, ok } = await searchParams
   const t = await getTranslations({ locale, namespace: 'admin' })
   const tCat = await getTranslations({ locale, namespace: 'articles.cat' })
 
@@ -62,6 +62,21 @@ export default async function AdminContentPage({
         }}>
           <strong>⚠ Publish failed</strong>
           <div style={{ marginTop: 6 }}>{err}</div>
+        </div>
+      )}
+
+      {ok && (
+        <div style={{
+          background: '#dcfce7',
+          border: '1px solid #86efac',
+          color: '#14532d',
+          borderRadius: 12,
+          padding: '12px 16px',
+          marginTop: 16,
+          fontSize: 14,
+        }}>
+          <strong>✓ {ok === 'listing' ? 'Listing published' : 'Saved'}</strong>
+          <div style={{ marginTop: 6 }}>Scroll down to see it in the list.</div>
         </div>
       )}
 
@@ -158,11 +173,11 @@ export default async function AdminContentPage({
           </div>
 
           <div>
-            <label className="adm-label">WhatsApp number (with country code, e.g. +212600000000)</label>
+            <label className="adm-label">WhatsApp number (with country code — e.g. +212600000000 or +491701234567)</label>
             <input
               name="whatsapp"
               className="adm-input"
-              placeholder="+212 600 00 00 00 — owner / agent / contact for this listing"
+              placeholder="+212 6XX XX XX XX  or  +49 1XX XXXXXXX"
               required
               dir="ltr"
             />

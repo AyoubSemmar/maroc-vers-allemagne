@@ -253,7 +253,7 @@ export async function addListing(formData) {
 
     revalidatePath('/console-x7k9/content')
     revalidatePath('/listings')
-    redirect('/console-x7k9/content')
+    redirect('/console-x7k9/content?ok=listing')
   } catch (e) {
     // Next.js redirect() throws a special error with digest starting
     // with NEXT_REDIRECT — those are control flow, not failures, so we
