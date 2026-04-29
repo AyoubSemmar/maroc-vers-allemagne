@@ -171,82 +171,98 @@ export async function addListing(formData) {
   const cookieStore = await cookies()
   if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/console-x7k9')
 
-  const db = adminClient()
+  // Outer try/catch surfaces ANY pre-insert error (uploadImage throw,
+  // adminClient init failure, formData parsing, env var missing, etc.)
+  // to the page banner instead of letting it hit the generic Next.js
+  // error boundary ("Something went wrong"), which hides the cause.
+  // We re-throw NEXT_REDIRECT digests so legitimate redirect() calls
+  // (success path, validation failures) keep working.
+  try {
+    const db = adminClient()
 
-  const title       = (formData.get('title')       || '').toString().trim()
-  const description = (formData.get('description') || '').toString().trim()
-  const city        = (formData.get('city')        || '').toString().trim()
-  const type        = (formData.get('type')        || 'شقة').toString().trim()
-  const priceRaw    = (formData.get('price')       || '').toString().trim()
-  const whatsappRaw = (formData.get('whatsapp')    || '').toString().trim()
-  // Anmeldung is a tri-state in storage (true / false / null = unknown)
-  // but the form is a tri-state radio with explicit yes/no/skip options
-  // so admin / power users can leave it blank if they don't know.
-  const anmeldungRaw = (formData.get('with_anmeldung') || '').toString().trim()
-  const with_anmeldung =
-    anmeldungRaw === 'true'  ? true  :
-    anmeldungRaw === 'false' ? false :
-                               null
-  // Gender preference — male/female/any (null = unspecified). Validated
-  // here AND at the DB layer (check constraint in the migration).
-  const genderRaw = (formData.get('gender_target') || '').toString().trim()
-  const gender_target =
-    genderRaw === 'male' || genderRaw === 'female' || genderRaw === 'any'
-      ? genderRaw
-      : null
+    const title       = (formData.get('title')       || '').toString().trim()
+    const description = (formData.get('description') || '').toString().trim()
+    const city        = (formData.get('city')        || '').toString().trim()
+    const type        = (formData.get('type')        || 'شقة').toString().trim()
+    const priceRaw    = (formData.get('price')       || '').toString().trim()
+    const whatsappRaw = (formData.get('whatsapp')    || '').toString().trim()
+    // Anmeldung is a tri-state in storage (true / false / null = unknown)
+    // but the form is a tri-state radio with explicit yes/no/skip options
+    // so admin / power users can leave it blank if they don't know.
+    const anmeldungRaw = (formData.get('with_anmeldung') || '').toString().trim()
+    const with_anmeldung =
+      anmeldungRaw === 'true'  ? true  :
+      anmeldungRaw === 'false' ? false :
+                                 null
+    // Gender preference — male/female/any (null = unspecified). Validated
+    // here AND at the DB layer (check constraint in the migration).
+    const genderRaw = (formData.get('gender_target') || '').toString().trim()
+    const gender_target =
+      genderRaw === 'male' || genderRaw === 'female' || genderRaw === 'any'
+        ? genderRaw
+        : null
 
-  if (!title || !description || !city || !whatsappRaw) {
-    redirect('/console-x7k9/content?err=missing')
-  }
+    if (!title || !description || !city || !whatsappRaw) {
+      redirect('/console-x7k9/content?err=missing')
+    }
 
-  // Normalise WhatsApp: strip everything except digits + leading +.
-  const whatsapp = whatsappRaw.replace(/[^\d+]/g, '')
+    // Normalise WhatsApp: strip everything except digits + leading +.
+    const whatsapp = whatsappRaw.replace(/[^\d+]/g, '')
 
-  // Upload images (multiple supported).
-  const imageUrls = []
-  const files = formData.getAll('images').filter((f) => f && typeof f !== 'string' && f.size > 0)
-  for (const file of files) {
-    const url = await uploadImage(file)
-    if (url) imageUrls.push(url)
-  }
+    // Upload images (multiple supported).
+    const imageUrls = []
+    const files = formData.getAll('images').filter((f) => f && typeof f !== 'string' && f.size > 0)
+    for (const file of files) {
+      const url = await uploadImage(file)
+      if (url) imageUrls.push(url)
+    }
 
-  const adminUserId = process.env.ADMIN_LISTING_USER_ID || null
+    const adminUserId = process.env.ADMIN_LISTING_USER_ID || null
 
-  // Build the row and only include the new columns if they have a value.
-  // Defensive: if the SQL migration for with_anmeldung or gender_target
-  // hasn't been run yet in this Supabase project, sending those keys
-  // makes Postgres reject the whole INSERT with "column does not exist".
-  // Skipping null values lets the action keep working on a DB that's
-  // a migration behind, while still saving the value when set.
-  const row = {
-    user_id: adminUserId,
-    title,
-    description,
-    city,
-    type,
-    price: priceRaw ? Number(priceRaw) : null,
-    whatsapp,
-    image_url: imageUrls[0] || '',
-    images: imageUrls,
-    available: true,
-    expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days
-  }
-  if (with_anmeldung !== null) row.with_anmeldung = with_anmeldung
-  if (gender_target  !== null) row.gender_target  = gender_target
+    // Build the row and only include the new columns if they have a value.
+    // Defensive: if the SQL migration for with_anmeldung or gender_target
+    // hasn't been run yet in this Supabase project, sending those keys
+    // makes Postgres reject the whole INSERT with "column does not exist".
+    // Skipping null values lets the action keep working on a DB that's
+    // a migration behind, while still saving the value when set.
+    const row = {
+      user_id: adminUserId,
+      title,
+      description,
+      city,
+      type,
+      price: priceRaw ? Number(priceRaw) : null,
+      whatsapp,
+      image_url: imageUrls[0] || '',
+      images: imageUrls,
+      available: true,
+      expires_at: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000).toISOString(), // 60 days
+    }
+    if (with_anmeldung !== null) row.with_anmeldung = with_anmeldung
+    if (gender_target  !== null) row.gender_target  = gender_target
 
-  const { error } = await db.from('listings').insert([row])
-  if (error) {
-    console.error('[admin/addListing] insert failed:', error)
-    // Throwing hits the error boundary (generic "Something went wrong"
-    // page) and hides the actual reason. Redirect with the message
-    // in a query param so the form page can render it as a banner.
-    const msg = `${error.message}${error.details ? ' — ' + error.details : ''}${error.hint ? ' (hint: ' + error.hint + ')' : ''}`
+    const { error } = await db.from('listings').insert([row])
+    if (error) {
+      console.error('[admin/addListing] insert failed:', error)
+      // Throwing hits the error boundary (generic "Something went wrong"
+      // page) and hides the actual reason. Redirect with the message
+      // in a query param so the form page can render it as a banner.
+      const msg = `${error.message}${error.details ? ' — ' + error.details : ''}${error.hint ? ' (hint: ' + error.hint + ')' : ''}`
+      redirect('/console-x7k9/content?err=' + encodeURIComponent(msg))
+    }
+
+    revalidatePath('/console-x7k9/content')
+    revalidatePath('/listings')
+    redirect('/console-x7k9/content')
+  } catch (e) {
+    // Next.js redirect() throws a special error with digest starting
+    // with NEXT_REDIRECT — those are control flow, not failures, so we
+    // re-throw to let the framework handle them.
+    if (e?.digest?.startsWith?.('NEXT_REDIRECT')) throw e
+    console.error('[admin/addListing] uncaught:', e)
+    const msg = e?.message || (typeof e === 'string' ? e : JSON.stringify(e))
     redirect('/console-x7k9/content?err=' + encodeURIComponent(msg))
   }
-
-  revalidatePath('/console-x7k9/content')
-  revalidatePath('/listings')
-  redirect('/console-x7k9/content')
 }
 
 // ─────────────────────────────────────────────────────────────────
