@@ -20,8 +20,13 @@ const categories = [
 
 export default async function AdminContentPage({
   params,
-}: { params: Promise<{ locale: AppLocale }> }) {
+  searchParams,
+}: {
+  params: Promise<{ locale: AppLocale }>
+  searchParams: Promise<{ err?: string }>
+}) {
   const { locale } = await params
+  const { err } = await searchParams
   const t = await getTranslations({ locale, namespace: 'admin' })
   const tCat = await getTranslations({ locale, namespace: 'articles.cat' })
 
@@ -43,6 +48,22 @@ export default async function AdminContentPage({
           <p className="adm-page-sub">Publish blog content and moderate apartment listings posted by the community.</p>
         </div>
       </header>
+
+      {err && (
+        <div style={{
+          background: '#fee2e2',
+          border: '1px solid #fca5a5',
+          color: '#7f1d1d',
+          borderRadius: 12,
+          padding: '12px 16px',
+          marginTop: 16,
+          fontSize: 14,
+          fontFamily: 'monospace',
+        }}>
+          <strong>⚠ Publish failed</strong>
+          <div style={{ marginTop: 6 }}>{err}</div>
+        </div>
+      )}
 
       <div className="adm-grid-2">
         {/* Add article form */}

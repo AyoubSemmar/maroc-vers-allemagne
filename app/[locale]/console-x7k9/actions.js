@@ -237,7 +237,11 @@ export async function addListing(formData) {
   const { error } = await db.from('listings').insert([row])
   if (error) {
     console.error('[admin/addListing] insert failed:', error)
-    throw new Error(`Failed to publish listing: ${error.message}`)
+    // Throwing hits the error boundary (generic "Something went wrong"
+    // page) and hides the actual reason. Redirect with the message
+    // in a query param so the form page can render it as a banner.
+    const msg = `${error.message}${error.details ? ' — ' + error.details : ''}${error.hint ? ' (hint: ' + error.hint + ')' : ''}`
+    redirect('/console-x7k9/content?err=' + encodeURIComponent(msg))
   }
 
   revalidatePath('/console-x7k9/content')
