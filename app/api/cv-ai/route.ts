@@ -1,10 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
-import { checkAndConsume, refund } from '@/lib/entitlements'
+import { checkAndConsume, refund, getStatus } from '@/lib/entitlements'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
+
+// GET — UI calls this on mount to show "X/Y CV improvements remaining
+// today". Same compact shape as /api/enhance-photo so the cv-builder
+// UI can mirror the PhotoEnhancer's quota display logic.
+export async function GET() {
+  const sb = await createServerSupabase()
+  const { data: { user } } = await sb.auth.getUser()
+  if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
+  const status = await getStatus(user.id, 'cv')
+  const isPremium = status.tier === 'premium'
+  const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
+  const dailyRemaining = isPremium ? 0 : ((status as any).dailyRemaining ?? 0)
+  const credits        = (status as any).credits ?? 0
+  return NextResponse.json({
+    tier: status.tier,
+    credits,
+    used: status.used,
+    dailyLimit,
+    dailyRemaining,
+    limit:     isPremium ? status.limit     : dailyLimit + credits,
+    remaining: isPremium ? status.remaining : dailyRemaining + credits,
+  })
+}
 
 // Shape expected from client — mirrors CVData but we only send the textual parts
 type Payload = {
@@ -229,7 +252,24 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    return NextResponse.json({ data: parsed, source: sourceForRefund })
+    // Include the post-consume quota snapshot so the UI can refresh the
+    // "X/Y remaining today" badge without a separate GET round-trip.
+    const status = await getStatus(user.id, 'cv')
+    const isPremium = status.tier === 'premium'
+    const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
+    const dailyRemaining = isPremium ? 0 : ((status as any).dailyRemaining ?? 0)
+    const credits        = (status as any).credits ?? 0
+    return NextResponse.json({
+      data: parsed,
+      source: sourceForRefund,
+      tier: status.tier,
+      credits,
+      used: status.used,
+      dailyLimit,
+      dailyRemaining,
+      limit:     isPremium ? status.limit     : dailyLimit + credits,
+      remaining: isPremium ? status.remaining : dailyRemaining + credits,
+    })
   } catch (e: any) {
     console.error('cv-ai error:', e)
     if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'cv', sourceForRefund)

@@ -28,12 +28,22 @@ function loadSaved(): FormState {
 
 type EntitlementStatus =
   | { tier: 'premium'; limit: number | null; used: number; remaining: number | null }
-  | { tier: 'free'; credits: number; used: number; freeLifetimeAvailable?: boolean }
+  | {
+      tier: 'free'
+      credits: number
+      used: number
+      // Daily quota fields — required for new users to use their 2/day
+      // free allowance. Previously the UI ignored these and gated on
+      // credits alone, which is why fresh accounts saw "out of credits"
+      // even though their daily quota was untouched.
+      dailyLimit: number
+      dailyRemaining: number
+    }
 
 function canGenerate(ent: EntitlementStatus | null): boolean {
   if (!ent) return true
   if (ent.tier === 'premium') return ent.remaining === null || ent.remaining > 0
-  return !!ent.freeLifetimeAvailable || ent.credits > 0
+  return ent.dailyRemaining > 0 || ent.credits > 0
 }
 
 export default function AnschreibenClient() {
@@ -200,19 +210,19 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
     )
   }
 
-  // Free users with a lifetime free try still available
-  if (ent.freeLifetimeAvailable) {
+  // Free users — show daily quota first if any remains today.
+  if (ent.dailyRemaining > 0) {
     return (
       <div style={bannerStyle('free')}>
         <strong>{t('freeTryTitle')}</strong>
         <span style={{ fontSize: 13, color: '#166534' }}>
-          &nbsp;{t('freeTryBody')}
+          &nbsp;{ent.dailyRemaining}/{ent.dailyLimit} {t('freeTryBody')}
         </span>
       </div>
     )
   }
 
-  // Free users with paid credits
+  // Free users with paid credits (daily quota exhausted, falling back to credits)
   if (ent.credits > 0) {
     return (
       <div style={bannerStyle('credits')}>

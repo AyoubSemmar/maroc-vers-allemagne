@@ -1,6 +1,6 @@
 'use client'
 
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { type AppLocale } from '@/i18n/routing'
 import { CVData, TEMPLATES, TemplateId, TemplateMeta } from './types'
@@ -29,6 +29,20 @@ export default function StepPreview({ data, update }: Props) {
   const [translating, setTranslating] = useState(false)
   const [saving, setSaving] = useState(false)
   const [saveMsg, setSaveMsg] = useState('')
+  // CV-AI quota: 2 free improvements per day for free users (matches photo
+  // enhance). Hits /api/cv-ai GET on mount + after every successful POST.
+  const [aiRemaining, setAiRemaining] = useState<number | null>(null)
+  const [aiLimit, setAiLimit] = useState<number | null>(null)
+
+  useEffect(() => {
+    let cancelled = false
+    fetch('/api/cv-ai').then(r => r.ok ? r.json() : null).then(data => {
+      if (cancelled || !data) return
+      if (typeof data.remaining === 'number') setAiRemaining(data.remaining)
+      if (typeof data.limit === 'number')     setAiLimit(data.limit)
+    }).catch(() => {})
+    return () => { cancelled = true }
+  }, [])
 
   // Responsive preview scaling. On mobile, scale the 794px-wide CV template
   // to fit the viewport and set the wrapper height to match the scaled content.
@@ -133,7 +147,12 @@ export default function StepPreview({ data, update }: Props) {
         const err = await res.json().catch(() => ({}))
         throw new Error(err.error || `HTTP ${res.status}`)
       }
-      const { data: g } = await res.json()
+      const json = await res.json()
+      const g = json.data
+      // Refresh the quota counter from the same response so the user sees
+      // their remaining count update without a separate GET.
+      if (typeof json.remaining === 'number') setAiRemaining(json.remaining)
+      if (typeof json.limit === 'number')     setAiLimit(json.limit)
 
       // AI arrays may be LONGER than the user's input when docs let it add
       // new education/experience/language entries. Pad with empty originals.
@@ -281,12 +300,20 @@ export default function StepPreview({ data, update }: Props) {
           <strong>{t('aiTitle')}</strong>
           <p className="rihla-cvb-hint-small" style={{ margin: '4px 0 0' }}>
             {t('aiHint')}
+            {aiRemaining !== null && aiLimit !== null && (
+              <>
+                {' · '}
+                <span style={{ color: aiRemaining === 0 ? '#dc2626' : 'var(--ink-mute)', fontWeight: 600 }}>
+                  {aiRemaining}/{aiLimit} {t('aiRemaining')}
+                </span>
+              </>
+            )}
           </p>
         </div>
         <button
           className="rihla-cvb-btn-primary"
           onClick={onTranslate}
-          disabled={translating}
+          disabled={translating || aiRemaining === 0}
           type="button"
         >
           {translating ? t('aiProcessing') : t('aiCta')}

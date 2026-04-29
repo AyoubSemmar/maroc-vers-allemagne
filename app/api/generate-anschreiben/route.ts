@@ -11,7 +11,23 @@ export async function GET() {
   const { data: { user } } = await sb.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
   const status = await getStatus(user.id, 'motivation')
-  return NextResponse.json(status)
+  // Compact shape with both daily quota AND credits surfaced — the UI's
+  // canGenerate previously read only `credits`, ignoring the free daily
+  // quota and showing "out of credit" to fresh users with no purchases
+  // (even though they had untouched daily allowance).
+  const isPremium = status.tier === 'premium'
+  const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
+  const dailyRemaining = isPremium ? 0 : ((status as any).dailyRemaining ?? 0)
+  const credits        = (status as any).credits ?? 0
+  return NextResponse.json({
+    tier: status.tier,
+    credits,
+    used: status.used,
+    dailyLimit,
+    dailyRemaining,
+    limit:     isPremium ? status.limit     : dailyLimit + credits,
+    remaining: isPremium ? status.remaining : dailyRemaining + credits,
+  })
 }
 
 const SYSTEM_PROMPT = `You are a professional German career assistant specialized in writing high-quality "Bewerbungsanschreiben" (motivation letters) for Ausbildung positions in Germany.

@@ -37,10 +37,12 @@ export const PREMIUM_DAILY_LIMITS = {
 
 // ── Daily cap for free (signed-in) users ───────────────────────
 // After these limits, the user must buy credits or upgrade to premium.
+// Bumped cv + motivation from 1/day to 2/day to match photo (consistent
+// "2 free tries per day" across the three paid AI features).
 export const FREE_DAILY_LIMITS = {
   photo: 2,
-  cv: 1,
-  motivation: 1,
+  cv: 2,
+  motivation: 2,
   ausbildung_reveal: 10,
 } as const
 
