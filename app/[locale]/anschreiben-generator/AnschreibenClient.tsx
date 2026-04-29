@@ -214,10 +214,7 @@ function EntitlementBanner({ ent }: { ent: EntitlementStatus }) {
   if (ent.dailyRemaining > 0) {
     return (
       <div style={bannerStyle('free')}>
-        <strong>{t('freeTryTitle')}</strong>
-        <span style={{ fontSize: 13, color: '#166534' }}>
-          &nbsp;{ent.dailyRemaining}/{ent.dailyLimit} {t('freeTryBody')}
-        </span>
+        <strong>{t('dailyAvailable', { rem: ent.dailyRemaining, lim: ent.dailyLimit })}</strong>
       </div>
     )
   }
