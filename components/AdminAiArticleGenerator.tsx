@@ -40,7 +40,8 @@ const LANG_LABEL: Record<Lang, string> = {
 
 export default function AdminAiArticleGenerator() {
   const [loading, setLoading] = useState(false)
-  const [loadingStage, setLoadingStage] = useState<'' | 'text' | 'image'>('')
+  const [loadingStage, setLoadingStage] = useState<'' | 'text' | 'translate' | 'image'>('')
+  const [translateWarning, setTranslateWarning] = useState<string | null>(null)
   const [draft, setDraft] = useState<Draft | null>(null)
   const [titleClash, setTitleClash] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -67,8 +68,9 @@ export default function AdminAiArticleGenerator() {
     setSaved(null)
     setTitleClash(false)
     setImageWarning(null)
+    setTranslateWarning(null)
     try {
-      // ── Step 1: text ────────────────────────────────────────────
+      // ── Step 1: Arabic article ──────────────────────────────────
       const resp = await fetch('/api/admin/generate-article', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -89,25 +91,55 @@ export default function AdminAiArticleGenerator() {
       setTitleClash(!!data.titleClash)
       setActiveLang('ar')
 
-      // ── Step 2: image (best effort) ─────────────────────────────
-      // The article is already on screen; if the image fails, the admin
-      // can still approve & publish or upload one manually.
-      setLoadingStage('image')
-      try {
-        const ir = await fetch('/api/admin/generate-article-image', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ prompt: initialDraft.image_prompt_used }),
-        })
-        const idata = await safeParse(ir)
-        if (ir.ok && idata?.image_url) {
-          setDraft(d => d ? { ...d, image_url: idata.image_url, image_prompt_used: idata.prompt_used || d.image_prompt_used } : d)
-        } else {
-          setImageWarning(idata?.error || `Image generation failed (HTTP ${ir.status}). You can approve without it or regenerate.`)
+      // Kick off translations and image in parallel — they don't depend
+      // on each other and overlapping them halves the wall-clock wait.
+      setLoadingStage('translate')
+      const tPromise = (async () => {
+        try {
+          const tr = await fetch('/api/admin/translate-article', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              title: initialDraft.title,
+              summary: initialDraft.summary,
+              content: initialDraft.content,
+              faqs: initialDraft.faqs,
+            }),
+          })
+          const tdata = await safeParse(tr)
+          if (tr.ok && tdata?.translations) {
+            setDraft(d => d ? { ...d, translations: tdata.translations } : d)
+          } else {
+            setTranslateWarning(tdata?.error || `Translation failed (HTTP ${tr.status}). You can still publish the Arabic version.`)
+          }
+        } catch (e: any) {
+          setTranslateWarning(`Translation step failed: ${e?.message || 'network error'}`)
         }
-      } catch (e: any) {
-        setImageWarning(`Image step failed: ${e?.message || 'network error'}`)
-      }
+      })()
+
+      const iPromise = (async () => {
+        try {
+          const ir = await fetch('/api/admin/generate-article-image', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ prompt: initialDraft.image_prompt_used }),
+          })
+          const idata = await safeParse(ir)
+          if (ir.ok && idata?.image_url) {
+            setDraft(d => d ? { ...d, image_url: idata.image_url, image_prompt_used: idata.prompt_used || d.image_prompt_used } : d)
+          } else {
+            setImageWarning(idata?.error || `Image generation failed (HTTP ${ir.status}). You can approve without it or regenerate.`)
+          }
+        } catch (e: any) {
+          setImageWarning(`Image step failed: ${e?.message || 'network error'}`)
+        }
+      })()
+
+      // Wait for translations first so the loading label transitions
+      // sensibly (translate → image), even though both are running.
+      await tPromise
+      setLoadingStage('image')
+      await iPromise
     } catch (e: any) {
       setError(e?.message || 'Network error')
     } finally {
@@ -154,6 +186,11 @@ export default function AdminAiArticleGenerator() {
     }
     return draft.translations[activeLang]
   })()
+  // Translations load after the AR article. While the call is in flight,
+  // each non-AR view will have empty title/content — surface that as a
+  // placeholder so the admin doesn't think the tab is broken.
+  const translationPending =
+    activeLang !== 'ar' && (!view || !view.title || !view.content)
 
   const isRtl = activeLang === 'ar'
 
@@ -176,8 +213,10 @@ export default function AdminAiArticleGenerator() {
           >
             {loading
               ? loadingStage === 'image'
-                ? 'Article ready — making image…'
-                : 'Writing article in 4 languages…'
+                ? 'Almost done — making image…'
+                : loadingStage === 'translate'
+                  ? 'Article ready — translating to FR/EN/DE…'
+                  : 'Writing article in Arabic…'
               : '✨ Generate a new article draft'}
           </button>
           <p style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 8 }}>
@@ -208,6 +247,53 @@ export default function AdminAiArticleGenerator() {
           fontFamily: 'monospace',
         }}>
           <strong>⚠ {error}</strong>
+        </div>
+      )}
+
+      {translateWarning && (
+        <div style={{
+          background: '#fef3c7', border: '1px solid #fde68a', color: '#78350f',
+          borderRadius: 10, padding: 10, fontSize: 13, marginBottom: 12,
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap',
+        }}>
+          <span>🌐 {translateWarning}</span>
+          <button
+            type="button"
+            onClick={async () => {
+              if (!draft) return
+              setTranslateWarning(null)
+              setLoadingStage('translate')
+              setLoading(true)
+              try {
+                const tr = await fetch('/api/admin/translate-article', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({
+                    title: draft.title,
+                    summary: draft.summary,
+                    content: draft.content,
+                    faqs: draft.faqs,
+                  }),
+                })
+                const tdata = await safeParse(tr)
+                if (tr.ok && tdata?.translations) {
+                  setDraft(d => d ? { ...d, translations: tdata.translations } : d)
+                } else {
+                  setTranslateWarning(tdata?.error || `Translation failed (HTTP ${tr.status}).`)
+                }
+              } finally {
+                setLoading(false)
+                setLoadingStage('')
+              }
+            }}
+            disabled={loading}
+            style={{
+              fontSize: 12, padding: '6px 12px', borderRadius: 8, cursor: 'pointer',
+              border: '1px solid #b45309', background: '#fbbf24', color: '#451a03', fontWeight: 600,
+            }}
+          >
+            🔄 Retry translations
+          </button>
         </div>
       )}
 
@@ -322,6 +408,13 @@ export default function AdminAiArticleGenerator() {
             background: 'white', border: '1px solid #e5e7eb', borderRadius: 10, padding: 14,
             maxHeight: 480, overflowY: 'auto',
           }}>
+            {translationPending ? (
+              <div style={{ padding: 24, color: '#78350f', background: '#fffbeb', border: '1px dashed #fde68a', borderRadius: 8, fontSize: 14, textAlign: 'center' }}>
+                {loadingStage === 'translate'
+                  ? '🌐 Translating to ' + LANG_LABEL[activeLang] + '… (~25s)'
+                  : '🌐 Translation not ready. Switch back to العربية or wait / retry.'}
+              </div>
+            ) : <>
             <h4 style={{ margin: 0, fontSize: 18, fontWeight: 700 }}>{view.title}</h4>
             <p style={{ margin: '6px 0 12px', fontSize: 14, color: '#475569', fontStyle: 'italic' }}>
               {view.summary}
@@ -341,6 +434,7 @@ export default function AdminAiArticleGenerator() {
                 ))}
               </>
             )}
+            </>}
           </div>
 
           <div style={{ display: 'flex', gap: 8, marginTop: 12, flexWrap: 'wrap' }}>

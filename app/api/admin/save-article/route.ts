@@ -41,6 +41,20 @@ export async function POST(req: NextRequest) {
       { auth: { persistSession: false, autoRefreshToken: false } },
     )
 
+    // Strip translation slots that are still empty (translation step
+    // failed / was skipped). The localizer (lib/i18n-content.ts) uses
+    // `??` so empty strings would override the Arabic source — better
+    // to omit the slot entirely and let the fallback handle it.
+    const cleanTranslations: Record<string, any> = {}
+    if (d.translations && typeof d.translations === 'object') {
+      for (const lang of ['fr', 'en', 'de'] as const) {
+        const t = d.translations[lang]
+        if (t && t.title && t.content) {
+          cleanTranslations[lang] = t
+        }
+      }
+    }
+
     const row = {
       title:        d.title,
       summary:      d.summary,
@@ -50,7 +64,7 @@ export async function POST(req: NextRequest) {
       image_url:    d.image_url || null,
       faqs:         Array.isArray(d.faqs) ? d.faqs : [],
       featured:     false,
-      translations: d.translations || null,
+      translations: Object.keys(cleanTranslations).length ? cleanTranslations : null,
     }
 
     const { data, error } = await supabase
