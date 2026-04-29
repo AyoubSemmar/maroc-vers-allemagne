@@ -98,6 +98,13 @@ Quality bar:
 - Title is concrete and click-worthy (no clickbait), under 80 chars.
 - Summary is one sentence, under 160 chars (used as meta description).
 
+ARABIC PUNCTUATION — STRICT RULES (otherwise glyphs render the wrong direction on the live site):
+- Use ؟ (U+061F) for question marks, NEVER the Latin ?
+- Use ، (U+060C) for commas, NEVER the Latin ,
+- Use ؛ (U+061B) for semicolons, NEVER the Latin ;
+- Use « » or curly "..." quotes, never straight ASCII quotes
+- Latin proper nouns and Western digits 0-9 are fine inside Arabic text
+
 Then translate the entire article + FAQs into French, English, and German with the same quality and length. Translations must be natural for native speakers, not literal. Keep proper nouns (Ausbildung, Anmeldung, BAföG, ZAB, IHK) in German across all locales.
 
 Image prompt: a single English sentence describing a tasteful, photographic hero image (no text overlays, no people's faces close-up, no logos). Should evoke the topic — e.g. for housing: "modern Berlin apartment building exterior with autumn light"; for visa: "neat stack of European passports and travel documents on a wooden desk".${dupesBlock}

@@ -104,6 +104,22 @@ const TEMPLATE_CSS = `
   --ink-mute: rgba(255,255,255,0.5);
 }
 .gg-social * { box-sizing: border-box; }
+/* Mixed-script tags / step labels (e.g. "📚 L'Ausbildung · التكوين المهني")
+   need bidi isolation so the Latin and Arabic runs don't fight over
+   punctuation orientation. unicode-bidi: plaintext lets the renderer
+   set direction segment-by-segment based on Unicode strong type. */
+.gg-social .p1-tag, .gg-social .p2-tag, .gg-social .p3-tag, .gg-social .p4-tag,
+.gg-social .cs-step {
+  unicode-bidi: plaintext;
+}
+/* Arabic-only blocks: lock direction so the * highlight wrapping doesn't
+   accidentally re-set it. */
+.gg-social .p1-ar, .gg-social .p2-ar, .gg-social .p3-q-ar, .gg-social .p3-big-ar,
+.gg-social .p4-headline-ar, .gg-social .p4-window-foot,
+.gg-social .cs-title-ar, .gg-social .cs-body-ar {
+  unicode-bidi: isolate;
+}
+
 .gg-social .post {
   position: relative;
   width: 1080px;
@@ -389,16 +405,34 @@ const TEMPLATE_CSS = `
 }
 `
 
-// Sinusoidal flight-path SVG for each of the 5 carousel slides — gives
-// the "journey from Morocco to Germany" feel of the reference templates.
-// Each entry: the path d-string drawn over a 1080×1080 viewBox.
+// Continuous "journey from Morocco to Germany" path threaded across the
+// 5 carousel slides. Each path's left/right edge anchor matches the
+// previous/next slide so when posted as an Instagram swipe set the
+// dashed line visually flows from slide 1 to slide 5.
+//
+// Slide-to-slide handoff y-coordinates (chosen to feel natural, not flat):
+//   exit slide 1 → enter slide 2: y = 240   (top-right of slide 1)
+//   exit slide 2 → enter slide 3: y = 380
+//   exit slide 3 → enter slide 4: y = 280
+//   exit slide 4 → enter slide 5: y = 220
+//   slide 5 ends at the flag pin at (200, 320)
 const CS_PATHS = [
-  'M -40 880 C 240 880 400 660 580 540 S 880 280 1140 200',     // slide 1: takeoff
-  'M -120 380 C 200 460 360 600 540 580 S 880 380 1200 480',    // slide 2
-  'M -120 200 C 220 320 460 460 720 380 S 980 240 1200 320',    // slide 3
-  'M -120 280 C 240 380 480 540 740 480 S 980 320 1200 380',    // slide 4
-  'M 1200 220 C 880 280 700 360 540 380 S 320 380 -60 360',     // slide 5: arrival
+  // slide 1 — takeoff from bottom-left, climbs to airplane at top-right (1040, 200)
+  'M -40 920 C 220 880 380 700 540 540 S 880 280 1040 200',
+  // slide 2 — enters left at y=240, gentle wave, exits right at y=380
+  'M -40 240 C 200 320 360 480 540 460 S 880 360 1120 380',
+  // slide 3 — enters left at y=380, dips up over the middle, exits right at y=280
+  'M -40 380 C 220 360 420 220 620 280 S 940 360 1120 280',
+  // slide 4 — enters left at y=280, swoops down then up, exits right at y=220
+  'M -40 280 C 200 420 420 460 620 380 S 940 240 1120 220',
+  // slide 5 — enters right at y=220, descends to the German-flag pin at (200, 320)
+  'M 1120 220 C 880 240 700 280 540 300 S 320 320 200 320',
 ] as const
+
+// X/Y location of the airplane on slide 1 and the flag-pin on slide 5,
+// matching the path endpoints above.
+const CS_AIRPLANE = { x: 1040, y: 200, rotateDeg: -25 } as const
+const CS_FLAGPIN  = { x: 200,  y: 200 } as const
 
 function CsPath({ index }: { index: number }) {
   const d = CS_PATHS[Math.min(index, CS_PATHS.length - 1)]
@@ -415,7 +449,7 @@ function CsPath({ index }: { index: number }) {
       />
       {index === 0 && (
         // Slide 1: airplane lifting off at the end of the dashed path
-        <g transform="translate(1040 200) rotate(-25)">
+        <g transform={`translate(${CS_AIRPLANE.x} ${CS_AIRPLANE.y}) rotate(${CS_AIRPLANE.rotateDeg})`}>
           <path
             d="M -60 -8 L 30 -8 L 60 -28 L 78 -22 L 50 8 L 80 8 L 96 -8 L 108 -4 L 92 14 L 108 32 L 96 36 L 80 20 L 50 20 L 78 50 L 60 56 L 30 36 L -60 36 Z"
             fill="#F4C842"
@@ -426,8 +460,8 @@ function CsPath({ index }: { index: number }) {
         </g>
       )}
       {index === CS_PATHS.length - 1 && (
-        // Slide 5: German-flag pin at the destination
-        <g transform="translate(160 200)">
+        // Slide 5: German-flag pin planted at the destination
+        <g transform={`translate(${CS_FLAGPIN.x} ${CS_FLAGPIN.y})`}>
           <line x1="0" y1="0" x2="0" y2="120" stroke="#F4C842" strokeWidth="6" />
           <circle cx="0" cy="124" r="14" fill="none" stroke="#F4C842" strokeWidth="6" />
           <rect x="2" y="0"  width="80" height="22" fill="#1A1A1A" />

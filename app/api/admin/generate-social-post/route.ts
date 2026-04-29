@@ -132,6 +132,14 @@ Guardrails:
 - Keep proper nouns in German: Ausbildung, Anmeldung, BAföG, Krankenkasse, Deutschlandticket, Steuer-ID.
 - No hashtags. No emojis inside main copy (only in tag pills where the schema says so).
 - Use the * char to mark ONE 1-3 word phrase per French headline that should be highlighted in gold. Example: "Vivre en Allemagne avec *1 000 € / mois*"
+
+ARABIC PUNCTUATION — STRICT RULES (otherwise glyphs face the wrong direction):
+- Question mark in Arabic: ؟ (U+061F)  — NEVER use the Latin "?"
+- Comma in Arabic: ، (U+060C)  — NEVER use the Latin ","
+- Semicolon in Arabic: ؛ (U+061B) — NEVER use the Latin ";"
+- Quote marks in Arabic: « » (or "..." curly) — never straight ASCII quotes
+- Parentheses around Arabic phrases stay as ( ) but the content inside must use Arabic punctuation
+- Numbers and Latin proper nouns inside Arabic text are fine — keep digits as Western 0-9
 `
 
   // Length / structure guidance per template.
