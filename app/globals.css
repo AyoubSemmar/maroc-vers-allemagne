@@ -2814,6 +2814,41 @@ html[dir="rtl"] .tools-dd-menu { left: auto; right: 0; }
   transition: background 0.15s ease;
 }
 .tools-dd-item:hover { background: var(--bg-warm); }
+
+/* Inline accordion: clicking "Tools" expands the 6 tool links inside
+   the same dropdown panel. Reuses .tools-dd-item styling so the
+   trigger looks identical to its Link siblings. */
+.tools-dd-subtoggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  width: 100%;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  justify-content: space-between;
+  text-align: inherit;
+}
+.tools-dd-subtoggle .tools-dd-chev {
+  transition: transform 0.2s ease;
+  flex: none;
+}
+.tools-dd-subtoggle.is-open .tools-dd-chev { transform: rotate(180deg); }
+.tools-dd-sublist {
+  display: grid;
+  gap: 2px;
+  padding-block: 2px;
+  border-inline-start: 2px solid var(--line);
+  margin-inline-start: 14px;
+  padding-inline-start: 6px;
+}
+.tools-dd-subitem {
+  font-size: 13.5px;
+  padding-block: 9px;
+  padding-inline: 10px;
+  color: var(--ink-soft, var(--fg));
+}
+.tools-dd-subitem:hover { color: var(--fg); }
 .tools-dd-icon {
   width: 42px; height: 42px;
   display: grid; place-items: center;

@@ -35,6 +35,8 @@ export default function RihlaNav() {
   const [mounted, setMounted] = useState(false)
   const [learnOpen, setLearnOpen] = useState(false)
   const [learnPos, setLearnPos] = useState<{ top: number; left: number } | null>(null)
+  const [toolsOpen, setToolsOpen] = useState(false)
+  const tTools = useTranslations('landing.tools')
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
   const learnRef = useRef<HTMLDivElement | null>(null)
   const learnTriggerRef = useRef<HTMLButtonElement | null>(null)
@@ -170,9 +172,44 @@ export default function RihlaNav() {
                 <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('learnGerman')}
                 </Link>
-                <Link href="/#tools" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+
+                {/* Tools — click to expand inline list of the 6 tools.
+                    Acts as a nested accordion within the same dropdown
+                    so users see all options without leaving the panel. */}
+                <button
+                  type="button"
+                  className={`tools-dd-item tools-dd-subtoggle${toolsOpen ? ' is-open' : ''}`}
+                  aria-expanded={toolsOpen}
+                  onClick={() => setToolsOpen(v => !v)}
+                >
                   {tNav('tools')}
-                </Link>
+                  <svg className="tools-dd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                </button>
+                {toolsOpen && (
+                  <div className="tools-dd-sublist" role="group">
+                    <Link href="/cv-builder" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('cv.name')}
+                    </Link>
+                    <Link href="/anschreiben-generator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('anschreiben.name')}
+                    </Link>
+                    <Link href="/tools/eligibility-checker" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('eligibilityChecker.name')}
+                    </Link>
+                    <Link href="/tools/migration-timeline" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('migrationTimeline.name')}
+                    </Link>
+                    <Link href="/tools/document-checklist" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('documentChecklist.name')}
+                    </Link>
+                    <Link href="/tools/living-cost-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('livingCost.name')}
+                    </Link>
+                  </div>
+                )}
+
                 <Link href="/articles" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('articles')}
                 </Link>
