@@ -14,8 +14,9 @@ import Anthropic from '@anthropic-ai/sdk'
 export const runtime = 'nodejs'
 export const maxDuration = 60
 
-// 4 visual templates, matching the launch HTML exactly.
-const TEMPLATE_TYPES = ['hook', 'fact', 'explainer', 'budget'] as const
+// 4 single-slide templates (matching the launch HTML exactly) plus a
+// 5-slide carousel template (cover + 4 steps).
+const TEMPLATE_TYPES = ['hook', 'fact', 'explainer', 'budget', 'carousel'] as const
 type TemplateType = (typeof TEMPLATE_TYPES)[number]
 
 // Topic ideas the AI can lean on. Lifted from the site's actual content
@@ -82,11 +83,29 @@ type BudgetFields = {
   footAr: string        // tiny RTL caption
 }
 
+// 5-slide carousel: cover slide + 4 step/tip slides.
+type CarouselSlide = {
+  stepLabelFr: string  // e.g. "ÉTAPE 1" or "À RETENIR" — appears as small eyebrow
+  titleFr: string      // big FR headline for this slide; supports *highlight*
+  titleAr: string      // Arabic translation
+  bodyFr: string       // 1-2 sentences
+  bodyAr: string       // Arabic equivalent
+}
+type CarouselFields = {
+  seriesTagFr: string       // e.g. "🇩🇪 GUIDE · مرشد"
+  seriesTitleFr: string     // cover headline (appears on slide 1, supports *highlight*)
+  seriesTitleAr: string     // Arabic cover headline
+  seriesIntroFr: string     // 1-line intro on slide 1
+  seriesIntroAr: string
+  slides: CarouselSlide[]   // exactly 4 slides for steps 2-5; cover is slide 1
+}
+
 type GeneratedDraft =
   | { templateType: 'hook'; fields: HookFields; topic: string }
   | { templateType: 'fact'; fields: FactFields; topic: string }
   | { templateType: 'explainer'; fields: ExplainerFields; topic: string }
   | { templateType: 'budget'; fields: BudgetFields; topic: string }
+  | { templateType: 'carousel'; fields: CarouselFields; topic: string }
 
 function parseJsonLoose(s: string): any {
   const cleaned = s.replace(/```json\s*|\s*```/g, '').trim()
@@ -173,6 +192,30 @@ Schema:
   "totalNum": "e.g. \\"~ 900 €\\"",
   "footAr": "Tiny RTL caption, ≤60 chars"
 }`,
+    carousel: `
+Template: CAROUSEL (5 slides — Instagram swipe set).
+Slide 1 is the cover (series title + intro). Slides 2-5 are steps or
+tips that build on each other. Use this for guides like "5 étapes pour
+ouvrir un compte", "5 erreurs à éviter en Ausbildung", "5 villes
+abordables", "Comment trouver un logement en 5 étapes".
+Schema:
+{
+  "seriesTagFr": "🇩🇪 ... · ... (≤30 chars)",
+  "seriesTitleFr": "Cover headline with ONE *highlight*, ≤55 chars",
+  "seriesTitleAr": "Arabic translation, ≤50 chars",
+  "seriesIntroFr": "1-line intro on cover, ≤90 chars",
+  "seriesIntroAr": "Arabic translation, ≤80 chars",
+  "slides": [
+    {
+      "stepLabelFr": "ÉTAPE 1 · المرحلة 1 (or À RETENIR / ASTUCE)",
+      "titleFr": "Step headline with optional *highlight*, ≤50 chars",
+      "titleAr": "Arabic translation, ≤45 chars",
+      "bodyFr": "1-2 sentences expanding the step, ≤180 chars",
+      "bodyAr": "Arabic equivalent, ≤160 chars"
+    }
+    ... exactly 4 entries ...
+  ]
+}`,
   }
 
   return `${sharedRules}
@@ -197,9 +240,12 @@ export async function POST(req: NextRequest) {
 
     const body = await req.json().catch(() => ({}))
     const requestedType = typeof body?.templateType === 'string' ? body.templateType : ''
+    // Random picks from single-slide templates only — carousels are
+    // explicit (5x the cost & content, admin should opt in).
+    const RANDOM_POOL: readonly TemplateType[] = ['hook', 'fact', 'explainer', 'budget']
     const templateType: TemplateType = (TEMPLATE_TYPES as readonly string[]).includes(requestedType)
       ? (requestedType as TemplateType)
-      : TEMPLATE_TYPES[Math.floor(Math.random() * TEMPLATE_TYPES.length)]
+      : RANDOM_POOL[Math.floor(Math.random() * RANDOM_POOL.length)]
 
     const customTopic = typeof body?.topic === 'string' && body.topic.trim().length > 3
       ? body.topic.trim()
@@ -209,7 +255,8 @@ export async function POST(req: NextRequest) {
     const client = new Anthropic({ apiKey })
     const resp = await client.messages.create({
       model: 'claude-sonnet-4-5',
-      max_tokens: 1500,
+      // Carousels need ~5x the tokens (cover + 4 step slides, FR + AR each).
+      max_tokens: templateType === 'carousel' ? 4000 : 1500,
       temperature: 0.85,
       messages: [{ role: 'user', content: buildPrompt(topic, templateType) }],
     })
@@ -237,6 +284,9 @@ export async function POST(req: NextRequest) {
     } else if (templateType === 'budget') {
       ['tagFr', 'headlineFr', 'headlineAr', 'items', 'totalLabel', 'totalNum', 'footAr'].forEach(need)
       if (Array.isArray(fields.items) && fields.items.length < 3) missing.push('items(≥3)')
+    } else if (templateType === 'carousel') {
+      ['seriesTagFr', 'seriesTitleFr', 'seriesTitleAr', 'seriesIntroFr', 'seriesIntroAr', 'slides'].forEach(need)
+      if (Array.isArray(fields.slides) && fields.slides.length < 4) missing.push('slides(=4)')
     }
     if (missing.length) {
       return NextResponse.json(

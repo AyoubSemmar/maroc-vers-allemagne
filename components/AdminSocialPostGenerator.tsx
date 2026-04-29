@@ -54,18 +54,35 @@ type Budget = {
   totalNum: string
   footAr: string
 }
+type CarouselSlide = {
+  stepLabelFr: string
+  titleFr: string
+  titleAr: string
+  bodyFr: string
+  bodyAr: string
+}
+type Carousel = {
+  seriesTagFr: string
+  seriesTitleFr: string
+  seriesTitleAr: string
+  seriesIntroFr: string
+  seriesIntroAr: string
+  slides: CarouselSlide[]
+}
 
 type Draft =
   | { templateType: 'hook'; fields: Hook; topic: string }
   | { templateType: 'fact'; fields: Fact; topic: string }
   | { templateType: 'explainer'; fields: Explainer; topic: string }
   | { templateType: 'budget'; fields: Budget; topic: string }
+  | { templateType: 'carousel'; fields: Carousel; topic: string }
 
 const TEMPLATE_LABELS: Record<Draft['templateType'], string> = {
   hook: '📢 Hook (yellow border)',
   fact: '💡 Fun fact (orange wedge)',
   explainer: '📚 Explainer (Q&A + stats)',
   budget: '💸 Budget (browser frame)',
+  carousel: '🧭 Carousel (5-slide guide)',
 }
 
 // CSS lifted from social-launch-templates.html, scoped under .gg-social
@@ -144,7 +161,10 @@ const TEMPLATE_CSS = `
 .gg-social .p1-content {
   position: absolute; inset: 36px;
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-  padding: 96px 72px; z-index: 10;
+  /* extra right + bottom inset so long stat labels don't run under the
+     URL footer (bottom: 56px right: 64px) */
+  padding: 96px 72px 140px;
+  z-index: 10;
 }
 .gg-social .p1-tag {
   font-size: 16px; color: var(--gold); font-weight: 800; letter-spacing: 0.22em;
@@ -185,9 +205,11 @@ const TEMPLATE_CSS = `
   z-index: 25;
 }
 .gg-social .p2-content {
-  position: absolute; inset: 0; padding: 140px 110px 120px; z-index: 10;
+  /* bottom: 170 — clears the German-flag bar (h:18) and url (bottom 80, h~30) */
+  position: absolute; inset: 0; padding: 140px 110px 170px; z-index: 10;
   display: flex; flex-direction: column; justify-content: space-between;
 }
+.gg-social .p2-bottom { padding-right: 240px; } /* don't let summary run under url */
 .gg-social .p2-tag {
   font-size: 14px; font-weight: 800; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--gold); margin-bottom: 24px;
@@ -218,7 +240,8 @@ const TEMPLATE_CSS = `
   z-index: 25;
 }
 .gg-social .p3-content {
-  position: absolute; left: 90px; right: 90px; top: 240px; bottom: 130px; z-index: 10;
+  /* bottom: 160 to clear flag bar (14) + url (60+~30) */
+  position: absolute; left: 90px; right: 90px; top: 240px; bottom: 160px; z-index: 10;
   display: flex; flex-direction: column; justify-content: center; max-width: 720px;
 }
 .gg-social .p3-tag {
@@ -288,7 +311,223 @@ const TEMPLATE_CSS = `
 .gg-social .p4-headline { font-size: 48px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin: 0; max-width: 820px; }
 .gg-social .p4-headline em { font-style: normal; color: var(--gold); }
 .gg-social .p4-headline-ar { font-size: 34px; font-weight: 800; color: var(--ink-soft); line-height: 1.35; direction: rtl; margin: 2px 0 0; }
+
+/* CAROUSEL slide — matches the journey-themed reference templates:
+   yellow→orange gradient frame, dashed flight path, city skyline, page indicator. */
+.gg-social .cs-frame {
+  position: absolute; inset: 28px; border-radius: 28px;
+  border: 5px solid transparent;
+  background:
+    linear-gradient(180deg, #0E1A36 0%, #0A1429 100%) padding-box,
+    linear-gradient(135deg, var(--brand-warm) 0%, var(--gold) 100%) border-box;
+  z-index: 5; pointer-events: none;
+}
+.gg-social .cs-logo {
+  position: absolute; top: 56px; left: 64px;
+  display: flex; align-items: center; gap: 14px; z-index: 30;
+}
+.gg-social .cs-logo .logo-text { font-size: 30px; font-weight: 800; }
+.gg-social .cs-logo .logo-mark { width: 56px; height: 56px; border-radius: 14px; }
+.gg-social .cs-logo .logo-mark .g { font-size: 38px; margin-top: -4px; }
+.gg-social .cs-logo .logo-mark::after { height: 10px; }
+
+.gg-social .cs-path {
+  position: absolute; inset: 0; z-index: 4; pointer-events: none;
+}
+.gg-social .cs-skyline {
+  position: absolute; left: 60px; right: 60px; bottom: 70px;
+  height: 130px; opacity: 0.32; z-index: 3; pointer-events: none;
+}
+.gg-social .cs-skyline svg { width: 100%; height: 100%; display: block; }
+
+.gg-social .cs-content {
+  position: absolute; left: 80px; right: 80px;
+  top: 380px; bottom: 220px;
+  z-index: 10; display: flex; flex-direction: column; justify-content: center;
+}
+.gg-social .cs-step {
+  font-size: 18px; font-weight: 800; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+}
+.gg-social .cs-title {
+  font-size: 64px; font-weight: 900; letter-spacing: -0.025em;
+  line-height: 1.05; margin: 0 0 14px; max-width: 880px;
+}
+.gg-social .cs-title em { font-style: normal; color: var(--gold); }
+.gg-social .cs-title-ar {
+  font-size: 44px; font-weight: 800; color: var(--ink-soft);
+  line-height: 1.3; direction: rtl; margin: 0 0 28px; max-width: 880px;
+}
+.gg-social .cs-body {
+  font-size: 24px; font-weight: 500; color: var(--ink-soft);
+  line-height: 1.45; margin: 0 0 10px; max-width: 820px;
+}
+.gg-social .cs-body-ar {
+  font-size: 22px; font-weight: 500; color: var(--ink-mute);
+  line-height: 1.55; direction: rtl; margin: 0; max-width: 820px;
+}
+
+/* Cover slide: bigger title, smaller body region (intro). */
+.gg-social .cs-cover .cs-title { font-size: 78px; }
+.gg-social .cs-cover .cs-title-ar { font-size: 50px; }
+
+.gg-social .cs-page {
+  position: absolute; left: 80px; bottom: 88px;
+  display: flex; align-items: center; gap: 14px;
+  font-size: 30px; font-weight: 900; color: var(--ink-soft);
+  z-index: 30; font-variant-numeric: tabular-nums;
+}
+.gg-social .cs-page .cs-page-tick {
+  width: 60px; height: 4px; background: var(--gold); border-radius: 2px;
+}
+.gg-social .cs-page .cs-page-tick.dim { background: rgba(255,255,255,0.18); }
+.gg-social .cs-page .cs-page-num strong { color: var(--gold); }
+.gg-social .cs-url {
+  position: absolute; right: 80px; bottom: 90px;
+  font-size: 18px; letter-spacing: 0.34em; color: var(--ink-mute);
+  text-transform: uppercase; z-index: 30; font-weight: 600;
+}
 `
+
+// Sinusoidal flight-path SVG for each of the 5 carousel slides — gives
+// the "journey from Morocco to Germany" feel of the reference templates.
+// Each entry: the path d-string drawn over a 1080×1080 viewBox.
+const CS_PATHS = [
+  'M -40 880 C 240 880 400 660 580 540 S 880 280 1140 200',     // slide 1: takeoff
+  'M -120 380 C 200 460 360 600 540 580 S 880 380 1200 480',    // slide 2
+  'M -120 200 C 220 320 460 460 720 380 S 980 240 1200 320',    // slide 3
+  'M -120 280 C 240 380 480 540 740 480 S 980 320 1200 380',    // slide 4
+  'M 1200 220 C 880 280 700 360 540 380 S 320 380 -60 360',     // slide 5: arrival
+] as const
+
+function CsPath({ index }: { index: number }) {
+  const d = CS_PATHS[Math.min(index, CS_PATHS.length - 1)]
+  return (
+    <svg viewBox="0 0 1080 1080" preserveAspectRatio="none" style={{ width: '100%', height: '100%' }}>
+      <path
+        d={d}
+        fill="none"
+        stroke="#F4C842"
+        strokeWidth="9"
+        strokeLinecap="round"
+        strokeDasharray="22 22"
+        opacity="0.85"
+      />
+      {index === 0 && (
+        // Slide 1: airplane lifting off at the end of the dashed path
+        <g transform="translate(1040 200) rotate(-25)">
+          <path
+            d="M -60 -8 L 30 -8 L 60 -28 L 78 -22 L 50 8 L 80 8 L 96 -8 L 108 -4 L 92 14 L 108 32 L 96 36 L 80 20 L 50 20 L 78 50 L 60 56 L 30 36 L -60 36 Z"
+            fill="#F4C842"
+            stroke="#F4C842"
+            strokeWidth="2"
+            strokeLinejoin="round"
+          />
+        </g>
+      )}
+      {index === CS_PATHS.length - 1 && (
+        // Slide 5: German-flag pin at the destination
+        <g transform="translate(160 200)">
+          <line x1="0" y1="0" x2="0" y2="120" stroke="#F4C842" strokeWidth="6" />
+          <circle cx="0" cy="124" r="14" fill="none" stroke="#F4C842" strokeWidth="6" />
+          <rect x="2" y="0"  width="80" height="22" fill="#1A1A1A" />
+          <rect x="2" y="22" width="80" height="22" fill="#C8252C" />
+          <rect x="2" y="44" width="80" height="22" fill="#F4C842" />
+        </g>
+      )}
+    </svg>
+  )
+}
+
+// Light, line-only Berlin-ish skyline silhouette anchored to the bottom edge.
+function CsSkyline() {
+  return (
+    <svg viewBox="0 0 960 130" preserveAspectRatio="none">
+      <g fill="none" stroke="#FFFFFF" strokeWidth="2.5" strokeLinejoin="round" strokeLinecap="round">
+        {/* TV tower */}
+        <line x1="80"  y1="130" x2="80"  y2="40" />
+        <circle cx="80" cy="32" r="14" />
+        <line x1="80"  y1="18"  x2="80"  y2="0" />
+        {/* Block buildings */}
+        <rect x="130" y="60"  width="80" height="70" />
+        <line x1="170" y1="60" x2="170" y2="130" />
+        <rect x="240" y="80"  width="120" height="50" />
+        {/* Brandenburg-ish gate */}
+        <rect x="400" y="55" width="200" height="75" />
+        <line x1="440" y1="55" x2="440" y2="130" />
+        <line x1="490" y1="55" x2="490" y2="130" />
+        <line x1="555" y1="55" x2="555" y2="130" />
+        {/* Cathedral dome */}
+        <rect x="640" y="50" width="120" height="80" />
+        <path d="M 640 50 C 660 18 740 18 760 50" />
+        {/* Tall block */}
+        <rect x="800" y="40" width="90" height="90" />
+        <line x1="845" y1="40" x2="845" y2="130" />
+      </g>
+    </svg>
+  )
+}
+
+function CsPageIndicator({ current, total }: { current: number; total: number }) {
+  return (
+    <div className="cs-page">
+      <div className={'cs-page-tick' + (current > 1 ? ' dim' : '')} />
+      <div className="cs-page-num">
+        <strong>{current}</strong> / {total}
+      </div>
+    </div>
+  )
+}
+
+function CarouselSlideRender({
+  index,
+  total,
+  isCover,
+  stepLabel,
+  titleFr,
+  titleAr,
+  bodyFr,
+  bodyAr,
+  exportId,
+}: {
+  index: number          // zero-based slide index
+  total: number
+  isCover: boolean
+  stepLabel: string
+  titleFr: string
+  titleAr: string
+  bodyFr: string
+  bodyAr: string
+  exportId: string
+}) {
+  return (
+    <article className={'post' + (isCover ? ' cs-cover' : '')} id={exportId}>
+      <div className="cs-frame" />
+      <div className="cs-logo logo">
+        <span className="logo-text">GoGermany</span>
+        <div className="logo-mark"><span className="g">G</span></div>
+      </div>
+
+      <div className="cs-path">
+        <CsPath index={index} />
+      </div>
+      <div className="cs-skyline">
+        <CsSkyline />
+      </div>
+
+      <div className="cs-content">
+        <div className="cs-step">{stepLabel}</div>
+        <h2 className="cs-title">{highlightStar(titleFr)}</h2>
+        <p className="cs-title-ar">{titleAr}</p>
+        <p className="cs-body">{bodyFr}</p>
+        <p className="cs-body-ar">{bodyAr}</p>
+      </div>
+
+      <CsPageIndicator current={index + 1} total={total} />
+      <div className="cs-url">www.gogermany.ma</div>
+    </article>
+  )
+}
 
 // Convert "before *highlighted* after" → JSX with the middle wrapped in <em>.
 // Only the FIRST *…* span is highlighted (matches the brand convention of
@@ -392,42 +631,79 @@ function PostPreview({ draft }: { draft: Draft }) {
     )
   }
 
-  // budget
-  const f = draft.fields
-  return (
-    <article className="post" id="gg-export-target">
-      <div className="logo">
-        <div className="logo-mark"><span className="g">G</span></div>
-        <span className="logo-text">GoGermany</span>
-      </div>
-      <div className="p4-headline-wrap">
-        <div className="p4-tag">{f.tagFr}</div>
-        <h2 className="p4-headline">{highlightStar(f.headlineFr)}</h2>
-        <p className="p4-headline-ar">{f.headlineAr}</p>
-      </div>
-      <div className="p4-window">
-        <div className="p4-dots">
-          <span className="p4-dot grey" />
-          <span className="p4-dot gold" />
-          <span className="p4-dot orange" />
+  if (draft.templateType === 'budget') {
+    const f = draft.fields
+    return (
+      <article className="post" id="gg-export-target">
+        <div className="logo">
+          <div className="logo-mark"><span className="g">G</span></div>
+          <span className="logo-text">GoGermany</span>
         </div>
-        <div className="p4-window-content">
-          {f.items.slice(0, 5).map((it, i) => (
-            <div key={i} className="p4-line">
-              <span className="p4-line-icon">{it.icon}</span>
-              <span className="p4-line-fr">{it.labelFr}</span>
-              <span className="p4-line-val">{it.value}</span>
-            </div>
-          ))}
-          <div className="p4-total">
-            <span className="p4-total-label">{f.totalLabel}</span>
-            <span className="p4-total-num">{f.totalNum}</span>
+        <div className="p4-headline-wrap">
+          <div className="p4-tag">{f.tagFr}</div>
+          <h2 className="p4-headline">{highlightStar(f.headlineFr)}</h2>
+          <p className="p4-headline-ar">{f.headlineAr}</p>
+        </div>
+        <div className="p4-window">
+          <div className="p4-dots">
+            <span className="p4-dot grey" />
+            <span className="p4-dot gold" />
+            <span className="p4-dot orange" />
           </div>
-          <div className="p4-window-foot">{f.footAr}</div>
+          <div className="p4-window-content">
+            {f.items.slice(0, 5).map((it, i) => (
+              <div key={i} className="p4-line">
+                <span className="p4-line-icon">{it.icon}</span>
+                <span className="p4-line-fr">{it.labelFr}</span>
+                <span className="p4-line-val">{it.value}</span>
+              </div>
+            ))}
+            <div className="p4-total">
+              <span className="p4-total-label">{f.totalLabel}</span>
+              <span className="p4-total-num">{f.totalNum}</span>
+            </div>
+            <div className="p4-window-foot">{f.footAr}</div>
+          </div>
         </div>
-      </div>
-      <div className="url">www.gogermany.ma</div>
-    </article>
+        <div className="url">www.gogermany.ma</div>
+      </article>
+    )
+  }
+
+  // Carousel: render 5 slides (cover + 4 steps) stacked vertically with a
+  // gap so the admin can see all of them. Each slide gets its own export
+  // id so we can capture them one at a time.
+  const f = draft.fields
+  const slides = (f.slides || []).slice(0, 4)
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
+      {/* Slide 1 — cover */}
+      <CarouselSlideRender
+        index={0}
+        total={5}
+        isCover
+        stepLabel={f.seriesTagFr}
+        titleFr={f.seriesTitleFr}
+        titleAr={f.seriesTitleAr}
+        bodyFr={f.seriesIntroFr}
+        bodyAr={f.seriesIntroAr}
+        exportId="gg-export-target-1"
+      />
+      {slides.map((s, i) => (
+        <CarouselSlideRender
+          key={i}
+          index={i + 1}
+          total={5}
+          isCover={false}
+          stepLabel={s.stepLabelFr}
+          titleFr={s.titleFr}
+          titleAr={s.titleAr}
+          bodyFr={s.bodyFr}
+          bodyAr={s.bodyAr}
+          exportId={`gg-export-target-${i + 2}`}
+        />
+      ))}
+    </div>
   )
 }
 
@@ -507,39 +783,51 @@ export default function AdminSocialPostGenerator() {
     }
   }
 
+  async function exportOne(lib: any, target: HTMLElement, fileName: string) {
+    const dataUrl = await lib.toPng(target, {
+      width: 1080,
+      height: 1080,
+      pixelRatio: 2,
+      backgroundColor: '#0E1A36',
+      cacheBust: true,
+      skipFonts: true,
+      fontEmbedCSS: '',
+    })
+    const a = document.createElement('a')
+    a.href = dataUrl
+    a.download = fileName
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+  }
+
   async function downloadPng() {
     if (!draft) return
     setDownloading(true)
     setError(null)
     try {
       const lib = await loadHtmlToImage()
-      const target = document.getElementById('gg-export-target')
-      if (!target) throw new Error('preview not in DOM')
 
-      // Temporarily un-scale the post so html-to-image captures the
-      // real 1080×1080 pixels. We restore the transform in finally.
-      const prevTransform = (target as HTMLElement).style.transform
-      ;(target as HTMLElement).style.transform = 'none'
-      void (target as HTMLElement).offsetWidth
+      // Carousel = 5 separate PNGs, captured one at a time. Single-slide
+      // templates use the legacy id 'gg-export-target'.
+      const isCarousel = draft.templateType === 'carousel'
+      const ids = isCarousel
+        ? ['gg-export-target-1', 'gg-export-target-2', 'gg-export-target-3', 'gg-export-target-4', 'gg-export-target-5']
+        : ['gg-export-target']
 
-      try {
-        const dataUrl = await lib.toPng(target, {
-          width: 1080,
-          height: 1080,
-          pixelRatio: 2,
-          backgroundColor: '#0E1A36',
-          cacheBust: true,
-          skipFonts: true,
-          fontEmbedCSS: '',
-        })
-        const a = document.createElement('a')
-        a.href = dataUrl
-        a.download = `gogermany-${draft.templateType}-${Date.now()}.png`
-        document.body.appendChild(a)
-        a.click()
-        a.remove()
-      } finally {
-        ;(target as HTMLElement).style.transform = prevTransform
+      const ts = Date.now()
+      for (let i = 0; i < ids.length; i++) {
+        const target = document.getElementById(ids[i]) as HTMLElement | null
+        if (!target) {
+          if (isCarousel) continue // skip missing slide rather than abort the whole batch
+          throw new Error('preview not in DOM')
+        }
+        const fileName = isCarousel
+          ? `gogermany-carousel-${ts}-slide-${i + 1}.png`
+          : `gogermany-${draft.templateType}-${ts}.png`
+        await exportOne(lib, target, fileName)
+        // tiny pause so the browser doesn't squash the download events
+        if (isCarousel && i < ids.length - 1) await new Promise(r => setTimeout(r, 250))
       }
     } catch (e: any) {
       setError(e?.message || 'PNG export failed')
@@ -581,11 +869,12 @@ export default function AdminSocialPostGenerator() {
               onChange={e => setTemplateType(e.target.value as any)}
               disabled={loading}
             >
-              <option value="random">🎲 Random</option>
+              <option value="random">🎲 Random (single slide)</option>
               <option value="hook">{TEMPLATE_LABELS.hook}</option>
               <option value="fact">{TEMPLATE_LABELS.fact}</option>
               <option value="explainer">{TEMPLATE_LABELS.explainer}</option>
               <option value="budget">{TEMPLATE_LABELS.budget}</option>
+              <option value="carousel">{TEMPLATE_LABELS.carousel}</option>
             </select>
           </div>
         </div>
@@ -607,7 +896,11 @@ export default function AdminSocialPostGenerator() {
                 disabled={downloading || loading}
                 style={{ background: '#16a34a' }}
               >
-                {downloading ? 'Rendering PNG…' : '⬇ Download PNG'}
+                {downloading
+                  ? 'Rendering PNG…'
+                  : draft.templateType === 'carousel'
+                    ? '⬇ Download 5 PNGs'
+                    : '⬇ Download PNG'}
               </button>
               <button
                 type="button"
@@ -641,29 +934,38 @@ export default function AdminSocialPostGenerator() {
 
           {/* The preview: real 1080×1080 inside a viewport that scales it
               to ~600px wide so it fits the admin column. The DOM size
-              is preserved so the PNG export grabs the right pixels. */}
-          <div
-            ref={previewRef}
-            className="gg-social"
-            style={{
-              width: '100%',
-              maxWidth: 620,
-              aspectRatio: '1 / 1',
-              overflow: 'hidden',
-              borderRadius: 12,
-              margin: '0 auto',
-              background: '#0E1A36',
-            }}
-          >
-            <div style={{
-              transform: 'scale(0.574)',
-              transformOrigin: 'top left',
-              width: 1080,
-              height: 1080,
-            }}>
-              <PostPreview draft={draft} />
-            </div>
-          </div>
+              is preserved so the PNG export grabs the right pixels.
+              Carousels expand vertically to show all 5 slides. */}
+          {(() => {
+            const isCarousel = draft.templateType === 'carousel'
+            const slideGapInner = 36 // matches the gap inside CarouselSlideRender stack
+            const innerH = isCarousel ? 5 * 1080 + 4 * slideGapInner : 1080
+            const scale = 0.574
+            return (
+              <div
+                ref={previewRef}
+                className="gg-social"
+                style={{
+                  width: '100%',
+                  maxWidth: 620,
+                  height: innerH * scale,
+                  overflow: 'hidden',
+                  borderRadius: 12,
+                  margin: '0 auto',
+                  background: '#0E1A36',
+                }}
+              >
+                <div style={{
+                  transform: `scale(${scale})`,
+                  transformOrigin: 'top left',
+                  width: 1080,
+                  height: innerH,
+                }}>
+                  <PostPreview draft={draft} />
+                </div>
+              </div>
+            )
+          })()}
         </>
       )}
     </section>
