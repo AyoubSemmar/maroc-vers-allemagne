@@ -179,6 +179,14 @@ export async function addListing(formData) {
   const type        = (formData.get('type')        || 'شقة').toString().trim()
   const priceRaw    = (formData.get('price')       || '').toString().trim()
   const whatsappRaw = (formData.get('whatsapp')    || '').toString().trim()
+  // Anmeldung is a tri-state in storage (true / false / null = unknown)
+  // but the form is a tri-state radio with explicit yes/no/skip options
+  // so admin / power users can leave it blank if they don't know.
+  const anmeldungRaw = (formData.get('with_anmeldung') || '').toString().trim()
+  const with_anmeldung =
+    anmeldungRaw === 'true'  ? true  :
+    anmeldungRaw === 'false' ? false :
+                               null
 
   if (!title || !description || !city || !whatsappRaw) {
     redirect('/console-x7k9/content?err=missing')
@@ -205,6 +213,7 @@ export async function addListing(formData) {
     type,
     price: priceRaw ? Number(priceRaw) : null,
     whatsapp,
+    with_anmeldung,
     image_url: imageUrls[0] || '',
     images: imageUrls,
     available: true,

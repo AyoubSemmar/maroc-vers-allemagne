@@ -48,6 +48,12 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
               <div className="flex gap-2 mb-2 flex-wrap">
                 <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{typeLabel(listing.type)}</span>
                 <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{listing.city}</span>
+                {listing.with_anmeldung === true && (
+                  <span className="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full">✅ {t('withAnmeldung')}</span>
+                )}
+                {listing.with_anmeldung === false && (
+                  <span className="text-xs font-medium bg-red-50 text-red-700 px-2 py-1 rounded-full">❌ {t('withoutAnmeldung')}</span>
+                )}
                 {listing.price && (
                   <span className="text-sm font-bold text-white bg-green-600 px-3 py-1 rounded-full">{listing.price} {t('priceSuffix')}</span>
                 )}

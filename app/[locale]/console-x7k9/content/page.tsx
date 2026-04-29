@@ -151,6 +151,26 @@ export default async function AdminContentPage({
           </div>
 
           <div>
+            <label className="adm-label">Anmeldung allowed at this address?</label>
+            <div style={{ display: 'flex', gap: 16, fontSize: 13, marginTop: 6 }}>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="with_anmeldung" value="true" /> ✅ With Anmeldung
+              </label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="with_anmeldung" value="false" /> ❌ Without Anmeldung
+              </label>
+              <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer' }}>
+                <input type="radio" name="with_anmeldung" value="" defaultChecked /> ❔ Not specified
+              </label>
+            </div>
+            <p style={{ fontSize: 11, color: 'var(--adm-ink-mute)', marginTop: 4 }}>
+              Anmeldung = the city-hall residence registration tenants need
+              for visa, bank, and tax purposes. Many sublets don&rsquo;t allow
+              it — confirm with the lister before posting.
+            </p>
+          </div>
+
+          <div>
             <label className="adm-label">Images (you can select multiple — first one becomes the cover)</label>
             <input name="images" type="file" accept="image/*" multiple className="adm-input" />
           </div>
