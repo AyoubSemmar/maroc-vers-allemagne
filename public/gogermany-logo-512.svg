@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#E27940"/>
+      <stop offset="100%" stop-color="#F4C842"/>
+    </linearGradient>
+    <clipPath id="tile">
+      <rect width="512" height="512" rx="112"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <!-- Orange → gold brand gradient background -->
+    <rect width="512" height="512" fill="url(#bg)"/>
+
+    <!-- Big chunky white G, centered slightly above middle -->
+    <text
+      x="256" y="312"
+      text-anchor="middle"
+      dominant-baseline="middle"
+      font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+      font-weight="900"
+      font-size="352"
+      fill="white">G</text>
+
+    <!-- German flag — three vertical bands across the bottom ~14% -->
+    <rect x="0"      y="440" width="170.67" height="72" fill="#000000"/>
+    <rect x="170.67" y="440" width="170.67" height="72" fill="#DD0000"/>
+    <rect x="341.33" y="440" width="170.67" height="72" fill="#FFCE00"/>
+  </g>
+</svg>

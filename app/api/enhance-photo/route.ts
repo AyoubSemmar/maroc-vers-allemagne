@@ -205,8 +205,6 @@ export async function POST(req: NextRequest) {
     // flux-kontext-max is an *official* Replicate model → use by model name
     // (no version hash needed).
     const finalPrompt = buildPrompt(hijab, profession)
-    console.log('[enhance-photo] profession:', profession, '| hijab:', hijab)
-    console.log('[enhance-photo] prompt:', finalPrompt)
 
     let prediction = await replicate.predictions.create({
       model: 'google/nano-banana',

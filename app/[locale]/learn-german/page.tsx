@@ -1,8 +1,39 @@
+import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import './learn-german.css'
+
+const META: Record<AppLocale, { title: string; desc: string }> = {
+  ar: {
+    title: 'تعلّم الألمانية مجاناً — A1 إلى C1 | GoGermany',
+    desc: 'دروس ألمانية تفاعلية مجانية من المستوى A1 إلى C1، مصمّمة للمغاربة المتجهين إلى ألمانيا. تمارين القراءة والكتابة بالذكاء الاصطناعي.',
+  },
+  fr: {
+    title: "Apprendre l'allemand gratuitement — A1 à C1 | GoGermany",
+    desc: "Cours d'allemand interactifs et gratuits du niveau A1 au C1, conçus pour les Marocains qui partent en Allemagne. Exercices de lecture et écriture par IA.",
+  },
+  en: {
+    title: 'Learn German free — A1 to C1 | GoGermany',
+    desc: 'Free interactive German lessons from A1 to C1, built for Moroccans heading to Germany. AI-powered reading and writing exercises.',
+  },
+  de: {
+    title: 'Deutsch lernen kostenlos — A1 bis C1 | GoGermany',
+    desc: 'Kostenlose interaktive Deutschkurse von A1 bis C1, für Marokkaner mit Ziel Deutschland. KI-gestützte Lese- und Schreibübungen.',
+  },
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
+  const { locale } = await params
+  const m = META[locale] ?? META.fr
+  return {
+    title: m.title,
+    description: m.desc,
+    openGraph: { title: m.title, description: m.desc },
+    twitter: { title: m.title, description: m.desc },
+  }
+}
 
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params

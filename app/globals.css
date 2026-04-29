@@ -1724,7 +1724,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .rihla-article-list li::before {
   content: "";
   position: absolute;
-  right: 4px;
+  inset-inline-start: 4px;
   top: 0.68em;
   width: 8px;
   height: 8px;
@@ -2347,7 +2347,7 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
 .rihla-acard-star {
   position: absolute;
   top: 10px;
-  right: 10px;
+  inset-inline-end: 10px;
   background: color-mix(in oklch, var(--gold) 90%, white);
   border-radius: 999px;
   width: 28px; height: 28px;
@@ -2456,7 +2456,7 @@ html[dir="rtl"] .announce-inner { padding: 9px 18px 9px 44px; }
 .announce-dot.on { background: white; width: 18px; border-radius: 3px; }
 .announce-close {
   position: absolute;
-  right: 10px; top: 50%;
+  inset-inline-end: 10px; top: 50%;
   transform: translateY(-50%);
   width: 28px; height: 28px;
   border-radius: 50%;
@@ -2685,7 +2685,7 @@ html[data-theme="dark"] .rihla .path-hero-glow {
 .rihla .path-pillar-num {
   position: absolute;
   top: 18px;
-  right: 20px;
+  inset-inline-end: 20px;
   font-size: 32px;
   font-weight: 900;
   font-family: var(--font-display, inherit);
@@ -2745,7 +2745,7 @@ html[dir="rtl"] .rihla .path-pillar:hover .path-pillar-cta span { transform: sca
 .rihla .path-pillar-badge {
   position: absolute;
   top: 14px;
-  left: 16px;
+  inset-inline-start: 16px;
   padding: 4px 10px;
   font-size: 10.5px;
   font-weight: 700;
@@ -2785,7 +2785,7 @@ html[dir="rtl"] .rihla .path-pillar-badge { left: auto; right: 16px; }
 .tools-dd-menu {
   position: absolute;
   top: calc(100% + 10px);
-  left: 0;
+  inset-inline-start: 0;
   min-width: 320px;
   background: var(--bg-elev);
   border: 1px solid var(--line);
