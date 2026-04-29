@@ -23,50 +23,40 @@
 import { useEffect, useRef, useState } from 'react'
 
 type Hook = {
-  tagFr: string
-  headlineFr: string
-  headlineAr: string
+  tagFr: string; tagAr: string
+  headlineFr: string; headlineAr: string
   statNum: string
-  statLabelFr: string
-  statLabelAr: string
+  statLabelFr: string; statLabelAr: string
 }
 type Fact = {
-  tagFr: string
+  tagFr: string; tagAr: string
   numText: string
   numSubFr: string
-  summaryFr: string
-  summaryAr: string
+  summaryFr: string; summaryAr: string
 }
 type Explainer = {
-  tagFr: string
-  qFr: string
-  qAr: string
-  bigFr: string
-  bigAr: string
+  tagFr: string; tagAr: string
+  qFr: string; qAr: string
+  bigFr: string; bigAr: string
   stats: { num: string; labelFr: string; labelAr: string }[]
 }
 type Budget = {
-  tagFr: string
-  headlineFr: string
-  headlineAr: string
+  tagFr: string; tagAr: string
+  headlineFr: string; headlineAr: string
   items: { icon: string; labelFr: string; value: string }[]
-  totalLabel: string
+  totalLabelFr: string; totalLabelAr: string
   totalNum: string
   footAr: string
 }
 type CarouselSlide = {
-  stepLabelFr: string
-  titleFr: string
-  titleAr: string
-  bodyFr: string
-  bodyAr: string
+  stepLabelFr: string; stepLabelAr: string
+  titleFr: string; titleAr: string
+  bodyFr: string; bodyAr: string
 }
 type Carousel = {
-  seriesTagFr: string
-  seriesTitleFr: string
-  seriesTitleAr: string
-  seriesIntroFr: string
-  seriesIntroAr: string
+  seriesTagFr: string; seriesTagAr: string
+  seriesTitleFr: string; seriesTitleAr: string
+  seriesIntroFr: string; seriesIntroAr: string
   slides: CarouselSlide[]
 }
 
@@ -104,13 +94,13 @@ const TEMPLATE_CSS = `
   --ink-mute: rgba(255,255,255,0.5);
 }
 .gg-social * { box-sizing: border-box; }
-/* Mixed-script tags / step labels (e.g. "📚 L'Ausbildung · التكوين المهني")
-   need bidi isolation so the Latin and Arabic runs don't fight over
-   punctuation orientation. unicode-bidi: plaintext lets the renderer
-   set direction segment-by-segment based on Unicode strong type. */
+/* Tag pills now host two separate <bdi> containers (one Latin, one
+   Arabic) joined visually by a "·". Each <bdi> sets its own direction
+   so the parent doesn't need any bidi rule — keeping it neutral
+   prevents conflicts with the inner isolation. */
 .gg-social .p1-tag, .gg-social .p2-tag, .gg-social .p3-tag, .gg-social .p4-tag,
 .gg-social .cs-step {
-  unicode-bidi: plaintext;
+  unicode-bidi: isolate;
 }
 /* Arabic-only blocks: lock direction so the * highlight wrapping doesn't
    accidentally re-set it. */
@@ -517,7 +507,8 @@ function CarouselSlideRender({
   index,
   total,
   isCover,
-  stepLabel,
+  stepLabelFr,
+  stepLabelAr,
   titleFr,
   titleAr,
   bodyFr,
@@ -527,7 +518,8 @@ function CarouselSlideRender({
   index: number          // zero-based slide index
   total: number
   isCover: boolean
-  stepLabel: string
+  stepLabelFr: string
+  stepLabelAr: string
   titleFr: string
   titleAr: string
   bodyFr: string
@@ -550,7 +542,7 @@ function CarouselSlideRender({
       </div>
 
       <div className="cs-content">
-        <div className="cs-step">{stepLabel}</div>
+        <div className="cs-step"><Bilingual fr={stepLabelFr} ar={stepLabelAr} /></div>
         <h2 className="cs-title">{highlightStar(titleFr)}</h2>
         <p className="cs-title-ar">{titleAr}</p>
         <p className="cs-body">{bodyFr}</p>
@@ -560,6 +552,41 @@ function CarouselSlideRender({
       <CsPageIndicator current={index + 1} total={total} />
       <div className="cs-url">www.gogermany.ma</div>
     </article>
+  )
+}
+
+// Render an FR + AR pair with a "·" between them, each side in its own
+// bidi-isolated container so neither script can corrupt the other's
+// punctuation/digit ordering. This is THE root fix for the wrong-facing
+// punctuation + flipped numbers we kept seeing in mixed-language strings.
+function Bilingual({
+  fr, ar, sep = ' · ', frClass, arClass, style,
+}: {
+  fr?: string; ar?: string; sep?: string
+  frClass?: string; arClass?: string
+  style?: React.CSSProperties
+}) {
+  if (!fr && !ar) return null
+  return (
+    <span style={{ display: 'inline-block', ...style }}>
+      {fr && (
+        <bdi
+          className={frClass}
+          style={{ direction: 'ltr', unicodeBidi: 'isolate' }}
+        >
+          {fr}
+        </bdi>
+      )}
+      {fr && ar && <span style={{ opacity: 0.55, margin: '0 6px' }}>{sep.trim()}</span>}
+      {ar && (
+        <bdi
+          className={arClass}
+          style={{ direction: 'rtl', unicodeBidi: 'isolate' }}
+        >
+          {ar}
+        </bdi>
+      )}
+    </span>
   )
 }
 
@@ -589,14 +616,14 @@ function PostPreview({ draft }: { draft: Draft }) {
           <span className="logo-text">GoGermany</span>
         </div>
         <div className="p1-content">
-          <span className="p1-tag">{f.tagFr}</span>
+          <span className="p1-tag"><Bilingual fr={f.tagFr} ar={f.tagAr} /></span>
           <h2 className="p1-headline">{highlightStar(f.headlineFr)}</h2>
           <p className="p1-ar">{f.headlineAr}</p>
           <div className="p1-stat-row">
             <div className="p1-stat-num">{f.statNum}</div>
             <div className="p1-stat-label">
               <strong>{f.statLabelFr}</strong>
-              {f.statLabelAr}
+              <bdi style={{ direction: 'rtl', unicodeBidi: 'isolate' }}>{f.statLabelAr}</bdi>
             </div>
           </div>
         </div>
@@ -616,7 +643,7 @@ function PostPreview({ draft }: { draft: Draft }) {
         </div>
         <div className="p2-content">
           <div>
-            <div className="p2-tag">{f.tagFr}</div>
+            <div className="p2-tag"><Bilingual fr={f.tagFr} ar={f.tagAr} /></div>
             <div className="p2-stat">
               <div className="p2-num">{f.numText}</div>
               <p className="p2-num-sub">{f.numSubFr}</p>
@@ -643,7 +670,7 @@ function PostPreview({ draft }: { draft: Draft }) {
           <span className="logo-text">GoGermany</span>
         </div>
         <div className="p3-content">
-          <div className="p3-tag">{f.tagFr}</div>
+          <div className="p3-tag"><Bilingual fr={f.tagFr} ar={f.tagAr} /></div>
           <h2 className="p3-q">{f.qFr}</h2>
           <p className="p3-q-ar">{f.qAr}</p>
           <h3 className="p3-big">{highlightStar(f.bigFr)}</h3>
@@ -653,7 +680,9 @@ function PostPreview({ draft }: { draft: Draft }) {
               <div key={i} className="p3-stat">
                 <span className="p3-stat-num">{s.num}</span>
                 <span className="p3-stat-lbl">
-                  {s.labelFr}<br />{s.labelAr}
+                  <bdi style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>{s.labelFr}</bdi>
+                  <br />
+                  <bdi style={{ direction: 'rtl', unicodeBidi: 'isolate' }}>{s.labelAr}</bdi>
                 </span>
               </div>
             ))}
@@ -674,7 +703,7 @@ function PostPreview({ draft }: { draft: Draft }) {
           <span className="logo-text">GoGermany</span>
         </div>
         <div className="p4-headline-wrap">
-          <div className="p4-tag">{f.tagFr}</div>
+          <div className="p4-tag"><Bilingual fr={f.tagFr} ar={f.tagAr} /></div>
           <h2 className="p4-headline">{highlightStar(f.headlineFr)}</h2>
           <p className="p4-headline-ar">{f.headlineAr}</p>
         </div>
@@ -689,12 +718,18 @@ function PostPreview({ draft }: { draft: Draft }) {
               <div key={i} className="p4-line">
                 <span className="p4-line-icon">{it.icon}</span>
                 <span className="p4-line-fr">{it.labelFr}</span>
-                <span className="p4-line-val">{it.value}</span>
+                <span className="p4-line-val">
+                  <bdi style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>{it.value}</bdi>
+                </span>
               </div>
             ))}
             <div className="p4-total">
-              <span className="p4-total-label">{f.totalLabel}</span>
-              <span className="p4-total-num">{f.totalNum}</span>
+              <span className="p4-total-label">
+                <Bilingual fr={f.totalLabelFr} ar={f.totalLabelAr} />
+              </span>
+              <span className="p4-total-num">
+                <bdi style={{ direction: 'ltr', unicodeBidi: 'isolate' }}>{f.totalNum}</bdi>
+              </span>
             </div>
             <div className="p4-window-foot">{f.footAr}</div>
           </div>
@@ -716,7 +751,8 @@ function PostPreview({ draft }: { draft: Draft }) {
         index={0}
         total={5}
         isCover
-        stepLabel={f.seriesTagFr}
+        stepLabelFr={f.seriesTagFr}
+        stepLabelAr={f.seriesTagAr}
         titleFr={f.seriesTitleFr}
         titleAr={f.seriesTitleAr}
         bodyFr={f.seriesIntroFr}
@@ -729,7 +765,8 @@ function PostPreview({ draft }: { draft: Draft }) {
           index={i + 1}
           total={5}
           isCover={false}
-          stepLabel={s.stepLabelFr}
+          stepLabelFr={s.stepLabelFr}
+          stepLabelAr={s.stepLabelAr}
           titleFr={s.titleFr}
           titleAr={s.titleAr}
           bodyFr={s.bodyFr}

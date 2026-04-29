@@ -50,54 +50,67 @@ const TOPIC_IDEAS = [
 
 type Field<T> = T
 
+// All "Fr" fields must be Latin script ONLY (French + Latin punctuation +
+// emojis). All "Ar" fields must be Arabic script ONLY (use ؟ ، ؛ « », not
+// ASCII punctuation). NEVER mix scripts in the same string — when the
+// browser tries to bidi-resolve a mixed run it reorders punctuation,
+// digits, and currency symbols unpredictably. The component renders the
+// FR + AR halves in separate <bdi> containers, joined visually by a "·".
 type HookFields = {
-  tagFr: string         // top pill text, e.g. "📍 GoGermany.ma · Lancement"
-  headlineFr: string    // main FR headline (use *word* to highlight in gold)
-  headlineAr: string    // Arabic translation
-  statNum: string       // big stat number, e.g. "400K+"
-  statLabelFr: string
-  statLabelAr: string
+  tagFr: string         // Latin-only, e.g. "📍 Lancement"
+  tagAr: string         // Arabic-only, e.g. "إطلاق"
+  headlineFr: string    // FR headline (*word* highlighted in gold)
+  headlineAr: string
+  statNum: string       // pure number+unit, e.g. "400K+" or "~250€"
+  statLabelFr: string   // Latin-only label
+  statLabelAr: string   // Arabic-only label
 }
 type FactFields = {
-  tagFr: string         // e.g. "💡 Fun fact · معلومة"
-  numText: string       // big number, can include unit, e.g. "~250€"
-  numSubFr: string
+  tagFr: string         // Latin-only, e.g. "💡 Fun fact"
+  tagAr: string         // Arabic-only, e.g. "معلومة"
+  numText: string       // big number / unit, single token
+  numSubFr: string      // Latin-only sub-line
   summaryFr: string
   summaryAr: string
 }
 type ExplainerFields = {
-  tagFr: string         // e.g. "📚 L'Ausbildung · التكوين المهني"
-  qFr: string           // short question
+  tagFr: string         // Latin-only, e.g. "📚 L'Ausbildung"
+  tagAr: string         // Arabic-only, e.g. "التكوين المهني"
+  qFr: string
   qAr: string
-  bigFr: string         // 1-line big answer; *word* highlighted in gold
+  bigFr: string
   bigAr: string
-  stats: { num: string; labelFr: string; labelAr: string }[] // 2-4 items
+  stats: { num: string; labelFr: string; labelAr: string }[]
 }
 type BudgetFields = {
-  tagFr: string         // e.g. "💸 Budget · ميزانية"
-  headlineFr: string    // *word* highlighted
+  tagFr: string         // Latin-only, e.g. "💸 Budget"
+  tagAr: string         // Arabic-only, e.g. "ميزانية"
+  headlineFr: string
   headlineAr: string
-  items: { icon: string; labelFr: string; value: string }[]   // 3-6 rows
-  totalLabel: string    // e.g. "Total · المجموع"
-  totalNum: string      // e.g. "~ 900 €"
-  footAr: string        // tiny RTL caption
+  items: { icon: string; labelFr: string; value: string }[]
+  totalLabelFr: string  // Latin-only, e.g. "Total"
+  totalLabelAr: string  // Arabic-only, e.g. "المجموع"
+  totalNum: string
+  footAr: string        // Arabic-only caption
 }
 
-// 5-slide carousel: cover slide + 4 step/tip slides.
+// 5-slide carousel.
 type CarouselSlide = {
-  stepLabelFr: string  // e.g. "ÉTAPE 1" or "À RETENIR" — appears as small eyebrow
-  titleFr: string      // big FR headline for this slide; supports *highlight*
-  titleAr: string      // Arabic translation
-  bodyFr: string       // 1-2 sentences
-  bodyAr: string       // Arabic equivalent
+  stepLabelFr: string  // Latin-only, e.g. "ÉTAPE 1" or "À RETENIR"
+  stepLabelAr: string  // Arabic-only, e.g. "المرحلة 1" or "فكرة"
+  titleFr: string
+  titleAr: string
+  bodyFr: string
+  bodyAr: string
 }
 type CarouselFields = {
-  seriesTagFr: string       // e.g. "🇩🇪 GUIDE · مرشد"
-  seriesTitleFr: string     // cover headline (appears on slide 1, supports *highlight*)
-  seriesTitleAr: string     // Arabic cover headline
-  seriesIntroFr: string     // 1-line intro on slide 1
+  seriesTagFr: string       // Latin-only, e.g. "🇩🇪 GUIDE"
+  seriesTagAr: string       // Arabic-only, e.g. "مرشد"
+  seriesTitleFr: string
+  seriesTitleAr: string
+  seriesIntroFr: string
   seriesIntroAr: string
-  slides: CarouselSlide[]   // exactly 4 slides for steps 2-5; cover is slide 1
+  slides: CarouselSlide[]
 }
 
 type GeneratedDraft =
@@ -133,13 +146,30 @@ Guardrails:
 - No hashtags. No emojis inside main copy (only in tag pills where the schema says so).
 - Use the * char to mark ONE 1-3 word phrase per French headline that should be highlighted in gold. Example: "Vivre en Allemagne avec *1 000 € / mois*"
 
+⚠ STRICT BILINGUAL RULE — DO NOT MIX SCRIPTS IN ONE FIELD ⚠
+Every "Fr" field must contain ONLY Latin script (French letters + emojis + Western digits + Latin punctuation).
+Every "Ar" field must contain ONLY Arabic script (Arabic letters + Arabic punctuation + Western digits if needed).
+Mixing French and Arabic in the same field breaks bidi rendering — separators ("·"), digits and currency symbols end up in the wrong place visually. The page renders the FR + AR halves in two separate boxes, so you do NOT need to put a "·" between them — that's purely visual chrome.
+
+Examples of CORRECT splits:
+  tagFr: "📚 L'Ausbildung"        tagAr: "التكوين المهني"
+  tagFr: "💡 Fun fact"             tagAr: "معلومة"
+  totalLabelFr: "Total"            totalLabelAr: "المجموع"
+  stepLabelFr: "ÉTAPE 1"           stepLabelAr: "المرحلة 1"
+
 ARABIC PUNCTUATION — STRICT RULES (otherwise glyphs face the wrong direction):
 - Question mark in Arabic: ؟ (U+061F)  — NEVER use the Latin "?"
-- Comma in Arabic: ، (U+060C)  — NEVER use the Latin ","
-- Semicolon in Arabic: ؛ (U+061B) — NEVER use the Latin ";"
-- Quote marks in Arabic: « » (or "..." curly) — never straight ASCII quotes
-- Parentheses around Arabic phrases stay as ( ) but the content inside must use Arabic punctuation
-- Numbers and Latin proper nouns inside Arabic text are fine — keep digits as Western 0-9
+- Comma in Arabic: ، (U+060C)         — NEVER use the Latin ","
+- Semicolon in Arabic: ؛ (U+061B)     — NEVER use the Latin ";"
+- Quote marks in Arabic: « »            — never straight ASCII quotes
+- Period at end of Arabic sentence: just a Latin "." is OK, but NEVER a "؟" instead of "."
+- Numbers stay as Western digits 0-9 (the bidi engine handles them correctly inside an isolated RTL run)
+
+NUMBER & CURRENCY FORMATTING IN ARABIC — to avoid visual flips:
+- Prefer "8 يورو شهرياً" over "8 €/شهر" (writing the unit as a word avoids € flipping sides)
+- Prefer "من 300 إلى 450 يورو" over "300–450 €" (the en-dash + currency in mixed runs flips)
+- For ranges in Arabic, write "من X إلى Y" instead of "X–Y"
+- Western digits 0-9 are OK; do NOT use Arabic-Indic digits ٠-٩ (the rest of the site uses Western)
 `
 
   // Length / structure guidance per template.
@@ -147,79 +177,83 @@ ARABIC PUNCTUATION — STRICT RULES (otherwise glyphs face the wrong direction):
     hook: `
 Template: HOOK (yellow rounded border).
 Used for big launch-style declarations or attention-grabbing facts.
-Schema:
+Schema (each "Fr" is Latin-only, each "Ar" is Arabic-only — DO NOT mix):
 {
-  "tagFr": "📍 ... · ...  (≤32 chars)",
+  "tagFr": "📍 Lancement (Latin, ≤22 chars)",
+  "tagAr": "إطلاق (Arabic, ≤16 chars)",
   "headlineFr": "Big French statement, ≤80 chars, with *highlight* (1-3 words)",
-  "headlineAr": "Arabic translation, ≤60 chars",
-  "statNum": "Punchy number like 400K+ / €120K / 47%",
-  "statLabelFr": "Two-line label, ≤90 chars",
-  "statLabelAr": "Arabic equivalent"
+  "headlineAr": "Pure Arabic, ≤60 chars",
+  "statNum": "Single token: 400K+ / 47% / 250€ / 3 ans",
+  "statLabelFr": "French two-line label, ≤90 chars",
+  "statLabelAr": "Pure Arabic equivalent, ≤80 chars"
 }`,
     fact: `
 Template: FACT (full diagonal orange wedge).
 Used for ONE memorable number with a short bilingual takeaway.
-Schema:
+Schema (each "Fr" is Latin-only, each "Ar" is Arabic-only):
 {
-  "tagFr": "💡 Fun fact · معلومة",
-  "numText": "Big number, e.g. \\"~250€\\" or \\"3 ans\\" or \\"400 000\\"",
-  "numSubFr": "1-2 sentences explaining the number, ≤180 chars",
-  "summaryFr": "1 punchy sentence, ≤90 chars",
-  "summaryAr": "Arabic equivalent, ≤90 chars"
+  "tagFr": "💡 Fun fact (Latin only, ≤16 chars)",
+  "tagAr": "معلومة (Arabic only, ≤12 chars)",
+  "numText": "Big single token: \\"~250€\\" or \\"3 ans\\" or \\"400 000\\"",
+  "numSubFr": "1-2 French sentences explaining the number, ≤180 chars",
+  "summaryFr": "1 punchy French sentence, ≤90 chars",
+  "summaryAr": "Pure Arabic equivalent, ≤90 chars"
 }`,
     explainer: `
 Template: EXPLAINER (half diagonal corner).
 Used for Q&A — explains a concept (Ausbildung, Anmeldung, BAföG) in 1 question + 1 punchy answer + 2-4 stat tiles.
-Schema:
+Schema (each "Fr" is Latin-only, each "Ar" is Arabic-only):
 {
-  "tagFr": "📚 ... · ... (≤40 chars)",
-  "qFr": "Short question, ≤45 chars",
-  "qAr": "Arabic translation, ≤40 chars",
-  "bigFr": "Punchy answer with *highlight*, ≤55 chars",
-  "bigAr": "Arabic translation, ≤50 chars",
+  "tagFr": "📚 L'Ausbildung (Latin only, ≤22 chars)",
+  "tagAr": "التكوين المهني (Arabic only, ≤18 chars)",
+  "qFr": "Short French question, ≤45 chars",
+  "qAr": "Pure Arabic question, ≤40 chars",
+  "bigFr": "Punchy French answer with *highlight*, ≤55 chars",
+  "bigAr": "Pure Arabic answer, ≤50 chars",
   "stats": [
-    {"num": "value", "labelFr": "≤24 chars", "labelAr": "≤22 chars"},
-    {"num": "value", "labelFr": "≤24 chars", "labelAr": "≤22 chars"},
-    {"num": "value", "labelFr": "≤24 chars", "labelAr": "≤22 chars"}
+    {"num": "value", "labelFr": "Latin ≤24 chars", "labelAr": "Arabic ≤22 chars"},
+    ... 3 entries unless topic warrants 2 or 4 ...
   ]
-}
-Provide 3 stats unless the topic clearly warrants 2 or 4.`,
+}`,
     budget: `
 Template: BUDGET (browser-window frame with line items).
-Used for cost breakdowns: "Vivre avec X €/mois", "Frais d'Ausbildung", "Budget premier mois".
-Schema:
+Used for cost breakdowns. Numbers in Arabic should follow the formatting
+rules above ("من 300 إلى 450 يورو" rather than "300–450 €").
+Schema (each "Fr" is Latin-only, each "Ar" is Arabic-only):
 {
-  "tagFr": "💸 ... · ... ",
-  "headlineFr": "Title with *highlighted* total, ≤55 chars",
-  "headlineAr": "Arabic translation, ≤45 chars",
+  "tagFr": "💸 Budget (Latin only)",
+  "tagAr": "ميزانية (Arabic only)",
+  "headlineFr": "French title with *highlight*, ≤55 chars",
+  "headlineAr": "Pure Arabic translation, ≤45 chars",
   "items": [
-    {"icon": "1 emoji", "labelFr": "≤32 chars", "value": "e.g. \\"300–450 €\\""},
+    {"icon": "1 emoji", "labelFr": "Latin ≤32 chars", "value": "300–450 € (Latin only — this column is always LTR-isolated)"},
     ... 4-5 items total ...
   ],
-  "totalLabel": "Total · المجموع",
-  "totalNum": "e.g. \\"~ 900 €\\"",
-  "footAr": "Tiny RTL caption, ≤60 chars"
+  "totalLabelFr": "Total (Latin only)",
+  "totalLabelAr": "المجموع (Arabic only)",
+  "totalNum": "Single token, e.g. \\"~ 900 €\\"",
+  "footAr": "Pure Arabic caption, ≤60 chars"
 }`,
     carousel: `
 Template: CAROUSEL (5 slides — Instagram swipe set).
-Slide 1 is the cover (series title + intro). Slides 2-5 are steps or
-tips that build on each other. Use this for guides like "5 étapes pour
-ouvrir un compte", "5 erreurs à éviter en Ausbildung", "5 villes
-abordables", "Comment trouver un logement en 5 étapes".
-Schema:
+Slide 1 is the cover (series title + intro). Slides 2-5 are steps that
+build on each other.
+Schema (each "Fr" is Latin-only, each "Ar" is Arabic-only):
 {
-  "seriesTagFr": "🇩🇪 ... · ... (≤30 chars)",
-  "seriesTitleFr": "Cover headline with ONE *highlight*, ≤55 chars",
-  "seriesTitleAr": "Arabic translation, ≤50 chars",
-  "seriesIntroFr": "1-line intro on cover, ≤90 chars",
-  "seriesIntroAr": "Arabic translation, ≤80 chars",
+  "seriesTagFr": "🇩🇪 GUIDE (Latin only, ≤14 chars)",
+  "seriesTagAr": "مرشد (Arabic only, ≤10 chars)",
+  "seriesTitleFr": "French cover headline with ONE *highlight*, ≤55 chars",
+  "seriesTitleAr": "Pure Arabic translation, ≤50 chars",
+  "seriesIntroFr": "1-line French intro, ≤90 chars",
+  "seriesIntroAr": "Pure Arabic intro, ≤80 chars",
   "slides": [
     {
-      "stepLabelFr": "ÉTAPE 1 · المرحلة 1 (or À RETENIR / ASTUCE)",
-      "titleFr": "Step headline with optional *highlight*, ≤50 chars",
-      "titleAr": "Arabic translation, ≤45 chars",
-      "bodyFr": "1-2 sentences expanding the step, ≤180 chars",
-      "bodyAr": "Arabic equivalent, ≤160 chars"
+      "stepLabelFr": "ÉTAPE 1 (Latin only — or À RETENIR / ASTUCE)",
+      "stepLabelAr": "المرحلة 1 (Arabic only — or فكرة / تذكير)",
+      "titleFr": "French step headline with optional *highlight*, ≤50 chars",
+      "titleAr": "Pure Arabic translation, ≤45 chars",
+      "bodyFr": "1-2 French sentences, ≤180 chars",
+      "bodyAr": "Pure Arabic equivalent, ≤160 chars"
     }
     ... exactly 4 entries ...
   ]
@@ -283,17 +317,17 @@ export async function POST(req: NextRequest) {
     const missing: string[] = []
     const need = (k: string) => { if (!fields[k]) missing.push(k) }
     if (templateType === 'hook') {
-      ['tagFr', 'headlineFr', 'headlineAr', 'statNum', 'statLabelFr', 'statLabelAr'].forEach(need)
+      ['tagFr', 'tagAr', 'headlineFr', 'headlineAr', 'statNum', 'statLabelFr', 'statLabelAr'].forEach(need)
     } else if (templateType === 'fact') {
-      ['tagFr', 'numText', 'numSubFr', 'summaryFr', 'summaryAr'].forEach(need)
+      ['tagFr', 'tagAr', 'numText', 'numSubFr', 'summaryFr', 'summaryAr'].forEach(need)
     } else if (templateType === 'explainer') {
-      ['tagFr', 'qFr', 'qAr', 'bigFr', 'bigAr', 'stats'].forEach(need)
+      ['tagFr', 'tagAr', 'qFr', 'qAr', 'bigFr', 'bigAr', 'stats'].forEach(need)
       if (Array.isArray(fields.stats) && fields.stats.length < 2) missing.push('stats(≥2)')
     } else if (templateType === 'budget') {
-      ['tagFr', 'headlineFr', 'headlineAr', 'items', 'totalLabel', 'totalNum', 'footAr'].forEach(need)
+      ['tagFr', 'tagAr', 'headlineFr', 'headlineAr', 'items', 'totalLabelFr', 'totalLabelAr', 'totalNum', 'footAr'].forEach(need)
       if (Array.isArray(fields.items) && fields.items.length < 3) missing.push('items(≥3)')
     } else if (templateType === 'carousel') {
-      ['seriesTagFr', 'seriesTitleFr', 'seriesTitleAr', 'seriesIntroFr', 'seriesIntroAr', 'slides'].forEach(need)
+      ['seriesTagFr', 'seriesTagAr', 'seriesTitleFr', 'seriesTitleAr', 'seriesIntroFr', 'seriesIntroAr', 'slides'].forEach(need)
       if (Array.isArray(fields.slides) && fields.slides.length < 4) missing.push('slides(=4)')
     }
     if (missing.length) {
