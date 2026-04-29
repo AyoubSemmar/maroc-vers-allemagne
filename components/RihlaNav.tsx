@@ -207,6 +207,9 @@ export default function RihlaNav() {
                     <Link href="/tools/living-cost-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('livingCost.name')}
                     </Link>
+                    <Link href="/listings" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('housing.name')}
+                    </Link>
                   </div>
                 )}
 
