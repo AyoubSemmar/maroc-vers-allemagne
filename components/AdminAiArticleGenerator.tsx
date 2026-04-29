@@ -48,7 +48,7 @@ export default function AdminAiArticleGenerator() {
   const [imageWarning, setImageWarning] = useState<string | null>(null)
   const [activeLang, setActiveLang] = useState<Lang>('ar')
   const [saving, setSaving] = useState(false)
-  const [saved, setSaved] = useState<{ id: string } | null>(null)
+  const [saved, setSaved] = useState<{ id: string; directUrl?: string } | null>(null)
 
   // Helper: parse the response defensively. On platform-level timeouts
   // Vercel returns an HTML error page — JSON.parse on that gives the
@@ -163,7 +163,7 @@ export default function AdminAiArticleGenerator() {
         setError(data?.error || `Save failed (${resp.status})`)
         return
       }
-      setSaved({ id: data.id })
+      setSaved({ id: data.id, directUrl: data.direct_url_ar })
       setDraft(null)
     } catch (e: any) {
       setError(e?.message || 'Network error')
@@ -231,8 +231,16 @@ export default function AdminAiArticleGenerator() {
           background: '#dcfce7', border: '1px solid #86efac', color: '#14532d',
           borderRadius: 10, padding: 12, fontSize: 14, marginBottom: 12,
         }}>
-          <strong>✓ Article published.</strong> Saved with ID <code>{saved.id}</code>. Generate another?
-          <div style={{ marginTop: 8 }}>
+          <strong>✓ Article published.</strong> Saved with ID <code>{saved.id}</code>.
+          {saved.directUrl && (
+            <div style={{ marginTop: 6, fontSize: 13 }}>
+              👉 <a href={saved.directUrl} target="_blank" rel="noreferrer" style={{ color: '#15803d', textDecoration: 'underline' }}>
+                Open the article directly
+              </a>
+              {' '}or it should appear at the top of the list (you may need to hard-refresh /articles).
+            </div>
+          )}
+          <div style={{ marginTop: 10 }}>
             <button type="button" className="adm-btn" onClick={generate} disabled={loading}>
               {loading ? 'Generating…' : '✨ Generate another'}
             </button>

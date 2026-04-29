@@ -81,11 +81,30 @@ export async function POST(req: NextRequest) {
       )
     }
 
+    // Revalidate every locale-prefixed route. revalidatePath('/articles')
+    // alone DOES NOT match /[locale]/articles in Next.js — the dynamic
+    // segment needs the page-pattern form, but that requires Next 15+
+    // syntax that isn't perfectly stable across versions, so we fall
+    // back to listing every locale explicitly. Belt and braces: also
+    // call the bare paths in case future Next versions match them.
     revalidatePath('/console-x7k9/content')
     revalidatePath('/articles')
     revalidatePath(`/articles/${data.id}`)
+    for (const l of ['ar', 'fr', 'en', 'de']) {
+      revalidatePath(`/${l}/articles`)
+      revalidatePath(`/${l}/articles/${data.id}`)
+    }
 
-    return NextResponse.json({ id: data.id })
+    // Echo back the row's identifying fields so the admin can verify
+    // straight from the network response that the insert really
+    // happened (eg. compare against the Supabase Table Editor).
+    return NextResponse.json({
+      id: data.id,
+      title: row.title,
+      category: row.category,
+      date: row.date,
+      direct_url_ar: `/ar/articles/${data.id}`,
+    })
   } catch (e: any) {
     console.error('[save-article] uncaught:', e)
     return NextResponse.json({ error: e?.message || 'Save failed.' }, { status: 500 })
