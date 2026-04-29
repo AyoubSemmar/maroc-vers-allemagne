@@ -1,14 +1,17 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { useRouter } from '@/i18n/navigation'
+import { cityLabel } from '@/lib/germanCities'
+import type { AppLocale } from '@/i18n/routing'
 
 export default function ListingsFilters({ cities, currentCity, currentType }: {
-  cities: string[]
+  cities: readonly string[]
   currentCity?: string
   currentType?: string
 }) {
   const t = useTranslations('listings')
+  const locale = useLocale() as AppLocale
   const router = useRouter()
 
   function updateFilter(key: string, value: string) {
@@ -35,7 +38,7 @@ export default function ListingsFilters({ cities, currentCity, currentType }: {
         className="border border-gray-300 rounded-full px-4 py-2 text-sm text-gray-700 bg-white"
       >
         <option value="__ALL__">{t('cityAll')}</option>
-        {cities.map(c => <option key={c} value={c}>{c}</option>)}
+        {cities.map(c => <option key={c} value={c}>{cityLabel(c, locale)}</option>)}
       </select>
     </div>
   )

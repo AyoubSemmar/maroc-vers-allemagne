@@ -5,15 +5,9 @@ import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
 import { useRouter, Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { CITIES_AR, cityLabel } from '@/lib/germanCities'
 
-const cities = [
-  'برلين', 'ميونخ', 'هامبورغ', 'فرانكفورت', 'كولونيا', 'شتوتغارت', 'دوسلدورف',
-  'لايبزيغ', 'دورتموند', 'إيسن', 'بريمن', 'درسدن', 'هانوفر', 'نورنبرغ', 'دويسبورغ',
-  'بوخوم', 'فوبرتال', 'بيليفيلد', 'بون', 'مونستر', 'مانهايم', 'كارلسروه',
-  'أوغسبورغ', 'فيسبادن', 'غلزنكيرشن', 'آخن', 'براونشفايغ', 'كيل', 'كيمنيتس',
-  'ماغدبورغ', 'فرايبورغ', 'روستوك', 'هاله', 'إيرفورت', 'ماينز', 'لوبيك',
-  'زاربروكن', 'هايدلبرغ', 'بوتسدام', 'أخرى'
-]
+const cities = CITIES_AR
 
 export default function NewListingPage() {
   const t = useTranslations('listings')
@@ -140,7 +134,7 @@ export default function NewListingPage() {
               className="border border-gray-300 rounded-lg px-4 py-2 text-right text-gray-900"
             >
               <option value="">{t('form.selectCity')}</option>
-              {cities.map(c => <option key={c} value={c}>{c}</option>)}
+              {cities.map(c => <option key={c} value={c}>{cityLabel(c, locale)}</option>)}
             </select>
 
             <div className="relative">

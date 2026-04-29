@@ -6,15 +6,9 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import ListingsFilters from '../../listings/ListingsFilters'
+import { CITIES_AR, cityLabel } from '@/lib/germanCities'
 
-const cities = [
-  'برلين', 'ميونخ', 'هامبورغ', 'فرانكفورت', 'كولونيا', 'شتوتغارت', 'دوسلدورف',
-  'لايبزيغ', 'دورتموند', 'إيسن', 'بريمن', 'درسدن', 'هانوفر', 'نورنبرغ', 'دويسبورغ',
-  'بوخوم', 'فوبرتال', 'بيليفيلد', 'بون', 'مونستر', 'مانهايم', 'كارلسروه',
-  'أوغسبورغ', 'فيسبادن', 'غلزنكيرشن', 'آخن', 'براونشفايغ', 'كيل', 'كيمنيتس',
-  'ماغدبورغ', 'فرايبورغ', 'روستوك', 'هاله', 'إيرفورت', 'ماينز', 'لوبيك',
-  'زاربروكن', 'هايدلبرغ', 'بوتسدام', 'أخرى',
-]
+const cities = CITIES_AR
 
 const LOCALE_TO_INTL: Record<AppLocale, string> = {
   ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
@@ -102,7 +96,7 @@ export default async function DashboardHousingPage({ params, searchParams }: Pro
             <div className="p-4">
               <div className="flex items-center gap-2 mb-2 flex-wrap">
                 <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{typeLabel(listing.type)}</span>
-                <span className="text-xs text-gray-400">{listing.city}</span>
+                <span className="text-xs text-gray-400">{cityLabel(listing.city, locale)}</span>
                 {listing.price && (
                   <span className="text-xs font-semibold text-white bg-green-600 px-2 py-1 rounded-full">
                     {listing.price} {t('priceSuffix')}

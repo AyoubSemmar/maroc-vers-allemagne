@@ -6,6 +6,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import DeleteListingButton from './DeleteListingButton'
 import ImageGallery from './ImageGallery'
 import ShareButtons from '@/components/ShareButtons'
+import { cityLabel } from '@/lib/germanCities'
 
 export default async function ListingPage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
   const { id, locale } = await params
@@ -47,7 +48,7 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
             <div>
               <div className="flex gap-2 mb-2 flex-wrap">
                 <span className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded-full">{typeLabel(listing.type)}</span>
-                <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{listing.city}</span>
+                <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-full">{cityLabel(listing.city, locale)}</span>
                 {listing.with_anmeldung === true && (
                   <span className="text-xs font-medium bg-green-100 text-green-800 px-2 py-1 rounded-full">✅ {t('withAnmeldung')}</span>
                 )}
