@@ -40,48 +40,79 @@ const LANG_LABEL: Record<Lang, string> = {
 
 export default function AdminAiArticleGenerator() {
   const [loading, setLoading] = useState(false)
+  const [loadingStage, setLoadingStage] = useState<'' | 'text' | 'image'>('')
   const [draft, setDraft] = useState<Draft | null>(null)
   const [titleClash, setTitleClash] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [imageWarning, setImageWarning] = useState<string | null>(null)
   const [activeLang, setActiveLang] = useState<Lang>('ar')
   const [saving, setSaving] = useState(false)
   const [saved, setSaved] = useState<{ id: string } | null>(null)
 
+  // Helper: parse the response defensively. On platform-level timeouts
+  // Vercel returns an HTML error page — JSON.parse on that gives the
+  // useless "Unexpected token 'A'…" we used to surface to the admin.
+  async function safeParse(resp: Response) {
+    const raw = await resp.text()
+    let data: any = null
+    try { data = raw ? JSON.parse(raw) : null } catch { /* HTML page */ }
+    return data
+  }
+
   async function generate() {
     setLoading(true)
+    setLoadingStage('text')
     setError(null)
     setDraft(null)
     setSaved(null)
     setTitleClash(false)
+    setImageWarning(null)
     try {
+      // ── Step 1: text ────────────────────────────────────────────
       const resp = await fetch('/api/admin/generate-article', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({}),
       })
-      // Read as text first; the server *should* return JSON, but on a
-      // platform-level timeout/crash Vercel returns its own HTML page —
-      // parsing that as JSON gives "Unexpected token 'A'…" which is
-      // useless to the admin. Surface a real message instead.
-      const raw = await resp.text()
-      let data: any = null
-      try { data = raw ? JSON.parse(raw) : null } catch { /* HTML error page */ }
+      const data = await safeParse(resp)
       if (!resp.ok || !data) {
         const msg =
           data?.error ||
           (resp.status === 504
-            ? 'The generator timed out (server limit). Try again — the second run is usually faster.'
+            ? 'The text generator timed out. Try again — the second run is usually faster.'
             : `Generation failed (HTTP ${resp.status}). The server returned a non-JSON response.`)
         setError(msg)
         return
       }
-      setDraft(data.draft)
+      const initialDraft: Draft = data.draft
+      setDraft(initialDraft)
       setTitleClash(!!data.titleClash)
       setActiveLang('ar')
+
+      // ── Step 2: image (best effort) ─────────────────────────────
+      // The article is already on screen; if the image fails, the admin
+      // can still approve & publish or upload one manually.
+      setLoadingStage('image')
+      try {
+        const ir = await fetch('/api/admin/generate-article-image', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ prompt: initialDraft.image_prompt_used }),
+        })
+        const idata = await safeParse(ir)
+        if (ir.ok && idata?.image_url) {
+          setDraft(d => d ? { ...d, image_url: idata.image_url, image_prompt_used: idata.prompt_used || d.image_prompt_used } : d)
+        } else {
+          setImageWarning(idata?.error || `Image generation failed (HTTP ${ir.status}). You can approve without it or regenerate.`)
+        }
+      } catch (e: any) {
+        setImageWarning(`Image step failed: ${e?.message || 'network error'}`)
+      }
     } catch (e: any) {
       setError(e?.message || 'Network error')
     } finally {
       setLoading(false)
+      setLoadingStage('')
     }
   }
 
@@ -143,7 +174,11 @@ export default function AdminAiArticleGenerator() {
             onClick={generate}
             disabled={loading}
           >
-            {loading ? 'Generating… (this takes 30–60s)' : '✨ Generate a new article draft'}
+            {loading
+              ? loadingStage === 'image'
+                ? 'Article ready — making image…'
+                : 'Writing article in 4 languages…'
+              : '✨ Generate a new article draft'}
           </button>
           <p style={{ fontSize: 12, color: 'var(--adm-ink-mute)', marginTop: 8 }}>
             Picks a random category from your existing list, avoids titles that already exist,
@@ -176,6 +211,48 @@ export default function AdminAiArticleGenerator() {
         </div>
       )}
 
+      {imageWarning && (
+        <div style={{
+          background: '#fef3c7', border: '1px solid #fde68a', color: '#78350f',
+          borderRadius: 10, padding: 10, fontSize: 13, marginBottom: 12,
+          display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap',
+        }}>
+          <span>🖼 {imageWarning}</span>
+          <button
+            type="button"
+            onClick={async () => {
+              if (!draft) return
+              setImageWarning(null)
+              setLoadingStage('image')
+              setLoading(true)
+              try {
+                const ir = await fetch('/api/admin/generate-article-image', {
+                  method: 'POST',
+                  headers: { 'Content-Type': 'application/json' },
+                  body: JSON.stringify({ prompt: draft.image_prompt_used }),
+                })
+                const idata = await safeParse(ir)
+                if (ir.ok && idata?.image_url) {
+                  setDraft(d => d ? { ...d, image_url: idata.image_url } : d)
+                } else {
+                  setImageWarning(idata?.error || `Image generation failed (HTTP ${ir.status}).`)
+                }
+              } finally {
+                setLoading(false)
+                setLoadingStage('')
+              }
+            }}
+            disabled={loading}
+            style={{
+              fontSize: 12, padding: '6px 12px', borderRadius: 8, cursor: 'pointer',
+              border: '1px solid #b45309', background: '#fbbf24', color: '#451a03', fontWeight: 600,
+            }}
+          >
+            🔄 Retry image
+          </button>
+        </div>
+      )}
+
       {draft && view && (
         <>
           {titleClash && (
@@ -194,13 +271,21 @@ export default function AdminAiArticleGenerator() {
                 alt=""
                 style={{ width: 220, height: 124, objectFit: 'cover', borderRadius: 8, border: '1px solid #e5e7eb' }}
               />
+            ) : loadingStage === 'image' ? (
+              <div style={{
+                width: 220, height: 124, borderRadius: 8, border: '1px dashed #fde68a',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                color: '#78350f', fontSize: 13, background: '#fffbeb',
+              }}>
+                🖼 Generating image…
+              </div>
             ) : (
               <div style={{
                 width: 220, height: 124, borderRadius: 8, border: '1px dashed #e5e7eb',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 color: '#9ca3af', fontSize: 13,
               }}>
-                no image generated
+                no image yet
               </div>
             )}
             <div style={{ flex: 1, minWidth: 220 }}>

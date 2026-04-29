@@ -15,15 +15,14 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 import Anthropic from '@anthropic-ai/sdk'
-import Replicate from 'replicate'
 import { createClient } from '@supabase/supabase-js'
 
 export const runtime = 'nodejs'
-// Cap at 90s. Past experience: when this was 120s, the Claude+Replicate
-// chain occasionally tripped Vercel's internal limit and the platform
-// returned its own HTML error page instead of our JSON, surfacing in
-// the UI as "Unexpected token 'A'…" when the client tried to parse it.
-export const maxDuration = 90
+// 60s is the Pro-tier sweet spot for a Sonnet call that returns a 4-
+// language article. Image generation now lives in a sibling endpoint
+// (/api/admin/generate-article-image) so this route only needs to fit
+// the Claude call + DB read; that's reliably <40s.
+export const maxDuration = 60
 
 // Canonical category list — same one used in the admin form.
 const CATEGORIES = [
@@ -118,75 +117,6 @@ Return ONLY a JSON object, no commentary:
 }`
 }
 
-async function generateImageBuffer(
-  prompt: string,
-  deadlineMs: number,
-): Promise<{ buffer: Buffer; promptUsed: string } | null> {
-  const apiToken = process.env.REPLICATE_API_TOKEN
-  if (!apiToken) return null
-  const replicate = new Replicate({ auth: apiToken })
-
-  const fullPrompt = `${prompt}, editorial photograph, soft natural light, shallow depth of field, no text, no logos, high detail`
-
-  // Use predictions.create + manual polling rather than replicate.run().
-  // .run() awaits internally with no clear deadline — we've seen it hang
-  // long enough to trip Vercel's function timeout and lose the whole
-  // request. With manual polling we can bail at our own deadline and
-  // still return the article draft (image becomes optional).
-  let prediction = await replicate.predictions.create({
-    model: 'black-forest-labs/flux-schnell',
-    input: {
-      prompt: fullPrompt,
-      aspect_ratio: '16:9',
-      output_format: 'jpg',
-      output_quality: 85,
-      num_outputs: 1,
-    },
-  })
-
-  const terminal = new Set(['succeeded', 'failed', 'canceled'])
-  const startedAt = Date.now()
-  while (!terminal.has(prediction.status)) {
-    if (Date.now() - startedAt > deadlineMs) {
-      console.warn('[generate-article] image gen exceeded deadline, abandoning')
-      return null
-    }
-    await new Promise(r => setTimeout(r, 1500))
-    try {
-      prediction = await replicate.predictions.get(prediction.id)
-    } catch (e: any) {
-      console.warn('[generate-article] poll error:', e?.message)
-      return null
-    }
-  }
-  if (prediction.status !== 'succeeded') return null
-
-  const out: any = prediction.output
-  const first = Array.isArray(out) ? out[0] : out
-  if (!first) return null
-
-  let buffer: Buffer
-  try {
-    if (typeof first === 'string') {
-      const resp = await fetch(first)
-      buffer = Buffer.from(await resp.arrayBuffer())
-    } else if (first instanceof ReadableStream) {
-      const resp = new Response(first)
-      buffer = Buffer.from(await resp.arrayBuffer())
-    } else if (typeof first?.url === 'function') {
-      const resp = await fetch(first.url())
-      buffer = Buffer.from(await resp.arrayBuffer())
-    } else {
-      return null
-    }
-  } catch (e: any) {
-    console.warn('[generate-article] image fetch failed:', e?.message)
-    return null
-  }
-
-  return { buffer, promptUsed: fullPrompt }
-}
-
 export async function POST(req: NextRequest) {
   const tStart = Date.now()
   try {
@@ -265,42 +195,9 @@ export async function POST(req: NextRequest) {
       t && t.trim().toLowerCase() === String(parsed.title).trim().toLowerCase(),
     )
 
-    // ── Generate image ────────────────────────────────────────────
-    // We only spend the remaining budget on the image. If the article
-    // alone took most of maxDuration, skip the image and let the admin
-    // upload one or re-roll. Better than killing the whole request.
-    const imgPrompt = String(parsed.image_prompt || `${categoryEn}, Germany`)
-    let image_url = ''
-    let image_prompt_used = imgPrompt
-    const elapsed = Date.now() - tStart
-    const imageBudget = Math.max(0, 75_000 - elapsed) // leave 15s for upload+response
-    try {
-      if (imageBudget < 8_000) {
-        console.warn('[generate-article] skipping image, only', imageBudget, 'ms left')
-      } else {
-        const img = await generateImageBuffer(imgPrompt, imageBudget)
-        if (img) {
-          image_prompt_used = img.promptUsed
-          const filename = `ai-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`
-          const { data: up, error: upErr } = await supabase.storage
-            .from('article-images')
-            .upload(filename, img.buffer, { contentType: 'image/jpeg' })
-          if (upErr) {
-            console.error('[generate-article] image upload failed:', upErr)
-          } else {
-            const { data: urlData } = supabase.storage
-              .from('article-images')
-              .getPublicUrl(up.path)
-            image_url = urlData.publicUrl
-          }
-        }
-      }
-    } catch (e: any) {
-      // Image is optional — if it fails, the admin can re-roll later
-      // or upload manually before approving.
-      console.error('[generate-article] image generation failed:', e?.message)
-    }
-
+    // Image is generated by a *separate* endpoint, called by the client
+    // right after this one returns. Keeping it out of this request is
+    // what lets us fit comfortably inside Vercel's 60s deadline.
     const draft: Draft = {
       category,
       date: new Date().toISOString().slice(0, 10),
@@ -313,11 +210,11 @@ export async function POST(req: NextRequest) {
         en: parsed.translations.en,
         de: parsed.translations.de,
       },
-      image_url,
-      image_prompt_used,
+      image_url: '',
+      image_prompt_used: String(parsed.image_prompt || `${categoryEn}, Germany`),
     }
 
-    return NextResponse.json({ draft, titleClash })
+    return NextResponse.json({ draft, titleClash, elapsedMs: Date.now() - tStart })
   } catch (e: any) {
     console.error('[generate-article] uncaught:', e)
     return NextResponse.json(
