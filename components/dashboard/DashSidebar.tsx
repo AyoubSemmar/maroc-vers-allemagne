@@ -231,7 +231,7 @@ export default function DashSidebar({
       {/* Footer actions */}
       <div className="dashshell-sidebar-foot">
         <a
-          href="https://wa.me/4912345678901"
+          href="https://wa.me/491771903108"
           target="_blank"
           rel="noopener noreferrer"
           className="dashshell-nav-item dashshell-wa"
