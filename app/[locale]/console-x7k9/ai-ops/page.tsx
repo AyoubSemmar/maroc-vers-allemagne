@@ -2,6 +2,13 @@
 // with current daily limits and dollar estimates.
 import { createClient } from '@supabase/supabase-js'
 import type { AppLocale } from '@/i18n/routing'
+import AdminAiOpsRefresh from '@/components/AdminAiOpsRefresh'
+
+// Always fetch live numbers. Without this, Next.js may serve a cached
+// render for up to its default cache window — the admin would see
+// stale call counts even after a fresh AI request just landed.
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -90,6 +97,10 @@ export default async function AdminAiOpsPage({
         </div>
         <a href="/cost-report.html" target="_blank" className="adm-btn adm-btn--ghost">📄 Open full cost report</a>
       </header>
+
+      <div style={{ marginBottom: 16 }}>
+        <AdminAiOpsRefresh />
+      </div>
 
       {/* Cost summary */}
       <div className="adm-kpi-grid">
