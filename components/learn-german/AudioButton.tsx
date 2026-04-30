@@ -17,9 +17,30 @@ export default function AudioButton({ text, lang = 'de-DE', size = 'md', classNa
   // Lesson strings often mix German and a translation separated by an em-dash
   // (either order, e.g. "Ich bin Ahmed. — I am Ahmed." or
   // "التعريف بالنفس — Sich vorstellen"). Pick only the German half for TTS.
+  // Strip markdown emphasis / formatting tokens before sending to TTS.
+  // Some lesson strings come from authoring with **bold** or *italic*
+  // hints — the SpeechSynthesis engine on iOS/Safari (and a few Android
+  // voices) literally pronounces "asterisk", which broke pronunciation
+  // for every lesson item that used the highlighter syntax. We also
+  // unwrap markdown links like [text](url) → text and code fences `x`.
+  function stripMarkdown(s: string): string {
+    return s
+      .replace(/\*\*([^*]+?)\*\*/g, '$1')
+      .replace(/__([^_]+?)__/g, '$1')
+      .replace(/(?<!\w)\*([^*\n]+?)\*(?!\w)/g, '$1')
+      .replace(/(?<!\w)_([^_\n]+?)_(?!\w)/g, '$1')
+      .replace(/~~([^~]+?)~~/g, '$1')
+      .replace(/`([^`\n]+?)`/g, '$1')
+      .replace(/\[([^\]]+?)\]\([^)]+?\)/g, '$1')
+      .replace(/[*_]+/g, '')
+      .replace(/\s+/g, ' ')
+      .trim()
+  }
+
   function germanOnly(s: string): string {
-    const parts = s.split(/\s+[—–]\s+/)
-    if (parts.length < 2) return s.trim()
+    const cleaned = stripMarkdown(s)
+    const parts = cleaned.split(/\s+[—–]\s+/)
+    if (parts.length < 2) return cleaned
     const score = (p: string) => {
       let n = 0
       if (/[äöüÄÖÜß]/.test(p)) n += 5
