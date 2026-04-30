@@ -35,7 +35,12 @@ export async function generateMetadata({
     title,
     description,
     alternates: {
-      canonical: `/${locale}`,
+      // NOTE: do NOT set `canonical` here — it would cascade to every
+      // child page and tell Google "every page is a duplicate of the
+      // locale homepage", which is exactly what was causing 'Page with
+      // redirect / duplicate canonical' errors in Search Console for
+      // hundreds of URLs. Without this line, each page gets its actual
+      // URL as its canonical, which is what we want.
       languages: {
         ar: "/ar",
         fr: "/fr",
