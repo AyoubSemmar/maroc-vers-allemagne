@@ -4,10 +4,15 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
+import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
 import ArticleContent from '@/components/ArticleContent'
 import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
 import ShareButtons from '@/components/ShareButtons'
+
+// 1-hour ISR for individual articles. They change rarely; this slashes
+// Supabase egress on the most-deep-linked routes.
+export const revalidate = 3600
 
 const SITE_URL = 'https://gogermany.ma'
 
@@ -94,12 +99,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
 
   const { data: rawRelated } = await supabase
     .from('articles')
-    .select('id, title, summary, category, date, image_url, translations')
+    .select(ARTICLE_LIST_FIELDS)
     .eq('category', article.category)
     .neq('id', id)
     .order('date', { ascending: false })
     .limit(3)
-  const related = localizeRows(rawRelated as any, locale)
+  const related = localizeRows(rehydrateTranslationsList(rawRelated as any), locale)
 
   function catLabel(cat: string): string {
     try { return t(`cat.${cat}` as any) } catch { return cat }

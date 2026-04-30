@@ -2,19 +2,24 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { localizeRows } from '@/lib/i18n-content'
+import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
+
+export const revalidate = 600
 
 export default async function CategoryPage({ params }: { params: Promise<{ name: string; locale: AppLocale }> }) {
   const { name, locale } = await params
   const t = await getTranslations({ locale, namespace: 'articles' })
   const categoryName = decodeURIComponent(name)
 
-  // Only the card list fields — avoids shipping body markdown +
-  // translations content for every article in the category.
-  const { data: articles } = await supabase
+  // Lightweight select with per-locale title/summary — see
+  // lib/article-list-select.ts for the egress story.
+  const { data: rawArticles } = await supabase
     .from('articles')
-    .select('id, title, summary, image_url, date')
+    .select(ARTICLE_LIST_FIELDS)
     .eq('category', categoryName)
     .order('date', { ascending: false })
+  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
 
   let catLabel: string = categoryName
   try { catLabel = t(`cat.${categoryName}` as any) } catch {}

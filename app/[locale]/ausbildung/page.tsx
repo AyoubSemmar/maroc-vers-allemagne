@@ -2,9 +2,12 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { localizeRows } from '@/lib/i18n-content'
+import { ARTICLE_LIST_FIELDS_WITH_READ_TIME, rehydrateTranslationsList } from '@/lib/article-list-select'
 import PathHub, { type PathTool, type PathPillar } from '@/components/path-hub/PathHub'
 import Icon from '@/components/ui/Icon'
 import type { AppLocale } from '@/i18n/routing'
+
+export const revalidate = 600
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
@@ -32,12 +35,12 @@ export default async function AusbildungPage({ params }: Props) {
 
   const { data: rawArticles } = await supabase
     .from('articles')
-    .select('id, title, category, date, image_url, read_time, translations')
+    .select(ARTICLE_LIST_FIELDS_WITH_READ_TIME)
     .in('category', AUSBILDUNG_CATEGORIES)
     .order('date', { ascending: false })
     .limit(12)
 
-  const articles = localizeRows((rawArticles ?? []) as any, locale) as any[]
+  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
 
   return (
     <PathHub
