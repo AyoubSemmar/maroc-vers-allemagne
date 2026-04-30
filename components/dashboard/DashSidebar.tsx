@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
+import { trackWhatsappClick } from '@/lib/analytics'
 import OpportunitiesPicker from '@/components/OpportunitiesPicker'
 
 type NavItem = {
@@ -234,6 +235,7 @@ export default function DashSidebar({
           href="https://wa.me/491771903108"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackWhatsappClick('dashboard_sidebar')}
           className="dashshell-nav-item dashshell-wa"
         >
           <span className="dashshell-nav-icon">{I.whatsapp}</span>

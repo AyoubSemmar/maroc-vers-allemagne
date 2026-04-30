@@ -6,6 +6,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import DeleteListingButton from './DeleteListingButton'
 import ImageGallery from './ImageGallery'
 import ShareButtons from '@/components/ShareButtons'
+import WhatsappLink from '@/components/WhatsappLink'
 import { cityLabel } from '@/lib/germanCities'
 
 export default async function ListingPage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
@@ -82,13 +83,13 @@ export default async function ListingPage({ params }: { params: Promise<{ id: st
           <ShareButtons title={listing.title} />
 
           {user ? (
-            <a
+            <WhatsappLink
               href={`https://wa.me/${listing.whatsapp.replace(/\D/g, '')}`}
-              target="_blank"
+              source="listing_detail"
               className="flex items-center justify-center gap-2 bg-green-600 text-white rounded-xl py-3 px-6 hover:bg-green-700 font-medium"
             >
               {t('detail.whatsappCta')}
-            </a>
+            </WhatsappLink>
           ) : (
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 text-center">
               <p className="text-gray-600 text-sm mb-3">{t('detail.loginPromptBody')}</p>

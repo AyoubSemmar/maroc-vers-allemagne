@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import GoogleSignInButton from '@/components/GoogleSignInButton'
+import { trackSignup } from '@/lib/analytics'
 
 type Msg = { kind: 'error' | 'success'; text: string } | null
 
@@ -33,6 +34,12 @@ export default function SignupPage() {
     } else if (data.user && data.user.identities && data.user.identities.length === 0) {
       setMessage({ kind: 'error', text: t('emailExists') })
     } else {
+      // Real account created (or pending email confirmation). Fire the
+      // GA4 conversion BEFORE setting the success message so the event
+      // lands even if the user closes the tab right after seeing 'check
+      // your inbox'. method:'email' distinguishes this from Google OAuth
+      // sign-ups, which fire their own event from the OAuth callback.
+      trackSignup('email')
       setMessage({ kind: 'success', text: t('checkInbox') })
     }
     setLoading(false)

@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
+import { trackBookConsultation } from '@/lib/analytics'
 
 // ── Five Calendly events, each with its own duration + price ──────
 // Maps to the events the user created in their upgraded Calendly:
@@ -197,6 +198,17 @@ export default function BookConsultationButton({
   function open(e: React.MouseEvent) {
     e.preventDefault()
     if (typeof window === 'undefined') return
+    // Fire the GA4 conversion event BEFORE opening the popup. We track
+    // the click intent — actual booking completion is in Calendly's own
+    // analytics. value:priceEur lets GA4 compute revenue if you ever
+    // mark this as a purchase-style conversion.
+    trackBookConsultation({
+      topic,
+      tier: TOPIC_TIER[topic] ?? 'path',
+      priceEur: tier.priceEur,
+      durationMin: tier.durationMin,
+      locale,
+    })
     if (window.Calendly) {
       window.Calendly.initPopupWidget({ url })
     } else {

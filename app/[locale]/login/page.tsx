@@ -8,6 +8,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import GoogleSignInButton from '@/components/GoogleSignInButton'
+import { trackLogin } from '@/lib/analytics'
 
 function LoginForm() {
   const t = useTranslations('auth.login')
@@ -28,6 +29,7 @@ function LoginForm() {
     if (error) {
       setError(t('invalidCredentials'))
     } else {
+      trackLogin('email')
       // The `next` query param coming from proxy.ts already includes the
       // locale prefix (e.g. /ar/cv-builder). next-intl's `router.push`
       // prepends the current locale on top of that, producing the
