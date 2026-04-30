@@ -4,7 +4,7 @@ import { Suspense, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { createClient } from '@/lib/supabase-browser'
 import { useSearchParams } from 'next/navigation'
-import { Link, useRouter } from '@/i18n/navigation'
+import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import GoogleSignInButton from '@/components/GoogleSignInButton'
@@ -12,11 +12,11 @@ import GoogleSignInButton from '@/components/GoogleSignInButton'
 function LoginForm() {
   const t = useTranslations('auth.login')
   const tShared = useTranslations('auth.shared')
+  const locale = useLocale() as AppLocale
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
-  const router = useRouter()
   const searchParams = useSearchParams()
   const supabase = createClient()
 
@@ -28,9 +28,15 @@ function LoginForm() {
     if (error) {
       setError(t('invalidCredentials'))
     } else {
-      const next = searchParams.get('next') || '/'
-      router.push(next)
-      router.refresh()
+      // The `next` query param coming from proxy.ts already includes the
+      // locale prefix (e.g. /ar/cv-builder). next-intl's `router.push`
+      // prepends the current locale on top of that, producing the
+      // /ar/ar/cv-builder 404 we kept seeing. Use a hard navigation
+      // through window.location so the path is honoured verbatim — this
+      // also fully refreshes auth state, which we want post-login.
+      const next = searchParams.get('next') || `/${locale}`
+      window.location.assign(next)
+      return
     }
     setLoading(false)
   }
