@@ -5823,6 +5823,655 @@
           }
         ]
       }
+    },
+    "c1-15": {
+      "id": "c1-15",
+      "title": "Punctuation — Kommasetzung",
+      "order": 15,
+      "grammar": {
+        "title": "When to place a comma in German — rules for subordinate clauses, lists, and asides",
+        "content": "Kommasetzung (comma placement) in German is **systematic and strict** — not \"as you feel\". On the C1 written exam, every wrong comma costs 0.5–1 point. Learn the rules well.\n\n**The six golden rules:**\n1. **Between Hauptsatz and Nebensatz** — always.\n2. **Between elements of a list** — no comma before the final \"und\".\n3. **Before aber/sondern** — always.\n4. **Around appositions** — before and after.\n5. **Around Infinitivkonstruktion with zu** — in extended cases.\n6. **Between Hauptsatz + Hauptsatz** without a connector — optional.",
+        "tables": [
+          {
+            "title": "Mandatory comma rules",
+            "headers": [
+              "Case",
+              "Example",
+              "Rule"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nebensatz",
+                  "Ich weiß, dass du kommst.",
+                  "always before dass/weil/wenn/..."
+                ]
+              },
+              {
+                "cells": [
+                  "List",
+                  "Ich kaufe Brot, Milch und Käse.",
+                  "no comma before the last und"
+                ]
+              },
+              {
+                "cells": [
+                  "aber/sondern",
+                  "Er kommt, aber spät.",
+                  "always before aber/sondern"
+                ]
+              },
+              {
+                "cells": [
+                  "Apposition",
+                  "Mein Bruder, der Arzt, kommt.",
+                  "frame the explanatory apposition"
+                ]
+              },
+              {
+                "cells": [
+                  "Infinitiv mit zu",
+                  "Ich versuche, das zu lernen.",
+                  "after a verb + extended zu-Inf"
+                ]
+              },
+              {
+                "cells": [
+                  "Anrede",
+                  "Hallo, Maria, wie geht's?",
+                  "frame the addressee"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "These rules are mandatory in formal writing and C1 exams."
+          },
+          {
+            "title": "Optional cases",
+            "headers": [
+              "Case",
+              "No comma",
+              "With comma"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "HS + und + HS",
+                  "Ich gehe und du bleibst.",
+                  "Ich gehe, und du bleibst."
+                ]
+              },
+              {
+                "cells": [
+                  "Simple Infinitiv",
+                  "Er versucht zu lernen.",
+                  "Er versucht, zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "Adverb at the start",
+                  "Heute komme ich nicht.",
+                  "(usually no comma)"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "In optional cases, choose the comma to clarify meaning."
+          },
+          {
+            "title": "Common mistakes to avoid",
+            "headers": [
+              "Wrong",
+              "Correct",
+              "Reason"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Ich denke, dass, er kommt.",
+                  "Ich denke, dass er kommt.",
+                  "no comma between dass and the subject"
+                ]
+              },
+              {
+                "cells": [
+                  "Brot, und Milch.",
+                  "Brot und Milch.",
+                  "no comma before und in a list"
+                ]
+              },
+              {
+                "cells": [
+                  "Er ist krank, aber, kommt.",
+                  "Er ist krank, aber kommt.",
+                  "no comma after aber"
+                ]
+              },
+              {
+                "cells": [
+                  "Nach dem Essen, gehen wir.",
+                  "Nach dem Essen gehen wir.",
+                  "no comma after a time complement"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Rule: commas separate clauses, not pieces inside a single clause."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Between Hauptsatz and Nebensatz: always a comma.",
+            "example": "Ich weiß, dass es schwer ist.",
+            "translation": "I know that it's hard."
+          },
+          {
+            "rule": "In a list, no comma before the last und/oder.",
+            "example": "Brot, Milch und Käse.",
+            "translation": "Bread, milk and cheese."
+          },
+          {
+            "rule": "Before aber/sondern: always a comma.",
+            "example": "Er ist klug, aber faul.",
+            "translation": "He's smart, but lazy."
+          },
+          {
+            "rule": "Around an explanatory apposition: two commas.",
+            "example": "Mein Vater, ein Lehrer, lebt in Casablanca.",
+            "translation": "My father, a teacher, lives in Casablanca."
+          }
+        ],
+        "examples": [
+          "Ich glaube, dass du recht hast. — I believe you're right.",
+          "Wir kaufen Brot, Milch, Käse und Butter. — We're buying bread, milk, cheese and butter.",
+          "Er ist freundlich, aber sehr beschäftigt. — He's friendly but very busy.",
+          "Mein Onkel, der in Berlin wohnt, kommt morgen. — My uncle, who lives in Berlin, is coming tomorrow.",
+          "Ich versuche, das Problem zu lösen. — I'm trying to solve the problem.",
+          "Hallo, Maria, wie geht's? — Hi, Maria, how are you?",
+          "Obwohl es regnet, gehen wir spazieren. — Even though it's raining, we go for a walk.",
+          "Wenn du Zeit hast, ruf mich an. — When you have time, call me."
+        ],
+        "tip": "Write 5 sentences a day and identify the mandatory commas. With practice, the rules become automatic. At the exam, reread your text twice to catch missed commas."
+      },
+      "vocabulary": [
+        {
+          "german": "das Komma",
+          "arabic": "comma",
+          "example": "Das Komma fehlt.",
+          "exampleArabic": "The comma is missing.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kommas"
+        },
+        {
+          "german": "der Punkt",
+          "arabic": "period",
+          "example": "Setze einen Punkt.",
+          "exampleArabic": "Put a period.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Punkte"
+        },
+        {
+          "german": "der Strichpunkt",
+          "arabic": "semicolon",
+          "example": "Hier brauchen wir einen Strichpunkt.",
+          "exampleArabic": "Here we need a semicolon.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Doppelpunkt",
+          "arabic": "colon",
+          "example": "Nach dem Doppelpunkt.",
+          "exampleArabic": "After the colon.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Anführungszeichen",
+          "arabic": "quotation mark",
+          "example": "Anführungszeichen oben und unten.",
+          "exampleArabic": "Quotation marks top and bottom.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Anführungszeichen"
+        },
+        {
+          "german": "der Bindestrich",
+          "arabic": "hyphen",
+          "example": "Wir benutzen einen Bindestrich.",
+          "exampleArabic": "We use a hyphen.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bindestriche"
+        },
+        {
+          "german": "das Ausrufezeichen",
+          "arabic": "exclamation mark",
+          "example": "Mit Ausrufezeichen!",
+          "exampleArabic": "With an exclamation mark!",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Fragezeichen",
+          "arabic": "question mark",
+          "example": "Vergiss das Fragezeichen nicht.",
+          "exampleArabic": "Don't forget the question mark.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Klammer",
+          "arabic": "parenthesis",
+          "example": "In Klammern stehen Erklärungen.",
+          "exampleArabic": "Explanations in parentheses.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Klammern"
+        },
+        {
+          "german": "der Hauptsatz",
+          "arabic": "main clause",
+          "example": "Ein Hauptsatz hat Subjekt und Verb.",
+          "exampleArabic": "A main clause has a subject and verb.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Hauptsätze"
+        },
+        {
+          "german": "der Nebensatz",
+          "arabic": "subordinate clause",
+          "example": "Nebensätze beginnen mit dass, weil, wenn.",
+          "exampleArabic": "Subordinate clauses start with dass, weil, wenn.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Nebensätze"
+        },
+        {
+          "german": "die Apposition",
+          "arabic": "apposition",
+          "example": "Mein Bruder, der Arzt — Apposition.",
+          "exampleArabic": "My brother, the doctor — apposition.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Appositionen"
+        },
+        {
+          "german": "die Aufzählung",
+          "arabic": "enumeration",
+          "example": "In einer Aufzählung trennen Kommas.",
+          "exampleArabic": "In a list, commas separate.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Aufzählungen"
+        },
+        {
+          "german": "die Anrede",
+          "arabic": "address / form of address",
+          "example": "Hallo, Maria — Anrede.",
+          "exampleArabic": "Hi, Maria — address.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Anreden"
+        },
+        {
+          "german": "der Einschub",
+          "arabic": "insertion / aside",
+          "example": "Ein Einschub wird mit Kommas getrennt.",
+          "exampleArabic": "An aside is set off with commas.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Einschübe"
+        },
+        {
+          "german": "die Konjunktion",
+          "arabic": "conjunction",
+          "example": "aber ist eine Konjunktion.",
+          "exampleArabic": "aber is a conjunction.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konjunktionen"
+        },
+        {
+          "german": "die Zeichensetzung",
+          "arabic": "punctuation",
+          "example": "Die Zeichensetzung ist wichtig.",
+          "exampleArabic": "Punctuation is important.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Rechtschreibung",
+          "arabic": "spelling",
+          "example": "Achten Sie auf die Rechtschreibung.",
+          "exampleArabic": "Watch your spelling.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Grammatik",
+          "arabic": "grammar",
+          "example": "Deutsche Grammatik ist logisch.",
+          "exampleArabic": "German grammar is logical.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Satzbau",
+          "arabic": "sentence construction",
+          "example": "Der Satzbau ist klar.",
+          "exampleArabic": "The sentence structure is clear.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Regel",
+          "arabic": "rule",
+          "example": "Eine wichtige Regel.",
+          "exampleArabic": "An important rule.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Regeln"
+        },
+        {
+          "german": "die Ausnahme",
+          "arabic": "exception",
+          "example": "Eine Ausnahme von der Regel.",
+          "exampleArabic": "An exception to the rule.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ausnahmen"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "mistake",
+          "example": "Ein häufiger Fehler.",
+          "exampleArabic": "A common mistake.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Fehler"
+        },
+        {
+          "german": "die Korrektur",
+          "arabic": "correction",
+          "example": "Eine wichtige Korrektur.",
+          "exampleArabic": "An important correction.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Korrekturen"
+        },
+        {
+          "german": "trennen",
+          "arabic": "to separate",
+          "example": "Kommas trennen Satzteile.",
+          "exampleArabic": "Commas separate sentence parts.",
+          "type": "verb"
+        },
+        {
+          "german": "verbinden",
+          "arabic": "to connect",
+          "example": "und verbindet zwei Sätze.",
+          "exampleArabic": "und connects two sentences.",
+          "type": "verb"
+        },
+        {
+          "german": "beginnen",
+          "arabic": "to begin",
+          "example": "Der Satz beginnt mit einem Großbuchstaben.",
+          "exampleArabic": "The sentence begins with a capital.",
+          "type": "verb"
+        },
+        {
+          "german": "beenden",
+          "arabic": "to end",
+          "example": "Beende den Satz mit einem Punkt.",
+          "exampleArabic": "End the sentence with a period.",
+          "type": "verb"
+        },
+        {
+          "german": "verbessern",
+          "arabic": "to improve / correct",
+          "example": "Verbessere deinen Text.",
+          "exampleArabic": "Correct your text.",
+          "type": "verb"
+        },
+        {
+          "german": "überprüfen",
+          "arabic": "to check",
+          "example": "Überprüfe die Zeichensetzung.",
+          "exampleArabic": "Check the punctuation.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q1",
+            "question": "Comma before dass? \"Ich weiß ___ er kommt.\"",
+            "answer": ",",
+            "hint": "always before Nebensatz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q2",
+            "question": "The correct list:",
+            "options": [
+              "Brot, Milch, und Käse",
+              "Brot Milch und Käse",
+              "Brot, Milch und Käse",
+              "Brot, Milch, Käse, und Butter,"
+            ],
+            "answer": "Brot, Milch und Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q3",
+            "question": "Comma before aber? \"Er ist klug ___ faul.\"",
+            "answer": ", aber",
+            "hint": "aber always with comma"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q4",
+            "question": "Correct apposition:",
+            "options": [
+              "Mein Bruder der Arzt kommt.",
+              "Mein Bruder, der Arzt, kommt.",
+              "Mein Bruder, der Arzt kommt.",
+              "Mein Bruder der Arzt, kommt."
+            ],
+            "answer": "Mein Bruder, der Arzt, kommt."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q5",
+            "question": "Address: \"Hallo ___ Maria ___ wie geht's?\"",
+            "answer": ", ,",
+            "hint": "two commas around the name"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q6",
+            "question": "Match the rule to its example:",
+            "pairs": [
+              {
+                "left": "Nebensatz",
+                "right": "comma always"
+              },
+              {
+                "left": "Aufzählung",
+                "right": "no comma before the last und"
+              },
+              {
+                "left": "aber/sondern",
+                "right": "comma always"
+              },
+              {
+                "left": "Apposition",
+                "right": "two commas around"
+              },
+              {
+                "left": "Anrede",
+                "right": "two commas around"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q7",
+            "question": "Order properly punctuated: \"I think you're right\"",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q8",
+            "question": "Say with commas: \"My father, a teacher, lives in Casablanca\"",
+            "answer": "Mein Vater, ein Lehrer, lebt in Casablanca"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q9",
+            "question": "Listen: \"Wir kaufen Brot ___ Milch ___ Käse.\" (with punctuation)",
+            "audioPrompt": "Wir kaufen Brot, Milch und Käse.",
+            "answer": ", ,",
+            "hint": "comma after the first two, then und"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q10",
+            "question": "The common mistake:",
+            "options": [
+              "comma between dass and the subject",
+              "comma before aber",
+              "comma before dass",
+              "commas around the apposition"
+            ],
+            "answer": "comma between dass and the subject"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q11",
+            "question": "Comma before sondern? \"Er ist nicht traurig ___ glücklich.\"",
+            "answer": ", sondern",
+            "hint": "sondern like aber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q12",
+            "question": "Comma after a leading time complement?",
+            "options": [
+              "always",
+              "no, usually not",
+              "only with heute",
+              "required in journalism"
+            ],
+            "answer": "no, usually not"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q13",
+            "question": "Apposition: \"Mein Bruder ___ der Lehrer ___ kommt morgen.\"",
+            "answer": ", ,",
+            "hint": "two commas around the apposition"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q14",
+            "question": "Match the rule to the example:",
+            "pairs": [
+              {
+                "left": "before aber/sondern",
+                "right": "comma always"
+              },
+              {
+                "left": "in list, before und",
+                "right": "no comma"
+              },
+              {
+                "left": "around an Anrede",
+                "right": "two commas"
+              },
+              {
+                "left": "after a time complement",
+                "right": "no comma"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q15",
+            "question": "Correct (with proper commas): \"Ich glaube dass du recht hast\"",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q16",
+            "question": "Listen: \"Er ist klug ___ sehr beschäftigt.\"",
+            "audioPrompt": "Er ist klug, aber sehr beschäftigt.",
+            "answer": ", aber",
+            "hint": "aber always with comma"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q17",
+            "question": "On the C1 exam, a comma mistake costs:",
+            "options": [
+              "nothing",
+              "0.5–1 point",
+              "the entire essay",
+              "nothing if the reader gets it"
+            ],
+            "answer": "0.5–1 point"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q18",
+            "question": "Say with commas: \"We're buying bread, milk, cheese and butter\"",
+            "answer": "Wir kaufen Brot, Milch, Käse und Butter"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q19",
+            "question": "\"Ich versuche ___ das zu lernen.\" (extended Inf with zu)",
+            "answer": ",",
+            "hint": "comma before extended zu-Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q20",
+            "question": "In the list \"Brot, Milch und Käse\" we note:",
+            "options": [
+              "comma before und",
+              "no comma before und",
+              "two commas before und",
+              "commas between every element"
+            ],
+            "answer": "no comma before und"
+          }
+        ]
+      }
     }
   },
   "title": "Level Five",
