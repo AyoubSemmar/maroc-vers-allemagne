@@ -5414,6 +5414,125 @@
           }
         ]
       }
+    },
+    "a2-13": {
+      "id": "a2-13",
+      "title": "Adjektivdeklination (Grundlagen)",
+      "order": 13,
+      "grammar": {
+        "title": "Adjektivendungen nach der/die/das + ein/eine — in Nominativ und Akkusativ",
+        "content": "Die Adjektivendung im Deutschen richtet sich nach **(1) Genus, (2) Kasus und (3) der Art des vorangestellten Artikels**. Wenn dein Kopf bei jedem Beispiel raucht — beruhige dich: Auf A2 lernen wir nur die zwei häufigsten Muster — **nach der/die/das** und **nach ein/eine** — in den beiden gebräuchlichsten Kasus (Nominativ und Akkusativ).\n\n**Die einfachste goldene Regel:**\n- Nach **der/die/das** (bestimmter Artikel): Adjektiv bekommt **-e** oder **-en**.\n- Nach **ein/eine** (unbestimmter Artikel): Adjektiv übernimmt die fehlende Artikelendung.",
+        "tables": [
+          {
+            "title": "Nach der/die/das (schwache Deklination)",
+            "headers": ["", "der (maskulin)", "die (feminin)", "das (neutrum)", "die (Plural)"],
+            "rows": [
+              { "cells": ["Nominativ", "der **schöne** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] },
+              { "cells": ["Akkusativ", "den **schönen** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] }
+            ],
+            "theme": "cases",
+            "note": "Nur Akkusativ-der wird zu schönen. Der Rest endet auf -e."
+          },
+          {
+            "title": "Nach ein/eine (gemischte Deklination)",
+            "headers": ["", "ein (maskulin)", "eine (feminin)", "ein (neutrum)"],
+            "rows": [
+              { "cells": ["Nominativ", "ein **schöner** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] },
+              { "cells": ["Akkusativ", "einen **schönen** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] }
+            ],
+            "theme": "cases",
+            "note": "Nach unbestimmtem ein trägt das Adjektiv die Genusendung: -er (m), -e (f), -es (n)."
+          }
+        ],
+        "rules": [
+          { "rule": "Ohne Artikel trägt das Adjektiv immer die Genusendung: kalter Tee, warme Milch.", "example": "Ich trinke kalten Tee.", "translation": "Nullartikel: starke Endung am Adjektiv selbst." },
+          { "rule": "Im Akkusativ erzwingt nur der maskuline der die Endung -en. Der Rest bleibt unverändert.", "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.", "translation": "Nur Maskulinum ändert sich im Akkusativ." },
+          { "rule": "kein verhält sich wie ein. mein, dein, sein, ihr, unser, euer, Ihr — genauso.", "example": "mein neuer Bruder / keine alte Frau", "translation": "Possessivartikel folgen dem ein-Muster." }
+        ],
+        "examples": [
+          "Der nette Lehrer kommt aus Berlin. — Bestimmter Artikel + schwache Endung -e.",
+          "Ich habe einen guten Freund. — einen + Maskulin Akk → -en.",
+          "Sie kauft ein schönes Kleid. — ein + Neutrum → -es.",
+          "Die jungen Studenten lernen viel. — Plural mit die → -en.",
+          "Mein neues Auto ist schnell. — mein folgt ein-Muster, Neutrum → -es.",
+          "Wir essen frisches Brot. — Nullartikel, Neutrum Akk → -es.",
+          "Er liest die deutschen Zeitungen. — Plural die → -en.",
+          "Trinkst du kalten Kaffee? — Nullartikel, Maskulin Akk → -en."
+        ],
+        "tip": "Lerne nicht alles auf einmal. Beginne mit „der + Adjektiv + e“ und „ein + Adjektiv + er/e/es“ und übe sie täglich an zehn Sätzen. Nach einer Woche wird es automatisch."
+      },
+      "vocabulary": [
+        { "german": "schön", "arabic": "ansprechend, hübsch", "example": "eine schöne Stadt", "exampleArabic": "positives Aussehen", "type": "adjective" },
+        { "german": "gut", "arabic": "von guter Qualität", "example": "ein guter Tag", "exampleArabic": "allgemein positiv", "type": "adjective" },
+        { "german": "neu", "arabic": "frisch erworben, aktuell", "example": "mein neues Auto", "exampleArabic": "Gegenteil von alt", "type": "adjective" },
+        { "german": "alt", "arabic": "betagt, schon lange existierend", "example": "das alte Haus", "exampleArabic": "Alter / Vorhandensein seit langem", "type": "adjective" },
+        { "german": "jung", "arabic": "in jungen Jahren", "example": "eine junge Frau", "exampleArabic": "geringes Alter", "type": "adjective" },
+        { "german": "groß", "arabic": "umfangreich, hochgewachsen", "example": "ein großes Zimmer", "exampleArabic": "Maß / Größe", "type": "adjective" },
+        { "german": "klein", "arabic": "von geringer Größe", "example": "die kleine Katze", "exampleArabic": "Gegenteil von groß", "type": "adjective" },
+        { "german": "kalt", "arabic": "niedrige Temperatur", "example": "kalter Kaffee", "exampleArabic": "Gegenteil von warm", "type": "adjective" },
+        { "german": "warm", "arabic": "angenehm temperiert", "example": "warme Milch", "exampleArabic": "leicht erwärmt", "type": "adjective" },
+        { "german": "heiß", "arabic": "sehr hohe Temperatur", "example": "heißer Tee", "exampleArabic": "stärker als warm", "type": "adjective" },
+        { "german": "frisch", "arabic": "neu zubereitet, nicht alt", "example": "frisches Brot", "exampleArabic": "noch nicht abgestanden", "type": "adjective" },
+        { "german": "lecker", "arabic": "köstlich, gut schmeckend", "example": "ein leckeres Essen", "exampleArabic": "Geschmack positiv", "type": "adjective" },
+        { "german": "schnell", "arabic": "mit hoher Geschwindigkeit", "example": "ein schnelles Auto", "exampleArabic": "Tempo hoch", "type": "adjective" },
+        { "german": "langsam", "arabic": "mit geringem Tempo", "example": "ein langsamer Bus", "exampleArabic": "Gegenteil von schnell", "type": "adjective" },
+        { "german": "einfach", "arabic": "leicht zu verstehen", "example": "eine einfache Frage", "exampleArabic": "ohne Komplikation", "type": "adjective" },
+        { "german": "schwer", "arabic": "schwierig oder gewichtig", "example": "eine schwere Prüfung", "exampleArabic": "anspruchsvoll", "type": "adjective" },
+        { "german": "leicht", "arabic": "geringes Gewicht oder einfach", "example": "ein leichter Koffer", "exampleArabic": "wenig Gewicht / Mühe", "type": "adjective" },
+        { "german": "teuer", "arabic": "kostspielig", "example": "ein teures Hotel", "exampleArabic": "hoher Preis", "type": "adjective" },
+        { "german": "billig", "arabic": "preiswert, günstig", "example": "ein billiger Tisch", "exampleArabic": "niedriger Preis", "type": "adjective" },
+        { "german": "nett", "arabic": "freundlich, sympathisch", "example": "eine nette Lehrerin", "exampleArabic": "sympathische Person", "type": "adjective" },
+        { "german": "freundlich", "arabic": "zugewandt, höflich", "example": "ein freundlicher Mann", "exampleArabic": "warmherzig im Umgang", "type": "adjective" },
+        { "german": "müde", "arabic": "erschöpft", "example": "Ich bin sehr müde.", "exampleArabic": "ohne Energie", "type": "adjective" },
+        { "german": "hungrig", "arabic": "Hunger habend", "example": "ein hungriges Kind", "exampleArabic": "braucht Essen", "type": "adjective" },
+        { "german": "fleißig", "arabic": "arbeitsam, strebsam", "example": "eine fleißige Studentin", "exampleArabic": "lernt / arbeitet viel", "type": "adjective" },
+        { "german": "intelligent", "arabic": "klug, begabt", "example": "ein intelligenter Schüler", "exampleArabic": "geistig fähig", "type": "adjective" },
+        { "german": "das Kleid", "arabic": "weibliches Kleidungsstück", "example": "Sie trägt ein rotes Kleid.", "exampleArabic": "Damenoberbekleidung", "type": "noun", "gender": "das", "plural": "die Kleider" },
+        { "german": "das Hemd", "arabic": "Oberkörperkleidung mit Knöpfen", "example": "ein weißes Hemd", "exampleArabic": "Oberbekleidung", "type": "noun", "gender": "das", "plural": "die Hemden" },
+        { "german": "die Hose", "arabic": "Beinkleidung", "example": "eine neue Hose", "exampleArabic": "bedeckt die Beine", "type": "noun", "gender": "die", "plural": "die Hosen" },
+        { "german": "die Schuhe", "arabic": "Fußbekleidung (Plural)", "example": "schwarze Schuhe", "exampleArabic": "wird paarweise getragen", "type": "noun", "gender": "pl" },
+        { "german": "rot", "arabic": "Farbe wie Blut", "example": "das rote Auto", "exampleArabic": "Farbe Rot", "type": "adjective" },
+        { "german": "blau", "arabic": "Farbe des Himmels", "example": "der blaue Himmel", "exampleArabic": "Farbe Blau", "type": "adjective" },
+        { "german": "grün", "arabic": "Farbe der Natur", "example": "grüner Tee", "exampleArabic": "Farbe Grün", "type": "adjective" },
+        { "german": "schwarz", "arabic": "dunkelste Farbe", "example": "eine schwarze Tasche", "exampleArabic": "Farbe Schwarz", "type": "adjective" },
+        { "german": "weiß", "arabic": "hellste Farbe", "example": "ein weißes Hemd", "exampleArabic": "Farbe Weiß", "type": "adjective" },
+        { "german": "sehr", "arabic": "in hohem Maß", "example": "sehr gut", "exampleArabic": "Gradadverb", "type": "adverb" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a2-13-q1", "question": "Ergänze: „der schön__ Mann“ (Nominativ)", "answer": "e", "hint": "der + Adjektiv + e" },
+          { "type": "multiple-choice", "id": "a2-13-q2", "question": "Korrigiere: „Ich kaufe ein ___ Auto.“", "options": ["neu", "neue", "neues", "neuer"], "answer": "neues" },
+          { "type": "fill-blank", "id": "a2-13-q3", "question": "Ergänze: „Ich habe einen gut___ Freund.“", "answer": "en", "hint": "einen + Akk-mask → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q4", "question": "Welcher Satz ist korrekt?", "options": ["Sie trägt eine rotes Kleid.", "Sie trägt ein rotes Kleid.", "Sie trägt ein rote Kleid.", "Sie trägt einen rotes Kleid."], "answer": "Sie trägt ein rotes Kleid." },
+          { "type": "fill-blank", "id": "a2-13-q5", "question": "Ergänze: „die jung__ Studenten“ (Plural, Nominativ)", "answer": "en", "hint": "nach die-Plural → -en" },
+          { "type": "matching", "id": "a2-13-q6", "question": "Verbinde Adjektiv mit Bedeutung:", "pairs": [
+            { "left": "schön", "right": "ansprechend" },
+            { "left": "alt", "right": "betagt" },
+            { "left": "klein", "right": "von geringer Größe" },
+            { "left": "teuer", "right": "kostspielig" },
+            { "left": "lecker", "right": "köstlich" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-13-q7", "question": "Ordne: „Ich kaufe ein weißes Hemd“", "words": ["Ich", "kaufe", "ein", "weißes", "Hemd"], "answer": "Ich kaufe ein weißes Hemd" },
+          { "type": "speaking", "id": "a2-13-q8", "question": "Sage auf Deutsch: „Das neue Haus ist groß“", "answer": "Das neue Haus ist groß" },
+          { "type": "fill-blank", "id": "a2-13-q9", "question": "Hör zu: „Wir trinken heiß___ Tee.“ (ohne Artikel)", "audioPrompt": "Wir trinken heißen Tee.", "answer": "en", "hint": "Akk-mask ohne Artikel → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q10", "question": "Das Wort kein wird dekliniert wie:", "options": ["der", "die", "das", "ein"], "answer": "ein" },
+          { "type": "fill-blank", "id": "a2-13-q11", "question": "Ergänze: „Die alt___ Häuser sind schön.“ (Plural, Nom)", "answer": "en", "hint": "nach die-Plural → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q12", "question": "Welches Adjektiv ohne Artikel im Akk-mask?", "options": ["kalt Tee", "kalter Tee", "kalten Tee", "kalte Tee"], "answer": "kalten Tee" },
+          { "type": "fill-blank", "id": "a2-13-q13", "question": "„Mein neu___ Auto ist schnell.“ (Neutrum, Nom)", "answer": "es", "hint": "mein/dein/sein... + Neutrum → -es" },
+          { "type": "matching", "id": "a2-13-q14", "question": "Verbinde Endung mit Form:", "pairs": [
+            { "left": "der schöne...", "right": "-e" },
+            { "left": "einen schönen...", "right": "-en" },
+            { "left": "ein schönes Kind", "right": "-es" },
+            { "left": "kalter Tee", "right": "-er" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-13-q15", "question": "Ordne: „Ich kaufe ein schönes Auto“", "words": ["Ich", "kaufe", "ein", "schönes", "Auto"], "answer": "Ich kaufe ein schönes Auto" },
+          { "type": "fill-blank", "id": "a2-13-q16", "question": "Hör zu: „Sie hat eine ___ Tasche.“ (schwarz)", "audioPrompt": "Sie hat eine schwarze Tasche.", "answer": "schwarze", "hint": "eine + adj + -e (fem. Akk)" },
+          { "type": "multiple-choice", "id": "a2-13-q17", "question": "Adjektiv nach kein folgt dem Muster von:", "options": ["der", "die", "das", "ein"], "answer": "ein" },
+          { "type": "speaking", "id": "a2-13-q18", "question": "Sage: „Ich mag heißen Kaffee“", "answer": "Ich mag heißen Kaffee" },
+          { "type": "fill-blank", "id": "a2-13-q19", "question": "„Wir essen frisch___ Brot.“ (ohne Artikel, Neutrum Akk)", "answer": "es", "hint": "Nullartikel, Akk-Neutrum → -es" },
+          { "type": "multiple-choice", "id": "a2-13-q20", "question": "Welcher Satz hat die korrekte Deklination?", "options": ["Der grüner Tee.", "Der grüne Tee.", "Der grünen Tee.", "Den grüne Tee."], "answer": "Der grüne Tee." }
+        ]
+      }
     }
   },
   "title": "Stufe Zwei",
