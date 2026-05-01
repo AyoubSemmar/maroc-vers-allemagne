@@ -4513,6 +4513,623 @@
           }
         ]
       }
+    },
+    "c1-13": {
+      "id": "c1-13",
+      "title": "Particules modales avancées — Modalpartikeln (C1)",
+      "order": 13,
+      "grammar": {
+        "title": "Combinaisons avancées de Modalpartikeln + nuances fines",
+        "content": "En B2 tu as appris les Modalpartikeln de base. En C1 tu apprends les **combinaisons** (compound usage) et les usages idiomatiques fins. Le natif les enchaîne : *eben mal*, *halt doch*, *ja gerade*. Chaque combinaison a sa propre coloration.\n\n→ Komm **doch mal** her! (Viens donc ! — plus insistant que mal seul)\n→ Das ist **eben halt** so. (C'est comme ça, tout simplement — résignation appuyée)\n→ Du weißt **ja eigentlich**, dass... (Tu sais bien en fait que... — confirmation + réflexion)",
+        "tables": [
+          {
+            "title": "Combinaisons courantes de Modalpartikeln",
+            "headers": [
+              "Combinaison",
+              "Usage",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "doch mal",
+                  "insistance + adoucissement",
+                  "Komm doch mal her!"
+                ]
+              },
+              {
+                "cells": [
+                  "halt eben",
+                  "résignation double",
+                  "Das ist halt eben so."
+                ]
+              },
+              {
+                "cells": [
+                  "ja wohl",
+                  "confirmation + supposition",
+                  "Das wirst du ja wohl wissen!"
+                ]
+              },
+              {
+                "cells": [
+                  "mal eben",
+                  "vite fait",
+                  "Kannst du mal eben helfen?"
+                ]
+              },
+              {
+                "cells": [
+                  "ja eigentlich",
+                  "confirmation + réflexion",
+                  "Das ist ja eigentlich logisch."
+                ]
+              },
+              {
+                "cells": [
+                  "doch eigentlich",
+                  "étonnement + réflexion",
+                  "Das ist doch eigentlich klar."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "L'ordre compte — l'inversion change le sens. Apprends chaque combinaison comme un bloc."
+          },
+          {
+            "title": "Modalpartikeln supplémentaires pour le C1",
+            "headers": [
+              "Mot",
+              "Usage",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "allerdings",
+                  "concession atténuée",
+                  "Das ist allerdings teuer."
+                ]
+              },
+              {
+                "cells": [
+                  "immerhin",
+                  "au moins",
+                  "Immerhin haben wir es versucht."
+                ]
+              },
+              {
+                "cells": [
+                  "schließlich",
+                  "enfin / après tout",
+                  "Schließlich bist du erwachsen."
+                ]
+              },
+              {
+                "cells": [
+                  "gerade",
+                  "insistance sur le mot suivant",
+                  "Gerade du solltest das wissen."
+                ]
+              },
+              {
+                "cells": [
+                  "ohnehin",
+                  "de toute façon",
+                  "Ich gehe ohnehin."
+                ]
+              },
+              {
+                "cells": [
+                  "ruhig",
+                  "sans hésiter",
+                  "Du kannst ruhig fragen."
+                ]
+              },
+              {
+                "cells": [
+                  "etwa",
+                  "vraiment ? (dans question négative)",
+                  "Hast du etwa keine Zeit?"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Ces particules sont plus fines que le B2 — elles apparaissent en littérature et dans la presse de qualité."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "doch mal est plus insistant que mal seul — utilise-le pour exhorter.",
+            "example": "Komm doch mal her! (avec insistance)",
+            "translation": "Allez, viens donc !"
+          },
+          {
+            "rule": "gerade devant un nom/pronom = insistance sur lui (« précisément celui-là »).",
+            "example": "Gerade du solltest das verstehen.",
+            "translation": "Toi précisément, tu devrais comprendre ça."
+          },
+          {
+            "rule": "etwa dans une question négative = surprise / reproche.",
+            "example": "Hast du etwa kein Geld? (= ne me dis pas que...)",
+            "translation": "Tu n'aurais pas d'argent, par hasard ?"
+          },
+          {
+            "rule": "ruhig à l'impératif = « sans hésiter, je suis d'accord ».",
+            "example": "Frag ruhig! / Bleib ruhig sitzen.",
+            "translation": "Pose la question sans hésiter / Reste assis, ça ne me dérange pas."
+          }
+        ],
+        "examples": [
+          "Komm doch mal her, ich muss dir was zeigen. — Viens donc, je dois te montrer un truc.",
+          "Das ist halt eben so im Leben. — C'est comme ça dans la vie, point.",
+          "Gerade du solltest das wissen! — C'est précisément toi qui devrais le savoir !",
+          "Frag ruhig, ich antworte gern. — N'hésite pas à demander, je réponds avec plaisir.",
+          "Hast du etwa keine Zeit? — Tu n'aurais pas le temps, par hasard ?",
+          "Ich gehe ohnehin in die Stadt. — De toute façon je vais en ville.",
+          "Allerdings ist das problematisch. — Cela dit, c'est problématique.",
+          "Schließlich sind wir hier, um zu lernen. — Après tout, on est là pour apprendre.",
+          "Immerhin haben wir es versucht. — Au moins on a essayé.",
+          "Du weißt ja wohl, was zu tun ist. — Tu sais bien ce qu'il y a à faire."
+        ],
+        "tip": "En C1, les Modalpartikeln te séparent du locuteur « académique » et du locuteur « naturel ». Lis des romans contemporains (Schlink, Süskind) et observe leur emploi. En deux mois, tu les utiliseras automatiquement."
+      },
+      "vocabulary": [
+        {
+          "german": "allerdings",
+          "arabic": "cela dit / toutefois",
+          "example": "Das ist allerdings teuer.",
+          "exampleArabic": "Cela dit, c'est cher.",
+          "type": "adverb"
+        },
+        {
+          "german": "immerhin",
+          "arabic": "au moins",
+          "example": "Immerhin hast du es versucht.",
+          "exampleArabic": "Au moins tu as essayé.",
+          "type": "adverb"
+        },
+        {
+          "german": "schließlich",
+          "arabic": "après tout / finalement",
+          "example": "Schließlich sind wir Freunde.",
+          "exampleArabic": "Après tout nous sommes amis.",
+          "type": "adverb"
+        },
+        {
+          "german": "gerade",
+          "arabic": "précisément",
+          "example": "Gerade du solltest helfen.",
+          "exampleArabic": "C'est précisément toi qui devrais aider.",
+          "type": "adverb"
+        },
+        {
+          "german": "ohnehin",
+          "arabic": "de toute façon",
+          "example": "Ich gehe ohnehin.",
+          "exampleArabic": "J'y vais de toute façon.",
+          "type": "adverb"
+        },
+        {
+          "german": "ruhig",
+          "arabic": "sans hésiter / sans problème",
+          "example": "Frag ruhig!",
+          "exampleArabic": "N'hésite pas à demander !",
+          "type": "adverb"
+        },
+        {
+          "german": "etwa",
+          "arabic": "vraiment ? / par hasard",
+          "example": "Hast du etwa Angst?",
+          "exampleArabic": "Aurais-tu peur, par hasard ?",
+          "type": "adverb"
+        },
+        {
+          "german": "durchaus",
+          "arabic": "tout à fait",
+          "example": "Das ist durchaus möglich.",
+          "exampleArabic": "C'est tout à fait possible.",
+          "type": "adverb"
+        },
+        {
+          "german": "keineswegs",
+          "arabic": "absolument pas",
+          "example": "Das ist keineswegs einfach.",
+          "exampleArabic": "Ce n'est absolument pas simple.",
+          "type": "adverb"
+        },
+        {
+          "german": "gewiss",
+          "arabic": "certainement",
+          "example": "Gewiss kommt er.",
+          "exampleArabic": "Il viendra certainement.",
+          "type": "adverb"
+        },
+        {
+          "german": "einigermaßen",
+          "arabic": "dans une certaine mesure",
+          "example": "Es geht mir einigermaßen.",
+          "exampleArabic": "Je vais à peu près bien.",
+          "type": "adverb"
+        },
+        {
+          "german": "beinahe",
+          "arabic": "presque / failli",
+          "example": "Ich wäre beinahe gefallen.",
+          "exampleArabic": "J'ai failli tomber.",
+          "type": "adverb"
+        },
+        {
+          "german": "nahezu",
+          "arabic": "quasiment",
+          "example": "Es ist nahezu unmöglich.",
+          "exampleArabic": "C'est quasiment impossible.",
+          "type": "adverb"
+        },
+        {
+          "german": "doch mal",
+          "arabic": "insistance + adoucissement",
+          "example": "Komm doch mal her!",
+          "exampleArabic": "Allez, viens donc !",
+          "type": "phrase"
+        },
+        {
+          "german": "halt eben",
+          "arabic": "tout simplement",
+          "example": "Das ist halt eben so.",
+          "exampleArabic": "C'est comme ça, tout simplement.",
+          "type": "phrase"
+        },
+        {
+          "german": "ja wohl",
+          "arabic": "certainement",
+          "example": "Das weißt du ja wohl.",
+          "exampleArabic": "Tu le sais bien.",
+          "type": "phrase"
+        },
+        {
+          "german": "mal eben",
+          "arabic": "vite fait",
+          "example": "Kannst du mal eben helfen?",
+          "exampleArabic": "Tu peux m'aider vite fait ?",
+          "type": "phrase"
+        },
+        {
+          "german": "noch nicht einmal",
+          "arabic": "même pas",
+          "example": "Er hat noch nicht einmal gegrüßt.",
+          "exampleArabic": "Il n'a même pas dit bonjour.",
+          "type": "phrase"
+        },
+        {
+          "german": "einigermaßen",
+          "arabic": "dans une certaine mesure",
+          "example": "Einigermaßen verstehe ich.",
+          "exampleArabic": "Je comprends en partie.",
+          "type": "adverb"
+        },
+        {
+          "german": "ehrlich gesagt",
+          "arabic": "honnêtement",
+          "example": "Ehrlich gesagt, weiß ich nicht.",
+          "exampleArabic": "Honnêtement, je ne sais pas.",
+          "type": "phrase"
+        },
+        {
+          "german": "der Beleg",
+          "arabic": "la preuve",
+          "example": "Wo ist der Beleg dafür?",
+          "exampleArabic": "Où en est la preuve ?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Belege"
+        },
+        {
+          "german": "die Andeutung",
+          "arabic": "l'allusion",
+          "example": "Eine versteckte Andeutung.",
+          "exampleArabic": "Une allusion voilée.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Andeutungen"
+        },
+        {
+          "german": "die Betonung",
+          "arabic": "l'accentuation",
+          "example": "Die Betonung liegt auf dem Wort.",
+          "exampleArabic": "L'accent porte sur ce mot.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Betonungen"
+        },
+        {
+          "german": "der Tonfall",
+          "arabic": "le ton de la voix",
+          "example": "Sein Tonfall war scharf.",
+          "exampleArabic": "Son ton était sec.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Ironie",
+          "arabic": "l'ironie",
+          "example": "Das war reine Ironie.",
+          "exampleArabic": "C'était de pure ironie.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Anspielung",
+          "arabic": "l'allusion / la pique",
+          "example": "Eine subtile Anspielung.",
+          "exampleArabic": "Une allusion subtile.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Anspielungen"
+        },
+        {
+          "german": "subtil",
+          "arabic": "subtil",
+          "example": "Eine subtile Bedeutung.",
+          "exampleArabic": "Un sens subtil.",
+          "type": "adjective"
+        },
+        {
+          "german": "feinfühlig",
+          "arabic": "sensible / délicat",
+          "example": "Eine feinfühlige Bemerkung.",
+          "exampleArabic": "Une remarque délicate.",
+          "type": "adjective"
+        },
+        {
+          "german": "ausdrucksstark",
+          "arabic": "expressif",
+          "example": "Eine ausdrucksstarke Sprache.",
+          "exampleArabic": "Une langue expressive.",
+          "type": "adjective"
+        },
+        {
+          "german": "gewichtig",
+          "arabic": "de poids",
+          "example": "Ein gewichtiges Argument.",
+          "exampleArabic": "Un argument de poids.",
+          "type": "adjective"
+        },
+        {
+          "german": "beiläufig",
+          "arabic": "incident / au passage",
+          "example": "Eine beiläufige Bemerkung.",
+          "exampleArabic": "Une remarque au passage.",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q1",
+            "question": "Insistance + adoucissement : « Komm ___ ___ her! »",
+            "answer": "doch mal",
+            "hint": "doch mal — combinaison"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q2",
+            "question": "Reproche/surprise dans une question négative :",
+            "options": [
+              "eben",
+              "wohl",
+              "etwa",
+              "doch"
+            ],
+            "answer": "etwa"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q3",
+            "question": "« ___ du solltest das wissen! » (toi précisément)",
+            "answer": "Gerade",
+            "hint": "gerade pour insister"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q4",
+            "question": "À l'impératif, « sans hésiter » :",
+            "options": [
+              "ruhig",
+              "gerade",
+              "wohl",
+              "eben"
+            ],
+            "answer": "ruhig"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q5",
+            "question": "« Es ist ___ teuer. » (cela dit / toutefois)",
+            "answer": "allerdings",
+            "hint": "allerdings = cela dit"
+          },
+          {
+            "type": "matching",
+            "id": "c1-13-q6",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "allerdings",
+                "right": "cela dit"
+              },
+              {
+                "left": "immerhin",
+                "right": "au moins"
+              },
+              {
+                "left": "ohnehin",
+                "right": "de toute façon"
+              },
+              {
+                "left": "gerade",
+                "right": "précisément"
+              },
+              {
+                "left": "etwa",
+                "right": "vraiment ?"
+              },
+              {
+                "left": "ruhig",
+                "right": "sans hésiter"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-13-q7",
+            "question": "Ordonne : « Toi précisément tu le sais »",
+            "words": [
+              "Gerade",
+              "du",
+              "weißt",
+              "das"
+            ],
+            "answer": "Gerade du weißt das"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-13-q8",
+            "question": "Dis : « C'est comme ça, tout simplement »",
+            "answer": "Das ist halt eben so"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q9",
+            "question": "Écoute : « Du weißt ___ ___, was zu tun ist. »",
+            "audioPrompt": "Du weißt ja wohl, was zu tun ist.",
+            "answer": "ja wohl",
+            "hint": "ja wohl = certainement"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q10",
+            "question": "Différence B2 vs C1 pour les Modalpartikeln :",
+            "options": [
+              "plus de mots",
+              "usage des combinaisons",
+              "aucune différence",
+              "suppression des Partikeln"
+            ],
+            "answer": "usage des combinaisons"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q11",
+            "question": "« Es ist ___ teuer, aber wertvoll. » (concession atténuée)",
+            "answer": "allerdings",
+            "hint": "allerdings = cela dit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q12",
+            "question": "Différence entre nahezu et beinahe ?",
+            "options": [
+              "sens quasi identique",
+              "nahezu soutenu, beinahe oral",
+              "nahezu pour le futur",
+              "radicalement différents"
+            ],
+            "answer": "nahezu soutenu, beinahe oral"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q13",
+            "question": "« Das ist ___ möglich. » (tout à fait possible)",
+            "answer": "durchaus",
+            "hint": "durchaus = tout à fait"
+          },
+          {
+            "type": "matching",
+            "id": "c1-13-q14",
+            "question": "Associe le mot avancé à son sens :",
+            "pairs": [
+              {
+                "left": "durchaus",
+                "right": "tout à fait"
+              },
+              {
+                "left": "keineswegs",
+                "right": "absolument pas"
+              },
+              {
+                "left": "einigermaßen",
+                "right": "dans une certaine mesure"
+              },
+              {
+                "left": "beinahe",
+                "right": "presque"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-13-q15",
+            "question": "Ordonne : « C'est comme ça, tout simplement »",
+            "words": [
+              "Das",
+              "ist",
+              "halt",
+              "eben",
+              "so"
+            ],
+            "answer": "Das ist halt eben so"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q16",
+            "question": "Écoute : « ___ stimme ich zu. » (dans cette mesure)",
+            "audioPrompt": "Insofern stimme ich zu.",
+            "answer": "Insofern",
+            "hint": "insofern = dans cette mesure"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q17",
+            "question": "Dans un texte littéraire :",
+            "options": [
+              "Modalpartikeln à éviter",
+              "elles enrichissent le style",
+              "elles sont supprimées",
+              "uniquement dans les dialogues"
+            ],
+            "answer": "elles enrichissent le style"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-13-q18",
+            "question": "Dis : « Demande sans hésiter, je réponds avec plaisir »",
+            "answer": "Frag ruhig, ich antworte gern"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-13-q19",
+            "question": "« ___ haben wir es versucht. » (au moins)",
+            "answer": "Immerhin",
+            "hint": "immerhin = au moins"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-13-q20",
+            "question": "Dans « Gerade du solltest das wissen! », gerade signifie :",
+            "options": [
+              "maintenant",
+              "rapidement",
+              "précisément toi",
+              "droit / direct"
+            ],
+            "answer": "précisément toi"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Cinq",
