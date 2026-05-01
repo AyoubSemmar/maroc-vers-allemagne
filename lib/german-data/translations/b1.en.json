@@ -4394,6 +4394,616 @@
           }
         ]
       }
+    },
+    "b1-13": {
+      "id": "b1-13",
+      "title": "The future tense — Futur I + Futur II",
+      "order": 13,
+      "grammar": {
+        "title": "werden + Infinitiv (simple future) + werden + Partizip + haben/sein (future perfect)",
+        "content": "German builds the future with **werden** (to become) + the main verb. **Futur I** = werden + Infinitiv (\"will + verb\"). **Futur II** = werden + Partizip + haben/sein (\"will have...\"). In everyday speech, native speakers prefer Präsens with a time adverb (morgen, bald) — simpler.\n\n→ Ich **werde** morgen nach Berlin **fahren**. (I will go to Berlin tomorrow)\n\nUse Futur I when you want to emphasize the future, make a promise, or a prediction.",
+        "tables": [
+          {
+            "title": "Futur I — conjugation of werden",
+            "headers": [
+              "Pronoun",
+              "werden",
+              "Example"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "werde",
+                  "Ich werde lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wirst",
+                  "Du wirst kommen."
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "wird",
+                  "Er wird arbeiten."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "werden",
+                  "Wir werden reisen."
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "werdet",
+                  "Ihr werdet lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "werden",
+                  "Sie werden helfen."
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "wirst (du) and wird (er/sie/es) are irregular."
+          },
+          {
+            "title": "Uses of Futur I",
+            "headers": [
+              "Use",
+              "Example",
+              "Difference"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "strong promise",
+                  "Ich werde dich nicht vergessen.",
+                  "serious commitment"
+                ]
+              },
+              {
+                "cells": [
+                  "prediction",
+                  "Es wird morgen regnen.",
+                  "high certainty about the future"
+                ]
+              },
+              {
+                "cells": [
+                  "guess about the present",
+                  "Er wird wohl zu Hause sein.",
+                  "guess = \"probably\""
+                ]
+              },
+              {
+                "cells": [
+                  "insistence",
+                  "Du wirst das jetzt machen!",
+                  "command with insistence"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "In everyday speech use Präsens + adverb. Save Futur I for special cases."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "In everyday speech, use Präsens + a time adverb instead of Futur I.",
+            "example": "Ich gehe morgen ins Kino.",
+            "translation": "I'll go to the cinema tomorrow."
+          },
+          {
+            "rule": "Use Futur I for promises and predictions.",
+            "example": "Es wird kalt werden.",
+            "translation": "It's going to get cold."
+          },
+          {
+            "rule": "Futur I + wohl/sicher = guess about the present, not future!",
+            "example": "Er wird wohl krank sein.",
+            "translation": "He's probably sick right now."
+          },
+          {
+            "rule": "Futur II is rare — \"by time X I will have...\".",
+            "example": "Bis Ende des Jahres werde ich Deutschland erreicht haben.",
+            "translation": "By the end of the year I will have reached Germany."
+          }
+        ],
+        "examples": [
+          "Ich werde nächstes Jahr nach Deutschland ziehen. — I'll move to Germany next year.",
+          "Du wirst die Prüfung sicher bestehen! — You'll surely pass the exam!",
+          "Es wird morgen regnen. — It will rain tomorrow.",
+          "Wir werden uns später treffen. — We'll meet later.",
+          "Sie wird wohl zu Hause sein. — She's probably at home.",
+          "In zehn Jahren werde ich Architekt sein. — In ten years I'll be an architect.",
+          "Du wirst das jetzt machen! — You'll do this now! (insistence)",
+          "Bis morgen werde ich alles erledigt haben. — By tomorrow I'll have finished everything."
+        ],
+        "tip": "Don't bother with Futur II in B1. Focus on Futur I, and even then use it sparingly. Präsens + time adverb is 80% of how natives talk about the future."
+      },
+      "vocabulary": [
+        {
+          "german": "werden",
+          "arabic": "to become / will",
+          "example": "Ich werde Lehrer.",
+          "exampleArabic": "I'll become a teacher.",
+          "type": "verb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "tomorrow",
+          "example": "Morgen werde ich kommen.",
+          "exampleArabic": "I'll come tomorrow.",
+          "type": "adverb"
+        },
+        {
+          "german": "übermorgen",
+          "arabic": "the day after tomorrow",
+          "example": "Übermorgen fährt er nach Berlin.",
+          "exampleArabic": "The day after tomorrow he's going to Berlin.",
+          "type": "adverb"
+        },
+        {
+          "german": "bald",
+          "arabic": "soon",
+          "example": "Ich komme bald.",
+          "exampleArabic": "I'll come soon.",
+          "type": "adverb"
+        },
+        {
+          "german": "später",
+          "arabic": "later",
+          "example": "Wir treffen uns später.",
+          "exampleArabic": "We'll meet later.",
+          "type": "adverb"
+        },
+        {
+          "german": "in einer Stunde",
+          "arabic": "in an hour",
+          "example": "Ich rufe dich in einer Stunde an.",
+          "exampleArabic": "I'll call you in an hour.",
+          "type": "phrase"
+        },
+        {
+          "german": "nächste Woche",
+          "arabic": "next week",
+          "example": "Nächste Woche fängt der Kurs an.",
+          "exampleArabic": "Next week the course starts.",
+          "type": "phrase"
+        },
+        {
+          "german": "nächsten Monat",
+          "arabic": "next month",
+          "example": "Nächsten Monat ziehe ich um.",
+          "exampleArabic": "Next month I'm moving.",
+          "type": "phrase"
+        },
+        {
+          "german": "nächstes Jahr",
+          "arabic": "next year",
+          "example": "Nächstes Jahr studiere ich.",
+          "exampleArabic": "Next year I'll be studying.",
+          "type": "phrase"
+        },
+        {
+          "german": "in Zukunft",
+          "arabic": "in the future",
+          "example": "In Zukunft werde ich mehr lernen.",
+          "exampleArabic": "In the future I'll study more.",
+          "type": "phrase"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "future",
+          "example": "Die Zukunft ist ungewiss.",
+          "exampleArabic": "The future is uncertain.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Plan",
+          "arabic": "plan",
+          "example": "Was ist dein Plan?",
+          "exampleArabic": "What's your plan?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Pläne"
+        },
+        {
+          "german": "das Ziel",
+          "arabic": "goal",
+          "example": "Mein Ziel ist Deutschland.",
+          "exampleArabic": "My goal is Germany.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Ziele"
+        },
+        {
+          "german": "der Traum",
+          "arabic": "dream",
+          "example": "Mein Traum wird wahr.",
+          "exampleArabic": "My dream is coming true.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Träume"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "hope",
+          "example": "Es gibt immer Hoffnung.",
+          "exampleArabic": "There's always hope.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Hoffnungen"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "probably",
+          "example": "Wahrscheinlich regnet es morgen.",
+          "exampleArabic": "It will probably rain tomorrow.",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sure / certain",
+          "example": "Ich bin sicher.",
+          "exampleArabic": "I'm sure.",
+          "type": "adjective"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "maybe",
+          "example": "Vielleicht komme ich.",
+          "exampleArabic": "Maybe I'll come.",
+          "type": "adverb"
+        },
+        {
+          "german": "bestehen",
+          "arabic": "to pass (an exam)",
+          "example": "Du wirst die Prüfung bestehen.",
+          "exampleArabic": "You'll pass the exam.",
+          "type": "verb"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "to reach / achieve",
+          "example": "Du wirst dein Ziel erreichen.",
+          "exampleArabic": "You'll achieve your goal.",
+          "type": "verb"
+        },
+        {
+          "german": "sich treffen",
+          "arabic": "to meet",
+          "example": "Wir werden uns treffen.",
+          "exampleArabic": "We'll meet.",
+          "type": "verb"
+        },
+        {
+          "german": "umziehen",
+          "arabic": "to move (house)",
+          "example": "Ich werde umziehen.",
+          "exampleArabic": "I'll move.",
+          "type": "verb"
+        },
+        {
+          "german": "planen",
+          "arabic": "to plan",
+          "example": "Ich plane meine Reise.",
+          "exampleArabic": "I'm planning my trip.",
+          "type": "verb"
+        },
+        {
+          "german": "verändern",
+          "arabic": "to change",
+          "example": "Wir werden viel verändern.",
+          "exampleArabic": "We're going to change a lot.",
+          "type": "verb"
+        },
+        {
+          "german": "die Reise",
+          "arabic": "trip / journey",
+          "example": "Die Reise wird lang sein.",
+          "exampleArabic": "The trip will be long.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Reisen"
+        },
+        {
+          "german": "die Wohnung",
+          "arabic": "apartment",
+          "example": "Wir werden eine neue Wohnung haben.",
+          "exampleArabic": "We'll have a new apartment.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Wohnungen"
+        },
+        {
+          "german": "die Arbeit",
+          "arabic": "work / job",
+          "example": "Die Arbeit wird einfacher.",
+          "exampleArabic": "Work will get easier.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Studium",
+          "arabic": "studies",
+          "example": "Mein Studium wird drei Jahre dauern.",
+          "exampleArabic": "My studies will last three years.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "to finish / handle",
+          "example": "Ich werde alles erledigen.",
+          "exampleArabic": "I'll handle everything.",
+          "type": "verb"
+        },
+        {
+          "german": "der Erfolg",
+          "arabic": "success",
+          "example": "Der Erfolg wird kommen.",
+          "exampleArabic": "Success will come.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Erfolge"
+        },
+        {
+          "german": "wohl",
+          "arabic": "probably",
+          "example": "Er wird wohl müde sein.",
+          "exampleArabic": "He's probably tired.",
+          "type": "adverb"
+        },
+        {
+          "german": "die Veränderung",
+          "arabic": "change",
+          "example": "Eine Veränderung wird kommen.",
+          "exampleArabic": "A change is coming.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Veränderungen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q1",
+            "question": "Futur I: \"Ich ___ morgen kommen.\" (werden)",
+            "answer": "werde",
+            "hint": "werden with ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q2",
+            "question": "Form of werden with du?",
+            "options": [
+              "werde",
+              "wirst",
+              "wird",
+              "werden"
+            ],
+            "answer": "wirst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q3",
+            "question": "\"Sie ___ nächstes Jahr studieren.\" (er/sie/es)",
+            "answer": "wird",
+            "hint": "er/sie/es → wird"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q4",
+            "question": "Which is the correct Futur II structure?",
+            "options": [
+              "werde + Partizip",
+              "werde + Infinitiv + haben",
+              "wird + Infinitiv",
+              "haben + Partizip"
+            ],
+            "answer": "werde + Infinitiv + haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q5",
+            "question": "Guess about the present: \"Er ___ wohl zu Hause sein.\"",
+            "answer": "wird",
+            "hint": "Futur I + wohl = guess"
+          },
+          {
+            "type": "matching",
+            "id": "b1-13-q6",
+            "question": "Match the sentence to its use:",
+            "pairs": [
+              {
+                "left": "Ich werde dich heiraten!",
+                "right": "strong promise"
+              },
+              {
+                "left": "Es wird wohl regnen.",
+                "right": "guess"
+              },
+              {
+                "left": "Du wirst das machen!",
+                "right": "insistence"
+              },
+              {
+                "left": "Morgen werde ich lernen.",
+                "right": "simple future"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-13-q7",
+            "question": "Order: \"Next year I'll move to Germany\"",
+            "words": [
+              "Nächstes",
+              "Jahr",
+              "werde",
+              "ich",
+              "nach",
+              "Deutschland",
+              "ziehen"
+            ],
+            "answer": "Nächstes Jahr werde ich nach Deutschland ziehen"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-13-q8",
+            "question": "Say: \"You'll surely pass the exam\"",
+            "answer": "Du wirst die Prüfung sicher bestehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q9",
+            "question": "Listen: \"Wir ___ uns später treffen.\"",
+            "audioPrompt": "Wir werden uns später treffen.",
+            "answer": "werden",
+            "hint": "wir + werden"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q10",
+            "question": "In everyday speech, which form do we use for the simple future?",
+            "options": [
+              "Futur I always",
+              "Futur II always",
+              "Präsens + time adverb",
+              "Plusquamperfekt"
+            ],
+            "answer": "Präsens + time adverb"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q11",
+            "question": "\"Ihr ___ den Erfolg sehen.\" (werden + ihr)",
+            "answer": "werdet",
+            "hint": "wir/Sie → werden, ihr → werdet"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q12",
+            "question": "Futur II structure:",
+            "options": [
+              "werde + Inf",
+              "werde + Inf + haben",
+              "werde + Partizip",
+              "werde + Inf + sein"
+            ],
+            "answer": "werde + Inf + haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q13",
+            "question": "\"Bis Ende des Monats ___ ich alles erledigt haben.\" (Futur II)",
+            "answer": "werde",
+            "hint": "Futur II with ich"
+          },
+          {
+            "type": "matching",
+            "id": "b1-13-q14",
+            "question": "Match the sentence to the use of Futur I:",
+            "pairs": [
+              {
+                "left": "Es wird regnen.",
+                "right": "prediction"
+              },
+              {
+                "left": "Du wirst das machen!",
+                "right": "insistence"
+              },
+              {
+                "left": "Er wird wohl müde sein.",
+                "right": "guess about the present"
+              },
+              {
+                "left": "Ich werde dich heiraten.",
+                "right": "promise"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-13-q15",
+            "question": "Order: \"By the end of the year I'll have reached Germany\"",
+            "words": [
+              "Bis",
+              "Ende",
+              "des",
+              "Jahres",
+              "werde",
+              "ich",
+              "Deutschland",
+              "erreicht",
+              "haben"
+            ],
+            "answer": "Bis Ende des Jahres werde ich Deutschland erreicht haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q16",
+            "question": "Listen: \"Sie ___ wohl zu Hause sein.\" (guess)",
+            "audioPrompt": "Sie wird wohl zu Hause sein.",
+            "answer": "wird",
+            "hint": "wird + wohl = guess"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q17",
+            "question": "wirst is used with:",
+            "options": [
+              "ich",
+              "du",
+              "er",
+              "wir"
+            ],
+            "answer": "du"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-13-q18",
+            "question": "Say: \"Tomorrow I'll go to university\" (avoid Futur I)",
+            "answer": "Morgen gehe ich zur Universität"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-13-q19",
+            "question": "\"Wir ___ uns nächstes Jahr treffen.\" (werden)",
+            "answer": "werden",
+            "hint": "werden + wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-13-q20",
+            "question": "The sentence \"Er wird wohl krank sein\" means:",
+            "options": [
+              "He'll get sick",
+              "He's probably sick right now",
+              "He'll be sick tomorrow",
+              "He must be sick"
+            ],
+            "answer": "He's probably sick right now"
+          }
+        ]
+      }
     }
   },
   "title": "Level Three",
