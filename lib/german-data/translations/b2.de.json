@@ -5523,6 +5523,708 @@
           }
         ]
       }
+    },
+    "b2-15": {
+      "id": "b2-15",
+      "title": "Wortbildung",
+      "order": 15,
+      "grammar": {
+        "title": "Komposita + Suffixe -keit/-heit/-ung + Präfixe ver-/ent-/be-/zer-",
+        "content": "Das Deutsche bildet leicht neue Wörter durch **Komposition** (Komposita) sowie **Suffixe und Präfixe**. Wer diese Muster beherrscht, versteht Tausende Wörter, auch wenn er sie noch nie gesehen hat.\n\n**Komposita:** Zwei oder mehr Wörter zu einem zusammengefügt. Das **letzte** Wort bestimmt das Genus.\n→ die Tür + der Schlüssel = **der Türschlüssel**\n→ die Hand + die Tasche = **die Handtasche**\n\n**Suffixe:** bilden Substantive aus Verben oder Adjektiven. -ung, -heit, -keit, -er, -in.\n**Präfixe:** verändern die Bedeutung des Verbs. ver-, ent-, be-, zer-, er-.",
+        "tables": [
+          {
+            "title": "Substantivbildende Suffixe",
+            "headers": [
+              "Suffix",
+              "Basis",
+              "Beispiel",
+              "Bedeutung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-ung",
+                  "Verb",
+                  "lernen → die Lernung",
+                  "Verb als Substantiv"
+                ]
+              },
+              {
+                "cells": [
+                  "-heit",
+                  "Adjektiv",
+                  "frei → die Freiheit",
+                  "Adjektiv als Zustand"
+                ]
+              },
+              {
+                "cells": [
+                  "-keit",
+                  "Adjektiv (-ig/-lich)",
+                  "möglich → die Möglichkeit",
+                  "Adjektiv als Zustand"
+                ]
+              },
+              {
+                "cells": [
+                  "-er",
+                  "Verb",
+                  "lehren → der Lehrer",
+                  "männlicher Akteur"
+                ]
+              },
+              {
+                "cells": [
+                  "-in",
+                  "männl. Substantiv",
+                  "der Lehrer → die Lehrerin",
+                  "weibliches Pendant"
+                ]
+              },
+              {
+                "cells": [
+                  "-schaft",
+                  "Substantiv/Adjektiv",
+                  "die Freundschaft",
+                  "Gruppe oder Zustand"
+                ]
+              },
+              {
+                "cells": [
+                  "-tum",
+                  "Substantiv",
+                  "das Eigentum",
+                  "Zustand oder Besitz"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Substantive auf -ung/-heit/-keit/-schaft/-tion sind **immer feminin (die)**."
+          },
+          {
+            "title": "Präfixe, die die Verbbedeutung ändern",
+            "headers": [
+              "Präfix",
+              "Bedeutung",
+              "Beispiel",
+              "Wirkung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ver-",
+                  "Zustandsänderung / Vollendung",
+                  "kaufen → verkaufen",
+                  "verkaufen (vs. kaufen)"
+                ]
+              },
+              {
+                "cells": [
+                  "ent-",
+                  "Entfernung / Trennung",
+                  "fliehen → entfliehen",
+                  "entkommen"
+                ]
+              },
+              {
+                "cells": [
+                  "be-",
+                  "Einwirkung auf etwas",
+                  "arbeiten → bearbeiten",
+                  "bearbeiten / redigieren"
+                ]
+              },
+              {
+                "cells": [
+                  "zer-",
+                  "Zerstörung",
+                  "brechen → zerbrechen",
+                  "vollständig brechen"
+                ]
+              },
+              {
+                "cells": [
+                  "er-",
+                  "Vollendung / Erreichung",
+                  "reichen → erreichen",
+                  "erreichen"
+                ]
+              },
+              {
+                "cells": [
+                  "miss-",
+                  "negativ / falsch",
+                  "verstehen → missverstehen",
+                  "falsch verstehen"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Diese Präfixe sind **untrennbar** — sie bleiben in allen Zeiten am Verb."
+          },
+          {
+            "title": "Komposita — das letzte Wort bestimmt das Genus",
+            "headers": [
+              "Zusammensetzung",
+              "Genus",
+              "Bedeutung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der Bahn + der Hof = der Bahnhof",
+                  "der",
+                  "Bahnhof"
+                ]
+              },
+              {
+                "cells": [
+                  "die Hand + die Tasche = die Handtasche",
+                  "die",
+                  "Handtasche"
+                ]
+              },
+              {
+                "cells": [
+                  "das Haus + die Tür = die Haustür",
+                  "die",
+                  "Haustür"
+                ]
+              },
+              {
+                "cells": [
+                  "der Geburts + der Tag = der Geburtstag",
+                  "der",
+                  "Geburtstag"
+                ]
+              },
+              {
+                "cells": [
+                  "die Sprache + die Schule = die Sprachschule",
+                  "die",
+                  "Sprachschule"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Merke: das letzte Substantiv im Kompositum bestimmt der/die/das."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Alle Substantive auf -ung/-heit/-keit/-schaft/-tion/-ität sind **feminin** (die).",
+            "example": "die Lösung, die Schönheit, die Möglichkeit, die Universität",
+            "translation": "Genusregel"
+          },
+          {
+            "rule": "Die Präfixe ver/ent/be/zer/er/miss sind untrennbar und nehmen kein ge- im Partizip II.",
+            "example": "verkaufen → verkauft (nicht geverkauft)",
+            "translation": "untrennbare Präfixe"
+          },
+          {
+            "rule": "In Komposita treten manchmal Fugenelemente (-s-/-n-/-en-) auf: Tageszeitung, Schweinefleisch.",
+            "example": "der Tag + die Zeitung → die Tageszeitung",
+            "translation": "Fugenelemente"
+          },
+          {
+            "rule": "Lange Wörter nicht fürchten — von rechts nach links zerlegen: Lebensversicherungsgesellschaft = Gesellschaft ← Versicherung ← Leben.",
+            "example": "der Donaudampfschifffahrtskapitän",
+            "translation": "Wortzerlegung"
+          }
+        ],
+        "examples": [
+          "der Bahnhof = die Bahn + der Hof.",
+          "die Möglichkeit = möglich + -keit.",
+          "die Schönheit = schön + -heit.",
+          "die Lehrerin = der Lehrer + -in.",
+          "Er hat das Buch verkauft.",
+          "Das Glas ist zerbrochen.",
+          "Ich erreiche mein Ziel.",
+          "Er hat mich missverstanden."
+        ],
+        "tip": "Lerne 5 Suffixe und 5 Präfixe. Wenn dir ein langes neues Wort begegnet, zerlege es: ver- + kauf + -en. So verstehst du 50 % des neuen Wortschatzes ohne Wörterbuch."
+      },
+      "vocabulary": [
+        {
+          "german": "die Möglichkeit",
+          "arabic": "Chance / Option",
+          "example": "Es gibt viele Möglichkeiten.",
+          "exampleArabic": "Optionen",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "die Schwierigkeit",
+          "arabic": "Problem / Hürde",
+          "example": "Die Schwierigkeit ist groß.",
+          "exampleArabic": "Hindernis",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwierigkeiten"
+        },
+        {
+          "german": "die Wirklichkeit",
+          "arabic": "Realität",
+          "example": "In der Wirklichkeit ist es anders.",
+          "exampleArabic": "Realität",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Freiheit",
+          "arabic": "Unabhängigkeit",
+          "example": "Freiheit ist wichtig.",
+          "exampleArabic": "Selbstbestimmung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freiheiten"
+        },
+        {
+          "german": "die Gesundheit",
+          "arabic": "körperliches Wohl",
+          "example": "Gesundheit ist alles.",
+          "exampleArabic": "Wohlbefinden",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Schönheit",
+          "arabic": "Anmut",
+          "example": "Die Schönheit der Stadt.",
+          "exampleArabic": "Ästhetik",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schönheiten"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "Antwort auf ein Problem",
+          "example": "Wir suchen eine Lösung.",
+          "exampleArabic": "Problemlösung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lösungen"
+        },
+        {
+          "german": "die Bewegung",
+          "arabic": "Ortsveränderung",
+          "example": "In Bewegung bleiben.",
+          "exampleArabic": "Aktivität",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bewegungen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "Wahl / Beschluss",
+          "example": "Eine wichtige Entscheidung.",
+          "exampleArabic": "Wahl",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "die Erfahrung",
+          "arabic": "praktisches Wissen",
+          "example": "Aus Erfahrung weiß ich es.",
+          "exampleArabic": "Lebenserfahrung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Erfahrungen"
+        },
+        {
+          "german": "die Gesellschaft",
+          "arabic": "Gemeinschaft / Firma",
+          "example": "Die Gesellschaft verändert sich.",
+          "exampleArabic": "Soziales / Unternehmen",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gesellschaften"
+        },
+        {
+          "german": "die Freundschaft",
+          "arabic": "freundschaftliches Verhältnis",
+          "example": "Wir haben eine alte Freundschaft.",
+          "exampleArabic": "Beziehung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundschaften"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "Hochschule",
+          "example": "Ich studiere an der Universität.",
+          "exampleArabic": "Hochschule",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Universitäten"
+        },
+        {
+          "german": "die Information",
+          "arabic": "Auskunft",
+          "example": "Eine wichtige Information.",
+          "exampleArabic": "Wissen",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Informationen"
+        },
+        {
+          "german": "die Nation",
+          "arabic": "Staat / Volk",
+          "example": "Die deutsche Nation.",
+          "exampleArabic": "Volksgemeinschaft",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nationen"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "etwas gegen Geld abgeben",
+          "example": "Ich verkaufe mein Auto.",
+          "exampleArabic": "Verkauf",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "begreifen",
+          "example": "Ich verstehe dich.",
+          "exampleArabic": "Begreifen",
+          "type": "verb"
+        },
+        {
+          "german": "vergessen",
+          "arabic": "nicht mehr erinnern",
+          "example": "Vergiss das nicht!",
+          "exampleArabic": "Erinnerungsverlust",
+          "type": "verb"
+        },
+        {
+          "german": "entdecken",
+          "arabic": "etwas finden",
+          "example": "Wir haben es entdeckt.",
+          "exampleArabic": "Entdeckung",
+          "type": "verb"
+        },
+        {
+          "german": "entscheiden",
+          "arabic": "eine Wahl treffen",
+          "example": "Du musst entscheiden.",
+          "exampleArabic": "Wahl",
+          "type": "verb"
+        },
+        {
+          "german": "bearbeiten",
+          "arabic": "an etwas arbeiten",
+          "example": "Ich bearbeite den Text.",
+          "exampleArabic": "Bearbeitung",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "jemanden aufsuchen",
+          "example": "Ich besuche meine Familie.",
+          "exampleArabic": "Besuch",
+          "type": "verb"
+        },
+        {
+          "german": "zerbrechen",
+          "arabic": "in Stücke gehen",
+          "example": "Das Glas ist zerbrochen.",
+          "exampleArabic": "Bruch",
+          "type": "verb"
+        },
+        {
+          "german": "zerstören",
+          "arabic": "kaputt machen",
+          "example": "Der Krieg zerstört alles.",
+          "exampleArabic": "Zerstörung",
+          "type": "verb"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "ans Ziel kommen",
+          "example": "Ich erreiche das Ziel.",
+          "exampleArabic": "Erreichung",
+          "type": "verb"
+        },
+        {
+          "german": "missverstehen",
+          "arabic": "falsch verstehen",
+          "example": "Du missverstehst mich!",
+          "exampleArabic": "Missverständnis",
+          "type": "verb"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "Zugstation",
+          "example": "Wir treffen uns am Bahnhof.",
+          "exampleArabic": "Verkehrsknotenpunkt",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bahnhöfe"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "Tag der Geburt",
+          "example": "Mein Geburtstag ist im Mai.",
+          "exampleArabic": "Jahrestag",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Geburtstage"
+        },
+        {
+          "german": "die Handtasche",
+          "arabic": "Tasche zum Tragen in der Hand",
+          "example": "Wo ist meine Handtasche?",
+          "exampleArabic": "Damenaccessoire",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Handtaschen"
+        },
+        {
+          "german": "die Tageszeitung",
+          "arabic": "tägliche Zeitung",
+          "example": "Ich lese die Tageszeitung.",
+          "exampleArabic": "Tagesblatt",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tageszeitungen"
+        },
+        {
+          "german": "die Sprachschule",
+          "arabic": "Schule für Sprachunterricht",
+          "example": "Goethe ist eine Sprachschule.",
+          "exampleArabic": "Sprachinstitut",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachschulen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q1",
+            "question": "Suffix -ung macht das Wort immer ___ (Genus).",
+            "answer": "die",
+            "hint": "alle -ung-Substantive sind feminin"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q2",
+            "question": "In Komposita „der Bahnhof\" stammt das Genus von?",
+            "options": [
+              "dem ersten Wort",
+              "dem letzten Wort",
+              "der Grammatik",
+              "kein Genus"
+            ],
+            "answer": "dem letzten Wort"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q3",
+            "question": "Das Präfix für „verkaufen\" aus kaufen ist ___-.",
+            "answer": "ver",
+            "hint": "verkaufen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q4",
+            "question": "Adjektiv → Substantiv mit -keit: möglich → ?",
+            "options": [
+              "Möglichung",
+              "Möglichkeit",
+              "Möglichheit",
+              "Möglichschaft"
+            ],
+            "answer": "Möglichkeit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q5",
+            "question": "die Hand + die Tasche = die ___.",
+            "answer": "Handtasche",
+            "hint": "Komposita ohne Suffix"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q6",
+            "question": "Verbinde Präfix mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "ver-",
+                "right": "Zustandsänderung"
+              },
+              {
+                "left": "ent-",
+                "right": "Entfernung"
+              },
+              {
+                "left": "zer-",
+                "right": "Zerstörung"
+              },
+              {
+                "left": "be-",
+                "right": "Einwirkung"
+              },
+              {
+                "left": "er-",
+                "right": "Vollendung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q7",
+            "question": "Bilde: „Der Bahnhof ist in Berlin\"",
+            "words": [
+              "Der",
+              "Bahnhof",
+              "ist",
+              "in",
+              "Berlin"
+            ],
+            "answer": "Der Bahnhof ist in Berlin"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q8",
+            "question": "Sage: „Ich suche eine Lösung\" (mit Lösung)",
+            "answer": "Ich suche eine Lösung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q9",
+            "question": "Hör zu: „Die ___ ist groß.\" (Schwierigkeit)",
+            "audioPrompt": "Die Schwierigkeit ist groß.",
+            "answer": "Schwierigkeit",
+            "hint": "schwierig + -keit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q10",
+            "question": "Welche Verben bekommen kein „ge-\" im Partizip II?",
+            "options": [
+              "ver/ent/be",
+              "kaufen/lernen",
+              "die untrennbaren Verben mit ver/ent/be",
+              "alle Verben"
+            ],
+            "answer": "die untrennbaren Verben mit ver/ent/be"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q11",
+            "question": "Adjektiv → Substantiv mit -heit: schön → die ___",
+            "answer": "Schönheit",
+            "hint": "schön + heit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q12",
+            "question": "Suffix für weiblichen Akteur:",
+            "options": [
+              "-er",
+              "-in",
+              "-tum",
+              "-schaft"
+            ],
+            "answer": "-in"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q13",
+            "question": "die Hand + der Schuh = der ___",
+            "answer": "Handschuh",
+            "hint": "letztes Wort → der"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q14",
+            "question": "Verbinde Wort mit Suffix:",
+            "pairs": [
+              {
+                "left": "die Möglichkeit",
+                "right": "-keit"
+              },
+              {
+                "left": "die Freundschaft",
+                "right": "-schaft"
+              },
+              {
+                "left": "die Universität",
+                "right": "-ität"
+              },
+              {
+                "left": "die Lösung",
+                "right": "-ung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q15",
+            "question": "Zerlege Komposita: „die Sprachschule\"",
+            "words": [
+              "die",
+              "Sprache",
+              "+",
+              "die",
+              "Schule"
+            ],
+            "answer": "die Sprache + die Schule"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q16",
+            "question": "Hör zu: „Eine wichtige ___\" (Entwicklung)",
+            "audioPrompt": "Eine wichtige Entwicklung.",
+            "answer": "Entwicklung",
+            "hint": "entwickeln + ung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q17",
+            "question": "Das Präfix zer- bedeutet:",
+            "options": [
+              "Wiederholung",
+              "Vollendung",
+              "Zerstörung",
+              "Entfernung"
+            ],
+            "answer": "Zerstörung"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q18",
+            "question": "Sage: „Ich erreiche mein Ziel\" (mit erreichen)",
+            "answer": "Ich erreiche mein Ziel"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q19",
+            "question": "die Tat + die Sache = die ___ (tatsächliche Sache)",
+            "answer": "Tatsache",
+            "hint": "einfaches Kompositum"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q20",
+            "question": "Alle Substantive auf -ung, -heit, -keit sind feminin. Wahr oder falsch?",
+            "options": [
+              "wahr",
+              "falsch",
+              "nur -ung",
+              "kommt darauf an"
+            ],
+            "answer": "wahr"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Vier",
