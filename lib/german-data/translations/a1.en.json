@@ -1033,6 +1033,134 @@
           "example": "Das ist viel!",
           "exampleArabic": "That's a lot!",
           "type": "adverb"
+        },
+        {
+          "german": "die Zahl",
+          "arabic": "number",
+          "gender": "die",
+          "plural": "die Zahlen",
+          "example": "Welche Zahl ist das?",
+          "exampleArabic": "What number is that?",
+          "type": "noun"
+        },
+        {
+          "german": "das Geld",
+          "arabic": "money",
+          "gender": "das",
+          "example": "Ich habe kein Geld.",
+          "exampleArabic": "I don't have money.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bargeld",
+          "arabic": "cash",
+          "gender": "das",
+          "example": "Ich zahle in bar.",
+          "exampleArabic": "I pay in cash.",
+          "type": "noun"
+        },
+        {
+          "german": "die Karte",
+          "arabic": "card",
+          "gender": "die",
+          "plural": "die Karten",
+          "example": "Eine Karte, bitte.",
+          "exampleArabic": "A card, please.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kreditkarte",
+          "arabic": "credit card",
+          "gender": "die",
+          "plural": "die Kreditkarten",
+          "example": "Mit Kreditkarte, bitte.",
+          "exampleArabic": "By credit card, please.",
+          "type": "noun"
+        },
+        {
+          "german": "günstig",
+          "arabic": "reasonably priced",
+          "example": "Das ist günstig.",
+          "exampleArabic": "That's a good price.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "expensive",
+          "example": "Das ist teuer!",
+          "exampleArabic": "That's expensive!",
+          "type": "adjective"
+        },
+        {
+          "german": "billig",
+          "arabic": "cheap",
+          "example": "Das ist billig.",
+          "exampleArabic": "That's cheap.",
+          "type": "adjective"
+        },
+        {
+          "german": "das Geschäft",
+          "arabic": "shop / store",
+          "gender": "das",
+          "plural": "die Geschäfte",
+          "example": "Das Geschäft ist offen.",
+          "exampleArabic": "The shop is open.",
+          "type": "noun"
+        },
+        {
+          "german": "bezahlen",
+          "arabic": "to pay",
+          "example": "Ich bezahle die Rechnung.",
+          "exampleArabic": "I'm paying the bill.",
+          "type": "verb"
+        },
+        {
+          "german": "zählen",
+          "arabic": "to count",
+          "example": "Kannst du auf Deutsch zählen?",
+          "exampleArabic": "Can you count in German?",
+          "type": "verb"
+        },
+        {
+          "german": "der Cent",
+          "arabic": "cent",
+          "gender": "der",
+          "example": "fünfzig Cent",
+          "exampleArabic": "50 cents",
+          "type": "noun"
+        },
+        {
+          "german": "die Rechnung",
+          "arabic": "bill / invoice",
+          "gender": "die",
+          "plural": "die Rechnungen",
+          "example": "Die Rechnung, bitte!",
+          "exampleArabic": "The bill, please!",
+          "type": "noun"
+        },
+        {
+          "german": "das Wechselgeld",
+          "arabic": "change (money back)",
+          "gender": "das",
+          "example": "Hier ist Ihr Wechselgeld.",
+          "exampleArabic": "Here's your change.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hälfte",
+          "arabic": "half",
+          "gender": "die",
+          "example": "die Hälfte vom Preis",
+          "exampleArabic": "half the price",
+          "type": "noun"
+        },
+        {
+          "german": "das Doppelte",
+          "arabic": "double",
+          "gender": "das",
+          "example": "das Doppelte zahlen",
+          "exampleArabic": "pay double",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -1153,6 +1281,118 @@
               "99"
             ],
             "answer": "98"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q11",
+            "question": "Complete: \"Das ___ 50 Euro.\" (costs)",
+            "answer": "kostet",
+            "hint": "verb kosten with es/das"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q12",
+            "question": "How do you say \"76\" in German?",
+            "options": [
+              "siebenundsechzig",
+              "sechsundsiebzig",
+              "siebzigsechs",
+              "sechsundsiebzehn"
+            ],
+            "answer": "sechsundsiebzig"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q13",
+            "question": "Complete: \"Wie ___ kostet das?\" (how much?)",
+            "answer": "viel",
+            "hint": "wie + viel = how much"
+          },
+          {
+            "type": "matching",
+            "id": "a1-02-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "teuer",
+                "right": "expensive"
+              },
+              {
+                "left": "billig",
+                "right": "cheap"
+              },
+              {
+                "left": "günstig",
+                "right": "reasonable price"
+              },
+              {
+                "left": "kosten",
+                "right": "to cost"
+              },
+              {
+                "left": "bezahlen",
+                "right": "to pay"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-02-q15",
+            "question": "Order: \"I pay by card\"",
+            "words": [
+              "Ich",
+              "bezahle",
+              "mit",
+              "der",
+              "Karte"
+            ],
+            "answer": "Ich bezahle mit der Karte"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-02-q16",
+            "question": "Say: \"It costs 25 euros and 50 cents\"",
+            "answer": "Das kostet fünfundzwanzig Euro und fünfzig Cent"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q17",
+            "question": "Listen and write the number: ___",
+            "audioPrompt": "vierundsechzig",
+            "answer": "64",
+            "hint": "vier + und + sechzig"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q18",
+            "question": "What does \"billig\" mean?",
+            "options": [
+              "expensive",
+              "cheap",
+              "new",
+              "big"
+            ],
+            "answer": "cheap"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q19",
+            "question": "\"Ich bezahle mit ___ Kreditkarte.\" (fem. Dat article)",
+            "answer": "der",
+            "hint": "mit + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q20",
+            "question": "How do you pay in cash?",
+            "options": [
+              "mit Karte",
+              "mit Bargeld",
+              "mit Telefon",
+              "mit Brot"
+            ],
+            "answer": "mit Bargeld"
           }
         ]
       }

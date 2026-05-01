@@ -1033,6 +1033,134 @@
           "example": "Das ist viel!",
           "exampleArabic": "C'est beaucoup !",
           "type": "adverb"
+        },
+        {
+          "german": "die Zahl",
+          "arabic": "le nombre",
+          "gender": "die",
+          "plural": "die Zahlen",
+          "example": "Welche Zahl ist das?",
+          "exampleArabic": "Quel est ce nombre ?",
+          "type": "noun"
+        },
+        {
+          "german": "das Geld",
+          "arabic": "l'argent",
+          "gender": "das",
+          "example": "Ich habe kein Geld.",
+          "exampleArabic": "Je n'ai pas d'argent.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bargeld",
+          "arabic": "l'argent liquide",
+          "gender": "das",
+          "example": "Ich zahle in bar.",
+          "exampleArabic": "Je paie en liquide.",
+          "type": "noun"
+        },
+        {
+          "german": "die Karte",
+          "arabic": "la carte",
+          "gender": "die",
+          "plural": "die Karten",
+          "example": "Eine Karte, bitte.",
+          "exampleArabic": "Une carte, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kreditkarte",
+          "arabic": "la carte de crédit",
+          "gender": "die",
+          "plural": "die Kreditkarten",
+          "example": "Mit Kreditkarte, bitte.",
+          "exampleArabic": "Par carte, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "günstig",
+          "arabic": "à prix raisonnable",
+          "example": "Das ist günstig.",
+          "exampleArabic": "C'est à un bon prix.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "cher",
+          "example": "Das ist teuer!",
+          "exampleArabic": "C'est cher !",
+          "type": "adjective"
+        },
+        {
+          "german": "billig",
+          "arabic": "bon marché",
+          "example": "Das ist billig.",
+          "exampleArabic": "C'est bon marché.",
+          "type": "adjective"
+        },
+        {
+          "german": "das Geschäft",
+          "arabic": "le magasin",
+          "gender": "das",
+          "plural": "die Geschäfte",
+          "example": "Das Geschäft ist offen.",
+          "exampleArabic": "Le magasin est ouvert.",
+          "type": "noun"
+        },
+        {
+          "german": "bezahlen",
+          "arabic": "payer",
+          "example": "Ich bezahle die Rechnung.",
+          "exampleArabic": "Je paie la facture.",
+          "type": "verb"
+        },
+        {
+          "german": "zählen",
+          "arabic": "compter",
+          "example": "Kannst du auf Deutsch zählen?",
+          "exampleArabic": "Tu sais compter en allemand ?",
+          "type": "verb"
+        },
+        {
+          "german": "der Cent",
+          "arabic": "le centime",
+          "gender": "der",
+          "example": "fünfzig Cent",
+          "exampleArabic": "50 centimes",
+          "type": "noun"
+        },
+        {
+          "german": "die Rechnung",
+          "arabic": "l'addition / la facture",
+          "gender": "die",
+          "plural": "die Rechnungen",
+          "example": "Die Rechnung, bitte!",
+          "exampleArabic": "L'addition, s'il vous plaît !",
+          "type": "noun"
+        },
+        {
+          "german": "das Wechselgeld",
+          "arabic": "la monnaie (rendue)",
+          "gender": "das",
+          "example": "Hier ist Ihr Wechselgeld.",
+          "exampleArabic": "Voici votre monnaie.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hälfte",
+          "arabic": "la moitié",
+          "gender": "die",
+          "example": "die Hälfte vom Preis",
+          "exampleArabic": "la moitié du prix",
+          "type": "noun"
+        },
+        {
+          "german": "das Doppelte",
+          "arabic": "le double",
+          "gender": "das",
+          "example": "das Doppelte zahlen",
+          "exampleArabic": "payer le double",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -1153,6 +1281,118 @@
               "99"
             ],
             "answer": "98"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q11",
+            "question": "Complète : « Das ___ 50 Euro. » (coûter)",
+            "answer": "kostet",
+            "hint": "verbe kosten avec es/das"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q12",
+            "question": "Comment dit-on « 76 » en allemand ?",
+            "options": [
+              "siebenundsechzig",
+              "sechsundsiebzig",
+              "siebzigsechs",
+              "sechsundsiebzehn"
+            ],
+            "answer": "sechsundsiebzig"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q13",
+            "question": "Complète : « Wie ___ kostet das? » (combien ?)",
+            "answer": "viel",
+            "hint": "wie + viel = combien"
+          },
+          {
+            "type": "matching",
+            "id": "a1-02-q14",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "teuer",
+                "right": "cher"
+              },
+              {
+                "left": "billig",
+                "right": "bon marché"
+              },
+              {
+                "left": "günstig",
+                "right": "à bon prix"
+              },
+              {
+                "left": "kosten",
+                "right": "coûter"
+              },
+              {
+                "left": "bezahlen",
+                "right": "payer"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-02-q15",
+            "question": "Ordonne : « Je paie par carte »",
+            "words": [
+              "Ich",
+              "bezahle",
+              "mit",
+              "der",
+              "Karte"
+            ],
+            "answer": "Ich bezahle mit der Karte"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-02-q16",
+            "question": "Dis : « Cela coûte 25 euros et 50 centimes »",
+            "answer": "Das kostet fünfundzwanzig Euro und fünfzig Cent"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q17",
+            "question": "Écoute et écris le nombre : ___",
+            "audioPrompt": "vierundsechzig",
+            "answer": "64",
+            "hint": "vier + und + sechzig"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q18",
+            "question": "Que signifie « billig » ?",
+            "options": [
+              "cher",
+              "bon marché",
+              "neuf",
+              "grand"
+            ],
+            "answer": "bon marché"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-02-q19",
+            "question": "« Ich bezahle mit ___ Kreditkarte. » (article fém. Dat)",
+            "answer": "der",
+            "hint": "mit + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-02-q20",
+            "question": "Comment paie-t-on en liquide ?",
+            "options": [
+              "mit Karte",
+              "mit Bargeld",
+              "mit Telefon",
+              "mit Brot"
+            ],
+            "answer": "mit Bargeld"
           }
         ]
       }
