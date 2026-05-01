@@ -5533,6 +5533,598 @@
           { "type": "multiple-choice", "id": "a2-13-q20", "question": "Welcher Satz hat die korrekte Deklination?", "options": ["Der grüner Tee.", "Der grüne Tee.", "Der grünen Tee.", "Den grüne Tee."], "answer": "Der grüne Tee." }
         ]
       }
+    },
+    "a2-14": {
+      "id": "a2-14",
+      "title": "Modalverben Perfekt",
+      "order": 14,
+      "grammar": {
+        "title": "Perfekt mit Modalverben + Doppelter Infinitiv",
+        "content": "Wenn man mit Modalverben über die Vergangenheit spricht, benutzt das Deutsche eine besondere Struktur — **„haben\" + Hauptverb + Modalverb am Ende, beide im Infinitiv**.\n\n→ Ich **habe** gestern arbeiten **müssen**. (Ich musste gestern arbeiten)\n\nDiese Struktur heißt **„Doppelter Infinitiv\"**. Hier gibt es kein ge- und keine normale Vergangenheitskonjugation.\n\n**Einfachere Alternative:** Im Alltag benutzen Sprecher das **Präteritum** (einfache Vergangenheit) für Modalverben statt Perfekt — häufiger und leichter.\n\n→ Ich **musste** gestern arbeiten. = Ich habe gestern arbeiten müssen.",
+        "tables": [
+          {
+            "title": "Präteritum der Modalverben (am häufigsten verwendet)",
+            "headers": [
+              "Pronomen",
+              "können",
+              "müssen",
+              "wollen",
+              "mögen",
+              "dürfen",
+              "sollen"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "konnte",
+                  "musste",
+                  "wollte",
+                  "mochte",
+                  "durfte",
+                  "sollte"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "konntest",
+                  "musstest",
+                  "wolltest",
+                  "mochtest",
+                  "durftest",
+                  "solltest"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "konnte",
+                  "musste",
+                  "wollte",
+                  "mochte",
+                  "durfte",
+                  "sollte"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "konnten",
+                  "mussten",
+                  "wollten",
+                  "mochten",
+                  "durften",
+                  "sollten"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "konntet",
+                  "musstet",
+                  "wolltet",
+                  "mochtet",
+                  "durftet",
+                  "solltet"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "konnten",
+                  "mussten",
+                  "wollten",
+                  "mochten",
+                  "durften",
+                  "sollten"
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "Bildung mit -te- nach dem Stamm. ich und er/sie/es sind identisch (kein -t)."
+          },
+          {
+            "title": "Unterschied zwischen Präteritum und Perfekt bei Modalverben",
+            "headers": [
+              "Zeitform",
+              "Satz",
+              "Verwendung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Präteritum",
+                  "Ich musste arbeiten.",
+                  "schriftlich und mündlich (am häufigsten)"
+                ]
+              },
+              {
+                "cells": [
+                  "Perfekt",
+                  "Ich habe arbeiten müssen.",
+                  "mündlich (seltener, manchmal formell)"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Verwende zuerst das Präteritum — die natürliche Form in allen Situationen."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Doppelter Infinitiv: haben + Hauptverb + Modalverb (beide Infinitiv, Reihenfolge wichtig).",
+            "example": "Ich habe gestern lange arbeiten müssen.",
+            "translation": "Vergangenheit mit Modalverb."
+          },
+          {
+            "rule": "Das Präteritum bildet sich mit -te- + Endung: konnte, musste, wollte. ich = er/sie/es immer.",
+            "example": "Sie konnte gut Deutsch sprechen.",
+            "translation": "Vergangenes Können."
+          },
+          {
+            "rule": "Ohne Hauptverb wird das Modalverb regelmäßig mit haben/sein konjugiert (selten).",
+            "example": "Ich habe das gewollt.",
+            "translation": "vollständiges Modalverb als Verb"
+          },
+          {
+            "rule": "mögen wird im Präteritum zu mochte (manchmal ohne Umlaut) — nicht mit möchte verwechseln.",
+            "example": "Als Kind mochte ich keinen Kaffee.",
+            "translation": "Vorliebe in der Vergangenheit."
+          }
+        ],
+        "examples": [
+          "Ich musste gestern früh aufstehen.",
+          "Wir konnten nicht kommen.",
+          "Mein Vater wollte nach Berlin reisen.",
+          "Als Kind mochte ich keinen Spinat.",
+          "Ich habe lange warten müssen.",
+          "Sie hat das nicht machen können.",
+          "Was hast du gestern machen wollen?",
+          "Wir durften ins Kino gehen."
+        ],
+        "tip": "In 95 % der Fälle das Präteritum benutzen (musste, konnte, wollte). Den Perfekt mit Modalverben für formelle oder schriftliche Situationen aufheben."
+      },
+      "vocabulary": [
+        {
+          "german": "gestern",
+          "arabic": "der vorige Tag",
+          "example": "Ich musste gestern arbeiten.",
+          "exampleArabic": "Vergangener Tag",
+          "type": "adverb"
+        },
+        {
+          "german": "heute",
+          "arabic": "der aktuelle Tag",
+          "example": "Heute kann ich frei machen.",
+          "exampleArabic": "Aktueller Tag",
+          "type": "adverb"
+        },
+        {
+          "german": "früh",
+          "arabic": "zu früher Stunde",
+          "example": "Ich musste früh aufstehen.",
+          "exampleArabic": "Tageszeit am Morgen",
+          "type": "adverb"
+        },
+        {
+          "german": "spät",
+          "arabic": "zu später Stunde",
+          "example": "Er kam spät nach Hause.",
+          "exampleArabic": "späte Tageszeit",
+          "type": "adverb"
+        },
+        {
+          "german": "lange",
+          "arabic": "über längere Zeit",
+          "example": "Ich habe lange warten müssen.",
+          "exampleArabic": "ausgedehnte Dauer",
+          "type": "adverb"
+        },
+        {
+          "german": "damals",
+          "arabic": "zu jener Zeit",
+          "example": "Damals konnte ich kein Deutsch.",
+          "exampleArabic": "in der Vergangenheit",
+          "type": "adverb"
+        },
+        {
+          "german": "als Kind",
+          "arabic": "in der Kindheit",
+          "example": "Als Kind mochte ich Schokolade.",
+          "exampleArabic": "Lebensphase Kindheit",
+          "type": "phrase"
+        },
+        {
+          "german": "letzte Woche",
+          "arabic": "vorige Woche",
+          "example": "Letzte Woche musste ich nach München fahren.",
+          "exampleArabic": "kurz vergangene Woche",
+          "type": "phrase"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "Berufstätigkeit ausüben",
+          "example": "Er hat arbeiten müssen.",
+          "exampleArabic": "Erwerbstätigkeit",
+          "type": "verb"
+        },
+        {
+          "german": "lernen",
+          "arabic": "Wissen erwerben",
+          "example": "Ich musste viel lernen.",
+          "exampleArabic": "Studium / Aneignung",
+          "type": "verb"
+        },
+        {
+          "german": "aufstehen",
+          "arabic": "sich aus dem Bett erheben",
+          "example": "Wir mussten früh aufstehen.",
+          "exampleArabic": "Morgenhandlung",
+          "type": "verb"
+        },
+        {
+          "german": "warten",
+          "arabic": "Geduld haben",
+          "example": "Ich konnte nicht warten.",
+          "exampleArabic": "Geduld zeigen",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "Unterstützung leisten",
+          "example": "Sie wollte mir helfen.",
+          "exampleArabic": "Hilfe anbieten",
+          "type": "verb"
+        },
+        {
+          "german": "kommen",
+          "arabic": "sich nähern",
+          "example": "Er konnte nicht kommen.",
+          "exampleArabic": "Bewegung zum Sprecher",
+          "type": "verb"
+        },
+        {
+          "german": "fahren",
+          "arabic": "ein Fahrzeug benutzen",
+          "example": "Wir wollten nach Spanien fahren.",
+          "exampleArabic": "Reise mit Verkehrsmittel",
+          "type": "verb"
+        },
+        {
+          "german": "essen",
+          "arabic": "Nahrung zu sich nehmen",
+          "example": "Ich konnte nichts essen.",
+          "exampleArabic": "Mahlzeit",
+          "type": "verb"
+        },
+        {
+          "german": "machen",
+          "arabic": "etwas tun",
+          "example": "Was wolltest du machen?",
+          "exampleArabic": "Tätigkeit ausüben",
+          "type": "verb"
+        },
+        {
+          "german": "die Prüfung",
+          "arabic": "schriftliche oder mündliche Leistungskontrolle",
+          "example": "Ich musste für die Prüfung lernen.",
+          "exampleArabic": "Bewertungsverfahren",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Prüfungen"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "Bildungseinrichtung",
+          "example": "Als Kind musste ich in die Schule gehen.",
+          "exampleArabic": "Lernort",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schulen"
+        },
+        {
+          "german": "der Termin",
+          "arabic": "vereinbarter Zeitpunkt",
+          "example": "Ich konnte den Termin nicht halten.",
+          "exampleArabic": "Verabredung",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Termine"
+        },
+        {
+          "german": "das Wochenende",
+          "arabic": "Samstag und Sonntag",
+          "example": "Am Wochenende wollte ich schlafen.",
+          "exampleArabic": "freie Tage",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Wochenenden"
+        },
+        {
+          "german": "der Urlaub",
+          "arabic": "arbeitsfreie Zeit",
+          "example": "Im Urlaub konnten wir nicht reisen.",
+          "exampleArabic": "Erholungszeit",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Urlaube"
+        },
+        {
+          "german": "leider",
+          "arabic": "bedauerlicherweise",
+          "example": "Ich konnte leider nicht kommen.",
+          "exampleArabic": "Bedauern",
+          "type": "adverb"
+        },
+        {
+          "german": "plötzlich",
+          "arabic": "unerwartet schnell",
+          "example": "Plötzlich musste ich gehen.",
+          "exampleArabic": "ohne Vorwarnung",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "tatsächlich / im Grunde",
+          "example": "Eigentlich wollte ich bleiben.",
+          "exampleArabic": "ursprüngliche Absicht",
+          "type": "adverb"
+        },
+        {
+          "german": "die Idee",
+          "arabic": "Gedanke / Einfall",
+          "example": "Das war eine gute Idee.",
+          "exampleArabic": "geistiger Einfall",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ideen"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "Schwierigkeit / Hindernis",
+          "example": "Ich hatte ein Problem.",
+          "exampleArabic": "Schwierigkeit",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Probleme"
+        },
+        {
+          "german": "der Grund",
+          "arabic": "Ursache / Begründung",
+          "example": "Aus diesem Grund musste ich gehen.",
+          "exampleArabic": "Ursache",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gründe"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q1",
+            "question": "Präteritum: „Ich ___ gestern arbeiten.\" (müssen)",
+            "answer": "musste",
+            "hint": "müssen → musste"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q2",
+            "question": "Präteritum-Form von können mit er?",
+            "options": [
+              "kannte",
+              "konnte",
+              "könnte",
+              "gekonnt"
+            ],
+            "answer": "konnte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q3",
+            "question": "Doppelter Infinitiv: „Ich habe gestern lernen ___.\"",
+            "answer": "müssen",
+            "hint": "Modalverb am Ende, Infinitiv"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q4",
+            "question": "Welcher Satz ist im Präteritum korrekt?",
+            "options": [
+              "Wir wolltet nach Berlin fahren.",
+              "Wir wollten nach Berlin fahren.",
+              "Wir wollen nach Berlin fahren.",
+              "Wir gewollt nach Berlin fahren."
+            ],
+            "answer": "Wir wollten nach Berlin fahren."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q5",
+            "question": "Als Kind ___ ich keinen Spinat. (mögen)",
+            "answer": "mochte",
+            "hint": "mögen → mochte (Vergangenheit)"
+          },
+          {
+            "type": "matching",
+            "id": "a2-14-q6",
+            "question": "Verbinde Modalverb mit Präteritum:",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "konnte"
+              },
+              {
+                "left": "müssen",
+                "right": "musste"
+              },
+              {
+                "left": "wollen",
+                "right": "wollte"
+              },
+              {
+                "left": "dürfen",
+                "right": "durfte"
+              },
+              {
+                "left": "sollen",
+                "right": "sollte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-14-q7",
+            "question": "Ordne (Präteritum): „Mein Vater wollte nach Berlin reisen\"",
+            "words": [
+              "Mein",
+              "Vater",
+              "wollte",
+              "nach",
+              "Berlin",
+              "reisen"
+            ],
+            "answer": "Mein Vater wollte nach Berlin reisen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-14-q8",
+            "question": "Sage im Präteritum: „Ich musste früh aufstehen\"",
+            "answer": "Ich musste früh aufstehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q9",
+            "question": "Hör zu: „Wir ___ ins Kino gehen.\" (durften / dürfen)",
+            "audioPrompt": "Wir durften ins Kino gehen.",
+            "answer": "durften",
+            "hint": "dürfen Vergangenheit → durften (wir)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q10",
+            "question": "In 95 % der Alltagssituationen, welche Form für Modalverben in der Vergangenheit?",
+            "options": [
+              "Perfekt",
+              "Präteritum",
+              "Plusquamperfekt",
+              "Konjunktiv"
+            ],
+            "answer": "Präteritum"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q11",
+            "question": "Präteritum von dürfen mit wir?",
+            "answer": "durften",
+            "hint": "dürfen → durfte/durften"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q12",
+            "question": "Präteritum-Form von sollen mit ich?",
+            "options": [
+              "solle",
+              "sollte",
+              "sollst",
+              "sollten"
+            ],
+            "answer": "sollte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q13",
+            "question": "„Ich ___ gestern nicht arbeiten.\" (es war nicht meine Pflicht — sollen)",
+            "answer": "sollte",
+            "hint": "sollen → sollte"
+          },
+          {
+            "type": "matching",
+            "id": "a2-14-q14",
+            "question": "Verbinde Modalverb mit Vergangenheit:",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "konnte"
+              },
+              {
+                "left": "müssen",
+                "right": "musste"
+              },
+              {
+                "left": "wollen",
+                "right": "wollte"
+              },
+              {
+                "left": "mögen",
+                "right": "mochte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-14-q15",
+            "question": "Ordne (Doppelter Inf): „Ich habe viel lernen müssen\"",
+            "words": [
+              "Ich",
+              "habe",
+              "viel",
+              "lernen",
+              "müssen"
+            ],
+            "answer": "Ich habe viel lernen müssen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q16",
+            "question": "Hör zu: „Wir ___ ins Kino gehen.\" (durften)",
+            "audioPrompt": "Wir durften ins Kino gehen.",
+            "answer": "durften",
+            "hint": "dürfen + wir Vergangenheit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q17",
+            "question": "Doppelter Infinitiv-Struktur:",
+            "options": [
+              "haben + Modal + Inf",
+              "haben + Inf + Modal",
+              "sein + Inf + Modal",
+              "haben + Partizip + Modal"
+            ],
+            "answer": "haben + Inf + Modal"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-14-q18",
+            "question": "Sage (Präteritum): „Wir wollten nach Deutschland reisen\"",
+            "answer": "Wir wollten nach Deutschland reisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q19",
+            "question": "„Du ___ nicht zur Schule gehen.\" (du brauchtest nicht — müssen)",
+            "answer": "musstest",
+            "hint": "müssen + du Vergangenheit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q20",
+            "question": "Unterschied zwischen möchte und mochte?",
+            "options": [
+              "dasselbe",
+              "möchte = höfliches Präsens, mochte = einfaches Präteritum",
+              "kein Unterschied",
+              "möchte = Vergangenheit, mochte = Präsens"
+            ],
+            "answer": "möchte = höfliches Präsens, mochte = einfaches Präteritum"
+          }
+        ]
+      }
     }
   },
   "title": "Stufe Zwei",
