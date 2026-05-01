@@ -1710,6 +1710,104 @@
           "example": "Ich trinke oft Tee.",
           "exampleArabic": "Je bois souvent du thé.",
           "type": "adverb"
+        },
+        {
+          "german": "sich duschen",
+          "arabic": "se doucher",
+          "example": "Ich dusche mich morgens.",
+          "exampleArabic": "Je me douche le matin.",
+          "type": "verb"
+        },
+        {
+          "german": "fernsehen",
+          "arabic": "regarder la télé",
+          "example": "Abends sehe ich fern.",
+          "exampleArabic": "Le soir, je regarde la télé.",
+          "type": "verb"
+        },
+        {
+          "german": "spazieren gehen",
+          "arabic": "se promener",
+          "example": "Wir gehen im Park spazieren.",
+          "exampleArabic": "On se promène dans le parc.",
+          "type": "verb"
+        },
+        {
+          "german": "einkaufen",
+          "arabic": "faire les courses",
+          "example": "Samstags kaufe ich ein.",
+          "exampleArabic": "Je fais les courses le samedi.",
+          "type": "verb"
+        },
+        {
+          "german": "putzen",
+          "arabic": "nettoyer",
+          "example": "Ich putze die Wohnung.",
+          "exampleArabic": "Je nettoie l'appartement.",
+          "type": "verb"
+        },
+        {
+          "german": "Sport machen",
+          "arabic": "faire du sport",
+          "example": "Ich mache jeden Tag Sport.",
+          "exampleArabic": "Je fais du sport tous les jours.",
+          "type": "phrase"
+        },
+        {
+          "german": "das Mittagessen",
+          "arabic": "le déjeuner",
+          "gender": "das",
+          "example": "Das Mittagessen ist um 13 Uhr.",
+          "exampleArabic": "Le déjeuner est à 13h.",
+          "type": "noun"
+        },
+        {
+          "german": "die Pause",
+          "arabic": "la pause",
+          "gender": "die",
+          "plural": "die Pausen",
+          "example": "Ich mache eine Pause.",
+          "exampleArabic": "Je fais une pause.",
+          "type": "noun"
+        },
+        {
+          "german": "der Tag",
+          "arabic": "le jour",
+          "gender": "der",
+          "plural": "die Tage",
+          "example": "Einen schönen Tag!",
+          "exampleArabic": "Bonne journée !",
+          "type": "noun"
+        },
+        {
+          "german": "die Woche",
+          "arabic": "la semaine",
+          "gender": "die",
+          "plural": "die Wochen",
+          "example": "In dieser Woche...",
+          "exampleArabic": "Cette semaine...",
+          "type": "noun"
+        },
+        {
+          "german": "früh / spät",
+          "arabic": "tôt / tard",
+          "example": "Ich komme früh nach Hause.",
+          "exampleArabic": "Je rentre tôt à la maison.",
+          "type": "adverb"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué",
+          "example": "Ich bin müde.",
+          "exampleArabic": "Je suis fatigué.",
+          "type": "adjective"
+        },
+        {
+          "german": "beschäftigt",
+          "arabic": "occupé",
+          "example": "Ich bin sehr beschäftigt.",
+          "exampleArabic": "Je suis très occupé.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -1826,6 +1924,113 @@
               "du fährt"
             ],
             "answer": "du fährst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q11",
+            "question": "« Ich ___ mich morgens. » (se doucher — sich duschen)",
+            "answer": "dusche",
+            "hint": "verbe réfléchi avec ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q12",
+            "question": "Que signifie « fernsehen » ?",
+            "options": [
+              "lire",
+              "regarder la télé",
+              "se doucher",
+              "faire les courses"
+            ],
+            "answer": "regarder la télé"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q13",
+            "question": "« Wir ___ im Park spazieren. » (se promener)",
+            "answer": "gehen",
+            "hint": "spazieren gehen"
+          },
+          {
+            "type": "matching",
+            "id": "a1-03-q14",
+            "question": "Associe l'activité au moment de la journée :",
+            "pairs": [
+              {
+                "left": "frühstücken",
+                "right": "morgens"
+              },
+              {
+                "left": "arbeiten",
+                "right": "tagsüber"
+              },
+              {
+                "left": "fernsehen",
+                "right": "abends"
+              },
+              {
+                "left": "schlafen",
+                "right": "nachts"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-03-q15",
+            "question": "Ordonne : « Je fais les courses le samedi »",
+            "words": [
+              "Samstags",
+              "kaufe",
+              "ich",
+              "ein"
+            ],
+            "answer": "Samstags kaufe ich ein"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-03-q16",
+            "question": "Dis : « Je suis très fatigué aujourd'hui »",
+            "answer": "Ich bin heute sehr müde"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q17",
+            "question": "Écoute : « Ich ___ jeden Tag Sport. » (faire)",
+            "audioPrompt": "Ich mache jeden Tag Sport.",
+            "answer": "mache",
+            "hint": "machen avec ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q18",
+            "question": "« einkaufen » avec er/sie/es :",
+            "options": [
+              "er einkauft",
+              "er kauft ein",
+              "er einkaufst",
+              "er kaufst ein"
+            ],
+            "answer": "er kauft ein"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q19",
+            "question": "« Ich mache eine ___ » (pause)",
+            "answer": "Pause",
+            "hint": "die Pause"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q20",
+            "question": "Le verbe à particule séparable « aufstehen » avec ich :",
+            "options": [
+              "ich aufstehe",
+              "ich stehe auf",
+              "ich aufstehst",
+              "ich stehe aufst"
+            ],
+            "answer": "ich stehe auf"
           }
         ]
       }

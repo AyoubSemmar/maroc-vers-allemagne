@@ -1710,6 +1710,104 @@
           "example": "Ich trinke oft Tee.",
           "exampleArabic": "I often drink tea.",
           "type": "adverb"
+        },
+        {
+          "german": "sich duschen",
+          "arabic": "to take a shower",
+          "example": "Ich dusche mich morgens.",
+          "exampleArabic": "I shower in the morning.",
+          "type": "verb"
+        },
+        {
+          "german": "fernsehen",
+          "arabic": "to watch TV",
+          "example": "Abends sehe ich fern.",
+          "exampleArabic": "I watch TV in the evening.",
+          "type": "verb"
+        },
+        {
+          "german": "spazieren gehen",
+          "arabic": "to go for a walk",
+          "example": "Wir gehen im Park spazieren.",
+          "exampleArabic": "We walk in the park.",
+          "type": "verb"
+        },
+        {
+          "german": "einkaufen",
+          "arabic": "to go shopping",
+          "example": "Samstags kaufe ich ein.",
+          "exampleArabic": "I shop on Saturdays.",
+          "type": "verb"
+        },
+        {
+          "german": "putzen",
+          "arabic": "to clean",
+          "example": "Ich putze die Wohnung.",
+          "exampleArabic": "I clean the apartment.",
+          "type": "verb"
+        },
+        {
+          "german": "Sport machen",
+          "arabic": "to do sports",
+          "example": "Ich mache jeden Tag Sport.",
+          "exampleArabic": "I do sports every day.",
+          "type": "phrase"
+        },
+        {
+          "german": "das Mittagessen",
+          "arabic": "lunch",
+          "gender": "das",
+          "example": "Das Mittagessen ist um 13 Uhr.",
+          "exampleArabic": "Lunch is at 1pm.",
+          "type": "noun"
+        },
+        {
+          "german": "die Pause",
+          "arabic": "break",
+          "gender": "die",
+          "plural": "die Pausen",
+          "example": "Ich mache eine Pause.",
+          "exampleArabic": "I take a break.",
+          "type": "noun"
+        },
+        {
+          "german": "der Tag",
+          "arabic": "day",
+          "gender": "der",
+          "plural": "die Tage",
+          "example": "Einen schönen Tag!",
+          "exampleArabic": "Have a nice day!",
+          "type": "noun"
+        },
+        {
+          "german": "die Woche",
+          "arabic": "week",
+          "gender": "die",
+          "plural": "die Wochen",
+          "example": "In dieser Woche...",
+          "exampleArabic": "This week...",
+          "type": "noun"
+        },
+        {
+          "german": "früh / spät",
+          "arabic": "early / late",
+          "example": "Ich komme früh nach Hause.",
+          "exampleArabic": "I come home early.",
+          "type": "adverb"
+        },
+        {
+          "german": "müde",
+          "arabic": "tired",
+          "example": "Ich bin müde.",
+          "exampleArabic": "I'm tired.",
+          "type": "adjective"
+        },
+        {
+          "german": "beschäftigt",
+          "arabic": "busy",
+          "example": "Ich bin sehr beschäftigt.",
+          "exampleArabic": "I'm very busy.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -1826,6 +1924,113 @@
               "du fährt"
             ],
             "answer": "du fährst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q11",
+            "question": "\"Ich ___ mich morgens.\" (to shower — sich duschen)",
+            "answer": "dusche",
+            "hint": "reflexive verb with ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q12",
+            "question": "What does \"fernsehen\" mean?",
+            "options": [
+              "to read",
+              "to watch TV",
+              "to shower",
+              "to shop"
+            ],
+            "answer": "to watch TV"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q13",
+            "question": "\"Wir ___ im Park spazieren.\" (to walk)",
+            "answer": "gehen",
+            "hint": "spazieren gehen"
+          },
+          {
+            "type": "matching",
+            "id": "a1-03-q14",
+            "question": "Match the activity to the time of day:",
+            "pairs": [
+              {
+                "left": "frühstücken",
+                "right": "morgens"
+              },
+              {
+                "left": "arbeiten",
+                "right": "tagsüber"
+              },
+              {
+                "left": "fernsehen",
+                "right": "abends"
+              },
+              {
+                "left": "schlafen",
+                "right": "nachts"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-03-q15",
+            "question": "Order: \"I go shopping on Saturdays\"",
+            "words": [
+              "Samstags",
+              "kaufe",
+              "ich",
+              "ein"
+            ],
+            "answer": "Samstags kaufe ich ein"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-03-q16",
+            "question": "Say: \"I'm very tired today\"",
+            "answer": "Ich bin heute sehr müde"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q17",
+            "question": "Listen: \"Ich ___ jeden Tag Sport.\" (to do)",
+            "audioPrompt": "Ich mache jeden Tag Sport.",
+            "answer": "mache",
+            "hint": "machen with ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q18",
+            "question": "\"einkaufen\" with er/sie/es:",
+            "options": [
+              "er einkauft",
+              "er kauft ein",
+              "er einkaufst",
+              "er kaufst ein"
+            ],
+            "answer": "er kauft ein"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-03-q19",
+            "question": "\"Ich mache eine ___\" (break)",
+            "answer": "Pause",
+            "hint": "die Pause"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-03-q20",
+            "question": "The separable verb \"aufstehen\" with ich:",
+            "options": [
+              "ich aufstehe",
+              "ich stehe auf",
+              "ich aufstehst",
+              "ich stehe aufst"
+            ],
+            "answer": "ich stehe auf"
           }
         ]
       }
