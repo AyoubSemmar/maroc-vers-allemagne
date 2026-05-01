@@ -2138,5 +2138,475 @@ export const A2: Level = {
         ],
       },
     },
+    // ─────────────────────────────────────────────
+    // LESSON 13 — أساسيات صفة الصفة (Adjektivdeklination Grundlagen)
+    // ─────────────────────────────────────────────
+    {
+      id: 'a2-13',
+      title: 'تصريف الصفة (الأساسيات) — Adjektivdeklination',
+      order: 13,
+      grammar: {
+        title: 'تصريف الصفة بعد der/die/das + ein/eine — في حالتي Nominativ و Akkusativ',
+        content: `الصفة في الألمانية تتغيّر نهايتها حسب: **(1) الجنس، (2) الحالة، (3) نوع الأداة قبلها**. اللحظة التي تتعب فيها أعصابك مع كل أمر، اطمئن: في A2 نتعلّم فقط نمطين شائعين — **بعد der/die/das** و **بعد ein/eine** — في الحالتين الأكثر استعمالاً (Nominativ و Akkusativ).
+
+**القاعدة الذهبية الأبسط:**
+- بعد **der/die/das** (الأداة المعرّفة): الصفة تأخذ **-e** أو **-en**.
+- بعد **ein/eine** (الأداة النكرة): الصفة تأخذ نهاية الأداة المفقودة.`,
+        tables: [
+          {
+            title: 'بعد der/die/das (التصريف الضعيف)',
+            headers: ['', 'der (مذكّر)', 'die (مؤنّث)', 'das (محايد)', 'die (جمع)'],
+            rows: [
+              { cells: ['Nominativ', 'der **schöne** Mann', 'die **schöne** Frau', 'das **schöne** Kind', 'die **schönen** Männer'] },
+              { cells: ['Akkusativ', 'den **schönen** Mann', 'die **schöne** Frau', 'das **schöne** Kind', 'die **schönen** Männer'] },
+            ],
+            theme: 'cases',
+            note: 'فقط Akkusativ-der يتغيّر إلى schönen. البقية -e.',
+          },
+          {
+            title: 'بعد ein/eine (التصريف المختلط)',
+            headers: ['', 'ein (مذكّر)', 'eine (مؤنّث)', 'ein (محايد)'],
+            rows: [
+              { cells: ['Nominativ', 'ein **schöner** Mann', 'eine **schöne** Frau', 'ein **schönes** Kind'] },
+              { cells: ['Akkusativ', 'einen **schönen** Mann', 'eine **schöne** Frau', 'ein **schönes** Kind'] },
+            ],
+            theme: 'cases',
+            note: 'بعد ein النكرة، الصفة تحمل النهاية: -er (مذكّر), -e (مؤنّث), -es (محايد).',
+          },
+        ],
+        rules: [
+          { rule: 'بدون أداة، الصفة تحمل دائماً نهاية الجنس: kalter Tee (شاي بارد), warme Milch (حليب دافئ).', example: 'Ich trinke kalten Tee.', translation: 'أشرب شاياً بارداً.' },
+          { rule: 'في Akkusativ، فقط der المذكّر يجبر الصفة على -en. الباقي يبقى نفسه.', example: 'Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.', translation: 'أشتري الطاولة الجديدة / المصباح / السيارة.' },
+          { rule: 'kein يتصرّف مثل ein. mein, dein, sein, ihr, unser, euer, Ihr — أيضاً.', example: 'mein neuer Bruder / keine alte Frau', translation: 'أخي الجديد / امرأة عجوز.' },
+        ],
+        examples: [
+          'Der nette Lehrer kommt aus Berlin. — المعلم اللطيف من برلين.',
+          'Ich habe einen guten Freund. — لي صديق طيب.',
+          'Sie kauft ein schönes Kleid. — تشتري فستاناً جميلاً.',
+          'Die jungen Studenten lernen viel. — الطلاب الشباب يدرسون كثيراً.',
+          'Mein neues Auto ist schnell. — سيارتي الجديدة سريعة.',
+          'Wir essen frisches Brot. — نأكل خبزاً طازجاً.',
+          'Er liest die deutschen Zeitungen. — يقرأ الجرائد الألمانية.',
+          'Trinkst du kalten Kaffee? — هل تشرب قهوة باردة؟',
+        ],
+        tip: 'لا تحفظ كل الجدول الكبير دفعة واحدة. ابدأ بـ "der + Adjektiv + e" و "ein + Adjektiv + er/e/es"، وجرّبها بعشر جمل يومياً. خلال أسبوع تصبح تلقائية.',
+      },
+      vocabulary: [
+        { german: 'schön',     arabic: 'جميل',          example: 'eine schöne Stadt',           exampleArabic: 'مدينة جميلة',         type: 'adjective' },
+        { german: 'gut',       arabic: 'جيد',           example: 'ein guter Tag',                exampleArabic: 'يوم جيد',             type: 'adjective' },
+        { german: 'neu',       arabic: 'جديد',          example: 'mein neues Auto',             exampleArabic: 'سيارتي الجديدة',      type: 'adjective' },
+        { german: 'alt',       arabic: 'قديم / مسنّ',   example: 'das alte Haus',                exampleArabic: 'البيت القديم',       type: 'adjective' },
+        { german: 'jung',      arabic: 'شاب',           example: 'eine junge Frau',              exampleArabic: 'امرأة شابة',          type: 'adjective' },
+        { german: 'groß',      arabic: 'كبير',          example: 'ein großes Zimmer',            exampleArabic: 'غرفة كبيرة',          type: 'adjective' },
+        { german: 'klein',     arabic: 'صغير',          example: 'die kleine Katze',             exampleArabic: 'القطة الصغيرة',      type: 'adjective' },
+        { german: 'kalt',      arabic: 'بارد',          example: 'kalter Kaffee',                exampleArabic: 'قهوة باردة',          type: 'adjective' },
+        { german: 'warm',      arabic: 'دافئ',          example: 'warme Milch',                  exampleArabic: 'حليب دافئ',          type: 'adjective' },
+        { german: 'heiß',      arabic: 'ساخن جداً',     example: 'heißer Tee',                   exampleArabic: 'شاي ساخن',           type: 'adjective' },
+        { german: 'frisch',    arabic: 'طازج',          example: 'frisches Brot',                exampleArabic: 'خبز طازج',           type: 'adjective' },
+        { german: 'lecker',    arabic: 'لذيذ',          example: 'ein leckeres Essen',           exampleArabic: 'طعام لذيذ',          type: 'adjective' },
+        { german: 'schnell',   arabic: 'سريع',          example: 'ein schnelles Auto',           exampleArabic: 'سيارة سريعة',        type: 'adjective' },
+        { german: 'langsam',   arabic: 'بطيء',          example: 'ein langsamer Bus',            exampleArabic: 'حافلة بطيئة',        type: 'adjective' },
+        { german: 'einfach',   arabic: 'سهل',           example: 'eine einfache Frage',          exampleArabic: 'سؤال سهل',           type: 'adjective' },
+        { german: 'schwer',    arabic: 'صعب / ثقيل',     example: 'eine schwere Prüfung',         exampleArabic: 'امتحان صعب',         type: 'adjective' },
+        { german: 'leicht',    arabic: 'خفيف / سهل',     example: 'ein leichter Koffer',          exampleArabic: 'حقيبة خفيفة',        type: 'adjective' },
+        { german: 'teuer',     arabic: 'غالي',          example: 'ein teures Hotel',             exampleArabic: 'فندق غالٍ',          type: 'adjective' },
+        { german: 'billig',    arabic: 'رخيص',          example: 'ein billiger Tisch',           exampleArabic: 'طاولة رخيصة',        type: 'adjective' },
+        { german: 'nett',      arabic: 'لطيف',          example: 'eine nette Lehrerin',          exampleArabic: 'معلّمة لطيفة',      type: 'adjective' },
+        { german: 'freundlich', arabic: 'ودود',         example: 'ein freundlicher Mann',        exampleArabic: 'رجل ودود',           type: 'adjective' },
+        { german: 'müde',      arabic: 'متعب',          example: 'Ich bin sehr müde.',           exampleArabic: 'أنا متعب جداً.',     type: 'adjective' },
+        { german: 'hungrig',   arabic: 'جائع',          example: 'ein hungriges Kind',           exampleArabic: 'طفل جائع',           type: 'adjective' },
+        { german: 'fleißig',   arabic: 'مجتهد',         example: 'eine fleißige Studentin',      exampleArabic: 'طالبة مجتهدة',       type: 'adjective' },
+        { german: 'intelligent', arabic: 'ذكي',         example: 'ein intelligenter Schüler',    exampleArabic: 'تلميذ ذكي',          type: 'adjective' },
+        { german: 'das Kleid', arabic: 'الفستان',       example: 'Sie trägt ein rotes Kleid.',   exampleArabic: 'ترتدي فستاناً أحمر.', type: 'noun', gender: 'das', plural: 'die Kleider' },
+        { german: 'das Hemd',  arabic: 'القميص',        example: 'ein weißes Hemd',              exampleArabic: 'قميص أبيض',          type: 'noun', gender: 'das', plural: 'die Hemden' },
+        { german: 'die Hose',  arabic: 'البنطلون',      example: 'eine neue Hose',                exampleArabic: 'بنطلون جديد',        type: 'noun', gender: 'die', plural: 'die Hosen' },
+        { german: 'die Schuhe', arabic: 'الأحذية',      example: 'schwarze Schuhe',              exampleArabic: 'أحذية سوداء',        type: 'noun', gender: 'pl' },
+        { german: 'rot',       arabic: 'أحمر',          example: 'das rote Auto',                exampleArabic: 'السيارة الحمراء',    type: 'adjective' },
+        { german: 'blau',      arabic: 'أزرق',          example: 'der blaue Himmel',             exampleArabic: 'السماء الزرقاء',     type: 'adjective' },
+        { german: 'grün',      arabic: 'أخضر',          example: 'grüner Tee',                   exampleArabic: 'شاي أخضر',          type: 'adjective' },
+        { german: 'schwarz',   arabic: 'أسود',          example: 'eine schwarze Tasche',         exampleArabic: 'حقيبة سوداء',        type: 'adjective' },
+        { german: 'weiß',      arabic: 'أبيض',          example: 'ein weißes Hemd',              exampleArabic: 'قميص أبيض',          type: 'adjective' },
+        { german: 'sehr',      arabic: 'جداً',          example: 'sehr gut',                      exampleArabic: 'جيد جداً',           type: 'adverb' },
+      ],
+      exercise: {
+        questions: [
+          { type: 'fill-blank', id: 'a2-13-q1', question: 'أكمل: "der schön__ Mann" (Nominativ)', answer: 'e', hint: 'der + Adjektiv + e' },
+          { type: 'multiple-choice', id: 'a2-13-q2', question: 'صحّح: "Ich kaufe ein ___ Auto."', options: ['neu', 'neue', 'neues', 'neuer'], answer: 'neues' },
+          { type: 'fill-blank', id: 'a2-13-q3', question: 'أكمل: "Ich habe einen gut___ Freund."', answer: 'en', hint: 'einen + Akk-mask → -en' },
+          { type: 'multiple-choice', id: 'a2-13-q4', question: 'أيّ جملة صحيحة؟', options: ['Sie trägt eine rotes Kleid.', 'Sie trägt ein rotes Kleid.', 'Sie trägt ein rote Kleid.', 'Sie trägt einen rotes Kleid.'], answer: 'Sie trägt ein rotes Kleid.' },
+          { type: 'fill-blank', id: 'a2-13-q5', question: 'أكمل: "die jung__ Studenten" (جمع، Nominativ)', answer: 'en', hint: 'بعد die الجمع → -en' },
+          { type: 'matching', id: 'a2-13-q6', question: 'اربط الصفة بمعناها:', pairs: [
+            { left: 'schön', right: 'جميل' },
+            { left: 'alt', right: 'قديم' },
+            { left: 'klein', right: 'صغير' },
+            { left: 'teuer', right: 'غالي' },
+            { left: 'lecker', right: 'لذيذ' },
+          ], answer: 'matched' },
+          { type: 'drag-drop', id: 'a2-13-q7', question: 'رتّب: "أشتري قميصاً أبيض"', words: ['Ich', 'kaufe', 'ein', 'weißes', 'Hemd'], answer: 'Ich kaufe ein weißes Hemd' },
+          { type: 'speaking', id: 'a2-13-q8', question: 'قل بالألمانية: "البيت الجديد كبير"', answer: 'Das neue Haus ist groß' },
+          { type: 'fill-blank', id: 'a2-13-q9', question: 'استمع: "Wir trinken heiß___ Tee." (بدون أداة)', audioPrompt: 'Wir trinken heißen Tee.', answer: 'en', hint: 'Akk-mask بدون أداة → -en' },
+          { type: 'multiple-choice', id: 'a2-13-q10', question: 'كلمة kein تتصرّف مثل:', options: ['der', 'die', 'das', 'ein'], answer: 'ein' },
+        ],
+      },
+    },
+    // ─────────────────────────────────────────────
+    // LESSON 14 — Modalverben im Perfekt
+    // ─────────────────────────────────────────────
+    {
+      id: 'a2-14',
+      title: 'الأفعال الناقصة في الماضي — Modalverben Perfekt',
+      order: 14,
+      grammar: {
+        title: 'صيغة الـ Perfekt مع الأفعال الناقصة + بنية المصدر المزدوج',
+        content: `حين نتكلّم عن الماضي مع الأفعال الناقصة، الألمانية تستعمل بنية خاصة جداً — **حرف "haben" + الفعل الرئيسي + الفعل الناقص في النهاية، كلاهما في صيغة المصدر**.
+
+→ Ich **habe** gestern arbeiten **müssen**. (كان عليّ العمل أمس)
+
+هذه البنية تُسمّى "**Doppelter Infinitiv**" (المصدر المزدوج). لاحظ أنه لا يوجد ge- ولا أيّ تصريف عادي للماضي.
+
+**بديل أبسط:** في الكلام اليومي يستخدم الناطقون الـ **Präteritum** (الماضي البسيط) للأفعال الناقصة بدلاً من Perfekt — أكثر شيوعاً وأسهل.
+
+→ Ich **musste** gestern arbeiten. = Ich habe gestern arbeiten müssen.`,
+        tables: [
+          {
+            title: 'Präteritum للأفعال الناقصة (الأكثر استعمالاً)',
+            headers: ['Pronomen', 'können', 'müssen', 'wollen', 'mögen', 'dürfen', 'sollen'],
+            rows: [
+              { cells: ['ich',     'konnte',   'musste',   'wollte',   'mochte',   'durfte',   'sollte'] },
+              { cells: ['du',      'konntest', 'musstest', 'wolltest', 'mochtest', 'durftest', 'solltest'] },
+              { cells: ['er/sie/es', 'konnte', 'musste',   'wollte',   'mochte',   'durfte',   'sollte'], highlight: true },
+              { cells: ['wir',     'konnten',  'mussten',  'wollten',  'mochten',  'durften',  'sollten'] },
+              { cells: ['ihr',     'konntet',  'musstet',  'wolltet',  'mochtet',  'durftet',  'solltet'] },
+              { cells: ['sie/Sie', 'konnten',  'mussten',  'wollten',  'mochten',  'durften',  'sollten'] },
+            ],
+            theme: 'conjugation',
+            note: 'تتشكّل بإضافة -te- بعد الجذر. ich و er/sie/es متطابقان (لا -t).',
+          },
+          {
+            title: 'الفرق بين Präteritum و Perfekt للأفعال الناقصة',
+            headers: ['الزمن', 'الجملة', 'الاستعمال'],
+            rows: [
+              { cells: ['Präteritum',  'Ich musste arbeiten.',           'في الكتابة والكلام (الأكثر شيوعاً)'] },
+              { cells: ['Perfekt',     'Ich habe arbeiten müssen.',      'في الكلام اليومي (أقل شيوعاً، رسمي أحياناً)'] },
+            ],
+            theme: 'default',
+            note: 'استعمل Präteritum أولاً — إنها الصيغة الطبيعية في كل المواقف.',
+          },
+        ],
+        rules: [
+          { rule: 'بنية Doppelter Infinitiv: haben + Hauptverb + Modalverb (كلاهما مصدر، الترتيب مهم).', example: 'Ich habe gestern lange arbeiten müssen.', translation: 'كان عليّ العمل لوقت طويل أمس.' },
+          { rule: 'الـ Präteritum يضاف -te- + النهاية: konnte, musste, wollte. ich = er/sie/es دائماً.', example: 'Sie konnte gut Deutsch sprechen.', translation: 'كانت تستطيع التحدث بالألمانية جيداً.' },
+          { rule: 'بدون فعل رئيسي، يُصرّف الفعل الناقص بشكل عادي مع haben/sein (نادر).', example: 'Ich habe das gewollt. (أردت ذلك)', translation: 'أردت ذلك.' },
+          { rule: 'mögen في الماضي يصبح mochte (دون umlaut أحياناً) — إيّاك والخلط بـ möchte.', example: 'Als Kind mochte ich keinen Kaffee.', translation: 'حين كنت طفلاً لم أحبّ القهوة.' },
+        ],
+        examples: [
+          'Ich musste gestern früh aufstehen. — كان عليّ الاستيقاظ مبكراً أمس.',
+          'Wir konnten nicht kommen. — لم نستطع المجيء.',
+          'Mein Vater wollte nach Berlin reisen. — أبي أراد السفر إلى برلين.',
+          'Als Kind mochte ich keinen Spinat. — حين كنت طفلاً لم أحب السبانخ.',
+          'Ich habe lange warten müssen. — كان عليّ الانتظار طويلاً.',
+          'Sie hat das nicht machen können. — لم تستطع فعل ذلك.',
+          'Was hast du gestern machen wollen? — ماذا أردت أن تفعل أمس؟',
+          'Wir durften ins Kino gehen. — كان مسموحاً لنا الذهاب إلى السينما.',
+        ],
+        tip: 'في 95% من الحالات، استعمل Präteritum (musste, konnte, wollte). احتفظ بـ Perfekt مع الأفعال الناقصة للمواقف الرسمية أو الكتابية.',
+      },
+      vocabulary: [
+        { german: 'gestern',   arabic: 'أمس',           example: 'Ich musste gestern arbeiten.',  exampleArabic: 'كان عليّ العمل أمس.', type: 'adverb' },
+        { german: 'heute',     arabic: 'اليوم',          example: 'Heute kann ich frei machen.',   exampleArabic: 'اليوم أستطيع أن أرتاح.', type: 'adverb' },
+        { german: 'früh',      arabic: 'مبكراً',         example: 'Ich musste früh aufstehen.',    exampleArabic: 'كان عليّ الاستيقاظ مبكراً.', type: 'adverb' },
+        { german: 'spät',      arabic: 'متأخراً',        example: 'Er kam spät nach Hause.',       exampleArabic: 'عاد إلى البيت متأخراً.', type: 'adverb' },
+        { german: 'lange',     arabic: 'طويلاً',         example: 'Ich habe lange warten müssen.',  exampleArabic: 'كان عليّ الانتظار طويلاً.', type: 'adverb' },
+        { german: 'damals',    arabic: 'في ذلك الوقت',    example: 'Damals konnte ich kein Deutsch.', exampleArabic: 'في ذلك الوقت لم أكن أعرف الألمانية.', type: 'adverb' },
+        { german: 'als Kind',  arabic: 'حين كنت طفلاً',   example: 'Als Kind mochte ich Schokolade.', exampleArabic: 'حين كنت طفلاً كنت أحب الشوكولاتة.', type: 'phrase' },
+        { german: 'letzte Woche', arabic: 'الأسبوع الماضي', example: 'Letzte Woche musste ich nach München fahren.', exampleArabic: 'الأسبوع الماضي كان عليّ السفر إلى ميونخ.', type: 'phrase' },
+        { german: 'arbeiten',  arabic: 'يعمل',          example: 'Er hat arbeiten müssen.',       exampleArabic: 'كان عليه العمل.',      type: 'verb' },
+        { german: 'lernen',    arabic: 'يتعلّم',         example: 'Ich musste viel lernen.',        exampleArabic: 'كان عليّ التعلّم كثيراً.', type: 'verb' },
+        { german: 'aufstehen', arabic: 'يستيقظ',        example: 'Wir mussten früh aufstehen.',   exampleArabic: 'كان علينا الاستيقاظ مبكراً.', type: 'verb' },
+        { german: 'warten',    arabic: 'ينتظر',         example: 'Ich konnte nicht warten.',       exampleArabic: 'لم أستطع الانتظار.',  type: 'verb' },
+        { german: 'helfen',    arabic: 'يساعد',         example: 'Sie wollte mir helfen.',         exampleArabic: 'أرادت أن تساعدني.',   type: 'verb' },
+        { german: 'kommen',    arabic: 'يأتي',          example: 'Er konnte nicht kommen.',        exampleArabic: 'لم يستطع المجيء.',    type: 'verb' },
+        { german: 'fahren',    arabic: 'يسافر',         example: 'Wir wollten nach Spanien fahren.', exampleArabic: 'أردنا السفر إلى إسبانيا.', type: 'verb' },
+        { german: 'essen',     arabic: 'يأكل',          example: 'Ich konnte nichts essen.',       exampleArabic: 'لم أستطع أكل شيء.',  type: 'verb' },
+        { german: 'machen',    arabic: 'يفعل',          example: 'Was wolltest du machen?',        exampleArabic: 'ماذا أردت أن تفعل؟',  type: 'verb' },
+        { german: 'die Prüfung', arabic: 'الامتحان',     example: 'Ich musste für die Prüfung lernen.', exampleArabic: 'كان عليّ الدراسة للامتحان.', type: 'noun', gender: 'die', plural: 'die Prüfungen' },
+        { german: 'die Schule', arabic: 'المدرسة',       example: 'Als Kind musste ich in die Schule gehen.', exampleArabic: 'حين كنت طفلاً كان عليّ الذهاب للمدرسة.', type: 'noun', gender: 'die', plural: 'die Schulen' },
+        { german: 'der Termin', arabic: 'الموعد',        example: 'Ich konnte den Termin nicht halten.', exampleArabic: 'لم أستطع الالتزام بالموعد.', type: 'noun', gender: 'der', plural: 'die Termine' },
+        { german: 'das Wochenende', arabic: 'عطلة الأسبوع', example: 'Am Wochenende wollte ich schlafen.', exampleArabic: 'في عطلة الأسبوع أردت النوم.', type: 'noun', gender: 'das', plural: 'die Wochenenden' },
+        { german: 'der Urlaub', arabic: 'الإجازة',        example: 'Im Urlaub konnten wir nicht reisen.', exampleArabic: 'في الإجازة لم نستطع السفر.', type: 'noun', gender: 'der', plural: 'die Urlaube' },
+        { german: 'leider',    arabic: 'للأسف',          example: 'Ich konnte leider nicht kommen.', exampleArabic: 'للأسف لم أستطع المجيء.', type: 'adverb' },
+        { german: 'plötzlich', arabic: 'فجأة',           example: 'Plötzlich musste ich gehen.',    exampleArabic: 'فجأة كان عليّ الذهاب.',  type: 'adverb' },
+        { german: 'eigentlich', arabic: 'في الواقع',     example: 'Eigentlich wollte ich bleiben.', exampleArabic: 'في الواقع أردت البقاء.', type: 'adverb' },
+        { german: 'die Idee', arabic: 'الفكرة',           example: 'Das war eine gute Idee.',        exampleArabic: 'كانت فكرة جيدة.',     type: 'noun', gender: 'die', plural: 'die Ideen' },
+        { german: 'das Problem', arabic: 'المشكلة',       example: 'Ich hatte ein Problem.',         exampleArabic: 'كانت لديّ مشكلة.',  type: 'noun', gender: 'das', plural: 'die Probleme' },
+        { german: 'der Grund', arabic: 'السبب',           example: 'Aus diesem Grund musste ich gehen.', exampleArabic: 'لهذا السبب كان عليّ الذهاب.', type: 'noun', gender: 'der', plural: 'die Gründe' },
+      ],
+      exercise: {
+        questions: [
+          { type: 'fill-blank', id: 'a2-14-q1', question: 'Präteritum: "Ich ___ gestern arbeiten." (müssen)', answer: 'musste', hint: 'müssen → musste' },
+          { type: 'multiple-choice', id: 'a2-14-q2', question: 'صيغة Präteritum من können مع er؟', options: ['kannte', 'konnte', 'könnte', 'gekonnt'], answer: 'konnte' },
+          { type: 'fill-blank', id: 'a2-14-q3', question: 'Doppelter Infinitiv: "Ich habe gestern lernen ___."', answer: 'müssen', hint: 'الفعل الناقص في النهاية، مصدر' },
+          { type: 'multiple-choice', id: 'a2-14-q4', question: 'أيّ جملة صحيحة في Präteritum؟', options: ['Wir wolltet nach Berlin fahren.', 'Wir wollten nach Berlin fahren.', 'Wir wollen nach Berlin fahren.', 'Wir gewollt nach Berlin fahren.'], answer: 'Wir wollten nach Berlin fahren.' },
+          { type: 'fill-blank', id: 'a2-14-q5', question: 'Als Kind ___ ich keinen Spinat. (mögen)', answer: 'mochte', hint: 'mögen → mochte (الماضي)' },
+          { type: 'matching', id: 'a2-14-q6', question: 'اربط الفعل الناقص بصيغة Präteritum:', pairs: [
+            { left: 'können', right: 'konnte' },
+            { left: 'müssen', right: 'musste' },
+            { left: 'wollen', right: 'wollte' },
+            { left: 'dürfen', right: 'durfte' },
+            { left: 'sollen', right: 'sollte' },
+          ], answer: 'matched' },
+          { type: 'drag-drop', id: 'a2-14-q7', question: 'رتّب (Präteritum): "أبي أراد السفر إلى برلين"', words: ['Mein', 'Vater', 'wollte', 'nach', 'Berlin', 'reisen'], answer: 'Mein Vater wollte nach Berlin reisen' },
+          { type: 'speaking', id: 'a2-14-q8', question: 'قل بـ Präteritum: "كان عليّ الاستيقاظ مبكراً"', answer: 'Ich musste früh aufstehen' },
+          { type: 'fill-blank', id: 'a2-14-q9', question: 'استمع وأكمل: "Wir ___ ins Kino gehen." (durften / dürfen)', audioPrompt: 'Wir durften ins Kino gehen.', answer: 'durften', hint: 'dürfen في الماضي → durften (wir)' },
+          { type: 'multiple-choice', id: 'a2-14-q10', question: 'في 95% من الحالات اليومية نستعمل أيّ صيغة للأفعال الناقصة في الماضي؟', options: ['Perfekt', 'Präteritum', 'Plusquamperfekt', 'Konjunktiv'], answer: 'Präteritum' },
+        ],
+      },
+    },
+    // ─────────────────────────────────────────────
+    // LESSON 15 — Konjunktiv II höflich
+    // ─────────────────────────────────────────────
+    {
+      id: 'a2-15',
+      title: 'صيغة المهذّبة — Konjunktiv II für Höflichkeit',
+      order: 15,
+      grammar: {
+        title: 'würde, hätte, wäre + كيف تطلب بأدب',
+        content: `الـ **Konjunktiv II** (التمنّي) صيغة كاملة في B1، لكن في A2 نتعلّم استعمالها الأبسط والأهم: **التهذيب**. حين تطلب شيئاً في مطعم، محل، أو من غريب، استعمل صيغة Konjunktiv II بدلاً من الصيغة العادية — فهي ألطف بكثير.
+
+**الصيغ الثلاث الأساسية:**
+- **würde + Infinitiv** = أحبّ أن... (مع كل الأفعال تقريباً)
+- **hätte** = "لو كان لديّ..."
+- **wäre** = "لو كنت..."
+
+**أمثلة من الحياة اليومية:**
+→ Ich **möchte** einen Kaffee, bitte. (أودّ قهوة من فضلك — möchte هو Konjunktiv II من mögen)
+→ Ich **hätte** gern einen Tisch für zwei. (أودّ طاولة لاثنين)
+→ **Würden** Sie mir helfen? (هل تتفضّلون بمساعدتي؟)`,
+        tables: [
+          {
+            title: 'صيغة würde + Infinitiv (الأكثر استعمالاً)',
+            headers: ['Pronomen', 'würde + ...', 'مثال'],
+            rows: [
+              { cells: ['ich',     'würde',     'Ich würde gern kommen.'] },
+              { cells: ['du',      'würdest',   'Würdest du mir helfen?'] },
+              { cells: ['er/sie/es', 'würde',   'Sie würde gern bleiben.'] },
+              { cells: ['wir',     'würden',    'Wir würden gern bestellen.'] },
+              { cells: ['ihr',     'würdet',    'Würdet ihr kommen?'] },
+              { cells: ['sie/Sie', 'würden',    'Würden Sie bitte warten?'] },
+            ],
+            theme: 'conjugation',
+            note: 'würde + الفعل الرئيسي في النهاية بصيغة المصدر.',
+          },
+          {
+            title: 'hätte و wäre — حالات خاصة',
+            headers: ['Pronomen', 'hätte (يملك مهذّب)', 'wäre (يكون مهذّب)'],
+            rows: [
+              { cells: ['ich',     'hätte',    'wäre'] },
+              { cells: ['du',      'hättest',  'wärst (wärest)'] },
+              { cells: ['er/sie/es', 'hätte',  'wäre'] },
+              { cells: ['wir',     'hätten',   'wären'] },
+              { cells: ['ihr',     'hättet',   'wärt (wäret)'] },
+              { cells: ['sie/Sie', 'hätten',   'wären'] },
+            ],
+            theme: 'conjugation',
+            note: 'استعمل hätte gern (= أودّ) و wäre gern (= أودّ أن أكون).',
+          },
+        ],
+        rules: [
+          { rule: 'möchte هو Konjunktiv II من mögen — استعمله في المطاعم والمحلات.', example: 'Ich möchte ein Wasser, bitte.', translation: 'أودّ ماء من فضلك.' },
+          { rule: 'würde + Infinitiv هي أكثر صيغة Konjunktiv II استعمالاً في الكلام.', example: 'Ich würde gern Deutschland besuchen.', translation: 'أودّ زيارة ألمانيا.' },
+          { rule: 'hätte gern + اسم = أودّ هذا الشيء (مهذّب جداً للطلب).', example: 'Ich hätte gern einen Tisch am Fenster.', translation: 'أودّ طاولة عند النافذة.' },
+          { rule: 'استعمال Könnten Sie...? و Würden Sie...? في الأسئلة المهذّبة.', example: 'Könnten Sie mir helfen? / Würden Sie das wiederholen?', translation: 'هل بإمكانكم مساعدتي؟ / هل تعيدون من فضلكم؟' },
+        ],
+        examples: [
+          'Ich möchte einen Tisch reservieren. — أودّ حجز طاولة.',
+          'Würden Sie mir bitte helfen? — هل تتفضّلون بمساعدتي؟',
+          'Könntest du das Fenster öffnen? — هل بإمكانك فتح النافذة؟',
+          'Ich hätte gern einen Cappuccino. — أودّ كابتشينو.',
+          'Wir würden gern in Berlin wohnen. — نودّ السكن في برلين.',
+          'Wäre das möglich? — هل ذلك ممكن؟',
+          'Ich würde mehr Wasser trinken. — أودّ شرب المزيد من الماء.',
+          'Hättest du Zeit für mich? — هل لديك وقت من أجلي؟',
+        ],
+        tip: 'في كل مرة تطلب فيها شيئاً من غريب أو في موقف رسمي، استعمل صيغة مهذّبة. الفرق بين "Ich will Wasser" (أريد ماء) و "Ich möchte Wasser, bitte" (أودّ ماء من فضلك) هو الفرق بين الفظاظة والاحترام.',
+      },
+      vocabulary: [
+        { german: 'möchten',   arabic: 'يودّ',           example: 'Ich möchte einen Kaffee.',       exampleArabic: 'أودّ قهوة.',          type: 'verb' },
+        { german: 'würden',    arabic: 'يودّ (مع فعل)',  example: 'Ich würde gern kommen.',         exampleArabic: 'أودّ المجيء.',        type: 'verb' },
+        { german: 'hätte',     arabic: 'كان لديه (مهذّب)', example: 'Ich hätte gern einen Tee.',     exampleArabic: 'أودّ كأس شاي.',      type: 'verb' },
+        { german: 'wäre',      arabic: 'كان (مهذّب)',     example: 'Wäre das möglich?',              exampleArabic: 'هل ذلك ممكن؟',       type: 'verb' },
+        { german: 'könnten',   arabic: 'بإمكانكم (مهذّب)', example: 'Könnten Sie mir helfen?',        exampleArabic: 'هل بإمكانكم مساعدتي؟', type: 'verb' },
+        { german: 'gern',      arabic: 'بسرور',          example: 'Ich würde gern bleiben.',         exampleArabic: 'أودّ البقاء.',        type: 'adverb' },
+        { german: 'lieber',    arabic: 'أفضّل',           example: 'Ich hätte lieber Tee.',           exampleArabic: 'أفضّل الشاي.',        type: 'adverb' },
+        { german: 'bitte',     arabic: 'من فضلك',         example: 'Einen Kaffee, bitte.',           exampleArabic: 'قهوة من فضلك.',      type: 'adverb' },
+        { german: 'vielleicht', arabic: 'ربما',          example: 'Vielleicht würde ich kommen.',   exampleArabic: 'ربما أودّ المجيء.',  type: 'adverb' },
+        { german: 'reservieren', arabic: 'يحجز',         example: 'Ich möchte einen Tisch reservieren.', exampleArabic: 'أودّ حجز طاولة.', type: 'verb' },
+        { german: 'bestellen', arabic: 'يطلب',           example: 'Ich würde gern bestellen.',       exampleArabic: 'أودّ الطلب.',         type: 'verb' },
+        { german: 'wiederholen', arabic: 'يكرّر',         example: 'Würden Sie das wiederholen?',     exampleArabic: 'هل تعيدون من فضلكم؟', type: 'verb' },
+        { german: 'erklären',  arabic: 'يشرح',           example: 'Könnten Sie das erklären?',       exampleArabic: 'هل بإمكانكم الشرح؟', type: 'verb' },
+        { german: 'zeigen',    arabic: 'يُري',            example: 'Würden Sie mir das zeigen?',      exampleArabic: 'هل تتفضّلون بإريائي؟', type: 'verb' },
+        { german: 'öffnen',    arabic: 'يفتح',           example: 'Könntest du das Fenster öffnen?', exampleArabic: 'هل تفتح النافذة؟',  type: 'verb' },
+        { german: 'schließen', arabic: 'يغلق',           example: 'Würden Sie die Tür schließen?',   exampleArabic: 'هل تغلق الباب؟',     type: 'verb' },
+        { german: 'der Tisch', arabic: 'الطاولة',         example: 'Einen Tisch für zwei, bitte.',   exampleArabic: 'طاولة لاثنين من فضلك.', type: 'noun', gender: 'der', plural: 'die Tische' },
+        { german: 'die Rechnung', arabic: 'الفاتورة',     example: 'Die Rechnung, bitte.',           exampleArabic: 'الفاتورة من فضلك.', type: 'noun', gender: 'die', plural: 'die Rechnungen' },
+        { german: 'die Speisekarte', arabic: 'قائمة الطعام', example: 'Könnte ich die Speisekarte haben?', exampleArabic: 'هل يمكنني الحصول على قائمة الطعام؟', type: 'noun', gender: 'die', plural: 'die Speisekarten' },
+        { german: 'die Bestellung', arabic: 'الطلب',      example: 'Eine Bestellung, bitte.',         exampleArabic: 'طلب من فضلكم.',     type: 'noun', gender: 'die', plural: 'die Bestellungen' },
+        { german: 'das Restaurant', arabic: 'المطعم',     example: 'Wir gehen ins Restaurant.',       exampleArabic: 'نذهب إلى المطعم.', type: 'noun', gender: 'das', plural: 'die Restaurants' },
+        { german: 'das Café',  arabic: 'المقهى',          example: 'Ich gehe ins Café.',              exampleArabic: 'أذهب إلى المقهى.', type: 'noun', gender: 'das', plural: 'die Cafés' },
+        { german: 'der Kellner', arabic: 'النادل',         example: 'Der Kellner kommt gleich.',       exampleArabic: 'النادل سيأتي حالاً.', type: 'noun', gender: 'der', plural: 'die Kellner' },
+        { german: 'das Glas',  arabic: 'الكأس',           example: 'Ein Glas Wasser, bitte.',         exampleArabic: 'كأس ماء من فضلك.',   type: 'noun', gender: 'das', plural: 'die Gläser' },
+        { german: 'die Flasche', arabic: 'القنينة',       example: 'Eine Flasche Wein, bitte.',       exampleArabic: 'قنينة نبيذ من فضلك.', type: 'noun', gender: 'die', plural: 'die Flaschen' },
+        { german: 'die Tasse', arabic: 'الفنجان',         example: 'Eine Tasse Kaffee.',              exampleArabic: 'فنجان قهوة.',        type: 'noun', gender: 'die', plural: 'die Tassen' },
+        { german: 'höflich',   arabic: 'مهذّب',           example: 'Sei bitte höflich.',              exampleArabic: 'كن مهذّباً من فضلك.', type: 'adjective' },
+        { german: 'freundlich', arabic: 'ودود',           example: 'Der Kellner war sehr freundlich.', exampleArabic: 'النادل كان ودوداً جداً.', type: 'adjective' },
+        { german: 'natürlich', arabic: 'طبعاً',           example: 'Natürlich helfe ich dir.',        exampleArabic: 'طبعاً أساعدك.',      type: 'adverb' },
+        { german: 'sicher',    arabic: 'بالتأكيد',         example: 'Sicher kannst du kommen.',         exampleArabic: 'بالتأكيد يمكنك المجيء.', type: 'adverb' },
+        { german: 'möglich',   arabic: 'ممكن',            example: 'Wäre das möglich?',                 exampleArabic: 'هل ذلك ممكن؟',     type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { type: 'fill-blank', id: 'a2-15-q1', question: 'صيغة مهذّبة من mögen مع ich؟', answer: 'möchte', hint: 'mögen → möchte (Konj. II)' },
+          { type: 'multiple-choice', id: 'a2-15-q2', question: 'كيف تطلب بأدب: "هل بإمكانك مساعدتي؟"', options: ['Hilf mir!', 'Du hilfst mir.', 'Könntest du mir helfen?', 'Ich helfe dir.'], answer: 'Könntest du mir helfen?' },
+          { type: 'fill-blank', id: 'a2-15-q3', question: 'أكمل: "Ich ___ gern einen Tisch am Fenster." (مهذّب)', answer: 'hätte', hint: 'hätte gern + اسم' },
+          { type: 'multiple-choice', id: 'a2-15-q4', question: 'صيغة würde مع wir؟', options: ['würde', 'würdest', 'würden', 'würdet'], answer: 'würden' },
+          { type: 'fill-blank', id: 'a2-15-q5', question: 'أكمل (مهذّب): "___ Sie das wiederholen?" (هل تعيدون؟)', answer: 'Würden', hint: 'Würden Sie + Infinitiv' },
+          { type: 'matching', id: 'a2-15-q6', question: 'اربط الصيغة المهذّبة بمعناها:', pairs: [
+            { left: 'Ich möchte', right: 'أودّ' },
+            { left: 'Ich hätte gern', right: 'أودّ (مع اسم)' },
+            { left: 'Würden Sie', right: 'هل تتفضّلون' },
+            { left: 'Könnten Sie', right: 'هل بإمكانكم' },
+          ], answer: 'matched' },
+          { type: 'drag-drop', id: 'a2-15-q7', question: 'رتّب: "أودّ كابتشينو من فضلك"', words: ['Ich', 'hätte', 'gern', 'einen', 'Cappuccino', 'bitte'], answer: 'Ich hätte gern einen Cappuccino bitte' },
+          { type: 'speaking', id: 'a2-15-q8', question: 'قل بأدب في مطعم: "هل يمكنني الحصول على الفاتورة؟"', answer: 'Könnte ich die Rechnung haben bitte' },
+          { type: 'fill-blank', id: 'a2-15-q9', question: 'استمع: "___ das möglich?" (هل ذلك ممكن؟ — مهذّب)', audioPrompt: 'Wäre das möglich?', answer: 'Wäre', hint: 'wäre = sein في Konj. II' },
+          { type: 'multiple-choice', id: 'a2-15-q10', question: 'الجملة الأكثر تهذيباً:', options: ['Ich will Kaffee.', 'Gib mir Kaffee.', 'Kaffee!', 'Ich hätte gern einen Kaffee, bitte.'], answer: 'Ich hätte gern einen Kaffee, bitte.' },
+        ],
+      },
+    },
+    // ─────────────────────────────────────────────
+    // LESSON 16 — Pronominaladverbien
+    // ─────────────────────────────────────────────
+    {
+      id: 'a2-16',
+      title: 'الظروف الضميرية — Pronominaladverbien',
+      order: 16,
+      grammar: {
+        title: 'darüber, davon, damit + worauf, wovon, womit',
+        content: `**الظروف الضميرية** (Pronominaladverbien) تُستعمل لتجنّب تكرار اسم سبق ذكره عندما يأتي بعد حرف جر — لكن **فقط حين يكون الاسم شيئاً، لا شخصاً**.
+
+**القاعدة الذهبية:**
+- شخص → حرف الجر + ضمير: *für **ihn**, mit **ihr**, von **ihm***
+- شيء → **da(r) + حرف الجر**: *dafür, damit, davon, darüber, daran*
+
+**في الأسئلة:**
+- شخص → **wem / wen** + حرف الجر: *Mit wem? Auf wen?*
+- شيء → **wo(r) + حرف الجر**: *Womit? Worauf? Wovon?*`,
+        tables: [
+          {
+            title: 'الأشكال الإجابية da(r)- مع حروف الجر الشائعة',
+            headers: ['حرف الجر', 'الشكل', 'مثال (إجابة)'],
+            rows: [
+              { cells: ['für',  'dafür',     'Bist du dafür?'] },
+              { cells: ['von',  'davon',     'Ich habe davon gehört.'] },
+              { cells: ['mit',  'damit',     'Was machst du damit?'] },
+              { cells: ['über', 'darüber',   'Wir sprechen darüber.'], highlight: true },
+              { cells: ['auf',  'darauf',    'Ich freue mich darauf.'], highlight: true },
+              { cells: ['an',   'daran',     'Denkst du daran?'], highlight: true },
+              { cells: ['in',   'darin',     'Was ist darin?'], highlight: true },
+              { cells: ['bei',  'dabei',     'Ich habe es nicht dabei.'] },
+              { cells: ['gegen','dagegen',   'Ich bin dagegen.'] },
+            ],
+            theme: 'default',
+            note: 'الصفوف المُلوَّنة (über, auf, an, in) تأخذ حرف r إضافي إذا بدأ حرف الجر بحرف صوتي.',
+          },
+          {
+            title: 'الأشكال الاستفهامية wo(r)- — للأسئلة',
+            headers: ['حرف الجر', 'الشكل', 'مثال'],
+            rows: [
+              { cells: ['mit',  'womit',     'Womit fährst du?'] },
+              { cells: ['von',  'wovon',     'Wovon sprichst du?'] },
+              { cells: ['auf',  'worauf',    'Worauf wartest du?'] },
+              { cells: ['über', 'worüber',   'Worüber lacht ihr?'] },
+              { cells: ['an',   'woran',     'Woran denkst du?'] },
+              { cells: ['für',  'wofür',     'Wofür ist das gut?'] },
+              { cells: ['gegen','wogegen',   'Wogegen bist du?'] },
+            ],
+            theme: 'default',
+            note: 'تستعمل هذه الأشكال للأسئلة عن الأشياء فقط — لا الأشخاص.',
+          },
+        ],
+        rules: [
+          { rule: 'الفرق بين الأشخاص والأشياء أساسي: für ihn (لشخص) ≠ dafür (لشيء).', example: 'Ich kaufe das Buch für meinen Bruder. → Für wen? / Ich brauche das für die Arbeit. → Wofür?', translation: 'أشتري الكتاب لأخي. لمن؟ / أحتاج هذا للعمل. لماذا؟' },
+          { rule: 'حروف الجر التي تبدأ بحرف صوتي (a, e, i, o, u) تأخذ -r- إضافي: darüber, darauf, daran, darin.', example: 'Ich denke daran. (وليس daan)', translation: 'أفكر في ذلك.' },
+          { rule: 'بعض الأفعال تتطلب حرف جر معيّن — احفظها كزوج: warten **auf**, denken **an**, sprechen **über**, sich freuen **auf**, sich interessieren **für**.', example: 'Ich warte auf den Bus. → Worauf wartest du?', translation: 'أنتظر الحافلة. ماذا تنتظر؟' },
+          { rule: 'في إجابة سؤال يبدأ بـ wo(r)-، نجيب بـ da(r)-: Worüber? → Darüber.', example: 'Worauf wartest du? — Auf den Zug. / Darauf.', translation: 'ماذا تنتظر؟ — القطار. / أنتظره.' },
+        ],
+        examples: [
+          'Ich freue mich auf das Wochenende. — Ich freue mich darauf. (أتطلّع إلى عطلة الأسبوع.)',
+          'Worauf wartest du? — Auf den Bus. (ماذا تنتظر؟ — الحافلة.)',
+          'Wir sprechen über das Problem. — Wir sprechen darüber. (نتحدّث عن المشكلة.)',
+          'Womit fährst du? — Mit dem Auto. (بماذا تذهب؟ — بالسيارة.)',
+          'Wofür ist das? — Das ist für die Arbeit. — Dafür. (لماذا هذا؟ — للعمل.)',
+          'Woran denkst du? — An meine Familie. (في ماذا تفكر؟ — في عائلتي.)',
+          'Bist du dafür oder dagegen? (هل أنت مع أم ضد؟)',
+          'Ich habe meinen Schlüssel nicht dabei. (مفتاحي ليس معي.)',
+        ],
+        tip: 'احفظ 3 أزواج فعل + حرف جر يومياً (warten auf, denken an, sich freuen auf...). بعد شهر تستعمل darauf و worauf بشكل تلقائي.',
+      },
+      vocabulary: [
+        { german: 'darüber',  arabic: 'عن ذلك',          example: 'Wir sprechen darüber.',           exampleArabic: 'نتحدّث عن ذلك.',     type: 'adverb' },
+        { german: 'darauf',   arabic: 'على ذلك / إليه',  example: 'Ich freue mich darauf.',          exampleArabic: 'أتطلّع إليه.',       type: 'adverb' },
+        { german: 'davon',    arabic: 'من ذلك / عنه',    example: 'Ich habe davon gehört.',          exampleArabic: 'سمعت عن ذلك.',       type: 'adverb' },
+        { german: 'damit',    arabic: 'بذلك',            example: 'Was machst du damit?',            exampleArabic: 'ماذا تفعل بذلك؟',    type: 'adverb' },
+        { german: 'dafür',    arabic: 'لذلك / مع',        example: 'Bist du dafür?',                  exampleArabic: 'هل أنت مع ذلك؟',     type: 'adverb' },
+        { german: 'dagegen',  arabic: 'ضد ذلك',           example: 'Ich bin dagegen.',                exampleArabic: 'أنا ضد ذلك.',         type: 'adverb' },
+        { german: 'daran',    arabic: 'في ذلك',           example: 'Denkst du daran?',                exampleArabic: 'هل تفكر في ذلك؟',    type: 'adverb' },
+        { german: 'darin',    arabic: 'في داخل ذلك',      example: 'Was ist darin?',                   exampleArabic: 'ماذا في داخل ذلك؟',  type: 'adverb' },
+        { german: 'dabei',    arabic: 'معي / لديّ',         example: 'Ich habe es nicht dabei.',         exampleArabic: 'ليس معي.',           type: 'adverb' },
+        { german: 'worauf',   arabic: 'على ماذا',          example: 'Worauf wartest du?',               exampleArabic: 'ماذا تنتظر؟',        type: 'adverb' },
+        { german: 'worüber',  arabic: 'عن ماذا',           example: 'Worüber sprecht ihr?',             exampleArabic: 'عن ماذا تتحدّثون؟',  type: 'adverb' },
+        { german: 'wovon',    arabic: 'عن ماذا / من ماذا', example: 'Wovon sprichst du?',                exampleArabic: 'عن ماذا تتحدّث؟',    type: 'adverb' },
+        { german: 'womit',    arabic: 'بماذا',             example: 'Womit fährst du?',                 exampleArabic: 'بماذا تسافر؟',       type: 'adverb' },
+        { german: 'woran',    arabic: 'في ماذا',           example: 'Woran denkst du?',                 exampleArabic: 'في ماذا تفكر؟',      type: 'adverb' },
+        { german: 'wofür',    arabic: 'لماذا',             example: 'Wofür ist das?',                    exampleArabic: 'لماذا هذا؟',         type: 'adverb' },
+        { german: 'warten auf', arabic: 'ينتظر',            example: 'Ich warte auf den Bus.',           exampleArabic: 'أنتظر الحافلة.',     type: 'verb' },
+        { german: 'denken an', arabic: 'يفكر في',          example: 'Ich denke an dich.',                exampleArabic: 'أفكر فيك.',          type: 'verb' },
+        { german: 'sprechen über', arabic: 'يتحدّث عن',    example: 'Wir sprechen über die Arbeit.',    exampleArabic: 'نتحدّث عن العمل.',  type: 'verb' },
+        { german: 'sich freuen auf', arabic: 'يتطلّع إلى',  example: 'Ich freue mich auf den Urlaub.',   exampleArabic: 'أتطلّع إلى الإجازة.', type: 'verb' },
+        { german: 'sich freuen über', arabic: 'يفرح بـ',    example: 'Sie freut sich über das Geschenk.', exampleArabic: 'تفرح بالهدية.',     type: 'verb' },
+        { german: 'sich interessieren für', arabic: 'يهتم بـ', example: 'Ich interessiere mich für Sport.', exampleArabic: 'أهتم بالرياضة.',  type: 'verb' },
+        { german: 'sich kümmern um', arabic: 'يعتني بـ',    example: 'Wer kümmert sich um die Kinder?',  exampleArabic: 'من يعتني بالأطفال؟', type: 'verb' },
+        { german: 'sich gewöhnen an', arabic: 'يعتاد على',  example: 'Ich gewöhne mich an das Wetter.',  exampleArabic: 'أعتاد على الجو.',    type: 'verb' },
+        { german: 'achten auf', arabic: 'ينتبه إلى',         example: 'Achte auf den Verkehr!',           exampleArabic: 'انتبه إلى المرور!',  type: 'verb' },
+        { german: 'sich erinnern an', arabic: 'يتذكر',       example: 'Ich erinnere mich an dich.',        exampleArabic: 'أتذكّرك.',          type: 'verb' },
+        { german: 'glauben an', arabic: 'يؤمن بـ',           example: 'Ich glaube an dich.',               exampleArabic: 'أنا أؤمن بك.',      type: 'verb' },
+        { german: 'die Sache', arabic: 'الشيء / الموضوع',     example: 'Was ist die Sache?',                exampleArabic: 'ما الموضوع؟',       type: 'noun', gender: 'die', plural: 'die Sachen' },
+        { german: 'das Thema', arabic: 'الموضوع',             example: 'Wir haben ein wichtiges Thema.',   exampleArabic: 'لدينا موضوع مهم.',  type: 'noun', gender: 'das', plural: 'die Themen' },
+        { german: 'die Frage', arabic: 'السؤال',              example: 'Eine Frage, bitte.',                exampleArabic: 'سؤال من فضلك.',     type: 'noun', gender: 'die', plural: 'die Fragen' },
+        { german: 'die Antwort', arabic: 'الإجابة',            example: 'Was ist die Antwort?',              exampleArabic: 'ما الإجابة؟',       type: 'noun', gender: 'die', plural: 'die Antworten' },
+        { german: 'wichtig',   arabic: 'مهم',                example: 'Das ist wichtig.',                  exampleArabic: 'هذا مهم.',           type: 'adjective' },
+        { german: 'interessant', arabic: 'ممتع',              example: 'Das ist interessant.',              exampleArabic: 'هذا ممتع.',          type: 'adjective' },
+      ],
+      exercise: {
+        questions: [
+          { type: 'fill-blank', id: 'a2-16-q1', question: 'الشكل الإجابي لـ "über das Problem"؟', answer: 'darüber', hint: 'da + r + über' },
+          { type: 'multiple-choice', id: 'a2-16-q2', question: 'سؤال عن شيء "ماذا تنتظر؟"', options: ['Auf wen wartest du?', 'Worauf wartest du?', 'Wer wartet auf dich?', 'Wovon wartest du?'], answer: 'Worauf wartest du?' },
+          { type: 'fill-blank', id: 'a2-16-q3', question: 'أكمل: "Ich freue mich ___ den Urlaub."', answer: 'auf', hint: 'sich freuen + auf' },
+          { type: 'multiple-choice', id: 'a2-16-q4', question: 'إجابة "Wovon sprichst du?"', options: ['Damit', 'Davon', 'Dafür', 'Darüber'], answer: 'Davon' },
+          { type: 'fill-blank', id: 'a2-16-q5', question: '"Ich denke ___ meine Familie."', answer: 'an', hint: 'denken + an' },
+          { type: 'matching', id: 'a2-16-q6', question: 'اربط الفعل بحرف جره:', pairs: [
+            { left: 'warten', right: 'auf' },
+            { left: 'denken', right: 'an' },
+            { left: 'sprechen', right: 'über' },
+            { left: 'sich freuen', right: 'auf' },
+            { left: 'sich interessieren', right: 'für' },
+          ], answer: 'matched' },
+          { type: 'drag-drop', id: 'a2-16-q7', question: 'رتّب: "ماذا تفكر في ذلك؟"', words: ['Was', 'denkst', 'du', 'darüber'], answer: 'Was denkst du darüber' },
+          { type: 'speaking', id: 'a2-16-q8', question: 'قل بالألمانية: "أنا أتطلّع إلى ذلك"', answer: 'Ich freue mich darauf' },
+          { type: 'fill-blank', id: 'a2-16-q9', question: 'استمع: "___ ist das gut?" (لماذا؟)', audioPrompt: 'Wofür ist das gut?', answer: 'Wofür', hint: 'wo + für' },
+          { type: 'multiple-choice', id: 'a2-16-q10', question: 'لشخص نقول: "Für wen?" — لشيء نقول؟', options: ['Wofür', 'Worüber', 'Worauf', 'Womit'], answer: 'Wofür' },
+        ],
+      },
+    },
   ],
 }
