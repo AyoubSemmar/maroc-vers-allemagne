@@ -5823,6 +5823,655 @@
           }
         ]
       }
+    },
+    "c1-15": {
+      "id": "c1-15",
+      "title": "Kommasetzung",
+      "order": 15,
+      "grammar": {
+        "title": "Wann ein Komma im Deutschen — Regeln für Nebensätze, Aufzählungen und Einschübe",
+        "content": "Die Kommasetzung im Deutschen ist **systematisch und streng** — nicht „nach Gefühl\". In der schriftlichen C1-Prüfung kostet jedes falsche Komma 0,5–1 Punkt. Lerne die Regeln gut.\n\n**Die sechs goldenen Regeln:**\n1. **Zwischen Hauptsatz und Nebensatz** — immer.\n2. **Zwischen Aufzählungselementen** — kein Komma vor dem letzten „und\".\n3. **Vor aber/sondern** — immer.\n4. **Um Appositionen** — davor und danach.\n5. **Um Infinitivkonstruktionen mit zu** — in erweiterten Fällen.\n6. **Zwischen Hauptsatz + Hauptsatz** ohne Konnektor — fakultativ.",
+        "tables": [
+          {
+            "title": "Pflicht-Kommaregeln",
+            "headers": [
+              "Fall",
+              "Beispiel",
+              "Regel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nebensatz",
+                  "Ich weiß, dass du kommst.",
+                  "immer vor dass/weil/wenn/..."
+                ]
+              },
+              {
+                "cells": [
+                  "Aufzählung",
+                  "Ich kaufe Brot, Milch und Käse.",
+                  "kein Komma vor dem letzten und"
+                ]
+              },
+              {
+                "cells": [
+                  "aber/sondern",
+                  "Er kommt, aber spät.",
+                  "immer vor aber/sondern"
+                ]
+              },
+              {
+                "cells": [
+                  "Apposition",
+                  "Mein Bruder, der Arzt, kommt.",
+                  "Apposition einschließen"
+                ]
+              },
+              {
+                "cells": [
+                  "Infinitiv mit zu",
+                  "Ich versuche, das zu lernen.",
+                  "nach Verb + erweitertem zu-Inf"
+                ]
+              },
+              {
+                "cells": [
+                  "Anrede",
+                  "Hallo, Maria, wie geht's?",
+                  "Anrede einschließen"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Diese Regeln gelten verpflichtend in formellem Schreiben und C1-Prüfungen."
+          },
+          {
+            "title": "Fakultative Fälle",
+            "headers": [
+              "Fall",
+              "Ohne Komma",
+              "Mit Komma"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "HS + und + HS",
+                  "Ich gehe und du bleibst.",
+                  "Ich gehe, und du bleibst."
+                ]
+              },
+              {
+                "cells": [
+                  "Einfacher Infinitiv",
+                  "Er versucht zu lernen.",
+                  "Er versucht, zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "Adverb am Anfang",
+                  "Heute komme ich nicht.",
+                  "(üblicherweise kein Komma)"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "In fakultativen Fällen das Komma zur Klarheit setzen."
+          },
+          {
+            "title": "Häufige Fehler vermeiden",
+            "headers": [
+              "Fehler",
+              "Korrekt",
+              "Grund"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Ich denke, dass, er kommt.",
+                  "Ich denke, dass er kommt.",
+                  "kein Komma zwischen dass und Subjekt"
+                ]
+              },
+              {
+                "cells": [
+                  "Brot, und Milch.",
+                  "Brot und Milch.",
+                  "kein Komma vor und in der Aufzählung"
+                ]
+              },
+              {
+                "cells": [
+                  "Er ist krank, aber, kommt.",
+                  "Er ist krank, aber kommt.",
+                  "kein Komma nach aber"
+                ]
+              },
+              {
+                "cells": [
+                  "Nach dem Essen, gehen wir.",
+                  "Nach dem Essen gehen wir.",
+                  "kein Komma nach Zeitangabe"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Regel: Kommas trennen Satzteile, nicht Bestandteile innerhalb eines Satzes."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Zwischen Hauptsatz und Nebensatz: immer Komma.",
+            "example": "Ich weiß, dass es schwer ist.",
+            "translation": "Pflicht-Komma"
+          },
+          {
+            "rule": "In der Aufzählung kein Komma vor dem letzten und/oder.",
+            "example": "Brot, Milch und Käse.",
+            "translation": "Aufzählung"
+          },
+          {
+            "rule": "Vor aber/sondern: immer Komma.",
+            "example": "Er ist klug, aber faul.",
+            "translation": "Gegensatz"
+          },
+          {
+            "rule": "Um eine erläuternde Apposition: zwei Kommas.",
+            "example": "Mein Vater, ein Lehrer, lebt in Casablanca.",
+            "translation": "Apposition"
+          }
+        ],
+        "examples": [
+          "Ich glaube, dass du recht hast.",
+          "Wir kaufen Brot, Milch, Käse und Butter.",
+          "Er ist freundlich, aber sehr beschäftigt.",
+          "Mein Onkel, der in Berlin wohnt, kommt morgen.",
+          "Ich versuche, das Problem zu lösen.",
+          "Hallo, Maria, wie geht's?",
+          "Obwohl es regnet, gehen wir spazieren.",
+          "Wenn du Zeit hast, ruf mich an."
+        ],
+        "tip": "Schreibe täglich 5 Sätze und identifiziere die Pflichtkommas. Mit Übung werden die Regeln automatisch. In der Prüfung lies deinen Text zweimal, um vergessene Kommas zu finden."
+      },
+      "vocabulary": [
+        {
+          "german": "das Komma",
+          "arabic": "Satzzeichen",
+          "example": "Das Komma fehlt.",
+          "exampleArabic": "Satzzeichen",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kommas"
+        },
+        {
+          "german": "der Punkt",
+          "arabic": "Schlusszeichen",
+          "example": "Setze einen Punkt.",
+          "exampleArabic": "Satzschluss",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Punkte"
+        },
+        {
+          "german": "der Strichpunkt",
+          "arabic": "Semikolon",
+          "example": "Hier brauchen wir einen Strichpunkt.",
+          "exampleArabic": "Semikolon",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Doppelpunkt",
+          "arabic": "zwei Punkte übereinander",
+          "example": "Nach dem Doppelpunkt.",
+          "exampleArabic": "Aufzählungseinleitung",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Anführungszeichen",
+          "arabic": "Zitatzeichen",
+          "example": "Anführungszeichen oben und unten.",
+          "exampleArabic": "Zitat",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Anführungszeichen"
+        },
+        {
+          "german": "der Bindestrich",
+          "arabic": "Verbindungsstrich",
+          "example": "Wir benutzen einen Bindestrich.",
+          "exampleArabic": "Wortverbinder",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bindestriche"
+        },
+        {
+          "german": "das Ausrufezeichen",
+          "arabic": "Ausruf-Zeichen",
+          "example": "Mit Ausrufezeichen!",
+          "exampleArabic": "Nachdruck",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Fragezeichen",
+          "arabic": "Frage-Zeichen",
+          "example": "Vergiss das Fragezeichen nicht.",
+          "exampleArabic": "Fragesatz-Zeichen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Klammer",
+          "arabic": "Einfügungszeichen",
+          "example": "In Klammern stehen Erklärungen.",
+          "exampleArabic": "Einfügung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Klammern"
+        },
+        {
+          "german": "der Hauptsatz",
+          "arabic": "selbständiger Satz",
+          "example": "Ein Hauptsatz hat Subjekt und Verb.",
+          "exampleArabic": "Hauptsatz",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Hauptsätze"
+        },
+        {
+          "german": "der Nebensatz",
+          "arabic": "untergeordneter Satz",
+          "example": "Nebensätze beginnen mit dass, weil, wenn.",
+          "exampleArabic": "Untersatz",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Nebensätze"
+        },
+        {
+          "german": "die Apposition",
+          "arabic": "Erläuterungseinschub",
+          "example": "Mein Bruder, der Arzt — Apposition.",
+          "exampleArabic": "Beifügung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Appositionen"
+        },
+        {
+          "german": "die Aufzählung",
+          "arabic": "Reihung",
+          "example": "In einer Aufzählung trennen Kommas.",
+          "exampleArabic": "Liste",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Aufzählungen"
+        },
+        {
+          "german": "die Anrede",
+          "arabic": "Adressierung",
+          "example": "Hallo, Maria — Anrede.",
+          "exampleArabic": "Anredeform",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Anreden"
+        },
+        {
+          "german": "der Einschub",
+          "arabic": "Einfügung",
+          "example": "Ein Einschub wird mit Kommas getrennt.",
+          "exampleArabic": "Einschub",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Einschübe"
+        },
+        {
+          "german": "die Konjunktion",
+          "arabic": "Verbindungswort",
+          "example": "aber ist eine Konjunktion.",
+          "exampleArabic": "Bindewort",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konjunktionen"
+        },
+        {
+          "german": "die Zeichensetzung",
+          "arabic": "Interpunktion",
+          "example": "Die Zeichensetzung ist wichtig.",
+          "exampleArabic": "Interpunktion",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Rechtschreibung",
+          "arabic": "Orthografie",
+          "example": "Achten Sie auf die Rechtschreibung.",
+          "exampleArabic": "Orthografie",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Grammatik",
+          "arabic": "Sprachlehre",
+          "example": "Deutsche Grammatik ist logisch.",
+          "exampleArabic": "Sprachlehre",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Satzbau",
+          "arabic": "Aufbau eines Satzes",
+          "example": "Der Satzbau ist klar.",
+          "exampleArabic": "Syntax",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Regel",
+          "arabic": "Vorschrift",
+          "example": "Eine wichtige Regel.",
+          "exampleArabic": "Vorschrift",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Regeln"
+        },
+        {
+          "german": "die Ausnahme",
+          "arabic": "Sonderfall",
+          "example": "Eine Ausnahme von der Regel.",
+          "exampleArabic": "Sonderfall",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ausnahmen"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "Irrtum",
+          "example": "Ein häufiger Fehler.",
+          "exampleArabic": "Irrtum",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Fehler"
+        },
+        {
+          "german": "die Korrektur",
+          "arabic": "Berichtigung",
+          "example": "Eine wichtige Korrektur.",
+          "exampleArabic": "Berichtigung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Korrekturen"
+        },
+        {
+          "german": "trennen",
+          "arabic": "auseinanderhalten",
+          "example": "Kommas trennen Satzteile.",
+          "exampleArabic": "Trennung",
+          "type": "verb"
+        },
+        {
+          "german": "verbinden",
+          "arabic": "zusammenfügen",
+          "example": "und verbindet zwei Sätze.",
+          "exampleArabic": "Verbindung",
+          "type": "verb"
+        },
+        {
+          "german": "beginnen",
+          "arabic": "anfangen",
+          "example": "Der Satz beginnt mit einem Großbuchstaben.",
+          "exampleArabic": "Anfang",
+          "type": "verb"
+        },
+        {
+          "german": "beenden",
+          "arabic": "abschließen",
+          "example": "Beende den Satz mit einem Punkt.",
+          "exampleArabic": "Abschluss",
+          "type": "verb"
+        },
+        {
+          "german": "verbessern",
+          "arabic": "korrigieren",
+          "example": "Verbessere deinen Text.",
+          "exampleArabic": "Korrektur",
+          "type": "verb"
+        },
+        {
+          "german": "überprüfen",
+          "arabic": "kontrollieren",
+          "example": "Überprüfe die Zeichensetzung.",
+          "exampleArabic": "Kontrolle",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q1",
+            "question": "Komma vor dass? „Ich weiß ___ er kommt.\"",
+            "answer": ",",
+            "hint": "immer vor Nebensatz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q2",
+            "question": "Korrekte Aufzählung:",
+            "options": [
+              "Brot, Milch, und Käse",
+              "Brot Milch und Käse",
+              "Brot, Milch und Käse",
+              "Brot, Milch, Käse, und Butter,"
+            ],
+            "answer": "Brot, Milch und Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q3",
+            "question": "Komma vor aber? „Er ist klug ___ faul.\"",
+            "answer": ", aber",
+            "hint": "aber immer mit Komma"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q4",
+            "question": "Korrekte Apposition:",
+            "options": [
+              "Mein Bruder der Arzt kommt.",
+              "Mein Bruder, der Arzt, kommt.",
+              "Mein Bruder, der Arzt kommt.",
+              "Mein Bruder der Arzt, kommt."
+            ],
+            "answer": "Mein Bruder, der Arzt, kommt."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q5",
+            "question": "Anrede: „Hallo ___ Maria ___ wie geht's?\"",
+            "answer": ", ,",
+            "hint": "zwei Kommas um den Namen"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q6",
+            "question": "Verbinde Regel mit Beispiel:",
+            "pairs": [
+              {
+                "left": "Nebensatz",
+                "right": "immer Komma"
+              },
+              {
+                "left": "Aufzählung",
+                "right": "kein Komma vor letztem und"
+              },
+              {
+                "left": "aber/sondern",
+                "right": "immer Komma"
+              },
+              {
+                "left": "Apposition",
+                "right": "zwei Kommas"
+              },
+              {
+                "left": "Anrede",
+                "right": "zwei Kommas"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q7",
+            "question": "Ordne richtig: „Ich glaube, dass du recht hast\"",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q8",
+            "question": "Sage mit Kommas: „Mein Vater, ein Lehrer, lebt in Casablanca\"",
+            "answer": "Mein Vater, ein Lehrer, lebt in Casablanca"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q9",
+            "question": "Hör zu: „Wir kaufen Brot ___ Milch ___ Käse.\" (mit Zeichen)",
+            "audioPrompt": "Wir kaufen Brot, Milch und Käse.",
+            "answer": ", ,",
+            "hint": "Komma nach den ersten beiden, dann und"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q10",
+            "question": "Häufiger Fehler:",
+            "options": [
+              "Komma zwischen dass und Subjekt",
+              "Komma vor aber",
+              "Komma vor dass",
+              "Kommas um Apposition"
+            ],
+            "answer": "Komma zwischen dass und Subjekt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q11",
+            "question": "Komma vor sondern? „Er ist nicht traurig ___ glücklich.\"",
+            "answer": ", sondern",
+            "hint": "sondern wie aber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q12",
+            "question": "Komma nach Zeitangabe am Anfang?",
+            "options": [
+              "immer",
+              "nein, üblich nicht",
+              "nur mit heute",
+              "Pflicht im Journalismus"
+            ],
+            "answer": "nein, üblich nicht"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q13",
+            "question": "Apposition: „Mein Bruder ___ der Lehrer ___ kommt morgen.\"",
+            "answer": ", ,",
+            "hint": "zwei Kommas um Apposition"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q14",
+            "question": "Verbinde Regel mit Beispiel:",
+            "pairs": [
+              {
+                "left": "vor aber/sondern",
+                "right": "immer Komma"
+              },
+              {
+                "left": "Aufzählung vor und",
+                "right": "kein Komma"
+              },
+              {
+                "left": "um Anrede",
+                "right": "zwei Kommas"
+              },
+              {
+                "left": "nach Zeitangabe",
+                "right": "kein Komma"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q15",
+            "question": "Korrigiere (mit korrekten Kommas): „Ich glaube dass du recht hast\"",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q16",
+            "question": "Hör zu: „Er ist klug ___ sehr beschäftigt.\"",
+            "audioPrompt": "Er ist klug, aber sehr beschäftigt.",
+            "answer": ", aber",
+            "hint": "aber immer mit Komma"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q17",
+            "question": "In der C1-Prüfung kostet ein Komma-Fehler:",
+            "options": [
+              "nichts",
+              "0,5–1 Punkt",
+              "den ganzen Aufsatz",
+              "nichts, wenn der Leser versteht"
+            ],
+            "answer": "0,5–1 Punkt"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q18",
+            "question": "Sage mit Kommas: „Wir kaufen Brot, Milch, Käse und Butter\"",
+            "answer": "Wir kaufen Brot, Milch, Käse und Butter"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q19",
+            "question": "„Ich versuche ___ das zu lernen.\" (erweitertes Inf mit zu)",
+            "answer": ",",
+            "hint": "Komma vor erweitertem zu-Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q20",
+            "question": "In der Aufzählung „Brot, Milch und Käse\" notieren wir:",
+            "options": [
+              "Komma vor und",
+              "kein Komma vor und",
+              "zwei Kommas vor und",
+              "Komma zwischen allen Elementen"
+            ],
+            "answer": "kein Komma vor und"
+          }
+        ]
+      }
     }
   },
   "title": "Stufe Fünf",
