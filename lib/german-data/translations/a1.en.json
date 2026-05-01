@@ -6646,6 +6646,123 @@
           "example": "Ich habe Fieber.",
           "exampleArabic": "I have a fever.",
           "type": "noun"
+        },
+        {
+          "german": "die Erkältung",
+          "arabic": "cold",
+          "gender": "die",
+          "plural": "Erkältungen",
+          "example": "Ich habe eine Erkältung.",
+          "exampleArabic": "I have a cold.",
+          "type": "noun"
+        },
+        {
+          "german": "der Husten",
+          "arabic": "cough",
+          "gender": "der",
+          "example": "Ich habe Husten.",
+          "exampleArabic": "I have a cough.",
+          "type": "noun"
+        },
+        {
+          "german": "die Grippe",
+          "arabic": "flu",
+          "gender": "die",
+          "example": "Ich habe Grippe.",
+          "exampleArabic": "I have the flu.",
+          "type": "noun"
+        },
+        {
+          "german": "das Auge",
+          "arabic": "eye",
+          "gender": "das",
+          "plural": "Augen",
+          "example": "Meine Augen tun weh.",
+          "exampleArabic": "My eyes hurt.",
+          "type": "noun"
+        },
+        {
+          "german": "das Ohr",
+          "arabic": "ear",
+          "gender": "das",
+          "plural": "Ohren",
+          "example": "Mein Ohr tut weh.",
+          "exampleArabic": "My ear hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nase",
+          "arabic": "nose",
+          "gender": "die",
+          "plural": "Nasen",
+          "example": "Meine Nase läuft.",
+          "exampleArabic": "My nose is running.",
+          "type": "noun"
+        },
+        {
+          "german": "der Hals",
+          "arabic": "throat / neck",
+          "gender": "der",
+          "plural": "Hälse",
+          "example": "Mein Hals tut weh.",
+          "exampleArabic": "My throat hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "back",
+          "gender": "der",
+          "example": "Mein Rücken tut weh.",
+          "exampleArabic": "My back hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "das Knie",
+          "arabic": "knee",
+          "gender": "das",
+          "plural": "Knie",
+          "example": "Mein Knie schmerzt.",
+          "exampleArabic": "My knee hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "die Verletzung",
+          "arabic": "injury",
+          "gender": "die",
+          "plural": "Verletzungen",
+          "example": "Eine kleine Verletzung.",
+          "exampleArabic": "A small injury.",
+          "type": "noun"
+        },
+        {
+          "german": "sich verletzen",
+          "arabic": "to hurt oneself",
+          "example": "Ich habe mich verletzt.",
+          "exampleArabic": "I hurt myself.",
+          "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "to recover",
+          "example": "Ich erhole mich gut.",
+          "exampleArabic": "I'm recovering well.",
+          "type": "verb"
+        },
+        {
+          "german": "der Notfall",
+          "arabic": "emergency",
+          "gender": "der",
+          "plural": "Notfälle",
+          "example": "Das ist ein Notfall!",
+          "exampleArabic": "This is an emergency!",
+          "type": "noun"
+        },
+        {
+          "german": "gute Besserung",
+          "arabic": "get well soon",
+          "example": "Gute Besserung!",
+          "exampleArabic": "Get well soon!",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -6767,6 +6884,117 @@
               "möchten is only for negatives."
             ],
             "answer": "möchten is more polite."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q11",
+            "question": "\"Ich habe eine ___\" (cold)",
+            "answer": "Erkältung",
+            "hint": "die Erkältung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q12",
+            "question": "Flu in German:",
+            "options": [
+              "der Husten",
+              "die Grippe",
+              "das Fieber",
+              "die Erkältung"
+            ],
+            "answer": "die Grippe"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q13",
+            "question": "\"Mein ___ tut weh.\" (back)",
+            "answer": "Rücken",
+            "hint": "der Rücken"
+          },
+          {
+            "type": "matching",
+            "id": "a1-10-q14",
+            "question": "Match the body part to its meaning:",
+            "pairs": [
+              {
+                "left": "Auge",
+                "right": "eye"
+              },
+              {
+                "left": "Ohr",
+                "right": "ear"
+              },
+              {
+                "left": "Nase",
+                "right": "nose"
+              },
+              {
+                "left": "Hals",
+                "right": "throat"
+              },
+              {
+                "left": "Knie",
+                "right": "knee"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-10-q15",
+            "question": "Order: \"I'm recovering well\"",
+            "words": [
+              "Ich",
+              "erhole",
+              "mich",
+              "gut"
+            ],
+            "answer": "Ich erhole mich gut"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-10-q16",
+            "question": "Say: \"Get well soon! Rest a lot\"",
+            "answer": "Gute Besserung Erhol dich gut"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q17",
+            "question": "Listen: \"Ich habe ___\" (cough)",
+            "audioPrompt": "Ich habe Husten.",
+            "answer": "Husten",
+            "hint": "der Husten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q18",
+            "question": "Emergency in German:",
+            "options": [
+              "der Termin",
+              "der Notfall",
+              "die Apotheke",
+              "das Rezept"
+            ],
+            "answer": "der Notfall"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q19",
+            "question": "\"Ich habe mich ___\" (hurt)",
+            "answer": "verletzt",
+            "hint": "sich verletzen Partizip"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q20",
+            "question": "How many times a day to take pills?",
+            "options": [
+              "einmal",
+              "zweimal",
+              "dreimal",
+              "depends on the prescription"
+            ],
+            "answer": "depends on the prescription"
           }
         ]
       }

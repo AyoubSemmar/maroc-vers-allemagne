@@ -6646,6 +6646,123 @@
           "example": "Ich habe Fieber.",
           "exampleArabic": "J'ai de la fièvre.",
           "type": "noun"
+        },
+        {
+          "german": "die Erkältung",
+          "arabic": "le rhume",
+          "gender": "die",
+          "plural": "Erkältungen",
+          "example": "Ich habe eine Erkältung.",
+          "exampleArabic": "J'ai un rhume.",
+          "type": "noun"
+        },
+        {
+          "german": "der Husten",
+          "arabic": "la toux",
+          "gender": "der",
+          "example": "Ich habe Husten.",
+          "exampleArabic": "Je tousse.",
+          "type": "noun"
+        },
+        {
+          "german": "die Grippe",
+          "arabic": "la grippe",
+          "gender": "die",
+          "example": "Ich habe Grippe.",
+          "exampleArabic": "J'ai la grippe.",
+          "type": "noun"
+        },
+        {
+          "german": "das Auge",
+          "arabic": "l'œil",
+          "gender": "das",
+          "plural": "Augen",
+          "example": "Meine Augen tun weh.",
+          "exampleArabic": "Mes yeux me font mal.",
+          "type": "noun"
+        },
+        {
+          "german": "das Ohr",
+          "arabic": "l'oreille",
+          "gender": "das",
+          "plural": "Ohren",
+          "example": "Mein Ohr tut weh.",
+          "exampleArabic": "Mon oreille me fait mal.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nase",
+          "arabic": "le nez",
+          "gender": "die",
+          "plural": "Nasen",
+          "example": "Meine Nase läuft.",
+          "exampleArabic": "J'ai le nez qui coule.",
+          "type": "noun"
+        },
+        {
+          "german": "der Hals",
+          "arabic": "la gorge / le cou",
+          "gender": "der",
+          "plural": "Hälse",
+          "example": "Mein Hals tut weh.",
+          "exampleArabic": "J'ai mal à la gorge.",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "le dos",
+          "gender": "der",
+          "example": "Mein Rücken tut weh.",
+          "exampleArabic": "J'ai mal au dos.",
+          "type": "noun"
+        },
+        {
+          "german": "das Knie",
+          "arabic": "le genou",
+          "gender": "das",
+          "plural": "Knie",
+          "example": "Mein Knie schmerzt.",
+          "exampleArabic": "Mon genou me fait mal.",
+          "type": "noun"
+        },
+        {
+          "german": "die Verletzung",
+          "arabic": "la blessure",
+          "gender": "die",
+          "plural": "Verletzungen",
+          "example": "Eine kleine Verletzung.",
+          "exampleArabic": "Une petite blessure.",
+          "type": "noun"
+        },
+        {
+          "german": "sich verletzen",
+          "arabic": "se blesser",
+          "example": "Ich habe mich verletzt.",
+          "exampleArabic": "Je me suis blessé.",
+          "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "se rétablir",
+          "example": "Ich erhole mich gut.",
+          "exampleArabic": "Je me rétablis bien.",
+          "type": "verb"
+        },
+        {
+          "german": "der Notfall",
+          "arabic": "l'urgence",
+          "gender": "der",
+          "plural": "Notfälle",
+          "example": "Das ist ein Notfall!",
+          "exampleArabic": "C'est une urgence !",
+          "type": "noun"
+        },
+        {
+          "german": "gute Besserung",
+          "arabic": "bon rétablissement",
+          "example": "Gute Besserung!",
+          "exampleArabic": "Bon rétablissement !",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -6767,6 +6884,117 @@
               "möchten est uniquement pour le négatif."
             ],
             "answer": "möchten est plus poli."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q11",
+            "question": "« Ich habe eine ___ » (rhume)",
+            "answer": "Erkältung",
+            "hint": "die Erkältung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q12",
+            "question": "La grippe en allemand :",
+            "options": [
+              "der Husten",
+              "die Grippe",
+              "das Fieber",
+              "die Erkältung"
+            ],
+            "answer": "die Grippe"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q13",
+            "question": "« Mein ___ tut weh. » (dos)",
+            "answer": "Rücken",
+            "hint": "der Rücken"
+          },
+          {
+            "type": "matching",
+            "id": "a1-10-q14",
+            "question": "Associe l'organe à son sens :",
+            "pairs": [
+              {
+                "left": "Auge",
+                "right": "œil"
+              },
+              {
+                "left": "Ohr",
+                "right": "oreille"
+              },
+              {
+                "left": "Nase",
+                "right": "nez"
+              },
+              {
+                "left": "Hals",
+                "right": "gorge"
+              },
+              {
+                "left": "Knie",
+                "right": "genou"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-10-q15",
+            "question": "Ordonne : « Je me rétablis bien »",
+            "words": [
+              "Ich",
+              "erhole",
+              "mich",
+              "gut"
+            ],
+            "answer": "Ich erhole mich gut"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-10-q16",
+            "question": "Dis : « Bon rétablissement ! Repose-toi bien »",
+            "answer": "Gute Besserung Erhol dich gut"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q17",
+            "question": "Écoute : « Ich habe ___ » (toux)",
+            "audioPrompt": "Ich habe Husten.",
+            "answer": "Husten",
+            "hint": "der Husten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q18",
+            "question": "Urgence en allemand :",
+            "options": [
+              "der Termin",
+              "der Notfall",
+              "die Apotheke",
+              "das Rezept"
+            ],
+            "answer": "der Notfall"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q19",
+            "question": "« Ich habe mich ___ » (blessé)",
+            "answer": "verletzt",
+            "hint": "sich verletzen Partizip"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q20",
+            "question": "Combien de fois par jour prendre les comprimés ?",
+            "options": [
+              "einmal",
+              "zweimal",
+              "dreimal",
+              "ça dépend de l'ordonnance"
+            ],
+            "answer": "ça dépend de l'ordonnance"
           }
         ]
       }

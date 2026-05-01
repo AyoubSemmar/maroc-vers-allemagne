@@ -6646,6 +6646,123 @@
           "example": "Ich habe Fieber.",
           "exampleArabic": "Ich habe Fieber.",
           "type": "noun"
+        },
+        {
+          "german": "die Erkältung",
+          "arabic": "leichte Krankheit mit Schnupfen",
+          "gender": "die",
+          "plural": "Erkältungen",
+          "example": "Ich habe eine Erkältung.",
+          "exampleArabic": "Schnupfen",
+          "type": "noun"
+        },
+        {
+          "german": "der Husten",
+          "arabic": "Reflex der Atemwege",
+          "gender": "der",
+          "example": "Ich habe Husten.",
+          "exampleArabic": "Atemwegssymptom",
+          "type": "noun"
+        },
+        {
+          "german": "die Grippe",
+          "arabic": "Influenza",
+          "gender": "die",
+          "example": "Ich habe Grippe.",
+          "exampleArabic": "Virusinfektion",
+          "type": "noun"
+        },
+        {
+          "german": "das Auge",
+          "arabic": "Sehorgan",
+          "gender": "das",
+          "plural": "Augen",
+          "example": "Meine Augen tun weh.",
+          "exampleArabic": "Sehorgan",
+          "type": "noun"
+        },
+        {
+          "german": "das Ohr",
+          "arabic": "Hörorgan",
+          "gender": "das",
+          "plural": "Ohren",
+          "example": "Mein Ohr tut weh.",
+          "exampleArabic": "Hörorgan",
+          "type": "noun"
+        },
+        {
+          "german": "die Nase",
+          "arabic": "Atmungs- und Riechorgan",
+          "gender": "die",
+          "plural": "Nasen",
+          "example": "Meine Nase läuft.",
+          "exampleArabic": "Riechorgan",
+          "type": "noun"
+        },
+        {
+          "german": "der Hals",
+          "arabic": "Verbindung zwischen Kopf und Körper",
+          "gender": "der",
+          "plural": "Hälse",
+          "example": "Mein Hals tut weh.",
+          "exampleArabic": "Halsbereich",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "hintere Körperseite",
+          "gender": "der",
+          "example": "Mein Rücken tut weh.",
+          "exampleArabic": "Rückenbereich",
+          "type": "noun"
+        },
+        {
+          "german": "das Knie",
+          "arabic": "Gelenk im Bein",
+          "gender": "das",
+          "plural": "Knie",
+          "example": "Mein Knie schmerzt.",
+          "exampleArabic": "Beingelenk",
+          "type": "noun"
+        },
+        {
+          "german": "die Verletzung",
+          "arabic": "körperliche Beschädigung",
+          "gender": "die",
+          "plural": "Verletzungen",
+          "example": "Eine kleine Verletzung.",
+          "exampleArabic": "Wunde",
+          "type": "noun"
+        },
+        {
+          "german": "sich verletzen",
+          "arabic": "sich Wunde zufügen",
+          "example": "Ich habe mich verletzt.",
+          "exampleArabic": "Verletzung",
+          "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "wieder gesund werden",
+          "example": "Ich erhole mich gut.",
+          "exampleArabic": "Erholung",
+          "type": "verb"
+        },
+        {
+          "german": "der Notfall",
+          "arabic": "dringende Situation",
+          "gender": "der",
+          "plural": "Notfälle",
+          "example": "Das ist ein Notfall!",
+          "exampleArabic": "akute Lage",
+          "type": "noun"
+        },
+        {
+          "german": "gute Besserung",
+          "arabic": "Genesungswunsch",
+          "example": "Gute Besserung!",
+          "exampleArabic": "Genesungswunsch",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -6767,6 +6884,117 @@
               "möchten nur für Negatives."
             ],
             "answer": "möchten ist höflicher."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q11",
+            "question": "„Ich habe eine ___\" (Erkältung)",
+            "answer": "Erkältung",
+            "hint": "die Erkältung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q12",
+            "question": "Influenza:",
+            "options": [
+              "der Husten",
+              "die Grippe",
+              "das Fieber",
+              "die Erkältung"
+            ],
+            "answer": "die Grippe"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q13",
+            "question": "„Mein ___ tut weh.\" (Rücken)",
+            "answer": "Rücken",
+            "hint": "der Rücken"
+          },
+          {
+            "type": "matching",
+            "id": "a1-10-q14",
+            "question": "Verbinde Körperteil mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Auge",
+                "right": "Sehorgan"
+              },
+              {
+                "left": "Ohr",
+                "right": "Hörorgan"
+              },
+              {
+                "left": "Nase",
+                "right": "Riechorgan"
+              },
+              {
+                "left": "Hals",
+                "right": "Halsbereich"
+              },
+              {
+                "left": "Knie",
+                "right": "Beingelenk"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-10-q15",
+            "question": "Ordne: „Ich erhole mich gut\"",
+            "words": [
+              "Ich",
+              "erhole",
+              "mich",
+              "gut"
+            ],
+            "answer": "Ich erhole mich gut"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-10-q16",
+            "question": "Sage: „Gute Besserung! Erhol dich gut\"",
+            "answer": "Gute Besserung Erhol dich gut"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q17",
+            "question": "Hör zu: „Ich habe ___\" (Husten)",
+            "audioPrompt": "Ich habe Husten.",
+            "answer": "Husten",
+            "hint": "der Husten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q18",
+            "question": "dringende Situation:",
+            "options": [
+              "der Termin",
+              "der Notfall",
+              "die Apotheke",
+              "das Rezept"
+            ],
+            "answer": "der Notfall"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-10-q19",
+            "question": "„Ich habe mich ___\" (verletzt)",
+            "answer": "verletzt",
+            "hint": "sich verletzen Partizip"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-10-q20",
+            "question": "Wie oft am Tag Tabletten nehmen?",
+            "options": [
+              "einmal",
+              "zweimal",
+              "dreimal",
+              "kommt aufs Rezept an"
+            ],
+            "answer": "kommt aufs Rezept an"
           }
         ]
       }
