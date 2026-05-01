@@ -6125,6 +6125,618 @@
           }
         ]
       }
+    },
+    "a2-15": {
+      "id": "a2-15",
+      "title": "Konjunktiv II für Höflichkeit",
+      "order": 15,
+      "grammar": {
+        "title": "würde, hätte, wäre + höflich bitten",
+        "content": "Der **Konjunktiv II** ist ein eigenes Thema in B1, aber in A2 lernen wir seine einfachste und wichtigste Verwendung: **die Höflichkeit**. Wenn du im Restaurant, im Geschäft oder bei einer fremden Person etwas erbittest, verwende den Konjunktiv II statt der normalen Form — er ist deutlich höflicher.\n\n**Die drei Grundformen:**\n- **würde + Infinitiv** = ich würde gern... (mit fast jedem Verb)\n- **hätte** = „wenn ich hätte...\"\n- **wäre** = „wenn ich wäre...\"\n\n**Beispiele aus dem Alltag:**\n→ Ich **möchte** einen Kaffee, bitte. (höfliche Form von wollen)\n→ Ich **hätte** gern einen Tisch für zwei.\n→ **Würden** Sie mir helfen?",
+        "tables": [
+          {
+            "title": "würde + Infinitiv (am häufigsten)",
+            "headers": [
+              "Pronomen",
+              "würde + ...",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "würde",
+                  "Ich würde gern kommen."
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "würdest",
+                  "Würdest du mir helfen?"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "würde",
+                  "Sie würde gern bleiben."
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "würden",
+                  "Wir würden gern bestellen."
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "würdet",
+                  "Würdet ihr kommen?"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "würden",
+                  "Würden Sie bitte warten?"
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "würde + Hauptverb am Ende im Infinitiv."
+          },
+          {
+            "title": "hätte und wäre — Sonderfälle",
+            "headers": [
+              "Pronomen",
+              "hätte (haben, höflich)",
+              "wäre (sein, höflich)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "wäre"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "wärst (wärest)"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "hätte",
+                  "wäre"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "wären"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "wärt (wäret)"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "hätten",
+                  "wären"
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "hätte gern (= ich möchte) und wäre gern verwenden."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "möchte ist der Konjunktiv II von mögen — im Restaurant und Geschäft verwenden.",
+            "example": "Ich möchte ein Wasser, bitte.",
+            "translation": "höfliche Bestellung"
+          },
+          {
+            "rule": "würde + Infinitiv ist die im Sprechen am häufigsten verwendete Konjunktiv-II-Form.",
+            "example": "Ich würde gern Deutschland besuchen.",
+            "translation": "höflicher Wunsch"
+          },
+          {
+            "rule": "hätte gern + Substantiv = ich möchte etwas (sehr höflich beim Bestellen).",
+            "example": "Ich hätte gern einen Tisch am Fenster.",
+            "translation": "Restaurantsprache"
+          },
+          {
+            "rule": "Könnten Sie...? und Würden Sie...? sind höfliche Fragen.",
+            "example": "Könnten Sie mir helfen? / Würden Sie das wiederholen?",
+            "translation": "höfliche Bitte"
+          }
+        ],
+        "examples": [
+          "Ich möchte einen Tisch reservieren.",
+          "Würden Sie mir bitte helfen?",
+          "Könntest du das Fenster öffnen?",
+          "Ich hätte gern einen Cappuccino.",
+          "Wir würden gern in Berlin wohnen.",
+          "Wäre das möglich?",
+          "Ich würde mehr Wasser trinken.",
+          "Hättest du Zeit für mich?"
+        ],
+        "tip": "Wann immer du etwas von einer fremden Person oder in einer formellen Situation erbittest, verwende eine höfliche Form. Der Unterschied zwischen „Ich will Wasser\" und „Ich möchte Wasser, bitte\" ist der Unterschied zwischen Unhöflichkeit und Respekt."
+      },
+      "vocabulary": [
+        {
+          "german": "möchten",
+          "arabic": "höflich wollen",
+          "example": "Ich möchte einen Kaffee.",
+          "exampleArabic": "höfliche Bestellung",
+          "type": "verb"
+        },
+        {
+          "german": "würden",
+          "arabic": "höfliche Form mit Verb",
+          "example": "Ich würde gern kommen.",
+          "exampleArabic": "Konj. II + Inf",
+          "type": "verb"
+        },
+        {
+          "german": "hätte",
+          "arabic": "höfliches haben",
+          "example": "Ich hätte gern einen Tee.",
+          "exampleArabic": "höflicher Wunsch",
+          "type": "verb"
+        },
+        {
+          "german": "wäre",
+          "arabic": "höfliches sein",
+          "example": "Wäre das möglich?",
+          "exampleArabic": "höfliche Frage",
+          "type": "verb"
+        },
+        {
+          "german": "könnten",
+          "arabic": "höfliches können",
+          "example": "Könnten Sie mir helfen?",
+          "exampleArabic": "höfliche Bitte",
+          "type": "verb"
+        },
+        {
+          "german": "gern",
+          "arabic": "mit Freude",
+          "example": "Ich würde gern bleiben.",
+          "exampleArabic": "Vorliebe ausdrücken",
+          "type": "adverb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "bevorzugt",
+          "example": "Ich hätte lieber Tee.",
+          "exampleArabic": "Präferenz",
+          "type": "adverb"
+        },
+        {
+          "german": "bitte",
+          "arabic": "höfliches Wort",
+          "example": "Einen Kaffee, bitte.",
+          "exampleArabic": "Höflichkeitspartikel",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "möglicherweise",
+          "example": "Vielleicht würde ich kommen.",
+          "exampleArabic": "Möglichkeit",
+          "type": "adverb"
+        },
+        {
+          "german": "reservieren",
+          "arabic": "im Voraus buchen",
+          "example": "Ich möchte einen Tisch reservieren.",
+          "exampleArabic": "Vorbestellung",
+          "type": "verb"
+        },
+        {
+          "german": "bestellen",
+          "arabic": "etwas auswählen / ordern",
+          "example": "Ich würde gern bestellen.",
+          "exampleArabic": "im Restaurant",
+          "type": "verb"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "noch einmal sagen",
+          "example": "Würden Sie das wiederholen?",
+          "exampleArabic": "erneut äußern",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "verständlich machen",
+          "example": "Könnten Sie das erklären?",
+          "exampleArabic": "Erläuterung geben",
+          "type": "verb"
+        },
+        {
+          "german": "zeigen",
+          "arabic": "präsentieren / vorführen",
+          "example": "Würden Sie mir das zeigen?",
+          "exampleArabic": "sichtbar machen",
+          "type": "verb"
+        },
+        {
+          "german": "öffnen",
+          "arabic": "aufmachen",
+          "example": "Könntest du das Fenster öffnen?",
+          "exampleArabic": "Öffnungshandlung",
+          "type": "verb"
+        },
+        {
+          "german": "schließen",
+          "arabic": "zumachen",
+          "example": "Würden Sie die Tür schließen?",
+          "exampleArabic": "Schließungshandlung",
+          "type": "verb"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "Möbel zum Essen",
+          "example": "Einen Tisch für zwei, bitte.",
+          "exampleArabic": "Restaurantmöbel",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "die Rechnung",
+          "arabic": "zu zahlender Betrag",
+          "example": "Die Rechnung, bitte.",
+          "exampleArabic": "Zahlungsaufforderung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Rechnungen"
+        },
+        {
+          "german": "die Speisekarte",
+          "arabic": "Liste der Gerichte",
+          "example": "Könnte ich die Speisekarte haben?",
+          "exampleArabic": "Restaurantmenü",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Speisekarten"
+        },
+        {
+          "german": "die Bestellung",
+          "arabic": "ausgewählte Auswahl",
+          "example": "Eine Bestellung, bitte.",
+          "exampleArabic": "Restaurantorder",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bestellungen"
+        },
+        {
+          "german": "das Restaurant",
+          "arabic": "Speiselokal",
+          "example": "Wir gehen ins Restaurant.",
+          "exampleArabic": "Gastronomiebetrieb",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Restaurants"
+        },
+        {
+          "german": "das Café",
+          "arabic": "Lokal mit Kaffee und Kuchen",
+          "example": "Ich gehe ins Café.",
+          "exampleArabic": "Kaffeehaus",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Cafés"
+        },
+        {
+          "german": "der Kellner",
+          "arabic": "Bedienung im Restaurant",
+          "example": "Der Kellner kommt gleich.",
+          "exampleArabic": "Servicepersonal",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Kellner"
+        },
+        {
+          "german": "das Glas",
+          "arabic": "Trinkgefäß",
+          "example": "Ein Glas Wasser, bitte.",
+          "exampleArabic": "Trinkbehälter",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Gläser"
+        },
+        {
+          "german": "die Flasche",
+          "arabic": "größerer Behälter",
+          "example": "Eine Flasche Wein, bitte.",
+          "exampleArabic": "Getränkebehälter",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Flaschen"
+        },
+        {
+          "german": "die Tasse",
+          "arabic": "kleines Trinkgefäß mit Henkel",
+          "example": "Eine Tasse Kaffee.",
+          "exampleArabic": "Heißgetränkebehälter",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tassen"
+        },
+        {
+          "german": "höflich",
+          "arabic": "respektvoll",
+          "example": "Sei bitte höflich.",
+          "exampleArabic": "Umgangsform",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "nett im Umgang",
+          "example": "Der Kellner war sehr freundlich.",
+          "exampleArabic": "angenehmes Verhalten",
+          "type": "adjective"
+        },
+        {
+          "german": "natürlich",
+          "arabic": "selbstverständlich",
+          "example": "Natürlich helfe ich dir.",
+          "exampleArabic": "Zustimmung",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "ohne Zweifel",
+          "example": "Sicher kannst du kommen.",
+          "exampleArabic": "Bekräftigung",
+          "type": "adverb"
+        },
+        {
+          "german": "möglich",
+          "arabic": "machbar",
+          "example": "Wäre das möglich?",
+          "exampleArabic": "Realisierbarkeit",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q1",
+            "question": "Höfliche Form von mögen mit ich?",
+            "answer": "möchte",
+            "hint": "mögen → möchte (Konj. II)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q2",
+            "question": "Wie bittet man höflich: „Könntest du mir helfen?\"",
+            "options": [
+              "Hilf mir!",
+              "Du hilfst mir.",
+              "Könntest du mir helfen?",
+              "Ich helfe dir."
+            ],
+            "answer": "Könntest du mir helfen?"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q3",
+            "question": "Ergänze: „Ich ___ gern einen Tisch am Fenster.\" (höflich)",
+            "answer": "hätte",
+            "hint": "hätte gern + Substantiv"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q4",
+            "question": "Form von würde mit wir?",
+            "options": [
+              "würde",
+              "würdest",
+              "würden",
+              "würdet"
+            ],
+            "answer": "würden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q5",
+            "question": "Ergänze (höflich): „___ Sie das wiederholen?\"",
+            "answer": "Würden",
+            "hint": "Würden Sie + Infinitiv"
+          },
+          {
+            "type": "matching",
+            "id": "a2-15-q6",
+            "question": "Verbinde höfliche Form mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Ich möchte",
+                "right": "Wunsch"
+              },
+              {
+                "left": "Ich hätte gern",
+                "right": "Wunsch (mit Substantiv)"
+              },
+              {
+                "left": "Würden Sie",
+                "right": "höfliche Bitte"
+              },
+              {
+                "left": "Könnten Sie",
+                "right": "höfliche Frage"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-15-q7",
+            "question": "Ordne: „Ich hätte gern einen Cappuccino bitte\"",
+            "words": [
+              "Ich",
+              "hätte",
+              "gern",
+              "einen",
+              "Cappuccino",
+              "bitte"
+            ],
+            "answer": "Ich hätte gern einen Cappuccino bitte"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-15-q8",
+            "question": "Sage höflich im Restaurant: „Könnte ich die Rechnung haben bitte\"",
+            "answer": "Könnte ich die Rechnung haben bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q9",
+            "question": "Hör zu: „___ das möglich?\" (Wäre? — höflich)",
+            "audioPrompt": "Wäre das möglich?",
+            "answer": "Wäre",
+            "hint": "wäre = sein im Konj. II"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q10",
+            "question": "Der höflichste Satz:",
+            "options": [
+              "Ich will Kaffee.",
+              "Gib mir Kaffee.",
+              "Kaffee!",
+              "Ich hätte gern einen Kaffee, bitte."
+            ],
+            "answer": "Ich hätte gern einen Kaffee, bitte."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q11",
+            "question": "Höflich: „___ Sie mir den Weg zeigen?\" (können Konj. II)",
+            "answer": "Könnten",
+            "hint": "können → könnten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q12",
+            "question": "Form von hätte mit du?",
+            "options": [
+              "hätte",
+              "hättest",
+              "hätten",
+              "hattet"
+            ],
+            "answer": "hättest"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q13",
+            "question": "„Ich ___ gerne in Berlin wohnen.\" (würde-Form)",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "type": "matching",
+            "id": "a2-15-q14",
+            "question": "Verbinde normale mit höflicher Form:",
+            "pairs": [
+              {
+                "left": "Ich will",
+                "right": "Ich möchte"
+              },
+              {
+                "left": "Kannst du",
+                "right": "Könntest du"
+              },
+              {
+                "left": "Hilf mir",
+                "right": "Würden Sie mir helfen"
+              },
+              {
+                "left": "Geben Sie",
+                "right": "Hätten Sie"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-15-q15",
+            "question": "Ordne: „Würden Sie das Fenster öffnen?\"",
+            "words": [
+              "Würden",
+              "Sie",
+              "das",
+              "Fenster",
+              "öffnen"
+            ],
+            "answer": "Würden Sie das Fenster öffnen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q16",
+            "question": "Hör zu: „Ich ___ gern bestellen.\" (höflich — würde)",
+            "audioPrompt": "Ich würde gern bestellen.",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q17",
+            "question": "Das Verb möchten kommt von:",
+            "options": [
+              "mögen",
+              "machen",
+              "müssen",
+              "müssen + möglich"
+            ],
+            "answer": "mögen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-15-q18",
+            "question": "Sage höflich: „Könnten Sie das wiederholen\"",
+            "answer": "Könnten Sie das wiederholen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q19",
+            "question": "„Wir ___ gern einen Tisch für vier.\" (höflich)",
+            "answer": "hätten",
+            "hint": "hätten gern + Substantiv"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q20",
+            "question": "Mit Fremden oder in formellen Situationen:",
+            "options": [
+              "normale Form",
+              "Imperativ",
+              "höflicher Konjunktiv II",
+              "ohne Artikel"
+            ],
+            "answer": "höflicher Konjunktiv II"
+          }
+        ]
+      }
     }
   },
   "title": "Stufe Zwei",
