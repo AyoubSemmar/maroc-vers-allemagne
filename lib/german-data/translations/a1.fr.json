@@ -7985,6 +7985,131 @@
           "example": "Viel Glück!",
           "exampleArabic": "Bonne chance !",
           "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "la question",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Eine Frage, bitte.",
+          "exampleArabic": "Une question, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "la réponse",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "Quelle est la réponse ?",
+          "type": "noun"
+        },
+        {
+          "german": "das Beispiel",
+          "arabic": "l'exemple",
+          "gender": "das",
+          "plural": "Beispiele",
+          "example": "Zum Beispiel...",
+          "exampleArabic": "Par exemple...",
+          "type": "noun"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "l'erreur",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich mache einen Fehler.",
+          "exampleArabic": "Je fais une erreur.",
+          "type": "noun"
+        },
+        {
+          "german": "das Wort",
+          "arabic": "le mot",
+          "gender": "das",
+          "plural": "Wörter",
+          "example": "Ein neues Wort.",
+          "exampleArabic": "Un nouveau mot.",
+          "type": "noun"
+        },
+        {
+          "german": "der Satz",
+          "arabic": "la phrase",
+          "gender": "der",
+          "plural": "Sätze",
+          "example": "Bilde einen Satz!",
+          "exampleArabic": "Forme une phrase !",
+          "type": "noun"
+        },
+        {
+          "german": "das Wörterbuch",
+          "arabic": "le dictionnaire",
+          "gender": "das",
+          "plural": "Wörterbücher",
+          "example": "Ich brauche ein Wörterbuch.",
+          "exampleArabic": "J'ai besoin d'un dictionnaire.",
+          "type": "noun"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "example": "Können Sie das erklären?",
+          "exampleArabic": "Pouvez-vous expliquer ?",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "s'entraîner",
+          "example": "Ich übe jeden Tag.",
+          "exampleArabic": "Je m'entraîne chaque jour.",
+          "type": "verb"
+        },
+        {
+          "german": "buchstabieren",
+          "arabic": "épeler",
+          "example": "Wie buchstabiert man das?",
+          "exampleArabic": "Comment ça s'épelle ?",
+          "type": "verb"
+        },
+        {
+          "german": "übersetzen",
+          "arabic": "traduire",
+          "example": "Übersetze diesen Satz.",
+          "exampleArabic": "Traduis cette phrase.",
+          "type": "verb"
+        },
+        {
+          "german": "leicht / schwer",
+          "arabic": "facile / difficile",
+          "example": "Deutsch ist nicht leicht.",
+          "exampleArabic": "L'allemand n'est pas facile.",
+          "type": "adjective"
+        },
+        {
+          "german": "das Niveau",
+          "arabic": "le niveau",
+          "gender": "das",
+          "plural": "Niveaus",
+          "example": "Ich bin auf Niveau A1.",
+          "exampleArabic": "Je suis au niveau A1.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "la langue",
+          "gender": "die",
+          "plural": "Sprachen",
+          "example": "Deutsch ist meine zweite Sprache.",
+          "exampleArabic": "L'allemand est ma 2e langue.",
+          "type": "noun"
+        },
+        {
+          "german": "der Akzent",
+          "arabic": "l'accent",
+          "gender": "der",
+          "plural": "Akzente",
+          "example": "Ich habe einen Akzent.",
+          "exampleArabic": "J'ai un accent.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -8111,6 +8236,118 @@
               "Ich helfen dir bitte!"
             ],
             "answer": "Hilf mir bitte!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q11",
+            "question": "« Ein neues ___ » (mot)",
+            "answer": "Wort",
+            "hint": "das Wort"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q12",
+            "question": "Le dictionnaire en allemand :",
+            "options": [
+              "das Buch",
+              "das Wörterbuch",
+              "die Sprache",
+              "die Frage"
+            ],
+            "answer": "das Wörterbuch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q13",
+            "question": "« Können Sie das ___? » (expliquer)",
+            "answer": "erklären",
+            "hint": "erklären = expliquer"
+          },
+          {
+            "type": "matching",
+            "id": "a1-12-q14",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "Frage",
+                "right": "question"
+              },
+              {
+                "left": "Antwort",
+                "right": "réponse"
+              },
+              {
+                "left": "Beispiel",
+                "right": "exemple"
+              },
+              {
+                "left": "Fehler",
+                "right": "erreur"
+              },
+              {
+                "left": "Wort",
+                "right": "mot"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-12-q15",
+            "question": "Ordonne : « Je m'entraîne à l'allemand chaque jour »",
+            "words": [
+              "Ich",
+              "übe",
+              "Deutsch",
+              "jeden",
+              "Tag"
+            ],
+            "answer": "Ich übe Deutsch jeden Tag"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-12-q16",
+            "question": "Dis : « Comment épelle-t-on ce mot ? »",
+            "answer": "Wie buchstabiert man dieses Wort"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q17",
+            "question": "Écoute : « Ich bin auf Niveau ___ » (le niveau)",
+            "audioPrompt": "Ich bin auf Niveau A1.",
+            "answer": "A1",
+            "hint": "A1, A2, B1..."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q18",
+            "question": "« leicht » signifie :",
+            "options": [
+              "difficile",
+              "facile",
+              "léger",
+              "les deux (facile/léger)"
+            ],
+            "answer": "les deux (facile/léger)"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q19",
+            "question": "« Übersetze diesen ___ » (phrase)",
+            "answer": "Satz",
+            "hint": "der Satz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q20",
+            "question": "L'accent en allemand :",
+            "options": [
+              "der Akzent",
+              "die Sprache",
+              "das Wort",
+              "der Fehler"
+            ],
+            "answer": "der Akzent"
           }
         ]
       }

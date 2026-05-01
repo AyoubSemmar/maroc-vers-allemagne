@@ -7985,6 +7985,131 @@
           "example": "Viel Glück!",
           "exampleArabic": "Viel Glück!",
           "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "Erkundigung",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Eine Frage, bitte.",
+          "exampleArabic": "Frageform",
+          "type": "noun"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "Reaktion auf eine Frage",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "Auskunft",
+          "type": "noun"
+        },
+        {
+          "german": "das Beispiel",
+          "arabic": "Veranschaulichung",
+          "gender": "das",
+          "plural": "Beispiele",
+          "example": "Zum Beispiel...",
+          "exampleArabic": "Erläuterungshilfe",
+          "type": "noun"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "Irrtum",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich mache einen Fehler.",
+          "exampleArabic": "Fehlleistung",
+          "type": "noun"
+        },
+        {
+          "german": "das Wort",
+          "arabic": "einzelne Spracheinheit",
+          "gender": "das",
+          "plural": "Wörter",
+          "example": "Ein neues Wort.",
+          "exampleArabic": "Vokabel",
+          "type": "noun"
+        },
+        {
+          "german": "der Satz",
+          "arabic": "Sprachstruktur",
+          "gender": "der",
+          "plural": "Sätze",
+          "example": "Bilde einen Satz!",
+          "exampleArabic": "Sprachstruktur",
+          "type": "noun"
+        },
+        {
+          "german": "das Wörterbuch",
+          "arabic": "Nachschlagewerk",
+          "gender": "das",
+          "plural": "Wörterbücher",
+          "example": "Ich brauche ein Wörterbuch.",
+          "exampleArabic": "Lexikon",
+          "type": "noun"
+        },
+        {
+          "german": "erklären",
+          "arabic": "verständlich machen",
+          "example": "Können Sie das erklären?",
+          "exampleArabic": "Erläuterung",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "trainieren",
+          "example": "Ich übe jeden Tag.",
+          "exampleArabic": "Übung",
+          "type": "verb"
+        },
+        {
+          "german": "buchstabieren",
+          "arabic": "Buchstabe für Buchstabe nennen",
+          "example": "Wie buchstabiert man das?",
+          "exampleArabic": "Buchstabieren",
+          "type": "verb"
+        },
+        {
+          "german": "übersetzen",
+          "arabic": "in andere Sprache überführen",
+          "example": "Übersetze diesen Satz.",
+          "exampleArabic": "Übersetzung",
+          "type": "verb"
+        },
+        {
+          "german": "leicht / schwer",
+          "arabic": "einfach / kompliziert",
+          "example": "Deutsch ist nicht leicht.",
+          "exampleArabic": "Schwierigkeitsgrad",
+          "type": "adjective"
+        },
+        {
+          "german": "das Niveau",
+          "arabic": "Sprachstufe",
+          "gender": "das",
+          "plural": "Niveaus",
+          "example": "Ich bin auf Niveau A1.",
+          "exampleArabic": "GeR-Stufe",
+          "type": "noun"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "Kommunikationssystem",
+          "gender": "die",
+          "plural": "Sprachen",
+          "example": "Deutsch ist meine zweite Sprache.",
+          "exampleArabic": "Sprachsystem",
+          "type": "noun"
+        },
+        {
+          "german": "der Akzent",
+          "arabic": "Aussprachefärbung",
+          "gender": "der",
+          "plural": "Akzente",
+          "example": "Ich habe einen Akzent.",
+          "exampleArabic": "Aussprache",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -8111,6 +8236,118 @@
               "Ich helfen dir bitte!"
             ],
             "answer": "Hilf mir bitte!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q11",
+            "question": "„Ein neues ___\" (Wort)",
+            "answer": "Wort",
+            "hint": "das Wort"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q12",
+            "question": "Nachschlagewerk:",
+            "options": [
+              "das Buch",
+              "das Wörterbuch",
+              "die Sprache",
+              "die Frage"
+            ],
+            "answer": "das Wörterbuch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q13",
+            "question": "„Können Sie das ___?\" (verständlich machen)",
+            "answer": "erklären",
+            "hint": "erklären"
+          },
+          {
+            "type": "matching",
+            "id": "a1-12-q14",
+            "question": "Verbinde Wort mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Frage",
+                "right": "Erkundigung"
+              },
+              {
+                "left": "Antwort",
+                "right": "Auskunft"
+              },
+              {
+                "left": "Beispiel",
+                "right": "Veranschaulichung"
+              },
+              {
+                "left": "Fehler",
+                "right": "Irrtum"
+              },
+              {
+                "left": "Wort",
+                "right": "Vokabel"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-12-q15",
+            "question": "Ordne: „Ich übe Deutsch jeden Tag\"",
+            "words": [
+              "Ich",
+              "übe",
+              "Deutsch",
+              "jeden",
+              "Tag"
+            ],
+            "answer": "Ich übe Deutsch jeden Tag"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-12-q16",
+            "question": "Sage: „Wie buchstabiert man dieses Wort?\"",
+            "answer": "Wie buchstabiert man dieses Wort"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q17",
+            "question": "Hör zu: „Ich bin auf Niveau ___\" (Sprachstufe)",
+            "audioPrompt": "Ich bin auf Niveau A1.",
+            "answer": "A1",
+            "hint": "A1, A2, B1..."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q18",
+            "question": "„leicht\" bedeutet:",
+            "options": [
+              "schwer",
+              "einfach",
+              "von geringem Gewicht",
+              "beides (einfach/leichtgewichtig)"
+            ],
+            "answer": "beides (einfach/leichtgewichtig)"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q19",
+            "question": "„Übersetze diesen ___\" (Sprachstruktur)",
+            "answer": "Satz",
+            "hint": "der Satz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q20",
+            "question": "Aussprachefärbung:",
+            "options": [
+              "der Akzent",
+              "die Sprache",
+              "das Wort",
+              "der Fehler"
+            ],
+            "answer": "der Akzent"
           }
         ]
       }

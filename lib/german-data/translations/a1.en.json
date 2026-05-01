@@ -7985,6 +7985,131 @@
           "example": "Viel Glück!",
           "exampleArabic": "Good luck!",
           "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "question",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Eine Frage, bitte.",
+          "exampleArabic": "A question, please.",
+          "type": "noun"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "answer",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "What's the answer?",
+          "type": "noun"
+        },
+        {
+          "german": "das Beispiel",
+          "arabic": "example",
+          "gender": "das",
+          "plural": "Beispiele",
+          "example": "Zum Beispiel...",
+          "exampleArabic": "For example...",
+          "type": "noun"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "mistake",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich mache einen Fehler.",
+          "exampleArabic": "I'm making a mistake.",
+          "type": "noun"
+        },
+        {
+          "german": "das Wort",
+          "arabic": "word",
+          "gender": "das",
+          "plural": "Wörter",
+          "example": "Ein neues Wort.",
+          "exampleArabic": "A new word.",
+          "type": "noun"
+        },
+        {
+          "german": "der Satz",
+          "arabic": "sentence",
+          "gender": "der",
+          "plural": "Sätze",
+          "example": "Bilde einen Satz!",
+          "exampleArabic": "Form a sentence!",
+          "type": "noun"
+        },
+        {
+          "german": "das Wörterbuch",
+          "arabic": "dictionary",
+          "gender": "das",
+          "plural": "Wörterbücher",
+          "example": "Ich brauche ein Wörterbuch.",
+          "exampleArabic": "I need a dictionary.",
+          "type": "noun"
+        },
+        {
+          "german": "erklären",
+          "arabic": "to explain",
+          "example": "Können Sie das erklären?",
+          "exampleArabic": "Can you explain?",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "to practice",
+          "example": "Ich übe jeden Tag.",
+          "exampleArabic": "I practice every day.",
+          "type": "verb"
+        },
+        {
+          "german": "buchstabieren",
+          "arabic": "to spell",
+          "example": "Wie buchstabiert man das?",
+          "exampleArabic": "How do you spell that?",
+          "type": "verb"
+        },
+        {
+          "german": "übersetzen",
+          "arabic": "to translate",
+          "example": "Übersetze diesen Satz.",
+          "exampleArabic": "Translate this sentence.",
+          "type": "verb"
+        },
+        {
+          "german": "leicht / schwer",
+          "arabic": "easy / difficult",
+          "example": "Deutsch ist nicht leicht.",
+          "exampleArabic": "German isn't easy.",
+          "type": "adjective"
+        },
+        {
+          "german": "das Niveau",
+          "arabic": "level",
+          "gender": "das",
+          "plural": "Niveaus",
+          "example": "Ich bin auf Niveau A1.",
+          "exampleArabic": "I'm at level A1.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "language",
+          "gender": "die",
+          "plural": "Sprachen",
+          "example": "Deutsch ist meine zweite Sprache.",
+          "exampleArabic": "German is my second language.",
+          "type": "noun"
+        },
+        {
+          "german": "der Akzent",
+          "arabic": "accent",
+          "gender": "der",
+          "plural": "Akzente",
+          "example": "Ich habe einen Akzent.",
+          "exampleArabic": "I have an accent.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -8111,6 +8236,118 @@
               "Ich helfen dir bitte!"
             ],
             "answer": "Hilf mir bitte!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q11",
+            "question": "\"Ein neues ___\" (word)",
+            "answer": "Wort",
+            "hint": "das Wort"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q12",
+            "question": "Dictionary in German:",
+            "options": [
+              "das Buch",
+              "das Wörterbuch",
+              "die Sprache",
+              "die Frage"
+            ],
+            "answer": "das Wörterbuch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q13",
+            "question": "\"Können Sie das ___?\" (explain)",
+            "answer": "erklären",
+            "hint": "erklären = explain"
+          },
+          {
+            "type": "matching",
+            "id": "a1-12-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "Frage",
+                "right": "question"
+              },
+              {
+                "left": "Antwort",
+                "right": "answer"
+              },
+              {
+                "left": "Beispiel",
+                "right": "example"
+              },
+              {
+                "left": "Fehler",
+                "right": "mistake"
+              },
+              {
+                "left": "Wort",
+                "right": "word"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-12-q15",
+            "question": "Order: \"I practice German every day\"",
+            "words": [
+              "Ich",
+              "übe",
+              "Deutsch",
+              "jeden",
+              "Tag"
+            ],
+            "answer": "Ich übe Deutsch jeden Tag"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-12-q16",
+            "question": "Say: \"How do you spell this word?\"",
+            "answer": "Wie buchstabiert man dieses Wort"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q17",
+            "question": "Listen: \"Ich bin auf Niveau ___\" (level)",
+            "audioPrompt": "Ich bin auf Niveau A1.",
+            "answer": "A1",
+            "hint": "A1, A2, B1..."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q18",
+            "question": "\"leicht\" means:",
+            "options": [
+              "difficult",
+              "easy",
+              "light (weight)",
+              "both (easy/light)"
+            ],
+            "answer": "both (easy/light)"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-12-q19",
+            "question": "\"Übersetze diesen ___\" (sentence)",
+            "answer": "Satz",
+            "hint": "der Satz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-12-q20",
+            "question": "Accent in German:",
+            "options": [
+              "der Akzent",
+              "die Sprache",
+              "das Wort",
+              "der Fehler"
+            ],
+            "answer": "der Akzent"
           }
         ]
       }
