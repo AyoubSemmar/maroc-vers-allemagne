@@ -4400,6 +4400,124 @@
           "example": "Ich bin selbstständig.",
           "exampleArabic": "Je suis indépendant.",
           "type": "adjective"
+        },
+        {
+          "german": "der Anwalt / die Anwältin",
+          "arabic": "l'avocat(e)",
+          "gender": "der",
+          "plural": "Anwälte",
+          "example": "Mein Anwalt hilft mir.",
+          "exampleArabic": "Mon avocat m'aide.",
+          "type": "noun"
+        },
+        {
+          "german": "der Friseur / die Friseurin",
+          "arabic": "le coiffeur / la coiffeuse",
+          "gender": "der",
+          "plural": "Friseure",
+          "example": "Ich gehe zum Friseur.",
+          "exampleArabic": "Je vais chez le coiffeur.",
+          "type": "noun"
+        },
+        {
+          "german": "der Bäcker",
+          "arabic": "le boulanger",
+          "gender": "der",
+          "plural": "Bäcker",
+          "example": "Der Bäcker macht Brot.",
+          "exampleArabic": "Le boulanger fait du pain.",
+          "type": "noun"
+        },
+        {
+          "german": "der Taxifahrer",
+          "arabic": "le chauffeur de taxi",
+          "gender": "der",
+          "plural": "Taxifahrer",
+          "example": "Der Taxifahrer kennt die Stadt.",
+          "exampleArabic": "Le chauffeur connaît la ville.",
+          "type": "noun"
+        },
+        {
+          "german": "der Architekt",
+          "arabic": "l'architecte",
+          "gender": "der",
+          "plural": "Architekten",
+          "example": "Mein Bruder ist Architekt.",
+          "exampleArabic": "Mon frère est architecte.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sekretärin",
+          "arabic": "la secrétaire",
+          "gender": "die",
+          "plural": "Sekretärinnen",
+          "example": "Die Sekretärin ist freundlich.",
+          "exampleArabic": "La secrétaire est aimable.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kollegin",
+          "arabic": "la collègue",
+          "gender": "die",
+          "plural": "Kolleginnen",
+          "example": "Meine Kollegin ist nett.",
+          "exampleArabic": "Ma collègue est sympa.",
+          "type": "noun"
+        },
+        {
+          "german": "die Stelle",
+          "arabic": "le poste / l'emploi",
+          "gender": "die",
+          "plural": "Stellen",
+          "example": "Ich suche eine Stelle.",
+          "exampleArabic": "Je cherche un poste.",
+          "type": "noun"
+        },
+        {
+          "german": "das Praktikum",
+          "arabic": "le stage",
+          "gender": "das",
+          "plural": "Praktika",
+          "example": "Ich mache ein Praktikum.",
+          "exampleArabic": "Je fais un stage.",
+          "type": "noun"
+        },
+        {
+          "german": "die Ausbildung",
+          "arabic": "la formation (Ausbildung)",
+          "gender": "die",
+          "plural": "Ausbildungen",
+          "example": "Meine Ausbildung dauert 3 Jahre.",
+          "exampleArabic": "Ma formation dure 3 ans.",
+          "type": "noun"
+        },
+        {
+          "german": "in Rente",
+          "arabic": "à la retraite",
+          "example": "Mein Vater ist in Rente.",
+          "exampleArabic": "Mon père est à la retraite.",
+          "type": "phrase"
+        },
+        {
+          "german": "Vollzeit / Teilzeit",
+          "arabic": "temps plein / partiel",
+          "example": "Ich arbeite Vollzeit.",
+          "exampleArabic": "Je travaille à temps plein.",
+          "type": "phrase"
+        },
+        {
+          "german": "kündigen",
+          "arabic": "démissionner",
+          "example": "Ich kündige nächsten Monat.",
+          "exampleArabic": "Je démissionne le mois prochain.",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben",
+          "arabic": "postuler",
+          "example": "Ich bewerbe mich um eine Stelle.",
+          "exampleArabic": "Je postule à un poste.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -4516,6 +4634,118 @@
               "Aucune n'est correcte"
             ],
             "answer": "Les deux sont correctes"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q11",
+            "question": "« Ich gehe zum ___ » (coiffeur)",
+            "answer": "Friseur",
+            "hint": "der Friseur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q12",
+            "question": "Comment dire « Mon père est à la retraite » ?",
+            "options": [
+              "Mein Vater hat Geld.",
+              "Mein Vater ist in Rente.",
+              "Mein Vater arbeitet.",
+              "Mein Vater hat Pause."
+            ],
+            "answer": "Mein Vater ist in Rente."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q13",
+            "question": "« Ich mache ein ___ » (stage)",
+            "answer": "Praktikum",
+            "hint": "das Praktikum"
+          },
+          {
+            "type": "matching",
+            "id": "a1-07-q14",
+            "question": "Associe le métier à son sens :",
+            "pairs": [
+              {
+                "left": "Anwalt",
+                "right": "avocat"
+              },
+              {
+                "left": "Bäcker",
+                "right": "boulanger"
+              },
+              {
+                "left": "Architekt",
+                "right": "architecte"
+              },
+              {
+                "left": "Sekretärin",
+                "right": "secrétaire"
+              },
+              {
+                "left": "Friseur",
+                "right": "coiffeur"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-07-q15",
+            "question": "Ordonne : « Je cherche un nouveau poste »",
+            "words": [
+              "Ich",
+              "suche",
+              "eine",
+              "neue",
+              "Stelle"
+            ],
+            "answer": "Ich suche eine neue Stelle"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-07-q16",
+            "question": "Dis : « Je travaille à temps plein dans une grande entreprise »",
+            "answer": "Ich arbeite Vollzeit in einer großen Firma"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q17",
+            "question": "Écoute : « Ich ___ mich um eine Stelle. » (postuler)",
+            "audioPrompt": "Ich bewerbe mich um eine Stelle.",
+            "answer": "bewerbe",
+            "hint": "sich bewerben + um"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q18",
+            "question": "Différence Vollzeit / Teilzeit :",
+            "options": [
+              "identiques",
+              "temps plein / partiel",
+              "matin / soir",
+              "fixe / temporaire"
+            ],
+            "answer": "temps plein / partiel"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q19",
+            "question": "« Meine ___ ist nett. » (la collègue)",
+            "answer": "Kollegin",
+            "hint": "die Kollegin"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q20",
+            "question": "Le verbe « kündigen » signifie :",
+            "options": [
+              "commencer",
+              "démissionner",
+              "travailler",
+              "louer"
+            ],
+            "answer": "démissionner"
           }
         ]
       }

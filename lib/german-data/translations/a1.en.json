@@ -4400,6 +4400,124 @@
           "example": "Ich bin selbstständig.",
           "exampleArabic": "I am self-employed.",
           "type": "adjective"
+        },
+        {
+          "german": "der Anwalt / die Anwältin",
+          "arabic": "lawyer",
+          "gender": "der",
+          "plural": "Anwälte",
+          "example": "Mein Anwalt hilft mir.",
+          "exampleArabic": "My lawyer helps me.",
+          "type": "noun"
+        },
+        {
+          "german": "der Friseur / die Friseurin",
+          "arabic": "hairdresser",
+          "gender": "der",
+          "plural": "Friseure",
+          "example": "Ich gehe zum Friseur.",
+          "exampleArabic": "I'm going to the hairdresser.",
+          "type": "noun"
+        },
+        {
+          "german": "der Bäcker",
+          "arabic": "baker",
+          "gender": "der",
+          "plural": "Bäcker",
+          "example": "Der Bäcker macht Brot.",
+          "exampleArabic": "The baker makes bread.",
+          "type": "noun"
+        },
+        {
+          "german": "der Taxifahrer",
+          "arabic": "taxi driver",
+          "gender": "der",
+          "plural": "Taxifahrer",
+          "example": "Der Taxifahrer kennt die Stadt.",
+          "exampleArabic": "The taxi driver knows the city.",
+          "type": "noun"
+        },
+        {
+          "german": "der Architekt",
+          "arabic": "architect",
+          "gender": "der",
+          "plural": "Architekten",
+          "example": "Mein Bruder ist Architekt.",
+          "exampleArabic": "My brother is an architect.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sekretärin",
+          "arabic": "secretary",
+          "gender": "die",
+          "plural": "Sekretärinnen",
+          "example": "Die Sekretärin ist freundlich.",
+          "exampleArabic": "The secretary is friendly.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kollegin",
+          "arabic": "colleague (female)",
+          "gender": "die",
+          "plural": "Kolleginnen",
+          "example": "Meine Kollegin ist nett.",
+          "exampleArabic": "My colleague is nice.",
+          "type": "noun"
+        },
+        {
+          "german": "die Stelle",
+          "arabic": "position / job",
+          "gender": "die",
+          "plural": "Stellen",
+          "example": "Ich suche eine Stelle.",
+          "exampleArabic": "I'm looking for a job.",
+          "type": "noun"
+        },
+        {
+          "german": "das Praktikum",
+          "arabic": "internship",
+          "gender": "das",
+          "plural": "Praktika",
+          "example": "Ich mache ein Praktikum.",
+          "exampleArabic": "I'm doing an internship.",
+          "type": "noun"
+        },
+        {
+          "german": "die Ausbildung",
+          "arabic": "vocational training (Ausbildung)",
+          "gender": "die",
+          "plural": "Ausbildungen",
+          "example": "Meine Ausbildung dauert 3 Jahre.",
+          "exampleArabic": "My training lasts 3 years.",
+          "type": "noun"
+        },
+        {
+          "german": "in Rente",
+          "arabic": "retired",
+          "example": "Mein Vater ist in Rente.",
+          "exampleArabic": "My father is retired.",
+          "type": "phrase"
+        },
+        {
+          "german": "Vollzeit / Teilzeit",
+          "arabic": "full-time / part-time",
+          "example": "Ich arbeite Vollzeit.",
+          "exampleArabic": "I work full-time.",
+          "type": "phrase"
+        },
+        {
+          "german": "kündigen",
+          "arabic": "to resign / quit",
+          "example": "Ich kündige nächsten Monat.",
+          "exampleArabic": "I'm quitting next month.",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben",
+          "arabic": "to apply (for a job)",
+          "example": "Ich bewerbe mich um eine Stelle.",
+          "exampleArabic": "I'm applying for a job.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -4516,6 +4634,118 @@
               "Neither is correct"
             ],
             "answer": "Both are correct"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q11",
+            "question": "\"Ich gehe zum ___\" (hairdresser)",
+            "answer": "Friseur",
+            "hint": "der Friseur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q12",
+            "question": "How to say \"My father is retired\"?",
+            "options": [
+              "Mein Vater hat Geld.",
+              "Mein Vater ist in Rente.",
+              "Mein Vater arbeitet.",
+              "Mein Vater hat Pause."
+            ],
+            "answer": "Mein Vater ist in Rente."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q13",
+            "question": "\"Ich mache ein ___\" (internship)",
+            "answer": "Praktikum",
+            "hint": "das Praktikum"
+          },
+          {
+            "type": "matching",
+            "id": "a1-07-q14",
+            "question": "Match the profession to its meaning:",
+            "pairs": [
+              {
+                "left": "Anwalt",
+                "right": "lawyer"
+              },
+              {
+                "left": "Bäcker",
+                "right": "baker"
+              },
+              {
+                "left": "Architekt",
+                "right": "architect"
+              },
+              {
+                "left": "Sekretärin",
+                "right": "secretary"
+              },
+              {
+                "left": "Friseur",
+                "right": "hairdresser"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-07-q15",
+            "question": "Order: \"I'm looking for a new position\"",
+            "words": [
+              "Ich",
+              "suche",
+              "eine",
+              "neue",
+              "Stelle"
+            ],
+            "answer": "Ich suche eine neue Stelle"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-07-q16",
+            "question": "Say: \"I work full-time at a big company\"",
+            "answer": "Ich arbeite Vollzeit in einer großen Firma"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q17",
+            "question": "Listen: \"Ich ___ mich um eine Stelle.\" (apply)",
+            "audioPrompt": "Ich bewerbe mich um eine Stelle.",
+            "answer": "bewerbe",
+            "hint": "sich bewerben + um"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q18",
+            "question": "Difference Vollzeit / Teilzeit:",
+            "options": [
+              "identical",
+              "full-time / part-time",
+              "morning / evening",
+              "permanent / temporary"
+            ],
+            "answer": "full-time / part-time"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-07-q19",
+            "question": "\"Meine ___ ist nett.\" (colleague f.)",
+            "answer": "Kollegin",
+            "hint": "die Kollegin"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-07-q20",
+            "question": "The verb \"kündigen\" means:",
+            "options": [
+              "to start",
+              "to resign",
+              "to work",
+              "to rent"
+            ],
+            "answer": "to resign"
           }
         ]
       }
