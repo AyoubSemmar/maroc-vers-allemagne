@@ -7332,6 +7332,109 @@
           "example": "Mach das Radio an.",
           "exampleArabic": "Mach das Radio an.",
           "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "Ordnung schaffen",
+          "example": "Räum dein Zimmer auf!",
+          "exampleArabic": "Ordnung halten",
+          "type": "verb"
+        },
+        {
+          "german": "abholen",
+          "arabic": "jemanden holen",
+          "example": "Ich hole dich ab.",
+          "exampleArabic": "Person holen",
+          "type": "verb"
+        },
+        {
+          "german": "aussehen",
+          "arabic": "Aussehen haben",
+          "example": "Du siehst gut aus.",
+          "exampleArabic": "Erscheinungsbild",
+          "type": "verb"
+        },
+        {
+          "german": "aufpassen",
+          "arabic": "achtsam sein",
+          "example": "Pass auf!",
+          "exampleArabic": "Aufmerksamkeit",
+          "type": "verb"
+        },
+        {
+          "german": "anziehen",
+          "arabic": "Kleidung anlegen",
+          "example": "Ich ziehe meine Jacke an.",
+          "exampleArabic": "Kleidung anlegen",
+          "type": "verb"
+        },
+        {
+          "german": "ausziehen",
+          "arabic": "Kleidung entfernen",
+          "example": "Zieh die Schuhe aus!",
+          "exampleArabic": "Kleidung ablegen",
+          "type": "verb"
+        },
+        {
+          "german": "anfangen",
+          "arabic": "beginnen",
+          "example": "Wann fängt der Kurs an?",
+          "exampleArabic": "Beginn",
+          "type": "verb"
+        },
+        {
+          "german": "aufhören",
+          "arabic": "beenden",
+          "example": "Hör auf!",
+          "exampleArabic": "Ende",
+          "type": "verb"
+        },
+        {
+          "german": "einladen",
+          "arabic": "zur Teilnahme bitten",
+          "example": "Ich lade dich ein.",
+          "exampleArabic": "Einladung",
+          "type": "verb"
+        },
+        {
+          "german": "mitmachen",
+          "arabic": "teilnehmen",
+          "example": "Mach mit!",
+          "exampleArabic": "Teilnahme",
+          "type": "verb"
+        },
+        {
+          "german": "wegfahren",
+          "arabic": "verreisen",
+          "example": "Wir fahren weg.",
+          "exampleArabic": "Abreise",
+          "type": "verb"
+        },
+        {
+          "german": "die Trennung",
+          "arabic": "Trennung der Vorsilbe",
+          "gender": "die",
+          "example": "Trennung am Satzende.",
+          "exampleArabic": "Verbtrennung",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorsilbe",
+          "arabic": "Verbpräfix",
+          "gender": "die",
+          "plural": "Vorsilben",
+          "example": "Die Vorsilbe geht ans Ende.",
+          "exampleArabic": "Präfix",
+          "type": "noun"
+        },
+        {
+          "german": "das Verb",
+          "arabic": "Tätigkeitswort",
+          "gender": "das",
+          "plural": "Verben",
+          "example": "Das Verb steht in Position 2.",
+          "exampleArabic": "Tunwort",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -7450,6 +7553,118 @@
               "Einkaufe ich im Supermarkt."
             ],
             "answer": "Ich kaufe im Supermarkt ein."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q11",
+            "question": "„Ich ___ mein Zimmer auf.\" (aufräumen)",
+            "answer": "räume",
+            "hint": "aufräumen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q12",
+            "question": "„Ich lade dich ein\" bedeutet:",
+            "options": [
+              "belasten",
+              "einladen",
+              "verlassen",
+              "helfen"
+            ],
+            "answer": "einladen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q13",
+            "question": "„Wann ___ der Kurs an?\" (anfangen)",
+            "answer": "fängt",
+            "hint": "anfangen + er/sie/es"
+          },
+          {
+            "type": "matching",
+            "id": "a1-11-q14",
+            "question": "Verbinde Verb mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "aufräumen",
+                "right": "Ordnung schaffen"
+              },
+              {
+                "left": "abholen",
+                "right": "Person holen"
+              },
+              {
+                "left": "einladen",
+                "right": "zur Teilnahme bitten"
+              },
+              {
+                "left": "mitmachen",
+                "right": "teilnehmen"
+              },
+              {
+                "left": "aufhören",
+                "right": "beenden"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-11-q15",
+            "question": "Ordne: „Ich ziehe meine Jacke an\"",
+            "words": [
+              "Ich",
+              "ziehe",
+              "meine",
+              "Jacke",
+              "an"
+            ],
+            "answer": "Ich ziehe meine Jacke an"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-11-q16",
+            "question": "Sage: „Kommst du mit mir in den Supermarkt?\"",
+            "answer": "Kommst du mit mir in den Supermarkt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q17",
+            "question": "Hör zu: „Du siehst gut ___\" (aussehen)",
+            "audioPrompt": "Du siehst gut aus.",
+            "answer": "aus",
+            "hint": "aussehen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q18",
+            "question": "Mit Modalverb, wohin geht die Vorsilbe?",
+            "options": [
+              "an den Anfang",
+              "bleibt beim Verb am Ende",
+              "in die Mitte",
+              "weg"
+            ],
+            "answer": "bleibt beim Verb am Ende"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q19",
+            "question": "„Ich ___ später zurück.\" (zurückkommen)",
+            "answer": "komme",
+            "hint": "zurückkommen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q20",
+            "question": "Im Partizip II, die trennbare Vorsilbe:",
+            "options": [
+              "fällt weg",
+              "verbindet sich mit ge in der Mitte: aufgestanden",
+              "bleibt getrennt",
+              "ändert sich"
+            ],
+            "answer": "verbindet sich mit ge in der Mitte: aufgestanden"
           }
         ]
       }

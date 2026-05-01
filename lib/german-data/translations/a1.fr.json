@@ -7332,6 +7332,109 @@
           "example": "Mach das Radio an.",
           "exampleArabic": "Allume la radio.",
           "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "ranger",
+          "example": "Räum dein Zimmer auf!",
+          "exampleArabic": "Range ta chambre !",
+          "type": "verb"
+        },
+        {
+          "german": "abholen",
+          "arabic": "aller chercher / récupérer",
+          "example": "Ich hole dich ab.",
+          "exampleArabic": "Je viens te chercher.",
+          "type": "verb"
+        },
+        {
+          "german": "aussehen",
+          "arabic": "avoir l'air",
+          "example": "Du siehst gut aus.",
+          "exampleArabic": "Tu as bonne mine.",
+          "type": "verb"
+        },
+        {
+          "german": "aufpassen",
+          "arabic": "faire attention",
+          "example": "Pass auf!",
+          "exampleArabic": "Fais attention !",
+          "type": "verb"
+        },
+        {
+          "german": "anziehen",
+          "arabic": "mettre (un vêtement)",
+          "example": "Ich ziehe meine Jacke an.",
+          "exampleArabic": "Je mets ma veste.",
+          "type": "verb"
+        },
+        {
+          "german": "ausziehen",
+          "arabic": "enlever (un vêtement)",
+          "example": "Zieh die Schuhe aus!",
+          "exampleArabic": "Enlève tes chaussures !",
+          "type": "verb"
+        },
+        {
+          "german": "anfangen",
+          "arabic": "commencer",
+          "example": "Wann fängt der Kurs an?",
+          "exampleArabic": "Quand commence le cours ?",
+          "type": "verb"
+        },
+        {
+          "german": "aufhören",
+          "arabic": "arrêter",
+          "example": "Hör auf!",
+          "exampleArabic": "Arrête !",
+          "type": "verb"
+        },
+        {
+          "german": "einladen",
+          "arabic": "inviter",
+          "example": "Ich lade dich ein.",
+          "exampleArabic": "Je t'invite.",
+          "type": "verb"
+        },
+        {
+          "german": "mitmachen",
+          "arabic": "participer",
+          "example": "Mach mit!",
+          "exampleArabic": "Participe !",
+          "type": "verb"
+        },
+        {
+          "german": "wegfahren",
+          "arabic": "partir au loin",
+          "example": "Wir fahren weg.",
+          "exampleArabic": "On part.",
+          "type": "verb"
+        },
+        {
+          "german": "die Trennung",
+          "arabic": "la séparation (du verbe)",
+          "gender": "die",
+          "example": "Trennung am Satzende.",
+          "exampleArabic": "Séparation à la fin de la phrase.",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorsilbe",
+          "arabic": "le préfixe",
+          "gender": "die",
+          "plural": "Vorsilben",
+          "example": "Die Vorsilbe geht ans Ende.",
+          "exampleArabic": "Le préfixe va à la fin.",
+          "type": "noun"
+        },
+        {
+          "german": "das Verb",
+          "arabic": "le verbe",
+          "gender": "das",
+          "plural": "Verben",
+          "example": "Das Verb steht in Position 2.",
+          "exampleArabic": "Le verbe est en 2e position.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -7450,6 +7553,118 @@
               "Einkaufe ich im Supermarkt."
             ],
             "answer": "Ich kaufe im Supermarkt ein."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q11",
+            "question": "« Ich ___ mein Zimmer auf. » (ranger)",
+            "answer": "räume",
+            "hint": "aufräumen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q12",
+            "question": "« Ich lade dich ein » signifie :",
+            "options": [
+              "je te charge",
+              "je t'invite",
+              "je te laisse",
+              "je t'aide"
+            ],
+            "answer": "je t'invite"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q13",
+            "question": "« Wann ___ der Kurs an? » (commencer)",
+            "answer": "fängt",
+            "hint": "anfangen + er/sie/es"
+          },
+          {
+            "type": "matching",
+            "id": "a1-11-q14",
+            "question": "Associe le verbe à son sens :",
+            "pairs": [
+              {
+                "left": "aufräumen",
+                "right": "ranger"
+              },
+              {
+                "left": "abholen",
+                "right": "aller chercher"
+              },
+              {
+                "left": "einladen",
+                "right": "inviter"
+              },
+              {
+                "left": "mitmachen",
+                "right": "participer"
+              },
+              {
+                "left": "aufhören",
+                "right": "arrêter"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-11-q15",
+            "question": "Ordonne : « Je mets ma veste »",
+            "words": [
+              "Ich",
+              "ziehe",
+              "meine",
+              "Jacke",
+              "an"
+            ],
+            "answer": "Ich ziehe meine Jacke an"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-11-q16",
+            "question": "Dis : « Tu viens avec moi au supermarché ? »",
+            "answer": "Kommst du mit mir in den Supermarkt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q17",
+            "question": "Écoute : « Du siehst gut ___ » (avoir l'air)",
+            "audioPrompt": "Du siehst gut aus.",
+            "answer": "aus",
+            "hint": "aussehen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q18",
+            "question": "Avec un verbe modal, où va le préfixe ?",
+            "options": [
+              "au début",
+              "il reste collé au verbe à la fin",
+              "au milieu",
+              "il disparaît"
+            ],
+            "answer": "il reste collé au verbe à la fin"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q19",
+            "question": "« Ich ___ später zurück. » (revenir)",
+            "answer": "komme",
+            "hint": "zurückkommen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q20",
+            "question": "Au Partizip II, le préfixe séparable :",
+            "options": [
+              "disparaît",
+              "se colle + ge au milieu : aufgestanden",
+              "reste séparé",
+              "change"
+            ],
+            "answer": "se colle + ge au milieu : aufgestanden"
           }
         ]
       }

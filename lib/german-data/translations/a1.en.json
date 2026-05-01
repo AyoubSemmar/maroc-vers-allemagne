@@ -7332,6 +7332,109 @@
           "example": "Mach das Radio an.",
           "exampleArabic": "Turn on the radio.",
           "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "to tidy up",
+          "example": "Räum dein Zimmer auf!",
+          "exampleArabic": "Tidy your room!",
+          "type": "verb"
+        },
+        {
+          "german": "abholen",
+          "arabic": "to pick up",
+          "example": "Ich hole dich ab.",
+          "exampleArabic": "I'll pick you up.",
+          "type": "verb"
+        },
+        {
+          "german": "aussehen",
+          "arabic": "to look (appearance)",
+          "example": "Du siehst gut aus.",
+          "exampleArabic": "You look good.",
+          "type": "verb"
+        },
+        {
+          "german": "aufpassen",
+          "arabic": "to watch out",
+          "example": "Pass auf!",
+          "exampleArabic": "Watch out!",
+          "type": "verb"
+        },
+        {
+          "german": "anziehen",
+          "arabic": "to put on (clothes)",
+          "example": "Ich ziehe meine Jacke an.",
+          "exampleArabic": "I put my jacket on.",
+          "type": "verb"
+        },
+        {
+          "german": "ausziehen",
+          "arabic": "to take off (clothes)",
+          "example": "Zieh die Schuhe aus!",
+          "exampleArabic": "Take off your shoes!",
+          "type": "verb"
+        },
+        {
+          "german": "anfangen",
+          "arabic": "to begin",
+          "example": "Wann fängt der Kurs an?",
+          "exampleArabic": "When does the course start?",
+          "type": "verb"
+        },
+        {
+          "german": "aufhören",
+          "arabic": "to stop",
+          "example": "Hör auf!",
+          "exampleArabic": "Stop!",
+          "type": "verb"
+        },
+        {
+          "german": "einladen",
+          "arabic": "to invite",
+          "example": "Ich lade dich ein.",
+          "exampleArabic": "I'm inviting you.",
+          "type": "verb"
+        },
+        {
+          "german": "mitmachen",
+          "arabic": "to join in",
+          "example": "Mach mit!",
+          "exampleArabic": "Join in!",
+          "type": "verb"
+        },
+        {
+          "german": "wegfahren",
+          "arabic": "to drive away / go away",
+          "example": "Wir fahren weg.",
+          "exampleArabic": "We're going away.",
+          "type": "verb"
+        },
+        {
+          "german": "die Trennung",
+          "arabic": "separation (of the verb)",
+          "gender": "die",
+          "example": "Trennung am Satzende.",
+          "exampleArabic": "Separation at the end.",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorsilbe",
+          "arabic": "prefix",
+          "gender": "die",
+          "plural": "Vorsilben",
+          "example": "Die Vorsilbe geht ans Ende.",
+          "exampleArabic": "The prefix goes to the end.",
+          "type": "noun"
+        },
+        {
+          "german": "das Verb",
+          "arabic": "verb",
+          "gender": "das",
+          "plural": "Verben",
+          "example": "Das Verb steht in Position 2.",
+          "exampleArabic": "The verb is in position 2.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -7450,6 +7553,118 @@
               "Einkaufe ich im Supermarkt."
             ],
             "answer": "Ich kaufe im Supermarkt ein."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q11",
+            "question": "\"Ich ___ mein Zimmer auf.\" (tidy up)",
+            "answer": "räume",
+            "hint": "aufräumen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q12",
+            "question": "\"Ich lade dich ein\" means:",
+            "options": [
+              "I'm loading you",
+              "I'm inviting you",
+              "I'm leaving you",
+              "I'm helping you"
+            ],
+            "answer": "I'm inviting you"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q13",
+            "question": "\"Wann ___ der Kurs an?\" (start)",
+            "answer": "fängt",
+            "hint": "anfangen + er/sie/es"
+          },
+          {
+            "type": "matching",
+            "id": "a1-11-q14",
+            "question": "Match the verb to its meaning:",
+            "pairs": [
+              {
+                "left": "aufräumen",
+                "right": "to tidy up"
+              },
+              {
+                "left": "abholen",
+                "right": "to pick up"
+              },
+              {
+                "left": "einladen",
+                "right": "to invite"
+              },
+              {
+                "left": "mitmachen",
+                "right": "to join in"
+              },
+              {
+                "left": "aufhören",
+                "right": "to stop"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-11-q15",
+            "question": "Order: \"I put my jacket on\"",
+            "words": [
+              "Ich",
+              "ziehe",
+              "meine",
+              "Jacke",
+              "an"
+            ],
+            "answer": "Ich ziehe meine Jacke an"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-11-q16",
+            "question": "Say: \"Are you coming with me to the supermarket?\"",
+            "answer": "Kommst du mit mir in den Supermarkt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q17",
+            "question": "Listen: \"Du siehst gut ___\" (look)",
+            "audioPrompt": "Du siehst gut aus.",
+            "answer": "aus",
+            "hint": "aussehen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q18",
+            "question": "With a modal verb, where does the prefix go?",
+            "options": [
+              "at the beginning",
+              "stays attached to the verb at the end",
+              "in the middle",
+              "disappears"
+            ],
+            "answer": "stays attached to the verb at the end"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-11-q19",
+            "question": "\"Ich ___ später zurück.\" (come back)",
+            "answer": "komme",
+            "hint": "zurückkommen + ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-11-q20",
+            "question": "In Partizip II, the separable prefix:",
+            "options": [
+              "disappears",
+              "joins + ge in the middle: aufgestanden",
+              "stays separate",
+              "changes"
+            ],
+            "answer": "joins + ge in the middle: aufgestanden"
           }
         ]
       }
