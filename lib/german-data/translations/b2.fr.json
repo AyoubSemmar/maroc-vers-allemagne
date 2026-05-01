@@ -6349,6 +6349,627 @@
           }
         ]
       }
+    },
+    "b2-17": {
+      "id": "b2-17",
+      "title": "Connecteurs avancés — Konnektoren erweitert",
+      "order": 17,
+      "grammar": {
+        "title": "indem, ohne dass, anstatt zu, dadurch, sodass — comment relier les idées avec précision",
+        "content": "En B2, les phrases simples ne suffisent plus. Tu as besoin de **connecteurs précis** pour exprimer la manière, la cause, l'opposition, la conséquence.\n\n**Types de connecteurs :**\n- **Manière (Modal) :** indem, dadurch, ohne dass\n- **Opposition (Konzessiv) :** trotzdem, obwohl, dennoch\n- **Conséquence (Konsekutiv) :** sodass, deshalb, daher\n- **Alternative (Alternativ) :** anstatt zu, anstatt dass\n\nChaque connecteur impose un ordre du verbe.",
+        "tables": [
+          {
+            "title": "Connecteurs de manière et de moyen",
+            "headers": [
+              "Connecteur",
+              "Sens",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "indem",
+                  "en + participe (moyen)",
+                  "Ich lerne, indem ich viel lese."
+                ]
+              },
+              {
+                "cells": [
+                  "dadurch, dass",
+                  "du fait que",
+                  "Dadurch, dass ich übe, werde ich besser."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne zu",
+                  "sans + infinitif",
+                  "Er ging weg, ohne zu sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne dass",
+                  "sans que (sujets différents)",
+                  "Er ging, ohne dass ich es merkte."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt zu",
+                  "au lieu de + infinitif",
+                  "Anstatt zu lernen, schaut er fern."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt dass",
+                  "au lieu que (sujets différents)",
+                  "Anstatt dass er kam, blieb er zu Hause."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "zu + Inf pour le même sujet. dass pour des sujets différents."
+          },
+          {
+            "title": "Connecteurs de conséquence et d'opposition",
+            "headers": [
+              "Connecteur",
+              "Sens",
+              "Position du verbe"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sodass / so dass",
+                  "de sorte que (conséquence)",
+                  "Hauptsatz, sodass + verb am Ende"
+                ]
+              },
+              {
+                "cells": [
+                  "so..., dass",
+                  "tellement... que",
+                  "Es ist so kalt, dass wir frieren."
+                ]
+              },
+              {
+                "cells": [
+                  "deshalb",
+                  "c'est pourquoi",
+                  "Es regnet. Deshalb bleiben wir."
+                ]
+              },
+              {
+                "cells": [
+                  "trotzdem",
+                  "malgré tout",
+                  "Es regnet. Trotzdem gehen wir."
+                ]
+              },
+              {
+                "cells": [
+                  "je...desto",
+                  "plus... plus",
+                  "Je mehr, desto besser."
+                ]
+              },
+              {
+                "cells": [
+                  "zumal",
+                  "d'autant plus que",
+                  "Ich komme, zumal ich Zeit habe."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "deshalb/trotzdem en tête de la 2e principale. sodass commence une subordonnée."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "indem décrit le moyen — verbe en fin : « Ich lerne, indem ich Filme schaue. »",
+            "example": "Sie verbessert ihr Deutsch, indem sie täglich liest.",
+            "translation": "Elle améliore son allemand en lisant tous les jours."
+          },
+          {
+            "rule": "ohne zu/anstatt zu pour le même sujet. ohne dass/anstatt dass pour des sujets différents.",
+            "example": "Er ging, ohne zu sprechen. (même sujet) / Er ging, ohne dass ich es wusste. (sujets différents)",
+            "translation": "Il est parti sans parler / sans que je le sache."
+          },
+          {
+            "rule": "sodass arrive après une virgule et place son verbe en fin. so + adj + dass insiste sur la cause.",
+            "example": "Er ist krank, sodass er nicht kommen kann. / Es ist so kalt, dass wir frieren.",
+            "translation": "Il est malade, de sorte qu'il ne peut pas venir."
+          },
+          {
+            "rule": "je...desto démarre chaque proposition par une virgule, avec un comparatif.",
+            "example": "Je mehr du übst, desto besser wirst du.",
+            "translation": "Plus tu t'entraînes, meilleur tu deviens."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, indem ich Filme schaue. — J'apprends l'allemand en regardant des films.",
+          "Sie verbessert sich, dadurch dass sie täglich übt. — Elle s'améliore du fait qu'elle s'entraîne tous les jours.",
+          "Er ging, ohne zu fragen. — Il est parti sans demander.",
+          "Anstatt zu lernen, schaut er fern. — Au lieu d'étudier, il regarde la télé.",
+          "Es ist so kalt, dass wir frieren. — Il fait tellement froid qu'on gèle.",
+          "Je mehr ich lerne, desto besser werde ich. — Plus j'apprends, mieux je m'en sors.",
+          "Trotzdem ist er gekommen. — Il est venu malgré tout.",
+          "Ich komme, zumal ich Zeit habe. — Je viens, d'autant plus que j'ai du temps."
+        ],
+        "tip": "Apprends 5 nouveaux connecteurs par semaine et fais une phrase pour chacun. En deux mois, tu écriras des phrases complexes facilement. L'examen B2 valorise les Konnektoren — plus ils sont variés, plus ton écrit gagne en qualité."
+      },
+      "vocabulary": [
+        {
+          "german": "indem",
+          "arabic": "en + participe",
+          "example": "Ich lerne, indem ich übe.",
+          "exampleArabic": "J'apprends en m'entraînant.",
+          "type": "conjunction"
+        },
+        {
+          "german": "dadurch dass",
+          "arabic": "du fait que",
+          "example": "Dadurch dass er hilft, lerne ich schneller.",
+          "exampleArabic": "Du fait qu'il aide, j'apprends plus vite.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne zu",
+          "arabic": "sans + infinitif",
+          "example": "Er ging, ohne zu sprechen.",
+          "exampleArabic": "Il est parti sans parler.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne dass",
+          "arabic": "sans que (sujet différent)",
+          "example": "Er kam, ohne dass ich es wusste.",
+          "exampleArabic": "Il est venu sans que je le sache.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt zu",
+          "arabic": "au lieu de",
+          "example": "Anstatt zu lernen, spielt er.",
+          "exampleArabic": "Au lieu d'étudier, il joue.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt dass",
+          "arabic": "au lieu que (sujet différent)",
+          "example": "Anstatt dass er hilft, lacht er.",
+          "exampleArabic": "Au lieu d'aider, il rit.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sodass",
+          "arabic": "de sorte que",
+          "example": "Es regnet, sodass wir bleiben.",
+          "exampleArabic": "Il pleut, de sorte qu'on reste.",
+          "type": "conjunction"
+        },
+        {
+          "german": "so...dass",
+          "arabic": "tellement...que",
+          "example": "Es ist so kalt, dass wir frieren.",
+          "exampleArabic": "Il fait tellement froid qu'on gèle.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "malgré tout",
+          "example": "Es regnet. Trotzdem gehe ich.",
+          "exampleArabic": "Il pleut. Malgré tout j'y vais.",
+          "type": "adverb"
+        },
+        {
+          "german": "dennoch",
+          "arabic": "néanmoins",
+          "example": "Er ist müde, dennoch arbeitet er.",
+          "exampleArabic": "Il est fatigué, néanmoins il travaille.",
+          "type": "adverb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "cependant",
+          "example": "Er kam, jedoch zu spät.",
+          "exampleArabic": "Il est venu, cependant trop tard.",
+          "type": "adverb"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "toutefois",
+          "example": "Allerdings ist es kalt.",
+          "exampleArabic": "Toutefois il fait froid.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "c'est pourquoi",
+          "example": "Es regnet. Deshalb bleiben wir.",
+          "exampleArabic": "Il pleut. C'est pourquoi nous restons.",
+          "type": "adverb"
+        },
+        {
+          "german": "daher",
+          "arabic": "par conséquent",
+          "example": "Daher ist es wichtig.",
+          "exampleArabic": "Par conséquent, c'est important.",
+          "type": "adverb"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "par suite",
+          "example": "Demzufolge ändert sich alles.",
+          "exampleArabic": "Par suite tout change.",
+          "type": "adverb"
+        },
+        {
+          "german": "je...desto",
+          "arabic": "plus... plus",
+          "example": "Je mehr, desto besser.",
+          "exampleArabic": "Plus c'est, mieux c'est.",
+          "type": "phrase"
+        },
+        {
+          "german": "zumal",
+          "arabic": "d'autant plus que",
+          "example": "Ich komme, zumal ich Zeit habe.",
+          "exampleArabic": "Je viens, d'autant plus que j'ai du temps.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "dans la mesure où",
+          "example": "Sofern es geht, helfe ich.",
+          "exampleArabic": "Dans la mesure où c'est possible, j'aide.",
+          "type": "conjunction"
+        },
+        {
+          "german": "insofern",
+          "arabic": "dans cette mesure",
+          "example": "Insofern stimme ich zu.",
+          "exampleArabic": "Dans cette mesure, je suis d'accord.",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "au cas où",
+          "example": "Falls es regnet...",
+          "exampleArabic": "Au cas où il pleuvrait...",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "dès que",
+          "example": "Sobald er kommt, gehen wir.",
+          "exampleArabic": "Dès qu'il arrive, on part.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "pendant que",
+          "example": "Während er liest, koche ich.",
+          "exampleArabic": "Pendant qu'il lit, je cuisine.",
+          "type": "conjunction"
+        },
+        {
+          "german": "inzwischen",
+          "arabic": "entre-temps",
+          "example": "Inzwischen ist es spät geworden.",
+          "exampleArabic": "Entre-temps il est tard.",
+          "type": "adverb"
+        },
+        {
+          "german": "mittlerweile",
+          "arabic": "désormais / depuis",
+          "example": "Mittlerweile habe ich es verstanden.",
+          "exampleArabic": "Désormais je l'ai compris.",
+          "type": "adverb"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "la conséquence",
+          "example": "Die Folgen sind klar.",
+          "exampleArabic": "Les conséquences sont claires.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Folgen"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "la cause",
+          "example": "Was ist die Ursache?",
+          "exampleArabic": "Quelle est la cause ?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ursachen"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "le lien / le rapport",
+          "example": "Der Zusammenhang ist klar.",
+          "exampleArabic": "Le rapport est clair.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Zusammenhänge"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "la comparaison",
+          "example": "Im Vergleich dazu...",
+          "exampleArabic": "Par comparaison...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Vergleiche"
+        },
+        {
+          "german": "der Gegensatz",
+          "arabic": "le contraire",
+          "example": "Im Gegensatz zu ihm...",
+          "exampleArabic": "À l'opposé de lui...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gegensätze"
+        },
+        {
+          "german": "das Argument",
+          "arabic": "l'argument",
+          "example": "Ein starkes Argument.",
+          "exampleArabic": "Un argument fort.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Argumente"
+        },
+        {
+          "german": "die Begründung",
+          "arabic": "la justification",
+          "example": "Die Begründung ist überzeugend.",
+          "exampleArabic": "La justification est convaincante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Begründungen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q1",
+            "question": "Moyen : « Ich lerne, ___ ich Filme schaue. »",
+            "answer": "indem",
+            "hint": "indem = en + participe"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q2",
+            "question": "Au lieu de (même sujet) :",
+            "options": [
+              "anstatt dass",
+              "anstatt zu",
+              "ohne zu",
+              "sodass"
+            ],
+            "answer": "anstatt zu"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q3",
+            "question": "Conséquence : « Es ist so kalt, ___ wir frieren. »",
+            "answer": "dass",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q4",
+            "question": "« Plus... plus »",
+            "options": [
+              "je...desto",
+              "wenn...dann",
+              "so...wie",
+              "als...so"
+            ],
+            "answer": "je...desto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q5",
+            "question": "Opposition : « Es regnet. ___ gehe ich. » (malgré tout)",
+            "answer": "Trotzdem",
+            "hint": "trotzdem = malgré tout"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q6",
+            "question": "Associe le connecteur à son type :",
+            "pairs": [
+              {
+                "left": "indem",
+                "right": "moyen"
+              },
+              {
+                "left": "sodass",
+                "right": "conséquence"
+              },
+              {
+                "left": "trotzdem",
+                "right": "opposition"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "alternative"
+              },
+              {
+                "left": "während",
+                "right": "temps simultané"
+              },
+              {
+                "left": "sobald",
+                "right": "temps postérieur"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q7",
+            "question": "Ordonne : « J'apprends en regardant des films »",
+            "words": [
+              "Ich",
+              "lerne,",
+              "indem",
+              "ich",
+              "Filme",
+              "schaue"
+            ],
+            "answer": "Ich lerne, indem ich Filme schaue"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q8",
+            "question": "Dis : « Plus tu t'entraînes, meilleur tu deviens »",
+            "answer": "Je mehr du übst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q9",
+            "question": "Écoute : « Er ging, ___ zu sprechen. »",
+            "audioPrompt": "Er ging, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu = sans + infinitif"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q10",
+            "question": "Après sodass, le verbe est en :",
+            "options": [
+              "tête",
+              "2e position",
+              "fin",
+              "indifférent"
+            ],
+            "answer": "fin"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q11",
+            "question": "Insistance sur la cause : « Es ist ___ kalt, dass wir frieren. » (tellement)",
+            "answer": "so",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q12",
+            "question": "Sans que (sujets différents) :",
+            "options": [
+              "ohne zu",
+              "ohne dass",
+              "sodass",
+              "als ob"
+            ],
+            "answer": "ohne dass"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q13",
+            "question": "« Sie verbessert sich ___ tägliches Üben. » (par — moyen, nom)",
+            "answer": "durch",
+            "hint": "durch + Akk = moyen"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q14",
+            "question": "Associe le connecteur au type :",
+            "pairs": [
+              {
+                "left": "während",
+                "right": "temps simultané"
+              },
+              {
+                "left": "sobald",
+                "right": "temps postérieur"
+              },
+              {
+                "left": "zumal",
+                "right": "cause supplémentaire"
+              },
+              {
+                "left": "allerdings",
+                "right": "concession atténuée"
+              },
+              {
+                "left": "sofern",
+                "right": "condition"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q15",
+            "question": "Ordonne : « Plus tu apprends, meilleur tu deviens »",
+            "words": [
+              "Je",
+              "mehr",
+              "du",
+              "lernst,",
+              "desto",
+              "besser",
+              "wirst",
+              "du"
+            ],
+            "answer": "Je mehr du lernst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q16",
+            "question": "Écoute : « Er ging weg, ___ zu sprechen. » (sans)",
+            "audioPrompt": "Er ging weg, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q17",
+            "question": "Après je, le verbe :",
+            "options": [
+              "en fin",
+              "en 2e position",
+              "schéma verbe-virgule-verbe",
+              "supprimé"
+            ],
+            "answer": "en fin"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q18",
+            "question": "Dis : « J'apprends en lisant des livres allemands »",
+            "answer": "Ich lerne, indem ich deutsche Bücher lese"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q19",
+            "question": "« Sie kam, ___ ich es wusste. » (sans que, sujets différents)",
+            "answer": "ohne dass",
+            "hint": "ohne dass + sujet différent"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q20",
+            "question": "Différence entre trotzdem et obwohl ?",
+            "options": [
+              "identiques",
+              "trotzdem adverbe, obwohl conjonction",
+              "trotzdem en fin, obwohl en tête",
+              "aucune"
+            ],
+            "answer": "trotzdem adverbe, obwohl conjonction"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Quatre",
