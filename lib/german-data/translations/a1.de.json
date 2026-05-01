@@ -5927,6 +5927,128 @@
           { "type": "multiple-choice", "id": "a1-14-q20", "question": "Welcher Satz hat einen korrekten Akkusativ?", "options": ["Ich liebe der Mann.", "Ich liebe den Mann.", "Ich liebe dem Mann.", "Ich liebe ein Mann."], "answer": "Ich liebe den Mann." }
         ]
       }
+    },
+    "a1-15": {
+      "id": "a1-15",
+      "title": "Imperativ",
+      "order": 15,
+      "grammar": {
+        "title": "Imperativ für drei Personen + die höfliche Anrede",
+        "content": "Der **Imperativ** ist die Befehlsform — wie man jemanden bittet oder auffordert. Das Deutsche unterscheidet drei Formen: für **du** (Freund), für **ihr** (Freundeskreis) und für **Sie** (höflich).\n\n**Allgemeine Regel:**\n- du → Verb ohne -st (Komm! Lies! Trink!)\n- ihr → Verb + -t (Kommt! Lest! Trinkt!)\n- Sie → Verb + Sie am Ende (Kommen Sie! Lesen Sie! Trinken Sie!)",
+        "tables": [
+          {
+            "title": "Imperativformen häufiger Verben",
+            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "rows": [
+              { "cells": ["kommen", "Komm!", "Kommt!", "Kommen Sie!"] },
+              { "cells": ["gehen", "Geh!", "Geht!", "Gehen Sie!"] },
+              { "cells": ["warten", "Warte!", "Wartet!", "Warten Sie!"] },
+              { "cells": ["hören", "Hör!", "Hört!", "Hören Sie!"] },
+              { "cells": ["sprechen", "Sprich!", "Sprecht!", "Sprechen Sie!"], "highlight": true },
+              { "cells": ["lesen", "Lies!", "Lest!", "Lesen Sie!"], "highlight": true },
+              { "cells": ["nehmen", "Nimm!", "Nehmt!", "Nehmen Sie!"], "highlight": true },
+              { "cells": ["fahren", "Fahr!", "Fahrt!", "Fahren Sie!"] }
+            ],
+            "theme": "conjugation",
+            "note": "Die hervorgehobenen Verben (sprechen, lesen, nehmen) behalten ihren Stammvokalwechsel in der du-Form."
+          },
+          {
+            "title": "sein und haben im Imperativ (unregelmäßig)",
+            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "rows": [
+              { "cells": ["sein", "Sei!", "Seid!", "Seien Sie!"], "highlight": true },
+              { "cells": ["haben", "Hab!", "Habt!", "Haben Sie!"] }
+            ],
+            "theme": "conjugation",
+            "note": "Sei! und Seien Sie! gut merken — sehr häufig (Sei vorsichtig! / Seien Sie ruhig!)."
+          }
+        ],
+        "rules": [
+          { "rule": "Im Imperativ entfällt das Pronomen du. Nur Verb + (Ergänzung) + Ausrufezeichen.", "example": "Komm hier! (nicht Du komm hier!)", "translation": "Aufforderung an die zweite Person Singular." },
+          { "rule": "Die Sie-Form behält das Pronomen Sie immer am Ende.", "example": "Kommen Sie bitte! / Hören Sie zu!", "translation": "höflicher Imperativ" },
+          { "rule": "Das Wort bitte macht den Imperativ höflich. Setze es ans Ende oder hinter das Verb.", "example": "Komm bitte! / Bitte komm!", "translation": "höfliche Bitte" },
+          { "rule": "Verben mit Stammvokalwechsel e → i / e → ie behalten ihn nur in der du-Form.", "example": "Sprich langsamer, bitte! (sprechen → Sprich)", "translation": "Stammwechsel im Imperativ" }
+        ],
+        "examples": [
+          "Komm hier!",
+          "Hör zu!",
+          "Sprich langsamer, bitte.",
+          "Lest das Buch zusammen!",
+          "Nehmen Sie Platz!",
+          "Sei nicht traurig!",
+          "Geht nach Hause!",
+          "Helfen Sie mir, bitte!"
+        ],
+        "tip": "In Anzeigen und Geschäften ist die Sie-Form Standard. Mit Freunden benutze du. Mit einer Gruppe von Freunden ihr. Nicht vermischen!"
+      },
+      "vocabulary": [
+        { "german": "kommen", "arabic": "sich nähern", "example": "Komm hierher!", "exampleArabic": "Aufforderung", "type": "verb" },
+        { "german": "gehen", "arabic": "sich entfernen / zu Fuß bewegen", "example": "Geh nach Hause!", "exampleArabic": "Aufforderung zum Aufbruch", "type": "verb" },
+        { "german": "warten", "arabic": "Geduld haben", "example": "Warte einen Moment!", "exampleArabic": "Aufforderung zur Geduld", "type": "verb" },
+        { "german": "hören", "arabic": "akustisch wahrnehmen", "example": "Hör zu, bitte!", "exampleArabic": "Aufforderung zum Zuhören", "type": "verb" },
+        { "german": "zuhören", "arabic": "aufmerksam hören", "example": "Hör mir zu!", "exampleArabic": "konzentriertes Zuhören", "type": "verb" },
+        { "german": "sprechen", "arabic": "reden", "example": "Sprich lauter!", "exampleArabic": "Aufforderung zur Lautstärke", "type": "verb" },
+        { "german": "lesen", "arabic": "Schrift erfassen", "example": "Lies das, bitte!", "exampleArabic": "Lektüreaufforderung", "type": "verb" },
+        { "german": "nehmen", "arabic": "ergreifen", "example": "Nimm den Bus!", "exampleArabic": "Verkehrsmittel wählen", "type": "verb" },
+        { "german": "geben", "arabic": "übergeben", "example": "Gib mir das Buch!", "exampleArabic": "Aufforderung zur Übergabe", "type": "verb" },
+        { "german": "fahren", "arabic": "ein Fahrzeug lenken", "example": "Fahr vorsichtig!", "exampleArabic": "Verkehrsanweisung", "type": "verb" },
+        { "german": "essen", "arabic": "Nahrung zu sich nehmen", "example": "Iss langsam!", "exampleArabic": "Tempo beim Essen", "type": "verb" },
+        { "german": "trinken", "arabic": "Flüssigkeit aufnehmen", "example": "Trink Wasser!", "exampleArabic": "Aufforderung zum Trinken", "type": "verb" },
+        { "german": "sein", "arabic": "existieren / Zustand", "example": "Sei ruhig!", "exampleArabic": "Zustandsaufforderung", "type": "verb" },
+        { "german": "sich setzen", "arabic": "Platz nehmen", "example": "Setz dich!", "exampleArabic": "Sitzaufforderung", "type": "verb" },
+        { "german": "aufstehen", "arabic": "sich erheben", "example": "Steh auf!", "exampleArabic": "Aufforderung zum Aufstehen", "type": "verb" },
+        { "german": "aufpassen", "arabic": "achtsam sein", "example": "Pass auf!", "exampleArabic": "Achtungswarnung", "type": "verb" },
+        { "german": "wiederholen", "arabic": "noch einmal sagen", "example": "Wiederholen Sie, bitte!", "exampleArabic": "Bitte um Wiederholung", "type": "verb" },
+        { "german": "helfen", "arabic": "Hilfe leisten", "example": "Hilf mir!", "exampleArabic": "Hilfsruf", "type": "verb" },
+        { "german": "bitte", "arabic": "höflicher Zusatz", "example": "Komm bitte!", "exampleArabic": "Höflichkeitsmarker", "type": "adverb" },
+        { "german": "langsam", "arabic": "ohne Eile", "example": "Sprich langsam!", "exampleArabic": "Tempo-Anweisung", "type": "adverb" },
+        { "german": "schnell", "arabic": "in kurzer Zeit", "example": "Komm schnell!", "exampleArabic": "Eile", "type": "adverb" },
+        { "german": "leise", "arabic": "mit geringer Lautstärke", "example": "Sprich leise!", "exampleArabic": "geringe Lautstärke", "type": "adverb" },
+        { "german": "laut", "arabic": "mit großer Lautstärke", "example": "Sprich lauter!", "exampleArabic": "höhere Lautstärke", "type": "adverb" },
+        { "german": "vorsichtig", "arabic": "achtsam", "example": "Fahr vorsichtig!", "exampleArabic": "Vorsichtsmaßnahme", "type": "adjective" },
+        { "german": "ruhig", "arabic": "still / gelassen", "example": "Sei ruhig!", "exampleArabic": "Aufforderung zur Ruhe", "type": "adjective" },
+        { "german": "der Platz", "arabic": "Sitzgelegenheit / Ort", "example": "Nehmen Sie Platz!", "exampleArabic": "Sitzangebot", "type": "noun", "gender": "der", "plural": "die Plätze" },
+        { "german": "der Moment", "arabic": "kurze Zeitspanne", "example": "Einen Moment, bitte!", "exampleArabic": "kurze Wartezeit", "type": "noun", "gender": "der" },
+        { "german": "die Tür", "arabic": "Eingangsöffnung", "example": "Mach die Tür zu!", "exampleArabic": "Eingang", "type": "noun", "gender": "die", "plural": "die Türen" },
+        { "german": "das Fenster", "arabic": "Lüftungsöffnung", "example": "Öffne das Fenster!", "exampleArabic": "Wandöffnung", "type": "noun", "gender": "das", "plural": "die Fenster" },
+        { "german": "auf|machen", "arabic": "öffnen", "example": "Mach das Fenster auf!", "exampleArabic": "Öffnungsaufforderung", "type": "verb" },
+        { "german": "zu|machen", "arabic": "schließen", "example": "Mach die Tür zu!", "exampleArabic": "Schließungsaufforderung", "type": "verb" },
+        { "german": "Achtung!", "arabic": "Vorsicht!", "example": "Achtung, ein Auto!", "exampleArabic": "Warnruf", "type": "phrase" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-15-q1", "question": "Imperativ du von kommen? „___!“", "answer": "Komm", "hint": "kommen → Komm! (ohne -st)" },
+          { "type": "multiple-choice", "id": "a1-15-q2", "question": "Wie sagt man „Sprich!“ zu einem Freund?", "options": ["Spricht!", "Sprich!", "Sprech!", "Sprechen!"], "answer": "Sprich!" },
+          { "type": "fill-blank", "id": "a1-15-q3", "question": "Höflicher Imperativ von helfen? „___ Sie mir!“", "answer": "Helfen", "hint": "Sie-Form + Pronomen Sie" },
+          { "type": "multiple-choice", "id": "a1-15-q4", "question": "Imperativ von sein mit du?", "options": ["Bin!", "Bist!", "Sei!", "Seid!"], "answer": "Sei!" },
+          { "type": "fill-blank", "id": "a1-15-q5", "question": "An eine Gruppe Freunde: „___ das Buch!“ (lesen)", "answer": "Lest", "hint": "lesen → ihr Lest!" },
+          { "type": "matching", "id": "a1-15-q6", "question": "Verbinde Imperativ mit Form:", "pairs": [
+            { "left": "Komm!", "right": "du-Form" },
+            { "left": "Kommt!", "right": "ihr-Form" },
+            { "left": "Kommen Sie!", "right": "Sie-Form" },
+            { "left": "Sei ruhig!", "right": "sein-Imperativ" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-15-q7", "question": "Ordne: „Komm bitte schnell!“", "words": ["Komm", "bitte", "schnell"], "answer": "Komm bitte schnell" },
+          { "type": "speaking", "id": "a1-15-q8", "question": "Sage höflich: „Wiederholen Sie bitte“", "answer": "Wiederholen Sie bitte" },
+          { "type": "fill-blank", "id": "a1-15-q9", "question": "Hör zu: „___ Sie Platz, bitte!“ (höflich)", "audioPrompt": "Nehmen Sie Platz, bitte!", "answer": "Nehmen", "hint": "nehmen in der Sie-Form" },
+          { "type": "multiple-choice", "id": "a1-15-q10", "question": "Welche ihr-Imperativform von warten ist richtig?", "options": ["Wart!", "Wartest!", "Wartet!", "Warten!"], "answer": "Wartet!" },
+          { "type": "fill-blank", "id": "a1-15-q11", "question": "Imperativ du von lesen? „___!“", "answer": "Lies", "hint": "lesen → Lies! (e→ie)" },
+          { "type": "multiple-choice", "id": "a1-15-q12", "question": "Höflicher Imperativ von kommen?", "options": ["Komm!", "Kommt!", "Kommen Sie!", "Du kommst!"], "answer": "Kommen Sie!" },
+          { "type": "fill-blank", "id": "a1-15-q13", "question": "„___ vorsichtig!“ (sein → du)", "answer": "Sei", "hint": "sein → Sei!" },
+          { "type": "matching", "id": "a1-15-q14", "question": "Verbinde Verb mit du-Imperativ:", "pairs": [
+            { "left": "sprechen", "right": "Sprich!" },
+            { "left": "nehmen", "right": "Nimm!" },
+            { "left": "lesen", "right": "Lies!" },
+            { "left": "sein", "right": "Sei!" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-15-q15", "question": "Ordne: „Mach das Fenster bitte auf!“ (du)", "words": ["Mach", "das", "Fenster", "bitte", "auf"], "answer": "Mach das Fenster bitte auf" },
+          { "type": "fill-blank", "id": "a1-15-q16", "question": "Hör zu: „___ leise, bitte!“ (sprechen)", "audioPrompt": "Sprich leise, bitte!", "answer": "Sprich", "hint": "sprechen → Sprich" },
+          { "type": "multiple-choice", "id": "a1-15-q17", "question": "In Anzeigen und Geschäften benutzt man die Form:", "options": ["du", "ihr", "Sie", "wir"], "answer": "Sie" },
+          { "type": "speaking", "id": "a1-15-q18", "question": "Sage zu Freunden: „Lest das Buch!“", "answer": "Lest das Buch" },
+          { "type": "fill-blank", "id": "a1-15-q19", "question": "„___ Sie mir, bitte!“ (helfen → Sie)", "answer": "Helfen", "hint": "Sie-Form von helfen" },
+          { "type": "multiple-choice", "id": "a1-15-q20", "question": "Höfliche Aufforderung zum Hinsetzen:", "options": ["Setz dich!", "Setzt euch!", "Nehmen Sie Platz!", "Sitz!"], "answer": "Nehmen Sie Platz!" }
+        ]
+      }
     }
   },
   "title": "Niveau Eins",
