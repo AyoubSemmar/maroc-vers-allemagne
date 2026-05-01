@@ -5656,6 +5656,148 @@
           }
         ]
       }
+    },
+    "a1-13": {
+      "id": "a1-13",
+      "title": "Modal verbs — Modalverben",
+      "order": 13,
+      "grammar": {
+        "title": "The six modal verbs + position of the main verb",
+        "content": "Modal verbs (**Modalverben**) are six verbs that express **ability, obligation, desire, permission, advice, and preference**. You can hardly build any everyday sentence without them — *I can, I must, I want, I like, I'm allowed, I should*.\n\n**The golden sentence rule:**\nThe modal verb takes **second position** in the sentence (conjugated), and the main verb goes **at the end in the infinitive (Infinitiv)**.\n\n→ Ich **kann** gut Deutsch **sprechen**. (I can speak German well)\n→ Wir **müssen** heute viel **arbeiten**. (We have to work a lot today)\n\n**Important note:** the **ich** and **er/sie/es** forms are **identical** for all modal verbs. No -t at the end.",
+        "tables": [
+          {
+            "title": "Conjugation of the six modal verbs in the present",
+            "headers": ["Pronoun", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "rows": [
+              { "cells": ["ich", "kann", "muss", "will", "mag", "darf", "soll"] },
+              { "cells": ["du", "kannst", "musst", "willst", "magst", "darfst", "sollst"] },
+              { "cells": ["er / sie / es", "kann", "muss", "will", "mag", "darf", "soll"], "highlight": true },
+              { "cells": ["wir", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] },
+              { "cells": ["ihr", "könnt", "müsst", "wollt", "mögt", "dürft", "sollt"] },
+              { "cells": ["sie / Sie", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] }
+            ],
+            "theme": "conjugation",
+            "note": "The highlighted row (er/sie/es) matches ich — this is the most important feature of modal verbs."
+          },
+          {
+            "title": "Meanings of the modal verbs",
+            "headers": ["Verb", "Meaning", "Example"],
+            "rows": [
+              { "cells": ["können", "ability (can)", "Ich kann schwimmen."] },
+              { "cells": ["müssen", "strong obligation (must)", "Du musst lernen."] },
+              { "cells": ["wollen", "will (want to)", "Ich will nach Berlin."] },
+              { "cells": ["mögen", "like (mögen) or would like (möchte)", "Ich mag Kaffee."] },
+              { "cells": ["dürfen", "permission (be allowed)", "Hier darf man rauchen."] },
+              { "cells": ["sollen", "advice/duty (should)", "Du sollst zum Arzt gehen."] }
+            ],
+            "theme": "default"
+          },
+          {
+            "title": "Sentence structure with a modal verb",
+            "headers": ["Position 1", "Position 2 (Modal)", "Middle", "End (Infinitiv)"],
+            "rows": [
+              { "cells": ["Ich", "kann", "gut Deutsch", "sprechen."] },
+              { "cells": ["Heute", "müssen", "wir früh", "aufstehen."] },
+              { "cells": ["Wo", "darf", "ich", "parken?"] },
+              { "cells": ["Mein Bruder", "will", "in Marokko", "studieren."] }
+            ],
+            "theme": "default",
+            "note": "The modal verb is always in Position 2, and the main verb at the end."
+          }
+        ],
+        "rules": [
+          { "rule": "Don't forget: with modal verbs, ich and er/sie/es have **the same** form, with no -t at the end.", "example": "Er kann Deutsch. — Ich kann Deutsch. (not \"er kannt\")", "translation": "He knows German. — I know German." },
+          { "rule": "In a question (Ja/Nein-Frage), the modal verb starts the sentence.", "example": "Kannst du Arabisch sprechen?", "translation": "Can you speak Arabic?" },
+          { "rule": "The polite form \"möchte\" (would like) comes from mögen — use it instead of will in restaurants and shops.", "example": "Ich möchte einen Kaffee, bitte.", "translation": "I'd like a coffee, please. (more polite than Ich will...)" },
+          { "rule": "With a modal verb, the main verb is sometimes dropped if it's clear from context.", "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)", "translation": "I know German. (= I can speak German.)" }
+        ],
+        "examples": [
+          "Ich kann ein bisschen Deutsch sprechen. — I can speak a little German.",
+          "Du musst um 8 Uhr aufstehen. — You have to get up at 8.",
+          "Wir wollen nach Berlin reisen. — We want to travel to Berlin.",
+          "Sie mag keinen Kaffee. — She doesn't like coffee.",
+          "Hier darf man nicht rauchen. — Smoking is not allowed here.",
+          "Du sollst mehr Wasser trinken. — You should drink more water.",
+          "Können Sie mir helfen? — Can you help me? (polite)",
+          "Ich möchte einen Tee, bitte. — I'd like a tea, please.",
+          "Mein Vater muss heute arbeiten. — My father has to work today.",
+          "Was willst du essen? — What do you want to eat?"
+        ],
+        "tip": "Memorize the big table by heart. Modal verb + main verb at the end = a pattern you'll use in almost every A1 sentence. Practice 5 minutes a day on the Drill page."
+      },
+      "vocabulary": [
+        { "german": "können", "arabic": "can / be able to", "example": "Ich kann gut schwimmen.", "exampleArabic": "I can swim well.", "type": "verb" },
+        { "german": "müssen", "arabic": "must / have to", "example": "Wir müssen lernen.", "exampleArabic": "We have to study.", "type": "verb" },
+        { "german": "wollen", "arabic": "want", "example": "Ich will Wasser.", "exampleArabic": "I want water.", "type": "verb" },
+        { "german": "mögen", "arabic": "like", "example": "Magst du Tee?", "exampleArabic": "Do you like tea?", "type": "verb" },
+        { "german": "möchten", "arabic": "would like (polite)", "example": "Ich möchte einen Kaffee.", "exampleArabic": "I'd like a coffee.", "type": "verb" },
+        { "german": "dürfen", "arabic": "be allowed to", "example": "Hier darf man parken.", "exampleArabic": "Parking is allowed here.", "type": "verb" },
+        { "german": "sollen", "arabic": "should", "example": "Du sollst zum Arzt gehen.", "exampleArabic": "You should go to the doctor.", "type": "verb" },
+        { "german": "der Infinitiv", "arabic": "the infinitive", "example": "sprechen ist ein Infinitiv.", "exampleArabic": "sprechen is an infinitive.", "type": "noun", "gender": "der" },
+        { "german": "rauchen", "arabic": "smoke", "example": "Hier darf man nicht rauchen.", "exampleArabic": "Smoking is not allowed here.", "type": "verb" },
+        { "german": "parken", "arabic": "park", "example": "Wo kann ich parken?", "exampleArabic": "Where can I park?", "type": "verb" },
+        { "german": "helfen", "arabic": "help", "example": "Können Sie mir helfen?", "exampleArabic": "Can you help me?", "type": "verb" },
+        { "german": "reisen", "arabic": "travel", "example": "Wir wollen nach Berlin reisen.", "exampleArabic": "We want to travel to Berlin.", "type": "verb" },
+        { "german": "studieren", "arabic": "study (at university)", "example": "Ich will in Deutschland studieren.", "exampleArabic": "I want to study in Germany.", "type": "verb" },
+        { "german": "arbeiten", "arabic": "work", "example": "Mein Vater muss arbeiten.", "exampleArabic": "My father has to work.", "type": "verb" },
+        { "german": "lernen", "arabic": "learn", "example": "Du musst Deutsch lernen.", "exampleArabic": "You have to learn German.", "type": "verb" },
+        { "german": "schlafen", "arabic": "sleep", "example": "Ich will jetzt schlafen.", "exampleArabic": "I want to sleep now.", "type": "verb" },
+        { "german": "kaufen", "arabic": "buy", "example": "Ich möchte Brot kaufen.", "exampleArabic": "I'd like to buy bread.", "type": "verb" },
+        { "german": "sprechen", "arabic": "speak", "example": "Kannst du Englisch sprechen?", "exampleArabic": "Can you speak English?", "type": "verb" },
+        { "german": "verstehen", "arabic": "understand", "example": "Ich kann das nicht verstehen.", "exampleArabic": "I can't understand that.", "type": "verb" },
+        { "german": "gehen", "arabic": "go", "example": "Wir wollen ins Kino gehen.", "exampleArabic": "We want to go to the cinema.", "type": "verb" },
+        { "german": "das Wasser", "arabic": "water", "example": "Ich möchte Wasser, bitte.", "exampleArabic": "I'd like water, please.", "type": "noun", "gender": "das" },
+        { "german": "die Hilfe", "arabic": "help", "example": "Ich brauche Hilfe.", "exampleArabic": "I need help.", "type": "noun", "gender": "die" },
+        { "german": "der Arzt", "arabic": "doctor", "example": "Du musst zum Arzt gehen.", "exampleArabic": "You have to go to the doctor.", "type": "noun", "gender": "der", "plural": "die Ärzte" },
+        { "german": "die Schule", "arabic": "school", "example": "Mein Sohn muss in die Schule.", "exampleArabic": "My son has to go to school.", "type": "noun", "gender": "die", "plural": "die Schulen" },
+        { "german": "die Arbeit", "arabic": "work / job", "example": "Ich muss zur Arbeit.", "exampleArabic": "I have to go to work.", "type": "noun", "gender": "die" },
+        { "german": "das Auto", "arabic": "car", "example": "Wo kann ich das Auto parken?", "exampleArabic": "Where can I park the car?", "type": "noun", "gender": "das", "plural": "die Autos" },
+        { "german": "der Bus", "arabic": "bus", "example": "Wir können den Bus nehmen.", "exampleArabic": "We can take the bus.", "type": "noun", "gender": "der", "plural": "die Busse" },
+        { "german": "die Apotheke", "arabic": "pharmacy", "example": "Ich muss zur Apotheke gehen.", "exampleArabic": "I have to go to the pharmacy.", "type": "noun", "gender": "die", "plural": "die Apotheken" },
+        { "german": "gern", "arabic": "gladly / with pleasure", "example": "Ich möchte gern einen Tee.", "exampleArabic": "I'd love a tea.", "type": "adverb" },
+        { "german": "lieber", "arabic": "rather / prefer", "example": "Ich möchte lieber Wasser.", "exampleArabic": "I'd rather have water.", "type": "adverb" },
+        { "german": "vielleicht", "arabic": "maybe", "example": "Vielleicht kann ich morgen kommen.", "exampleArabic": "Maybe I can come tomorrow.", "type": "adverb" },
+        { "german": "unbedingt", "arabic": "absolutely / definitely", "example": "Du musst unbedingt das Brandenburger Tor sehen!", "exampleArabic": "You absolutely have to see the Brandenburg Gate!", "type": "adverb" },
+        { "german": "leider", "arabic": "unfortunately", "example": "Ich kann leider nicht kommen.", "exampleArabic": "Unfortunately I can't come.", "type": "adverb" },
+        { "german": "Entschuldigung", "arabic": "excuse me / sorry", "example": "Entschuldigung, kann ich Sie etwas fragen?", "exampleArabic": "Excuse me, can I ask you something?", "type": "phrase" },
+        { "german": "kein Problem", "arabic": "no problem", "example": "Du kannst kommen — kein Problem.", "exampleArabic": "You can come — no problem.", "type": "phrase" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-13-q1", "question": "Complete: \"Ich ___ gut Deutsch sprechen.\" (can)", "answer": "kann", "hint": "können — remember: ich kann (no -e)" },
+          { "type": "multiple-choice", "id": "a1-13-q2", "question": "What's the correct form of er with müssen?", "options": ["er müsst", "er muss", "er musst", "er müssen"], "answer": "er muss" },
+          { "type": "fill-blank", "id": "a1-13-q3", "question": "Complete: \"Du ___ mehr Wasser trinken.\" (should)", "answer": "sollst", "hint": "sollen — du form" },
+          { "type": "multiple-choice", "id": "a1-13-q4", "question": "Which sentence is correct?", "options": ["Ich kann sprechen Deutsch gut.", "Ich Deutsch gut sprechen kann.", "Ich kann gut Deutsch sprechen.", "Sprechen ich kann gut Deutsch."], "answer": "Ich kann gut Deutsch sprechen." },
+          { "type": "fill-blank", "id": "a1-13-q5", "question": "Complete: \"___ ich hier parken?\" (Am I allowed?)", "answer": "Darf", "hint": "dürfen — ich form in a question" },
+          { "type": "matching", "id": "a1-13-q6", "question": "Match the modal verb with its meaning:", "pairs": [
+            { "left": "können", "right": "can / be able to" },
+            { "left": "müssen", "right": "must" },
+            { "left": "wollen", "right": "want" },
+            { "left": "mögen", "right": "like" },
+            { "left": "dürfen", "right": "be allowed to" },
+            { "left": "sollen", "right": "should" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-13-q7", "question": "Order: \"I want to travel to Germany\"", "words": ["Ich", "will", "nach", "Deutschland", "reisen"], "answer": "Ich will nach Deutschland reisen" },
+          { "type": "speaking", "id": "a1-13-q8", "question": "Say in German: \"I'd like a coffee please\" (polite)", "answer": "Ich möchte einen Kaffee bitte" },
+          { "type": "fill-blank", "id": "a1-13-q9", "question": "Listen and complete: \"Hier ___ man nicht rauchen.\" (not allowed)", "audioPrompt": "Hier darf man nicht rauchen.", "answer": "darf", "hint": "dürfen + man (general permission)" },
+          { "type": "multiple-choice", "id": "a1-13-q10", "question": "How do you ask for help politely?", "options": ["Hilf mir!", "Du musst mir helfen!", "Können Sie mir helfen, bitte?", "Ich helfe dir."], "answer": "Können Sie mir helfen, bitte?" },
+          { "type": "fill-blank", "id": "a1-13-q11", "question": "Complete: \"Wir ___ heute viel arbeiten.\" (we have to)", "answer": "müssen", "hint": "müssen with wir" },
+          { "type": "multiple-choice", "id": "a1-13-q12", "question": "Form of wollen with ihr?", "options": ["will", "willst", "wollen", "wollt"], "answer": "wollt" },
+          { "type": "fill-blank", "id": "a1-13-q13", "question": "\"Magst ___ Tee oder Kaffee?\" (you)", "answer": "du", "hint": "Yes/No question" },
+          { "type": "drag-drop", "id": "a1-13-q14", "question": "Order: \"Can you speak English?\"", "words": ["Kannst", "du", "Englisch", "sprechen"], "answer": "Kannst du Englisch sprechen" },
+          { "type": "matching", "id": "a1-13-q15", "question": "Match the sentence to its meaning:", "pairs": [
+            { "left": "Ich kann.", "right": "I can." },
+            { "left": "Ich darf.", "right": "I'm allowed." },
+            { "left": "Ich möchte.", "right": "I'd like." },
+            { "left": "Ich soll.", "right": "I should." }
+          ], "answer": "matched" },
+          { "type": "fill-blank", "id": "a1-13-q16", "question": "Listen: \"Du ___ jetzt schlafen!\" (must)", "audioPrompt": "Du musst jetzt schlafen!", "answer": "musst", "hint": "müssen + du" },
+          { "type": "multiple-choice", "id": "a1-13-q17", "question": "\"Möchtest du Wasser?\" — comes from:", "options": ["möchten", "mögen", "wollen", "müssen"], "answer": "mögen" },
+          { "type": "speaking", "id": "a1-13-q18", "question": "Say in German: \"We want to travel to Germany\"", "answer": "Wir wollen nach Deutschland reisen" },
+          { "type": "fill-blank", "id": "a1-13-q19", "question": "\"Hier ___ man rauchen?\" (Is it allowed?)", "answer": "darf", "hint": "dürfen in a question" },
+          { "type": "multiple-choice", "id": "a1-13-q20", "question": "Which sentence is polite in a restaurant?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
+        ]
+      }
     }
   },
   "title": "Level One",
