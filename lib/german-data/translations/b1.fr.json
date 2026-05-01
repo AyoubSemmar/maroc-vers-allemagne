@@ -4504,6 +4504,129 @@
           { "type": "multiple-choice", "id": "b1-13-q20", "question": "La phrase « Er wird wohl krank sein » signifie :", "options": ["Il va tomber malade", "Il est probablement malade en ce moment", "Il sera malade demain", "Il doit être malade"], "answer": "Il est probablement malade en ce moment" }
         ]
       }
+    },
+    "b1-14": {
+      "id": "b1-14",
+      "title": "Verbes avec préposition — Verben mit Präpositionen",
+      "order": 14,
+      "grammar": {
+        "title": "Les verbes qui exigent une préposition + le bon cas",
+        "content": "Certains verbes allemands ne sont complets qu'avec une préposition précise — et ce mariage entre verbe et préposition **ne correspond pas toujours au français**. Il faut les apprendre par paires.\n\n→ Ich denke **an** dich. (Je pense à toi — pas « auf dich »)\n→ Ich warte **auf** den Bus. (J'attends le bus — pas « für den Bus »)\n\n**Chaque préposition impose son cas :** an/auf/in/über → Akkusativ avec ces verbes ; mit/von/zu/bei/nach → Dativ toujours.",
+        "tables": [
+          { "title": "Verbes + préposition (Akkusativ)", "headers": ["Verbe", "Prép.", "Cas", "Exemple"], "rows": [
+            { "cells": ["warten", "auf", "Akk", "Ich warte auf den Bus."] },
+            { "cells": ["denken", "an", "Akk", "Ich denke an meine Familie."] },
+            { "cells": ["sich freuen", "auf", "Akk", "Ich freue mich auf das Wochenende."], "highlight": true },
+            { "cells": ["sich freuen", "über", "Akk", "Ich freue mich über das Geschenk."], "highlight": true },
+            { "cells": ["sich interessieren", "für", "Akk", "Sie interessiert sich für Kunst."] },
+            { "cells": ["sich erinnern", "an", "Akk", "Ich erinnere mich an dich."] },
+            { "cells": ["glauben", "an", "Akk", "Ich glaube an dich."] },
+            { "cells": ["hoffen", "auf", "Akk", "Wir hoffen auf gutes Wetter."] },
+            { "cells": ["sich verlieben", "in", "Akk", "Er hat sich in sie verliebt."] },
+            { "cells": ["sich kümmern", "um", "Akk", "Wer kümmert sich um die Kinder?"] }
+          ], "theme": "cases", "note": "sich freuen a deux sens : auf (futur) ou über (chose qui s'est passée)." },
+          { "title": "Verbes + préposition (Dativ)", "headers": ["Verbe", "Prép.", "Cas", "Exemple"], "rows": [
+            { "cells": ["sprechen", "mit", "Dat", "Ich spreche mit dem Lehrer."] },
+            { "cells": ["sprechen", "von", "Dat", "Wir sprechen von dem Problem."] },
+            { "cells": ["träumen", "von", "Dat", "Ich träume von einem Haus."] },
+            { "cells": ["arbeiten", "bei", "Dat", "Sie arbeitet bei BMW."] },
+            { "cells": ["gehören", "zu", "Dat", "Ich gehöre zu dieser Familie."] },
+            { "cells": ["sich treffen", "mit", "Dat", "Ich treffe mich mit Anna."] },
+            { "cells": ["anfangen", "mit", "Dat", "Wir fangen mit der Lektion an."] },
+            { "cells": ["aufhören", "mit", "Dat", "Hör mit dem Rauchen auf!"] }
+          ], "theme": "cases", "note": "Après mit/von/zu/bei/nach, toujours Dativ." }
+        ],
+        "rules": [
+          { "rule": "Apprends les paires comme une unité : warten auf, denken an. Ne traduis pas du français.", "example": "Ich warte auf den Bus.", "translation": "J'attends le bus." },
+          { "rule": "Avec une chose, utilise da(r)- : warte ich darauf?", "example": "Wartest du? — Ja, ich warte darauf.", "translation": "Tu attends ? — Oui, j'attends ça." },
+          { "rule": "Avec une personne, utilise préposition + pronom : für ihn, mit ihr.", "example": "Auf wen warten? — Auf ihn.", "translation": "Qui attendre ? — Lui." },
+          { "rule": "sich freuen auf (futur) ≠ sich freuen über (événement présent).", "example": "Ich freue mich auf den Urlaub. / über das Geschenk.", "translation": "Je me réjouis des vacances. / Je me réjouis du cadeau." }
+        ],
+        "examples": [
+          "Ich warte auf den Bus. — J'attends le bus.",
+          "Sie denkt oft an ihre Familie. — Elle pense souvent à sa famille.",
+          "Wir freuen uns auf den Urlaub. — Nous nous réjouissons des vacances.",
+          "Er interessiert sich für Politik. — Il s'intéresse à la politique.",
+          "Ich habe mich in sie verliebt. — Je suis tombé amoureux d'elle.",
+          "Wer kümmert sich um die Katze? — Qui s'occupe du chat ?",
+          "Wir sprechen mit dem Chef. — Nous parlons avec le chef.",
+          "Sie arbeitet bei einer großen Firma. — Elle travaille dans une grande entreprise.",
+          "Hör auf mit dem Lärm! — Arrête le bruit !",
+          "Ich erinnere mich nicht an seinen Namen. — Je ne me souviens pas de son nom."
+        ],
+        "tip": "Apprends 5 paires verbe + préposition par jour, et fais une phrase pour chacune. Au bout d'un mois, tu auras 150 paires — assez pour tout le B2."
+      },
+      "vocabulary": [
+        { "german": "warten auf", "arabic": "attendre", "example": "Ich warte auf dich.", "exampleArabic": "Je t'attends.", "type": "verb" },
+        { "german": "denken an", "arabic": "penser à", "example": "Ich denke an meine Mutter.", "exampleArabic": "Je pense à ma mère.", "type": "verb" },
+        { "german": "sich freuen auf", "arabic": "se réjouir de (à venir)", "example": "Ich freue mich auf den Sommer.", "exampleArabic": "Je me réjouis de l'été.", "type": "verb" },
+        { "german": "sich freuen über", "arabic": "se réjouir de (présent/passé)", "example": "Ich freue mich über deine Nachricht.", "exampleArabic": "Je me réjouis de ton message.", "type": "verb" },
+        { "german": "sich interessieren für", "arabic": "s'intéresser à", "example": "Ich interessiere mich für Sport.", "exampleArabic": "Je m'intéresse au sport.", "type": "verb" },
+        { "german": "sich erinnern an", "arabic": "se souvenir de", "example": "Ich erinnere mich an dich.", "exampleArabic": "Je me souviens de toi.", "type": "verb" },
+        { "german": "glauben an", "arabic": "croire en", "example": "Ich glaube an Gott.", "exampleArabic": "Je crois en Dieu.", "type": "verb" },
+        { "german": "hoffen auf", "arabic": "espérer", "example": "Wir hoffen auf besseres Wetter.", "exampleArabic": "Nous espérons un meilleur temps.", "type": "verb" },
+        { "german": "sich verlieben in", "arabic": "tomber amoureux de", "example": "Er verliebte sich in sie.", "exampleArabic": "Il est tombé amoureux d'elle.", "type": "verb" },
+        { "german": "sich kümmern um", "arabic": "s'occuper de", "example": "Sie kümmert sich um ihre Eltern.", "exampleArabic": "Elle s'occupe de ses parents.", "type": "verb" },
+        { "german": "sprechen mit", "arabic": "parler avec", "example": "Ich spreche mit dem Lehrer.", "exampleArabic": "Je parle avec l'enseignant.", "type": "verb" },
+        { "german": "sprechen über", "arabic": "parler de", "example": "Wir sprechen über die Arbeit.", "exampleArabic": "Nous parlons du travail.", "type": "verb" },
+        { "german": "träumen von", "arabic": "rêver de", "example": "Ich träume von Deutschland.", "exampleArabic": "Je rêve de l'Allemagne.", "type": "verb" },
+        { "german": "arbeiten bei", "arabic": "travailler chez", "example": "Er arbeitet bei Mercedes.", "exampleArabic": "Il travaille chez Mercedes.", "type": "verb" },
+        { "german": "gehören zu", "arabic": "appartenir à", "example": "Ich gehöre zu dieser Gruppe.", "exampleArabic": "J'appartiens à ce groupe.", "type": "verb" },
+        { "german": "sich treffen mit", "arabic": "rencontrer", "example": "Ich treffe mich mit Freunden.", "exampleArabic": "Je rencontre des amis.", "type": "verb" },
+        { "german": "anfangen mit", "arabic": "commencer par", "example": "Wir fangen mit der Arbeit an.", "exampleArabic": "Nous commençons par le travail.", "type": "verb" },
+        { "german": "aufhören mit", "arabic": "arrêter de", "example": "Hör mit dem Rauchen auf!", "exampleArabic": "Arrête de fumer !", "type": "verb" },
+        { "german": "sich beschäftigen mit", "arabic": "s'occuper de / s'investir dans", "example": "Er beschäftigt sich mit Geschichte.", "exampleArabic": "Il s'investit dans l'histoire.", "type": "verb" },
+        { "german": "sich entschuldigen für", "arabic": "s'excuser de", "example": "Ich entschuldige mich für die Verspätung.", "exampleArabic": "Je m'excuse du retard.", "type": "verb" },
+        { "german": "sich gewöhnen an", "arabic": "s'habituer à", "example": "Ich gewöhne mich an das Wetter.", "exampleArabic": "Je m'habitue au climat.", "type": "verb" },
+        { "german": "achten auf", "arabic": "faire attention à", "example": "Achte auf den Verkehr!", "exampleArabic": "Fais attention à la circulation !", "type": "verb" },
+        { "german": "antworten auf", "arabic": "répondre à", "example": "Antworte auf die Frage!", "exampleArabic": "Réponds à la question !", "type": "verb" },
+        { "german": "reagieren auf", "arabic": "réagir à", "example": "Wie reagierst du auf Stress?", "exampleArabic": "Comment réagis-tu au stress ?", "type": "verb" },
+        { "german": "sich beziehen auf", "arabic": "se rapporter à", "example": "Das bezieht sich auf den Vertrag.", "exampleArabic": "Cela se rapporte au contrat.", "type": "verb" },
+        { "german": "fragen nach", "arabic": "demander (qqch)", "example": "Er fragt nach dem Weg.", "exampleArabic": "Il demande son chemin.", "type": "verb" },
+        { "german": "suchen nach", "arabic": "chercher", "example": "Ich suche nach meinem Schlüssel.", "exampleArabic": "Je cherche ma clé.", "type": "verb" },
+        { "german": "die Beziehung", "arabic": "la relation", "example": "Wir haben eine gute Beziehung.", "exampleArabic": "Nous avons une bonne relation.", "type": "noun", "gender": "die", "plural": "die Beziehungen" },
+        { "german": "das Vertrauen", "arabic": "la confiance", "example": "Ich habe Vertrauen in dich.", "exampleArabic": "J'ai confiance en toi.", "type": "noun", "gender": "das" },
+        { "german": "die Verspätung", "arabic": "le retard", "example": "Entschuldigung für die Verspätung.", "exampleArabic": "Désolé pour le retard.", "type": "noun", "gender": "die", "plural": "die Verspätungen" },
+        { "german": "die Nachricht", "arabic": "le message / la nouvelle", "example": "Ich freue mich über deine Nachricht.", "exampleArabic": "Je me réjouis de ton message.", "type": "noun", "gender": "die", "plural": "die Nachrichten" },
+        { "german": "das Geschenk", "arabic": "le cadeau", "example": "Das ist ein Geschenk für dich.", "exampleArabic": "C'est un cadeau pour toi.", "type": "noun", "gender": "das", "plural": "die Geschenke" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "b1-14-q1", "question": "Complète : « Ich warte ___ den Bus. »", "answer": "auf", "hint": "warten + auf" },
+          { "type": "multiple-choice", "id": "b1-14-q2", "question": "La préposition avec denken ?", "options": ["für", "an", "auf", "mit"], "answer": "an" },
+          { "type": "fill-blank", "id": "b1-14-q3", "question": "« Ich freue mich ___ den Urlaub. » (futur)", "answer": "auf", "hint": "sich freuen auf = futur" },
+          { "type": "multiple-choice", "id": "b1-14-q4", "question": "Quelle préposition avec sich kümmern ?", "options": ["für", "um", "an", "auf"], "answer": "um" },
+          { "type": "fill-blank", "id": "b1-14-q5", "question": "« Sie spricht ___ dem Lehrer. » (Dativ)", "answer": "mit", "hint": "sprechen + mit" },
+          { "type": "matching", "id": "b1-14-q6", "question": "Associe le verbe à sa préposition :", "pairs": [
+            { "left": "warten", "right": "auf" },
+            { "left": "denken", "right": "an" },
+            { "left": "sich interessieren", "right": "für" },
+            { "left": "träumen", "right": "von" },
+            { "left": "sich kümmern", "right": "um" },
+            { "left": "glauben", "right": "an" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b1-14-q7", "question": "Ordonne : « Je me souviens de mon enfance »", "words": ["Ich", "erinnere", "mich", "an", "meine", "Kindheit"], "answer": "Ich erinnere mich an meine Kindheit" },
+          { "type": "speaking", "id": "b1-14-q8", "question": "Dis : « Je m'intéresse au sport »", "answer": "Ich interessiere mich für Sport" },
+          { "type": "fill-blank", "id": "b1-14-q9", "question": "Écoute : « Wir hoffen ___ gutes Wetter. »", "audioPrompt": "Wir hoffen auf gutes Wetter.", "answer": "auf", "hint": "hoffen + auf" },
+          { "type": "multiple-choice", "id": "b1-14-q10", "question": "sich freuen auf vs sich freuen über ?", "options": ["identiques", "auf pour le futur, über pour le présent/passé", "auf pour les personnes, über pour les choses", "auf pour le négatif, über pour le positif"], "answer": "auf pour le futur, über pour le présent/passé" },
+          { "type": "fill-blank", "id": "b1-14-q11", "question": "« Er träumt ___ einem Haus. »", "answer": "von", "hint": "träumen + von" },
+          { "type": "multiple-choice", "id": "b1-14-q12", "question": "Préposition avec sich verlieben ?", "options": ["für", "in", "auf", "mit"], "answer": "in" },
+          { "type": "fill-blank", "id": "b1-14-q13", "question": "« Wir fangen ___ der Arbeit an. » (Dativ)", "answer": "mit", "hint": "anfangen mit + Dat" },
+          { "type": "matching", "id": "b1-14-q14", "question": "Associe le verbe à sa préposition :", "pairs": [
+            { "left": "antworten", "right": "auf" },
+            { "left": "sprechen", "right": "mit" },
+            { "left": "gehören", "right": "zu" },
+            { "left": "fragen", "right": "nach" },
+            { "left": "arbeiten", "right": "bei" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b1-14-q15", "question": "Ordonne : « Elle travaille dans une grande entreprise »", "words": ["Sie", "arbeitet", "bei", "einer", "großen", "Firma"], "answer": "Sie arbeitet bei einer großen Firma" },
+          { "type": "fill-blank", "id": "b1-14-q16", "question": "Écoute : « Achte ___ den Verkehr! »", "audioPrompt": "Achte auf den Verkehr!", "answer": "auf", "hint": "achten + auf" },
+          { "type": "multiple-choice", "id": "b1-14-q17", "question": "Réponse à « Worauf freust du dich? »", "options": ["Auf wen?", "Darauf.", "Damit.", "Davon."], "answer": "Darauf." },
+          { "type": "speaking", "id": "b1-14-q18", "question": "Dis : « Je m'excuse du retard »", "answer": "Ich entschuldige mich für die Verspätung" },
+          { "type": "fill-blank", "id": "b1-14-q19", "question": "« Hör ___ dem Rauchen auf! » (Dativ)", "answer": "mit", "hint": "aufhören + mit + Dat" },
+          { "type": "multiple-choice", "id": "b1-14-q20", "question": "Comment demander à propos d'une personne : « J'attends mon frère » ?", "options": ["Worauf?", "Auf wen?", "Auf was?", "Wofür?"], "answer": "Auf wen?" }
+        ]
+      }
     }
   },
   "title": "Niveau Trois",
