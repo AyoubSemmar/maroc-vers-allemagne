@@ -3031,6 +3031,120 @@
           "example": "Ich liebe meine Familie.",
           "exampleArabic": "I love my family.",
           "type": "verb"
+        },
+        {
+          "german": "die Schwiegermutter",
+          "arabic": "mother-in-law",
+          "gender": "die",
+          "plural": "Schwiegermütter",
+          "example": "Meine Schwiegermutter wohnt nah.",
+          "exampleArabic": "My mother-in-law lives nearby.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schwiegervater",
+          "arabic": "father-in-law",
+          "gender": "der",
+          "plural": "Schwiegerväter",
+          "example": "Mein Schwiegervater ist Arzt.",
+          "exampleArabic": "My father-in-law is a doctor.",
+          "type": "noun"
+        },
+        {
+          "german": "der Enkel",
+          "arabic": "grandson",
+          "gender": "der",
+          "plural": "Enkel",
+          "example": "Mein Enkel ist 3 Jahre alt.",
+          "exampleArabic": "My grandson is 3.",
+          "type": "noun"
+        },
+        {
+          "german": "die Enkelin",
+          "arabic": "granddaughter",
+          "gender": "die",
+          "plural": "Enkelinnen",
+          "example": "Meine Enkelin spielt gern.",
+          "exampleArabic": "My granddaughter loves to play.",
+          "type": "noun"
+        },
+        {
+          "german": "der Neffe",
+          "arabic": "nephew",
+          "gender": "der",
+          "plural": "Neffen",
+          "example": "Mein Neffe ist nett.",
+          "exampleArabic": "My nephew is nice.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nichte",
+          "arabic": "niece",
+          "gender": "die",
+          "plural": "Nichten",
+          "example": "Meine Nichte studiert.",
+          "exampleArabic": "My niece studies.",
+          "type": "noun"
+        },
+        {
+          "german": "der Verwandte",
+          "arabic": "relative",
+          "gender": "der",
+          "plural": "Verwandte",
+          "example": "Wir besuchen Verwandte.",
+          "exampleArabic": "We visit relatives.",
+          "type": "noun"
+        },
+        {
+          "german": "der Nachbar",
+          "arabic": "neighbor",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Mein Nachbar ist freundlich.",
+          "exampleArabic": "My neighbor is friendly.",
+          "type": "noun"
+        },
+        {
+          "german": "verlobt",
+          "arabic": "engaged",
+          "example": "Wir sind verlobt.",
+          "exampleArabic": "We're engaged.",
+          "type": "adjective"
+        },
+        {
+          "german": "geschieden",
+          "arabic": "divorced",
+          "example": "Sie ist geschieden.",
+          "exampleArabic": "She's divorced.",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich / nett",
+          "arabic": "friendly / nice",
+          "example": "Meine Tante ist sehr nett.",
+          "exampleArabic": "My aunt is very nice.",
+          "type": "adjective"
+        },
+        {
+          "german": "stolz auf",
+          "arabic": "proud of",
+          "example": "Ich bin stolz auf meine Familie.",
+          "exampleArabic": "I'm proud of my family.",
+          "type": "phrase"
+        },
+        {
+          "german": "helfen",
+          "arabic": "to help",
+          "example": "Ich helfe meiner Mutter.",
+          "exampleArabic": "I help my mother.",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "to visit",
+          "example": "Wir besuchen die Großeltern.",
+          "exampleArabic": "We visit our grandparents.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -3148,6 +3262,119 @@
               "unser"
             ],
             "answer": "ihre"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q11",
+            "question": "\"Mein ___ ist 3 Jahre alt.\" (grandson)",
+            "answer": "Enkel",
+            "hint": "der Enkel"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q12",
+            "question": "Nephew in German:",
+            "options": [
+              "der Cousin",
+              "der Neffe",
+              "der Onkel",
+              "der Bruder"
+            ],
+            "answer": "der Neffe"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q13",
+            "question": "\"Sie ist ___\" (divorced)",
+            "answer": "geschieden",
+            "hint": "marital status"
+          },
+          {
+            "type": "matching",
+            "id": "a1-05-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "Schwiegermutter",
+                "right": "mother-in-law"
+              },
+              {
+                "left": "Enkel",
+                "right": "grandson"
+              },
+              {
+                "left": "Neffe",
+                "right": "nephew"
+              },
+              {
+                "left": "Nichte",
+                "right": "niece"
+              },
+              {
+                "left": "Nachbar",
+                "right": "neighbor"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-05-q15",
+            "question": "Order: \"I'm proud of my family\"",
+            "words": [
+              "Ich",
+              "bin",
+              "stolz",
+              "auf",
+              "meine",
+              "Familie"
+            ],
+            "answer": "Ich bin stolz auf meine Familie"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-05-q16",
+            "question": "Say: \"I visit my grandparents on Saturdays\"",
+            "answer": "Ich besuche meine Großeltern am Samstag"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q17",
+            "question": "Listen: \"Ich helfe ___ Mutter.\" (Dat — my mother)",
+            "audioPrompt": "Ich helfe meiner Mutter.",
+            "answer": "meiner",
+            "hint": "helfen + Dativ; Mutter fem."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q18",
+            "question": "Neighbor in German:",
+            "options": [
+              "der Nachbar",
+              "der Nachfolger",
+              "der Sohn",
+              "der Vater"
+            ],
+            "answer": "der Nachbar"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q19",
+            "question": "\"Wir sind ___\" (engaged)",
+            "answer": "verlobt",
+            "hint": "engagement"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q20",
+            "question": "Plural of Onkel:",
+            "options": [
+              "Onkels",
+              "Onkeln",
+              "Onkel",
+              "Onkele"
+            ],
+            "answer": "Onkel"
           }
         ]
       }

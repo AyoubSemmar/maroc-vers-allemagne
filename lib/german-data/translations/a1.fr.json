@@ -3031,6 +3031,120 @@
           "example": "Ich liebe meine Familie.",
           "exampleArabic": "J'aime ma famille.",
           "type": "verb"
+        },
+        {
+          "german": "die Schwiegermutter",
+          "arabic": "la belle-mère",
+          "gender": "die",
+          "plural": "Schwiegermütter",
+          "example": "Meine Schwiegermutter wohnt nah.",
+          "exampleArabic": "Ma belle-mère habite près.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schwiegervater",
+          "arabic": "le beau-père",
+          "gender": "der",
+          "plural": "Schwiegerväter",
+          "example": "Mein Schwiegervater ist Arzt.",
+          "exampleArabic": "Mon beau-père est médecin.",
+          "type": "noun"
+        },
+        {
+          "german": "der Enkel",
+          "arabic": "le petit-fils",
+          "gender": "der",
+          "plural": "Enkel",
+          "example": "Mein Enkel ist 3 Jahre alt.",
+          "exampleArabic": "Mon petit-fils a 3 ans.",
+          "type": "noun"
+        },
+        {
+          "german": "die Enkelin",
+          "arabic": "la petite-fille",
+          "gender": "die",
+          "plural": "Enkelinnen",
+          "example": "Meine Enkelin spielt gern.",
+          "exampleArabic": "Ma petite-fille adore jouer.",
+          "type": "noun"
+        },
+        {
+          "german": "der Neffe",
+          "arabic": "le neveu",
+          "gender": "der",
+          "plural": "Neffen",
+          "example": "Mein Neffe ist nett.",
+          "exampleArabic": "Mon neveu est gentil.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nichte",
+          "arabic": "la nièce",
+          "gender": "die",
+          "plural": "Nichten",
+          "example": "Meine Nichte studiert.",
+          "exampleArabic": "Ma nièce étudie.",
+          "type": "noun"
+        },
+        {
+          "german": "der Verwandte",
+          "arabic": "le parent (au sens large)",
+          "gender": "der",
+          "plural": "Verwandte",
+          "example": "Wir besuchen Verwandte.",
+          "exampleArabic": "Nous rendons visite à des proches.",
+          "type": "noun"
+        },
+        {
+          "german": "der Nachbar",
+          "arabic": "le voisin",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Mein Nachbar ist freundlich.",
+          "exampleArabic": "Mon voisin est sympa.",
+          "type": "noun"
+        },
+        {
+          "german": "verlobt",
+          "arabic": "fiancé(e)",
+          "example": "Wir sind verlobt.",
+          "exampleArabic": "Nous sommes fiancés.",
+          "type": "adjective"
+        },
+        {
+          "german": "geschieden",
+          "arabic": "divorcé(e)",
+          "example": "Sie ist geschieden.",
+          "exampleArabic": "Elle est divorcée.",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich / nett",
+          "arabic": "aimable / gentil",
+          "example": "Meine Tante ist sehr nett.",
+          "exampleArabic": "Ma tante est très gentille.",
+          "type": "adjective"
+        },
+        {
+          "german": "stolz auf",
+          "arabic": "fier de",
+          "example": "Ich bin stolz auf meine Familie.",
+          "exampleArabic": "Je suis fier de ma famille.",
+          "type": "phrase"
+        },
+        {
+          "german": "helfen",
+          "arabic": "aider",
+          "example": "Ich helfe meiner Mutter.",
+          "exampleArabic": "J'aide ma mère.",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "rendre visite à",
+          "example": "Wir besuchen die Großeltern.",
+          "exampleArabic": "Nous rendons visite aux grands-parents.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -3148,6 +3262,119 @@
               "unser"
             ],
             "answer": "ihre"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q11",
+            "question": "« Mein ___ ist 3 Jahre alt. » (petit-fils)",
+            "answer": "Enkel",
+            "hint": "der Enkel"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q12",
+            "question": "Le neveu en allemand :",
+            "options": [
+              "der Cousin",
+              "der Neffe",
+              "der Onkel",
+              "der Bruder"
+            ],
+            "answer": "der Neffe"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q13",
+            "question": "« Sie ist ___ » (divorcée)",
+            "answer": "geschieden",
+            "hint": "état civil"
+          },
+          {
+            "type": "matching",
+            "id": "a1-05-q14",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "Schwiegermutter",
+                "right": "belle-mère"
+              },
+              {
+                "left": "Enkel",
+                "right": "petit-fils"
+              },
+              {
+                "left": "Neffe",
+                "right": "neveu"
+              },
+              {
+                "left": "Nichte",
+                "right": "nièce"
+              },
+              {
+                "left": "Nachbar",
+                "right": "voisin"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-05-q15",
+            "question": "Ordonne : « Je suis fier de ma famille »",
+            "words": [
+              "Ich",
+              "bin",
+              "stolz",
+              "auf",
+              "meine",
+              "Familie"
+            ],
+            "answer": "Ich bin stolz auf meine Familie"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-05-q16",
+            "question": "Dis : « Je rends visite à mes grands-parents le samedi »",
+            "answer": "Ich besuche meine Großeltern am Samstag"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q17",
+            "question": "Écoute : « Ich helfe ___ Mutter. » (Dat — ma mère)",
+            "audioPrompt": "Ich helfe meiner Mutter.",
+            "answer": "meiner",
+            "hint": "helfen + Dativ ; Mutter fém."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q18",
+            "question": "Le voisin :",
+            "options": [
+              "der Nachbar",
+              "der Nachfolger",
+              "der Sohn",
+              "der Vater"
+            ],
+            "answer": "der Nachbar"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-05-q19",
+            "question": "« Wir sind ___ » (fiancés)",
+            "answer": "verlobt",
+            "hint": "fiançailles"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-05-q20",
+            "question": "Pluriel de Onkel :",
+            "options": [
+              "Onkels",
+              "Onkeln",
+              "Onkel",
+              "Onkele"
+            ],
+            "answer": "Onkel"
           }
         ]
       }
