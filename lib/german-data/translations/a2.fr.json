@@ -5414,6 +5414,125 @@
           }
         ]
       }
+    },
+    "a2-13": {
+      "id": "a2-13",
+      "title": "La déclinaison de l'adjectif (les bases) — Adjektivdeklination",
+      "order": 13,
+      "grammar": {
+        "title": "Déclinaison de l'adjectif après der/die/das + ein/eine — au Nominativ et à l'Akkusativ",
+        "content": "En allemand, la terminaison de l'adjectif change selon : **(1) le genre, (2) le cas, (3) le type d'article qui le précède**. Pas de panique : en A2 nous n'apprenons que les deux schémas les plus courants — **après der/die/das** et **après ein/eine** — dans les deux cas les plus fréquents (Nominativ et Akkusativ).\n\n**La règle d'or la plus simple :**\n- Après **der/die/das** (article défini) : l'adjectif prend **-e** ou **-en**.\n- Après **ein/eine** (article indéfini) : l'adjectif prend la terminaison manquante de l'article.",
+        "tables": [
+          {
+            "title": "Après der/die/das (déclinaison faible)",
+            "headers": ["", "der (masc.)", "die (fém.)", "das (neutre)", "die (pluriel)"],
+            "rows": [
+              { "cells": ["Nominativ", "der **schöne** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] },
+              { "cells": ["Akkusativ", "den **schönen** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] }
+            ],
+            "theme": "cases",
+            "note": "Seul l'Akkusativ-der devient schönen. Le reste prend -e."
+          },
+          {
+            "title": "Après ein/eine (déclinaison mixte)",
+            "headers": ["", "ein (masc.)", "eine (fém.)", "ein (neutre)"],
+            "rows": [
+              { "cells": ["Nominativ", "ein **schöner** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] },
+              { "cells": ["Akkusativ", "einen **schönen** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] }
+            ],
+            "theme": "cases",
+            "note": "Après ein indéfini, l'adjectif porte la terminaison : -er (masc.), -e (fém.), -es (neutre)."
+          }
+        ],
+        "rules": [
+          { "rule": "Sans article, l'adjectif porte toujours la marque du genre : kalter Tee (thé froid), warme Milch (lait chaud).", "example": "Ich trinke kalten Tee.", "translation": "Je bois du thé froid." },
+          { "rule": "À l'Akkusativ, seul der masculin force l'adjectif à -en. Le reste reste identique.", "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.", "translation": "J'achète la nouvelle table / la nouvelle lampe / la nouvelle voiture." },
+          { "rule": "kein se comporte comme ein. mein, dein, sein, ihr, unser, euer, Ihr — pareil.", "example": "mein neuer Bruder / keine alte Frau", "translation": "mon nouveau frère / pas de vieille femme." }
+        ],
+        "examples": [
+          "Der nette Lehrer kommt aus Berlin. — Le gentil professeur vient de Berlin.",
+          "Ich habe einen guten Freund. — J'ai un bon ami.",
+          "Sie kauft ein schönes Kleid. — Elle achète une belle robe.",
+          "Die jungen Studenten lernen viel. — Les jeunes étudiants étudient beaucoup.",
+          "Mein neues Auto ist schnell. — Ma nouvelle voiture est rapide.",
+          "Wir essen frisches Brot. — Nous mangeons du pain frais.",
+          "Er liest die deutschen Zeitungen. — Il lit les journaux allemands.",
+          "Trinkst du kalten Kaffee? — Tu bois du café froid ?"
+        ],
+        "tip": "N'apprends pas tout le tableau d'un coup. Commence par « der + adjectif + e » et « ein + adjectif + er/e/es », puis fais dix phrases par jour. En une semaine, ça devient automatique."
+      },
+      "vocabulary": [
+        { "german": "schön", "arabic": "beau / belle", "example": "eine schöne Stadt", "exampleArabic": "une belle ville", "type": "adjective" },
+        { "german": "gut", "arabic": "bon", "example": "ein guter Tag", "exampleArabic": "une bonne journée", "type": "adjective" },
+        { "german": "neu", "arabic": "nouveau / neuf", "example": "mein neues Auto", "exampleArabic": "ma nouvelle voiture", "type": "adjective" },
+        { "german": "alt", "arabic": "vieux / âgé", "example": "das alte Haus", "exampleArabic": "la vieille maison", "type": "adjective" },
+        { "german": "jung", "arabic": "jeune", "example": "eine junge Frau", "exampleArabic": "une jeune femme", "type": "adjective" },
+        { "german": "groß", "arabic": "grand", "example": "ein großes Zimmer", "exampleArabic": "une grande chambre", "type": "adjective" },
+        { "german": "klein", "arabic": "petit", "example": "die kleine Katze", "exampleArabic": "le petit chat", "type": "adjective" },
+        { "german": "kalt", "arabic": "froid", "example": "kalter Kaffee", "exampleArabic": "café froid", "type": "adjective" },
+        { "german": "warm", "arabic": "chaud (tiède)", "example": "warme Milch", "exampleArabic": "lait chaud", "type": "adjective" },
+        { "german": "heiß", "arabic": "très chaud / brûlant", "example": "heißer Tee", "exampleArabic": "thé brûlant", "type": "adjective" },
+        { "german": "frisch", "arabic": "frais", "example": "frisches Brot", "exampleArabic": "pain frais", "type": "adjective" },
+        { "german": "lecker", "arabic": "délicieux", "example": "ein leckeres Essen", "exampleArabic": "un repas délicieux", "type": "adjective" },
+        { "german": "schnell", "arabic": "rapide", "example": "ein schnelles Auto", "exampleArabic": "une voiture rapide", "type": "adjective" },
+        { "german": "langsam", "arabic": "lent", "example": "ein langsamer Bus", "exampleArabic": "un bus lent", "type": "adjective" },
+        { "german": "einfach", "arabic": "simple / facile", "example": "eine einfache Frage", "exampleArabic": "une question simple", "type": "adjective" },
+        { "german": "schwer", "arabic": "difficile / lourd", "example": "eine schwere Prüfung", "exampleArabic": "un examen difficile", "type": "adjective" },
+        { "german": "leicht", "arabic": "léger / facile", "example": "ein leichter Koffer", "exampleArabic": "une valise légère", "type": "adjective" },
+        { "german": "teuer", "arabic": "cher", "example": "ein teures Hotel", "exampleArabic": "un hôtel cher", "type": "adjective" },
+        { "german": "billig", "arabic": "bon marché", "example": "ein billiger Tisch", "exampleArabic": "une table bon marché", "type": "adjective" },
+        { "german": "nett", "arabic": "gentil", "example": "eine nette Lehrerin", "exampleArabic": "une enseignante gentille", "type": "adjective" },
+        { "german": "freundlich", "arabic": "aimable", "example": "ein freundlicher Mann", "exampleArabic": "un homme aimable", "type": "adjective" },
+        { "german": "müde", "arabic": "fatigué", "example": "Ich bin sehr müde.", "exampleArabic": "Je suis très fatigué.", "type": "adjective" },
+        { "german": "hungrig", "arabic": "affamé", "example": "ein hungriges Kind", "exampleArabic": "un enfant affamé", "type": "adjective" },
+        { "german": "fleißig", "arabic": "appliqué / studieux", "example": "eine fleißige Studentin", "exampleArabic": "une étudiante studieuse", "type": "adjective" },
+        { "german": "intelligent", "arabic": "intelligent", "example": "ein intelligenter Schüler", "exampleArabic": "un élève intelligent", "type": "adjective" },
+        { "german": "das Kleid", "arabic": "la robe", "example": "Sie trägt ein rotes Kleid.", "exampleArabic": "Elle porte une robe rouge.", "type": "noun", "gender": "das", "plural": "die Kleider" },
+        { "german": "das Hemd", "arabic": "la chemise", "example": "ein weißes Hemd", "exampleArabic": "une chemise blanche", "type": "noun", "gender": "das", "plural": "die Hemden" },
+        { "german": "die Hose", "arabic": "le pantalon", "example": "eine neue Hose", "exampleArabic": "un nouveau pantalon", "type": "noun", "gender": "die", "plural": "die Hosen" },
+        { "german": "die Schuhe", "arabic": "les chaussures", "example": "schwarze Schuhe", "exampleArabic": "des chaussures noires", "type": "noun", "gender": "pl" },
+        { "german": "rot", "arabic": "rouge", "example": "das rote Auto", "exampleArabic": "la voiture rouge", "type": "adjective" },
+        { "german": "blau", "arabic": "bleu", "example": "der blaue Himmel", "exampleArabic": "le ciel bleu", "type": "adjective" },
+        { "german": "grün", "arabic": "vert", "example": "grüner Tee", "exampleArabic": "thé vert", "type": "adjective" },
+        { "german": "schwarz", "arabic": "noir", "example": "eine schwarze Tasche", "exampleArabic": "un sac noir", "type": "adjective" },
+        { "german": "weiß", "arabic": "blanc", "example": "ein weißes Hemd", "exampleArabic": "une chemise blanche", "type": "adjective" },
+        { "german": "sehr", "arabic": "très", "example": "sehr gut", "exampleArabic": "très bien", "type": "adverb" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a2-13-q1", "question": "Complète : « der schön__ Mann » (Nominativ)", "answer": "e", "hint": "der + adjectif + e" },
+          { "type": "multiple-choice", "id": "a2-13-q2", "question": "Corrige : « Ich kaufe ein ___ Auto. »", "options": ["neu", "neue", "neues", "neuer"], "answer": "neues" },
+          { "type": "fill-blank", "id": "a2-13-q3", "question": "Complète : « Ich habe einen gut___ Freund. »", "answer": "en", "hint": "einen + Akk-masc → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q4", "question": "Quelle phrase est correcte ?", "options": ["Sie trägt eine rotes Kleid.", "Sie trägt ein rotes Kleid.", "Sie trägt ein rote Kleid.", "Sie trägt einen rotes Kleid."], "answer": "Sie trägt ein rotes Kleid." },
+          { "type": "fill-blank", "id": "a2-13-q5", "question": "Complète : « die jung__ Studenten » (pluriel, Nominativ)", "answer": "en", "hint": "après die pluriel → -en" },
+          { "type": "matching", "id": "a2-13-q6", "question": "Associe l'adjectif à son sens :", "pairs": [
+            { "left": "schön", "right": "beau" },
+            { "left": "alt", "right": "vieux" },
+            { "left": "klein", "right": "petit" },
+            { "left": "teuer", "right": "cher" },
+            { "left": "lecker", "right": "délicieux" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-13-q7", "question": "Ordonne : « J'achète une chemise blanche »", "words": ["Ich", "kaufe", "ein", "weißes", "Hemd"], "answer": "Ich kaufe ein weißes Hemd" },
+          { "type": "speaking", "id": "a2-13-q8", "question": "Dis en allemand : « La nouvelle maison est grande »", "answer": "Das neue Haus ist groß" },
+          { "type": "fill-blank", "id": "a2-13-q9", "question": "Écoute : « Wir trinken heiß___ Tee. » (sans article)", "audioPrompt": "Wir trinken heißen Tee.", "answer": "en", "hint": "Akk-masc sans article → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q10", "question": "Le mot kein se décline comme :", "options": ["der", "die", "das", "ein"], "answer": "ein" },
+          { "type": "fill-blank", "id": "a2-13-q11", "question": "Complète : « Die alt___ Häuser sind schön. » (pluriel, Nom)", "answer": "en", "hint": "après die pluriel → -en" },
+          { "type": "multiple-choice", "id": "a2-13-q12", "question": "Quelle est la forme adjectif sans article à l'Akk-masc ?", "options": ["kalt Tee", "kalter Tee", "kalten Tee", "kalte Tee"], "answer": "kalten Tee" },
+          { "type": "fill-blank", "id": "a2-13-q13", "question": "« Mein neu___ Auto ist schnell. » (masc/neutre, Nom)", "answer": "es", "hint": "mein/dein/sein... + neutre → -es" },
+          { "type": "matching", "id": "a2-13-q14", "question": "Associe la terminaison au cas :", "pairs": [
+            { "left": "der schöne...", "right": "-e" },
+            { "left": "einen schönen...", "right": "-en" },
+            { "left": "ein schönes Kind", "right": "-es" },
+            { "left": "kalter Tee", "right": "-er" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-13-q15", "question": "Ordonne : « J'achète une belle voiture »", "words": ["Ich", "kaufe", "ein", "schönes", "Auto"], "answer": "Ich kaufe ein schönes Auto" },
+          { "type": "fill-blank", "id": "a2-13-q16", "question": "Écoute : « Sie hat eine ___ Tasche. » (noir)", "audioPrompt": "Sie hat eine schwarze Tasche.", "answer": "schwarze", "hint": "eine + adj + -e (féminin Akk)" },
+          { "type": "multiple-choice", "id": "a2-13-q17", "question": "L'adjectif après kein suit le schéma :", "options": ["der", "die", "das", "ein"], "answer": "ein" },
+          { "type": "speaking", "id": "a2-13-q18", "question": "Dis : « J'aime le café chaud »", "answer": "Ich mag heißen Kaffee" },
+          { "type": "fill-blank", "id": "a2-13-q19", "question": "« Wir essen frisch___ Brot. » (sans article, neutre Akk)", "answer": "es", "hint": "sans article, Akk-neutre → -es" },
+          { "type": "multiple-choice", "id": "a2-13-q20", "question": "Quelle phrase a une déclinaison correcte ?", "options": ["Der grüner Tee.", "Der grüne Tee.", "Der grünen Tee.", "Den grüne Tee."], "answer": "Der grüne Tee." }
+        ]
+      }
     }
   },
   "title": "Niveau Deux",
