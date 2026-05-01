@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import './learn-german.css'
@@ -58,6 +59,16 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       <div className="lg-body wrap">
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />
+
+        {/* Daily conjugation drill — 5 min/day, level-aware, builds streak */}
+        <Link href="/learn-german/drill" className="lg-drill-card">
+          <div className="lg-drill-card-icon">⚡</div>
+          <div className="lg-drill-card-text">
+            <strong>{t('drill.title')}</strong>
+            <span>{t('drill.intro')}</span>
+          </div>
+          <span className="lg-drill-card-cta">{t('drill.startCta')} →</span>
+        </Link>
 
         <ExamPrepCTA />
       </div>

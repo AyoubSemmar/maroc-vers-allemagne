@@ -2155,5 +2155,201 @@ export const A1: Level = {
         ],
       },
     },
+    // ─────────────────────────────────────────────
+    // LESSON 13 — الأفعال الناقصة (Modalverben)
+    // Critical A1 gap that was previously missing.
+    // Covers können / müssen / wollen / mögen / dürfen / sollen.
+    // ─────────────────────────────────────────────
+    {
+      id: 'a1-13',
+      title: 'الأفعال الناقصة — Modalverben',
+      order: 13,
+      grammar: {
+        title: 'الأفعال الناقصة الستة + موقع الفعل الثاني',
+        content: `الأفعال الناقصة (**Modalverben**) هي ست أفعال تُعبّر عن **القدرة، الواجب، الرغبة، الإذن، النصيحة، والميول**. لا يمكنك بناء جملة مغربية يومية تقريباً بدونها — *أستطيع، يجب، أريد، أحب، يُسمح لي، ينبغي*.
+
+**القاعدة الذهبية للجملة:**
+الفعل الناقص يحتل **المكان الثاني** في الجملة (مُصرَّفاً)، والفعل الرئيسي يذهب **في النهاية بصيغة المصدر (Infinitiv)**.
+
+→ Ich **kann** gut Deutsch **sprechen**. (أستطيع التحدث جيداً بالألمانية)
+→ Wir **müssen** heute viel **arbeiten**. (يجب علينا العمل كثيراً اليوم)
+
+**ملاحظة مهمة:** صيغة ich و er/sie/es **متطابقتان** في كل الأفعال الناقصة. لا حرف -t في النهاية.`,
+        tables: [
+          {
+            title: 'تصريف الأفعال الناقصة الستة في الحاضر',
+            headers: ['Pronomen', 'können', 'müssen', 'wollen', 'mögen', 'dürfen', 'sollen'],
+            rows: [
+              { cells: ['ich',           'kann',  'muss',  'will',   'mag',  'darf',   'soll'] },
+              { cells: ['du',            'kannst','musst', 'willst', 'magst','darfst', 'sollst'] },
+              { cells: ['er / sie / es', 'kann',  'muss',  'will',   'mag',  'darf',   'soll'], highlight: true },
+              { cells: ['wir',           'können','müssen','wollen', 'mögen','dürfen', 'sollen'] },
+              { cells: ['ihr',           'könnt', 'müsst', 'wollt',  'mögt', 'dürft',  'sollt'] },
+              { cells: ['sie / Sie',     'können','müssen','wollen', 'mögen','dürfen', 'sollen'] },
+            ],
+            theme: 'conjugation',
+            note: 'الصف المُلوَّن (er/sie/es) يُطابق ich — هذه أهم خاصية للأفعال الناقصة.',
+          },
+          {
+            title: 'معاني الأفعال الناقصة',
+            headers: ['الفعل', 'المعنى', 'مثال'],
+            rows: [
+              { cells: ['können', 'القدرة (يستطيع)',          'Ich kann schwimmen.'] },
+              { cells: ['müssen', 'الواجب القوي (يجب)',         'Du musst lernen.'] },
+              { cells: ['wollen', 'الرغبة الإرادية (يريد)',     'Ich will nach Berlin.'] },
+              { cells: ['mögen',  'يحب (مع mögen) أو يودّ (möchte)', 'Ich mag Kaffee.'] },
+              { cells: ['dürfen', 'الإذن (يُسمح)',              'Hier darf man rauchen.'] },
+              { cells: ['sollen', 'النصيحة/التكليف (ينبغي)',     'Du sollst zum Arzt gehen.'] },
+            ],
+            theme: 'default',
+          },
+          {
+            title: 'هيكل الجملة مع الفعل الناقص',
+            headers: ['Position 1', 'Position 2 (Modal)', 'Mitte', 'Ende (Infinitiv)'],
+            rows: [
+              { cells: ['Ich',        'kann',   'gut Deutsch',   'sprechen.'] },
+              { cells: ['Heute',      'müssen', 'wir früh',      'aufstehen.'] },
+              { cells: ['Wo',         'darf',   'ich',           'parken?'] },
+              { cells: ['Mein Bruder','will',   'in Marokko',    'studieren.'] },
+            ],
+            theme: 'default',
+            note: 'الفعل الناقص دائماً Position 2، الفعل الرئيسي في النهاية.',
+          },
+        ],
+        rules: [
+          {
+            rule: 'لا تنسَ: ich و er/sie/es عند الأفعال الناقصة لهما **نفس** الصيغة، بدون -t في النهاية.',
+            example: 'Er kann Deutsch. — Ich kann Deutsch. (وليس "er kannt")',
+            translation: 'هو يعرف الألمانية. — أنا أعرف الألمانية.',
+          },
+          {
+            rule: 'في السؤال (Ja/Nein-Frage)، الفعل الناقص يبدأ الجملة.',
+            example: 'Kannst du Arabisch sprechen?',
+            translation: 'هل تستطيع التحدث بالعربية؟',
+          },
+          {
+            rule: 'الصيغة المهذّبة "möchte" (أودّ) من mögen — استعملها بدلاً من will في المطاعم والمحلات.',
+            example: 'Ich möchte einen Kaffee, bitte.',
+            translation: 'أودّ قهوة من فضلك. (أكثر تهذيباً من Ich will...)',
+          },
+          {
+            rule: 'مع الفعل الناقص يُحذف الفعل الرئيسي أحياناً إذا كان مفهوماً من السياق.',
+            example: 'Ich kann Deutsch. (= Ich kann Deutsch sprechen.)',
+            translation: 'أعرف الألمانية. (= أستطيع التحدث بالألمانية.)',
+          },
+        ],
+        examples: [
+          'Ich kann ein bisschen Deutsch sprechen. — أستطيع التحدث بالألمانية قليلاً.',
+          'Du musst um 8 Uhr aufstehen. — يجب عليك الاستيقاظ في الثامنة.',
+          'Wir wollen nach Berlin reisen. — نريد السفر إلى برلين.',
+          'Sie mag keinen Kaffee. — هي لا تحب القهوة.',
+          'Hier darf man nicht rauchen. — لا يُسمح بالتدخين هنا.',
+          'Du sollst mehr Wasser trinken. — ينبغي عليك شرب المزيد من الماء.',
+          'Können Sie mir helfen? — هل يمكنك مساعدتي؟ (مهذّب)',
+          'Ich möchte einen Tee, bitte. — أودّ شاياً من فضلك.',
+          'Mein Vater muss heute arbeiten. — والدي يجب أن يعمل اليوم.',
+          'Was willst du essen? — ماذا تريد أن تأكل؟',
+        ],
+        tip: 'احفظ الجدول الكبير غيباً. الفعل الناقص + الفعل الرئيسي في النهاية = نمط ستستخدمه في كل جملة A1 تقريباً. تدرّب 5 دقائق يومياً في صفحة Drill (تدريب التصريف).',
+      },
+      vocabulary: [
+        { german: 'können',    arabic: 'يستطيع',           example: 'Ich kann gut schwimmen.',         exampleArabic: 'أستطيع السباحة جيداً.', type: 'verb' },
+        { german: 'müssen',    arabic: 'يجب',              example: 'Wir müssen lernen.',              exampleArabic: 'يجب علينا أن نتعلم.',   type: 'verb' },
+        { german: 'wollen',    arabic: 'يريد',             example: 'Ich will Wasser.',                 exampleArabic: 'أريد ماءً.',            type: 'verb' },
+        { german: 'mögen',     arabic: 'يحب',              example: 'Magst du Tee?',                    exampleArabic: 'هل تحب الشاي؟',        type: 'verb' },
+        { german: 'möchten',   arabic: 'يودّ (مهذّب)',     example: 'Ich möchte einen Kaffee.',         exampleArabic: 'أودّ قهوة.',            type: 'verb' },
+        { german: 'dürfen',    arabic: 'يُسمح له',         example: 'Hier darf man parken.',            exampleArabic: 'يُسمح بالوقوف هنا.',    type: 'verb' },
+        { german: 'sollen',    arabic: 'ينبغي',            example: 'Du sollst zum Arzt gehen.',        exampleArabic: 'ينبغي أن تذهب للطبيب.', type: 'verb' },
+        { german: 'der Infinitiv', arabic: 'صيغة المصدر',  example: 'sprechen ist ein Infinitiv.',      exampleArabic: 'sprechen صيغة مصدر.',  type: 'noun', gender: 'der' },
+        { german: 'rauchen',   arabic: 'يدخّن',            example: 'Hier darf man nicht rauchen.',     exampleArabic: 'لا يُسمح بالتدخين هنا.', type: 'verb' },
+        { german: 'parken',    arabic: 'يركن السيارة',     example: 'Wo kann ich parken?',              exampleArabic: 'أين يمكنني ركن السيارة؟', type: 'verb' },
+        { german: 'helfen',    arabic: 'يساعد',            example: 'Können Sie mir helfen?',           exampleArabic: 'هل يمكنك مساعدتي؟',    type: 'verb' },
+        { german: 'reisen',    arabic: 'يسافر',            example: 'Wir wollen nach Berlin reisen.',   exampleArabic: 'نريد السفر إلى برلين.', type: 'verb' },
+        { german: 'studieren', arabic: 'يدرس بالجامعة',    example: 'Ich will in Deutschland studieren.', exampleArabic: 'أريد الدراسة بألمانيا.', type: 'verb' },
+        { german: 'das Wasser', arabic: 'الماء',           example: 'Ich möchte Wasser, bitte.',        exampleArabic: 'أودّ ماءً من فضلك.',    type: 'noun', gender: 'das' },
+        { german: 'die Hilfe',  arabic: 'المساعدة',        example: 'Ich brauche Hilfe.',               exampleArabic: 'أحتاج مساعدة.',        type: 'noun', gender: 'die' },
+      ],
+      exercise: {
+        questions: [
+          {
+            type: 'fill-blank', id: 'a1-13-q1',
+            question: 'أكمل: "Ich ___ gut Deutsch sprechen." (أستطيع)',
+            answer: 'kann',
+            hint: 'können — تذكّر: ich kann (بدون -e)',
+          },
+          {
+            type: 'multiple-choice', id: 'a1-13-q2',
+            question: 'ما الصيغة الصحيحة لـ er مع müssen؟',
+            options: ['er müsst', 'er muss', 'er musst', 'er müssen'],
+            answer: 'er muss',
+          },
+          {
+            type: 'fill-blank', id: 'a1-13-q3',
+            question: 'أكمل: "Du ___ mehr Wasser trinken." (ينبغي)',
+            answer: 'sollst',
+            hint: 'sollen — صيغة du',
+          },
+          {
+            type: 'multiple-choice', id: 'a1-13-q4',
+            question: 'أيّ جملة صحيحة؟',
+            options: [
+              'Ich kann sprechen Deutsch gut.',
+              'Ich Deutsch gut sprechen kann.',
+              'Ich kann gut Deutsch sprechen.',
+              'Sprechen ich kann gut Deutsch.',
+            ],
+            answer: 'Ich kann gut Deutsch sprechen.',
+          },
+          {
+            type: 'fill-blank', id: 'a1-13-q5',
+            question: 'أكمل: "___ ich hier parken?" (هل يُسمح؟)',
+            answer: 'Darf',
+            hint: 'dürfen — صيغة ich في السؤال',
+          },
+          {
+            type: 'matching', id: 'a1-13-q6',
+            question: 'اربط الفعل الناقص بمعناه:',
+            pairs: [
+              { left: 'können', right: 'يستطيع' },
+              { left: 'müssen', right: 'يجب' },
+              { left: 'wollen', right: 'يريد' },
+              { left: 'mögen',  right: 'يحب' },
+              { left: 'dürfen', right: 'يُسمح له' },
+              { left: 'sollen', right: 'ينبغي' },
+            ],
+            answer: 'matched',
+          },
+          {
+            type: 'drag-drop', id: 'a1-13-q7',
+            question: 'رتّب: "أريد السفر إلى ألمانيا"',
+            words: ['Ich', 'will', 'nach', 'Deutschland', 'reisen'],
+            answer: 'Ich will nach Deutschland reisen',
+          },
+          {
+            type: 'speaking', id: 'a1-13-q8',
+            question: 'قل بالألمانية: "أودّ قهوة من فضلك" (مهذّب)',
+            answer: 'Ich möchte einen Kaffee bitte',
+          },
+          {
+            type: 'fill-blank', id: 'a1-13-q9',
+            question: 'استمع وأكمل: "Hier ___ man nicht rauchen." (لا يُسمح)',
+            audioPrompt: 'Hier darf man nicht rauchen.',
+            answer: 'darf',
+            hint: 'dürfen + man (الإذن العام)',
+          },
+          {
+            type: 'multiple-choice', id: 'a1-13-q10',
+            question: 'كيف تطلب المساعدة بشكل مهذّب؟',
+            options: [
+              'Hilf mir!',
+              'Du musst mir helfen!',
+              'Können Sie mir helfen, bitte?',
+              'Ich helfe dir.',
+            ],
+            answer: 'Können Sie mir helfen, bitte?',
+          },
+        ],
+      },
+    },
   ],
 }
