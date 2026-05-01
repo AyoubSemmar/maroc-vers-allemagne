@@ -4261,6 +4261,137 @@
           }
         ]
       }
+    },
+    "b2-13": {
+      "id": "b2-13",
+      "title": "Discours indirect formel — Konjunktiv I",
+      "order": 13,
+      "grammar": {
+        "title": "Konjunktiv I pour rapporter neutralement les propos d'autrui + quand recourir au Konjunktiv II",
+        "content": "Le **Konjunktiv I** est une forme spéciale qui sert à rapporter les propos d'autrui sans les confirmer ni les nier — utilisée dans la presse, les actualités et les rapports officiels. Le but : **rapporter de façon neutre** (= « selon ce qu'a dit... »).\n\n→ Der Minister **sagt**, er **habe** keine Zeit. (Le ministre dit qu'il n'a pas de temps — selon ses propres mots)\n\nDans la langue de tous les jours, on utilise plutôt **dass-Satz + Indikativ** ou **Konjunktiv II** — le Konjunktiv I reste réservé aux contextes formels et journalistiques. L'examen B2 (telc/Goethe) le teste — ne le sautez pas.",
+        "tables": [
+          {
+            "title": "Konjunktiv I — conjugaison des verbes courants",
+            "headers": ["Pronomen", "sein", "haben", "sagen", "kommen"],
+            "rows": [
+              { "cells": ["ich", "sei", "habe", "sage", "komme"] },
+              { "cells": ["du", "sei(e)st", "habest", "sagest", "kommest"] },
+              { "cells": ["er/sie/es", "sei", "habe", "sage", "komme"], "highlight": true },
+              { "cells": ["wir", "seien", "haben", "sagen", "kommen"] },
+              { "cells": ["ihr", "seiet", "habet", "saget", "kommet"] },
+              { "cells": ["sie/Sie", "seien", "haben", "sagen", "kommen"] }
+            ],
+            "theme": "conjugation",
+            "note": "sein est le seul totalement régulier au Konj. I. Les autres ajoutent -e- au radical."
+          },
+          {
+            "title": "Quand recourir au Konjunktiv II",
+            "headers": ["Cas", "Exemple", "Raison"],
+            "rows": [
+              { "cells": ["Konj. I = Indikativ", "sie sagen → sie sagen", "Aucune différence — remplacer par würde + Inf"] },
+              { "cells": ["Solution alternative", "sie würden sagen", "Lève l'ambiguïté"] },
+              { "cells": ["ich/wir souvent", "ich habe → ich hätte", "Pour éviter la confusion avec l'Indikativ"] }
+            ],
+            "theme": "default",
+            "note": "Règle : si le Konj. I coïncide avec le présent ordinaire, remplacer par Konj. II ou würde+Inf."
+          },
+          {
+            "title": "Formes du Konjunktiv I aux différents temps",
+            "headers": ["Temps", "Structure", "Exemple"],
+            "rows": [
+              { "cells": ["Präsens (Konj. I)", "verbe + -e/-est/-e/-en/-et/-en", "Er sage, dass..."] },
+              { "cells": ["Vergangenheit (Konj. I)", "habe/sei + Partizip II", "Sie habe das gesagt."] },
+              { "cells": ["Zukunft (Konj. I)", "werde + Infinitiv", "Er werde kommen."] }
+            ],
+            "theme": "default",
+            "note": "Le passé au Konj. I utilise toujours le Perfekt (haben/sein + Partizip)."
+          }
+        ],
+        "rules": [
+          { "rule": "Au discours indirect formel, on utilise le Konj. I sans « dass » ; l'ordre des mots reste celui d'une phrase principale.", "example": "Er sagt, er habe Zeit. (وليس Er sagt, dass er habe Zeit.)", "translation": "Il dit qu'il a du temps." },
+          { "rule": "Si le Konj. I coïncide avec l'Indikativ, on le remplace par le Konj. II (würde + Inf ou la forme simple).", "example": "sie sagen → sie würden sagen / sie sagten", "translation": "Ils disent." },
+          { "rule": "Limite l'usage du Konj. I à la presse, aux rapports, à l'écriture académique et aux examens officiels.", "example": "In den Nachrichten: \"Der Präsident habe das nicht gewusst.\"", "translation": "Aux infos : le président aurait dit qu'il n'était pas au courant." },
+          { "rule": "La forme sei/seien au Konj. I s'emploie aussi dans les instructions et les recettes : « Man nehme... »", "example": "Man nehme drei Eier.", "translation": "On prend trois œufs. (recette)" }
+        ],
+        "examples": [
+          "Der Politiker sagt, er sei unschuldig. — Le politicien dit qu'il est innocent.",
+          "Sie behauptet, sie habe nichts davon gewusst. — Elle prétend qu'elle n'en savait rien.",
+          "Laut der Studie nehme die Inflation zu. — Selon l'étude, l'inflation augmente.",
+          "Der Arzt erklärt, der Patient brauche mehr Ruhe. — Le médecin explique que le patient a besoin de plus de repos.",
+          "Er fragt, ob sie kommen werde. — Il demande si elle viendra.",
+          "Die Zeitung berichtet, der Minister habe das Land verlassen. — Le journal rapporte que le ministre a quitté le pays.",
+          "Man sage, das Wetter werde besser. — On dit que le temps va s'améliorer."
+        ],
+        "tip": "L'examen B2 teste surtout le passage du discours direct au Konj. I. Entraîne-toi 10 phrases par jour à partir de journaux allemands : transforme « ich sage » en « er sagt, er sage ». En deux semaines tu maîtrises la structure."
+      },
+      "vocabulary": [
+        { "german": "sagen", "arabic": "dire", "example": "Er sagt, er habe Zeit.", "exampleArabic": "Il dit qu'il a du temps.", "type": "verb" },
+        { "german": "behaupten", "arabic": "prétendre", "example": "Sie behauptet, sie sei krank.", "exampleArabic": "Elle prétend être malade.", "type": "verb" },
+        { "german": "erklären", "arabic": "expliquer", "example": "Er erklärt, das sei einfach.", "exampleArabic": "Il explique que c'est simple.", "type": "verb" },
+        { "german": "berichten", "arabic": "rapporter / signaler", "example": "Die Presse berichtet, er sei zurückgetreten.", "exampleArabic": "La presse rapporte qu'il a démissionné.", "type": "verb" },
+        { "german": "meinen", "arabic": "penser / vouloir dire", "example": "Sie meint, ich hätte das gesagt.", "exampleArabic": "Elle pense que j'ai dit ça.", "type": "verb" },
+        { "german": "erzählen", "arabic": "raconter", "example": "Er erzählt, er sei in Berlin gewesen.", "exampleArabic": "Il raconte qu'il était à Berlin.", "type": "verb" },
+        { "german": "mitteilen", "arabic": "informer", "example": "Er teilt mit, er komme später.", "exampleArabic": "Il informe qu'il viendra plus tard.", "type": "verb" },
+        { "german": "fragen", "arabic": "demander", "example": "Sie fragt, ob er da sei.", "exampleArabic": "Elle demande s'il est là.", "type": "verb" },
+        { "german": "antworten", "arabic": "répondre", "example": "Er antwortet, er wisse es nicht.", "exampleArabic": "Il répond qu'il ne le sait pas.", "type": "verb" },
+        { "german": "die Aussage", "arabic": "la déclaration", "example": "Seine Aussage war klar.", "exampleArabic": "Sa déclaration était claire.", "type": "noun", "gender": "die", "plural": "die Aussagen" },
+        { "german": "das Zitat", "arabic": "la citation", "example": "Das Zitat ist berühmt.", "exampleArabic": "La citation est célèbre.", "type": "noun", "gender": "das", "plural": "die Zitate" },
+        { "german": "die Quelle", "arabic": "la source", "example": "Was ist die Quelle?", "exampleArabic": "Quelle est la source ?", "type": "noun", "gender": "die", "plural": "die Quellen" },
+        { "german": "der Bericht", "arabic": "le rapport", "example": "Der Bericht erscheint heute.", "exampleArabic": "Le rapport paraît aujourd'hui.", "type": "noun", "gender": "der", "plural": "die Berichte" },
+        { "german": "die Nachricht", "arabic": "la nouvelle / l'info", "example": "Die Nachricht ist wichtig.", "exampleArabic": "La nouvelle est importante.", "type": "noun", "gender": "die", "plural": "die Nachrichten" },
+        { "german": "die Presse", "arabic": "la presse", "example": "Die Presse berichtet darüber.", "exampleArabic": "La presse en parle.", "type": "noun", "gender": "die" },
+        { "german": "der Journalist", "arabic": "le journaliste", "example": "Der Journalist fragt nach.", "exampleArabic": "Le journaliste pose la question.", "type": "noun", "gender": "der", "plural": "die Journalisten" },
+        { "german": "der Minister", "arabic": "le ministre", "example": "Der Minister erklärt die Entscheidung.", "exampleArabic": "Le ministre explique la décision.", "type": "noun", "gender": "der", "plural": "die Minister" },
+        { "german": "die Regierung", "arabic": "le gouvernement", "example": "Die Regierung kündigt eine Reform an.", "exampleArabic": "Le gouvernement annonce une réforme.", "type": "noun", "gender": "die", "plural": "die Regierungen" },
+        { "german": "die Studie", "arabic": "l'étude", "example": "Laut der Studie...", "exampleArabic": "Selon l'étude...", "type": "noun", "gender": "die", "plural": "die Studien" },
+        { "german": "das Ergebnis", "arabic": "le résultat", "example": "Das Ergebnis ist überraschend.", "exampleArabic": "Le résultat est surprenant.", "type": "noun", "gender": "das", "plural": "die Ergebnisse" },
+        { "german": "die Untersuchung", "arabic": "l'enquête / l'examen", "example": "Die Untersuchung dauert noch.", "exampleArabic": "L'enquête est toujours en cours.", "type": "noun", "gender": "die", "plural": "die Untersuchungen" },
+        { "german": "die Behauptung", "arabic": "l'affirmation", "example": "Die Behauptung ist falsch.", "exampleArabic": "L'affirmation est fausse.", "type": "noun", "gender": "die", "plural": "die Behauptungen" },
+        { "german": "die Erklärung", "arabic": "l'explication", "example": "Eine offizielle Erklärung kam.", "exampleArabic": "Une déclaration officielle a été publiée.", "type": "noun", "gender": "die", "plural": "die Erklärungen" },
+        { "german": "angeblich", "arabic": "soi-disant", "example": "Er ist angeblich krank.", "exampleArabic": "Il serait soi-disant malade.", "type": "adverb" },
+        { "german": "laut", "arabic": "selon", "example": "Laut der Zeitung...", "exampleArabic": "Selon le journal...", "type": "preposition" },
+        { "german": "gemäß", "arabic": "conformément à", "example": "Gemäß dem Vertrag...", "exampleArabic": "Conformément au contrat...", "type": "preposition" },
+        { "german": "offiziell", "arabic": "officiel", "example": "Das ist offiziell.", "exampleArabic": "C'est officiel.", "type": "adjective" },
+        { "german": "inoffiziell", "arabic": "officieux", "example": "Eine inoffizielle Aussage.", "exampleArabic": "Une déclaration officieuse.", "type": "adjective" },
+        { "german": "angesehen", "arabic": "réputé", "example": "Eine angesehene Zeitung.", "exampleArabic": "Un journal réputé.", "type": "adjective" },
+        { "german": "kontrovers", "arabic": "controversé", "example": "Eine kontroverse Behauptung.", "exampleArabic": "Une affirmation controversée.", "type": "adjective" },
+        { "german": "glaubwürdig", "arabic": "crédible", "example": "Eine glaubwürdige Quelle.", "exampleArabic": "Une source crédible.", "type": "adjective" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "b2-13-q1", "question": "Transforme : « Er hat Zeit. » → « Er sagt, er ___ Zeit. » (Konj. I)", "answer": "habe", "hint": "haben → habe au Konj. I (er)" },
+          { "type": "multiple-choice", "id": "b2-13-q2", "question": "Konjunktiv I de sein avec er ?", "options": ["ist", "sei", "sein", "wäre"], "answer": "sei" },
+          { "type": "fill-blank", "id": "b2-13-q3", "question": "Que faire si le Konj. I coïncide avec l'Indikativ ? On utilise ___ + Inf.", "answer": "würde", "hint": "L'alternative la plus courante" },
+          { "type": "multiple-choice", "id": "b2-13-q4", "question": "Konj. I au passé ?", "options": ["werde + Inf", "habe/sei + Partizip", "würde + Inf", "hätte/wäre + Partizip"], "answer": "habe/sei + Partizip" },
+          { "type": "fill-blank", "id": "b2-13-q5", "question": "Transforme : « Sie kommt morgen. » → « Er sagt, sie ___ morgen. » (Konj. I)", "answer": "komme", "hint": "kommen → komme" },
+          { "type": "matching", "id": "b2-13-q6", "question": "Associe le verbe à sa forme Konj. I (er) :", "pairs": [
+            { "left": "haben", "right": "habe" },
+            { "left": "sein", "right": "sei" },
+            { "left": "kommen", "right": "komme" },
+            { "left": "sagen", "right": "sage" },
+            { "left": "gehen", "right": "gehe" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b2-13-q7", "question": "Remets dans l'ordre : « Le ministre dit qu'il est innocent »", "words": ["Der", "Minister", "sagt,", "er", "sei", "unschuldig"], "answer": "Der Minister sagt, er sei unschuldig" },
+          { "type": "speaking", "id": "b2-13-q8", "question": "Dis au Konj. I : « Elle dit qu'elle est occupée »", "answer": "Sie sagt, sie sei beschäftigt" },
+          { "type": "fill-blank", "id": "b2-13-q9", "question": "Écoute : « Laut der Studie ___ die Inflation zu. » (Konj. I de zunehmen)", "audioPrompt": "Laut der Studie nehme die Inflation zu.", "answer": "nehme", "hint": "zunehmen → nehme...zu" },
+          { "type": "multiple-choice", "id": "b2-13-q10", "question": "Le Konj. I s'emploie principalement dans :", "options": ["la langue de tous les jours", "la presse et les rapports officiels", "les lettres personnelles", "les annonces"], "answer": "la presse et les rapports officiels" },
+          { "type": "fill-blank", "id": "b2-13-q11", "question": "Konj. I de müssen avec er ?", "answer": "müsse", "hint": "müssen → müsse (Konj. I)" },
+          { "type": "multiple-choice", "id": "b2-13-q12", "question": "Au discours formel sans dass :", "options": ["ordre subordonné", "ordre principal", "verbe à la fin", "pas de verbe"], "answer": "ordre principal" },
+          { "type": "fill-blank", "id": "b2-13-q13", "question": "« Sie ___ das Land verlassen. » (Konj. I passé haben + Partizip)", "answer": "habe", "hint": "habe + verlassen" },
+          { "type": "matching", "id": "b2-13-q14", "question": "Associe le discours direct au Konj. I :", "pairs": [
+            { "left": "« Ich bin müde. »", "right": "Er sagt, er sei müde." },
+            { "left": "« Ich habe Geld. »", "right": "Er sagt, er habe Geld." },
+            { "left": "« Sie kommt morgen. »", "right": "Er sagt, sie komme morgen." },
+            { "left": "« Wir wissen es nicht. »", "right": "Sie sagen, sie wüssten es nicht." }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b2-13-q15", "question": "Remets dans l'ordre : « Le ministre dit qu'il a démissionné »", "words": ["Der", "Minister", "sagt,", "er", "sei", "zurückgetreten"], "answer": "Der Minister sagt, er sei zurückgetreten" },
+          { "type": "fill-blank", "id": "b2-13-q16", "question": "Écoute : « Sie behauptet, sie ___ unschuldig. » (sein Konj. I)", "audioPrompt": "Sie behauptet, sie sei unschuldig.", "answer": "sei", "hint": "sein → sei" },
+          { "type": "multiple-choice", "id": "b2-13-q17", "question": "Quand recourt-on à würde + Inf ?", "options": ["toujours", "quand Konj. I = Indikativ", "avec haben uniquement", "dans la langue courante"], "answer": "quand Konj. I = Indikativ" },
+          { "type": "speaking", "id": "b2-13-q18", "question": "Dis au Konj. I : « Le politicien dit qu'il est innocent »", "answer": "Der Politiker sagt, er sei unschuldig" },
+          { "type": "fill-blank", "id": "b2-13-q19", "question": "« Laut der Studie ___ die Inflation zu. » (zunehmen Konj. I)", "answer": "nehme", "hint": "zunehmen → nehme...zu" },
+          { "type": "multiple-choice", "id": "b2-13-q20", "question": "La forme sei en jussif (recette) :", "options": ["suggestion", "description", "« on prend... »", "question"], "answer": "« on prend... »" }
+        ]
+      }
     }
   },
   "title": "Niveau Quatre",
