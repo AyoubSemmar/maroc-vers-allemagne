@@ -5130,6 +5130,699 @@
           }
         ]
       }
+    },
+    "c1-14": {
+      "id": "c1-14",
+      "title": "Style verbal vs nominal — Verbalstil vs Nominalstil",
+      "order": 14,
+      "grammar": {
+        "title": "Transformer les verbes en noms (Nominalisierung) et inversement — compétence clé du C1",
+        "content": "En C1, la distinction entre **Verbalstil** (style verbal) et **Nominalstil** (style nominal) est **cruciale**. Tout examen C1 demande de passer de l'un à l'autre.\n\n**Verbalstil** = phrases avec verbes, plus claires, plus naturelles à l'oral :\n→ Wenn die Preise steigen, sinkt der Konsum.\n\n**Nominalstil** = phrases avec noms, plus denses, utilisé dans les textes officiels et scientifiques :\n→ Bei Preisanstieg sinkt der Konsum.\n\nLa transformation utilise des **prépositions** (bei, durch, nach, trotz, wegen) + nom à la place d'une subordonnée.",
+        "tables": [
+          {
+            "title": "Du Verbalstil au Nominalstil",
+            "headers": [
+              "Verbalstil (verbe)",
+              "Nominalstil (nom)",
+              "Préposition"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "wenn er kommt",
+                  "bei seinem Kommen",
+                  "bei (condition)"
+                ]
+              },
+              {
+                "cells": [
+                  "weil das Wetter schlecht ist",
+                  "wegen des schlechten Wetters",
+                  "wegen (cause)"
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl es regnet",
+                  "trotz des Regens",
+                  "trotz (concession)"
+                ]
+              },
+              {
+                "cells": [
+                  "nachdem ich gegessen habe",
+                  "nach dem Essen",
+                  "nach (temps postérieur)"
+                ]
+              },
+              {
+                "cells": [
+                  "bevor wir abreisen",
+                  "vor der Abreise",
+                  "vor (temps antérieur)"
+                ]
+              },
+              {
+                "cells": [
+                  "indem er hilft",
+                  "durch seine Hilfe",
+                  "durch (moyen)"
+                ]
+              },
+              {
+                "cells": [
+                  "ohne zu helfen",
+                  "ohne Hilfe",
+                  "ohne (négation)"
+                ]
+              },
+              {
+                "cells": [
+                  "dass er kommt",
+                  "sein Kommen",
+                  "cas Genitiv"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Chaque connecteur du Verbalstil a une préposition correspondante en Nominalstil."
+          },
+          {
+            "title": "Nominalisierung — transformation du verbe en nom",
+            "headers": [
+              "Verbe",
+              "Nom",
+              "Genre"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "kommen",
+                  "das Kommen / die Ankunft",
+                  "das/die"
+                ]
+              },
+              {
+                "cells": [
+                  "gehen",
+                  "der Gang / das Gehen",
+                  "der/das"
+                ]
+              },
+              {
+                "cells": [
+                  "fahren",
+                  "die Fahrt",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "reisen",
+                  "die Reise",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "lernen",
+                  "das Lernen",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "lösen",
+                  "die Lösung",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "untersuchen",
+                  "die Untersuchung",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "entscheiden",
+                  "die Entscheidung",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "entwickeln",
+                  "die Entwicklung",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "steigen",
+                  "der Anstieg",
+                  "der"
+                ]
+              },
+              {
+                "cells": [
+                  "sinken",
+                  "der Rückgang",
+                  "der"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "-ung pour les noms féminins (die). Tout verbe peut devenir das + Infinitiv (das Lernen)."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "À l'écrit académique et journalistique, utilise le Nominalstil — plus dense et précis.",
+            "example": "Bei Preisanstieg sinkt der Konsum. (= Wenn die Preise steigen, sinkt der Konsum.)",
+            "translation": "Avec la hausse des prix, la consommation baisse."
+          },
+          {
+            "rule": "À l'oral et au dialogue, utilise le Verbalstil — plus clair et naturel.",
+            "example": "Weil es regnet, bleiben wir zu Hause. (= Wegen des Regens bleiben wir zu Hause.)",
+            "translation": "Parce qu'il pleut, on reste à la maison."
+          },
+          {
+            "rule": "Après bei/durch/wegen/trotz/nach/vor/ohne, le nom prend le cas approprié (Dativ ou Genitiv).",
+            "example": "wegen des Wetters (Genitiv) / bei dem Treffen (Dativ)",
+            "translation": "à cause du temps / à la réunion."
+          },
+          {
+            "rule": "N'abuse pas du Nominalstil — trop de phrases nominales deviennent obscures. Le bon style mélange les deux.",
+            "example": "Mauvais : Die Verbesserung der Qualität durch Optimierung der Prozesse... / Mieux : Wir verbessern die Qualität, indem wir die Prozesse optimieren.",
+            "translation": "Le style mixte est plus clair."
+          }
+        ],
+        "examples": [
+          "Verbalstil : Wenn das Projekt abgeschlossen ist, feiern wir. — Quand le projet sera fini, on fêtera.",
+          "Nominalstil : Nach Abschluss des Projekts feiern wir.",
+          "Verbalstil : Weil ich krank war, bin ich zu Hause geblieben. — Comme j'étais malade, je suis resté chez moi.",
+          "Nominalstil : Wegen meiner Krankheit bin ich zu Hause geblieben.",
+          "Verbalstil : Obwohl es regnete, gingen wir spazieren. — Même s'il pleuvait, on s'est promenés.",
+          "Nominalstil : Trotz des Regens gingen wir spazieren.",
+          "Verbalstil : Bevor wir abreisen, packen wir die Koffer. — Avant de partir, on fait les valises.",
+          "Nominalstil : Vor der Abreise packen wir die Koffer."
+        ],
+        "tip": "Choisis un texte allemand (article, rapport) et transforme 5 phrases du Verbalstil au Nominalstil chaque jour. En un mois, tu maîtriseras le passage entre les deux styles — compétence clé du C1 aux examens DSH/TestDaF."
+      },
+      "vocabulary": [
+        {
+          "german": "die Nominalisierung",
+          "arabic": "la nominalisation",
+          "example": "Die Nominalisierung ist häufig.",
+          "exampleArabic": "La nominalisation est courante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nominalisierungen"
+        },
+        {
+          "german": "der Anstieg",
+          "arabic": "la hausse",
+          "example": "Ein starker Anstieg.",
+          "exampleArabic": "Une forte hausse.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Anstiege"
+        },
+        {
+          "german": "der Rückgang",
+          "arabic": "la baisse",
+          "example": "Der Rückgang ist klar.",
+          "exampleArabic": "La baisse est nette.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Rückgänge"
+        },
+        {
+          "german": "die Entwicklung",
+          "arabic": "le développement",
+          "example": "Eine positive Entwicklung.",
+          "exampleArabic": "Une évolution positive.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entwicklungen"
+        },
+        {
+          "german": "die Veränderung",
+          "arabic": "le changement",
+          "example": "Eine wichtige Veränderung.",
+          "exampleArabic": "Un changement important.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Veränderungen"
+        },
+        {
+          "german": "die Verbesserung",
+          "arabic": "l'amélioration",
+          "example": "Eine deutliche Verbesserung.",
+          "exampleArabic": "Une nette amélioration.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Verbesserungen"
+        },
+        {
+          "german": "die Optimierung",
+          "arabic": "l'optimisation",
+          "example": "Die Optimierung der Prozesse.",
+          "exampleArabic": "L'optimisation des processus.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Optimierungen"
+        },
+        {
+          "german": "die Untersuchung",
+          "arabic": "l'examen / l'enquête",
+          "example": "Eine genaue Untersuchung.",
+          "exampleArabic": "Une enquête précise.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Untersuchungen"
+        },
+        {
+          "german": "die Auswertung",
+          "arabic": "l'analyse / l'évaluation",
+          "example": "Die Auswertung der Daten.",
+          "exampleArabic": "L'analyse des données.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Auswertungen"
+        },
+        {
+          "german": "die Bewertung",
+          "arabic": "l'évaluation",
+          "example": "Eine objektive Bewertung.",
+          "exampleArabic": "Une évaluation objective.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bewertungen"
+        },
+        {
+          "german": "der Abschluss",
+          "arabic": "la clôture / la fin",
+          "example": "Nach Abschluss des Studiums.",
+          "exampleArabic": "Après la fin des études.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Abschlüsse"
+        },
+        {
+          "german": "die Abreise",
+          "arabic": "le départ",
+          "example": "Vor der Abreise.",
+          "exampleArabic": "Avant le départ.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Abreisen"
+        },
+        {
+          "german": "die Ankunft",
+          "arabic": "l'arrivée",
+          "example": "Bei der Ankunft.",
+          "exampleArabic": "À l'arrivée.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ankünfte"
+        },
+        {
+          "german": "die Durchführung",
+          "arabic": "la mise en œuvre",
+          "example": "Bei der Durchführung des Projekts.",
+          "exampleArabic": "Lors de la mise en œuvre du projet.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Durchführungen"
+        },
+        {
+          "german": "die Berücksichtigung",
+          "arabic": "la prise en compte",
+          "example": "Unter Berücksichtigung aller Faktoren.",
+          "exampleArabic": "En tenant compte de tous les facteurs.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Voraussetzung",
+          "arabic": "le prérequis",
+          "example": "Die Voraussetzungen sind erfüllt.",
+          "exampleArabic": "Les prérequis sont remplis.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Voraussetzungen"
+        },
+        {
+          "german": "die Konsequenz",
+          "arabic": "la conséquence",
+          "example": "Die Konsequenzen sind unvermeidbar.",
+          "exampleArabic": "Les conséquences sont inévitables.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konsequenzen"
+        },
+        {
+          "german": "unter",
+          "arabic": "sous / avec",
+          "example": "Unter Berücksichtigung von...",
+          "exampleArabic": "En tenant compte de...",
+          "type": "preposition"
+        },
+        {
+          "german": "aufgrund",
+          "arabic": "en raison de",
+          "example": "Aufgrund des Wetters.",
+          "exampleArabic": "En raison du temps.",
+          "type": "preposition"
+        },
+        {
+          "german": "mittels",
+          "arabic": "au moyen de",
+          "example": "Mittels einer Studie.",
+          "exampleArabic": "Au moyen d'une étude.",
+          "type": "preposition"
+        },
+        {
+          "german": "angesichts",
+          "arabic": "à la lumière de",
+          "example": "Angesichts der Lage.",
+          "exampleArabic": "Au vu de la situation.",
+          "type": "preposition"
+        },
+        {
+          "german": "hinsichtlich",
+          "arabic": "concernant",
+          "example": "Hinsichtlich des Themas.",
+          "exampleArabic": "Concernant le sujet.",
+          "type": "preposition"
+        },
+        {
+          "german": "bezüglich",
+          "arabic": "à propos de",
+          "example": "Bezüglich Ihrer Anfrage.",
+          "exampleArabic": "À propos de votre demande.",
+          "type": "preposition"
+        },
+        {
+          "german": "der Umstand",
+          "arabic": "la circonstance",
+          "example": "Unter normalen Umständen.",
+          "exampleArabic": "Dans des circonstances normales.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Umstände"
+        },
+        {
+          "german": "das Ausmaß",
+          "arabic": "l'ampleur",
+          "example": "Das Ausmaß ist enorm.",
+          "exampleArabic": "L'ampleur est énorme.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Ausmaße"
+        },
+        {
+          "german": "der Faktor",
+          "arabic": "le facteur",
+          "example": "Ein wichtiger Faktor.",
+          "exampleArabic": "Un facteur important.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Faktoren"
+        },
+        {
+          "german": "die Tendenz",
+          "arabic": "la tendance",
+          "example": "Die Tendenz ist positiv.",
+          "exampleArabic": "La tendance est positive.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tendenzen"
+        },
+        {
+          "german": "der Beleg",
+          "arabic": "la preuve",
+          "example": "Ein klarer Beleg dafür.",
+          "exampleArabic": "Une preuve claire.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Belege"
+        },
+        {
+          "german": "umfassend",
+          "arabic": "complet / global",
+          "example": "Eine umfassende Analyse.",
+          "exampleArabic": "Une analyse complète.",
+          "type": "adjective"
+        },
+        {
+          "german": "differenziert",
+          "arabic": "nuancé",
+          "example": "Eine differenzierte Sicht.",
+          "exampleArabic": "Une vision nuancée.",
+          "type": "adjective"
+        },
+        {
+          "german": "zusammenhängend",
+          "arabic": "cohérent",
+          "example": "Ein zusammenhängender Text.",
+          "exampleArabic": "Un texte cohérent.",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q1",
+            "question": "Transforme : « Wenn er kommt... » → « ___ seinem Kommen... »",
+            "answer": "Bei",
+            "hint": "wenn → bei"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q2",
+            "question": "Équivalent en Nominalstil de « weil das Wetter schlecht ist » :",
+            "options": [
+              "trotz des Wetters",
+              "wegen des schlechten Wetters",
+              "bei dem Wetter",
+              "durch das Wetter"
+            ],
+            "answer": "wegen des schlechten Wetters"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q3",
+            "question": "Nominalstil : « obwohl es regnet » → « ___ des Regens »",
+            "answer": "trotz",
+            "hint": "obwohl → trotz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q4",
+            "question": "Verbalstil de « Vor der Abreise » :",
+            "options": [
+              "Wenn wir abreisen",
+              "Bevor wir abreisen",
+              "Nachdem wir abreisen",
+              "Während wir abreisen"
+            ],
+            "answer": "Bevor wir abreisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q5",
+            "question": "Le verbe entwickeln en nom : « die ___ »",
+            "answer": "Entwicklung",
+            "hint": "entwickeln → Entwicklung"
+          },
+          {
+            "type": "matching",
+            "id": "c1-14-q6",
+            "question": "Associe le connecteur à sa préposition :",
+            "pairs": [
+              {
+                "left": "wenn",
+                "right": "bei"
+              },
+              {
+                "left": "weil",
+                "right": "wegen"
+              },
+              {
+                "left": "obwohl",
+                "right": "trotz"
+              },
+              {
+                "left": "nachdem",
+                "right": "nach"
+              },
+              {
+                "left": "bevor",
+                "right": "vor"
+              },
+              {
+                "left": "indem",
+                "right": "durch"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-14-q7",
+            "question": "Ordonne (Nominalstil) : « À cause du mauvais temps, on reste »",
+            "words": [
+              "Wegen",
+              "des",
+              "schlechten",
+              "Wetters",
+              "bleiben",
+              "wir"
+            ],
+            "answer": "Wegen des schlechten Wetters bleiben wir"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-14-q8",
+            "question": "Mets en Nominalstil : « Wenn das Projekt abgeschlossen ist, feiern wir. »",
+            "answer": "Nach Abschluss des Projekts feiern wir"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q9",
+            "question": "Écoute : « ___ Berücksichtigung aller Faktoren... »",
+            "audioPrompt": "Unter Berücksichtigung aller Faktoren analysieren wir.",
+            "answer": "Unter",
+            "hint": "unter Berücksichtigung = en tenant compte de"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q10",
+            "question": "Le Nominalstil s'utilise principalement dans :",
+            "options": [
+              "la conversation quotidienne",
+              "l'écrit académique et journalistique",
+              "les lettres personnelles",
+              "la communication familiale"
+            ],
+            "answer": "l'écrit académique et journalistique"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q11",
+            "question": "Transforme : « indem er hilft » → « ___ seine Hilfe »",
+            "answer": "durch",
+            "hint": "indem → durch"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q12",
+            "question": "Verbalstil de « wegen des Wetters » :",
+            "options": [
+              "wenn das Wetter",
+              "weil das Wetter",
+              "obwohl das Wetter",
+              "während das Wetter"
+            ],
+            "answer": "weil das Wetter"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q13",
+            "question": "Nom de untersuchen : « die ___ »",
+            "answer": "Untersuchung",
+            "hint": "-ung"
+          },
+          {
+            "type": "matching",
+            "id": "c1-14-q14",
+            "question": "Associe la préposition académique à son sens :",
+            "pairs": [
+              {
+                "left": "aufgrund",
+                "right": "en raison de"
+              },
+              {
+                "left": "mittels",
+                "right": "au moyen de"
+              },
+              {
+                "left": "angesichts",
+                "right": "au vu de"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "concernant"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-14-q15",
+            "question": "Ordonne (Nominalstil) : « Après la clôture du projet on fête »",
+            "words": [
+              "Nach",
+              "Abschluss",
+              "des",
+              "Projekts",
+              "feiern",
+              "wir"
+            ],
+            "answer": "Nach Abschluss des Projekts feiern wir"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q16",
+            "question": "Écoute : « ___ Berücksichtigung aller Faktoren... » (en tenant compte)",
+            "audioPrompt": "Unter Berücksichtigung aller Faktoren analysieren wir.",
+            "answer": "Unter",
+            "hint": "unter Berücksichtigung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q17",
+            "question": "L'écriture idéale en C1 :",
+            "options": [
+              "Verbalstil seul",
+              "Nominalstil seul",
+              "mélange adapté au contexte",
+              "sans virgule"
+            ],
+            "answer": "mélange adapté au contexte"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-14-q18",
+            "question": "Transforme en Nominalstil : « Bevor wir abreisen, packen wir. »",
+            "answer": "Vor der Abreise packen wir"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-14-q19",
+            "question": "Nom à partir de entwickeln : « die ___ »",
+            "answer": "Entwicklung",
+            "hint": "-ung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-14-q20",
+            "question": "La phrase la plus académique :",
+            "options": [
+              "Wegen schlechtem Wetter blieben wir.",
+              "Wegen des schlechten Wetters blieben wir zu Hause.",
+              "Weil schlecht Wetter, bleiben wir.",
+              "Es ist schlecht Wetter, also bleiben wir."
+            ],
+            "answer": "Wegen des schlechten Wetters blieben wir zu Hause."
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Cinq",
