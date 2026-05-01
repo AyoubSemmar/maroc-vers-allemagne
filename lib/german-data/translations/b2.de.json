@@ -6868,6 +6868,627 @@
           }
         ]
       }
+    },
+    "b2-17": {
+      "id": "b2-17",
+      "title": "Konnektoren erweitert",
+      "order": 17,
+      "grammar": {
+        "title": "indem, ohne dass, anstatt zu, dadurch, sodass — wie man Gedanken präzise verknüpft",
+        "content": "In B2 reichen einfache Sätze nicht mehr aus. Du brauchst **präzise Konnektoren**, um Art, Grund, Gegensatz und Folge auszudrücken.\n\n**Arten von Konnektoren:**\n- **Modal:** indem, dadurch, ohne dass\n- **Konzessiv:** trotzdem, obwohl, dennoch\n- **Konsekutiv:** sodass, deshalb, daher\n- **Alternativ:** anstatt zu, anstatt dass\n\nJeder Konnektor erfordert eine bestimmte Verbstellung.",
+        "tables": [
+          {
+            "title": "Konnektoren der Art und Weise und des Mittels",
+            "headers": [
+              "Konnektor",
+              "Bedeutung",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "indem",
+                  "durch (Mittel)",
+                  "Ich lerne, indem ich viel lese."
+                ]
+              },
+              {
+                "cells": [
+                  "dadurch, dass",
+                  "dadurch, dass",
+                  "Dadurch, dass ich übe, werde ich besser."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne zu",
+                  "ohne zu",
+                  "Er ging weg, ohne zu sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne dass",
+                  "ohne dass (anderes Subjekt)",
+                  "Er ging, ohne dass ich es merkte."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt zu",
+                  "anstatt zu",
+                  "Anstatt zu lernen, schaut er fern."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt dass",
+                  "anstatt dass (anderes Subjekt)",
+                  "Anstatt dass er kam, blieb er zu Hause."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "zu + Inf bei gleichem Subjekt. dass bei verschiedenen Subjekten."
+          },
+          {
+            "title": "Konnektoren der Folge und des Gegensatzes",
+            "headers": [
+              "Konnektor",
+              "Bedeutung",
+              "Verbstellung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sodass / so dass",
+                  "sodass (Folge)",
+                  "Hauptsatz, sodass + Verb am Ende"
+                ]
+              },
+              {
+                "cells": [
+                  "so..., dass",
+                  "so... dass",
+                  "Es ist so kalt, dass wir frieren."
+                ]
+              },
+              {
+                "cells": [
+                  "deshalb",
+                  "deshalb",
+                  "Es regnet. Deshalb bleiben wir."
+                ]
+              },
+              {
+                "cells": [
+                  "trotzdem",
+                  "trotzdem",
+                  "Es regnet. Trotzdem gehen wir."
+                ]
+              },
+              {
+                "cells": [
+                  "je...desto",
+                  "je...desto",
+                  "Je mehr, desto besser."
+                ]
+              },
+              {
+                "cells": [
+                  "zumal",
+                  "zumal",
+                  "Ich komme, zumal ich Zeit habe."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "deshalb/trotzdem stehen am Anfang des zweiten Hauptsatzes. sodass beginnt einen Nebensatz."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "indem beschreibt das Mittel — Verb am Ende: „Ich lerne, indem ich Filme schaue.\"",
+            "example": "Sie verbessert ihr Deutsch, indem sie täglich liest.",
+            "translation": "Mittel"
+          },
+          {
+            "rule": "ohne zu/anstatt zu bei gleichem Subjekt. ohne dass/anstatt dass bei verschiedenen Subjekten.",
+            "example": "Er ging, ohne zu sprechen. (gleiches Subjekt) / Er ging, ohne dass ich es wusste. (verschiedene Subjekte)",
+            "translation": "Subjektregel"
+          },
+          {
+            "rule": "sodass folgt nach Komma, Verb am Ende. so + Adj + dass betont eine Ursache.",
+            "example": "Er ist krank, sodass er nicht kommen kann. / Es ist so kalt, dass wir frieren.",
+            "translation": "Folge / Verstärkung"
+          },
+          {
+            "rule": "je...desto beginnt jede Teilsatzhälfte mit Komma, Komparativform.",
+            "example": "Je mehr du übst, desto besser wirst du.",
+            "translation": "Verhältnisangabe"
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, indem ich Filme schaue.",
+          "Sie verbessert sich, dadurch dass sie täglich übt.",
+          "Er ging, ohne zu fragen.",
+          "Anstatt zu lernen, schaut er fern.",
+          "Es ist so kalt, dass wir frieren.",
+          "Je mehr ich lerne, desto besser werde ich.",
+          "Trotzdem ist er gekommen.",
+          "Ich komme, zumal ich Zeit habe."
+        ],
+        "tip": "Lerne 5 neue Konnektoren pro Woche und bilde mit jedem einen Satz. In zwei Monaten schreibst du komplexe Sätze mühelos. Die B2-Prüfung honoriert Konnektoren — je vielfältiger, desto besser dein Schreiben."
+      },
+      "vocabulary": [
+        {
+          "german": "indem",
+          "arabic": "durch",
+          "example": "Ich lerne, indem ich übe.",
+          "exampleArabic": "Mittelangabe",
+          "type": "conjunction"
+        },
+        {
+          "german": "dadurch dass",
+          "arabic": "dadurch, dass",
+          "example": "Dadurch dass er hilft, lerne ich schneller.",
+          "exampleArabic": "Mittel / Ursache",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne zu",
+          "arabic": "ohne zu (Inf)",
+          "example": "Er ging, ohne zu sprechen.",
+          "exampleArabic": "Verneinung mit Inf",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne dass",
+          "arabic": "ohne dass (anderes Subjekt)",
+          "example": "Er kam, ohne dass ich es wusste.",
+          "exampleArabic": "Verneinung mit Subjekt",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt zu",
+          "arabic": "anstatt zu",
+          "example": "Anstatt zu lernen, spielt er.",
+          "exampleArabic": "Alternative",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt dass",
+          "arabic": "anstatt dass (anderes Subjekt)",
+          "example": "Anstatt dass er hilft, lacht er.",
+          "exampleArabic": "Alternative",
+          "type": "conjunction"
+        },
+        {
+          "german": "sodass",
+          "arabic": "sodass / so dass",
+          "example": "Es regnet, sodass wir bleiben.",
+          "exampleArabic": "Folge",
+          "type": "conjunction"
+        },
+        {
+          "german": "so...dass",
+          "arabic": "so... dass",
+          "example": "Es ist so kalt, dass wir frieren.",
+          "exampleArabic": "Verstärkung",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "dennoch",
+          "example": "Es regnet. Trotzdem gehe ich.",
+          "exampleArabic": "Gegensatz",
+          "type": "adverb"
+        },
+        {
+          "german": "dennoch",
+          "arabic": "trotzdem",
+          "example": "Er ist müde, dennoch arbeitet er.",
+          "exampleArabic": "Gegensatz formell",
+          "type": "adverb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "aber",
+          "example": "Er kam, jedoch zu spät.",
+          "exampleArabic": "Gegensatz",
+          "type": "adverb"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "indes / freilich",
+          "example": "Allerdings ist es kalt.",
+          "exampleArabic": "Einschränkung",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "darum",
+          "example": "Es regnet. Deshalb bleiben wir.",
+          "exampleArabic": "Folge",
+          "type": "adverb"
+        },
+        {
+          "german": "daher",
+          "arabic": "darum / aus diesem Grund",
+          "example": "Daher ist es wichtig.",
+          "exampleArabic": "Konsequenz",
+          "type": "adverb"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "infolgedessen",
+          "example": "Demzufolge ändert sich alles.",
+          "exampleArabic": "logische Folge",
+          "type": "adverb"
+        },
+        {
+          "german": "je...desto",
+          "arabic": "je...umso/desto",
+          "example": "Je mehr, desto besser.",
+          "exampleArabic": "Verhältnis",
+          "type": "phrase"
+        },
+        {
+          "german": "zumal",
+          "arabic": "umso mehr als",
+          "example": "Ich komme, zumal ich Zeit habe.",
+          "exampleArabic": "zusätzlicher Grund",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "soweit",
+          "example": "Sofern es geht, helfe ich.",
+          "exampleArabic": "Bedingung",
+          "type": "conjunction"
+        },
+        {
+          "german": "insofern",
+          "arabic": "in dieser Hinsicht",
+          "example": "Insofern stimme ich zu.",
+          "exampleArabic": "Bezugnahme",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "im Falle",
+          "example": "Falls es regnet...",
+          "exampleArabic": "Bedingung",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "sobald",
+          "example": "Sobald er kommt, gehen wir.",
+          "exampleArabic": "zeitlich folgend",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "während",
+          "example": "Während er liest, koche ich.",
+          "exampleArabic": "gleichzeitig",
+          "type": "conjunction"
+        },
+        {
+          "german": "inzwischen",
+          "arabic": "in der Zwischenzeit",
+          "example": "Inzwischen ist es spät geworden.",
+          "exampleArabic": "zwischen zwei Ereignissen",
+          "type": "adverb"
+        },
+        {
+          "german": "mittlerweile",
+          "arabic": "inzwischen",
+          "example": "Mittlerweile habe ich es verstanden.",
+          "exampleArabic": "im Verlauf der Zeit",
+          "type": "adverb"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "Konsequenz",
+          "example": "Die Folgen sind klar.",
+          "exampleArabic": "Auswirkung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Folgen"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "Grund",
+          "example": "Was ist die Ursache?",
+          "exampleArabic": "Auslöser",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ursachen"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "Bezug",
+          "example": "Der Zusammenhang ist klar.",
+          "exampleArabic": "Verbindung",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Zusammenhänge"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "Gegenüberstellung",
+          "example": "Im Vergleich dazu...",
+          "exampleArabic": "Vergleichsangabe",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Vergleiche"
+        },
+        {
+          "german": "der Gegensatz",
+          "arabic": "das Entgegengesetzte",
+          "example": "Im Gegensatz zu ihm...",
+          "exampleArabic": "Gegenpol",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gegensätze"
+        },
+        {
+          "german": "das Argument",
+          "arabic": "Begründung",
+          "example": "Ein starkes Argument.",
+          "exampleArabic": "Beweisgrund",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Argumente"
+        },
+        {
+          "german": "die Begründung",
+          "arabic": "Rechtfertigung",
+          "example": "Die Begründung ist überzeugend.",
+          "exampleArabic": "Erklärung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Begründungen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q1",
+            "question": "Mittel: „Ich lerne, ___ ich Filme schaue.\"",
+            "answer": "indem",
+            "hint": "indem = durch"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q2",
+            "question": "Anstatt (gleiches Subjekt):",
+            "options": [
+              "anstatt dass",
+              "anstatt zu",
+              "ohne zu",
+              "sodass"
+            ],
+            "answer": "anstatt zu"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q3",
+            "question": "Folge: „Es ist so kalt, ___ wir frieren.\"",
+            "answer": "dass",
+            "hint": "so + Adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q4",
+            "question": "„Je mehr... desto mehr\"",
+            "options": [
+              "je...desto",
+              "wenn...dann",
+              "so...wie",
+              "als...so"
+            ],
+            "answer": "je...desto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q5",
+            "question": "Gegensatz: „Es regnet. ___ gehe ich.\" (trotzdem)",
+            "answer": "Trotzdem",
+            "hint": "trotzdem = dennoch"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q6",
+            "question": "Verbinde Konnektor mit Typ:",
+            "pairs": [
+              {
+                "left": "indem",
+                "right": "Mittel"
+              },
+              {
+                "left": "sodass",
+                "right": "Folge"
+              },
+              {
+                "left": "trotzdem",
+                "right": "Gegensatz"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "Alternative"
+              },
+              {
+                "left": "während",
+                "right": "gleichzeitig"
+              },
+              {
+                "left": "sobald",
+                "right": "zeitlich folgend"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q7",
+            "question": "Ordne: „Ich lerne, indem ich Filme schaue\"",
+            "words": [
+              "Ich",
+              "lerne,",
+              "indem",
+              "ich",
+              "Filme",
+              "schaue"
+            ],
+            "answer": "Ich lerne, indem ich Filme schaue"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q8",
+            "question": "Sage: „Je mehr du übst, desto besser wirst du\"",
+            "answer": "Je mehr du übst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q9",
+            "question": "Hör zu: „Er ging, ___ zu sprechen.\"",
+            "audioPrompt": "Er ging, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu = ohne"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q10",
+            "question": "Nach sodass steht das Verb:",
+            "options": [
+              "am Anfang",
+              "an zweiter Stelle",
+              "am Ende",
+              "egal"
+            ],
+            "answer": "am Ende"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q11",
+            "question": "Verstärkung: „Es ist ___ kalt, dass wir frieren.\" (so)",
+            "answer": "so",
+            "hint": "so + Adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q12",
+            "question": "Ohne (verschiedene Subjekte):",
+            "options": [
+              "ohne zu",
+              "ohne dass",
+              "sodass",
+              "als ob"
+            ],
+            "answer": "ohne dass"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q13",
+            "question": "„Sie verbessert sich ___ tägliches Üben.\" (durch — Mittel, Substantiv)",
+            "answer": "durch",
+            "hint": "durch + Akk = Mittel"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q14",
+            "question": "Verbinde Konnektor mit Typ:",
+            "pairs": [
+              {
+                "left": "während",
+                "right": "gleichzeitig"
+              },
+              {
+                "left": "sobald",
+                "right": "zeitlich folgend"
+              },
+              {
+                "left": "zumal",
+                "right": "zusätzlicher Grund"
+              },
+              {
+                "left": "allerdings",
+                "right": "abgemilderte Einschränkung"
+              },
+              {
+                "left": "sofern",
+                "right": "Bedingung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q15",
+            "question": "Ordne: „Je mehr du lernst, desto besser wirst du\"",
+            "words": [
+              "Je",
+              "mehr",
+              "du",
+              "lernst,",
+              "desto",
+              "besser",
+              "wirst",
+              "du"
+            ],
+            "answer": "Je mehr du lernst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q16",
+            "question": "Hör zu: „Er ging weg, ___ zu sprechen.\" (ohne)",
+            "audioPrompt": "Er ging weg, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q17",
+            "question": "Nach je steht das Verb:",
+            "options": [
+              "am Ende",
+              "an zweiter Stelle",
+              "Verb-Komma-Verb-Muster",
+              "wegfallen"
+            ],
+            "answer": "am Ende"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q18",
+            "question": "Sage: „Ich lerne, indem ich deutsche Bücher lese\"",
+            "answer": "Ich lerne, indem ich deutsche Bücher lese"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q19",
+            "question": "„Sie kam, ___ ich es wusste.\" (ohne dass, anderes Subjekt)",
+            "answer": "ohne dass",
+            "hint": "ohne dass + anderes Subjekt"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q20",
+            "question": "Unterschied zwischen trotzdem und obwohl?",
+            "options": [
+              "dasselbe",
+              "trotzdem Adverb, obwohl Konjunktion",
+              "trotzdem am Ende, obwohl am Anfang",
+              "kein Unterschied"
+            ],
+            "answer": "trotzdem Adverb, obwohl Konjunktion"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Vier",
