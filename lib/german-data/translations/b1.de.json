@@ -5004,6 +5004,693 @@
           }
         ]
       }
+    },
+    "b1-14": {
+      "id": "b1-14",
+      "title": "Verben mit Präpositionen",
+      "order": 14,
+      "grammar": {
+        "title": "Verben mit fester Präposition + dem richtigen Kasus",
+        "content": "Manche deutschen Verben sind ohne eine bestimmte Präposition unvollständig — und diese Verbindung **stimmt nicht immer mit dem Englischen überein**. Sie müssen als Paar gelernt werden.\n\n→ Ich denke **an** dich.\n→ Ich warte **auf** den Bus.\n\n**Jede Präposition bestimmt den Kasus:** an/auf/in/über → Akkusativ bei diesen Verben; mit/von/zu/bei/nach → immer Dativ.",
+        "tables": [
+          {
+            "title": "Verben + Präposition (Akkusativ)",
+            "headers": [
+              "Verb",
+              "Präp.",
+              "Kasus",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "warten",
+                  "auf",
+                  "Akk",
+                  "Ich warte auf den Bus."
+                ]
+              },
+              {
+                "cells": [
+                  "denken",
+                  "an",
+                  "Akk",
+                  "Ich denke an meine Familie."
+                ]
+              },
+              {
+                "cells": [
+                  "sich freuen",
+                  "auf",
+                  "Akk",
+                  "Ich freue mich auf das Wochenende."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "sich freuen",
+                  "über",
+                  "Akk",
+                  "Ich freue mich über das Geschenk."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "sich interessieren",
+                  "für",
+                  "Akk",
+                  "Sie interessiert sich für Kunst."
+                ]
+              },
+              {
+                "cells": [
+                  "sich erinnern",
+                  "an",
+                  "Akk",
+                  "Ich erinnere mich an dich."
+                ]
+              },
+              {
+                "cells": [
+                  "glauben",
+                  "an",
+                  "Akk",
+                  "Ich glaube an dich."
+                ]
+              },
+              {
+                "cells": [
+                  "hoffen",
+                  "auf",
+                  "Akk",
+                  "Wir hoffen auf gutes Wetter."
+                ]
+              },
+              {
+                "cells": [
+                  "sich verlieben",
+                  "in",
+                  "Akk",
+                  "Er hat sich in sie verliebt."
+                ]
+              },
+              {
+                "cells": [
+                  "sich kümmern",
+                  "um",
+                  "Akk",
+                  "Wer kümmert sich um die Kinder?"
+                ]
+              }
+            ],
+            "theme": "cases",
+            "note": "sich freuen hat zwei Bedeutungen: auf (Zukunft) oder über (etwas Geschehenes)."
+          },
+          {
+            "title": "Verben + Präposition (Dativ)",
+            "headers": [
+              "Verb",
+              "Präp.",
+              "Kasus",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sprechen",
+                  "mit",
+                  "Dat",
+                  "Ich spreche mit dem Lehrer."
+                ]
+              },
+              {
+                "cells": [
+                  "sprechen",
+                  "von",
+                  "Dat",
+                  "Wir sprechen von dem Problem."
+                ]
+              },
+              {
+                "cells": [
+                  "träumen",
+                  "von",
+                  "Dat",
+                  "Ich träume von einem Haus."
+                ]
+              },
+              {
+                "cells": [
+                  "arbeiten",
+                  "bei",
+                  "Dat",
+                  "Sie arbeitet bei BMW."
+                ]
+              },
+              {
+                "cells": [
+                  "gehören",
+                  "zu",
+                  "Dat",
+                  "Ich gehöre zu dieser Familie."
+                ]
+              },
+              {
+                "cells": [
+                  "sich treffen",
+                  "mit",
+                  "Dat",
+                  "Ich treffe mich mit Anna."
+                ]
+              },
+              {
+                "cells": [
+                  "anfangen",
+                  "mit",
+                  "Dat",
+                  "Wir fangen mit der Lektion an."
+                ]
+              },
+              {
+                "cells": [
+                  "aufhören",
+                  "mit",
+                  "Dat",
+                  "Hör mit dem Rauchen auf!"
+                ]
+              }
+            ],
+            "theme": "cases",
+            "note": "Nach mit/von/zu/bei/nach immer Dativ."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Lerne die Paare als Einheit: warten auf, denken an. Nicht aus dem Englischen übersetzen.",
+            "example": "Ich warte auf den Bus.",
+            "translation": "Verb-Präposition-Verbindung"
+          },
+          {
+            "rule": "Bei einer Sache da(r)- verwenden: warte ich darauf?",
+            "example": "Wartest du? — Ja, ich warte darauf.",
+            "translation": "Sache → da(r)-"
+          },
+          {
+            "rule": "Bei einer Person Präposition + Pronomen: für ihn, mit ihr.",
+            "example": "Auf wen warten? — Auf ihn.",
+            "translation": "Person → Präp. + Pronomen"
+          },
+          {
+            "rule": "sich freuen auf (Zukunft) ≠ sich freuen über (jetzt/Vergangenheit).",
+            "example": "Ich freue mich auf den Urlaub. / über das Geschenk.",
+            "translation": "Zeitbezug"
+          }
+        ],
+        "examples": [
+          "Ich warte auf den Bus.",
+          "Sie denkt oft an ihre Familie.",
+          "Wir freuen uns auf den Urlaub.",
+          "Er interessiert sich für Politik.",
+          "Ich habe mich in sie verliebt.",
+          "Wer kümmert sich um die Katze?",
+          "Wir sprechen mit dem Chef.",
+          "Sie arbeitet bei einer großen Firma.",
+          "Hör auf mit dem Lärm!",
+          "Ich erinnere mich nicht an seinen Namen."
+        ],
+        "tip": "Lerne täglich 5 Verb-Präposition-Paare und bilde mit jedem einen Satz. Nach einem Monat kennst du 150 Paare — genug für das gesamte B2."
+      },
+      "vocabulary": [
+        {
+          "german": "warten auf",
+          "arabic": "auf etwas warten",
+          "example": "Ich warte auf dich.",
+          "exampleArabic": "Erwartung",
+          "type": "verb"
+        },
+        {
+          "german": "denken an",
+          "arabic": "im Sinn haben",
+          "example": "Ich denke an meine Mutter.",
+          "exampleArabic": "geistige Bezugnahme",
+          "type": "verb"
+        },
+        {
+          "german": "sich freuen auf",
+          "arabic": "Vorfreude haben",
+          "example": "Ich freue mich auf den Sommer.",
+          "exampleArabic": "zukünftige Freude",
+          "type": "verb"
+        },
+        {
+          "german": "sich freuen über",
+          "arabic": "über etwas froh sein",
+          "example": "Ich freue mich über deine Nachricht.",
+          "exampleArabic": "aktuelle Freude",
+          "type": "verb"
+        },
+        {
+          "german": "sich interessieren für",
+          "arabic": "Interesse zeigen",
+          "example": "Ich interessiere mich für Sport.",
+          "exampleArabic": "Vorliebe",
+          "type": "verb"
+        },
+        {
+          "german": "sich erinnern an",
+          "arabic": "im Gedächtnis behalten",
+          "example": "Ich erinnere mich an dich.",
+          "exampleArabic": "Erinnerung",
+          "type": "verb"
+        },
+        {
+          "german": "glauben an",
+          "arabic": "Vertrauen haben",
+          "example": "Ich glaube an Gott.",
+          "exampleArabic": "Glaube",
+          "type": "verb"
+        },
+        {
+          "german": "hoffen auf",
+          "arabic": "Hoffnung haben",
+          "example": "Wir hoffen auf besseres Wetter.",
+          "exampleArabic": "positive Erwartung",
+          "type": "verb"
+        },
+        {
+          "german": "sich verlieben in",
+          "arabic": "Liebe entwickeln",
+          "example": "Er verliebte sich in sie.",
+          "exampleArabic": "Verliebtsein",
+          "type": "verb"
+        },
+        {
+          "german": "sich kümmern um",
+          "arabic": "fürsorglich sein",
+          "example": "Sie kümmert sich um ihre Eltern.",
+          "exampleArabic": "Fürsorge",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen mit",
+          "arabic": "ein Gespräch führen",
+          "example": "Ich spreche mit dem Lehrer.",
+          "exampleArabic": "Kommunikation",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen über",
+          "arabic": "ein Thema besprechen",
+          "example": "Wir sprechen über die Arbeit.",
+          "exampleArabic": "thematische Diskussion",
+          "type": "verb"
+        },
+        {
+          "german": "träumen von",
+          "arabic": "ersehnen",
+          "example": "Ich träume von Deutschland.",
+          "exampleArabic": "Wunschvorstellung",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten bei",
+          "arabic": "angestellt sein bei",
+          "example": "Er arbeitet bei Mercedes.",
+          "exampleArabic": "Arbeitgeber",
+          "type": "verb"
+        },
+        {
+          "german": "gehören zu",
+          "arabic": "Teil von etwas sein",
+          "example": "Ich gehöre zu dieser Gruppe.",
+          "exampleArabic": "Zugehörigkeit",
+          "type": "verb"
+        },
+        {
+          "german": "sich treffen mit",
+          "arabic": "verabredet sein",
+          "example": "Ich treffe mich mit Freunden.",
+          "exampleArabic": "Begegnung",
+          "type": "verb"
+        },
+        {
+          "german": "anfangen mit",
+          "arabic": "beginnen",
+          "example": "Wir fangen mit der Arbeit an.",
+          "exampleArabic": "Beginn",
+          "type": "verb"
+        },
+        {
+          "german": "aufhören mit",
+          "arabic": "aufgeben / stoppen",
+          "example": "Hör mit dem Rauchen auf!",
+          "exampleArabic": "Beenden",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschäftigen mit",
+          "arabic": "sich widmen",
+          "example": "Er beschäftigt sich mit Geschichte.",
+          "exampleArabic": "Tätigkeit / Interessensgebiet",
+          "type": "verb"
+        },
+        {
+          "german": "sich entschuldigen für",
+          "arabic": "Bedauern äußern",
+          "example": "Ich entschuldige mich für die Verspätung.",
+          "exampleArabic": "Entschuldigung",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "sich anpassen",
+          "example": "Ich gewöhne mich an das Wetter.",
+          "exampleArabic": "Anpassung",
+          "type": "verb"
+        },
+        {
+          "german": "achten auf",
+          "arabic": "aufmerksam sein",
+          "example": "Achte auf den Verkehr!",
+          "exampleArabic": "Aufmerksamkeit",
+          "type": "verb"
+        },
+        {
+          "german": "antworten auf",
+          "arabic": "eine Antwort geben",
+          "example": "Antworte auf die Frage!",
+          "exampleArabic": "Reaktion",
+          "type": "verb"
+        },
+        {
+          "german": "reagieren auf",
+          "arabic": "Reaktion zeigen",
+          "example": "Wie reagierst du auf Stress?",
+          "exampleArabic": "Reaktionsverhalten",
+          "type": "verb"
+        },
+        {
+          "german": "sich beziehen auf",
+          "arabic": "Bezug nehmen",
+          "example": "Das bezieht sich auf den Vertrag.",
+          "exampleArabic": "Verweis",
+          "type": "verb"
+        },
+        {
+          "german": "fragen nach",
+          "arabic": "sich erkundigen",
+          "example": "Er fragt nach dem Weg.",
+          "exampleArabic": "Erkundigung",
+          "type": "verb"
+        },
+        {
+          "german": "suchen nach",
+          "arabic": "auf der Suche sein",
+          "example": "Ich suche nach meinem Schlüssel.",
+          "exampleArabic": "Suche",
+          "type": "verb"
+        },
+        {
+          "german": "die Beziehung",
+          "arabic": "Verbindung zwischen Personen",
+          "example": "Wir haben eine gute Beziehung.",
+          "exampleArabic": "menschliche Verbindung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Beziehungen"
+        },
+        {
+          "german": "das Vertrauen",
+          "arabic": "Glaube an jemanden",
+          "example": "Ich habe Vertrauen in dich.",
+          "exampleArabic": "Zuversicht",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Verspätung",
+          "arabic": "verspätete Ankunft",
+          "example": "Entschuldigung für die Verspätung.",
+          "exampleArabic": "Verzögerung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Verspätungen"
+        },
+        {
+          "german": "die Nachricht",
+          "arabic": "Mitteilung",
+          "example": "Ich freue mich über deine Nachricht.",
+          "exampleArabic": "Information",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nachrichten"
+        },
+        {
+          "german": "das Geschenk",
+          "arabic": "Gabe",
+          "example": "Das ist ein Geschenk für dich.",
+          "exampleArabic": "Präsent",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Geschenke"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q1",
+            "question": "Ergänze: „Ich warte ___ den Bus.\"",
+            "answer": "auf",
+            "hint": "warten + auf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q2",
+            "question": "Präposition mit denken?",
+            "options": [
+              "für",
+              "an",
+              "auf",
+              "mit"
+            ],
+            "answer": "an"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q3",
+            "question": "„Ich freue mich ___ den Urlaub.\" (Zukunft)",
+            "answer": "auf",
+            "hint": "sich freuen auf = Zukunft"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q4",
+            "question": "Welche Präposition mit sich kümmern?",
+            "options": [
+              "für",
+              "um",
+              "an",
+              "auf"
+            ],
+            "answer": "um"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q5",
+            "question": "„Sie spricht ___ dem Lehrer.\" (Dativ)",
+            "answer": "mit",
+            "hint": "sprechen + mit"
+          },
+          {
+            "type": "matching",
+            "id": "b1-14-q6",
+            "question": "Verbinde Verb mit Präposition:",
+            "pairs": [
+              {
+                "left": "warten",
+                "right": "auf"
+              },
+              {
+                "left": "denken",
+                "right": "an"
+              },
+              {
+                "left": "sich interessieren",
+                "right": "für"
+              },
+              {
+                "left": "träumen",
+                "right": "von"
+              },
+              {
+                "left": "sich kümmern",
+                "right": "um"
+              },
+              {
+                "left": "glauben",
+                "right": "an"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-14-q7",
+            "question": "Ordne: „Ich erinnere mich an meine Kindheit\"",
+            "words": [
+              "Ich",
+              "erinnere",
+              "mich",
+              "an",
+              "meine",
+              "Kindheit"
+            ],
+            "answer": "Ich erinnere mich an meine Kindheit"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-14-q8",
+            "question": "Sage: „Ich interessiere mich für Sport\"",
+            "answer": "Ich interessiere mich für Sport"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q9",
+            "question": "Hör zu: „Wir hoffen ___ gutes Wetter.\"",
+            "audioPrompt": "Wir hoffen auf gutes Wetter.",
+            "answer": "auf",
+            "hint": "hoffen + auf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q10",
+            "question": "sich freuen auf vs sich freuen über?",
+            "options": [
+              "dasselbe",
+              "auf für die Zukunft, über für Gegenwart/Vergangenheit",
+              "auf für Personen, über für Sachen",
+              "auf für negativ, über für positiv"
+            ],
+            "answer": "auf für die Zukunft, über für Gegenwart/Vergangenheit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q11",
+            "question": "„Er träumt ___ einem Haus.\"",
+            "answer": "von",
+            "hint": "träumen + von"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q12",
+            "question": "Präposition mit sich verlieben?",
+            "options": [
+              "für",
+              "in",
+              "auf",
+              "mit"
+            ],
+            "answer": "in"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q13",
+            "question": "„Wir fangen ___ der Arbeit an.\" (Dativ)",
+            "answer": "mit",
+            "hint": "anfangen mit + Dat"
+          },
+          {
+            "type": "matching",
+            "id": "b1-14-q14",
+            "question": "Verbinde Verb mit Präposition:",
+            "pairs": [
+              {
+                "left": "antworten",
+                "right": "auf"
+              },
+              {
+                "left": "sprechen",
+                "right": "mit"
+              },
+              {
+                "left": "gehören",
+                "right": "zu"
+              },
+              {
+                "left": "fragen",
+                "right": "nach"
+              },
+              {
+                "left": "arbeiten",
+                "right": "bei"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-14-q15",
+            "question": "Ordne: „Sie arbeitet bei einer großen Firma\"",
+            "words": [
+              "Sie",
+              "arbeitet",
+              "bei",
+              "einer",
+              "großen",
+              "Firma"
+            ],
+            "answer": "Sie arbeitet bei einer großen Firma"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q16",
+            "question": "Hör zu: „Achte ___ den Verkehr!\"",
+            "audioPrompt": "Achte auf den Verkehr!",
+            "answer": "auf",
+            "hint": "achten + auf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q17",
+            "question": "Antwort auf „Worauf freust du dich?\"",
+            "options": [
+              "Auf wen?",
+              "Darauf.",
+              "Damit.",
+              "Davon."
+            ],
+            "answer": "Darauf."
+          },
+          {
+            "type": "speaking",
+            "id": "b1-14-q18",
+            "question": "Sage: „Ich entschuldige mich für die Verspätung\"",
+            "answer": "Ich entschuldige mich für die Verspätung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-14-q19",
+            "question": "„Hör ___ dem Rauchen auf!\" (Dativ)",
+            "answer": "mit",
+            "hint": "aufhören + mit + Dat"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-14-q20",
+            "question": "Wie fragt man nach einer Person: „Ich warte auf meinen Bruder\"?",
+            "options": [
+              "Worauf?",
+              "Auf wen?",
+              "Auf was?",
+              "Wofür?"
+            ],
+            "answer": "Auf wen?"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau drei",
