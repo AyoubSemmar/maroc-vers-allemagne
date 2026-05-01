@@ -3722,6 +3722,115 @@
           "example": "Die Wohnung ist möbliert.",
           "exampleArabic": "The apartment is furnished.",
           "type": "adjective"
+        },
+        {
+          "german": "der Garten",
+          "arabic": "garden",
+          "gender": "der",
+          "plural": "Gärten",
+          "example": "Der Garten ist groß.",
+          "exampleArabic": "The garden is big.",
+          "type": "noun"
+        },
+        {
+          "german": "der Keller",
+          "arabic": "basement / cellar",
+          "gender": "der",
+          "plural": "Keller",
+          "example": "Im Keller ist es kühl.",
+          "exampleArabic": "It's cool in the basement.",
+          "type": "noun"
+        },
+        {
+          "german": "die Garage",
+          "arabic": "garage",
+          "gender": "die",
+          "plural": "Garagen",
+          "example": "Das Auto steht in der Garage.",
+          "exampleArabic": "The car is in the garage.",
+          "type": "noun"
+        },
+        {
+          "german": "die WG (Wohngemeinschaft)",
+          "arabic": "shared flat",
+          "gender": "die",
+          "example": "Ich wohne in einer WG.",
+          "exampleArabic": "I live in a shared flat.",
+          "type": "noun"
+        },
+        {
+          "german": "der Mitbewohner",
+          "arabic": "flatmate / roommate",
+          "gender": "der",
+          "plural": "Mitbewohner",
+          "example": "Mein Mitbewohner ist nett.",
+          "exampleArabic": "My flatmate is nice.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nebenkosten",
+          "arabic": "utilities (extra costs)",
+          "gender": "pl",
+          "example": "Die Nebenkosten sind hoch.",
+          "exampleArabic": "The utilities are high.",
+          "type": "noun"
+        },
+        {
+          "german": "die Heizung",
+          "arabic": "heating",
+          "gender": "die",
+          "plural": "Heizungen",
+          "example": "Die Heizung funktioniert nicht.",
+          "exampleArabic": "The heating doesn't work.",
+          "type": "noun"
+        },
+        {
+          "german": "der Aufzug",
+          "arabic": "elevator / lift",
+          "gender": "der",
+          "plural": "Aufzüge",
+          "example": "Der Aufzug ist kaputt.",
+          "exampleArabic": "The lift is broken.",
+          "type": "noun"
+        },
+        {
+          "german": "die Wand",
+          "arabic": "wall",
+          "gender": "die",
+          "plural": "Wände",
+          "example": "Die Wand ist weiß.",
+          "exampleArabic": "The wall is white.",
+          "type": "noun"
+        },
+        {
+          "german": "der Boden",
+          "arabic": "floor",
+          "gender": "der",
+          "plural": "Böden",
+          "example": "Der Boden ist aus Holz.",
+          "exampleArabic": "The floor is wooden.",
+          "type": "noun"
+        },
+        {
+          "german": "umziehen",
+          "arabic": "to move (house)",
+          "example": "Wir ziehen nächste Woche um.",
+          "exampleArabic": "We're moving next week.",
+          "type": "verb"
+        },
+        {
+          "german": "einziehen / ausziehen",
+          "arabic": "to move in / out",
+          "example": "Ich ziehe morgen ein.",
+          "exampleArabic": "I move in tomorrow.",
+          "type": "verb"
+        },
+        {
+          "german": "zentral / ruhig",
+          "arabic": "central / quiet",
+          "example": "Die Wohnung ist zentral.",
+          "exampleArabic": "The flat is central.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3842,6 +3951,118 @@
               "Es nicht gibt Garten."
             ],
             "answer": "Es gibt keinen Garten."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q11",
+            "question": "\"Mein Auto steht in der ___\" (garage)",
+            "answer": "Garage",
+            "hint": "die Garage"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q12",
+            "question": "Basement in German:",
+            "options": [
+              "der Boden",
+              "der Keller",
+              "die Garage",
+              "der Garten"
+            ],
+            "answer": "der Keller"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q13",
+            "question": "\"Die ___ sind hoch.\" (utilities)",
+            "answer": "Nebenkosten",
+            "hint": "with the rent"
+          },
+          {
+            "type": "matching",
+            "id": "a1-06-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "Garten",
+                "right": "garden"
+              },
+              {
+                "left": "Keller",
+                "right": "basement"
+              },
+              {
+                "left": "Aufzug",
+                "right": "elevator"
+              },
+              {
+                "left": "Heizung",
+                "right": "heating"
+              },
+              {
+                "left": "Wand",
+                "right": "wall"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-06-q15",
+            "question": "Order: \"I live in a shared flat\"",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einer",
+              "WG"
+            ],
+            "answer": "Ich wohne in einer WG"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-06-q16",
+            "question": "Say: \"My apartment is quiet and on the second floor\"",
+            "answer": "Meine Wohnung ist ruhig und im zweiten Stock"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q17",
+            "question": "Listen: \"Wir ___ nächste Woche um.\" (move)",
+            "audioPrompt": "Wir ziehen nächste Woche um.",
+            "answer": "ziehen",
+            "hint": "umziehen + wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q18",
+            "question": "\"Central location\" in German:",
+            "options": [
+              "ruhig",
+              "zentral",
+              "möbliert",
+              "hell"
+            ],
+            "answer": "zentral"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q19",
+            "question": "\"Der ___ ist kaputt.\" (elevator)",
+            "answer": "Aufzug",
+            "hint": "der Aufzug"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q20",
+            "question": "Flatmate in German:",
+            "options": [
+              "der Nachbar",
+              "der Mitbewohner",
+              "der Vermieter",
+              "der Mieter"
+            ],
+            "answer": "der Mitbewohner"
           }
         ]
       }

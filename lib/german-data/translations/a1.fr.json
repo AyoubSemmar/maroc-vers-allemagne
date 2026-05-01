@@ -3722,6 +3722,115 @@
           "example": "Die Wohnung ist möbliert.",
           "exampleArabic": "L'appartement est meublé.",
           "type": "adjective"
+        },
+        {
+          "german": "der Garten",
+          "arabic": "le jardin",
+          "gender": "der",
+          "plural": "Gärten",
+          "example": "Der Garten ist groß.",
+          "exampleArabic": "Le jardin est grand.",
+          "type": "noun"
+        },
+        {
+          "german": "der Keller",
+          "arabic": "la cave",
+          "gender": "der",
+          "plural": "Keller",
+          "example": "Im Keller ist es kühl.",
+          "exampleArabic": "Il fait frais à la cave.",
+          "type": "noun"
+        },
+        {
+          "german": "die Garage",
+          "arabic": "le garage",
+          "gender": "die",
+          "plural": "Garagen",
+          "example": "Das Auto steht in der Garage.",
+          "exampleArabic": "La voiture est au garage.",
+          "type": "noun"
+        },
+        {
+          "german": "die WG (Wohngemeinschaft)",
+          "arabic": "la coloc",
+          "gender": "die",
+          "example": "Ich wohne in einer WG.",
+          "exampleArabic": "J'habite en coloc.",
+          "type": "noun"
+        },
+        {
+          "german": "der Mitbewohner",
+          "arabic": "le colocataire",
+          "gender": "der",
+          "plural": "Mitbewohner",
+          "example": "Mein Mitbewohner ist nett.",
+          "exampleArabic": "Mon coloc est sympa.",
+          "type": "noun"
+        },
+        {
+          "german": "die Nebenkosten",
+          "arabic": "les charges",
+          "gender": "pl",
+          "example": "Die Nebenkosten sind hoch.",
+          "exampleArabic": "Les charges sont élevées.",
+          "type": "noun"
+        },
+        {
+          "german": "die Heizung",
+          "arabic": "le chauffage",
+          "gender": "die",
+          "plural": "Heizungen",
+          "example": "Die Heizung funktioniert nicht.",
+          "exampleArabic": "Le chauffage ne marche pas.",
+          "type": "noun"
+        },
+        {
+          "german": "der Aufzug",
+          "arabic": "l'ascenseur",
+          "gender": "der",
+          "plural": "Aufzüge",
+          "example": "Der Aufzug ist kaputt.",
+          "exampleArabic": "L'ascenseur est en panne.",
+          "type": "noun"
+        },
+        {
+          "german": "die Wand",
+          "arabic": "le mur",
+          "gender": "die",
+          "plural": "Wände",
+          "example": "Die Wand ist weiß.",
+          "exampleArabic": "Le mur est blanc.",
+          "type": "noun"
+        },
+        {
+          "german": "der Boden",
+          "arabic": "le sol",
+          "gender": "der",
+          "plural": "Böden",
+          "example": "Der Boden ist aus Holz.",
+          "exampleArabic": "Le sol est en bois.",
+          "type": "noun"
+        },
+        {
+          "german": "umziehen",
+          "arabic": "déménager",
+          "example": "Wir ziehen nächste Woche um.",
+          "exampleArabic": "On déménage la semaine prochaine.",
+          "type": "verb"
+        },
+        {
+          "german": "einziehen / ausziehen",
+          "arabic": "emménager / déménager",
+          "example": "Ich ziehe morgen ein.",
+          "exampleArabic": "J'emménage demain.",
+          "type": "verb"
+        },
+        {
+          "german": "zentral / ruhig",
+          "arabic": "central / calme",
+          "example": "Die Wohnung ist zentral.",
+          "exampleArabic": "L'appartement est central.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3842,6 +3951,118 @@
               "Es nicht gibt Garten."
             ],
             "answer": "Es gibt keinen Garten."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q11",
+            "question": "« Mein Auto steht in der ___ » (garage)",
+            "answer": "Garage",
+            "hint": "die Garage"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q12",
+            "question": "La cave en allemand :",
+            "options": [
+              "der Boden",
+              "der Keller",
+              "die Garage",
+              "der Garten"
+            ],
+            "answer": "der Keller"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q13",
+            "question": "« Die ___ sind hoch. » (les charges)",
+            "answer": "Nebenkosten",
+            "hint": "avec le loyer"
+          },
+          {
+            "type": "matching",
+            "id": "a1-06-q14",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "Garten",
+                "right": "jardin"
+              },
+              {
+                "left": "Keller",
+                "right": "cave"
+              },
+              {
+                "left": "Aufzug",
+                "right": "ascenseur"
+              },
+              {
+                "left": "Heizung",
+                "right": "chauffage"
+              },
+              {
+                "left": "Wand",
+                "right": "mur"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-06-q15",
+            "question": "Ordonne : « J'habite en coloc »",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einer",
+              "WG"
+            ],
+            "answer": "Ich wohne in einer WG"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-06-q16",
+            "question": "Dis : « Mon appartement est calme et au 2e étage »",
+            "answer": "Meine Wohnung ist ruhig und im zweiten Stock"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q17",
+            "question": "Écoute : « Wir ___ nächste Woche um. » (déménager)",
+            "audioPrompt": "Wir ziehen nächste Woche um.",
+            "answer": "ziehen",
+            "hint": "umziehen + wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q18",
+            "question": "« Emplacement central » en allemand :",
+            "options": [
+              "ruhig",
+              "zentral",
+              "möbliert",
+              "hell"
+            ],
+            "answer": "zentral"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q19",
+            "question": "« Der ___ ist kaputt. » (ascenseur)",
+            "answer": "Aufzug",
+            "hint": "der Aufzug"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q20",
+            "question": "Le colocataire en allemand :",
+            "options": [
+              "der Nachbar",
+              "der Mitbewohner",
+              "der Vermieter",
+              "der Mieter"
+            ],
+            "answer": "der Mitbewohner"
           }
         ]
       }

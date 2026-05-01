@@ -3722,6 +3722,115 @@
           "example": "Die Wohnung ist möbliert.",
           "exampleArabic": "Die Wohnung ist möbliert.",
           "type": "adjective"
+        },
+        {
+          "german": "der Garten",
+          "arabic": "Grünfläche am Haus",
+          "gender": "der",
+          "plural": "Gärten",
+          "example": "Der Garten ist groß.",
+          "exampleArabic": "Außenbereich",
+          "type": "noun"
+        },
+        {
+          "german": "der Keller",
+          "arabic": "Untergeschoss",
+          "gender": "der",
+          "plural": "Keller",
+          "example": "Im Keller ist es kühl.",
+          "exampleArabic": "Stauraum unten",
+          "type": "noun"
+        },
+        {
+          "german": "die Garage",
+          "arabic": "Stellplatz für Autos",
+          "gender": "die",
+          "plural": "Garagen",
+          "example": "Das Auto steht in der Garage.",
+          "exampleArabic": "Autostellplatz",
+          "type": "noun"
+        },
+        {
+          "german": "die WG (Wohngemeinschaft)",
+          "arabic": "geteilte Wohnung",
+          "gender": "die",
+          "example": "Ich wohne in einer WG.",
+          "exampleArabic": "Wohnform",
+          "type": "noun"
+        },
+        {
+          "german": "der Mitbewohner",
+          "arabic": "Person in derselben Wohnung",
+          "gender": "der",
+          "plural": "Mitbewohner",
+          "example": "Mein Mitbewohner ist nett.",
+          "exampleArabic": "Wohnpartner",
+          "type": "noun"
+        },
+        {
+          "german": "die Nebenkosten",
+          "arabic": "zusätzliche Wohnkosten",
+          "gender": "pl",
+          "example": "Die Nebenkosten sind hoch.",
+          "exampleArabic": "Mietzusatz",
+          "type": "noun"
+        },
+        {
+          "german": "die Heizung",
+          "arabic": "System zum Wärmen",
+          "gender": "die",
+          "plural": "Heizungen",
+          "example": "Die Heizung funktioniert nicht.",
+          "exampleArabic": "Wärmesystem",
+          "type": "noun"
+        },
+        {
+          "german": "der Aufzug",
+          "arabic": "Lift im Gebäude",
+          "gender": "der",
+          "plural": "Aufzüge",
+          "example": "Der Aufzug ist kaputt.",
+          "exampleArabic": "Personenlift",
+          "type": "noun"
+        },
+        {
+          "german": "die Wand",
+          "arabic": "Mauer in der Wohnung",
+          "gender": "die",
+          "plural": "Wände",
+          "example": "Die Wand ist weiß.",
+          "exampleArabic": "Innenwand",
+          "type": "noun"
+        },
+        {
+          "german": "der Boden",
+          "arabic": "Fußboden",
+          "gender": "der",
+          "plural": "Böden",
+          "example": "Der Boden ist aus Holz.",
+          "exampleArabic": "Fußboden",
+          "type": "noun"
+        },
+        {
+          "german": "umziehen",
+          "arabic": "Wohnung wechseln",
+          "example": "Wir ziehen nächste Woche um.",
+          "exampleArabic": "Wohnungswechsel",
+          "type": "verb"
+        },
+        {
+          "german": "einziehen / ausziehen",
+          "arabic": "Wohnung beziehen / verlassen",
+          "example": "Ich ziehe morgen ein.",
+          "exampleArabic": "An- und Abzug",
+          "type": "verb"
+        },
+        {
+          "german": "zentral / ruhig",
+          "arabic": "im Zentrum / leise",
+          "example": "Die Wohnung ist zentral.",
+          "exampleArabic": "Lageeigenschaften",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3842,6 +3951,118 @@
               "Es nicht gibt Garten."
             ],
             "answer": "Es gibt keinen Garten."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q11",
+            "question": "„Mein Auto steht in der ___\" (Garage)",
+            "answer": "Garage",
+            "hint": "die Garage"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q12",
+            "question": "Untergeschoss:",
+            "options": [
+              "der Boden",
+              "der Keller",
+              "die Garage",
+              "der Garten"
+            ],
+            "answer": "der Keller"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q13",
+            "question": "„Die ___ sind hoch.\" (Nebenkosten)",
+            "answer": "Nebenkosten",
+            "hint": "Mietzusatz"
+          },
+          {
+            "type": "matching",
+            "id": "a1-06-q14",
+            "question": "Verbinde Wort mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Garten",
+                "right": "Grünfläche"
+              },
+              {
+                "left": "Keller",
+                "right": "Untergeschoss"
+              },
+              {
+                "left": "Aufzug",
+                "right": "Lift"
+              },
+              {
+                "left": "Heizung",
+                "right": "Wärmesystem"
+              },
+              {
+                "left": "Wand",
+                "right": "Mauer"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-06-q15",
+            "question": "Ordne: „Ich wohne in einer WG\"",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einer",
+              "WG"
+            ],
+            "answer": "Ich wohne in einer WG"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-06-q16",
+            "question": "Sage: „Meine Wohnung ist ruhig und im zweiten Stock\"",
+            "answer": "Meine Wohnung ist ruhig und im zweiten Stock"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q17",
+            "question": "Hör zu: „Wir ___ nächste Woche um.\" (umziehen)",
+            "audioPrompt": "Wir ziehen nächste Woche um.",
+            "answer": "ziehen",
+            "hint": "umziehen + wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q18",
+            "question": "Im Zentrum gelegen:",
+            "options": [
+              "ruhig",
+              "zentral",
+              "möbliert",
+              "hell"
+            ],
+            "answer": "zentral"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-06-q19",
+            "question": "„Der ___ ist kaputt.\" (Lift)",
+            "answer": "Aufzug",
+            "hint": "der Aufzug"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-06-q20",
+            "question": "Person, mit der man die Wohnung teilt:",
+            "options": [
+              "der Nachbar",
+              "der Mitbewohner",
+              "der Vermieter",
+              "der Mieter"
+            ],
+            "answer": "der Mitbewohner"
           }
         ]
       }
