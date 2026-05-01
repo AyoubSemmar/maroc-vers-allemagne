@@ -327,6 +327,103 @@
           "example": "Danke schön!",
           "exampleArabic": "Merci beaucoup !",
           "type": "phrase"
+        },
+        {
+          "german": "der Beruf",
+          "arabic": "le métier / la profession",
+          "gender": "der",
+          "plural": "die Berufe",
+          "example": "Was ist dein Beruf?",
+          "exampleArabic": "Quel est ton métier ?",
+          "type": "noun"
+        },
+        {
+          "german": "die Adresse",
+          "arabic": "l'adresse",
+          "gender": "die",
+          "plural": "die Adressen",
+          "example": "Wie ist deine Adresse?",
+          "exampleArabic": "Quelle est ton adresse ?",
+          "type": "noun"
+        },
+        {
+          "german": "die Telefonnummer",
+          "arabic": "le numéro de téléphone",
+          "gender": "die",
+          "plural": "die Telefonnummern",
+          "example": "Meine Telefonnummer ist 0123456789.",
+          "exampleArabic": "Mon numéro est 0123456789.",
+          "type": "noun"
+        },
+        {
+          "german": "die E-Mail",
+          "arabic": "l'e-mail",
+          "gender": "die",
+          "plural": "die E-Mails",
+          "example": "Meine E-Mail ist sara@mail.de.",
+          "exampleArabic": "Mon e-mail est sara@mail.de.",
+          "type": "noun"
+        },
+        {
+          "german": "der Kollege",
+          "arabic": "le collègue",
+          "gender": "der",
+          "plural": "die Kollegen",
+          "example": "Das ist mein Kollege.",
+          "exampleArabic": "C'est mon collègue.",
+          "type": "noun"
+        },
+        {
+          "german": "die Familie",
+          "arabic": "la famille",
+          "gender": "die",
+          "plural": "die Familien",
+          "example": "Meine Familie wohnt in Casablanca.",
+          "exampleArabic": "Ma famille habite à Casablanca.",
+          "type": "noun"
+        },
+        {
+          "german": "das Alter",
+          "arabic": "l'âge",
+          "gender": "das",
+          "example": "Mein Alter ist 25.",
+          "exampleArabic": "J'ai 25 ans.",
+          "type": "noun"
+        },
+        {
+          "german": "willkommen",
+          "arabic": "bienvenue",
+          "example": "Willkommen in Deutschland!",
+          "exampleArabic": "Bienvenue en Allemagne !",
+          "type": "phrase"
+        },
+        {
+          "german": "Tschüss",
+          "arabic": "salut (au revoir, informel)",
+          "example": "Tschüss, bis morgen!",
+          "exampleArabic": "Salut, à demain !",
+          "type": "phrase"
+        },
+        {
+          "german": "Auf Wiedersehen",
+          "arabic": "au revoir (formel)",
+          "example": "Auf Wiedersehen, Frau Schmidt!",
+          "exampleArabic": "Au revoir, Madame Schmidt !",
+          "type": "phrase"
+        },
+        {
+          "german": "Wie geht es Ihnen?",
+          "arabic": "comment allez-vous ? (formel)",
+          "example": "Wie geht es Ihnen heute?",
+          "exampleArabic": "Comment allez-vous aujourd'hui ?",
+          "type": "phrase"
+        },
+        {
+          "german": "Mir geht es gut",
+          "arabic": "je vais bien",
+          "example": "Mir geht es gut, danke!",
+          "exampleArabic": "Je vais bien, merci !",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -445,6 +542,122 @@
             ],
             "answer": "Wie heißen Sie ?",
             "hint": "La question commence par Wie, le verbe en deuxième position"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-01-q11",
+            "question": "Complète : « Wie ___ Sie? » (formel — être)",
+            "answer": "sind",
+            "hint": "sein avec Sie de politesse"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-01-q12",
+            "question": "Salutation formelle :",
+            "options": [
+              "Hallo!",
+              "Tschüss!",
+              "Guten Tag!",
+              "Hi!"
+            ],
+            "answer": "Guten Tag!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-01-q13",
+            "question": "« Wie ___ du? » (Quel âge as-tu — sein + du)",
+            "answer": "alt bist",
+            "hint": "alt + bist (du)"
+          },
+          {
+            "type": "matching",
+            "id": "a1-01-q14",
+            "question": "Associe le pronom à la forme de sein :",
+            "pairs": [
+              {
+                "left": "ich",
+                "right": "bin"
+              },
+              {
+                "left": "du",
+                "right": "bist"
+              },
+              {
+                "left": "er/sie/es",
+                "right": "ist"
+              },
+              {
+                "left": "wir",
+                "right": "sind"
+              },
+              {
+                "left": "ihr",
+                "right": "seid"
+              },
+              {
+                "left": "sie/Sie",
+                "right": "sind"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-01-q15",
+            "question": "Ordonne : « C'est mon ami Karim »",
+            "words": [
+              "Das",
+              "ist",
+              "mein",
+              "Freund",
+              "Karim"
+            ],
+            "answer": "Das ist mein Freund Karim"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-01-q16",
+            "question": "Dis : « Je suis marié et j'ai 30 ans »",
+            "answer": "Ich bin verheiratet und ich bin 30 Jahre alt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-01-q17",
+            "question": "Écoute : « ___ Wiedersehen! » (formel)",
+            "audioPrompt": "Auf Wiedersehen!",
+            "answer": "Auf",
+            "hint": "salutation d'adieu formelle"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-01-q18",
+            "question": "Comment réponds-tu à « Wie geht es Ihnen? »",
+            "options": [
+              "Mir geht es gut, danke!",
+              "Ich heiße Sara.",
+              "Aus Marokko.",
+              "Tschüss!"
+            ],
+            "answer": "Mir geht es gut, danke!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-01-q19",
+            "question": "« Mein ___ ist Lehrer. » (le métier)",
+            "answer": "Beruf",
+            "hint": "der Beruf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-01-q20",
+            "question": "Différence entre du et Sie ?",
+            "options": [
+              "identiques",
+              "du informel, Sie formel",
+              "du pour les femmes, Sie pour les hommes",
+              "Sie uniquement pour le pluriel"
+            ],
+            "answer": "du informel, Sie formel"
           }
         ]
       }
