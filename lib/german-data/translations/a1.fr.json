@@ -6049,6 +6049,135 @@
           { "type": "multiple-choice", "id": "a1-15-q20", "question": "La phrase polie pour demander de s'asseoir :", "options": ["Setz dich!", "Setzt euch!", "Nehmen Sie Platz!", "Sitz!"], "answer": "Nehmen Sie Platz!" }
         ]
       }
+    },
+    "a1-16": {
+      "id": "a1-16",
+      "title": "Le pluriel des noms — Plural der Nomen",
+      "order": 16,
+      "grammar": {
+        "title": "Les cinq schémas de formation du pluriel + die pour tous",
+        "content": "Le pluriel en allemand n'a pas une seule règle, mais **cinq schémas** principaux. Bonne nouvelle : au pluriel, tous les noms — masculin, féminin, neutre — prennent l'article **die**.\n\n**Les cinq schémas :**\n1. **-e** (le plus fréquent au masculin) : der Tag → die Tage\n2. **-(e)n** (souvent au féminin) : die Frau → die Frauen\n3. **-er** (avec changement de voyelle) : das Buch → die Bücher\n4. **-s** (mots étrangers) : das Auto → die Autos\n5. **sans terminaison** (parfois avec Umlaut) : der Vater → die Väter\n\n**Conseil :** quand tu apprends un nouveau nom, mémorise le genre + le pluriel ensemble. Comme : *die Frau, die Frauen*.",
+        "tables": [
+          {
+            "title": "Les cinq schémas avec exemples",
+            "headers": ["Schéma", "Singulier", "Pluriel", "Remarque"],
+            "rows": [
+              { "cells": ["+ -e", "der Tag", "die Tage", "le plus fréquent au masculin"] },
+              { "cells": ["+ -(e)n", "die Frau", "die Frauen", "presque tous les féminins en -e/-in"] },
+              { "cells": ["+ -er + Umlaut", "das Buch", "die Bücher", "avec a/o/u → ä/ö/ü"], "highlight": true },
+              { "cells": ["+ -s", "das Auto", "die Autos", "mots étrangers et abréviations"] },
+              { "cells": ["sans / Umlaut", "der Vater", "die Väter", "noms en -er, -el, -en"] }
+            ],
+            "theme": "default",
+            "note": "Essaie de prédire le pluriel, mais vérifie toujours dans le dictionnaire — il y a des exceptions."
+          },
+          {
+            "title": "Exemples pratiques avec les cinq schémas",
+            "headers": ["Genre", "Singulier", "Pluriel"],
+            "rows": [
+              { "cells": ["der", "der Tisch", "die Tische"] },
+              { "cells": ["der", "der Stuhl", "die Stühle"] },
+              { "cells": ["die", "die Lampe", "die Lampen"] },
+              { "cells": ["die", "die Schwester", "die Schwestern"] },
+              { "cells": ["das", "das Haus", "die Häuser"] },
+              { "cells": ["das", "das Kind", "die Kinder"] },
+              { "cells": ["das", "das Hotel", "die Hotels"] },
+              { "cells": ["der", "der Lehrer", "die Lehrer"] },
+              { "cells": ["die", "die Mutter", "die Mütter"] }
+            ],
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          { "rule": "Tous les noms au pluriel prennent die — pas de différence entre der/die/das.", "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder", "translation": "Les hommes / les femmes / les enfants — tous die." },
+          { "rule": "Les féminins en -in doublent le n : die Lehrerin → die Lehrerinnen.", "example": "die Studentin → die Studentinnen", "translation": "Les étudiantes." },
+          { "rule": "Les mots étrangers (auto, hotel, café, taxi) prennent -s.", "example": "das Auto → die Autos / das Café → die Cafés", "translation": "Les voitures / les cafés." },
+          { "rule": "Certains noms ne s'utilisent qu'au pluriel : die Eltern (les parents), die Leute (les gens), die Ferien (les vacances).", "example": "Meine Eltern wohnen in Casablanca.", "translation": "Mes parents habitent à Casablanca." }
+        ],
+        "examples": [
+          "Ich habe zwei Brüder. — J'ai deux frères.",
+          "Die Kinder spielen im Park. — Les enfants jouent dans le parc.",
+          "Wir kaufen drei Bücher. — Nous achetons trois livres.",
+          "Die Häuser sind alt. — Les maisons sont anciennes.",
+          "Ich kenne viele Lehrer. — Je connais beaucoup d'enseignants.",
+          "Die Frauen arbeiten im Krankenhaus. — Les femmes travaillent à l'hôpital.",
+          "Meine Eltern kommen morgen. — Mes parents arrivent demain.",
+          "Wo sind die Schlüssel? — Où sont les clés ?"
+        ],
+        "tip": "Dans la vie quotidienne, tu auras besoin de connaître au maximum 50 pluriels — apprends-les. Pour le reste, tu les retiendras à l'usage. Essaie la page Drill (entraînement de conjugaison) pour rafraîchir ta mémoire."
+      },
+      "vocabulary": [
+        { "german": "der Tag", "arabic": "le jour", "example": "Es gibt sieben Tage in der Woche.", "exampleArabic": "Il y a sept jours dans la semaine.", "type": "noun", "gender": "der", "plural": "die Tage" },
+        { "german": "der Tisch", "arabic": "la table", "example": "Die Tische sind groß.", "exampleArabic": "Les tables sont grandes.", "type": "noun", "gender": "der", "plural": "die Tische" },
+        { "german": "der Stuhl", "arabic": "la chaise", "example": "Wir brauchen vier Stühle.", "exampleArabic": "Nous avons besoin de quatre chaises.", "type": "noun", "gender": "der", "plural": "die Stühle" },
+        { "german": "die Lampe", "arabic": "la lampe", "example": "Die Lampen sind neu.", "exampleArabic": "Les lampes sont neuves.", "type": "noun", "gender": "die", "plural": "die Lampen" },
+        { "german": "das Buch", "arabic": "le livre", "example": "Ich lese drei Bücher.", "exampleArabic": "Je lis trois livres.", "type": "noun", "gender": "das", "plural": "die Bücher" },
+        { "german": "das Kind", "arabic": "l'enfant", "example": "Die Kinder sind im Park.", "exampleArabic": "Les enfants sont au parc.", "type": "noun", "gender": "das", "plural": "die Kinder" },
+        { "german": "das Haus", "arabic": "la maison", "example": "Die Häuser sind alt.", "exampleArabic": "Les maisons sont anciennes.", "type": "noun", "gender": "das", "plural": "die Häuser" },
+        { "german": "das Auto", "arabic": "la voiture", "example": "Wir kaufen zwei Autos.", "exampleArabic": "Nous achetons deux voitures.", "type": "noun", "gender": "das", "plural": "die Autos" },
+        { "german": "das Hotel", "arabic": "l'hôtel", "example": "Es gibt viele Hotels.", "exampleArabic": "Il y a beaucoup d'hôtels.", "type": "noun", "gender": "das", "plural": "die Hotels" },
+        { "german": "der Vater", "arabic": "le père", "example": "Die Väter arbeiten.", "exampleArabic": "Les pères travaillent.", "type": "noun", "gender": "der", "plural": "die Väter" },
+        { "german": "die Mutter", "arabic": "la mère", "example": "Die Mütter sind hier.", "exampleArabic": "Les mères sont ici.", "type": "noun", "gender": "die", "plural": "die Mütter" },
+        { "german": "der Bruder", "arabic": "le frère", "example": "Ich habe zwei Brüder.", "exampleArabic": "J'ai deux frères.", "type": "noun", "gender": "der", "plural": "die Brüder" },
+        { "german": "die Schwester", "arabic": "la sœur", "example": "Sie hat drei Schwestern.", "exampleArabic": "Elle a trois sœurs.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
+        { "german": "der Mann", "arabic": "l'homme", "example": "Die Männer sprechen.", "exampleArabic": "Les hommes parlent.", "type": "noun", "gender": "der", "plural": "die Männer" },
+        { "german": "die Frau", "arabic": "la femme", "example": "Die Frauen lernen Deutsch.", "exampleArabic": "Les femmes apprennent l'allemand.", "type": "noun", "gender": "die", "plural": "die Frauen" },
+        { "german": "der Freund", "arabic": "l'ami", "example": "Meine Freunde wohnen in Berlin.", "exampleArabic": "Mes amis habitent à Berlin.", "type": "noun", "gender": "der", "plural": "die Freunde" },
+        { "german": "die Freundin", "arabic": "l'amie", "example": "Meine Freundinnen sind hier.", "exampleArabic": "Mes amies sont ici.", "type": "noun", "gender": "die", "plural": "die Freundinnen" },
+        { "german": "der Lehrer", "arabic": "l'enseignant", "example": "Die Lehrer sind nett.", "exampleArabic": "Les enseignants sont sympas.", "type": "noun", "gender": "der", "plural": "die Lehrer" },
+        { "german": "die Lehrerin", "arabic": "l'enseignante", "example": "Die Lehrerinnen helfen.", "exampleArabic": "Les enseignantes aident.", "type": "noun", "gender": "die", "plural": "die Lehrerinnen" },
+        { "german": "der Student", "arabic": "l'étudiant", "example": "Die Studenten lernen viel.", "exampleArabic": "Les étudiants étudient beaucoup.", "type": "noun", "gender": "der", "plural": "die Studenten" },
+        { "german": "die Studentin", "arabic": "l'étudiante", "example": "Die Studentinnen kommen.", "exampleArabic": "Les étudiantes arrivent.", "type": "noun", "gender": "die", "plural": "die Studentinnen" },
+        { "german": "der Apfel", "arabic": "la pomme", "example": "Ich kaufe drei Äpfel.", "exampleArabic": "J'achète trois pommes.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
+        { "german": "das Brot", "arabic": "le pain", "example": "Die Brote sind frisch.", "exampleArabic": "Les pains sont frais.", "type": "noun", "gender": "das", "plural": "die Brote" },
+        { "german": "der Schlüssel", "arabic": "la clé", "example": "Wo sind die Schlüssel?", "exampleArabic": "Où sont les clés ?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
+        { "german": "das Zimmer", "arabic": "la chambre", "example": "Die Zimmer sind klein.", "exampleArabic": "Les chambres sont petites.", "type": "noun", "gender": "das", "plural": "die Zimmer" },
+        { "german": "die Stadt", "arabic": "la ville", "example": "Diese Städte sind schön.", "exampleArabic": "Ces villes sont belles.", "type": "noun", "gender": "die", "plural": "die Städte" },
+        { "german": "das Land", "arabic": "le pays", "example": "Diese Länder sind in Europa.", "exampleArabic": "Ces pays sont en Europe.", "type": "noun", "gender": "das", "plural": "die Länder" },
+        { "german": "die Sprache", "arabic": "la langue", "example": "Sie spricht drei Sprachen.", "exampleArabic": "Elle parle trois langues.", "type": "noun", "gender": "die", "plural": "die Sprachen" },
+        { "german": "die Eltern", "arabic": "les parents", "example": "Meine Eltern arbeiten.", "exampleArabic": "Mes parents travaillent.", "type": "noun", "gender": "pl" },
+        { "german": "die Leute", "arabic": "les gens", "example": "Die Leute sind freundlich.", "exampleArabic": "Les gens sont sympathiques.", "type": "noun", "gender": "pl" },
+        { "german": "die Ferien", "arabic": "les vacances", "example": "In den Ferien fahren wir nach Spanien.", "exampleArabic": "Pendant les vacances, nous allons en Espagne.", "type": "noun", "gender": "pl" },
+        { "german": "die Geschwister", "arabic": "les frères et sœurs", "example": "Hast du Geschwister?", "exampleArabic": "As-tu des frères et sœurs ?", "type": "noun", "gender": "pl" },
+        { "german": "viele", "arabic": "beaucoup (de)", "example": "Es gibt viele Bücher.", "exampleArabic": "Il y a beaucoup de livres.", "type": "adjective" },
+        { "german": "wenige", "arabic": "peu (de)", "example": "Wenige Studenten lernen Arabisch.", "exampleArabic": "Peu d'étudiants apprennent l'arabe.", "type": "adjective" },
+        { "german": "einige", "arabic": "quelques", "example": "Einige Kinder spielen draußen.", "exampleArabic": "Quelques enfants jouent dehors.", "type": "adjective" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-16-q1", "question": "Pluriel de der Tag ? « die ___ »", "answer": "Tage", "hint": "schéma -e" },
+          { "type": "multiple-choice", "id": "a1-16-q2", "question": "Pluriel de das Buch ?", "options": ["die Buchen", "die Bücher", "die Buchs", "die Buches"], "answer": "die Bücher" },
+          { "type": "fill-blank", "id": "a1-16-q3", "question": "Pluriel de die Frau ? « die ___ »", "answer": "Frauen", "hint": "schéma -en" },
+          { "type": "multiple-choice", "id": "a1-16-q4", "question": "Quel est l'article correct au pluriel de der Mann ?", "options": ["der", "die", "das", "den"], "answer": "die" },
+          { "type": "fill-blank", "id": "a1-16-q5", "question": "Pluriel de das Auto ? « die ___ »", "answer": "Autos", "hint": "mot étranger → -s" },
+          { "type": "matching", "id": "a1-16-q6", "question": "Associe le singulier au pluriel :", "pairs": [
+            { "left": "der Vater", "right": "die Väter" },
+            { "left": "das Kind", "right": "die Kinder" },
+            { "left": "die Lampe", "right": "die Lampen" },
+            { "left": "das Hotel", "right": "die Hotels" },
+            { "left": "der Apfel", "right": "die Äpfel" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-16-q7", "question": "Ordonne : « Les enfants jouent dans le parc »", "words": ["Die", "Kinder", "spielen", "im", "Park"], "answer": "Die Kinder spielen im Park" },
+          { "type": "speaking", "id": "a1-16-q8", "question": "Dis en allemand : « J'ai deux frères et une sœur »", "answer": "Ich habe zwei Brüder und eine Schwester" },
+          { "type": "fill-blank", "id": "a1-16-q9", "question": "Écoute et complète : « Die ___ sind alt. » (les maisons)", "audioPrompt": "Die Häuser sind alt.", "answer": "Häuser", "hint": "das Haus → die Häuser" },
+          { "type": "multiple-choice", "id": "a1-16-q10", "question": "Quel mot ne s'emploie qu'au pluriel ?", "options": ["der Tag", "die Eltern", "das Auto", "der Lehrer"], "answer": "die Eltern" },
+          { "type": "fill-blank", "id": "a1-16-q11", "question": "Pluriel de der Stuhl ? « die ___ »", "answer": "Stühle", "hint": "schéma -e + Umlaut" },
+          { "type": "multiple-choice", "id": "a1-16-q12", "question": "Pluriel de die Lehrerin ?", "options": ["die Lehrerinen", "die Lehrerinnen", "die Lehrerins", "die Lehrerin"], "answer": "die Lehrerinnen" },
+          { "type": "fill-blank", "id": "a1-16-q13", "question": "Pluriel de der Vater ? « die ___ »", "answer": "Väter", "hint": "sans terminaison + Umlaut" },
+          { "type": "matching", "id": "a1-16-q14", "question": "Associe le singulier au pluriel :", "pairs": [
+            { "left": "das Buch", "right": "die Bücher" },
+            { "left": "der Mann", "right": "die Männer" },
+            { "left": "die Stadt", "right": "die Städte" },
+            { "left": "das Auto", "right": "die Autos" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-16-q15", "question": "Ordonne : « Il y a beaucoup d'enfants dans le parc »", "words": ["Es", "gibt", "viele", "Kinder", "im", "Park"], "answer": "Es gibt viele Kinder im Park" },
+          { "type": "fill-blank", "id": "a1-16-q16", "question": "Écoute : « Die ___ sind in der Schule. » (les enfants)", "audioPrompt": "Die Kinder sind in der Schule.", "answer": "Kinder", "hint": "das Kind → die Kinder" },
+          { "type": "multiple-choice", "id": "a1-16-q17", "question": "Les mots étrangers prennent le schéma :", "options": ["-er", "-en", "-s", "-e"], "answer": "-s" },
+          { "type": "speaking", "id": "a1-16-q18", "question": "Dis : « J'ai besoin de deux livres et d'un stylo »", "answer": "Ich brauche zwei Bücher und einen Stift" },
+          { "type": "fill-blank", "id": "a1-16-q19", "question": "Pluriel de die Mutter ? « die ___ »", "answer": "Mütter", "hint": "sans terminaison + Umlaut" },
+          { "type": "multiple-choice", "id": "a1-16-q20", "question": "Tous les noms au pluriel prennent l'article :", "options": ["der", "die", "das", "ein"], "answer": "die" }
+        ]
+      }
     }
   },
   "title": "Niveau Un",
