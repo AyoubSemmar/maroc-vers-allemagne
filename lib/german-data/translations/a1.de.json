@@ -5865,6 +5865,117 @@
           "example": "Kann ich das anprobieren?",
           "exampleArabic": "Can I try this on?",
           "type": "verb"
+        },
+        {
+          "german": "rosa",
+          "arabic": "Farbe Pink",
+          "example": "Ein rosa Kleid.",
+          "exampleArabic": "Farbangabe",
+          "type": "adjective"
+        },
+        {
+          "german": "orange",
+          "arabic": "Farbe Orange",
+          "example": "Eine orange Mütze.",
+          "exampleArabic": "Farbangabe",
+          "type": "adjective"
+        },
+        {
+          "german": "lila / violett",
+          "arabic": "Farbe Violett",
+          "example": "Lila Schuhe.",
+          "exampleArabic": "Farbangabe",
+          "type": "adjective"
+        },
+        {
+          "german": "die Mütze",
+          "arabic": "Kopfbedeckung",
+          "gender": "die",
+          "plural": "Mützen",
+          "example": "Eine warme Mütze.",
+          "exampleArabic": "Kleidungsstück",
+          "type": "noun"
+        },
+        {
+          "german": "der Schal",
+          "arabic": "Halsbedeckung",
+          "gender": "der",
+          "plural": "Schals",
+          "example": "Der Schal ist blau.",
+          "exampleArabic": "Wintertuch",
+          "type": "noun"
+        },
+        {
+          "german": "die Socken",
+          "arabic": "Fußbekleidung unter den Schuhen",
+          "gender": "pl",
+          "example": "warme Socken",
+          "exampleArabic": "Strümpfe",
+          "type": "noun"
+        },
+        {
+          "german": "der Mantel",
+          "arabic": "Übergangsjacke",
+          "gender": "der",
+          "plural": "Mäntel",
+          "example": "Der Mantel ist lang.",
+          "exampleArabic": "Oberbekleidung",
+          "type": "noun"
+        },
+        {
+          "german": "die Umkleidekabine",
+          "arabic": "Raum zum Anprobieren",
+          "gender": "die",
+          "plural": "Umkleidekabinen",
+          "example": "Wo ist die Umkleidekabine?",
+          "exampleArabic": "Anprobierraum",
+          "type": "noun"
+        },
+        {
+          "german": "das Sonderangebot",
+          "arabic": "vorübergehend reduzierter Preis",
+          "gender": "das",
+          "plural": "Sonderangebote",
+          "example": "Heute Sonderangebot!",
+          "exampleArabic": "Aktion",
+          "type": "noun"
+        },
+        {
+          "german": "der Rabatt",
+          "arabic": "Preisnachlass",
+          "gender": "der",
+          "plural": "Rabatte",
+          "example": "20% Rabatt!",
+          "exampleArabic": "Preisnachlass",
+          "type": "noun"
+        },
+        {
+          "german": "umtauschen",
+          "arabic": "gegen anderes tauschen",
+          "example": "Ich möchte das umtauschen.",
+          "exampleArabic": "Tausch",
+          "type": "verb"
+        },
+        {
+          "german": "passen",
+          "arabic": "die richtige Größe haben",
+          "example": "Die Hose passt mir.",
+          "exampleArabic": "Größenpassung",
+          "type": "verb"
+        },
+        {
+          "german": "eng / weit",
+          "arabic": "schmal / breit",
+          "example": "Das ist zu eng.",
+          "exampleArabic": "Größenbeschreibung",
+          "type": "adjective"
+        },
+        {
+          "german": "kurz / lang",
+          "arabic": "Längenangaben",
+          "example": "Der Rock ist zu kurz.",
+          "exampleArabic": "Längenangabe",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5985,6 +6096,117 @@
             "question": "Complete: \"Zahlen Sie bar oder mit ___?\" (card)",
             "answer": "Karte",
             "hint": "card in German"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q11",
+            "question": "„Die Hose ___ mir.\" (passen)",
+            "answer": "passt",
+            "hint": "passen + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q12",
+            "question": "Wo probiert man Kleidung an?",
+            "options": [
+              "die Kasse",
+              "die Umkleidekabine",
+              "der Eingang",
+              "das Schaufenster"
+            ],
+            "answer": "die Umkleidekabine"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q13",
+            "question": "„20% ___\" (Preisnachlass)",
+            "answer": "Rabatt",
+            "hint": "der Rabatt"
+          },
+          {
+            "type": "matching",
+            "id": "a1-09-q14",
+            "question": "Verbinde Kleidung mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Mütze",
+                "right": "Kopfbedeckung"
+              },
+              {
+                "left": "Schal",
+                "right": "Halsbedeckung"
+              },
+              {
+                "left": "Socken",
+                "right": "Strümpfe"
+              },
+              {
+                "left": "Mantel",
+                "right": "Oberbekleidung"
+              },
+              {
+                "left": "Rock",
+                "right": "Damenkleid"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-09-q15",
+            "question": "Ordne: „Ich möchte das umtauschen\"",
+            "words": [
+              "Ich",
+              "möchte",
+              "das",
+              "umtauschen"
+            ],
+            "answer": "Ich möchte das umtauschen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-09-q16",
+            "question": "Sage: „Dieses Kleid ist zu eng\"",
+            "answer": "Dieses Kleid ist zu eng"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q17",
+            "question": "Hör zu: „Ein ___ Pullover.\" (Pink)",
+            "audioPrompt": "Ein rosa Pullover.",
+            "answer": "rosa",
+            "hint": "Farbe"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q18",
+            "question": "„eng\" bedeutet:",
+            "options": [
+              "lang",
+              "schmal",
+              "kurz",
+              "warm"
+            ],
+            "answer": "schmal"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q19",
+            "question": "„Der Mantel ist zu ___\" (lang)",
+            "answer": "lang",
+            "hint": "lang / kurz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q20",
+            "question": "Vorübergehender Preisnachlass:",
+            "options": [
+              "der Rabatt",
+              "das Sonderangebot",
+              "die Kasse",
+              "der Preis"
+            ],
+            "answer": "das Sonderangebot"
           }
         ]
       }

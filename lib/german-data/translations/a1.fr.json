@@ -5865,6 +5865,117 @@
           "example": "Kann ich das anprobieren?",
           "exampleArabic": "Puis-je l'essayer ?",
           "type": "verb"
+        },
+        {
+          "german": "rosa",
+          "arabic": "rose",
+          "example": "Ein rosa Kleid.",
+          "exampleArabic": "Une robe rose.",
+          "type": "adjective"
+        },
+        {
+          "german": "orange",
+          "arabic": "orange",
+          "example": "Eine orange Mütze.",
+          "exampleArabic": "Un bonnet orange.",
+          "type": "adjective"
+        },
+        {
+          "german": "lila / violett",
+          "arabic": "violet",
+          "example": "Lila Schuhe.",
+          "exampleArabic": "Des chaussures violettes.",
+          "type": "adjective"
+        },
+        {
+          "german": "die Mütze",
+          "arabic": "le bonnet",
+          "gender": "die",
+          "plural": "Mützen",
+          "example": "Eine warme Mütze.",
+          "exampleArabic": "Un bonnet chaud.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schal",
+          "arabic": "l'écharpe",
+          "gender": "der",
+          "plural": "Schals",
+          "example": "Der Schal ist blau.",
+          "exampleArabic": "L'écharpe est bleue.",
+          "type": "noun"
+        },
+        {
+          "german": "die Socken",
+          "arabic": "les chaussettes",
+          "gender": "pl",
+          "example": "warme Socken",
+          "exampleArabic": "des chaussettes chaudes",
+          "type": "noun"
+        },
+        {
+          "german": "der Mantel",
+          "arabic": "le manteau",
+          "gender": "der",
+          "plural": "Mäntel",
+          "example": "Der Mantel ist lang.",
+          "exampleArabic": "Le manteau est long.",
+          "type": "noun"
+        },
+        {
+          "german": "die Umkleidekabine",
+          "arabic": "la cabine d'essayage",
+          "gender": "die",
+          "plural": "Umkleidekabinen",
+          "example": "Wo ist die Umkleidekabine?",
+          "exampleArabic": "Où est la cabine d'essayage ?",
+          "type": "noun"
+        },
+        {
+          "german": "das Sonderangebot",
+          "arabic": "l'offre spéciale",
+          "gender": "das",
+          "plural": "Sonderangebote",
+          "example": "Heute Sonderangebot!",
+          "exampleArabic": "Offre spéciale aujourd'hui !",
+          "type": "noun"
+        },
+        {
+          "german": "der Rabatt",
+          "arabic": "la réduction",
+          "gender": "der",
+          "plural": "Rabatte",
+          "example": "20% Rabatt!",
+          "exampleArabic": "20 % de réduction !",
+          "type": "noun"
+        },
+        {
+          "german": "umtauschen",
+          "arabic": "échanger",
+          "example": "Ich möchte das umtauschen.",
+          "exampleArabic": "Je voudrais échanger ça.",
+          "type": "verb"
+        },
+        {
+          "german": "passen",
+          "arabic": "aller (taille)",
+          "example": "Die Hose passt mir.",
+          "exampleArabic": "Le pantalon me va.",
+          "type": "verb"
+        },
+        {
+          "german": "eng / weit",
+          "arabic": "serré / large",
+          "example": "Das ist zu eng.",
+          "exampleArabic": "C'est trop serré.",
+          "type": "adjective"
+        },
+        {
+          "german": "kurz / lang",
+          "arabic": "court / long",
+          "example": "Der Rock ist zu kurz.",
+          "exampleArabic": "La jupe est trop courte.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5985,6 +6096,117 @@
             "question": "Complétez : \"Zahlen Sie bar oder mit ___?\" (carte)",
             "answer": "Karte",
             "hint": "La carte en allemand"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q11",
+            "question": "« Die Hose ___ mir. » (aller)",
+            "answer": "passt",
+            "hint": "passen + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q12",
+            "question": "Où essaies-tu les vêtements ?",
+            "options": [
+              "die Kasse",
+              "die Umkleidekabine",
+              "der Eingang",
+              "das Schaufenster"
+            ],
+            "answer": "die Umkleidekabine"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q13",
+            "question": "« 20% ___ » (réduction)",
+            "answer": "Rabatt",
+            "hint": "der Rabatt"
+          },
+          {
+            "type": "matching",
+            "id": "a1-09-q14",
+            "question": "Associe le vêtement à son sens :",
+            "pairs": [
+              {
+                "left": "Mütze",
+                "right": "bonnet"
+              },
+              {
+                "left": "Schal",
+                "right": "écharpe"
+              },
+              {
+                "left": "Socken",
+                "right": "chaussettes"
+              },
+              {
+                "left": "Mantel",
+                "right": "manteau"
+              },
+              {
+                "left": "Rock",
+                "right": "jupe"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-09-q15",
+            "question": "Ordonne : « Je voudrais échanger ça »",
+            "words": [
+              "Ich",
+              "möchte",
+              "das",
+              "umtauschen"
+            ],
+            "answer": "Ich möchte das umtauschen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-09-q16",
+            "question": "Dis : « Cette robe est trop serrée »",
+            "answer": "Dieses Kleid ist zu eng"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q17",
+            "question": "Écoute : « Ein ___ Pullover. » (rose)",
+            "audioPrompt": "Ein rosa Pullover.",
+            "answer": "rosa",
+            "hint": "couleur rose"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q18",
+            "question": "« eng » signifie :",
+            "options": [
+              "long",
+              "serré",
+              "court",
+              "chaud"
+            ],
+            "answer": "serré"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-09-q19",
+            "question": "« Der Mantel ist zu ___ » (long)",
+            "answer": "lang",
+            "hint": "lang / kurz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-09-q20",
+            "question": "Offre spéciale en allemand :",
+            "options": [
+              "der Rabatt",
+              "das Sonderangebot",
+              "die Kasse",
+              "der Preis"
+            ],
+            "answer": "das Sonderangebot"
           }
         ]
       }
