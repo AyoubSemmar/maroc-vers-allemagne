@@ -2347,6 +2347,128 @@
           "example": "Einen Tisch, bitte.",
           "exampleArabic": "A table, please.",
           "type": "phrase"
+        },
+        {
+          "german": "das Frühstück",
+          "arabic": "breakfast",
+          "gender": "das",
+          "example": "Das Frühstück ist um 8 Uhr.",
+          "exampleArabic": "Breakfast is at 8.",
+          "type": "noun"
+        },
+        {
+          "german": "das Mittagessen",
+          "arabic": "lunch",
+          "gender": "das",
+          "example": "Was gibt es zum Mittagessen?",
+          "exampleArabic": "What's for lunch?",
+          "type": "noun"
+        },
+        {
+          "german": "das Abendessen",
+          "arabic": "dinner",
+          "gender": "das",
+          "example": "Wir essen Abendessen um 19 Uhr.",
+          "exampleArabic": "We have dinner at 7pm.",
+          "type": "noun"
+        },
+        {
+          "german": "die Milch",
+          "arabic": "milk",
+          "gender": "die",
+          "example": "Kaffee mit Milch.",
+          "exampleArabic": "Coffee with milk.",
+          "type": "noun"
+        },
+        {
+          "german": "der Zucker",
+          "arabic": "sugar",
+          "gender": "der",
+          "example": "Tee ohne Zucker.",
+          "exampleArabic": "Tea without sugar.",
+          "type": "noun"
+        },
+        {
+          "german": "das Salz",
+          "arabic": "salt",
+          "gender": "das",
+          "example": "Das Salz, bitte.",
+          "exampleArabic": "Salt, please.",
+          "type": "noun"
+        },
+        {
+          "german": "die Butter",
+          "arabic": "butter",
+          "gender": "die",
+          "example": "Brot mit Butter.",
+          "exampleArabic": "Bread with butter.",
+          "type": "noun"
+        },
+        {
+          "german": "der Käse",
+          "arabic": "cheese",
+          "gender": "der",
+          "example": "Käsebrot, bitte.",
+          "exampleArabic": "Cheese sandwich, please.",
+          "type": "noun"
+        },
+        {
+          "german": "das Ei",
+          "arabic": "egg",
+          "gender": "das",
+          "plural": "Eier",
+          "example": "Zwei Eier, bitte.",
+          "exampleArabic": "Two eggs, please.",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorspeise",
+          "arabic": "starter",
+          "gender": "die",
+          "plural": "Vorspeisen",
+          "example": "Eine Vorspeise, bitte.",
+          "exampleArabic": "A starter, please.",
+          "type": "noun"
+        },
+        {
+          "german": "das Hauptgericht",
+          "arabic": "main course",
+          "gender": "das",
+          "plural": "Hauptgerichte",
+          "example": "Das Hauptgericht ist Fisch.",
+          "exampleArabic": "The main course is fish.",
+          "type": "noun"
+        },
+        {
+          "german": "der Nachtisch",
+          "arabic": "dessert",
+          "gender": "der",
+          "example": "Was gibt es zum Nachtisch?",
+          "exampleArabic": "What's for dessert?",
+          "type": "noun"
+        },
+        {
+          "german": "der Kellner",
+          "arabic": "waiter",
+          "gender": "der",
+          "plural": "Kellner",
+          "example": "Der Kellner kommt gleich.",
+          "exampleArabic": "The waiter is coming.",
+          "type": "noun"
+        },
+        {
+          "german": "durstig / hungrig",
+          "arabic": "thirsty / hungry",
+          "example": "Ich bin hungrig.",
+          "exampleArabic": "I'm hungry.",
+          "type": "adjective"
+        },
+        {
+          "german": "kalt / heiß / warm",
+          "arabic": "cold / hot / warm",
+          "example": "Der Kaffee ist heiß.",
+          "exampleArabic": "The coffee is hot.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2463,6 +2585,117 @@
               "Ich möchte den Suppe."
             ],
             "answer": "Ich möchte eine Suppe."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q11",
+            "question": "\"___ Speisekarte, bitte!\" (feminine)",
+            "answer": "Die",
+            "hint": "die Speisekarte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q12",
+            "question": "Article of \"Ei\" (egg, neuter)?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "eine"
+            ],
+            "answer": "das"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q13",
+            "question": "\"Ich nehme ___ Fisch.\" (fish, masc., Akk)",
+            "answer": "den",
+            "hint": "der → den"
+          },
+          {
+            "type": "matching",
+            "id": "a1-04-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "Frühstück",
+                "right": "breakfast"
+              },
+              {
+                "left": "Mittagessen",
+                "right": "lunch"
+              },
+              {
+                "left": "Abendessen",
+                "right": "dinner"
+              },
+              {
+                "left": "Nachtisch",
+                "right": "dessert"
+              },
+              {
+                "left": "Vorspeise",
+                "right": "starter"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-04-q15",
+            "question": "Order: \"I'm very hungry\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "hungrig"
+            ],
+            "answer": "Ich bin sehr hungrig"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-04-q16",
+            "question": "Say: \"Coffee with milk and no sugar, please\"",
+            "answer": "Kaffee mit Milch und ohne Zucker bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q17",
+            "question": "Listen: \"Der Kaffee ist ___\" (hot)",
+            "audioPrompt": "Der Kaffee ist heiß.",
+            "answer": "heiß",
+            "hint": "temperature adj."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q18",
+            "question": "Cheese in German:",
+            "options": [
+              "die Butter",
+              "der Käse",
+              "das Salz",
+              "der Zucker"
+            ],
+            "answer": "der Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q19",
+            "question": "\"Der ___ kommt gleich.\" (waiter)",
+            "answer": "Kellner",
+            "hint": "der Kellner"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q20",
+            "question": "How to say \"I'm thirsty\"?",
+            "options": [
+              "Ich bin hungrig.",
+              "Ich bin durstig.",
+              "Ich bin müde.",
+              "Ich bin satt."
+            ],
+            "answer": "Ich bin durstig."
           }
         ]
       }

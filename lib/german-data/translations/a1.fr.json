@@ -2347,6 +2347,128 @@
           "example": "Einen Tisch, bitte.",
           "exampleArabic": "Une table s'il vous plaît.",
           "type": "phrase"
+        },
+        {
+          "german": "das Frühstück",
+          "arabic": "le petit-déjeuner",
+          "gender": "das",
+          "example": "Das Frühstück ist um 8 Uhr.",
+          "exampleArabic": "Le petit-déj est à 8h.",
+          "type": "noun"
+        },
+        {
+          "german": "das Mittagessen",
+          "arabic": "le déjeuner",
+          "gender": "das",
+          "example": "Was gibt es zum Mittagessen?",
+          "exampleArabic": "Qu'y a-t-il au déjeuner ?",
+          "type": "noun"
+        },
+        {
+          "german": "das Abendessen",
+          "arabic": "le dîner",
+          "gender": "das",
+          "example": "Wir essen Abendessen um 19 Uhr.",
+          "exampleArabic": "On dîne à 19h.",
+          "type": "noun"
+        },
+        {
+          "german": "die Milch",
+          "arabic": "le lait",
+          "gender": "die",
+          "example": "Kaffee mit Milch.",
+          "exampleArabic": "Café au lait.",
+          "type": "noun"
+        },
+        {
+          "german": "der Zucker",
+          "arabic": "le sucre",
+          "gender": "der",
+          "example": "Tee ohne Zucker.",
+          "exampleArabic": "Thé sans sucre.",
+          "type": "noun"
+        },
+        {
+          "german": "das Salz",
+          "arabic": "le sel",
+          "gender": "das",
+          "example": "Das Salz, bitte.",
+          "exampleArabic": "Le sel, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "die Butter",
+          "arabic": "le beurre",
+          "gender": "die",
+          "example": "Brot mit Butter.",
+          "exampleArabic": "Pain au beurre.",
+          "type": "noun"
+        },
+        {
+          "german": "der Käse",
+          "arabic": "le fromage",
+          "gender": "der",
+          "example": "Käsebrot, bitte.",
+          "exampleArabic": "Pain au fromage, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "das Ei",
+          "arabic": "l'œuf",
+          "gender": "das",
+          "plural": "Eier",
+          "example": "Zwei Eier, bitte.",
+          "exampleArabic": "Deux œufs, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorspeise",
+          "arabic": "l'entrée",
+          "gender": "die",
+          "plural": "Vorspeisen",
+          "example": "Eine Vorspeise, bitte.",
+          "exampleArabic": "Une entrée, s'il vous plaît.",
+          "type": "noun"
+        },
+        {
+          "german": "das Hauptgericht",
+          "arabic": "le plat principal",
+          "gender": "das",
+          "plural": "Hauptgerichte",
+          "example": "Das Hauptgericht ist Fisch.",
+          "exampleArabic": "Le plat principal est du poisson.",
+          "type": "noun"
+        },
+        {
+          "german": "der Nachtisch",
+          "arabic": "le dessert",
+          "gender": "der",
+          "example": "Was gibt es zum Nachtisch?",
+          "exampleArabic": "Qu'y a-t-il en dessert ?",
+          "type": "noun"
+        },
+        {
+          "german": "der Kellner",
+          "arabic": "le serveur",
+          "gender": "der",
+          "plural": "Kellner",
+          "example": "Der Kellner kommt gleich.",
+          "exampleArabic": "Le serveur arrive tout de suite.",
+          "type": "noun"
+        },
+        {
+          "german": "durstig / hungrig",
+          "arabic": "assoiffé / affamé",
+          "example": "Ich bin hungrig.",
+          "exampleArabic": "J'ai faim.",
+          "type": "adjective"
+        },
+        {
+          "german": "kalt / heiß / warm",
+          "arabic": "froid / chaud (brûlant) / tiède",
+          "example": "Der Kaffee ist heiß.",
+          "exampleArabic": "Le café est brûlant.",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2463,6 +2585,117 @@
               "Ich möchte den Suppe."
             ],
             "answer": "Ich möchte eine Suppe."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q11",
+            "question": "« ___ Speisekarte, bitte! » (féminin)",
+            "answer": "Die",
+            "hint": "die Speisekarte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q12",
+            "question": "Article de « Ei » (œuf, neutre) ?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "eine"
+            ],
+            "answer": "das"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q13",
+            "question": "« Ich nehme ___ Fisch. » (poisson, masc., Akk)",
+            "answer": "den",
+            "hint": "der → den"
+          },
+          {
+            "type": "matching",
+            "id": "a1-04-q14",
+            "question": "Associe le mot à son sens :",
+            "pairs": [
+              {
+                "left": "Frühstück",
+                "right": "petit-déjeuner"
+              },
+              {
+                "left": "Mittagessen",
+                "right": "déjeuner"
+              },
+              {
+                "left": "Abendessen",
+                "right": "dîner"
+              },
+              {
+                "left": "Nachtisch",
+                "right": "dessert"
+              },
+              {
+                "left": "Vorspeise",
+                "right": "entrée"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-04-q15",
+            "question": "Ordonne : « J'ai très faim »",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "hungrig"
+            ],
+            "answer": "Ich bin sehr hungrig"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-04-q16",
+            "question": "Dis : « Café au lait sans sucre, s'il vous plaît »",
+            "answer": "Kaffee mit Milch und ohne Zucker bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q17",
+            "question": "Écoute : « Der Kaffee ist ___ » (chaud)",
+            "audioPrompt": "Der Kaffee ist heiß.",
+            "answer": "heiß",
+            "hint": "adj. de température"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q18",
+            "question": "Le fromage en allemand :",
+            "options": [
+              "die Butter",
+              "der Käse",
+              "das Salz",
+              "der Zucker"
+            ],
+            "answer": "der Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q19",
+            "question": "« Der ___ kommt gleich. » (le serveur)",
+            "answer": "Kellner",
+            "hint": "der Kellner"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q20",
+            "question": "Comment dire « j'ai soif » ?",
+            "options": [
+              "Ich bin hungrig.",
+              "Ich bin durstig.",
+              "Ich bin müde.",
+              "Ich bin satt."
+            ],
+            "answer": "Ich bin durstig."
           }
         ]
       }

@@ -2347,6 +2347,128 @@
           "example": "Einen Tisch, bitte.",
           "exampleArabic": "Einen Tisch, bitte.",
           "type": "phrase"
+        },
+        {
+          "german": "das Frühstück",
+          "arabic": "Morgenmahlzeit",
+          "gender": "das",
+          "example": "Das Frühstück ist um 8 Uhr.",
+          "exampleArabic": "erste Mahlzeit",
+          "type": "noun"
+        },
+        {
+          "german": "das Mittagessen",
+          "arabic": "Mahlzeit am Mittag",
+          "gender": "das",
+          "example": "Was gibt es zum Mittagessen?",
+          "exampleArabic": "Mittagsmahlzeit",
+          "type": "noun"
+        },
+        {
+          "german": "das Abendessen",
+          "arabic": "Mahlzeit am Abend",
+          "gender": "das",
+          "example": "Wir essen Abendessen um 19 Uhr.",
+          "exampleArabic": "Abendmahlzeit",
+          "type": "noun"
+        },
+        {
+          "german": "die Milch",
+          "arabic": "Kuhmilch",
+          "gender": "die",
+          "example": "Kaffee mit Milch.",
+          "exampleArabic": "Milcherzeugnis",
+          "type": "noun"
+        },
+        {
+          "german": "der Zucker",
+          "arabic": "Süßstoff",
+          "gender": "der",
+          "example": "Tee ohne Zucker.",
+          "exampleArabic": "Süßungsmittel",
+          "type": "noun"
+        },
+        {
+          "german": "das Salz",
+          "arabic": "Speisesalz",
+          "gender": "das",
+          "example": "Das Salz, bitte.",
+          "exampleArabic": "Würzmittel",
+          "type": "noun"
+        },
+        {
+          "german": "die Butter",
+          "arabic": "Streichfett",
+          "gender": "die",
+          "example": "Brot mit Butter.",
+          "exampleArabic": "Milchprodukt",
+          "type": "noun"
+        },
+        {
+          "german": "der Käse",
+          "arabic": "Milchprodukt",
+          "gender": "der",
+          "example": "Käsebrot, bitte.",
+          "exampleArabic": "Milchprodukt",
+          "type": "noun"
+        },
+        {
+          "german": "das Ei",
+          "arabic": "Hühnerei",
+          "gender": "das",
+          "plural": "Eier",
+          "example": "Zwei Eier, bitte.",
+          "exampleArabic": "Lebensmittel",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorspeise",
+          "arabic": "erster Gang",
+          "gender": "die",
+          "plural": "Vorspeisen",
+          "example": "Eine Vorspeise, bitte.",
+          "exampleArabic": "kleiner Auftakt",
+          "type": "noun"
+        },
+        {
+          "german": "das Hauptgericht",
+          "arabic": "Hauptmahlzeit auf der Speisekarte",
+          "gender": "das",
+          "plural": "Hauptgerichte",
+          "example": "Das Hauptgericht ist Fisch.",
+          "exampleArabic": "Hauptspeise",
+          "type": "noun"
+        },
+        {
+          "german": "der Nachtisch",
+          "arabic": "Süßspeise nach dem Essen",
+          "gender": "der",
+          "example": "Was gibt es zum Nachtisch?",
+          "exampleArabic": "Dessert",
+          "type": "noun"
+        },
+        {
+          "german": "der Kellner",
+          "arabic": "Servicekraft im Restaurant",
+          "gender": "der",
+          "plural": "Kellner",
+          "example": "Der Kellner kommt gleich.",
+          "exampleArabic": "Bedienung",
+          "type": "noun"
+        },
+        {
+          "german": "durstig / hungrig",
+          "arabic": "Durst habend / Hunger habend",
+          "example": "Ich bin hungrig.",
+          "exampleArabic": "Bedürfnisse",
+          "type": "adjective"
+        },
+        {
+          "german": "kalt / heiß / warm",
+          "arabic": "Temperaturangaben",
+          "example": "Der Kaffee ist heiß.",
+          "exampleArabic": "Temperaturen",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2463,6 +2585,117 @@
               "Ich möchte den Suppe."
             ],
             "answer": "Ich möchte eine Suppe."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q11",
+            "question": "„___ Speisekarte, bitte!\" (feminin)",
+            "answer": "Die",
+            "hint": "die Speisekarte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q12",
+            "question": "Artikel von „Ei\" (Neutrum)?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "eine"
+            ],
+            "answer": "das"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q13",
+            "question": "„Ich nehme ___ Fisch.\" (mask., Akk)",
+            "answer": "den",
+            "hint": "der → den"
+          },
+          {
+            "type": "matching",
+            "id": "a1-04-q14",
+            "question": "Verbinde Wort mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Frühstück",
+                "right": "Morgenmahlzeit"
+              },
+              {
+                "left": "Mittagessen",
+                "right": "Mittagsmahlzeit"
+              },
+              {
+                "left": "Abendessen",
+                "right": "Abendmahlzeit"
+              },
+              {
+                "left": "Nachtisch",
+                "right": "Dessert"
+              },
+              {
+                "left": "Vorspeise",
+                "right": "erster Gang"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-04-q15",
+            "question": "Ordne: „Ich bin sehr hungrig\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "hungrig"
+            ],
+            "answer": "Ich bin sehr hungrig"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-04-q16",
+            "question": "Sage: „Kaffee mit Milch und ohne Zucker, bitte\"",
+            "answer": "Kaffee mit Milch und ohne Zucker bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q17",
+            "question": "Hör zu: „Der Kaffee ist ___\" (heiß)",
+            "audioPrompt": "Der Kaffee ist heiß.",
+            "answer": "heiß",
+            "hint": "Temperaturadjektiv"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q18",
+            "question": "Käse:",
+            "options": [
+              "die Butter",
+              "der Käse",
+              "das Salz",
+              "der Zucker"
+            ],
+            "answer": "der Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-04-q19",
+            "question": "„Der ___ kommt gleich.\" (Bedienung)",
+            "answer": "Kellner",
+            "hint": "der Kellner"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-04-q20",
+            "question": "Wie sagt man „ich habe Durst\"?",
+            "options": [
+              "Ich bin hungrig.",
+              "Ich bin durstig.",
+              "Ich bin müde.",
+              "Ich bin satt."
+            ],
+            "answer": "Ich bin durstig."
           }
         ]
       }
