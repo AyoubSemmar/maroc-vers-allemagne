@@ -5004,6 +5004,708 @@
           }
         ]
       }
+    },
+    "b2-15": {
+      "id": "b2-15",
+      "title": "La formation des mots — Wortbildung",
+      "order": 15,
+      "grammar": {
+        "title": "Mots composés (Komposita) + suffixes -keit/-heit/-ung + préfixes ver-/ent-/be-/zer-",
+        "content": "L'allemand crée facilement de nouveaux mots par **composition** (Komposita) et par **suffixes et préfixes**. Si tu maîtrises ces règles, tu comprends des milliers de mots même si tu ne les as jamais vus.\n\n**Komposita :** deux mots ou plus collés pour en former un seul. Le **dernier** mot détermine le genre.\n→ die Tür + der Schlüssel = **der Türschlüssel** (la clé de la porte)\n→ die Hand + die Tasche = **die Handtasche** (le sac à main)\n\n**Suffixes :** créent des noms à partir de verbes ou d'adjectifs. -ung, -heit, -keit, -er, -in.\n**Préfixes :** changent le sens du verbe. ver-, ent-, be-, zer-, er-.",
+        "tables": [
+          {
+            "title": "Suffixes nominalisateurs",
+            "headers": [
+              "Suffixe",
+              "Origine",
+              "Exemple",
+              "Sens"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-ung",
+                  "verbe",
+                  "lernen → die Lernung (l'apprentissage)",
+                  "le verbe en nom"
+                ]
+              },
+              {
+                "cells": [
+                  "-heit",
+                  "adjectif",
+                  "frei → die Freiheit (la liberté)",
+                  "l'adjectif en état"
+                ]
+              },
+              {
+                "cells": [
+                  "-keit",
+                  "adjectif (en -ig/-lich)",
+                  "möglich → die Möglichkeit",
+                  "l'adjectif en état"
+                ]
+              },
+              {
+                "cells": [
+                  "-er",
+                  "verbe",
+                  "lehren → der Lehrer (l'enseignant)",
+                  "agent masculin"
+                ]
+              },
+              {
+                "cells": [
+                  "-in",
+                  "nom masculin",
+                  "der Lehrer → die Lehrerin",
+                  "féminin correspondant"
+                ]
+              },
+              {
+                "cells": [
+                  "-schaft",
+                  "nom/adjectif",
+                  "die Freundschaft (l'amitié)",
+                  "groupe ou état"
+                ]
+              },
+              {
+                "cells": [
+                  "-tum",
+                  "nom",
+                  "das Eigentum (la propriété)",
+                  "état ou possession"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Les noms en -ung/-heit/-keit/-schaft/-tion sont **toujours féminins (die)**."
+          },
+          {
+            "title": "Préfixes qui changent le sens du verbe",
+            "headers": [
+              "Préfixe",
+              "Sens",
+              "Exemple",
+              "Effet"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ver-",
+                  "changement d'état / accomplissement",
+                  "kaufen → verkaufen",
+                  "vendre (vs acheter)"
+                ]
+              },
+              {
+                "cells": [
+                  "ent-",
+                  "éloignement / suppression",
+                  "fliehen → entfliehen",
+                  "s'enfuir"
+                ]
+              },
+              {
+                "cells": [
+                  "be-",
+                  "action sur quelque chose",
+                  "arbeiten → bearbeiten",
+                  "traiter / éditer"
+                ]
+              },
+              {
+                "cells": [
+                  "zer-",
+                  "destruction",
+                  "brechen → zerbrechen",
+                  "briser complètement"
+                ]
+              },
+              {
+                "cells": [
+                  "er-",
+                  "accomplissement / atteinte",
+                  "reichen → erreichen",
+                  "atteindre"
+                ]
+              },
+              {
+                "cells": [
+                  "miss-",
+                  "négatif / erreur",
+                  "verstehen → missverstehen",
+                  "mal comprendre"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Ces préfixes sont **inséparables** — ils restent collés au verbe à tous les temps."
+          },
+          {
+            "title": "Komposita — le dernier mot détermine le genre",
+            "headers": [
+              "Composé",
+              "Genre",
+              "Traduction"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der Bahn + der Hof = der Bahnhof",
+                  "der",
+                  "la gare"
+                ]
+              },
+              {
+                "cells": [
+                  "die Hand + die Tasche = die Handtasche",
+                  "die",
+                  "le sac à main"
+                ]
+              },
+              {
+                "cells": [
+                  "das Haus + die Tür = die Haustür",
+                  "die",
+                  "la porte d'entrée"
+                ]
+              },
+              {
+                "cells": [
+                  "der Geburts + der Tag = der Geburtstag",
+                  "der",
+                  "l'anniversaire"
+                ]
+              },
+              {
+                "cells": [
+                  "die Sprache + die Schule = die Sprachschule",
+                  "die",
+                  "l'école de langues"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Souviens-toi : le dernier nom du composé détermine der/die/das."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Tous les noms en -ung/-heit/-keit/-schaft/-tion/-ität sont **féminins** (die).",
+            "example": "die Lösung, die Schönheit, die Möglichkeit, die Universität",
+            "translation": "la solution, la beauté, la possibilité, l'université."
+          },
+          {
+            "rule": "Les préfixes ver/ent/be/zer/er/miss sont inséparables et ne prennent pas ge- au Partizip II.",
+            "example": "verkaufen → verkauft (et non geverkauft)",
+            "translation": "a vendu."
+          },
+          {
+            "rule": "Dans les Komposita, des liens (-s-/-n-/-en-) apparaissent parfois : Tageszeitung, Schweinefleisch.",
+            "example": "der Tag + die Zeitung → die Tageszeitung",
+            "translation": "le journal quotidien."
+          },
+          {
+            "rule": "N'aie pas peur des mots longs — découpe-les de droite à gauche : Lebensversicherungsgesellschaft = Gesellschaft (compagnie) ← Versicherung (assurance) ← Leben (vie).",
+            "example": "der Donaudampfschifffahrtskapitän",
+            "translation": "le capitaine de la compagnie de navigation à vapeur du Danube."
+          }
+        ],
+        "examples": [
+          "der Bahnhof = die Bahn + der Hof — la gare.",
+          "die Möglichkeit = möglich + -keit — la possibilité.",
+          "die Schönheit = schön + -heit — la beauté.",
+          "die Lehrerin = der Lehrer + -in — l'enseignante.",
+          "Er hat das Buch verkauft. — Il a vendu le livre.",
+          "Das Glas ist zerbrochen. — Le verre est cassé.",
+          "Ich erreiche mein Ziel. — J'atteins mon objectif.",
+          "Er hat mich missverstanden. — Il m'a mal compris."
+        ],
+        "tip": "Apprends 5 suffixes et 5 préfixes. Quand tu rencontres un nouveau mot long, décompose-le : ver- + kauf + -en. Tu comprendras 50 % du nouveau vocabulaire sans dictionnaire."
+      },
+      "vocabulary": [
+        {
+          "german": "die Möglichkeit",
+          "arabic": "la possibilité",
+          "example": "Es gibt viele Möglichkeiten.",
+          "exampleArabic": "Il y a beaucoup de possibilités.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "die Schwierigkeit",
+          "arabic": "la difficulté",
+          "example": "Die Schwierigkeit ist groß.",
+          "exampleArabic": "La difficulté est grande.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwierigkeiten"
+        },
+        {
+          "german": "die Wirklichkeit",
+          "arabic": "la réalité",
+          "example": "In der Wirklichkeit ist es anders.",
+          "exampleArabic": "En réalité, c'est différent.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Freiheit",
+          "arabic": "la liberté",
+          "example": "Freiheit ist wichtig.",
+          "exampleArabic": "La liberté est importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freiheiten"
+        },
+        {
+          "german": "die Gesundheit",
+          "arabic": "la santé",
+          "example": "Gesundheit ist alles.",
+          "exampleArabic": "La santé, c'est tout.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Schönheit",
+          "arabic": "la beauté",
+          "example": "Die Schönheit der Stadt.",
+          "exampleArabic": "La beauté de la ville.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schönheiten"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "la solution",
+          "example": "Wir suchen eine Lösung.",
+          "exampleArabic": "Nous cherchons une solution.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lösungen"
+        },
+        {
+          "german": "die Bewegung",
+          "arabic": "le mouvement",
+          "example": "In Bewegung bleiben.",
+          "exampleArabic": "Rester en mouvement.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bewegungen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "la décision",
+          "example": "Eine wichtige Entscheidung.",
+          "exampleArabic": "Une décision importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "die Erfahrung",
+          "arabic": "l'expérience",
+          "example": "Aus Erfahrung weiß ich es.",
+          "exampleArabic": "Je le sais par expérience.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Erfahrungen"
+        },
+        {
+          "german": "die Gesellschaft",
+          "arabic": "la société / l'entreprise",
+          "example": "Die Gesellschaft verändert sich.",
+          "exampleArabic": "La société change.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gesellschaften"
+        },
+        {
+          "german": "die Freundschaft",
+          "arabic": "l'amitié",
+          "example": "Wir haben eine alte Freundschaft.",
+          "exampleArabic": "Nous avons une vieille amitié.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundschaften"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "l'université",
+          "example": "Ich studiere an der Universität.",
+          "exampleArabic": "J'étudie à l'université.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Universitäten"
+        },
+        {
+          "german": "die Information",
+          "arabic": "l'information",
+          "example": "Eine wichtige Information.",
+          "exampleArabic": "Une information importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Informationen"
+        },
+        {
+          "german": "die Nation",
+          "arabic": "la nation",
+          "example": "Die deutsche Nation.",
+          "exampleArabic": "La nation allemande.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nationen"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "vendre",
+          "example": "Ich verkaufe mein Auto.",
+          "exampleArabic": "Je vends ma voiture.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "comprendre",
+          "example": "Ich verstehe dich.",
+          "exampleArabic": "Je te comprends.",
+          "type": "verb"
+        },
+        {
+          "german": "vergessen",
+          "arabic": "oublier",
+          "example": "Vergiss das nicht!",
+          "exampleArabic": "N'oublie pas ça !",
+          "type": "verb"
+        },
+        {
+          "german": "entdecken",
+          "arabic": "découvrir",
+          "example": "Wir haben es entdeckt.",
+          "exampleArabic": "Nous l'avons découvert.",
+          "type": "verb"
+        },
+        {
+          "german": "entscheiden",
+          "arabic": "décider",
+          "example": "Du musst entscheiden.",
+          "exampleArabic": "Tu dois décider.",
+          "type": "verb"
+        },
+        {
+          "german": "bearbeiten",
+          "arabic": "traiter / éditer",
+          "example": "Ich bearbeite den Text.",
+          "exampleArabic": "Je traite le texte.",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "rendre visite à / visiter",
+          "example": "Ich besuche meine Familie.",
+          "exampleArabic": "Je rends visite à ma famille.",
+          "type": "verb"
+        },
+        {
+          "german": "zerbrechen",
+          "arabic": "se briser",
+          "example": "Das Glas ist zerbrochen.",
+          "exampleArabic": "Le verre est cassé.",
+          "type": "verb"
+        },
+        {
+          "german": "zerstören",
+          "arabic": "détruire",
+          "example": "Der Krieg zerstört alles.",
+          "exampleArabic": "La guerre détruit tout.",
+          "type": "verb"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "atteindre / réaliser",
+          "example": "Ich erreiche das Ziel.",
+          "exampleArabic": "J'atteins l'objectif.",
+          "type": "verb"
+        },
+        {
+          "german": "missverstehen",
+          "arabic": "mal comprendre",
+          "example": "Du missverstehst mich!",
+          "exampleArabic": "Tu me comprends mal !",
+          "type": "verb"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "la gare",
+          "example": "Wir treffen uns am Bahnhof.",
+          "exampleArabic": "On se retrouve à la gare.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bahnhöfe"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "l'anniversaire",
+          "example": "Mein Geburtstag ist im Mai.",
+          "exampleArabic": "Mon anniversaire est en mai.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Geburtstage"
+        },
+        {
+          "german": "die Handtasche",
+          "arabic": "le sac à main",
+          "example": "Wo ist meine Handtasche?",
+          "exampleArabic": "Où est mon sac à main ?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Handtaschen"
+        },
+        {
+          "german": "die Tageszeitung",
+          "arabic": "le journal quotidien",
+          "example": "Ich lese die Tageszeitung.",
+          "exampleArabic": "Je lis le journal quotidien.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tageszeitungen"
+        },
+        {
+          "german": "die Sprachschule",
+          "arabic": "l'école de langues",
+          "example": "Goethe ist eine Sprachschule.",
+          "exampleArabic": "Goethe est une école de langues.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachschulen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q1",
+            "question": "Le suffixe -ung rend toujours le mot ___ (genre).",
+            "answer": "die",
+            "hint": "Tous les noms en -ung sont féminins"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q2",
+            "question": "Dans Komposita « der Bahnhof », le genre vient de ?",
+            "options": [
+              "le premier mot",
+              "le dernier mot",
+              "la grammaire le décide",
+              "kein Genus"
+            ],
+            "answer": "le dernier mot"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q3",
+            "question": "Le préfixe pour « vendre » à partir de kaufen est ___-.",
+            "answer": "ver",
+            "hint": "verkaufen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q4",
+            "question": "Adjectif → nom en -keit : möglich → ?",
+            "options": [
+              "Möglichung",
+              "Möglichkeit",
+              "Möglichheit",
+              "Möglichschaft"
+            ],
+            "answer": "Möglichkeit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q5",
+            "question": "die Hand + die Tasche = die ___.",
+            "answer": "Handtasche",
+            "hint": "Komposita sans suffixe"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q6",
+            "question": "Associe le préfixe à son sens :",
+            "pairs": [
+              {
+                "left": "ver-",
+                "right": "changement d'état"
+              },
+              {
+                "left": "ent-",
+                "right": "éloignement"
+              },
+              {
+                "left": "zer-",
+                "right": "destruction"
+              },
+              {
+                "left": "be-",
+                "right": "action sur"
+              },
+              {
+                "left": "er-",
+                "right": "accomplissement"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q7",
+            "question": "Forme : « La gare est à Berlin »",
+            "words": [
+              "Der",
+              "Bahnhof",
+              "ist",
+              "in",
+              "Berlin"
+            ],
+            "answer": "Der Bahnhof ist in Berlin"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q8",
+            "question": "Dis : « Je cherche une solution » (avec Lösung)",
+            "answer": "Ich suche eine Lösung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q9",
+            "question": "Écoute : « Die ___ ist groß. » (la difficulté)",
+            "audioPrompt": "Die Schwierigkeit ist groß.",
+            "answer": "Schwierigkeit",
+            "hint": "schwierig + -keit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q10",
+            "question": "Quels verbes ne prennent pas « ge- » au Partizip II ?",
+            "options": [
+              "ver/ent/be",
+              "kaufen/lernen",
+              "les verbes inséparables ver/ent/be",
+              "tous les verbes"
+            ],
+            "answer": "les verbes inséparables ver/ent/be"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q11",
+            "question": "Adjectif → nom en -heit : schön → die ___",
+            "answer": "Schönheit",
+            "hint": "schön + heit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q12",
+            "question": "Le suffixe pour le nom d'agent féminin :",
+            "options": [
+              "-er",
+              "-in",
+              "-tum",
+              "-schaft"
+            ],
+            "answer": "-in"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q13",
+            "question": "die Hand + der Schuh = der ___",
+            "answer": "Handschuh",
+            "hint": "Le dernier mot → der"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q14",
+            "question": "Associe le mot à son suffixe :",
+            "pairs": [
+              {
+                "left": "die Möglichkeit",
+                "right": "-keit"
+              },
+              {
+                "left": "die Freundschaft",
+                "right": "-schaft"
+              },
+              {
+                "left": "die Universität",
+                "right": "-ität"
+              },
+              {
+                "left": "die Lösung",
+                "right": "-ung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q15",
+            "question": "Décompose le composé : « die Sprachschule »",
+            "words": [
+              "die",
+              "Sprache",
+              "+",
+              "die",
+              "Schule"
+            ],
+            "answer": "die Sprache + die Schule"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q16",
+            "question": "Écoute : « Eine wichtige ___ » (le développement)",
+            "audioPrompt": "Eine wichtige Entwicklung.",
+            "answer": "Entwicklung",
+            "hint": "entwickeln + ung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q17",
+            "question": "Le préfixe zer- signifie :",
+            "options": [
+              "répétition",
+              "accomplissement",
+              "destruction",
+              "éloignement"
+            ],
+            "answer": "destruction"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q18",
+            "question": "Dis : « J'atteins mon objectif » (avec erreichen)",
+            "answer": "Ich erreiche mein Ziel"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q19",
+            "question": "die Tat + die Sache = die ___ (chose réelle)",
+            "answer": "Tatsache",
+            "hint": "Komposita simple"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q20",
+            "question": "Tous les noms en -ung, -heit, -keit sont féminins. Vrai ou faux ?",
+            "options": [
+              "vrai",
+              "faux",
+              "uniquement -ung",
+              "ça dépend"
+            ],
+            "answer": "vrai"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Quatre",
