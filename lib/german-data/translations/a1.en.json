@@ -5798,6 +5798,135 @@
           { "type": "multiple-choice", "id": "a1-13-q20", "question": "Which sentence is polite in a restaurant?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
         ]
       }
+    },
+    "a1-14": {
+      "id": "a1-14",
+      "title": "The accusative case — Akkusativ",
+      "order": 14,
+      "grammar": {
+        "title": "Akkusativ + articles + direct-object pronouns",
+        "content": "**Akkusativ** is the case of the direct object — the person or thing that the subject's action falls on. *(I see **the book**, I love **the girl**)*.\n\n**The golden rule:** only the **masculine der** changes to **den**. Everything else (die, das, indefinite, plural) stays the same.\n\n→ Ich sehe **den** Mann. (masculine, changes) / Ich sehe **die** Frau. (unchanged) / Ich sehe **das** Kind. (unchanged)",
+        "tables": [
+          {
+            "title": "Articles in Nominativ vs Akkusativ",
+            "headers": ["Gender", "Nominativ (subject)", "Akkusativ (object)"],
+            "rows": [
+              { "cells": ["der (masc.)", "der Mann", "den Mann"], "highlight": true },
+              { "cells": ["die (fem.)", "die Frau", "die Frau"] },
+              { "cells": ["das (neuter)", "das Kind", "das Kind"] },
+              { "cells": ["die (plural)", "die Kinder", "die Kinder"] },
+              { "cells": ["ein (masc.)", "ein Mann", "einen Mann"], "highlight": true },
+              { "cells": ["eine (fem.)", "eine Frau", "eine Frau"] },
+              { "cells": ["ein (neuter)", "ein Kind", "ein Kind"] },
+              { "cells": ["kein (masc.)", "kein Tisch", "keinen Tisch"], "highlight": true }
+            ],
+            "theme": "cases",
+            "note": "The highlighted rows are the only ones that change — masculine only."
+          },
+          {
+            "title": "Personal pronouns in both cases",
+            "headers": ["Nominativ", "Akkusativ", "Meaning"],
+            "rows": [
+              { "cells": ["ich", "mich", "I / me"] },
+              { "cells": ["du", "dich", "you / you (obj.)"] },
+              { "cells": ["er", "ihn", "he / him"] },
+              { "cells": ["sie", "sie", "she / her"] },
+              { "cells": ["es", "es", "it (neuter)"] },
+              { "cells": ["wir", "uns", "we / us"] },
+              { "cells": ["ihr", "euch", "you (pl.) / you all"] },
+              { "cells": ["sie/Sie", "sie/Sie", "they/them / you (formal)"] }
+            ],
+            "theme": "conjugation",
+            "note": "mich, dich, ihn — memorize them. You'll use them every day."
+          }
+        ],
+        "rules": [
+          { "rule": "All transitive verbs (taking a direct object) require Akkusativ: sehen, haben, kaufen, lieben, brauchen, lesen.", "example": "Ich liebe dich. / Ich habe einen Bruder.", "translation": "I love you. / I have a brother." },
+          { "rule": "With prepositions: durch, für, gegen, ohne, um, bis — always Akkusativ.", "example": "Das ist für dich. / Ich gehe ohne ihn.", "translation": "This is for you. / I'm going without him." },
+          { "rule": "Don't forget den / einen / keinen — these are the three masculine articles in Akkusativ.", "example": "Ich kaufe einen Apfel und keinen Kuchen.", "translation": "I'm buying an apple and no cake." }
+        ],
+        "examples": [
+          "Ich sehe den Hund. — I see the dog.",
+          "Hast du einen Bruder? — Do you have a brother?",
+          "Wir lieben dich. — We love you.",
+          "Sie kauft das Buch für ihn. — She's buying the book for him.",
+          "Ich habe keinen Hunger. — I'm not hungry.",
+          "Er trinkt einen Kaffee ohne Milch. — He's drinking a coffee without milk.",
+          "Wo ist der Schlüssel? — Ich habe ihn! — Where's the key? — I've got it!",
+          "Verstehst du mich? — Do you understand me?"
+        ],
+        "tip": "Smart trick: if the question is \"Wen?\" or \"Was?\" (whom? what?), the answer is in Akkusativ. Example: \"Wen siehst du?\" — \"Ich sehe **den Mann**.\""
+      },
+      "vocabulary": [
+        { "german": "sehen", "arabic": "see", "example": "Ich sehe einen Vogel.", "exampleArabic": "I see a bird.", "type": "verb" },
+        { "german": "haben", "arabic": "have", "example": "Ich habe einen Hund.", "exampleArabic": "I have a dog.", "type": "verb" },
+        { "german": "kaufen", "arabic": "buy", "example": "Sie kauft den Apfel.", "exampleArabic": "She's buying the apple.", "type": "verb" },
+        { "german": "lieben", "arabic": "love", "example": "Ich liebe dich.", "exampleArabic": "I love you.", "type": "verb" },
+        { "german": "brauchen", "arabic": "need", "example": "Wir brauchen den Schlüssel.", "exampleArabic": "We need the key.", "type": "verb" },
+        { "german": "lesen", "arabic": "read", "example": "Er liest die Zeitung.", "exampleArabic": "He's reading the newspaper.", "type": "verb" },
+        { "german": "finden", "arabic": "find", "example": "Ich finde das Buch gut.", "exampleArabic": "I find the book good.", "type": "verb" },
+        { "german": "kennen", "arabic": "know (someone)", "example": "Kennst du ihn?", "exampleArabic": "Do you know him?", "type": "verb" },
+        { "german": "verstehen", "arabic": "understand", "example": "Verstehst du mich?", "exampleArabic": "Do you understand me?", "type": "verb" },
+        { "german": "der Mann", "arabic": "the man", "example": "Ich sehe den Mann.", "exampleArabic": "I see the man.", "type": "noun", "gender": "der", "plural": "die Männer" },
+        { "german": "die Frau", "arabic": "the woman", "example": "Er kennt die Frau.", "exampleArabic": "He knows the woman.", "type": "noun", "gender": "die", "plural": "die Frauen" },
+        { "german": "das Kind", "arabic": "the child", "example": "Wir lieben das Kind.", "exampleArabic": "We love the child.", "type": "noun", "gender": "das", "plural": "die Kinder" },
+        { "german": "der Hund", "arabic": "the dog", "example": "Hast du einen Hund?", "exampleArabic": "Do you have a dog?", "type": "noun", "gender": "der", "plural": "die Hunde" },
+        { "german": "die Katze", "arabic": "the cat", "example": "Sie hat eine Katze.", "exampleArabic": "She has a cat.", "type": "noun", "gender": "die", "plural": "die Katzen" },
+        { "german": "der Apfel", "arabic": "the apple", "example": "Ich kaufe einen Apfel.", "exampleArabic": "I'm buying an apple.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
+        { "german": "das Buch", "arabic": "the book", "example": "Ich lese das Buch.", "exampleArabic": "I'm reading the book.", "type": "noun", "gender": "das", "plural": "die Bücher" },
+        { "german": "der Schlüssel", "arabic": "the key", "example": "Wo ist der Schlüssel?", "exampleArabic": "Where is the key?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
+        { "german": "die Zeitung", "arabic": "the newspaper", "example": "Er liest eine Zeitung.", "exampleArabic": "He's reading a newspaper.", "type": "noun", "gender": "die", "plural": "die Zeitungen" },
+        { "german": "der Kaffee", "arabic": "coffee", "example": "Ich trinke einen Kaffee.", "exampleArabic": "I'm drinking a coffee.", "type": "noun", "gender": "der" },
+        { "german": "der Tee", "arabic": "tea", "example": "Möchtest du einen Tee?", "exampleArabic": "Would you like a tea?", "type": "noun", "gender": "der" },
+        { "german": "die Milch", "arabic": "milk", "example": "Ohne Milch, bitte.", "exampleArabic": "Without milk, please.", "type": "noun", "gender": "die" },
+        { "german": "durch", "arabic": "through", "example": "Wir gehen durch den Park.", "exampleArabic": "We go through the park.", "type": "preposition" },
+        { "german": "für", "arabic": "for", "example": "Das ist für dich.", "exampleArabic": "This is for you.", "type": "preposition" },
+        { "german": "gegen", "arabic": "against", "example": "Ich bin gegen den Plan.", "exampleArabic": "I'm against the plan.", "type": "preposition" },
+        { "german": "ohne", "arabic": "without", "example": "Tee ohne Zucker.", "exampleArabic": "Tea without sugar.", "type": "preposition" },
+        { "german": "um", "arabic": "around / at (time)", "example": "Wir treffen uns um 8.", "exampleArabic": "We meet at 8.", "type": "preposition" },
+        { "german": "bis", "arabic": "until", "example": "Bis morgen!", "exampleArabic": "See you tomorrow!", "type": "preposition" },
+        { "german": "der Bruder", "arabic": "the brother", "example": "Ich habe einen Bruder.", "exampleArabic": "I have a brother.", "type": "noun", "gender": "der", "plural": "die Brüder" },
+        { "german": "die Schwester", "arabic": "the sister", "example": "Sie hat eine Schwester.", "exampleArabic": "She has a sister.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
+        { "german": "die Mutter", "arabic": "the mother", "example": "Ich rufe die Mutter an.", "exampleArabic": "I'm calling Mum.", "type": "noun", "gender": "die", "plural": "die Mütter" },
+        { "german": "der Vater", "arabic": "the father", "example": "Ich frage den Vater.", "exampleArabic": "I'm asking Dad.", "type": "noun", "gender": "der", "plural": "die Väter" },
+        { "german": "der Hunger", "arabic": "hunger", "example": "Ich habe Hunger.", "exampleArabic": "I'm hungry.", "type": "noun", "gender": "der" },
+        { "german": "der Durst", "arabic": "thirst", "example": "Hast du Durst?", "exampleArabic": "Are you thirsty?", "type": "noun", "gender": "der" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-14-q1", "question": "Complete: \"Ich sehe ___ Mann.\" (der → ?)", "answer": "den", "hint": "der masculine becomes den in Akkusativ" },
+          { "type": "multiple-choice", "id": "a1-14-q2", "question": "Which pronoun is correct? \"Ich liebe ___.\"", "options": ["du", "dich", "dir", "mich"], "answer": "dich" },
+          { "type": "fill-blank", "id": "a1-14-q3", "question": "Complete: \"Hast du ___ Bruder?\" (masculine indefinite)", "answer": "einen", "hint": "ein → einen" },
+          { "type": "multiple-choice", "id": "a1-14-q4", "question": "Which sentence is correct?", "options": ["Ich kaufe der Apfel.", "Ich kaufe den Apfel.", "Ich kaufe das Apfel.", "Ich kaufe ein Apfel."], "answer": "Ich kaufe den Apfel." },
+          { "type": "fill-blank", "id": "a1-14-q5", "question": "Complete: \"Das ist ___ dich.\" (for you)", "answer": "für", "hint": "für + Akkusativ" },
+          { "type": "matching", "id": "a1-14-q6", "question": "Match the Nominativ pronoun to the Akkusativ:", "pairs": [
+            { "left": "ich", "right": "mich" },
+            { "left": "du", "right": "dich" },
+            { "left": "er", "right": "ihn" },
+            { "left": "wir", "right": "uns" },
+            { "left": "ihr", "right": "euch" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-14-q7", "question": "Order: \"I need the key\"", "words": ["Ich", "brauche", "den", "Schlüssel"], "answer": "Ich brauche den Schlüssel" },
+          { "type": "speaking", "id": "a1-14-q8", "question": "Say in German: \"Do you know him?\"", "answer": "Kennst du ihn" },
+          { "type": "fill-blank", "id": "a1-14-q9", "question": "Listen and complete: \"Wir trinken ___ Kaffee.\" (masculine indefinite)", "audioPrompt": "Wir trinken einen Kaffee.", "answer": "einen", "hint": "der Kaffee → einen Kaffee" },
+          { "type": "multiple-choice", "id": "a1-14-q10", "question": "After ohne, what is the correct case?", "options": ["Ohne den Mann.", "Ohne der Mann.", "Ohne dem Mann.", "Ohne ein Mann."], "answer": "Ohne den Mann." },
+          { "type": "fill-blank", "id": "a1-14-q11", "question": "\"Ich habe ___ Hund.\" (masculine, negation)", "answer": "keinen", "hint": "kein → keinen" },
+          { "type": "multiple-choice", "id": "a1-14-q12", "question": "Correct pronoun: \"Wir lieben ___.\"", "options": ["ihr", "euch", "ihn", "sie"], "answer": "euch" },
+          { "type": "fill-blank", "id": "a1-14-q13", "question": "\"Ich brauche ___ Hilfe.\" (feminine, indefinite)", "answer": "eine", "hint": "eine — feminine doesn't change in Akk" },
+          { "type": "matching", "id": "a1-14-q14", "question": "Match the sentence to its translation:", "pairs": [
+            { "left": "Ich liebe dich.", "right": "I love you." },
+            { "left": "Wir lieben uns.", "right": "We love each other." },
+            { "left": "Sie kennt ihn.", "right": "She knows him." },
+            { "left": "Verstehst du mich?", "right": "Do you understand me?" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-14-q15", "question": "Order: \"I'm looking for a table for two\"", "words": ["Ich", "suche", "einen", "Tisch", "für", "zwei"], "answer": "Ich suche einen Tisch für zwei" },
+          { "type": "fill-blank", "id": "a1-14-q16", "question": "Listen: \"Hast du ___ Apfel?\" (masculine, indefinite)", "audioPrompt": "Hast du einen Apfel?", "answer": "einen", "hint": "der Apfel → einen Apfel" },
+          { "type": "multiple-choice", "id": "a1-14-q17", "question": "With gegen, the case is:", "options": ["Nominativ", "Akkusativ", "Dativ", "Genitiv"], "answer": "Akkusativ" },
+          { "type": "speaking", "id": "a1-14-q18", "question": "Say in German: \"I see the dog and the cat\"", "answer": "Ich sehe den Hund und die Katze" },
+          { "type": "fill-blank", "id": "a1-14-q19", "question": "\"Sie kauft das Buch ___ ihren Vater.\" (for)", "answer": "für", "hint": "für + Akk" },
+          { "type": "multiple-choice", "id": "a1-14-q20", "question": "Which sentence has a correct Akk?", "options": ["Ich liebe der Mann.", "Ich liebe den Mann.", "Ich liebe dem Mann.", "Ich liebe ein Mann."], "answer": "Ich liebe den Mann." }
+        ]
+      }
     }
   },
   "title": "Level One",
