@@ -49,7 +49,7 @@ Quality bar — STRICT:
   • Grammar block must include 1-3 PARADIGM TABLES with proper headers/rows. Tables show real conjugations, declensions, or article forms.
   • Add 2-4 RULE CARDS (rule + example + Arabic translation).
   • Add 6-10 EXAMPLES — full German sentences each followed by " — " and Arabic translation.
-  • Vocabulary list: 12-18 items, each with german/arabic/example/exampleArabic/type.
+  • Vocabulary list: 30-40 items. Mix the core grammar verbs (must-haves for the topic) with thematic expansion vocabulary — synonyms, opposites, common collocations a Moroccan learner will hit at this level. Each item gets german/arabic/example/exampleArabic/type. For nouns include gender (der/die/das) and the plural form when irregular.
   • Exercise: EXACTLY 10 questions covering all 5 types: at least 2× fill-blank, 2× multiple-choice, 1× matching, 1× drag-drop, 1× speaking. Mix audioPrompt fields on 2-3 fill-blank items for listening practice.
   • Tone: warm, practical, confidence-building. Avoid academic German labels — use Moroccan-friendly explanations.
   • German vocabulary uses Latin script as-is; Arabic body uses ؟ ، ؛ « » (never ASCII punctuation in Arabic).
@@ -136,9 +136,11 @@ export async function POST(req: NextRequest) {
     }
 
     const client = new Anthropic({ apiKey })
+    // Bump max_tokens to fit the larger vocab list (30-40 items × ~80 tokens/item
+    // including examples ≈ 3000 extra tokens).
     const resp = await client.messages.create({
       model: 'claude-haiku-4-5',
-      max_tokens: 5500,
+      max_tokens: 7000,
       temperature: 0.5,
       messages: [{ role: 'user', content: buildPrompt(level as Level, lessonId, order, topic, grammarFocus) }],
     })
@@ -160,8 +162,11 @@ export async function POST(req: NextRequest) {
     if (!Array.isArray(lesson.grammar?.examples) || lesson.grammar.examples.length < 4) {
       return NextResponse.json({ error: 'grammar.examples must have ≥4 entries' }, { status: 502 })
     }
-    if (!Array.isArray(lesson.vocabulary) || lesson.vocabulary.length < 8) {
-      return NextResponse.json({ error: 'vocabulary must have ≥8 entries' }, { status: 502 })
+    if (!Array.isArray(lesson.vocabulary) || lesson.vocabulary.length < 25) {
+      return NextResponse.json(
+        { error: `vocabulary must have ≥25 entries (got ${lesson.vocabulary?.length ?? 0}). Regenerate.` },
+        { status: 502 },
+      )
     }
     if (!Array.isArray(lesson.exercise?.questions) || lesson.exercise.questions.length < 6) {
       return NextResponse.json({ error: 'exercise.questions must have ≥6 entries' }, { status: 502 })

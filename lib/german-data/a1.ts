@@ -2253,6 +2253,7 @@ export const A1: Level = {
         tip: 'احفظ الجدول الكبير غيباً. الفعل الناقص + الفعل الرئيسي في النهاية = نمط ستستخدمه في كل جملة A1 تقريباً. تدرّب 5 دقائق يومياً في صفحة Drill (تدريب التصريف).',
       },
       vocabulary: [
+        // Core modal verbs
         { german: 'können',    arabic: 'يستطيع',           example: 'Ich kann gut schwimmen.',         exampleArabic: 'أستطيع السباحة جيداً.', type: 'verb' },
         { german: 'müssen',    arabic: 'يجب',              example: 'Wir müssen lernen.',              exampleArabic: 'يجب علينا أن نتعلم.',   type: 'verb' },
         { german: 'wollen',    arabic: 'يريد',             example: 'Ich will Wasser.',                 exampleArabic: 'أريد ماءً.',            type: 'verb' },
@@ -2261,13 +2262,37 @@ export const A1: Level = {
         { german: 'dürfen',    arabic: 'يُسمح له',         example: 'Hier darf man parken.',            exampleArabic: 'يُسمح بالوقوف هنا.',    type: 'verb' },
         { german: 'sollen',    arabic: 'ينبغي',            example: 'Du sollst zum Arzt gehen.',        exampleArabic: 'ينبغي أن تذهب للطبيب.', type: 'verb' },
         { german: 'der Infinitiv', arabic: 'صيغة المصدر',  example: 'sprechen ist ein Infinitiv.',      exampleArabic: 'sprechen صيغة مصدر.',  type: 'noun', gender: 'der' },
+        // Common verbs that pair with modals
         { german: 'rauchen',   arabic: 'يدخّن',            example: 'Hier darf man nicht rauchen.',     exampleArabic: 'لا يُسمح بالتدخين هنا.', type: 'verb' },
         { german: 'parken',    arabic: 'يركن السيارة',     example: 'Wo kann ich parken?',              exampleArabic: 'أين يمكنني ركن السيارة؟', type: 'verb' },
         { german: 'helfen',    arabic: 'يساعد',            example: 'Können Sie mir helfen?',           exampleArabic: 'هل يمكنك مساعدتي؟',    type: 'verb' },
         { german: 'reisen',    arabic: 'يسافر',            example: 'Wir wollen nach Berlin reisen.',   exampleArabic: 'نريد السفر إلى برلين.', type: 'verb' },
         { german: 'studieren', arabic: 'يدرس بالجامعة',    example: 'Ich will in Deutschland studieren.', exampleArabic: 'أريد الدراسة بألمانيا.', type: 'verb' },
-        { german: 'das Wasser', arabic: 'الماء',           example: 'Ich möchte Wasser, bitte.',        exampleArabic: 'أودّ ماءً من فضلك.',    type: 'noun', gender: 'das' },
-        { german: 'die Hilfe',  arabic: 'المساعدة',        example: 'Ich brauche Hilfe.',               exampleArabic: 'أحتاج مساعدة.',        type: 'noun', gender: 'die' },
+        { german: 'arbeiten',  arabic: 'يعمل',             example: 'Mein Vater muss arbeiten.',        exampleArabic: 'يجب على والدي أن يعمل.', type: 'verb' },
+        { german: 'lernen',    arabic: 'يتعلم',            example: 'Du musst Deutsch lernen.',         exampleArabic: 'يجب أن تتعلم الألمانية.', type: 'verb' },
+        { german: 'schlafen',  arabic: 'ينام',             example: 'Ich will jetzt schlafen.',         exampleArabic: 'أريد النوم الآن.',     type: 'verb' },
+        { german: 'kaufen',    arabic: 'يشتري',            example: 'Ich möchte Brot kaufen.',          exampleArabic: 'أودّ شراء الخبز.',      type: 'verb' },
+        { german: 'sprechen',  arabic: 'يتحدث',            example: 'Kannst du Englisch sprechen?',     exampleArabic: 'هل تستطيع التحدث بالإنجليزية؟', type: 'verb' },
+        { german: 'verstehen', arabic: 'يفهم',             example: 'Ich kann das nicht verstehen.',    exampleArabic: 'لا أستطيع فهم ذلك.',   type: 'verb' },
+        { german: 'gehen',     arabic: 'يذهب',             example: 'Wir wollen ins Kino gehen.',       exampleArabic: 'نريد الذهاب إلى السينما.', type: 'verb' },
+        // Common nouns surrounding modal contexts
+        { german: 'das Wasser',   arabic: 'الماء',         example: 'Ich möchte Wasser, bitte.',        exampleArabic: 'أودّ ماءً من فضلك.',    type: 'noun', gender: 'das' },
+        { german: 'die Hilfe',    arabic: 'المساعدة',      example: 'Ich brauche Hilfe.',               exampleArabic: 'أحتاج مساعدة.',        type: 'noun', gender: 'die' },
+        { german: 'der Arzt',     arabic: 'الطبيب',        example: 'Du musst zum Arzt gehen.',         exampleArabic: 'يجب أن تذهب للطبيب.',  type: 'noun', gender: 'der', plural: 'die Ärzte' },
+        { german: 'die Schule',   arabic: 'المدرسة',       example: 'Mein Sohn muss in die Schule.',    exampleArabic: 'ابني يجب أن يذهب للمدرسة.', type: 'noun', gender: 'die', plural: 'die Schulen' },
+        { german: 'die Arbeit',   arabic: 'العمل',         example: 'Ich muss zur Arbeit.',             exampleArabic: 'يجب أن أذهب للعمل.',   type: 'noun', gender: 'die' },
+        { german: 'das Auto',     arabic: 'السيارة',       example: 'Wo kann ich das Auto parken?',     exampleArabic: 'أين يمكنني ركن السيارة؟', type: 'noun', gender: 'das', plural: 'die Autos' },
+        { german: 'der Bus',      arabic: 'الحافلة',       example: 'Wir können den Bus nehmen.',       exampleArabic: 'يمكننا أن نأخذ الحافلة.', type: 'noun', gender: 'der', plural: 'die Busse' },
+        { german: 'die Apotheke', arabic: 'الصيدلية',      example: 'Ich muss zur Apotheke gehen.',     exampleArabic: 'يجب أن أذهب للصيدلية.', type: 'noun', gender: 'die', plural: 'die Apotheken' },
+        // Useful adverbs / connectors with modals
+        { german: 'gern',         arabic: 'بسرور / يحبّ',  example: 'Ich möchte gern einen Tee.',       exampleArabic: 'أودّ كأس شاي بسرور.',  type: 'adverb' },
+        { german: 'lieber',       arabic: 'أفضّل',          example: 'Ich möchte lieber Wasser.',        exampleArabic: 'أفضّل الماء.',          type: 'adverb' },
+        { german: 'vielleicht',   arabic: 'ربما',           example: 'Vielleicht kann ich morgen kommen.', exampleArabic: 'ربما أستطيع المجيء غداً.', type: 'adverb' },
+        { german: 'unbedingt',    arabic: 'حتماً / ضرورياً', example: 'Du musst unbedingt das Brandenburger Tor sehen!', exampleArabic: 'يجب عليك حتماً أن ترى بوابة براندنبورغ!', type: 'adverb' },
+        { german: 'leider',       arabic: 'للأسف',          example: 'Ich kann leider nicht kommen.',    exampleArabic: 'للأسف لا أستطيع المجيء.', type: 'adverb' },
+        // Common short phrases
+        { german: 'Entschuldigung', arabic: 'عذراً',         example: 'Entschuldigung, kann ich Sie etwas fragen?', exampleArabic: 'عذراً، هل يمكنني سؤالك شيئاً؟', type: 'phrase' },
+        { german: 'kein Problem', arabic: 'لا مشكلة',        example: 'Du kannst kommen — kein Problem.', exampleArabic: 'يمكنك المجيء — لا مشكلة.', type: 'phrase' },
       ],
       exercise: {
         questions: [
