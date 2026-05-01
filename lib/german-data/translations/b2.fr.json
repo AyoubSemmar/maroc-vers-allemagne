@@ -5706,6 +5706,649 @@
           }
         ]
       }
+    },
+    "b2-16": {
+      "id": "b2-16",
+      "title": "Les phrases conditionnelles — Konditionalsätze",
+      "order": 16,
+      "grammar": {
+        "title": "wenn (conditionnel) + condition réelle vs irréelle + Konjunktiv II pour les souhaits",
+        "content": "Les phrases conditionnelles expriment cause et conséquence. L'allemand distingue :\n\n**Réel (Realer Bedingung) :** ce qui peut arriver.\n→ **Wenn** ich Zeit **habe**, **komme** ich. (Si j'ai du temps, je viens)\n\n**Irréel (Irrealer Bedingung) :** hypothèse, souhait, ce qui n'est pas arrivé.\n→ **Wenn** ich Zeit **hätte**, **würde** ich kommen. (Si j'avais du temps, je viendrais)\n\n**Passé irréel :** regret du passé.\n→ **Wenn** ich Zeit **gehabt hätte**, **wäre** ich gekommen. (Si j'avais eu du temps hier, je serais venu)",
+        "tables": [
+          {
+            "title": "Les trois types de phrases conditionnelles",
+            "headers": [
+              "Type",
+              "Condition",
+              "Conséquence",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Réel (présent/futur)",
+                  "Indikativ",
+                  "Indikativ",
+                  "Wenn es regnet, bleibe ich zu Hause."
+                ]
+              },
+              {
+                "cells": [
+                  "Irréel (présent/futur)",
+                  "Konj. II",
+                  "würde + Inf",
+                  "Wenn ich reich wäre, würde ich reisen."
+                ]
+              },
+              {
+                "cells": [
+                  "Irréel (passé)",
+                  "hätte/wäre + Partizip",
+                  "hätte/wäre + Partizip",
+                  "Wenn ich Zeit gehabt hätte, wäre ich gekommen."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Virgule toujours après wenn-Satz : « Wenn..., (verbe)... »"
+          },
+          {
+            "title": "Alternatives à wenn",
+            "headers": [
+              "Mot",
+              "Sens",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "falls",
+                  "au cas où",
+                  "Falls es regnet, nehmen wir Schirme."
+                ]
+              },
+              {
+                "cells": [
+                  "sofern",
+                  "dans la mesure où",
+                  "Sofern du Zeit hast, komm vorbei."
+                ]
+              },
+              {
+                "cells": [
+                  "unter der Bedingung, dass",
+                  "à condition que",
+                  "Ich helfe dir unter der Bedingung, dass du auch hilfst."
+                ]
+              },
+              {
+                "cells": [
+                  "sans wenn (inversion du verbe)",
+                  "omission de wenn",
+                  "Hätte ich Zeit, würde ich kommen."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Sans wenn, le verbe vient en tête : « Hätte ich..., würde ich... »"
+          },
+          {
+            "title": "Konjunktiv II — exemples de verbes courants",
+            "headers": [
+              "Infinitiv",
+              "Konj. II",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sein",
+                  "wäre",
+                  "Wenn ich du wäre..."
+                ]
+              },
+              {
+                "cells": [
+                  "haben",
+                  "hätte",
+                  "Wenn ich Zeit hätte..."
+                ]
+              },
+              {
+                "cells": [
+                  "werden",
+                  "würde",
+                  "Ich würde reisen."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "könnte",
+                  "Ich könnte helfen."
+                ]
+              },
+              {
+                "cells": [
+                  "wissen",
+                  "wüsste",
+                  "Wenn ich es wüsste..."
+                ]
+              },
+              {
+                "cells": [
+                  "gehen",
+                  "ginge / würde gehen",
+                  "Ich würde gehen."
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "Verbes réguliers en Konj. II = Präteritum + ä/ö/ü. Le reste : würde + Inf."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Au réel, le verbe est en 2e position dans wenn-Satz, et en 1ère dans la principale (après wenn-Satz).",
+            "example": "Wenn es regnet, bleibe ich zu Hause.",
+            "translation": "S'il pleut, je reste à la maison."
+          },
+          {
+            "rule": "Présent irréel = Konj. II (équivalent du conditionnel français « si... + imparfait/conditionnel »).",
+            "example": "Wenn ich reich wäre, würde ich helfen.",
+            "translation": "Si j'étais riche, j'aiderais."
+          },
+          {
+            "rule": "Passé irréel = hätte/wäre + Partizip — « si j'avais... »",
+            "example": "Wenn du gekommen wärst, hätten wir gespielt.",
+            "translation": "Si tu étais venu, nous aurions joué."
+          },
+          {
+            "rule": "Sans wenn = verbe en tête : « Hätte ich Zeit, würde ich... »",
+            "example": "Wäre ich du, würde ich es tun.",
+            "translation": "Si j'étais toi, je le ferais."
+          }
+        ],
+        "examples": [
+          "Wenn ich Zeit habe, lerne ich Deutsch. — Quand j'ai du temps, j'apprends l'allemand.",
+          "Falls es regnet, bleiben wir zu Hause. — Au cas où il pleuvrait, on reste à la maison.",
+          "Wenn ich reich wäre, würde ich nach Japan reisen. — Si j'étais riche, je voyagerais au Japon.",
+          "Wenn ich du wäre, würde ich das machen. — Si j'étais toi, je le ferais.",
+          "Hätten wir mehr Zeit, könnten wir mehr lernen. — Avec plus de temps, on pourrait apprendre plus.",
+          "Wenn du gekommen wärst, hätten wir gefeiert. — Si tu étais venu, on aurait fait la fête.",
+          "Sofern du einverstanden bist, fangen wir an. — Dans la mesure où tu es d'accord, on commence.",
+          "Ich würde dir helfen, wenn ich könnte. — Je t'aiderais si je pouvais."
+        ],
+        "tip": "Entraîne-toi sur : « Wenn ich + Konj. II, würde ich + Inf ». Cette structure couvre 80 % des phrases conditionnelles en B2. Ajoute le passé irréel (hätte gehabt) plus tard."
+      },
+      "vocabulary": [
+        {
+          "german": "wenn",
+          "arabic": "si",
+          "example": "Wenn ich Zeit habe...",
+          "exampleArabic": "Si j'ai du temps...",
+          "type": "conjunction"
+        },
+        {
+          "german": "falls",
+          "arabic": "au cas où",
+          "example": "Falls es regnet...",
+          "exampleArabic": "Au cas où il pleuvrait...",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "dans la mesure où",
+          "example": "Sofern du willst...",
+          "exampleArabic": "Dans la mesure où tu veux...",
+          "type": "conjunction"
+        },
+        {
+          "german": "unter der Bedingung",
+          "arabic": "à condition que",
+          "example": "Unter der Bedingung, dass du hilfst.",
+          "exampleArabic": "À condition que tu aides.",
+          "type": "phrase"
+        },
+        {
+          "german": "wäre",
+          "arabic": "serait (Konj. II de sein)",
+          "example": "Wenn ich reich wäre...",
+          "exampleArabic": "Si j'étais riche...",
+          "type": "verb"
+        },
+        {
+          "german": "hätte",
+          "arabic": "aurais",
+          "example": "Wenn ich Zeit hätte...",
+          "exampleArabic": "Si j'avais du temps...",
+          "type": "verb"
+        },
+        {
+          "german": "würde",
+          "arabic": "(conditionnel) + verbe",
+          "example": "Ich würde gerne kommen.",
+          "exampleArabic": "J'aimerais venir.",
+          "type": "verb"
+        },
+        {
+          "german": "könnte",
+          "arabic": "pourrais",
+          "example": "Ich könnte helfen.",
+          "exampleArabic": "Je pourrais aider.",
+          "type": "verb"
+        },
+        {
+          "german": "müsste",
+          "arabic": "devrais",
+          "example": "Du müsstest jetzt gehen.",
+          "exampleArabic": "Tu devrais partir maintenant.",
+          "type": "verb"
+        },
+        {
+          "german": "sollte",
+          "arabic": "il faudrait que",
+          "example": "Du solltest mehr lernen.",
+          "exampleArabic": "Tu devrais étudier plus.",
+          "type": "verb"
+        },
+        {
+          "german": "wüsste",
+          "arabic": "saurais",
+          "example": "Wenn ich es wüsste!",
+          "exampleArabic": "Si je le savais !",
+          "type": "verb"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "la condition",
+          "example": "Eine wichtige Bedingung.",
+          "exampleArabic": "Une condition importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bedingungen"
+        },
+        {
+          "german": "die Voraussetzung",
+          "arabic": "le prérequis",
+          "example": "Was sind die Voraussetzungen?",
+          "exampleArabic": "Quels sont les prérequis ?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Voraussetzungen"
+        },
+        {
+          "german": "die Möglichkeit",
+          "arabic": "la possibilité",
+          "example": "Es gibt eine Möglichkeit.",
+          "exampleArabic": "Il y a une possibilité.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "der Fall",
+          "arabic": "le cas",
+          "example": "In diesem Fall...",
+          "exampleArabic": "Dans ce cas...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Fälle"
+        },
+        {
+          "german": "der Wunsch",
+          "arabic": "le souhait",
+          "example": "Mein Wunsch ist...",
+          "exampleArabic": "Mon souhait est...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Wünsche"
+        },
+        {
+          "german": "die Konsequenz",
+          "arabic": "la conséquence",
+          "example": "Die Konsequenzen sind klar.",
+          "exampleArabic": "Les conséquences sont claires.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konsequenzen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "la décision",
+          "example": "Die Entscheidung war richtig.",
+          "exampleArabic": "La décision était bonne.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "das Risiko",
+          "arabic": "le risque",
+          "example": "Das Risiko ist groß.",
+          "exampleArabic": "Le risque est grand.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Risiken"
+        },
+        {
+          "german": "die Gelegenheit",
+          "arabic": "l'occasion",
+          "example": "Eine gute Gelegenheit.",
+          "exampleArabic": "Une bonne occasion.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gelegenheiten"
+        },
+        {
+          "german": "reich",
+          "arabic": "riche",
+          "example": "Wenn ich reich wäre...",
+          "exampleArabic": "Si j'étais riche...",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "pauvre",
+          "example": "Niemand will arm sein.",
+          "exampleArabic": "Personne ne veut être pauvre.",
+          "type": "adjective"
+        },
+        {
+          "german": "frei",
+          "arabic": "libre",
+          "example": "Wenn ich frei wäre...",
+          "exampleArabic": "Si j'étais libre...",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "heureux",
+          "example": "Ich wäre glücklich.",
+          "exampleArabic": "Je serais heureux.",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "satisfait",
+          "example": "Wir wären zufrieden.",
+          "exampleArabic": "Nous serions satisfaits.",
+          "type": "adjective"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "théoriquement",
+          "example": "Theoretisch ist es möglich.",
+          "exampleArabic": "Théoriquement, c'est possible.",
+          "type": "adverb"
+        },
+        {
+          "german": "praktisch",
+          "arabic": "pratiquement",
+          "example": "Praktisch geht das nicht.",
+          "exampleArabic": "En pratique, ce n'est pas faisable.",
+          "type": "adverb"
+        },
+        {
+          "german": "angenommen",
+          "arabic": "supposons que",
+          "example": "Angenommen, du gewinnst.",
+          "exampleArabic": "Supposons que tu gagnes.",
+          "type": "phrase"
+        },
+        {
+          "german": "realisieren",
+          "arabic": "réaliser",
+          "example": "Träume realisieren.",
+          "exampleArabic": "Réaliser des rêves.",
+          "type": "verb"
+        },
+        {
+          "german": "verwirklichen",
+          "arabic": "concrétiser",
+          "example": "Pläne verwirklichen.",
+          "exampleArabic": "Concrétiser des plans.",
+          "type": "verb"
+        },
+        {
+          "german": "feiern",
+          "arabic": "fêter",
+          "example": "Wir feiern den Erfolg.",
+          "exampleArabic": "Nous fêtons le succès.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q1",
+            "question": "Condition réelle : « Wenn ich Zeit ___, komme ich. » (haben)",
+            "answer": "habe",
+            "hint": "présent — Indikativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q2",
+            "question": "Irréel : « Wenn ich reich ___, würde ich reisen. » (sein)",
+            "options": [
+              "bin",
+              "war",
+              "wäre",
+              "wäre gewesen"
+            ],
+            "answer": "wäre"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q3",
+            "question": "Sans wenn : « ___ ich Zeit, würde ich kommen. » (haben Konj. II)",
+            "answer": "Hätte",
+            "hint": "verbe en tête"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q4",
+            "question": "Le passé irréel utilise ?",
+            "options": [
+              "hätte/wäre + Partizip",
+              "würde + Inf",
+              "Konj. II simple",
+              "Indikativ Perfekt"
+            ],
+            "answer": "hätte/wäre + Partizip"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q5",
+            "question": "Alternative à wenn : « ___ es regnet, bleiben wir zu Hause. » (au cas où)",
+            "answer": "Falls",
+            "hint": "falls = wenn formel"
+          },
+          {
+            "type": "matching",
+            "id": "b2-16-q6",
+            "question": "Associe le verbe à son Konj. II :",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "wäre"
+              },
+              {
+                "left": "haben",
+                "right": "hätte"
+              },
+              {
+                "left": "werden",
+                "right": "würde"
+              },
+              {
+                "left": "können",
+                "right": "könnte"
+              },
+              {
+                "left": "wissen",
+                "right": "wüsste"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-16-q7",
+            "question": "Ordonne : « Si j'avais eu du temps, je serais venu » (passé irréel)",
+            "words": [
+              "Wenn",
+              "ich",
+              "Zeit",
+              "gehabt",
+              "hätte,",
+              "wäre",
+              "ich",
+              "gekommen"
+            ],
+            "answer": "Wenn ich Zeit gehabt hätte, wäre ich gekommen"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-16-q8",
+            "question": "Dis : « Si j'étais toi, je le ferais »",
+            "answer": "Wenn ich du wäre, würde ich das machen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q9",
+            "question": "Écoute : « Wenn du gekommen ___, hätten wir gefeiert. » (sein Konj. II passé)",
+            "audioPrompt": "Wenn du gekommen wärst, hätten wir gefeiert.",
+            "answer": "wärst",
+            "hint": "wärst = sein Konj. II avec du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q10",
+            "question": "La structure la plus courante pour le présent irréel :",
+            "options": [
+              "hätte gehabt",
+              "Wenn + Konj. II + würde + Inf",
+              "wenn + Indikativ",
+              "Imperativ"
+            ],
+            "answer": "Wenn + Konj. II + würde + Inf"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q11",
+            "question": "Konj. II de können ?",
+            "answer": "könnte",
+            "hint": "können → könnte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q12",
+            "question": "Le plus naturel à l'oral pour « si je faisais » :",
+            "options": [
+              "ich täte",
+              "ich würde tun",
+              "ich tüte",
+              "ich werde tun"
+            ],
+            "answer": "ich würde tun"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q13",
+            "question": "« Wenn ich es ___, würde ich antworten. » (wissen Konj. II)",
+            "answer": "wüsste",
+            "hint": "wissen → wüsste"
+          },
+          {
+            "type": "matching",
+            "id": "b2-16-q14",
+            "question": "Associe le type à la structure :",
+            "pairs": [
+              {
+                "left": "réel présent",
+                "right": "wenn + Indikativ"
+              },
+              {
+                "left": "irréel présent",
+                "right": "wenn + Konj. II + würde"
+              },
+              {
+                "left": "irréel passé",
+                "right": "wenn + hätte/wäre + Partizip"
+              },
+              {
+                "left": "sans wenn",
+                "right": "verbe en tête"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-16-q15",
+            "question": "Ordonne : « Si je le savais, je te le dirais »",
+            "words": [
+              "Wenn",
+              "ich",
+              "es",
+              "wüsste,",
+              "würde",
+              "ich",
+              "es",
+              "dir",
+              "sagen"
+            ],
+            "answer": "Wenn ich es wüsste, würde ich es dir sagen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q16",
+            "question": "Écoute : « ___ ich Geld, würde ich reisen. » (sans wenn)",
+            "audioPrompt": "Hätte ich Geld, würde ich reisen.",
+            "answer": "Hätte",
+            "hint": "verbe en tête"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q17",
+            "question": "Quelle est une alternative à wenn ?",
+            "options": [
+              "falls",
+              "sofern",
+              "unter der Bedingung dass",
+              "toutes"
+            ],
+            "answer": "toutes"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-16-q18",
+            "question": "Dis : « Si tu étais venu, on aurait fêté »",
+            "answer": "Wenn du gekommen wärst, hätten wir gefeiert"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q19",
+            "question": "« Wenn ich Zeit ___ ___, wäre ich gekommen. » (haben — Konj. II passé)",
+            "answer": "gehabt hätte",
+            "hint": "gehabt + hätte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q20",
+            "question": "La phrase « Hätte ich Geld » signifie :",
+            "options": [
+              "j'ai de l'argent",
+              "si j'avais de l'argent",
+              "j'aurai de l'argent",
+              "j'avais de l'argent"
+            ],
+            "answer": "si j'avais de l'argent"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Quatre",
