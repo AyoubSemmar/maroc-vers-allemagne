@@ -5656,6 +5656,148 @@
           }
         ]
       }
+    },
+    "a1-13": {
+      "id": "a1-13",
+      "title": "Modalverben",
+      "order": 13,
+      "grammar": {
+        "title": "Die sechs Modalverben + Position des Hauptverbs",
+        "content": "Die Modalverben (**Modalverben**) sind sechs Verben, die **Fähigkeit, Pflicht, Wunsch, Erlaubnis, Rat und Vorliebe** ausdrücken. Ohne sie kann man kaum einen Alltagssatz bilden — *ich kann, ich muss, ich will, ich mag, ich darf, ich soll*.\n\n**Goldene Satzregel:**\nDas Modalverb steht an **zweiter Position** im Satz (konjugiert), und das Hauptverb steht **am Ende im Infinitiv**.\n\n→ Ich **kann** gut Deutsch **sprechen**.\n→ Wir **müssen** heute viel **arbeiten**.\n\n**Wichtig:** Die Formen für **ich** und **er/sie/es** sind bei allen Modalverben **identisch**. Kein -t am Ende.",
+        "tables": [
+          {
+            "title": "Konjugation der sechs Modalverben im Präsens",
+            "headers": ["Pronomen", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "rows": [
+              { "cells": ["ich", "kann", "muss", "will", "mag", "darf", "soll"] },
+              { "cells": ["du", "kannst", "musst", "willst", "magst", "darfst", "sollst"] },
+              { "cells": ["er / sie / es", "kann", "muss", "will", "mag", "darf", "soll"], "highlight": true },
+              { "cells": ["wir", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] },
+              { "cells": ["ihr", "könnt", "müsst", "wollt", "mögt", "dürft", "sollt"] },
+              { "cells": ["sie / Sie", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] }
+            ],
+            "theme": "conjugation",
+            "note": "Die hervorgehobene Zeile (er/sie/es) entspricht ich — die wichtigste Eigenschaft der Modalverben."
+          },
+          {
+            "title": "Bedeutungen der Modalverben",
+            "headers": ["Verb", "Bedeutung", "Beispiel"],
+            "rows": [
+              { "cells": ["können", "Fähigkeit", "Ich kann schwimmen."] },
+              { "cells": ["müssen", "starke Pflicht", "Du musst lernen."] },
+              { "cells": ["wollen", "Wunsch / Wille", "Ich will nach Berlin."] },
+              { "cells": ["mögen", "mögen / möchte (höflich)", "Ich mag Kaffee."] },
+              { "cells": ["dürfen", "Erlaubnis", "Hier darf man rauchen."] },
+              { "cells": ["sollen", "Rat / Auftrag", "Du sollst zum Arzt gehen."] }
+            ],
+            "theme": "default"
+          },
+          {
+            "title": "Satzbau mit Modalverb",
+            "headers": ["Position 1", "Position 2 (Modal)", "Mitte", "Ende (Infinitiv)"],
+            "rows": [
+              { "cells": ["Ich", "kann", "gut Deutsch", "sprechen."] },
+              { "cells": ["Heute", "müssen", "wir früh", "aufstehen."] },
+              { "cells": ["Wo", "darf", "ich", "parken?"] },
+              { "cells": ["Mein Bruder", "will", "in Marokko", "studieren."] }
+            ],
+            "theme": "default",
+            "note": "Modalverb immer Position 2, Hauptverb am Ende."
+          }
+        ],
+        "rules": [
+          { "rule": "Nicht vergessen: ich und er/sie/es haben bei Modalverben **dieselbe** Form, ohne -t am Ende.", "example": "Er kann Deutsch. — Ich kann Deutsch. (nicht „er kannt“)", "translation": "Er beherrscht Deutsch. — Ich beherrsche Deutsch." },
+          { "rule": "In Ja/Nein-Fragen steht das Modalverb am Anfang.", "example": "Kannst du Arabisch sprechen?", "translation": "Beherrschst du Arabisch?" },
+          { "rule": "Die höfliche Form „möchte“ kommt von mögen — verwende sie statt will in Restaurants und Geschäften.", "example": "Ich möchte einen Kaffee, bitte.", "translation": "Höflicher als Ich will..." },
+          { "rule": "Bei einem Modalverb wird das Hauptverb manchmal weggelassen, wenn es aus dem Kontext klar ist.", "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)", "translation": "Ich beherrsche Deutsch." }
+        ],
+        "examples": [
+          "Ich kann ein bisschen Deutsch sprechen.",
+          "Du musst um 8 Uhr aufstehen.",
+          "Wir wollen nach Berlin reisen.",
+          "Sie mag keinen Kaffee.",
+          "Hier darf man nicht rauchen.",
+          "Du sollst mehr Wasser trinken.",
+          "Können Sie mir helfen? (höflich)",
+          "Ich möchte einen Tee, bitte.",
+          "Mein Vater muss heute arbeiten.",
+          "Was willst du essen?"
+        ],
+        "tip": "Lerne die große Tabelle auswendig. Modalverb + Hauptverb am Ende = ein Muster, das du in fast jedem A1-Satz brauchst. Übe täglich 5 Minuten auf der Drill-Seite."
+      },
+      "vocabulary": [
+        { "german": "können", "arabic": "Fähigkeit haben", "example": "Ich kann gut schwimmen.", "exampleArabic": "Fähigkeit", "type": "verb" },
+        { "german": "müssen", "arabic": "Pflicht", "example": "Wir müssen lernen.", "exampleArabic": "starke Pflicht", "type": "verb" },
+        { "german": "wollen", "arabic": "Wunsch / Wille", "example": "Ich will Wasser.", "exampleArabic": "starker Wille", "type": "verb" },
+        { "german": "mögen", "arabic": "gernhaben", "example": "Magst du Tee?", "exampleArabic": "Vorliebe", "type": "verb" },
+        { "german": "möchten", "arabic": "höfliche Form von wollen", "example": "Ich möchte einen Kaffee.", "exampleArabic": "höflicher Wunsch", "type": "verb" },
+        { "german": "dürfen", "arabic": "Erlaubnis haben", "example": "Hier darf man parken.", "exampleArabic": "Erlaubnis", "type": "verb" },
+        { "german": "sollen", "arabic": "Aufforderung / Rat", "example": "Du sollst zum Arzt gehen.", "exampleArabic": "Empfehlung", "type": "verb" },
+        { "german": "der Infinitiv", "arabic": "Grundform des Verbs", "example": "sprechen ist ein Infinitiv.", "exampleArabic": "Verbgrundform", "type": "noun", "gender": "der" },
+        { "german": "rauchen", "arabic": "Tabak konsumieren", "example": "Hier darf man nicht rauchen.", "exampleArabic": "Verbot", "type": "verb" },
+        { "german": "parken", "arabic": "Auto abstellen", "example": "Wo kann ich parken?", "exampleArabic": "Frage nach Parkplatz", "type": "verb" },
+        { "german": "helfen", "arabic": "Hilfe leisten", "example": "Können Sie mir helfen?", "exampleArabic": "höfliche Bitte", "type": "verb" },
+        { "german": "reisen", "arabic": "eine Reise machen", "example": "Wir wollen nach Berlin reisen.", "exampleArabic": "Reisewunsch", "type": "verb" },
+        { "german": "studieren", "arabic": "an einer Hochschule lernen", "example": "Ich will in Deutschland studieren.", "exampleArabic": "Hochschulstudium", "type": "verb" },
+        { "german": "arbeiten", "arabic": "Beruf ausüben", "example": "Mein Vater muss arbeiten.", "exampleArabic": "Berufstätigkeit", "type": "verb" },
+        { "german": "lernen", "arabic": "Wissen erwerben", "example": "Du musst Deutsch lernen.", "exampleArabic": "Lernen einer Sprache", "type": "verb" },
+        { "german": "schlafen", "arabic": "ruhen", "example": "Ich will jetzt schlafen.", "exampleArabic": "Schlafwunsch", "type": "verb" },
+        { "german": "kaufen", "arabic": "etwas erwerben", "example": "Ich möchte Brot kaufen.", "exampleArabic": "Einkauf", "type": "verb" },
+        { "german": "sprechen", "arabic": "reden", "example": "Kannst du Englisch sprechen?", "exampleArabic": "Sprachfähigkeit", "type": "verb" },
+        { "german": "verstehen", "arabic": "begreifen", "example": "Ich kann das nicht verstehen.", "exampleArabic": "Verständnisproblem", "type": "verb" },
+        { "german": "gehen", "arabic": "sich bewegen / zu Fuß gehen", "example": "Wir wollen ins Kino gehen.", "exampleArabic": "Bewegung zum Ort", "type": "verb" },
+        { "german": "das Wasser", "arabic": "Trinkflüssigkeit", "example": "Ich möchte Wasser, bitte.", "exampleArabic": "Getränk", "type": "noun", "gender": "das" },
+        { "german": "die Hilfe", "arabic": "Unterstützung", "example": "Ich brauche Hilfe.", "exampleArabic": "Hilfegesuch", "type": "noun", "gender": "die" },
+        { "german": "der Arzt", "arabic": "Mediziner", "example": "Du musst zum Arzt gehen.", "exampleArabic": "medizinische Person", "type": "noun", "gender": "der", "plural": "die Ärzte" },
+        { "german": "die Schule", "arabic": "Bildungseinrichtung", "example": "Mein Sohn muss in die Schule.", "exampleArabic": "Lernort", "type": "noun", "gender": "die", "plural": "die Schulen" },
+        { "german": "die Arbeit", "arabic": "Beruf / Tätigkeit", "example": "Ich muss zur Arbeit.", "exampleArabic": "Erwerbstätigkeit", "type": "noun", "gender": "die" },
+        { "german": "das Auto", "arabic": "Fahrzeug", "example": "Wo kann ich das Auto parken?", "exampleArabic": "Personenwagen", "type": "noun", "gender": "das", "plural": "die Autos" },
+        { "german": "der Bus", "arabic": "öffentliches Verkehrsmittel", "example": "Wir können den Bus nehmen.", "exampleArabic": "Großraumfahrzeug", "type": "noun", "gender": "der", "plural": "die Busse" },
+        { "german": "die Apotheke", "arabic": "Geschäft für Medikamente", "example": "Ich muss zur Apotheke gehen.", "exampleArabic": "Medikamentengeschäft", "type": "noun", "gender": "die", "plural": "die Apotheken" },
+        { "german": "gern", "arabic": "mit Freude", "example": "Ich möchte gern einen Tee.", "exampleArabic": "Vorliebe ausdrücken", "type": "adverb" },
+        { "german": "lieber", "arabic": "bevorzugt", "example": "Ich möchte lieber Wasser.", "exampleArabic": "Präferenz", "type": "adverb" },
+        { "german": "vielleicht", "arabic": "möglicherweise", "example": "Vielleicht kann ich morgen kommen.", "exampleArabic": "Möglichkeit", "type": "adverb" },
+        { "german": "unbedingt", "arabic": "auf jeden Fall", "example": "Du musst unbedingt das Brandenburger Tor sehen!", "exampleArabic": "Nachdruck", "type": "adverb" },
+        { "german": "leider", "arabic": "bedauerlicherweise", "example": "Ich kann leider nicht kommen.", "exampleArabic": "Bedauern", "type": "adverb" },
+        { "german": "Entschuldigung", "arabic": "höfliche Anrede / Verzeihung", "example": "Entschuldigung, kann ich Sie etwas fragen?", "exampleArabic": "höflicher Auftakt", "type": "phrase" },
+        { "german": "kein Problem", "arabic": "alles in Ordnung", "example": "Du kannst kommen — kein Problem.", "exampleArabic": "Zustimmung", "type": "phrase" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-13-q1", "question": "Ergänze: „Ich ___ gut Deutsch sprechen.“ (Fähigkeit)", "answer": "kann", "hint": "können — ich kann (kein -e)" },
+          { "type": "multiple-choice", "id": "a1-13-q2", "question": "Wie lautet die Form von er mit müssen?", "options": ["er müsst", "er muss", "er musst", "er müssen"], "answer": "er muss" },
+          { "type": "fill-blank", "id": "a1-13-q3", "question": "Ergänze: „Du ___ mehr Wasser trinken.“ (Empfehlung)", "answer": "sollst", "hint": "sollen — du-Form" },
+          { "type": "multiple-choice", "id": "a1-13-q4", "question": "Welcher Satz ist korrekt?", "options": ["Ich kann sprechen Deutsch gut.", "Ich Deutsch gut sprechen kann.", "Ich kann gut Deutsch sprechen.", "Sprechen ich kann gut Deutsch."], "answer": "Ich kann gut Deutsch sprechen." },
+          { "type": "fill-blank", "id": "a1-13-q5", "question": "Ergänze: „___ ich hier parken?“ (Erlaubnis)", "answer": "Darf", "hint": "dürfen — ich-Form in der Frage" },
+          { "type": "matching", "id": "a1-13-q6", "question": "Verbinde das Modalverb mit seiner Bedeutung:", "pairs": [
+            { "left": "können", "right": "Fähigkeit" },
+            { "left": "müssen", "right": "Pflicht" },
+            { "left": "wollen", "right": "Wunsch" },
+            { "left": "mögen", "right": "Vorliebe" },
+            { "left": "dürfen", "right": "Erlaubnis" },
+            { "left": "sollen", "right": "Empfehlung" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-13-q7", "question": "Ordne: „Ich will nach Deutschland reisen“", "words": ["Ich", "will", "nach", "Deutschland", "reisen"], "answer": "Ich will nach Deutschland reisen" },
+          { "type": "speaking", "id": "a1-13-q8", "question": "Sage: „Ich möchte einen Kaffee bitte“ (höflich)", "answer": "Ich möchte einen Kaffee bitte" },
+          { "type": "fill-blank", "id": "a1-13-q9", "question": "Hör zu: „Hier ___ man nicht rauchen.“ (Verbot)", "audioPrompt": "Hier darf man nicht rauchen.", "answer": "darf", "hint": "dürfen + man (allgemeine Erlaubnis)" },
+          { "type": "multiple-choice", "id": "a1-13-q10", "question": "Wie bittet man höflich um Hilfe?", "options": ["Hilf mir!", "Du musst mir helfen!", "Können Sie mir helfen, bitte?", "Ich helfe dir."], "answer": "Können Sie mir helfen, bitte?" },
+          { "type": "fill-blank", "id": "a1-13-q11", "question": "Ergänze: „Wir ___ heute viel arbeiten.“ (Pflicht)", "answer": "müssen", "hint": "müssen mit wir" },
+          { "type": "multiple-choice", "id": "a1-13-q12", "question": "Form von wollen mit ihr?", "options": ["will", "willst", "wollen", "wollt"], "answer": "wollt" },
+          { "type": "fill-blank", "id": "a1-13-q13", "question": "„Magst ___ Tee oder Kaffee?“ (du)", "answer": "du", "hint": "Ja/Nein-Frage" },
+          { "type": "drag-drop", "id": "a1-13-q14", "question": "Ordne: „Kannst du Englisch sprechen?“", "words": ["Kannst", "du", "Englisch", "sprechen"], "answer": "Kannst du Englisch sprechen" },
+          { "type": "matching", "id": "a1-13-q15", "question": "Verbinde Satz mit Bedeutung:", "pairs": [
+            { "left": "Ich kann.", "right": "Fähigkeit" },
+            { "left": "Ich darf.", "right": "Erlaubnis" },
+            { "left": "Ich möchte.", "right": "höflicher Wunsch" },
+            { "left": "Ich soll.", "right": "Empfehlung" }
+          ], "answer": "matched" },
+          { "type": "fill-blank", "id": "a1-13-q16", "question": "Hör zu: „Du ___ jetzt schlafen!“ (Pflicht)", "audioPrompt": "Du musst jetzt schlafen!", "answer": "musst", "hint": "müssen + du" },
+          { "type": "multiple-choice", "id": "a1-13-q17", "question": "„Möchtest du Wasser?“ — kommt von:", "options": ["möchten", "mögen", "wollen", "müssen"], "answer": "mögen" },
+          { "type": "speaking", "id": "a1-13-q18", "question": "Sage: „Wir wollen nach Deutschland reisen“", "answer": "Wir wollen nach Deutschland reisen" },
+          { "type": "fill-blank", "id": "a1-13-q19", "question": "„Hier ___ man rauchen?“ (Erlaubnis)", "answer": "darf", "hint": "dürfen in der Frage" },
+          { "type": "multiple-choice", "id": "a1-13-q20", "question": "Welcher Satz ist im Restaurant höflich?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
+        ]
+      }
     }
   },
   "title": "Niveau Eins",
