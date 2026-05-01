@@ -6868,6 +6868,627 @@
           }
         ]
       }
+    },
+    "b2-17": {
+      "id": "b2-17",
+      "title": "Advanced connectors — Konnektoren erweitert",
+      "order": 17,
+      "grammar": {
+        "title": "indem, ohne dass, anstatt zu, dadurch, sodass — how to link ideas precisely",
+        "content": "In B2, simple sentences aren't enough anymore. You need **precise connectors** to express manner, cause, contrast, consequence.\n\n**Types of connectors:**\n- **Manner (Modal):** indem, dadurch, ohne dass\n- **Concession (Konzessiv):** trotzdem, obwohl, dennoch\n- **Consequence (Konsekutiv):** sodass, deshalb, daher\n- **Alternative (Alternativ):** anstatt zu, anstatt dass\n\nEach connector imposes a verb order.",
+        "tables": [
+          {
+            "title": "Connectors of manner and means",
+            "headers": [
+              "Connector",
+              "Meaning",
+              "Example"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "indem",
+                  "by + -ing (means)",
+                  "Ich lerne, indem ich viel lese."
+                ]
+              },
+              {
+                "cells": [
+                  "dadurch, dass",
+                  "by the fact that",
+                  "Dadurch, dass ich übe, werde ich besser."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne zu",
+                  "without + -ing",
+                  "Er ging weg, ohne zu sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne dass",
+                  "without (different subject)",
+                  "Er ging, ohne dass ich es merkte."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt zu",
+                  "instead of + -ing",
+                  "Anstatt zu lernen, schaut er fern."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt dass",
+                  "instead of (different subject)",
+                  "Anstatt dass er kam, blieb er zu Hause."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "zu + Inf for the same subject. dass for different subjects."
+          },
+          {
+            "title": "Connectors of consequence and concession",
+            "headers": [
+              "Connector",
+              "Meaning",
+              "Verb position"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sodass / so dass",
+                  "so that (consequence)",
+                  "Hauptsatz, sodass + verb am Ende"
+                ]
+              },
+              {
+                "cells": [
+                  "so..., dass",
+                  "so... that",
+                  "Es ist so kalt, dass wir frieren."
+                ]
+              },
+              {
+                "cells": [
+                  "deshalb",
+                  "that's why",
+                  "Es regnet. Deshalb bleiben wir."
+                ]
+              },
+              {
+                "cells": [
+                  "trotzdem",
+                  "nevertheless",
+                  "Es regnet. Trotzdem gehen wir."
+                ]
+              },
+              {
+                "cells": [
+                  "je...desto",
+                  "the more... the more",
+                  "Je mehr, desto besser."
+                ]
+              },
+              {
+                "cells": [
+                  "zumal",
+                  "all the more so since",
+                  "Ich komme, zumal ich Zeit habe."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "deshalb/trotzdem at the start of the 2nd main clause. sodass starts a subordinate clause."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "indem describes the means — verb at the end: \"Ich lerne, indem ich Filme schaue.\"",
+            "example": "Sie verbessert ihr Deutsch, indem sie täglich liest.",
+            "translation": "She improves her German by reading daily."
+          },
+          {
+            "rule": "ohne zu/anstatt zu for same subject. ohne dass/anstatt dass for different subjects.",
+            "example": "Er ging, ohne zu sprechen. (same subject) / Er ging, ohne dass ich es wusste. (different subjects)",
+            "translation": "He left without speaking / without me knowing."
+          },
+          {
+            "rule": "sodass comes after a comma with verb at the end. so + adj + dass emphasizes a cause.",
+            "example": "Er ist krank, sodass er nicht kommen kann. / Es ist so kalt, dass wir frieren.",
+            "translation": "He's sick, so he can't come."
+          },
+          {
+            "rule": "je...desto starts each clause with a comma, using comparatives.",
+            "example": "Je mehr du übst, desto besser wirst du.",
+            "translation": "The more you practice, the better you get."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, indem ich Filme schaue. — I learn German by watching films.",
+          "Sie verbessert sich, dadurch dass sie täglich übt. — She improves by practicing daily.",
+          "Er ging, ohne zu fragen. — He left without asking.",
+          "Anstatt zu lernen, schaut er fern. — Instead of studying, he watches TV.",
+          "Es ist so kalt, dass wir frieren. — It's so cold we're freezing.",
+          "Je mehr ich lerne, desto besser werde ich. — The more I learn, the better I get.",
+          "Trotzdem ist er gekommen. — He came nevertheless.",
+          "Ich komme, zumal ich Zeit habe. — I'll come, all the more so since I have time."
+        ],
+        "tip": "Memorize 5 new connectors a week and form a sentence for each. In two months, you'll write complex sentences with ease. The B2 exam values Konnektoren — the more variety, the higher your writing score."
+      },
+      "vocabulary": [
+        {
+          "german": "indem",
+          "arabic": "by + -ing",
+          "example": "Ich lerne, indem ich übe.",
+          "exampleArabic": "I learn by practicing.",
+          "type": "conjunction"
+        },
+        {
+          "german": "dadurch dass",
+          "arabic": "by the fact that",
+          "example": "Dadurch dass er hilft, lerne ich schneller.",
+          "exampleArabic": "By his help, I learn faster.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne zu",
+          "arabic": "without + -ing",
+          "example": "Er ging, ohne zu sprechen.",
+          "exampleArabic": "He left without speaking.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne dass",
+          "arabic": "without (different subject)",
+          "example": "Er kam, ohne dass ich es wusste.",
+          "exampleArabic": "He came without me knowing.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt zu",
+          "arabic": "instead of",
+          "example": "Anstatt zu lernen, spielt er.",
+          "exampleArabic": "Instead of studying, he plays.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt dass",
+          "arabic": "instead of (different subject)",
+          "example": "Anstatt dass er hilft, lacht er.",
+          "exampleArabic": "Instead of helping, he laughs.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sodass",
+          "arabic": "so that",
+          "example": "Es regnet, sodass wir bleiben.",
+          "exampleArabic": "It's raining, so we stay.",
+          "type": "conjunction"
+        },
+        {
+          "german": "so...dass",
+          "arabic": "so... that",
+          "example": "Es ist so kalt, dass wir frieren.",
+          "exampleArabic": "It's so cold we freeze.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "nevertheless",
+          "example": "Es regnet. Trotzdem gehe ich.",
+          "exampleArabic": "It's raining. I'm going anyway.",
+          "type": "adverb"
+        },
+        {
+          "german": "dennoch",
+          "arabic": "yet / still",
+          "example": "Er ist müde, dennoch arbeitet er.",
+          "exampleArabic": "He's tired, yet he works.",
+          "type": "adverb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "however",
+          "example": "Er kam, jedoch zu spät.",
+          "exampleArabic": "He came, but too late.",
+          "type": "adverb"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "however / mind you",
+          "example": "Allerdings ist es kalt.",
+          "exampleArabic": "Mind you, it's cold.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "that's why",
+          "example": "Es regnet. Deshalb bleiben wir.",
+          "exampleArabic": "It's raining. That's why we stay.",
+          "type": "adverb"
+        },
+        {
+          "german": "daher",
+          "arabic": "therefore",
+          "example": "Daher ist es wichtig.",
+          "exampleArabic": "Therefore it's important.",
+          "type": "adverb"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "consequently",
+          "example": "Demzufolge ändert sich alles.",
+          "exampleArabic": "Consequently everything changes.",
+          "type": "adverb"
+        },
+        {
+          "german": "je...desto",
+          "arabic": "the more... the more",
+          "example": "Je mehr, desto besser.",
+          "exampleArabic": "The more, the better.",
+          "type": "phrase"
+        },
+        {
+          "german": "zumal",
+          "arabic": "all the more so since",
+          "example": "Ich komme, zumal ich Zeit habe.",
+          "exampleArabic": "I'll come, all the more so since I have time.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "as long as / insofar as",
+          "example": "Sofern es geht, helfe ich.",
+          "exampleArabic": "Insofar as possible, I help.",
+          "type": "conjunction"
+        },
+        {
+          "german": "insofern",
+          "arabic": "to that extent",
+          "example": "Insofern stimme ich zu.",
+          "exampleArabic": "To that extent I agree.",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "in case",
+          "example": "Falls es regnet...",
+          "exampleArabic": "In case it rains...",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "as soon as",
+          "example": "Sobald er kommt, gehen wir.",
+          "exampleArabic": "As soon as he comes, we go.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "while",
+          "example": "Während er liest, koche ich.",
+          "exampleArabic": "While he reads, I cook.",
+          "type": "conjunction"
+        },
+        {
+          "german": "inzwischen",
+          "arabic": "meanwhile",
+          "example": "Inzwischen ist es spät geworden.",
+          "exampleArabic": "Meanwhile it's gotten late.",
+          "type": "adverb"
+        },
+        {
+          "german": "mittlerweile",
+          "arabic": "by now",
+          "example": "Mittlerweile habe ich es verstanden.",
+          "exampleArabic": "By now I've understood it.",
+          "type": "adverb"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "consequence",
+          "example": "Die Folgen sind klar.",
+          "exampleArabic": "The consequences are clear.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Folgen"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "cause",
+          "example": "Was ist die Ursache?",
+          "exampleArabic": "What's the cause?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ursachen"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "connection / context",
+          "example": "Der Zusammenhang ist klar.",
+          "exampleArabic": "The context is clear.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Zusammenhänge"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "comparison",
+          "example": "Im Vergleich dazu...",
+          "exampleArabic": "By comparison...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Vergleiche"
+        },
+        {
+          "german": "der Gegensatz",
+          "arabic": "contrast",
+          "example": "Im Gegensatz zu ihm...",
+          "exampleArabic": "In contrast to him...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gegensätze"
+        },
+        {
+          "german": "das Argument",
+          "arabic": "argument",
+          "example": "Ein starkes Argument.",
+          "exampleArabic": "A strong argument.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Argumente"
+        },
+        {
+          "german": "die Begründung",
+          "arabic": "justification",
+          "example": "Die Begründung ist überzeugend.",
+          "exampleArabic": "The justification is convincing.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Begründungen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q1",
+            "question": "Means: \"Ich lerne, ___ ich Filme schaue.\"",
+            "answer": "indem",
+            "hint": "indem = by + -ing"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q2",
+            "question": "Instead of (same subject):",
+            "options": [
+              "anstatt dass",
+              "anstatt zu",
+              "ohne zu",
+              "sodass"
+            ],
+            "answer": "anstatt zu"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q3",
+            "question": "Consequence: \"Es ist so kalt, ___ wir frieren.\"",
+            "answer": "dass",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q4",
+            "question": "\"The more... the more\"",
+            "options": [
+              "je...desto",
+              "wenn...dann",
+              "so...wie",
+              "als...so"
+            ],
+            "answer": "je...desto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q5",
+            "question": "Concession: \"Es regnet. ___ gehe ich.\" (nevertheless)",
+            "answer": "Trotzdem",
+            "hint": "trotzdem = nevertheless"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q6",
+            "question": "Match the connector to its type:",
+            "pairs": [
+              {
+                "left": "indem",
+                "right": "means"
+              },
+              {
+                "left": "sodass",
+                "right": "consequence"
+              },
+              {
+                "left": "trotzdem",
+                "right": "concession"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "alternative"
+              },
+              {
+                "left": "während",
+                "right": "simultaneous time"
+              },
+              {
+                "left": "sobald",
+                "right": "later time"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q7",
+            "question": "Order: \"I learn by watching films\"",
+            "words": [
+              "Ich",
+              "lerne,",
+              "indem",
+              "ich",
+              "Filme",
+              "schaue"
+            ],
+            "answer": "Ich lerne, indem ich Filme schaue"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q8",
+            "question": "Say: \"The more you practice, the better you get\"",
+            "answer": "Je mehr du übst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q9",
+            "question": "Listen: \"Er ging, ___ zu sprechen.\"",
+            "audioPrompt": "Er ging, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu = without -ing"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q10",
+            "question": "After sodass, the verb is at:",
+            "options": [
+              "the start",
+              "2nd position",
+              "the end",
+              "no difference"
+            ],
+            "answer": "the end"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q11",
+            "question": "Cause emphasis: \"Es ist ___ kalt, dass wir frieren.\" (so)",
+            "answer": "so",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q12",
+            "question": "Without (different subjects):",
+            "options": [
+              "ohne zu",
+              "ohne dass",
+              "sodass",
+              "als ob"
+            ],
+            "answer": "ohne dass"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q13",
+            "question": "\"Sie verbessert sich ___ tägliches Üben.\" (through — means, noun)",
+            "answer": "durch",
+            "hint": "durch + Akk = means"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q14",
+            "question": "Match the connector to type:",
+            "pairs": [
+              {
+                "left": "während",
+                "right": "simultaneous time"
+              },
+              {
+                "left": "sobald",
+                "right": "later time"
+              },
+              {
+                "left": "zumal",
+                "right": "additional cause"
+              },
+              {
+                "left": "allerdings",
+                "right": "softened concession"
+              },
+              {
+                "left": "sofern",
+                "right": "condition"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q15",
+            "question": "Order: \"The more you learn, the better you get\"",
+            "words": [
+              "Je",
+              "mehr",
+              "du",
+              "lernst,",
+              "desto",
+              "besser",
+              "wirst",
+              "du"
+            ],
+            "answer": "Je mehr du lernst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q16",
+            "question": "Listen: \"Er ging weg, ___ zu sprechen.\" (without)",
+            "audioPrompt": "Er ging weg, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q17",
+            "question": "After je, the verb:",
+            "options": [
+              "at the end",
+              "2nd position",
+              "verb-comma-verb pattern",
+              "deleted"
+            ],
+            "answer": "at the end"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q18",
+            "question": "Say: \"I learn by reading German books\"",
+            "answer": "Ich lerne, indem ich deutsche Bücher lese"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q19",
+            "question": "\"Sie kam, ___ ich es wusste.\" (without, different subject)",
+            "answer": "ohne dass",
+            "hint": "ohne dass + different subject"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q20",
+            "question": "Difference between trotzdem and obwohl?",
+            "options": [
+              "same thing",
+              "trotzdem adverb, obwohl conjunction",
+              "trotzdem at end, obwohl at start",
+              "no difference"
+            ],
+            "answer": "trotzdem adverb, obwohl conjunction"
+          }
+        ]
+      }
     }
   },
   "title": "Level Four",
