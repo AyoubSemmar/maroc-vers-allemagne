@@ -5773,6 +5773,135 @@
           { "type": "multiple-choice", "id": "a2-15-q20", "question": "Avec un inconnu ou en situation formelle :", "options": ["la forme normale", "Imperativ", "Konjunktiv II poli", "sans article"], "answer": "Konjunktiv II poli" }
         ]
       }
+    },
+    "a2-16": {
+      "id": "a2-16",
+      "title": "Les adverbes pronominaux — Pronominaladverbien",
+      "order": 16,
+      "grammar": {
+        "title": "darüber, davon, damit + worauf, wovon, womit",
+        "content": "Les **adverbes pronominaux** (Pronominaladverbien) servent à éviter de répéter un nom déjà mentionné quand il vient après une préposition — mais **uniquement quand le nom désigne une chose, pas une personne**.\n\n**La règle d'or :**\n- personne → préposition + pronom : *für **ihn**, mit **ihr**, von **ihm***\n- chose → **da(r) + préposition** : *dafür, damit, davon, darüber, daran*\n\n**Dans les questions :**\n- personne → **wem / wen** + préposition : *Mit wem? Auf wen?*\n- chose → **wo(r) + préposition** : *Womit? Worauf? Wovon?*",
+        "tables": [
+          {
+            "title": "Les formes affirmatives da(r)- avec les prépositions courantes",
+            "headers": ["Préposition", "Forme", "Exemple (réponse)"],
+            "rows": [
+              { "cells": ["für", "dafür", "Bist du dafür?"] },
+              { "cells": ["von", "davon", "Ich habe davon gehört."] },
+              { "cells": ["mit", "damit", "Was machst du damit?"] },
+              { "cells": ["über", "darüber", "Wir sprechen darüber."], "highlight": true },
+              { "cells": ["auf", "darauf", "Ich freue mich darauf."], "highlight": true },
+              { "cells": ["an", "daran", "Denkst du daran?"], "highlight": true },
+              { "cells": ["in", "darin", "Was ist darin?"], "highlight": true },
+              { "cells": ["bei", "dabei", "Ich habe es nicht dabei."] },
+              { "cells": ["gegen", "dagegen", "Ich bin dagegen."] }
+            ],
+            "theme": "default",
+            "note": "Les lignes en couleur (über, auf, an, in) prennent un -r- supplémentaire si la préposition commence par une voyelle."
+          },
+          {
+            "title": "Les formes interrogatives wo(r)- — pour les questions",
+            "headers": ["Préposition", "Forme", "Exemple"],
+            "rows": [
+              { "cells": ["mit", "womit", "Womit fährst du?"] },
+              { "cells": ["von", "wovon", "Wovon sprichst du?"] },
+              { "cells": ["auf", "worauf", "Worauf wartest du?"] },
+              { "cells": ["über", "worüber", "Worüber lacht ihr?"] },
+              { "cells": ["an", "woran", "Woran denkst du?"] },
+              { "cells": ["für", "wofür", "Wofür ist das gut?"] },
+              { "cells": ["gegen", "wogegen", "Wogegen bist du?"] }
+            ],
+            "theme": "default",
+            "note": "Ces formes s'utilisent pour les questions sur des choses uniquement — pas des personnes."
+          }
+        ],
+        "rules": [
+          { "rule": "La distinction personnes/choses est essentielle : für ihn (personne) ≠ dafür (chose).", "example": "Ich kaufe das Buch für meinen Bruder. → Für wen? / Ich brauche das für die Arbeit. → Wofür?", "translation": "J'achète le livre pour mon frère. Pour qui ? / J'ai besoin de ça pour le travail. Pourquoi ?" },
+          { "rule": "Les prépositions commençant par une voyelle (a, e, i, o, u) prennent un -r- supplémentaire : darüber, darauf, daran, darin.", "example": "Ich denke daran. (et non daan)", "translation": "Je pense à ça." },
+          { "rule": "Certains verbes exigent une préposition précise — apprends-les en couple : warten **auf**, denken **an**, sprechen **über**, sich freuen **auf**, sich interessieren **für**.", "example": "Ich warte auf den Bus. → Worauf wartest du?", "translation": "J'attends le bus. Qu'attends-tu ?" },
+          { "rule": "On répond à une question en wo(r)- par da(r)- : Worüber? → Darüber.", "example": "Worauf wartest du? — Auf den Zug. / Darauf.", "translation": "Qu'attends-tu ? — Le train. / Je l'attends." }
+        ],
+        "examples": [
+          "Ich freue mich auf das Wochenende. — Ich freue mich darauf. (Je me réjouis du week-end.)",
+          "Worauf wartest du? — Auf den Bus. (Qu'attends-tu ? — Le bus.)",
+          "Wir sprechen über das Problem. — Wir sprechen darüber. (Nous parlons du problème.)",
+          "Womit fährst du? — Mit dem Auto. (Avec quoi voyages-tu ? — En voiture.)",
+          "Wofür ist das? — Das ist für die Arbeit. — Dafür. (À quoi sert ça ? — Pour le travail.)",
+          "Woran denkst du? — An meine Familie. (À quoi penses-tu ? — À ma famille.)",
+          "Bist du dafür oder dagegen? (Es-tu pour ou contre ?)",
+          "Ich habe meinen Schlüssel nicht dabei. (Je n'ai pas ma clé sur moi.)"
+        ],
+        "tip": "Apprends 3 couples verbe + préposition par jour (warten auf, denken an, sich freuen auf...). Au bout d'un mois, tu utiliseras darauf et worauf automatiquement."
+      },
+      "vocabulary": [
+        { "german": "darüber", "arabic": "à ce sujet / de ça", "example": "Wir sprechen darüber.", "exampleArabic": "Nous en parlons.", "type": "adverb" },
+        { "german": "darauf", "arabic": "là-dessus / à cela", "example": "Ich freue mich darauf.", "exampleArabic": "Je m'en réjouis.", "type": "adverb" },
+        { "german": "davon", "arabic": "de cela / en", "example": "Ich habe davon gehört.", "exampleArabic": "J'en ai entendu parler.", "type": "adverb" },
+        { "german": "damit", "arabic": "avec cela", "example": "Was machst du damit?", "exampleArabic": "Que fais-tu avec ça ?", "type": "adverb" },
+        { "german": "dafür", "arabic": "pour cela", "example": "Bist du dafür?", "exampleArabic": "Es-tu pour ?", "type": "adverb" },
+        { "german": "dagegen", "arabic": "contre cela", "example": "Ich bin dagegen.", "exampleArabic": "Je suis contre.", "type": "adverb" },
+        { "german": "daran", "arabic": "à cela / y", "example": "Denkst du daran?", "exampleArabic": "Y penses-tu ?", "type": "adverb" },
+        { "german": "darin", "arabic": "à l'intérieur / dedans", "example": "Was ist darin?", "exampleArabic": "Qu'y a-t-il dedans ?", "type": "adverb" },
+        { "german": "dabei", "arabic": "sur soi / avec soi", "example": "Ich habe es nicht dabei.", "exampleArabic": "Je ne l'ai pas sur moi.", "type": "adverb" },
+        { "german": "worauf", "arabic": "sur quoi", "example": "Worauf wartest du?", "exampleArabic": "Qu'attends-tu ?", "type": "adverb" },
+        { "german": "worüber", "arabic": "à propos de quoi", "example": "Worüber sprecht ihr?", "exampleArabic": "De quoi parlez-vous ?", "type": "adverb" },
+        { "german": "wovon", "arabic": "de quoi", "example": "Wovon sprichst du?", "exampleArabic": "De quoi parles-tu ?", "type": "adverb" },
+        { "german": "womit", "arabic": "avec quoi", "example": "Womit fährst du?", "exampleArabic": "Avec quoi voyages-tu ?", "type": "adverb" },
+        { "german": "woran", "arabic": "à quoi", "example": "Woran denkst du?", "exampleArabic": "À quoi penses-tu ?", "type": "adverb" },
+        { "german": "wofür", "arabic": "pour quoi", "example": "Wofür ist das?", "exampleArabic": "À quoi sert ça ?", "type": "adverb" },
+        { "german": "warten auf", "arabic": "attendre", "example": "Ich warte auf den Bus.", "exampleArabic": "J'attends le bus.", "type": "verb" },
+        { "german": "denken an", "arabic": "penser à", "example": "Ich denke an dich.", "exampleArabic": "Je pense à toi.", "type": "verb" },
+        { "german": "sprechen über", "arabic": "parler de", "example": "Wir sprechen über die Arbeit.", "exampleArabic": "Nous parlons du travail.", "type": "verb" },
+        { "german": "sich freuen auf", "arabic": "se réjouir de (à venir)", "example": "Ich freue mich auf den Urlaub.", "exampleArabic": "Je me réjouis des vacances.", "type": "verb" },
+        { "german": "sich freuen über", "arabic": "se réjouir de (passé/présent)", "example": "Sie freut sich über das Geschenk.", "exampleArabic": "Elle se réjouit du cadeau.", "type": "verb" },
+        { "german": "sich interessieren für", "arabic": "s'intéresser à", "example": "Ich interessiere mich für Sport.", "exampleArabic": "Je m'intéresse au sport.", "type": "verb" },
+        { "german": "sich kümmern um", "arabic": "s'occuper de", "example": "Wer kümmert sich um die Kinder?", "exampleArabic": "Qui s'occupe des enfants ?", "type": "verb" },
+        { "german": "sich gewöhnen an", "arabic": "s'habituer à", "example": "Ich gewöhne mich an das Wetter.", "exampleArabic": "Je m'habitue au climat.", "type": "verb" },
+        { "german": "achten auf", "arabic": "faire attention à", "example": "Achte auf den Verkehr!", "exampleArabic": "Fais attention à la circulation !", "type": "verb" },
+        { "german": "sich erinnern an", "arabic": "se souvenir de", "example": "Ich erinnere mich an dich.", "exampleArabic": "Je me souviens de toi.", "type": "verb" },
+        { "german": "glauben an", "arabic": "croire en", "example": "Ich glaube an dich.", "exampleArabic": "Je crois en toi.", "type": "verb" },
+        { "german": "die Sache", "arabic": "la chose / le sujet", "example": "Was ist die Sache?", "exampleArabic": "De quoi s'agit-il ?", "type": "noun", "gender": "die", "plural": "die Sachen" },
+        { "german": "das Thema", "arabic": "le sujet / thème", "example": "Wir haben ein wichtiges Thema.", "exampleArabic": "Nous avons un sujet important.", "type": "noun", "gender": "das", "plural": "die Themen" },
+        { "german": "die Frage", "arabic": "la question", "example": "Eine Frage, bitte.", "exampleArabic": "Une question, s'il vous plaît.", "type": "noun", "gender": "die", "plural": "die Fragen" },
+        { "german": "die Antwort", "arabic": "la réponse", "example": "Was ist die Antwort?", "exampleArabic": "Quelle est la réponse ?", "type": "noun", "gender": "die", "plural": "die Antworten" },
+        { "german": "wichtig", "arabic": "important", "example": "Das ist wichtig.", "exampleArabic": "C'est important.", "type": "adjective" },
+        { "german": "interessant", "arabic": "intéressant", "example": "Das ist interessant.", "exampleArabic": "C'est intéressant.", "type": "adjective" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a2-16-q1", "question": "Forme affirmative de « über das Problem » ?", "answer": "darüber", "hint": "da + r + über" },
+          { "type": "multiple-choice", "id": "a2-16-q2", "question": "Question sur une chose : « Qu'attends-tu ? »", "options": ["Auf wen wartest du?", "Worauf wartest du?", "Wer wartet auf dich?", "Wovon wartest du?"], "answer": "Worauf wartest du?" },
+          { "type": "fill-blank", "id": "a2-16-q3", "question": "Complète : « Ich freue mich ___ den Urlaub. »", "answer": "auf", "hint": "sich freuen + auf" },
+          { "type": "multiple-choice", "id": "a2-16-q4", "question": "Réponse à « Wovon sprichst du? »", "options": ["Damit", "Davon", "Dafür", "Darüber"], "answer": "Davon" },
+          { "type": "fill-blank", "id": "a2-16-q5", "question": "« Ich denke ___ meine Familie. »", "answer": "an", "hint": "denken + an" },
+          { "type": "matching", "id": "a2-16-q6", "question": "Associe le verbe à sa préposition :", "pairs": [
+            { "left": "warten", "right": "auf" },
+            { "left": "denken", "right": "an" },
+            { "left": "sprechen", "right": "über" },
+            { "left": "sich freuen", "right": "auf" },
+            { "left": "sich interessieren", "right": "für" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-16-q7", "question": "Ordonne : « Qu'en penses-tu ? »", "words": ["Was", "denkst", "du", "darüber"], "answer": "Was denkst du darüber" },
+          { "type": "speaking", "id": "a2-16-q8", "question": "Dis en allemand : « Je m'en réjouis »", "answer": "Ich freue mich darauf" },
+          { "type": "fill-blank", "id": "a2-16-q9", "question": "Écoute : « ___ ist das gut? » (À quoi ?)", "audioPrompt": "Wofür ist das gut?", "answer": "Wofür", "hint": "wo + für" },
+          { "type": "multiple-choice", "id": "a2-16-q10", "question": "Pour une personne on dit « Für wen? » — pour une chose on dit ?", "options": ["Wofür", "Worüber", "Worauf", "Womit"], "answer": "Wofür" },
+          { "type": "fill-blank", "id": "a2-16-q11", "question": "« Ich kümmere mich ___ die Kinder. »", "answer": "um", "hint": "sich kümmern + um" },
+          { "type": "multiple-choice", "id": "a2-16-q12", "question": "Réponse à « Womit fährst du? »", "options": ["Davon", "Damit", "Darauf", "Dazu"], "answer": "Damit" },
+          { "type": "fill-blank", "id": "a2-16-q13", "question": "« Ich erinnere mich ___ dich. » (personne)", "answer": "an", "hint": "sich erinnern + an + personne" },
+          { "type": "matching", "id": "a2-16-q14", "question": "Associe la question à la réponse :", "pairs": [
+            { "left": "Worauf wartest du?", "right": "Auf den Bus." },
+            { "left": "Womit fährst du?", "right": "Mit dem Auto." },
+            { "left": "Wovon träumst du?", "right": "Von Deutschland." },
+            { "left": "Wofür ist das?", "right": "Für die Schule." }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a2-16-q15", "question": "Ordonne : « Je me réjouis du week-end »", "words": ["Ich", "freue", "mich", "auf", "das", "Wochenende"], "answer": "Ich freue mich auf das Wochenende" },
+          { "type": "fill-blank", "id": "a2-16-q16", "question": "Écoute : « Ich glaube ___ dich. »", "audioPrompt": "Ich glaube an dich.", "answer": "an", "hint": "glauben + an" },
+          { "type": "multiple-choice", "id": "a2-16-q17", "question": "Après les prépositions commençant par une voyelle (a/ü/ö), on ajoute :", "options": ["-r-", "-d-", "-s-", "-t-"], "answer": "-r-" },
+          { "type": "speaking", "id": "a2-16-q18", "question": "Dis : « Qu'en penses-tu ? » (chose)", "answer": "Was denkst du darüber" },
+          { "type": "fill-blank", "id": "a2-16-q19", "question": "« Bist du ___ oder ___? » (pour/contre)", "answer": "dafür, dagegen", "hint": "da + für / da + gegen" },
+          { "type": "multiple-choice", "id": "a2-16-q20", "question": "Règle de base : chose → da(r)-, personne →", "options": ["wo(r)-", "préposition + pronom", "aucune différence", "préposition seule"], "answer": "préposition + pronom" }
+        ]
+      }
     }
   },
   "title": "Niveau Deux",
