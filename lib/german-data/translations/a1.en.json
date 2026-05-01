@@ -6049,6 +6049,135 @@
           { "type": "multiple-choice", "id": "a1-15-q20", "question": "The polite phrase to ask someone to sit:", "options": ["Setz dich!", "Setzt euch!", "Nehmen Sie Platz!", "Sitz!"], "answer": "Nehmen Sie Platz!" }
         ]
       }
+    },
+    "a1-16": {
+      "id": "a1-16",
+      "title": "Plurals of nouns — Plural der Nomen",
+      "order": 16,
+      "grammar": {
+        "title": "The five plural patterns + die for all",
+        "content": "German plurals don't have a single rule, but **five main patterns**. Good news: in the plural, all nouns — masculine, feminine, neuter — take the article **die**.\n\n**The five patterns:**\n1. **-e** (most common for masculines): der Tag → die Tage\n2. **-(e)n** (mostly feminines): die Frau → die Frauen\n3. **-er** (with vowel change): das Buch → die Bücher\n4. **-s** (foreign words): das Auto → die Autos\n5. **no ending** (sometimes with Umlaut): der Vater → die Väter\n\n**Tip:** when learning a new noun, memorize gender + plural together. Like: *die Frau, die Frauen*.",
+        "tables": [
+          {
+            "title": "The five patterns with examples",
+            "headers": ["Pattern", "Singular", "Plural", "Note"],
+            "rows": [
+              { "cells": ["+ -e", "der Tag", "die Tage", "most common for masculines"] },
+              { "cells": ["+ -(e)n", "die Frau", "die Frauen", "almost all feminines ending in -e/-in"] },
+              { "cells": ["+ -er + Umlaut", "das Buch", "die Bücher", "with a/o/u → ä/ö/ü"], "highlight": true },
+              { "cells": ["+ -s", "das Auto", "die Autos", "foreign words and abbreviations"] },
+              { "cells": ["no / Umlaut", "der Vater", "die Väter", "nouns ending in -er, -el, -en"] }
+            ],
+            "theme": "default",
+            "note": "Try to predict the plural, but always check the dictionary — there are exceptions."
+          },
+          {
+            "title": "Practical examples with the five patterns",
+            "headers": ["Gender", "Singular", "Plural"],
+            "rows": [
+              { "cells": ["der", "der Tisch", "die Tische"] },
+              { "cells": ["der", "der Stuhl", "die Stühle"] },
+              { "cells": ["die", "die Lampe", "die Lampen"] },
+              { "cells": ["die", "die Schwester", "die Schwestern"] },
+              { "cells": ["das", "das Haus", "die Häuser"] },
+              { "cells": ["das", "das Kind", "die Kinder"] },
+              { "cells": ["das", "das Hotel", "die Hotels"] },
+              { "cells": ["der", "der Lehrer", "die Lehrer"] },
+              { "cells": ["die", "die Mutter", "die Mütter"] }
+            ],
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          { "rule": "All plural nouns take die — no difference between der/die/das.", "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder", "translation": "The men / the women / the children — all die." },
+          { "rule": "Feminines ending in -in double the n: die Lehrerin → die Lehrerinnen.", "example": "die Studentin → die Studentinnen", "translation": "The female students." },
+          { "rule": "Foreign words (auto, hotel, café, taxi) take -s.", "example": "das Auto → die Autos / das Café → die Cafés", "translation": "The cars / the cafés." },
+          { "rule": "Some nouns are only used in plural: die Eltern (parents), die Leute (people), die Ferien (vacation).", "example": "Meine Eltern wohnen in Casablanca.", "translation": "My parents live in Casablanca." }
+        ],
+        "examples": [
+          "Ich habe zwei Brüder. — I have two brothers.",
+          "Die Kinder spielen im Park. — The children are playing in the park.",
+          "Wir kaufen drei Bücher. — We're buying three books.",
+          "Die Häuser sind alt. — The houses are old.",
+          "Ich kenne viele Lehrer. — I know many teachers.",
+          "Die Frauen arbeiten im Krankenhaus. — The women work at the hospital.",
+          "Meine Eltern kommen morgen. — My parents are coming tomorrow.",
+          "Wo sind die Schlüssel? — Where are the keys?"
+        ],
+        "tip": "In daily life you'll need to know at most 50 plurals — memorize them. The rest you'll pick up by use. Try the Drill page to refresh your memory."
+      },
+      "vocabulary": [
+        { "german": "der Tag", "arabic": "day", "example": "Es gibt sieben Tage in der Woche.", "exampleArabic": "There are seven days in the week.", "type": "noun", "gender": "der", "plural": "die Tage" },
+        { "german": "der Tisch", "arabic": "table", "example": "Die Tische sind groß.", "exampleArabic": "The tables are big.", "type": "noun", "gender": "der", "plural": "die Tische" },
+        { "german": "der Stuhl", "arabic": "chair", "example": "Wir brauchen vier Stühle.", "exampleArabic": "We need four chairs.", "type": "noun", "gender": "der", "plural": "die Stühle" },
+        { "german": "die Lampe", "arabic": "lamp", "example": "Die Lampen sind neu.", "exampleArabic": "The lamps are new.", "type": "noun", "gender": "die", "plural": "die Lampen" },
+        { "german": "das Buch", "arabic": "book", "example": "Ich lese drei Bücher.", "exampleArabic": "I'm reading three books.", "type": "noun", "gender": "das", "plural": "die Bücher" },
+        { "german": "das Kind", "arabic": "child", "example": "Die Kinder sind im Park.", "exampleArabic": "The children are in the park.", "type": "noun", "gender": "das", "plural": "die Kinder" },
+        { "german": "das Haus", "arabic": "house", "example": "Die Häuser sind alt.", "exampleArabic": "The houses are old.", "type": "noun", "gender": "das", "plural": "die Häuser" },
+        { "german": "das Auto", "arabic": "car", "example": "Wir kaufen zwei Autos.", "exampleArabic": "We're buying two cars.", "type": "noun", "gender": "das", "plural": "die Autos" },
+        { "german": "das Hotel", "arabic": "hotel", "example": "Es gibt viele Hotels.", "exampleArabic": "There are many hotels.", "type": "noun", "gender": "das", "plural": "die Hotels" },
+        { "german": "der Vater", "arabic": "father", "example": "Die Väter arbeiten.", "exampleArabic": "The fathers are working.", "type": "noun", "gender": "der", "plural": "die Väter" },
+        { "german": "die Mutter", "arabic": "mother", "example": "Die Mütter sind hier.", "exampleArabic": "The mothers are here.", "type": "noun", "gender": "die", "plural": "die Mütter" },
+        { "german": "der Bruder", "arabic": "brother", "example": "Ich habe zwei Brüder.", "exampleArabic": "I have two brothers.", "type": "noun", "gender": "der", "plural": "die Brüder" },
+        { "german": "die Schwester", "arabic": "sister", "example": "Sie hat drei Schwestern.", "exampleArabic": "She has three sisters.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
+        { "german": "der Mann", "arabic": "man", "example": "Die Männer sprechen.", "exampleArabic": "The men are talking.", "type": "noun", "gender": "der", "plural": "die Männer" },
+        { "german": "die Frau", "arabic": "woman", "example": "Die Frauen lernen Deutsch.", "exampleArabic": "The women are learning German.", "type": "noun", "gender": "die", "plural": "die Frauen" },
+        { "german": "der Freund", "arabic": "friend (m.)", "example": "Meine Freunde wohnen in Berlin.", "exampleArabic": "My friends live in Berlin.", "type": "noun", "gender": "der", "plural": "die Freunde" },
+        { "german": "die Freundin", "arabic": "friend (f.)", "example": "Meine Freundinnen sind hier.", "exampleArabic": "My female friends are here.", "type": "noun", "gender": "die", "plural": "die Freundinnen" },
+        { "german": "der Lehrer", "arabic": "teacher (m.)", "example": "Die Lehrer sind nett.", "exampleArabic": "The teachers are nice.", "type": "noun", "gender": "der", "plural": "die Lehrer" },
+        { "german": "die Lehrerin", "arabic": "teacher (f.)", "example": "Die Lehrerinnen helfen.", "exampleArabic": "The female teachers help.", "type": "noun", "gender": "die", "plural": "die Lehrerinnen" },
+        { "german": "der Student", "arabic": "student (m.)", "example": "Die Studenten lernen viel.", "exampleArabic": "The students study a lot.", "type": "noun", "gender": "der", "plural": "die Studenten" },
+        { "german": "die Studentin", "arabic": "student (f.)", "example": "Die Studentinnen kommen.", "exampleArabic": "The female students are coming.", "type": "noun", "gender": "die", "plural": "die Studentinnen" },
+        { "german": "der Apfel", "arabic": "apple", "example": "Ich kaufe drei Äpfel.", "exampleArabic": "I'm buying three apples.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
+        { "german": "das Brot", "arabic": "bread", "example": "Die Brote sind frisch.", "exampleArabic": "The breads are fresh.", "type": "noun", "gender": "das", "plural": "die Brote" },
+        { "german": "der Schlüssel", "arabic": "key", "example": "Wo sind die Schlüssel?", "exampleArabic": "Where are the keys?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
+        { "german": "das Zimmer", "arabic": "room", "example": "Die Zimmer sind klein.", "exampleArabic": "The rooms are small.", "type": "noun", "gender": "das", "plural": "die Zimmer" },
+        { "german": "die Stadt", "arabic": "city", "example": "Diese Städte sind schön.", "exampleArabic": "These cities are beautiful.", "type": "noun", "gender": "die", "plural": "die Städte" },
+        { "german": "das Land", "arabic": "country", "example": "Diese Länder sind in Europa.", "exampleArabic": "These countries are in Europe.", "type": "noun", "gender": "das", "plural": "die Länder" },
+        { "german": "die Sprache", "arabic": "language", "example": "Sie spricht drei Sprachen.", "exampleArabic": "She speaks three languages.", "type": "noun", "gender": "die", "plural": "die Sprachen" },
+        { "german": "die Eltern", "arabic": "parents", "example": "Meine Eltern arbeiten.", "exampleArabic": "My parents work.", "type": "noun", "gender": "pl" },
+        { "german": "die Leute", "arabic": "people", "example": "Die Leute sind freundlich.", "exampleArabic": "The people are friendly.", "type": "noun", "gender": "pl" },
+        { "german": "die Ferien", "arabic": "holidays / vacation", "example": "In den Ferien fahren wir nach Spanien.", "exampleArabic": "On vacation we go to Spain.", "type": "noun", "gender": "pl" },
+        { "german": "die Geschwister", "arabic": "siblings", "example": "Hast du Geschwister?", "exampleArabic": "Do you have siblings?", "type": "noun", "gender": "pl" },
+        { "german": "viele", "arabic": "many", "example": "Es gibt viele Bücher.", "exampleArabic": "There are many books.", "type": "adjective" },
+        { "german": "wenige", "arabic": "few", "example": "Wenige Studenten lernen Arabisch.", "exampleArabic": "Few students learn Arabic.", "type": "adjective" },
+        { "german": "einige", "arabic": "some / a few", "example": "Einige Kinder spielen draußen.", "exampleArabic": "Some children are playing outside.", "type": "adjective" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-16-q1", "question": "Plural of der Tag? \"die ___\"", "answer": "Tage", "hint": "-e pattern" },
+          { "type": "multiple-choice", "id": "a1-16-q2", "question": "Plural of das Buch?", "options": ["die Buchen", "die Bücher", "die Buchs", "die Buches"], "answer": "die Bücher" },
+          { "type": "fill-blank", "id": "a1-16-q3", "question": "Plural of die Frau? \"die ___\"", "answer": "Frauen", "hint": "-en pattern" },
+          { "type": "multiple-choice", "id": "a1-16-q4", "question": "Which is the correct article for the plural of der Mann?", "options": ["der", "die", "das", "den"], "answer": "die" },
+          { "type": "fill-blank", "id": "a1-16-q5", "question": "Plural of das Auto? \"die ___\"", "answer": "Autos", "hint": "foreign word → -s" },
+          { "type": "matching", "id": "a1-16-q6", "question": "Match the singular to the plural:", "pairs": [
+            { "left": "der Vater", "right": "die Väter" },
+            { "left": "das Kind", "right": "die Kinder" },
+            { "left": "die Lampe", "right": "die Lampen" },
+            { "left": "das Hotel", "right": "die Hotels" },
+            { "left": "der Apfel", "right": "die Äpfel" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-16-q7", "question": "Order: \"The children are playing in the park\"", "words": ["Die", "Kinder", "spielen", "im", "Park"], "answer": "Die Kinder spielen im Park" },
+          { "type": "speaking", "id": "a1-16-q8", "question": "Say in German: \"I have two brothers and a sister\"", "answer": "Ich habe zwei Brüder und eine Schwester" },
+          { "type": "fill-blank", "id": "a1-16-q9", "question": "Listen and complete: \"Die ___ sind alt.\" (the houses)", "audioPrompt": "Die Häuser sind alt.", "answer": "Häuser", "hint": "das Haus → die Häuser" },
+          { "type": "multiple-choice", "id": "a1-16-q10", "question": "Which word is used only in plural?", "options": ["der Tag", "die Eltern", "das Auto", "der Lehrer"], "answer": "die Eltern" },
+          { "type": "fill-blank", "id": "a1-16-q11", "question": "Plural of der Stuhl? \"die ___\"", "answer": "Stühle", "hint": "-e + Umlaut pattern" },
+          { "type": "multiple-choice", "id": "a1-16-q12", "question": "Plural of die Lehrerin?", "options": ["die Lehrerinen", "die Lehrerinnen", "die Lehrerins", "die Lehrerin"], "answer": "die Lehrerinnen" },
+          { "type": "fill-blank", "id": "a1-16-q13", "question": "Plural of der Vater? \"die ___\"", "answer": "Väter", "hint": "no ending + Umlaut" },
+          { "type": "matching", "id": "a1-16-q14", "question": "Match the singular to the plural:", "pairs": [
+            { "left": "das Buch", "right": "die Bücher" },
+            { "left": "der Mann", "right": "die Männer" },
+            { "left": "die Stadt", "right": "die Städte" },
+            { "left": "das Auto", "right": "die Autos" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-16-q15", "question": "Order: \"There are many children in the park\"", "words": ["Es", "gibt", "viele", "Kinder", "im", "Park"], "answer": "Es gibt viele Kinder im Park" },
+          { "type": "fill-blank", "id": "a1-16-q16", "question": "Listen: \"Die ___ sind in der Schule.\" (the children)", "audioPrompt": "Die Kinder sind in der Schule.", "answer": "Kinder", "hint": "das Kind → die Kinder" },
+          { "type": "multiple-choice", "id": "a1-16-q17", "question": "Foreign words follow the pattern:", "options": ["-er", "-en", "-s", "-e"], "answer": "-s" },
+          { "type": "speaking", "id": "a1-16-q18", "question": "Say: \"I need two books and a pen\"", "answer": "Ich brauche zwei Bücher und einen Stift" },
+          { "type": "fill-blank", "id": "a1-16-q19", "question": "Plural of die Mutter? \"die ___\"", "answer": "Mütter", "hint": "no ending + Umlaut" },
+          { "type": "multiple-choice", "id": "a1-16-q20", "question": "All plural nouns take the article:", "options": ["der", "die", "das", "ein"], "answer": "die" }
+        ]
+      }
     }
   },
   "title": "Level One",
