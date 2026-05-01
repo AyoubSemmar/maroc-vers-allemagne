@@ -4392,6 +4392,618 @@
           { "type": "multiple-choice", "id": "b2-13-q20", "question": "La forme sei en jussif (recette) :", "options": ["suggestion", "description", "« on prend... »", "question"], "answer": "« on prend... »" }
         ]
       }
+    },
+    "b2-14": {
+      "id": "b2-14",
+      "title": "Les particules modales — Modalpartikeln",
+      "order": 14,
+      "grammar": {
+        "title": "doch, halt, eben, ja, mal, denn, wohl — comment rendre ton allemand vraiment naturel",
+        "content": "Les **Modalpartikeln** sont de petits mots (doch, halt, eben, ja, mal, denn, wohl) qu'on ajoute aux phrases pour leur donner une **coloration émotionnelle** — insistance, étonnement, adoucissement, fermeté. Ils n'ont pas de traduction directe, mais ils marquent **la frontière entre le B2 et un locuteur naturel**.\n\n→ Komm **mal** her. (Viens ici — poliment, sans formalité)\n→ Das ist **doch** unmöglich! (Mais c'est impossible ! — étonnement)\n→ Was machst du **denn** hier? (Qu'est-ce que tu fais ici ? — curiosité/insistance)\n\nApprends-les avec leur contexte. Chaque mot a plusieurs usages, mais commence par en mémoriser un seul pour chacun.",
+        "tables": [
+          {
+            "title": "Les Modalpartikeln de base + leur usage",
+            "headers": [
+              "Particule",
+              "Usage principal",
+              "Exemple",
+              "Traduction"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "doch",
+                  "étonnement / insistance",
+                  "Das ist doch klar!",
+                  "Mais c'est évident !"
+                ]
+              },
+              {
+                "cells": [
+                  "halt",
+                  "résignation",
+                  "Das ist halt so.",
+                  "C'est comme ça."
+                ]
+              },
+              {
+                "cells": [
+                  "eben",
+                  "constat évident",
+                  "Das ist eben das Problem.",
+                  "C'est précisément le problème."
+                ]
+              },
+              {
+                "cells": [
+                  "ja",
+                  "fait connu / partagé",
+                  "Du weißt ja, dass...",
+                  "Tu sais bien que..."
+                ]
+              },
+              {
+                "cells": [
+                  "mal",
+                  "adoucir une demande",
+                  "Komm mal her!",
+                  "Viens, s'il te plaît."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "curiosité dans une question",
+                  "Wo bist du denn?",
+                  "Mais où es-tu donc ?"
+                ]
+              },
+              {
+                "cells": [
+                  "wohl",
+                  "supposition",
+                  "Er ist wohl zu Hause.",
+                  "Il doit être à la maison."
+                ]
+              },
+              {
+                "cells": [
+                  "nur / bloß",
+                  "insistance dans une question",
+                  "Was hast du nur gemacht?",
+                  "Mais qu'as-tu donc fait ?"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Position : la Modalpartikel se place après le sujet et avant l'information nouvelle."
+          },
+          {
+            "title": "Comparaison : la même phrase avec et sans Modalpartikel",
+            "headers": [
+              "Sans",
+              "Avec Modalpartikel",
+              "Différence"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Komm her.",
+                  "Komm mal her.",
+                  "La 2e est plus douce, moins impérative."
+                ]
+              },
+              {
+                "cells": [
+                  "Wo bist du?",
+                  "Wo bist du denn?",
+                  "La 2e exprime curiosité ou inquiétude."
+                ]
+              },
+              {
+                "cells": [
+                  "Das ist klar.",
+                  "Das ist doch klar!",
+                  "La 2e insiste fortement."
+                ]
+              },
+              {
+                "cells": [
+                  "Er ist krank.",
+                  "Er ist halt krank.",
+                  "La 2e exprime résignation, pas reproche."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Sans Modalpartikel, la phrase est correcte mais « froide » — comme un mode d'emploi."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Apprends chaque Modalpartikel avec une seule situation au début. doch = étonnement, mal = adoucir, denn = curiosité.",
+            "example": "Komm mal! / Das geht doch nicht!",
+            "translation": "Viens ! / Mais ça ne va pas !"
+          },
+          {
+            "rule": "Dans une question, utilise denn — la rend moins inquisitrice, plus curieuse.",
+            "example": "Wie heißt du denn? (et non Wie heißt du?)",
+            "translation": "Comment t'appelles-tu donc ?"
+          },
+          {
+            "rule": "mal adoucit les ordres — utilise-le toujours pour les demandes.",
+            "example": "Schau mal! / Hör mal zu!",
+            "translation": "Regarde ! / Écoute !"
+          },
+          {
+            "rule": "doch répond « si » à une question négative : « Du kommst nicht? » — « Doch, ich komme. »",
+            "example": "Hast du keine Zeit? — Doch, ich habe Zeit!",
+            "translation": "Tu n'as pas de temps ? — Si, j'en ai !"
+          }
+        ],
+        "examples": [
+          "Das ist doch unmöglich! — Mais c'est impossible !",
+          "Komm mal kurz hierher. — Viens un instant, s'il te plaît.",
+          "Was machst du denn da? — Mais qu'est-ce que tu fabriques là ?",
+          "Du weißt ja, dass ich Marokkaner bin. — Tu sais bien que je suis Marocain.",
+          "Das ist eben so im Leben. — C'est comme ça dans la vie.",
+          "Es regnet halt im Februar. — En février, il pleut, c'est normal.",
+          "Er wird wohl zu Hause sein. — Il doit être à la maison.",
+          "Hör mal, ich muss dir was sagen. — Écoute, j'ai un truc à te dire.",
+          "Was hast du nur getan? — Mais qu'est-ce que tu as bien pu faire ?"
+        ],
+        "tip": "N'essaie pas de toutes les utiliser d'un coup. Choisis-en 3 (par ex. mal/denn/doch) et utilise-les toute une semaine dans chaque phrase. Puis ajoute-en 3 autres. En un mois tu parleras comme un natif."
+      },
+      "vocabulary": [
+        {
+          "german": "doch",
+          "arabic": "mais / si",
+          "example": "Das ist doch klar!",
+          "exampleArabic": "Mais c'est évident !",
+          "type": "adverb"
+        },
+        {
+          "german": "halt",
+          "arabic": "c'est comme ça (résignation)",
+          "example": "Das ist halt so.",
+          "exampleArabic": "C'est comme ça.",
+          "type": "adverb"
+        },
+        {
+          "german": "eben",
+          "arabic": "précisément",
+          "example": "Das ist eben das Problem.",
+          "exampleArabic": "C'est précisément le problème.",
+          "type": "adverb"
+        },
+        {
+          "german": "ja",
+          "arabic": "tu sais bien",
+          "example": "Du weißt ja, was ich meine.",
+          "exampleArabic": "Tu sais bien ce que je veux dire.",
+          "type": "adverb"
+        },
+        {
+          "german": "mal",
+          "arabic": "(adoucisseur)",
+          "example": "Komm mal her!",
+          "exampleArabic": "Viens, s'il te plaît !",
+          "type": "adverb"
+        },
+        {
+          "german": "denn",
+          "arabic": "(curiosité dans la question)",
+          "example": "Wo bist du denn?",
+          "exampleArabic": "Mais où es-tu donc ?",
+          "type": "adverb"
+        },
+        {
+          "german": "wohl",
+          "arabic": "probablement",
+          "example": "Er wird wohl müde sein.",
+          "exampleArabic": "Il doit être fatigué.",
+          "type": "adverb"
+        },
+        {
+          "german": "nur",
+          "arabic": "donc (insistance)",
+          "example": "Was hast du nur gemacht?",
+          "exampleArabic": "Mais qu'as-tu donc fait ?",
+          "type": "adverb"
+        },
+        {
+          "german": "bloß",
+          "arabic": "donc (insistance)",
+          "example": "Wie konnte das bloß passieren?",
+          "exampleArabic": "Comment cela a-t-il bien pu arriver ?",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "en fait",
+          "example": "Wer bist du eigentlich?",
+          "exampleArabic": "Qui es-tu, en fait ?",
+          "type": "adverb"
+        },
+        {
+          "german": "überhaupt",
+          "arabic": "vraiment / du tout",
+          "example": "Hat er überhaupt Zeit?",
+          "exampleArabic": "A-t-il seulement du temps ?",
+          "type": "adverb"
+        },
+        {
+          "german": "sowieso",
+          "arabic": "de toute façon",
+          "example": "Ich gehe sowieso.",
+          "exampleArabic": "J'y vais de toute façon.",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "vraiment / en effet",
+          "example": "Er kommt tatsächlich.",
+          "exampleArabic": "Il vient vraiment.",
+          "type": "adverb"
+        },
+        {
+          "german": "ehrlich gesagt",
+          "arabic": "honnêtement",
+          "example": "Ehrlich gesagt, weiß ich nicht.",
+          "exampleArabic": "Honnêtement, je ne sais pas.",
+          "type": "phrase"
+        },
+        {
+          "german": "übrigens",
+          "arabic": "au fait",
+          "example": "Übrigens, hast du schon gehört?",
+          "exampleArabic": "Au fait, tu as déjà entendu ?",
+          "type": "adverb"
+        },
+        {
+          "german": "klar",
+          "arabic": "clair / bien sûr",
+          "example": "Klar, ich komme.",
+          "exampleArabic": "Bien sûr, je viens.",
+          "type": "adjective"
+        },
+        {
+          "german": "kurz",
+          "arabic": "court / un instant",
+          "example": "Komm kurz her.",
+          "exampleArabic": "Viens un instant.",
+          "type": "adjective"
+        },
+        {
+          "german": "unmöglich",
+          "arabic": "impossible",
+          "example": "Das ist unmöglich!",
+          "exampleArabic": "C'est impossible !",
+          "type": "adjective"
+        },
+        {
+          "german": "merkwürdig",
+          "arabic": "étrange",
+          "example": "Das ist merkwürdig.",
+          "exampleArabic": "C'est étrange.",
+          "type": "adjective"
+        },
+        {
+          "german": "unglaublich",
+          "arabic": "incroyable",
+          "example": "Unglaublich, was passiert ist!",
+          "exampleArabic": "Incroyable, ce qui s'est passé !",
+          "type": "adjective"
+        },
+        {
+          "german": "das Gespräch",
+          "arabic": "la conversation",
+          "example": "Wir hatten ein langes Gespräch.",
+          "exampleArabic": "Nous avons eu une longue conversation.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Gespräche"
+        },
+        {
+          "german": "die Stimmung",
+          "arabic": "l'ambiance / l'humeur",
+          "example": "Die Stimmung ist gut.",
+          "exampleArabic": "L'ambiance est bonne.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Stimmungen"
+        },
+        {
+          "german": "der Ton",
+          "arabic": "le ton",
+          "example": "In welchem Ton sprichst du?",
+          "exampleArabic": "Sur quel ton parles-tu ?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Töne"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "le sens / la signification",
+          "example": "Die Bedeutung ist wichtig.",
+          "exampleArabic": "Le sens est important.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bedeutungen"
+        },
+        {
+          "german": "die Nuance",
+          "arabic": "la nuance",
+          "example": "Eine kleine Nuance reicht.",
+          "exampleArabic": "Une petite nuance suffit.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nuancen"
+        },
+        {
+          "german": "sich wundern",
+          "arabic": "s'étonner",
+          "example": "Ich wundere mich darüber.",
+          "exampleArabic": "Je m'en étonne.",
+          "type": "verb"
+        },
+        {
+          "german": "erstaunt sein",
+          "arabic": "être stupéfait",
+          "example": "Ich bin erstaunt.",
+          "exampleArabic": "Je suis stupéfait.",
+          "type": "phrase"
+        },
+        {
+          "german": "das Erstaunen",
+          "arabic": "la stupéfaction",
+          "example": "Zu meinem Erstaunen kam er.",
+          "exampleArabic": "À ma grande surprise, il est venu.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "übertreiben",
+          "arabic": "exagérer",
+          "example": "Du übertreibst!",
+          "exampleArabic": "Tu exagères !",
+          "type": "verb"
+        },
+        {
+          "german": "die Färbung",
+          "arabic": "la coloration / la nuance",
+          "example": "Modalpartikeln geben Färbung.",
+          "exampleArabic": "Les Modalpartikeln donnent une coloration.",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q1",
+            "question": "Adoucir l'ordre : « Komm ___ her! »",
+            "answer": "mal",
+            "hint": "mal = adoucir une demande"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q2",
+            "question": "Question avec curiosité : « Was machst du ___ hier? »",
+            "options": [
+              "mal",
+              "doch",
+              "denn",
+              "halt"
+            ],
+            "answer": "denn"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q3",
+            "question": "Étonnement : « Das ist ___ unmöglich! »",
+            "answer": "doch",
+            "hint": "doch = étonnement / insistance"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q4",
+            "question": "Supposition : « Er ist ___ zu Hause. »",
+            "options": [
+              "mal",
+              "wohl",
+              "doch",
+              "eben"
+            ],
+            "answer": "wohl"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q5",
+            "question": "Résignation : « Das ist ___ so im Leben. »",
+            "answer": "eben",
+            "hint": "eben = constat / résignation"
+          },
+          {
+            "type": "matching",
+            "id": "b2-14-q6",
+            "question": "Associe la Modalpartikel à son usage :",
+            "pairs": [
+              {
+                "left": "mal",
+                "right": "adoucir"
+              },
+              {
+                "left": "denn",
+                "right": "curiosité dans la question"
+              },
+              {
+                "left": "doch",
+                "right": "étonnement"
+              },
+              {
+                "left": "wohl",
+                "right": "supposition"
+              },
+              {
+                "left": "eben",
+                "right": "résignation"
+              },
+              {
+                "left": "ja",
+                "right": "tu sais bien"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-14-q7",
+            "question": "Ordonne (avec adoucissement) : « Viens ici ! »",
+            "words": [
+              "Komm",
+              "mal",
+              "her"
+            ],
+            "answer": "Komm mal her"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-14-q8",
+            "question": "Dis (avec curiosité) : « Mais où es-tu donc ? »",
+            "answer": "Wo bist du denn"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q9",
+            "question": "Écoute : « Du weißt ___ , dass ich beschäftigt bin. » (tu sais bien)",
+            "audioPrompt": "Du weißt ja, dass ich beschäftigt bin.",
+            "answer": "ja",
+            "hint": "ja = info partagée"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q10",
+            "question": "La réponse « Doch » s'utilise quand :",
+            "options": [
+              "on est d'accord",
+              "on contredit une question négative",
+              "on remercie",
+              "on demande"
+            ],
+            "answer": "on contredit une question négative"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q11",
+            "question": "Question de curiosité : « Wie heißt du ___? »",
+            "answer": "denn",
+            "hint": "denn = curiosité dans la question"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q12",
+            "question": "Différence entre « Komm her » et « Komm mal her » :",
+            "options": [
+              "identiques",
+              "la 2e est plus douce",
+              "la 2e est plus impérative",
+              "la 2e est au passé"
+            ],
+            "answer": "la 2e est plus douce"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q13",
+            "question": "Insistance sur le connu : « Du weißt ___, was zu tun ist. »",
+            "answer": "ja",
+            "hint": "ja = tu sais bien"
+          },
+          {
+            "type": "matching",
+            "id": "b2-14-q14",
+            "question": "Associe la Modalpartikel à son contexte :",
+            "pairs": [
+              {
+                "left": "Komm doch mal!",
+                "right": "adoucir + insister"
+              },
+              {
+                "left": "Was machst du denn?",
+                "right": "curiosité"
+              },
+              {
+                "left": "Das ist halt so.",
+                "right": "résignation"
+              },
+              {
+                "left": "Er ist wohl da.",
+                "right": "supposition"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-14-q15",
+            "question": "Ordonne (avec supposition) : « Il doit être à la maison »",
+            "words": [
+              "Er",
+              "ist",
+              "wohl",
+              "zu",
+              "Hause"
+            ],
+            "answer": "Er ist wohl zu Hause"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q16",
+            "question": "Écoute : « Das ist ___ unmöglich! » (mais — étonnement)",
+            "audioPrompt": "Das ist doch unmöglich!",
+            "answer": "doch",
+            "hint": "doch = étonnement"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q17",
+            "question": "Dans la phrase : « Hast du etwa kein Geld? »",
+            "options": [
+              "demande",
+              "étonnement / surprise réprobatrice",
+              "confirmation",
+              "constat"
+            ],
+            "answer": "étonnement / surprise réprobatrice"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-14-q18",
+            "question": "Dis (avec résignation) : « C'est comme ça dans la vie »",
+            "answer": "Das ist halt so im Leben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q19",
+            "question": "Réponse à une question négative : « Du kommst nicht? » — « ___, ich komme! »",
+            "answer": "Doch",
+            "hint": "Doch = si (réponse au négatif)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q20",
+            "question": "Pourquoi les Modalpartikeln sont-elles importantes en B2 ?",
+            "options": [
+              "elles raccourcissent",
+              "elles rendent le discours naturel",
+              "elles imposent la grammaire",
+              "elles remplacent les verbes"
+            ],
+            "answer": "elles rendent le discours naturel"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Quatre",
