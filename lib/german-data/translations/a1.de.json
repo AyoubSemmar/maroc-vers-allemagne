@@ -5155,6 +5155,118 @@
           "example": "Die Arbeit endet um 17 Uhr.",
           "exampleArabic": "Die Arbeit endet um 17 Uhr.",
           "type": "verb"
+        },
+        {
+          "german": "die Sekunde",
+          "arabic": "60stel einer Minute",
+          "gender": "die",
+          "plural": "Sekunden",
+          "example": "In drei Sekunden!",
+          "exampleArabic": "kleinste Zeiteinheit",
+          "type": "noun"
+        },
+        {
+          "german": "das Datum",
+          "arabic": "kalendarische Angabe",
+          "gender": "das",
+          "plural": "Daten",
+          "example": "Welches Datum haben wir?",
+          "exampleArabic": "Tag im Kalender",
+          "type": "noun"
+        },
+        {
+          "german": "der Wochentag",
+          "arabic": "Tag der Woche",
+          "gender": "der",
+          "plural": "Wochentage",
+          "example": "Welcher Wochentag ist heute?",
+          "exampleArabic": "Wochentagsangabe",
+          "type": "noun"
+        },
+        {
+          "german": "der Feiertag",
+          "arabic": "arbeitsfreier Tag",
+          "gender": "der",
+          "plural": "Feiertage",
+          "example": "Heute ist ein Feiertag.",
+          "exampleArabic": "gesetzlicher Feiertag",
+          "type": "noun"
+        },
+        {
+          "german": "der Urlaub",
+          "arabic": "Erholungszeit",
+          "gender": "der",
+          "plural": "Urlaube",
+          "example": "Ich gehe in Urlaub.",
+          "exampleArabic": "Erholung",
+          "type": "noun"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "schulfreie Zeit",
+          "gender": "pl",
+          "example": "In den Ferien fahren wir weg.",
+          "exampleArabic": "Schulferien",
+          "type": "noun"
+        },
+        {
+          "german": "der Wecker",
+          "arabic": "Uhr zum Aufwachen",
+          "gender": "der",
+          "plural": "Wecker",
+          "example": "Der Wecker klingelt um 6.",
+          "exampleArabic": "Aufwachhilfe",
+          "type": "noun"
+        },
+        {
+          "german": "früh / spät",
+          "arabic": "vor der Zeit / nach der Zeit",
+          "example": "Er kommt zu spät.",
+          "exampleArabic": "Zeitpunktangabe",
+          "type": "adverb"
+        },
+        {
+          "german": "jetzt",
+          "arabic": "im Moment",
+          "example": "Jetzt ist es 14 Uhr.",
+          "exampleArabic": "aktueller Zeitpunkt",
+          "type": "adverb"
+        },
+        {
+          "german": "gleich",
+          "arabic": "sofort / in Kürze",
+          "example": "Ich komme gleich.",
+          "exampleArabic": "kurze Zeitangabe",
+          "type": "adverb"
+        },
+        {
+          "german": "dauern",
+          "arabic": "Zeitspanne haben",
+          "example": "Wie lange dauert das?",
+          "exampleArabic": "Dauerangabe",
+          "type": "verb"
+        },
+        {
+          "german": "ein Termin haben",
+          "arabic": "verabredet sein",
+          "example": "Ich habe um 10 einen Termin.",
+          "exampleArabic": "Verabredung",
+          "type": "phrase"
+        },
+        {
+          "german": "Viertel",
+          "arabic": "ein viertel von etwas",
+          "gender": "das",
+          "example": "Viertel nach drei.",
+          "exampleArabic": "15 Minuten",
+          "type": "noun"
+        },
+        {
+          "german": "Halb",
+          "arabic": "die Hälfte",
+          "example": "Es ist halb acht.",
+          "exampleArabic": "30 Minuten",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -5277,6 +5389,118 @@
               "8:15"
             ],
             "answer": "8:45"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q11",
+            "question": "„Welches ___ haben wir?\" (Kalender)",
+            "answer": "Datum",
+            "hint": "das Datum"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q12",
+            "question": "Arbeitsfreier offizieller Tag:",
+            "options": [
+              "der Urlaub",
+              "der Feiertag",
+              "die Ferien",
+              "der Wochentag"
+            ],
+            "answer": "der Feiertag"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q13",
+            "question": "„Der ___ klingelt um 6.\" (Wecker)",
+            "answer": "Wecker",
+            "hint": "der Wecker"
+          },
+          {
+            "type": "matching",
+            "id": "a1-08-q14",
+            "question": "Verbinde Wort mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Datum",
+                "right": "Kalenderangabe"
+              },
+              {
+                "left": "Feiertag",
+                "right": "freier Tag"
+              },
+              {
+                "left": "Urlaub",
+                "right": "Erholung"
+              },
+              {
+                "left": "Ferien",
+                "right": "Schulferien"
+              },
+              {
+                "left": "Wecker",
+                "right": "Aufwachuhr"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-08-q15",
+            "question": "Ordne: „Morgen habe ich einen Termin\"",
+            "words": [
+              "Morgen",
+              "habe",
+              "ich",
+              "einen",
+              "Termin"
+            ],
+            "answer": "Morgen habe ich einen Termin"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-08-q16",
+            "question": "Sage: „Der Kurs dauert zwei Stunden\"",
+            "answer": "Der Kurs dauert zwei Stunden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q17",
+            "question": "Hör zu: „Ich komme ___\" (in Kürze)",
+            "audioPrompt": "Ich komme gleich.",
+            "answer": "gleich",
+            "hint": "gleich = sofort"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q18",
+            "question": "„dauern\" bedeutet:",
+            "options": [
+              "beginnen",
+              "beenden",
+              "Zeit brauchen",
+              "vorbereiten"
+            ],
+            "answer": "Zeit brauchen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q19",
+            "question": "„Er kommt zu ___\" (verspätet)",
+            "answer": "spät",
+            "hint": "spät / früh"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q20",
+            "question": "Wie viele Sekunden hat eine Minute?",
+            "options": [
+              "30",
+              "60",
+              "100",
+              "24"
+            ],
+            "answer": "60"
           }
         ]
       }

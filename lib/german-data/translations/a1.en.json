@@ -5155,6 +5155,118 @@
           "example": "Die Arbeit endet um 17 Uhr.",
           "exampleArabic": "Work finishes at 5 p.m.",
           "type": "verb"
+        },
+        {
+          "german": "die Sekunde",
+          "arabic": "second",
+          "gender": "die",
+          "plural": "Sekunden",
+          "example": "In drei Sekunden!",
+          "exampleArabic": "In three seconds!",
+          "type": "noun"
+        },
+        {
+          "german": "das Datum",
+          "arabic": "date",
+          "gender": "das",
+          "plural": "Daten",
+          "example": "Welches Datum haben wir?",
+          "exampleArabic": "What's today's date?",
+          "type": "noun"
+        },
+        {
+          "german": "der Wochentag",
+          "arabic": "day of the week",
+          "gender": "der",
+          "plural": "Wochentage",
+          "example": "Welcher Wochentag ist heute?",
+          "exampleArabic": "What day is today?",
+          "type": "noun"
+        },
+        {
+          "german": "der Feiertag",
+          "arabic": "public holiday",
+          "gender": "der",
+          "plural": "Feiertage",
+          "example": "Heute ist ein Feiertag.",
+          "exampleArabic": "Today is a holiday.",
+          "type": "noun"
+        },
+        {
+          "german": "der Urlaub",
+          "arabic": "vacation",
+          "gender": "der",
+          "plural": "Urlaube",
+          "example": "Ich gehe in Urlaub.",
+          "exampleArabic": "I'm going on vacation.",
+          "type": "noun"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "school holidays",
+          "gender": "pl",
+          "example": "In den Ferien fahren wir weg.",
+          "exampleArabic": "We go away during the holidays.",
+          "type": "noun"
+        },
+        {
+          "german": "der Wecker",
+          "arabic": "alarm clock",
+          "gender": "der",
+          "plural": "Wecker",
+          "example": "Der Wecker klingelt um 6.",
+          "exampleArabic": "The alarm rings at 6.",
+          "type": "noun"
+        },
+        {
+          "german": "früh / spät",
+          "arabic": "early / late",
+          "example": "Er kommt zu spät.",
+          "exampleArabic": "He's late.",
+          "type": "adverb"
+        },
+        {
+          "german": "jetzt",
+          "arabic": "now",
+          "example": "Jetzt ist es 14 Uhr.",
+          "exampleArabic": "It's 2pm now.",
+          "type": "adverb"
+        },
+        {
+          "german": "gleich",
+          "arabic": "right away",
+          "example": "Ich komme gleich.",
+          "exampleArabic": "I'm coming right away.",
+          "type": "adverb"
+        },
+        {
+          "german": "dauern",
+          "arabic": "to last",
+          "example": "Wie lange dauert das?",
+          "exampleArabic": "How long does it last?",
+          "type": "verb"
+        },
+        {
+          "german": "ein Termin haben",
+          "arabic": "to have an appointment",
+          "example": "Ich habe um 10 einen Termin.",
+          "exampleArabic": "I have an appointment at 10.",
+          "type": "phrase"
+        },
+        {
+          "german": "Viertel",
+          "arabic": "quarter",
+          "gender": "das",
+          "example": "Viertel nach drei.",
+          "exampleArabic": "Quarter past three.",
+          "type": "noun"
+        },
+        {
+          "german": "Halb",
+          "arabic": "half",
+          "example": "Es ist halb acht.",
+          "exampleArabic": "It's 7:30.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -5277,6 +5389,118 @@
               "8:15"
             ],
             "answer": "8:45"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q11",
+            "question": "\"Welches ___ haben wir?\" (date)",
+            "answer": "Datum",
+            "hint": "das Datum"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q12",
+            "question": "Public holiday in German:",
+            "options": [
+              "der Urlaub",
+              "der Feiertag",
+              "die Ferien",
+              "der Wochentag"
+            ],
+            "answer": "der Feiertag"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q13",
+            "question": "\"Der ___ klingelt um 6.\" (alarm clock)",
+            "answer": "Wecker",
+            "hint": "der Wecker"
+          },
+          {
+            "type": "matching",
+            "id": "a1-08-q14",
+            "question": "Match the word to its meaning:",
+            "pairs": [
+              {
+                "left": "Datum",
+                "right": "date"
+              },
+              {
+                "left": "Feiertag",
+                "right": "public holiday"
+              },
+              {
+                "left": "Urlaub",
+                "right": "vacation"
+              },
+              {
+                "left": "Ferien",
+                "right": "school holidays"
+              },
+              {
+                "left": "Wecker",
+                "right": "alarm clock"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-08-q15",
+            "question": "Order: \"I have an appointment tomorrow\"",
+            "words": [
+              "Morgen",
+              "habe",
+              "ich",
+              "einen",
+              "Termin"
+            ],
+            "answer": "Morgen habe ich einen Termin"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-08-q16",
+            "question": "Say: \"The course lasts two hours\"",
+            "answer": "Der Kurs dauert zwei Stunden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q17",
+            "question": "Listen: \"Ich komme ___\" (right away)",
+            "audioPrompt": "Ich komme gleich.",
+            "answer": "gleich",
+            "hint": "gleich = right away"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q18",
+            "question": "The verb \"dauern\" means:",
+            "options": [
+              "to start",
+              "to end",
+              "to last",
+              "to prepare"
+            ],
+            "answer": "to last"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-08-q19",
+            "question": "\"Er kommt zu ___\" (late)",
+            "answer": "spät",
+            "hint": "spät / früh"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-08-q20",
+            "question": "How many seconds in a minute?",
+            "options": [
+              "30",
+              "60",
+              "100",
+              "24"
+            ],
+            "answer": "60"
           }
         ]
       }
