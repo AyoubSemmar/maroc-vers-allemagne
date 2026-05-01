@@ -5927,6 +5927,128 @@
           { "type": "multiple-choice", "id": "a1-14-q20", "question": "Quelle phrase a un Akk correct ?", "options": ["Ich liebe der Mann.", "Ich liebe den Mann.", "Ich liebe dem Mann.", "Ich liebe ein Mann."], "answer": "Ich liebe den Mann." }
         ]
       }
+    },
+    "a1-15": {
+      "id": "a1-15",
+      "title": "L'impératif — Imperativ",
+      "order": 15,
+      "grammar": {
+        "title": "L'impératif aux trois personnes + l'appel poli",
+        "content": "L'**Imperativ** est l'impératif — comment demander ou ordonner quelque chose à quelqu'un. L'allemand distingue trois formes : pour **du** (ami), pour **ihr** (groupe d'amis) et pour **Sie** (poli).\n\n**Règle générale :**\n- du → verbe sans -st (Komm! Lies! Trink!)\n- ihr → verbe + -t (Kommt! Lest! Trinkt!)\n- Sie → verbe + Sie à la fin (Kommen Sie! Lesen Sie! Trinken Sie!)",
+        "tables": [
+          {
+            "title": "L'impératif des verbes courants",
+            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "rows": [
+              { "cells": ["kommen", "Komm!", "Kommt!", "Kommen Sie!"] },
+              { "cells": ["gehen", "Geh!", "Geht!", "Gehen Sie!"] },
+              { "cells": ["warten", "Warte!", "Wartet!", "Warten Sie!"] },
+              { "cells": ["hören", "Hör!", "Hört!", "Hören Sie!"] },
+              { "cells": ["sprechen", "Sprich!", "Sprecht!", "Sprechen Sie!"], "highlight": true },
+              { "cells": ["lesen", "Lies!", "Lest!", "Lesen Sie!"], "highlight": true },
+              { "cells": ["nehmen", "Nimm!", "Nehmt!", "Nehmen Sie!"], "highlight": true },
+              { "cells": ["fahren", "Fahr!", "Fahrt!", "Fahren Sie!"] }
+            ],
+            "theme": "conjugation",
+            "note": "Les verbes en couleur (sprechen, lesen, nehmen) gardent leur changement de radical à la forme du."
+          },
+          {
+            "title": "sein et haben à l'impératif (irréguliers)",
+            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "rows": [
+              { "cells": ["sein", "Sei!", "Seid!", "Seien Sie!"], "highlight": true },
+              { "cells": ["haben", "Hab!", "Habt!", "Haben Sie!"] }
+            ],
+            "theme": "conjugation",
+            "note": "Apprends Sei! et Seien Sie! — deux formes très utilisées (Sei vorsichtig! / Seien Sie ruhig!)."
+          }
+        ],
+        "rules": [
+          { "rule": "À l'impératif, le pronom du est supprimé. Seulement le verbe + (complément) + point d'exclamation.", "example": "Komm hier! (et non Du komm hier!)", "translation": "Viens ici !" },
+          { "rule": "La forme polie Sie garde toujours le pronom Sie à la fin.", "example": "Kommen Sie bitte! / Hören Sie zu!", "translation": "Venez s'il vous plaît ! / Écoutez !" },
+          { "rule": "Le mot bitte (s'il te plaît) rend l'impératif poli. Place-le à la fin ou après le verbe.", "example": "Komm bitte! / Bitte komm!", "translation": "Viens s'il te plaît !" },
+          { "rule": "Les verbes à changement de radical e → i / e → ie le gardent uniquement à la forme du.", "example": "Sprich langsamer, bitte! (sprechen → Sprich)", "translation": "Parle plus lentement, s'il te plaît !" }
+        ],
+        "examples": [
+          "Komm hier! — Viens ici !",
+          "Hör zu! — Écoute !",
+          "Sprich langsamer, bitte. — Parle plus lentement, s'il te plaît.",
+          "Lest das Buch zusammen! — Lisez le livre ensemble !",
+          "Nehmen Sie Platz! — Asseyez-vous !",
+          "Sei nicht traurig! — Ne sois pas triste !",
+          "Geht nach Hause! — Rentrez à la maison !",
+          "Helfen Sie mir, bitte! — Aidez-moi, s'il vous plaît !"
+        ],
+        "tip": "Dans les annonces et magasins, la forme Sie est la règle. Avec des amis utilise du. Avec un groupe d'amis utilise ihr. Ne les mélange pas !"
+      },
+      "vocabulary": [
+        { "german": "kommen", "arabic": "venir", "example": "Komm hierher!", "exampleArabic": "Viens ici !", "type": "verb" },
+        { "german": "gehen", "arabic": "aller", "example": "Geh nach Hause!", "exampleArabic": "Rentre à la maison !", "type": "verb" },
+        { "german": "warten", "arabic": "attendre", "example": "Warte einen Moment!", "exampleArabic": "Attends un instant !", "type": "verb" },
+        { "german": "hören", "arabic": "écouter", "example": "Hör zu, bitte!", "exampleArabic": "Écoute, s'il te plaît !", "type": "verb" },
+        { "german": "zuhören", "arabic": "prêter l'oreille", "example": "Hör mir zu!", "exampleArabic": "Écoute-moi !", "type": "verb" },
+        { "german": "sprechen", "arabic": "parler", "example": "Sprich lauter!", "exampleArabic": "Parle plus fort !", "type": "verb" },
+        { "german": "lesen", "arabic": "lire", "example": "Lies das, bitte!", "exampleArabic": "Lis ça, s'il te plaît !", "type": "verb" },
+        { "german": "nehmen", "arabic": "prendre", "example": "Nimm den Bus!", "exampleArabic": "Prends le bus !", "type": "verb" },
+        { "german": "geben", "arabic": "donner", "example": "Gib mir das Buch!", "exampleArabic": "Donne-moi le livre !", "type": "verb" },
+        { "german": "fahren", "arabic": "conduire / aller (en véhicule)", "example": "Fahr vorsichtig!", "exampleArabic": "Conduis prudemment !", "type": "verb" },
+        { "german": "essen", "arabic": "manger", "example": "Iss langsam!", "exampleArabic": "Mange lentement !", "type": "verb" },
+        { "german": "trinken", "arabic": "boire", "example": "Trink Wasser!", "exampleArabic": "Bois de l'eau !", "type": "verb" },
+        { "german": "sein", "arabic": "être", "example": "Sei ruhig!", "exampleArabic": "Sois calme !", "type": "verb" },
+        { "german": "sich setzen", "arabic": "s'asseoir", "example": "Setz dich!", "exampleArabic": "Assieds-toi !", "type": "verb" },
+        { "german": "aufstehen", "arabic": "se lever", "example": "Steh auf!", "exampleArabic": "Lève-toi !", "type": "verb" },
+        { "german": "aufpassen", "arabic": "faire attention", "example": "Pass auf!", "exampleArabic": "Fais attention !", "type": "verb" },
+        { "german": "wiederholen", "arabic": "répéter", "example": "Wiederholen Sie, bitte!", "exampleArabic": "Répétez, s'il vous plaît !", "type": "verb" },
+        { "german": "helfen", "arabic": "aider", "example": "Hilf mir!", "exampleArabic": "Aide-moi !", "type": "verb" },
+        { "german": "bitte", "arabic": "s'il te plaît", "example": "Komm bitte!", "exampleArabic": "Viens s'il te plaît !", "type": "adverb" },
+        { "german": "langsam", "arabic": "lentement", "example": "Sprich langsam!", "exampleArabic": "Parle lentement !", "type": "adverb" },
+        { "german": "schnell", "arabic": "vite", "example": "Komm schnell!", "exampleArabic": "Viens vite !", "type": "adverb" },
+        { "german": "leise", "arabic": "doucement (à voix basse)", "example": "Sprich leise!", "exampleArabic": "Parle doucement !", "type": "adverb" },
+        { "german": "laut", "arabic": "fort (à voix haute)", "example": "Sprich lauter!", "exampleArabic": "Parle plus fort !", "type": "adverb" },
+        { "german": "vorsichtig", "arabic": "prudent", "example": "Fahr vorsichtig!", "exampleArabic": "Conduis prudemment !", "type": "adjective" },
+        { "german": "ruhig", "arabic": "calme", "example": "Sei ruhig!", "exampleArabic": "Sois calme !", "type": "adjective" },
+        { "german": "der Platz", "arabic": "la place / le siège", "example": "Nehmen Sie Platz!", "exampleArabic": "Asseyez-vous !", "type": "noun", "gender": "der", "plural": "die Plätze" },
+        { "german": "der Moment", "arabic": "le moment", "example": "Einen Moment, bitte!", "exampleArabic": "Un instant, s'il vous plaît !", "type": "noun", "gender": "der" },
+        { "german": "die Tür", "arabic": "la porte", "example": "Mach die Tür zu!", "exampleArabic": "Ferme la porte !", "type": "noun", "gender": "die", "plural": "die Türen" },
+        { "german": "das Fenster", "arabic": "la fenêtre", "example": "Öffne das Fenster!", "exampleArabic": "Ouvre la fenêtre !", "type": "noun", "gender": "das", "plural": "die Fenster" },
+        { "german": "auf|machen", "arabic": "ouvrir", "example": "Mach das Fenster auf!", "exampleArabic": "Ouvre la fenêtre !", "type": "verb" },
+        { "german": "zu|machen", "arabic": "fermer", "example": "Mach die Tür zu!", "exampleArabic": "Ferme la porte !", "type": "verb" },
+        { "german": "Achtung!", "arabic": "Attention !", "example": "Achtung, ein Auto!", "exampleArabic": "Attention, une voiture !", "type": "phrase" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "a1-15-q1", "question": "Forme impérative pour du de kommen ? « ___! »", "answer": "Komm", "hint": "kommen → Komm! (sans -st)" },
+          { "type": "multiple-choice", "id": "a1-15-q2", "question": "Comment dire « Parle ! » à un ami ?", "options": ["Spricht!", "Sprich!", "Sprech!", "Sprechen!"], "answer": "Sprich!" },
+          { "type": "fill-blank", "id": "a1-15-q3", "question": "L'impératif poli de helfen ? « ___ Sie mir! »", "answer": "Helfen", "hint": "Forme Sie + pronom Sie" },
+          { "type": "multiple-choice", "id": "a1-15-q4", "question": "Forme de sein à l'impératif avec du ?", "options": ["Bin!", "Bist!", "Sei!", "Seid!"], "answer": "Sei!" },
+          { "type": "fill-blank", "id": "a1-15-q5", "question": "À un groupe d'amis, comment dire « Lisez le livre ! » ? « ___ das Buch! »", "answer": "Lest", "hint": "lesen → ihr Lest!" },
+          { "type": "matching", "id": "a1-15-q6", "question": "Associe l'impératif à sa forme :", "pairs": [
+            { "left": "Komm!", "right": "pour du" },
+            { "left": "Kommt!", "right": "pour ihr" },
+            { "left": "Kommen Sie!", "right": "pour Sie" },
+            { "left": "Sei ruhig!", "right": "Sois calme !" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-15-q7", "question": "Ordonne : « Viens vite, s'il te plaît ! »", "words": ["Komm", "bitte", "schnell"], "answer": "Komm bitte schnell" },
+          { "type": "speaking", "id": "a1-15-q8", "question": "Dis poliment en allemand : « Répétez s'il vous plaît »", "answer": "Wiederholen Sie bitte" },
+          { "type": "fill-blank", "id": "a1-15-q9", "question": "Écoute et complète : « ___ Sie Platz, bitte! » (Asseyez-vous)", "audioPrompt": "Nehmen Sie Platz, bitte!", "answer": "Nehmen", "hint": "nehmen à la forme Sie" },
+          { "type": "multiple-choice", "id": "a1-15-q10", "question": "Quelle est la forme correcte de l'impératif ihr avec warten ?", "options": ["Wart!", "Wartest!", "Wartet!", "Warten!"], "answer": "Wartet!" },
+          { "type": "fill-blank", "id": "a1-15-q11", "question": "Imperativ pour du de lesen ? « ___! »", "answer": "Lies", "hint": "lesen → Lies! (changement e→ie)" },
+          { "type": "multiple-choice", "id": "a1-15-q12", "question": "Impératif poli de kommen ?", "options": ["Komm!", "Kommt!", "Kommen Sie!", "Du kommst!"], "answer": "Kommen Sie!" },
+          { "type": "fill-blank", "id": "a1-15-q13", "question": "« ___ vorsichtig! » (sein → du)", "answer": "Sei", "hint": "sein → Sei!" },
+          { "type": "matching", "id": "a1-15-q14", "question": "Associe le verbe à son impératif du :", "pairs": [
+            { "left": "sprechen", "right": "Sprich!" },
+            { "left": "nehmen", "right": "Nimm!" },
+            { "left": "lesen", "right": "Lies!" },
+            { "left": "sein", "right": "Sei!" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "a1-15-q15", "question": "Ordonne : « Ouvre la fenêtre s'il te plaît » (du)", "words": ["Mach", "das", "Fenster", "bitte", "auf"], "answer": "Mach das Fenster bitte auf" },
+          { "type": "fill-blank", "id": "a1-15-q16", "question": "Écoute : « ___ leise, bitte! » (Parle doucement)", "audioPrompt": "Sprich leise, bitte!", "answer": "Sprich", "hint": "sprechen → Sprich" },
+          { "type": "multiple-choice", "id": "a1-15-q17", "question": "Dans les annonces et magasins, on utilise la forme :", "options": ["du", "ihr", "Sie", "wir"], "answer": "Sie" },
+          { "type": "speaking", "id": "a1-15-q18", "question": "Dis à un groupe d'amis : « Lisez le livre ! »", "answer": "Lest das Buch" },
+          { "type": "fill-blank", "id": "a1-15-q19", "question": "« ___ Sie mir, bitte! » (helfen → Sie)", "answer": "Helfen", "hint": "Forme Sie de helfen" },
+          { "type": "multiple-choice", "id": "a1-15-q20", "question": "La phrase polie pour demander de s'asseoir :", "options": ["Setz dich!", "Setzt euch!", "Nehmen Sie Platz!", "Sitz!"], "answer": "Nehmen Sie Platz!" }
+        ]
+      }
     }
   },
   "title": "Niveau Un",
