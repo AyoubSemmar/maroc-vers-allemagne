@@ -4911,6 +4911,618 @@
           }
         ]
       }
+    },
+    "b2-14": {
+      "id": "b2-14",
+      "title": "Modalpartikeln",
+      "order": 14,
+      "grammar": {
+        "title": "doch, halt, eben, ja, mal, denn, wohl — wie dein Deutsch wirklich natürlich klingt",
+        "content": "**Modalpartikeln** sind kleine Wörter (doch, halt, eben, ja, mal, denn, wohl), die Sätzen eine **emotionale Färbung** geben — Nachdruck, Erstaunen, Abmilderung, Beharrlichkeit. Sie haben keine direkte Übersetzung, kennzeichnen aber **die Grenze zwischen B2 und einem natürlichen Sprecher**.\n\n→ Komm **mal** her. (höflich, ohne Förmlichkeit)\n→ Das ist **doch** unmöglich! (Erstaunen)\n→ Was machst du **denn** hier? (Neugier/Nachdruck)\n\nLerne sie mit ihrem Kontext. Jedes Wort hat mehrere Verwendungen, aber präge dir zunächst eine pro Wort ein.",
+        "tables": [
+          {
+            "title": "Grundlegende Modalpartikeln + ihre Verwendung",
+            "headers": [
+              "Partikel",
+              "Hauptverwendung",
+              "Beispiel",
+              "Bedeutung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "doch",
+                  "Erstaunen / Nachdruck",
+                  "Das ist doch klar!",
+                  "Aber das ist klar!"
+                ]
+              },
+              {
+                "cells": [
+                  "halt",
+                  "Resignation",
+                  "Das ist halt so.",
+                  "So ist es eben."
+                ]
+              },
+              {
+                "cells": [
+                  "eben",
+                  "selbstverständliche Feststellung",
+                  "Das ist eben das Problem.",
+                  "Genau das ist das Problem."
+                ]
+              },
+              {
+                "cells": [
+                  "ja",
+                  "bekannte Tatsache",
+                  "Du weißt ja, dass...",
+                  "Du weißt..."
+                ]
+              },
+              {
+                "cells": [
+                  "mal",
+                  "Bitte abmildern",
+                  "Komm mal her!",
+                  "Komm bitte her."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "Neugier in Frage",
+                  "Wo bist du denn?",
+                  "Wo bist du nur?"
+                ]
+              },
+              {
+                "cells": [
+                  "wohl",
+                  "Vermutung",
+                  "Er ist wohl zu Hause.",
+                  "Wahrscheinlich zu Hause."
+                ]
+              },
+              {
+                "cells": [
+                  "nur / bloß",
+                  "Nachdruck in Frage",
+                  "Was hast du nur gemacht?",
+                  "Was hast du eigentlich getan?"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Stellung: Modalpartikel kommt nach dem Subjekt und vor der neuen Information."
+          },
+          {
+            "title": "Vergleich: derselbe Satz mit und ohne Modalpartikel",
+            "headers": [
+              "Ohne",
+              "Mit Modalpartikel",
+              "Unterschied"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Komm her.",
+                  "Komm mal her.",
+                  "Der zweite ist sanfter, weniger befehlend."
+                ]
+              },
+              {
+                "cells": [
+                  "Wo bist du?",
+                  "Wo bist du denn?",
+                  "Der zweite zeigt Neugier oder Sorge."
+                ]
+              },
+              {
+                "cells": [
+                  "Das ist klar.",
+                  "Das ist doch klar!",
+                  "Der zweite betont stark."
+                ]
+              },
+              {
+                "cells": [
+                  "Er ist krank.",
+                  "Er ist halt krank.",
+                  "Der zweite drückt Hinnahme aus, keine Klage."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Ohne Modalpartikel sind Sätze korrekt, aber „kalt\" — wie eine Anleitung."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Lerne jede Modalpartikel zunächst mit einer Situation. doch = Erstaunen, mal = Abmilderung, denn = Neugier.",
+            "example": "Komm mal! / Das geht doch nicht!",
+            "translation": "Anfangsregel"
+          },
+          {
+            "rule": "In einer Frage denn verwenden — sie wirkt weniger inquisitorisch, neugieriger.",
+            "example": "Wie heißt du denn? (nicht Wie heißt du?)",
+            "translation": "Neugier in Fragen"
+          },
+          {
+            "rule": "mal mildert Aufforderungen — bei Bitten immer einsetzen.",
+            "example": "Schau mal! / Hör mal zu!",
+            "translation": "Bitte abmildern"
+          },
+          {
+            "rule": "doch antwortet „doch\" auf eine Verneinungsfrage: „Du kommst nicht?\" — „Doch, ich komme.\"",
+            "example": "Hast du keine Zeit? — Doch, ich habe Zeit!",
+            "translation": "doch als Bejahung der Verneinung"
+          }
+        ],
+        "examples": [
+          "Das ist doch unmöglich!",
+          "Komm mal kurz hierher.",
+          "Was machst du denn da?",
+          "Du weißt ja, dass ich Marokkaner bin.",
+          "Das ist eben so im Leben.",
+          "Es regnet halt im Februar.",
+          "Er wird wohl zu Hause sein.",
+          "Hör mal, ich muss dir was sagen.",
+          "Was hast du nur getan?"
+        ],
+        "tip": "Versuche nicht, alle auf einmal zu verwenden. Wähle 3 (z. B. mal/denn/doch) und benutze sie eine Woche lang in jedem Satz. Dann nimm 3 weitere dazu. In einem Monat klingst du wie ein Muttersprachler."
+      },
+      "vocabulary": [
+        {
+          "german": "doch",
+          "arabic": "aber / doch",
+          "example": "Das ist doch klar!",
+          "exampleArabic": "Erstaunen / Bejahung",
+          "type": "adverb"
+        },
+        {
+          "german": "halt",
+          "arabic": "eben (Resignation)",
+          "example": "Das ist halt so.",
+          "exampleArabic": "Resignation",
+          "type": "adverb"
+        },
+        {
+          "german": "eben",
+          "arabic": "genau / gerade",
+          "example": "Das ist eben das Problem.",
+          "exampleArabic": "Bestätigung",
+          "type": "adverb"
+        },
+        {
+          "german": "ja",
+          "arabic": "bekanntlich",
+          "example": "Du weißt ja, was ich meine.",
+          "exampleArabic": "geteiltes Wissen",
+          "type": "adverb"
+        },
+        {
+          "german": "mal",
+          "arabic": "bitte (Bitte abmildern)",
+          "example": "Komm mal her!",
+          "exampleArabic": "höfliche Aufforderung",
+          "type": "adverb"
+        },
+        {
+          "german": "denn",
+          "arabic": "(Neugier in Frage)",
+          "example": "Wo bist du denn?",
+          "exampleArabic": "Frage mit Anteilnahme",
+          "type": "adverb"
+        },
+        {
+          "german": "wohl",
+          "arabic": "wahrscheinlich",
+          "example": "Er wird wohl müde sein.",
+          "exampleArabic": "Vermutung",
+          "type": "adverb"
+        },
+        {
+          "german": "nur",
+          "arabic": "denn / bloß (Nachdruck)",
+          "example": "Was hast du nur gemacht?",
+          "exampleArabic": "Nachdruck",
+          "type": "adverb"
+        },
+        {
+          "german": "bloß",
+          "arabic": "nur (Nachdruck)",
+          "example": "Wie konnte das bloß passieren?",
+          "exampleArabic": "Nachdruck",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "tatsächlich",
+          "example": "Wer bist du eigentlich?",
+          "exampleArabic": "Hinterfragung",
+          "type": "adverb"
+        },
+        {
+          "german": "überhaupt",
+          "arabic": "wirklich / generell",
+          "example": "Hat er überhaupt Zeit?",
+          "exampleArabic": "grundlegend",
+          "type": "adverb"
+        },
+        {
+          "german": "sowieso",
+          "arabic": "ohnehin",
+          "example": "Ich gehe sowieso.",
+          "exampleArabic": "ohne weiteres",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "wirklich / in der Tat",
+          "example": "Er kommt tatsächlich.",
+          "exampleArabic": "Bestätigung",
+          "type": "adverb"
+        },
+        {
+          "german": "ehrlich gesagt",
+          "arabic": "offen gesagt",
+          "example": "Ehrlich gesagt, weiß ich nicht.",
+          "exampleArabic": "Offenheit",
+          "type": "phrase"
+        },
+        {
+          "german": "übrigens",
+          "arabic": "nebenbei bemerkt",
+          "example": "Übrigens, hast du schon gehört?",
+          "exampleArabic": "Nebenbemerkung",
+          "type": "adverb"
+        },
+        {
+          "german": "klar",
+          "arabic": "deutlich / sicher",
+          "example": "Klar, ich komme.",
+          "exampleArabic": "Zustimmung",
+          "type": "adjective"
+        },
+        {
+          "german": "kurz",
+          "arabic": "knapp / einen Moment",
+          "example": "Komm kurz her.",
+          "exampleArabic": "Kürze",
+          "type": "adjective"
+        },
+        {
+          "german": "unmöglich",
+          "arabic": "nicht machbar",
+          "example": "Das ist unmöglich!",
+          "exampleArabic": "Unmöglichkeit",
+          "type": "adjective"
+        },
+        {
+          "german": "merkwürdig",
+          "arabic": "seltsam",
+          "example": "Das ist merkwürdig.",
+          "exampleArabic": "Befremden",
+          "type": "adjective"
+        },
+        {
+          "german": "unglaublich",
+          "arabic": "kaum zu glauben",
+          "example": "Unglaublich, was passiert ist!",
+          "exampleArabic": "starke Reaktion",
+          "type": "adjective"
+        },
+        {
+          "german": "das Gespräch",
+          "arabic": "verbaler Austausch",
+          "example": "Wir hatten ein langes Gespräch.",
+          "exampleArabic": "Dialog",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Gespräche"
+        },
+        {
+          "german": "die Stimmung",
+          "arabic": "Atmosphäre / Laune",
+          "example": "Die Stimmung ist gut.",
+          "exampleArabic": "Atmosphäre",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Stimmungen"
+        },
+        {
+          "german": "der Ton",
+          "arabic": "Klangart / Tonfall",
+          "example": "In welchem Ton sprichst du?",
+          "exampleArabic": "Sprechweise",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Töne"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "Sinn",
+          "example": "Die Bedeutung ist wichtig.",
+          "exampleArabic": "Sinn",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bedeutungen"
+        },
+        {
+          "german": "die Nuance",
+          "arabic": "feiner Unterschied",
+          "example": "Eine kleine Nuance reicht.",
+          "exampleArabic": "feiner Unterschied",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nuancen"
+        },
+        {
+          "german": "sich wundern",
+          "arabic": "erstaunt sein",
+          "example": "Ich wundere mich darüber.",
+          "exampleArabic": "Verwunderung",
+          "type": "verb"
+        },
+        {
+          "german": "erstaunt sein",
+          "arabic": "überrascht sein",
+          "example": "Ich bin erstaunt.",
+          "exampleArabic": "Überraschung",
+          "type": "phrase"
+        },
+        {
+          "german": "das Erstaunen",
+          "arabic": "Verwunderung",
+          "example": "Zu meinem Erstaunen kam er.",
+          "exampleArabic": "starke Überraschung",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "übertreiben",
+          "arabic": "über das Maß hinausgehen",
+          "example": "Du übertreibst!",
+          "exampleArabic": "Übertreibung",
+          "type": "verb"
+        },
+        {
+          "german": "die Färbung",
+          "arabic": "Tönung / Schattierung",
+          "example": "Modalpartikeln geben Färbung.",
+          "exampleArabic": "stilistische Nuance",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q1",
+            "question": "Bitte abmildern: „Komm ___ her!\"",
+            "answer": "mal",
+            "hint": "mal = abmildern"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q2",
+            "question": "Frage mit Neugier: „Was machst du ___ hier?\"",
+            "options": [
+              "mal",
+              "doch",
+              "denn",
+              "halt"
+            ],
+            "answer": "denn"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q3",
+            "question": "Erstaunen: „Das ist ___ unmöglich!\"",
+            "answer": "doch",
+            "hint": "doch = Erstaunen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q4",
+            "question": "Vermutung: „Er ist ___ zu Hause.\"",
+            "options": [
+              "mal",
+              "wohl",
+              "doch",
+              "eben"
+            ],
+            "answer": "wohl"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q5",
+            "question": "Resignation: „Das ist ___ so im Leben.\"",
+            "answer": "eben",
+            "hint": "eben = Resignation"
+          },
+          {
+            "type": "matching",
+            "id": "b2-14-q6",
+            "question": "Verbinde Modalpartikel mit Verwendung:",
+            "pairs": [
+              {
+                "left": "mal",
+                "right": "abmildern"
+              },
+              {
+                "left": "denn",
+                "right": "Neugier in Frage"
+              },
+              {
+                "left": "doch",
+                "right": "Erstaunen"
+              },
+              {
+                "left": "wohl",
+                "right": "Vermutung"
+              },
+              {
+                "left": "eben",
+                "right": "Resignation"
+              },
+              {
+                "left": "ja",
+                "right": "geteiltes Wissen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-14-q7",
+            "question": "Ordne (mit Abmilderung): „Komm mal her\"",
+            "words": [
+              "Komm",
+              "mal",
+              "her"
+            ],
+            "answer": "Komm mal her"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-14-q8",
+            "question": "Sage (mit Neugier): „Wo bist du denn?\"",
+            "answer": "Wo bist du denn"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q9",
+            "question": "Hör zu: „Du weißt ___ , dass ich beschäftigt bin.\" (du weißt schon)",
+            "audioPrompt": "Du weißt ja, dass ich beschäftigt bin.",
+            "answer": "ja",
+            "hint": "ja = bekanntes Wissen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q10",
+            "question": "Die Antwort „Doch\" verwendet man, wenn:",
+            "options": [
+              "man zustimmt",
+              "man eine Verneinungsfrage widerlegt",
+              "man dankt",
+              "man fragt"
+            ],
+            "answer": "man eine Verneinungsfrage widerlegt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q11",
+            "question": "Frage mit Neugier: „Wie heißt du ___?\"",
+            "answer": "denn",
+            "hint": "denn = Neugier"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q12",
+            "question": "Unterschied zwischen „Komm her\" und „Komm mal her\":",
+            "options": [
+              "dasselbe",
+              "der zweite ist sanfter",
+              "der zweite ist befehlender",
+              "der zweite ist Vergangenheit"
+            ],
+            "answer": "der zweite ist sanfter"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q13",
+            "question": "Bekanntes betonen: „Du weißt ___, was zu tun ist.\"",
+            "answer": "ja",
+            "hint": "ja = du weißt schon"
+          },
+          {
+            "type": "matching",
+            "id": "b2-14-q14",
+            "question": "Verbinde Modalpartikel mit Kontext:",
+            "pairs": [
+              {
+                "left": "Komm doch mal!",
+                "right": "Abmilderung + Nachdruck"
+              },
+              {
+                "left": "Was machst du denn?",
+                "right": "Neugier"
+              },
+              {
+                "left": "Das ist halt so.",
+                "right": "Resignation"
+              },
+              {
+                "left": "Er ist wohl da.",
+                "right": "Vermutung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-14-q15",
+            "question": "Ordne (mit Vermutung): „Er ist wohl zu Hause\"",
+            "words": [
+              "Er",
+              "ist",
+              "wohl",
+              "zu",
+              "Hause"
+            ],
+            "answer": "Er ist wohl zu Hause"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q16",
+            "question": "Hör zu: „Das ist ___ unmöglich!\" (Erstaunen)",
+            "audioPrompt": "Das ist doch unmöglich!",
+            "answer": "doch",
+            "hint": "doch = Erstaunen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q17",
+            "question": "Im Satz „Hast du etwa kein Geld?\" liegt vor:",
+            "options": [
+              "Bitte",
+              "Erstaunen / Vorwurf",
+              "Bestätigung",
+              "Aussage"
+            ],
+            "answer": "Erstaunen / Vorwurf"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-14-q18",
+            "question": "Sage (mit Resignation): „Das ist halt so im Leben\"",
+            "answer": "Das ist halt so im Leben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-14-q19",
+            "question": "Antwort auf eine Verneinungsfrage: „Du kommst nicht?\" — „___, ich komme!\"",
+            "answer": "Doch",
+            "hint": "Doch = Bejahung der Verneinung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-14-q20",
+            "question": "Warum sind Modalpartikeln in B2 wichtig?",
+            "options": [
+              "sie verkürzen die Rede",
+              "sie machen die Rede natürlich",
+              "sie erzwingen Grammatik",
+              "sie ersetzen Verben"
+            ],
+            "answer": "sie machen die Rede natürlich"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Vier",
