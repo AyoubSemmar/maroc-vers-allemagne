@@ -5823,6 +5823,655 @@
           }
         ]
       }
+    },
+    "c1-15": {
+      "id": "c1-15",
+      "title": "Ponctuation — Kommasetzung",
+      "order": 15,
+      "grammar": {
+        "title": "Quand placer une virgule en allemand — règles pour subordonnées, listes et incises",
+        "content": "La Kommasetzung (placement des virgules) en allemand est **systématique et stricte** — pas « selon le goût ». À l'examen écrit C1, une virgule fautive coûte 0,5–1 point par erreur. Apprends bien les règles.\n\n**Les six règles d'or :**\n1. **Entre Hauptsatz et Nebensatz** — toujours.\n2. **Entre éléments d'une liste** — pas de virgule avant le dernier « und ».\n3. **Avant aber/sondern** — toujours.\n4. **Autour des appositions** — avant et après.\n5. **Autour des Infinitivkonstruktion avec zu** — dans les cas étoffés.\n6. **Entre Hauptsatz + Hauptsatz** sans connecteur — facultatif.",
+        "tables": [
+          {
+            "title": "Règles obligatoires de la virgule",
+            "headers": [
+              "Cas",
+              "Exemple",
+              "Règle"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nebensatz",
+                  "Ich weiß, dass du kommst.",
+                  "toujours avant dass/weil/wenn/..."
+                ]
+              },
+              {
+                "cells": [
+                  "Liste",
+                  "Ich kaufe Brot, Milch und Käse.",
+                  "pas de virgule avant le dernier und"
+                ]
+              },
+              {
+                "cells": [
+                  "aber/sondern",
+                  "Er kommt, aber spät.",
+                  "toujours avant aber/sondern"
+                ]
+              },
+              {
+                "cells": [
+                  "Apposition",
+                  "Mein Bruder, der Arzt, kommt.",
+                  "encadrer l'apposition explicative"
+                ]
+              },
+              {
+                "cells": [
+                  "Infinitiv mit zu",
+                  "Ich versuche, das zu lernen.",
+                  "après verbe + zu-Inf étoffé"
+                ]
+              },
+              {
+                "cells": [
+                  "Anrede",
+                  "Hallo, Maria, wie geht's?",
+                  "encadrer l'apostrophe"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Ces règles sont obligatoires à l'écrit formel et aux examens C1."
+          },
+          {
+            "title": "Cas facultatifs",
+            "headers": [
+              "Cas",
+              "Sans virgule",
+              "Avec virgule"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "HS + und + HS",
+                  "Ich gehe und du bleibst.",
+                  "Ich gehe, und du bleibst."
+                ]
+              },
+              {
+                "cells": [
+                  "Infinitiv simple",
+                  "Er versucht zu lernen.",
+                  "Er versucht, zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "Adverbe en tête",
+                  "Heute komme ich nicht.",
+                  "(pas de virgule en général)"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Dans les cas facultatifs, choisis la virgule pour clarifier le sens."
+          },
+          {
+            "title": "Erreurs fréquentes à éviter",
+            "headers": [
+              "Erreur",
+              "Correct",
+              "Raison"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Ich denke, dass, er kommt.",
+                  "Ich denke, dass er kommt.",
+                  "pas de virgule entre dass et le sujet"
+                ]
+              },
+              {
+                "cells": [
+                  "Brot, und Milch.",
+                  "Brot und Milch.",
+                  "pas de virgule avant und dans la liste"
+                ]
+              },
+              {
+                "cells": [
+                  "Er ist krank, aber, kommt.",
+                  "Er ist krank, aber kommt.",
+                  "pas de virgule après aber"
+                ]
+              },
+              {
+                "cells": [
+                  "Nach dem Essen, gehen wir.",
+                  "Nach dem Essen gehen wir.",
+                  "pas de virgule après un complément de temps"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Règle : la virgule sépare les phrases, pas l'intérieur d'une même phrase."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Entre Hauptsatz et Nebensatz : virgule toujours.",
+            "example": "Ich weiß, dass es schwer ist.",
+            "translation": "Je sais que c'est difficile."
+          },
+          {
+            "rule": "Dans une liste, pas de virgule avant le dernier und/oder.",
+            "example": "Brot, Milch und Käse.",
+            "translation": "Du pain, du lait et du fromage."
+          },
+          {
+            "rule": "Avant aber/sondern : virgule toujours.",
+            "example": "Er ist klug, aber faul.",
+            "translation": "Il est intelligent, mais paresseux."
+          },
+          {
+            "rule": "Autour d'une apposition explicative : deux virgules.",
+            "example": "Mein Vater, ein Lehrer, lebt in Casablanca.",
+            "translation": "Mon père, un enseignant, vit à Casablanca."
+          }
+        ],
+        "examples": [
+          "Ich glaube, dass du recht hast. — Je pense que tu as raison.",
+          "Wir kaufen Brot, Milch, Käse und Butter. — On achète du pain, du lait, du fromage et du beurre.",
+          "Er ist freundlich, aber sehr beschäftigt. — Il est gentil mais très occupé.",
+          "Mein Onkel, der in Berlin wohnt, kommt morgen. — Mon oncle, qui habite à Berlin, arrive demain.",
+          "Ich versuche, das Problem zu lösen. — J'essaie de résoudre le problème.",
+          "Hallo, Maria, wie geht's? — Salut, Maria, comment ça va ?",
+          "Obwohl es regnet, gehen wir spazieren. — Même s'il pleut, on se promène.",
+          "Wenn du Zeit hast, ruf mich an. — Quand tu auras du temps, appelle-moi."
+        ],
+        "tip": "Écris 5 phrases par jour et identifie les virgules obligatoires. Avec l'entraînement, les règles deviennent automatiques. À l'examen, relis ton texte deux fois pour repérer les virgules oubliées."
+      },
+      "vocabulary": [
+        {
+          "german": "das Komma",
+          "arabic": "la virgule",
+          "example": "Das Komma fehlt.",
+          "exampleArabic": "La virgule manque.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kommas"
+        },
+        {
+          "german": "der Punkt",
+          "arabic": "le point",
+          "example": "Setze einen Punkt.",
+          "exampleArabic": "Mets un point.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Punkte"
+        },
+        {
+          "german": "der Strichpunkt",
+          "arabic": "le point-virgule",
+          "example": "Hier brauchen wir einen Strichpunkt.",
+          "exampleArabic": "Ici il nous faut un point-virgule.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Doppelpunkt",
+          "arabic": "les deux-points",
+          "example": "Nach dem Doppelpunkt.",
+          "exampleArabic": "Après les deux-points.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Anführungszeichen",
+          "arabic": "les guillemets",
+          "example": "Anführungszeichen oben und unten.",
+          "exampleArabic": "Guillemets en haut et en bas.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Anführungszeichen"
+        },
+        {
+          "german": "der Bindestrich",
+          "arabic": "le trait d'union",
+          "example": "Wir benutzen einen Bindestrich.",
+          "exampleArabic": "On utilise un trait d'union.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bindestriche"
+        },
+        {
+          "german": "das Ausrufezeichen",
+          "arabic": "le point d'exclamation",
+          "example": "Mit Ausrufezeichen!",
+          "exampleArabic": "Avec un point d'exclamation !",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Fragezeichen",
+          "arabic": "le point d'interrogation",
+          "example": "Vergiss das Fragezeichen nicht.",
+          "exampleArabic": "N'oublie pas le point d'interrogation.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Klammer",
+          "arabic": "la parenthèse",
+          "example": "In Klammern stehen Erklärungen.",
+          "exampleArabic": "Entre parenthèses, on met des explications.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Klammern"
+        },
+        {
+          "german": "der Hauptsatz",
+          "arabic": "la principale",
+          "example": "Ein Hauptsatz hat Subjekt und Verb.",
+          "exampleArabic": "Une principale a un sujet et un verbe.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Hauptsätze"
+        },
+        {
+          "german": "der Nebensatz",
+          "arabic": "la subordonnée",
+          "example": "Nebensätze beginnen mit dass, weil, wenn.",
+          "exampleArabic": "Les subordonnées commencent par dass, weil, wenn.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Nebensätze"
+        },
+        {
+          "german": "die Apposition",
+          "arabic": "l'apposition",
+          "example": "Mein Bruder, der Arzt — Apposition.",
+          "exampleArabic": "Mon frère, le médecin — apposition.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Appositionen"
+        },
+        {
+          "german": "die Aufzählung",
+          "arabic": "l'énumération",
+          "example": "In einer Aufzählung trennen Kommas.",
+          "exampleArabic": "Dans une énumération, les virgules séparent.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Aufzählungen"
+        },
+        {
+          "german": "die Anrede",
+          "arabic": "l'apostrophe (interpellation)",
+          "example": "Hallo, Maria — Anrede.",
+          "exampleArabic": "Salut, Maria — apostrophe.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Anreden"
+        },
+        {
+          "german": "der Einschub",
+          "arabic": "l'incise",
+          "example": "Ein Einschub wird mit Kommas getrennt.",
+          "exampleArabic": "Une incise est séparée par des virgules.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Einschübe"
+        },
+        {
+          "german": "die Konjunktion",
+          "arabic": "la conjonction",
+          "example": "aber ist eine Konjunktion.",
+          "exampleArabic": "aber est une conjonction.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konjunktionen"
+        },
+        {
+          "german": "die Zeichensetzung",
+          "arabic": "la ponctuation",
+          "example": "Die Zeichensetzung ist wichtig.",
+          "exampleArabic": "La ponctuation est importante.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Rechtschreibung",
+          "arabic": "l'orthographe",
+          "example": "Achten Sie auf die Rechtschreibung.",
+          "exampleArabic": "Faites attention à l'orthographe.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Grammatik",
+          "arabic": "la grammaire",
+          "example": "Deutsche Grammatik ist logisch.",
+          "exampleArabic": "La grammaire allemande est logique.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Satzbau",
+          "arabic": "la construction de la phrase",
+          "example": "Der Satzbau ist klar.",
+          "exampleArabic": "La construction est claire.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Regel",
+          "arabic": "la règle",
+          "example": "Eine wichtige Regel.",
+          "exampleArabic": "Une règle importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Regeln"
+        },
+        {
+          "german": "die Ausnahme",
+          "arabic": "l'exception",
+          "example": "Eine Ausnahme von der Regel.",
+          "exampleArabic": "Une exception à la règle.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ausnahmen"
+        },
+        {
+          "german": "der Fehler",
+          "arabic": "la faute",
+          "example": "Ein häufiger Fehler.",
+          "exampleArabic": "Une faute fréquente.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Fehler"
+        },
+        {
+          "german": "die Korrektur",
+          "arabic": "la correction",
+          "example": "Eine wichtige Korrektur.",
+          "exampleArabic": "Une correction importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Korrekturen"
+        },
+        {
+          "german": "trennen",
+          "arabic": "séparer",
+          "example": "Kommas trennen Satzteile.",
+          "exampleArabic": "Les virgules séparent les éléments.",
+          "type": "verb"
+        },
+        {
+          "german": "verbinden",
+          "arabic": "relier",
+          "example": "und verbindet zwei Sätze.",
+          "exampleArabic": "und relie deux phrases.",
+          "type": "verb"
+        },
+        {
+          "german": "beginnen",
+          "arabic": "commencer",
+          "example": "Der Satz beginnt mit einem Großbuchstaben.",
+          "exampleArabic": "La phrase commence par une majuscule.",
+          "type": "verb"
+        },
+        {
+          "german": "beenden",
+          "arabic": "terminer",
+          "example": "Beende den Satz mit einem Punkt.",
+          "exampleArabic": "Termine la phrase par un point.",
+          "type": "verb"
+        },
+        {
+          "german": "verbessern",
+          "arabic": "corriger / améliorer",
+          "example": "Verbessere deinen Text.",
+          "exampleArabic": "Corrige ton texte.",
+          "type": "verb"
+        },
+        {
+          "german": "überprüfen",
+          "arabic": "vérifier",
+          "example": "Überprüfe die Zeichensetzung.",
+          "exampleArabic": "Vérifie la ponctuation.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q1",
+            "question": "Virgule avant dass ? « Ich weiß ___ er kommt. »",
+            "answer": ",",
+            "hint": "toujours avant Nebensatz"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q2",
+            "question": "La liste correcte :",
+            "options": [
+              "Brot, Milch, und Käse",
+              "Brot Milch und Käse",
+              "Brot, Milch und Käse",
+              "Brot, Milch, Käse, und Butter,"
+            ],
+            "answer": "Brot, Milch und Käse"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q3",
+            "question": "Virgule avant aber ? « Er ist klug ___ faul. »",
+            "answer": ", aber",
+            "hint": "aber toujours avec virgule"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q4",
+            "question": "Apposition correcte :",
+            "options": [
+              "Mein Bruder der Arzt kommt.",
+              "Mein Bruder, der Arzt, kommt.",
+              "Mein Bruder, der Arzt kommt.",
+              "Mein Bruder der Arzt, kommt."
+            ],
+            "answer": "Mein Bruder, der Arzt, kommt."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q5",
+            "question": "Apostrophe : « Hallo ___ Maria ___ wie geht's? »",
+            "answer": ", ,",
+            "hint": "deux virgules autour du nom"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q6",
+            "question": "Associe la règle à son exemple :",
+            "pairs": [
+              {
+                "left": "Nebensatz",
+                "right": "virgule toujours"
+              },
+              {
+                "left": "Aufzählung",
+                "right": "pas de virgule avant le dernier und"
+              },
+              {
+                "left": "aber/sondern",
+                "right": "virgule toujours"
+              },
+              {
+                "left": "Apposition",
+                "right": "deux virgules autour"
+              },
+              {
+                "left": "Anrede",
+                "right": "deux virgules autour"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q7",
+            "question": "Ordonne phrase ponctuée correctement : « Je pense que tu as raison »",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q8",
+            "question": "Dis avec virgules : « Mon père, un enseignant, vit à Casablanca »",
+            "answer": "Mein Vater, ein Lehrer, lebt in Casablanca"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q9",
+            "question": "Écoute : « Wir kaufen Brot ___ Milch ___ Käse. » (avec ponctuation)",
+            "audioPrompt": "Wir kaufen Brot, Milch und Käse.",
+            "answer": ", ,",
+            "hint": "virgule après les deux premiers, puis und"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q10",
+            "question": "L'erreur fréquente :",
+            "options": [
+              "virgule entre dass et le sujet",
+              "virgule avant aber",
+              "virgule avant dass",
+              "virgules autour de l'apposition"
+            ],
+            "answer": "virgule entre dass et le sujet"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q11",
+            "question": "Virgule avant sondern ? « Er ist nicht traurig ___ glücklich. »",
+            "answer": ", sondern",
+            "hint": "sondern comme aber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q12",
+            "question": "Virgule après un complément de temps en tête ?",
+            "options": [
+              "toujours",
+              "non, en général",
+              "uniquement avec heute",
+              "obligatoire en presse"
+            ],
+            "answer": "non, en général"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q13",
+            "question": "Apposition : « Mein Bruder ___ der Lehrer ___ kommt morgen. »",
+            "answer": ", ,",
+            "hint": "deux virgules autour de l'apposition"
+          },
+          {
+            "type": "matching",
+            "id": "c1-15-q14",
+            "question": "Associe la règle à son exemple :",
+            "pairs": [
+              {
+                "left": "avant aber/sondern",
+                "right": "virgule toujours"
+              },
+              {
+                "left": "dans liste, avant und",
+                "right": "pas de virgule"
+              },
+              {
+                "left": "autour de l'Anrede",
+                "right": "deux virgules"
+              },
+              {
+                "left": "après complément de temps",
+                "right": "pas de virgule"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-15-q15",
+            "question": "Corrige (avec bonnes virgules) : « Ich glaube dass du recht hast »",
+            "words": [
+              "Ich",
+              "glaube,",
+              "dass",
+              "du",
+              "recht",
+              "hast"
+            ],
+            "answer": "Ich glaube, dass du recht hast"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q16",
+            "question": "Écoute : « Er ist klug ___ sehr beschäftigt. »",
+            "audioPrompt": "Er ist klug, aber sehr beschäftigt.",
+            "answer": ", aber",
+            "hint": "aber toujours avec virgule"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q17",
+            "question": "À l'examen C1, une faute de virgule coûte :",
+            "options": [
+              "rien",
+              "0,5–1 point",
+              "tout le sujet",
+              "rien si le lecteur comprend"
+            ],
+            "answer": "0,5–1 point"
+          },
+          {
+            "type": "speaking",
+            "id": "c1-15-q18",
+            "question": "Dis avec virgules : « On achète du pain, du lait, du fromage et du beurre »",
+            "answer": "Wir kaufen Brot, Milch, Käse und Butter"
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-15-q19",
+            "question": "« Ich versuche ___ das zu lernen. » (Inf étoffé avec zu)",
+            "answer": ",",
+            "hint": "virgule avant zu-Inf étoffé"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-15-q20",
+            "question": "Dans la liste « Brot, Milch und Käse » on note :",
+            "options": [
+              "virgule avant und",
+              "pas de virgule avant und",
+              "deux virgules avant und",
+              "virgules entre tous les éléments"
+            ],
+            "answer": "pas de virgule avant und"
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Cinq",
