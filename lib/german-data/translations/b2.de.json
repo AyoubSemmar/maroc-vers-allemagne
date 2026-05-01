@@ -4261,6 +4261,656 @@
           }
         ]
       }
+    },
+    "b2-13": {
+      "id": "b2-13",
+      "title": "Konjunktiv I — formale indirekte Rede",
+      "order": 13,
+      "grammar": {
+        "title": "Konjunktiv I für die neutrale Wiedergabe von Aussagen + wann auf Konjunktiv II ausweichen",
+        "content": "Der **Konjunktiv I** ist eine Sonderform, um Aussagen anderer wiederzugeben, ohne sie zu bestätigen oder zu bestreiten — verwendet in Zeitungen, Nachrichten und offiziellen Berichten. Ziel: **neutrale Wiedergabe** (= „laut Aussage von ...\").\n\n→ Der Minister **sagt**, er **habe** keine Zeit. (Indirekte Rede)\n\nIm Alltag verwenden Muttersprachler **dass-Satz + Indikativ** oder **Konjunktiv II** stattdessen — der Konjunktiv I bleibt formellen und journalistischen Kontexten vorbehalten. Die B2-Prüfung (telc/Goethe) prüft ihn — nicht überspringen.",
+        "tables": [
+          {
+            "title": "Konjunktiv I — Konjugation häufiger Verben",
+            "headers": [
+              "Pronomen",
+              "sein",
+              "haben",
+              "sagen",
+              "kommen"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "sei",
+                  "habe",
+                  "sage",
+                  "komme"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "sei(e)st",
+                  "habest",
+                  "sagest",
+                  "kommest"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "sei",
+                  "habe",
+                  "sage",
+                  "komme"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "seien",
+                  "haben",
+                  "sagen",
+                  "kommen"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "seiet",
+                  "habet",
+                  "saget",
+                  "kommet"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "seien",
+                  "haben",
+                  "sagen",
+                  "kommen"
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "sein ist als einziges Verb in Konj. I vollständig regelmäßig. Die anderen erhalten -e- am Stamm."
+          },
+          {
+            "title": "Wann auf Konjunktiv II ausweichen",
+            "headers": [
+              "Fall",
+              "Beispiel",
+              "Grund"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Konj. I = Indikativ",
+                  "sie sagen → sie sagen",
+                  "kein Unterschied — durch würde + Inf ersetzen"
+                ]
+              },
+              {
+                "cells": [
+                  "Alternative",
+                  "sie würden sagen",
+                  "vermeidet Mehrdeutigkeit"
+                ]
+              },
+              {
+                "cells": [
+                  "ich/wir oft",
+                  "ich habe → ich hätte",
+                  "Verwechslung mit Indikativ vermeiden"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Regel: Wenn Konj. I dem Indikativ entspricht, durch Konj. II oder würde + Inf ersetzen."
+          },
+          {
+            "title": "Konjunktiv-I-Formen in den Zeiten",
+            "headers": [
+              "Zeit",
+              "Struktur",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Präsens (Konj. I)",
+                  "Verb + -e/-est/-e/-en/-et/-en",
+                  "Er sage, dass..."
+                ]
+              },
+              {
+                "cells": [
+                  "Vergangenheit (Konj. I)",
+                  "habe/sei + Partizip II",
+                  "Sie habe das gesagt."
+                ]
+              },
+              {
+                "cells": [
+                  "Zukunft (Konj. I)",
+                  "werde + Infinitiv",
+                  "Er werde kommen."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Die Vergangenheit im Konj. I verwendet immer Perfekt (haben/sein + Partizip)."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "In der formalen indirekten Rede Konj. I ohne „dass\" verwenden; die Wortstellung bleibt wie im Hauptsatz.",
+            "example": "Er sagt, er habe Zeit. (nicht Er sagt, dass er habe Zeit.)",
+            "translation": "Hauptsatz-Wortstellung"
+          },
+          {
+            "rule": "Wenn Konj. I dem Indikativ entspricht, durch Konj. II ersetzen (würde + Inf oder einfache Form).",
+            "example": "sie sagen → sie würden sagen / sie sagten",
+            "translation": "Ersatzform"
+          },
+          {
+            "rule": "Konj. I beschränkt sich auf Journalismus, Berichte, akademisches Schreiben und formelle Prüfungen.",
+            "example": "In den Nachrichten: „Der Präsident habe das nicht gewusst.\"",
+            "translation": "Nachrichtensprache"
+          },
+          {
+            "rule": "Die Form sei/seien im Konj. I dient auch in Anweisungen und Rezepten: „Man nehme...\"",
+            "example": "Man nehme drei Eier.",
+            "translation": "Rezeptsprache"
+          }
+        ],
+        "examples": [
+          "Der Politiker sagt, er sei unschuldig.",
+          "Sie behauptet, sie habe nichts davon gewusst.",
+          "Laut der Studie nehme die Inflation zu.",
+          "Der Arzt erklärt, der Patient brauche mehr Ruhe.",
+          "Er fragt, ob sie kommen werde.",
+          "Die Zeitung berichtet, der Minister habe das Land verlassen.",
+          "Man sage, das Wetter werde besser."
+        ],
+        "tip": "Die B2-Prüfung prüft besonders die Wiedergabe von Nachrichten in Konj. I. Übe täglich 10 Sätze aus deutschen Zeitungen: wandle „ich sage\" in „er sagt, er sage\" um. Innerhalb von zwei Wochen beherrschst du die Struktur."
+      },
+      "vocabulary": [
+        {
+          "german": "sagen",
+          "arabic": "äußern",
+          "example": "Er sagt, er habe Zeit.",
+          "exampleArabic": "Aussage",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "etwas als wahr ausgeben",
+          "example": "Sie behauptet, sie sei krank.",
+          "exampleArabic": "Behauptung aufstellen",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "verständlich machen",
+          "example": "Er erklärt, das sei einfach.",
+          "exampleArabic": "Erläuterung",
+          "type": "verb"
+        },
+        {
+          "german": "berichten",
+          "arabic": "Bericht geben",
+          "example": "Die Presse berichtet, er sei zurückgetreten.",
+          "exampleArabic": "Berichterstattung",
+          "type": "verb"
+        },
+        {
+          "german": "meinen",
+          "arabic": "denken / der Ansicht sein",
+          "example": "Sie meint, ich hätte das gesagt.",
+          "exampleArabic": "Meinung äußern",
+          "type": "verb"
+        },
+        {
+          "german": "erzählen",
+          "arabic": "berichten / schildern",
+          "example": "Er erzählt, er sei in Berlin gewesen.",
+          "exampleArabic": "Erzählung",
+          "type": "verb"
+        },
+        {
+          "german": "mitteilen",
+          "arabic": "informieren",
+          "example": "Er teilt mit, er komme später.",
+          "exampleArabic": "Mitteilung",
+          "type": "verb"
+        },
+        {
+          "german": "fragen",
+          "arabic": "eine Frage stellen",
+          "example": "Sie fragt, ob er da sei.",
+          "exampleArabic": "Frage",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "auf eine Frage erwidern",
+          "example": "Er antwortet, er wisse es nicht.",
+          "exampleArabic": "Antwort",
+          "type": "verb"
+        },
+        {
+          "german": "die Aussage",
+          "arabic": "geäußerte Mitteilung",
+          "example": "Seine Aussage war klar.",
+          "exampleArabic": "Statement",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Aussagen"
+        },
+        {
+          "german": "das Zitat",
+          "arabic": "wörtliche Wiedergabe",
+          "example": "Das Zitat ist berühmt.",
+          "exampleArabic": "wörtliche Anführung",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Zitate"
+        },
+        {
+          "german": "die Quelle",
+          "arabic": "Herkunft der Information",
+          "example": "Was ist die Quelle?",
+          "exampleArabic": "Informationsherkunft",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Quellen"
+        },
+        {
+          "german": "der Bericht",
+          "arabic": "Darstellung von Sachverhalten",
+          "example": "Der Bericht erscheint heute.",
+          "exampleArabic": "Reportage",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Berichte"
+        },
+        {
+          "german": "die Nachricht",
+          "arabic": "Information / Meldung",
+          "example": "Die Nachricht ist wichtig.",
+          "exampleArabic": "Meldung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nachrichten"
+        },
+        {
+          "german": "die Presse",
+          "arabic": "Gesamtheit der Medien",
+          "example": "Die Presse berichtet darüber.",
+          "exampleArabic": "Medien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Journalist",
+          "arabic": "Pressevertreter",
+          "example": "Der Journalist fragt nach.",
+          "exampleArabic": "Reporter",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Journalisten"
+        },
+        {
+          "german": "der Minister",
+          "arabic": "Regierungsmitglied",
+          "example": "Der Minister erklärt die Entscheidung.",
+          "exampleArabic": "Politiker",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Minister"
+        },
+        {
+          "german": "die Regierung",
+          "arabic": "Staatsleitung",
+          "example": "Die Regierung kündigt eine Reform an.",
+          "exampleArabic": "Politische Führung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Regierungen"
+        },
+        {
+          "german": "die Studie",
+          "arabic": "wissenschaftliche Untersuchung",
+          "example": "Laut der Studie...",
+          "exampleArabic": "Forschungsbericht",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Studien"
+        },
+        {
+          "german": "das Ergebnis",
+          "arabic": "Resultat",
+          "example": "Das Ergebnis ist überraschend.",
+          "exampleArabic": "Resultat",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Ergebnisse"
+        },
+        {
+          "german": "die Untersuchung",
+          "arabic": "genaue Prüfung",
+          "example": "Die Untersuchung dauert noch.",
+          "exampleArabic": "Analyse / Ermittlung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Untersuchungen"
+        },
+        {
+          "german": "die Behauptung",
+          "arabic": "ungeprüfte Aussage",
+          "example": "Die Behauptung ist falsch.",
+          "exampleArabic": "These",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Behauptungen"
+        },
+        {
+          "german": "die Erklärung",
+          "arabic": "Stellungnahme",
+          "example": "Eine offizielle Erklärung kam.",
+          "exampleArabic": "Statement",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Erklärungen"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "vorgeblich",
+          "example": "Er ist angeblich krank.",
+          "exampleArabic": "ohne Bestätigung",
+          "type": "adverb"
+        },
+        {
+          "german": "laut",
+          "arabic": "gemäß / nach Aussage",
+          "example": "Laut der Zeitung...",
+          "exampleArabic": "Quellenangabe",
+          "type": "preposition"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "im Einklang mit",
+          "example": "Gemäß dem Vertrag...",
+          "exampleArabic": "vertragsgemäß",
+          "type": "preposition"
+        },
+        {
+          "german": "offiziell",
+          "arabic": "amtlich",
+          "example": "Das ist offiziell.",
+          "exampleArabic": "amtlich bestätigt",
+          "type": "adjective"
+        },
+        {
+          "german": "inoffiziell",
+          "arabic": "nicht amtlich",
+          "example": "Eine inoffizielle Aussage.",
+          "exampleArabic": "informell",
+          "type": "adjective"
+        },
+        {
+          "german": "angesehen",
+          "arabic": "renommiert",
+          "example": "Eine angesehene Zeitung.",
+          "exampleArabic": "Renommee",
+          "type": "adjective"
+        },
+        {
+          "german": "kontrovers",
+          "arabic": "umstritten",
+          "example": "Eine kontroverse Behauptung.",
+          "exampleArabic": "umstritten",
+          "type": "adjective"
+        },
+        {
+          "german": "glaubwürdig",
+          "arabic": "vertrauenswürdig",
+          "example": "Eine glaubwürdige Quelle.",
+          "exampleArabic": "verlässlich",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q1",
+            "question": "Wandle um: „Er hat Zeit.\" → „Er sagt, er ___ Zeit.\" (Konj. I)",
+            "answer": "habe",
+            "hint": "haben → habe in Konj. I (er)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q2",
+            "question": "Konjunktiv I von sein mit er?",
+            "options": [
+              "ist",
+              "sei",
+              "sein",
+              "wäre"
+            ],
+            "answer": "sei"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q3",
+            "question": "Was tun, wenn Konj. I dem Indikativ entspricht? ___ + Inf verwenden.",
+            "answer": "würde",
+            "hint": "die häufigste Alternative"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q4",
+            "question": "Konj. I in der Vergangenheit?",
+            "options": [
+              "werde + Inf",
+              "habe/sei + Partizip",
+              "würde + Inf",
+              "hätte/wäre + Partizip"
+            ],
+            "answer": "habe/sei + Partizip"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q5",
+            "question": "Wandle um: „Sie kommt morgen.\" → „Er sagt, sie ___ morgen.\" (Konj. I)",
+            "answer": "komme",
+            "hint": "kommen → komme"
+          },
+          {
+            "type": "matching",
+            "id": "b2-13-q6",
+            "question": "Verbinde Verb mit Konj.-I-Form (er):",
+            "pairs": [
+              {
+                "left": "haben",
+                "right": "habe"
+              },
+              {
+                "left": "sein",
+                "right": "sei"
+              },
+              {
+                "left": "kommen",
+                "right": "komme"
+              },
+              {
+                "left": "sagen",
+                "right": "sage"
+              },
+              {
+                "left": "gehen",
+                "right": "gehe"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-13-q7",
+            "question": "Ordne: „Der Minister sagt, er sei unschuldig\"",
+            "words": [
+              "Der",
+              "Minister",
+              "sagt,",
+              "er",
+              "sei",
+              "unschuldig"
+            ],
+            "answer": "Der Minister sagt, er sei unschuldig"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-13-q8",
+            "question": "Sage in Konj. I: „Sie sagt, sie sei beschäftigt\"",
+            "answer": "Sie sagt, sie sei beschäftigt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q9",
+            "question": "Hör zu: „Laut der Studie ___ die Inflation zu.\" (Konj. I von zunehmen)",
+            "audioPrompt": "Laut der Studie nehme die Inflation zu.",
+            "answer": "nehme",
+            "hint": "zunehmen → nehme...zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q10",
+            "question": "Konj. I wird hauptsächlich verwendet in:",
+            "options": [
+              "Alltagssprache",
+              "Presse und offiziellen Berichten",
+              "persönlichen Briefen",
+              "Werbung"
+            ],
+            "answer": "Presse und offiziellen Berichten"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q11",
+            "question": "Konj. I von müssen mit er?",
+            "answer": "müsse",
+            "hint": "müssen → müsse (Konj. I)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q12",
+            "question": "In der formalen Rede ohne dass:",
+            "options": [
+              "Nebensatz-Stellung",
+              "Hauptsatz-Stellung",
+              "Verb am Ende",
+              "kein Verb"
+            ],
+            "answer": "Hauptsatz-Stellung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q13",
+            "question": "„Sie ___ das Land verlassen.\" (Konj. I Vergangenheit haben + Partizip)",
+            "answer": "habe",
+            "hint": "habe + verlassen"
+          },
+          {
+            "type": "matching",
+            "id": "b2-13-q14",
+            "question": "Verbinde direkten Satz mit Konj.-I-Form:",
+            "pairs": [
+              {
+                "left": "„Ich bin müde.\"",
+                "right": "Er sagt, er sei müde."
+              },
+              {
+                "left": "„Ich habe Geld.\"",
+                "right": "Er sagt, er habe Geld."
+              },
+              {
+                "left": "„Sie kommt morgen.\"",
+                "right": "Er sagt, sie komme morgen."
+              },
+              {
+                "left": "„Wir wissen es nicht.\"",
+                "right": "Sie sagen, sie wüssten es nicht."
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-13-q15",
+            "question": "Ordne: „Der Minister sagt, er sei zurückgetreten\"",
+            "words": [
+              "Der",
+              "Minister",
+              "sagt,",
+              "er",
+              "sei",
+              "zurückgetreten"
+            ],
+            "answer": "Der Minister sagt, er sei zurückgetreten"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q16",
+            "question": "Hör zu: „Sie behauptet, sie ___ unschuldig.\" (sein Konj. I)",
+            "audioPrompt": "Sie behauptet, sie sei unschuldig.",
+            "answer": "sei",
+            "hint": "sein → sei"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q17",
+            "question": "Wann verwendet man würde + Inf?",
+            "options": [
+              "immer",
+              "wenn Konj. I = Indikativ",
+              "nur mit haben",
+              "in der Alltagssprache"
+            ],
+            "answer": "wenn Konj. I = Indikativ"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-13-q18",
+            "question": "Sage in Konj. I: „Der Politiker sagt, er sei unschuldig\"",
+            "answer": "Der Politiker sagt, er sei unschuldig"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-13-q19",
+            "question": "„Laut der Studie ___ die Inflation zu.\" (zunehmen Konj. I)",
+            "answer": "nehme",
+            "hint": "zunehmen → nehme...zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-13-q20",
+            "question": "Die Form sei im Jussiv (Rezept):",
+            "options": [
+              "Vorschlag",
+              "Beschreibung",
+              "„Man nehme...\"",
+              "Frage"
+            ],
+            "answer": "„Man nehme...\""
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Vier",
