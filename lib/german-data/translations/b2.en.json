@@ -5523,6 +5523,708 @@
           }
         ]
       }
+    },
+    "b2-15": {
+      "id": "b2-15",
+      "title": "Word formation — Wortbildung",
+      "order": 15,
+      "grammar": {
+        "title": "Compound nouns (Komposita) + suffixes -keit/-heit/-ung + prefixes ver-/ent-/be-/zer-",
+        "content": "German easily creates new words through **compounding** (Komposita) and **suffixes and prefixes**. If you master these patterns, you can understand thousands of words even ones you've never seen.\n\n**Komposita:** two or more words glued together to form one. The **last** word determines the gender.\n→ die Tür + der Schlüssel = **der Türschlüssel** (door key)\n→ die Hand + die Tasche = **die Handtasche** (handbag)\n\n**Suffixes:** create nouns from verbs or adjectives. -ung, -heit, -keit, -er, -in.\n**Prefixes:** change the verb's meaning. ver-, ent-, be-, zer-, er-.",
+        "tables": [
+          {
+            "title": "Noun-forming suffixes",
+            "headers": [
+              "Suffix",
+              "From",
+              "Example",
+              "Meaning"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-ung",
+                  "verb",
+                  "lernen → die Lernung (learning)",
+                  "verb as noun"
+                ]
+              },
+              {
+                "cells": [
+                  "-heit",
+                  "adjective",
+                  "frei → die Freiheit (freedom)",
+                  "adjective as state"
+                ]
+              },
+              {
+                "cells": [
+                  "-keit",
+                  "adjective (in -ig/-lich)",
+                  "möglich → die Möglichkeit",
+                  "adjective as state"
+                ]
+              },
+              {
+                "cells": [
+                  "-er",
+                  "verb",
+                  "lehren → der Lehrer (teacher)",
+                  "male agent"
+                ]
+              },
+              {
+                "cells": [
+                  "-in",
+                  "masculine noun",
+                  "der Lehrer → die Lehrerin",
+                  "female counterpart"
+                ]
+              },
+              {
+                "cells": [
+                  "-schaft",
+                  "noun/adjective",
+                  "die Freundschaft (friendship)",
+                  "group or state"
+                ]
+              },
+              {
+                "cells": [
+                  "-tum",
+                  "noun",
+                  "das Eigentum (property)",
+                  "state or possession"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Nouns ending in -ung/-heit/-keit/-schaft/-tion are **always feminine (die)**."
+          },
+          {
+            "title": "Prefixes that change verb meaning",
+            "headers": [
+              "Prefix",
+              "Meaning",
+              "Example",
+              "Effect"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ver-",
+                  "change of state / completion",
+                  "kaufen → verkaufen",
+                  "to sell (vs to buy)"
+                ]
+              },
+              {
+                "cells": [
+                  "ent-",
+                  "removal / departure",
+                  "fliehen → entfliehen",
+                  "to flee from"
+                ]
+              },
+              {
+                "cells": [
+                  "be-",
+                  "action on something",
+                  "arbeiten → bearbeiten",
+                  "to process / edit"
+                ]
+              },
+              {
+                "cells": [
+                  "zer-",
+                  "destruction",
+                  "brechen → zerbrechen",
+                  "to break completely"
+                ]
+              },
+              {
+                "cells": [
+                  "er-",
+                  "achievement / attainment",
+                  "reichen → erreichen",
+                  "to reach"
+                ]
+              },
+              {
+                "cells": [
+                  "miss-",
+                  "negative / wrong",
+                  "verstehen → missverstehen",
+                  "to misunderstand"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "These prefixes are **inseparable** — they stay attached in all tenses."
+          },
+          {
+            "title": "Komposita — the last word determines gender",
+            "headers": [
+              "Compound",
+              "Gender",
+              "Translation"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der Bahn + der Hof = der Bahnhof",
+                  "der",
+                  "train station"
+                ]
+              },
+              {
+                "cells": [
+                  "die Hand + die Tasche = die Handtasche",
+                  "die",
+                  "handbag"
+                ]
+              },
+              {
+                "cells": [
+                  "das Haus + die Tür = die Haustür",
+                  "die",
+                  "front door"
+                ]
+              },
+              {
+                "cells": [
+                  "der Geburts + der Tag = der Geburtstag",
+                  "der",
+                  "birthday"
+                ]
+              },
+              {
+                "cells": [
+                  "die Sprache + die Schule = die Sprachschule",
+                  "die",
+                  "language school"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Remember: the last noun in the compound determines der/die/das."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "All nouns ending in -ung/-heit/-keit/-schaft/-tion/-ität are **feminine** (die).",
+            "example": "die Lösung, die Schönheit, die Möglichkeit, die Universität",
+            "translation": "the solution, beauty, possibility, university."
+          },
+          {
+            "rule": "Prefixes ver/ent/be/zer/er/miss are inseparable and don't take ge- in Partizip II.",
+            "example": "verkaufen → verkauft (not geverkauft)",
+            "translation": "sold."
+          },
+          {
+            "rule": "In Komposita, linking elements (-s-/-n-/-en-) sometimes appear: Tageszeitung, Schweinefleisch.",
+            "example": "der Tag + die Zeitung → die Tageszeitung",
+            "translation": "daily newspaper."
+          },
+          {
+            "rule": "Don't be afraid of long words — split them right to left: Lebensversicherungsgesellschaft = Gesellschaft (company) ← Versicherung (insurance) ← Leben (life).",
+            "example": "der Donaudampfschifffahrtskapitän",
+            "translation": "the Danube steamship company captain."
+          }
+        ],
+        "examples": [
+          "der Bahnhof = die Bahn + der Hof — train station.",
+          "die Möglichkeit = möglich + -keit — possibility.",
+          "die Schönheit = schön + -heit — beauty.",
+          "die Lehrerin = der Lehrer + -in — female teacher.",
+          "Er hat das Buch verkauft. — He sold the book.",
+          "Das Glas ist zerbrochen. — The glass is broken.",
+          "Ich erreiche mein Ziel. — I'm reaching my goal.",
+          "Er hat mich missverstanden. — He misunderstood me."
+        ],
+        "tip": "Learn 5 suffixes and 5 prefixes. When you meet a new long word, decompose it: ver- + kauf + -en. That way you'll grasp 50% of new vocabulary without a dictionary."
+      },
+      "vocabulary": [
+        {
+          "german": "die Möglichkeit",
+          "arabic": "possibility",
+          "example": "Es gibt viele Möglichkeiten.",
+          "exampleArabic": "There are many possibilities.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "die Schwierigkeit",
+          "arabic": "difficulty",
+          "example": "Die Schwierigkeit ist groß.",
+          "exampleArabic": "The difficulty is great.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwierigkeiten"
+        },
+        {
+          "german": "die Wirklichkeit",
+          "arabic": "reality",
+          "example": "In der Wirklichkeit ist es anders.",
+          "exampleArabic": "In reality it's different.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Freiheit",
+          "arabic": "freedom",
+          "example": "Freiheit ist wichtig.",
+          "exampleArabic": "Freedom is important.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freiheiten"
+        },
+        {
+          "german": "die Gesundheit",
+          "arabic": "health",
+          "example": "Gesundheit ist alles.",
+          "exampleArabic": "Health is everything.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Schönheit",
+          "arabic": "beauty",
+          "example": "Die Schönheit der Stadt.",
+          "exampleArabic": "The beauty of the city.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schönheiten"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "solution",
+          "example": "Wir suchen eine Lösung.",
+          "exampleArabic": "We're looking for a solution.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lösungen"
+        },
+        {
+          "german": "die Bewegung",
+          "arabic": "movement",
+          "example": "In Bewegung bleiben.",
+          "exampleArabic": "Stay in motion.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bewegungen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "decision",
+          "example": "Eine wichtige Entscheidung.",
+          "exampleArabic": "An important decision.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "die Erfahrung",
+          "arabic": "experience",
+          "example": "Aus Erfahrung weiß ich es.",
+          "exampleArabic": "I know from experience.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Erfahrungen"
+        },
+        {
+          "german": "die Gesellschaft",
+          "arabic": "society / company",
+          "example": "Die Gesellschaft verändert sich.",
+          "exampleArabic": "Society is changing.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gesellschaften"
+        },
+        {
+          "german": "die Freundschaft",
+          "arabic": "friendship",
+          "example": "Wir haben eine alte Freundschaft.",
+          "exampleArabic": "We have an old friendship.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundschaften"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "university",
+          "example": "Ich studiere an der Universität.",
+          "exampleArabic": "I study at the university.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Universitäten"
+        },
+        {
+          "german": "die Information",
+          "arabic": "information",
+          "example": "Eine wichtige Information.",
+          "exampleArabic": "Important information.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Informationen"
+        },
+        {
+          "german": "die Nation",
+          "arabic": "nation",
+          "example": "Die deutsche Nation.",
+          "exampleArabic": "The German nation.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nationen"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "to sell",
+          "example": "Ich verkaufe mein Auto.",
+          "exampleArabic": "I'm selling my car.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "to understand",
+          "example": "Ich verstehe dich.",
+          "exampleArabic": "I understand you.",
+          "type": "verb"
+        },
+        {
+          "german": "vergessen",
+          "arabic": "to forget",
+          "example": "Vergiss das nicht!",
+          "exampleArabic": "Don't forget that!",
+          "type": "verb"
+        },
+        {
+          "german": "entdecken",
+          "arabic": "to discover",
+          "example": "Wir haben es entdeckt.",
+          "exampleArabic": "We discovered it.",
+          "type": "verb"
+        },
+        {
+          "german": "entscheiden",
+          "arabic": "to decide",
+          "example": "Du musst entscheiden.",
+          "exampleArabic": "You have to decide.",
+          "type": "verb"
+        },
+        {
+          "german": "bearbeiten",
+          "arabic": "to process / edit",
+          "example": "Ich bearbeite den Text.",
+          "exampleArabic": "I'm editing the text.",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "to visit",
+          "example": "Ich besuche meine Familie.",
+          "exampleArabic": "I'm visiting my family.",
+          "type": "verb"
+        },
+        {
+          "german": "zerbrechen",
+          "arabic": "to shatter / break",
+          "example": "Das Glas ist zerbrochen.",
+          "exampleArabic": "The glass is broken.",
+          "type": "verb"
+        },
+        {
+          "german": "zerstören",
+          "arabic": "to destroy",
+          "example": "Der Krieg zerstört alles.",
+          "exampleArabic": "War destroys everything.",
+          "type": "verb"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "to reach / achieve",
+          "example": "Ich erreiche das Ziel.",
+          "exampleArabic": "I'm reaching the goal.",
+          "type": "verb"
+        },
+        {
+          "german": "missverstehen",
+          "arabic": "to misunderstand",
+          "example": "Du missverstehst mich!",
+          "exampleArabic": "You're misunderstanding me!",
+          "type": "verb"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "train station",
+          "example": "Wir treffen uns am Bahnhof.",
+          "exampleArabic": "We're meeting at the station.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bahnhöfe"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "birthday",
+          "example": "Mein Geburtstag ist im Mai.",
+          "exampleArabic": "My birthday is in May.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Geburtstage"
+        },
+        {
+          "german": "die Handtasche",
+          "arabic": "handbag",
+          "example": "Wo ist meine Handtasche?",
+          "exampleArabic": "Where is my handbag?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Handtaschen"
+        },
+        {
+          "german": "die Tageszeitung",
+          "arabic": "daily newspaper",
+          "example": "Ich lese die Tageszeitung.",
+          "exampleArabic": "I read the daily newspaper.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tageszeitungen"
+        },
+        {
+          "german": "die Sprachschule",
+          "arabic": "language school",
+          "example": "Goethe ist eine Sprachschule.",
+          "exampleArabic": "Goethe is a language school.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachschulen"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q1",
+            "question": "The suffix -ung always makes the word ___ (gender).",
+            "answer": "die",
+            "hint": "All -ung nouns are feminine"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q2",
+            "question": "In Komposita \"der Bahnhof\", the gender comes from?",
+            "options": [
+              "the first word",
+              "the last word",
+              "grammar decides",
+              "no genus"
+            ],
+            "answer": "the last word"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q3",
+            "question": "The prefix to mean \"to sell\" from kaufen is ___-.",
+            "answer": "ver",
+            "hint": "verkaufen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q4",
+            "question": "Adjective → noun in -keit: möglich → ?",
+            "options": [
+              "Möglichung",
+              "Möglichkeit",
+              "Möglichheit",
+              "Möglichschaft"
+            ],
+            "answer": "Möglichkeit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q5",
+            "question": "die Hand + die Tasche = die ___.",
+            "answer": "Handtasche",
+            "hint": "Komposita with no suffix"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q6",
+            "question": "Match the prefix to its meaning:",
+            "pairs": [
+              {
+                "left": "ver-",
+                "right": "change of state"
+              },
+              {
+                "left": "ent-",
+                "right": "removal"
+              },
+              {
+                "left": "zer-",
+                "right": "destruction"
+              },
+              {
+                "left": "be-",
+                "right": "action on"
+              },
+              {
+                "left": "er-",
+                "right": "achievement"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q7",
+            "question": "Form: \"The train station is in Berlin\"",
+            "words": [
+              "Der",
+              "Bahnhof",
+              "ist",
+              "in",
+              "Berlin"
+            ],
+            "answer": "Der Bahnhof ist in Berlin"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q8",
+            "question": "Say: \"I'm looking for a solution\" (with Lösung)",
+            "answer": "Ich suche eine Lösung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q9",
+            "question": "Listen: \"Die ___ ist groß.\" (the difficulty)",
+            "audioPrompt": "Die Schwierigkeit ist groß.",
+            "answer": "Schwierigkeit",
+            "hint": "schwierig + -keit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q10",
+            "question": "Which verbs don't take \"ge-\" in Partizip II?",
+            "options": [
+              "ver/ent/be",
+              "kaufen/lernen",
+              "the inseparable verbs ver/ent/be",
+              "all verbs"
+            ],
+            "answer": "the inseparable verbs ver/ent/be"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q11",
+            "question": "Adjective → noun in -heit: schön → die ___",
+            "answer": "Schönheit",
+            "hint": "schön + heit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q12",
+            "question": "The suffix for the female agent noun:",
+            "options": [
+              "-er",
+              "-in",
+              "-tum",
+              "-schaft"
+            ],
+            "answer": "-in"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q13",
+            "question": "die Hand + der Schuh = der ___",
+            "answer": "Handschuh",
+            "hint": "the last word → der"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q14",
+            "question": "Match the word to its suffix:",
+            "pairs": [
+              {
+                "left": "die Möglichkeit",
+                "right": "-keit"
+              },
+              {
+                "left": "die Freundschaft",
+                "right": "-schaft"
+              },
+              {
+                "left": "die Universität",
+                "right": "-ität"
+              },
+              {
+                "left": "die Lösung",
+                "right": "-ung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q15",
+            "question": "Decompose Komposita: \"die Sprachschule\"",
+            "words": [
+              "die",
+              "Sprache",
+              "+",
+              "die",
+              "Schule"
+            ],
+            "answer": "die Sprache + die Schule"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q16",
+            "question": "Listen: \"Eine wichtige ___\" (development)",
+            "audioPrompt": "Eine wichtige Entwicklung.",
+            "answer": "Entwicklung",
+            "hint": "entwickeln + ung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q17",
+            "question": "The prefix zer- means:",
+            "options": [
+              "repetition",
+              "achievement",
+              "destruction",
+              "removal"
+            ],
+            "answer": "destruction"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q18",
+            "question": "Say: \"I achieve my goal\" (with erreichen)",
+            "answer": "Ich erreiche mein Ziel"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q19",
+            "question": "die Tat + die Sache = die ___ (real thing)",
+            "answer": "Tatsache",
+            "hint": "simple Komposita"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q20",
+            "question": "All nouns in -ung, -heit, -keit are feminine. True or false?",
+            "options": [
+              "true",
+              "false",
+              "only -ung",
+              "depends"
+            ],
+            "answer": "true"
+          }
+        ]
+      }
     }
   },
   "title": "Level Four",
