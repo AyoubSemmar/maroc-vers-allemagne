@@ -4394,6 +4394,116 @@
           }
         ]
       }
+    },
+    "b1-13": {
+      "id": "b1-13",
+      "title": "Le futur — Futur I + Futur II",
+      "order": 13,
+      "grammar": {
+        "title": "werden + Infinitiv (futur simple) + werden + Partizip + haben/sein (futur antérieur)",
+        "content": "L'allemand construit le futur avec **werden** (devenir) + le verbe principal. **Futur I** = werden + Infinitiv (« je vais + verbe »). **Futur II** = werden + Partizip + haben/sein (« j'aurai... »). À l'oral courant, les locuteurs préfèrent le Präsens + un adverbe de temps (morgen, bald) — c'est plus simple.\n\n→ Ich **werde** morgen nach Berlin **fahren**. (J'irai à Berlin demain)\n\nUtilise le Futur I quand tu veux insister sur le futur, faire une promesse ou une prédiction.",
+        "tables": [
+          { "title": "Futur I — conjugaison de werden", "headers": ["Pronom", "werden", "Exemple"], "rows": [
+            { "cells": ["ich", "werde", "Ich werde lernen."] },
+            { "cells": ["du", "wirst", "Du wirst kommen."] },
+            { "cells": ["er/sie/es", "wird", "Er wird arbeiten."], "highlight": true },
+            { "cells": ["wir", "werden", "Wir werden reisen."] },
+            { "cells": ["ihr", "werdet", "Ihr werdet lernen."] },
+            { "cells": ["sie/Sie", "werden", "Sie werden helfen."] }
+          ], "theme": "conjugation", "note": "wirst (du) et wird (er/sie/es) sont irréguliers." },
+          { "title": "Usages du Futur I", "headers": ["Usage", "Exemple", "Différence"], "rows": [
+            { "cells": ["promesse forte", "Ich werde dich nicht vergessen.", "engagement sérieux"] },
+            { "cells": ["prédiction", "Es wird morgen regnen.", "forte certitude sur l'avenir"] },
+            { "cells": ["supposition au présent", "Er wird wohl zu Hause sein.", "supposition = « probably »"] },
+            { "cells": ["insistance", "Du wirst das jetzt machen!", "ordre avec insistance"] }
+          ], "theme": "default", "note": "À l'oral courant, utilise le Präsens + adverbe. Garde le Futur I pour des cas particuliers." }
+        ],
+        "rules": [
+          { "rule": "À l'oral courant, utilise le Präsens + adverbe de temps plutôt que le Futur I.", "example": "Ich gehe morgen ins Kino.", "translation": "J'irai au cinéma demain." },
+          { "rule": "Utilise le Futur I pour les promesses et les prédictions.", "example": "Es wird kalt werden.", "translation": "Il va faire froid." },
+          { "rule": "Futur I + wohl/sicher = supposition sur le présent, pas sur le futur !", "example": "Er wird wohl krank sein.", "translation": "Il est probablement malade en ce moment." },
+          { "rule": "Le Futur II est rare — « d'ici X, j'aurai... ».", "example": "Bis Ende des Jahres werde ich Deutschland erreicht haben.", "translation": "D'ici fin d'année, j'aurai atteint l'Allemagne." }
+        ],
+        "examples": [
+          "Ich werde nächstes Jahr nach Deutschland ziehen. — L'année prochaine, je déménagerai en Allemagne.",
+          "Du wirst die Prüfung sicher bestehen! — Tu vas sûrement réussir l'examen !",
+          "Es wird morgen regnen. — Il va pleuvoir demain.",
+          "Wir werden uns später treffen. — Nous nous retrouverons plus tard.",
+          "Sie wird wohl zu Hause sein. — Elle est probablement à la maison.",
+          "In zehn Jahren werde ich Architekt sein. — Dans dix ans je serai architecte.",
+          "Du wirst das jetzt machen! — Tu vas faire ça maintenant ! (insistance)",
+          "Bis morgen werde ich alles erledigt haben. — D'ici demain j'aurai tout terminé."
+        ],
+        "tip": "Ne te casse pas la tête avec le Futur II en B1. Concentre-toi sur le Futur I, et même là utilise-le avec parcimonie. Le Präsens + adverbe de temps représente 80 % du parler des locuteurs sur le futur."
+      },
+      "vocabulary": [
+        { "german": "werden", "arabic": "devenir / aller (futur)", "example": "Ich werde Lehrer.", "exampleArabic": "Je vais devenir enseignant.", "type": "verb" },
+        { "german": "morgen", "arabic": "demain", "example": "Morgen werde ich kommen.", "exampleArabic": "Demain je viendrai.", "type": "adverb" },
+        { "german": "übermorgen", "arabic": "après-demain", "example": "Übermorgen fährt er nach Berlin.", "exampleArabic": "Après-demain il part à Berlin.", "type": "adverb" },
+        { "german": "bald", "arabic": "bientôt", "example": "Ich komme bald.", "exampleArabic": "Je viens bientôt.", "type": "adverb" },
+        { "german": "später", "arabic": "plus tard", "example": "Wir treffen uns später.", "exampleArabic": "On se retrouve plus tard.", "type": "adverb" },
+        { "german": "in einer Stunde", "arabic": "dans une heure", "example": "Ich rufe dich in einer Stunde an.", "exampleArabic": "Je t'appelle dans une heure.", "type": "phrase" },
+        { "german": "nächste Woche", "arabic": "la semaine prochaine", "example": "Nächste Woche fängt der Kurs an.", "exampleArabic": "La semaine prochaine, le cours commence.", "type": "phrase" },
+        { "german": "nächsten Monat", "arabic": "le mois prochain", "example": "Nächsten Monat ziehe ich um.", "exampleArabic": "Le mois prochain je déménage.", "type": "phrase" },
+        { "german": "nächstes Jahr", "arabic": "l'année prochaine", "example": "Nächstes Jahr studiere ich.", "exampleArabic": "L'année prochaine j'étudierai.", "type": "phrase" },
+        { "german": "in Zukunft", "arabic": "à l'avenir", "example": "In Zukunft werde ich mehr lernen.", "exampleArabic": "À l'avenir j'apprendrai davantage.", "type": "phrase" },
+        { "german": "die Zukunft", "arabic": "le futur / l'avenir", "example": "Die Zukunft ist ungewiss.", "exampleArabic": "L'avenir est incertain.", "type": "noun", "gender": "die" },
+        { "german": "der Plan", "arabic": "le plan", "example": "Was ist dein Plan?", "exampleArabic": "Quel est ton plan ?", "type": "noun", "gender": "der", "plural": "die Pläne" },
+        { "german": "das Ziel", "arabic": "l'objectif", "example": "Mein Ziel ist Deutschland.", "exampleArabic": "Mon objectif, c'est l'Allemagne.", "type": "noun", "gender": "das", "plural": "die Ziele" },
+        { "german": "der Traum", "arabic": "le rêve", "example": "Mein Traum wird wahr.", "exampleArabic": "Mon rêve va se réaliser.", "type": "noun", "gender": "der", "plural": "die Träume" },
+        { "german": "die Hoffnung", "arabic": "l'espoir", "example": "Es gibt immer Hoffnung.", "exampleArabic": "Il y a toujours de l'espoir.", "type": "noun", "gender": "die", "plural": "die Hoffnungen" },
+        { "german": "wahrscheinlich", "arabic": "probablement", "example": "Wahrscheinlich regnet es morgen.", "exampleArabic": "Il va probablement pleuvoir demain.", "type": "adverb" },
+        { "german": "sicher", "arabic": "sûr / certain", "example": "Ich bin sicher.", "exampleArabic": "Je suis sûr.", "type": "adjective" },
+        { "german": "vielleicht", "arabic": "peut-être", "example": "Vielleicht komme ich.", "exampleArabic": "Peut-être que je viens.", "type": "adverb" },
+        { "german": "bestehen", "arabic": "réussir (un examen)", "example": "Du wirst die Prüfung bestehen.", "exampleArabic": "Tu vas réussir l'examen.", "type": "verb" },
+        { "german": "erreichen", "arabic": "atteindre / réaliser", "example": "Du wirst dein Ziel erreichen.", "exampleArabic": "Tu atteindras ton objectif.", "type": "verb" },
+        { "german": "sich treffen", "arabic": "se rencontrer", "example": "Wir werden uns treffen.", "exampleArabic": "Nous allons nous retrouver.", "type": "verb" },
+        { "german": "umziehen", "arabic": "déménager", "example": "Ich werde umziehen.", "exampleArabic": "Je vais déménager.", "type": "verb" },
+        { "german": "planen", "arabic": "planifier", "example": "Ich plane meine Reise.", "exampleArabic": "Je planifie mon voyage.", "type": "verb" },
+        { "german": "verändern", "arabic": "changer / modifier", "example": "Wir werden viel verändern.", "exampleArabic": "Nous allons changer beaucoup de choses.", "type": "verb" },
+        { "german": "die Reise", "arabic": "le voyage", "example": "Die Reise wird lang sein.", "exampleArabic": "Le voyage sera long.", "type": "noun", "gender": "die", "plural": "die Reisen" },
+        { "german": "die Wohnung", "arabic": "l'appartement", "example": "Wir werden eine neue Wohnung haben.", "exampleArabic": "Nous aurons un nouvel appartement.", "type": "noun", "gender": "die", "plural": "die Wohnungen" },
+        { "german": "die Arbeit", "arabic": "le travail", "example": "Die Arbeit wird einfacher.", "exampleArabic": "Le travail va devenir plus facile.", "type": "noun", "gender": "die" },
+        { "german": "das Studium", "arabic": "les études", "example": "Mein Studium wird drei Jahre dauern.", "exampleArabic": "Mes études dureront trois ans.", "type": "noun", "gender": "das" },
+        { "german": "erledigen", "arabic": "terminer / régler", "example": "Ich werde alles erledigen.", "exampleArabic": "Je vais tout régler.", "type": "verb" },
+        { "german": "der Erfolg", "arabic": "le succès", "example": "Der Erfolg wird kommen.", "exampleArabic": "Le succès viendra.", "type": "noun", "gender": "der", "plural": "die Erfolge" },
+        { "german": "wohl", "arabic": "probablement", "example": "Er wird wohl müde sein.", "exampleArabic": "Il est probablement fatigué.", "type": "adverb" },
+        { "german": "die Veränderung", "arabic": "le changement", "example": "Eine Veränderung wird kommen.", "exampleArabic": "Un changement va venir.", "type": "noun", "gender": "die", "plural": "die Veränderungen" }
+      ],
+      "exercise": {
+        "questions": [
+          { "type": "fill-blank", "id": "b1-13-q1", "question": "Futur I : « Ich ___ morgen kommen. » (werden)", "answer": "werde", "hint": "werden avec ich" },
+          { "type": "multiple-choice", "id": "b1-13-q2", "question": "Forme de werden avec du ?", "options": ["werde", "wirst", "wird", "werden"], "answer": "wirst" },
+          { "type": "fill-blank", "id": "b1-13-q3", "question": "« Sie ___ nächstes Jahr studieren. » (er/sie/es)", "answer": "wird", "hint": "er/sie/es → wird" },
+          { "type": "multiple-choice", "id": "b1-13-q4", "question": "Quelle est la structure correcte du Futur II ?", "options": ["werde + Partizip", "werde + Infinitiv + haben", "wird + Infinitiv", "haben + Partizip"], "answer": "werde + Infinitiv + haben" },
+          { "type": "fill-blank", "id": "b1-13-q5", "question": "Supposition au présent : « Er ___ wohl zu Hause sein. »", "answer": "wird", "hint": "Futur I + wohl = supposition" },
+          { "type": "matching", "id": "b1-13-q6", "question": "Associe la phrase à son usage :", "pairs": [
+            { "left": "Ich werde dich heiraten!", "right": "promesse forte" },
+            { "left": "Es wird wohl regnen.", "right": "supposition" },
+            { "left": "Du wirst das machen!", "right": "insistance" },
+            { "left": "Morgen werde ich lernen.", "right": "futur simple" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b1-13-q7", "question": "Ordonne : « L'année prochaine, je déménagerai en Allemagne »", "words": ["Nächstes", "Jahr", "werde", "ich", "nach", "Deutschland", "ziehen"], "answer": "Nächstes Jahr werde ich nach Deutschland ziehen" },
+          { "type": "speaking", "id": "b1-13-q8", "question": "Dis : « Tu vas sûrement réussir l'examen »", "answer": "Du wirst die Prüfung sicher bestehen" },
+          { "type": "fill-blank", "id": "b1-13-q9", "question": "Écoute : « Wir ___ uns später treffen. »", "audioPrompt": "Wir werden uns später treffen.", "answer": "werden", "hint": "wir + werden" },
+          { "type": "multiple-choice", "id": "b1-13-q10", "question": "À l'oral courant, quelle forme utilise-t-on pour le futur simple ?", "options": ["Futur I toujours", "Futur II toujours", "Präsens + adverbe de temps", "Plusquamperfekt"], "answer": "Präsens + adverbe de temps" },
+          { "type": "fill-blank", "id": "b1-13-q11", "question": "« Ihr ___ den Erfolg sehen. » (werden + ihr)", "answer": "werdet", "hint": "wir/Sie → werden, ihr → werdet" },
+          { "type": "multiple-choice", "id": "b1-13-q12", "question": "Structure du Futur II :", "options": ["werde + Inf", "werde + Inf + haben", "werde + Partizip", "werde + Inf + sein"], "answer": "werde + Inf + haben" },
+          { "type": "fill-blank", "id": "b1-13-q13", "question": "« Bis Ende des Monats ___ ich alles erledigt haben. » (Futur II)", "answer": "werde", "hint": "Futur II avec ich" },
+          { "type": "matching", "id": "b1-13-q14", "question": "Associe la phrase à l'usage du Futur I :", "pairs": [
+            { "left": "Es wird regnen.", "right": "prédiction" },
+            { "left": "Du wirst das machen!", "right": "insistance" },
+            { "left": "Er wird wohl müde sein.", "right": "supposition au présent" },
+            { "left": "Ich werde dich heiraten.", "right": "promesse" }
+          ], "answer": "matched" },
+          { "type": "drag-drop", "id": "b1-13-q15", "question": "Ordonne : « D'ici fin d'année, j'aurai atteint l'Allemagne »", "words": ["Bis", "Ende", "des", "Jahres", "werde", "ich", "Deutschland", "erreicht", "haben"], "answer": "Bis Ende des Jahres werde ich Deutschland erreicht haben" },
+          { "type": "fill-blank", "id": "b1-13-q16", "question": "Écoute : « Sie ___ wohl zu Hause sein. » (supposition)", "audioPrompt": "Sie wird wohl zu Hause sein.", "answer": "wird", "hint": "wird + wohl = supposition" },
+          { "type": "multiple-choice", "id": "b1-13-q17", "question": "wirst s'utilise avec :", "options": ["ich", "du", "er", "wir"], "answer": "du" },
+          { "type": "speaking", "id": "b1-13-q18", "question": "Dis : « Demain j'irai à l'université » (évite le Futur I)", "answer": "Morgen gehe ich zur Universität" },
+          { "type": "fill-blank", "id": "b1-13-q19", "question": "« Wir ___ uns nächstes Jahr treffen. » (werden)", "answer": "werden", "hint": "werden + wir" },
+          { "type": "multiple-choice", "id": "b1-13-q20", "question": "La phrase « Er wird wohl krank sein » signifie :", "options": ["Il va tomber malade", "Il est probablement malade en ce moment", "Il sera malade demain", "Il doit être malade"], "answer": "Il est probablement malade en ce moment" }
+        ]
+      }
     }
   },
   "title": "Niveau Trois",
