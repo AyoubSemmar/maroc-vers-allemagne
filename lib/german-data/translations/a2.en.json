@@ -7096,6 +7096,118 @@
           "example": "Ich bin Vegetarier.",
           "exampleArabic": "I'm a vegetarian.",
           "type": "adjective"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "the doctor",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "I'm going to the doctor.",
+          "type": "noun"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "the pharmacy",
+          "gender": "die",
+          "plural": "Apotheken",
+          "example": "Die Apotheke ist offen.",
+          "exampleArabic": "The pharmacy is open.",
+          "type": "noun"
+        },
+        {
+          "german": "das Medikament",
+          "arabic": "the medication",
+          "gender": "das",
+          "plural": "Medikamente",
+          "example": "Nimm das Medikament.",
+          "exampleArabic": "Take the medication.",
+          "type": "noun"
+        },
+        {
+          "german": "die Tablette",
+          "arabic": "the pill, tablet",
+          "gender": "die",
+          "plural": "Tabletten",
+          "example": "Eine Tablette pro Tag.",
+          "exampleArabic": "One tablet a day.",
+          "type": "noun"
+        },
+        {
+          "german": "der Termin",
+          "arabic": "the appointment",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Ich habe einen Termin.",
+          "exampleArabic": "I have an appointment.",
+          "type": "noun"
+        },
+        {
+          "german": "die Schmerzen",
+          "arabic": "the pains",
+          "gender": "pl",
+          "example": "Ich habe Schmerzen.",
+          "exampleArabic": "I'm in pain.",
+          "type": "noun"
+        },
+        {
+          "german": "der Kopf",
+          "arabic": "the head",
+          "gender": "der",
+          "plural": "Köpfe",
+          "example": "Mein Kopf tut weh.",
+          "exampleArabic": "My head hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "der Bauch",
+          "arabic": "the belly, stomach",
+          "gender": "der",
+          "plural": "Bäuche",
+          "example": "Bauchschmerzen sind unangenehm.",
+          "exampleArabic": "Stomach aches are unpleasant.",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "the back",
+          "gender": "der",
+          "plural": "Rücken",
+          "example": "Der Rücken tut weh.",
+          "exampleArabic": "My back hurts.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bein",
+          "arabic": "the leg",
+          "gender": "das",
+          "plural": "Beine",
+          "example": "Mein Bein ist gebrochen.",
+          "exampleArabic": "My leg is broken.",
+          "type": "noun"
+        },
+        {
+          "german": "der Arm",
+          "arabic": "the arm",
+          "gender": "der",
+          "plural": "Arme",
+          "example": "Sie hebt den Arm.",
+          "exampleArabic": "She raises her arm.",
+          "type": "noun"
+        },
+        {
+          "german": "weh|tun",
+          "arabic": "to hurt",
+          "example": "Mein Bauch tut weh.",
+          "exampleArabic": "My stomach hurts.",
+          "type": "verb"
+        },
+        {
+          "german": "krank werden",
+          "arabic": "to fall ill",
+          "example": "Ich bin krank geworden.",
+          "exampleArabic": "I got sick.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7212,6 +7324,125 @@
             "id": "a2-11-q10",
             "question": "Complete: \"Sie müssen zum ___ gehen.\" (doctor)",
             "answer": "Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q11",
+            "question": "Fill in: \"Mein Kopf tut ___.\" (hurts)",
+            "answer": "weh",
+            "hint": "wehtun"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q12",
+            "question": "Where do you buy medication?",
+            "options": [
+              "im Supermarkt",
+              "in der Apotheke",
+              "in der Schule",
+              "im Park"
+            ],
+            "answer": "in der Apotheke"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q13",
+            "question": "Fill in: \"Ich habe einen ___ beim Arzt.\" (appointment)",
+            "answer": "Termin",
+            "hint": "doctor's appointment"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q14",
+            "question": "What does \"Bauchschmerzen\" mean?",
+            "options": [
+              "headache",
+              "back pain",
+              "stomach pain",
+              "leg pain"
+            ],
+            "answer": "stomach pain"
+          },
+          {
+            "type": "matching",
+            "id": "a2-11-q15",
+            "question": "Match the body part to its meaning:",
+            "pairs": [
+              {
+                "left": "der Kopf",
+                "right": "the head"
+              },
+              {
+                "left": "der Bauch",
+                "right": "the belly"
+              },
+              {
+                "left": "der Rücken",
+                "right": "the back"
+              },
+              {
+                "left": "das Bein",
+                "right": "the leg"
+              },
+              {
+                "left": "der Arm",
+                "right": "the arm"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q16",
+            "question": "Order the words: \"Take a tablet every day\"",
+            "words": [
+              "Nimm",
+              "jeden",
+              "Tag",
+              "eine",
+              "Tablette"
+            ],
+            "answer": "Nimm jeden Tag eine Tablette"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-11-q17",
+            "question": "Say in German: \"I need a doctor's appointment\"",
+            "answer": "Ich brauche einen Termin beim Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q18",
+            "question": "Listen: \"Ich habe ___.\" (fever)",
+            "audioPrompt": "Ich habe Fieber.",
+            "answer": "Fieber",
+            "hint": "elevated temperature"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q19",
+            "question": "Which form gives a polite suggestion?",
+            "options": [
+              "Du musst!",
+              "Du sollst!",
+              "Du solltest...",
+              "Du wirst!"
+            ],
+            "answer": "Du solltest..."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q20",
+            "question": "Order the words: \"You need to go to the pharmacy\"",
+            "words": [
+              "Du",
+              "musst",
+              "in",
+              "die",
+              "Apotheke",
+              "gehen"
+            ],
+            "answer": "Du musst in die Apotheke gehen"
           }
         ]
       }

@@ -7096,6 +7096,118 @@
           "example": "Ich bin Vegetarier.",
           "exampleArabic": "Je suis végétarien.",
           "type": "adjective"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "le médecin",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "Je vais chez le médecin.",
+          "type": "noun"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "la pharmacie",
+          "gender": "die",
+          "plural": "Apotheken",
+          "example": "Die Apotheke ist offen.",
+          "exampleArabic": "La pharmacie est ouverte.",
+          "type": "noun"
+        },
+        {
+          "german": "das Medikament",
+          "arabic": "le médicament",
+          "gender": "das",
+          "plural": "Medikamente",
+          "example": "Nimm das Medikament.",
+          "exampleArabic": "Prends le médicament.",
+          "type": "noun"
+        },
+        {
+          "german": "die Tablette",
+          "arabic": "le comprimé",
+          "gender": "die",
+          "plural": "Tabletten",
+          "example": "Eine Tablette pro Tag.",
+          "exampleArabic": "Un comprimé par jour.",
+          "type": "noun"
+        },
+        {
+          "german": "der Termin",
+          "arabic": "le rendez-vous",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Ich habe einen Termin.",
+          "exampleArabic": "J'ai un rendez-vous.",
+          "type": "noun"
+        },
+        {
+          "german": "die Schmerzen",
+          "arabic": "les douleurs",
+          "gender": "pl",
+          "example": "Ich habe Schmerzen.",
+          "exampleArabic": "J'ai mal.",
+          "type": "noun"
+        },
+        {
+          "german": "der Kopf",
+          "arabic": "la tête",
+          "gender": "der",
+          "plural": "Köpfe",
+          "example": "Mein Kopf tut weh.",
+          "exampleArabic": "J'ai mal à la tête.",
+          "type": "noun"
+        },
+        {
+          "german": "der Bauch",
+          "arabic": "le ventre",
+          "gender": "der",
+          "plural": "Bäuche",
+          "example": "Bauchschmerzen sind unangenehm.",
+          "exampleArabic": "Les maux de ventre sont désagréables.",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "le dos",
+          "gender": "der",
+          "plural": "Rücken",
+          "example": "Der Rücken tut weh.",
+          "exampleArabic": "Le dos fait mal.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bein",
+          "arabic": "la jambe",
+          "gender": "das",
+          "plural": "Beine",
+          "example": "Mein Bein ist gebrochen.",
+          "exampleArabic": "Ma jambe est cassée.",
+          "type": "noun"
+        },
+        {
+          "german": "der Arm",
+          "arabic": "le bras",
+          "gender": "der",
+          "plural": "Arme",
+          "example": "Sie hebt den Arm.",
+          "exampleArabic": "Elle lève le bras.",
+          "type": "noun"
+        },
+        {
+          "german": "weh|tun",
+          "arabic": "faire mal",
+          "example": "Mein Bauch tut weh.",
+          "exampleArabic": "J'ai mal au ventre.",
+          "type": "verb"
+        },
+        {
+          "german": "krank werden",
+          "arabic": "tomber malade",
+          "example": "Ich bin krank geworden.",
+          "exampleArabic": "Je suis tombé malade.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7212,6 +7324,125 @@
             "id": "a2-11-q10",
             "question": "Complète : \"Sie müssen zum ___ gehen.\" (médecin)",
             "answer": "Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q11",
+            "question": "Complète : « Mein Kopf tut ___. » (mal)",
+            "answer": "weh",
+            "hint": "wehtun"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q12",
+            "question": "Où achète-t-on les médicaments ?",
+            "options": [
+              "im Supermarkt",
+              "in der Apotheke",
+              "in der Schule",
+              "im Park"
+            ],
+            "answer": "in der Apotheke"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q13",
+            "question": "Complète : « Ich habe einen ___ beim Arzt. » (rendez-vous)",
+            "answer": "Termin",
+            "hint": "rendez-vous médical"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q14",
+            "question": "Que signifie « Bauchschmerzen » ?",
+            "options": [
+              "mal de tête",
+              "mal de dos",
+              "mal de ventre",
+              "mal de jambe"
+            ],
+            "answer": "mal de ventre"
+          },
+          {
+            "type": "matching",
+            "id": "a2-11-q15",
+            "question": "Associe la partie du corps à son sens :",
+            "pairs": [
+              {
+                "left": "der Kopf",
+                "right": "la tête"
+              },
+              {
+                "left": "der Bauch",
+                "right": "le ventre"
+              },
+              {
+                "left": "der Rücken",
+                "right": "le dos"
+              },
+              {
+                "left": "das Bein",
+                "right": "la jambe"
+              },
+              {
+                "left": "der Arm",
+                "right": "le bras"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q16",
+            "question": "Remets dans l'ordre : « Prends un comprimé chaque jour »",
+            "words": [
+              "Nimm",
+              "jeden",
+              "Tag",
+              "eine",
+              "Tablette"
+            ],
+            "answer": "Nimm jeden Tag eine Tablette"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-11-q17",
+            "question": "Dis en allemand : « J'ai besoin d'un rendez-vous chez le médecin »",
+            "answer": "Ich brauche einen Termin beim Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q18",
+            "question": "Écoute : « Ich habe ___. » (de la fièvre)",
+            "audioPrompt": "Ich habe Fieber.",
+            "answer": "Fieber",
+            "hint": "élévation de température"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q19",
+            "question": "Quelle forme donne un conseil poli ?",
+            "options": [
+              "Du musst!",
+              "Du sollst!",
+              "Du solltest...",
+              "Du wirst!"
+            ],
+            "answer": "Du solltest..."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q20",
+            "question": "Remets dans l'ordre : « Tu dois aller à la pharmacie »",
+            "words": [
+              "Du",
+              "musst",
+              "in",
+              "die",
+              "Apotheke",
+              "gehen"
+            ],
+            "answer": "Du musst in die Apotheke gehen"
           }
         ]
       }

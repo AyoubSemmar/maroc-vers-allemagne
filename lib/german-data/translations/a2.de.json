@@ -7096,6 +7096,118 @@
           "example": "Ich bin Vegetarier.",
           "exampleArabic": "I'm a vegetarian.",
           "type": "adjective"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "Mediziner, behandelt Kranke",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "Beruf im Gesundheitswesen.",
+          "type": "noun"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "Geschäft, das Medikamente verkauft",
+          "gender": "die",
+          "plural": "Apotheken",
+          "example": "Die Apotheke ist offen.",
+          "exampleArabic": "Hier kauft man Medikamente.",
+          "type": "noun"
+        },
+        {
+          "german": "das Medikament",
+          "arabic": "Mittel gegen Krankheit",
+          "gender": "das",
+          "plural": "Medikamente",
+          "example": "Nimm das Medikament.",
+          "exampleArabic": "Heilmittel.",
+          "type": "noun"
+        },
+        {
+          "german": "die Tablette",
+          "arabic": "feste Form eines Medikaments",
+          "gender": "die",
+          "plural": "Tabletten",
+          "example": "Eine Tablette pro Tag.",
+          "exampleArabic": "Pille zum Schlucken.",
+          "type": "noun"
+        },
+        {
+          "german": "der Termin",
+          "arabic": "fest vereinbarte Zeit",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Ich habe einen Termin.",
+          "exampleArabic": "Vereinbarung mit Datum und Uhrzeit.",
+          "type": "noun"
+        },
+        {
+          "german": "die Schmerzen",
+          "arabic": "körperliches Leid, Plural",
+          "gender": "pl",
+          "example": "Ich habe Schmerzen.",
+          "exampleArabic": "Pluralwort.",
+          "type": "noun"
+        },
+        {
+          "german": "der Kopf",
+          "arabic": "oberer Teil des Körpers",
+          "gender": "der",
+          "plural": "Köpfe",
+          "example": "Mein Kopf tut weh.",
+          "exampleArabic": "Körperteil mit Gehirn.",
+          "type": "noun"
+        },
+        {
+          "german": "der Bauch",
+          "arabic": "Vorderseite des Rumpfes",
+          "gender": "der",
+          "plural": "Bäuche",
+          "example": "Bauchschmerzen sind unangenehm.",
+          "exampleArabic": "Körpermitte.",
+          "type": "noun"
+        },
+        {
+          "german": "der Rücken",
+          "arabic": "Hinterseite des Körpers",
+          "gender": "der",
+          "plural": "Rücken",
+          "example": "Der Rücken tut weh.",
+          "exampleArabic": "Gegenteil vom Bauch.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bein",
+          "arabic": "Körperteil zum Gehen",
+          "gender": "das",
+          "plural": "Beine",
+          "example": "Mein Bein ist gebrochen.",
+          "exampleArabic": "Untere Extremität.",
+          "type": "noun"
+        },
+        {
+          "german": "der Arm",
+          "arabic": "Körperteil zwischen Schulter und Hand",
+          "gender": "der",
+          "plural": "Arme",
+          "example": "Sie hebt den Arm.",
+          "exampleArabic": "Obere Extremität.",
+          "type": "noun"
+        },
+        {
+          "german": "weh|tun",
+          "arabic": "Schmerzen verursachen",
+          "example": "Mein Bauch tut weh.",
+          "exampleArabic": "Trennbares Verb mit Dativ.",
+          "type": "verb"
+        },
+        {
+          "german": "krank werden",
+          "arabic": "sich krank fühlen, eine Krankheit bekommen",
+          "example": "Ich bin krank geworden.",
+          "exampleArabic": "Verbphrase mit werden.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7212,6 +7324,125 @@
             "id": "a2-11-q10",
             "question": "Complete: \"Sie müssen zum ___ gehen.\" (doctor)",
             "answer": "Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q11",
+            "question": "Ergänze: „Mein Kopf tut ___.\" (Schmerzen)",
+            "answer": "weh",
+            "hint": "wehtun"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q12",
+            "question": "Wo kauft man Medikamente?",
+            "options": [
+              "im Supermarkt",
+              "in der Apotheke",
+              "in der Schule",
+              "im Park"
+            ],
+            "answer": "in der Apotheke"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q13",
+            "question": "Ergänze: „Ich habe einen ___ beim Arzt.\" (Termin)",
+            "answer": "Termin",
+            "hint": "Arzttermin"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q14",
+            "question": "Was bedeutet „Bauchschmerzen\"?",
+            "options": [
+              "Kopfschmerzen",
+              "Rückenschmerzen",
+              "Schmerzen im Bauch",
+              "Beinschmerzen"
+            ],
+            "answer": "Schmerzen im Bauch"
+          },
+          {
+            "type": "matching",
+            "id": "a2-11-q15",
+            "question": "Verbinde Körperteil mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "der Kopf",
+                "right": "oberer Körperteil"
+              },
+              {
+                "left": "der Bauch",
+                "right": "Körpermitte vorn"
+              },
+              {
+                "left": "der Rücken",
+                "right": "Körpermitte hinten"
+              },
+              {
+                "left": "das Bein",
+                "right": "untere Extremität"
+              },
+              {
+                "left": "der Arm",
+                "right": "obere Extremität"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q16",
+            "question": "Ordne: „Nimm jeden Tag eine Tablette\"",
+            "words": [
+              "Nimm",
+              "jeden",
+              "Tag",
+              "eine",
+              "Tablette"
+            ],
+            "answer": "Nimm jeden Tag eine Tablette"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-11-q17",
+            "question": "Sag auf Deutsch: „Ich brauche einen Termin beim Arzt\"",
+            "answer": "Ich brauche einen Termin beim Arzt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-11-q18",
+            "question": "Hör zu: „Ich habe ___.\" (Fieber)",
+            "audioPrompt": "Ich habe Fieber.",
+            "answer": "Fieber",
+            "hint": "erhöhte Körpertemperatur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-11-q19",
+            "question": "Welche Form gibt einen höflichen Rat?",
+            "options": [
+              "Du musst!",
+              "Du sollst!",
+              "Du solltest...",
+              "Du wirst!"
+            ],
+            "answer": "Du solltest..."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-11-q20",
+            "question": "Ordne: „Du musst in die Apotheke gehen\"",
+            "words": [
+              "Du",
+              "musst",
+              "in",
+              "die",
+              "Apotheke",
+              "gehen"
+            ],
+            "answer": "Du musst in die Apotheke gehen"
           }
         ]
       }
