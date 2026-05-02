@@ -848,6 +848,79 @@
           "german": "bekannt",
           "arabic": "known / famous",
           "type": "adjective"
+        },
+        {
+          "german": "die Polizei",
+          "arabic": "the police",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Verbrechen",
+          "arabic": "the crime",
+          "plural": "die Verbrechen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Untersuchung",
+          "arabic": "the investigation",
+          "plural": "die Untersuchungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "the solution",
+          "plural": "die Lösungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Sicherheit",
+          "arabic": "the security",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "verlangen",
+          "arabic": "to demand, require",
+          "type": "verb"
+        },
+        {
+          "german": "untersuchen",
+          "arabic": "to examine, investigate",
+          "type": "verb"
+        },
+        {
+          "german": "überprüfen",
+          "arabic": "to check, verify",
+          "type": "verb"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "to sell",
+          "type": "verb"
+        },
+        {
+          "german": "erfunden",
+          "arabic": "invented (PII)",
+          "type": "verb"
+        },
+        {
+          "german": "wurden",
+          "arabic": "were (Passiv plural)",
+          "type": "verb"
+        },
+        {
+          "german": "normalerweise",
+          "arabic": "normally",
+          "type": "adverb"
+        },
+        {
+          "german": "offiziell",
+          "arabic": "official",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -966,6 +1039,121 @@
               "The package is lost"
             ],
             "answer": "The package was delivered yesterday"
+          },
+          {
+            "id": "b1-02-q11",
+            "type": "fill-blank",
+            "question": "Passiv Perfekt: \"Das Problem ist gelöst ___.\" (worden)",
+            "answer": "worden",
+            "hint": "Passiv Perfekt: sein + PII + worden"
+          },
+          {
+            "id": "b1-02-q12",
+            "type": "multiple-choice",
+            "question": "\"von\" or \"durch\"? \"Das Auto wird ___ einem Mechaniker repariert.\" (person)",
+            "options": [
+              "von",
+              "durch",
+              "mit",
+              "bei"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b1-02-q13",
+            "type": "fill-blank",
+            "question": "Fill in: \"Die Fenster ___ jeden Monat geputzt.\" (Passiv Präsens)",
+            "answer": "werden",
+            "hint": "plural"
+          },
+          {
+            "id": "b1-02-q14",
+            "type": "multiple-choice",
+            "question": "Passiv Präteritum of \"machen\" with das Buch?",
+            "options": [
+              "wird gemacht",
+              "wurde gemacht",
+              "ist gemacht",
+              "macht"
+            ],
+            "answer": "wurde gemacht"
+          },
+          {
+            "id": "b1-02-q15",
+            "type": "matching",
+            "question": "Match the Passiv tense to its example:",
+            "pairs": [
+              {
+                "left": "Passiv Präsens",
+                "right": "wird gebaut"
+              },
+              {
+                "left": "Passiv Präteritum",
+                "right": "wurde gebaut"
+              },
+              {
+                "left": "Passiv Perfekt",
+                "right": "ist gebaut worden"
+              },
+              {
+                "left": "Passiv Futur",
+                "right": "wird gebaut werden"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-02-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"Cars are produced in Germany\"",
+            "words": [
+              "Autos",
+              "werden",
+              "in",
+              "Deutschland",
+              "produziert"
+            ],
+            "answer": "Autos werden in Deutschland produziert"
+          },
+          {
+            "id": "b1-02-q17",
+            "type": "speaking",
+            "question": "Say in German: \"The house was built last year\"",
+            "answer": "Das Haus wurde letztes Jahr gebaut"
+          },
+          {
+            "id": "b1-02-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Der Brief ___ ___ einem Kollegen geschickt.\" (von)",
+            "audioPrompt": "Der Brief wurde von einem Kollegen geschickt.",
+            "answer": "wurde, von",
+            "hint": "Passiv Präteritum + von"
+          },
+          {
+            "id": "b1-02-q19",
+            "type": "multiple-choice",
+            "question": "When do we use \"durch\" in Passiv?",
+            "options": [
+              "with a person",
+              "with a means/cause",
+              "with time",
+              "with a place"
+            ],
+            "answer": "with a means/cause"
+          },
+          {
+            "id": "b1-02-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"The solution was found last year\"",
+            "words": [
+              "Die",
+              "Lösung",
+              "wurde",
+              "letztes",
+              "Jahr",
+              "gefunden"
+            ],
+            "answer": "Die Lösung wurde letztes Jahr gefunden"
           }
         ]
       }

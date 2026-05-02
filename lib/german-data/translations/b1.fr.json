@@ -848,6 +848,79 @@
           "german": "bekannt",
           "arabic": "connu",
           "type": "adjective"
+        },
+        {
+          "german": "die Polizei",
+          "arabic": "la police",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Verbrechen",
+          "arabic": "le crime",
+          "plural": "die Verbrechen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Untersuchung",
+          "arabic": "l'enquête",
+          "plural": "die Untersuchungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "la solution",
+          "plural": "die Lösungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Sicherheit",
+          "arabic": "la sécurité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "verlangen",
+          "arabic": "exiger, demander",
+          "type": "verb"
+        },
+        {
+          "german": "untersuchen",
+          "arabic": "examiner, enquêter",
+          "type": "verb"
+        },
+        {
+          "german": "überprüfen",
+          "arabic": "vérifier",
+          "type": "verb"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "vendre",
+          "type": "verb"
+        },
+        {
+          "german": "erfunden",
+          "arabic": "inventé (PII)",
+          "type": "verb"
+        },
+        {
+          "german": "wurden",
+          "arabic": "ont été (Passiv plural)",
+          "type": "verb"
+        },
+        {
+          "german": "normalerweise",
+          "arabic": "normalement",
+          "type": "adverb"
+        },
+        {
+          "german": "offiziell",
+          "arabic": "officiel",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -966,6 +1039,121 @@
               "Le colis a été perdu"
             ],
             "answer": "Le colis a été livré hier"
+          },
+          {
+            "id": "b1-02-q11",
+            "type": "fill-blank",
+            "question": "Passiv Perfekt : « Das Problem ist gelöst ___. » (worden)",
+            "answer": "worden",
+            "hint": "Passiv Perfekt : sein + PII + worden"
+          },
+          {
+            "id": "b1-02-q12",
+            "type": "multiple-choice",
+            "question": "« von » ou « durch » ? « Das Auto wird ___ einem Mechaniker repariert. » (personne)",
+            "options": [
+              "von",
+              "durch",
+              "mit",
+              "bei"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b1-02-q13",
+            "type": "fill-blank",
+            "question": "Complète : « Die Fenster ___ jeden Monat geputzt. » (Passiv Präsens)",
+            "answer": "werden",
+            "hint": "Pluriel"
+          },
+          {
+            "id": "b1-02-q14",
+            "type": "multiple-choice",
+            "question": "Passiv Präteritum de « machen » avec das Buch ?",
+            "options": [
+              "wird gemacht",
+              "wurde gemacht",
+              "ist gemacht",
+              "macht"
+            ],
+            "answer": "wurde gemacht"
+          },
+          {
+            "id": "b1-02-q15",
+            "type": "matching",
+            "question": "Associe le temps Passiv à son exemple :",
+            "pairs": [
+              {
+                "left": "Passiv Präsens",
+                "right": "wird gebaut"
+              },
+              {
+                "left": "Passiv Präteritum",
+                "right": "wurde gebaut"
+              },
+              {
+                "left": "Passiv Perfekt",
+                "right": "ist gebaut worden"
+              },
+              {
+                "left": "Passiv Futur",
+                "right": "wird gebaut werden"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-02-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Les voitures sont produites en Allemagne »",
+            "words": [
+              "Autos",
+              "werden",
+              "in",
+              "Deutschland",
+              "produziert"
+            ],
+            "answer": "Autos werden in Deutschland produziert"
+          },
+          {
+            "id": "b1-02-q17",
+            "type": "speaking",
+            "question": "Dis en allemand : « La maison a été construite l'année dernière »",
+            "answer": "Das Haus wurde letztes Jahr gebaut"
+          },
+          {
+            "id": "b1-02-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Der Brief ___ ___ einem Kollegen geschickt. » (von)",
+            "audioPrompt": "Der Brief wurde von einem Kollegen geschickt.",
+            "answer": "wurde, von",
+            "hint": "Passiv Präteritum + von"
+          },
+          {
+            "id": "b1-02-q19",
+            "type": "multiple-choice",
+            "question": "Quand utilise-t-on « durch » au Passiv ?",
+            "options": [
+              "avec une personne",
+              "avec un moyen/cause",
+              "avec le temps",
+              "avec le lieu"
+            ],
+            "answer": "avec un moyen/cause"
+          },
+          {
+            "id": "b1-02-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « La solution a été trouvée l'année dernière »",
+            "words": [
+              "Die",
+              "Lösung",
+              "wurde",
+              "letztes",
+              "Jahr",
+              "gefunden"
+            ],
+            "answer": "Die Lösung wurde letztes Jahr gefunden"
           }
         ]
       }
