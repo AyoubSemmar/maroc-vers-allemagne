@@ -1423,6 +1423,87 @@
           "german": "besitzen",
           "arabic": "to own",
           "type": "verb"
+        },
+        {
+          "german": "der Eigentümer",
+          "arabic": "the owner",
+          "plural": "die Eigentümer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Mieter",
+          "arabic": "the tenant",
+          "plural": "die Mieter",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Miete",
+          "arabic": "the rent",
+          "plural": "die Mieten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Adresse",
+          "arabic": "the address",
+          "plural": "die Adressen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Gegenwart",
+          "arabic": "the present",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Vergangenheit",
+          "arabic": "the past",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "angesichts",
+          "arabic": "in view of",
+          "type": "preposition"
+        },
+        {
+          "german": "aufgrund",
+          "arabic": "due to",
+          "type": "preposition"
+        },
+        {
+          "german": "mithilfe",
+          "arabic": "with the help of",
+          "type": "preposition"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "according to",
+          "type": "preposition"
+        },
+        {
+          "german": "der Inhalt",
+          "arabic": "the content",
+          "plural": "die Inhalte",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Ursprung",
+          "arabic": "the origin",
+          "plural": "die Ursprünge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Ziel",
+          "arabic": "the goal, target",
+          "plural": "die Ziele",
+          "type": "noun",
+          "gender": "das"
         }
       ],
       "exercise": {
@@ -1546,6 +1627,123 @@
               "I don't go to Italy"
             ],
             "answer": "During the holidays I go to Italy"
+          },
+          {
+            "id": "b1-03-q11",
+            "type": "fill-blank",
+            "question": "Genitiv: \"das Ende ___ Films\" (masc)",
+            "answer": "des",
+            "hint": "der → des"
+          },
+          {
+            "id": "b1-03-q12",
+            "type": "multiple-choice",
+            "question": "Which preposition takes the Genitiv?",
+            "options": [
+              "mit",
+              "bei",
+              "wegen",
+              "zu"
+            ],
+            "answer": "wegen"
+          },
+          {
+            "id": "b1-03-q13",
+            "type": "fill-blank",
+            "question": "\"Die Tür ___ Hauses ist offen.\" (das Haus → Genitiv)",
+            "answer": "des",
+            "hint": "das → des + s/es"
+          },
+          {
+            "id": "b1-03-q14",
+            "type": "multiple-choice",
+            "question": "What ending does masc/neut noun take in Genitiv?",
+            "options": [
+              "+e",
+              "+er",
+              "+(e)s",
+              "none"
+            ],
+            "answer": "+(e)s"
+          },
+          {
+            "id": "b1-03-q15",
+            "type": "matching",
+            "question": "Match the case to its article (masc):",
+            "pairs": [
+              {
+                "left": "Nominativ",
+                "right": "der"
+              },
+              {
+                "left": "Akkusativ",
+                "right": "den"
+              },
+              {
+                "left": "Dativ",
+                "right": "dem"
+              },
+              {
+                "left": "Genitiv",
+                "right": "des"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-03-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"During summer vacation we travel to Germany\"",
+            "words": [
+              "Während",
+              "der",
+              "Sommerferien",
+              "reisen",
+              "wir",
+              "nach",
+              "Deutschland"
+            ],
+            "answer": "Während der Sommerferien reisen wir nach Deutschland"
+          },
+          {
+            "id": "b1-03-q17",
+            "type": "speaking",
+            "question": "Say in German: \"Because of the cold weather, we stayed home\"",
+            "answer": "Wegen des kalten Wetters blieben wir zu Hause"
+          },
+          {
+            "id": "b1-03-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Die Farbe ___ Augen ist blau.\" (Genitiv plural)",
+            "audioPrompt": "Die Farbe der Augen ist blau.",
+            "answer": "der",
+            "hint": "die (pl) → der"
+          },
+          {
+            "id": "b1-03-q19",
+            "type": "multiple-choice",
+            "question": "What's the alternative to Genitiv in spoken language?",
+            "options": [
+              "für + Akk",
+              "mit + Dativ",
+              "von + Dativ",
+              "bei + Dativ"
+            ],
+            "answer": "von + Dativ"
+          },
+          {
+            "id": "b1-03-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"This is my friend's book\"",
+            "words": [
+              "Das",
+              "ist",
+              "das",
+              "Buch",
+              "meines",
+              "Freundes"
+            ],
+            "answer": "Das ist das Buch meines Freundes"
           }
         ]
       }
