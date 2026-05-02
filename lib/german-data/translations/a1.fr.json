@@ -8504,41 +8504,160 @@
         "tables": [
           {
             "title": "Les articles au Nominativ vs Akkusativ",
-            "headers": ["Genre", "Nominativ (sujet)", "Akkusativ (COD)"],
+            "headers": [
+              "Genre",
+              "Nominativ (sujet)",
+              "Akkusativ (COD)"
+            ],
             "rows": [
-              { "cells": ["der (masculin)", "der Mann", "den Mann"], "highlight": true },
-              { "cells": ["die (féminin)", "die Frau", "die Frau"] },
-              { "cells": ["das (neutre)", "das Kind", "das Kind"] },
-              { "cells": ["die (pluriel)", "die Kinder", "die Kinder"] },
-              { "cells": ["ein (masculin)", "ein Mann", "einen Mann"], "highlight": true },
-              { "cells": ["eine (féminin)", "eine Frau", "eine Frau"] },
-              { "cells": ["ein (neutre)", "ein Kind", "ein Kind"] },
-              { "cells": ["kein (masculin)", "kein Tisch", "keinen Tisch"], "highlight": true }
+              {
+                "cells": [
+                  "der (masculin)",
+                  "der Mann",
+                  "den Mann"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "die (féminin)",
+                  "die Frau",
+                  "die Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "das (neutre)",
+                  "das Kind",
+                  "das Kind"
+                ]
+              },
+              {
+                "cells": [
+                  "die (pluriel)",
+                  "die Kinder",
+                  "die Kinder"
+                ]
+              },
+              {
+                "cells": [
+                  "ein (masculin)",
+                  "ein Mann",
+                  "einen Mann"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "eine (féminin)",
+                  "eine Frau",
+                  "eine Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "ein (neutre)",
+                  "ein Kind",
+                  "ein Kind"
+                ]
+              },
+              {
+                "cells": [
+                  "kein (masculin)",
+                  "kein Tisch",
+                  "keinen Tisch"
+                ],
+                "highlight": true
+              }
             ],
             "theme": "cases",
             "note": "Les lignes en couleur sont les seules qui changent — uniquement le masculin."
           },
           {
             "title": "Les pronoms personnels dans les deux cas",
-            "headers": ["Nominativ", "Akkusativ", "Sens"],
+            "headers": [
+              "Nominativ",
+              "Akkusativ",
+              "Sens"
+            ],
             "rows": [
-              { "cells": ["ich", "mich", "je / me"] },
-              { "cells": ["du", "dich", "tu / te"] },
-              { "cells": ["er", "ihn", "il / le"] },
-              { "cells": ["sie", "sie", "elle / la"] },
-              { "cells": ["es", "es", "neutre"] },
-              { "cells": ["wir", "uns", "nous"] },
-              { "cells": ["ihr", "euch", "vous (pluriel)"] },
-              { "cells": ["sie/Sie", "sie/Sie", "ils/elles / vous (poli)"] }
+              {
+                "cells": [
+                  "ich",
+                  "mich",
+                  "je / me"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "dich",
+                  "tu / te"
+                ]
+              },
+              {
+                "cells": [
+                  "er",
+                  "ihn",
+                  "il / le"
+                ]
+              },
+              {
+                "cells": [
+                  "sie",
+                  "sie",
+                  "elle / la"
+                ]
+              },
+              {
+                "cells": [
+                  "es",
+                  "es",
+                  "neutre"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "uns",
+                  "nous"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "euch",
+                  "vous (pluriel)"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "sie/Sie",
+                  "ils/elles / vous (poli)"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "mich, dich, ihn — apprends-les. Tu les utiliseras tous les jours."
           }
         ],
         "rules": [
-          { "rule": "Tous les verbes transitifs (qui prennent un COD) demandent l'Akkusativ : sehen, haben, kaufen, lieben, brauchen, lesen.", "example": "Ich liebe dich. / Ich habe einen Bruder.", "translation": "Je t'aime. / J'ai un frère." },
-          { "rule": "Avec les prépositions : durch, für, gegen, ohne, um, bis — toujours Akkusativ.", "example": "Das ist für dich. / Ich gehe ohne ihn.", "translation": "C'est pour toi. / Je pars sans lui." },
-          { "rule": "N'oublie pas den / einen / keinen — ce sont les trois articles masculins à l'Akkusativ.", "example": "Ich kaufe einen Apfel und keinen Kuchen.", "translation": "J'achète une pomme et pas de gâteau." }
+          {
+            "rule": "Tous les verbes transitifs (qui prennent un COD) demandent l'Akkusativ : sehen, haben, kaufen, lieben, brauchen, lesen.",
+            "example": "Ich liebe dich. / Ich habe einen Bruder.",
+            "translation": "Je t'aime. / J'ai un frère."
+          },
+          {
+            "rule": "Avec les prépositions : durch, für, gegen, ohne, um, bis — toujours Akkusativ.",
+            "example": "Das ist für dich. / Ich gehe ohne ihn.",
+            "translation": "C'est pour toi. / Je pars sans lui."
+          },
+          {
+            "rule": "N'oublie pas den / einen / keinen — ce sont les trois articles masculins à l'Akkusativ.",
+            "example": "Ich kaufe einen Apfel und keinen Kuchen.",
+            "translation": "J'achète une pomme et pas de gâteau."
+          }
         ],
         "examples": [
           "Ich sehe den Hund. — Je vois le chien.",
@@ -8553,73 +8672,509 @@
         "tip": "Astuce : si la question est « Wen? » ou « Was? » (qui ? quoi ?), la réponse est à l'Akkusativ. Exemple : « Wen siehst du? » — « Ich sehe **den Mann**. »"
       },
       "vocabulary": [
-        { "german": "sehen", "arabic": "voir", "example": "Ich sehe einen Vogel.", "exampleArabic": "Je vois un oiseau.", "type": "verb" },
-        { "german": "haben", "arabic": "avoir", "example": "Ich habe einen Hund.", "exampleArabic": "J'ai un chien.", "type": "verb" },
-        { "german": "kaufen", "arabic": "acheter", "example": "Sie kauft den Apfel.", "exampleArabic": "Elle achète la pomme.", "type": "verb" },
-        { "german": "lieben", "arabic": "aimer", "example": "Ich liebe dich.", "exampleArabic": "Je t'aime.", "type": "verb" },
-        { "german": "brauchen", "arabic": "avoir besoin de", "example": "Wir brauchen den Schlüssel.", "exampleArabic": "Nous avons besoin de la clé.", "type": "verb" },
-        { "german": "lesen", "arabic": "lire", "example": "Er liest die Zeitung.", "exampleArabic": "Il lit le journal.", "type": "verb" },
-        { "german": "finden", "arabic": "trouver", "example": "Ich finde das Buch gut.", "exampleArabic": "Je trouve le livre bien.", "type": "verb" },
-        { "german": "kennen", "arabic": "connaître (qqn)", "example": "Kennst du ihn?", "exampleArabic": "Le connais-tu ?", "type": "verb" },
-        { "german": "verstehen", "arabic": "comprendre", "example": "Verstehst du mich?", "exampleArabic": "Tu me comprends ?", "type": "verb" },
-        { "german": "der Mann", "arabic": "l'homme", "example": "Ich sehe den Mann.", "exampleArabic": "Je vois l'homme.", "type": "noun", "gender": "der", "plural": "die Männer" },
-        { "german": "die Frau", "arabic": "la femme", "example": "Er kennt die Frau.", "exampleArabic": "Il connaît la femme.", "type": "noun", "gender": "die", "plural": "die Frauen" },
-        { "german": "das Kind", "arabic": "l'enfant", "example": "Wir lieben das Kind.", "exampleArabic": "Nous aimons l'enfant.", "type": "noun", "gender": "das", "plural": "die Kinder" },
-        { "german": "der Hund", "arabic": "le chien", "example": "Hast du einen Hund?", "exampleArabic": "As-tu un chien ?", "type": "noun", "gender": "der", "plural": "die Hunde" },
-        { "german": "die Katze", "arabic": "le chat (féminin)", "example": "Sie hat eine Katze.", "exampleArabic": "Elle a un chat.", "type": "noun", "gender": "die", "plural": "die Katzen" },
-        { "german": "der Apfel", "arabic": "la pomme", "example": "Ich kaufe einen Apfel.", "exampleArabic": "J'achète une pomme.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
-        { "german": "das Buch", "arabic": "le livre", "example": "Ich lese das Buch.", "exampleArabic": "Je lis le livre.", "type": "noun", "gender": "das", "plural": "die Bücher" },
-        { "german": "der Schlüssel", "arabic": "la clé", "example": "Wo ist der Schlüssel?", "exampleArabic": "Où est la clé ?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
-        { "german": "die Zeitung", "arabic": "le journal", "example": "Er liest eine Zeitung.", "exampleArabic": "Il lit un journal.", "type": "noun", "gender": "die", "plural": "die Zeitungen" },
-        { "german": "der Kaffee", "arabic": "le café", "example": "Ich trinke einen Kaffee.", "exampleArabic": "Je bois un café.", "type": "noun", "gender": "der" },
-        { "german": "der Tee", "arabic": "le thé", "example": "Möchtest du einen Tee?", "exampleArabic": "Voudrais-tu un thé ?", "type": "noun", "gender": "der" },
-        { "german": "die Milch", "arabic": "le lait", "example": "Ohne Milch, bitte.", "exampleArabic": "Sans lait, s'il vous plaît.", "type": "noun", "gender": "die" },
-        { "german": "durch", "arabic": "à travers", "example": "Wir gehen durch den Park.", "exampleArabic": "Nous traversons le parc.", "type": "preposition" },
-        { "german": "für", "arabic": "pour", "example": "Das ist für dich.", "exampleArabic": "C'est pour toi.", "type": "preposition" },
-        { "german": "gegen", "arabic": "contre", "example": "Ich bin gegen den Plan.", "exampleArabic": "Je suis contre le plan.", "type": "preposition" },
-        { "german": "ohne", "arabic": "sans", "example": "Tee ohne Zucker.", "exampleArabic": "Thé sans sucre.", "type": "preposition" },
-        { "german": "um", "arabic": "autour / à (heure)", "example": "Wir treffen uns um 8.", "exampleArabic": "On se retrouve à 8 heures.", "type": "preposition" },
-        { "german": "bis", "arabic": "jusqu'à", "example": "Bis morgen!", "exampleArabic": "À demain !", "type": "preposition" },
-        { "german": "der Bruder", "arabic": "le frère", "example": "Ich habe einen Bruder.", "exampleArabic": "J'ai un frère.", "type": "noun", "gender": "der", "plural": "die Brüder" },
-        { "german": "die Schwester", "arabic": "la sœur", "example": "Sie hat eine Schwester.", "exampleArabic": "Elle a une sœur.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
-        { "german": "die Mutter", "arabic": "la mère", "example": "Ich rufe die Mutter an.", "exampleArabic": "J'appelle la mère.", "type": "noun", "gender": "die", "plural": "die Mütter" },
-        { "german": "der Vater", "arabic": "le père", "example": "Ich frage den Vater.", "exampleArabic": "Je demande au père.", "type": "noun", "gender": "der", "plural": "die Väter" },
-        { "german": "der Hunger", "arabic": "la faim", "example": "Ich habe Hunger.", "exampleArabic": "J'ai faim.", "type": "noun", "gender": "der" },
-        { "german": "der Durst", "arabic": "la soif", "example": "Hast du Durst?", "exampleArabic": "As-tu soif ?", "type": "noun", "gender": "der" }
+        {
+          "german": "sehen",
+          "arabic": "voir",
+          "example": "Ich sehe einen Vogel.",
+          "exampleArabic": "Je vois un oiseau.",
+          "type": "verb"
+        },
+        {
+          "german": "haben",
+          "arabic": "avoir",
+          "example": "Ich habe einen Hund.",
+          "exampleArabic": "J'ai un chien.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "acheter",
+          "example": "Sie kauft den Apfel.",
+          "exampleArabic": "Elle achète la pomme.",
+          "type": "verb"
+        },
+        {
+          "german": "lieben",
+          "arabic": "aimer",
+          "example": "Ich liebe dich.",
+          "exampleArabic": "Je t'aime.",
+          "type": "verb"
+        },
+        {
+          "german": "brauchen",
+          "arabic": "avoir besoin de",
+          "example": "Wir brauchen den Schlüssel.",
+          "exampleArabic": "Nous avons besoin de la clé.",
+          "type": "verb"
+        },
+        {
+          "german": "lesen",
+          "arabic": "lire",
+          "example": "Er liest die Zeitung.",
+          "exampleArabic": "Il lit le journal.",
+          "type": "verb"
+        },
+        {
+          "german": "finden",
+          "arabic": "trouver",
+          "example": "Ich finde das Buch gut.",
+          "exampleArabic": "Je trouve le livre bien.",
+          "type": "verb"
+        },
+        {
+          "german": "kennen",
+          "arabic": "connaître (qqn)",
+          "example": "Kennst du ihn?",
+          "exampleArabic": "Le connais-tu ?",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "comprendre",
+          "example": "Verstehst du mich?",
+          "exampleArabic": "Tu me comprends ?",
+          "type": "verb"
+        },
+        {
+          "german": "der Mann",
+          "arabic": "l'homme",
+          "example": "Ich sehe den Mann.",
+          "exampleArabic": "Je vois l'homme.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Männer"
+        },
+        {
+          "german": "die Frau",
+          "arabic": "la femme",
+          "example": "Er kennt die Frau.",
+          "exampleArabic": "Il connaît la femme.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Frauen"
+        },
+        {
+          "german": "das Kind",
+          "arabic": "l'enfant",
+          "example": "Wir lieben das Kind.",
+          "exampleArabic": "Nous aimons l'enfant.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kinder"
+        },
+        {
+          "german": "der Hund",
+          "arabic": "le chien",
+          "example": "Hast du einen Hund?",
+          "exampleArabic": "As-tu un chien ?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Hunde"
+        },
+        {
+          "german": "die Katze",
+          "arabic": "le chat (féminin)",
+          "example": "Sie hat eine Katze.",
+          "exampleArabic": "Elle a un chat.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Katzen"
+        },
+        {
+          "german": "der Apfel",
+          "arabic": "la pomme",
+          "example": "Ich kaufe einen Apfel.",
+          "exampleArabic": "J'achète une pomme.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Äpfel"
+        },
+        {
+          "german": "das Buch",
+          "arabic": "le livre",
+          "example": "Ich lese das Buch.",
+          "exampleArabic": "Je lis le livre.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Bücher"
+        },
+        {
+          "german": "der Schlüssel",
+          "arabic": "la clé",
+          "example": "Wo ist der Schlüssel?",
+          "exampleArabic": "Où est la clé ?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Schlüssel"
+        },
+        {
+          "german": "die Zeitung",
+          "arabic": "le journal",
+          "example": "Er liest eine Zeitung.",
+          "exampleArabic": "Il lit un journal.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Zeitungen"
+        },
+        {
+          "german": "der Kaffee",
+          "arabic": "le café",
+          "example": "Ich trinke einen Kaffee.",
+          "exampleArabic": "Je bois un café.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Tee",
+          "arabic": "le thé",
+          "example": "Möchtest du einen Tee?",
+          "exampleArabic": "Voudrais-tu un thé ?",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Milch",
+          "arabic": "le lait",
+          "example": "Ohne Milch, bitte.",
+          "exampleArabic": "Sans lait, s'il vous plaît.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "durch",
+          "arabic": "à travers",
+          "example": "Wir gehen durch den Park.",
+          "exampleArabic": "Nous traversons le parc.",
+          "type": "preposition"
+        },
+        {
+          "german": "für",
+          "arabic": "pour",
+          "example": "Das ist für dich.",
+          "exampleArabic": "C'est pour toi.",
+          "type": "preposition"
+        },
+        {
+          "german": "gegen",
+          "arabic": "contre",
+          "example": "Ich bin gegen den Plan.",
+          "exampleArabic": "Je suis contre le plan.",
+          "type": "preposition"
+        },
+        {
+          "german": "ohne",
+          "arabic": "sans",
+          "example": "Tee ohne Zucker.",
+          "exampleArabic": "Thé sans sucre.",
+          "type": "preposition"
+        },
+        {
+          "german": "um",
+          "arabic": "autour / à (heure)",
+          "example": "Wir treffen uns um 8.",
+          "exampleArabic": "On se retrouve à 8 heures.",
+          "type": "preposition"
+        },
+        {
+          "german": "bis",
+          "arabic": "jusqu'à",
+          "example": "Bis morgen!",
+          "exampleArabic": "À demain !",
+          "type": "preposition"
+        },
+        {
+          "german": "der Bruder",
+          "arabic": "le frère",
+          "example": "Ich habe einen Bruder.",
+          "exampleArabic": "J'ai un frère.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Brüder"
+        },
+        {
+          "german": "die Schwester",
+          "arabic": "la sœur",
+          "example": "Sie hat eine Schwester.",
+          "exampleArabic": "Elle a une sœur.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwestern"
+        },
+        {
+          "german": "die Mutter",
+          "arabic": "la mère",
+          "example": "Ich rufe die Mutter an.",
+          "exampleArabic": "J'appelle la mère.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Mütter"
+        },
+        {
+          "german": "der Vater",
+          "arabic": "le père",
+          "example": "Ich frage den Vater.",
+          "exampleArabic": "Je demande au père.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Väter"
+        },
+        {
+          "german": "der Hunger",
+          "arabic": "la faim",
+          "example": "Ich habe Hunger.",
+          "exampleArabic": "J'ai faim.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Durst",
+          "arabic": "la soif",
+          "example": "Hast du Durst?",
+          "exampleArabic": "As-tu soif ?",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "la table",
+          "example": "Ich suche einen Tisch.",
+          "exampleArabic": "Je cherche une table.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "das Brot",
+          "arabic": "le pain",
+          "example": "Wir kaufen das Brot.",
+          "exampleArabic": "Nous achetons le pain.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Brote"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-14-q1", "question": "Complète : « Ich sehe ___ Mann. » (der → ?)", "answer": "den", "hint": "der masculin devient den à l'Akkusativ" },
-          { "type": "multiple-choice", "id": "a1-14-q2", "question": "Quel pronom est correct ? « Ich liebe ___. »", "options": ["du", "dich", "dir", "mich"], "answer": "dich" },
-          { "type": "fill-blank", "id": "a1-14-q3", "question": "Complète : « Hast du ___ Bruder? » (masculin indéfini)", "answer": "einen", "hint": "ein → einen" },
-          { "type": "multiple-choice", "id": "a1-14-q4", "question": "Quelle phrase est correcte ?", "options": ["Ich kaufe der Apfel.", "Ich kaufe den Apfel.", "Ich kaufe das Apfel.", "Ich kaufe ein Apfel."], "answer": "Ich kaufe den Apfel." },
-          { "type": "fill-blank", "id": "a1-14-q5", "question": "Complète : « Das ist ___ dich. » (pour toi)", "answer": "für", "hint": "für + Akkusativ" },
-          { "type": "matching", "id": "a1-14-q6", "question": "Associe le pronom Nominativ à l'Akkusativ :", "pairs": [
-            { "left": "ich", "right": "mich" },
-            { "left": "du", "right": "dich" },
-            { "left": "er", "right": "ihn" },
-            { "left": "wir", "right": "uns" },
-            { "left": "ihr", "right": "euch" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-14-q7", "question": "Ordonne : « J'ai besoin de la clé »", "words": ["Ich", "brauche", "den", "Schlüssel"], "answer": "Ich brauche den Schlüssel" },
-          { "type": "speaking", "id": "a1-14-q8", "question": "Dis en allemand : « Le connais-tu ? »", "answer": "Kennst du ihn" },
-          { "type": "fill-blank", "id": "a1-14-q9", "question": "Écoute et complète : « Wir trinken ___ Kaffee. » (masculin indéfini)", "audioPrompt": "Wir trinken einen Kaffee.", "answer": "einen", "hint": "der Kaffee → einen Kaffee" },
-          { "type": "multiple-choice", "id": "a1-14-q10", "question": "Après ohne, quel est le cas correct ?", "options": ["Ohne den Mann.", "Ohne der Mann.", "Ohne dem Mann.", "Ohne ein Mann."], "answer": "Ohne den Mann." },
-          { "type": "fill-blank", "id": "a1-14-q11", "question": "« Ich habe ___ Hund. » (masculin, négation)", "answer": "keinen", "hint": "kein → keinen" },
-          { "type": "multiple-choice", "id": "a1-14-q12", "question": "Le pronom correct : « Wir lieben ___. »", "options": ["ihr", "euch", "ihn", "sie"], "answer": "euch" },
-          { "type": "fill-blank", "id": "a1-14-q13", "question": "« Ich brauche ___ Hilfe. » (féminin, indéfini)", "answer": "eine", "hint": "eine — ne change pas à l'Akk au féminin" },
-          { "type": "matching", "id": "a1-14-q14", "question": "Associe la phrase à sa traduction :", "pairs": [
-            { "left": "Ich liebe dich.", "right": "Je t'aime." },
-            { "left": "Wir lieben uns.", "right": "Nous nous aimons." },
-            { "left": "Sie kennt ihn.", "right": "Elle le connaît." },
-            { "left": "Verstehst du mich?", "right": "Tu me comprends ?" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-14-q15", "question": "Ordonne : « Je cherche une table pour deux »", "words": ["Ich", "suche", "einen", "Tisch", "für", "zwei"], "answer": "Ich suche einen Tisch für zwei" },
-          { "type": "fill-blank", "id": "a1-14-q16", "question": "Écoute : « Hast du ___ Apfel? » (masculin, indéfini)", "audioPrompt": "Hast du einen Apfel?", "answer": "einen", "hint": "der Apfel → einen Apfel" },
-          { "type": "multiple-choice", "id": "a1-14-q17", "question": "Avec gegen, le cas est :", "options": ["Nominativ", "Akkusativ", "Dativ", "Genitiv"], "answer": "Akkusativ" },
-          { "type": "speaking", "id": "a1-14-q18", "question": "Dis en allemand : « Je vois le chien et le chat »", "answer": "Ich sehe den Hund und die Katze" },
-          { "type": "fill-blank", "id": "a1-14-q19", "question": "« Sie kauft das Buch ___ ihren Vater. » (pour)", "answer": "für", "hint": "für + Akk" },
-          { "type": "multiple-choice", "id": "a1-14-q20", "question": "Quelle phrase a un Akk correct ?", "options": ["Ich liebe der Mann.", "Ich liebe den Mann.", "Ich liebe dem Mann.", "Ich liebe ein Mann."], "answer": "Ich liebe den Mann." }
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q1",
+            "question": "Complète : « Ich sehe ___ Mann. » (der → ?)",
+            "answer": "den",
+            "hint": "der masculin devient den à l'Akkusativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q2",
+            "question": "Quel pronom est correct ? « Ich liebe ___. »",
+            "options": [
+              "du",
+              "dich",
+              "dir",
+              "mich"
+            ],
+            "answer": "dich"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q3",
+            "question": "Complète : « Hast du ___ Bruder? » (masculin indéfini)",
+            "answer": "einen",
+            "hint": "ein → einen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q4",
+            "question": "Quelle phrase est correcte ?",
+            "options": [
+              "Ich kaufe der Apfel.",
+              "Ich kaufe den Apfel.",
+              "Ich kaufe das Apfel.",
+              "Ich kaufe ein Apfel."
+            ],
+            "answer": "Ich kaufe den Apfel."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q5",
+            "question": "Complète : « Das ist ___ dich. » (pour toi)",
+            "answer": "für",
+            "hint": "für + Akkusativ"
+          },
+          {
+            "type": "matching",
+            "id": "a1-14-q6",
+            "question": "Associe le pronom Nominativ à l'Akkusativ :",
+            "pairs": [
+              {
+                "left": "ich",
+                "right": "mich"
+              },
+              {
+                "left": "du",
+                "right": "dich"
+              },
+              {
+                "left": "er",
+                "right": "ihn"
+              },
+              {
+                "left": "wir",
+                "right": "uns"
+              },
+              {
+                "left": "ihr",
+                "right": "euch"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-14-q7",
+            "question": "Ordonne : « J'ai besoin de la clé »",
+            "words": [
+              "Ich",
+              "brauche",
+              "den",
+              "Schlüssel"
+            ],
+            "answer": "Ich brauche den Schlüssel"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-14-q8",
+            "question": "Dis en allemand : « Le connais-tu ? »",
+            "answer": "Kennst du ihn"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q9",
+            "question": "Écoute et complète : « Wir trinken ___ Kaffee. » (masculin indéfini)",
+            "audioPrompt": "Wir trinken einen Kaffee.",
+            "answer": "einen",
+            "hint": "der Kaffee → einen Kaffee"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q10",
+            "question": "Après ohne, quel est le cas correct ?",
+            "options": [
+              "Ohne den Mann.",
+              "Ohne der Mann.",
+              "Ohne dem Mann.",
+              "Ohne ein Mann."
+            ],
+            "answer": "Ohne den Mann."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q11",
+            "question": "« Ich habe ___ Hund. » (masculin, négation)",
+            "answer": "keinen",
+            "hint": "kein → keinen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q12",
+            "question": "Le pronom correct : « Wir lieben ___. »",
+            "options": [
+              "ihr",
+              "euch",
+              "ihn",
+              "sie"
+            ],
+            "answer": "euch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q13",
+            "question": "« Ich brauche ___ Hilfe. » (féminin, indéfini)",
+            "answer": "eine",
+            "hint": "eine — ne change pas à l'Akk au féminin"
+          },
+          {
+            "type": "matching",
+            "id": "a1-14-q14",
+            "question": "Associe la phrase à sa traduction :",
+            "pairs": [
+              {
+                "left": "Ich liebe dich.",
+                "right": "Je t'aime."
+              },
+              {
+                "left": "Wir lieben uns.",
+                "right": "Nous nous aimons."
+              },
+              {
+                "left": "Sie kennt ihn.",
+                "right": "Elle le connaît."
+              },
+              {
+                "left": "Verstehst du mich?",
+                "right": "Tu me comprends ?"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-14-q15",
+            "question": "Ordonne : « Je cherche une table pour deux »",
+            "words": [
+              "Ich",
+              "suche",
+              "einen",
+              "Tisch",
+              "für",
+              "zwei"
+            ],
+            "answer": "Ich suche einen Tisch für zwei"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q16",
+            "question": "Écoute : « Hast du ___ Apfel? » (masculin, indéfini)",
+            "audioPrompt": "Hast du einen Apfel?",
+            "answer": "einen",
+            "hint": "der Apfel → einen Apfel"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q17",
+            "question": "Avec gegen, le cas est :",
+            "options": [
+              "Nominativ",
+              "Akkusativ",
+              "Dativ",
+              "Genitiv"
+            ],
+            "answer": "Akkusativ"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-14-q18",
+            "question": "Dis en allemand : « Je vois le chien et le chat »",
+            "answer": "Ich sehe den Hund und die Katze"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-14-q19",
+            "question": "« Sie kauft das Buch ___ ihren Vater. » (pour)",
+            "answer": "für",
+            "hint": "für + Akk"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-14-q20",
+            "question": "Quelle phrase a un Akk correct ?",
+            "options": [
+              "Ich liebe der Mann.",
+              "Ich liebe den Mann.",
+              "Ich liebe dem Mann.",
+              "Ich liebe ein Mann."
+            ],
+            "answer": "Ich liebe den Mann."
+          }
         ]
       }
     },

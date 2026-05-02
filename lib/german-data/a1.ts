@@ -2850,6 +2850,8 @@ export const A1: Level = {
         { german: 'der Vater', arabic: 'الأب',          example: 'Ich frage den Vater.',          exampleArabic: 'أسأل الأب.',         type: 'noun', gender: 'der', plural: 'die Väter' },
         { german: 'der Hunger', arabic: 'الجوع',        example: 'Ich habe Hunger.',              exampleArabic: 'أنا جائع.',          type: 'noun', gender: 'der' },
         { german: 'der Durst', arabic: 'العطش',         example: 'Hast du Durst?',                exampleArabic: 'هل أنت عطشان؟',      type: 'noun', gender: 'der' },
+        { german: 'der Tisch', arabic: 'الطاولة',       example: 'Ich suche einen Tisch.',        exampleArabic: 'أبحث عن طاولة.',     type: 'noun', gender: 'der', plural: 'die Tische' },
+        { german: 'das Brot',  arabic: 'الخبز',         example: 'Wir kaufen das Brot.',          exampleArabic: 'نشتري الخبز.',       type: 'noun', gender: 'das', plural: 'die Brote' },
       ],
       exercise: {
         questions: [
