@@ -4101,6 +4101,71 @@
           "german": "andererseits",
           "arabic": "on the other hand",
           "type": "adverb"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "besides",
+          "type": "adverb"
+        },
+        {
+          "german": "darüber hinaus",
+          "arabic": "moreover",
+          "type": "phrase"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "consequently",
+          "type": "adverb"
+        },
+        {
+          "german": "infolgedessen",
+          "arabic": "as a result",
+          "type": "adverb"
+        },
+        {
+          "german": "zwar",
+          "arabic": "admittedly",
+          "type": "adverb"
+        },
+        {
+          "german": "kaum",
+          "arabic": "hardly",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "in case",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald wie möglich",
+          "arabic": "as soon as possible",
+          "type": "phrase"
+        },
+        {
+          "german": "zugleich",
+          "arabic": "at the same time",
+          "type": "adverb"
+        },
+        {
+          "german": "überdies",
+          "arabic": "in addition",
+          "type": "adverb"
+        },
+        {
+          "german": "ferner",
+          "arabic": "furthermore",
+          "type": "adverb"
+        },
+        {
+          "german": "gleichzeitig",
+          "arabic": "simultaneously",
+          "type": "adverb"
+        },
+        {
+          "german": "offensichtlich",
+          "arabic": "obviously",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -4227,6 +4292,130 @@
               "He neither studies nor plays"
             ],
             "answer": "Instead of studying, he plays on his phone"
+          },
+          {
+            "id": "b2-08-q11",
+            "type": "fill-blank",
+            "question": "Fill: \"Je mehr du übst, ___ besser wirst du.\"",
+            "answer": "desto",
+            "hint": "je ... desto"
+          },
+          {
+            "id": "b2-08-q12",
+            "type": "multiple-choice",
+            "question": "After \"als ob\" which mood?",
+            "options": [
+              "Indikativ",
+              "Konjunktiv I",
+              "Konjunktiv II",
+              "Imperativ"
+            ],
+            "answer": "Konjunktiv II"
+          },
+          {
+            "id": "b2-08-q13",
+            "type": "fill-blank",
+            "question": "\"Ich lerne, ___ ich jeden Tag lese.\" (by/through)",
+            "answer": "indem",
+            "hint": "indem = means"
+          },
+          {
+            "id": "b2-08-q14",
+            "type": "multiple-choice",
+            "question": "\"sodass\" expresses:",
+            "options": [
+              "cause",
+              "purpose",
+              "consequence",
+              "condition"
+            ],
+            "answer": "consequence"
+          },
+          {
+            "id": "b2-08-q15",
+            "type": "matching",
+            "question": "Match Konnektor to meaning:",
+            "pairs": [
+              {
+                "left": "sodass",
+                "right": "consequence"
+              },
+              {
+                "left": "je...desto",
+                "right": "balanced comparison"
+              },
+              {
+                "left": "indem",
+                "right": "means"
+              },
+              {
+                "left": "als ob",
+                "right": "as if"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "alternative"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-08-q16",
+            "type": "drag-drop",
+            "question": "Order: \"The more I learn, the more confident I become\"",
+            "words": [
+              "Je",
+              "mehr",
+              "ich",
+              "lerne,",
+              "desto",
+              "sicherer",
+              "werde",
+              "ich"
+            ],
+            "answer": "Je mehr ich lerne, desto sicherer werde ich"
+          },
+          {
+            "id": "b2-08-q17",
+            "type": "speaking",
+            "question": "Say: \"He left without saying a word\"",
+            "answer": "Er ging, ohne ein Wort zu sagen"
+          },
+          {
+            "id": "b2-08-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Er tut, ___ ob er reich wäre.\"",
+            "audioPrompt": "Er tut, als ob er reich wäre.",
+            "answer": "als",
+            "hint": "als ob + Konjunktiv II"
+          },
+          {
+            "id": "b2-08-q19",
+            "type": "multiple-choice",
+            "question": "In \"anstatt + zu + Inf\", verb position?",
+            "options": [
+              "beginning",
+              "middle",
+              "end as Infinitiv",
+              "conjugated"
+            ],
+            "answer": "end as Infinitiv"
+          },
+          {
+            "id": "b2-08-q20",
+            "type": "drag-drop",
+            "question": "Order: \"It's raining hard, so we stay home\"",
+            "words": [
+              "Es",
+              "regnet",
+              "stark,",
+              "sodass",
+              "wir",
+              "zu",
+              "Hause",
+              "bleiben"
+            ],
+            "answer": "Es regnet stark, sodass wir zu Hause bleiben"
           }
         ]
       }

@@ -4101,6 +4101,71 @@
           "german": "andererseits",
           "arabic": "d'autre part",
           "type": "adverb"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "en outre",
+          "type": "adverb"
+        },
+        {
+          "german": "darüber hinaus",
+          "arabic": "de plus",
+          "type": "phrase"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "par conséquent",
+          "type": "adverb"
+        },
+        {
+          "german": "infolgedessen",
+          "arabic": "en conséquence",
+          "type": "adverb"
+        },
+        {
+          "german": "zwar",
+          "arabic": "certes",
+          "type": "adverb"
+        },
+        {
+          "german": "kaum",
+          "arabic": "à peine",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "au cas où",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald wie möglich",
+          "arabic": "dès que possible",
+          "type": "phrase"
+        },
+        {
+          "german": "zugleich",
+          "arabic": "en même temps",
+          "type": "adverb"
+        },
+        {
+          "german": "überdies",
+          "arabic": "en plus",
+          "type": "adverb"
+        },
+        {
+          "german": "ferner",
+          "arabic": "de plus",
+          "type": "adverb"
+        },
+        {
+          "german": "gleichzeitig",
+          "arabic": "simultanément",
+          "type": "adverb"
+        },
+        {
+          "german": "offensichtlich",
+          "arabic": "manifestement",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -4227,6 +4292,130 @@
               "Il n'étudie ni ne joue"
             ],
             "answer": "Au lieu d'étudier, il joue sur son téléphone"
+          },
+          {
+            "id": "b2-08-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Je mehr du übst, ___ besser wirst du. »",
+            "answer": "desto",
+            "hint": "je ... desto"
+          },
+          {
+            "id": "b2-08-q12",
+            "type": "multiple-choice",
+            "question": "Après « als ob » quel mode ?",
+            "options": [
+              "Indikativ",
+              "Konjunktiv I",
+              "Konjunktiv II",
+              "Imperativ"
+            ],
+            "answer": "Konjunktiv II"
+          },
+          {
+            "id": "b2-08-q13",
+            "type": "fill-blank",
+            "question": "« Ich lerne, ___ ich jeden Tag lese. » (en + V)",
+            "answer": "indem",
+            "hint": "indem = moyen"
+          },
+          {
+            "id": "b2-08-q14",
+            "type": "multiple-choice",
+            "question": "« sodass » exprime :",
+            "options": [
+              "cause",
+              "but",
+              "conséquence",
+              "condition"
+            ],
+            "answer": "conséquence"
+          },
+          {
+            "id": "b2-08-q15",
+            "type": "matching",
+            "question": "Associe le Konnektor à son sens :",
+            "pairs": [
+              {
+                "left": "sodass",
+                "right": "conséquence"
+              },
+              {
+                "left": "je...desto",
+                "right": "comparaison équilibrée"
+              },
+              {
+                "left": "indem",
+                "right": "moyen"
+              },
+              {
+                "left": "als ob",
+                "right": "comme si"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "alternative"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-08-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Plus j'apprends, plus je deviens sûr »",
+            "words": [
+              "Je",
+              "mehr",
+              "ich",
+              "lerne,",
+              "desto",
+              "sicherer",
+              "werde",
+              "ich"
+            ],
+            "answer": "Je mehr ich lerne, desto sicherer werde ich"
+          },
+          {
+            "id": "b2-08-q17",
+            "type": "speaking",
+            "question": "Dis : « Il est parti sans dire un mot »",
+            "answer": "Er ging, ohne ein Wort zu sagen"
+          },
+          {
+            "id": "b2-08-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Er tut, ___ ob er reich wäre. »",
+            "audioPrompt": "Er tut, als ob er reich wäre.",
+            "answer": "als",
+            "hint": "als ob + Konjunktiv II"
+          },
+          {
+            "id": "b2-08-q19",
+            "type": "multiple-choice",
+            "question": "Dans « anstatt + zu + Inf », où est le verbe ?",
+            "options": [
+              "au début",
+              "au milieu",
+              "à la fin comme Infinitiv",
+              "conjugué"
+            ],
+            "answer": "à la fin comme Infinitiv"
+          },
+          {
+            "id": "b2-08-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Il pleut fort, alors nous restons à la maison »",
+            "words": [
+              "Es",
+              "regnet",
+              "stark,",
+              "sodass",
+              "wir",
+              "zu",
+              "Hause",
+              "bleiben"
+            ],
+            "answer": "Es regnet stark, sodass wir zu Hause bleiben"
           }
         ]
       }
