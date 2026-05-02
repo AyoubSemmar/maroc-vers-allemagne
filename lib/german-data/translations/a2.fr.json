@@ -3120,6 +3120,111 @@
           "example": "Mehr Zucker, bitte.",
           "exampleArabic": "Plus de sucre, s'il vous plaît.",
           "type": "adverb"
+        },
+        {
+          "german": "hoch / höher / am höchsten",
+          "arabic": "haut / plus haut / le plus haut",
+          "example": "Der Berg ist sehr hoch.",
+          "exampleArabic": "La montagne est très haute.",
+          "type": "adjective"
+        },
+        {
+          "german": "niedrig",
+          "arabic": "bas, faible",
+          "example": "Der Preis ist niedrig.",
+          "exampleArabic": "Le prix est bas.",
+          "type": "adjective"
+        },
+        {
+          "german": "dick",
+          "arabic": "épais, gros",
+          "example": "Ein dickes Buch.",
+          "exampleArabic": "Un livre épais.",
+          "type": "adjective"
+        },
+        {
+          "german": "dünn",
+          "arabic": "mince, fin",
+          "example": "Eine dünne Jacke.",
+          "exampleArabic": "Une veste fine.",
+          "type": "adjective"
+        },
+        {
+          "german": "stark / stärker",
+          "arabic": "fort / plus fort",
+          "example": "Er ist sehr stark.",
+          "exampleArabic": "Il est très fort.",
+          "type": "adjective"
+        },
+        {
+          "german": "schwach",
+          "arabic": "faible",
+          "example": "Der Tee ist schwach.",
+          "exampleArabic": "Le thé est léger.",
+          "type": "adjective"
+        },
+        {
+          "german": "lang / länger",
+          "arabic": "long / plus long",
+          "example": "Eine lange Straße.",
+          "exampleArabic": "Une longue rue.",
+          "type": "adjective"
+        },
+        {
+          "german": "kurz / kürzer",
+          "arabic": "court / plus court",
+          "example": "Ein kurzer Weg.",
+          "exampleArabic": "Un chemin court.",
+          "type": "adjective"
+        },
+        {
+          "german": "nah / näher",
+          "arabic": "proche / plus proche",
+          "example": "Mein Haus ist näher.",
+          "exampleArabic": "Ma maison est plus proche.",
+          "type": "adjective"
+        },
+        {
+          "german": "weit",
+          "arabic": "loin",
+          "example": "Das ist zu weit.",
+          "exampleArabic": "C'est trop loin.",
+          "type": "adjective"
+        },
+        {
+          "german": "fleißig",
+          "arabic": "travailleur",
+          "example": "Er ist fleißig.",
+          "exampleArabic": "Il est travailleur.",
+          "type": "adjective"
+        },
+        {
+          "german": "faul",
+          "arabic": "paresseux",
+          "example": "Sei nicht faul!",
+          "exampleArabic": "Ne sois pas paresseux !",
+          "type": "adjective"
+        },
+        {
+          "german": "modern",
+          "arabic": "moderne",
+          "example": "Ein modernes Haus.",
+          "exampleArabic": "Une maison moderne.",
+          "type": "adjective"
+        },
+        {
+          "german": "praktisch",
+          "arabic": "pratique",
+          "example": "Das ist sehr praktisch.",
+          "exampleArabic": "C'est très pratique.",
+          "type": "adjective"
+        },
+        {
+          "german": "besonders",
+          "arabic": "particulièrement",
+          "example": "Das ist besonders gut.",
+          "exampleArabic": "C'est particulièrement bon.",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -3236,6 +3341,127 @@
             "question": "Complétez : \"Im Sommer ist es am ___.\" (le plus chaud)",
             "answer": "heißesten",
             "hint": "Superlativ : heiß → heißesten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-05-q11",
+            "question": "Quel est le Komparativ de « lang » ?",
+            "options": [
+              "langer",
+              "länger",
+              "mehr lang",
+              "am längsten"
+            ],
+            "answer": "länger"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-05-q12",
+            "question": "Complète : « Mein Bruder ist ___ als ich. » (plus âgé)",
+            "answer": "älter",
+            "hint": "alt → älter"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-05-q13",
+            "question": "Quel est le Superlativ de « viel » ?",
+            "options": [
+              "mehr",
+              "mehrer",
+              "am meisten",
+              "am vielsten"
+            ],
+            "answer": "am meisten"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-05-q14",
+            "question": "Complète : « Sie ist genauso fleißig ___ ihre Schwester. » (égalité)",
+            "answer": "wie",
+            "hint": "égalité = wie"
+          },
+          {
+            "type": "matching",
+            "id": "a2-05-q15",
+            "question": "Associe l'adjectif au Superlativ :",
+            "pairs": [
+              {
+                "left": "gut",
+                "right": "am besten"
+              },
+              {
+                "left": "viel",
+                "right": "am meisten"
+              },
+              {
+                "left": "gern",
+                "right": "am liebsten"
+              },
+              {
+                "left": "hoch",
+                "right": "am höchsten"
+              },
+              {
+                "left": "nah",
+                "right": "am nächsten"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-05-q16",
+            "question": "Remets dans l'ordre : « C'est la maison la moins chère de la ville »",
+            "words": [
+              "Das",
+              "ist",
+              "das",
+              "billigste",
+              "Haus",
+              "in",
+              "der",
+              "Stadt"
+            ],
+            "answer": "Das ist das billigste Haus in der Stadt"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-05-q17",
+            "question": "Dis en allemand : « J'aime le plus la musique allemande »",
+            "answer": "Ich mag deutsche Musik am liebsten"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-05-q18",
+            "question": "Écoute : « Mein Auto ist ___ als deins. » (plus récent)",
+            "audioPrompt": "Mein Auto ist neuer als deins.",
+            "answer": "neuer",
+            "hint": "neu → neuer"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-05-q19",
+            "question": "Quel adjectif a une comparaison irrégulière ?",
+            "options": [
+              "klein → kleiner",
+              "gut → besser",
+              "schnell → schneller",
+              "alt → älter"
+            ],
+            "answer": "gut → besser"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-05-q20",
+            "question": "Remets dans l'ordre : « L'Allemagne est plus grande que le Maroc »",
+            "words": [
+              "Deutschland",
+              "ist",
+              "größer",
+              "als",
+              "Marokko"
+            ],
+            "answer": "Deutschland ist größer als Marokko"
           }
         ]
       }
