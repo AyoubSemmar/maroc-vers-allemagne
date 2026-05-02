@@ -1469,6 +1469,96 @@
           "gender": "die",
           "plural": "Lösungen",
           "type": "noun"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "the problem",
+          "gender": "das",
+          "plural": "Probleme",
+          "type": "noun"
+        },
+        {
+          "german": "die Schwierigkeit",
+          "arabic": "the difficulty",
+          "gender": "die",
+          "plural": "Schwierigkeiten",
+          "type": "noun"
+        },
+        {
+          "german": "das Ergebnis",
+          "arabic": "the result",
+          "gender": "das",
+          "plural": "Ergebnisse",
+          "type": "noun"
+        },
+        {
+          "german": "die Methode",
+          "arabic": "the method",
+          "gender": "die",
+          "plural": "Methoden",
+          "type": "noun"
+        },
+        {
+          "german": "der Ansatz",
+          "arabic": "the approach",
+          "gender": "der",
+          "plural": "Ansätze",
+          "type": "noun"
+        },
+        {
+          "german": "der Ausgang",
+          "arabic": "the outcome",
+          "gender": "der",
+          "plural": "Ausgänge",
+          "type": "noun"
+        },
+        {
+          "german": "die Strategie",
+          "arabic": "the strategy",
+          "gender": "die",
+          "plural": "Strategien",
+          "type": "noun"
+        },
+        {
+          "german": "das Vorgehen",
+          "arabic": "the procedure",
+          "gender": "das",
+          "type": "noun"
+        },
+        {
+          "german": "verzichtbar",
+          "arabic": "dispensable",
+          "type": "adjective"
+        },
+        {
+          "german": "unverzichtbar",
+          "arabic": "indispensable",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "required",
+          "type": "adjective"
+        },
+        {
+          "german": "bewältigen",
+          "arabic": "to overcome",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "to master",
+          "type": "verb"
+        },
+        {
+          "german": "überwinden",
+          "arabic": "to overcome",
+          "type": "verb"
+        },
+        {
+          "german": "erkennbar",
+          "arabic": "recognizable",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -1586,6 +1676,121 @@
               "essbar"
             ],
             "answer": "Diese Pilze sind nicht essbar"
+          },
+          {
+            "id": "c1-03-q11",
+            "type": "fill-blank",
+            "question": "\"Das Problem ___ sich lösen.\" (sich lassen)",
+            "answer": "lässt",
+            "hint": "lässt sich + Inf"
+          },
+          {
+            "id": "c1-03-q12",
+            "type": "multiple-choice",
+            "question": "\"Das ist denkbar\" equals:",
+            "options": [
+              "muss gedacht werden",
+              "kann gedacht werden",
+              "wurde gedacht",
+              "darf gedacht werden"
+            ],
+            "answer": "kann gedacht werden"
+          },
+          {
+            "id": "c1-03-q13",
+            "type": "fill-blank",
+            "question": "\"Das Auto ist ___.\" (repairable)",
+            "answer": "reparierbar",
+            "hint": "-bar = kann ... werden"
+          },
+          {
+            "id": "c1-03-q14",
+            "type": "multiple-choice",
+            "question": "Most formal alternative to \"kann gemacht werden\":",
+            "options": [
+              "man kann das machen",
+              "das ist machbar",
+              "das lässt sich machen",
+              "B and C"
+            ],
+            "answer": "B and C"
+          },
+          {
+            "id": "c1-03-q15",
+            "type": "matching",
+            "question": "Match equivalent forms:",
+            "pairs": [
+              {
+                "left": "Das ist machbar.",
+                "right": "Das kann gemacht werden."
+              },
+              {
+                "left": "Das ist zu lesen.",
+                "right": "Das muss gelesen werden."
+              },
+              {
+                "left": "Das lässt sich tun.",
+                "right": "Das kann getan werden."
+              },
+              {
+                "left": "Man kann das machen.",
+                "right": "Das kann gemacht werden."
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-03-q16",
+            "type": "drag-drop",
+            "question": "Order: \"This problem can be solved easily\"",
+            "words": [
+              "Dieses",
+              "Problem",
+              "lässt",
+              "sich",
+              "leicht",
+              "lösen"
+            ],
+            "answer": "Dieses Problem lässt sich leicht lösen"
+          },
+          {
+            "id": "c1-03-q17",
+            "type": "speaking",
+            "question": "Say: \"This task is feasible within a week\"",
+            "answer": "Diese Aufgabe ist innerhalb einer Woche machbar"
+          },
+          {
+            "id": "c1-03-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Das ___ verständlich.\"",
+            "audioPrompt": "Das ist verständlich.",
+            "answer": "ist",
+            "hint": "sein + adj -lich"
+          },
+          {
+            "id": "c1-03-q19",
+            "type": "multiple-choice",
+            "question": "\"Ich bekomme das Paket geliefert\" is called:",
+            "options": [
+              "Vorgangspassiv",
+              "Zustandspassiv",
+              "Rezipientenpassiv",
+              "Aktiv"
+            ],
+            "answer": "Rezipientenpassiv"
+          },
+          {
+            "id": "c1-03-q20",
+            "type": "drag-drop",
+            "question": "Order: \"The result is not predictable\"",
+            "words": [
+              "Das",
+              "Ergebnis",
+              "ist",
+              "nicht",
+              "vorhersehbar"
+            ],
+            "answer": "Das Ergebnis ist nicht vorhersehbar"
           }
         ]
       }
