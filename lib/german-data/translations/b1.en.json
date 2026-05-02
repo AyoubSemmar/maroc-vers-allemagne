@@ -3121,6 +3121,84 @@
           "arabic": "part-time",
           "type": "noun",
           "gender": "die"
+        },
+        {
+          "german": "der Beruf",
+          "arabic": "the profession",
+          "plural": "die Berufe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Praktikant",
+          "arabic": "the intern",
+          "plural": "die Praktikanten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Praktikum",
+          "arabic": "the internship",
+          "plural": "die Praktika",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Karriere",
+          "arabic": "the career",
+          "plural": "die Karrieren",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verantwortung",
+          "arabic": "the responsibility",
+          "plural": "die Verantwortungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Team",
+          "arabic": "the team",
+          "plural": "die Teams",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Branche",
+          "arabic": "the industry, sector",
+          "plural": "die Branchen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Zeugnis",
+          "arabic": "the certificate, reference",
+          "plural": "die Zeugnisse",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Kündigung",
+          "arabic": "the resignation/termination",
+          "plural": "die Kündigungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "flexibel",
+          "arabic": "flexible",
+          "type": "adjective"
+        },
+        {
+          "german": "selbstständig",
+          "arabic": "self-employed, independent",
+          "type": "adjective"
+        },
+        {
+          "german": "engagiert",
+          "arabic": "committed, engaged",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3244,6 +3322,127 @@
               "How much is the salary?"
             ],
             "answer": "Can you give me an appointment for an interview?"
+          },
+          {
+            "id": "b1-06-q11",
+            "type": "fill-blank",
+            "question": "\"Ich freue mich ___ Ihre Rückmeldung.\" (auf)",
+            "answer": "auf",
+            "hint": "sich freuen + auf + Akk"
+          },
+          {
+            "id": "b1-06-q12",
+            "type": "multiple-choice",
+            "question": "What does \"Lebenslauf\" mean?",
+            "options": [
+              "work contract",
+              "CV",
+              "cover letter",
+              "certificate"
+            ],
+            "answer": "CV"
+          },
+          {
+            "id": "b1-06-q13",
+            "type": "fill-blank",
+            "question": "\"Ich ___ mich um die Stelle.\" (sich bewerben)",
+            "answer": "bewerbe",
+            "hint": "sich bewerben with ich"
+          },
+          {
+            "id": "b1-06-q14",
+            "type": "multiple-choice",
+            "question": "How to open a formal letter?",
+            "options": [
+              "Hallo!",
+              "Hi there",
+              "Sehr geehrte Damen und Herren",
+              "Liebe Freunde"
+            ],
+            "answer": "Sehr geehrte Damen und Herren"
+          },
+          {
+            "id": "b1-06-q15",
+            "type": "matching",
+            "question": "Match the stage to the word:",
+            "pairs": [
+              {
+                "left": "search",
+                "right": "Stellensuche"
+              },
+              {
+                "left": "application",
+                "right": "Bewerbung"
+              },
+              {
+                "left": "interview",
+                "right": "Vorstellungsgespräch"
+              },
+              {
+                "left": "contract",
+                "right": "Arbeitsvertrag"
+              },
+              {
+                "left": "probation",
+                "right": "Probezeit"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-06-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"I'm looking for a new job because I resigned\"",
+            "words": [
+              "Ich",
+              "suche",
+              "eine",
+              "neue",
+              "Stelle,",
+              "weil",
+              "ich",
+              "gekündigt",
+              "habe"
+            ],
+            "answer": "Ich suche eine neue Stelle, weil ich gekündigt habe"
+          },
+          {
+            "id": "b1-06-q17",
+            "type": "speaking",
+            "question": "Say in German: \"I have five years of experience\"",
+            "answer": "Ich habe fünf Jahre Erfahrung"
+          },
+          {
+            "id": "b1-06-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Mein ___ ist im Anhang.\" (CV)",
+            "audioPrompt": "Mein Lebenslauf ist im Anhang.",
+            "answer": "Lebenslauf",
+            "hint": "CV in German"
+          },
+          {
+            "id": "b1-06-q19",
+            "type": "multiple-choice",
+            "question": "Formal closing of a letter:",
+            "options": [
+              "Tschüss!",
+              "Bis bald",
+              "Mit freundlichen Grüßen",
+              "Danke"
+            ],
+            "answer": "Mit freundlichen Grüßen"
+          },
+          {
+            "id": "b1-06-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"The contract is permanent\"",
+            "words": [
+              "Der",
+              "Arbeitsvertrag",
+              "ist",
+              "unbefristet"
+            ],
+            "answer": "Der Arbeitsvertrag ist unbefristet"
           }
         ]
       }
