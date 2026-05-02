@@ -6422,6 +6422,87 @@
           "german": "Glückwunsch!",
           "arabic": "Congratulations!",
           "type": "phrase"
+        },
+        {
+          "german": "das Goethe-Zertifikat",
+          "arabic": "offizielles Sprachzertifikat des Goethe-Instituts",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Test",
+          "arabic": "Prüfung oder Untersuchung",
+          "plural": "die Tests",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Note",
+          "arabic": "Bewertung der Leistung",
+          "plural": "die Noten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Ergebnis",
+          "arabic": "Endresultat",
+          "plural": "die Ergebnisse",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aussprache",
+          "arabic": "die Art, Wörter zu sagen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Hörverstehen",
+          "arabic": "Fähigkeit, Gehörtes zu verstehen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Leseverstehen",
+          "arabic": "Fähigkeit, Texte zu verstehen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Schreibteil",
+          "arabic": "Prüfungsteil zum Schreiben",
+          "plural": "die Schreibteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Sprechteil",
+          "arabic": "Prüfungsteil zum Sprechen",
+          "plural": "die Sprechteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "beherrschen",
+          "arabic": "etwas perfekt können",
+          "type": "verb"
+        },
+        {
+          "german": "verbessern",
+          "arabic": "besser machen",
+          "type": "verb"
+        },
+        {
+          "german": "auswendig lernen",
+          "arabic": "im Gedächtnis behalten",
+          "type": "phrase"
+        },
+        {
+          "german": "die Strategie",
+          "arabic": "geplanter Weg, Ziele zu erreichen",
+          "plural": "die Strategien",
+          "type": "noun",
+          "gender": "die"
         }
       ],
       "exercise": {
@@ -6546,6 +6627,129 @@
               "Start over"
             ],
             "answer": "Congratulations! You've completed B1"
+          },
+          {
+            "id": "b1-12-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „Ich muss meine Aussprache ___.\" (verbessern)",
+            "answer": "verbessern",
+            "hint": "verbessern = besser machen"
+          },
+          {
+            "id": "b1-12-q12",
+            "type": "multiple-choice",
+            "question": "Wie viele Teile hat die Goethe-Zertifikat-B1-Prüfung?",
+            "options": [
+              "2",
+              "3",
+              "4 (Lesen, Hören, Schreiben, Sprechen)",
+              "5"
+            ],
+            "answer": "4 (Lesen, Hören, Schreiben, Sprechen)"
+          },
+          {
+            "id": "b1-12-q13",
+            "type": "fill-blank",
+            "question": "„Ich habe die Prüfung ___.\" (bestehen → bestanden)",
+            "answer": "bestanden",
+            "hint": "bestehen → bestanden"
+          },
+          {
+            "id": "b1-12-q14",
+            "type": "multiple-choice",
+            "question": "Was bedeutet „fließend\"?",
+            "options": [
+              "mit Mühe",
+              "ohne Stocken",
+              "langsam",
+              "leise"
+            ],
+            "answer": "ohne Stocken"
+          },
+          {
+            "id": "b1-12-q15",
+            "type": "matching",
+            "question": "Verbinde Regel mit Beispiel:",
+            "pairs": [
+              {
+                "left": "Indirekte Rede",
+                "right": "Er sagt, er sei müde"
+              },
+              {
+                "left": "Konjunktiv II",
+                "right": "Ich würde gehen"
+              },
+              {
+                "left": "Passiv",
+                "right": "wird gemacht"
+              },
+              {
+                "left": "Plusquamperfekt",
+                "right": "hatte gegessen"
+              },
+              {
+                "left": "Genitiv",
+                "right": "das Haus meines Vaters"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-12-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich habe die Prüfung bestanden, weil ich viel geübt habe\"",
+            "words": [
+              "Ich",
+              "habe",
+              "die",
+              "Prüfung",
+              "bestanden,",
+              "weil",
+              "ich",
+              "viel",
+              "geübt",
+              "habe"
+            ],
+            "answer": "Ich habe die Prüfung bestanden, weil ich viel geübt habe"
+          },
+          {
+            "id": "b1-12-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich spreche Deutsch fließend\"",
+            "answer": "Ich spreche Deutsch fließend"
+          },
+          {
+            "id": "b1-12-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Ich werde meine ___ verbessern.\" (Fehler)",
+            "audioPrompt": "Ich werde meine Fehler verbessern.",
+            "answer": "Fehler",
+            "hint": "der Fehler"
+          },
+          {
+            "id": "b1-12-q19",
+            "type": "multiple-choice",
+            "question": "Nach B1 kann man:",
+            "options": [
+              "bei A1 anfangen",
+              "zu B2 wechseln",
+              "nur lesen",
+              "nichts"
+            ],
+            "answer": "zu B2 wechseln"
+          },
+          {
+            "id": "b1-12-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Glückwunsch! Du hast B1 geschafft\"",
+            "words": [
+              "Glückwunsch!",
+              "Du",
+              "hast",
+              "B1",
+              "geschafft"
+            ],
+            "answer": "Glückwunsch! Du hast B1 geschafft"
           }
         ]
       }
