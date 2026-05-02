@@ -4248,6 +4248,85 @@
           "plural": "die Zeitpunkte",
           "type": "noun",
           "gender": "der"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "morgens essen",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "in den Schlaf fallen",
+          "type": "verb"
+        },
+        {
+          "german": "beenden",
+          "arabic": "zu Ende bringen",
+          "type": "verb"
+        },
+        {
+          "german": "beginnen",
+          "arabic": "anfangen",
+          "type": "verb"
+        },
+        {
+          "german": "die Gelegenheit",
+          "arabic": "günstige Möglichkeit",
+          "plural": "die Gelegenheiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Augenblick",
+          "arabic": "kurzer Moment",
+          "plural": "die Augenblicke",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Stunde",
+          "arabic": "60 Minuten",
+          "plural": "die Stunden",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Tag",
+          "arabic": "24 Stunden",
+          "plural": "die Tage",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Woche",
+          "arabic": "sieben Tage",
+          "plural": "die Wochen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Monat",
+          "arabic": "etwa 30 Tage",
+          "plural": "die Monate",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Jahr",
+          "arabic": "12 Monate",
+          "plural": "die Jahre",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "plötzlich",
+          "arabic": "ohne Vorwarnung",
+          "type": "adverb"
+        },
+        {
+          "german": "gleichzeitig",
+          "arabic": "zur selben Zeit",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -4374,6 +4453,132 @@
               "He didn't go"
             ],
             "answer": "When he arrived, the film had already ended"
+          },
+          {
+            "id": "b1-08-q11",
+            "type": "fill-blank",
+            "question": "Plusquamperfekt: „Sie ___ schon gegangen, als ich kam.\" (sein → war)",
+            "answer": "war",
+            "hint": "Bewegung → sein"
+          },
+          {
+            "id": "b1-08-q12",
+            "type": "multiple-choice",
+            "question": "Bei welchen Verben verwendet man sein im Plusquamperfekt?",
+            "options": [
+              "transitive Verben",
+              "Bewegungs- und Veränderungsverben",
+              "reflexive Verben",
+              "alle Verben"
+            ],
+            "answer": "Bewegungs- und Veränderungsverben"
+          },
+          {
+            "id": "b1-08-q13",
+            "type": "fill-blank",
+            "question": "Ergänze: „Nachdem wir ___ hatten, gingen wir ins Kino.\" (essen → gegessen)",
+            "answer": "gegessen",
+            "hint": "essen → gegessen"
+          },
+          {
+            "id": "b1-08-q14",
+            "type": "multiple-choice",
+            "question": "Wann verwendet man Plusquamperfekt?",
+            "options": [
+              "entfernte Zukunft",
+              "Ereignis vor einem anderen Vergangenheitsereignis",
+              "Gegenwart",
+              "Imperativ"
+            ],
+            "answer": "Ereignis vor einem anderen Vergangenheitsereignis"
+          },
+          {
+            "id": "b1-08-q15",
+            "type": "matching",
+            "question": "Verbinde Zeit mit Beispiel:",
+            "pairs": [
+              {
+                "left": "Plusquamperfekt",
+                "right": "ich hatte gegessen"
+              },
+              {
+                "left": "Perfekt",
+                "right": "ich habe gegessen"
+              },
+              {
+                "left": "Präteritum",
+                "right": "ich aß"
+              },
+              {
+                "left": "Präsens",
+                "right": "ich esse"
+              },
+              {
+                "left": "Futur I",
+                "right": "ich werde essen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-08-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Nachdem der Zug abgefahren war, kam ich am Bahnhof an\"",
+            "words": [
+              "Nachdem",
+              "der",
+              "Zug",
+              "abgefahren",
+              "war,",
+              "kam",
+              "ich",
+              "am",
+              "Bahnhof",
+              "an"
+            ],
+            "answer": "Nachdem der Zug abgefahren war, kam ich am Bahnhof an"
+          },
+          {
+            "id": "b1-08-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich hatte das Buch schon gelesen\"",
+            "answer": "Ich hatte das Buch schon gelesen"
+          },
+          {
+            "id": "b1-08-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Bevor es regnete, ___ wir das Haus verlassen.\" (Plusquam mit haben)",
+            "audioPrompt": "Bevor es regnete, hatten wir das Haus verlassen.",
+            "answer": "hatten",
+            "hint": "haben + wir"
+          },
+          {
+            "id": "b1-08-q19",
+            "type": "multiple-choice",
+            "question": "Korrekte zeitliche Reihenfolge:",
+            "options": [
+              "Plusquam → Perfekt",
+              "Plusquam → Präteritum",
+              "Präteritum → Plusquam",
+              "egal"
+            ],
+            "answer": "Plusquam → Präteritum"
+          },
+          {
+            "id": "b1-08-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Nachdem ich aufgewacht war, ging ich ins Bad\"",
+            "words": [
+              "Nachdem",
+              "ich",
+              "aufgewacht",
+              "war,",
+              "ging",
+              "ich",
+              "ins",
+              "Bad"
+            ],
+            "answer": "Nachdem ich aufgewacht war, ging ich ins Bad"
           }
         ]
       }
