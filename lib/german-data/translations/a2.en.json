@@ -376,6 +376,97 @@
           "example": "Ich habe meine Oma besucht.",
           "exampleArabic": "I visited my grandma.",
           "type": "verb"
+        },
+        {
+          "german": "gespielt",
+          "arabic": "played (past)",
+          "example": "Wir haben Fußball gespielt.",
+          "exampleArabic": "We played football.",
+          "type": "verb"
+        },
+        {
+          "german": "gehört",
+          "arabic": "listened / heard (past)",
+          "example": "Ich habe Musik gehört.",
+          "exampleArabic": "I listened to music.",
+          "type": "verb"
+        },
+        {
+          "german": "getanzt",
+          "arabic": "danced (past)",
+          "example": "Sie hat getanzt.",
+          "exampleArabic": "She danced.",
+          "type": "verb"
+        },
+        {
+          "german": "gefragt",
+          "arabic": "asked (past)",
+          "example": "Er hat den Lehrer gefragt.",
+          "exampleArabic": "He asked the teacher.",
+          "type": "verb"
+        },
+        {
+          "german": "geantwortet",
+          "arabic": "answered (past)",
+          "example": "Sie hat schnell geantwortet.",
+          "exampleArabic": "She answered quickly.",
+          "type": "verb"
+        },
+        {
+          "german": "geholfen",
+          "arabic": "helped (past)",
+          "example": "Ich habe ihm geholfen.",
+          "exampleArabic": "I helped him.",
+          "type": "verb"
+        },
+        {
+          "german": "genommen",
+          "arabic": "took (past)",
+          "example": "Ich habe den Bus genommen.",
+          "exampleArabic": "I took the bus.",
+          "type": "verb"
+        },
+        {
+          "german": "gefunden",
+          "arabic": "found (past)",
+          "example": "Ich habe den Schlüssel gefunden.",
+          "exampleArabic": "I found the key.",
+          "type": "verb"
+        },
+        {
+          "german": "verstanden",
+          "arabic": "understood (past)",
+          "example": "Ich habe alles verstanden.",
+          "exampleArabic": "I understood everything.",
+          "type": "verb"
+        },
+        {
+          "german": "telefoniert",
+          "arabic": "called (on phone, past)",
+          "example": "Wir haben lange telefoniert.",
+          "exampleArabic": "We talked on the phone for a long time.",
+          "type": "verb"
+        },
+        {
+          "german": "gekocht",
+          "arabic": "cooked (past)",
+          "example": "Mama hat gekocht.",
+          "exampleArabic": "Mom cooked.",
+          "type": "verb"
+        },
+        {
+          "german": "heute Morgen",
+          "arabic": "this morning",
+          "example": "Heute Morgen habe ich Brot gekauft.",
+          "exampleArabic": "This morning I bought bread.",
+          "type": "phrase"
+        },
+        {
+          "german": "am Wochenende",
+          "arabic": "on the weekend",
+          "example": "Am Wochenende habe ich gelesen.",
+          "exampleArabic": "I read over the weekend.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -503,6 +594,125 @@
               "angerufen"
             ],
             "answer": "Hast du deine Mutter angerufen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q11",
+            "question": "Fill in: \"Wir ___ Fußball gespielt.\" (haben with wir)",
+            "answer": "haben",
+            "hint": "haben + wir = haben"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q12",
+            "question": "What is the Partizip II of helfen?",
+            "options": [
+              "gehilft",
+              "geholfen",
+              "gehelft",
+              "helfen"
+            ],
+            "answer": "geholfen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q13",
+            "question": "Fill in: \"Sie hat den Bus ___.\" (took → nehmen)",
+            "answer": "genommen",
+            "hint": "nehmen → genommen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q14",
+            "question": "Which form is correct for \"I phoned\"?",
+            "options": [
+              "Ich habe getelefoniert.",
+              "Ich habe telefoniert.",
+              "Ich bin telefoniert.",
+              "Ich habe gestellefoniert."
+            ],
+            "answer": "Ich habe telefoniert."
+          },
+          {
+            "type": "matching",
+            "id": "a2-01-q15",
+            "question": "Match infinitive to Partizip II:",
+            "pairs": [
+              {
+                "left": "finden",
+                "right": "gefunden"
+              },
+              {
+                "left": "verstehen",
+                "right": "verstanden"
+              },
+              {
+                "left": "helfen",
+                "right": "geholfen"
+              },
+              {
+                "left": "nehmen",
+                "right": "genommen"
+              },
+              {
+                "left": "kochen",
+                "right": "gekocht"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-01-q16",
+            "question": "Order the words: \"I helped my mother yesterday\"",
+            "words": [
+              "Ich",
+              "habe",
+              "gestern",
+              "meiner",
+              "Mutter",
+              "geholfen"
+            ],
+            "answer": "Ich habe gestern meiner Mutter geholfen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-01-q17",
+            "question": "Say in German: \"Did you find the key?\"",
+            "answer": "Hast du den Schlüssel gefunden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q18",
+            "question": "Listen and fill in: \"Wir haben am Wochenende viel ___.\" (read)",
+            "audioPrompt": "Wir haben am Wochenende viel gelesen.",
+            "answer": "gelesen",
+            "hint": "lesen → gelesen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q19",
+            "question": "What is the Partizip II of besuchen?",
+            "options": [
+              "gebesucht",
+              "besucht",
+              "gesucht",
+              "besuchen"
+            ],
+            "answer": "besucht"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-01-q20",
+            "question": "Order the words: \"Yesterday I understood everything\"",
+            "words": [
+              "Gestern",
+              "habe",
+              "ich",
+              "alles",
+              "verstanden"
+            ],
+            "answer": "Gestern habe ich alles verstanden"
           }
         ]
       }

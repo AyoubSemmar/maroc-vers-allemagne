@@ -376,6 +376,97 @@
           "example": "Ich habe meine Oma besucht.",
           "exampleArabic": "J'ai rendu visite à ma grand-mère.",
           "type": "verb"
+        },
+        {
+          "german": "gespielt",
+          "arabic": "joué (passé)",
+          "example": "Wir haben Fußball gespielt.",
+          "exampleArabic": "Nous avons joué au foot.",
+          "type": "verb"
+        },
+        {
+          "german": "gehört",
+          "arabic": "écouté / entendu (passé)",
+          "example": "Ich habe Musik gehört.",
+          "exampleArabic": "J'ai écouté de la musique.",
+          "type": "verb"
+        },
+        {
+          "german": "getanzt",
+          "arabic": "dansé (passé)",
+          "example": "Sie hat getanzt.",
+          "exampleArabic": "Elle a dansé.",
+          "type": "verb"
+        },
+        {
+          "german": "gefragt",
+          "arabic": "demandé (passé)",
+          "example": "Er hat den Lehrer gefragt.",
+          "exampleArabic": "Il a demandé au professeur.",
+          "type": "verb"
+        },
+        {
+          "german": "geantwortet",
+          "arabic": "répondu (passé)",
+          "example": "Sie hat schnell geantwortet.",
+          "exampleArabic": "Elle a répondu rapidement.",
+          "type": "verb"
+        },
+        {
+          "german": "geholfen",
+          "arabic": "aidé (passé)",
+          "example": "Ich habe ihm geholfen.",
+          "exampleArabic": "Je l'ai aidé.",
+          "type": "verb"
+        },
+        {
+          "german": "genommen",
+          "arabic": "pris (passé)",
+          "example": "Ich habe den Bus genommen.",
+          "exampleArabic": "J'ai pris le bus.",
+          "type": "verb"
+        },
+        {
+          "german": "gefunden",
+          "arabic": "trouvé (passé)",
+          "example": "Ich habe den Schlüssel gefunden.",
+          "exampleArabic": "J'ai trouvé la clé.",
+          "type": "verb"
+        },
+        {
+          "german": "verstanden",
+          "arabic": "compris (passé)",
+          "example": "Ich habe alles verstanden.",
+          "exampleArabic": "J'ai tout compris.",
+          "type": "verb"
+        },
+        {
+          "german": "telefoniert",
+          "arabic": "téléphoné (passé)",
+          "example": "Wir haben lange telefoniert.",
+          "exampleArabic": "Nous avons parlé longtemps au téléphone.",
+          "type": "verb"
+        },
+        {
+          "german": "gekocht",
+          "arabic": "cuisiné (passé)",
+          "example": "Mama hat gekocht.",
+          "exampleArabic": "Maman a cuisiné.",
+          "type": "verb"
+        },
+        {
+          "german": "heute Morgen",
+          "arabic": "ce matin",
+          "example": "Heute Morgen habe ich Brot gekauft.",
+          "exampleArabic": "Ce matin, j'ai acheté du pain.",
+          "type": "phrase"
+        },
+        {
+          "german": "am Wochenende",
+          "arabic": "le week-end",
+          "example": "Am Wochenende habe ich gelesen.",
+          "exampleArabic": "J'ai lu pendant le week-end.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -503,6 +594,125 @@
               "angerufen"
             ],
             "answer": "Hast du deine Mutter angerufen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q11",
+            "question": "Complète : « Wir ___ Fußball gespielt. » (haben avec wir)",
+            "answer": "haben",
+            "hint": "haben + wir = haben"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q12",
+            "question": "Quel est le Partizip II de helfen ?",
+            "options": [
+              "gehilft",
+              "geholfen",
+              "gehelft",
+              "helfen"
+            ],
+            "answer": "geholfen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q13",
+            "question": "Complète : « Sie hat den Bus ___. » (a pris → nehmen)",
+            "answer": "genommen",
+            "hint": "nehmen → genommen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q14",
+            "question": "Quelle forme est correcte pour « j'ai téléphoné » ?",
+            "options": [
+              "Ich habe getelefoniert.",
+              "Ich habe telefoniert.",
+              "Ich bin telefoniert.",
+              "Ich habe gestellefoniert."
+            ],
+            "answer": "Ich habe telefoniert."
+          },
+          {
+            "type": "matching",
+            "id": "a2-01-q15",
+            "question": "Associe l'infinitif au Partizip II :",
+            "pairs": [
+              {
+                "left": "finden",
+                "right": "gefunden"
+              },
+              {
+                "left": "verstehen",
+                "right": "verstanden"
+              },
+              {
+                "left": "helfen",
+                "right": "geholfen"
+              },
+              {
+                "left": "nehmen",
+                "right": "genommen"
+              },
+              {
+                "left": "kochen",
+                "right": "gekocht"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-01-q16",
+            "question": "Remets dans l'ordre : « J'ai aidé ma mère hier »",
+            "words": [
+              "Ich",
+              "habe",
+              "gestern",
+              "meiner",
+              "Mutter",
+              "geholfen"
+            ],
+            "answer": "Ich habe gestern meiner Mutter geholfen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-01-q17",
+            "question": "Dis en allemand : « As-tu trouvé la clé ? »",
+            "answer": "Hast du den Schlüssel gefunden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-01-q18",
+            "question": "Écoute et complète : « Wir haben am Wochenende viel ___. » (lu)",
+            "audioPrompt": "Wir haben am Wochenende viel gelesen.",
+            "answer": "gelesen",
+            "hint": "lesen → gelesen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-01-q19",
+            "question": "Quel est le Partizip II de besuchen ?",
+            "options": [
+              "gebesucht",
+              "besucht",
+              "gesucht",
+              "besuchen"
+            ],
+            "answer": "besucht"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-01-q20",
+            "question": "Remets dans l'ordre : « Hier j'ai tout compris »",
+            "words": [
+              "Gestern",
+              "habe",
+              "ich",
+              "alles",
+              "verstanden"
+            ],
+            "answer": "Gestern habe ich alles verstanden"
           }
         ]
       }
