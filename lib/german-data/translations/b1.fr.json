@@ -3683,6 +3683,82 @@
           "german": "richtig",
           "arabic": "correct / juste",
           "type": "adjective"
+        },
+        {
+          "german": "falsch",
+          "arabic": "faux",
+          "type": "adjective"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "répéter",
+          "type": "verb"
+        },
+        {
+          "german": "bestätigen",
+          "arabic": "confirmer",
+          "type": "verb"
+        },
+        {
+          "german": "leugnen",
+          "arabic": "nier",
+          "type": "verb"
+        },
+        {
+          "german": "die Wahrheit",
+          "arabic": "la vérité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lüge",
+          "arabic": "le mensonge",
+          "plural": "die Lügen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gerücht",
+          "arabic": "la rumeur",
+          "plural": "die Gerüchte",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Quelle",
+          "arabic": "la source",
+          "plural": "die Quellen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zeuge",
+          "arabic": "le témoin",
+          "plural": "die Zeugen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Journalist",
+          "arabic": "le journaliste",
+          "plural": "die Journalisten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "soi-disant",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "effectivement",
+          "type": "adverb"
+        },
+        {
+          "german": "offenbar",
+          "arabic": "apparemment",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -3806,6 +3882,127 @@
               "Elle est venue hier"
             ],
             "answer": "Elle dit qu'elle viendra demain"
+          },
+          {
+            "id": "b1-07-q11",
+            "type": "fill-blank",
+            "question": "Er sagt, er ___ Zeit. (Konjunktiv I de haben)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q12",
+            "type": "multiple-choice",
+            "question": "Direkte: « Wann kommst du? » → Indirekte:",
+            "options": [
+              "Er fragt, dass ich komme",
+              "Er fragt, ob ich komme",
+              "Er fragt, wann ich komme",
+              "Er sagt, ich komme"
+            ],
+            "answer": "Er fragt, wann ich komme"
+          },
+          {
+            "id": "b1-07-q13",
+            "type": "fill-blank",
+            "question": "Er behauptet, er ___ das Buch gelesen. (haben → Konj. I)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q14",
+            "type": "multiple-choice",
+            "question": "Au discours indirect, le verbe est habituellement à :",
+            "options": [
+              "Indikativ Präsens",
+              "Konjunktiv I",
+              "Imperativ",
+              "seulement Konjunktiv II"
+            ],
+            "answer": "Konjunktiv I"
+          },
+          {
+            "id": "b1-07-q15",
+            "type": "matching",
+            "question": "Associe le verbe à son Konj. I (er) :",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "sei"
+              },
+              {
+                "left": "haben",
+                "right": "habe"
+              },
+              {
+                "left": "werden",
+                "right": "werde"
+              },
+              {
+                "left": "können",
+                "right": "könne"
+              },
+              {
+                "left": "müssen",
+                "right": "müsse"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-07-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Elle dit qu'elle ne peut pas venir »",
+            "words": [
+              "Sie",
+              "sagt,",
+              "sie",
+              "könne",
+              "nicht",
+              "kommen"
+            ],
+            "answer": "Sie sagt, sie könne nicht kommen"
+          },
+          {
+            "id": "b1-07-q17",
+            "type": "speaking",
+            "question": "Dis : « Il prétend avoir lu le livre »",
+            "answer": "Er behauptet, er habe das Buch gelesen"
+          },
+          {
+            "id": "b1-07-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Er sagt, er ___ in Berlin. » (sein → Konj. I)",
+            "audioPrompt": "Er sagt, er sei in Berlin.",
+            "answer": "sei",
+            "hint": "sein → sei"
+          },
+          {
+            "id": "b1-07-q19",
+            "type": "multiple-choice",
+            "question": "Où trouve-t-on souvent le Konjunktiv I ?",
+            "options": [
+              "la langue quotidienne",
+              "les médias et la presse",
+              "uniquement la littérature",
+              "les publicités"
+            ],
+            "answer": "les médias et la presse"
+          },
+          {
+            "id": "b1-07-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Selon les actualités, le temps deviendra froid »",
+            "words": [
+              "Laut",
+              "den",
+              "Nachrichten",
+              "werde",
+              "das",
+              "Wetter",
+              "kalt"
+            ],
+            "answer": "Laut den Nachrichten werde das Wetter kalt"
           }
         ]
       }

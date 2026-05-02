@@ -3683,6 +3683,82 @@
           "german": "richtig",
           "arabic": "richtig",
           "type": "adjective"
+        },
+        {
+          "german": "falsch",
+          "arabic": "nicht richtig, unwahr",
+          "type": "adjective"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "noch einmal sagen",
+          "type": "verb"
+        },
+        {
+          "german": "bestätigen",
+          "arabic": "als richtig erklären",
+          "type": "verb"
+        },
+        {
+          "german": "leugnen",
+          "arabic": "abstreiten, verneinen",
+          "type": "verb"
+        },
+        {
+          "german": "die Wahrheit",
+          "arabic": "das, was wirklich ist",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lüge",
+          "arabic": "Gegenteil der Wahrheit",
+          "plural": "die Lügen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gerücht",
+          "arabic": "unbestätigte Information",
+          "plural": "die Gerüchte",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Quelle",
+          "arabic": "Herkunft einer Information",
+          "plural": "die Quellen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zeuge",
+          "arabic": "Person, die etwas gesehen hat",
+          "plural": "die Zeugen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Journalist",
+          "arabic": "Person, die für Medien schreibt",
+          "plural": "die Journalisten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "wie man behauptet",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "wirklich, in der Tat",
+          "type": "adverb"
+        },
+        {
+          "german": "offenbar",
+          "arabic": "wie es scheint",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -3806,6 +3882,127 @@
               "Sie kam gestern"
             ],
             "answer": "Sie sagt, dass sie morgen kommt"
+          },
+          {
+            "id": "b1-07-q11",
+            "type": "fill-blank",
+            "question": "Er sagt, er ___ Zeit. (Konjunktiv I von haben)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q12",
+            "type": "multiple-choice",
+            "question": "Direkte: „Wann kommst du?\" → Indirekte:",
+            "options": [
+              "Er fragt, dass ich komme",
+              "Er fragt, ob ich komme",
+              "Er fragt, wann ich komme",
+              "Er sagt, ich komme"
+            ],
+            "answer": "Er fragt, wann ich komme"
+          },
+          {
+            "id": "b1-07-q13",
+            "type": "fill-blank",
+            "question": "Er behauptet, er ___ das Buch gelesen. (haben → Konj. I)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q14",
+            "type": "multiple-choice",
+            "question": "In der indirekten Rede steht das Verb meist im:",
+            "options": [
+              "Indikativ Präsens",
+              "Konjunktiv I",
+              "Imperativ",
+              "nur Konjunktiv II"
+            ],
+            "answer": "Konjunktiv I"
+          },
+          {
+            "id": "b1-07-q15",
+            "type": "matching",
+            "question": "Verbinde Verb mit Konj. I (er):",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "sei"
+              },
+              {
+                "left": "haben",
+                "right": "habe"
+              },
+              {
+                "left": "werden",
+                "right": "werde"
+              },
+              {
+                "left": "können",
+                "right": "könne"
+              },
+              {
+                "left": "müssen",
+                "right": "müsse"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-07-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Sie sagt, sie könne nicht kommen\"",
+            "words": [
+              "Sie",
+              "sagt,",
+              "sie",
+              "könne",
+              "nicht",
+              "kommen"
+            ],
+            "answer": "Sie sagt, sie könne nicht kommen"
+          },
+          {
+            "id": "b1-07-q17",
+            "type": "speaking",
+            "question": "Sag auf Deutsch: „Er behauptet, er habe das Buch gelesen\"",
+            "answer": "Er behauptet, er habe das Buch gelesen"
+          },
+          {
+            "id": "b1-07-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Er sagt, er ___ in Berlin.\" (sein → Konj. I)",
+            "audioPrompt": "Er sagt, er sei in Berlin.",
+            "answer": "sei",
+            "hint": "sein → sei"
+          },
+          {
+            "id": "b1-07-q19",
+            "type": "multiple-choice",
+            "question": "Wo findet man Konjunktiv I oft?",
+            "options": [
+              "Alltagssprache",
+              "Nachrichten und Presse",
+              "nur Literatur",
+              "Werbung"
+            ],
+            "answer": "Nachrichten und Presse"
+          },
+          {
+            "id": "b1-07-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Laut den Nachrichten werde das Wetter kalt\"",
+            "words": [
+              "Laut",
+              "den",
+              "Nachrichten",
+              "werde",
+              "das",
+              "Wetter",
+              "kalt"
+            ],
+            "answer": "Laut den Nachrichten werde das Wetter kalt"
           }
         ]
       }

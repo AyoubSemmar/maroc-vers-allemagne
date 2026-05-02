@@ -3683,6 +3683,82 @@
           "german": "richtig",
           "arabic": "correct",
           "type": "adjective"
+        },
+        {
+          "german": "falsch",
+          "arabic": "wrong",
+          "type": "adjective"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "to repeat",
+          "type": "verb"
+        },
+        {
+          "german": "bestätigen",
+          "arabic": "to confirm",
+          "type": "verb"
+        },
+        {
+          "german": "leugnen",
+          "arabic": "to deny",
+          "type": "verb"
+        },
+        {
+          "german": "die Wahrheit",
+          "arabic": "the truth",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lüge",
+          "arabic": "the lie",
+          "plural": "die Lügen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gerücht",
+          "arabic": "the rumor",
+          "plural": "die Gerüchte",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Quelle",
+          "arabic": "the source",
+          "plural": "die Quellen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zeuge",
+          "arabic": "the witness",
+          "plural": "die Zeugen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Journalist",
+          "arabic": "the journalist",
+          "plural": "die Journalisten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "allegedly",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "actually, indeed",
+          "type": "adverb"
+        },
+        {
+          "german": "offenbar",
+          "arabic": "apparently",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -3806,6 +3882,127 @@
               "She came yesterday"
             ],
             "answer": "She says she'll come tomorrow"
+          },
+          {
+            "id": "b1-07-q11",
+            "type": "fill-blank",
+            "question": "Er sagt, er ___ Zeit. (Konjunktiv I of haben)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q12",
+            "type": "multiple-choice",
+            "question": "Direkte: \"Wann kommst du?\" → Indirekte:",
+            "options": [
+              "Er fragt, dass ich komme",
+              "Er fragt, ob ich komme",
+              "Er fragt, wann ich komme",
+              "Er sagt, ich komme"
+            ],
+            "answer": "Er fragt, wann ich komme"
+          },
+          {
+            "id": "b1-07-q13",
+            "type": "fill-blank",
+            "question": "Er behauptet, er ___ das Buch gelesen. (haben → Konj. I)",
+            "answer": "habe",
+            "hint": "haben → habe"
+          },
+          {
+            "id": "b1-07-q14",
+            "type": "multiple-choice",
+            "question": "In Indirekte Rede, the verb is usually in:",
+            "options": [
+              "Indikativ Präsens",
+              "Konjunktiv I",
+              "Imperativ",
+              "Konjunktiv II only"
+            ],
+            "answer": "Konjunktiv I"
+          },
+          {
+            "id": "b1-07-q15",
+            "type": "matching",
+            "question": "Match the verb to its Konj. I (er):",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "sei"
+              },
+              {
+                "left": "haben",
+                "right": "habe"
+              },
+              {
+                "left": "werden",
+                "right": "werde"
+              },
+              {
+                "left": "können",
+                "right": "könne"
+              },
+              {
+                "left": "müssen",
+                "right": "müsse"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-07-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"She says she can't come\"",
+            "words": [
+              "Sie",
+              "sagt,",
+              "sie",
+              "könne",
+              "nicht",
+              "kommen"
+            ],
+            "answer": "Sie sagt, sie könne nicht kommen"
+          },
+          {
+            "id": "b1-07-q17",
+            "type": "speaking",
+            "question": "Say in German: \"He claims he read the book\"",
+            "answer": "Er behauptet, er habe das Buch gelesen"
+          },
+          {
+            "id": "b1-07-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Er sagt, er ___ in Berlin.\" (sein → Konj. I)",
+            "audioPrompt": "Er sagt, er sei in Berlin.",
+            "answer": "sei",
+            "hint": "sein → sei"
+          },
+          {
+            "id": "b1-07-q19",
+            "type": "multiple-choice",
+            "question": "Where is Konjunktiv I commonly found?",
+            "options": [
+              "everyday speech",
+              "news and journalism",
+              "only literature",
+              "advertising"
+            ],
+            "answer": "news and journalism"
+          },
+          {
+            "id": "b1-07-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"According to the news, the weather will turn cold\"",
+            "words": [
+              "Laut",
+              "den",
+              "Nachrichten",
+              "werde",
+              "das",
+              "Wetter",
+              "kalt"
+            ],
+            "answer": "Laut den Nachrichten werde das Wetter kalt"
           }
         ]
       }
