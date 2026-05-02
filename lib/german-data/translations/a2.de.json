@@ -4420,6 +4420,110 @@
           "example": "Ich muss mich konzentrieren.",
           "exampleArabic": "Ich muss mich konzentrieren.",
           "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "wieder zu Kräften kommen",
+          "example": "Ich erhole mich vom Stress.",
+          "exampleArabic": "Reflexives Verb für Erholung.",
+          "type": "verb"
+        },
+        {
+          "german": "sich verspäten",
+          "arabic": "später kommen als geplant",
+          "example": "Er hat sich verspätet.",
+          "exampleArabic": "Reflexiv mit Zeitbedeutung.",
+          "type": "verb"
+        },
+        {
+          "german": "sich entscheiden",
+          "arabic": "eine Wahl treffen",
+          "example": "Ich entscheide mich für das Buch.",
+          "exampleArabic": "Reflexives Verb mit für + Akk.",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben um",
+          "arabic": "Bewerbung schreiben",
+          "example": "Ich bewerbe mich um die Stelle.",
+          "exampleArabic": "Reflexives Verb mit um + Akk.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorstellen",
+          "arabic": "den Namen sagen / sich denken",
+          "example": "Darf ich mich vorstellen?",
+          "exampleArabic": "Mit Akk = vorstellen, mit Dat = imaginieren.",
+          "type": "verb"
+        },
+        {
+          "german": "sich kümmern um",
+          "arabic": "sich für jemanden interessieren und helfen",
+          "example": "Ich kümmere mich um die Kinder.",
+          "exampleArabic": "Reflexives Verb mit um + Akk.",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "etwas Neues normal finden",
+          "example": "Ich gewöhne mich an das Wetter.",
+          "exampleArabic": "Reflexives Verb mit an + Akk.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorbereiten auf",
+          "arabic": "etwas planen, bevor man es tut",
+          "example": "Ich bereite mich auf die Prüfung vor.",
+          "exampleArabic": "Trennbares reflexives Verb.",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschweren",
+          "arabic": "Unzufriedenheit ausdrücken",
+          "example": "Er beschwert sich oft.",
+          "exampleArabic": "Reflexives Verb der Kritik.",
+          "type": "verb"
+        },
+        {
+          "german": "sich aufregen",
+          "arabic": "ärgerlich oder nervös werden",
+          "example": "Reg dich nicht auf!",
+          "exampleArabic": "Trennbares reflexives Verb.",
+          "type": "verb"
+        },
+        {
+          "german": "sich langweilen",
+          "arabic": "keine Freude haben, nichts zu tun",
+          "example": "Ich langweile mich.",
+          "exampleArabic": "Reflexives Verb der Stimmung.",
+          "type": "verb"
+        },
+        {
+          "german": "das Gesicht",
+          "arabic": "Vorderseite des Kopfes mit Augen, Nase, Mund",
+          "gender": "das",
+          "plural": "Gesichter",
+          "example": "Ich wasche mir das Gesicht.",
+          "exampleArabic": "Körperteil am Kopf.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hand",
+          "arabic": "Körperteil am Ende des Arms mit Fingern",
+          "gender": "die",
+          "plural": "Hände",
+          "example": "Wasch dir die Hände!",
+          "exampleArabic": "Körperteil zum Greifen.",
+          "type": "noun"
+        },
+        {
+          "german": "der Spiegel",
+          "arabic": "Glas, in dem man sich selbst sieht",
+          "gender": "der",
+          "plural": "Spiegel",
+          "example": "Sie schaut in den Spiegel.",
+          "exampleArabic": "Reflektierendes Glas.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -4532,6 +4636,127 @@
             "id": "a2-07-q10",
             "question": "Ergänze: \"Ihr trefft ___ um 8 Uhr.\" (ihr)",
             "answer": "euch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q11",
+            "question": "Ergänze: „Ich bereite ___ auf die Prüfung vor.\" (ich)",
+            "answer": "mich",
+            "hint": "Reflexivpronomen für ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q12",
+            "question": "Was ist das Reflexivpronomen für „wir\"?",
+            "options": [
+              "mich",
+              "sich",
+              "uns",
+              "euch"
+            ],
+            "answer": "uns"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q13",
+            "question": "Ergänze: „Ich wasche ___ die Hände.\" (Dativ — mir)",
+            "answer": "mir",
+            "hint": "mit Körperteil → Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q14",
+            "question": "Welches reflexive Verb bedeutet „eine Wahl treffen\"?",
+            "options": [
+              "sich freuen",
+              "sich entscheiden",
+              "sich treffen",
+              "sich beeilen"
+            ],
+            "answer": "sich entscheiden"
+          },
+          {
+            "type": "matching",
+            "id": "a2-07-q15",
+            "question": "Verbinde das Verb mit der Bedeutung:",
+            "pairs": [
+              {
+                "left": "sich erholen",
+                "right": "wieder zu Kräften kommen"
+              },
+              {
+                "left": "sich vorstellen",
+                "right": "den Namen sagen"
+              },
+              {
+                "left": "sich gewöhnen",
+                "right": "etwas normal finden"
+              },
+              {
+                "left": "sich bewerben",
+                "right": "Bewerbung schreiben"
+              },
+              {
+                "left": "sich verspäten",
+                "right": "zu spät kommen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q16",
+            "question": "Ordne: „Ich bewerbe mich um diese Stelle\"",
+            "words": [
+              "Ich",
+              "bewerbe",
+              "mich",
+              "um",
+              "diese",
+              "Stelle"
+            ],
+            "answer": "Ich bewerbe mich um diese Stelle"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-07-q17",
+            "question": "Sag auf Deutsch: „Ich kümmere mich jeden Tag um meine Kinder\"",
+            "answer": "Ich kümmere mich jeden Tag um meine Kinder"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q18",
+            "question": "Hör zu: „Wir freuen ___ auf das Wochenende.\"",
+            "audioPrompt": "Wir freuen uns auf das Wochenende.",
+            "answer": "uns",
+            "hint": "wir → uns"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q19",
+            "question": "Richtiger Satz für „du gewöhnst dich an das Wetter\":",
+            "options": [
+              "Du gewöhnst dich an das Wetter.",
+              "Du gewöhnst sich an das Wetter.",
+              "Du gewöhnst mich an das Wetter.",
+              "Dich gewöhnst an das Wetter."
+            ],
+            "answer": "Du gewöhnst dich an das Wetter."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q20",
+            "question": "Ordne: „Erinnerst du dich an meinen alten Freund?\"",
+            "words": [
+              "Erinnerst",
+              "du",
+              "dich",
+              "an",
+              "meinen",
+              "alten",
+              "Freund"
+            ],
+            "answer": "Erinnerst du dich an meinen alten Freund"
           }
         ]
       }

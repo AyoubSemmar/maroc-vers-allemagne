@@ -4420,6 +4420,110 @@
           "example": "Ich muss mich konzentrieren.",
           "exampleArabic": "I have to concentrate.",
           "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "to recover, recuperate",
+          "example": "Ich erhole mich vom Stress.",
+          "exampleArabic": "I'm recovering from stress.",
+          "type": "verb"
+        },
+        {
+          "german": "sich verspäten",
+          "arabic": "to be late",
+          "example": "Er hat sich verspätet.",
+          "exampleArabic": "He was late.",
+          "type": "verb"
+        },
+        {
+          "german": "sich entscheiden",
+          "arabic": "to decide",
+          "example": "Ich entscheide mich für das Buch.",
+          "exampleArabic": "I'm choosing the book.",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben um",
+          "arabic": "to apply for",
+          "example": "Ich bewerbe mich um die Stelle.",
+          "exampleArabic": "I'm applying for the position.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorstellen",
+          "arabic": "to introduce oneself / imagine",
+          "example": "Darf ich mich vorstellen?",
+          "exampleArabic": "May I introduce myself?",
+          "type": "verb"
+        },
+        {
+          "german": "sich kümmern um",
+          "arabic": "to take care of",
+          "example": "Ich kümmere mich um die Kinder.",
+          "exampleArabic": "I take care of the children.",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "to get used to",
+          "example": "Ich gewöhne mich an das Wetter.",
+          "exampleArabic": "I'm getting used to the weather.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorbereiten auf",
+          "arabic": "to prepare for",
+          "example": "Ich bereite mich auf die Prüfung vor.",
+          "exampleArabic": "I'm preparing for the exam.",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschweren",
+          "arabic": "to complain",
+          "example": "Er beschwert sich oft.",
+          "exampleArabic": "He complains often.",
+          "type": "verb"
+        },
+        {
+          "german": "sich aufregen",
+          "arabic": "to get worked up, upset",
+          "example": "Reg dich nicht auf!",
+          "exampleArabic": "Don't get upset!",
+          "type": "verb"
+        },
+        {
+          "german": "sich langweilen",
+          "arabic": "to be bored",
+          "example": "Ich langweile mich.",
+          "exampleArabic": "I'm bored.",
+          "type": "verb"
+        },
+        {
+          "german": "das Gesicht",
+          "arabic": "the face",
+          "gender": "das",
+          "plural": "Gesichter",
+          "example": "Ich wasche mir das Gesicht.",
+          "exampleArabic": "I'm washing my face.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hand",
+          "arabic": "the hand",
+          "gender": "die",
+          "plural": "Hände",
+          "example": "Wasch dir die Hände!",
+          "exampleArabic": "Wash your hands!",
+          "type": "noun"
+        },
+        {
+          "german": "der Spiegel",
+          "arabic": "the mirror",
+          "gender": "der",
+          "plural": "Spiegel",
+          "example": "Sie schaut in den Spiegel.",
+          "exampleArabic": "She looks in the mirror.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -4532,6 +4636,127 @@
             "id": "a2-07-q10",
             "question": "Complete: \"Ihr trefft ___ um 8 Uhr.\" (you all)",
             "answer": "euch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q11",
+            "question": "Fill in: \"Ich bereite ___ auf die Prüfung vor.\" (I)",
+            "answer": "mich",
+            "hint": "reflexive pronoun for ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q12",
+            "question": "What's the reflexive pronoun for \"wir\"?",
+            "options": [
+              "mich",
+              "sich",
+              "uns",
+              "euch"
+            ],
+            "answer": "uns"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q13",
+            "question": "Fill in: \"Ich wasche ___ die Hände.\" (Dativ — myself)",
+            "answer": "mir",
+            "hint": "with body part → Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q14",
+            "question": "Which reflexive verb means \"to decide\"?",
+            "options": [
+              "sich freuen",
+              "sich entscheiden",
+              "sich treffen",
+              "sich beeilen"
+            ],
+            "answer": "sich entscheiden"
+          },
+          {
+            "type": "matching",
+            "id": "a2-07-q15",
+            "question": "Match the verb to its meaning:",
+            "pairs": [
+              {
+                "left": "sich erholen",
+                "right": "to recover"
+              },
+              {
+                "left": "sich vorstellen",
+                "right": "to introduce oneself"
+              },
+              {
+                "left": "sich gewöhnen",
+                "right": "to get used to"
+              },
+              {
+                "left": "sich bewerben",
+                "right": "to apply"
+              },
+              {
+                "left": "sich verspäten",
+                "right": "to be late"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q16",
+            "question": "Order the words: \"I'm applying for this position\"",
+            "words": [
+              "Ich",
+              "bewerbe",
+              "mich",
+              "um",
+              "diese",
+              "Stelle"
+            ],
+            "answer": "Ich bewerbe mich um diese Stelle"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-07-q17",
+            "question": "Say in German: \"I take care of my children every day\"",
+            "answer": "Ich kümmere mich jeden Tag um meine Kinder"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q18",
+            "question": "Listen: \"Wir freuen ___ auf das Wochenende.\"",
+            "audioPrompt": "Wir freuen uns auf das Wochenende.",
+            "answer": "uns",
+            "hint": "wir → uns"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q19",
+            "question": "Correct sentence for \"you're getting used to the weather\":",
+            "options": [
+              "Du gewöhnst dich an das Wetter.",
+              "Du gewöhnst sich an das Wetter.",
+              "Du gewöhnst mich an das Wetter.",
+              "Dich gewöhnst an das Wetter."
+            ],
+            "answer": "Du gewöhnst dich an das Wetter."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q20",
+            "question": "Order the words: \"Do you remember my old friend?\"",
+            "words": [
+              "Erinnerst",
+              "du",
+              "dich",
+              "an",
+              "meinen",
+              "alten",
+              "Freund"
+            ],
+            "answer": "Erinnerst du dich an meinen alten Freund"
           }
         ]
       }

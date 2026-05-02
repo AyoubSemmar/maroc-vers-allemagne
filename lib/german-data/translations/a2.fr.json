@@ -4420,6 +4420,110 @@
           "example": "Ich muss mich konzentrieren.",
           "exampleArabic": "Je dois me concentrer.",
           "type": "verb"
+        },
+        {
+          "german": "sich erholen",
+          "arabic": "se rétablir, récupérer",
+          "example": "Ich erhole mich vom Stress.",
+          "exampleArabic": "Je récupère du stress.",
+          "type": "verb"
+        },
+        {
+          "german": "sich verspäten",
+          "arabic": "être en retard",
+          "example": "Er hat sich verspätet.",
+          "exampleArabic": "Il est arrivé en retard.",
+          "type": "verb"
+        },
+        {
+          "german": "sich entscheiden",
+          "arabic": "se décider",
+          "example": "Ich entscheide mich für das Buch.",
+          "exampleArabic": "Je me décide pour le livre.",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben um",
+          "arabic": "postuler à",
+          "example": "Ich bewerbe mich um die Stelle.",
+          "exampleArabic": "Je postule pour ce poste.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorstellen",
+          "arabic": "se présenter / s'imaginer",
+          "example": "Darf ich mich vorstellen?",
+          "exampleArabic": "Puis-je me présenter ?",
+          "type": "verb"
+        },
+        {
+          "german": "sich kümmern um",
+          "arabic": "s'occuper de",
+          "example": "Ich kümmere mich um die Kinder.",
+          "exampleArabic": "Je m'occupe des enfants.",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "s'habituer à",
+          "example": "Ich gewöhne mich an das Wetter.",
+          "exampleArabic": "Je m'habitue au temps.",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorbereiten auf",
+          "arabic": "se préparer à",
+          "example": "Ich bereite mich auf die Prüfung vor.",
+          "exampleArabic": "Je me prépare pour l'examen.",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschweren",
+          "arabic": "se plaindre",
+          "example": "Er beschwert sich oft.",
+          "exampleArabic": "Il se plaint souvent.",
+          "type": "verb"
+        },
+        {
+          "german": "sich aufregen",
+          "arabic": "s'énerver",
+          "example": "Reg dich nicht auf!",
+          "exampleArabic": "Ne t'énerve pas !",
+          "type": "verb"
+        },
+        {
+          "german": "sich langweilen",
+          "arabic": "s'ennuyer",
+          "example": "Ich langweile mich.",
+          "exampleArabic": "Je m'ennuie.",
+          "type": "verb"
+        },
+        {
+          "german": "das Gesicht",
+          "arabic": "le visage",
+          "gender": "das",
+          "plural": "Gesichter",
+          "example": "Ich wasche mir das Gesicht.",
+          "exampleArabic": "Je me lave le visage.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hand",
+          "arabic": "la main",
+          "gender": "die",
+          "plural": "Hände",
+          "example": "Wasch dir die Hände!",
+          "exampleArabic": "Lave-toi les mains !",
+          "type": "noun"
+        },
+        {
+          "german": "der Spiegel",
+          "arabic": "le miroir",
+          "gender": "der",
+          "plural": "Spiegel",
+          "example": "Sie schaut in den Spiegel.",
+          "exampleArabic": "Elle se regarde dans le miroir.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -4532,6 +4636,127 @@
             "id": "a2-07-q10",
             "question": "Complétez : \"Ihr trefft ___ um 8 Uhr.\" (vous)",
             "answer": "euch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q11",
+            "question": "Complète : « Ich bereite ___ auf die Prüfung vor. » (je)",
+            "answer": "mich",
+            "hint": "pronom réfléchi pour ich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q12",
+            "question": "Quel est le pronom réfléchi pour « wir » ?",
+            "options": [
+              "mich",
+              "sich",
+              "uns",
+              "euch"
+            ],
+            "answer": "uns"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q13",
+            "question": "Complète : « Ich wasche ___ die Hände. » (Dativ — me)",
+            "answer": "mir",
+            "hint": "avec partie du corps → Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q14",
+            "question": "Quel verbe réfléchi signifie « décider » ?",
+            "options": [
+              "sich freuen",
+              "sich entscheiden",
+              "sich treffen",
+              "sich beeilen"
+            ],
+            "answer": "sich entscheiden"
+          },
+          {
+            "type": "matching",
+            "id": "a2-07-q15",
+            "question": "Associe le verbe à son sens :",
+            "pairs": [
+              {
+                "left": "sich erholen",
+                "right": "récupérer"
+              },
+              {
+                "left": "sich vorstellen",
+                "right": "se présenter"
+              },
+              {
+                "left": "sich gewöhnen",
+                "right": "s'habituer"
+              },
+              {
+                "left": "sich bewerben",
+                "right": "postuler"
+              },
+              {
+                "left": "sich verspäten",
+                "right": "être en retard"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q16",
+            "question": "Remets dans l'ordre : « Je postule pour ce poste »",
+            "words": [
+              "Ich",
+              "bewerbe",
+              "mich",
+              "um",
+              "diese",
+              "Stelle"
+            ],
+            "answer": "Ich bewerbe mich um diese Stelle"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-07-q17",
+            "question": "Dis en allemand : « Je m'occupe de mes enfants tous les jours »",
+            "answer": "Ich kümmere mich jeden Tag um meine Kinder"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-07-q18",
+            "question": "Écoute : « Wir freuen ___ auf das Wochenende. »",
+            "audioPrompt": "Wir freuen uns auf das Wochenende.",
+            "answer": "uns",
+            "hint": "wir → uns"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-07-q19",
+            "question": "Phrase correcte pour « tu t'habitues au temps » :",
+            "options": [
+              "Du gewöhnst dich an das Wetter.",
+              "Du gewöhnst sich an das Wetter.",
+              "Du gewöhnst mich an das Wetter.",
+              "Dich gewöhnst an das Wetter."
+            ],
+            "answer": "Du gewöhnst dich an das Wetter."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-07-q20",
+            "question": "Remets dans l'ordre : « Te souviens-tu de mon vieil ami ? »",
+            "words": [
+              "Erinnerst",
+              "du",
+              "dich",
+              "an",
+              "meinen",
+              "alten",
+              "Freund"
+            ],
+            "answer": "Erinnerst du dich an meinen alten Freund"
           }
         ]
       }
