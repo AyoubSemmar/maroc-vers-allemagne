@@ -4821,6 +4821,71 @@
           "german": "klug",
           "arabic": "smart",
           "type": "adjective"
+        },
+        {
+          "german": "dumm",
+          "arabic": "stupid",
+          "type": "adjective"
+        },
+        {
+          "german": "lustig",
+          "arabic": "funny",
+          "type": "adjective"
+        },
+        {
+          "german": "traurig",
+          "arabic": "sad",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "happy",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "tired",
+          "type": "adjective"
+        },
+        {
+          "german": "reich",
+          "arabic": "rich",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "poor",
+          "type": "adjective"
+        },
+        {
+          "german": "hoch",
+          "arabic": "high",
+          "type": "adjective"
+        },
+        {
+          "german": "tief",
+          "arabic": "deep",
+          "type": "adjective"
+        },
+        {
+          "german": "breit",
+          "arabic": "wide",
+          "type": "adjective"
+        },
+        {
+          "german": "schmal",
+          "arabic": "narrow",
+          "type": "adjective"
+        },
+        {
+          "german": "hell",
+          "arabic": "bright, light",
+          "type": "adjective"
+        },
+        {
+          "german": "dunkel",
+          "arabic": "dark",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -4939,6 +5004,121 @@
               "My neighbors are unfriendly"
             ],
             "answer": "The friendly neighbors live next door"
+          },
+          {
+            "id": "b1-09-q11",
+            "type": "fill-blank",
+            "question": "Mit einer ___ Frau. (young — junge → fem)",
+            "answer": "jungen",
+            "hint": "einer + jungen in Dativ"
+          },
+          {
+            "id": "b1-09-q12",
+            "type": "multiple-choice",
+            "question": "No article, Nominativ masc:",
+            "options": [
+              "guter Kaffee",
+              "gute Kaffee",
+              "gutes Kaffee",
+              "guten Kaffee"
+            ],
+            "answer": "guter Kaffee"
+          },
+          {
+            "id": "b1-09-q13",
+            "type": "fill-blank",
+            "question": "After der/die/das + Akkusativ masc: \"den ___ Mann\"",
+            "answer": "großen",
+            "hint": "der shows gender → -en"
+          },
+          {
+            "id": "b1-09-q14",
+            "type": "multiple-choice",
+            "question": "The golden rule:",
+            "options": [
+              "always -e",
+              "if article is clear: -e/-en",
+              "always -er",
+              "always -es"
+            ],
+            "answer": "if article is clear: -e/-en"
+          },
+          {
+            "id": "b1-09-q15",
+            "type": "matching",
+            "question": "Match the phrase to the ending:",
+            "pairs": [
+              {
+                "left": "ein ___ Mann (Nom)",
+                "right": "großer"
+              },
+              {
+                "left": "eine ___ Frau (Nom)",
+                "right": "große"
+              },
+              {
+                "left": "ein ___ Kind (Nom)",
+                "right": "großes"
+              },
+              {
+                "left": "der ___ Mann (Nom)",
+                "right": "große"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-09-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"I'm buying a new car\"",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "neues",
+              "Auto"
+            ],
+            "answer": "Ich kaufe ein neues Auto"
+          },
+          {
+            "id": "b1-09-q17",
+            "type": "speaking",
+            "question": "Say: \"The friendly neighbors help me\"",
+            "answer": "Die freundlichen Nachbarn helfen mir"
+          },
+          {
+            "id": "b1-09-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Ich trinke ___ Kaffee.\" (no article, masc)",
+            "audioPrompt": "Ich trinke heißen Kaffee.",
+            "answer": "heißen",
+            "hint": "no article + Akkusativ masc → -en"
+          },
+          {
+            "id": "b1-09-q19",
+            "type": "multiple-choice",
+            "question": "In \"ein kleines Kind\", why -es?",
+            "options": [
+              "word in Akkusativ",
+              "das Kind is neuter, ein doesn't show gender → adjective takes -es",
+              "always -es",
+              "plural"
+            ],
+            "answer": "das Kind is neuter, ein doesn't show gender → adjective takes -es"
+          },
+          {
+            "id": "b1-09-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"I live in an old house\"",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einem",
+              "alten",
+              "Haus"
+            ],
+            "answer": "Ich wohne in einem alten Haus"
           }
         ]
       }

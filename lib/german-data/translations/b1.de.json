@@ -4821,6 +4821,71 @@
           "german": "klug",
           "arabic": "klug",
           "type": "adjective"
+        },
+        {
+          "german": "dumm",
+          "arabic": "nicht klug",
+          "type": "adjective"
+        },
+        {
+          "german": "lustig",
+          "arabic": "humorvoll, amüsant",
+          "type": "adjective"
+        },
+        {
+          "german": "traurig",
+          "arabic": "Gegenteil von glücklich",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "voller Freude",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "ohne Energie, schläfrig",
+          "type": "adjective"
+        },
+        {
+          "german": "reich",
+          "arabic": "viel Geld besitzend",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "wenig Geld habend",
+          "type": "adjective"
+        },
+        {
+          "german": "hoch",
+          "arabic": "weit nach oben reichend",
+          "type": "adjective"
+        },
+        {
+          "german": "tief",
+          "arabic": "weit nach unten reichend",
+          "type": "adjective"
+        },
+        {
+          "german": "breit",
+          "arabic": "weit von Seite zu Seite",
+          "type": "adjective"
+        },
+        {
+          "german": "schmal",
+          "arabic": "Gegenteil von breit",
+          "type": "adjective"
+        },
+        {
+          "german": "hell",
+          "arabic": "Gegenteil von dunkel",
+          "type": "adjective"
+        },
+        {
+          "german": "dunkel",
+          "arabic": "wenig Licht",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -4939,6 +5004,121 @@
               "Meine Nachbarn sind unfreundlich"
             ],
             "answer": "Die freundlichen Nachbarn wohnen nebenan"
+          },
+          {
+            "id": "b1-09-q11",
+            "type": "fill-blank",
+            "question": "Mit einer ___ Frau. (jung → feminin)",
+            "answer": "jungen",
+            "hint": "einer + jungen im Dativ"
+          },
+          {
+            "id": "b1-09-q12",
+            "type": "multiple-choice",
+            "question": "Ohne Artikel Nominativ maskulin:",
+            "options": [
+              "guter Kaffee",
+              "gute Kaffee",
+              "gutes Kaffee",
+              "guten Kaffee"
+            ],
+            "answer": "guter Kaffee"
+          },
+          {
+            "id": "b1-09-q13",
+            "type": "fill-blank",
+            "question": "Nach der/die/das + Akkusativ maskulin: „den ___ Mann\"",
+            "answer": "großen",
+            "hint": "der zeigt das Geschlecht → -en"
+          },
+          {
+            "id": "b1-09-q14",
+            "type": "multiple-choice",
+            "question": "Die goldene Regel:",
+            "options": [
+              "immer -e",
+              "wenn der Artikel deutlich ist: -e/-en",
+              "immer -er",
+              "immer -es"
+            ],
+            "answer": "wenn der Artikel deutlich ist: -e/-en"
+          },
+          {
+            "id": "b1-09-q15",
+            "type": "matching",
+            "question": "Verbinde Phrase mit Endung:",
+            "pairs": [
+              {
+                "left": "ein ___ Mann (Nom)",
+                "right": "großer"
+              },
+              {
+                "left": "eine ___ Frau (Nom)",
+                "right": "große"
+              },
+              {
+                "left": "ein ___ Kind (Nom)",
+                "right": "großes"
+              },
+              {
+                "left": "der ___ Mann (Nom)",
+                "right": "große"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-09-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich kaufe ein neues Auto\"",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "neues",
+              "Auto"
+            ],
+            "answer": "Ich kaufe ein neues Auto"
+          },
+          {
+            "id": "b1-09-q17",
+            "type": "speaking",
+            "question": "Sag: „Die freundlichen Nachbarn helfen mir\"",
+            "answer": "Die freundlichen Nachbarn helfen mir"
+          },
+          {
+            "id": "b1-09-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Ich trinke ___ Kaffee.\" (ohne Artikel, maskulin)",
+            "audioPrompt": "Ich trinke heißen Kaffee.",
+            "answer": "heißen",
+            "hint": "ohne Artikel + Akkusativ mask → -en"
+          },
+          {
+            "id": "b1-09-q19",
+            "type": "multiple-choice",
+            "question": "Bei „ein kleines Kind\", warum -es?",
+            "options": [
+              "Akkusativ",
+              "das Kind ist neutrum, ein zeigt das Geschlecht nicht → Adjektiv -es",
+              "immer -es",
+              "Plural"
+            ],
+            "answer": "das Kind ist neutrum, ein zeigt das Geschlecht nicht → Adjektiv -es"
+          },
+          {
+            "id": "b1-09-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich wohne in einem alten Haus\"",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einem",
+              "alten",
+              "Haus"
+            ],
+            "answer": "Ich wohne in einem alten Haus"
           }
         ]
       }

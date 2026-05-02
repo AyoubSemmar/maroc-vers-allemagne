@@ -4821,6 +4821,71 @@
           "german": "klug",
           "arabic": "intelligent(e) / malin",
           "type": "adjective"
+        },
+        {
+          "german": "dumm",
+          "arabic": "bête",
+          "type": "adjective"
+        },
+        {
+          "german": "lustig",
+          "arabic": "amusant",
+          "type": "adjective"
+        },
+        {
+          "german": "traurig",
+          "arabic": "triste",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "heureux",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué",
+          "type": "adjective"
+        },
+        {
+          "german": "reich",
+          "arabic": "riche",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "pauvre",
+          "type": "adjective"
+        },
+        {
+          "german": "hoch",
+          "arabic": "haut",
+          "type": "adjective"
+        },
+        {
+          "german": "tief",
+          "arabic": "profond",
+          "type": "adjective"
+        },
+        {
+          "german": "breit",
+          "arabic": "large",
+          "type": "adjective"
+        },
+        {
+          "german": "schmal",
+          "arabic": "étroit",
+          "type": "adjective"
+        },
+        {
+          "german": "hell",
+          "arabic": "clair",
+          "type": "adjective"
+        },
+        {
+          "german": "dunkel",
+          "arabic": "sombre",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -4939,6 +5004,121 @@
               "Mes voisins sont antipathiques"
             ],
             "answer": "Les voisins sympathiques habitent à côté"
+          },
+          {
+            "id": "b1-09-q11",
+            "type": "fill-blank",
+            "question": "Mit einer ___ Frau. (jeune femme — junge → fém.)",
+            "answer": "jungen",
+            "hint": "einer + jungen au Dativ"
+          },
+          {
+            "id": "b1-09-q12",
+            "type": "multiple-choice",
+            "question": "Sans article Nominativ masc :",
+            "options": [
+              "guter Kaffee",
+              "gute Kaffee",
+              "gutes Kaffee",
+              "guten Kaffee"
+            ],
+            "answer": "guter Kaffee"
+          },
+          {
+            "id": "b1-09-q13",
+            "type": "fill-blank",
+            "question": "Après der/die/das + Akkusativ masc : « den ___ Mann »",
+            "answer": "großen",
+            "hint": "l'article der montre le genre → -en"
+          },
+          {
+            "id": "b1-09-q14",
+            "type": "multiple-choice",
+            "question": "La règle d'or :",
+            "options": [
+              "toujours -e",
+              "si l'article est clair : -e/-en",
+              "toujours -er",
+              "toujours -es"
+            ],
+            "answer": "si l'article est clair : -e/-en"
+          },
+          {
+            "id": "b1-09-q15",
+            "type": "matching",
+            "question": "Associe la phrase à la terminaison :",
+            "pairs": [
+              {
+                "left": "ein ___ Mann (Nom)",
+                "right": "großer"
+              },
+              {
+                "left": "eine ___ Frau (Nom)",
+                "right": "große"
+              },
+              {
+                "left": "ein ___ Kind (Nom)",
+                "right": "großes"
+              },
+              {
+                "left": "der ___ Mann (Nom)",
+                "right": "große"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-09-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « J'achète une nouvelle voiture »",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "neues",
+              "Auto"
+            ],
+            "answer": "Ich kaufe ein neues Auto"
+          },
+          {
+            "id": "b1-09-q17",
+            "type": "speaking",
+            "question": "Dis : « Les voisins sympathiques m'aident »",
+            "answer": "Die freundlichen Nachbarn helfen mir"
+          },
+          {
+            "id": "b1-09-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Ich trinke ___ Kaffee. » (sans article, masc.)",
+            "audioPrompt": "Ich trinke heißen Kaffee.",
+            "answer": "heißen",
+            "hint": "sans article + Akkusativ masc → -en"
+          },
+          {
+            "id": "b1-09-q19",
+            "type": "multiple-choice",
+            "question": "Dans « ein kleines Kind », pourquoi -es ?",
+            "options": [
+              "mot à l'Akkusativ",
+              "das Kind est neutre, l'article ein ne montre pas le genre → l'adjectif prend -es",
+              "toujours -es",
+              "pluriel"
+            ],
+            "answer": "das Kind est neutre, l'article ein ne montre pas le genre → l'adjectif prend -es"
+          },
+          {
+            "id": "b1-09-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « J'habite dans une vieille maison »",
+            "words": [
+              "Ich",
+              "wohne",
+              "in",
+              "einem",
+              "alten",
+              "Haus"
+            ],
+            "answer": "Ich wohne in einem alten Haus"
           }
         ]
       }
