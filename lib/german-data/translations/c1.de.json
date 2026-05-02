@@ -5499,6 +5499,102 @@
           "gender": "die",
           "plural": "Strophen",
           "type": "noun"
+        },
+        {
+          "german": "der Reim",
+          "arabic": "Gleichklang am Versende",
+          "gender": "der",
+          "plural": "Reime",
+          "type": "noun"
+        },
+        {
+          "german": "der Stil",
+          "arabic": "Schreibweise",
+          "gender": "der",
+          "plural": "Stile",
+          "type": "noun"
+        },
+        {
+          "german": "das Stilmittel",
+          "arabic": "rhetorisches Werkzeug",
+          "gender": "das",
+          "plural": "Stilmittel",
+          "type": "noun"
+        },
+        {
+          "german": "die Allegorie",
+          "arabic": "verdeutlichende Bildersprache",
+          "gender": "die",
+          "plural": "Allegorien",
+          "type": "noun"
+        },
+        {
+          "german": "die Ironie",
+          "arabic": "bewusst gegenteilige Aussage",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Spannung",
+          "arabic": "Anziehung der Aufmerksamkeit",
+          "gender": "die",
+          "plural": "Spannungen",
+          "type": "noun"
+        },
+        {
+          "german": "das Werk",
+          "arabic": "literarisches Erzeugnis",
+          "gender": "das",
+          "plural": "Werke",
+          "type": "noun"
+        },
+        {
+          "german": "die Figur",
+          "arabic": "Charakter im Werk",
+          "gender": "die",
+          "plural": "Figuren",
+          "type": "noun"
+        },
+        {
+          "german": "das Thema",
+          "arabic": "zentrales Anliegen",
+          "gender": "das",
+          "plural": "Themen",
+          "type": "noun"
+        },
+        {
+          "german": "die Botschaft",
+          "arabic": "Aussage eines Werkes",
+          "gender": "die",
+          "plural": "Botschaften",
+          "type": "noun"
+        },
+        {
+          "german": "die Perspektive",
+          "arabic": "Blickwinkel",
+          "gender": "die",
+          "plural": "Perspektiven",
+          "type": "noun"
+        },
+        {
+          "german": "rezipieren",
+          "arabic": "wahrnehmen, lesen (Fachsprache)",
+          "type": "verb"
+        },
+        {
+          "german": "erzählen",
+          "arabic": "eine Geschichte schildern",
+          "type": "verb"
+        },
+        {
+          "german": "darstellen",
+          "arabic": "präsentieren, abbilden",
+          "type": "verb"
+        },
+        {
+          "german": "tragisch",
+          "arabic": "von Tragik geprägt",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5617,6 +5713,125 @@
               "Theater"
             ],
             "answer": "Brecht entwickelte das epische Theater"
+          },
+          {
+            "id": "c1-10-q11",
+            "type": "fill-blank",
+            "question": "„Das ___ verdeutlicht die innere Zerrissenheit.\" (Symbol)",
+            "answer": "Symbol",
+            "hint": "das Symbol"
+          },
+          {
+            "id": "c1-10-q12",
+            "type": "multiple-choice",
+            "question": "Hauptgattungen der Literatur:",
+            "options": [
+              "Epik, Lyrik, Dramatik",
+              "Roman, Gedicht, Oper",
+              "Brief, Tagebuch, Bericht",
+              "nur Roman"
+            ],
+            "answer": "Epik, Lyrik, Dramatik"
+          },
+          {
+            "id": "c1-10-q13",
+            "type": "fill-blank",
+            "question": "„Die Erzählung wird aus der Perspektive des ___ erzählt.\" (Erzähler)",
+            "answer": "Erzählers",
+            "hint": "der Erzähler → Genitiv"
+          },
+          {
+            "id": "c1-10-q14",
+            "type": "multiple-choice",
+            "question": "Kafka gehört zu:",
+            "options": [
+              "Klassik",
+              "Romantik",
+              "Expressionismus",
+              "Realismus"
+            ],
+            "answer": "Expressionismus"
+          },
+          {
+            "id": "c1-10-q15",
+            "type": "matching",
+            "question": "Verbinde:",
+            "pairs": [
+              {
+                "left": "Goethe",
+                "right": "Klassik"
+              },
+              {
+                "left": "Kafka",
+                "right": "Expressionismus"
+              },
+              {
+                "left": "Brecht",
+                "right": "episches Theater"
+              },
+              {
+                "left": "Brüder Grimm",
+                "right": "Romantik"
+              },
+              {
+                "left": "Fontane",
+                "right": "Realismus"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-10-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Der Roman spielt im 19. Jahrhundert\"",
+            "words": [
+              "Der",
+              "Roman",
+              "spielt",
+              "im",
+              "19.",
+              "Jahrhundert"
+            ],
+            "answer": "Der Roman spielt im 19. Jahrhundert"
+          },
+          {
+            "id": "c1-10-q17",
+            "type": "speaking",
+            "question": "Sag: „Diese Geschichte handelt von einem Generationenkonflikt\"",
+            "answer": "Diese Geschichte handelt von einem Generationenkonflikt"
+          },
+          {
+            "id": "c1-10-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Die ___ steht im Mittelpunkt.\" (Hauptfigur)",
+            "audioPrompt": "Die Hauptfigur steht im Mittelpunkt.",
+            "answer": "Hauptfigur",
+            "hint": "die Hauptfigur"
+          },
+          {
+            "id": "c1-10-q19",
+            "type": "multiple-choice",
+            "question": "„Sturm und Drang\" ist:",
+            "options": [
+              "Sturm und Druck",
+              "deutsche Literaturepoche",
+              "Buch von Schiller",
+              "Roman von Goethe"
+            ],
+            "answer": "deutsche Literaturepoche"
+          },
+          {
+            "id": "c1-10-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Der Autor verwendet mehrere Metaphern\"",
+            "words": [
+              "Der",
+              "Autor",
+              "verwendet",
+              "mehrere",
+              "Metaphern"
+            ],
+            "answer": "Der Autor verwendet mehrere Metaphern"
           }
         ]
       }
