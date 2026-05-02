@@ -5199,6 +5199,91 @@
           "german": "sich einschreiben",
           "arabic": "to enroll",
           "type": "verb"
+        },
+        {
+          "german": "die Mensa",
+          "arabic": "the university canteen",
+          "plural": "die Mensen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Bibliothek",
+          "arabic": "the library",
+          "plural": "die Bibliotheken",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Hörsaal",
+          "arabic": "the lecture hall",
+          "plural": "die Hörsäle",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Studiengang",
+          "arabic": "the degree program",
+          "plural": "die Studiengänge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Note",
+          "arabic": "the grade",
+          "plural": "die Noten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Wissen",
+          "arabic": "the knowledge",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Forschung",
+          "arabic": "the research",
+          "plural": "die Forschungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Doktorarbeit",
+          "arabic": "the doctoral thesis",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Promotion",
+          "arabic": "the doctorate",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "forschen",
+          "arabic": "to research",
+          "type": "verb"
+        },
+        {
+          "german": "verfassen",
+          "arabic": "to compose, write",
+          "type": "verb"
+        },
+        {
+          "german": "recherchieren",
+          "arabic": "to research (academic)",
+          "type": "verb"
+        },
+        {
+          "german": "akademisch",
+          "arabic": "academic",
+          "type": "adjective"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "theoretical",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5321,6 +5406,123 @@
               "She will take the exam tomorrow"
             ],
             "answer": "She passed the exam and is very happy"
+          },
+          {
+            "id": "b2-10-q11",
+            "type": "fill-blank",
+            "question": "\"Ich ___ mich an der Uni ein.\" (enroll)",
+            "answer": "schreibe",
+            "hint": "sich einschreiben separable"
+          },
+          {
+            "id": "b2-10-q12",
+            "type": "multiple-choice",
+            "question": "Difference between Vorlesung and Seminar?",
+            "options": [
+              "same",
+              "Vorlesung large theory, Seminar small applied",
+              "Vorlesung writing only",
+              "Seminar PhD only"
+            ],
+            "answer": "Vorlesung large theory, Seminar small applied"
+          },
+          {
+            "id": "b2-10-q13",
+            "type": "fill-blank",
+            "question": "\"Ich bewerbe mich ___ ein Stipendium.\" (for)",
+            "answer": "für",
+            "hint": "sich bewerben für"
+          },
+          {
+            "id": "b2-10-q14",
+            "type": "multiple-choice",
+            "question": "Bachelor in German:",
+            "options": [
+              "der Master",
+              "das Bachelor",
+              "der Bachelor",
+              "die Promotion"
+            ],
+            "answer": "der Bachelor"
+          },
+          {
+            "id": "b2-10-q15",
+            "type": "matching",
+            "question": "Match phase to duration:",
+            "pairs": [
+              {
+                "left": "Bachelor",
+                "right": "3 years"
+              },
+              {
+                "left": "Master",
+                "right": "2 years"
+              },
+              {
+                "left": "Promotion",
+                "right": "3-5 years"
+              },
+              {
+                "left": "Abitur",
+                "right": "end of high school"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-10-q16",
+            "type": "drag-drop",
+            "question": "Order: \"I'm writing my master thesis on AI\"",
+            "words": [
+              "Ich",
+              "schreibe",
+              "meine",
+              "Masterarbeit",
+              "über",
+              "KI"
+            ],
+            "answer": "Ich schreibe meine Masterarbeit über KI"
+          },
+          {
+            "id": "b2-10-q17",
+            "type": "speaking",
+            "question": "Say: \"I study computer science at Berlin University\"",
+            "answer": "Ich studiere Informatik an der Universität Berlin"
+          },
+          {
+            "id": "b2-10-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Ich lege eine ___ ab.\" (exam)",
+            "audioPrompt": "Ich lege eine Prüfung ab.",
+            "answer": "Prüfung",
+            "hint": "eine Prüfung ablegen"
+          },
+          {
+            "id": "b2-10-q19",
+            "type": "multiple-choice",
+            "question": "What is DAAD?",
+            "options": [
+              "a type of exam",
+              "a German scholarship",
+              "a PhD program",
+              "a faculty"
+            ],
+            "answer": "a German scholarship"
+          },
+          {
+            "id": "b2-10-q20",
+            "type": "drag-drop",
+            "question": "Order: \"After the Bachelor I'll do a Master\"",
+            "words": [
+              "Nach",
+              "dem",
+              "Bachelor",
+              "mache",
+              "ich",
+              "einen",
+              "Master"
+            ],
+            "answer": "Nach dem Bachelor mache ich einen Master"
           }
         ]
       }

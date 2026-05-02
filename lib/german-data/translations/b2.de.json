@@ -5199,6 +5199,91 @@
           "german": "sich einschreiben",
           "arabic": "to enroll",
           "type": "verb"
+        },
+        {
+          "german": "die Mensa",
+          "arabic": "Essensausgabe der Uni",
+          "plural": "die Mensen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Bibliothek",
+          "arabic": "Sammlung von Büchern zum Ausleihen",
+          "plural": "die Bibliotheken",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Hörsaal",
+          "arabic": "großer Vortragsraum",
+          "plural": "die Hörsäle",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Studiengang",
+          "arabic": "Fachrichtung des Studiums",
+          "plural": "die Studiengänge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Note",
+          "arabic": "Bewertung von Leistung",
+          "plural": "die Noten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Wissen",
+          "arabic": "Gesamtheit von Kenntnissen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Forschung",
+          "arabic": "wissenschaftliche Untersuchung",
+          "plural": "die Forschungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Doktorarbeit",
+          "arabic": "Dissertation für Doktorgrad",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Promotion",
+          "arabic": "Verleihung des Doktortitels",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "forschen",
+          "arabic": "wissenschaftlich untersuchen",
+          "type": "verb"
+        },
+        {
+          "german": "verfassen",
+          "arabic": "schreiben (Text)",
+          "type": "verb"
+        },
+        {
+          "german": "recherchieren",
+          "arabic": "Informationen suchen",
+          "type": "verb"
+        },
+        {
+          "german": "akademisch",
+          "arabic": "wissenschaftlich, hochschulbezogen",
+          "type": "adjective"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "in der Theorie",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5321,6 +5406,123 @@
               "She will take the exam tomorrow"
             ],
             "answer": "She passed the exam and is very happy"
+          },
+          {
+            "id": "b2-10-q11",
+            "type": "fill-blank",
+            "question": "„Ich ___ mich an der Uni ein.\" (immatrikulieren)",
+            "answer": "schreibe",
+            "hint": "sich einschreiben trennbar"
+          },
+          {
+            "id": "b2-10-q12",
+            "type": "multiple-choice",
+            "question": "Unterschied Vorlesung und Seminar?",
+            "options": [
+              "dasselbe",
+              "Vorlesung Theorie groß, Seminar praktisch klein",
+              "Vorlesung nur Schreiben",
+              "Seminar nur Doktoranden"
+            ],
+            "answer": "Vorlesung Theorie groß, Seminar praktisch klein"
+          },
+          {
+            "id": "b2-10-q13",
+            "type": "fill-blank",
+            "question": "„Ich bewerbe mich ___ ein Stipendium.\" (für)",
+            "answer": "für",
+            "hint": "sich bewerben für"
+          },
+          {
+            "id": "b2-10-q14",
+            "type": "multiple-choice",
+            "question": "Bachelor auf Deutsch:",
+            "options": [
+              "der Master",
+              "das Bachelor",
+              "der Bachelor",
+              "die Promotion"
+            ],
+            "answer": "der Bachelor"
+          },
+          {
+            "id": "b2-10-q15",
+            "type": "matching",
+            "question": "Verbinde Phase mit Dauer:",
+            "pairs": [
+              {
+                "left": "Bachelor",
+                "right": "3 Jahre"
+              },
+              {
+                "left": "Master",
+                "right": "2 Jahre"
+              },
+              {
+                "left": "Promotion",
+                "right": "3-5 Jahre"
+              },
+              {
+                "left": "Abitur",
+                "right": "Ende des Gymnasiums"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-10-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich schreibe meine Masterarbeit über KI\"",
+            "words": [
+              "Ich",
+              "schreibe",
+              "meine",
+              "Masterarbeit",
+              "über",
+              "KI"
+            ],
+            "answer": "Ich schreibe meine Masterarbeit über KI"
+          },
+          {
+            "id": "b2-10-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich studiere Informatik an der Universität Berlin\"",
+            "answer": "Ich studiere Informatik an der Universität Berlin"
+          },
+          {
+            "id": "b2-10-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Ich lege eine ___ ab.\" (Prüfung)",
+            "audioPrompt": "Ich lege eine Prüfung ab.",
+            "answer": "Prüfung",
+            "hint": "eine Prüfung ablegen"
+          },
+          {
+            "id": "b2-10-q19",
+            "type": "multiple-choice",
+            "question": "Was ist DAAD?",
+            "options": [
+              "eine Prüfungsart",
+              "ein deutsches Stipendium",
+              "ein Promotionsprogramm",
+              "eine Fakultät"
+            ],
+            "answer": "ein deutsches Stipendium"
+          },
+          {
+            "id": "b2-10-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Nach dem Bachelor mache ich einen Master\"",
+            "words": [
+              "Nach",
+              "dem",
+              "Bachelor",
+              "mache",
+              "ich",
+              "einen",
+              "Master"
+            ],
+            "answer": "Nach dem Bachelor mache ich einen Master"
           }
         ]
       }
