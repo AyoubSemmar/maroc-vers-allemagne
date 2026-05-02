@@ -6081,6 +6081,91 @@
           "gender": "die",
           "plural": "Rückfragen",
           "type": "noun"
+        },
+        {
+          "german": "die Argumentation",
+          "arabic": "l'argumentation",
+          "gender": "die",
+          "plural": "Argumentationen",
+          "type": "noun"
+        },
+        {
+          "german": "der Übergang",
+          "arabic": "la transition",
+          "gender": "der",
+          "plural": "Übergänge",
+          "type": "noun"
+        },
+        {
+          "german": "die Folie",
+          "arabic": "la diapositive",
+          "gender": "die",
+          "plural": "Folien",
+          "type": "noun"
+        },
+        {
+          "german": "die Statistik",
+          "arabic": "la statistique",
+          "gender": "die",
+          "plural": "Statistiken",
+          "type": "noun"
+        },
+        {
+          "german": "das Diagramm",
+          "arabic": "le diagramme",
+          "gender": "das",
+          "plural": "Diagramme",
+          "type": "noun"
+        },
+        {
+          "german": "gliedern",
+          "arabic": "structurer",
+          "type": "verb"
+        },
+        {
+          "german": "untermauern",
+          "arabic": "étayer",
+          "type": "verb"
+        },
+        {
+          "german": "ausführen",
+          "arabic": "détailler",
+          "type": "verb"
+        },
+        {
+          "german": "hervorheben",
+          "arabic": "souligner",
+          "type": "verb"
+        },
+        {
+          "german": "klären",
+          "arabic": "clarifier",
+          "type": "verb"
+        },
+        {
+          "german": "aufgreifen",
+          "arabic": "reprendre, traiter",
+          "type": "verb"
+        },
+        {
+          "german": "plädieren für",
+          "arabic": "plaider pour",
+          "type": "verb"
+        },
+        {
+          "german": "in diesem Zusammenhang",
+          "arabic": "dans ce contexte",
+          "type": "phrase"
+        },
+        {
+          "german": "an dieser Stelle",
+          "arabic": "à ce stade",
+          "type": "phrase"
+        },
+        {
+          "german": "kompetent",
+          "arabic": "compétent",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -6202,6 +6287,125 @@
               "Reformen"
             ],
             "answer": "Wenn ich Sie richtig verstehe plädieren Sie für Reformen"
+          },
+          {
+            "id": "c1-11-q11",
+            "type": "fill-blank",
+            "question": "« ___ komme ich zu meiner Einschätzung. » (en conclusion)",
+            "answer": "Abschließend",
+            "hint": "à la fin"
+          },
+          {
+            "id": "c1-11-q12",
+            "type": "multiple-choice",
+            "question": "Pour résumer l'avis d'autrui :",
+            "options": [
+              "Sie haben Unrecht.",
+              "Wenn ich Sie richtig verstehe...",
+              "Was sagen Sie?",
+              "Bitte schweigen Sie."
+            ],
+            "answer": "Wenn ich Sie richtig verstehe..."
+          },
+          {
+            "id": "c1-11-q13",
+            "type": "fill-blank",
+            "question": "« Da haben Sie ___ recht, aber... » (en partie)",
+            "answer": "teilweise",
+            "hint": "accord partiel"
+          },
+          {
+            "id": "c1-11-q14",
+            "type": "multiple-choice",
+            "question": "Dans une bonne présentation, on doit :",
+            "options": [
+              "ne pas utiliser de connecteurs",
+              "utiliser des connecteurs pour structurer",
+              "utiliser que du langage familier",
+              "éviter les exemples"
+            ],
+            "answer": "utiliser des connecteurs pour structurer"
+          },
+          {
+            "id": "c1-11-q15",
+            "type": "matching",
+            "question": "Associe la fonction à l'expression :",
+            "pairs": [
+              {
+                "left": "donner son avis",
+                "right": "Meiner Meinung nach"
+              },
+              {
+                "left": "fort accord",
+                "right": "Dem kann ich nur zustimmen"
+              },
+              {
+                "left": "désaccord poli",
+                "right": "Ich sehe das differenzierter"
+              },
+              {
+                "left": "résumer",
+                "right": "Wenn ich Sie richtig verstehe"
+              },
+              {
+                "left": "début",
+                "right": "Zunächst"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-11-q16",
+            "type": "drag-drop",
+            "question": "Remets : « Permettez-moi de souligner ce point »",
+            "words": [
+              "Erlauben",
+              "Sie",
+              "mir,",
+              "diesen",
+              "Punkt",
+              "hervorzuheben"
+            ],
+            "answer": "Erlauben Sie mir, diesen Punkt hervorzuheben"
+          },
+          {
+            "id": "c1-11-q17",
+            "type": "speaking",
+            "question": "Dis : « Je suis d'accord en principe, mais... »",
+            "answer": "Da stimme ich Ihnen grundsätzlich zu, jedoch"
+          },
+          {
+            "id": "c1-11-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Vielen Dank für Ihre ___. » (attention)",
+            "audioPrompt": "Vielen Dank für Ihre Aufmerksamkeit.",
+            "answer": "Aufmerksamkeit",
+            "hint": "die Aufmerksamkeit"
+          },
+          {
+            "id": "c1-11-q19",
+            "type": "multiple-choice",
+            "question": "Pour un désaccord ferme :",
+            "options": [
+              "Vielleicht...",
+              "Dem muss ich entschieden widersprechen",
+              "Quatsch",
+              "Egal"
+            ],
+            "answer": "Dem muss ich entschieden widersprechen"
+          },
+          {
+            "id": "c1-11-q20",
+            "type": "drag-drop",
+            "question": "Remets : « Y a-t-il des questions pour conclure ? »",
+            "words": [
+              "Gibt",
+              "es",
+              "abschließend",
+              "noch",
+              "Fragen"
+            ],
+            "answer": "Gibt es abschließend noch Fragen"
           }
         ]
       }
