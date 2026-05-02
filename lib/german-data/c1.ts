@@ -1640,6 +1640,10 @@ Goethe, Schiller, Kafka, Thomas Mann, Hesse, Brecht, Böll, Grass`,
         { german: 'ausdrucksstark', arabic: 'معبّر', example: 'Eine ausdrucksstarke Sprache.', exampleArabic: 'لغة معبّرة.', type: 'adjective' },
         { german: 'gewichtig', arabic: 'ذو وزن', example: 'Ein gewichtiges Argument.', exampleArabic: 'حجة ذات وزن.', type: 'adjective' },
         { german: 'beiläufig', arabic: 'عرضي', example: 'Eine beiläufige Bemerkung.', exampleArabic: 'ملاحظة عرضية.', type: 'adjective' },
+        { german: 'die Pointe', arabic: 'النكتة / الصدمة', plural: 'die Pointen', example: 'Die Pointe ist überraschend.', exampleArabic: 'النكتة مفاجئة.', type: 'noun', gender: 'die' },
+        { german: 'die Andeutung', arabic: 'التلميح', plural: 'die Andeutungen', example: 'Eine vage Andeutung.', exampleArabic: 'تلميح غامض.', type: 'noun', gender: 'die' },
+        { german: 'der Kontext', arabic: 'السياق', plural: 'die Kontexte', example: 'Im Kontext betrachtet.', exampleArabic: 'إذا نُظر إليها في سياقها.', type: 'noun', gender: 'der' },
+        { german: 'die Präzision', arabic: 'الدقة', example: 'Mit höchster Präzision.', exampleArabic: 'بأعلى دقة.', type: 'noun', gender: 'die' },
       ],
       exercise: {
         questions: [
