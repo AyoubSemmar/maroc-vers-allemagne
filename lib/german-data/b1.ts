@@ -593,6 +593,7 @@ export const B1: Level = {
         { german: 'die Wirkung', arabic: 'التأثير', plural: 'die Wirkungen', type: 'noun', gender: 'die' },
         { german: 'die Beziehung', arabic: 'العلاقة', plural: 'die Beziehungen', type: 'noun', gender: 'die' },
         { german: 'logisch', arabic: 'منطقي', type: 'adjective' },
+        { german: 'unlogisch', arabic: 'غير منطقي', type: 'adjective' },
       ],
       exercise: {
         questions: [
@@ -968,6 +969,7 @@ export const B1: Level = {
         { german: 'das Jahr', arabic: 'السنة', plural: 'die Jahre', type: 'noun', gender: 'das' },
         { german: 'plötzlich', arabic: 'فجأة', type: 'adverb' },
         { german: 'gleichzeitig', arabic: 'في نفس الوقت', type: 'adverb' },
+        { german: 'die Reihenfolge', arabic: 'الترتيب الزمني', gender: 'die', plural: 'Reihenfolgen', type: 'noun' },
       ],
       exercise: {
         questions: [

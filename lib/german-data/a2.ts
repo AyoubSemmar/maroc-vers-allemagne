@@ -772,6 +772,7 @@ export const A2: Level = {
         { german: 'im', arabic: 'في الـ (in + dem)', example: 'Ich bin im Park.', exampleArabic: 'أنا في الحديقة.', type: 'preposition' },
         { german: 'ans', arabic: 'إلى الـ (an + das)', example: 'Ich gehe ans Fenster.', exampleArabic: 'أذهب إلى النافذة.', type: 'preposition' },
         { german: 'am', arabic: 'عند الـ (an + dem)', example: 'Ich sitze am Tisch.', exampleArabic: 'أجلس عند الطاولة.', type: 'preposition' },
+        { german: 'der Boden', arabic: 'الأرضية', gender: 'der', plural: 'Böden', example: 'Das Buch liegt auf dem Boden.', exampleArabic: 'الكتاب على الأرض.', type: 'noun' },
       ],
       exercise: {
         questions: [
@@ -1376,6 +1377,7 @@ export const A2: Level = {
         { german: 'das Gesicht', arabic: 'الوجه', gender: 'das', plural: 'Gesichter', example: 'Ich wasche mir das Gesicht.', exampleArabic: 'أغسل وجهي.', type: 'noun' },
         { german: 'die Hand', arabic: 'اليد', gender: 'die', plural: 'Hände', example: 'Wasch dir die Hände!', exampleArabic: 'اغسل يديك!', type: 'noun' },
         { german: 'der Spiegel', arabic: 'المرآة', gender: 'der', plural: 'Spiegel', example: 'Sie schaut in den Spiegel.', exampleArabic: 'تنظر إلى المرآة.', type: 'noun' },
+        { german: 'sich entspannen', arabic: 'يسترخي', example: 'Ich entspanne mich am Wochenende.', exampleArabic: 'أسترخي في عطلة الأسبوع.', type: 'verb' },
       ],
       exercise: {
         questions: [
@@ -1590,6 +1592,7 @@ export const A2: Level = {
         { german: 'die Universität', arabic: 'الجامعة', gender: 'die', plural: 'Universitäten', example: 'Ich gehe an die Universität.', exampleArabic: 'أذهب إلى الجامعة.', type: 'noun' },
         { german: 'das Studium', arabic: 'الدراسة (الجامعية)', gender: 'das', example: 'Mein Studium war schwer.', exampleArabic: 'دراستي كانت صعبة.', type: 'noun' },
         { german: 'der Job', arabic: 'العمل / الوظيفة', gender: 'der', plural: 'Jobs', example: 'Der Job war interessant.', exampleArabic: 'كانت الوظيفة شيقة.', type: 'noun' },
+        { german: 'die Erinnerung', arabic: 'الذكرى', gender: 'die', plural: 'Erinnerungen', example: 'Schöne Erinnerungen aus der Kindheit.', exampleArabic: 'ذكريات جميلة من الطفولة.', type: 'noun' },
       ],
       exercise: {
         questions: [
@@ -1796,6 +1799,7 @@ export const A2: Level = {
         { german: 'buchen', arabic: 'يحجز (إلكترونياً)', example: 'Ich buche einen Flug.', exampleArabic: 'أحجز رحلة.', type: 'verb' },
         { german: 'nächste Woche', arabic: 'الأسبوع القادم', example: 'Nächste Woche fliege ich.', exampleArabic: 'الأسبوع القادم سأطير.', type: 'phrase' },
         { german: 'übermorgen', arabic: 'بعد غد', example: 'Übermorgen kommen sie.', exampleArabic: 'بعد غد سيأتون.', type: 'adverb' },
+        { german: 'das Reisebüro', arabic: 'وكالة السفر', gender: 'das', plural: 'Reisebüros', example: 'Im Reisebüro buche ich.', exampleArabic: 'في وكالة السفر أحجز.', type: 'noun' },
       ],
       exercise: {
         questions: [

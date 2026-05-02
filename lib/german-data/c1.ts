@@ -486,6 +486,7 @@ export const C1: Level = {
         { german: 'sofern', arabic: 'إذا / بقدر ما', type: 'conjunction' },
         { german: 'verbindlich', arabic: 'مُلزم', type: 'adjective' },
         { german: 'unverbindlich', arabic: 'غير مُلزم', type: 'adjective' },
+        { german: 'die Klausel', arabic: 'الشرط القانوني', gender: 'die', plural: 'Klauseln', type: 'noun' },
       ],
       exercise: {
         questions: [
