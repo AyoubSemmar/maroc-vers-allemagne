@@ -2045,6 +2045,10 @@ export const B2: Level = {
         { german: 'der Gegensatz', arabic: 'النقيض', example: 'Im Gegensatz zu ihm...', exampleArabic: 'على عكسه...', type: 'noun', gender: 'der', plural: 'die Gegensätze' },
         { german: 'das Argument', arabic: 'الحجة', example: 'Ein starkes Argument.', exampleArabic: 'حجة قوية.', type: 'noun', gender: 'das', plural: 'die Argumente' },
         { german: 'die Begründung', arabic: 'التبرير', example: 'Die Begründung ist überzeugend.', exampleArabic: 'التبرير مقنع.', type: 'noun', gender: 'die', plural: 'die Begründungen' },
+        { german: 'die Voraussetzung', arabic: 'الشرط الأساسي', plural: 'die Voraussetzungen', example: 'Die Voraussetzung ist erfüllt.', exampleArabic: 'الشرط مستوفى.', type: 'noun', gender: 'die' },
+        { german: 'die Bedingung', arabic: 'الشرط', plural: 'die Bedingungen', example: 'Unter dieser Bedingung.', exampleArabic: 'بهذا الشرط.', type: 'noun', gender: 'die' },
+        { german: 'die Gegenüberstellung', arabic: 'المقابلة بين', plural: 'die Gegenüberstellungen', example: 'Eine kritische Gegenüberstellung.', exampleArabic: 'مقابلة نقدية.', type: 'noun', gender: 'die' },
+        { german: 'die Schlussfolgerung', arabic: 'الاستنتاج', plural: 'die Schlussfolgerungen', example: 'Eine logische Schlussfolgerung.', exampleArabic: 'استنتاج منطقي.', type: 'noun', gender: 'die' },
       ],
       exercise: {
         questions: [
