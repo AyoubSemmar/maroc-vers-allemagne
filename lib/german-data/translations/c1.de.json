@@ -4271,6 +4271,81 @@
           "german": "Schwein haben",
           "arabic": "Glück haben",
           "type": "phrase"
+        },
+        {
+          "german": "jdm. einen Bären aufbinden",
+          "arabic": "jemanden absichtlich täuschen",
+          "type": "phrase"
+        },
+        {
+          "german": "sich aus dem Staub machen",
+          "arabic": "schnell verschwinden",
+          "type": "phrase"
+        },
+        {
+          "german": "auf den Punkt bringen",
+          "arabic": "in einer Aussage zusammenfassen",
+          "type": "phrase"
+        },
+        {
+          "german": "bei null anfangen",
+          "arabic": "neu beginnen",
+          "type": "phrase"
+        },
+        {
+          "german": "das ist nicht mein Bier",
+          "arabic": "geht mich nichts an",
+          "type": "phrase"
+        },
+        {
+          "german": "unter vier Augen",
+          "arabic": "vertraulich, zu zweit",
+          "type": "phrase"
+        },
+        {
+          "german": "Hals- und Beinbruch",
+          "arabic": "Glückwunsch ironisch — viel Glück",
+          "type": "phrase"
+        },
+        {
+          "german": "jdm. auf die Pelle rücken",
+          "arabic": "jemandem zusetzen",
+          "type": "phrase"
+        },
+        {
+          "german": "da steh ich auf dem Schlauch",
+          "arabic": "ich verstehe es nicht",
+          "type": "phrase"
+        },
+        {
+          "german": "alle Hände voll zu tun haben",
+          "arabic": "sehr beschäftigt sein",
+          "type": "phrase"
+        },
+        {
+          "german": "ein Auge zudrücken",
+          "arabic": "tolerant sein, etwas durchgehen lassen",
+          "type": "phrase"
+        },
+        {
+          "german": "ohne Wenn und Aber",
+          "arabic": "ohne Einschränkung",
+          "type": "phrase"
+        },
+        {
+          "german": "eine harte Nuss",
+          "arabic": "eine schwere Aufgabe",
+          "type": "phrase"
+        },
+        {
+          "german": "jdm. den Boden unter den Füßen wegziehen",
+          "arabic": "jemanden völlig schockieren",
+          "type": "phrase"
+        },
+        {
+          "german": "Lampenfieber haben",
+          "arabic": "vor Auftritt nervös sein",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -4389,6 +4464,127 @@
               "Kopf"
             ],
             "answer": "Er trifft den Nagel auf den Kopf"
+          },
+          {
+            "id": "c1-08-q11",
+            "type": "fill-blank",
+            "question": "„Hals- und ___!\" (Glückwunsch)",
+            "answer": "Beinbruch",
+            "hint": "Hals- und Beinbruch"
+          },
+          {
+            "id": "c1-08-q12",
+            "type": "multiple-choice",
+            "question": "Bedeutung von „Schwein haben\":",
+            "options": [
+              "ein Schwein besitzen",
+              "Glück haben",
+              "Schweinefleisch essen",
+              "verlieren"
+            ],
+            "answer": "Glück haben"
+          },
+          {
+            "id": "c1-08-q13",
+            "type": "fill-blank",
+            "question": "„Ich verstehe nur ___.\" (ich verstehe nichts)",
+            "answer": "Bahnhof",
+            "hint": "deutsche Redewendung"
+          },
+          {
+            "id": "c1-08-q14",
+            "type": "multiple-choice",
+            "question": "„unter vier Augen\" bedeutet:",
+            "options": [
+              "vier Augen",
+              "vertraulich zu zweit",
+              "mit Brille",
+              "vorsichtig"
+            ],
+            "answer": "vertraulich zu zweit"
+          },
+          {
+            "id": "c1-08-q15",
+            "type": "matching",
+            "question": "Verbinde Redewendung mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Schwein haben",
+                "right": "Glück haben"
+              },
+              {
+                "left": "die Nase voll haben",
+                "right": "genug haben"
+              },
+              {
+                "left": "auf Wolke 7",
+                "right": "sehr glücklich"
+              },
+              {
+                "left": "Lampenfieber haben",
+                "right": "Nervosität vor Auftritt"
+              },
+              {
+                "left": "Bahnhof verstehen",
+                "right": "nichts verstehen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-08-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Das ist nicht mein Bier\"",
+            "words": [
+              "Das",
+              "ist",
+              "nicht",
+              "mein",
+              "Bier"
+            ],
+            "answer": "Das ist nicht mein Bier"
+          },
+          {
+            "id": "c1-08-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich habe alle Hände voll zu tun\"",
+            "answer": "Ich habe alle Hände voll zu tun"
+          },
+          {
+            "id": "c1-08-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Er hat ein ___ zugedrückt.\" (Auge)",
+            "audioPrompt": "Er hat ein Auge zugedrückt.",
+            "answer": "Auge",
+            "hint": "das Auge"
+          },
+          {
+            "id": "c1-08-q19",
+            "type": "multiple-choice",
+            "question": "„den Stier bei den Hörnern packen\" bedeutet:",
+            "options": [
+              "Vieh züchten",
+              "Problem mutig angehen",
+              "fliehen",
+              "schreien"
+            ],
+            "answer": "Problem mutig angehen"
+          },
+          {
+            "id": "c1-08-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Du drückst mir vor der Präsentation die Daumen\"",
+            "words": [
+              "Du",
+              "drückst",
+              "mir",
+              "vor",
+              "der",
+              "Präsentation",
+              "die",
+              "Daumen"
+            ],
+            "answer": "Du drückst mir vor der Präsentation die Daumen"
           }
         ]
       }
