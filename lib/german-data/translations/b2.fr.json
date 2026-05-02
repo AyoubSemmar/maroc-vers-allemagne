@@ -1357,6 +1357,87 @@
           "plural": "die Bemühungen",
           "type": "noun",
           "gender": "die"
+        },
+        {
+          "german": "die Strategie",
+          "arabic": "la stratégie",
+          "plural": "die Strategien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Maßnahme",
+          "arabic": "la mesure",
+          "plural": "die Maßnahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Vorgehen",
+          "arabic": "la démarche",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aufgabe",
+          "arabic": "la tâche",
+          "plural": "die Aufgaben",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "l'espoir",
+          "plural": "die Hoffnungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Fähigkeit",
+          "arabic": "la capacité",
+          "plural": "die Fähigkeiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "sich bemühen",
+          "arabic": "s'efforcer",
+          "type": "verb"
+        },
+        {
+          "german": "umsetzen",
+          "arabic": "mettre en œuvre",
+          "type": "verb"
+        },
+        {
+          "german": "sich konzentrieren",
+          "arabic": "se concentrer",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "maîtriser",
+          "type": "verb"
+        },
+        {
+          "german": "ehrgeizig",
+          "arabic": "ambitieux",
+          "type": "adjective"
+        },
+        {
+          "german": "entschlossen",
+          "arabic": "déterminé",
+          "type": "adjective"
+        },
+        {
+          "german": "realistisch",
+          "arabic": "réaliste",
+          "type": "adjective"
+        },
+        {
+          "german": "gezielt",
+          "arabic": "ciblé",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -1482,6 +1563,130 @@
               "Je ne travaille pas"
             ],
             "answer": "Je me lève tôt pour arriver au travail à l'heure"
+          },
+          {
+            "id": "b2-03-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Ich lerne, ___ die Prüfung zu bestehen. » (même sujet)",
+            "answer": "um",
+            "hint": "um + zu + Inf"
+          },
+          {
+            "id": "b2-03-q12",
+            "type": "multiple-choice",
+            "question": "Quand utiliser damit au lieu de um zu ?",
+            "options": [
+              "même sujet toujours",
+              "sujet différent",
+              "cause",
+              "aucune différence"
+            ],
+            "answer": "sujet différent"
+          },
+          {
+            "id": "b2-03-q13",
+            "type": "fill-blank",
+            "question": "« Sie kauft ein Geschenk, ___ ihre Mutter sich freut. »",
+            "answer": "damit",
+            "hint": "sujet différent → damit"
+          },
+          {
+            "id": "b2-03-q14",
+            "type": "multiple-choice",
+            "question": "Dans « um zu », où est le verbe ?",
+            "options": [
+              "au début",
+              "au milieu",
+              "à la fin comme Infinitiv",
+              "supprimé"
+            ],
+            "answer": "à la fin comme Infinitiv"
+          },
+          {
+            "id": "b2-03-q15",
+            "type": "matching",
+            "question": "Associe le verbe au nom :",
+            "pairs": [
+              {
+                "left": "planen",
+                "right": "der Plan"
+              },
+              {
+                "left": "erfolgen",
+                "right": "der Erfolg"
+              },
+              {
+                "left": "sich bemühen",
+                "right": "die Bemühung"
+              },
+              {
+                "left": "investieren",
+                "right": "die Investition"
+              },
+              {
+                "left": "ziehen",
+                "right": "das Ziel (verwandt)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-03-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je travaille pour gagner de l'argent »",
+            "words": [
+              "Ich",
+              "arbeite,",
+              "um",
+              "Geld",
+              "zu",
+              "verdienen"
+            ],
+            "answer": "Ich arbeite, um Geld zu verdienen"
+          },
+          {
+            "id": "b2-03-q17",
+            "type": "speaking",
+            "question": "Dis : « J'épargne pour acheter une maison »",
+            "answer": "Ich spare, um ein Haus zu kaufen"
+          },
+          {
+            "id": "b2-03-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Er erklärt langsam, ___ wir verstehen. » (afin que)",
+            "audioPrompt": "Er erklärt langsam, damit wir verstehen.",
+            "answer": "damit",
+            "hint": "sujet différent"
+          },
+          {
+            "id": "b2-03-q19",
+            "type": "multiple-choice",
+            "question": "Différence entre Final et Kausal :",
+            "options": [
+              "but vs cause",
+              "tous deux cause",
+              "tous deux but",
+              "aucune différence"
+            ],
+            "answer": "but vs cause"
+          },
+          {
+            "id": "b2-03-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Tu devrais bien te préparer pour atteindre ton objectif »",
+            "words": [
+              "Du",
+              "solltest",
+              "dich",
+              "gut",
+              "vorbereiten,",
+              "um",
+              "dein",
+              "Ziel",
+              "zu",
+              "erreichen"
+            ],
+            "answer": "Du solltest dich gut vorbereiten, um dein Ziel zu erreichen"
           }
         ]
       }

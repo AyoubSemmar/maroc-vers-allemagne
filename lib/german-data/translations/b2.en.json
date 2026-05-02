@@ -1357,6 +1357,87 @@
           "plural": "die Bemühungen",
           "type": "noun",
           "gender": "die"
+        },
+        {
+          "german": "die Strategie",
+          "arabic": "the strategy",
+          "plural": "die Strategien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Maßnahme",
+          "arabic": "the measure",
+          "plural": "die Maßnahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Vorgehen",
+          "arabic": "the approach",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aufgabe",
+          "arabic": "the task",
+          "plural": "die Aufgaben",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "the hope",
+          "plural": "die Hoffnungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Fähigkeit",
+          "arabic": "the ability",
+          "plural": "die Fähigkeiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "sich bemühen",
+          "arabic": "to make an effort",
+          "type": "verb"
+        },
+        {
+          "german": "umsetzen",
+          "arabic": "to implement",
+          "type": "verb"
+        },
+        {
+          "german": "sich konzentrieren",
+          "arabic": "to concentrate",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "to master",
+          "type": "verb"
+        },
+        {
+          "german": "ehrgeizig",
+          "arabic": "ambitious",
+          "type": "adjective"
+        },
+        {
+          "german": "entschlossen",
+          "arabic": "determined",
+          "type": "adjective"
+        },
+        {
+          "german": "realistisch",
+          "arabic": "realistic",
+          "type": "adjective"
+        },
+        {
+          "german": "gezielt",
+          "arabic": "targeted",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -1482,6 +1563,130 @@
               "I don't work"
             ],
             "answer": "I get up early to arrive at work on time"
+          },
+          {
+            "id": "b2-03-q11",
+            "type": "fill-blank",
+            "question": "Fill in: \"Ich lerne, ___ die Prüfung zu bestehen.\" (same subject)",
+            "answer": "um",
+            "hint": "um + zu + Inf"
+          },
+          {
+            "id": "b2-03-q12",
+            "type": "multiple-choice",
+            "question": "When to use damit instead of um zu?",
+            "options": [
+              "always same subject",
+              "different subject",
+              "cause",
+              "no difference"
+            ],
+            "answer": "different subject"
+          },
+          {
+            "id": "b2-03-q13",
+            "type": "fill-blank",
+            "question": "\"Sie kauft ein Geschenk, ___ ihre Mutter sich freut.\"",
+            "answer": "damit",
+            "hint": "different subject → damit"
+          },
+          {
+            "id": "b2-03-q14",
+            "type": "multiple-choice",
+            "question": "In \"um zu\", where is the verb?",
+            "options": [
+              "at the beginning",
+              "in the middle",
+              "at the end as Infinitiv",
+              "omitted"
+            ],
+            "answer": "at the end as Infinitiv"
+          },
+          {
+            "id": "b2-03-q15",
+            "type": "matching",
+            "question": "Match verb to noun:",
+            "pairs": [
+              {
+                "left": "planen",
+                "right": "der Plan"
+              },
+              {
+                "left": "erfolgen",
+                "right": "der Erfolg"
+              },
+              {
+                "left": "sich bemühen",
+                "right": "die Bemühung"
+              },
+              {
+                "left": "investieren",
+                "right": "die Investition"
+              },
+              {
+                "left": "ziehen",
+                "right": "das Ziel (verwandt)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-03-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"I work to earn money\"",
+            "words": [
+              "Ich",
+              "arbeite,",
+              "um",
+              "Geld",
+              "zu",
+              "verdienen"
+            ],
+            "answer": "Ich arbeite, um Geld zu verdienen"
+          },
+          {
+            "id": "b2-03-q17",
+            "type": "speaking",
+            "question": "Say: \"I'm saving to buy a house\"",
+            "answer": "Ich spare, um ein Haus zu kaufen"
+          },
+          {
+            "id": "b2-03-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Er erklärt langsam, ___ wir verstehen.\" (so that)",
+            "audioPrompt": "Er erklärt langsam, damit wir verstehen.",
+            "answer": "damit",
+            "hint": "different subject"
+          },
+          {
+            "id": "b2-03-q19",
+            "type": "multiple-choice",
+            "question": "Difference between Final and Kausal:",
+            "options": [
+              "purpose vs cause",
+              "both cause",
+              "both purpose",
+              "no difference"
+            ],
+            "answer": "purpose vs cause"
+          },
+          {
+            "id": "b2-03-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"You should prepare well to reach your goal\"",
+            "words": [
+              "Du",
+              "solltest",
+              "dich",
+              "gut",
+              "vorbereiten,",
+              "um",
+              "dein",
+              "Ziel",
+              "zu",
+              "erreichen"
+            ],
+            "answer": "Du solltest dich gut vorbereiten, um dein Ziel zu erreichen"
           }
         ]
       }
