@@ -6456,6 +6456,106 @@
           "example": "Meine Schuhe sind nass.",
           "exampleArabic": "My shoes are wet.",
           "type": "adjective"
+        },
+        {
+          "german": "die Jahreszeit",
+          "arabic": "the season",
+          "gender": "die",
+          "plural": "Jahreszeiten",
+          "example": "Welche Jahreszeit magst du?",
+          "exampleArabic": "Which season do you like?",
+          "type": "noun"
+        },
+        {
+          "german": "das Klima",
+          "arabic": "the climate",
+          "gender": "das",
+          "example": "Das Klima in Marokko ist warm.",
+          "exampleArabic": "The climate in Morocco is warm.",
+          "type": "noun"
+        },
+        {
+          "german": "der Sturm",
+          "arabic": "the storm",
+          "gender": "der",
+          "plural": "Stürme",
+          "example": "Heute kommt ein Sturm.",
+          "exampleArabic": "A storm is coming today.",
+          "type": "noun"
+        },
+        {
+          "german": "der Hagel",
+          "arabic": "the hail",
+          "gender": "der",
+          "example": "Der Hagel war groß.",
+          "exampleArabic": "The hail was big.",
+          "type": "noun"
+        },
+        {
+          "german": "das Eis",
+          "arabic": "the ice / ice cream",
+          "gender": "das",
+          "example": "Vorsicht, Eis auf der Straße!",
+          "exampleArabic": "Watch out, ice on the road!",
+          "type": "noun"
+        },
+        {
+          "german": "die Hitze",
+          "arabic": "the heat (intense)",
+          "gender": "die",
+          "example": "Die Hitze ist unerträglich.",
+          "exampleArabic": "The heat is unbearable.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kälte",
+          "arabic": "the cold (intense)",
+          "gender": "die",
+          "example": "Die Kälte beißt.",
+          "exampleArabic": "The cold is biting.",
+          "type": "noun"
+        },
+        {
+          "german": "wehen",
+          "arabic": "to blow (wind)",
+          "example": "Der Wind weht stark.",
+          "exampleArabic": "The wind is blowing hard.",
+          "type": "verb"
+        },
+        {
+          "german": "blitzen",
+          "arabic": "to flash (lightning)",
+          "example": "Es blitzt und donnert.",
+          "exampleArabic": "There's lightning and thunder.",
+          "type": "verb"
+        },
+        {
+          "german": "donnern",
+          "arabic": "to thunder",
+          "example": "Hörst du das Donnern?",
+          "exampleArabic": "Do you hear the thunder?",
+          "type": "verb"
+        },
+        {
+          "german": "mild",
+          "arabic": "mild",
+          "example": "Das Wetter ist mild.",
+          "exampleArabic": "The weather is mild.",
+          "type": "adjective"
+        },
+        {
+          "german": "frieren",
+          "arabic": "to freeze, be cold",
+          "example": "Ich friere!",
+          "exampleArabic": "I'm freezing!",
+          "type": "verb"
+        },
+        {
+          "german": "schwitzen",
+          "arabic": "to sweat",
+          "example": "Bei der Hitze schwitze ich.",
+          "exampleArabic": "I sweat in the heat.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -6572,6 +6672,121 @@
             "id": "a2-10-q10",
             "question": "Complete: \"Nimm einen ___ mit!\" (umbrella)",
             "answer": "Regenschirm"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q11",
+            "question": "Which verb describes wind blowing?",
+            "options": [
+              "regnen",
+              "wehen",
+              "schneien",
+              "scheinen"
+            ],
+            "answer": "wehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q12",
+            "question": "Fill in: \"Im ___ schneit es oft.\" (in winter)",
+            "answer": "Winter",
+            "hint": "the cold season"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q13",
+            "question": "What does \"Es ist neblig\" mean?",
+            "options": [
+              "it's sunny",
+              "it's foggy",
+              "it's raining",
+              "it's hot"
+            ],
+            "answer": "it's foggy"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q14",
+            "question": "Fill in: \"Es ___ und donnert.\" (lightning)",
+            "answer": "blitzt",
+            "hint": "blitzen → er/es blitzt"
+          },
+          {
+            "type": "matching",
+            "id": "a2-10-q15",
+            "question": "Match the season to the activity:",
+            "pairs": [
+              {
+                "left": "Frühling",
+                "right": "spazieren gehen"
+              },
+              {
+                "left": "Sommer",
+                "right": "schwimmen"
+              },
+              {
+                "left": "Herbst",
+                "right": "Tee trinken"
+              },
+              {
+                "left": "Winter",
+                "right": "Ski fahren"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q16",
+            "question": "Order the words: \"In summer we go to the sea\"",
+            "words": [
+              "Im",
+              "Sommer",
+              "fahren",
+              "wir",
+              "ans",
+              "Meer"
+            ],
+            "answer": "Im Sommer fahren wir ans Meer"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-10-q17",
+            "question": "Say in German: \"It's very hot today\"",
+            "answer": "Heute ist es sehr heiß"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q18",
+            "question": "Listen: \"Die Temperatur ist 25 ___.\" (degrees)",
+            "audioPrompt": "Die Temperatur ist 25 Grad.",
+            "answer": "Grad",
+            "hint": "temperature unit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q19",
+            "question": "Which verb means \"to sweat\"?",
+            "options": [
+              "frieren",
+              "schwitzen",
+              "regnen",
+              "donnern"
+            ],
+            "answer": "schwitzen"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q20",
+            "question": "Order the words: \"How will the weather be tomorrow?\"",
+            "words": [
+              "Wie",
+              "wird",
+              "das",
+              "Wetter",
+              "morgen"
+            ],
+            "answer": "Wie wird das Wetter morgen"
           }
         ]
       }

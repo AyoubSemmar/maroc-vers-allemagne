@@ -6456,6 +6456,106 @@
           "example": "Meine Schuhe sind nass.",
           "exampleArabic": "Meine Schuhe sind nass.",
           "type": "adjective"
+        },
+        {
+          "german": "die Jahreszeit",
+          "arabic": "ein Viertel des Jahres mit eigenem Wetter",
+          "gender": "die",
+          "plural": "Jahreszeiten",
+          "example": "Welche Jahreszeit magst du?",
+          "exampleArabic": "Frühling, Sommer, Herbst oder Winter.",
+          "type": "noun"
+        },
+        {
+          "german": "das Klima",
+          "arabic": "langfristiges Wetter einer Region",
+          "gender": "das",
+          "example": "Das Klima in Marokko ist warm.",
+          "exampleArabic": "Allgemeine Wetterbedingungen.",
+          "type": "noun"
+        },
+        {
+          "german": "der Sturm",
+          "arabic": "starker Wind mit Regen",
+          "gender": "der",
+          "plural": "Stürme",
+          "example": "Heute kommt ein Sturm.",
+          "exampleArabic": "Heftiges Unwetter.",
+          "type": "noun"
+        },
+        {
+          "german": "der Hagel",
+          "arabic": "Eiskugeln, die vom Himmel fallen",
+          "gender": "der",
+          "example": "Der Hagel war groß.",
+          "exampleArabic": "Niederschlagsform aus Eis.",
+          "type": "noun"
+        },
+        {
+          "german": "das Eis",
+          "arabic": "gefrorenes Wasser oder Speiseeis",
+          "gender": "das",
+          "example": "Vorsicht, Eis auf der Straße!",
+          "exampleArabic": "Doppelbedeutung: Glatteis oder Dessert.",
+          "type": "noun"
+        },
+        {
+          "german": "die Hitze",
+          "arabic": "sehr hohe Temperatur",
+          "gender": "die",
+          "example": "Die Hitze ist unerträglich.",
+          "exampleArabic": "Substantiv zu heiß.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kälte",
+          "arabic": "sehr niedrige Temperatur",
+          "gender": "die",
+          "example": "Die Kälte beißt.",
+          "exampleArabic": "Substantiv zu kalt.",
+          "type": "noun"
+        },
+        {
+          "german": "wehen",
+          "arabic": "sich durch die Luft bewegen (Wind)",
+          "example": "Der Wind weht stark.",
+          "exampleArabic": "Verb für Wind.",
+          "type": "verb"
+        },
+        {
+          "german": "blitzen",
+          "arabic": "kurzes Licht am Himmel zeigen",
+          "example": "Es blitzt und donnert.",
+          "exampleArabic": "Bei Gewitter sichtbar.",
+          "type": "verb"
+        },
+        {
+          "german": "donnern",
+          "arabic": "lautes Geräusch nach Blitz",
+          "example": "Hörst du das Donnern?",
+          "exampleArabic": "Akustisches Phänomen beim Gewitter.",
+          "type": "verb"
+        },
+        {
+          "german": "mild",
+          "arabic": "nicht extrem, angenehm",
+          "example": "Das Wetter ist mild.",
+          "exampleArabic": "Adjektiv für gemäßigtes Wetter.",
+          "type": "adjective"
+        },
+        {
+          "german": "frieren",
+          "arabic": "sehr kalt sein, Eis bilden",
+          "example": "Ich friere!",
+          "exampleArabic": "Verb für Kälteempfinden.",
+          "type": "verb"
+        },
+        {
+          "german": "schwitzen",
+          "arabic": "Schweiß absondern bei Wärme",
+          "example": "Bei der Hitze schwitze ich.",
+          "exampleArabic": "Körperreaktion bei Hitze.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -6572,6 +6672,121 @@
             "id": "a2-10-q10",
             "question": "Ergänze: \"Nimm einen ___ mit!\" (Regenschirm)",
             "answer": "Regenschirm"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q11",
+            "question": "Welches Verb beschreibt das Wehen des Windes?",
+            "options": [
+              "regnen",
+              "wehen",
+              "schneien",
+              "scheinen"
+            ],
+            "answer": "wehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q12",
+            "question": "Ergänze: „Im ___ schneit es oft.\" (Winter)",
+            "answer": "Winter",
+            "hint": "die kalte Jahreszeit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q13",
+            "question": "Was bedeutet „Es ist neblig\"?",
+            "options": [
+              "sonnig",
+              "neblig",
+              "regnerisch",
+              "heiß"
+            ],
+            "answer": "neblig"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q14",
+            "question": "Ergänze: „Es ___ und donnert.\" (Blitz)",
+            "answer": "blitzt",
+            "hint": "blitzen → er/es blitzt"
+          },
+          {
+            "type": "matching",
+            "id": "a2-10-q15",
+            "question": "Verbinde die Jahreszeit mit der Aktivität:",
+            "pairs": [
+              {
+                "left": "Frühling",
+                "right": "spazieren gehen"
+              },
+              {
+                "left": "Sommer",
+                "right": "schwimmen"
+              },
+              {
+                "left": "Herbst",
+                "right": "Tee trinken"
+              },
+              {
+                "left": "Winter",
+                "right": "Ski fahren"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q16",
+            "question": "Ordne: „Im Sommer fahren wir ans Meer\"",
+            "words": [
+              "Im",
+              "Sommer",
+              "fahren",
+              "wir",
+              "ans",
+              "Meer"
+            ],
+            "answer": "Im Sommer fahren wir ans Meer"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-10-q17",
+            "question": "Sag auf Deutsch: „Heute ist es sehr heiß\"",
+            "answer": "Heute ist es sehr heiß"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q18",
+            "question": "Hör zu: „Die Temperatur ist 25 ___.\" (Grad)",
+            "audioPrompt": "Die Temperatur ist 25 Grad.",
+            "answer": "Grad",
+            "hint": "Einheit der Temperatur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q19",
+            "question": "Welches Verb bedeutet „Schweiß absondern\"?",
+            "options": [
+              "frieren",
+              "schwitzen",
+              "regnen",
+              "donnern"
+            ],
+            "answer": "schwitzen"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q20",
+            "question": "Ordne: „Wie wird das Wetter morgen?\"",
+            "words": [
+              "Wie",
+              "wird",
+              "das",
+              "Wetter",
+              "morgen"
+            ],
+            "answer": "Wie wird das Wetter morgen"
           }
         ]
       }

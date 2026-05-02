@@ -6456,6 +6456,106 @@
           "example": "Meine Schuhe sind nass.",
           "exampleArabic": "Mes chaussures sont mouillées.",
           "type": "adjective"
+        },
+        {
+          "german": "die Jahreszeit",
+          "arabic": "la saison",
+          "gender": "die",
+          "plural": "Jahreszeiten",
+          "example": "Welche Jahreszeit magst du?",
+          "exampleArabic": "Quelle saison aimes-tu ?",
+          "type": "noun"
+        },
+        {
+          "german": "das Klima",
+          "arabic": "le climat",
+          "gender": "das",
+          "example": "Das Klima in Marokko ist warm.",
+          "exampleArabic": "Le climat au Maroc est chaud.",
+          "type": "noun"
+        },
+        {
+          "german": "der Sturm",
+          "arabic": "la tempête",
+          "gender": "der",
+          "plural": "Stürme",
+          "example": "Heute kommt ein Sturm.",
+          "exampleArabic": "Une tempête arrive aujourd'hui.",
+          "type": "noun"
+        },
+        {
+          "german": "der Hagel",
+          "arabic": "la grêle",
+          "gender": "der",
+          "example": "Der Hagel war groß.",
+          "exampleArabic": "La grêle était grosse.",
+          "type": "noun"
+        },
+        {
+          "german": "das Eis",
+          "arabic": "la glace / le verglas",
+          "gender": "das",
+          "example": "Vorsicht, Eis auf der Straße!",
+          "exampleArabic": "Attention, du verglas sur la route !",
+          "type": "noun"
+        },
+        {
+          "german": "die Hitze",
+          "arabic": "la chaleur (intense)",
+          "gender": "die",
+          "example": "Die Hitze ist unerträglich.",
+          "exampleArabic": "La chaleur est insupportable.",
+          "type": "noun"
+        },
+        {
+          "german": "die Kälte",
+          "arabic": "le froid (intense)",
+          "gender": "die",
+          "example": "Die Kälte beißt.",
+          "exampleArabic": "Le froid est mordant.",
+          "type": "noun"
+        },
+        {
+          "german": "wehen",
+          "arabic": "souffler (vent)",
+          "example": "Der Wind weht stark.",
+          "exampleArabic": "Le vent souffle fort.",
+          "type": "verb"
+        },
+        {
+          "german": "blitzen",
+          "arabic": "faire des éclairs",
+          "example": "Es blitzt und donnert.",
+          "exampleArabic": "Il y a des éclairs et du tonnerre.",
+          "type": "verb"
+        },
+        {
+          "german": "donnern",
+          "arabic": "tonner",
+          "example": "Hörst du das Donnern?",
+          "exampleArabic": "Entends-tu le tonnerre ?",
+          "type": "verb"
+        },
+        {
+          "german": "mild",
+          "arabic": "doux (climat)",
+          "example": "Das Wetter ist mild.",
+          "exampleArabic": "Le temps est doux.",
+          "type": "adjective"
+        },
+        {
+          "german": "frieren",
+          "arabic": "geler, avoir froid",
+          "example": "Ich friere!",
+          "exampleArabic": "J'ai froid !",
+          "type": "verb"
+        },
+        {
+          "german": "schwitzen",
+          "arabic": "transpirer",
+          "example": "Bei der Hitze schwitze ich.",
+          "exampleArabic": "Avec cette chaleur je transpire.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -6572,6 +6672,121 @@
             "id": "a2-10-q10",
             "question": "Complète : \"Nimm einen ___ mit!\" (parapluie)",
             "answer": "Regenschirm"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q11",
+            "question": "Quel verbe décrit le souffle du vent ?",
+            "options": [
+              "regnen",
+              "wehen",
+              "schneien",
+              "scheinen"
+            ],
+            "answer": "wehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q12",
+            "question": "Complète : « Im ___ schneit es oft. » (en hiver)",
+            "answer": "Winter",
+            "hint": "saison froide"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q13",
+            "question": "Que signifie « Es ist neblig » ?",
+            "options": [
+              "il fait soleil",
+              "il y a du brouillard",
+              "il pleut",
+              "il fait chaud"
+            ],
+            "answer": "il y a du brouillard"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q14",
+            "question": "Complète : « Es ___ und donnert. » (éclair)",
+            "answer": "blitzt",
+            "hint": "blitzen → er/es blitzt"
+          },
+          {
+            "type": "matching",
+            "id": "a2-10-q15",
+            "question": "Associe la saison à l'activité :",
+            "pairs": [
+              {
+                "left": "Frühling",
+                "right": "spazieren gehen"
+              },
+              {
+                "left": "Sommer",
+                "right": "schwimmen"
+              },
+              {
+                "left": "Herbst",
+                "right": "Tee trinken"
+              },
+              {
+                "left": "Winter",
+                "right": "Ski fahren"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q16",
+            "question": "Remets dans l'ordre : « En été, nous allons à la mer »",
+            "words": [
+              "Im",
+              "Sommer",
+              "fahren",
+              "wir",
+              "ans",
+              "Meer"
+            ],
+            "answer": "Im Sommer fahren wir ans Meer"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-10-q17",
+            "question": "Dis en allemand : « Aujourd'hui il fait très chaud »",
+            "answer": "Heute ist es sehr heiß"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-10-q18",
+            "question": "Écoute : « Die Temperatur ist 25 ___. » (degrés)",
+            "audioPrompt": "Die Temperatur ist 25 Grad.",
+            "answer": "Grad",
+            "hint": "unité de température"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-10-q19",
+            "question": "Quel verbe signifie « transpirer » ?",
+            "options": [
+              "frieren",
+              "schwitzen",
+              "regnen",
+              "donnern"
+            ],
+            "answer": "schwitzen"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-10-q20",
+            "question": "Remets dans l'ordre : « Quel temps fera-t-il demain ? »",
+            "words": [
+              "Wie",
+              "wird",
+              "das",
+              "Wetter",
+              "morgen"
+            ],
+            "answer": "Wie wird das Wetter morgen"
           }
         ]
       }
