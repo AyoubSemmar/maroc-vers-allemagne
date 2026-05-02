@@ -290,6 +290,89 @@
           "german": "rasant",
           "arabic": "very fast/rapid",
           "type": "adjective"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "the meaning, importance",
+          "plural": "die Bedeutungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "the effect",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "the consequence",
+          "plural": "die Folgen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wahrnehmung",
+          "arabic": "the perception",
+          "plural": "die Wahrnehmungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Mitteilung",
+          "arabic": "the notice, message",
+          "plural": "die Mitteilungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Forderung",
+          "arabic": "the demand",
+          "plural": "die Forderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Empfehlung",
+          "arabic": "the recommendation",
+          "plural": "die Empfehlungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Förderung",
+          "arabic": "the support, promotion",
+          "plural": "die Förderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verbreitung",
+          "arabic": "the spread, distribution",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Übersetzung",
+          "arabic": "the translation",
+          "plural": "die Übersetzungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "the comparison",
+          "plural": "die Vergleiche",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Auswirkung",
+          "arabic": "the impact",
+          "plural": "die Auswirkungen",
+          "type": "noun",
+          "gender": "die"
         }
       ],
       "exercise": {
@@ -413,6 +496,128 @@
               "I worked from home"
             ],
             "answer": "I arrived late to work because of the delay"
+          },
+          {
+            "id": "b2-01-q11",
+            "type": "fill-blank",
+            "question": "Transform: \"die Wirtschaft entwickelt sich\" → \"die ___ der Wirtschaft\"",
+            "answer": "Entwicklung",
+            "hint": "entwickeln → die Entwicklung"
+          },
+          {
+            "id": "b2-01-q12",
+            "type": "multiple-choice",
+            "question": "Noun of \"untersuchen\":",
+            "options": [
+              "die Untersuchung",
+              "der Untersuch",
+              "das Untersuchen",
+              "die Untersuche"
+            ],
+            "answer": "die Untersuchung"
+          },
+          {
+            "id": "b2-01-q13",
+            "type": "fill-blank",
+            "question": "Fill in: \"Die ___ der Preise ist hoch.\" (the rise)",
+            "answer": "Erhöhung",
+            "hint": "erhöhen → die Erhöhung"
+          },
+          {
+            "id": "b2-01-q14",
+            "type": "multiple-choice",
+            "question": "Most \"Nominalstil\" sentence:",
+            "options": [
+              "Wir entwickeln das Produkt.",
+              "Bei der Entwicklung des Produkts...",
+              "Das Produkt wird entwickelt.",
+              "Wir haben entwickelt."
+            ],
+            "answer": "Bei der Entwicklung des Produkts..."
+          },
+          {
+            "id": "b2-01-q15",
+            "type": "matching",
+            "question": "Match verb to noun:",
+            "pairs": [
+              {
+                "left": "wirken",
+                "right": "die Wirkung"
+              },
+              {
+                "left": "fordern",
+                "right": "die Forderung"
+              },
+              {
+                "left": "übersetzen",
+                "right": "die Übersetzung"
+              },
+              {
+                "left": "vergleichen",
+                "right": "der Vergleich"
+              },
+              {
+                "left": "empfehlen",
+                "right": "die Empfehlung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-01-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"The economy's growth is rapid\"",
+            "words": [
+              "Das",
+              "Wachstum",
+              "der",
+              "Wirtschaft",
+              "ist",
+              "rasant"
+            ],
+            "answer": "Das Wachstum der Wirtschaft ist rasant"
+          },
+          {
+            "id": "b2-01-q17",
+            "type": "speaking",
+            "question": "Say: \"The spread of the internet was fast\"",
+            "answer": "Die Verbreitung des Internets war schnell"
+          },
+          {
+            "id": "b2-01-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Die ___ auf die Umwelt ist groß.\" (impact)",
+            "audioPrompt": "Die Auswirkung auf die Umwelt ist groß.",
+            "answer": "Auswirkung",
+            "hint": "sich auswirken → die Auswirkung"
+          },
+          {
+            "id": "b2-01-q19",
+            "type": "multiple-choice",
+            "question": "When is Nominalstil used?",
+            "options": [
+              "everyday speech",
+              "formal and journalistic texts",
+              "only advertising",
+              "poetry"
+            ],
+            "answer": "formal and journalistic texts"
+          },
+          {
+            "id": "b2-01-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"After the translation of the text, I understood everything\"",
+            "words": [
+              "Nach",
+              "der",
+              "Übersetzung",
+              "des",
+              "Textes",
+              "verstand",
+              "ich",
+              "alles"
+            ],
+            "answer": "Nach der Übersetzung des Textes verstand ich alles"
           }
         ]
       }

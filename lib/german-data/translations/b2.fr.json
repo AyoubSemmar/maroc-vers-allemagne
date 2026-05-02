@@ -290,6 +290,89 @@
           "german": "rasant",
           "arabic": "rapide/fulgurant",
           "type": "adjective"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "le sens, l'importance",
+          "plural": "die Bedeutungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "l'effet",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "la conséquence",
+          "plural": "die Folgen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wahrnehmung",
+          "arabic": "la perception",
+          "plural": "die Wahrnehmungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Mitteilung",
+          "arabic": "la communication, l'avis",
+          "plural": "die Mitteilungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Forderung",
+          "arabic": "la revendication, l'exigence",
+          "plural": "die Forderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Empfehlung",
+          "arabic": "la recommandation",
+          "plural": "die Empfehlungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Förderung",
+          "arabic": "le soutien, la promotion",
+          "plural": "die Förderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verbreitung",
+          "arabic": "la propagation, la diffusion",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Übersetzung",
+          "arabic": "la traduction",
+          "plural": "die Übersetzungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "la comparaison",
+          "plural": "die Vergleiche",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Auswirkung",
+          "arabic": "l'impact, la répercussion",
+          "plural": "die Auswirkungen",
+          "type": "noun",
+          "gender": "die"
         }
       ],
       "exercise": {
@@ -413,6 +496,128 @@
               "J'ai travaillé à la maison"
             ],
             "answer": "Je suis arrivé en retard au travail à cause du retard"
+          },
+          {
+            "id": "b2-01-q11",
+            "type": "fill-blank",
+            "question": "Transforme : « die Wirtschaft entwickelt sich » → « die ___ der Wirtschaft »",
+            "answer": "Entwicklung",
+            "hint": "entwickeln → die Entwicklung"
+          },
+          {
+            "id": "b2-01-q12",
+            "type": "multiple-choice",
+            "question": "Le nom de « untersuchen » :",
+            "options": [
+              "die Untersuchung",
+              "der Untersuch",
+              "das Untersuchen",
+              "die Untersuche"
+            ],
+            "answer": "die Untersuchung"
+          },
+          {
+            "id": "b2-01-q13",
+            "type": "fill-blank",
+            "question": "Complète : « Die ___ der Preise ist hoch. » (la hausse)",
+            "answer": "Erhöhung",
+            "hint": "erhöhen → die Erhöhung"
+          },
+          {
+            "id": "b2-01-q14",
+            "type": "multiple-choice",
+            "question": "La phrase la plus « Nominalstil » :",
+            "options": [
+              "Wir entwickeln das Produkt.",
+              "Bei der Entwicklung des Produkts...",
+              "Das Produkt wird entwickelt.",
+              "Wir haben entwickelt."
+            ],
+            "answer": "Bei der Entwicklung des Produkts..."
+          },
+          {
+            "id": "b2-01-q15",
+            "type": "matching",
+            "question": "Associe le verbe au nom :",
+            "pairs": [
+              {
+                "left": "wirken",
+                "right": "die Wirkung"
+              },
+              {
+                "left": "fordern",
+                "right": "die Forderung"
+              },
+              {
+                "left": "übersetzen",
+                "right": "die Übersetzung"
+              },
+              {
+                "left": "vergleichen",
+                "right": "der Vergleich"
+              },
+              {
+                "left": "empfehlen",
+                "right": "die Empfehlung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-01-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « La croissance économique est rapide »",
+            "words": [
+              "Das",
+              "Wachstum",
+              "der",
+              "Wirtschaft",
+              "ist",
+              "rasant"
+            ],
+            "answer": "Das Wachstum der Wirtschaft ist rasant"
+          },
+          {
+            "id": "b2-01-q17",
+            "type": "speaking",
+            "question": "Dis : « La diffusion d'Internet a été rapide »",
+            "answer": "Die Verbreitung des Internets war schnell"
+          },
+          {
+            "id": "b2-01-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Die ___ auf die Umwelt ist groß. » (l'impact)",
+            "audioPrompt": "Die Auswirkung auf die Umwelt ist groß.",
+            "answer": "Auswirkung",
+            "hint": "sich auswirken → die Auswirkung"
+          },
+          {
+            "id": "b2-01-q19",
+            "type": "multiple-choice",
+            "question": "Quand utilise-t-on le Nominalstil ?",
+            "options": [
+              "langue quotidienne",
+              "textes formels et journalistiques",
+              "uniquement publicité",
+              "poésie"
+            ],
+            "answer": "textes formels et journalistiques"
+          },
+          {
+            "id": "b2-01-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Après la traduction du texte, j'ai tout compris »",
+            "words": [
+              "Nach",
+              "der",
+              "Übersetzung",
+              "des",
+              "Textes",
+              "verstand",
+              "ich",
+              "alles"
+            ],
+            "answer": "Nach der Übersetzung des Textes verstand ich alles"
           }
         ]
       }
