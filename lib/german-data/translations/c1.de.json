@@ -4868,6 +4868,107 @@
           "arabic": "wirtschaftlicher Aufschwung",
           "gender": "der",
           "type": "noun"
+        },
+        {
+          "german": "die Demokratie",
+          "arabic": "Staatsform mit Volksherrschaft",
+          "gender": "die",
+          "plural": "Demokratien",
+          "type": "noun"
+        },
+        {
+          "german": "die Diktatur",
+          "arabic": "Staat ohne politische Freiheit",
+          "gender": "die",
+          "plural": "Diktaturen",
+          "type": "noun"
+        },
+        {
+          "german": "der Klimaschutz",
+          "arabic": "Maßnahmen für die Umwelt",
+          "gender": "der",
+          "type": "noun"
+        },
+        {
+          "german": "die Krise",
+          "arabic": "schwierige Situation",
+          "gender": "die",
+          "plural": "Krisen",
+          "type": "noun"
+        },
+        {
+          "german": "der Konjunktur",
+          "arabic": "wirtschaftliche Lage",
+          "gender": "der",
+          "type": "noun"
+        },
+        {
+          "german": "die Außenpolitik",
+          "arabic": "Politik mit anderen Staaten",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Innenpolitik",
+          "arabic": "Politik im eigenen Land",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Sicherheit",
+          "arabic": "Schutz vor Gefahren",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "der Konflikt",
+          "arabic": "Streit, Auseinandersetzung",
+          "gender": "der",
+          "plural": "Konflikte",
+          "type": "noun"
+        },
+        {
+          "german": "die Verfassung",
+          "arabic": "Grundgesetz eines Staates",
+          "gender": "die",
+          "plural": "Verfassungen",
+          "type": "noun"
+        },
+        {
+          "german": "das Parlament",
+          "arabic": "Vertretung des Volkes",
+          "gender": "das",
+          "plural": "Parlamente",
+          "type": "noun"
+        },
+        {
+          "german": "der Minister",
+          "arabic": "Mitglied der Regierung",
+          "gender": "der",
+          "plural": "Minister",
+          "type": "noun"
+        },
+        {
+          "german": "der Präsident",
+          "arabic": "Staatsoberhaupt",
+          "gender": "der",
+          "plural": "Präsidenten",
+          "type": "noun"
+        },
+        {
+          "german": "einführen",
+          "arabic": "neu in Kraft setzen",
+          "type": "verb"
+        },
+        {
+          "german": "reformieren",
+          "arabic": "verändern und verbessern",
+          "type": "verb"
+        },
+        {
+          "german": "sich auswirken",
+          "arabic": "Folgen haben",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -4986,6 +5087,125 @@
               "Haushaltsplan"
             ],
             "answer": "Die Opposition kritisiert den Haushaltsplan"
+          },
+          {
+            "id": "c1-09-q11",
+            "type": "fill-blank",
+            "question": "„Die ___ ist im Quartal gestiegen.\" (Inflation)",
+            "answer": "Inflation",
+            "hint": "die Inflation"
+          },
+          {
+            "id": "c1-09-q12",
+            "type": "multiple-choice",
+            "question": "Das deutsche Parlament heißt:",
+            "options": [
+              "das Parlament",
+              "der Bundestag",
+              "die Regierung",
+              "die Koalition"
+            ],
+            "answer": "der Bundestag"
+          },
+          {
+            "id": "c1-09-q13",
+            "type": "fill-blank",
+            "question": "„Das Gesetz wurde im Bundestag ___.\" (verabschiedet)",
+            "answer": "verabschiedet",
+            "hint": "verabschieden → verabschiedet"
+          },
+          {
+            "id": "c1-09-q14",
+            "type": "multiple-choice",
+            "question": "Was bedeutet „BIP\"?",
+            "options": [
+              "Arbeitslosigkeit",
+              "Bruttoinlandsprodukt",
+              "Parlament",
+              "Bank"
+            ],
+            "answer": "Bruttoinlandsprodukt"
+          },
+          {
+            "id": "c1-09-q15",
+            "type": "matching",
+            "question": "Verbinde:",
+            "pairs": [
+              {
+                "left": "Bundestag",
+                "right": "Parlament"
+              },
+              {
+                "left": "Bundeskanzler",
+                "right": "Regierungschef"
+              },
+              {
+                "left": "Inflation",
+                "right": "Preissteigerung"
+              },
+              {
+                "left": "Sanktion",
+                "right": "Strafmaßnahme"
+              },
+              {
+                "left": "Wahl",
+                "right": "demokratische Abstimmung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-09-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Die Wirtschaft wuchs um 2 Prozent\"",
+            "words": [
+              "Die",
+              "Wirtschaft",
+              "wuchs",
+              "um",
+              "2",
+              "Prozent"
+            ],
+            "answer": "Die Wirtschaft wuchs um 2 Prozent"
+          },
+          {
+            "id": "c1-09-q17",
+            "type": "speaking",
+            "question": "Sag: „Die Regierung verhandelt mit der Opposition\"",
+            "answer": "Die Regierung verhandelt mit der Opposition"
+          },
+          {
+            "id": "c1-09-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Die ___ wurden verhängt.\" (Sanktionen)",
+            "audioPrompt": "Die Sanktionen wurden verhängt.",
+            "answer": "Sanktionen",
+            "hint": "die Sanktion (pl)"
+          },
+          {
+            "id": "c1-09-q19",
+            "type": "multiple-choice",
+            "question": "Beste Zeitung für B2/C1-Training:",
+            "options": [
+              "BILD",
+              "FAZ / Süddeutsche",
+              "Bunte",
+              "TV Spielfilm"
+            ],
+            "answer": "FAZ / Süddeutsche"
+          },
+          {
+            "id": "c1-09-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Die Arbeitslosenquote sinkt in Deutschland\"",
+            "words": [
+              "Die",
+              "Arbeitslosenquote",
+              "sinkt",
+              "in",
+              "Deutschland"
+            ],
+            "answer": "Die Arbeitslosenquote sinkt in Deutschland"
           }
         ]
       }
