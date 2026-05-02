@@ -5795,6 +5795,105 @@
           "example": "Ich werde kommen.",
           "exampleArabic": "I will come.",
           "type": "verb"
+        },
+        {
+          "german": "die Fahrt",
+          "arabic": "the trip, ride (vehicle)",
+          "gender": "die",
+          "plural": "Fahrten",
+          "example": "Die Fahrt war lang.",
+          "exampleArabic": "The trip was long.",
+          "type": "noun"
+        },
+        {
+          "german": "der Tourist",
+          "arabic": "the tourist",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Berlin hat viele Touristen.",
+          "exampleArabic": "Berlin has lots of tourists.",
+          "type": "noun"
+        },
+        {
+          "german": "die Welt",
+          "arabic": "the world",
+          "gender": "die",
+          "example": "Ich möchte die Welt sehen.",
+          "exampleArabic": "I want to see the world.",
+          "type": "noun"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "the hotel",
+          "gender": "das",
+          "plural": "Hotels",
+          "example": "Das Hotel ist gut.",
+          "exampleArabic": "The hotel is good.",
+          "type": "noun"
+        },
+        {
+          "german": "das Gepäck",
+          "arabic": "the luggage",
+          "gender": "das",
+          "example": "Wo ist mein Gepäck?",
+          "exampleArabic": "Where's my luggage?",
+          "type": "noun"
+        },
+        {
+          "german": "ein|steigen",
+          "arabic": "to board, get on",
+          "example": "Bitte einsteigen!",
+          "exampleArabic": "All aboard, please!",
+          "type": "verb"
+        },
+        {
+          "german": "aus|steigen",
+          "arabic": "to get off",
+          "example": "Hier steige ich aus.",
+          "exampleArabic": "I'm getting off here.",
+          "type": "verb"
+        },
+        {
+          "german": "landen",
+          "arabic": "to land",
+          "example": "Wann landet das Flugzeug?",
+          "exampleArabic": "When does the plane land?",
+          "type": "verb"
+        },
+        {
+          "german": "starten",
+          "arabic": "to take off, start",
+          "example": "Das Flugzeug startet.",
+          "exampleArabic": "The plane is taking off.",
+          "type": "verb"
+        },
+        {
+          "german": "reservieren",
+          "arabic": "to reserve",
+          "example": "Ich möchte einen Tisch reservieren.",
+          "exampleArabic": "I'd like to reserve a table.",
+          "type": "verb"
+        },
+        {
+          "german": "buchen",
+          "arabic": "to book (online)",
+          "example": "Ich buche einen Flug.",
+          "exampleArabic": "I'm booking a flight.",
+          "type": "verb"
+        },
+        {
+          "german": "nächste Woche",
+          "arabic": "next week",
+          "example": "Nächste Woche fliege ich.",
+          "exampleArabic": "I'm flying next week.",
+          "type": "phrase"
+        },
+        {
+          "german": "übermorgen",
+          "arabic": "the day after tomorrow",
+          "example": "Übermorgen kommen sie.",
+          "exampleArabic": "They're coming the day after tomorrow.",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -5912,6 +6011,125 @@
             "id": "a2-09-q10",
             "question": "Complete: \"Ich gehe ___ Fuß.\" (on foot)",
             "answer": "zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q11",
+            "question": "What does \"buchen\" mean?",
+            "options": [
+              "to read",
+              "to book online",
+              "to pay",
+              "to write"
+            ],
+            "answer": "to book online"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q12",
+            "question": "Fill in: \"Wir ___ in Frankfurt um.\" (change — umsteigen)",
+            "answer": "steigen",
+            "hint": "separable verb"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q13",
+            "question": "Futur I is formed with:",
+            "options": [
+              "haben + Partizip II",
+              "sein + Partizip II",
+              "werden + Infinitiv",
+              "werden + Partizip II"
+            ],
+            "answer": "werden + Infinitiv"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q14",
+            "question": "Fill in: \"Übermorgen ___ ich nach Köln.\" (Präsens with future meaning)",
+            "answer": "fahre",
+            "hint": "fahren with ich"
+          },
+          {
+            "type": "matching",
+            "id": "a2-09-q15",
+            "question": "Match the verb to its meaning:",
+            "pairs": [
+              {
+                "left": "einsteigen",
+                "right": "to board"
+              },
+              {
+                "left": "aussteigen",
+                "right": "to get off"
+              },
+              {
+                "left": "umsteigen",
+                "right": "to change (transport)"
+              },
+              {
+                "left": "landen",
+                "right": "to land"
+              },
+              {
+                "left": "starten",
+                "right": "to take off"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q16",
+            "question": "Order the words: \"I want to book a hotel in Munich\"",
+            "words": [
+              "Ich",
+              "möchte",
+              "ein",
+              "Hotel",
+              "in",
+              "München",
+              "buchen"
+            ],
+            "answer": "Ich möchte ein Hotel in München buchen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-09-q17",
+            "question": "Say in German: \"When does the plane land?\"",
+            "answer": "Wann landet das Flugzeug"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q18",
+            "question": "Listen: \"___ Sie bitte ein!\" (board)",
+            "audioPrompt": "Steigen Sie bitte ein!",
+            "answer": "Steigen",
+            "hint": "einsteigen in Sie form"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q19",
+            "question": "Which sentence is in Futur I?",
+            "options": [
+              "Ich fahre morgen.",
+              "Ich werde morgen fahren.",
+              "Ich bin morgen gefahren.",
+              "Ich fahre gestern."
+            ],
+            "answer": "Ich werde morgen fahren."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q20",
+            "question": "Order the words: \"Where is my luggage?\"",
+            "words": [
+              "Wo",
+              "ist",
+              "mein",
+              "Gepäck"
+            ],
+            "answer": "Wo ist mein Gepäck"
           }
         ]
       }

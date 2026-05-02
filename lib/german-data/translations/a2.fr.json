@@ -5795,6 +5795,105 @@
           "example": "Ich werde kommen.",
           "exampleArabic": "Je viendrai.",
           "type": "verb"
+        },
+        {
+          "german": "die Fahrt",
+          "arabic": "le trajet, le voyage (en véhicule)",
+          "gender": "die",
+          "plural": "Fahrten",
+          "example": "Die Fahrt war lang.",
+          "exampleArabic": "Le trajet était long.",
+          "type": "noun"
+        },
+        {
+          "german": "der Tourist",
+          "arabic": "le touriste",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Berlin hat viele Touristen.",
+          "exampleArabic": "Berlin a beaucoup de touristes.",
+          "type": "noun"
+        },
+        {
+          "german": "die Welt",
+          "arabic": "le monde",
+          "gender": "die",
+          "example": "Ich möchte die Welt sehen.",
+          "exampleArabic": "Je veux voir le monde.",
+          "type": "noun"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "l'hôtel",
+          "gender": "das",
+          "plural": "Hotels",
+          "example": "Das Hotel ist gut.",
+          "exampleArabic": "L'hôtel est bien.",
+          "type": "noun"
+        },
+        {
+          "german": "das Gepäck",
+          "arabic": "les bagages",
+          "gender": "das",
+          "example": "Wo ist mein Gepäck?",
+          "exampleArabic": "Où sont mes bagages ?",
+          "type": "noun"
+        },
+        {
+          "german": "ein|steigen",
+          "arabic": "monter (dans un véhicule)",
+          "example": "Bitte einsteigen!",
+          "exampleArabic": "Veuillez monter !",
+          "type": "verb"
+        },
+        {
+          "german": "aus|steigen",
+          "arabic": "descendre (d'un véhicule)",
+          "example": "Hier steige ich aus.",
+          "exampleArabic": "Je descends ici.",
+          "type": "verb"
+        },
+        {
+          "german": "landen",
+          "arabic": "atterrir",
+          "example": "Wann landet das Flugzeug?",
+          "exampleArabic": "Quand atterrit l'avion ?",
+          "type": "verb"
+        },
+        {
+          "german": "starten",
+          "arabic": "décoller, démarrer",
+          "example": "Das Flugzeug startet.",
+          "exampleArabic": "L'avion décolle.",
+          "type": "verb"
+        },
+        {
+          "german": "reservieren",
+          "arabic": "réserver",
+          "example": "Ich möchte einen Tisch reservieren.",
+          "exampleArabic": "Je voudrais réserver une table.",
+          "type": "verb"
+        },
+        {
+          "german": "buchen",
+          "arabic": "réserver (en ligne)",
+          "example": "Ich buche einen Flug.",
+          "exampleArabic": "Je réserve un vol.",
+          "type": "verb"
+        },
+        {
+          "german": "nächste Woche",
+          "arabic": "la semaine prochaine",
+          "example": "Nächste Woche fliege ich.",
+          "exampleArabic": "Je m'envole la semaine prochaine.",
+          "type": "phrase"
+        },
+        {
+          "german": "übermorgen",
+          "arabic": "après-demain",
+          "example": "Übermorgen kommen sie.",
+          "exampleArabic": "Ils viennent après-demain.",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -5912,6 +6011,125 @@
             "id": "a2-09-q10",
             "question": "Complète : \"Ich gehe ___ Fuß.\" (à pied)",
             "answer": "zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q11",
+            "question": "Que signifie « buchen » ?",
+            "options": [
+              "lire",
+              "réserver en ligne",
+              "payer",
+              "écrire"
+            ],
+            "answer": "réserver en ligne"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q12",
+            "question": "Complète : « Wir ___ in Frankfurt um. » (changeons — umsteigen)",
+            "answer": "steigen",
+            "hint": "verbe séparable"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q13",
+            "question": "Le Futur I est formé de :",
+            "options": [
+              "haben + Partizip II",
+              "sein + Partizip II",
+              "werden + Infinitiv",
+              "werden + Partizip II"
+            ],
+            "answer": "werden + Infinitiv"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q14",
+            "question": "Complète : « Übermorgen ___ ich nach Köln. » (Präsens à valeur future)",
+            "answer": "fahre",
+            "hint": "fahren avec ich"
+          },
+          {
+            "type": "matching",
+            "id": "a2-09-q15",
+            "question": "Associe le verbe à son sens :",
+            "pairs": [
+              {
+                "left": "einsteigen",
+                "right": "monter"
+              },
+              {
+                "left": "aussteigen",
+                "right": "descendre"
+              },
+              {
+                "left": "umsteigen",
+                "right": "changer"
+              },
+              {
+                "left": "landen",
+                "right": "atterrir"
+              },
+              {
+                "left": "starten",
+                "right": "décoller"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q16",
+            "question": "Remets dans l'ordre : « Je veux réserver un hôtel à Munich »",
+            "words": [
+              "Ich",
+              "möchte",
+              "ein",
+              "Hotel",
+              "in",
+              "München",
+              "buchen"
+            ],
+            "answer": "Ich möchte ein Hotel in München buchen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-09-q17",
+            "question": "Dis en allemand : « Quand atterrit l'avion ? »",
+            "answer": "Wann landet das Flugzeug"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q18",
+            "question": "Écoute : « ___ Sie bitte ein! » (montez)",
+            "audioPrompt": "Steigen Sie bitte ein!",
+            "answer": "Steigen",
+            "hint": "einsteigen à la forme Sie"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q19",
+            "question": "Quelle phrase est au Futur I ?",
+            "options": [
+              "Ich fahre morgen.",
+              "Ich werde morgen fahren.",
+              "Ich bin morgen gefahren.",
+              "Ich fahre gestern."
+            ],
+            "answer": "Ich werde morgen fahren."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q20",
+            "question": "Remets dans l'ordre : « Où sont mes bagages ? »",
+            "words": [
+              "Wo",
+              "ist",
+              "mein",
+              "Gepäck"
+            ],
+            "answer": "Wo ist mein Gepäck"
           }
         ]
       }

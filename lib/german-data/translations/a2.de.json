@@ -5795,6 +5795,105 @@
           "example": "Ich werde kommen.",
           "exampleArabic": "I will come.",
           "type": "verb"
+        },
+        {
+          "german": "die Fahrt",
+          "arabic": "Reise mit einem Fahrzeug",
+          "gender": "die",
+          "plural": "Fahrten",
+          "example": "Die Fahrt war lang.",
+          "exampleArabic": "Reisedauer mit Bus, Auto oder Bahn.",
+          "type": "noun"
+        },
+        {
+          "german": "der Tourist",
+          "arabic": "Person, die zum Vergnügen reist",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Berlin hat viele Touristen.",
+          "exampleArabic": "Reisender Besucher.",
+          "type": "noun"
+        },
+        {
+          "german": "die Welt",
+          "arabic": "die Erde, alle Länder",
+          "gender": "die",
+          "example": "Ich möchte die Welt sehen.",
+          "exampleArabic": "Globaler Begriff.",
+          "type": "noun"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "Übernachtungsmöglichkeit gegen Bezahlung",
+          "gender": "das",
+          "plural": "Hotels",
+          "example": "Das Hotel ist gut.",
+          "exampleArabic": "Beherbergungsbetrieb.",
+          "type": "noun"
+        },
+        {
+          "german": "das Gepäck",
+          "arabic": "Koffer und Taschen für die Reise",
+          "gender": "das",
+          "example": "Wo ist mein Gepäck?",
+          "exampleArabic": "Reiseutensilien zusammen.",
+          "type": "noun"
+        },
+        {
+          "german": "ein|steigen",
+          "arabic": "in ein Fahrzeug hineingehen",
+          "example": "Bitte einsteigen!",
+          "exampleArabic": "Trennbares Verb der Bewegung.",
+          "type": "verb"
+        },
+        {
+          "german": "aus|steigen",
+          "arabic": "ein Fahrzeug verlassen",
+          "example": "Hier steige ich aus.",
+          "exampleArabic": "Gegenteil von einsteigen.",
+          "type": "verb"
+        },
+        {
+          "german": "landen",
+          "arabic": "auf dem Boden ankommen (Flugzeug)",
+          "example": "Wann landet das Flugzeug?",
+          "exampleArabic": "Verb der Luftfahrt.",
+          "type": "verb"
+        },
+        {
+          "german": "starten",
+          "arabic": "abheben, beginnen",
+          "example": "Das Flugzeug startet.",
+          "exampleArabic": "Gegenteil von landen.",
+          "type": "verb"
+        },
+        {
+          "german": "reservieren",
+          "arabic": "im Voraus sichern, vormerken",
+          "example": "Ich möchte einen Tisch reservieren.",
+          "exampleArabic": "Etwas frei halten lassen.",
+          "type": "verb"
+        },
+        {
+          "german": "buchen",
+          "arabic": "online oder im Reisebüro reservieren",
+          "example": "Ich buche einen Flug.",
+          "exampleArabic": "Reise oder Hotel bestellen.",
+          "type": "verb"
+        },
+        {
+          "german": "nächste Woche",
+          "arabic": "die kommende Woche",
+          "example": "Nächste Woche fliege ich.",
+          "exampleArabic": "Zeitangabe für die Zukunft.",
+          "type": "phrase"
+        },
+        {
+          "german": "übermorgen",
+          "arabic": "der Tag nach morgen",
+          "example": "Übermorgen kommen sie.",
+          "exampleArabic": "Zwei Tage in der Zukunft.",
+          "type": "adverb"
         }
       ],
       "exercise": {
@@ -5912,6 +6011,125 @@
             "id": "a2-09-q10",
             "question": "Complete: \"Ich gehe ___ Fuß.\" (on foot)",
             "answer": "zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q11",
+            "question": "Was bedeutet „buchen\"?",
+            "options": [
+              "lesen",
+              "online reservieren",
+              "bezahlen",
+              "schreiben"
+            ],
+            "answer": "online reservieren"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q12",
+            "question": "Ergänze: „Wir ___ in Frankfurt um.\" (umsteigen)",
+            "answer": "steigen",
+            "hint": "Trennbares Verb"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q13",
+            "question": "Futur I bildet man mit:",
+            "options": [
+              "haben + Partizip II",
+              "sein + Partizip II",
+              "werden + Infinitiv",
+              "werden + Partizip II"
+            ],
+            "answer": "werden + Infinitiv"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q14",
+            "question": "Ergänze: „Übermorgen ___ ich nach Köln.\" (Präsens mit Zukunftsbedeutung)",
+            "answer": "fahre",
+            "hint": "fahren mit ich"
+          },
+          {
+            "type": "matching",
+            "id": "a2-09-q15",
+            "question": "Verbinde das Verb mit seiner Bedeutung:",
+            "pairs": [
+              {
+                "left": "einsteigen",
+                "right": "ins Fahrzeug gehen"
+              },
+              {
+                "left": "aussteigen",
+                "right": "Fahrzeug verlassen"
+              },
+              {
+                "left": "umsteigen",
+                "right": "Fahrzeug wechseln"
+              },
+              {
+                "left": "landen",
+                "right": "auf den Boden kommen"
+              },
+              {
+                "left": "starten",
+                "right": "abheben"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q16",
+            "question": "Ordne: „Ich möchte ein Hotel in München buchen\"",
+            "words": [
+              "Ich",
+              "möchte",
+              "ein",
+              "Hotel",
+              "in",
+              "München",
+              "buchen"
+            ],
+            "answer": "Ich möchte ein Hotel in München buchen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-09-q17",
+            "question": "Sag auf Deutsch: „Wann landet das Flugzeug?\"",
+            "answer": "Wann landet das Flugzeug"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-09-q18",
+            "question": "Hör zu: „___ Sie bitte ein!\" (einsteigen)",
+            "audioPrompt": "Steigen Sie bitte ein!",
+            "answer": "Steigen",
+            "hint": "einsteigen in Sie-Form"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-09-q19",
+            "question": "Welcher Satz steht im Futur I?",
+            "options": [
+              "Ich fahre morgen.",
+              "Ich werde morgen fahren.",
+              "Ich bin morgen gefahren.",
+              "Ich fahre gestern."
+            ],
+            "answer": "Ich werde morgen fahren."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-09-q20",
+            "question": "Ordne: „Wo ist mein Gepäck?\"",
+            "words": [
+              "Wo",
+              "ist",
+              "mein",
+              "Gepäck"
+            ],
+            "answer": "Wo ist mein Gepäck"
           }
         ]
       }
