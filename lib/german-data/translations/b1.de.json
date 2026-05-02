@@ -270,6 +270,80 @@
           "german": "es wäre schön",
           "arabic": "es wäre schön",
           "type": "phrase"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "Erwartung von etwas Gutem",
+          "plural": "die Hoffnungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Realität",
+          "arabic": "die Wirklichkeit",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lust",
+          "arabic": "Wunsch, etwas zu tun",
+          "type": "noun",
+          "gender": "die",
+          "example": "Ich habe Lust auf Kaffee."
+        },
+        {
+          "german": "der Gedanke",
+          "arabic": "geistige Vorstellung",
+          "plural": "die Gedanken",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Rat",
+          "arabic": "Empfehlung, Vorschlag",
+          "plural": "die Ratschläge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "in der Theorie, nicht praktisch",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "in Wirklichkeit, im Grunde",
+          "type": "adverb"
+        },
+        {
+          "german": "nochmal",
+          "arabic": "ein weiteres Mal",
+          "type": "adverb"
+        },
+        {
+          "german": "niemals",
+          "arabic": "zu keiner Zeit",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "wirklich, in der Tat",
+          "type": "adverb"
+        },
+        {
+          "german": "erlauben",
+          "arabic": "die Genehmigung geben",
+          "type": "verb"
+        },
+        {
+          "german": "verbieten",
+          "arabic": "Gegenteil von erlauben",
+          "type": "verb"
+        },
+        {
+          "german": "wenn nur",
+          "arabic": "Ausdruck eines starken Wunsches",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -395,6 +469,128 @@
               "Ich werde nicht ins Kino gehen"
             ],
             "answer": "Wenn ich Zeit hätte, würde ich ins Kino gehen"
+          },
+          {
+            "id": "b1-01-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „Wenn ich du ___, würde ich gehen.\" (sein → Konj. II)",
+            "answer": "wäre",
+            "hint": "sein → wäre"
+          },
+          {
+            "id": "b1-01-q12",
+            "type": "multiple-choice",
+            "question": "Konjunktiv II von haben mit du?",
+            "options": [
+              "hatte",
+              "hättest",
+              "habst",
+              "hat"
+            ],
+            "answer": "hättest"
+          },
+          {
+            "id": "b1-01-q13",
+            "type": "fill-blank",
+            "question": "Ergänze: „Wir ___ gerne ins Kino gehen.\" (würden)",
+            "answer": "würden",
+            "hint": "würden + Inf"
+          },
+          {
+            "id": "b1-01-q14",
+            "type": "multiple-choice",
+            "question": "Unterschied zwischen möchte und mochte?",
+            "options": [
+              "dasselbe",
+              "möchte = höfliche Form, mochte = Vergangenheit",
+              "beide Vergangenheit",
+              "beide höflich"
+            ],
+            "answer": "möchte = höfliche Form, mochte = Vergangenheit"
+          },
+          {
+            "id": "b1-01-q15",
+            "type": "matching",
+            "question": "Verbinde Verb mit Konjunktiv II:",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "könnte"
+              },
+              {
+                "left": "müssen",
+                "right": "müsste"
+              },
+              {
+                "left": "dürfen",
+                "right": "dürfte"
+              },
+              {
+                "left": "sollen",
+                "right": "sollte"
+              },
+              {
+                "left": "mögen",
+                "right": "möchte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-01-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Du solltest dich mehr ausruhen\"",
+            "words": [
+              "Du",
+              "solltest",
+              "dich",
+              "mehr",
+              "ausruhen"
+            ],
+            "answer": "Du solltest dich mehr ausruhen"
+          },
+          {
+            "id": "b1-01-q17",
+            "type": "speaking",
+            "question": "Sag höflich: „Könnten Sie mir bitte helfen?\"",
+            "answer": "Könnten Sie mir bitte helfen"
+          },
+          {
+            "id": "b1-01-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „An deiner Stelle ___ ich das nicht tun.\" (würde)",
+            "audioPrompt": "An deiner Stelle würde ich das nicht tun.",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "id": "b1-01-q19",
+            "type": "multiple-choice",
+            "question": "Welcher Satz ist im Konjunktiv II?",
+            "options": [
+              "Ich gehe ins Kino.",
+              "Ich ging ins Kino.",
+              "Ich würde ins Kino gehen.",
+              "Ich bin gegangen."
+            ],
+            "answer": "Ich würde ins Kino gehen."
+          },
+          {
+            "id": "b1-01-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Wenn ich mehr Zeit hätte, würde ich Musik lernen\"",
+            "words": [
+              "Wenn",
+              "ich",
+              "mehr",
+              "Zeit",
+              "hätte,",
+              "würde",
+              "ich",
+              "Musik",
+              "lernen"
+            ],
+            "answer": "Wenn ich mehr Zeit hätte, würde ich Musik lernen"
           }
         ]
       }

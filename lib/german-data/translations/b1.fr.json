@@ -270,6 +270,80 @@
           "german": "es wäre schön",
           "arabic": "Ce serait bien",
           "type": "phrase"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "l'espoir",
+          "plural": "die Hoffnungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Realität",
+          "arabic": "la réalité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Lust",
+          "arabic": "l'envie",
+          "type": "noun",
+          "gender": "die",
+          "example": "Ich habe Lust auf Kaffee."
+        },
+        {
+          "german": "der Gedanke",
+          "arabic": "la pensée",
+          "plural": "die Gedanken",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Rat",
+          "arabic": "le conseil",
+          "plural": "die Ratschläge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "théoriquement",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "en fait",
+          "type": "adverb"
+        },
+        {
+          "german": "nochmal",
+          "arabic": "encore une fois",
+          "type": "adverb"
+        },
+        {
+          "german": "niemals",
+          "arabic": "jamais",
+          "type": "adverb"
+        },
+        {
+          "german": "tatsächlich",
+          "arabic": "effectivement",
+          "type": "adverb"
+        },
+        {
+          "german": "erlauben",
+          "arabic": "permettre",
+          "type": "verb"
+        },
+        {
+          "german": "verbieten",
+          "arabic": "interdire",
+          "type": "verb"
+        },
+        {
+          "german": "wenn nur",
+          "arabic": "si seulement",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -395,6 +469,128 @@
               "Je n'irai pas au cinéma"
             ],
             "answer": "Si j'avais du temps, j'irais au cinéma"
+          },
+          {
+            "id": "b1-01-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Wenn ich du ___, würde ich gehen. » (sein → Konj. II)",
+            "answer": "wäre",
+            "hint": "sein → wäre"
+          },
+          {
+            "id": "b1-01-q12",
+            "type": "multiple-choice",
+            "question": "Konjunktiv II de haben avec du ?",
+            "options": [
+              "hatte",
+              "hättest",
+              "habst",
+              "hat"
+            ],
+            "answer": "hättest"
+          },
+          {
+            "id": "b1-01-q13",
+            "type": "fill-blank",
+            "question": "Complète : « Wir ___ gerne ins Kino gehen. » (würden)",
+            "answer": "würden",
+            "hint": "würden + Inf"
+          },
+          {
+            "id": "b1-01-q14",
+            "type": "multiple-choice",
+            "question": "Différence entre möchte et mochte ?",
+            "options": [
+              "pareil",
+              "möchte = je voudrais (poli), mochte = j'aimais (passé)",
+              "tous deux passé",
+              "tous deux polis"
+            ],
+            "answer": "möchte = je voudrais (poli), mochte = j'aimais (passé)"
+          },
+          {
+            "id": "b1-01-q15",
+            "type": "matching",
+            "question": "Associe le verbe à son Konjunktiv II :",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "könnte"
+              },
+              {
+                "left": "müssen",
+                "right": "müsste"
+              },
+              {
+                "left": "dürfen",
+                "right": "dürfte"
+              },
+              {
+                "left": "sollen",
+                "right": "sollte"
+              },
+              {
+                "left": "mögen",
+                "right": "möchte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-01-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Tu devrais te reposer davantage »",
+            "words": [
+              "Du",
+              "solltest",
+              "dich",
+              "mehr",
+              "ausruhen"
+            ],
+            "answer": "Du solltest dich mehr ausruhen"
+          },
+          {
+            "id": "b1-01-q17",
+            "type": "speaking",
+            "question": "Dis poliment : « Pourriez-vous m'aider, s'il vous plaît ? »",
+            "answer": "Könnten Sie mir bitte helfen"
+          },
+          {
+            "id": "b1-01-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « An deiner Stelle ___ ich das nicht tun. » (würde)",
+            "audioPrompt": "An deiner Stelle würde ich das nicht tun.",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "id": "b1-01-q19",
+            "type": "multiple-choice",
+            "question": "Quelle phrase est au Konjunktiv II ?",
+            "options": [
+              "Ich gehe ins Kino.",
+              "Ich ging ins Kino.",
+              "Ich würde ins Kino gehen.",
+              "Ich bin gegangen."
+            ],
+            "answer": "Ich würde ins Kino gehen."
+          },
+          {
+            "id": "b1-01-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Si j'avais plus de temps, j'apprendrais la musique »",
+            "words": [
+              "Wenn",
+              "ich",
+              "mehr",
+              "Zeit",
+              "hätte,",
+              "würde",
+              "ich",
+              "Musik",
+              "lernen"
+            ],
+            "answer": "Wenn ich mehr Zeit hätte, würde ich Musik lernen"
           }
         ]
       }
