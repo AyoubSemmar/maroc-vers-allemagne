@@ -1979,6 +1979,84 @@
           "gender": "der",
           "plural": "Einwände",
           "type": "noun"
+        },
+        {
+          "german": "der Fall",
+          "arabic": "le cas",
+          "gender": "der",
+          "plural": "Fälle",
+          "type": "noun"
+        },
+        {
+          "german": "die Eventualität",
+          "arabic": "l'éventualité",
+          "gender": "die",
+          "plural": "Eventualitäten",
+          "type": "noun"
+        },
+        {
+          "german": "die Annahme",
+          "arabic": "la supposition",
+          "gender": "die",
+          "plural": "Annahmen",
+          "type": "noun"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "la condition",
+          "gender": "die",
+          "plural": "Bedingungen",
+          "type": "noun"
+        },
+        {
+          "german": "gegebenenfalls",
+          "arabic": "le cas échéant",
+          "type": "adverb"
+        },
+        {
+          "german": "allenfalls",
+          "arabic": "tout au plus",
+          "type": "adverb"
+        },
+        {
+          "german": "erwägen",
+          "arabic": "envisager",
+          "type": "verb"
+        },
+        {
+          "german": "voraussetzen",
+          "arabic": "présupposer",
+          "type": "verb"
+        },
+        {
+          "german": "angenommen, dass",
+          "arabic": "à supposer que",
+          "type": "phrase"
+        },
+        {
+          "german": "unter der Bedingung",
+          "arabic": "à condition que",
+          "type": "phrase"
+        },
+        {
+          "german": "soweit",
+          "arabic": "dans la mesure où",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "à condition que",
+          "type": "conjunction"
+        },
+        {
+          "german": "verbindlich",
+          "arabic": "obligatoire, contraignant",
+          "type": "adjective"
+        },
+        {
+          "german": "unverbindlich",
+          "arabic": "non contraignant",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2099,6 +2177,126 @@
               "schwimmen"
             ],
             "answer": "Ist das Wetter gut gehen wir schwimmen"
+          },
+          {
+            "id": "c1-04-q11",
+            "type": "fill-blank",
+            "question": "Transforme : « Wenn er kommt, freue ich mich. » → « ___ er, freue ich mich. »",
+            "answer": "Kommt",
+            "hint": "verbe en première position, sans wenn"
+          },
+          {
+            "id": "c1-04-q12",
+            "type": "multiple-choice",
+            "question": "Alternative formelle à wenn :",
+            "options": [
+              "verbe à la fin",
+              "verbe au début",
+              "supprimer le sujet",
+              "ajouter « so »"
+            ],
+            "answer": "verbe au début"
+          },
+          {
+            "id": "c1-04-q13",
+            "type": "fill-blank",
+            "question": "« Hätten wir mehr Zeit, ___ wir bleiben. » (würden)",
+            "answer": "würden",
+            "hint": "proposition principale"
+          },
+          {
+            "id": "c1-04-q14",
+            "type": "multiple-choice",
+            "question": "« Sollten Sie Fragen haben... » est courant dans :",
+            "options": [
+              "langue quotidienne",
+              "lettres formelles",
+              "littérature jeunesse",
+              "chansons"
+            ],
+            "answer": "lettres formelles"
+          },
+          {
+            "id": "c1-04-q15",
+            "type": "matching",
+            "question": "Associe (avec wenn vs sans wenn) :",
+            "pairs": [
+              {
+                "left": "Wenn ich Zeit habe",
+                "right": "Habe ich Zeit"
+              },
+              {
+                "left": "Wenn du wüsstest",
+                "right": "Wüsstest du"
+              },
+              {
+                "left": "Wenn er gekommen wäre",
+                "right": "Wäre er gekommen"
+              },
+              {
+                "left": "Wenn ich reich wäre",
+                "right": "Wäre ich reich"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-04-q16",
+            "type": "drag-drop",
+            "question": "Remets : « Si je l'avais su, je ne serais pas venu »",
+            "words": [
+              "Hätte",
+              "ich",
+              "das",
+              "gewusst,",
+              "wäre",
+              "ich",
+              "nicht",
+              "gekommen"
+            ],
+            "answer": "Hätte ich das gewusst, wäre ich nicht gekommen"
+          },
+          {
+            "id": "c1-04-q17",
+            "type": "speaking",
+            "question": "Dis (sans wenn) : « Si tu as des questions, dis-le-moi »",
+            "answer": "Hast du Fragen, sag es mir"
+          },
+          {
+            "id": "c1-04-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « ___ Sie Fragen haben, melden Sie sich. »",
+            "audioPrompt": "Sollten Sie Fragen haben, melden Sie sich.",
+            "answer": "Sollten",
+            "hint": "sollen formel"
+          },
+          {
+            "id": "c1-04-q19",
+            "type": "multiple-choice",
+            "question": "Dans la principale, on peut ajouter :",
+            "options": [
+              "so (optionnel)",
+              "denn (obligatoire)",
+              "aber",
+              "oder"
+            ],
+            "answer": "so (optionnel)"
+          },
+          {
+            "id": "c1-04-q20",
+            "type": "drag-drop",
+            "question": "Remets : « Si j'avais été plus précis, aucune erreur n'aurait eu lieu »",
+            "words": [
+              "Wäre",
+              "ich",
+              "genauer",
+              "gewesen,",
+              "wären",
+              "keine",
+              "Fehler",
+              "passiert"
+            ],
+            "answer": "Wäre ich genauer gewesen, wären keine Fehler passiert"
           }
         ]
       }
