@@ -1542,6 +1542,9 @@ export const B1: Level = {
         { german: 'der Erfolg', arabic: 'النجاح', example: 'Der Erfolg wird kommen.', exampleArabic: 'النجاح سيأتي.', type: 'noun', gender: 'der', plural: 'die Erfolge' },
         { german: 'wohl', arabic: 'على الأرجح', example: 'Er wird wohl müde sein.', exampleArabic: 'هو على الأرجح متعب.', type: 'adverb' },
         { german: 'die Veränderung', arabic: 'التغيير', example: 'Eine Veränderung wird kommen.', exampleArabic: 'التغيير سيأتي.', type: 'noun', gender: 'die', plural: 'die Veränderungen' },
+        { german: 'die Hochzeit', arabic: 'الزفاف', example: 'Die Hochzeit wird im Sommer sein.', exampleArabic: 'سيكون الزفاف في الصيف.', type: 'noun', gender: 'die', plural: 'die Hochzeiten' },
+        { german: 'das Kind', arabic: 'الطفل', example: 'Wir werden Kinder haben.', exampleArabic: 'سيكون لدينا أطفال.', type: 'noun', gender: 'das', plural: 'die Kinder' },
+        { german: 'das Vorhaben', arabic: 'النيّة / المخطّط', example: 'Mein Vorhaben wird klar.', exampleArabic: 'مخططي سيتضح.', type: 'noun', gender: 'das', plural: 'die Vorhaben' },
       ],
       exercise: {
         questions: [
