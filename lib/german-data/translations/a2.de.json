@@ -2468,6 +2468,124 @@
           "example": "Ich gehe ins Kino.",
           "exampleArabic": "Ich gehe ins Kino.",
           "type": "noun"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "Sitzmöbel mit Lehne, für eine Person",
+          "gender": "der",
+          "plural": "Stühle",
+          "example": "Der Stuhl steht am Tisch.",
+          "exampleArabic": "Möbelstück zum Sitzen.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bett",
+          "arabic": "Möbelstück zum Schlafen",
+          "gender": "das",
+          "plural": "Betten",
+          "example": "Ich liege im Bett.",
+          "exampleArabic": "Wo man nachts schläft.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "Gerät, das Licht gibt",
+          "gender": "die",
+          "plural": "Lampen",
+          "example": "Die Lampe hängt über dem Tisch.",
+          "exampleArabic": "Lichtquelle im Zimmer.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bild",
+          "arabic": "Gemälde oder Foto an der Wand",
+          "gender": "das",
+          "plural": "Bilder",
+          "example": "Das Bild hängt an der Wand.",
+          "exampleArabic": "Visuelle Darstellung.",
+          "type": "noun"
+        },
+        {
+          "german": "das Sofa",
+          "arabic": "Sitzmöbel für mehrere Personen",
+          "gender": "das",
+          "plural": "Sofas",
+          "example": "Wir sitzen auf dem Sofa.",
+          "exampleArabic": "Großes Sitzmöbel im Wohnzimmer.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schrank",
+          "arabic": "Möbelstück mit Türen für Kleidung oder Geschirr",
+          "gender": "der",
+          "plural": "Schränke",
+          "example": "Die Kleidung ist im Schrank.",
+          "exampleArabic": "Aufbewahrungsmöbel.",
+          "type": "noun"
+        },
+        {
+          "german": "die Küche",
+          "arabic": "Raum zum Kochen",
+          "gender": "die",
+          "plural": "Küchen",
+          "example": "Mama ist in der Küche.",
+          "exampleArabic": "Zimmer mit Herd und Spüle.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bad",
+          "arabic": "Raum mit Dusche, Wanne, Toilette",
+          "gender": "das",
+          "plural": "Bäder",
+          "example": "Das Bad ist links.",
+          "exampleArabic": "Sanitärraum in der Wohnung.",
+          "type": "noun"
+        },
+        {
+          "german": "das Wohnzimmer",
+          "arabic": "Raum zum Entspannen, mit Sofa",
+          "gender": "das",
+          "plural": "Wohnzimmer",
+          "example": "Wir essen im Wohnzimmer.",
+          "exampleArabic": "Hauptaufenthaltsraum.",
+          "type": "noun"
+        },
+        {
+          "german": "das Schlafzimmer",
+          "arabic": "Raum mit Bett, zum Schlafen",
+          "gender": "das",
+          "plural": "Schlafzimmer",
+          "example": "Mein Schlafzimmer ist klein.",
+          "exampleArabic": "Privater Schlafraum.",
+          "type": "noun"
+        },
+        {
+          "german": "ins",
+          "arabic": "Verschmelzung: in + das",
+          "example": "Ich gehe ins Kino.",
+          "exampleArabic": "Bei Akkusativ und Wohin-Frage.",
+          "type": "preposition"
+        },
+        {
+          "german": "im",
+          "arabic": "Verschmelzung: in + dem",
+          "example": "Ich bin im Park.",
+          "exampleArabic": "Bei Dativ und Wo-Frage.",
+          "type": "preposition"
+        },
+        {
+          "german": "ans",
+          "arabic": "Verschmelzung: an + das",
+          "example": "Ich gehe ans Fenster.",
+          "exampleArabic": "Bei Akkusativ und Wohin-Frage.",
+          "type": "preposition"
+        },
+        {
+          "german": "am",
+          "arabic": "Verschmelzung: an + dem",
+          "example": "Ich sitze am Tisch.",
+          "exampleArabic": "Bei Dativ und Wo-Frage.",
+          "type": "preposition"
         }
       ],
       "exercise": {
@@ -2589,6 +2707,126 @@
             "question": "Ergänze: \"Ich gehe ___ Kino.\" (ins Kino — ins/im?)",
             "answer": "ins",
             "hint": "Wohin → ins"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q11",
+            "question": "Ergänze: „Ich bin ___ Park.\" (im/ins?)",
+            "answer": "im",
+            "hint": "Wo → im (Dativ)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q12",
+            "question": "Welches Verb verlangt den Dativ (Zustand)?",
+            "options": [
+              "legen",
+              "stellen",
+              "liegen",
+              "setzen"
+            ],
+            "answer": "liegen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q13",
+            "question": "„Ich setze mich ___ den Stuhl.\" (Wohin? — maskulin)",
+            "answer": "auf",
+            "hint": "auf + Akk (Wohin)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q14",
+            "question": "Welcher Satz ist korrekt für „ich hänge das Bild an die Wand\"?",
+            "options": [
+              "Ich hänge das Bild an der Wand.",
+              "Ich hänge das Bild an die Wand.",
+              "Ich hänge das Bild auf die Wand.",
+              "Ich hänge das Bild in der Wand."
+            ],
+            "answer": "Ich hänge das Bild an die Wand."
+          },
+          {
+            "type": "matching",
+            "id": "a2-04-q15",
+            "question": "Verbinde das Verb mit seinem Gegenstück (Bewegung/Zustand):",
+            "pairs": [
+              {
+                "left": "legen",
+                "right": "liegen"
+              },
+              {
+                "left": "stellen",
+                "right": "stehen"
+              },
+              {
+                "left": "setzen",
+                "right": "sitzen"
+              },
+              {
+                "left": "hängen (Akk)",
+                "right": "hängen (Dativ)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q16",
+            "question": "Ordne: „Ich stelle die Flasche in den Schrank\" (Wohin?)",
+            "words": [
+              "Ich",
+              "stelle",
+              "die",
+              "Flasche",
+              "in",
+              "den",
+              "Schrank"
+            ],
+            "answer": "Ich stelle die Flasche in den Schrank"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-04-q17",
+            "question": "Sag auf Deutsch: „Wir sind im Wohnzimmer\"",
+            "answer": "Wir sind im Wohnzimmer"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q18",
+            "question": "Hör zu: „Die Lampe hängt ___ dem Tisch.\" (oberhalb)",
+            "audioPrompt": "Die Lampe hängt über dem Tisch.",
+            "answer": "über",
+            "hint": "oben → über"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q19",
+            "question": "Welcher Satz steht im Akkusativ (Wohin)?",
+            "options": [
+              "Das Buch liegt auf dem Tisch.",
+              "Ich lege das Buch auf den Tisch.",
+              "Wir sitzen auf dem Sofa.",
+              "Die Katze ist unter dem Bett."
+            ],
+            "answer": "Ich lege das Buch auf den Tisch."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q20",
+            "question": "Ordne: „Das Bett steht zwischen dem Fenster und dem Schrank\"",
+            "words": [
+              "Das",
+              "Bett",
+              "steht",
+              "zwischen",
+              "dem",
+              "Fenster",
+              "und",
+              "dem",
+              "Schrank"
+            ],
+            "answer": "Das Bett steht zwischen dem Fenster und dem Schrank"
           }
         ]
       }

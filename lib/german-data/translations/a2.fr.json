@@ -2468,6 +2468,124 @@
           "example": "Ich gehe ins Kino.",
           "exampleArabic": "Je vais au cinéma.",
           "type": "noun"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "la chaise",
+          "gender": "der",
+          "plural": "Stühle",
+          "example": "Der Stuhl steht am Tisch.",
+          "exampleArabic": "La chaise est près de la table.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bett",
+          "arabic": "le lit",
+          "gender": "das",
+          "plural": "Betten",
+          "example": "Ich liege im Bett.",
+          "exampleArabic": "Je suis au lit.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "la lampe",
+          "gender": "die",
+          "plural": "Lampen",
+          "example": "Die Lampe hängt über dem Tisch.",
+          "exampleArabic": "La lampe est suspendue au-dessus de la table.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bild",
+          "arabic": "le tableau / l'image",
+          "gender": "das",
+          "plural": "Bilder",
+          "example": "Das Bild hängt an der Wand.",
+          "exampleArabic": "Le tableau est accroché au mur.",
+          "type": "noun"
+        },
+        {
+          "german": "das Sofa",
+          "arabic": "le canapé",
+          "gender": "das",
+          "plural": "Sofas",
+          "example": "Wir sitzen auf dem Sofa.",
+          "exampleArabic": "Nous sommes assis sur le canapé.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schrank",
+          "arabic": "l'armoire",
+          "gender": "der",
+          "plural": "Schränke",
+          "example": "Die Kleidung ist im Schrank.",
+          "exampleArabic": "Les vêtements sont dans l'armoire.",
+          "type": "noun"
+        },
+        {
+          "german": "die Küche",
+          "arabic": "la cuisine",
+          "gender": "die",
+          "plural": "Küchen",
+          "example": "Mama ist in der Küche.",
+          "exampleArabic": "Maman est dans la cuisine.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bad",
+          "arabic": "la salle de bain",
+          "gender": "das",
+          "plural": "Bäder",
+          "example": "Das Bad ist links.",
+          "exampleArabic": "La salle de bain est à gauche.",
+          "type": "noun"
+        },
+        {
+          "german": "das Wohnzimmer",
+          "arabic": "le salon",
+          "gender": "das",
+          "plural": "Wohnzimmer",
+          "example": "Wir essen im Wohnzimmer.",
+          "exampleArabic": "Nous mangeons au salon.",
+          "type": "noun"
+        },
+        {
+          "german": "das Schlafzimmer",
+          "arabic": "la chambre à coucher",
+          "gender": "das",
+          "plural": "Schlafzimmer",
+          "example": "Mein Schlafzimmer ist klein.",
+          "exampleArabic": "Ma chambre est petite.",
+          "type": "noun"
+        },
+        {
+          "german": "ins",
+          "arabic": "dans le (in + das)",
+          "example": "Ich gehe ins Kino.",
+          "exampleArabic": "Je vais au cinéma.",
+          "type": "preposition"
+        },
+        {
+          "german": "im",
+          "arabic": "dans le (in + dem)",
+          "example": "Ich bin im Park.",
+          "exampleArabic": "Je suis dans le parc.",
+          "type": "preposition"
+        },
+        {
+          "german": "ans",
+          "arabic": "à le (an + das)",
+          "example": "Ich gehe ans Fenster.",
+          "exampleArabic": "Je vais à la fenêtre.",
+          "type": "preposition"
+        },
+        {
+          "german": "am",
+          "arabic": "à le (an + dem)",
+          "example": "Ich sitze am Tisch.",
+          "exampleArabic": "Je suis assis à table.",
+          "type": "preposition"
         }
       ],
       "exercise": {
@@ -2589,6 +2707,126 @@
             "question": "Complétez : \"Ich gehe ___ Kino.\" (au cinéma — ins/im ?)",
             "answer": "ins",
             "hint": "Wohin → ins"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q11",
+            "question": "Complète : « Ich bin ___ Park. » (dans le parc — im/ins ?)",
+            "answer": "im",
+            "hint": "Wo → im (Dativ)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q12",
+            "question": "Quel verbe demande le Dativ (état) ?",
+            "options": [
+              "legen",
+              "stellen",
+              "liegen",
+              "setzen"
+            ],
+            "answer": "liegen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q13",
+            "question": "« Ich setze mich ___ den Stuhl. » (Wohin? — masc.)",
+            "answer": "auf",
+            "hint": "auf + Akk (Wohin)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q14",
+            "question": "Quelle phrase est correcte pour « j'accroche le tableau au mur » ?",
+            "options": [
+              "Ich hänge das Bild an der Wand.",
+              "Ich hänge das Bild an die Wand.",
+              "Ich hänge das Bild auf die Wand.",
+              "Ich hänge das Bild in der Wand."
+            ],
+            "answer": "Ich hänge das Bild an die Wand."
+          },
+          {
+            "type": "matching",
+            "id": "a2-04-q15",
+            "question": "Associe le verbe à son pendant (mouvement/statique) :",
+            "pairs": [
+              {
+                "left": "legen",
+                "right": "liegen"
+              },
+              {
+                "left": "stellen",
+                "right": "stehen"
+              },
+              {
+                "left": "setzen",
+                "right": "sitzen"
+              },
+              {
+                "left": "hängen (Akk)",
+                "right": "hängen (Dativ)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q16",
+            "question": "Remets dans l'ordre : « Je mets la bouteille dans l'armoire » (Wohin?)",
+            "words": [
+              "Ich",
+              "stelle",
+              "die",
+              "Flasche",
+              "in",
+              "den",
+              "Schrank"
+            ],
+            "answer": "Ich stelle die Flasche in den Schrank"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-04-q17",
+            "question": "Dis en allemand : « Nous sommes au salon »",
+            "answer": "Wir sind im Wohnzimmer"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q18",
+            "question": "Écoute : « Die Lampe hängt ___ dem Tisch. » (au-dessus)",
+            "audioPrompt": "Die Lampe hängt über dem Tisch.",
+            "answer": "über",
+            "hint": "au-dessus → über"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q19",
+            "question": "Quelle phrase est à l'Akkusativ (Wohin) ?",
+            "options": [
+              "Das Buch liegt auf dem Tisch.",
+              "Ich lege das Buch auf den Tisch.",
+              "Wir sitzen auf dem Sofa.",
+              "Die Katze ist unter dem Bett."
+            ],
+            "answer": "Ich lege das Buch auf den Tisch."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q20",
+            "question": "Remets dans l'ordre : « Le lit est entre la fenêtre et l'armoire »",
+            "words": [
+              "Das",
+              "Bett",
+              "steht",
+              "zwischen",
+              "dem",
+              "Fenster",
+              "und",
+              "dem",
+              "Schrank"
+            ],
+            "answer": "Das Bett steht zwischen dem Fenster und dem Schrank"
           }
         ]
       }

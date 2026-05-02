@@ -2468,6 +2468,124 @@
           "example": "Ich gehe ins Kino.",
           "exampleArabic": "I'm going to the cinema.",
           "type": "noun"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "the chair",
+          "gender": "der",
+          "plural": "Stühle",
+          "example": "Der Stuhl steht am Tisch.",
+          "exampleArabic": "The chair is by the table.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bett",
+          "arabic": "the bed",
+          "gender": "das",
+          "plural": "Betten",
+          "example": "Ich liege im Bett.",
+          "exampleArabic": "I'm lying in bed.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "the lamp",
+          "gender": "die",
+          "plural": "Lampen",
+          "example": "Die Lampe hängt über dem Tisch.",
+          "exampleArabic": "The lamp hangs above the table.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bild",
+          "arabic": "the picture / painting",
+          "gender": "das",
+          "plural": "Bilder",
+          "example": "Das Bild hängt an der Wand.",
+          "exampleArabic": "The picture hangs on the wall.",
+          "type": "noun"
+        },
+        {
+          "german": "das Sofa",
+          "arabic": "the sofa",
+          "gender": "das",
+          "plural": "Sofas",
+          "example": "Wir sitzen auf dem Sofa.",
+          "exampleArabic": "We're sitting on the sofa.",
+          "type": "noun"
+        },
+        {
+          "german": "der Schrank",
+          "arabic": "the wardrobe / cupboard",
+          "gender": "der",
+          "plural": "Schränke",
+          "example": "Die Kleidung ist im Schrank.",
+          "exampleArabic": "The clothes are in the wardrobe.",
+          "type": "noun"
+        },
+        {
+          "german": "die Küche",
+          "arabic": "the kitchen",
+          "gender": "die",
+          "plural": "Küchen",
+          "example": "Mama ist in der Küche.",
+          "exampleArabic": "Mom is in the kitchen.",
+          "type": "noun"
+        },
+        {
+          "german": "das Bad",
+          "arabic": "the bathroom",
+          "gender": "das",
+          "plural": "Bäder",
+          "example": "Das Bad ist links.",
+          "exampleArabic": "The bathroom is on the left.",
+          "type": "noun"
+        },
+        {
+          "german": "das Wohnzimmer",
+          "arabic": "the living room",
+          "gender": "das",
+          "plural": "Wohnzimmer",
+          "example": "Wir essen im Wohnzimmer.",
+          "exampleArabic": "We eat in the living room.",
+          "type": "noun"
+        },
+        {
+          "german": "das Schlafzimmer",
+          "arabic": "the bedroom",
+          "gender": "das",
+          "plural": "Schlafzimmer",
+          "example": "Mein Schlafzimmer ist klein.",
+          "exampleArabic": "My bedroom is small.",
+          "type": "noun"
+        },
+        {
+          "german": "ins",
+          "arabic": "into the (in + das)",
+          "example": "Ich gehe ins Kino.",
+          "exampleArabic": "I'm going to the cinema.",
+          "type": "preposition"
+        },
+        {
+          "german": "im",
+          "arabic": "in the (in + dem)",
+          "example": "Ich bin im Park.",
+          "exampleArabic": "I'm in the park.",
+          "type": "preposition"
+        },
+        {
+          "german": "ans",
+          "arabic": "to/at the (an + das)",
+          "example": "Ich gehe ans Fenster.",
+          "exampleArabic": "I'm going to the window.",
+          "type": "preposition"
+        },
+        {
+          "german": "am",
+          "arabic": "at the (an + dem)",
+          "example": "Ich sitze am Tisch.",
+          "exampleArabic": "I'm sitting at the table.",
+          "type": "preposition"
         }
       ],
       "exercise": {
@@ -2589,6 +2707,126 @@
             "question": "Complete: \"Ich gehe ___ Kino.\" (to the cinema — ins/im?)",
             "answer": "ins",
             "hint": "Wohin → ins"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q11",
+            "question": "Fill in: \"Ich bin ___ Park.\" (in the park — im/ins?)",
+            "answer": "im",
+            "hint": "Wo → im (Dativ)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q12",
+            "question": "Which verb takes the Dativ (state)?",
+            "options": [
+              "legen",
+              "stellen",
+              "liegen",
+              "setzen"
+            ],
+            "answer": "liegen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q13",
+            "question": "\"Ich setze mich ___ den Stuhl.\" (Wohin? — masc)",
+            "answer": "auf",
+            "hint": "auf + Akk (Wohin)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q14",
+            "question": "Which sentence is correct for \"I hang the picture on the wall\"?",
+            "options": [
+              "Ich hänge das Bild an der Wand.",
+              "Ich hänge das Bild an die Wand.",
+              "Ich hänge das Bild auf die Wand.",
+              "Ich hänge das Bild in der Wand."
+            ],
+            "answer": "Ich hänge das Bild an die Wand."
+          },
+          {
+            "type": "matching",
+            "id": "a2-04-q15",
+            "question": "Match the verb to its pair (motion/state):",
+            "pairs": [
+              {
+                "left": "legen",
+                "right": "liegen"
+              },
+              {
+                "left": "stellen",
+                "right": "stehen"
+              },
+              {
+                "left": "setzen",
+                "right": "sitzen"
+              },
+              {
+                "left": "hängen (Akk)",
+                "right": "hängen (Dativ)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q16",
+            "question": "Order the words: \"I'm putting the bottle in the wardrobe\" (Wohin?)",
+            "words": [
+              "Ich",
+              "stelle",
+              "die",
+              "Flasche",
+              "in",
+              "den",
+              "Schrank"
+            ],
+            "answer": "Ich stelle die Flasche in den Schrank"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-04-q17",
+            "question": "Say in German: \"We're in the living room\"",
+            "answer": "Wir sind im Wohnzimmer"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-04-q18",
+            "question": "Listen: \"Die Lampe hängt ___ dem Tisch.\" (above)",
+            "audioPrompt": "Die Lampe hängt über dem Tisch.",
+            "answer": "über",
+            "hint": "above → über"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-04-q19",
+            "question": "Which sentence is in the Akkusativ (Wohin)?",
+            "options": [
+              "Das Buch liegt auf dem Tisch.",
+              "Ich lege das Buch auf den Tisch.",
+              "Wir sitzen auf dem Sofa.",
+              "Die Katze ist unter dem Bett."
+            ],
+            "answer": "Ich lege das Buch auf den Tisch."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-04-q20",
+            "question": "Order the words: \"The bed is between the window and the wardrobe\"",
+            "words": [
+              "Das",
+              "Bett",
+              "steht",
+              "zwischen",
+              "dem",
+              "Fenster",
+              "und",
+              "dem",
+              "Schrank"
+            ],
+            "answer": "Das Bett steht zwischen dem Fenster und dem Schrank"
           }
         ]
       }
