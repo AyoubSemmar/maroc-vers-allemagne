@@ -243,6 +243,93 @@
           "german": "vorhersehen",
           "arabic": "vorhersehen / voraussehen",
           "type": "verb"
+        },
+        {
+          "german": "die Möglichkeit",
+          "arabic": "Option, denkbare Lage",
+          "gender": "die",
+          "plural": "Möglichkeiten",
+          "type": "noun"
+        },
+        {
+          "german": "die Vergangenheit",
+          "arabic": "vergangene Zeit",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "kommende Zeit",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Hypothese",
+          "arabic": "wissenschaftliche Annahme",
+          "gender": "die",
+          "plural": "Hypothesen",
+          "type": "noun"
+        },
+        {
+          "german": "das Schicksal",
+          "arabic": "Lebensbestimmung",
+          "gender": "das",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorhersage",
+          "arabic": "Prognose",
+          "gender": "die",
+          "plural": "Vorhersagen",
+          "type": "noun"
+        },
+        {
+          "german": "die Wahl",
+          "arabic": "Auswahl, Entscheidung",
+          "gender": "die",
+          "plural": "Wahlen",
+          "type": "noun"
+        },
+        {
+          "german": "die Reflexion",
+          "arabic": "tiefes Nachdenken",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "sich überlegen",
+          "arabic": "gründlich nachdenken",
+          "type": "verb"
+        },
+        {
+          "german": "erkennen",
+          "arabic": "begreifen, identifizieren",
+          "type": "verb"
+        },
+        {
+          "german": "verzichten",
+          "arabic": "auf etwas freiwillig nicht beanspruchen",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "auf später legen",
+          "type": "verb"
+        },
+        {
+          "german": "aufgeben",
+          "arabic": "etwas nicht mehr fortsetzen",
+          "type": "verb"
+        },
+        {
+          "german": "unwiederbringlich",
+          "arabic": "nicht wiederholbar",
+          "type": "adjective"
+        },
+        {
+          "german": "irreversibel",
+          "arabic": "nicht umkehrbar",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -360,6 +447,130 @@
               "müssen"
             ],
             "answer": "Sie hätte es sagen müssen"
+          },
+          {
+            "id": "c1-01-q11",
+            "type": "fill-blank",
+            "question": "„Hätten wir mehr Zeit ___, wären wir geblieben.\" (Konj. II Vergangenheit)",
+            "answer": "gehabt",
+            "hint": "haben → gehabt"
+          },
+          {
+            "id": "c1-01-q12",
+            "type": "multiple-choice",
+            "question": "Vergangenes Bedauern drückt man aus mit:",
+            "options": [
+              "Konjunktiv II Präsens",
+              "Konjunktiv II Vergangenheit",
+              "Indikativ",
+              "Imperativ"
+            ],
+            "answer": "Konjunktiv II Vergangenheit"
+          },
+          {
+            "id": "c1-01-q13",
+            "type": "fill-blank",
+            "question": "„Ich ___ das nie machen sollen.\" (Konj. II)",
+            "answer": "hätte",
+            "hint": "hätte + sollen"
+          },
+          {
+            "id": "c1-01-q14",
+            "type": "multiple-choice",
+            "question": "Struktur Konj. II Vergangenheit:",
+            "options": [
+              "würde + Inf",
+              "hätte/wäre + Partizip II",
+              "haben/sein + Inf",
+              "werde + Partizip"
+            ],
+            "answer": "hätte/wäre + Partizip II"
+          },
+          {
+            "id": "c1-01-q15",
+            "type": "matching",
+            "question": "Verbinde:",
+            "pairs": [
+              {
+                "left": "ohne deine Hilfe",
+                "right": "Ohne deine Hilfe"
+              },
+              {
+                "left": "wenn ich es gewusst hätte",
+                "right": "Wenn ich es gewusst hätte"
+              },
+              {
+                "left": "an deiner Stelle",
+                "right": "An deiner Stelle"
+              },
+              {
+                "left": "ich hätte sollen",
+                "right": "Ich hätte sollen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-01-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Wenn ich mehr Zeit gehabt hätte, hätte ich Französisch gelernt\"",
+            "words": [
+              "Wenn",
+              "ich",
+              "mehr",
+              "Zeit",
+              "gehabt",
+              "hätte,",
+              "hätte",
+              "ich",
+              "Französisch",
+              "gelernt"
+            ],
+            "answer": "Wenn ich mehr Zeit gehabt hätte, hätte ich Französisch gelernt"
+          },
+          {
+            "id": "c1-01-q17",
+            "type": "speaking",
+            "question": "Sag: „Es wäre besser gewesen, wenn ich mehr nachgedacht hätte\"",
+            "answer": "Es wäre besser gewesen, wenn ich mehr nachgedacht hätte"
+          },
+          {
+            "id": "c1-01-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Du hättest mich ___.\" (anrufen)",
+            "audioPrompt": "Du hättest mich anrufen sollen.",
+            "answer": "anrufen sollen",
+            "hint": "Modalverb am Ende"
+          },
+          {
+            "id": "c1-01-q19",
+            "type": "multiple-choice",
+            "question": "„Wenn er pünktlich gewesen wäre\" drückt aus:",
+            "options": [
+              "reale Bedingung",
+              "nicht erfüllte Vergangenheitsbedingung",
+              "Zukunftsbedingung",
+              "Tatsache"
+            ],
+            "answer": "nicht erfüllte Vergangenheitsbedingung"
+          },
+          {
+            "id": "c1-01-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich hätte es lieber gehabt, wenn du nicht gekommen wärst\"",
+            "words": [
+              "Ich",
+              "hätte",
+              "es",
+              "lieber",
+              "gehabt,",
+              "wenn",
+              "du",
+              "nicht",
+              "gekommen",
+              "wärst"
+            ],
+            "answer": "Ich hätte es lieber gehabt, wenn du nicht gekommen wärst"
           }
         ]
       }

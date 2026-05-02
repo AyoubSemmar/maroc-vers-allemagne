@@ -243,6 +243,93 @@
           "german": "vorhersehen",
           "arabic": "prévoir / anticiper",
           "type": "verb"
+        },
+        {
+          "german": "die Möglichkeit",
+          "arabic": "la possibilité",
+          "gender": "die",
+          "plural": "Möglichkeiten",
+          "type": "noun"
+        },
+        {
+          "german": "die Vergangenheit",
+          "arabic": "le passé",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "l'avenir",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Hypothese",
+          "arabic": "l'hypothèse",
+          "gender": "die",
+          "plural": "Hypothesen",
+          "type": "noun"
+        },
+        {
+          "german": "das Schicksal",
+          "arabic": "le destin",
+          "gender": "das",
+          "type": "noun"
+        },
+        {
+          "german": "die Vorhersage",
+          "arabic": "la prédiction",
+          "gender": "die",
+          "plural": "Vorhersagen",
+          "type": "noun"
+        },
+        {
+          "german": "die Wahl",
+          "arabic": "le choix",
+          "gender": "die",
+          "plural": "Wahlen",
+          "type": "noun"
+        },
+        {
+          "german": "die Reflexion",
+          "arabic": "la réflexion",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "sich überlegen",
+          "arabic": "réfléchir bien",
+          "type": "verb"
+        },
+        {
+          "german": "erkennen",
+          "arabic": "reconnaître",
+          "type": "verb"
+        },
+        {
+          "german": "verzichten",
+          "arabic": "renoncer",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "reporter",
+          "type": "verb"
+        },
+        {
+          "german": "aufgeben",
+          "arabic": "abandonner",
+          "type": "verb"
+        },
+        {
+          "german": "unwiederbringlich",
+          "arabic": "irrécupérable",
+          "type": "adjective"
+        },
+        {
+          "german": "irreversibel",
+          "arabic": "irréversible",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -360,6 +447,130 @@
               "müssen"
             ],
             "answer": "Sie hätte es sagen müssen"
+          },
+          {
+            "id": "c1-01-q11",
+            "type": "fill-blank",
+            "question": "« Hätten wir mehr Zeit ___, wären wir geblieben. » (Konj. II Vergangenheit)",
+            "answer": "gehabt",
+            "hint": "haben → gehabt"
+          },
+          {
+            "id": "c1-01-q12",
+            "type": "multiple-choice",
+            "question": "Pour exprimer un regret au passé, on utilise :",
+            "options": [
+              "Konjunktiv II Präsens",
+              "Konjunktiv II Vergangenheit",
+              "Indikativ",
+              "Imperativ"
+            ],
+            "answer": "Konjunktiv II Vergangenheit"
+          },
+          {
+            "id": "c1-01-q13",
+            "type": "fill-blank",
+            "question": "« Ich ___ das nie machen sollen. » (n'aurais pas dû — Konj. II)",
+            "answer": "hätte",
+            "hint": "hätte + sollen"
+          },
+          {
+            "id": "c1-01-q14",
+            "type": "multiple-choice",
+            "question": "Structure du Konj. II Vergangenheit :",
+            "options": [
+              "würde + Inf",
+              "hätte/wäre + Partizip II",
+              "haben/sein + Inf",
+              "werde + Partizip"
+            ],
+            "answer": "hätte/wäre + Partizip II"
+          },
+          {
+            "id": "c1-01-q15",
+            "type": "matching",
+            "question": "Associe :",
+            "pairs": [
+              {
+                "left": "sans ton aide",
+                "right": "Ohne deine Hilfe"
+              },
+              {
+                "left": "si je l'avais su",
+                "right": "Wenn ich es gewusst hätte"
+              },
+              {
+                "left": "à ta place",
+                "right": "An deiner Stelle"
+              },
+              {
+                "left": "j'aurais dû",
+                "right": "Ich hätte sollen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-01-q16",
+            "type": "drag-drop",
+            "question": "Remets : « Si j'avais eu plus de temps, j'aurais appris le français »",
+            "words": [
+              "Wenn",
+              "ich",
+              "mehr",
+              "Zeit",
+              "gehabt",
+              "hätte,",
+              "hätte",
+              "ich",
+              "Französisch",
+              "gelernt"
+            ],
+            "answer": "Wenn ich mehr Zeit gehabt hätte, hätte ich Französisch gelernt"
+          },
+          {
+            "id": "c1-01-q17",
+            "type": "speaking",
+            "question": "Dis : « Il aurait été préférable d'avoir réfléchi davantage »",
+            "answer": "Es wäre besser gewesen, wenn ich mehr nachgedacht hätte"
+          },
+          {
+            "id": "c1-01-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Du hättest mich ___. » (appeler)",
+            "audioPrompt": "Du hättest mich anrufen sollen.",
+            "answer": "anrufen sollen",
+            "hint": "Modalverb à la fin"
+          },
+          {
+            "id": "c1-01-q19",
+            "type": "multiple-choice",
+            "question": "« Wenn er pünktlich gewesen wäre » exprime :",
+            "options": [
+              "condition réelle",
+              "condition passée non réalisée",
+              "condition future",
+              "fait"
+            ],
+            "answer": "condition passée non réalisée"
+          },
+          {
+            "id": "c1-01-q20",
+            "type": "drag-drop",
+            "question": "Remets : « J'aurais préféré que tu ne sois pas venu »",
+            "words": [
+              "Ich",
+              "hätte",
+              "es",
+              "lieber",
+              "gehabt,",
+              "wenn",
+              "du",
+              "nicht",
+              "gekommen",
+              "wärst"
+            ],
+            "answer": "Ich hätte es lieber gehabt, wenn du nicht gekommen wärst"
           }
         ]
       }
