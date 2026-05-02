@@ -8233,34 +8233,135 @@
         "tables": [
           {
             "title": "Präteritum des verbes de modalité (le plus utilisé)",
-            "headers": ["Pronom", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "headers": [
+              "Pronom",
+              "können",
+              "müssen",
+              "wollen",
+              "mögen",
+              "dürfen",
+              "sollen"
+            ],
             "rows": [
-              { "cells": ["ich", "konnte", "musste", "wollte", "mochte", "durfte", "sollte"] },
-              { "cells": ["du", "konntest", "musstest", "wolltest", "mochtest", "durftest", "solltest"] },
-              { "cells": ["er/sie/es", "konnte", "musste", "wollte", "mochte", "durfte", "sollte"], "highlight": true },
-              { "cells": ["wir", "konnten", "mussten", "wollten", "mochten", "durften", "sollten"] },
-              { "cells": ["ihr", "konntet", "musstet", "wolltet", "mochtet", "durftet", "solltet"] },
-              { "cells": ["sie/Sie", "konnten", "mussten", "wollten", "mochten", "durften", "sollten"] }
+              {
+                "cells": [
+                  "ich",
+                  "konnte",
+                  "musste",
+                  "wollte",
+                  "mochte",
+                  "durfte",
+                  "sollte"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "konntest",
+                  "musstest",
+                  "wolltest",
+                  "mochtest",
+                  "durftest",
+                  "solltest"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "konnte",
+                  "musste",
+                  "wollte",
+                  "mochte",
+                  "durfte",
+                  "sollte"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "konnten",
+                  "mussten",
+                  "wollten",
+                  "mochten",
+                  "durften",
+                  "sollten"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "konntet",
+                  "musstet",
+                  "wolltet",
+                  "mochtet",
+                  "durftet",
+                  "solltet"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "konnten",
+                  "mussten",
+                  "wollten",
+                  "mochten",
+                  "durften",
+                  "sollten"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "Formé en ajoutant -te- après le radical. ich et er/sie/es sont identiques (pas de -t)."
           },
           {
             "title": "Différence entre Präteritum et Perfekt pour les verbes de modalité",
-            "headers": ["Temps", "Phrase", "Usage"],
+            "headers": [
+              "Temps",
+              "Phrase",
+              "Usage"
+            ],
             "rows": [
-              { "cells": ["Präteritum", "Ich musste arbeiten.", "à l'écrit comme à l'oral (le plus courant)"] },
-              { "cells": ["Perfekt", "Ich habe arbeiten müssen.", "à l'oral (moins fréquent, parfois plus formel)"] }
+              {
+                "cells": [
+                  "Präteritum",
+                  "Ich musste arbeiten.",
+                  "à l'écrit comme à l'oral (le plus courant)"
+                ]
+              },
+              {
+                "cells": [
+                  "Perfekt",
+                  "Ich habe arbeiten müssen.",
+                  "à l'oral (moins fréquent, parfois plus formel)"
+                ]
+              }
             ],
             "theme": "default",
             "note": "Utilise le Präteritum d'abord — c'est la forme naturelle dans toutes les situations."
           }
         ],
         "rules": [
-          { "rule": "Structure du Doppelter Infinitiv : haben + Hauptverb + Modalverb (les deux à l'infinitif, l'ordre compte).", "example": "Ich habe gestern lange arbeiten müssen.", "translation": "J'ai dû travailler longtemps hier." },
-          { "rule": "Le Präteritum se forme avec -te- + terminaison : konnte, musste, wollte. ich = er/sie/es toujours.", "example": "Sie konnte gut Deutsch sprechen.", "translation": "Elle savait bien parler allemand." },
-          { "rule": "Sans verbe principal, le verbe de modalité se conjugue normalement avec haben/sein (rare).", "example": "Ich habe das gewollt. (J'ai voulu cela)", "translation": "J'ai voulu cela." },
-          { "rule": "mögen au passé devient mochte (sans Umlaut parfois) — ne le confonds pas avec möchte.", "example": "Als Kind mochte ich keinen Kaffee.", "translation": "Enfant, je n'aimais pas le café." }
+          {
+            "rule": "Structure du Doppelter Infinitiv : haben + Hauptverb + Modalverb (les deux à l'infinitif, l'ordre compte).",
+            "example": "Ich habe gestern lange arbeiten müssen.",
+            "translation": "J'ai dû travailler longtemps hier."
+          },
+          {
+            "rule": "Le Präteritum se forme avec -te- + terminaison : konnte, musste, wollte. ich = er/sie/es toujours.",
+            "example": "Sie konnte gut Deutsch sprechen.",
+            "translation": "Elle savait bien parler allemand."
+          },
+          {
+            "rule": "Sans verbe principal, le verbe de modalité se conjugue normalement avec haben/sein (rare).",
+            "example": "Ich habe das gewollt. (J'ai voulu cela)",
+            "translation": "J'ai voulu cela."
+          },
+          {
+            "rule": "mögen au passé devient mochte (sans Umlaut parfois) — ne le confonds pas avec möchte.",
+            "example": "Als Kind mochte ich keinen Kaffee.",
+            "translation": "Enfant, je n'aimais pas le café."
+          }
         ],
         "examples": [
           "Ich musste gestern früh aufstehen. — J'ai dû me lever tôt hier.",
@@ -8275,68 +8376,505 @@
         "tip": "Dans 95 % des cas, utilise le Präteritum (musste, konnte, wollte). Garde le Perfekt avec les verbes de modalité pour les situations formelles ou écrites."
       },
       "vocabulary": [
-        { "german": "gestern", "arabic": "hier", "example": "Ich musste gestern arbeiten.", "exampleArabic": "J'ai dû travailler hier.", "type": "adverb" },
-        { "german": "heute", "arabic": "aujourd'hui", "example": "Heute kann ich frei machen.", "exampleArabic": "Aujourd'hui je peux me reposer.", "type": "adverb" },
-        { "german": "früh", "arabic": "tôt", "example": "Ich musste früh aufstehen.", "exampleArabic": "J'ai dû me lever tôt.", "type": "adverb" },
-        { "german": "spät", "arabic": "tard", "example": "Er kam spät nach Hause.", "exampleArabic": "Il est rentré tard à la maison.", "type": "adverb" },
-        { "german": "lange", "arabic": "longtemps", "example": "Ich habe lange warten müssen.", "exampleArabic": "J'ai dû attendre longtemps.", "type": "adverb" },
-        { "german": "damals", "arabic": "à cette époque", "example": "Damals konnte ich kein Deutsch.", "exampleArabic": "À cette époque, je ne parlais pas allemand.", "type": "adverb" },
-        { "german": "als Kind", "arabic": "enfant / quand j'étais petit", "example": "Als Kind mochte ich Schokolade.", "exampleArabic": "Enfant, j'aimais le chocolat.", "type": "phrase" },
-        { "german": "letzte Woche", "arabic": "la semaine dernière", "example": "Letzte Woche musste ich nach München fahren.", "exampleArabic": "La semaine dernière, j'ai dû aller à Munich.", "type": "phrase" },
-        { "german": "arbeiten", "arabic": "travailler", "example": "Er hat arbeiten müssen.", "exampleArabic": "Il a dû travailler.", "type": "verb" },
-        { "german": "lernen", "arabic": "apprendre / étudier", "example": "Ich musste viel lernen.", "exampleArabic": "J'ai dû beaucoup étudier.", "type": "verb" },
-        { "german": "aufstehen", "arabic": "se lever", "example": "Wir mussten früh aufstehen.", "exampleArabic": "Nous avons dû nous lever tôt.", "type": "verb" },
-        { "german": "warten", "arabic": "attendre", "example": "Ich konnte nicht warten.", "exampleArabic": "Je n'ai pas pu attendre.", "type": "verb" },
-        { "german": "helfen", "arabic": "aider", "example": "Sie wollte mir helfen.", "exampleArabic": "Elle voulait m'aider.", "type": "verb" },
-        { "german": "kommen", "arabic": "venir", "example": "Er konnte nicht kommen.", "exampleArabic": "Il n'a pas pu venir.", "type": "verb" },
-        { "german": "fahren", "arabic": "voyager / aller (en véhicule)", "example": "Wir wollten nach Spanien fahren.", "exampleArabic": "Nous voulions aller en Espagne.", "type": "verb" },
-        { "german": "essen", "arabic": "manger", "example": "Ich konnte nichts essen.", "exampleArabic": "Je n'ai rien pu manger.", "type": "verb" },
-        { "german": "machen", "arabic": "faire", "example": "Was wolltest du machen?", "exampleArabic": "Qu'est-ce que tu voulais faire ?", "type": "verb" },
-        { "german": "die Prüfung", "arabic": "l'examen", "example": "Ich musste für die Prüfung lernen.", "exampleArabic": "J'ai dû étudier pour l'examen.", "type": "noun", "gender": "die", "plural": "die Prüfungen" },
-        { "german": "die Schule", "arabic": "l'école", "example": "Als Kind musste ich in die Schule gehen.", "exampleArabic": "Enfant, je devais aller à l'école.", "type": "noun", "gender": "die", "plural": "die Schulen" },
-        { "german": "der Termin", "arabic": "le rendez-vous", "example": "Ich konnte den Termin nicht halten.", "exampleArabic": "Je n'ai pas pu honorer le rendez-vous.", "type": "noun", "gender": "der", "plural": "die Termine" },
-        { "german": "das Wochenende", "arabic": "le week-end", "example": "Am Wochenende wollte ich schlafen.", "exampleArabic": "Le week-end, je voulais dormir.", "type": "noun", "gender": "das", "plural": "die Wochenenden" },
-        { "german": "der Urlaub", "arabic": "les vacances / congé", "example": "Im Urlaub konnten wir nicht reisen.", "exampleArabic": "Pendant les vacances, nous n'avons pas pu voyager.", "type": "noun", "gender": "der", "plural": "die Urlaube" },
-        { "german": "leider", "arabic": "malheureusement", "example": "Ich konnte leider nicht kommen.", "exampleArabic": "Malheureusement, je n'ai pas pu venir.", "type": "adverb" },
-        { "german": "plötzlich", "arabic": "soudain", "example": "Plötzlich musste ich gehen.", "exampleArabic": "Soudain, j'ai dû partir.", "type": "adverb" },
-        { "german": "eigentlich", "arabic": "en fait", "example": "Eigentlich wollte ich bleiben.", "exampleArabic": "En fait, je voulais rester.", "type": "adverb" },
-        { "german": "die Idee", "arabic": "l'idée", "example": "Das war eine gute Idee.", "exampleArabic": "C'était une bonne idée.", "type": "noun", "gender": "die", "plural": "die Ideen" },
-        { "german": "das Problem", "arabic": "le problème", "example": "Ich hatte ein Problem.", "exampleArabic": "J'avais un problème.", "type": "noun", "gender": "das", "plural": "die Probleme" },
-        { "german": "der Grund", "arabic": "la raison", "example": "Aus diesem Grund musste ich gehen.", "exampleArabic": "Pour cette raison, j'ai dû partir.", "type": "noun", "gender": "der", "plural": "die Gründe" }
+        {
+          "german": "gestern",
+          "arabic": "hier",
+          "example": "Ich musste gestern arbeiten.",
+          "exampleArabic": "J'ai dû travailler hier.",
+          "type": "adverb"
+        },
+        {
+          "german": "heute",
+          "arabic": "aujourd'hui",
+          "example": "Heute kann ich frei machen.",
+          "exampleArabic": "Aujourd'hui je peux me reposer.",
+          "type": "adverb"
+        },
+        {
+          "german": "früh",
+          "arabic": "tôt",
+          "example": "Ich musste früh aufstehen.",
+          "exampleArabic": "J'ai dû me lever tôt.",
+          "type": "adverb"
+        },
+        {
+          "german": "spät",
+          "arabic": "tard",
+          "example": "Er kam spät nach Hause.",
+          "exampleArabic": "Il est rentré tard à la maison.",
+          "type": "adverb"
+        },
+        {
+          "german": "lange",
+          "arabic": "longtemps",
+          "example": "Ich habe lange warten müssen.",
+          "exampleArabic": "J'ai dû attendre longtemps.",
+          "type": "adverb"
+        },
+        {
+          "german": "damals",
+          "arabic": "à cette époque",
+          "example": "Damals konnte ich kein Deutsch.",
+          "exampleArabic": "À cette époque, je ne parlais pas allemand.",
+          "type": "adverb"
+        },
+        {
+          "german": "als Kind",
+          "arabic": "enfant / quand j'étais petit",
+          "example": "Als Kind mochte ich Schokolade.",
+          "exampleArabic": "Enfant, j'aimais le chocolat.",
+          "type": "phrase"
+        },
+        {
+          "german": "letzte Woche",
+          "arabic": "la semaine dernière",
+          "example": "Letzte Woche musste ich nach München fahren.",
+          "exampleArabic": "La semaine dernière, j'ai dû aller à Munich.",
+          "type": "phrase"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "travailler",
+          "example": "Er hat arbeiten müssen.",
+          "exampleArabic": "Il a dû travailler.",
+          "type": "verb"
+        },
+        {
+          "german": "lernen",
+          "arabic": "apprendre / étudier",
+          "example": "Ich musste viel lernen.",
+          "exampleArabic": "J'ai dû beaucoup étudier.",
+          "type": "verb"
+        },
+        {
+          "german": "aufstehen",
+          "arabic": "se lever",
+          "example": "Wir mussten früh aufstehen.",
+          "exampleArabic": "Nous avons dû nous lever tôt.",
+          "type": "verb"
+        },
+        {
+          "german": "warten",
+          "arabic": "attendre",
+          "example": "Ich konnte nicht warten.",
+          "exampleArabic": "Je n'ai pas pu attendre.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "aider",
+          "example": "Sie wollte mir helfen.",
+          "exampleArabic": "Elle voulait m'aider.",
+          "type": "verb"
+        },
+        {
+          "german": "kommen",
+          "arabic": "venir",
+          "example": "Er konnte nicht kommen.",
+          "exampleArabic": "Il n'a pas pu venir.",
+          "type": "verb"
+        },
+        {
+          "german": "fahren",
+          "arabic": "voyager / aller (en véhicule)",
+          "example": "Wir wollten nach Spanien fahren.",
+          "exampleArabic": "Nous voulions aller en Espagne.",
+          "type": "verb"
+        },
+        {
+          "german": "essen",
+          "arabic": "manger",
+          "example": "Ich konnte nichts essen.",
+          "exampleArabic": "Je n'ai rien pu manger.",
+          "type": "verb"
+        },
+        {
+          "german": "machen",
+          "arabic": "faire",
+          "example": "Was wolltest du machen?",
+          "exampleArabic": "Qu'est-ce que tu voulais faire ?",
+          "type": "verb"
+        },
+        {
+          "german": "die Prüfung",
+          "arabic": "l'examen",
+          "example": "Ich musste für die Prüfung lernen.",
+          "exampleArabic": "J'ai dû étudier pour l'examen.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Prüfungen"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "l'école",
+          "example": "Als Kind musste ich in die Schule gehen.",
+          "exampleArabic": "Enfant, je devais aller à l'école.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schulen"
+        },
+        {
+          "german": "der Termin",
+          "arabic": "le rendez-vous",
+          "example": "Ich konnte den Termin nicht halten.",
+          "exampleArabic": "Je n'ai pas pu honorer le rendez-vous.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Termine"
+        },
+        {
+          "german": "das Wochenende",
+          "arabic": "le week-end",
+          "example": "Am Wochenende wollte ich schlafen.",
+          "exampleArabic": "Le week-end, je voulais dormir.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Wochenenden"
+        },
+        {
+          "german": "der Urlaub",
+          "arabic": "les vacances / congé",
+          "example": "Im Urlaub konnten wir nicht reisen.",
+          "exampleArabic": "Pendant les vacances, nous n'avons pas pu voyager.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Urlaube"
+        },
+        {
+          "german": "leider",
+          "arabic": "malheureusement",
+          "example": "Ich konnte leider nicht kommen.",
+          "exampleArabic": "Malheureusement, je n'ai pas pu venir.",
+          "type": "adverb"
+        },
+        {
+          "german": "plötzlich",
+          "arabic": "soudain",
+          "example": "Plötzlich musste ich gehen.",
+          "exampleArabic": "Soudain, j'ai dû partir.",
+          "type": "adverb"
+        },
+        {
+          "german": "eigentlich",
+          "arabic": "en fait",
+          "example": "Eigentlich wollte ich bleiben.",
+          "exampleArabic": "En fait, je voulais rester.",
+          "type": "adverb"
+        },
+        {
+          "german": "die Idee",
+          "arabic": "l'idée",
+          "example": "Das war eine gute Idee.",
+          "exampleArabic": "C'était une bonne idée.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ideen"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "le problème",
+          "example": "Ich hatte ein Problem.",
+          "exampleArabic": "J'avais un problème.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Probleme"
+        },
+        {
+          "german": "der Grund",
+          "arabic": "la raison",
+          "example": "Aus diesem Grund musste ich gehen.",
+          "exampleArabic": "Pour cette raison, j'ai dû partir.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gründe"
+        },
+        {
+          "german": "die Stunde",
+          "arabic": "l'heure (durée)",
+          "gender": "die",
+          "plural": "Stunden",
+          "example": "Ich musste drei Stunden warten.",
+          "exampleArabic": "J'ai dû attendre trois heures.",
+          "type": "noun"
+        },
+        {
+          "german": "die Minute",
+          "arabic": "la minute",
+          "gender": "die",
+          "plural": "Minuten",
+          "example": "Eine Minute, bitte!",
+          "exampleArabic": "Une minute, s'il te plaît !",
+          "type": "noun"
+        },
+        {
+          "german": "die Pause",
+          "arabic": "la pause",
+          "gender": "die",
+          "plural": "Pausen",
+          "example": "Ich brauche eine Pause.",
+          "exampleArabic": "J'ai besoin d'une pause.",
+          "type": "noun"
+        },
+        {
+          "german": "die Aufgabe",
+          "arabic": "la tâche, le devoir",
+          "gender": "die",
+          "plural": "Aufgaben",
+          "example": "Ich musste viele Aufgaben machen.",
+          "exampleArabic": "J'ai dû faire beaucoup de tâches.",
+          "type": "noun"
+        },
+        {
+          "german": "der Plan",
+          "arabic": "le plan",
+          "gender": "der",
+          "plural": "Pläne",
+          "example": "Mein Plan war anders.",
+          "exampleArabic": "Mon plan était différent.",
+          "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "la question",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Ich hatte eine Frage.",
+          "exampleArabic": "J'avais une question.",
+          "type": "noun"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "la réponse",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Ich wusste die Antwort nicht.",
+          "exampleArabic": "Je ne connaissais pas la réponse.",
+          "type": "noun"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a2-14-q1", "question": "Präteritum : « Ich ___ gestern arbeiten. » (müssen)", "answer": "musste", "hint": "müssen → musste" },
-          { "type": "multiple-choice", "id": "a2-14-q2", "question": "Forme Präteritum de können avec er ?", "options": ["kannte", "konnte", "könnte", "gekonnt"], "answer": "konnte" },
-          { "type": "fill-blank", "id": "a2-14-q3", "question": "Doppelter Infinitiv : « Ich habe gestern lernen ___. »", "answer": "müssen", "hint": "le verbe de modalité à la fin, à l'infinitif" },
-          { "type": "multiple-choice", "id": "a2-14-q4", "question": "Quelle phrase est correcte au Präteritum ?", "options": ["Wir wolltet nach Berlin fahren.", "Wir wollten nach Berlin fahren.", "Wir wollen nach Berlin fahren.", "Wir gewollt nach Berlin fahren."], "answer": "Wir wollten nach Berlin fahren." },
-          { "type": "fill-blank", "id": "a2-14-q5", "question": "Als Kind ___ ich keinen Spinat. (mögen)", "answer": "mochte", "hint": "mögen → mochte (passé)" },
-          { "type": "matching", "id": "a2-14-q6", "question": "Associe le verbe de modalité à sa forme Präteritum :", "pairs": [
-            { "left": "können", "right": "konnte" },
-            { "left": "müssen", "right": "musste" },
-            { "left": "wollen", "right": "wollte" },
-            { "left": "dürfen", "right": "durfte" },
-            { "left": "sollen", "right": "sollte" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-14-q7", "question": "Ordonne (Präteritum) : « Mon père voulait voyager à Berlin »", "words": ["Mein", "Vater", "wollte", "nach", "Berlin", "reisen"], "answer": "Mein Vater wollte nach Berlin reisen" },
-          { "type": "speaking", "id": "a2-14-q8", "question": "Dis au Präteritum : « J'ai dû me lever tôt »", "answer": "Ich musste früh aufstehen" },
-          { "type": "fill-blank", "id": "a2-14-q9", "question": "Écoute et complète : « Wir ___ ins Kino gehen. » (durften / dürfen)", "audioPrompt": "Wir durften ins Kino gehen.", "answer": "durften", "hint": "dürfen au passé → durften (wir)" },
-          { "type": "multiple-choice", "id": "a2-14-q10", "question": "Dans 95 % des situations courantes, quelle forme utilise-t-on pour les verbes de modalité au passé ?", "options": ["Perfekt", "Präteritum", "Plusquamperfekt", "Konjunktiv"], "answer": "Präteritum" },
-          { "type": "fill-blank", "id": "a2-14-q11", "question": "Präteritum de dürfen avec wir ?", "answer": "durften", "hint": "dürfen → durfte/durften" },
-          { "type": "multiple-choice", "id": "a2-14-q12", "question": "Forme Präteritum de sollen avec ich ?", "options": ["solle", "sollte", "sollst", "sollten"], "answer": "sollte" },
-          { "type": "fill-blank", "id": "a2-14-q13", "question": "« Ich ___ gestern nicht arbeiten. » (je n'aurais pas dû — sollen)", "answer": "sollte", "hint": "sollen → sollte" },
-          { "type": "matching", "id": "a2-14-q14", "question": "Associe le verbe de modalité à son passé :", "pairs": [
-            { "left": "können", "right": "konnte" },
-            { "left": "müssen", "right": "musste" },
-            { "left": "wollen", "right": "wollte" },
-            { "left": "mögen", "right": "mochte" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-14-q15", "question": "Ordonne (Doppelter Inf) : « J'ai dû beaucoup apprendre »", "words": ["Ich", "habe", "viel", "lernen", "müssen"], "answer": "Ich habe viel lernen müssen" },
-          { "type": "fill-blank", "id": "a2-14-q16", "question": "Écoute : « Wir ___ ins Kino gehen. » (durften)", "audioPrompt": "Wir durften ins Kino gehen.", "answer": "durften", "hint": "dürfen + wir au passé" },
-          { "type": "multiple-choice", "id": "a2-14-q17", "question": "La structure du Doppelter Infinitiv est :", "options": ["haben + Modal + Inf", "haben + Inf + Modal", "sein + Inf + Modal", "haben + Partizip + Modal"], "answer": "haben + Inf + Modal" },
-          { "type": "speaking", "id": "a2-14-q18", "question": "Dis (Präteritum) : « Nous voulions voyager en Allemagne »", "answer": "Wir wollten nach Deutschland reisen" },
-          { "type": "fill-blank", "id": "a2-14-q19", "question": "« Du ___ nicht zur Schule gehen. » (tu ne devais pas — müssen)", "answer": "musstest", "hint": "müssen + du au passé" },
-          { "type": "multiple-choice", "id": "a2-14-q20", "question": "Différence entre möchte et mochte ?", "options": ["Identiques", "möchte = présent poli, mochte = passé simple", "aucune différence", "möchte = passé, mochte = présent"], "answer": "möchte = présent poli, mochte = passé simple" }
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q1",
+            "question": "Präteritum : « Ich ___ gestern arbeiten. » (müssen)",
+            "answer": "musste",
+            "hint": "müssen → musste"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q2",
+            "question": "Forme Präteritum de können avec er ?",
+            "options": [
+              "kannte",
+              "konnte",
+              "könnte",
+              "gekonnt"
+            ],
+            "answer": "konnte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q3",
+            "question": "Doppelter Infinitiv : « Ich habe gestern lernen ___. »",
+            "answer": "müssen",
+            "hint": "le verbe de modalité à la fin, à l'infinitif"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q4",
+            "question": "Quelle phrase est correcte au Präteritum ?",
+            "options": [
+              "Wir wolltet nach Berlin fahren.",
+              "Wir wollten nach Berlin fahren.",
+              "Wir wollen nach Berlin fahren.",
+              "Wir gewollt nach Berlin fahren."
+            ],
+            "answer": "Wir wollten nach Berlin fahren."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q5",
+            "question": "Als Kind ___ ich keinen Spinat. (mögen)",
+            "answer": "mochte",
+            "hint": "mögen → mochte (passé)"
+          },
+          {
+            "type": "matching",
+            "id": "a2-14-q6",
+            "question": "Associe le verbe de modalité à sa forme Präteritum :",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "konnte"
+              },
+              {
+                "left": "müssen",
+                "right": "musste"
+              },
+              {
+                "left": "wollen",
+                "right": "wollte"
+              },
+              {
+                "left": "dürfen",
+                "right": "durfte"
+              },
+              {
+                "left": "sollen",
+                "right": "sollte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-14-q7",
+            "question": "Ordonne (Präteritum) : « Mon père voulait voyager à Berlin »",
+            "words": [
+              "Mein",
+              "Vater",
+              "wollte",
+              "nach",
+              "Berlin",
+              "reisen"
+            ],
+            "answer": "Mein Vater wollte nach Berlin reisen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-14-q8",
+            "question": "Dis au Präteritum : « J'ai dû me lever tôt »",
+            "answer": "Ich musste früh aufstehen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q9",
+            "question": "Écoute et complète : « Wir ___ ins Kino gehen. » (durften / dürfen)",
+            "audioPrompt": "Wir durften ins Kino gehen.",
+            "answer": "durften",
+            "hint": "dürfen au passé → durften (wir)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q10",
+            "question": "Dans 95 % des situations courantes, quelle forme utilise-t-on pour les verbes de modalité au passé ?",
+            "options": [
+              "Perfekt",
+              "Präteritum",
+              "Plusquamperfekt",
+              "Konjunktiv"
+            ],
+            "answer": "Präteritum"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q11",
+            "question": "Präteritum de dürfen avec wir ?",
+            "answer": "durften",
+            "hint": "dürfen → durfte/durften"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q12",
+            "question": "Forme Präteritum de sollen avec ich ?",
+            "options": [
+              "solle",
+              "sollte",
+              "sollst",
+              "sollten"
+            ],
+            "answer": "sollte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q13",
+            "question": "« Ich ___ gestern nicht arbeiten. » (je n'aurais pas dû — sollen)",
+            "answer": "sollte",
+            "hint": "sollen → sollte"
+          },
+          {
+            "type": "matching",
+            "id": "a2-14-q14",
+            "question": "Associe le verbe de modalité à son passé :",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "konnte"
+              },
+              {
+                "left": "müssen",
+                "right": "musste"
+              },
+              {
+                "left": "wollen",
+                "right": "wollte"
+              },
+              {
+                "left": "mögen",
+                "right": "mochte"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-14-q15",
+            "question": "Ordonne (Doppelter Inf) : « J'ai dû beaucoup apprendre »",
+            "words": [
+              "Ich",
+              "habe",
+              "viel",
+              "lernen",
+              "müssen"
+            ],
+            "answer": "Ich habe viel lernen müssen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q16",
+            "question": "Écoute : « Wir ___ ins Kino gehen. » (durften)",
+            "audioPrompt": "Wir durften ins Kino gehen.",
+            "answer": "durften",
+            "hint": "dürfen + wir au passé"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q17",
+            "question": "La structure du Doppelter Infinitiv est :",
+            "options": [
+              "haben + Modal + Inf",
+              "haben + Inf + Modal",
+              "sein + Inf + Modal",
+              "haben + Partizip + Modal"
+            ],
+            "answer": "haben + Inf + Modal"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-14-q18",
+            "question": "Dis (Präteritum) : « Nous voulions voyager en Allemagne »",
+            "answer": "Wir wollten nach Deutschland reisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-14-q19",
+            "question": "« Du ___ nicht zur Schule gehen. » (tu ne devais pas — müssen)",
+            "answer": "musstest",
+            "hint": "müssen + du au passé"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-14-q20",
+            "question": "Différence entre möchte et mochte ?",
+            "options": [
+              "Identiques",
+              "möchte = présent poli, mochte = passé simple",
+              "aucune différence",
+              "möchte = passé, mochte = présent"
+            ],
+            "answer": "möchte = présent poli, mochte = passé simple"
+          }
         ]
       }
     },

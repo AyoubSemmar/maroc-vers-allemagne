@@ -2708,6 +2708,13 @@ export const A2: Level = {
         { german: 'die Idee', arabic: 'الفكرة',           example: 'Das war eine gute Idee.',        exampleArabic: 'كانت فكرة جيدة.',     type: 'noun', gender: 'die', plural: 'die Ideen' },
         { german: 'das Problem', arabic: 'المشكلة',       example: 'Ich hatte ein Problem.',         exampleArabic: 'كانت لديّ مشكلة.',  type: 'noun', gender: 'das', plural: 'die Probleme' },
         { german: 'der Grund', arabic: 'السبب',           example: 'Aus diesem Grund musste ich gehen.', exampleArabic: 'لهذا السبب كان عليّ الذهاب.', type: 'noun', gender: 'der', plural: 'die Gründe' },
+        { german: 'die Stunde', arabic: 'الساعة (مدة)', gender: 'die', plural: 'Stunden', example: 'Ich musste drei Stunden warten.', exampleArabic: 'كان عليّ الانتظار 3 ساعات.', type: 'noun' },
+        { german: 'die Minute', arabic: 'الدقيقة', gender: 'die', plural: 'Minuten', example: 'Eine Minute, bitte!', exampleArabic: 'دقيقة من فضلك!', type: 'noun' },
+        { german: 'die Pause', arabic: 'الاستراحة', gender: 'die', plural: 'Pausen', example: 'Ich brauche eine Pause.', exampleArabic: 'أحتاج استراحة.', type: 'noun' },
+        { german: 'die Aufgabe', arabic: 'المهمة / الواجب', gender: 'die', plural: 'Aufgaben', example: 'Ich musste viele Aufgaben machen.', exampleArabic: 'كان عليّ القيام بمهام كثيرة.', type: 'noun' },
+        { german: 'der Plan', arabic: 'الخطة', gender: 'der', plural: 'Pläne', example: 'Mein Plan war anders.', exampleArabic: 'كانت خطتي مختلفة.', type: 'noun' },
+        { german: 'die Frage', arabic: 'السؤال', gender: 'die', plural: 'Fragen', example: 'Ich hatte eine Frage.', exampleArabic: 'كان لدي سؤال.', type: 'noun' },
+        { german: 'die Antwort', arabic: 'الجواب', gender: 'die', plural: 'Antworten', example: 'Ich wusste die Antwort nicht.', exampleArabic: 'لم أعرف الجواب.', type: 'noun' },
       ],
       exercise: {
         questions: [
