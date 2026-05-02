@@ -886,6 +886,111 @@
           "gender": "der",
           "plural": "Zeugen",
           "type": "noun"
+        },
+        {
+          "german": "der Patient",
+          "arabic": "le patient",
+          "gender": "der",
+          "plural": "Patienten",
+          "type": "noun"
+        },
+        {
+          "german": "der Kunde",
+          "arabic": "le client",
+          "gender": "der",
+          "plural": "Kunden",
+          "type": "noun"
+        },
+        {
+          "german": "der Architekt",
+          "arabic": "l'architecte",
+          "gender": "der",
+          "plural": "Architekten",
+          "type": "noun"
+        },
+        {
+          "german": "der Pilot",
+          "arabic": "le pilote",
+          "gender": "der",
+          "plural": "Piloten",
+          "type": "noun"
+        },
+        {
+          "german": "der Bauer",
+          "arabic": "le paysan",
+          "gender": "der",
+          "plural": "Bauern",
+          "type": "noun"
+        },
+        {
+          "german": "der Heilige",
+          "arabic": "le saint",
+          "gender": "der",
+          "plural": "Heilige",
+          "type": "noun"
+        },
+        {
+          "german": "der Held",
+          "arabic": "le héros",
+          "gender": "der",
+          "plural": "Helden",
+          "type": "noun"
+        },
+        {
+          "german": "der Idiot",
+          "arabic": "l'idiot",
+          "gender": "der",
+          "plural": "Idioten",
+          "type": "noun"
+        },
+        {
+          "german": "der Kandidat",
+          "arabic": "le candidat",
+          "gender": "der",
+          "plural": "Kandidaten",
+          "type": "noun"
+        },
+        {
+          "german": "der Tourist",
+          "arabic": "le touriste",
+          "gender": "der",
+          "plural": "Touristen",
+          "type": "noun"
+        },
+        {
+          "german": "der Kapitalist",
+          "arabic": "le capitaliste",
+          "gender": "der",
+          "plural": "Kapitalisten",
+          "type": "noun"
+        },
+        {
+          "german": "der Soldat",
+          "arabic": "le soldat",
+          "gender": "der",
+          "plural": "Soldaten",
+          "type": "noun"
+        },
+        {
+          "german": "der Mediziner",
+          "arabic": "le médecin chercheur",
+          "gender": "der",
+          "plural": "Mediziner",
+          "type": "noun"
+        },
+        {
+          "german": "der Junggeselle",
+          "arabic": "le célibataire",
+          "gender": "der",
+          "plural": "Junggesellen",
+          "type": "noun"
+        },
+        {
+          "german": "der Sklave",
+          "arabic": "l'esclave",
+          "gender": "der",
+          "plural": "Sklaven",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -1005,6 +1110,127 @@
               "groß"
             ],
             "answer": "Das Haus meines Nachbarn ist groß"
+          },
+          {
+            "id": "c1-02-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Ich rufe den ___. » (le client)",
+            "answer": "Kunden",
+            "hint": "Akkusativ + n-Dekl."
+          },
+          {
+            "id": "c1-02-q12",
+            "type": "multiple-choice",
+            "question": "Quel nom n'est PAS n-Deklination ?",
+            "options": [
+              "der Junge",
+              "der Kollege",
+              "der Vater",
+              "der Mensch"
+            ],
+            "answer": "der Vater"
+          },
+          {
+            "id": "c1-02-q13",
+            "type": "fill-blank",
+            "question": "Génitif de der Name ?",
+            "answer": "des Namens",
+            "hint": "irrégulier : -ns"
+          },
+          {
+            "id": "c1-02-q14",
+            "type": "multiple-choice",
+            "question": "Les noms en -ist suivent :",
+            "options": [
+              "Nominativ seulement",
+              "n-Deklination",
+              "Genitiv seulement",
+              "aucune règle"
+            ],
+            "answer": "n-Deklination"
+          },
+          {
+            "id": "c1-02-q15",
+            "type": "matching",
+            "question": "Associe l'Akkusativ :",
+            "pairs": [
+              {
+                "left": "der Mensch",
+                "right": "den Menschen"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Bär",
+                "right": "den Bären"
+              },
+              {
+                "left": "der Pilot",
+                "right": "den Piloten"
+              },
+              {
+                "left": "der Tourist",
+                "right": "den Touristen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-02-q16",
+            "type": "drag-drop",
+            "question": "Remets : « J'ai parlé avec le patient »",
+            "words": [
+              "Ich",
+              "habe",
+              "mit",
+              "dem",
+              "Patienten",
+              "gesprochen"
+            ],
+            "answer": "Ich habe mit dem Patienten gesprochen"
+          },
+          {
+            "id": "c1-02-q17",
+            "type": "speaking",
+            "question": "Dis : « Je connais ce touriste de Turquie »",
+            "answer": "Ich kenne diesen Touristen aus der Türkei"
+          },
+          {
+            "id": "c1-02-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Wir haben den ___ getroffen. » (philosophe)",
+            "audioPrompt": "Wir haben den Philosophen getroffen.",
+            "answer": "Philosophen",
+            "hint": "Philosoph → Philosophen"
+          },
+          {
+            "id": "c1-02-q19",
+            "type": "multiple-choice",
+            "question": "Quel est le génitif de « der Name » ?",
+            "options": [
+              "des Names",
+              "des Namens",
+              "der Name",
+              "dem Namen"
+            ],
+            "answer": "des Namens"
+          },
+          {
+            "id": "c1-02-q20",
+            "type": "drag-drop",
+            "question": "Remets : « L'interview a été menée avec le candidat »",
+            "words": [
+              "Das",
+              "Interview",
+              "wurde",
+              "mit",
+              "dem",
+              "Kandidaten",
+              "geführt"
+            ],
+            "answer": "Das Interview wurde mit dem Kandidaten geführt"
           }
         ]
       }

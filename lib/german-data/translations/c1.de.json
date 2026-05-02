@@ -886,6 +886,111 @@
           "gender": "der",
           "plural": "Zeugen",
           "type": "noun"
+        },
+        {
+          "german": "der Patient",
+          "arabic": "kranker Mensch beim Arzt",
+          "gender": "der",
+          "plural": "Patienten",
+          "type": "noun"
+        },
+        {
+          "german": "der Kunde",
+          "arabic": "Käufer von Waren",
+          "gender": "der",
+          "plural": "Kunden",
+          "type": "noun"
+        },
+        {
+          "german": "der Architekt",
+          "arabic": "Designer von Gebäuden",
+          "gender": "der",
+          "plural": "Architekten",
+          "type": "noun"
+        },
+        {
+          "german": "der Pilot",
+          "arabic": "Flugzeugführer",
+          "gender": "der",
+          "plural": "Piloten",
+          "type": "noun"
+        },
+        {
+          "german": "der Bauer",
+          "arabic": "Landwirt",
+          "gender": "der",
+          "plural": "Bauern",
+          "type": "noun"
+        },
+        {
+          "german": "der Heilige",
+          "arabic": "religiös verehrte Person",
+          "gender": "der",
+          "plural": "Heilige",
+          "type": "noun"
+        },
+        {
+          "german": "der Held",
+          "arabic": "mutige Person",
+          "gender": "der",
+          "plural": "Helden",
+          "type": "noun"
+        },
+        {
+          "german": "der Idiot",
+          "arabic": "abwertend für unkluge Person",
+          "gender": "der",
+          "plural": "Idioten",
+          "type": "noun"
+        },
+        {
+          "german": "der Kandidat",
+          "arabic": "Bewerber für eine Position",
+          "gender": "der",
+          "plural": "Kandidaten",
+          "type": "noun"
+        },
+        {
+          "german": "der Tourist",
+          "arabic": "Reisender zum Vergnügen",
+          "gender": "der",
+          "plural": "Touristen",
+          "type": "noun"
+        },
+        {
+          "german": "der Kapitalist",
+          "arabic": "Anhänger des Kapitalismus",
+          "gender": "der",
+          "plural": "Kapitalisten",
+          "type": "noun"
+        },
+        {
+          "german": "der Soldat",
+          "arabic": "Mitglied einer Armee",
+          "gender": "der",
+          "plural": "Soldaten",
+          "type": "noun"
+        },
+        {
+          "german": "der Mediziner",
+          "arabic": "Arzt oder Medizinwissenschaftler",
+          "gender": "der",
+          "plural": "Mediziner",
+          "type": "noun"
+        },
+        {
+          "german": "der Junggeselle",
+          "arabic": "unverheirateter Mann",
+          "gender": "der",
+          "plural": "Junggesellen",
+          "type": "noun"
+        },
+        {
+          "german": "der Sklave",
+          "arabic": "unfreier Mensch",
+          "gender": "der",
+          "plural": "Sklaven",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -1005,6 +1110,127 @@
               "groß"
             ],
             "answer": "Das Haus meines Nachbarn ist groß"
+          },
+          {
+            "id": "c1-02-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „Ich rufe den ___.\" (Kunde)",
+            "answer": "Kunden",
+            "hint": "Akkusativ + n-Dekl."
+          },
+          {
+            "id": "c1-02-q12",
+            "type": "multiple-choice",
+            "question": "Welches Nomen ist KEINE n-Deklination?",
+            "options": [
+              "der Junge",
+              "der Kollege",
+              "der Vater",
+              "der Mensch"
+            ],
+            "answer": "der Vater"
+          },
+          {
+            "id": "c1-02-q13",
+            "type": "fill-blank",
+            "question": "Genitiv von der Name?",
+            "answer": "des Namens",
+            "hint": "unregelmäßig: -ns"
+          },
+          {
+            "id": "c1-02-q14",
+            "type": "multiple-choice",
+            "question": "Nomen auf -ist folgen:",
+            "options": [
+              "nur Nominativ",
+              "n-Deklination",
+              "nur Genitiv",
+              "keiner Regel"
+            ],
+            "answer": "n-Deklination"
+          },
+          {
+            "id": "c1-02-q15",
+            "type": "matching",
+            "question": "Verbinde Akkusativ:",
+            "pairs": [
+              {
+                "left": "der Mensch",
+                "right": "den Menschen"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Bär",
+                "right": "den Bären"
+              },
+              {
+                "left": "der Pilot",
+                "right": "den Piloten"
+              },
+              {
+                "left": "der Tourist",
+                "right": "den Touristen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-02-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich habe mit dem Patienten gesprochen\"",
+            "words": [
+              "Ich",
+              "habe",
+              "mit",
+              "dem",
+              "Patienten",
+              "gesprochen"
+            ],
+            "answer": "Ich habe mit dem Patienten gesprochen"
+          },
+          {
+            "id": "c1-02-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich kenne diesen Touristen aus der Türkei\"",
+            "answer": "Ich kenne diesen Touristen aus der Türkei"
+          },
+          {
+            "id": "c1-02-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Wir haben den ___ getroffen.\" (Philosoph)",
+            "audioPrompt": "Wir haben den Philosophen getroffen.",
+            "answer": "Philosophen",
+            "hint": "Philosoph → Philosophen"
+          },
+          {
+            "id": "c1-02-q19",
+            "type": "multiple-choice",
+            "question": "Genitiv von „der Name\":",
+            "options": [
+              "des Names",
+              "des Namens",
+              "der Name",
+              "dem Namen"
+            ],
+            "answer": "des Namens"
+          },
+          {
+            "id": "c1-02-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Das Interview wurde mit dem Kandidaten geführt\"",
+            "words": [
+              "Das",
+              "Interview",
+              "wurde",
+              "mit",
+              "dem",
+              "Kandidaten",
+              "geführt"
+            ],
+            "answer": "Das Interview wurde mit dem Kandidaten geführt"
           }
         ]
       }
