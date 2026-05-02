@@ -3686,6 +3686,91 @@
           "arabic": "methodology",
           "gender": "die",
           "type": "noun"
+        },
+        {
+          "german": "die Quelle",
+          "arabic": "the source",
+          "gender": "die",
+          "plural": "Quellen",
+          "type": "noun"
+        },
+        {
+          "german": "die Studie",
+          "arabic": "the study",
+          "gender": "die",
+          "plural": "Studien",
+          "type": "noun"
+        },
+        {
+          "german": "die Analyse",
+          "arabic": "the analysis",
+          "gender": "die",
+          "plural": "Analysen",
+          "type": "noun"
+        },
+        {
+          "german": "der Befund",
+          "arabic": "the finding",
+          "gender": "der",
+          "plural": "Befunde",
+          "type": "noun"
+        },
+        {
+          "german": "die Argumentation",
+          "arabic": "the argumentation",
+          "gender": "die",
+          "plural": "Argumentationen",
+          "type": "noun"
+        },
+        {
+          "german": "analysieren",
+          "arabic": "to analyze",
+          "type": "verb"
+        },
+        {
+          "german": "interpretieren",
+          "arabic": "to interpret",
+          "type": "verb"
+        },
+        {
+          "german": "argumentieren",
+          "arabic": "to argue",
+          "type": "verb"
+        },
+        {
+          "german": "beweisen",
+          "arabic": "to prove",
+          "type": "verb"
+        },
+        {
+          "german": "widerlegen",
+          "arabic": "to refute",
+          "type": "verb"
+        },
+        {
+          "german": "objektiv",
+          "arabic": "objective",
+          "type": "adjective"
+        },
+        {
+          "german": "wissenschaftlich",
+          "arabic": "scientific",
+          "type": "adjective"
+        },
+        {
+          "german": "maßgeblich",
+          "arabic": "decisive",
+          "type": "adjective"
+        },
+        {
+          "german": "umfassend",
+          "arabic": "comprehensive",
+          "type": "adjective"
+        },
+        {
+          "german": "differenziert",
+          "arabic": "nuanced",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3810,6 +3895,129 @@
               "ist"
             ],
             "answer": "Es ist davon auszugehen dass die Methode geeignet ist"
+          },
+          {
+            "id": "c1-07-q11",
+            "type": "fill-blank",
+            "question": "Academic alt for \"viele\": \"___ Studien\"",
+            "answer": "zahlreiche",
+            "hint": "zahlreiche = many (formal)"
+          },
+          {
+            "id": "c1-07-q12",
+            "type": "multiple-choice",
+            "question": "In academic writing we avoid:",
+            "options": [
+              "Passiv",
+              "Nominalstil",
+              "Konjunktiv II",
+              "Ich-Form"
+            ],
+            "answer": "Ich-Form"
+          },
+          {
+            "id": "c1-07-q13",
+            "type": "fill-blank",
+            "question": "\"Daraus lässt sich ___, dass...\" (conclude)",
+            "answer": "schließen",
+            "hint": "sich schließen lassen"
+          },
+          {
+            "id": "c1-07-q14",
+            "type": "multiple-choice",
+            "question": "Academic alt for \"wichtig\":",
+            "options": [
+              "groß",
+              "gut",
+              "maßgeblich",
+              "schön"
+            ],
+            "answer": "maßgeblich"
+          },
+          {
+            "id": "c1-07-q15",
+            "type": "matching",
+            "question": "Match colloquial to academic:",
+            "pairs": [
+              {
+                "left": "sagen",
+                "right": "darlegen"
+              },
+              {
+                "left": "zeigen",
+                "right": "aufzeigen"
+              },
+              {
+                "left": "wichtig",
+                "right": "maßgeblich"
+              },
+              {
+                "left": "klar",
+                "right": "eindeutig"
+              },
+              {
+                "left": "schlimm",
+                "right": "gravierend"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-07-q16",
+            "type": "drag-drop",
+            "question": "Order: \"This work deals with a complex question\"",
+            "words": [
+              "Die",
+              "vorliegende",
+              "Arbeit",
+              "beschäftigt",
+              "sich",
+              "mit",
+              "einer",
+              "komplexen",
+              "Frage"
+            ],
+            "answer": "Die vorliegende Arbeit beschäftigt sich mit einer komplexen Frage"
+          },
+          {
+            "id": "c1-07-q17",
+            "type": "speaking",
+            "question": "Say: \"Moreover, it should be noted that...\"",
+            "answer": "Darüber hinaus ist anzumerken dass"
+          },
+          {
+            "id": "c1-07-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Die ___ wurden durch die Daten bestätigt.\" (hypotheses)",
+            "audioPrompt": "Die Hypothesen wurden durch die Daten bestätigt.",
+            "answer": "Hypothesen",
+            "hint": "die Hypothese (pl)"
+          },
+          {
+            "id": "c1-07-q19",
+            "type": "multiple-choice",
+            "question": "Most scientific sentence:",
+            "options": [
+              "Es ist klar.",
+              "Es lässt sich eindeutig feststellen.",
+              "Das stimmt.",
+              "Ich denke ja."
+            ],
+            "answer": "Es lässt sich eindeutig feststellen."
+          },
+          {
+            "id": "c1-07-q20",
+            "type": "drag-drop",
+            "question": "Order: \"The results are of great importance\"",
+            "words": [
+              "Die",
+              "Ergebnisse",
+              "sind",
+              "von",
+              "großer",
+              "Bedeutung"
+            ],
+            "answer": "Die Ergebnisse sind von großer Bedeutung"
           }
         ]
       }
