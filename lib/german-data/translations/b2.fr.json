@@ -3036,6 +3036,71 @@
           "german": "hoffen auf",
           "arabic": "espérer",
           "type": "verb"
+        },
+        {
+          "german": "sich beschäftigen mit",
+          "arabic": "s'occuper de",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschweren über",
+          "arabic": "se plaindre de",
+          "type": "verb"
+        },
+        {
+          "german": "sich konzentrieren auf",
+          "arabic": "se concentrer sur",
+          "type": "verb"
+        },
+        {
+          "german": "sich verlassen auf",
+          "arabic": "compter sur",
+          "type": "verb"
+        },
+        {
+          "german": "reagieren auf",
+          "arabic": "réagir à",
+          "type": "verb"
+        },
+        {
+          "german": "überzeugen von",
+          "arabic": "convaincre de",
+          "type": "verb"
+        },
+        {
+          "german": "streben nach",
+          "arabic": "aspirer à",
+          "type": "verb"
+        },
+        {
+          "german": "leiden unter",
+          "arabic": "souffrir de",
+          "type": "verb"
+        },
+        {
+          "german": "protestieren gegen",
+          "arabic": "protester contre",
+          "type": "verb"
+        },
+        {
+          "german": "kämpfen für",
+          "arabic": "se battre pour",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "s'habituer à",
+          "type": "verb"
+        },
+        {
+          "german": "rechnen mit",
+          "arabic": "compter avec, s'attendre à",
+          "type": "verb"
+        },
+        {
+          "german": "sich bedanken für",
+          "arabic": "remercier pour",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -3156,6 +3221,127 @@
               "Il était médecin"
             ],
             "answer": "Il rêve de devenir médecin"
+          },
+          {
+            "id": "b2-06-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Ich verlasse mich ___ dich. » (auf + Akk)",
+            "answer": "auf",
+            "hint": "sich verlassen + auf + Akk"
+          },
+          {
+            "id": "b2-06-q12",
+            "type": "multiple-choice",
+            "question": "Le verbe « leiden » prend :",
+            "options": [
+              "unter + Dat",
+              "auf + Akk",
+              "an + Dat",
+              "für + Akk"
+            ],
+            "answer": "unter + Dat"
+          },
+          {
+            "id": "b2-06-q13",
+            "type": "fill-blank",
+            "question": "« Wofür interessierst du dich? » — la question commence par ___",
+            "answer": "Wofür",
+            "hint": "wo + für (chose)"
+          },
+          {
+            "id": "b2-06-q14",
+            "type": "multiple-choice",
+            "question": "Pour une personne « an + ihn », pour une chose :",
+            "options": [
+              "daran",
+              "darauf",
+              "damit",
+              "dafür"
+            ],
+            "answer": "daran"
+          },
+          {
+            "id": "b2-06-q15",
+            "type": "matching",
+            "question": "Associe le verbe à sa préposition :",
+            "pairs": [
+              {
+                "left": "sich beschweren",
+                "right": "über + Akk"
+              },
+              {
+                "left": "rechnen",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "protestieren",
+                "right": "gegen + Akk"
+              },
+              {
+                "left": "kämpfen",
+                "right": "für + Akk"
+              },
+              {
+                "left": "sich gewöhnen",
+                "right": "an + Akk"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-06-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je compte sur toi pour tout »",
+            "words": [
+              "Ich",
+              "verlasse",
+              "mich",
+              "in",
+              "allem",
+              "auf",
+              "dich"
+            ],
+            "answer": "Ich verlasse mich in allem auf dich"
+          },
+          {
+            "id": "b2-06-q17",
+            "type": "speaking",
+            "question": "Dis : « Je souffre du stress »",
+            "answer": "Ich leide unter Stress"
+          },
+          {
+            "id": "b2-06-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Ich bedanke mich ___ deine Hilfe. » (für)",
+            "audioPrompt": "Ich bedanke mich für deine Hilfe.",
+            "answer": "für",
+            "hint": "sich bedanken + für + Akk"
+          },
+          {
+            "id": "b2-06-q19",
+            "type": "multiple-choice",
+            "question": "Les wo-Komposita servent pour :",
+            "options": [
+              "personnes",
+              "choses uniquement",
+              "lieux uniquement",
+              "temps"
+            ],
+            "answer": "choses uniquement"
+          },
+          {
+            "id": "b2-06-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je me concentre sur mes études »",
+            "words": [
+              "Ich",
+              "konzentriere",
+              "mich",
+              "auf",
+              "mein",
+              "Studium"
+            ],
+            "answer": "Ich konzentriere mich auf mein Studium"
           }
         ]
       }
