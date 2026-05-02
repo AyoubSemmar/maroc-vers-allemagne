@@ -5742,6 +5742,88 @@
           "german": "im Gegensatz zu",
           "arabic": "contrairement à",
           "type": "phrase"
+        },
+        {
+          "german": "der Vorteil",
+          "arabic": "l'avantage",
+          "plural": "die Vorteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Nachteil",
+          "arabic": "l'inconvénient",
+          "plural": "die Nachteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Stellungnahme",
+          "arabic": "la prise de position",
+          "plural": "die Stellungnahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Beweis",
+          "arabic": "la preuve",
+          "plural": "die Beweise",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Beispiel",
+          "arabic": "l'exemple",
+          "plural": "die Beispiele",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Einleitung",
+          "arabic": "l'introduction",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Schluss",
+          "arabic": "la conclusion",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "einleiten",
+          "arabic": "introduire",
+          "type": "verb"
+        },
+        {
+          "german": "zusammenfassen",
+          "arabic": "résumer",
+          "type": "verb"
+        },
+        {
+          "german": "argumentieren",
+          "arabic": "argumenter",
+          "type": "verb"
+        },
+        {
+          "german": "gegenüberstellen",
+          "arabic": "comparer, opposer",
+          "type": "verb"
+        },
+        {
+          "german": "sachlich",
+          "arabic": "factuel",
+          "type": "adjective"
+        },
+        {
+          "german": "objektiv",
+          "arabic": "objectif",
+          "type": "adjective"
+        },
+        {
+          "german": "subjektiv",
+          "arabic": "subjectif",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5868,6 +5950,131 @@
               "Nous ne voulons pas agir"
             ],
             "answer": "En résumé, on peut dire que nous devons agir"
+          },
+          {
+            "id": "b2-11-q11",
+            "type": "fill-blank",
+            "question": "Complète : « ___ Gegensatz zu seiner Meinung... »",
+            "answer": "Im",
+            "hint": "im Gegensatz zu"
+          },
+          {
+            "id": "b2-11-q12",
+            "type": "multiple-choice",
+            "question": "Contraire de « der Vorteil » :",
+            "options": [
+              "der Nachteil",
+              "der Schaden",
+              "der Schluss",
+              "der Standpunkt"
+            ],
+            "answer": "der Nachteil"
+          },
+          {
+            "id": "b2-11-q13",
+            "type": "fill-blank",
+            "question": "« Ich kann diese These nur ___. » (soutenir)",
+            "answer": "befürworten",
+            "hint": "soutenir"
+          },
+          {
+            "id": "b2-11-q14",
+            "type": "multiple-choice",
+            "question": "Bonne structure d'argumentation :",
+            "options": [
+              "intro + exemples",
+              "These + Argumente + Schluss",
+              "un bloc",
+              "seulement exemples"
+            ],
+            "answer": "These + Argumente + Schluss"
+          },
+          {
+            "id": "b2-11-q15",
+            "type": "matching",
+            "question": "Associe l'expression à sa fonction :",
+            "pairs": [
+              {
+                "left": "Meiner Meinung nach",
+                "right": "donner son avis"
+              },
+              {
+                "left": "Außerdem",
+                "right": "ajouter un argument"
+              },
+              {
+                "left": "Allerdings",
+                "right": "contre-argument"
+              },
+              {
+                "left": "Zum Beispiel",
+                "right": "exemple"
+              },
+              {
+                "left": "Zusammenfassend",
+                "right": "conclusion"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-11-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je suis convaincu que l'environnement est le plus important »",
+            "words": [
+              "Ich",
+              "bin",
+              "der",
+              "festen",
+              "Überzeugung,",
+              "dass",
+              "die",
+              "Umwelt",
+              "das",
+              "Wichtigste",
+              "ist"
+            ],
+            "answer": "Ich bin der festen Überzeugung, dass die Umwelt das Wichtigste ist"
+          },
+          {
+            "id": "b2-11-q17",
+            "type": "speaking",
+            "question": "Dis : « D'autre part, c'est cher »",
+            "answer": "Andererseits ist das teuer"
+          },
+          {
+            "id": "b2-11-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « ___ kann man sagen, dass... » (zusammenfassend)",
+            "audioPrompt": "Zusammenfassend kann man sagen, dass...",
+            "answer": "Zusammenfassend",
+            "hint": "conclusion"
+          },
+          {
+            "id": "b2-11-q19",
+            "type": "multiple-choice",
+            "question": "Dans l'écrit Goethe B2, longueur du commentaire :",
+            "options": [
+              "50 mots",
+              "150 mots",
+              "500 mots",
+              "1000 mots"
+            ],
+            "answer": "150 mots"
+          },
+          {
+            "id": "b2-11-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « De plus, cela offre de nouvelles possibilités »",
+            "words": [
+              "Darüber",
+              "hinaus",
+              "bietet",
+              "das",
+              "neue",
+              "Möglichkeiten"
+            ],
+            "answer": "Darüber hinaus bietet das neue Möglichkeiten"
           }
         ]
       }

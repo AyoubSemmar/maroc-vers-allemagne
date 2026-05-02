@@ -5742,6 +5742,88 @@
           "german": "im Gegensatz zu",
           "arabic": "in contrast to",
           "type": "phrase"
+        },
+        {
+          "german": "der Vorteil",
+          "arabic": "positiver Aspekt",
+          "plural": "die Vorteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Nachteil",
+          "arabic": "negativer Aspekt",
+          "plural": "die Nachteile",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Stellungnahme",
+          "arabic": "öffentliche Meinungsäußerung",
+          "plural": "die Stellungnahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Beweis",
+          "arabic": "Nachweis der Wahrheit",
+          "plural": "die Beweise",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Beispiel",
+          "arabic": "konkreter Fall zur Veranschaulichung",
+          "plural": "die Beispiele",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Einleitung",
+          "arabic": "Anfang eines Textes",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Schluss",
+          "arabic": "Ende eines Textes",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "einleiten",
+          "arabic": "anfangen, einführen",
+          "type": "verb"
+        },
+        {
+          "german": "zusammenfassen",
+          "arabic": "kurz wiedergeben",
+          "type": "verb"
+        },
+        {
+          "german": "argumentieren",
+          "arabic": "Argumente vorbringen",
+          "type": "verb"
+        },
+        {
+          "german": "gegenüberstellen",
+          "arabic": "vergleichend nebeneinanderstellen",
+          "type": "verb"
+        },
+        {
+          "german": "sachlich",
+          "arabic": "auf Fakten basierend",
+          "type": "adjective"
+        },
+        {
+          "german": "objektiv",
+          "arabic": "neutral, ohne persönliche Meinung",
+          "type": "adjective"
+        },
+        {
+          "german": "subjektiv",
+          "arabic": "persönlich, von Meinung geprägt",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5868,6 +5950,131 @@
               "We don't want to act"
             ],
             "answer": "In summary, one can say that we must act"
+          },
+          {
+            "id": "b2-11-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „___ Gegensatz zu seiner Meinung...\"",
+            "answer": "Im",
+            "hint": "im Gegensatz zu"
+          },
+          {
+            "id": "b2-11-q12",
+            "type": "multiple-choice",
+            "question": "Gegenteil von „der Vorteil\":",
+            "options": [
+              "der Nachteil",
+              "der Schaden",
+              "der Schluss",
+              "der Standpunkt"
+            ],
+            "answer": "der Nachteil"
+          },
+          {
+            "id": "b2-11-q13",
+            "type": "fill-blank",
+            "question": "„Ich kann diese These nur ___.\" (befürworten)",
+            "answer": "befürworten",
+            "hint": "unterstützen"
+          },
+          {
+            "id": "b2-11-q14",
+            "type": "multiple-choice",
+            "question": "Gute Argumentationsstruktur:",
+            "options": [
+              "Einleitung + Beispiele",
+              "These + Argumente + Schluss",
+              "ein Block",
+              "nur Beispiele"
+            ],
+            "answer": "These + Argumente + Schluss"
+          },
+          {
+            "id": "b2-11-q15",
+            "type": "matching",
+            "question": "Verbinde Phrase mit Funktion:",
+            "pairs": [
+              {
+                "left": "Meiner Meinung nach",
+                "right": "Meinung geben"
+              },
+              {
+                "left": "Außerdem",
+                "right": "Argument hinzufügen"
+              },
+              {
+                "left": "Allerdings",
+                "right": "Gegenargument"
+              },
+              {
+                "left": "Zum Beispiel",
+                "right": "Beispiel"
+              },
+              {
+                "left": "Zusammenfassend",
+                "right": "Schluss"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-11-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich bin der festen Überzeugung, dass die Umwelt das Wichtigste ist\"",
+            "words": [
+              "Ich",
+              "bin",
+              "der",
+              "festen",
+              "Überzeugung,",
+              "dass",
+              "die",
+              "Umwelt",
+              "das",
+              "Wichtigste",
+              "ist"
+            ],
+            "answer": "Ich bin der festen Überzeugung, dass die Umwelt das Wichtigste ist"
+          },
+          {
+            "id": "b2-11-q17",
+            "type": "speaking",
+            "question": "Sag: „Andererseits ist das teuer\"",
+            "answer": "Andererseits ist das teuer"
+          },
+          {
+            "id": "b2-11-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „___ kann man sagen, dass...\" (zusammenfassend)",
+            "audioPrompt": "Zusammenfassend kann man sagen, dass...",
+            "answer": "Zusammenfassend",
+            "hint": "Schluss"
+          },
+          {
+            "id": "b2-11-q19",
+            "type": "multiple-choice",
+            "question": "Im Goethe-B2-Schreibteil, Kommentarlänge:",
+            "options": [
+              "50 Wörter",
+              "150 Wörter",
+              "500 Wörter",
+              "1000 Wörter"
+            ],
+            "answer": "150 Wörter"
+          },
+          {
+            "id": "b2-11-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Darüber hinaus bietet das neue Möglichkeiten\"",
+            "words": [
+              "Darüber",
+              "hinaus",
+              "bietet",
+              "das",
+              "neue",
+              "Möglichkeiten"
+            ],
+            "answer": "Darüber hinaus bietet das neue Möglichkeiten"
           }
         ]
       }
