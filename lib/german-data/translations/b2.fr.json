@@ -3587,6 +3587,71 @@
           "german": "arm",
           "arabic": "pauvre",
           "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué",
+          "type": "adjective"
+        },
+        {
+          "german": "wütend",
+          "arabic": "furieux",
+          "type": "adjective"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sûr / certain",
+          "type": "adjective"
+        },
+        {
+          "german": "unsicher",
+          "arabic": "incertain",
+          "type": "adjective"
+        },
+        {
+          "german": "erstaunt",
+          "arabic": "étonné",
+          "type": "adjective"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "déçu",
+          "type": "adjective"
+        },
+        {
+          "german": "überzeugt",
+          "arabic": "convaincu",
+          "type": "adjective"
+        },
+        {
+          "german": "gespannt",
+          "arabic": "impatient",
+          "type": "adjective"
+        },
+        {
+          "german": "eifrig",
+          "arabic": "zélé",
+          "type": "adjective"
+        },
+        {
+          "german": "neidisch",
+          "arabic": "envieux",
+          "type": "adjective"
+        },
+        {
+          "german": "höflich",
+          "arabic": "poli",
+          "type": "adjective"
+        },
+        {
+          "german": "unhöflich",
+          "arabic": "impoli",
+          "type": "adjective"
+        },
+        {
+          "german": "ehrlich",
+          "arabic": "honnête",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3708,6 +3773,128 @@
               "As-tu besoin d'aide ?"
             ],
             "answer": "Es-tu en colère contre moi ?"
+          },
+          {
+            "id": "b2-07-q11",
+            "type": "fill-blank",
+            "question": "« Ich bin überzeugt ___ deinem Erfolg. » (von + Dat)",
+            "answer": "von",
+            "hint": "überzeugt von"
+          },
+          {
+            "id": "b2-07-q12",
+            "type": "multiple-choice",
+            "question": "« Ich bin abhängig ___ Internet. »",
+            "options": [
+              "für",
+              "mit",
+              "von",
+              "auf"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b2-07-q13",
+            "type": "fill-blank",
+            "question": "« Sie ist eifersüchtig ___ ihre Schwester. » (auf + Akk)",
+            "answer": "auf",
+            "hint": "eifersüchtig auf"
+          },
+          {
+            "id": "b2-07-q14",
+            "type": "multiple-choice",
+            "question": "« interessiert » prend :",
+            "options": [
+              "für + Akk",
+              "an + Dat",
+              "auf + Akk",
+              "in + Akk"
+            ],
+            "answer": "an + Dat"
+          },
+          {
+            "id": "b2-07-q15",
+            "type": "matching",
+            "question": "Associe l'adjectif à sa préposition :",
+            "pairs": [
+              {
+                "left": "stolz",
+                "right": "auf + Akk"
+              },
+              {
+                "left": "zufrieden",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "verantwortlich",
+                "right": "für + Akk"
+              },
+              {
+                "left": "abhängig",
+                "right": "von + Dat"
+              },
+              {
+                "left": "interessiert",
+                "right": "an + Dat"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-07-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je suis très reconnaissant pour ton aide »",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "dankbar",
+              "für",
+              "deine",
+              "Hilfe"
+            ],
+            "answer": "Ich bin sehr dankbar für deine Hilfe"
+          },
+          {
+            "id": "b2-07-q17",
+            "type": "speaking",
+            "question": "Dis : « Je suis fier de mon peuple »",
+            "answer": "Ich bin stolz auf mein Volk"
+          },
+          {
+            "id": "b2-07-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Wir sind reich ___ Kultur. » (an + Dat)",
+            "audioPrompt": "Wir sind reich an Kultur.",
+            "answer": "an",
+            "hint": "reich an + Dat"
+          },
+          {
+            "id": "b2-07-q19",
+            "type": "multiple-choice",
+            "question": "« bereit » prend :",
+            "options": [
+              "für + Akk",
+              "zu + Dat",
+              "mit + Dat",
+              "auf + Akk"
+            ],
+            "answer": "zu + Dat"
+          },
+          {
+            "id": "b2-07-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Elle est impatiente de te voir »",
+            "words": [
+              "Sie",
+              "ist",
+              "gespannt",
+              "darauf,",
+              "dich",
+              "zu",
+              "sehen"
+            ],
+            "answer": "Sie ist gespannt darauf, dich zu sehen"
           }
         ]
       }

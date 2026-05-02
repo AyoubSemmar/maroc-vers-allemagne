@@ -3587,6 +3587,71 @@
           "german": "arm",
           "arabic": "poor",
           "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "tired",
+          "type": "adjective"
+        },
+        {
+          "german": "wütend",
+          "arabic": "furious",
+          "type": "adjective"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sure / safe",
+          "type": "adjective"
+        },
+        {
+          "german": "unsicher",
+          "arabic": "unsure",
+          "type": "adjective"
+        },
+        {
+          "german": "erstaunt",
+          "arabic": "amazed",
+          "type": "adjective"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "disappointed",
+          "type": "adjective"
+        },
+        {
+          "german": "überzeugt",
+          "arabic": "convinced",
+          "type": "adjective"
+        },
+        {
+          "german": "gespannt",
+          "arabic": "eager, excited",
+          "type": "adjective"
+        },
+        {
+          "german": "eifrig",
+          "arabic": "eager, zealous",
+          "type": "adjective"
+        },
+        {
+          "german": "neidisch",
+          "arabic": "envious",
+          "type": "adjective"
+        },
+        {
+          "german": "höflich",
+          "arabic": "polite",
+          "type": "adjective"
+        },
+        {
+          "german": "unhöflich",
+          "arabic": "impolite",
+          "type": "adjective"
+        },
+        {
+          "german": "ehrlich",
+          "arabic": "honest",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -3708,6 +3773,128 @@
               "Do you need help?"
             ],
             "answer": "Are you angry at me?"
+          },
+          {
+            "id": "b2-07-q11",
+            "type": "fill-blank",
+            "question": "\"Ich bin überzeugt ___ deinem Erfolg.\" (von + Dat)",
+            "answer": "von",
+            "hint": "überzeugt von"
+          },
+          {
+            "id": "b2-07-q12",
+            "type": "multiple-choice",
+            "question": "\"Ich bin abhängig ___ Internet.\"",
+            "options": [
+              "für",
+              "mit",
+              "von",
+              "auf"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b2-07-q13",
+            "type": "fill-blank",
+            "question": "\"Sie ist eifersüchtig ___ ihre Schwester.\" (auf + Akk)",
+            "answer": "auf",
+            "hint": "eifersüchtig auf"
+          },
+          {
+            "id": "b2-07-q14",
+            "type": "multiple-choice",
+            "question": "\"interessiert\" takes:",
+            "options": [
+              "für + Akk",
+              "an + Dat",
+              "auf + Akk",
+              "in + Akk"
+            ],
+            "answer": "an + Dat"
+          },
+          {
+            "id": "b2-07-q15",
+            "type": "matching",
+            "question": "Match adjective to preposition:",
+            "pairs": [
+              {
+                "left": "stolz",
+                "right": "auf + Akk"
+              },
+              {
+                "left": "zufrieden",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "verantwortlich",
+                "right": "für + Akk"
+              },
+              {
+                "left": "abhängig",
+                "right": "von + Dat"
+              },
+              {
+                "left": "interessiert",
+                "right": "an + Dat"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-07-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"I'm very grateful for your help\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "dankbar",
+              "für",
+              "deine",
+              "Hilfe"
+            ],
+            "answer": "Ich bin sehr dankbar für deine Hilfe"
+          },
+          {
+            "id": "b2-07-q17",
+            "type": "speaking",
+            "question": "Say: \"I'm proud of my people\"",
+            "answer": "Ich bin stolz auf mein Volk"
+          },
+          {
+            "id": "b2-07-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Wir sind reich ___ Kultur.\" (an + Dat)",
+            "audioPrompt": "Wir sind reich an Kultur.",
+            "answer": "an",
+            "hint": "reich an + Dat"
+          },
+          {
+            "id": "b2-07-q19",
+            "type": "multiple-choice",
+            "question": "\"bereit\" takes:",
+            "options": [
+              "für + Akk",
+              "zu + Dat",
+              "mit + Dat",
+              "auf + Akk"
+            ],
+            "answer": "zu + Dat"
+          },
+          {
+            "id": "b2-07-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"She's eager to see you\"",
+            "words": [
+              "Sie",
+              "ist",
+              "gespannt",
+              "darauf,",
+              "dich",
+              "zu",
+              "sehen"
+            ],
+            "answer": "Sie ist gespannt darauf, dich zu sehen"
           }
         ]
       }
