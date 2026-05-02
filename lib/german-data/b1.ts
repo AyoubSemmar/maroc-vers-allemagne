@@ -1668,6 +1668,9 @@ export const B1: Level = {
         { german: 'die Verspätung', arabic: 'التأخّر', example: 'Entschuldigung für die Verspätung.', exampleArabic: 'عذراً على التأخّر.', type: 'noun', gender: 'die', plural: 'die Verspätungen' },
         { german: 'die Nachricht', arabic: 'الرسالة', example: 'Ich freue mich über deine Nachricht.', exampleArabic: 'أفرح برسالتك.', type: 'noun', gender: 'die', plural: 'die Nachrichten' },
         { german: 'das Geschenk', arabic: 'الهدية', example: 'Das ist ein Geschenk für dich.', exampleArabic: 'هذه هدية لك.', type: 'noun', gender: 'das', plural: 'die Geschenke' },
+        { german: 'der Vertrag', arabic: 'العقد', example: 'Der Vertrag ist wichtig.', exampleArabic: 'العقد مهم.', type: 'noun', gender: 'der', plural: 'die Verträge' },
+        { german: 'die Hilfe', arabic: 'المساعدة', example: 'Ich brauche deine Hilfe.', exampleArabic: 'أحتاج مساعدتك.', type: 'noun', gender: 'die' },
+        { german: 'der Stress', arabic: 'الإجهاد', example: 'Der Stress wird zu viel.', exampleArabic: 'الإجهاد يصبح كبيراً.', type: 'noun', gender: 'der' },
       ],
       exercise: {
         questions: [
