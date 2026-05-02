@@ -5872,6 +5872,85 @@
           "german": "unvergesslich",
           "arabic": "unvergesslich",
           "type": "adjective"
+        },
+        {
+          "german": "der Strand",
+          "arabic": "Sandfläche am Meer",
+          "plural": "die Strände",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der See",
+          "arabic": "stehendes Gewässer im Binnenland",
+          "plural": "die Seen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Wald",
+          "arabic": "Gebiet voller Bäume",
+          "plural": "die Wälder",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Souvenir",
+          "arabic": "Andenken an eine Reise",
+          "plural": "die Souvenirs",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Reiseführer",
+          "arabic": "Buch oder Person, die Reiseinfos gibt",
+          "plural": "die Reiseführer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "System der Verständigung in Worten",
+          "plural": "die Sprachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Gewohnheit",
+          "arabic": "etwas regelmäßig Wiederholtes",
+          "plural": "die Gewohnheiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "fotografieren",
+          "arabic": "Bilder mit Kamera machen",
+          "type": "verb"
+        },
+        {
+          "german": "genießen",
+          "arabic": "etwas mit Freude erleben",
+          "type": "verb"
+        },
+        {
+          "german": "übernachten",
+          "arabic": "die Nacht woanders verbringen",
+          "type": "verb"
+        },
+        {
+          "german": "planen",
+          "arabic": "im Voraus organisieren",
+          "type": "verb"
+        },
+        {
+          "german": "gemütlich",
+          "arabic": "angenehm, behaglich",
+          "type": "adjective"
+        },
+        {
+          "german": "aufregend",
+          "arabic": "spannend",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5994,6 +6073,131 @@
               "Ich wohne in der Schweiz"
             ],
             "answer": "Letzten Sommer bin ich in die Schweiz gefahren und habe die Berge gesehen"
+          },
+          {
+            "id": "b1-11-q11",
+            "type": "fill-blank",
+            "question": "„Wir haben ___ Hotel übernachtet.\" (im)",
+            "answer": "im",
+            "hint": "in + dem = im"
+          },
+          {
+            "id": "b1-11-q12",
+            "type": "multiple-choice",
+            "question": "Wie sagt man „nach Marokko\" (Ziel)?",
+            "options": [
+              "in Marokko",
+              "nach Marokko",
+              "an Marokko",
+              "zu Marokko"
+            ],
+            "answer": "nach Marokko"
+          },
+          {
+            "id": "b1-11-q13",
+            "type": "fill-blank",
+            "question": "„Ich habe viele Fotos ___.\" (Partizip II)",
+            "answer": "gemacht",
+            "hint": "machen → gemacht"
+          },
+          {
+            "id": "b1-11-q14",
+            "type": "multiple-choice",
+            "question": "Auf eine Insel — wie sagt man „auf die Insel\" (Wohin)?",
+            "options": [
+              "nach die Insel",
+              "auf die Insel",
+              "in die Insel",
+              "zu die Insel"
+            ],
+            "answer": "auf die Insel"
+          },
+          {
+            "id": "b1-11-q15",
+            "type": "matching",
+            "question": "Verbinde Reisewort:",
+            "pairs": [
+              {
+                "left": "der Strand",
+                "right": "Sand am Meer"
+              },
+              {
+                "left": "der See",
+                "right": "Binnengewässer"
+              },
+              {
+                "left": "der Wald",
+                "right": "viele Bäume"
+              },
+              {
+                "left": "das Souvenir",
+                "right": "Andenken"
+              },
+              {
+                "left": "der Reiseführer",
+                "right": "Reiseberatung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-11-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Das Essen war wunderbar und die Menschen waren freundlich\"",
+            "words": [
+              "Das",
+              "Essen",
+              "war",
+              "wunderbar",
+              "und",
+              "die",
+              "Menschen",
+              "waren",
+              "freundlich"
+            ],
+            "answer": "Das Essen war wunderbar und die Menschen waren freundlich"
+          },
+          {
+            "id": "b1-11-q17",
+            "type": "speaking",
+            "question": "Sag: „Auf meiner Reise habe ich viel gelernt\"",
+            "answer": "Auf meiner Reise habe ich viel gelernt"
+          },
+          {
+            "id": "b1-11-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Wir haben am ___ übernachtet.\" (See)",
+            "audioPrompt": "Wir haben am See übernachtet.",
+            "answer": "See",
+            "hint": "der See → am See"
+          },
+          {
+            "id": "b1-11-q19",
+            "type": "multiple-choice",
+            "question": "Welches Adjektiv bedeutet „nicht zu vergessen\"?",
+            "options": [
+              "langweilig",
+              "unvergesslich",
+              "historisch",
+              "modern"
+            ],
+            "answer": "unvergesslich"
+          },
+          {
+            "id": "b1-11-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich erinnere mich immer an diese wunderbare Reise\"",
+            "words": [
+              "Ich",
+              "erinnere",
+              "mich",
+              "immer",
+              "an",
+              "diese",
+              "wunderbare",
+              "Reise"
+            ],
+            "answer": "Ich erinnere mich immer an diese wunderbare Reise"
           }
         ]
       }

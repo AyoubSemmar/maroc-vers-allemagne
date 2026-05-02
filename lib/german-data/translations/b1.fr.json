@@ -5872,6 +5872,85 @@
           "german": "unvergesslich",
           "arabic": "inoubliable",
           "type": "adjective"
+        },
+        {
+          "german": "der Strand",
+          "arabic": "la plage",
+          "plural": "die Strände",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der See",
+          "arabic": "le lac",
+          "plural": "die Seen",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Wald",
+          "arabic": "la forêt",
+          "plural": "die Wälder",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Souvenir",
+          "arabic": "le souvenir (objet)",
+          "plural": "die Souvenirs",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Reiseführer",
+          "arabic": "le guide touristique",
+          "plural": "die Reiseführer",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "la langue",
+          "plural": "die Sprachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Gewohnheit",
+          "arabic": "l'habitude",
+          "plural": "die Gewohnheiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "fotografieren",
+          "arabic": "photographier",
+          "type": "verb"
+        },
+        {
+          "german": "genießen",
+          "arabic": "savourer, profiter",
+          "type": "verb"
+        },
+        {
+          "german": "übernachten",
+          "arabic": "passer la nuit",
+          "type": "verb"
+        },
+        {
+          "german": "planen",
+          "arabic": "planifier",
+          "type": "verb"
+        },
+        {
+          "german": "gemütlich",
+          "arabic": "confortable, cosy",
+          "type": "adjective"
+        },
+        {
+          "german": "aufregend",
+          "arabic": "passionnant",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -5994,6 +6073,131 @@
               "J'habite en Suisse"
             ],
             "answer": "L'été dernier, je suis allé(e) en Suisse et j'ai vu les montagnes"
+          },
+          {
+            "id": "b1-11-q11",
+            "type": "fill-blank",
+            "question": "« Wir haben ___ Hotel übernachtet. » (im)",
+            "answer": "im",
+            "hint": "in + dem = im"
+          },
+          {
+            "id": "b1-11-q12",
+            "type": "multiple-choice",
+            "question": "Comment dit-on « au Maroc » (destination) ?",
+            "options": [
+              "in Marokko",
+              "nach Marokko",
+              "an Marokko",
+              "zu Marokko"
+            ],
+            "answer": "nach Marokko"
+          },
+          {
+            "id": "b1-11-q13",
+            "type": "fill-blank",
+            "question": "« Ich habe viele Fotos ___. » (Partizip II)",
+            "answer": "gemacht",
+            "hint": "machen → gemacht"
+          },
+          {
+            "id": "b1-11-q14",
+            "type": "multiple-choice",
+            "question": "Vers une île (auf der Insel), comment dire « vers l'île » ?",
+            "options": [
+              "nach die Insel",
+              "auf die Insel",
+              "in die Insel",
+              "zu die Insel"
+            ],
+            "answer": "auf die Insel"
+          },
+          {
+            "id": "b1-11-q15",
+            "type": "matching",
+            "question": "Associe le mot de voyage :",
+            "pairs": [
+              {
+                "left": "der Strand",
+                "right": "la plage"
+              },
+              {
+                "left": "der See",
+                "right": "le lac"
+              },
+              {
+                "left": "der Wald",
+                "right": "la forêt"
+              },
+              {
+                "left": "das Souvenir",
+                "right": "le souvenir"
+              },
+              {
+                "left": "der Reiseführer",
+                "right": "le guide"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-11-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « La nourriture était merveilleuse et les gens sympathiques »",
+            "words": [
+              "Das",
+              "Essen",
+              "war",
+              "wunderbar",
+              "und",
+              "die",
+              "Menschen",
+              "waren",
+              "freundlich"
+            ],
+            "answer": "Das Essen war wunderbar und die Menschen waren freundlich"
+          },
+          {
+            "id": "b1-11-q17",
+            "type": "speaking",
+            "question": "Dis : « Pendant mon voyage j'ai beaucoup appris »",
+            "answer": "Auf meiner Reise habe ich viel gelernt"
+          },
+          {
+            "id": "b1-11-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Wir haben am ___ übernachtet. » (lac)",
+            "audioPrompt": "Wir haben am See übernachtet.",
+            "answer": "See",
+            "hint": "der See → am See"
+          },
+          {
+            "id": "b1-11-q19",
+            "type": "multiple-choice",
+            "question": "Quel adjectif signifie « inoubliable » ?",
+            "options": [
+              "langweilig",
+              "unvergesslich",
+              "historisch",
+              "modern"
+            ],
+            "answer": "unvergesslich"
+          },
+          {
+            "id": "b1-11-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je me souviens toujours de ce merveilleux voyage »",
+            "words": [
+              "Ich",
+              "erinnere",
+              "mich",
+              "immer",
+              "an",
+              "diese",
+              "wunderbare",
+              "Reise"
+            ],
+            "answer": "Ich erinnere mich immer an diese wunderbare Reise"
           }
         ]
       }
