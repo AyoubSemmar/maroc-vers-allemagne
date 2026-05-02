@@ -6668,6 +6668,94 @@
           "gender": "die",
           "plural": "Erkenntnisse",
           "type": "noun"
+        },
+        {
+          "german": "die Beherrschung",
+          "arabic": "la maîtrise",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Sprachgewandtheit",
+          "arabic": "l'aisance linguistique",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "der Eindruck",
+          "arabic": "l'impression",
+          "gender": "der",
+          "plural": "Eindrücke",
+          "type": "noun"
+        },
+        {
+          "german": "die Wendung",
+          "arabic": "l'expression idiomatique",
+          "gender": "die",
+          "plural": "Wendungen",
+          "type": "noun"
+        },
+        {
+          "german": "die Nuance",
+          "arabic": "la nuance",
+          "gender": "die",
+          "plural": "Nuancen",
+          "type": "noun"
+        },
+        {
+          "german": "die Bedeutungsebene",
+          "arabic": "le niveau sémantique",
+          "gender": "die",
+          "plural": "Bedeutungsebenen",
+          "type": "noun"
+        },
+        {
+          "german": "die Sprachkompetenz",
+          "arabic": "la compétence linguistique",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Stilistik",
+          "arabic": "la stylistique",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "die Idiomatik",
+          "arabic": "l'idiomatique",
+          "gender": "die",
+          "type": "noun"
+        },
+        {
+          "german": "sich aneignen",
+          "arabic": "s'approprier, acquérir",
+          "type": "verb"
+        },
+        {
+          "german": "verfeinern",
+          "arabic": "affiner",
+          "type": "verb"
+        },
+        {
+          "german": "beherrschen",
+          "arabic": "maîtriser",
+          "type": "verb"
+        },
+        {
+          "german": "mühelos",
+          "arabic": "sans effort",
+          "type": "adjective"
+        },
+        {
+          "german": "professionell",
+          "arabic": "professionnel",
+          "type": "adjective"
+        },
+        {
+          "german": "muttersprachlich",
+          "arabic": "comme un natif",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -6787,6 +6875,124 @@
               "Herausforderungen"
             ],
             "answer": "Die Digitalisierung stellt uns vor neue Herausforderungen"
+          },
+          {
+            "id": "c1-12-q11",
+            "type": "fill-blank",
+            "question": "« Hätten wir mehr Zeit, ___ wir intensiver recherchieren. » (würden)",
+            "answer": "würden",
+            "hint": "Konjunktiv II"
+          },
+          {
+            "id": "c1-12-q12",
+            "type": "multiple-choice",
+            "question": "Après C1 on peut :",
+            "options": [
+              "recommencer A1",
+              "passer à C2 / TestDaF",
+              "seulement lire",
+              "rien"
+            ],
+            "answer": "passer à C2 / TestDaF"
+          },
+          {
+            "id": "c1-12-q13",
+            "type": "fill-blank",
+            "question": "« Folglich ist davon ___, dass weitere Reformen nötig sind. » (auszugehen)",
+            "answer": "auszugehen",
+            "hint": "davon auszugehen"
+          },
+          {
+            "id": "c1-12-q14",
+            "type": "multiple-choice",
+            "question": "C1 suffit pour :",
+            "options": [
+              "visite courte seulement",
+              "études universitaires et postes académiques",
+              "seulement traduction",
+              "rien"
+            ],
+            "answer": "études universitaires et postes académiques"
+          },
+          {
+            "id": "c1-12-q15",
+            "type": "matching",
+            "question": "Associe la notion C1 :",
+            "pairs": [
+              {
+                "left": "Konjunktiv II Vergangenheit",
+                "right": "hätte/wäre + Partizip II"
+              },
+              {
+                "left": "n-Deklination",
+                "right": "der Mensch → den Menschen"
+              },
+              {
+                "left": "FVG",
+                "right": "eine Entscheidung treffen"
+              },
+              {
+                "left": "Funktionsverbgefüge",
+                "right": "verbe + nom (formel)"
+              },
+              {
+                "left": "Konditional ohne wenn",
+                "right": "Hätte ich Zeit, würde ich"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-12-q16",
+            "type": "drag-drop",
+            "question": "Remets : « Je maîtrise l'allemand au niveau C1 »",
+            "words": [
+              "Ich",
+              "beherrsche",
+              "Deutsch",
+              "auf",
+              "C1-Niveau"
+            ],
+            "answer": "Ich beherrsche Deutsch auf C1-Niveau"
+          },
+          {
+            "id": "c1-12-q17",
+            "type": "speaking",
+            "question": "Dis : « Après C1, je peux étudier dans les universités allemandes »",
+            "answer": "Nach C1 kann ich an deutschen Universitäten studieren"
+          },
+          {
+            "id": "c1-12-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Ich werde meine Sprachkenntnisse weiter ___. » (affiner)",
+            "audioPrompt": "Ich werde meine Sprachkenntnisse weiter verfeinern.",
+            "answer": "verfeinern",
+            "hint": "perfectionner"
+          },
+          {
+            "id": "c1-12-q19",
+            "type": "multiple-choice",
+            "question": "Examens allemands avancés :",
+            "options": [
+              "même A1",
+              "TestDaF et C2",
+              "seulement écrit",
+              "aucun"
+            ],
+            "answer": "TestDaF et C2"
+          },
+          {
+            "id": "c1-12-q20",
+            "type": "drag-drop",
+            "question": "Remets : « Félicitations, tu as réussi C1 ! »",
+            "words": [
+              "Glückwunsch!",
+              "Du",
+              "hast",
+              "C1",
+              "geschafft"
+            ],
+            "answer": "Glückwunsch! Du hast C1 geschafft"
           }
         ]
       }
