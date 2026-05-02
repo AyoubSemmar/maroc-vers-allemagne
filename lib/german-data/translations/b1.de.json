@@ -2538,6 +2538,79 @@
           "german": "erklären",
           "arabic": "erklären",
           "type": "verb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "aber, in formellem Kontext",
+          "type": "conjunction"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "Einschränkung: jedoch, aber",
+          "type": "adverb"
+        },
+        {
+          "german": "dagegen",
+          "arabic": "im Gegensatz dazu",
+          "type": "adverb"
+        },
+        {
+          "german": "einerseits ... andererseits",
+          "arabic": "Ausdruck zweier Aspekte",
+          "type": "conjunction"
+        },
+        {
+          "german": "somit",
+          "arabic": "also, daher",
+          "type": "conjunction"
+        },
+        {
+          "german": "folglich",
+          "arabic": "als logische Folge",
+          "type": "conjunction"
+        },
+        {
+          "german": "zudem",
+          "arabic": "darüber hinaus",
+          "type": "conjunction"
+        },
+        {
+          "german": "obendrein",
+          "arabic": "zusätzlich, außerdem",
+          "type": "adverb"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "Voraussetzung für etwas",
+          "plural": "die Bedingungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "Grund, warum etwas passiert",
+          "plural": "die Ursachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "Folge oder Effekt einer Ursache",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Beziehung",
+          "arabic": "Zusammenhang oder Verbindung",
+          "plural": "die Beziehungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "logisch",
+          "arabic": "nach den Regeln des Denkens",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2666,6 +2739,121 @@
               "Wir gehen morgen in den Park"
             ],
             "answer": "Obwohl es regnet, gehen wir in den Park"
+          },
+          {
+            "id": "b1-05-q11",
+            "type": "fill-blank",
+            "question": "Ergänze (Folge): „Es ist kalt, ___ ich bleibe zu Hause.\"",
+            "answer": "deshalb",
+            "hint": "Folge → deshalb (Inversion)"
+          },
+          {
+            "id": "b1-05-q12",
+            "type": "multiple-choice",
+            "question": "Nach deshalb steht:",
+            "options": [
+              "das Verb zuerst",
+              "das Verb am Ende",
+              "das Subjekt zuerst",
+              "keine Änderung"
+            ],
+            "answer": "das Verb zuerst"
+          },
+          {
+            "id": "b1-05-q13",
+            "type": "fill-blank",
+            "question": "„Ich lerne viel, ___ ich die Prüfung bestehe.\" (Ziel)",
+            "answer": "damit",
+            "hint": "Ziel = damit"
+          },
+          {
+            "id": "b1-05-q14",
+            "type": "multiple-choice",
+            "question": "Unterschied zwischen denn und weil?",
+            "options": [
+              "gleiche Bedeutung und Wortstellung",
+              "denn behält normale Wortstellung, weil schickt das Verb ans Ende",
+              "denn schickt ans Ende",
+              "kein Unterschied"
+            ],
+            "answer": "denn behält normale Wortstellung, weil schickt das Verb ans Ende"
+          },
+          {
+            "id": "b1-05-q15",
+            "type": "matching",
+            "question": "Verbinde Konnektor mit Typ:",
+            "pairs": [
+              {
+                "left": "weil",
+                "right": "Subjunktion (Verb am Ende)"
+              },
+              {
+                "left": "denn",
+                "right": "Position 0 (normale Stellung)"
+              },
+              {
+                "left": "deshalb",
+                "right": "Position 1 (Inversion)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "Position 1 (Inversion)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-05-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Sobald ich ankomme, rufe ich dich an\"",
+            "words": [
+              "Sobald",
+              "ich",
+              "ankomme,",
+              "rufe",
+              "ich",
+              "dich",
+              "an"
+            ],
+            "answer": "Sobald ich ankomme, rufe ich dich an"
+          },
+          {
+            "id": "b1-05-q17",
+            "type": "speaking",
+            "question": "Sag: „Zwar ist die Arbeit schwer aber sie ist interessant\"",
+            "answer": "Zwar ist die Arbeit schwer aber sie ist interessant"
+          },
+          {
+            "id": "b1-05-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Ich gehe nicht ins Kino, ___ ich kein Geld habe.\" (weil)",
+            "audioPrompt": "Ich gehe nicht ins Kino, weil ich kein Geld habe.",
+            "answer": "weil",
+            "hint": "formaler Grund = weil"
+          },
+          {
+            "id": "b1-05-q19",
+            "type": "multiple-choice",
+            "question": "Welcher Konnektor bedeutet „sofort wenn\"?",
+            "options": [
+              "solange",
+              "sobald",
+              "falls",
+              "während"
+            ],
+            "answer": "sobald"
+          },
+          {
+            "id": "b1-05-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Außerdem bin ich müde\"",
+            "words": [
+              "Außerdem",
+              "bin",
+              "ich",
+              "müde"
+            ],
+            "answer": "Außerdem bin ich müde"
           }
         ]
       }

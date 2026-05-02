@@ -2538,6 +2538,79 @@
           "german": "erklären",
           "arabic": "to explain",
           "type": "verb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "however (formal)",
+          "type": "conjunction"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "however, though",
+          "type": "adverb"
+        },
+        {
+          "german": "dagegen",
+          "arabic": "in contrast",
+          "type": "adverb"
+        },
+        {
+          "german": "einerseits ... andererseits",
+          "arabic": "on the one hand ... on the other",
+          "type": "conjunction"
+        },
+        {
+          "german": "somit",
+          "arabic": "thus, therefore",
+          "type": "conjunction"
+        },
+        {
+          "german": "folglich",
+          "arabic": "consequently",
+          "type": "conjunction"
+        },
+        {
+          "german": "zudem",
+          "arabic": "in addition",
+          "type": "conjunction"
+        },
+        {
+          "german": "obendrein",
+          "arabic": "on top of that",
+          "type": "adverb"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "the condition",
+          "plural": "die Bedingungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "the cause",
+          "plural": "die Ursachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "the effect",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Beziehung",
+          "arabic": "the relationship",
+          "plural": "die Beziehungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "logisch",
+          "arabic": "logical",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2666,6 +2739,121 @@
               "We'll go to the park tomorrow"
             ],
             "answer": "Although it's raining we're going to the park"
+          },
+          {
+            "id": "b1-05-q11",
+            "type": "fill-blank",
+            "question": "Fill in (consequence): \"Es ist kalt, ___ ich bleibe zu Hause.\"",
+            "answer": "deshalb",
+            "hint": "consequence → deshalb (Inversion)"
+          },
+          {
+            "id": "b1-05-q12",
+            "type": "multiple-choice",
+            "question": "After deshalb comes:",
+            "options": [
+              "the verb first",
+              "the verb at the end",
+              "the subject first",
+              "nothing changes"
+            ],
+            "answer": "the verb first"
+          },
+          {
+            "id": "b1-05-q13",
+            "type": "fill-blank",
+            "question": "\"Ich lerne viel, ___ ich die Prüfung bestehe.\" (so that)",
+            "answer": "damit",
+            "hint": "purpose = damit"
+          },
+          {
+            "id": "b1-05-q14",
+            "type": "multiple-choice",
+            "question": "Difference between denn and weil?",
+            "options": [
+              "same meaning and order",
+              "denn keeps normal order, weil sends verb to end",
+              "denn sends to end",
+              "no difference"
+            ],
+            "answer": "denn keeps normal order, weil sends verb to end"
+          },
+          {
+            "id": "b1-05-q15",
+            "type": "matching",
+            "question": "Match the Konnektor to its type:",
+            "pairs": [
+              {
+                "left": "weil",
+                "right": "Subjunktion (verb at end)"
+              },
+              {
+                "left": "denn",
+                "right": "Position 0 (normal order)"
+              },
+              {
+                "left": "deshalb",
+                "right": "Position 1 (Inversion)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "Position 1 (Inversion)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-05-q16",
+            "type": "drag-drop",
+            "question": "Order the words: \"As soon as I arrive, I'll call you\"",
+            "words": [
+              "Sobald",
+              "ich",
+              "ankomme,",
+              "rufe",
+              "ich",
+              "dich",
+              "an"
+            ],
+            "answer": "Sobald ich ankomme, rufe ich dich an"
+          },
+          {
+            "id": "b1-05-q17",
+            "type": "speaking",
+            "question": "Say: \"It's true the work is hard, but it's interesting\"",
+            "answer": "Zwar ist die Arbeit schwer aber sie ist interessant"
+          },
+          {
+            "id": "b1-05-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Ich gehe nicht ins Kino, ___ ich kein Geld habe.\" (because)",
+            "audioPrompt": "Ich gehe nicht ins Kino, weil ich kein Geld habe.",
+            "answer": "weil",
+            "hint": "formal cause = weil"
+          },
+          {
+            "id": "b1-05-q19",
+            "type": "multiple-choice",
+            "question": "Which Konnektor means \"as soon as\"?",
+            "options": [
+              "solange",
+              "sobald",
+              "falls",
+              "während"
+            ],
+            "answer": "sobald"
+          },
+          {
+            "id": "b1-05-q20",
+            "type": "drag-drop",
+            "question": "Order the words: \"Besides, I'm tired\"",
+            "words": [
+              "Außerdem",
+              "bin",
+              "ich",
+              "müde"
+            ],
+            "answer": "Außerdem bin ich müde"
           }
         ]
       }

@@ -2538,6 +2538,79 @@
           "german": "erklären",
           "arabic": "expliquer",
           "type": "verb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "cependant (formel)",
+          "type": "conjunction"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "toutefois",
+          "type": "adverb"
+        },
+        {
+          "german": "dagegen",
+          "arabic": "en revanche",
+          "type": "adverb"
+        },
+        {
+          "german": "einerseits ... andererseits",
+          "arabic": "d'une part ... d'autre part",
+          "type": "conjunction"
+        },
+        {
+          "german": "somit",
+          "arabic": "ainsi, par conséquent",
+          "type": "conjunction"
+        },
+        {
+          "german": "folglich",
+          "arabic": "par conséquent",
+          "type": "conjunction"
+        },
+        {
+          "german": "zudem",
+          "arabic": "en outre",
+          "type": "conjunction"
+        },
+        {
+          "german": "obendrein",
+          "arabic": "en plus",
+          "type": "adverb"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "la condition",
+          "plural": "die Bedingungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "la cause",
+          "plural": "die Ursachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "l'effet",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Beziehung",
+          "arabic": "la relation",
+          "plural": "die Beziehungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "logisch",
+          "arabic": "logique",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -2666,6 +2739,121 @@
               "Nous irons au parc demain"
             ],
             "answer": "Bien qu'il pleuve nous allons au parc"
+          },
+          {
+            "id": "b1-05-q11",
+            "type": "fill-blank",
+            "question": "Complète (conséquence) : « Es ist kalt, ___ ich bleibe zu Hause. »",
+            "answer": "deshalb",
+            "hint": "conséquence → deshalb (Inversion)"
+          },
+          {
+            "id": "b1-05-q12",
+            "type": "multiple-choice",
+            "question": "Après deshalb on a :",
+            "options": [
+              "le verbe en premier",
+              "le verbe à la fin",
+              "le sujet en premier",
+              "rien ne change"
+            ],
+            "answer": "le verbe en premier"
+          },
+          {
+            "id": "b1-05-q13",
+            "type": "fill-blank",
+            "question": "« Ich lerne viel, ___ ich die Prüfung bestehe. » (afin que)",
+            "answer": "damit",
+            "hint": "but = damit"
+          },
+          {
+            "id": "b1-05-q14",
+            "type": "multiple-choice",
+            "question": "Différence entre denn et weil ?",
+            "options": [
+              "même sens et même ordre",
+              "denn garde l'ordre normal, weil envoie le verbe à la fin",
+              "denn envoie à la fin",
+              "aucune différence"
+            ],
+            "answer": "denn garde l'ordre normal, weil envoie le verbe à la fin"
+          },
+          {
+            "id": "b1-05-q15",
+            "type": "matching",
+            "question": "Associe le connecteur à son type :",
+            "pairs": [
+              {
+                "left": "weil",
+                "right": "Subjonction (verbe à la fin)"
+              },
+              {
+                "left": "denn",
+                "right": "Position 0 (ordre normal)"
+              },
+              {
+                "left": "deshalb",
+                "right": "Position 1 (Inversion)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "Position 1 (Inversion)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-05-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Dès que j'arrive, je t'appelle »",
+            "words": [
+              "Sobald",
+              "ich",
+              "ankomme,",
+              "rufe",
+              "ich",
+              "dich",
+              "an"
+            ],
+            "answer": "Sobald ich ankomme, rufe ich dich an"
+          },
+          {
+            "id": "b1-05-q17",
+            "type": "speaking",
+            "question": "Dis : « Certes le travail est dur, mais il est intéressant »",
+            "answer": "Zwar ist die Arbeit schwer aber sie ist interessant"
+          },
+          {
+            "id": "b1-05-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Ich gehe nicht ins Kino, ___ ich kein Geld habe. » (parce que)",
+            "audioPrompt": "Ich gehe nicht ins Kino, weil ich kein Geld habe.",
+            "answer": "weil",
+            "hint": "cause formelle = weil"
+          },
+          {
+            "id": "b1-05-q19",
+            "type": "multiple-choice",
+            "question": "Quel connecteur signifie « dès que » ?",
+            "options": [
+              "solange",
+              "sobald",
+              "falls",
+              "während"
+            ],
+            "answer": "sobald"
+          },
+          {
+            "id": "b1-05-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « En plus, je suis fatigué »",
+            "words": [
+              "Außerdem",
+              "bin",
+              "ich",
+              "müde"
+            ],
+            "answer": "Außerdem bin ich müde"
           }
         ]
       }
