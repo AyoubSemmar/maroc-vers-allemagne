@@ -1767,6 +1767,117 @@
           "example": "Meiner Meinung nach...",
           "exampleArabic": "Meiner Meinung nach...",
           "type": "noun"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "Mediziner, behandelt Kranke",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "Beruf im Gesundheitswesen.",
+          "type": "noun"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "Person, mit der man eng verbunden ist",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich helfe meinem Freund.",
+          "exampleArabic": "Vertrauter Mensch.",
+          "type": "noun"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "Mutter und Vater zusammen",
+          "gender": "pl",
+          "example": "Ich wohne bei meinen Eltern.",
+          "exampleArabic": "Pluralnomen — kein Singular.",
+          "type": "noun"
+        },
+        {
+          "german": "das Foto",
+          "arabic": "Bild, fotografische Aufnahme",
+          "gender": "das",
+          "plural": "Fotos",
+          "example": "Ich schicke dir ein Foto.",
+          "exampleArabic": "Bild, mit Kamera gemacht.",
+          "type": "noun"
+        },
+        {
+          "german": "die E-Mail",
+          "arabic": "elektronische Nachricht",
+          "gender": "die",
+          "plural": "E-Mails",
+          "example": "Schreib mir eine E-Mail.",
+          "exampleArabic": "Digitale Post.",
+          "type": "noun"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "Tag der Geburt, jährlich gefeiert",
+          "gender": "der",
+          "plural": "Geburtstage",
+          "example": "Ich gratuliere dir zum Geburtstag.",
+          "exampleArabic": "Persönlicher Festtag.",
+          "type": "noun"
+        },
+        {
+          "german": "die Blume",
+          "arabic": "Pflanze mit Blüte",
+          "gender": "die",
+          "plural": "Blumen",
+          "example": "Ich bringe ihr Blumen.",
+          "exampleArabic": "Geschenk oder Schmuck.",
+          "type": "noun"
+        },
+        {
+          "german": "zum",
+          "arabic": "Verschmelzung: zu + dem",
+          "example": "Ich gehe zum Bahnhof.",
+          "exampleArabic": "Häufige Kontraktion mit Dativ.",
+          "type": "preposition"
+        },
+        {
+          "german": "zur",
+          "arabic": "Verschmelzung: zu + der",
+          "example": "Ich gehe zur Schule.",
+          "exampleArabic": "Kontraktion bei femininem Dativ.",
+          "type": "preposition"
+        },
+        {
+          "german": "beim",
+          "arabic": "Verschmelzung: bei + dem",
+          "example": "Wir sind beim Arzt.",
+          "exampleArabic": "Häufige Verschmelzung im Alltag.",
+          "type": "preposition"
+        },
+        {
+          "german": "empfehlen",
+          "arabic": "jemandem etwas Gutes vorschlagen",
+          "example": "Ich empfehle dir den Film.",
+          "exampleArabic": "Verb mit Dativ-Objekt.",
+          "type": "verb"
+        },
+        {
+          "german": "gratulieren",
+          "arabic": "Glückwünsche aussprechen",
+          "example": "Ich gratuliere dir!",
+          "exampleArabic": "Mit Dativ und zu + Dativ.",
+          "type": "verb"
+        },
+        {
+          "german": "glauben",
+          "arabic": "für wahr halten, vertrauen",
+          "example": "Ich glaube dir.",
+          "exampleArabic": "Verb mit Dativ-Objekt.",
+          "type": "verb"
+        },
+        {
+          "german": "begegnen",
+          "arabic": "treffen, zufällig sehen",
+          "example": "Ich bin ihm begegnet.",
+          "exampleArabic": "Verb mit sein im Perfekt.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1886,6 +1997,123 @@
             "question": "Ergänzen Sie: \"Ich komme ___ Marokko.\" (Herkunft)",
             "answer": "aus",
             "hint": "Mit Herkunftsland verwenden wir aus"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q11",
+            "question": "Ergänze: „Ich gehe ___ Schule.\" (zu + die)",
+            "answer": "zur",
+            "hint": "zu + der (Dativ feminin) = zur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q12",
+            "question": "Welches Verb verlangt den Dativ?",
+            "options": [
+              "kaufen",
+              "sehen",
+              "gefallen",
+              "haben"
+            ],
+            "answer": "gefallen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q13",
+            "question": "Ergänze: „Ich gratuliere ___ zum Geburtstag.\" (dir → Dativ)",
+            "answer": "dir",
+            "hint": "du → dir im Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q14",
+            "question": "Welcher Satz ist korrekt?",
+            "options": [
+              "Ich helfe meinen Vater.",
+              "Ich helfe meinem Vater.",
+              "Ich helfe mein Vater.",
+              "Ich helfe meinen Vaters."
+            ],
+            "answer": "Ich helfe meinem Vater."
+          },
+          {
+            "type": "matching",
+            "id": "a2-03-q15",
+            "question": "Verbinde die Verschmelzung mit ihrer Auflösung:",
+            "pairs": [
+              {
+                "left": "zum",
+                "right": "zu + dem"
+              },
+              {
+                "left": "zur",
+                "right": "zu + der"
+              },
+              {
+                "left": "beim",
+                "right": "bei + dem"
+              },
+              {
+                "left": "vom",
+                "right": "von + dem"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q16",
+            "question": "Ordne: „Ich habe ihr zum Geburtstag Blumen geschickt\"",
+            "words": [
+              "Ich",
+              "habe",
+              "ihr",
+              "zum",
+              "Geburtstag",
+              "Blumen",
+              "geschickt"
+            ],
+            "answer": "Ich habe ihr zum Geburtstag Blumen geschickt"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-03-q17",
+            "question": "Sag auf Deutsch: „Kannst du mir bitte helfen?\"",
+            "answer": "Kannst du mir bitte helfen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q18",
+            "question": "Hör zu und ergänze: „Wir wohnen ___ unseren Eltern.\" (bei)",
+            "audioPrompt": "Wir wohnen bei unseren Eltern.",
+            "answer": "bei",
+            "hint": "bei + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q19",
+            "question": "Welches Dativ-Pronomen passt in „Das gehört ___\" (ihr)?",
+            "options": [
+              "sie",
+              "ihr",
+              "ihre",
+              "ihrem"
+            ],
+            "answer": "ihr"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q20",
+            "question": "Ordne: „Ich empfehle dir den neuen Film\"",
+            "words": [
+              "Ich",
+              "empfehle",
+              "dir",
+              "den",
+              "neuen",
+              "Film"
+            ],
+            "answer": "Ich empfehle dir den neuen Film"
           }
         ]
       }

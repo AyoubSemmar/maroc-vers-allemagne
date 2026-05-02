@@ -1767,6 +1767,117 @@
           "example": "Meiner Meinung nach...",
           "exampleArabic": "À mon avis...",
           "type": "noun"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "le médecin",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "Je vais chez le médecin.",
+          "type": "noun"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "l'ami",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich helfe meinem Freund.",
+          "exampleArabic": "J'aide mon ami.",
+          "type": "noun"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "les parents",
+          "gender": "pl",
+          "example": "Ich wohne bei meinen Eltern.",
+          "exampleArabic": "J'habite chez mes parents.",
+          "type": "noun"
+        },
+        {
+          "german": "das Foto",
+          "arabic": "la photo",
+          "gender": "das",
+          "plural": "Fotos",
+          "example": "Ich schicke dir ein Foto.",
+          "exampleArabic": "Je t'envoie une photo.",
+          "type": "noun"
+        },
+        {
+          "german": "die E-Mail",
+          "arabic": "l'e-mail",
+          "gender": "die",
+          "plural": "E-Mails",
+          "example": "Schreib mir eine E-Mail.",
+          "exampleArabic": "Écris-moi un e-mail.",
+          "type": "noun"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "l'anniversaire",
+          "gender": "der",
+          "plural": "Geburtstage",
+          "example": "Ich gratuliere dir zum Geburtstag.",
+          "exampleArabic": "Je te souhaite un bon anniversaire.",
+          "type": "noun"
+        },
+        {
+          "german": "die Blume",
+          "arabic": "la fleur",
+          "gender": "die",
+          "plural": "Blumen",
+          "example": "Ich bringe ihr Blumen.",
+          "exampleArabic": "Je lui apporte des fleurs.",
+          "type": "noun"
+        },
+        {
+          "german": "zum",
+          "arabic": "au, à la (masc/neutre)",
+          "example": "Ich gehe zum Bahnhof.",
+          "exampleArabic": "Je vais à la gare.",
+          "type": "preposition"
+        },
+        {
+          "german": "zur",
+          "arabic": "à la (féminin)",
+          "example": "Ich gehe zur Schule.",
+          "exampleArabic": "Je vais à l'école.",
+          "type": "preposition"
+        },
+        {
+          "german": "beim",
+          "arabic": "chez le, au",
+          "example": "Wir sind beim Arzt.",
+          "exampleArabic": "Nous sommes chez le médecin.",
+          "type": "preposition"
+        },
+        {
+          "german": "empfehlen",
+          "arabic": "recommander",
+          "example": "Ich empfehle dir den Film.",
+          "exampleArabic": "Je te recommande ce film.",
+          "type": "verb"
+        },
+        {
+          "german": "gratulieren",
+          "arabic": "féliciter",
+          "example": "Ich gratuliere dir!",
+          "exampleArabic": "Je te félicite !",
+          "type": "verb"
+        },
+        {
+          "german": "glauben",
+          "arabic": "croire",
+          "example": "Ich glaube dir.",
+          "exampleArabic": "Je te crois.",
+          "type": "verb"
+        },
+        {
+          "german": "begegnen",
+          "arabic": "rencontrer (croiser)",
+          "example": "Ich bin ihm begegnet.",
+          "exampleArabic": "Je l'ai croisé.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1886,6 +1997,123 @@
             "question": "Complète : \"Ich komme ___ Marokko.\" (de, origine)",
             "answer": "aus",
             "hint": "avec le pays d'origine on utilise aus"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q11",
+            "question": "Complète : « Ich gehe ___ Schule. » (zu + die)",
+            "answer": "zur",
+            "hint": "zu + der (Dativ féminin) = zur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q12",
+            "question": "Quel verbe demande le Dativ ?",
+            "options": [
+              "kaufen",
+              "sehen",
+              "gefallen",
+              "haben"
+            ],
+            "answer": "gefallen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q13",
+            "question": "Complète : « Ich gratuliere ___ zum Geburtstag. » (à toi → Dativ)",
+            "answer": "dir",
+            "hint": "du → dir au Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q14",
+            "question": "La phrase correcte est :",
+            "options": [
+              "Ich helfe meinen Vater.",
+              "Ich helfe meinem Vater.",
+              "Ich helfe mein Vater.",
+              "Ich helfe meinen Vaters."
+            ],
+            "answer": "Ich helfe meinem Vater."
+          },
+          {
+            "type": "matching",
+            "id": "a2-03-q15",
+            "question": "Associe la contraction à son équivalent :",
+            "pairs": [
+              {
+                "left": "zum",
+                "right": "zu + dem"
+              },
+              {
+                "left": "zur",
+                "right": "zu + der"
+              },
+              {
+                "left": "beim",
+                "right": "bei + dem"
+              },
+              {
+                "left": "vom",
+                "right": "von + dem"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q16",
+            "question": "Remets dans l'ordre : « Je lui ai envoyé des fleurs pour son anniversaire »",
+            "words": [
+              "Ich",
+              "habe",
+              "ihr",
+              "zum",
+              "Geburtstag",
+              "Blumen",
+              "geschickt"
+            ],
+            "answer": "Ich habe ihr zum Geburtstag Blumen geschickt"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-03-q17",
+            "question": "Dis en allemand : « Peux-tu m'aider, s'il te plaît ? »",
+            "answer": "Kannst du mir bitte helfen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q18",
+            "question": "Écoute et complète : « Wir wohnen ___ unseren Eltern. » (chez)",
+            "audioPrompt": "Wir wohnen bei unseren Eltern.",
+            "answer": "bei",
+            "hint": "bei + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q19",
+            "question": "Quel pronom Dativ convient dans « Das gehört ___ » (à elle) ?",
+            "options": [
+              "sie",
+              "ihr",
+              "ihre",
+              "ihrem"
+            ],
+            "answer": "ihr"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q20",
+            "question": "Remets dans l'ordre : « Je te recommande le nouveau film »",
+            "words": [
+              "Ich",
+              "empfehle",
+              "dir",
+              "den",
+              "neuen",
+              "Film"
+            ],
+            "answer": "Ich empfehle dir den neuen Film"
           }
         ]
       }

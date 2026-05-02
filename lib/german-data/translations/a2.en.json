@@ -1767,6 +1767,117 @@
           "example": "Meiner Meinung nach...",
           "exampleArabic": "In my opinion...",
           "type": "noun"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "the doctor",
+          "gender": "der",
+          "plural": "Ärzte",
+          "example": "Ich gehe zum Arzt.",
+          "exampleArabic": "I'm going to the doctor.",
+          "type": "noun"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "the friend",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich helfe meinem Freund.",
+          "exampleArabic": "I'm helping my friend.",
+          "type": "noun"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "the parents",
+          "gender": "pl",
+          "example": "Ich wohne bei meinen Eltern.",
+          "exampleArabic": "I live at my parents'.",
+          "type": "noun"
+        },
+        {
+          "german": "das Foto",
+          "arabic": "the photo",
+          "gender": "das",
+          "plural": "Fotos",
+          "example": "Ich schicke dir ein Foto.",
+          "exampleArabic": "I'll send you a photo.",
+          "type": "noun"
+        },
+        {
+          "german": "die E-Mail",
+          "arabic": "the email",
+          "gender": "die",
+          "plural": "E-Mails",
+          "example": "Schreib mir eine E-Mail.",
+          "exampleArabic": "Write me an email.",
+          "type": "noun"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "the birthday",
+          "gender": "der",
+          "plural": "Geburtstage",
+          "example": "Ich gratuliere dir zum Geburtstag.",
+          "exampleArabic": "Happy birthday!",
+          "type": "noun"
+        },
+        {
+          "german": "die Blume",
+          "arabic": "the flower",
+          "gender": "die",
+          "plural": "Blumen",
+          "example": "Ich bringe ihr Blumen.",
+          "exampleArabic": "I'm bringing her flowers.",
+          "type": "noun"
+        },
+        {
+          "german": "zum",
+          "arabic": "to the (masc/neut)",
+          "example": "Ich gehe zum Bahnhof.",
+          "exampleArabic": "I'm going to the station.",
+          "type": "preposition"
+        },
+        {
+          "german": "zur",
+          "arabic": "to the (fem)",
+          "example": "Ich gehe zur Schule.",
+          "exampleArabic": "I'm going to school.",
+          "type": "preposition"
+        },
+        {
+          "german": "beim",
+          "arabic": "at the, at someone's place",
+          "example": "Wir sind beim Arzt.",
+          "exampleArabic": "We're at the doctor's.",
+          "type": "preposition"
+        },
+        {
+          "german": "empfehlen",
+          "arabic": "to recommend",
+          "example": "Ich empfehle dir den Film.",
+          "exampleArabic": "I recommend the film to you.",
+          "type": "verb"
+        },
+        {
+          "german": "gratulieren",
+          "arabic": "to congratulate",
+          "example": "Ich gratuliere dir!",
+          "exampleArabic": "Congratulations!",
+          "type": "verb"
+        },
+        {
+          "german": "glauben",
+          "arabic": "to believe",
+          "example": "Ich glaube dir.",
+          "exampleArabic": "I believe you.",
+          "type": "verb"
+        },
+        {
+          "german": "begegnen",
+          "arabic": "to meet, run into",
+          "example": "Ich bin ihm begegnet.",
+          "exampleArabic": "I ran into him.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1886,6 +1997,123 @@
             "question": "Complete: \"Ich komme ___ Marokko.\" (from origin)",
             "answer": "aus",
             "hint": "For country of origin we use aus"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q11",
+            "question": "Fill in: \"Ich gehe ___ Schule.\" (zu + die)",
+            "answer": "zur",
+            "hint": "zu + der (Dativ feminine) = zur"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q12",
+            "question": "Which verb takes the Dativ?",
+            "options": [
+              "kaufen",
+              "sehen",
+              "gefallen",
+              "haben"
+            ],
+            "answer": "gefallen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q13",
+            "question": "Fill in: \"Ich gratuliere ___ zum Geburtstag.\" (you → Dativ)",
+            "answer": "dir",
+            "hint": "du → dir in Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q14",
+            "question": "Which sentence is correct?",
+            "options": [
+              "Ich helfe meinen Vater.",
+              "Ich helfe meinem Vater.",
+              "Ich helfe mein Vater.",
+              "Ich helfe meinen Vaters."
+            ],
+            "answer": "Ich helfe meinem Vater."
+          },
+          {
+            "type": "matching",
+            "id": "a2-03-q15",
+            "question": "Match the contraction to its expansion:",
+            "pairs": [
+              {
+                "left": "zum",
+                "right": "zu + dem"
+              },
+              {
+                "left": "zur",
+                "right": "zu + der"
+              },
+              {
+                "left": "beim",
+                "right": "bei + dem"
+              },
+              {
+                "left": "vom",
+                "right": "von + dem"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q16",
+            "question": "Order the words: \"I sent her flowers for her birthday\"",
+            "words": [
+              "Ich",
+              "habe",
+              "ihr",
+              "zum",
+              "Geburtstag",
+              "Blumen",
+              "geschickt"
+            ],
+            "answer": "Ich habe ihr zum Geburtstag Blumen geschickt"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-03-q17",
+            "question": "Say in German: \"Can you help me, please?\"",
+            "answer": "Kannst du mir bitte helfen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-03-q18",
+            "question": "Listen and fill in: \"Wir wohnen ___ unseren Eltern.\" (at, with)",
+            "audioPrompt": "Wir wohnen bei unseren Eltern.",
+            "answer": "bei",
+            "hint": "bei + Dativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-03-q19",
+            "question": "Which Dativ pronoun fits in \"Das gehört ___\" (to her)?",
+            "options": [
+              "sie",
+              "ihr",
+              "ihre",
+              "ihrem"
+            ],
+            "answer": "ihr"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-03-q20",
+            "question": "Order the words: \"I recommend the new film to you\"",
+            "words": [
+              "Ich",
+              "empfehle",
+              "dir",
+              "den",
+              "neuen",
+              "Film"
+            ],
+            "answer": "Ich empfehle dir den neuen Film"
           }
         ]
       }
