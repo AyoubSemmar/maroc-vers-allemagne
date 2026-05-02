@@ -5115,6 +5115,109 @@
           "example": "Ich war sehr müde.",
           "exampleArabic": "J'étais très fatigué.",
           "type": "adjective"
+        },
+        {
+          "german": "ging",
+          "arabic": "allait (gehen, prétérit)",
+          "example": "Ich ging zur Schule.",
+          "exampleArabic": "J'allais à l'école.",
+          "type": "verb"
+        },
+        {
+          "german": "kam",
+          "arabic": "venait (kommen, prétérit)",
+          "example": "Er kam spät.",
+          "exampleArabic": "Il venait en retard.",
+          "type": "verb"
+        },
+        {
+          "german": "sah",
+          "arabic": "voyait (sehen, prétérit)",
+          "example": "Ich sah den Film.",
+          "exampleArabic": "J'ai vu le film.",
+          "type": "verb"
+        },
+        {
+          "german": "sagte",
+          "arabic": "disait (sagen, prétérit)",
+          "example": "Er sagte nichts.",
+          "exampleArabic": "Il ne disait rien.",
+          "type": "verb"
+        },
+        {
+          "german": "machte",
+          "arabic": "faisait (machen, prétérit)",
+          "example": "Was machtest du?",
+          "exampleArabic": "Que faisais-tu ?",
+          "type": "verb"
+        },
+        {
+          "german": "lebte",
+          "arabic": "vivait (leben, prétérit)",
+          "example": "Er lebte in Berlin.",
+          "exampleArabic": "Il vivait à Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeitete",
+          "arabic": "travaillait (arbeiten, prétérit)",
+          "example": "Sie arbeitete als Lehrerin.",
+          "exampleArabic": "Elle travaillait comme enseignante.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnte",
+          "arabic": "habitait (wohnen, prétérit)",
+          "example": "Wir wohnten in Köln.",
+          "exampleArabic": "Nous habitions à Cologne.",
+          "type": "verb"
+        },
+        {
+          "german": "gab",
+          "arabic": "donnait (geben, prétérit)",
+          "example": "Er gab mir das Buch.",
+          "exampleArabic": "Il m'a donné le livre.",
+          "type": "verb"
+        },
+        {
+          "german": "fand",
+          "arabic": "trouvait (finden, prétérit)",
+          "example": "Ich fand den Schlüssel.",
+          "exampleArabic": "J'ai trouvé la clé.",
+          "type": "verb"
+        },
+        {
+          "german": "studierte",
+          "arabic": "étudiait (studieren, prétérit)",
+          "example": "Sie studierte Medizin.",
+          "exampleArabic": "Elle étudiait la médecine.",
+          "type": "verb"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "l'université",
+          "gender": "die",
+          "plural": "Universitäten",
+          "example": "Ich gehe an die Universität.",
+          "exampleArabic": "Je vais à l'université.",
+          "type": "noun"
+        },
+        {
+          "german": "das Studium",
+          "arabic": "les études (universitaires)",
+          "gender": "das",
+          "example": "Mein Studium war schwer.",
+          "exampleArabic": "Mes études étaient difficiles.",
+          "type": "noun"
+        },
+        {
+          "german": "der Job",
+          "arabic": "le job, l'emploi",
+          "gender": "der",
+          "plural": "Jobs",
+          "example": "Der Job war interessant.",
+          "exampleArabic": "Le job était intéressant.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -5228,6 +5331,124 @@
             "id": "a2-08-q10",
             "question": "Complète : \"Du ___ gestern müde.\" (tu étais fatigué — sein / du)",
             "answer": "warst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q11",
+            "question": "Complète : « Sie ___ in Berlin. » (habitait — wohnen)",
+            "answer": "wohnte",
+            "hint": "wohnen → wohnte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q12",
+            "question": "Quel est le Präteritum de gehen avec ich ?",
+            "options": [
+              "gehte",
+              "ging",
+              "gangte",
+              "gegangen"
+            ],
+            "answer": "ging"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q13",
+            "question": "« Er ___ mir das Buch. » (donnait — geben)",
+            "answer": "gab",
+            "hint": "geben → gab"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q14",
+            "question": "Dans l'écriture littéraire on utilise :",
+            "options": [
+              "Perfekt",
+              "Präteritum",
+              "Präsens",
+              "Futur"
+            ],
+            "answer": "Präteritum"
+          },
+          {
+            "type": "matching",
+            "id": "a2-08-q15",
+            "question": "Associe l'infinitif au Präteritum :",
+            "pairs": [
+              {
+                "left": "gehen",
+                "right": "ging"
+              },
+              {
+                "left": "kommen",
+                "right": "kam"
+              },
+              {
+                "left": "sehen",
+                "right": "sah"
+              },
+              {
+                "left": "finden",
+                "right": "fand"
+              },
+              {
+                "left": "geben",
+                "right": "gab"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q16",
+            "question": "Remets dans l'ordre : « Enfant, je vivais au Maroc »",
+            "words": [
+              "Als",
+              "Kind",
+              "lebte",
+              "ich",
+              "in",
+              "Marokko"
+            ],
+            "answer": "Als Kind lebte ich in Marokko"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-08-q17",
+            "question": "Dis en allemand : « Je voulais devenir médecin »",
+            "answer": "Ich wollte Arzt werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q18",
+            "question": "Écoute : « Er ___ Medizin. » (étudiait)",
+            "audioPrompt": "Er studierte Medizin.",
+            "answer": "studierte",
+            "hint": "studieren → studierte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q19",
+            "question": "Quelle forme Präteritum est correcte pour « haben » avec « er » ?",
+            "options": [
+              "hatte",
+              "hattest",
+              "hatten",
+              "hattet"
+            ],
+            "answer": "hatte"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q20",
+            "question": "Remets dans l'ordre : « Avant, tout était plus simple »",
+            "words": [
+              "Früher",
+              "war",
+              "alles",
+              "einfacher"
+            ],
+            "answer": "Früher war alles einfacher"
           }
         ]
       }

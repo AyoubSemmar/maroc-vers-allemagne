@@ -5115,6 +5115,109 @@
           "example": "Ich war sehr müde.",
           "exampleArabic": "I was very tired.",
           "type": "adjective"
+        },
+        {
+          "german": "ging",
+          "arabic": "went (gehen, past)",
+          "example": "Ich ging zur Schule.",
+          "exampleArabic": "I went to school.",
+          "type": "verb"
+        },
+        {
+          "german": "kam",
+          "arabic": "came (kommen, past)",
+          "example": "Er kam spät.",
+          "exampleArabic": "He came late.",
+          "type": "verb"
+        },
+        {
+          "german": "sah",
+          "arabic": "saw (sehen, past)",
+          "example": "Ich sah den Film.",
+          "exampleArabic": "I saw the film.",
+          "type": "verb"
+        },
+        {
+          "german": "sagte",
+          "arabic": "said (sagen, past)",
+          "example": "Er sagte nichts.",
+          "exampleArabic": "He said nothing.",
+          "type": "verb"
+        },
+        {
+          "german": "machte",
+          "arabic": "did/made (machen, past)",
+          "example": "Was machtest du?",
+          "exampleArabic": "What were you doing?",
+          "type": "verb"
+        },
+        {
+          "german": "lebte",
+          "arabic": "lived (leben, past)",
+          "example": "Er lebte in Berlin.",
+          "exampleArabic": "He lived in Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeitete",
+          "arabic": "worked (arbeiten, past)",
+          "example": "Sie arbeitete als Lehrerin.",
+          "exampleArabic": "She worked as a teacher.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnte",
+          "arabic": "lived/resided (wohnen, past)",
+          "example": "Wir wohnten in Köln.",
+          "exampleArabic": "We lived in Cologne.",
+          "type": "verb"
+        },
+        {
+          "german": "gab",
+          "arabic": "gave (geben, past)",
+          "example": "Er gab mir das Buch.",
+          "exampleArabic": "He gave me the book.",
+          "type": "verb"
+        },
+        {
+          "german": "fand",
+          "arabic": "found (finden, past)",
+          "example": "Ich fand den Schlüssel.",
+          "exampleArabic": "I found the key.",
+          "type": "verb"
+        },
+        {
+          "german": "studierte",
+          "arabic": "studied (studieren, past)",
+          "example": "Sie studierte Medizin.",
+          "exampleArabic": "She studied medicine.",
+          "type": "verb"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "the university",
+          "gender": "die",
+          "plural": "Universitäten",
+          "example": "Ich gehe an die Universität.",
+          "exampleArabic": "I'm going to the university.",
+          "type": "noun"
+        },
+        {
+          "german": "das Studium",
+          "arabic": "the studies (university)",
+          "gender": "das",
+          "example": "Mein Studium war schwer.",
+          "exampleArabic": "My studies were tough.",
+          "type": "noun"
+        },
+        {
+          "german": "der Job",
+          "arabic": "the job",
+          "gender": "der",
+          "plural": "Jobs",
+          "example": "Der Job war interessant.",
+          "exampleArabic": "The job was interesting.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -5228,6 +5331,124 @@
             "id": "a2-08-q10",
             "question": "Complete: \"Du ___ gestern müde.\" (you were tired — sein / du)",
             "answer": "warst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q11",
+            "question": "Fill in: \"Sie ___ in Berlin.\" (lived — wohnen)",
+            "answer": "wohnte",
+            "hint": "wohnen → wohnte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q12",
+            "question": "What's the Präteritum of gehen with ich?",
+            "options": [
+              "gehte",
+              "ging",
+              "gangte",
+              "gegangen"
+            ],
+            "answer": "ging"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q13",
+            "question": "\"Er ___ mir das Buch.\" (gave — geben)",
+            "answer": "gab",
+            "hint": "geben → gab"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q14",
+            "question": "In literary writing we use:",
+            "options": [
+              "Perfekt",
+              "Präteritum",
+              "Präsens",
+              "Futur"
+            ],
+            "answer": "Präteritum"
+          },
+          {
+            "type": "matching",
+            "id": "a2-08-q15",
+            "question": "Match infinitive to Präteritum:",
+            "pairs": [
+              {
+                "left": "gehen",
+                "right": "ging"
+              },
+              {
+                "left": "kommen",
+                "right": "kam"
+              },
+              {
+                "left": "sehen",
+                "right": "sah"
+              },
+              {
+                "left": "finden",
+                "right": "fand"
+              },
+              {
+                "left": "geben",
+                "right": "gab"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q16",
+            "question": "Order the words: \"As a child I lived in Morocco\"",
+            "words": [
+              "Als",
+              "Kind",
+              "lebte",
+              "ich",
+              "in",
+              "Marokko"
+            ],
+            "answer": "Als Kind lebte ich in Marokko"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-08-q17",
+            "question": "Say in German: \"I wanted to become a doctor\"",
+            "answer": "Ich wollte Arzt werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q18",
+            "question": "Listen: \"Er ___ Medizin.\" (studied)",
+            "audioPrompt": "Er studierte Medizin.",
+            "answer": "studierte",
+            "hint": "studieren → studierte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q19",
+            "question": "Which Präteritum is correct for \"haben\" with \"er\"?",
+            "options": [
+              "hatte",
+              "hattest",
+              "hatten",
+              "hattet"
+            ],
+            "answer": "hatte"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q20",
+            "question": "Order the words: \"Things used to be simpler\"",
+            "words": [
+              "Früher",
+              "war",
+              "alles",
+              "einfacher"
+            ],
+            "answer": "Früher war alles einfacher"
           }
         ]
       }

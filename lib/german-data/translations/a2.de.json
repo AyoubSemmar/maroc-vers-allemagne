@@ -5115,6 +5115,109 @@
           "example": "Ich war sehr müde.",
           "exampleArabic": "Ich war sehr müde.",
           "type": "adjective"
+        },
+        {
+          "german": "ging",
+          "arabic": "Präteritum von gehen",
+          "example": "Ich ging zur Schule.",
+          "exampleArabic": "Vergangenheitsform: bewegte sich zu Fuß.",
+          "type": "verb"
+        },
+        {
+          "german": "kam",
+          "arabic": "Präteritum von kommen",
+          "example": "Er kam spät.",
+          "exampleArabic": "Vergangenheitsform: traf ein.",
+          "type": "verb"
+        },
+        {
+          "german": "sah",
+          "arabic": "Präteritum von sehen",
+          "example": "Ich sah den Film.",
+          "exampleArabic": "Vergangenheitsform der Wahrnehmung.",
+          "type": "verb"
+        },
+        {
+          "german": "sagte",
+          "arabic": "Präteritum von sagen",
+          "example": "Er sagte nichts.",
+          "exampleArabic": "Regelmäßige Vergangenheitsform.",
+          "type": "verb"
+        },
+        {
+          "german": "machte",
+          "arabic": "Präteritum von machen",
+          "example": "Was machtest du?",
+          "exampleArabic": "Regelmäßige Vergangenheitsform.",
+          "type": "verb"
+        },
+        {
+          "german": "lebte",
+          "arabic": "Präteritum von leben",
+          "example": "Er lebte in Berlin.",
+          "exampleArabic": "Regelmäßige Vergangenheitsform.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeitete",
+          "arabic": "Präteritum von arbeiten",
+          "example": "Sie arbeitete als Lehrerin.",
+          "exampleArabic": "Mit -et- nach -t- Stamm.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnte",
+          "arabic": "Präteritum von wohnen",
+          "example": "Wir wohnten in Köln.",
+          "exampleArabic": "Regelmäßige Vergangenheitsform.",
+          "type": "verb"
+        },
+        {
+          "german": "gab",
+          "arabic": "Präteritum von geben",
+          "example": "Er gab mir das Buch.",
+          "exampleArabic": "Starkes Verb mit Vokalwechsel.",
+          "type": "verb"
+        },
+        {
+          "german": "fand",
+          "arabic": "Präteritum von finden",
+          "example": "Ich fand den Schlüssel.",
+          "exampleArabic": "Starkes Verb mit Vokalwechsel.",
+          "type": "verb"
+        },
+        {
+          "german": "studierte",
+          "arabic": "Präteritum von studieren",
+          "example": "Sie studierte Medizin.",
+          "exampleArabic": "Verb auf -ieren, regelmäßig.",
+          "type": "verb"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "Hochschule für akademisches Studium",
+          "gender": "die",
+          "plural": "Universitäten",
+          "example": "Ich gehe an die Universität.",
+          "exampleArabic": "Bildungseinrichtung.",
+          "type": "noun"
+        },
+        {
+          "german": "das Studium",
+          "arabic": "Ausbildung an einer Universität",
+          "gender": "das",
+          "example": "Mein Studium war schwer.",
+          "exampleArabic": "Akademische Ausbildungszeit.",
+          "type": "noun"
+        },
+        {
+          "german": "der Job",
+          "arabic": "Arbeit, Anstellung",
+          "gender": "der",
+          "plural": "Jobs",
+          "example": "Der Job war interessant.",
+          "exampleArabic": "Umgangssprachlich für Arbeit.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -5228,6 +5331,124 @@
             "id": "a2-08-q10",
             "question": "Ergänze: \"Du ___ gestern müde.\" (warst müde — sein / du)",
             "answer": "warst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q11",
+            "question": "Ergänze: „Sie ___ in Berlin.\" (wohnte)",
+            "answer": "wohnte",
+            "hint": "wohnen → wohnte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q12",
+            "question": "Was ist das Präteritum von gehen mit ich?",
+            "options": [
+              "gehte",
+              "ging",
+              "gangte",
+              "gegangen"
+            ],
+            "answer": "ging"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q13",
+            "question": "„Er ___ mir das Buch.\" (geben)",
+            "answer": "gab",
+            "hint": "geben → gab"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q14",
+            "question": "In literarischer Schrift verwendet man:",
+            "options": [
+              "Perfekt",
+              "Präteritum",
+              "Präsens",
+              "Futur"
+            ],
+            "answer": "Präteritum"
+          },
+          {
+            "type": "matching",
+            "id": "a2-08-q15",
+            "question": "Verbinde Infinitiv mit Präteritum:",
+            "pairs": [
+              {
+                "left": "gehen",
+                "right": "ging"
+              },
+              {
+                "left": "kommen",
+                "right": "kam"
+              },
+              {
+                "left": "sehen",
+                "right": "sah"
+              },
+              {
+                "left": "finden",
+                "right": "fand"
+              },
+              {
+                "left": "geben",
+                "right": "gab"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q16",
+            "question": "Ordne: „Als Kind lebte ich in Marokko\"",
+            "words": [
+              "Als",
+              "Kind",
+              "lebte",
+              "ich",
+              "in",
+              "Marokko"
+            ],
+            "answer": "Als Kind lebte ich in Marokko"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-08-q17",
+            "question": "Sag auf Deutsch: „Ich wollte Arzt werden\"",
+            "answer": "Ich wollte Arzt werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-08-q18",
+            "question": "Hör zu: „Er ___ Medizin.\" (studierte)",
+            "audioPrompt": "Er studierte Medizin.",
+            "answer": "studierte",
+            "hint": "studieren → studierte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-08-q19",
+            "question": "Welche Präteritum-Form ist korrekt für „haben\" mit „er\"?",
+            "options": [
+              "hatte",
+              "hattest",
+              "hatten",
+              "hattet"
+            ],
+            "answer": "hatte"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-08-q20",
+            "question": "Ordne: „Früher war alles einfacher\"",
+            "words": [
+              "Früher",
+              "war",
+              "alles",
+              "einfacher"
+            ],
+            "answer": "Früher war alles einfacher"
           }
         ]
       }
