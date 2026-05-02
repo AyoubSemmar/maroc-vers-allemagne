@@ -5332,6 +5332,81 @@
           "plural": "die Lösungen",
           "type": "noun",
           "gender": "die"
+        },
+        {
+          "german": "das Plastik",
+          "arabic": "le plastique",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Baum",
+          "arabic": "l'arbre",
+          "plural": "die Bäume",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Wasser",
+          "arabic": "l'eau",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Luft",
+          "arabic": "l'air",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Strom",
+          "arabic": "l'électricité",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "reduzieren",
+          "arabic": "réduire",
+          "type": "verb"
+        },
+        {
+          "german": "pflanzen",
+          "arabic": "planter",
+          "type": "verb"
+        },
+        {
+          "german": "verändern",
+          "arabic": "changer, transformer",
+          "type": "verb"
+        },
+        {
+          "german": "die Verantwortung",
+          "arabic": "la responsabilité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "l'avenir",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "globalisieren",
+          "arabic": "mondialiser",
+          "type": "verb"
+        },
+        {
+          "german": "nutzen",
+          "arabic": "utiliser, profiter",
+          "type": "verb"
+        },
+        {
+          "german": "die Diskussion",
+          "arabic": "la discussion",
+          "plural": "die Diskussionen",
+          "type": "noun",
+          "gender": "die"
         }
       ],
       "exercise": {
@@ -5453,6 +5528,125 @@
               "Nous n'avons pas besoin d'arbres"
             ],
             "answer": "Il faut planter plus d'arbres pour protéger l'environnement"
+          },
+          {
+            "id": "b1-10-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Man ___ die Umwelt schützen. » (man + müssen)",
+            "answer": "muss",
+            "hint": "man + 3e personne"
+          },
+          {
+            "id": "b1-10-q12",
+            "type": "multiple-choice",
+            "question": "Que signifie « nachhaltig » ?",
+            "options": [
+              "renouvelable",
+              "durable",
+              "pollué",
+              "lourd"
+            ],
+            "answer": "durable"
+          },
+          {
+            "id": "b1-10-q13",
+            "type": "fill-blank",
+            "question": "« Wir sollten ___ Strom sparen. » (plus — comparatif)",
+            "answer": "mehr",
+            "hint": "viel → mehr"
+          },
+          {
+            "id": "b1-10-q14",
+            "type": "multiple-choice",
+            "question": "Quel pronom général impersonnel pour conseils ?",
+            "options": [
+              "er",
+              "man",
+              "sie",
+              "es"
+            ],
+            "answer": "man"
+          },
+          {
+            "id": "b1-10-q15",
+            "type": "matching",
+            "question": "Associe le mot environnemental :",
+            "pairs": [
+              {
+                "left": "le plastique",
+                "right": "das Plastik"
+              },
+              {
+                "left": "l'air",
+                "right": "die Luft"
+              },
+              {
+                "left": "l'eau",
+                "right": "das Wasser"
+              },
+              {
+                "left": "l'arbre",
+                "right": "der Baum"
+              },
+              {
+                "left": "l'énergie",
+                "right": "die Energie"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-10-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « La technologie change notre vie quotidienne »",
+            "words": [
+              "Die",
+              "Technologie",
+              "verändert",
+              "unser",
+              "tägliches",
+              "Leben"
+            ],
+            "answer": "Die Technologie verändert unser tägliches Leben"
+          },
+          {
+            "id": "b1-10-q17",
+            "type": "speaking",
+            "question": "Dis : « L'environnement est notre responsabilité »",
+            "answer": "Die Umwelt ist unsere Verantwortung"
+          },
+          {
+            "id": "b1-10-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Wir müssen den ___ trennen. » (déchets)",
+            "audioPrompt": "Wir müssen den Müll trennen.",
+            "answer": "Müll",
+            "hint": "der Müll"
+          },
+          {
+            "id": "b1-10-q19",
+            "type": "multiple-choice",
+            "question": "Que signifie « Es gibt + Akk » ?",
+            "options": [
+              "il y a",
+              "il donne",
+              "il prend",
+              "il est"
+            ],
+            "answer": "il y a"
+          },
+          {
+            "id": "b1-10-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Nous devrions réduire le plastique »",
+            "words": [
+              "Wir",
+              "sollten",
+              "das",
+              "Plastik",
+              "reduzieren"
+            ],
+            "answer": "Wir sollten das Plastik reduzieren"
           }
         ]
       }

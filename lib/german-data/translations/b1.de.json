@@ -5332,6 +5332,81 @@
           "plural": "die Lösungen",
           "type": "noun",
           "gender": "die"
+        },
+        {
+          "german": "das Plastik",
+          "arabic": "synthetisches Material",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Baum",
+          "arabic": "große Pflanze mit Stamm",
+          "plural": "die Bäume",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Wasser",
+          "arabic": "klare Flüssigkeit zum Trinken",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Luft",
+          "arabic": "Gas, das wir atmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Strom",
+          "arabic": "elektrische Energie",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "reduzieren",
+          "arabic": "weniger machen",
+          "type": "verb"
+        },
+        {
+          "german": "pflanzen",
+          "arabic": "in die Erde setzen (Pflanze)",
+          "type": "verb"
+        },
+        {
+          "german": "verändern",
+          "arabic": "anders machen",
+          "type": "verb"
+        },
+        {
+          "german": "die Verantwortung",
+          "arabic": "Pflicht für etwas",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Zukunft",
+          "arabic": "die kommende Zeit",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "globalisieren",
+          "arabic": "weltweit verbreiten",
+          "type": "verb"
+        },
+        {
+          "german": "nutzen",
+          "arabic": "verwenden, gebrauchen",
+          "type": "verb"
+        },
+        {
+          "german": "die Diskussion",
+          "arabic": "Meinungsaustausch",
+          "plural": "die Diskussionen",
+          "type": "noun",
+          "gender": "die"
         }
       ],
       "exercise": {
@@ -5453,6 +5528,125 @@
               "We don't need trees"
             ],
             "answer": "We must plant more trees to protect the environment"
+          },
+          {
+            "id": "b1-10-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „Man ___ die Umwelt schützen.\" (man + müssen)",
+            "answer": "muss",
+            "hint": "man + 3. Person"
+          },
+          {
+            "id": "b1-10-q12",
+            "type": "multiple-choice",
+            "question": "Was bedeutet „nachhaltig\"?",
+            "options": [
+              "erneuerbar",
+              "lange haltbar, ressourcenschonend",
+              "verschmutzt",
+              "schwer"
+            ],
+            "answer": "lange haltbar, ressourcenschonend"
+          },
+          {
+            "id": "b1-10-q13",
+            "type": "fill-blank",
+            "question": "„Wir sollten ___ Strom sparen.\" (Komparativ)",
+            "answer": "mehr",
+            "hint": "viel → mehr"
+          },
+          {
+            "id": "b1-10-q14",
+            "type": "multiple-choice",
+            "question": "Welches unpersönliche Pronomen für allgemeine Ratschläge?",
+            "options": [
+              "er",
+              "man",
+              "sie",
+              "es"
+            ],
+            "answer": "man"
+          },
+          {
+            "id": "b1-10-q15",
+            "type": "matching",
+            "question": "Verbinde Umweltwort:",
+            "pairs": [
+              {
+                "left": "Plastik",
+                "right": "das Plastik"
+              },
+              {
+                "left": "Luft",
+                "right": "die Luft"
+              },
+              {
+                "left": "Wasser",
+                "right": "das Wasser"
+              },
+              {
+                "left": "Baum",
+                "right": "der Baum"
+              },
+              {
+                "left": "Energie",
+                "right": "die Energie"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b1-10-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Die Technologie verändert unser tägliches Leben\"",
+            "words": [
+              "Die",
+              "Technologie",
+              "verändert",
+              "unser",
+              "tägliches",
+              "Leben"
+            ],
+            "answer": "Die Technologie verändert unser tägliches Leben"
+          },
+          {
+            "id": "b1-10-q17",
+            "type": "speaking",
+            "question": "Sag: „Die Umwelt ist unsere Verantwortung\"",
+            "answer": "Die Umwelt ist unsere Verantwortung"
+          },
+          {
+            "id": "b1-10-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Wir müssen den ___ trennen.\" (Müll)",
+            "audioPrompt": "Wir müssen den Müll trennen.",
+            "answer": "Müll",
+            "hint": "der Müll"
+          },
+          {
+            "id": "b1-10-q19",
+            "type": "multiple-choice",
+            "question": "Was bedeutet „Es gibt + Akk\"?",
+            "options": [
+              "es existiert",
+              "er gibt",
+              "er nimmt",
+              "es ist"
+            ],
+            "answer": "es existiert"
+          },
+          {
+            "id": "b1-10-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Wir sollten das Plastik reduzieren\"",
+            "words": [
+              "Wir",
+              "sollten",
+              "das",
+              "Plastik",
+              "reduzieren"
+            ],
+            "answer": "Wir sollten das Plastik reduzieren"
           }
         ]
       }
