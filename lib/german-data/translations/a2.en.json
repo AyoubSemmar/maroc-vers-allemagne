@@ -3749,6 +3749,119 @@
           "example": "Du hast Recht.",
           "exampleArabic": "You're right.",
           "type": "phrase"
+        },
+        {
+          "german": "denn",
+          "arabic": "because (coordinating)",
+          "example": "Ich bleibe, denn ich bin müde.",
+          "exampleArabic": "I'm staying, because I'm tired.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "nevertheless, still",
+          "example": "Es regnet, trotzdem gehe ich.",
+          "exampleArabic": "It's raining; I'm still going.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "therefore, that's why",
+          "example": "Es ist kalt, deshalb bleibe ich zu Hause.",
+          "exampleArabic": "It's cold, that's why I'm staying home.",
+          "type": "adverb"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "besides, in addition",
+          "example": "Außerdem ist es teuer.",
+          "exampleArabic": "Besides, it's expensive.",
+          "type": "adverb"
+        },
+        {
+          "german": "vermuten",
+          "arabic": "to suppose, presume",
+          "example": "Ich vermute, dass er kommt.",
+          "exampleArabic": "I suppose he's coming.",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "to explain",
+          "example": "Kannst du das erklären?",
+          "exampleArabic": "Can you explain that?",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "to answer",
+          "example": "Antworte mir bitte.",
+          "exampleArabic": "Please answer me.",
+          "type": "verb"
+        },
+        {
+          "german": "wichtig",
+          "arabic": "important",
+          "example": "Das ist wichtig.",
+          "exampleArabic": "That's important.",
+          "type": "adjective"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "probably",
+          "example": "Wahrscheinlich kommt er.",
+          "exampleArabic": "He'll probably come.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "maybe, perhaps",
+          "example": "Vielleicht regnet es.",
+          "exampleArabic": "Maybe it'll rain.",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sure, certain",
+          "example": "Bist du sicher?",
+          "exampleArabic": "Are you sure?",
+          "type": "adjective"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "the answer",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "What's the answer?",
+          "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "the question",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Ich habe eine Frage.",
+          "exampleArabic": "I have a question.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "the solution",
+          "gender": "die",
+          "plural": "Lösungen",
+          "example": "Ich suche eine Lösung.",
+          "exampleArabic": "I'm looking for a solution.",
+          "type": "noun"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "the problem",
+          "gender": "das",
+          "plural": "Probleme",
+          "example": "Wir haben ein Problem.",
+          "exampleArabic": "We have a problem.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -3868,6 +3981,129 @@
             "id": "a2-06-q10",
             "question": "Complete: \"Ich lerne Deutsch, ___ ich eine Arbeit finde.\" (so that)",
             "answer": "damit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q11",
+            "question": "What's the difference between weil and denn?",
+            "options": [
+              "weil sends the verb to the end, denn doesn't",
+              "denn sends the verb to the end",
+              "no difference",
+              "weil formal, denn informal and both change the order"
+            ],
+            "answer": "weil sends the verb to the end, denn doesn't"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q12",
+            "question": "Fill in: \"Es ist kalt, ___ bleibe ich zu Hause.\" (therefore)",
+            "answer": "deshalb",
+            "hint": "consequence = deshalb"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q13",
+            "question": "In \"Als ich Kind war, wohnte ich in Marokko\" — when do we use als?",
+            "options": [
+              "for the present",
+              "for a repeated event",
+              "for a single past event",
+              "for the future"
+            ],
+            "answer": "for a single past event"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q14",
+            "question": "Fill in: \"___ ich gegessen habe, gehe ich spazieren.\" (after)",
+            "answer": "Nachdem",
+            "hint": "after = nachdem"
+          },
+          {
+            "type": "matching",
+            "id": "a2-06-q15",
+            "question": "Match the conjunction to its meaning:",
+            "pairs": [
+              {
+                "left": "denn",
+                "right": "because (coordinating)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "nevertheless"
+              },
+              {
+                "left": "deshalb",
+                "right": "therefore"
+              },
+              {
+                "left": "außerdem",
+                "right": "besides"
+              },
+              {
+                "left": "nachdem",
+                "right": "after"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q16",
+            "question": "Order the words: \"I'm learning German because I want to work in Germany\"",
+            "words": [
+              "Ich",
+              "lerne",
+              "Deutsch,",
+              "weil",
+              "ich",
+              "in",
+              "Deutschland",
+              "arbeiten",
+              "will"
+            ],
+            "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-06-q17",
+            "question": "Say in German: \"I hope you're coming tomorrow\"",
+            "answer": "Ich hoffe, dass du morgen kommst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q18",
+            "question": "Listen and fill in: \"Ich weiß nicht, ___ er kommt.\" (whether)",
+            "audioPrompt": "Ich weiß nicht, ob er kommt.",
+            "answer": "ob",
+            "hint": "indirect question = ob"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q19",
+            "question": "Which sentence has the verb at the end?",
+            "options": [
+              "Er kommt heute.",
+              "Ich glaube, dass er heute kommt.",
+              "Heute kommt er.",
+              "Kommt er heute?"
+            ],
+            "answer": "Ich glaube, dass er heute kommt."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q20",
+            "question": "Order the words: \"Although he's tired, he works\"",
+            "words": [
+              "Obwohl",
+              "er",
+              "müde",
+              "ist,",
+              "arbeitet",
+              "er"
+            ],
+            "answer": "Obwohl er müde ist, arbeitet er"
           }
         ]
       }

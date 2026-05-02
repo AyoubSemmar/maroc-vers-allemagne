@@ -3749,6 +3749,119 @@
           "example": "Du hast Recht.",
           "exampleArabic": "You're right.",
           "type": "phrase"
+        },
+        {
+          "german": "denn",
+          "arabic": "nebenordnende Konjunktion: Grund",
+          "example": "Ich bleibe, denn ich bin müde.",
+          "exampleArabic": "Wie weil, aber ohne Verbendstellung.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "Adverb des Gegensatzes: dennoch",
+          "example": "Es regnet, trotzdem gehe ich.",
+          "exampleArabic": "Drückt einen Widerspruch aus.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "Adverb der Folge: aus diesem Grund",
+          "example": "Es ist kalt, deshalb bleibe ich zu Hause.",
+          "exampleArabic": "Verbindet Ursache und Wirkung.",
+          "type": "adverb"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "zusätzlich, auch noch",
+          "example": "Außerdem ist es teuer.",
+          "exampleArabic": "Adverb der Hinzufügung.",
+          "type": "adverb"
+        },
+        {
+          "german": "vermuten",
+          "arabic": "annehmen, raten",
+          "example": "Ich vermute, dass er kommt.",
+          "exampleArabic": "Verb der Annahme, oft mit dass.",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "verständlich machen",
+          "example": "Kannst du das erklären?",
+          "exampleArabic": "Etwas mit Worten klar machen.",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "auf eine Frage reagieren",
+          "example": "Antworte mir bitte.",
+          "exampleArabic": "Verb mit Dativ-Objekt.",
+          "type": "verb"
+        },
+        {
+          "german": "wichtig",
+          "arabic": "von großer Bedeutung",
+          "example": "Das ist wichtig.",
+          "exampleArabic": "Adjektiv für Bedeutung.",
+          "type": "adjective"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "mit hoher Wahrscheinlichkeit",
+          "example": "Wahrscheinlich kommt er.",
+          "exampleArabic": "Adverb der Vermutung.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "möglicherweise",
+          "example": "Vielleicht regnet es.",
+          "exampleArabic": "Adverb der Möglichkeit.",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "ohne Zweifel, gewiss",
+          "example": "Bist du sicher?",
+          "exampleArabic": "Adjektiv der Gewissheit.",
+          "type": "adjective"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "Reaktion auf eine Frage",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "Gegenteil von Frage.",
+          "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "Bitte um Information",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Ich habe eine Frage.",
+          "exampleArabic": "Was man fragt.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "Ergebnis, das ein Problem klärt",
+          "gender": "die",
+          "plural": "Lösungen",
+          "example": "Ich suche eine Lösung.",
+          "exampleArabic": "Antwort auf ein Problem.",
+          "type": "noun"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "Schwierigkeit, die gelöst werden muss",
+          "gender": "das",
+          "plural": "Probleme",
+          "example": "Wir haben ein Problem.",
+          "exampleArabic": "Schwieriges Thema.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -3868,6 +3981,129 @@
             "id": "a2-06-q10",
             "question": "Complete: \"Ich lerne Deutsch, ___ ich eine Arbeit finde.\" (so that)",
             "answer": "damit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q11",
+            "question": "Was ist der Unterschied zwischen weil und denn?",
+            "options": [
+              "weil sendet das Verb ans Ende, denn nicht",
+              "denn sendet das Verb ans Ende",
+              "kein Unterschied",
+              "weil formal, denn informell und beide ändern die Wortstellung"
+            ],
+            "answer": "weil sendet das Verb ans Ende, denn nicht"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q12",
+            "question": "Ergänze: „Es ist kalt, ___ bleibe ich zu Hause.\" (deshalb)",
+            "answer": "deshalb",
+            "hint": "Folge = deshalb"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q13",
+            "question": "In „Als ich Kind war, wohnte ich in Marokko\" — wann benutzt man als?",
+            "options": [
+              "für die Gegenwart",
+              "für ein wiederholtes Ereignis",
+              "für ein einmaliges Ereignis in der Vergangenheit",
+              "für die Zukunft"
+            ],
+            "answer": "für ein einmaliges Ereignis in der Vergangenheit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q14",
+            "question": "Ergänze: „___ ich gegessen habe, gehe ich spazieren.\" (nachdem)",
+            "answer": "Nachdem",
+            "hint": "nach einem Ereignis = nachdem"
+          },
+          {
+            "type": "matching",
+            "id": "a2-06-q15",
+            "question": "Verbinde die Konjunktion mit ihrer Bedeutung:",
+            "pairs": [
+              {
+                "left": "denn",
+                "right": "Grund (nebenordnend)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "Gegensatz"
+              },
+              {
+                "left": "deshalb",
+                "right": "Folge"
+              },
+              {
+                "left": "außerdem",
+                "right": "Hinzufügung"
+              },
+              {
+                "left": "nachdem",
+                "right": "Zeit (danach)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q16",
+            "question": "Ordne: „Ich lerne Deutsch, weil ich in Deutschland arbeiten will\"",
+            "words": [
+              "Ich",
+              "lerne",
+              "Deutsch,",
+              "weil",
+              "ich",
+              "in",
+              "Deutschland",
+              "arbeiten",
+              "will"
+            ],
+            "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-06-q17",
+            "question": "Sag auf Deutsch: „Ich hoffe, dass du morgen kommst\"",
+            "answer": "Ich hoffe, dass du morgen kommst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q18",
+            "question": "Hör zu und ergänze: „Ich weiß nicht, ___ er kommt.\" (ob)",
+            "audioPrompt": "Ich weiß nicht, ob er kommt.",
+            "answer": "ob",
+            "hint": "indirekte Frage = ob"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q19",
+            "question": "Welcher Satz hat das Verb am Ende?",
+            "options": [
+              "Er kommt heute.",
+              "Ich glaube, dass er heute kommt.",
+              "Heute kommt er.",
+              "Kommt er heute?"
+            ],
+            "answer": "Ich glaube, dass er heute kommt."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q20",
+            "question": "Ordne: „Obwohl er müde ist, arbeitet er\"",
+            "words": [
+              "Obwohl",
+              "er",
+              "müde",
+              "ist,",
+              "arbeitet",
+              "er"
+            ],
+            "answer": "Obwohl er müde ist, arbeitet er"
           }
         ]
       }

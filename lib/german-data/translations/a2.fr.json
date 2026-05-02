@@ -3749,6 +3749,119 @@
           "example": "Du hast Recht.",
           "exampleArabic": "Tu as raison.",
           "type": "phrase"
+        },
+        {
+          "german": "denn",
+          "arabic": "car (coordonnante)",
+          "example": "Ich bleibe, denn ich bin müde.",
+          "exampleArabic": "Je reste, car je suis fatigué.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "malgré tout, quand même",
+          "example": "Es regnet, trotzdem gehe ich.",
+          "exampleArabic": "Il pleut, j'y vais quand même.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "c'est pourquoi",
+          "example": "Es ist kalt, deshalb bleibe ich zu Hause.",
+          "exampleArabic": "Il fait froid, c'est pourquoi je reste à la maison.",
+          "type": "adverb"
+        },
+        {
+          "german": "außerdem",
+          "arabic": "en plus, de plus",
+          "example": "Außerdem ist es teuer.",
+          "exampleArabic": "En plus, c'est cher.",
+          "type": "adverb"
+        },
+        {
+          "german": "vermuten",
+          "arabic": "supposer",
+          "example": "Ich vermute, dass er kommt.",
+          "exampleArabic": "Je suppose qu'il vient.",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "example": "Kannst du das erklären?",
+          "exampleArabic": "Peux-tu expliquer cela ?",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "répondre",
+          "example": "Antworte mir bitte.",
+          "exampleArabic": "Réponds-moi, s'il te plaît.",
+          "type": "verb"
+        },
+        {
+          "german": "wichtig",
+          "arabic": "important",
+          "example": "Das ist wichtig.",
+          "exampleArabic": "C'est important.",
+          "type": "adjective"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "probablement",
+          "example": "Wahrscheinlich kommt er.",
+          "exampleArabic": "Il viendra probablement.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "peut-être",
+          "example": "Vielleicht regnet es.",
+          "exampleArabic": "Il pleuvra peut-être.",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sûr, certain",
+          "example": "Bist du sicher?",
+          "exampleArabic": "Es-tu sûr ?",
+          "type": "adjective"
+        },
+        {
+          "german": "die Antwort",
+          "arabic": "la réponse",
+          "gender": "die",
+          "plural": "Antworten",
+          "example": "Was ist die Antwort?",
+          "exampleArabic": "Quelle est la réponse ?",
+          "type": "noun"
+        },
+        {
+          "german": "die Frage",
+          "arabic": "la question",
+          "gender": "die",
+          "plural": "Fragen",
+          "example": "Ich habe eine Frage.",
+          "exampleArabic": "J'ai une question.",
+          "type": "noun"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "la solution",
+          "gender": "die",
+          "plural": "Lösungen",
+          "example": "Ich suche eine Lösung.",
+          "exampleArabic": "Je cherche une solution.",
+          "type": "noun"
+        },
+        {
+          "german": "das Problem",
+          "arabic": "le problème",
+          "gender": "das",
+          "plural": "Probleme",
+          "example": "Wir haben ein Problem.",
+          "exampleArabic": "Nous avons un problème.",
+          "type": "noun"
         }
       ],
       "exercise": {
@@ -3868,6 +3981,129 @@
             "id": "a2-06-q10",
             "question": "Complète : \"Ich lerne Deutsch, ___ ich eine Arbeit finde.\" (pour que)",
             "answer": "damit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q11",
+            "question": "Quelle est la différence entre weil et denn ?",
+            "options": [
+              "weil envoie le verbe à la fin, denn non",
+              "denn envoie le verbe à la fin",
+              "aucune différence",
+              "weil est formel, denn informel et tous deux changent l'ordre"
+            ],
+            "answer": "weil envoie le verbe à la fin, denn non"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q12",
+            "question": "Complète : « Es ist kalt, ___ bleibe ich zu Hause. » (c'est pourquoi)",
+            "answer": "deshalb",
+            "hint": "conséquence = deshalb"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q13",
+            "question": "Dans « Als ich Kind war, wohnte ich in Marokko » — quand utilise-t-on als ?",
+            "options": [
+              "pour le présent",
+              "pour un événement répété",
+              "pour un événement passé unique",
+              "pour le futur"
+            ],
+            "answer": "pour un événement passé unique"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q14",
+            "question": "Complète : « ___ ich gegessen habe, gehe ich spazieren. » (après que)",
+            "answer": "Nachdem",
+            "hint": "après que = nachdem"
+          },
+          {
+            "type": "matching",
+            "id": "a2-06-q15",
+            "question": "Associe la conjonction à son sens :",
+            "pairs": [
+              {
+                "left": "denn",
+                "right": "car (coordonnante)"
+              },
+              {
+                "left": "trotzdem",
+                "right": "malgré tout"
+              },
+              {
+                "left": "deshalb",
+                "right": "c'est pourquoi"
+              },
+              {
+                "left": "außerdem",
+                "right": "en plus"
+              },
+              {
+                "left": "nachdem",
+                "right": "après que"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q16",
+            "question": "Remets dans l'ordre : « J'apprends l'allemand parce que je veux travailler en Allemagne »",
+            "words": [
+              "Ich",
+              "lerne",
+              "Deutsch,",
+              "weil",
+              "ich",
+              "in",
+              "Deutschland",
+              "arbeiten",
+              "will"
+            ],
+            "answer": "Ich lerne Deutsch, weil ich in Deutschland arbeiten will"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-06-q17",
+            "question": "Dis en allemand : « J'espère que tu viens demain »",
+            "answer": "Ich hoffe, dass du morgen kommst"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-06-q18",
+            "question": "Écoute et complète : « Ich weiß nicht, ___ er kommt. » (s'il)",
+            "audioPrompt": "Ich weiß nicht, ob er kommt.",
+            "answer": "ob",
+            "hint": "question indirecte = ob"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-06-q19",
+            "question": "Quelle phrase a le verbe à la fin ?",
+            "options": [
+              "Er kommt heute.",
+              "Ich glaube, dass er heute kommt.",
+              "Heute kommt er.",
+              "Kommt er heute?"
+            ],
+            "answer": "Ich glaube, dass er heute kommt."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-06-q20",
+            "question": "Remets dans l'ordre : « Bien qu'il soit fatigué, il travaille »",
+            "words": [
+              "Obwohl",
+              "er",
+              "müde",
+              "ist,",
+              "arbeitet",
+              "er"
+            ],
+            "answer": "Obwohl er müde ist, arbeitet er"
           }
         ]
       }
