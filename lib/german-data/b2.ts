@@ -1556,6 +1556,10 @@ export const B2: Level = {
         { german: 'angesehen', arabic: 'مرموق', example: 'Eine angesehene Zeitung.', exampleArabic: 'جريدة مرموقة.', type: 'adjective' },
         { german: 'kontrovers', arabic: 'مثير للجدل', example: 'Eine kontroverse Behauptung.', exampleArabic: 'ادعاء مثير للجدل.', type: 'adjective' },
         { german: 'glaubwürdig', arabic: 'موثوق', example: 'Eine glaubwürdige Quelle.', exampleArabic: 'مصدر موثوق.', type: 'adjective' },
+        { german: 'der Sprecher', arabic: 'المتحدّث', plural: 'die Sprecher', example: 'Der Sprecher äußerte sich.', exampleArabic: 'تحدّث المتحدّث.', type: 'noun', gender: 'der' },
+        { german: 'die Aussage', arabic: 'التصريح', plural: 'die Aussagen', example: 'Eine wichtige Aussage.', exampleArabic: 'تصريح مهم.', type: 'noun', gender: 'die' },
+        { german: 'die Pressekonferenz', arabic: 'المؤتمر الصحفي', plural: 'die Pressekonferenzen', example: 'Die Pressekonferenz beginnt.', exampleArabic: 'يبدأ المؤتمر.', type: 'noun', gender: 'die' },
+        { german: 'die Stellungnahme', arabic: 'الموقف الرسمي', plural: 'die Stellungnahmen', example: 'Eine offizielle Stellungnahme.', exampleArabic: 'موقف رسمي.', type: 'noun', gender: 'die' },
       ],
       exercise: {
         questions: [
