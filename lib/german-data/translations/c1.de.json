@@ -2580,6 +2580,81 @@
           "german": "zur Kenntnis nehmen",
           "arabic": "zur Kenntnis nehmen",
           "type": "phrase"
+        },
+        {
+          "german": "in Auftrag geben",
+          "arabic": "etwas bestellen, beauftragen",
+          "type": "phrase"
+        },
+        {
+          "german": "eine Vereinbarung treffen",
+          "arabic": "Abmachung schließen",
+          "type": "phrase"
+        },
+        {
+          "german": "in Erwägung ziehen",
+          "arabic": "berücksichtigen, bedenken",
+          "type": "phrase"
+        },
+        {
+          "german": "in die Tat umsetzen",
+          "arabic": "konkret durchführen",
+          "type": "phrase"
+        },
+        {
+          "german": "zum Schluss kommen",
+          "arabic": "eine Folgerung erreichen",
+          "type": "phrase"
+        },
+        {
+          "german": "eine Bedingung stellen",
+          "arabic": "etwas zur Voraussetzung machen",
+          "type": "phrase"
+        },
+        {
+          "german": "in Betracht kommen",
+          "arabic": "denkbar sein, möglich sein",
+          "type": "phrase"
+        },
+        {
+          "german": "zum Einsatz kommen",
+          "arabic": "verwendet werden",
+          "type": "phrase"
+        },
+        {
+          "german": "Stellung nehmen",
+          "arabic": "öffentlich Meinung äußern",
+          "type": "phrase"
+        },
+        {
+          "german": "einen Beitrag leisten",
+          "arabic": "etwas Wertvolles beisteuern",
+          "type": "phrase"
+        },
+        {
+          "german": "eine Forderung stellen",
+          "arabic": "etwas verlangen",
+          "type": "phrase"
+        },
+        {
+          "german": "einen Eindruck machen",
+          "arabic": "wirken",
+          "type": "phrase"
+        },
+        {
+          "german": "das Wort ergreifen",
+          "arabic": "zu sprechen beginnen",
+          "type": "phrase"
+        },
+        {
+          "german": "zur Diskussion stellen",
+          "arabic": "zur Debatte bereitstellen",
+          "type": "phrase"
+        },
+        {
+          "german": "in Verbindung bringen",
+          "arabic": "assoziieren mit",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -2698,6 +2773,126 @@
               "Urlaub"
             ],
             "answer": "Er stellt einen Antrag auf Urlaub"
+          },
+          {
+            "id": "c1-05-q11",
+            "type": "fill-blank",
+            "question": "Alternative zu „ausdrücken\": „zum Ausdruck ___.\"",
+            "answer": "bringen",
+            "hint": "zum Ausdruck bringen"
+          },
+          {
+            "id": "c1-05-q12",
+            "type": "multiple-choice",
+            "question": "FVG für „kritisieren\":",
+            "options": [
+              "Kritik üben",
+              "Kritik bringen",
+              "Kritik machen",
+              "Kritik kommen"
+            ],
+            "answer": "Kritik üben"
+          },
+          {
+            "id": "c1-05-q13",
+            "type": "fill-blank",
+            "question": "„Ich nehme deinen Vorschlag in ___.\" (Erwägung)",
+            "answer": "Erwägung",
+            "hint": "in Erwägung ziehen"
+          },
+          {
+            "id": "c1-05-q14",
+            "type": "multiple-choice",
+            "question": "Warum verwendet man FVG?",
+            "options": [
+              "formelle und akademische Schrift",
+              "Kindersprache",
+              "nur Lyrik",
+              "Werbung"
+            ],
+            "answer": "formelle und akademische Schrift"
+          },
+          {
+            "id": "c1-05-q15",
+            "type": "matching",
+            "question": "Verbinde FVG mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "eine Entscheidung treffen",
+                "right": "entscheiden"
+              },
+              {
+                "left": "zur Verfügung stehen",
+                "right": "verfügbar sein"
+              },
+              {
+                "left": "in Frage kommen",
+                "right": "möglich sein"
+              },
+              {
+                "left": "Rücksicht nehmen",
+                "right": "rücksichtsvoll sein"
+              },
+              {
+                "left": "zur Folge haben",
+                "right": "verursachen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-05-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Wir nehmen die Rede zur Kenntnis\"",
+            "words": [
+              "Wir",
+              "nehmen",
+              "die",
+              "Rede",
+              "zur",
+              "Kenntnis"
+            ],
+            "answer": "Wir nehmen die Rede zur Kenntnis"
+          },
+          {
+            "id": "c1-05-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich gehe diese Verpflichtung ein\"",
+            "answer": "Ich gehe diese Verpflichtung ein"
+          },
+          {
+            "id": "c1-05-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Wir leisten einen ___ zur Lösung.\" (Beitrag)",
+            "audioPrompt": "Wir leisten einen Beitrag zur Lösung.",
+            "answer": "Beitrag",
+            "hint": "einen Beitrag leisten"
+          },
+          {
+            "id": "c1-05-q19",
+            "type": "multiple-choice",
+            "question": "Das Verb im FVG:",
+            "options": [
+              "trägt die Hauptbedeutung",
+              "verliert Bedeutung und liefert grammatische Funktion",
+              "wird gestrichen",
+              "wird zum Nomen"
+            ],
+            "answer": "verliert Bedeutung und liefert grammatische Funktion"
+          },
+          {
+            "id": "c1-05-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Er nimmt zu dem Thema Stellung\"",
+            "words": [
+              "Er",
+              "nimmt",
+              "zu",
+              "dem",
+              "Thema",
+              "Stellung"
+            ],
+            "answer": "Er nimmt zu dem Thema Stellung"
           }
         ]
       }
