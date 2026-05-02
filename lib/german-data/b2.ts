@@ -1675,6 +1675,11 @@ export const B2: Level = {
         { german: 'das Erstaunen', arabic: 'الدهشة', example: 'Zu meinem Erstaunen kam er.', exampleArabic: 'لدهشتي، أتى.', type: 'noun', gender: 'das' },
         { german: 'übertreiben', arabic: 'يُبالغ', example: 'Du übertreibst!', exampleArabic: 'أنت تبالغ!', type: 'verb' },
         { german: 'die Färbung', arabic: 'النكهة / اللون اللغوي', example: 'Modalpartikeln geben Färbung.', exampleArabic: 'أحرف الإضافة تُعطي نكهة.', type: 'noun', gender: 'die' },
+        { german: 'die Höflichkeit', arabic: 'اللياقة', example: 'Höflichkeit ist wichtig.', exampleArabic: 'اللياقة مهمة.', type: 'noun', gender: 'die' },
+        { german: 'die Modalpartikel', arabic: 'الأداة الترخيمية', plural: 'die Modalpartikeln', example: 'Doch ist eine Modalpartikel.', exampleArabic: 'doch أداة ترخيمية.', type: 'noun', gender: 'die' },
+        { german: 'der Smalltalk', arabic: 'الحديث الخفيف', example: 'Smalltalk im Büro.', exampleArabic: 'حديث خفيف في المكتب.', type: 'noun', gender: 'der' },
+        { german: 'die Spontaneität', arabic: 'العفوية', example: 'Mir gefällt seine Spontaneität.', exampleArabic: 'تعجبني عفويته.', type: 'noun', gender: 'die' },
+        { german: 'spontan', arabic: 'عفوي', example: 'Eine spontane Antwort.', exampleArabic: 'إجابة عفوية.', type: 'adjective' },
       ],
       exercise: {
         questions: [
