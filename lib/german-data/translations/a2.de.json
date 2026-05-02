@@ -1042,6 +1042,103 @@
           "example": "Mein Auto ist neu.",
           "exampleArabic": "Mein Auto ist neu.",
           "type": "noun"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "Ort, an dem Züge halten",
+          "gender": "der",
+          "plural": "Bahnhöfe",
+          "example": "Wir sind am Bahnhof angekommen.",
+          "exampleArabic": "Verkehrsgebäude für Eisenbahnen.",
+          "type": "noun"
+        },
+        {
+          "german": "der Flughafen",
+          "arabic": "Ort, an dem Flugzeuge starten und landen",
+          "gender": "der",
+          "plural": "Flughäfen",
+          "example": "Der Flughafen ist groß.",
+          "exampleArabic": "Verkehrsanlage für Flüge.",
+          "type": "noun"
+        },
+        {
+          "german": "die Fahrkarte",
+          "arabic": "Ticket für öffentliche Verkehrsmittel",
+          "gender": "die",
+          "plural": "Fahrkarten",
+          "example": "Ich habe eine Fahrkarte gekauft.",
+          "exampleArabic": "Berechtigt zur Fahrt mit Bus oder Bahn.",
+          "type": "noun"
+        },
+        {
+          "german": "ab|fahren",
+          "arabic": "den Ort mit einem Fahrzeug verlassen",
+          "example": "Der Zug fährt um 8 ab.",
+          "exampleArabic": "Trennbares Verb der Bewegung.",
+          "type": "verb"
+        },
+        {
+          "german": "abgefahren",
+          "arabic": "Partizip II von abfahren",
+          "example": "Der Zug ist abgefahren.",
+          "exampleArabic": "Vergangenheitsform mit sein.",
+          "type": "verb"
+        },
+        {
+          "german": "an|kommen",
+          "arabic": "an einem Ort eintreffen",
+          "example": "Wann kommst du an?",
+          "exampleArabic": "Gegenteil von abfahren.",
+          "type": "verb"
+        },
+        {
+          "german": "angekommen",
+          "arabic": "Partizip II von ankommen",
+          "example": "Ich bin spät angekommen.",
+          "exampleArabic": "Vergangenheitsform mit sein.",
+          "type": "verb"
+        },
+        {
+          "german": "los|gehen",
+          "arabic": "starten, einen Weg beginnen",
+          "example": "Wir gehen jetzt los.",
+          "exampleArabic": "Mit einer Bewegung anfangen.",
+          "type": "verb"
+        },
+        {
+          "german": "losgegangen",
+          "arabic": "Partizip II von losgehen",
+          "example": "Wir sind früh losgegangen.",
+          "exampleArabic": "Vergangenheitsform mit sein.",
+          "type": "verb"
+        },
+        {
+          "german": "um|ziehen",
+          "arabic": "die Wohnung wechseln",
+          "example": "Ich ziehe nach Berlin um.",
+          "exampleArabic": "Trennbares Verb für Wohnungswechsel.",
+          "type": "verb"
+        },
+        {
+          "german": "umgezogen",
+          "arabic": "Partizip II von umziehen",
+          "example": "Sie ist umgezogen.",
+          "exampleArabic": "Vergangenheitsform mit sein.",
+          "type": "verb"
+        },
+        {
+          "german": "zurück|kommen",
+          "arabic": "wieder zum Ausgangspunkt gelangen",
+          "example": "Wann kommst du zurück?",
+          "exampleArabic": "Trennbares Verb der Rückkehr.",
+          "type": "verb"
+        },
+        {
+          "german": "zurückgekommen",
+          "arabic": "Partizip II von zurückkommen",
+          "example": "Er ist gestern zurückgekommen.",
+          "exampleArabic": "Vergangenheitsform mit sein.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1168,6 +1265,132 @@
               "geblieben"
             ],
             "answer": "Ich bin gestern zu Hause geblieben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q11",
+            "question": "Ergänze: „Der Zug ___ um 8 abgefahren.\" (sein)",
+            "answer": "ist",
+            "hint": "abfahren = Bewegung → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q12",
+            "question": "Was ist das Partizip II von ankommen?",
+            "options": [
+              "gekommen",
+              "angekommen",
+              "ankommen",
+              "angekamen"
+            ],
+            "answer": "angekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q13",
+            "question": "Ergänze: „Sie ___ nach Berlin umgezogen.\" (sein)",
+            "answer": "ist",
+            "hint": "umziehen = Ortswechsel → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q14",
+            "question": "Welcher Satz ist korrekt?",
+            "options": [
+              "Ich habe nach Hause gegangen.",
+              "Ich bin nach Hause gegangen.",
+              "Ich habe gehen nach Hause.",
+              "Ich bin gegangen Hause."
+            ],
+            "answer": "Ich bin nach Hause gegangen."
+          },
+          {
+            "type": "matching",
+            "id": "a2-02-q15",
+            "question": "Verbinde das trennbare Verb mit dem Partizip II:",
+            "pairs": [
+              {
+                "left": "abfahren",
+                "right": "abgefahren"
+              },
+              {
+                "left": "ankommen",
+                "right": "angekommen"
+              },
+              {
+                "left": "losgehen",
+                "right": "losgegangen"
+              },
+              {
+                "left": "umziehen",
+                "right": "umgezogen"
+              },
+              {
+                "left": "zurückkommen",
+                "right": "zurückgekommen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q16",
+            "question": "Ordne: „Ich bin um 9 Uhr am Bahnhof angekommen\"",
+            "words": [
+              "Ich",
+              "bin",
+              "um",
+              "9",
+              "Uhr",
+              "am",
+              "Bahnhof",
+              "angekommen"
+            ],
+            "answer": "Ich bin um 9 Uhr am Bahnhof angekommen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-02-q17",
+            "question": "Sag auf Deutsch: „Wann bist du aus Deutschland zurückgekommen?\"",
+            "answer": "Wann bist du aus Deutschland zurückgekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q18",
+            "question": "Hör zu und ergänze: „Sie ___ schon angekommen.\" (sein)",
+            "audioPrompt": "Sie ist schon angekommen.",
+            "answer": "ist",
+            "hint": "ankommen = Bewegung → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q19",
+            "question": "Das Hilfsverb für „umziehen\" (Wohnung wechseln) ist:",
+            "options": [
+              "haben",
+              "sein",
+              "werden",
+              "beide"
+            ],
+            "answer": "sein"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q20",
+            "question": "Ordne: „Wir haben eine Fahrkarte gekauft und sind zum Flughafen gegangen\"",
+            "words": [
+              "Wir",
+              "haben",
+              "eine",
+              "Fahrkarte",
+              "gekauft",
+              "und",
+              "sind",
+              "zum",
+              "Flughafen",
+              "gegangen"
+            ],
+            "answer": "Wir haben eine Fahrkarte gekauft und sind zum Flughafen gegangen"
           }
         ]
       }

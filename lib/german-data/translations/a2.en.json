@@ -1042,6 +1042,103 @@
           "example": "Mein Auto ist neu.",
           "exampleArabic": "My car is new.",
           "type": "noun"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "the train station",
+          "gender": "der",
+          "plural": "Bahnhöfe",
+          "example": "Wir sind am Bahnhof angekommen.",
+          "exampleArabic": "We arrived at the train station.",
+          "type": "noun"
+        },
+        {
+          "german": "der Flughafen",
+          "arabic": "the airport",
+          "gender": "der",
+          "plural": "Flughäfen",
+          "example": "Der Flughafen ist groß.",
+          "exampleArabic": "The airport is big.",
+          "type": "noun"
+        },
+        {
+          "german": "die Fahrkarte",
+          "arabic": "the (travel) ticket",
+          "gender": "die",
+          "plural": "Fahrkarten",
+          "example": "Ich habe eine Fahrkarte gekauft.",
+          "exampleArabic": "I bought a ticket.",
+          "type": "noun"
+        },
+        {
+          "german": "ab|fahren",
+          "arabic": "to depart (by vehicle)",
+          "example": "Der Zug fährt um 8 ab.",
+          "exampleArabic": "The train departs at 8.",
+          "type": "verb"
+        },
+        {
+          "german": "abgefahren",
+          "arabic": "departed (past)",
+          "example": "Der Zug ist abgefahren.",
+          "exampleArabic": "The train has left.",
+          "type": "verb"
+        },
+        {
+          "german": "an|kommen",
+          "arabic": "to arrive",
+          "example": "Wann kommst du an?",
+          "exampleArabic": "When are you arriving?",
+          "type": "verb"
+        },
+        {
+          "german": "angekommen",
+          "arabic": "arrived (past)",
+          "example": "Ich bin spät angekommen.",
+          "exampleArabic": "I arrived late.",
+          "type": "verb"
+        },
+        {
+          "german": "los|gehen",
+          "arabic": "to set off, get going",
+          "example": "Wir gehen jetzt los.",
+          "exampleArabic": "We're heading out now.",
+          "type": "verb"
+        },
+        {
+          "german": "losgegangen",
+          "arabic": "set off (past)",
+          "example": "Wir sind früh losgegangen.",
+          "exampleArabic": "We set off early.",
+          "type": "verb"
+        },
+        {
+          "german": "um|ziehen",
+          "arabic": "to move (house)",
+          "example": "Ich ziehe nach Berlin um.",
+          "exampleArabic": "I'm moving to Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "umgezogen",
+          "arabic": "moved house (past)",
+          "example": "Sie ist umgezogen.",
+          "exampleArabic": "She has moved.",
+          "type": "verb"
+        },
+        {
+          "german": "zurück|kommen",
+          "arabic": "to come back",
+          "example": "Wann kommst du zurück?",
+          "exampleArabic": "When are you coming back?",
+          "type": "verb"
+        },
+        {
+          "german": "zurückgekommen",
+          "arabic": "came back (past)",
+          "example": "Er ist gestern zurückgekommen.",
+          "exampleArabic": "He came back yesterday.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1168,6 +1265,132 @@
               "geblieben"
             ],
             "answer": "Ich bin gestern zu Hause geblieben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q11",
+            "question": "Fill in: \"Der Zug ___ um 8 abgefahren.\" (sein)",
+            "answer": "ist",
+            "hint": "abfahren = motion → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q12",
+            "question": "What is the Partizip II of ankommen?",
+            "options": [
+              "gekommen",
+              "angekommen",
+              "ankommen",
+              "angekamen"
+            ],
+            "answer": "angekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q13",
+            "question": "Fill in: \"Sie ___ nach Berlin umgezogen.\" (sein)",
+            "answer": "ist",
+            "hint": "umziehen = change of place → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q14",
+            "question": "Which sentence is correct?",
+            "options": [
+              "Ich habe nach Hause gegangen.",
+              "Ich bin nach Hause gegangen.",
+              "Ich habe gehen nach Hause.",
+              "Ich bin gegangen Hause."
+            ],
+            "answer": "Ich bin nach Hause gegangen."
+          },
+          {
+            "type": "matching",
+            "id": "a2-02-q15",
+            "question": "Match the separable verb with its Partizip II:",
+            "pairs": [
+              {
+                "left": "abfahren",
+                "right": "abgefahren"
+              },
+              {
+                "left": "ankommen",
+                "right": "angekommen"
+              },
+              {
+                "left": "losgehen",
+                "right": "losgegangen"
+              },
+              {
+                "left": "umziehen",
+                "right": "umgezogen"
+              },
+              {
+                "left": "zurückkommen",
+                "right": "zurückgekommen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q16",
+            "question": "Order the words: \"I arrived at the train station at 9\"",
+            "words": [
+              "Ich",
+              "bin",
+              "um",
+              "9",
+              "Uhr",
+              "am",
+              "Bahnhof",
+              "angekommen"
+            ],
+            "answer": "Ich bin um 9 Uhr am Bahnhof angekommen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-02-q17",
+            "question": "Say in German: \"When did you come back from Germany?\"",
+            "answer": "Wann bist du aus Deutschland zurückgekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q18",
+            "question": "Listen and fill in: \"Sie ___ schon angekommen.\" (sein)",
+            "audioPrompt": "Sie ist schon angekommen.",
+            "answer": "ist",
+            "hint": "ankommen = motion → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q19",
+            "question": "The auxiliary for \"umziehen\" (to move house) is:",
+            "options": [
+              "haben",
+              "sein",
+              "werden",
+              "both"
+            ],
+            "answer": "sein"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q20",
+            "question": "Order the words: \"We bought a ticket and went to the airport\"",
+            "words": [
+              "Wir",
+              "haben",
+              "eine",
+              "Fahrkarte",
+              "gekauft",
+              "und",
+              "sind",
+              "zum",
+              "Flughafen",
+              "gegangen"
+            ],
+            "answer": "Wir haben eine Fahrkarte gekauft und sind zum Flughafen gegangen"
           }
         ]
       }

@@ -1042,6 +1042,103 @@
           "example": "Mein Auto ist neu.",
           "exampleArabic": "Ma voiture est neuve.",
           "type": "noun"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "la gare",
+          "gender": "der",
+          "plural": "Bahnhöfe",
+          "example": "Wir sind am Bahnhof angekommen.",
+          "exampleArabic": "Nous sommes arrivés à la gare.",
+          "type": "noun"
+        },
+        {
+          "german": "der Flughafen",
+          "arabic": "l'aéroport",
+          "gender": "der",
+          "plural": "Flughäfen",
+          "example": "Der Flughafen ist groß.",
+          "exampleArabic": "L'aéroport est grand.",
+          "type": "noun"
+        },
+        {
+          "german": "die Fahrkarte",
+          "arabic": "le billet (de transport)",
+          "gender": "die",
+          "plural": "Fahrkarten",
+          "example": "Ich habe eine Fahrkarte gekauft.",
+          "exampleArabic": "J'ai acheté un billet.",
+          "type": "noun"
+        },
+        {
+          "german": "ab|fahren",
+          "arabic": "partir (en véhicule)",
+          "example": "Der Zug fährt um 8 ab.",
+          "exampleArabic": "Le train part à 8 heures.",
+          "type": "verb"
+        },
+        {
+          "german": "abgefahren",
+          "arabic": "parti (passé)",
+          "example": "Der Zug ist abgefahren.",
+          "exampleArabic": "Le train est parti.",
+          "type": "verb"
+        },
+        {
+          "german": "an|kommen",
+          "arabic": "arriver",
+          "example": "Wann kommst du an?",
+          "exampleArabic": "Quand arrives-tu ?",
+          "type": "verb"
+        },
+        {
+          "german": "angekommen",
+          "arabic": "arrivé (passé)",
+          "example": "Ich bin spät angekommen.",
+          "exampleArabic": "Je suis arrivé en retard.",
+          "type": "verb"
+        },
+        {
+          "german": "los|gehen",
+          "arabic": "se mettre en route, partir",
+          "example": "Wir gehen jetzt los.",
+          "exampleArabic": "Nous partons maintenant.",
+          "type": "verb"
+        },
+        {
+          "german": "losgegangen",
+          "arabic": "parti, mis en route (passé)",
+          "example": "Wir sind früh losgegangen.",
+          "exampleArabic": "Nous sommes partis tôt.",
+          "type": "verb"
+        },
+        {
+          "german": "um|ziehen",
+          "arabic": "déménager",
+          "example": "Ich ziehe nach Berlin um.",
+          "exampleArabic": "Je déménage à Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "umgezogen",
+          "arabic": "déménagé (passé)",
+          "example": "Sie ist umgezogen.",
+          "exampleArabic": "Elle a déménagé.",
+          "type": "verb"
+        },
+        {
+          "german": "zurück|kommen",
+          "arabic": "revenir",
+          "example": "Wann kommst du zurück?",
+          "exampleArabic": "Quand reviens-tu ?",
+          "type": "verb"
+        },
+        {
+          "german": "zurückgekommen",
+          "arabic": "revenu (passé)",
+          "example": "Er ist gestern zurückgekommen.",
+          "exampleArabic": "Il est revenu hier.",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -1168,6 +1265,132 @@
               "geblieben"
             ],
             "answer": "Ich bin gestern zu Hause geblieben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q11",
+            "question": "Complète : « Der Zug ___ um 8 abgefahren. » (sein)",
+            "answer": "ist",
+            "hint": "abfahren = mouvement → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q12",
+            "question": "Quel est le Partizip II de ankommen ?",
+            "options": [
+              "gekommen",
+              "angekommen",
+              "ankommen",
+              "angekamen"
+            ],
+            "answer": "angekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q13",
+            "question": "Complète : « Sie ___ nach Berlin umgezogen. » (sein)",
+            "answer": "ist",
+            "hint": "umziehen = changement de lieu → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q14",
+            "question": "Quelle phrase est correcte ?",
+            "options": [
+              "Ich habe nach Hause gegangen.",
+              "Ich bin nach Hause gegangen.",
+              "Ich habe gehen nach Hause.",
+              "Ich bin gegangen Hause."
+            ],
+            "answer": "Ich bin nach Hause gegangen."
+          },
+          {
+            "type": "matching",
+            "id": "a2-02-q15",
+            "question": "Associe le verbe séparable au Partizip II :",
+            "pairs": [
+              {
+                "left": "abfahren",
+                "right": "abgefahren"
+              },
+              {
+                "left": "ankommen",
+                "right": "angekommen"
+              },
+              {
+                "left": "losgehen",
+                "right": "losgegangen"
+              },
+              {
+                "left": "umziehen",
+                "right": "umgezogen"
+              },
+              {
+                "left": "zurückkommen",
+                "right": "zurückgekommen"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q16",
+            "question": "Remets dans l'ordre : « Je suis arrivé à la gare à 9h »",
+            "words": [
+              "Ich",
+              "bin",
+              "um",
+              "9",
+              "Uhr",
+              "am",
+              "Bahnhof",
+              "angekommen"
+            ],
+            "answer": "Ich bin um 9 Uhr am Bahnhof angekommen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-02-q17",
+            "question": "Dis en allemand : « Quand es-tu revenu d'Allemagne ? »",
+            "answer": "Wann bist du aus Deutschland zurückgekommen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-02-q18",
+            "question": "Écoute et complète : « Sie ___ schon angekommen. » (sein)",
+            "audioPrompt": "Sie ist schon angekommen.",
+            "answer": "ist",
+            "hint": "ankommen = mouvement → sein"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-02-q19",
+            "question": "L'auxiliaire de « umziehen » (déménager) est :",
+            "options": [
+              "haben",
+              "sein",
+              "werden",
+              "les deux"
+            ],
+            "answer": "sein"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-02-q20",
+            "question": "Remets dans l'ordre : « Nous avons acheté un billet et sommes allés à l'aéroport »",
+            "words": [
+              "Wir",
+              "haben",
+              "eine",
+              "Fahrkarte",
+              "gekauft",
+              "und",
+              "sind",
+              "zum",
+              "Flughafen",
+              "gegangen"
+            ],
+            "answer": "Wir haben eine Fahrkarte gekauft und sind zum Flughafen gegangen"
           }
         ]
       }
