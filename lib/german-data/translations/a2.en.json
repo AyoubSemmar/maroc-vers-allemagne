@@ -7766,6 +7766,103 @@
           "example": "Genau!",
           "exampleArabic": "Exactly!",
           "type": "adverb"
+        },
+        {
+          "german": "die Idee",
+          "arabic": "the idea",
+          "gender": "die",
+          "plural": "Ideen",
+          "example": "Eine gute Idee!",
+          "exampleArabic": "A good idea!",
+          "type": "noun"
+        },
+        {
+          "german": "das Gefühl",
+          "arabic": "the feeling",
+          "gender": "das",
+          "plural": "Gefühle",
+          "example": "Ich habe ein gutes Gefühl.",
+          "exampleArabic": "I have a good feeling.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sorge",
+          "arabic": "the worry, concern",
+          "gender": "die",
+          "plural": "Sorgen",
+          "example": "Mach dir keine Sorgen!",
+          "exampleArabic": "Don't worry!",
+          "type": "noun"
+        },
+        {
+          "german": "zu|stimmen",
+          "arabic": "to agree",
+          "example": "Ich stimme dir zu.",
+          "exampleArabic": "I agree with you.",
+          "type": "verb"
+        },
+        {
+          "german": "ab|lehnen",
+          "arabic": "to reject, refuse",
+          "example": "Ich lehne das ab.",
+          "exampleArabic": "I refuse that.",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "to claim, assert",
+          "example": "Er behauptet, dass er Recht hat.",
+          "exampleArabic": "He claims he's right.",
+          "type": "verb"
+        },
+        {
+          "german": "zweifeln",
+          "arabic": "to doubt",
+          "example": "Ich zweifle daran.",
+          "exampleArabic": "I doubt it.",
+          "type": "verb"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "disappointed",
+          "example": "Ich bin enttäuscht.",
+          "exampleArabic": "I'm disappointed.",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "satisfied",
+          "example": "Ich bin zufrieden.",
+          "exampleArabic": "I'm satisfied.",
+          "type": "adjective"
+        },
+        {
+          "german": "besorgt",
+          "arabic": "worried",
+          "example": "Ich bin besorgt.",
+          "exampleArabic": "I'm worried.",
+          "type": "adjective"
+        },
+        {
+          "german": "aufgeregt",
+          "arabic": "excited, nervous",
+          "example": "Sie ist sehr aufgeregt.",
+          "exampleArabic": "She's very excited.",
+          "type": "adjective"
+        },
+        {
+          "german": "erleichtert",
+          "arabic": "relieved",
+          "example": "Ich bin erleichtert.",
+          "exampleArabic": "I'm relieved.",
+          "type": "adjective"
+        },
+        {
+          "german": "Quatsch!",
+          "arabic": "Nonsense!",
+          "example": "Das ist Quatsch!",
+          "exampleArabic": "That's nonsense!",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7882,6 +7979,127 @@
             "id": "a2-12-q10",
             "question": "Complete: \"Ich trinke ___ Tee als Kaffee.\" (prefer)",
             "answer": "lieber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q11",
+            "question": "What does \"zustimmen\" mean?",
+            "options": [
+              "to refuse",
+              "to agree",
+              "to doubt",
+              "to claim"
+            ],
+            "answer": "to agree"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q12",
+            "question": "Fill in: \"Mach dir keine ___!\" (don't worry)",
+            "answer": "Sorgen",
+            "hint": "plural noun"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q13",
+            "question": "How do you express satisfaction?",
+            "options": [
+              "Ich bin enttäuscht.",
+              "Ich bin zufrieden.",
+              "Ich bin wütend.",
+              "Ich bin nervös."
+            ],
+            "answer": "Ich bin zufrieden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q14",
+            "question": "Fill in: \"Das ist eine gute ___.\" (idea)",
+            "answer": "Idee",
+            "hint": "feminine"
+          },
+          {
+            "type": "matching",
+            "id": "a2-12-q15",
+            "question": "Match the new emotion to its meaning:",
+            "pairs": [
+              {
+                "left": "enttäuscht",
+                "right": "disappointed"
+              },
+              {
+                "left": "zufrieden",
+                "right": "satisfied"
+              },
+              {
+                "left": "besorgt",
+                "right": "worried"
+              },
+              {
+                "left": "aufgeregt",
+                "right": "excited"
+              },
+              {
+                "left": "erleichtert",
+                "right": "relieved"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q16",
+            "question": "Order the words: \"I'm very proud of my children\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "stolz",
+              "auf",
+              "meine",
+              "Kinder"
+            ],
+            "answer": "Ich bin sehr stolz auf meine Kinder"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-12-q17",
+            "question": "Say in German: \"I'm excited about the trip to Germany\"",
+            "answer": "Ich bin aufgeregt auf die Reise nach Deutschland"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q18",
+            "question": "Listen: \"Ich ___ dir zu.\" (agree)",
+            "audioPrompt": "Ich stimme dir zu.",
+            "answer": "stimme",
+            "hint": "zustimmen is separable"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q19",
+            "question": "What does \"Quatsch!\" mean?",
+            "options": [
+              "Congrats!",
+              "Nonsense!",
+              "Exactly!",
+              "Really?"
+            ],
+            "answer": "Nonsense!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q20",
+            "question": "Order the words: \"What do you think about this idea?\"",
+            "words": [
+              "Was",
+              "denkst",
+              "du",
+              "über",
+              "diese",
+              "Idee"
+            ],
+            "answer": "Was denkst du über diese Idee"
           }
         ]
       }

@@ -7766,6 +7766,103 @@
           "example": "Genau!",
           "exampleArabic": "Exactement !",
           "type": "adverb"
+        },
+        {
+          "german": "die Idee",
+          "arabic": "l'idée",
+          "gender": "die",
+          "plural": "Ideen",
+          "example": "Eine gute Idee!",
+          "exampleArabic": "Une bonne idée !",
+          "type": "noun"
+        },
+        {
+          "german": "das Gefühl",
+          "arabic": "le sentiment",
+          "gender": "das",
+          "plural": "Gefühle",
+          "example": "Ich habe ein gutes Gefühl.",
+          "exampleArabic": "J'ai un bon sentiment.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sorge",
+          "arabic": "le souci, l'inquiétude",
+          "gender": "die",
+          "plural": "Sorgen",
+          "example": "Mach dir keine Sorgen!",
+          "exampleArabic": "Ne t'inquiète pas !",
+          "type": "noun"
+        },
+        {
+          "german": "zu|stimmen",
+          "arabic": "être d'accord",
+          "example": "Ich stimme dir zu.",
+          "exampleArabic": "Je suis d'accord avec toi.",
+          "type": "verb"
+        },
+        {
+          "german": "ab|lehnen",
+          "arabic": "refuser",
+          "example": "Ich lehne das ab.",
+          "exampleArabic": "Je refuse cela.",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "prétendre, affirmer",
+          "example": "Er behauptet, dass er Recht hat.",
+          "exampleArabic": "Il prétend avoir raison.",
+          "type": "verb"
+        },
+        {
+          "german": "zweifeln",
+          "arabic": "douter",
+          "example": "Ich zweifle daran.",
+          "exampleArabic": "J'en doute.",
+          "type": "verb"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "déçu",
+          "example": "Ich bin enttäuscht.",
+          "exampleArabic": "Je suis déçu.",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "satisfait",
+          "example": "Ich bin zufrieden.",
+          "exampleArabic": "Je suis satisfait.",
+          "type": "adjective"
+        },
+        {
+          "german": "besorgt",
+          "arabic": "inquiet",
+          "example": "Ich bin besorgt.",
+          "exampleArabic": "Je suis inquiet.",
+          "type": "adjective"
+        },
+        {
+          "german": "aufgeregt",
+          "arabic": "excité, nerveux",
+          "example": "Sie ist sehr aufgeregt.",
+          "exampleArabic": "Elle est très excitée.",
+          "type": "adjective"
+        },
+        {
+          "german": "erleichtert",
+          "arabic": "soulagé",
+          "example": "Ich bin erleichtert.",
+          "exampleArabic": "Je suis soulagé.",
+          "type": "adjective"
+        },
+        {
+          "german": "Quatsch!",
+          "arabic": "n'importe quoi !",
+          "example": "Das ist Quatsch!",
+          "exampleArabic": "C'est n'importe quoi !",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7882,6 +7979,127 @@
             "id": "a2-12-q10",
             "question": "Complète : \"Ich trinke ___ Tee als Kaffee.\" (je préfère)",
             "answer": "lieber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q11",
+            "question": "Que signifie « zustimmen » ?",
+            "options": [
+              "refuser",
+              "être d'accord",
+              "douter",
+              "prétendre"
+            ],
+            "answer": "être d'accord"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q12",
+            "question": "Complète : « Mach dir keine ___! » (soucis)",
+            "answer": "Sorgen",
+            "hint": "mot au pluriel"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q13",
+            "question": "Comment exprimer la satisfaction ?",
+            "options": [
+              "Ich bin enttäuscht.",
+              "Ich bin zufrieden.",
+              "Ich bin wütend.",
+              "Ich bin nervös."
+            ],
+            "answer": "Ich bin zufrieden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q14",
+            "question": "Complète : « Das ist eine gute ___. » (idée)",
+            "answer": "Idee",
+            "hint": "féminin"
+          },
+          {
+            "type": "matching",
+            "id": "a2-12-q15",
+            "question": "Associe le sentiment à son sens :",
+            "pairs": [
+              {
+                "left": "enttäuscht",
+                "right": "déçu"
+              },
+              {
+                "left": "zufrieden",
+                "right": "satisfait"
+              },
+              {
+                "left": "besorgt",
+                "right": "inquiet"
+              },
+              {
+                "left": "aufgeregt",
+                "right": "excité"
+              },
+              {
+                "left": "erleichtert",
+                "right": "soulagé"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q16",
+            "question": "Remets dans l'ordre : « Je suis très fier de mes enfants »",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "stolz",
+              "auf",
+              "meine",
+              "Kinder"
+            ],
+            "answer": "Ich bin sehr stolz auf meine Kinder"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-12-q17",
+            "question": "Dis en allemand : « Je suis enthousiaste pour le voyage en Allemagne »",
+            "answer": "Ich bin aufgeregt auf die Reise nach Deutschland"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q18",
+            "question": "Écoute : « Ich ___ dir zu. » (suis d'accord)",
+            "audioPrompt": "Ich stimme dir zu.",
+            "answer": "stimme",
+            "hint": "zustimmen est séparable"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q19",
+            "question": "Que signifie « Quatsch! » ?",
+            "options": [
+              "Félicitations !",
+              "N'importe quoi !",
+              "Exactement !",
+              "Vraiment ?"
+            ],
+            "answer": "N'importe quoi !"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q20",
+            "question": "Remets dans l'ordre : « Que penses-tu de cette idée ? »",
+            "words": [
+              "Was",
+              "denkst",
+              "du",
+              "über",
+              "diese",
+              "Idee"
+            ],
+            "answer": "Was denkst du über diese Idee"
           }
         ]
       }

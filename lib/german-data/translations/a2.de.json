@@ -7766,6 +7766,103 @@
           "example": "Genau!",
           "exampleArabic": "Genau!",
           "type": "adverb"
+        },
+        {
+          "german": "die Idee",
+          "arabic": "Gedanke, Einfall",
+          "gender": "die",
+          "plural": "Ideen",
+          "example": "Eine gute Idee!",
+          "exampleArabic": "Konzept oder Vorschlag.",
+          "type": "noun"
+        },
+        {
+          "german": "das Gefühl",
+          "arabic": "innere Empfindung",
+          "gender": "das",
+          "plural": "Gefühle",
+          "example": "Ich habe ein gutes Gefühl.",
+          "exampleArabic": "Emotion oder Eindruck.",
+          "type": "noun"
+        },
+        {
+          "german": "die Sorge",
+          "arabic": "ängstliches Denken an etwas",
+          "gender": "die",
+          "plural": "Sorgen",
+          "example": "Mach dir keine Sorgen!",
+          "exampleArabic": "Beunruhigung.",
+          "type": "noun"
+        },
+        {
+          "german": "zu|stimmen",
+          "arabic": "der Meinung eines anderen sein",
+          "example": "Ich stimme dir zu.",
+          "exampleArabic": "Trennbares Verb mit Dativ.",
+          "type": "verb"
+        },
+        {
+          "german": "ab|lehnen",
+          "arabic": "Nein sagen, nicht akzeptieren",
+          "example": "Ich lehne das ab.",
+          "exampleArabic": "Trennbares Verb der Verneinung.",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "fest sagen, ohne zu beweisen",
+          "example": "Er behauptet, dass er Recht hat.",
+          "exampleArabic": "Verb der Aussage.",
+          "type": "verb"
+        },
+        {
+          "german": "zweifeln",
+          "arabic": "nicht sicher sein",
+          "example": "Ich zweifle daran.",
+          "exampleArabic": "Mit an + Dativ.",
+          "type": "verb"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "negative Gefühle nach Hoffnung",
+          "example": "Ich bin enttäuscht.",
+          "exampleArabic": "Adjektiv der Emotion.",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "froh über die Situation",
+          "example": "Ich bin zufrieden.",
+          "exampleArabic": "Positives Gefühl.",
+          "type": "adjective"
+        },
+        {
+          "german": "besorgt",
+          "arabic": "voller Sorgen",
+          "example": "Ich bin besorgt.",
+          "exampleArabic": "Adjektiv der Sorge.",
+          "type": "adjective"
+        },
+        {
+          "german": "aufgeregt",
+          "arabic": "innerlich nervös oder gespannt",
+          "example": "Sie ist sehr aufgeregt.",
+          "exampleArabic": "Vor wichtigen Ereignissen.",
+          "type": "adjective"
+        },
+        {
+          "german": "erleichtert",
+          "arabic": "froh, dass etwas vorbei ist",
+          "example": "Ich bin erleichtert.",
+          "exampleArabic": "Nach Sorge oder Stress.",
+          "type": "adjective"
+        },
+        {
+          "german": "Quatsch!",
+          "arabic": "Unsinn, Blödsinn",
+          "example": "Das ist Quatsch!",
+          "exampleArabic": "Umgangssprachlicher Ausruf.",
+          "type": "phrase"
         }
       ],
       "exercise": {
@@ -7882,6 +7979,127 @@
             "id": "a2-12-q10",
             "question": "Ergänze: \"Ich trinke ___ Tee als Kaffee.\" (lieber)",
             "answer": "lieber"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q11",
+            "question": "Was bedeutet „zustimmen\"?",
+            "options": [
+              "ablehnen",
+              "der Meinung sein",
+              "zweifeln",
+              "behaupten"
+            ],
+            "answer": "der Meinung sein"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q12",
+            "question": "Ergänze: „Mach dir keine ___!\" (Sorgen)",
+            "answer": "Sorgen",
+            "hint": "Pluralwort"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q13",
+            "question": "Wie drückt man Zufriedenheit aus?",
+            "options": [
+              "Ich bin enttäuscht.",
+              "Ich bin zufrieden.",
+              "Ich bin wütend.",
+              "Ich bin nervös."
+            ],
+            "answer": "Ich bin zufrieden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q14",
+            "question": "Ergänze: „Das ist eine gute ___.\" (Idee)",
+            "answer": "Idee",
+            "hint": "feminin"
+          },
+          {
+            "type": "matching",
+            "id": "a2-12-q15",
+            "question": "Verbinde das Gefühl mit der Bedeutung:",
+            "pairs": [
+              {
+                "left": "enttäuscht",
+                "right": "negative Gefühle nach Hoffnung"
+              },
+              {
+                "left": "zufrieden",
+                "right": "froh mit der Situation"
+              },
+              {
+                "left": "besorgt",
+                "right": "voller Sorgen"
+              },
+              {
+                "left": "aufgeregt",
+                "right": "innerlich nervös"
+              },
+              {
+                "left": "erleichtert",
+                "right": "Sorgen sind weg"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q16",
+            "question": "Ordne: „Ich bin sehr stolz auf meine Kinder\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "stolz",
+              "auf",
+              "meine",
+              "Kinder"
+            ],
+            "answer": "Ich bin sehr stolz auf meine Kinder"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-12-q17",
+            "question": "Sag auf Deutsch: „Ich bin aufgeregt auf die Reise nach Deutschland\"",
+            "answer": "Ich bin aufgeregt auf die Reise nach Deutschland"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-12-q18",
+            "question": "Hör zu: „Ich ___ dir zu.\" (zustimmen)",
+            "audioPrompt": "Ich stimme dir zu.",
+            "answer": "stimme",
+            "hint": "zustimmen ist trennbar"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-12-q19",
+            "question": "Was bedeutet „Quatsch!\"?",
+            "options": [
+              "Glückwunsch!",
+              "Unsinn!",
+              "Genau!",
+              "Wirklich?"
+            ],
+            "answer": "Unsinn!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-12-q20",
+            "question": "Ordne: „Was denkst du über diese Idee?\"",
+            "words": [
+              "Was",
+              "denkst",
+              "du",
+              "über",
+              "diese",
+              "Idee"
+            ],
+            "answer": "Was denkst du über diese Idee"
           }
         ]
       }
