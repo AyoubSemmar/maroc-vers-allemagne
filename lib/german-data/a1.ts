@@ -2983,6 +2983,9 @@ export const A1: Level = {
         { german: 'auf|machen', arabic: 'يفتح',     example: 'Mach das Fenster auf!',   exampleArabic: 'افتح النافذة!',      type: 'verb' },
         { german: 'zu|machen', arabic: 'يغلق',      example: 'Mach die Tür zu!',         exampleArabic: 'أغلق الباب!',        type: 'verb' },
         { german: 'Achtung!',  arabic: 'انتبه!',    example: 'Achtung, ein Auto!',      exampleArabic: 'انتبه، سيارة!',     type: 'phrase' },
+        { german: 'fragen',    arabic: 'يسأل',      example: 'Frag den Lehrer!',         exampleArabic: 'اسأل المعلّم!',      type: 'verb' },
+        { german: 'antworten', arabic: 'يُجيب',     example: 'Antworte bitte!',          exampleArabic: 'أجب من فضلك!',       type: 'verb' },
+        { german: 'mit|kommen', arabic: 'يأتي مع',  example: 'Komm mit!',                exampleArabic: 'تعال معنا!',         type: 'verb' },
       ],
       exercise: {
         questions: [

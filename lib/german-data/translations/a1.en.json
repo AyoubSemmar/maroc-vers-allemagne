@@ -9188,36 +9188,136 @@
         "tables": [
           {
             "title": "Imperative forms of common verbs",
-            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "headers": [
+              "Infinitiv",
+              "du",
+              "ihr",
+              "Sie"
+            ],
             "rows": [
-              { "cells": ["kommen", "Komm!", "Kommt!", "Kommen Sie!"] },
-              { "cells": ["gehen", "Geh!", "Geht!", "Gehen Sie!"] },
-              { "cells": ["warten", "Warte!", "Wartet!", "Warten Sie!"] },
-              { "cells": ["hören", "Hör!", "Hört!", "Hören Sie!"] },
-              { "cells": ["sprechen", "Sprich!", "Sprecht!", "Sprechen Sie!"], "highlight": true },
-              { "cells": ["lesen", "Lies!", "Lest!", "Lesen Sie!"], "highlight": true },
-              { "cells": ["nehmen", "Nimm!", "Nehmt!", "Nehmen Sie!"], "highlight": true },
-              { "cells": ["fahren", "Fahr!", "Fahrt!", "Fahren Sie!"] }
+              {
+                "cells": [
+                  "kommen",
+                  "Komm!",
+                  "Kommt!",
+                  "Kommen Sie!"
+                ]
+              },
+              {
+                "cells": [
+                  "gehen",
+                  "Geh!",
+                  "Geht!",
+                  "Gehen Sie!"
+                ]
+              },
+              {
+                "cells": [
+                  "warten",
+                  "Warte!",
+                  "Wartet!",
+                  "Warten Sie!"
+                ]
+              },
+              {
+                "cells": [
+                  "hören",
+                  "Hör!",
+                  "Hört!",
+                  "Hören Sie!"
+                ]
+              },
+              {
+                "cells": [
+                  "sprechen",
+                  "Sprich!",
+                  "Sprecht!",
+                  "Sprechen Sie!"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "lesen",
+                  "Lies!",
+                  "Lest!",
+                  "Lesen Sie!"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "nehmen",
+                  "Nimm!",
+                  "Nehmt!",
+                  "Nehmen Sie!"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "fahren",
+                  "Fahr!",
+                  "Fahrt!",
+                  "Fahren Sie!"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "Highlighted verbs (sprechen, lesen, nehmen) keep their stem change in the du form."
           },
           {
             "title": "sein and haben in the imperative (irregular)",
-            "headers": ["Infinitiv", "du", "ihr", "Sie"],
+            "headers": [
+              "Infinitiv",
+              "du",
+              "ihr",
+              "Sie"
+            ],
             "rows": [
-              { "cells": ["sein", "Sei!", "Seid!", "Seien Sie!"], "highlight": true },
-              { "cells": ["haben", "Hab!", "Habt!", "Haben Sie!"] }
+              {
+                "cells": [
+                  "sein",
+                  "Sei!",
+                  "Seid!",
+                  "Seien Sie!"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "haben",
+                  "Hab!",
+                  "Habt!",
+                  "Haben Sie!"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "Memorize Sei! and Seien Sie! — two very common forms (Sei vorsichtig! / Seien Sie ruhig!)."
           }
         ],
         "rules": [
-          { "rule": "In the imperative, the pronoun du is dropped. Just verb + (complement) + exclamation mark.", "example": "Komm hier! (not Du komm hier!)", "translation": "Come here!" },
-          { "rule": "The polite Sie form always keeps the pronoun Sie at the end.", "example": "Kommen Sie bitte! / Hören Sie zu!", "translation": "Please come! / Listen!" },
-          { "rule": "The word bitte (please) makes the imperative polite. Place it at the end or after the verb.", "example": "Komm bitte! / Bitte komm!", "translation": "Please come!" },
-          { "rule": "Stem-changing verbs e → i / e → ie keep the change only in the du form.", "example": "Sprich langsamer, bitte! (sprechen → Sprich)", "translation": "Speak more slowly, please!" }
+          {
+            "rule": "In the imperative, the pronoun du is dropped. Just verb + (complement) + exclamation mark.",
+            "example": "Komm hier! (not Du komm hier!)",
+            "translation": "Come here!"
+          },
+          {
+            "rule": "The polite Sie form always keeps the pronoun Sie at the end.",
+            "example": "Kommen Sie bitte! / Hören Sie zu!",
+            "translation": "Please come! / Listen!"
+          },
+          {
+            "rule": "The word bitte (please) makes the imperative polite. Place it at the end or after the verb.",
+            "example": "Komm bitte! / Bitte komm!",
+            "translation": "Please come!"
+          },
+          {
+            "rule": "Stem-changing verbs e → i / e → ie keep the change only in the du form.",
+            "example": "Sprich langsamer, bitte! (sprechen → Sprich)",
+            "translation": "Speak more slowly, please!"
+          }
         ],
         "examples": [
           "Komm hier! — Come here!",
@@ -9232,71 +9332,475 @@
         "tip": "In ads and shops, the Sie form is the rule. With friends use du. With a group of friends use ihr. Don't mix them up!"
       },
       "vocabulary": [
-        { "german": "kommen", "arabic": "come", "example": "Komm hierher!", "exampleArabic": "Come here!", "type": "verb" },
-        { "german": "gehen", "arabic": "go", "example": "Geh nach Hause!", "exampleArabic": "Go home!", "type": "verb" },
-        { "german": "warten", "arabic": "wait", "example": "Warte einen Moment!", "exampleArabic": "Wait a moment!", "type": "verb" },
-        { "german": "hören", "arabic": "listen / hear", "example": "Hör zu, bitte!", "exampleArabic": "Listen, please!", "type": "verb" },
-        { "german": "zuhören", "arabic": "listen carefully", "example": "Hör mir zu!", "exampleArabic": "Listen to me!", "type": "verb" },
-        { "german": "sprechen", "arabic": "speak", "example": "Sprich lauter!", "exampleArabic": "Speak louder!", "type": "verb" },
-        { "german": "lesen", "arabic": "read", "example": "Lies das, bitte!", "exampleArabic": "Read this, please!", "type": "verb" },
-        { "german": "nehmen", "arabic": "take", "example": "Nimm den Bus!", "exampleArabic": "Take the bus!", "type": "verb" },
-        { "german": "geben", "arabic": "give", "example": "Gib mir das Buch!", "exampleArabic": "Give me the book!", "type": "verb" },
-        { "german": "fahren", "arabic": "drive / travel", "example": "Fahr vorsichtig!", "exampleArabic": "Drive carefully!", "type": "verb" },
-        { "german": "essen", "arabic": "eat", "example": "Iss langsam!", "exampleArabic": "Eat slowly!", "type": "verb" },
-        { "german": "trinken", "arabic": "drink", "example": "Trink Wasser!", "exampleArabic": "Drink water!", "type": "verb" },
-        { "german": "sein", "arabic": "be", "example": "Sei ruhig!", "exampleArabic": "Be quiet!", "type": "verb" },
-        { "german": "sich setzen", "arabic": "sit down", "example": "Setz dich!", "exampleArabic": "Sit down!", "type": "verb" },
-        { "german": "aufstehen", "arabic": "get up", "example": "Steh auf!", "exampleArabic": "Stand up!", "type": "verb" },
-        { "german": "aufpassen", "arabic": "watch out / pay attention", "example": "Pass auf!", "exampleArabic": "Watch out!", "type": "verb" },
-        { "german": "wiederholen", "arabic": "repeat", "example": "Wiederholen Sie, bitte!", "exampleArabic": "Repeat, please!", "type": "verb" },
-        { "german": "helfen", "arabic": "help", "example": "Hilf mir!", "exampleArabic": "Help me!", "type": "verb" },
-        { "german": "bitte", "arabic": "please", "example": "Komm bitte!", "exampleArabic": "Please come!", "type": "adverb" },
-        { "german": "langsam", "arabic": "slowly", "example": "Sprich langsam!", "exampleArabic": "Speak slowly!", "type": "adverb" },
-        { "german": "schnell", "arabic": "fast / quickly", "example": "Komm schnell!", "exampleArabic": "Come quickly!", "type": "adverb" },
-        { "german": "leise", "arabic": "quietly", "example": "Sprich leise!", "exampleArabic": "Speak quietly!", "type": "adverb" },
-        { "german": "laut", "arabic": "loudly", "example": "Sprich lauter!", "exampleArabic": "Speak louder!", "type": "adverb" },
-        { "german": "vorsichtig", "arabic": "careful", "example": "Fahr vorsichtig!", "exampleArabic": "Drive carefully!", "type": "adjective" },
-        { "german": "ruhig", "arabic": "calm / quiet", "example": "Sei ruhig!", "exampleArabic": "Be quiet!", "type": "adjective" },
-        { "german": "der Platz", "arabic": "place / seat", "example": "Nehmen Sie Platz!", "exampleArabic": "Have a seat!", "type": "noun", "gender": "der", "plural": "die Plätze" },
-        { "german": "der Moment", "arabic": "moment", "example": "Einen Moment, bitte!", "exampleArabic": "One moment, please!", "type": "noun", "gender": "der" },
-        { "german": "die Tür", "arabic": "door", "example": "Mach die Tür zu!", "exampleArabic": "Close the door!", "type": "noun", "gender": "die", "plural": "die Türen" },
-        { "german": "das Fenster", "arabic": "window", "example": "Öffne das Fenster!", "exampleArabic": "Open the window!", "type": "noun", "gender": "das", "plural": "die Fenster" },
-        { "german": "auf|machen", "arabic": "open", "example": "Mach das Fenster auf!", "exampleArabic": "Open the window!", "type": "verb" },
-        { "german": "zu|machen", "arabic": "close", "example": "Mach die Tür zu!", "exampleArabic": "Close the door!", "type": "verb" },
-        { "german": "Achtung!", "arabic": "Look out!", "example": "Achtung, ein Auto!", "exampleArabic": "Watch out, a car!", "type": "phrase" }
+        {
+          "german": "kommen",
+          "arabic": "come",
+          "example": "Komm hierher!",
+          "exampleArabic": "Come here!",
+          "type": "verb"
+        },
+        {
+          "german": "gehen",
+          "arabic": "go",
+          "example": "Geh nach Hause!",
+          "exampleArabic": "Go home!",
+          "type": "verb"
+        },
+        {
+          "german": "warten",
+          "arabic": "wait",
+          "example": "Warte einen Moment!",
+          "exampleArabic": "Wait a moment!",
+          "type": "verb"
+        },
+        {
+          "german": "hören",
+          "arabic": "listen / hear",
+          "example": "Hör zu, bitte!",
+          "exampleArabic": "Listen, please!",
+          "type": "verb"
+        },
+        {
+          "german": "zuhören",
+          "arabic": "listen carefully",
+          "example": "Hör mir zu!",
+          "exampleArabic": "Listen to me!",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen",
+          "arabic": "speak",
+          "example": "Sprich lauter!",
+          "exampleArabic": "Speak louder!",
+          "type": "verb"
+        },
+        {
+          "german": "lesen",
+          "arabic": "read",
+          "example": "Lies das, bitte!",
+          "exampleArabic": "Read this, please!",
+          "type": "verb"
+        },
+        {
+          "german": "nehmen",
+          "arabic": "take",
+          "example": "Nimm den Bus!",
+          "exampleArabic": "Take the bus!",
+          "type": "verb"
+        },
+        {
+          "german": "geben",
+          "arabic": "give",
+          "example": "Gib mir das Buch!",
+          "exampleArabic": "Give me the book!",
+          "type": "verb"
+        },
+        {
+          "german": "fahren",
+          "arabic": "drive / travel",
+          "example": "Fahr vorsichtig!",
+          "exampleArabic": "Drive carefully!",
+          "type": "verb"
+        },
+        {
+          "german": "essen",
+          "arabic": "eat",
+          "example": "Iss langsam!",
+          "exampleArabic": "Eat slowly!",
+          "type": "verb"
+        },
+        {
+          "german": "trinken",
+          "arabic": "drink",
+          "example": "Trink Wasser!",
+          "exampleArabic": "Drink water!",
+          "type": "verb"
+        },
+        {
+          "german": "sein",
+          "arabic": "be",
+          "example": "Sei ruhig!",
+          "exampleArabic": "Be quiet!",
+          "type": "verb"
+        },
+        {
+          "german": "sich setzen",
+          "arabic": "sit down",
+          "example": "Setz dich!",
+          "exampleArabic": "Sit down!",
+          "type": "verb"
+        },
+        {
+          "german": "aufstehen",
+          "arabic": "get up",
+          "example": "Steh auf!",
+          "exampleArabic": "Stand up!",
+          "type": "verb"
+        },
+        {
+          "german": "aufpassen",
+          "arabic": "watch out / pay attention",
+          "example": "Pass auf!",
+          "exampleArabic": "Watch out!",
+          "type": "verb"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "repeat",
+          "example": "Wiederholen Sie, bitte!",
+          "exampleArabic": "Repeat, please!",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "help",
+          "example": "Hilf mir!",
+          "exampleArabic": "Help me!",
+          "type": "verb"
+        },
+        {
+          "german": "bitte",
+          "arabic": "please",
+          "example": "Komm bitte!",
+          "exampleArabic": "Please come!",
+          "type": "adverb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "slowly",
+          "example": "Sprich langsam!",
+          "exampleArabic": "Speak slowly!",
+          "type": "adverb"
+        },
+        {
+          "german": "schnell",
+          "arabic": "fast / quickly",
+          "example": "Komm schnell!",
+          "exampleArabic": "Come quickly!",
+          "type": "adverb"
+        },
+        {
+          "german": "leise",
+          "arabic": "quietly",
+          "example": "Sprich leise!",
+          "exampleArabic": "Speak quietly!",
+          "type": "adverb"
+        },
+        {
+          "german": "laut",
+          "arabic": "loudly",
+          "example": "Sprich lauter!",
+          "exampleArabic": "Speak louder!",
+          "type": "adverb"
+        },
+        {
+          "german": "vorsichtig",
+          "arabic": "careful",
+          "example": "Fahr vorsichtig!",
+          "exampleArabic": "Drive carefully!",
+          "type": "adjective"
+        },
+        {
+          "german": "ruhig",
+          "arabic": "calm / quiet",
+          "example": "Sei ruhig!",
+          "exampleArabic": "Be quiet!",
+          "type": "adjective"
+        },
+        {
+          "german": "der Platz",
+          "arabic": "place / seat",
+          "example": "Nehmen Sie Platz!",
+          "exampleArabic": "Have a seat!",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Plätze"
+        },
+        {
+          "german": "der Moment",
+          "arabic": "moment",
+          "example": "Einen Moment, bitte!",
+          "exampleArabic": "One moment, please!",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Tür",
+          "arabic": "door",
+          "example": "Mach die Tür zu!",
+          "exampleArabic": "Close the door!",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Türen"
+        },
+        {
+          "german": "das Fenster",
+          "arabic": "window",
+          "example": "Öffne das Fenster!",
+          "exampleArabic": "Open the window!",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Fenster"
+        },
+        {
+          "german": "auf|machen",
+          "arabic": "open",
+          "example": "Mach das Fenster auf!",
+          "exampleArabic": "Open the window!",
+          "type": "verb"
+        },
+        {
+          "german": "zu|machen",
+          "arabic": "close",
+          "example": "Mach die Tür zu!",
+          "exampleArabic": "Close the door!",
+          "type": "verb"
+        },
+        {
+          "german": "Achtung!",
+          "arabic": "Look out!",
+          "example": "Achtung, ein Auto!",
+          "exampleArabic": "Watch out, a car!",
+          "type": "phrase"
+        },
+        {
+          "german": "fragen",
+          "arabic": "to ask",
+          "example": "Frag den Lehrer!",
+          "exampleArabic": "Ask the teacher!",
+          "type": "verb"
+        },
+        {
+          "german": "antworten",
+          "arabic": "to answer",
+          "example": "Antworte bitte!",
+          "exampleArabic": "Please answer!",
+          "type": "verb"
+        },
+        {
+          "german": "mit|kommen",
+          "arabic": "to come along",
+          "example": "Komm mit!",
+          "exampleArabic": "Come with us!",
+          "type": "verb"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-15-q1", "question": "Imperative form of du for kommen? \"___!\"", "answer": "Komm", "hint": "kommen → Komm! (without -st)" },
-          { "type": "multiple-choice", "id": "a1-15-q2", "question": "How do you say \"Speak!\" to a friend?", "options": ["Spricht!", "Sprich!", "Sprech!", "Sprechen!"], "answer": "Sprich!" },
-          { "type": "fill-blank", "id": "a1-15-q3", "question": "Polite imperative of helfen? \"___ Sie mir!\"", "answer": "Helfen", "hint": "Sie form + pronoun Sie" },
-          { "type": "multiple-choice", "id": "a1-15-q4", "question": "Imperative of sein with du?", "options": ["Bin!", "Bist!", "Sei!", "Seid!"], "answer": "Sei!" },
-          { "type": "fill-blank", "id": "a1-15-q5", "question": "To a group of friends, how do you say \"Read the book!\"? \"___ das Buch!\"", "answer": "Lest", "hint": "lesen → ihr Lest!" },
-          { "type": "matching", "id": "a1-15-q6", "question": "Match the imperative with its form:", "pairs": [
-            { "left": "Komm!", "right": "for du" },
-            { "left": "Kommt!", "right": "for ihr" },
-            { "left": "Kommen Sie!", "right": "for Sie" },
-            { "left": "Sei ruhig!", "right": "Be quiet!" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-15-q7", "question": "Order: \"Come quickly please!\"", "words": ["Komm", "bitte", "schnell"], "answer": "Komm bitte schnell" },
-          { "type": "speaking", "id": "a1-15-q8", "question": "Say politely in German: \"Repeat please\"", "answer": "Wiederholen Sie bitte" },
-          { "type": "fill-blank", "id": "a1-15-q9", "question": "Listen and complete: \"___ Sie Platz, bitte!\" (Have a seat)", "audioPrompt": "Nehmen Sie Platz, bitte!", "answer": "Nehmen", "hint": "nehmen in the Sie form" },
-          { "type": "multiple-choice", "id": "a1-15-q10", "question": "Which is the correct ihr imperative of warten?", "options": ["Wart!", "Wartest!", "Wartet!", "Warten!"], "answer": "Wartet!" },
-          { "type": "fill-blank", "id": "a1-15-q11", "question": "Imperativ for du of lesen? \"___!\"", "answer": "Lies", "hint": "lesen → Lies! (e→ie change)" },
-          { "type": "multiple-choice", "id": "a1-15-q12", "question": "Polite imperative of kommen?", "options": ["Komm!", "Kommt!", "Kommen Sie!", "Du kommst!"], "answer": "Kommen Sie!" },
-          { "type": "fill-blank", "id": "a1-15-q13", "question": "\"___ vorsichtig!\" (sein → du)", "answer": "Sei", "hint": "sein → Sei!" },
-          { "type": "matching", "id": "a1-15-q14", "question": "Match the verb to its du imperative:", "pairs": [
-            { "left": "sprechen", "right": "Sprich!" },
-            { "left": "nehmen", "right": "Nimm!" },
-            { "left": "lesen", "right": "Lies!" },
-            { "left": "sein", "right": "Sei!" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-15-q15", "question": "Order: \"Open the window please\" (du)", "words": ["Mach", "das", "Fenster", "bitte", "auf"], "answer": "Mach das Fenster bitte auf" },
-          { "type": "fill-blank", "id": "a1-15-q16", "question": "Listen: \"___ leise, bitte!\" (Speak quietly)", "audioPrompt": "Sprich leise, bitte!", "answer": "Sprich", "hint": "sprechen → Sprich" },
-          { "type": "multiple-choice", "id": "a1-15-q17", "question": "In ads and shops, we use the form:", "options": ["du", "ihr", "Sie", "wir"], "answer": "Sie" },
-          { "type": "speaking", "id": "a1-15-q18", "question": "Say to a group of friends: \"Read the book!\"", "answer": "Lest das Buch" },
-          { "type": "fill-blank", "id": "a1-15-q19", "question": "\"___ Sie mir, bitte!\" (helfen → Sie)", "answer": "Helfen", "hint": "Sie form of helfen" },
-          { "type": "multiple-choice", "id": "a1-15-q20", "question": "The polite phrase to ask someone to sit:", "options": ["Setz dich!", "Setzt euch!", "Nehmen Sie Platz!", "Sitz!"], "answer": "Nehmen Sie Platz!" }
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q1",
+            "question": "Imperative form of du for kommen? \"___!\"",
+            "answer": "Komm",
+            "hint": "kommen → Komm! (without -st)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q2",
+            "question": "How do you say \"Speak!\" to a friend?",
+            "options": [
+              "Spricht!",
+              "Sprich!",
+              "Sprech!",
+              "Sprechen!"
+            ],
+            "answer": "Sprich!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q3",
+            "question": "Polite imperative of helfen? \"___ Sie mir!\"",
+            "answer": "Helfen",
+            "hint": "Sie form + pronoun Sie"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q4",
+            "question": "Imperative of sein with du?",
+            "options": [
+              "Bin!",
+              "Bist!",
+              "Sei!",
+              "Seid!"
+            ],
+            "answer": "Sei!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q5",
+            "question": "To a group of friends, how do you say \"Read the book!\"? \"___ das Buch!\"",
+            "answer": "Lest",
+            "hint": "lesen → ihr Lest!"
+          },
+          {
+            "type": "matching",
+            "id": "a1-15-q6",
+            "question": "Match the imperative with its form:",
+            "pairs": [
+              {
+                "left": "Komm!",
+                "right": "for du"
+              },
+              {
+                "left": "Kommt!",
+                "right": "for ihr"
+              },
+              {
+                "left": "Kommen Sie!",
+                "right": "for Sie"
+              },
+              {
+                "left": "Sei ruhig!",
+                "right": "Be quiet!"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-15-q7",
+            "question": "Order: \"Come quickly please!\"",
+            "words": [
+              "Komm",
+              "bitte",
+              "schnell"
+            ],
+            "answer": "Komm bitte schnell"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-15-q8",
+            "question": "Say politely in German: \"Repeat please\"",
+            "answer": "Wiederholen Sie bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q9",
+            "question": "Listen and complete: \"___ Sie Platz, bitte!\" (Have a seat)",
+            "audioPrompt": "Nehmen Sie Platz, bitte!",
+            "answer": "Nehmen",
+            "hint": "nehmen in the Sie form"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q10",
+            "question": "Which is the correct ihr imperative of warten?",
+            "options": [
+              "Wart!",
+              "Wartest!",
+              "Wartet!",
+              "Warten!"
+            ],
+            "answer": "Wartet!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q11",
+            "question": "Imperativ for du of lesen? \"___!\"",
+            "answer": "Lies",
+            "hint": "lesen → Lies! (e→ie change)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q12",
+            "question": "Polite imperative of kommen?",
+            "options": [
+              "Komm!",
+              "Kommt!",
+              "Kommen Sie!",
+              "Du kommst!"
+            ],
+            "answer": "Kommen Sie!"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q13",
+            "question": "\"___ vorsichtig!\" (sein → du)",
+            "answer": "Sei",
+            "hint": "sein → Sei!"
+          },
+          {
+            "type": "matching",
+            "id": "a1-15-q14",
+            "question": "Match the verb to its du imperative:",
+            "pairs": [
+              {
+                "left": "sprechen",
+                "right": "Sprich!"
+              },
+              {
+                "left": "nehmen",
+                "right": "Nimm!"
+              },
+              {
+                "left": "lesen",
+                "right": "Lies!"
+              },
+              {
+                "left": "sein",
+                "right": "Sei!"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-15-q15",
+            "question": "Order: \"Open the window please\" (du)",
+            "words": [
+              "Mach",
+              "das",
+              "Fenster",
+              "bitte",
+              "auf"
+            ],
+            "answer": "Mach das Fenster bitte auf"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q16",
+            "question": "Listen: \"___ leise, bitte!\" (Speak quietly)",
+            "audioPrompt": "Sprich leise, bitte!",
+            "answer": "Sprich",
+            "hint": "sprechen → Sprich"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q17",
+            "question": "In ads and shops, we use the form:",
+            "options": [
+              "du",
+              "ihr",
+              "Sie",
+              "wir"
+            ],
+            "answer": "Sie"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-15-q18",
+            "question": "Say to a group of friends: \"Read the book!\"",
+            "answer": "Lest das Buch"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-15-q19",
+            "question": "\"___ Sie mir, bitte!\" (helfen → Sie)",
+            "answer": "Helfen",
+            "hint": "Sie form of helfen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-15-q20",
+            "question": "The polite phrase to ask someone to sit:",
+            "options": [
+              "Setz dich!",
+              "Setzt euch!",
+              "Nehmen Sie Platz!",
+              "Sitz!"
+            ],
+            "answer": "Nehmen Sie Platz!"
+          }
         ]
       }
     },
