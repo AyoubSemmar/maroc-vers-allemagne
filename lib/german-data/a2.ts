@@ -2852,6 +2852,10 @@ export const A2: Level = {
         { german: 'natürlich', arabic: 'طبعاً',           example: 'Natürlich helfe ich dir.',        exampleArabic: 'طبعاً أساعدك.',      type: 'adverb' },
         { german: 'sicher',    arabic: 'بالتأكيد',         example: 'Sicher kannst du kommen.',         exampleArabic: 'بالتأكيد يمكنك المجيء.', type: 'adverb' },
         { german: 'möglich',   arabic: 'ممكن',            example: 'Wäre das möglich?',                 exampleArabic: 'هل ذلك ممكن؟',     type: 'adjective' },
+        { german: 'der Gast', arabic: 'الضيف', gender: 'der', plural: 'Gäste', example: 'Wir haben Gäste.', exampleArabic: 'عندنا ضيوف.', type: 'noun' },
+        { german: 'das Trinkgeld', arabic: 'البقشيش', gender: 'das', plural: 'Trinkgelder', example: 'Das Trinkgeld ist freiwillig.', exampleArabic: 'البقشيش اختياري.', type: 'noun' },
+        { german: 'wünschen', arabic: 'يتمنّى', example: 'Was wünschen Sie?', exampleArabic: 'ماذا تتمنّون؟', type: 'verb' },
+        { german: 'dürfte', arabic: 'هل يسمح لي (مهذّب)', example: 'Dürfte ich Sie fragen?', exampleArabic: 'هل يسمح لي بسؤالكم؟', type: 'verb' },
       ],
       exercise: {
         questions: [

@@ -8888,38 +8888,134 @@
         "tables": [
           {
             "title": "La forme würde + Infinitiv (la plus utilisée)",
-            "headers": ["Pronom", "würde + ...", "Exemple"],
+            "headers": [
+              "Pronom",
+              "würde + ...",
+              "Exemple"
+            ],
             "rows": [
-              { "cells": ["ich", "würde", "Ich würde gern kommen."] },
-              { "cells": ["du", "würdest", "Würdest du mir helfen?"] },
-              { "cells": ["er/sie/es", "würde", "Sie würde gern bleiben."] },
-              { "cells": ["wir", "würden", "Wir würden gern bestellen."] },
-              { "cells": ["ihr", "würdet", "Würdet ihr kommen?"] },
-              { "cells": ["sie/Sie", "würden", "Würden Sie bitte warten?"] }
+              {
+                "cells": [
+                  "ich",
+                  "würde",
+                  "Ich würde gern kommen."
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "würdest",
+                  "Würdest du mir helfen?"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "würde",
+                  "Sie würde gern bleiben."
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "würden",
+                  "Wir würden gern bestellen."
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "würdet",
+                  "Würdet ihr kommen?"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "würden",
+                  "Würden Sie bitte warten?"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "würde + le verbe principal à l'infinitif à la fin."
           },
           {
             "title": "hätte et wäre — cas particuliers",
-            "headers": ["Pronom", "hätte (avoir, poli)", "wäre (être, poli)"],
+            "headers": [
+              "Pronom",
+              "hätte (avoir, poli)",
+              "wäre (être, poli)"
+            ],
             "rows": [
-              { "cells": ["ich", "hätte", "wäre"] },
-              { "cells": ["du", "hättest", "wärst (wärest)"] },
-              { "cells": ["er/sie/es", "hätte", "wäre"] },
-              { "cells": ["wir", "hätten", "wären"] },
-              { "cells": ["ihr", "hättet", "wärt (wäret)"] },
-              { "cells": ["sie/Sie", "hätten", "wären"] }
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "wäre"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "wärst (wärest)"
+                ]
+              },
+              {
+                "cells": [
+                  "er/sie/es",
+                  "hätte",
+                  "wäre"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "wären"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "wärt (wäret)"
+                ]
+              },
+              {
+                "cells": [
+                  "sie/Sie",
+                  "hätten",
+                  "wären"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "Utilise hätte gern (= je voudrais) et wäre gern (= je voudrais être)."
           }
         ],
         "rules": [
-          { "rule": "möchte est le Konjunktiv II de mögen — utilise-le dans les restaurants et les magasins.", "example": "Ich möchte ein Wasser, bitte.", "translation": "Je voudrais une eau, s'il vous plaît." },
-          { "rule": "würde + Infinitiv est la forme du Konjunktiv II la plus courante à l'oral.", "example": "Ich würde gern Deutschland besuchen.", "translation": "Je voudrais visiter l'Allemagne." },
-          { "rule": "hätte gern + nom = je voudrais ce truc-là (très poli pour commander).", "example": "Ich hätte gern einen Tisch am Fenster.", "translation": "Je voudrais une table près de la fenêtre." },
-          { "rule": "Utilisation de Könnten Sie...? et Würden Sie...? dans les questions polies.", "example": "Könnten Sie mir helfen? / Würden Sie das wiederholen?", "translation": "Pourriez-vous m'aider ? / Voudriez-vous répéter, s'il vous plaît ?" }
+          {
+            "rule": "möchte est le Konjunktiv II de mögen — utilise-le dans les restaurants et les magasins.",
+            "example": "Ich möchte ein Wasser, bitte.",
+            "translation": "Je voudrais une eau, s'il vous plaît."
+          },
+          {
+            "rule": "würde + Infinitiv est la forme du Konjunktiv II la plus courante à l'oral.",
+            "example": "Ich würde gern Deutschland besuchen.",
+            "translation": "Je voudrais visiter l'Allemagne."
+          },
+          {
+            "rule": "hätte gern + nom = je voudrais ce truc-là (très poli pour commander).",
+            "example": "Ich hätte gern einen Tisch am Fenster.",
+            "translation": "Je voudrais une table près de la fenêtre."
+          },
+          {
+            "rule": "Utilisation de Könnten Sie...? et Würden Sie...? dans les questions polies.",
+            "example": "Könnten Sie mir helfen? / Würden Sie das wiederholen?",
+            "translation": "Pourriez-vous m'aider ? / Voudriez-vous répéter, s'il vous plaît ?"
+          }
         ],
         "examples": [
           "Ich möchte einen Tisch reservieren. — Je voudrais réserver une table.",
@@ -8934,70 +9030,495 @@
         "tip": "Chaque fois que tu demandes quelque chose à un inconnu ou dans une situation formelle, utilise une forme polie. La différence entre « Ich will Wasser » (Je veux de l'eau) et « Ich möchte Wasser, bitte » (Je voudrais de l'eau, s'il vous plaît) est la différence entre la grossièreté et le respect."
       },
       "vocabulary": [
-        { "german": "möchten", "arabic": "voudrais", "example": "Ich möchte einen Kaffee.", "exampleArabic": "Je voudrais un café.", "type": "verb" },
-        { "german": "würden", "arabic": "voudrais (avec verbe)", "example": "Ich würde gern kommen.", "exampleArabic": "Je voudrais venir.", "type": "verb" },
-        { "german": "hätte", "arabic": "aurais (poli)", "example": "Ich hätte gern einen Tee.", "exampleArabic": "Je voudrais un thé.", "type": "verb" },
-        { "german": "wäre", "arabic": "serais (poli)", "example": "Wäre das möglich?", "exampleArabic": "Serait-ce possible ?", "type": "verb" },
-        { "german": "könnten", "arabic": "pourriez (poli)", "example": "Könnten Sie mir helfen?", "exampleArabic": "Pourriez-vous m'aider ?", "type": "verb" },
-        { "german": "gern", "arabic": "volontiers", "example": "Ich würde gern bleiben.", "exampleArabic": "Je voudrais rester.", "type": "adverb" },
-        { "german": "lieber", "arabic": "plutôt", "example": "Ich hätte lieber Tee.", "exampleArabic": "Je préférerais du thé.", "type": "adverb" },
-        { "german": "bitte", "arabic": "s'il vous plaît", "example": "Einen Kaffee, bitte.", "exampleArabic": "Un café, s'il vous plaît.", "type": "adverb" },
-        { "german": "vielleicht", "arabic": "peut-être", "example": "Vielleicht würde ich kommen.", "exampleArabic": "Peut-être viendrais-je.", "type": "adverb" },
-        { "german": "reservieren", "arabic": "réserver", "example": "Ich möchte einen Tisch reservieren.", "exampleArabic": "Je voudrais réserver une table.", "type": "verb" },
-        { "german": "bestellen", "arabic": "commander", "example": "Ich würde gern bestellen.", "exampleArabic": "Je voudrais commander.", "type": "verb" },
-        { "german": "wiederholen", "arabic": "répéter", "example": "Würden Sie das wiederholen?", "exampleArabic": "Voudriez-vous répéter ?", "type": "verb" },
-        { "german": "erklären", "arabic": "expliquer", "example": "Könnten Sie das erklären?", "exampleArabic": "Pourriez-vous expliquer cela ?", "type": "verb" },
-        { "german": "zeigen", "arabic": "montrer", "example": "Würden Sie mir das zeigen?", "exampleArabic": "Voudriez-vous me le montrer ?", "type": "verb" },
-        { "german": "öffnen", "arabic": "ouvrir", "example": "Könntest du das Fenster öffnen?", "exampleArabic": "Pourrais-tu ouvrir la fenêtre ?", "type": "verb" },
-        { "german": "schließen", "arabic": "fermer", "example": "Würden Sie die Tür schließen?", "exampleArabic": "Voudriez-vous fermer la porte ?", "type": "verb" },
-        { "german": "der Tisch", "arabic": "la table", "example": "Einen Tisch für zwei, bitte.", "exampleArabic": "Une table pour deux, s'il vous plaît.", "type": "noun", "gender": "der", "plural": "die Tische" },
-        { "german": "die Rechnung", "arabic": "l'addition / la facture", "example": "Die Rechnung, bitte.", "exampleArabic": "L'addition, s'il vous plaît.", "type": "noun", "gender": "die", "plural": "die Rechnungen" },
-        { "german": "die Speisekarte", "arabic": "la carte / le menu", "example": "Könnte ich die Speisekarte haben?", "exampleArabic": "Puis-je avoir la carte ?", "type": "noun", "gender": "die", "plural": "die Speisekarten" },
-        { "german": "die Bestellung", "arabic": "la commande", "example": "Eine Bestellung, bitte.", "exampleArabic": "Une commande, s'il vous plaît.", "type": "noun", "gender": "die", "plural": "die Bestellungen" },
-        { "german": "das Restaurant", "arabic": "le restaurant", "example": "Wir gehen ins Restaurant.", "exampleArabic": "Nous allons au restaurant.", "type": "noun", "gender": "das", "plural": "die Restaurants" },
-        { "german": "das Café", "arabic": "le café (lieu)", "example": "Ich gehe ins Café.", "exampleArabic": "Je vais au café.", "type": "noun", "gender": "das", "plural": "die Cafés" },
-        { "german": "der Kellner", "arabic": "le serveur", "example": "Der Kellner kommt gleich.", "exampleArabic": "Le serveur arrive tout de suite.", "type": "noun", "gender": "der", "plural": "die Kellner" },
-        { "german": "das Glas", "arabic": "le verre", "example": "Ein Glas Wasser, bitte.", "exampleArabic": "Un verre d'eau, s'il vous plaît.", "type": "noun", "gender": "das", "plural": "die Gläser" },
-        { "german": "die Flasche", "arabic": "la bouteille", "example": "Eine Flasche Wein, bitte.", "exampleArabic": "Une bouteille de vin, s'il vous plaît.", "type": "noun", "gender": "die", "plural": "die Flaschen" },
-        { "german": "die Tasse", "arabic": "la tasse", "example": "Eine Tasse Kaffee.", "exampleArabic": "Une tasse de café.", "type": "noun", "gender": "die", "plural": "die Tassen" },
-        { "german": "höflich", "arabic": "poli", "example": "Sei bitte höflich.", "exampleArabic": "Sois poli s'il te plaît.", "type": "adjective" },
-        { "german": "freundlich", "arabic": "aimable", "example": "Der Kellner war sehr freundlich.", "exampleArabic": "Le serveur était très aimable.", "type": "adjective" },
-        { "german": "natürlich", "arabic": "bien sûr", "example": "Natürlich helfe ich dir.", "exampleArabic": "Bien sûr je t'aide.", "type": "adverb" },
-        { "german": "sicher", "arabic": "sûrement", "example": "Sicher kannst du kommen.", "exampleArabic": "Tu peux sûrement venir.", "type": "adverb" },
-        { "german": "möglich", "arabic": "possible", "example": "Wäre das möglich?", "exampleArabic": "Serait-ce possible ?", "type": "adjective" }
+        {
+          "german": "möchten",
+          "arabic": "voudrais",
+          "example": "Ich möchte einen Kaffee.",
+          "exampleArabic": "Je voudrais un café.",
+          "type": "verb"
+        },
+        {
+          "german": "würden",
+          "arabic": "voudrais (avec verbe)",
+          "example": "Ich würde gern kommen.",
+          "exampleArabic": "Je voudrais venir.",
+          "type": "verb"
+        },
+        {
+          "german": "hätte",
+          "arabic": "aurais (poli)",
+          "example": "Ich hätte gern einen Tee.",
+          "exampleArabic": "Je voudrais un thé.",
+          "type": "verb"
+        },
+        {
+          "german": "wäre",
+          "arabic": "serais (poli)",
+          "example": "Wäre das möglich?",
+          "exampleArabic": "Serait-ce possible ?",
+          "type": "verb"
+        },
+        {
+          "german": "könnten",
+          "arabic": "pourriez (poli)",
+          "example": "Könnten Sie mir helfen?",
+          "exampleArabic": "Pourriez-vous m'aider ?",
+          "type": "verb"
+        },
+        {
+          "german": "gern",
+          "arabic": "volontiers",
+          "example": "Ich würde gern bleiben.",
+          "exampleArabic": "Je voudrais rester.",
+          "type": "adverb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "plutôt",
+          "example": "Ich hätte lieber Tee.",
+          "exampleArabic": "Je préférerais du thé.",
+          "type": "adverb"
+        },
+        {
+          "german": "bitte",
+          "arabic": "s'il vous plaît",
+          "example": "Einen Kaffee, bitte.",
+          "exampleArabic": "Un café, s'il vous plaît.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "peut-être",
+          "example": "Vielleicht würde ich kommen.",
+          "exampleArabic": "Peut-être viendrais-je.",
+          "type": "adverb"
+        },
+        {
+          "german": "reservieren",
+          "arabic": "réserver",
+          "example": "Ich möchte einen Tisch reservieren.",
+          "exampleArabic": "Je voudrais réserver une table.",
+          "type": "verb"
+        },
+        {
+          "german": "bestellen",
+          "arabic": "commander",
+          "example": "Ich würde gern bestellen.",
+          "exampleArabic": "Je voudrais commander.",
+          "type": "verb"
+        },
+        {
+          "german": "wiederholen",
+          "arabic": "répéter",
+          "example": "Würden Sie das wiederholen?",
+          "exampleArabic": "Voudriez-vous répéter ?",
+          "type": "verb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "example": "Könnten Sie das erklären?",
+          "exampleArabic": "Pourriez-vous expliquer cela ?",
+          "type": "verb"
+        },
+        {
+          "german": "zeigen",
+          "arabic": "montrer",
+          "example": "Würden Sie mir das zeigen?",
+          "exampleArabic": "Voudriez-vous me le montrer ?",
+          "type": "verb"
+        },
+        {
+          "german": "öffnen",
+          "arabic": "ouvrir",
+          "example": "Könntest du das Fenster öffnen?",
+          "exampleArabic": "Pourrais-tu ouvrir la fenêtre ?",
+          "type": "verb"
+        },
+        {
+          "german": "schließen",
+          "arabic": "fermer",
+          "example": "Würden Sie die Tür schließen?",
+          "exampleArabic": "Voudriez-vous fermer la porte ?",
+          "type": "verb"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "la table",
+          "example": "Einen Tisch für zwei, bitte.",
+          "exampleArabic": "Une table pour deux, s'il vous plaît.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "die Rechnung",
+          "arabic": "l'addition / la facture",
+          "example": "Die Rechnung, bitte.",
+          "exampleArabic": "L'addition, s'il vous plaît.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Rechnungen"
+        },
+        {
+          "german": "die Speisekarte",
+          "arabic": "la carte / le menu",
+          "example": "Könnte ich die Speisekarte haben?",
+          "exampleArabic": "Puis-je avoir la carte ?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Speisekarten"
+        },
+        {
+          "german": "die Bestellung",
+          "arabic": "la commande",
+          "example": "Eine Bestellung, bitte.",
+          "exampleArabic": "Une commande, s'il vous plaît.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bestellungen"
+        },
+        {
+          "german": "das Restaurant",
+          "arabic": "le restaurant",
+          "example": "Wir gehen ins Restaurant.",
+          "exampleArabic": "Nous allons au restaurant.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Restaurants"
+        },
+        {
+          "german": "das Café",
+          "arabic": "le café (lieu)",
+          "example": "Ich gehe ins Café.",
+          "exampleArabic": "Je vais au café.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Cafés"
+        },
+        {
+          "german": "der Kellner",
+          "arabic": "le serveur",
+          "example": "Der Kellner kommt gleich.",
+          "exampleArabic": "Le serveur arrive tout de suite.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Kellner"
+        },
+        {
+          "german": "das Glas",
+          "arabic": "le verre",
+          "example": "Ein Glas Wasser, bitte.",
+          "exampleArabic": "Un verre d'eau, s'il vous plaît.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Gläser"
+        },
+        {
+          "german": "die Flasche",
+          "arabic": "la bouteille",
+          "example": "Eine Flasche Wein, bitte.",
+          "exampleArabic": "Une bouteille de vin, s'il vous plaît.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Flaschen"
+        },
+        {
+          "german": "die Tasse",
+          "arabic": "la tasse",
+          "example": "Eine Tasse Kaffee.",
+          "exampleArabic": "Une tasse de café.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tassen"
+        },
+        {
+          "german": "höflich",
+          "arabic": "poli",
+          "example": "Sei bitte höflich.",
+          "exampleArabic": "Sois poli s'il te plaît.",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "aimable",
+          "example": "Der Kellner war sehr freundlich.",
+          "exampleArabic": "Le serveur était très aimable.",
+          "type": "adjective"
+        },
+        {
+          "german": "natürlich",
+          "arabic": "bien sûr",
+          "example": "Natürlich helfe ich dir.",
+          "exampleArabic": "Bien sûr je t'aide.",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "sûrement",
+          "example": "Sicher kannst du kommen.",
+          "exampleArabic": "Tu peux sûrement venir.",
+          "type": "adverb"
+        },
+        {
+          "german": "möglich",
+          "arabic": "possible",
+          "example": "Wäre das möglich?",
+          "exampleArabic": "Serait-ce possible ?",
+          "type": "adjective"
+        },
+        {
+          "german": "der Gast",
+          "arabic": "l'invité, le client",
+          "gender": "der",
+          "plural": "Gäste",
+          "example": "Wir haben Gäste.",
+          "exampleArabic": "Nous avons des invités.",
+          "type": "noun"
+        },
+        {
+          "german": "das Trinkgeld",
+          "arabic": "le pourboire",
+          "gender": "das",
+          "plural": "Trinkgelder",
+          "example": "Das Trinkgeld ist freiwillig.",
+          "exampleArabic": "Le pourboire est facultatif.",
+          "type": "noun"
+        },
+        {
+          "german": "wünschen",
+          "arabic": "souhaiter",
+          "example": "Was wünschen Sie?",
+          "exampleArabic": "Que souhaitez-vous ?",
+          "type": "verb"
+        },
+        {
+          "german": "dürfte",
+          "arabic": "puis-je (poli)",
+          "example": "Dürfte ich Sie fragen?",
+          "exampleArabic": "Puis-je vous poser une question ?",
+          "type": "verb"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a2-15-q1", "question": "Forme polie de mögen avec ich ?", "answer": "möchte", "hint": "mögen → möchte (Konj. II)" },
-          { "type": "multiple-choice", "id": "a2-15-q2", "question": "Comment demander poliment : « Pourrais-tu m'aider ? »", "options": ["Hilf mir!", "Du hilfst mir.", "Könntest du mir helfen?", "Ich helfe dir."], "answer": "Könntest du mir helfen?" },
-          { "type": "fill-blank", "id": "a2-15-q3", "question": "Complète : « Ich ___ gern einen Tisch am Fenster. » (poli)", "answer": "hätte", "hint": "hätte gern + nom" },
-          { "type": "multiple-choice", "id": "a2-15-q4", "question": "Forme würde avec wir ?", "options": ["würde", "würdest", "würden", "würdet"], "answer": "würden" },
-          { "type": "fill-blank", "id": "a2-15-q5", "question": "Complète (poli) : « ___ Sie das wiederholen? » (Voudriez-vous répéter ?)", "answer": "Würden", "hint": "Würden Sie + Infinitiv" },
-          { "type": "matching", "id": "a2-15-q6", "question": "Associe la forme polie à son sens :", "pairs": [
-            { "left": "Ich möchte", "right": "Je voudrais" },
-            { "left": "Ich hätte gern", "right": "Je voudrais (avec un nom)" },
-            { "left": "Würden Sie", "right": "Voudriez-vous" },
-            { "left": "Könnten Sie", "right": "Pourriez-vous" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-15-q7", "question": "Ordonne : « Je voudrais un cappuccino, s'il vous plaît »", "words": ["Ich", "hätte", "gern", "einen", "Cappuccino", "bitte"], "answer": "Ich hätte gern einen Cappuccino bitte" },
-          { "type": "speaking", "id": "a2-15-q8", "question": "Dis poliment au restaurant : « Puis-je avoir l'addition ? »", "answer": "Könnte ich die Rechnung haben bitte" },
-          { "type": "fill-blank", "id": "a2-15-q9", "question": "Écoute : « ___ das möglich? » (Serait-ce possible ? — poli)", "audioPrompt": "Wäre das möglich?", "answer": "Wäre", "hint": "wäre = sein au Konj. II" },
-          { "type": "multiple-choice", "id": "a2-15-q10", "question": "La phrase la plus polie :", "options": ["Ich will Kaffee.", "Gib mir Kaffee.", "Kaffee!", "Ich hätte gern einen Kaffee, bitte."], "answer": "Ich hätte gern einen Kaffee, bitte." },
-          { "type": "fill-blank", "id": "a2-15-q11", "question": "Poli : « ___ Sie mir den Weg zeigen? » (Pourriez-vous — können Konj. II)", "answer": "Könnten", "hint": "können → könnten" },
-          { "type": "multiple-choice", "id": "a2-15-q12", "question": "Forme hätte avec du ?", "options": ["hätte", "hättest", "hätten", "hattet"], "answer": "hättest" },
-          { "type": "fill-blank", "id": "a2-15-q13", "question": "« Ich ___ gerne in Berlin wohnen. » (forme würde)", "answer": "würde", "hint": "würde + Inf" },
-          { "type": "matching", "id": "a2-15-q14", "question": "Associe la forme normale à la forme polie :", "pairs": [
-            { "left": "Ich will", "right": "Ich möchte" },
-            { "left": "Kannst du", "right": "Könntest du" },
-            { "left": "Hilf mir", "right": "Würden Sie mir helfen" },
-            { "left": "Geben Sie", "right": "Hätten Sie" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-15-q15", "question": "Ordonne : « Voudriez-vous ouvrir la fenêtre ? »", "words": ["Würden", "Sie", "das", "Fenster", "öffnen"], "answer": "Würden Sie das Fenster öffnen" },
-          { "type": "fill-blank", "id": "a2-15-q16", "question": "Écoute : « Ich ___ gern bestellen. » (poli — würde)", "audioPrompt": "Ich würde gern bestellen.", "answer": "würde", "hint": "würde + Inf" },
-          { "type": "multiple-choice", "id": "a2-15-q17", "question": "Le verbe möchten vient de :", "options": ["mögen", "machen", "müssen", "müssen + möglich"], "answer": "mögen" },
-          { "type": "speaking", "id": "a2-15-q18", "question": "Dis poliment : « Pourriez-vous répéter cela ? »", "answer": "Könnten Sie das wiederholen" },
-          { "type": "fill-blank", "id": "a2-15-q19", "question": "« Wir ___ gern einen Tisch für vier. » (poli)", "answer": "hätten", "hint": "hätten gern + nom" },
-          { "type": "multiple-choice", "id": "a2-15-q20", "question": "Avec un inconnu ou en situation formelle :", "options": ["la forme normale", "Imperativ", "Konjunktiv II poli", "sans article"], "answer": "Konjunktiv II poli" }
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q1",
+            "question": "Forme polie de mögen avec ich ?",
+            "answer": "möchte",
+            "hint": "mögen → möchte (Konj. II)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q2",
+            "question": "Comment demander poliment : « Pourrais-tu m'aider ? »",
+            "options": [
+              "Hilf mir!",
+              "Du hilfst mir.",
+              "Könntest du mir helfen?",
+              "Ich helfe dir."
+            ],
+            "answer": "Könntest du mir helfen?"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q3",
+            "question": "Complète : « Ich ___ gern einen Tisch am Fenster. » (poli)",
+            "answer": "hätte",
+            "hint": "hätte gern + nom"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q4",
+            "question": "Forme würde avec wir ?",
+            "options": [
+              "würde",
+              "würdest",
+              "würden",
+              "würdet"
+            ],
+            "answer": "würden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q5",
+            "question": "Complète (poli) : « ___ Sie das wiederholen? » (Voudriez-vous répéter ?)",
+            "answer": "Würden",
+            "hint": "Würden Sie + Infinitiv"
+          },
+          {
+            "type": "matching",
+            "id": "a2-15-q6",
+            "question": "Associe la forme polie à son sens :",
+            "pairs": [
+              {
+                "left": "Ich möchte",
+                "right": "Je voudrais"
+              },
+              {
+                "left": "Ich hätte gern",
+                "right": "Je voudrais (avec un nom)"
+              },
+              {
+                "left": "Würden Sie",
+                "right": "Voudriez-vous"
+              },
+              {
+                "left": "Könnten Sie",
+                "right": "Pourriez-vous"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-15-q7",
+            "question": "Ordonne : « Je voudrais un cappuccino, s'il vous plaît »",
+            "words": [
+              "Ich",
+              "hätte",
+              "gern",
+              "einen",
+              "Cappuccino",
+              "bitte"
+            ],
+            "answer": "Ich hätte gern einen Cappuccino bitte"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-15-q8",
+            "question": "Dis poliment au restaurant : « Puis-je avoir l'addition ? »",
+            "answer": "Könnte ich die Rechnung haben bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q9",
+            "question": "Écoute : « ___ das möglich? » (Serait-ce possible ? — poli)",
+            "audioPrompt": "Wäre das möglich?",
+            "answer": "Wäre",
+            "hint": "wäre = sein au Konj. II"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q10",
+            "question": "La phrase la plus polie :",
+            "options": [
+              "Ich will Kaffee.",
+              "Gib mir Kaffee.",
+              "Kaffee!",
+              "Ich hätte gern einen Kaffee, bitte."
+            ],
+            "answer": "Ich hätte gern einen Kaffee, bitte."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q11",
+            "question": "Poli : « ___ Sie mir den Weg zeigen? » (Pourriez-vous — können Konj. II)",
+            "answer": "Könnten",
+            "hint": "können → könnten"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q12",
+            "question": "Forme hätte avec du ?",
+            "options": [
+              "hätte",
+              "hättest",
+              "hätten",
+              "hattet"
+            ],
+            "answer": "hättest"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q13",
+            "question": "« Ich ___ gerne in Berlin wohnen. » (forme würde)",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "type": "matching",
+            "id": "a2-15-q14",
+            "question": "Associe la forme normale à la forme polie :",
+            "pairs": [
+              {
+                "left": "Ich will",
+                "right": "Ich möchte"
+              },
+              {
+                "left": "Kannst du",
+                "right": "Könntest du"
+              },
+              {
+                "left": "Hilf mir",
+                "right": "Würden Sie mir helfen"
+              },
+              {
+                "left": "Geben Sie",
+                "right": "Hätten Sie"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-15-q15",
+            "question": "Ordonne : « Voudriez-vous ouvrir la fenêtre ? »",
+            "words": [
+              "Würden",
+              "Sie",
+              "das",
+              "Fenster",
+              "öffnen"
+            ],
+            "answer": "Würden Sie das Fenster öffnen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q16",
+            "question": "Écoute : « Ich ___ gern bestellen. » (poli — würde)",
+            "audioPrompt": "Ich würde gern bestellen.",
+            "answer": "würde",
+            "hint": "würde + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q17",
+            "question": "Le verbe möchten vient de :",
+            "options": [
+              "mögen",
+              "machen",
+              "müssen",
+              "müssen + möglich"
+            ],
+            "answer": "mögen"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-15-q18",
+            "question": "Dis poliment : « Pourriez-vous répéter cela ? »",
+            "answer": "Könnten Sie das wiederholen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-15-q19",
+            "question": "« Wir ___ gern einen Tisch für vier. » (poli)",
+            "answer": "hätten",
+            "hint": "hätten gern + nom"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-15-q20",
+            "question": "Avec un inconnu ou en situation formelle :",
+            "options": [
+              "la forme normale",
+              "Imperativ",
+              "Konjunktiv II poli",
+              "sans article"
+            ],
+            "answer": "Konjunktiv II poli"
+          }
         ]
       }
     },
