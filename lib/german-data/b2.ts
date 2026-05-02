@@ -1926,6 +1926,10 @@ export const B2: Level = {
         { german: 'realisieren', arabic: 'يحقق', example: 'Träume realisieren.', exampleArabic: 'تحقيق الأحلام.', type: 'verb' },
         { german: 'verwirklichen', arabic: 'يجعل واقعاً', example: 'Pläne verwirklichen.', exampleArabic: 'تحقيق الخطط.', type: 'verb' },
         { german: 'feiern', arabic: 'يحتفل', example: 'Wir feiern den Erfolg.', exampleArabic: 'نحتفل بالنجاح.', type: 'verb' },
+        { german: 'die Hypothese', arabic: 'الفرضية', plural: 'die Hypothesen', example: 'Eine Hypothese aufstellen.', exampleArabic: 'وضع فرضية.', type: 'noun', gender: 'die' },
+        { german: 'die Vermutung', arabic: 'الافتراض', plural: 'die Vermutungen', example: 'Eine reine Vermutung.', exampleArabic: 'مجرد افتراض.', type: 'noun', gender: 'die' },
+        { german: 'die Wirklichkeit', arabic: 'الواقع', example: 'Die Wirklichkeit ist anders.', exampleArabic: 'الواقع مختلف.', type: 'noun', gender: 'die' },
+        { german: 'das Schicksal', arabic: 'القدر', example: 'Das ist mein Schicksal.', exampleArabic: 'هذا قدري.', type: 'noun', gender: 'das' },
       ],
       exercise: {
         questions: [
