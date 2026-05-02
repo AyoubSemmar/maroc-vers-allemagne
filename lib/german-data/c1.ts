@@ -2011,6 +2011,11 @@ Goethe, Schiller, Kafka, Thomas Mann, Hesse, Brecht, Böll, Grass`,
         { german: 'die Aussagekraft', arabic: 'القوة التعبيرية', example: 'Hohe Aussagekraft.', exampleArabic: 'قوة تعبيرية عالية.', type: 'noun', gender: 'die' },
         { german: 'beibehalten', arabic: 'يحافظ على', example: 'Den Stil beibehalten.', exampleArabic: 'الحفاظ على الأسلوب.', type: 'verb' },
         { german: 'wechseln', arabic: 'يبدّل', example: 'Zwischen Stilen wechseln.', exampleArabic: 'التبديل بين الأساليب.', type: 'verb' },
+        { german: 'die Lesbarkeit', arabic: 'سهولة القراءة', example: 'Hohe Lesbarkeit.', exampleArabic: 'سهولة قراءة عالية.', type: 'noun', gender: 'die' },
+        { german: 'die Eleganz', arabic: 'الأناقة الأسلوبية', example: 'Stilistische Eleganz.', exampleArabic: 'أناقة أسلوبية.', type: 'noun', gender: 'die' },
+        { german: 'die Verständlichkeit', arabic: 'القابلية للفهم', example: 'Hohe Verständlichkeit.', exampleArabic: 'قابلية فهم عالية.', type: 'noun', gender: 'die' },
+        { german: 'die Tiefe', arabic: 'العمق', example: 'Inhaltliche Tiefe.', exampleArabic: 'عمق المحتوى.', type: 'noun', gender: 'die' },
+        { german: 'der Ausdruckswille', arabic: 'الإرادة التعبيرية', example: 'Starker Ausdruckswille.', exampleArabic: 'إرادة تعبيرية قوية.', type: 'noun', gender: 'der' },
       ],
       exercise: {
         questions: [
