@@ -4653,6 +4653,88 @@
           "german": "einstellen",
           "arabic": "to hire",
           "type": "verb"
+        },
+        {
+          "german": "die Bewerbung",
+          "arabic": "the application",
+          "plural": "die Bewerbungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Lebenslauf",
+          "arabic": "the CV",
+          "plural": "die Lebensläufe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Arbeitsplatz",
+          "arabic": "the workplace",
+          "plural": "die Arbeitsplätze",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Karriere",
+          "arabic": "the career",
+          "plural": "die Karrieren",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Weiterbildung",
+          "arabic": "the continuing education",
+          "plural": "die Weiterbildungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gehalt",
+          "arabic": "the salary",
+          "plural": "die Gehälter",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Vorgesetzte",
+          "arabic": "the supervisor",
+          "plural": "die Vorgesetzten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Pünktlichkeit",
+          "arabic": "the punctuality",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Effizienz",
+          "arabic": "the efficiency",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Stress",
+          "arabic": "the stress",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "überzeugen",
+          "arabic": "to convince",
+          "type": "verb"
+        },
+        {
+          "german": "sich engagieren",
+          "arabic": "to commit, get involved",
+          "type": "verb"
+        },
+        {
+          "german": "lösen",
+          "arabic": "to solve",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -4773,6 +4855,127 @@
               "He worked with the boss"
             ],
             "answer": "The boss promoted him last week"
+          },
+          {
+            "id": "b2-09-q11",
+            "type": "fill-blank",
+            "question": "\"Sie hat sich ___ eine Stelle beworben.\" (um)",
+            "answer": "um",
+            "hint": "sich bewerben um + Akk"
+          },
+          {
+            "id": "b2-09-q12",
+            "type": "multiple-choice",
+            "question": "What does \"die Beförderung\" mean?",
+            "options": [
+              "resignation",
+              "hiring",
+              "promotion",
+              "salary"
+            ],
+            "answer": "promotion"
+          },
+          {
+            "id": "b2-09-q13",
+            "type": "fill-blank",
+            "question": "\"Wir haben einen ___ erreicht.\" (compromise)",
+            "answer": "Kompromiss",
+            "hint": "der Kompromiss"
+          },
+          {
+            "id": "b2-09-q14",
+            "type": "multiple-choice",
+            "question": "Difference between \"kündigen\" and \"entlassen\":",
+            "options": [
+              "same",
+              "kündigen = employee resigns, entlassen = employer fires",
+              "reversed",
+              "none"
+            ],
+            "answer": "kündigen = employee resigns, entlassen = employer fires"
+          },
+          {
+            "id": "b2-09-q15",
+            "type": "matching",
+            "question": "Match work term:",
+            "pairs": [
+              {
+                "left": "die Besprechung",
+                "right": "the meeting"
+              },
+              {
+                "left": "die Beförderung",
+                "right": "the promotion"
+              },
+              {
+                "left": "die Kündigung",
+                "right": "the resignation"
+              },
+              {
+                "left": "der Vorgesetzte",
+                "right": "the supervisor"
+              },
+              {
+                "left": "die Weiterbildung",
+                "right": "continuing education"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-09-q16",
+            "type": "drag-drop",
+            "question": "Order: \"I'd like to discuss a raise\"",
+            "words": [
+              "Ich",
+              "möchte",
+              "eine",
+              "Gehaltserhöhung",
+              "besprechen"
+            ],
+            "answer": "Ich möchte eine Gehaltserhöhung besprechen"
+          },
+          {
+            "id": "b2-09-q17",
+            "type": "speaking",
+            "question": "Say: \"Teamwork is very important for success\"",
+            "answer": "Teamarbeit ist sehr wichtig für den Erfolg"
+          },
+          {
+            "id": "b2-09-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Wir müssen die ___ einhalten.\" (deadline)",
+            "audioPrompt": "Wir müssen die Deadline einhalten.",
+            "answer": "Deadline",
+            "hint": "die Deadline / der Termin"
+          },
+          {
+            "id": "b2-09-q19",
+            "type": "multiple-choice",
+            "question": "Formal letter opening:",
+            "options": [
+              "Hallo!",
+              "Hi!",
+              "Sehr geehrte Damen und Herren,",
+              "Liebe Freunde"
+            ],
+            "answer": "Sehr geehrte Damen und Herren,"
+          },
+          {
+            "id": "b2-09-q20",
+            "type": "drag-drop",
+            "question": "Order: \"In my assessment, this is a successful project\"",
+            "words": [
+              "Meiner",
+              "Einschätzung",
+              "nach",
+              "ist",
+              "das",
+              "ein",
+              "erfolgreiches",
+              "Projekt"
+            ],
+            "answer": "Meiner Einschätzung nach ist das ein erfolgreiches Projekt"
           }
         ]
       }

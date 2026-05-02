@@ -4653,6 +4653,88 @@
           "german": "einstellen",
           "arabic": "recruter / embaucher",
           "type": "verb"
+        },
+        {
+          "german": "die Bewerbung",
+          "arabic": "la candidature",
+          "plural": "die Bewerbungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Lebenslauf",
+          "arabic": "le CV",
+          "plural": "die Lebensläufe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Arbeitsplatz",
+          "arabic": "le poste de travail",
+          "plural": "die Arbeitsplätze",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Karriere",
+          "arabic": "la carrière",
+          "plural": "die Karrieren",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Weiterbildung",
+          "arabic": "la formation continue",
+          "plural": "die Weiterbildungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gehalt",
+          "arabic": "le salaire",
+          "plural": "die Gehälter",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Vorgesetzte",
+          "arabic": "le supérieur",
+          "plural": "die Vorgesetzten",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Pünktlichkeit",
+          "arabic": "la ponctualité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Effizienz",
+          "arabic": "l'efficacité",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Stress",
+          "arabic": "le stress",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "überzeugen",
+          "arabic": "convaincre",
+          "type": "verb"
+        },
+        {
+          "german": "sich engagieren",
+          "arabic": "s'engager",
+          "type": "verb"
+        },
+        {
+          "german": "lösen",
+          "arabic": "résoudre",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -4773,6 +4855,127 @@
               "Il a travaillé avec le chef"
             ],
             "answer": "Le chef l'a promu la semaine dernière"
+          },
+          {
+            "id": "b2-09-q11",
+            "type": "fill-blank",
+            "question": "« Sie hat sich ___ eine Stelle beworben. » (um)",
+            "answer": "um",
+            "hint": "sich bewerben um + Akk"
+          },
+          {
+            "id": "b2-09-q12",
+            "type": "multiple-choice",
+            "question": "Que signifie « die Beförderung » ?",
+            "options": [
+              "démission",
+              "embauche",
+              "promotion",
+              "salaire"
+            ],
+            "answer": "promotion"
+          },
+          {
+            "id": "b2-09-q13",
+            "type": "fill-blank",
+            "question": "« Wir haben einen ___ erreicht. » (compromis)",
+            "answer": "Kompromiss",
+            "hint": "der Kompromiss"
+          },
+          {
+            "id": "b2-09-q14",
+            "type": "multiple-choice",
+            "question": "Différence entre « kündigen » et « entlassen » :",
+            "options": [
+              "même sens",
+              "kündigen = l'employé démissionne, entlassen = l'employeur licencie",
+              "l'inverse",
+              "aucune"
+            ],
+            "answer": "kündigen = l'employé démissionne, entlassen = l'employeur licencie"
+          },
+          {
+            "id": "b2-09-q15",
+            "type": "matching",
+            "question": "Associe le terme de travail :",
+            "pairs": [
+              {
+                "left": "die Besprechung",
+                "right": "la réunion"
+              },
+              {
+                "left": "die Beförderung",
+                "right": "la promotion"
+              },
+              {
+                "left": "die Kündigung",
+                "right": "la démission"
+              },
+              {
+                "left": "der Vorgesetzte",
+                "right": "le supérieur"
+              },
+              {
+                "left": "die Weiterbildung",
+                "right": "la formation continue"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-09-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Je voudrais discuter d'une augmentation »",
+            "words": [
+              "Ich",
+              "möchte",
+              "eine",
+              "Gehaltserhöhung",
+              "besprechen"
+            ],
+            "answer": "Ich möchte eine Gehaltserhöhung besprechen"
+          },
+          {
+            "id": "b2-09-q17",
+            "type": "speaking",
+            "question": "Dis : « Le travail d'équipe est très important pour le succès »",
+            "answer": "Teamarbeit ist sehr wichtig für den Erfolg"
+          },
+          {
+            "id": "b2-09-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Wir müssen die ___ einhalten. » (deadline)",
+            "audioPrompt": "Wir müssen die Deadline einhalten.",
+            "answer": "Deadline",
+            "hint": "die Deadline / der Termin"
+          },
+          {
+            "id": "b2-09-q19",
+            "type": "multiple-choice",
+            "question": "Dans une lettre formelle, l'ouverture :",
+            "options": [
+              "Hallo!",
+              "Hi!",
+              "Sehr geehrte Damen und Herren,",
+              "Liebe Freunde"
+            ],
+            "answer": "Sehr geehrte Damen und Herren,"
+          },
+          {
+            "id": "b2-09-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « À mon avis, c'est un projet réussi »",
+            "words": [
+              "Meiner",
+              "Einschätzung",
+              "nach",
+              "ist",
+              "das",
+              "ein",
+              "erfolgreiches",
+              "Projekt"
+            ],
+            "answer": "Meiner Einschätzung nach ist das ein erfolgreiches Projekt"
           }
         ]
       }
