@@ -1804,6 +1804,10 @@ export const B2: Level = {
         { german: 'die Handtasche', arabic: 'حقيبة اليد', example: 'Wo ist meine Handtasche?', exampleArabic: 'أين حقيبتي؟', type: 'noun', gender: 'die', plural: 'die Handtaschen' },
         { german: 'die Tageszeitung', arabic: 'الجريدة اليومية', example: 'Ich lese die Tageszeitung.', exampleArabic: 'أقرأ الجريدة اليومية.', type: 'noun', gender: 'die', plural: 'die Tageszeitungen' },
         { german: 'die Sprachschule', arabic: 'مدرسة اللغات', example: 'Goethe ist eine Sprachschule.', exampleArabic: 'Goethe مدرسة لغات.', type: 'noun', gender: 'die', plural: 'die Sprachschulen' },
+        { german: 'die Wortbildung', arabic: 'تكوين الكلمات', example: 'Wortbildung im Deutschen.', exampleArabic: 'تكوين الكلمات في الألمانية.', type: 'noun', gender: 'die' },
+        { german: 'die Vorsilbe', arabic: 'البادئة', plural: 'die Vorsilben', example: 'be- ist eine Vorsilbe.', exampleArabic: 'be- بادئة.', type: 'noun', gender: 'die' },
+        { german: 'die Endsilbe', arabic: 'اللاحقة', plural: 'die Endsilben', example: '-ung ist eine Endsilbe.', exampleArabic: 'ung- لاحقة.', type: 'noun', gender: 'die' },
+        { german: 'die Zusammensetzung', arabic: 'الكلمة المركّبة', plural: 'die Zusammensetzungen', example: 'Eine deutsche Zusammensetzung.', exampleArabic: 'كلمة مركّبة ألمانية.', type: 'noun', gender: 'die' },
       ],
       exercise: {
         questions: [
