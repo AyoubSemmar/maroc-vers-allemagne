@@ -2995,6 +2995,9 @@ export const A2: Level = {
         { german: 'die Antwort', arabic: 'الإجابة',            example: 'Was ist die Antwort?',              exampleArabic: 'ما الإجابة؟',       type: 'noun', gender: 'die', plural: 'die Antworten' },
         { german: 'wichtig',   arabic: 'مهم',                example: 'Das ist wichtig.',                  exampleArabic: 'هذا مهم.',           type: 'adjective' },
         { german: 'interessant', arabic: 'ممتع',              example: 'Das ist interessant.',              exampleArabic: 'هذا ممتع.',          type: 'adjective' },
+        { german: 'die Erinnerung', arabic: 'الذكرى', gender: 'die', plural: 'Erinnerungen', example: 'Ich habe gute Erinnerungen daran.', exampleArabic: 'لدي ذكريات جميلة عنه.', type: 'noun' },
+        { german: 'der Traum', arabic: 'الحلم', gender: 'der', plural: 'Träume', example: 'Davon träume ich.', exampleArabic: 'بهذا أحلم.', type: 'noun' },
+        { german: 'das Ergebnis', arabic: 'النتيجة', gender: 'das', plural: 'Ergebnisse', example: 'Was ist das Ergebnis?', exampleArabic: 'ما هي النتيجة؟', type: 'noun' },
       ],
       exercise: {
         questions: [
