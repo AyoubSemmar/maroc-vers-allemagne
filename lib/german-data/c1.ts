@@ -1889,6 +1889,11 @@ Goethe, Schiller, Kafka, Thomas Mann, Hesse, Brecht, Böll, Grass`,
         { german: 'beenden', arabic: 'ينهي', example: 'Beende den Satz mit einem Punkt.', exampleArabic: 'أنهِ الجملة بنقطة.', type: 'verb' },
         { german: 'verbessern', arabic: 'يصحّح', example: 'Verbessere deinen Text.', exampleArabic: 'صحّح نصّك.', type: 'verb' },
         { german: 'überprüfen', arabic: 'يتفحّص', example: 'Überprüfe die Zeichensetzung.', exampleArabic: 'تفحّص الترقيم.', type: 'verb' },
+        { german: 'die Lektüre', arabic: 'القراءة', plural: 'die Lektüren', example: 'Eine angenehme Lektüre.', exampleArabic: 'قراءة ممتعة.', type: 'noun', gender: 'die' },
+        { german: 'die Schreibweise', arabic: 'طريقة الكتابة', plural: 'die Schreibweisen', example: 'Neue Schreibweise.', exampleArabic: 'طريقة كتابة جديدة.', type: 'noun', gender: 'die' },
+        { german: 'die Rechtschreibreform', arabic: 'إصلاح الإملاء', example: 'Die Rechtschreibreform 1996.', exampleArabic: 'إصلاح الإملاء عام 1996.', type: 'noun', gender: 'die' },
+        { german: 'die Klarheit', arabic: 'الوضوح', example: 'Die Klarheit eines Textes.', exampleArabic: 'وضوح النص.', type: 'noun', gender: 'die' },
+        { german: 'der Leserkreis', arabic: 'جمهور القرّاء', plural: 'die Leserkreise', example: 'Ein breiter Leserkreis.', exampleArabic: 'جمهور قرّاء واسع.', type: 'noun', gender: 'der' },
       ],
       exercise: {
         questions: [
