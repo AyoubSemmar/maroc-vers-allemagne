@@ -1767,6 +1767,10 @@ Goethe, Schiller, Kafka, Thomas Mann, Hesse, Brecht, Böll, Grass`,
         { german: 'umfassend', arabic: 'شامل', example: 'Eine umfassende Analyse.', exampleArabic: 'تحليل شامل.', type: 'adjective' },
         { german: 'differenziert', arabic: 'متمايز', example: 'Eine differenzierte Sicht.', exampleArabic: 'رؤية متمايزة.', type: 'adjective' },
         { german: 'zusammenhängend', arabic: 'مترابط', example: 'Ein zusammenhängender Text.', exampleArabic: 'نص مترابط.', type: 'adjective' },
+        { german: 'die Begründung', arabic: 'التبرير', plural: 'die Begründungen', example: 'Die Begründung ist klar.', exampleArabic: 'التبرير واضح.', type: 'noun', gender: 'die' },
+        { german: 'die Erläuterung', arabic: 'الشرح', plural: 'die Erläuterungen', example: 'Eine ausführliche Erläuterung.', exampleArabic: 'شرح مفصّل.', type: 'noun', gender: 'die' },
+        { german: 'die Berücksichtigung', arabic: 'المراعاة', example: 'Unter Berücksichtigung aller Faktoren.', exampleArabic: 'مع مراعاة كل العوامل.', type: 'noun', gender: 'die' },
+        { german: 'die Konkretisierung', arabic: 'التجسيد', example: 'Die Konkretisierung des Plans.', exampleArabic: 'تجسيد الخطة.', type: 'noun', gender: 'die' },
       ],
       exercise: {
         questions: [
