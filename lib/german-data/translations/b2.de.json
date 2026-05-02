@@ -6293,6 +6293,83 @@
           "german": "Glückwunsch!",
           "arabic": "Glückwunsch!",
           "type": "phrase"
+        },
+        {
+          "german": "die Bestätigung",
+          "arabic": "offizielle Anerkennung",
+          "plural": "die Bestätigungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Anstrengung",
+          "arabic": "Mühe, große Belastung",
+          "plural": "die Anstrengungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Übung",
+          "arabic": "Praxis zum Lernen",
+          "plural": "die Übungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Hörverständnis",
+          "arabic": "Fähigkeit, Gehörtes zu verstehen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Leseverständnis",
+          "arabic": "Fähigkeit, Texte zu verstehen",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aussprache",
+          "arabic": "wie man Wörter spricht",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wortwahl",
+          "arabic": "Auswahl der passenden Wörter",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "Verbindung, Kontext",
+          "plural": "die Zusammenhänge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "erweitern",
+          "arabic": "größer machen",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "praktisch trainieren",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "etwas Schwieriges schaffen",
+          "type": "verb"
+        },
+        {
+          "german": "sich messen",
+          "arabic": "sich vergleichen",
+          "type": "verb"
+        },
+        {
+          "german": "systematisch",
+          "arabic": "geordnet, planvoll",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -6414,6 +6491,128 @@
               "Niveau C1"
             ],
             "answer": "Glückwunsch! Du hast B2 erreicht"
+          },
+          {
+            "id": "b2-12-q11",
+            "type": "fill-blank",
+            "question": "Ergänze: „Ich muss meine Aussprache ___.\" (verbessern)",
+            "answer": "verbessern",
+            "hint": "besser machen"
+          },
+          {
+            "id": "b2-12-q12",
+            "type": "multiple-choice",
+            "question": "Wie viele Teile beim Goethe-Zertifikat B2?",
+            "options": [
+              "2",
+              "3",
+              "4 (Lesen, Hören, Schreiben, Sprechen)",
+              "5"
+            ],
+            "answer": "4 (Lesen, Hören, Schreiben, Sprechen)"
+          },
+          {
+            "id": "b2-12-q13",
+            "type": "fill-blank",
+            "question": "„Bildung ist der ___ zum Erfolg.\" (Schlüssel)",
+            "answer": "Schlüssel",
+            "hint": "der Schlüssel"
+          },
+          {
+            "id": "b2-12-q14",
+            "type": "multiple-choice",
+            "question": "Nach B2:",
+            "options": [
+              "zurück zu A1",
+              "Wechsel zu C1",
+              "nur lesen",
+              "nichts"
+            ],
+            "answer": "Wechsel zu C1"
+          },
+          {
+            "id": "b2-12-q15",
+            "type": "matching",
+            "question": "Verbinde Regel mit Beispiel:",
+            "pairs": [
+              {
+                "left": "Nominalstil",
+                "right": "das Lernen"
+              },
+              {
+                "left": "Partizipialattribut",
+                "right": "der lesende Mann"
+              },
+              {
+                "left": "Passiv + Modal",
+                "right": "muss gemacht werden"
+              },
+              {
+                "left": "je...desto",
+                "right": "Je mehr, desto besser"
+              },
+              {
+                "left": "als ob + Konj II",
+                "right": "als ob er krank wäre"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-12-q16",
+            "type": "drag-drop",
+            "question": "Ordne: „Ich habe B2 bestanden, weil ich regelmäßig geübt habe\"",
+            "words": [
+              "Ich",
+              "habe",
+              "B2",
+              "bestanden,",
+              "weil",
+              "ich",
+              "regelmäßig",
+              "geübt",
+              "habe"
+            ],
+            "answer": "Ich habe B2 bestanden, weil ich regelmäßig geübt habe"
+          },
+          {
+            "id": "b2-12-q17",
+            "type": "speaking",
+            "question": "Sag: „Ich bin stolz auf mein Deutsch-Niveau\"",
+            "answer": "Ich bin stolz auf mein Deutsch-Niveau"
+          },
+          {
+            "id": "b2-12-q18",
+            "type": "fill-blank",
+            "question": "Hör zu: „Mein Wortschatz ___ sich täglich.\" (erweitert)",
+            "audioPrompt": "Mein Wortschatz erweitert sich täglich.",
+            "answer": "erweitert",
+            "hint": "sich erweitern"
+          },
+          {
+            "id": "b2-12-q19",
+            "type": "multiple-choice",
+            "question": "B2 reicht für:",
+            "options": [
+              "nur Kurzbesuch",
+              "Studium und Beruf",
+              "Simultandolmetschen",
+              "komplexe akademische Vorträge"
+            ],
+            "answer": "Studium und Beruf"
+          },
+          {
+            "id": "b2-12-q20",
+            "type": "drag-drop",
+            "question": "Ordne: „Glückwunsch! Du hast B2 geschafft\"",
+            "words": [
+              "Glückwunsch!",
+              "Du",
+              "hast",
+              "B2",
+              "geschafft"
+            ],
+            "answer": "Glückwunsch! Du hast B2 geschafft"
           }
         ]
       }

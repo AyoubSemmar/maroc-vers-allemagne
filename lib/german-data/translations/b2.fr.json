@@ -6293,6 +6293,83 @@
           "german": "Glückwunsch!",
           "arabic": "Félicitations !",
           "type": "phrase"
+        },
+        {
+          "german": "die Bestätigung",
+          "arabic": "la confirmation",
+          "plural": "die Bestätigungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Anstrengung",
+          "arabic": "l'effort",
+          "plural": "die Anstrengungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Übung",
+          "arabic": "l'exercice",
+          "plural": "die Übungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Hörverständnis",
+          "arabic": "la compréhension orale",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Leseverständnis",
+          "arabic": "la compréhension écrite",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aussprache",
+          "arabic": "la prononciation",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wortwahl",
+          "arabic": "le choix des mots",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "le contexte",
+          "plural": "die Zusammenhänge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "erweitern",
+          "arabic": "élargir",
+          "type": "verb"
+        },
+        {
+          "german": "üben",
+          "arabic": "s'entraîner",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "maîtriser",
+          "type": "verb"
+        },
+        {
+          "german": "sich messen",
+          "arabic": "se mesurer",
+          "type": "verb"
+        },
+        {
+          "german": "systematisch",
+          "arabic": "systématique",
+          "type": "adjective"
         }
       ],
       "exercise": {
@@ -6414,6 +6491,128 @@
               "Le niveau C1"
             ],
             "answer": "Félicitations ! Tu as atteint B2"
+          },
+          {
+            "id": "b2-12-q11",
+            "type": "fill-blank",
+            "question": "Complète : « Ich muss meine Aussprache ___. » (améliorer)",
+            "answer": "verbessern",
+            "hint": "améliorer"
+          },
+          {
+            "id": "b2-12-q12",
+            "type": "multiple-choice",
+            "question": "Combien de parties dans Goethe-Zertifikat B2 ?",
+            "options": [
+              "2",
+              "3",
+              "4 (Lesen, Hören, Schreiben, Sprechen)",
+              "5"
+            ],
+            "answer": "4 (Lesen, Hören, Schreiben, Sprechen)"
+          },
+          {
+            "id": "b2-12-q13",
+            "type": "fill-blank",
+            "question": "« Bildung ist der ___ zum Erfolg. » (clé)",
+            "answer": "Schlüssel",
+            "hint": "der Schlüssel"
+          },
+          {
+            "id": "b2-12-q14",
+            "type": "multiple-choice",
+            "question": "Après B2 :",
+            "options": [
+              "retour à A1",
+              "passage à C1",
+              "seulement lire",
+              "rien"
+            ],
+            "answer": "passage à C1"
+          },
+          {
+            "id": "b2-12-q15",
+            "type": "matching",
+            "question": "Associe la règle à son exemple :",
+            "pairs": [
+              {
+                "left": "Nominalstil",
+                "right": "das Lernen"
+              },
+              {
+                "left": "Partizipialattribut",
+                "right": "der lesende Mann"
+              },
+              {
+                "left": "Passiv + Modal",
+                "right": "muss gemacht werden"
+              },
+              {
+                "left": "je...desto",
+                "right": "Je mehr, desto besser"
+              },
+              {
+                "left": "als ob + Konj II",
+                "right": "als ob er krank wäre"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-12-q16",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « J'ai réussi B2 parce que je me suis entraîné régulièrement »",
+            "words": [
+              "Ich",
+              "habe",
+              "B2",
+              "bestanden,",
+              "weil",
+              "ich",
+              "regelmäßig",
+              "geübt",
+              "habe"
+            ],
+            "answer": "Ich habe B2 bestanden, weil ich regelmäßig geübt habe"
+          },
+          {
+            "id": "b2-12-q17",
+            "type": "speaking",
+            "question": "Dis : « Je suis fier de mon niveau d'allemand »",
+            "answer": "Ich bin stolz auf mein Deutsch-Niveau"
+          },
+          {
+            "id": "b2-12-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Mein Wortschatz ___ sich täglich. » (s'élargit)",
+            "audioPrompt": "Mein Wortschatz erweitert sich täglich.",
+            "answer": "erweitert",
+            "hint": "sich erweitern"
+          },
+          {
+            "id": "b2-12-q19",
+            "type": "multiple-choice",
+            "question": "Le niveau B2 suffit pour :",
+            "options": [
+              "visite courte seulement",
+              "études universitaires et travail",
+              "traduction simultanée",
+              "conférences académiques complexes"
+            ],
+            "answer": "études universitaires et travail"
+          },
+          {
+            "id": "b2-12-q20",
+            "type": "drag-drop",
+            "question": "Remets dans l'ordre : « Félicitations, tu as réussi B2 »",
+            "words": [
+              "Glückwunsch!",
+              "Du",
+              "hast",
+              "B2",
+              "geschafft"
+            ],
+            "answer": "Glückwunsch! Du hast B2 geschafft"
           }
         ]
       }
