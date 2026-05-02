@@ -3125,6 +3125,89 @@
           "gender": "die",
           "plural": "Demonstrationen",
           "type": "noun"
+        },
+        {
+          "german": "die Behörde",
+          "arabic": "l'administration",
+          "gender": "die",
+          "plural": "Behörden",
+          "type": "noun"
+        },
+        {
+          "german": "die Maßnahme",
+          "arabic": "la mesure",
+          "gender": "die",
+          "plural": "Maßnahmen",
+          "type": "noun"
+        },
+        {
+          "german": "eindrucksvoll",
+          "arabic": "impressionnant",
+          "type": "adjective"
+        },
+        {
+          "german": "verheerend",
+          "arabic": "dévastateur",
+          "type": "adjective"
+        },
+        {
+          "german": "aufstrebend",
+          "arabic": "émergent",
+          "type": "adjective"
+        },
+        {
+          "german": "überzeugend",
+          "arabic": "convaincant",
+          "type": "adjective"
+        },
+        {
+          "german": "verschwiegen",
+          "arabic": "discret",
+          "type": "adjective"
+        },
+        {
+          "german": "überrascht",
+          "arabic": "surpris",
+          "type": "adjective"
+        },
+        {
+          "german": "erweitert",
+          "arabic": "élargi",
+          "type": "adjective"
+        },
+        {
+          "german": "die Veränderung",
+          "arabic": "le changement",
+          "gender": "die",
+          "plural": "Veränderungen",
+          "type": "noun"
+        },
+        {
+          "german": "die Anpassung",
+          "arabic": "l'adaptation",
+          "gender": "die",
+          "plural": "Anpassungen",
+          "type": "noun"
+        },
+        {
+          "german": "verlauten",
+          "arabic": "déclarer publiquement",
+          "type": "verb"
+        },
+        {
+          "german": "verkünden",
+          "arabic": "annoncer",
+          "type": "verb"
+        },
+        {
+          "german": "einschätzen",
+          "arabic": "estimer",
+          "type": "verb"
+        },
+        {
+          "german": "bewerten",
+          "arabic": "évaluer",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -3244,6 +3327,122 @@
               "Antrag"
             ],
             "answer": "der von der Behörde genehmigte Antrag"
+          },
+          {
+            "id": "c1-06-q11",
+            "type": "fill-blank",
+            "question": "Transforme : « Die Tür wurde geöffnet » → « die ___ Tür »",
+            "answer": "geöffnete",
+            "hint": "Partizip II + adj."
+          },
+          {
+            "id": "c1-06-q12",
+            "type": "multiple-choice",
+            "question": "Partizip I exprime :",
+            "options": [
+              "action terminée",
+              "action en cours / active",
+              "passif",
+              "futur"
+            ],
+            "answer": "action en cours / active"
+          },
+          {
+            "id": "c1-06-q13",
+            "type": "fill-blank",
+            "question": "« die ___ Krise » (qui dure)",
+            "answer": "anhaltende",
+            "hint": "anhalten → anhaltend"
+          },
+          {
+            "id": "c1-06-q14",
+            "type": "multiple-choice",
+            "question": "Dans un attribut étendu, les adjectifs viennent :",
+            "options": [
+              "après le nom",
+              "avant le nom dans l'ordre",
+              "à la fin",
+              "aucune règle"
+            ],
+            "answer": "avant le nom dans l'ordre"
+          },
+          {
+            "id": "c1-06-q15",
+            "type": "matching",
+            "question": "Associe :",
+            "pairs": [
+              {
+                "left": "das brennende Haus",
+                "right": "la maison en feu"
+              },
+              {
+                "left": "das verlorene Buch",
+                "right": "le livre perdu"
+              },
+              {
+                "left": "die wachsende Stadt",
+                "right": "la ville croissante"
+              },
+              {
+                "left": "die fertige Arbeit",
+                "right": "le travail fini"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-06-q16",
+            "type": "drag-drop",
+            "question": "Remets : « La maison construite en 1900 est rénovée »",
+            "words": [
+              "Das",
+              "im",
+              "Jahr",
+              "1900",
+              "gebaute",
+              "Haus",
+              "wird",
+              "renoviert"
+            ],
+            "answer": "Das im Jahr 1900 gebaute Haus wird renoviert"
+          },
+          {
+            "id": "c1-06-q17",
+            "type": "speaking",
+            "question": "Dis : « Les citoyens participant à la discussion »",
+            "answer": "Die an der Diskussion teilnehmenden Bürger"
+          },
+          {
+            "id": "c1-06-q18",
+            "type": "fill-blank",
+            "question": "Écoute : « Die ___ Reformen kommen bald. » (à venir)",
+            "audioPrompt": "Die bevorstehenden Reformen kommen bald.",
+            "answer": "bevorstehenden",
+            "hint": "bevorstehen → bevorstehend"
+          },
+          {
+            "id": "c1-06-q19",
+            "type": "multiple-choice",
+            "question": "Cette structure est courante dans :",
+            "options": [
+              "langue quotidienne",
+              "presse et articles académiques",
+              "livres jeunesse",
+              "publicités"
+            ],
+            "answer": "presse et articles académiques"
+          },
+          {
+            "id": "c1-06-q20",
+            "type": "drag-drop",
+            "question": "Remets : « La technologie nouvellement développée »",
+            "words": [
+              "Die",
+              "neu",
+              "entwickelte",
+              "Technologie"
+            ],
+            "answer": "Die neu entwickelte Technologie"
           }
         ]
       }

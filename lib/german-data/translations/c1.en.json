@@ -3125,6 +3125,89 @@
           "gender": "die",
           "plural": "Demonstrationen",
           "type": "noun"
+        },
+        {
+          "german": "die Behörde",
+          "arabic": "the authority",
+          "gender": "die",
+          "plural": "Behörden",
+          "type": "noun"
+        },
+        {
+          "german": "die Maßnahme",
+          "arabic": "the measure",
+          "gender": "die",
+          "plural": "Maßnahmen",
+          "type": "noun"
+        },
+        {
+          "german": "eindrucksvoll",
+          "arabic": "impressive",
+          "type": "adjective"
+        },
+        {
+          "german": "verheerend",
+          "arabic": "devastating",
+          "type": "adjective"
+        },
+        {
+          "german": "aufstrebend",
+          "arabic": "rising, emerging",
+          "type": "adjective"
+        },
+        {
+          "german": "überzeugend",
+          "arabic": "convincing",
+          "type": "adjective"
+        },
+        {
+          "german": "verschwiegen",
+          "arabic": "discreet",
+          "type": "adjective"
+        },
+        {
+          "german": "überrascht",
+          "arabic": "surprised",
+          "type": "adjective"
+        },
+        {
+          "german": "erweitert",
+          "arabic": "expanded",
+          "type": "adjective"
+        },
+        {
+          "german": "die Veränderung",
+          "arabic": "the change",
+          "gender": "die",
+          "plural": "Veränderungen",
+          "type": "noun"
+        },
+        {
+          "german": "die Anpassung",
+          "arabic": "the adaptation",
+          "gender": "die",
+          "plural": "Anpassungen",
+          "type": "noun"
+        },
+        {
+          "german": "verlauten",
+          "arabic": "to be reported",
+          "type": "verb"
+        },
+        {
+          "german": "verkünden",
+          "arabic": "to announce",
+          "type": "verb"
+        },
+        {
+          "german": "einschätzen",
+          "arabic": "to assess",
+          "type": "verb"
+        },
+        {
+          "german": "bewerten",
+          "arabic": "to evaluate",
+          "type": "verb"
         }
       ],
       "exercise": {
@@ -3244,6 +3327,122 @@
               "Antrag"
             ],
             "answer": "der von der Behörde genehmigte Antrag"
+          },
+          {
+            "id": "c1-06-q11",
+            "type": "fill-blank",
+            "question": "Transform: \"Die Tür wurde geöffnet\" → \"die ___ Tür\"",
+            "answer": "geöffnete",
+            "hint": "Partizip II + adj. ending"
+          },
+          {
+            "id": "c1-06-q12",
+            "type": "multiple-choice",
+            "question": "Partizip I expresses:",
+            "options": [
+              "completed action",
+              "ongoing/active action",
+              "passive",
+              "future"
+            ],
+            "answer": "ongoing/active action"
+          },
+          {
+            "id": "c1-06-q13",
+            "type": "fill-blank",
+            "question": "\"die ___ Krise\" (continuing)",
+            "answer": "anhaltende",
+            "hint": "anhalten → anhaltend"
+          },
+          {
+            "id": "c1-06-q14",
+            "type": "multiple-choice",
+            "question": "In an extended attribute, adjectives go:",
+            "options": [
+              "after the noun",
+              "before the noun in order",
+              "at the end",
+              "no rule"
+            ],
+            "answer": "before the noun in order"
+          },
+          {
+            "id": "c1-06-q15",
+            "type": "matching",
+            "question": "Match:",
+            "pairs": [
+              {
+                "left": "das brennende Haus",
+                "right": "the burning house"
+              },
+              {
+                "left": "das verlorene Buch",
+                "right": "the lost book"
+              },
+              {
+                "left": "die wachsende Stadt",
+                "right": "the growing city"
+              },
+              {
+                "left": "die fertige Arbeit",
+                "right": "the finished work"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "c1-06-q16",
+            "type": "drag-drop",
+            "question": "Order: \"The house built in 1900 is being renovated\"",
+            "words": [
+              "Das",
+              "im",
+              "Jahr",
+              "1900",
+              "gebaute",
+              "Haus",
+              "wird",
+              "renoviert"
+            ],
+            "answer": "Das im Jahr 1900 gebaute Haus wird renoviert"
+          },
+          {
+            "id": "c1-06-q17",
+            "type": "speaking",
+            "question": "Say: \"The citizens participating in the discussion\"",
+            "answer": "Die an der Diskussion teilnehmenden Bürger"
+          },
+          {
+            "id": "c1-06-q18",
+            "type": "fill-blank",
+            "question": "Listen: \"Die ___ Reformen kommen bald.\" (upcoming)",
+            "audioPrompt": "Die bevorstehenden Reformen kommen bald.",
+            "answer": "bevorstehenden",
+            "hint": "bevorstehen → bevorstehend"
+          },
+          {
+            "id": "c1-06-q19",
+            "type": "multiple-choice",
+            "question": "This structure is common in:",
+            "options": [
+              "everyday speech",
+              "newspapers and academic articles",
+              "children's books",
+              "advertisements"
+            ],
+            "answer": "newspapers and academic articles"
+          },
+          {
+            "id": "c1-06-q20",
+            "type": "drag-drop",
+            "question": "Order: \"The newly developed technology\"",
+            "words": [
+              "Die",
+              "neu",
+              "entwickelte",
+              "Technologie"
+            ],
+            "answer": "Die neu entwickelte Technologie"
           }
         ]
       }
