@@ -6,20 +6,23 @@ import { trackBookConsultation } from '@/lib/analytics'
 
 // ── Five Calendly events, each with its own duration + price ──────
 // Maps to the events the user created in their upgraded Calendly:
-//   /quick-check     15 min · €8   (eligibility / planning / docs)
-//   /cv-interview    30 min · €16  (CV review or interview prep)
-//   /path-planning   45 min · €25  (visa / Studium / Ausbildung deep dive)
-//   /apply-for-me    60 min · €40  (flagship — full application package)
-//   /german-tutoring 60 min · €30  (language lessons + exam prep)
+//   /quick-check     15 min · 80 MAD   (eligibility / planning / docs)
+//   /cv-interview    30 min · 160 MAD  (CV review or interview prep)
+//   /path-planning   45 min · 250 MAD  (visa / Studium / Ausbildung deep dive)
+//   /apply-for-me    60 min · 400 MAD  (flagship — full application package)
+//   /german-tutoring 60 min · 300 MAD  (language lessons + exam prep)
+// priceMad is what we charge and display. priceEur is kept for GA4
+// revenue tracking continuity (analytics has prior data in EUR).
+// Conversion: 1 EUR = 10 MAD.
 // Payment is collected manually by bank transfer after booking; the
 // confirmation email (configured in Calendly) carries the IBAN + the
 // per-tier reference code so we can match wires to bookings.
 const TIERS = {
-  quick:  { url: 'https://calendly.com/contact-gogermany/quick-check',     priceEur:  8, durationMin: 15 },
-  cv:     { url: 'https://calendly.com/contact-gogermany/cv-interview',    priceEur: 16, durationMin: 30 },
-  path:   { url: 'https://calendly.com/contact-gogermany/path-planning',   priceEur: 25, durationMin: 45 },
-  apply:  { url: 'https://calendly.com/contact-gogermany/apply-for-me',    priceEur: 40, durationMin: 60 },
-  german: { url: 'https://calendly.com/contact-gogermany/german-tutoring', priceEur: 30, durationMin: 60 },
+  quick:  { url: 'https://calendly.com/contact-gogermany/quick-check',     priceEur:  8, priceMad:  80, durationMin: 15 },
+  cv:     { url: 'https://calendly.com/contact-gogermany/cv-interview',    priceEur: 16, priceMad: 160, durationMin: 30 },
+  path:   { url: 'https://calendly.com/contact-gogermany/path-planning',   priceEur: 25, priceMad: 250, durationMin: 45 },
+  apply:  { url: 'https://calendly.com/contact-gogermany/apply-for-me',    priceEur: 40, priceMad: 400, durationMin: 60 },
+  german: { url: 'https://calendly.com/contact-gogermany/german-tutoring', priceEur: 30, priceMad: 300, durationMin: 60 },
 } as const
 type TierKey = keyof typeof TIERS
 
@@ -143,8 +146,8 @@ type Props = {
  * lazily on first render so it doesn't block initial paint elsewhere.
  *
  * The button shows the price + duration of the tier the topic maps to
- * (€8/15min, €16/30min, €25/45min, €30/60min, or €40/60min). Labels
- * come from the bookConsult i18n namespace with {price}/{duration}
+ * (80/15min, 160/30min, 250/45min, 300/60min, or 400/60min — all MAD).
+ * Labels come from the bookConsult i18n namespace with {price}/{duration}
  * placeholders so each locale renders its own number+unit format.
  */
 export default function BookConsultationButton({
@@ -221,7 +224,7 @@ export default function BookConsultationButton({
   return (
     <button type="button" onClick={open} className={cls}>
       <span className="bcb-label">{t('cta')}</span>
-      <span className="bcb-price">{t('price', { price: tier.priceEur, duration: tier.durationMin })}</span>
+      <span className="bcb-price">{t('price', { price: tier.priceMad, duration: tier.durationMin })}</span>
     </button>
   )
 }
