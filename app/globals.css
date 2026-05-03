@@ -476,17 +476,9 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   .rihla-nav-cta { gap: 6px; }
   .rihla-icon-btn, .rihla-theme-btn { width: 32px; height: 32px; }
   .rihla-avatar { width: 32px; height: 32px; }
-  /* Logout becomes icon-only on mobile to save space */
-  .rihla-nav-cta .btn-brand { padding: 0; width: 32px; height: 32px; font-size: 0; border-radius: 999px; }
-  .rihla-nav-cta .btn-brand::after {
-    content: '';
-    display: block;
-    width: 14px; height: 14px;
-    background: currentColor;
-    -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>") center/contain no-repeat;
-    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'><path d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4'/><polyline points='16 17 21 12 16 7'/><line x1='21' y1='12' x2='9' y2='12'/></svg>") center/contain no-repeat;
-    color: white;
-  }
+  /* Sign up button stays as a real text button on mobile (was an icon-only
+     logout-glyph remnant from when signup was hidden on mobile). */
+  .rihla-nav-cta .btn-brand { padding: 7px 12px; font-size: 13px; }
 }
 @media (max-width: 480px) {
   .rihla-nav-links { font-size: 12.5px; gap: 12px; }
@@ -1098,7 +1090,25 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   50% { background-position: 100% 50%; }
 }
 .rihla .hero-sub { font-size: 20px; color: var(--ink-soft); max-width: 560px; margin-bottom: 36px; }
-.rihla .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+.rihla .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 20px; }
+.rihla .hero-wa-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 24px;
+  box-shadow: 0 6px 20px oklch(0.7 0.18 145 / 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.rihla .hero-wa-cta:hover { transform: translateY(-1px); background: #1ebe57; box-shadow: 0 10px 28px oklch(0.7 0.18 145 / 0.45); }
+.rihla .hero-wa-cta-text { display: flex; flex-direction: column; line-height: 1.15; }
+.rihla .hero-wa-cta-text strong { font-size: 15px; font-weight: 700; }
+.rihla .hero-wa-cta-text small { font-size: 12px; opacity: 0.9; font-weight: 500; }
 .rihla .hero-trust { display: flex; align-items: center; gap: 18px; color: var(--ink-mute); font-size: 14px; }
 .rihla .avatars { display: flex; }
 .rihla .avatars > div {

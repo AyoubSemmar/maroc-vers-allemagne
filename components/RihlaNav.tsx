@@ -280,8 +280,8 @@ export default function RihlaNav() {
             </>
           ) : (
             <>
-              <Link href="/login" className="btn btn-ghost btn-sm">{tNav('login')}</Link>
-              <Link href="/signup" className="btn btn-brand btn-sm rihla-desktop-only">{tNav('signup')}</Link>
+              <Link href="/login" className="btn btn-ghost btn-sm rihla-desktop-only">{tNav('login')}</Link>
+              <Link href="/signup" className="btn btn-brand btn-sm">{tNav('signup')}</Link>
             </>
           )}
         </div>
