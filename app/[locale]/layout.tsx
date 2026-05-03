@@ -10,6 +10,7 @@ import LanguagePicker from "@/components/LanguagePicker";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HideOnDashboard from "@/components/HideOnDashboard";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -108,6 +109,7 @@ export default async function LocaleLayout({
           <main className="flex-1">{children}</main>
           <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           <LanguagePicker />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
       {process.env.NODE_ENV === "production" && (
