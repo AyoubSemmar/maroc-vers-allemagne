@@ -35,13 +35,20 @@ const STATIC_PATHS = [
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date()
+  // Static pages don't have a natural lastModified, so use the deploy
+  // time. We pin it to midnight UTC of *yesterday* so it doesn't drift
+  // by milliseconds on every request and so Google doesn't see the
+  // sitemap claim "updated today" on every fetch — that signal makes
+  // Google deprioritise the URLs.
+  const yesterday = new Date()
+  yesterday.setUTCDate(yesterday.getUTCDate() - 1)
+  yesterday.setUTCHours(0, 0, 0, 0)
 
   // Build per-locale entries for static paths with hreflang alternates.
   const staticEntries: MetadataRoute.Sitemap = STATIC_PATHS.flatMap((path) =>
     routing.locales.map((loc) => ({
       url: `${SITE}/${loc}${path}`,
-      lastModified: now,
+      lastModified: yesterday,
       changeFrequency: 'weekly' as const,
       priority: path === '' ? 1 : 0.7,
       alternates: {
@@ -52,7 +59,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   )
 
-  // Articles from Supabase, one entry per locale.
+  // Articles from Supabase, one entry per locale — same hreflang
+  // grouping as static paths so Google understands these are
+  // translations of each other rather than separate pages. Without
+  // this, GSC's "Discovered – currently not indexed" pile fills up
+  // with locale duplicates that Google rations crawl budget on.
   let articleEntries: MetadataRoute.Sitemap = []
   try {
     const { data: articles } = await supabase
@@ -64,9 +75,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       articleEntries = articles.flatMap((a: any) =>
         routing.locales.map((loc) => ({
           url: `${SITE}/${loc}/articles/${a.id}`,
-          lastModified: a.date ? new Date(a.date) : now,
+          lastModified: a.date ? new Date(a.date) : yesterday,
           changeFrequency: 'monthly' as const,
           priority: 0.6,
+          alternates: {
+            languages: Object.fromEntries(
+              routing.locales.map((l) => [l, `${SITE}/${l}/articles/${a.id}`]),
+            ),
+          },
         })),
       )
     }
