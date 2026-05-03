@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import { CATEGORIES, CATEGORIES_ORDER, CategoryKey } from '@/lib/jobCategories'
 import JobCard, { Job } from '@/components/jobs/JobCard'
 import ApplyModal from '@/components/jobs/ApplyModal'
+import ApplyForYouCta from '@/components/ApplyForYouCta'
 import Pager, { usePageSize } from '@/components/Pager'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import './ausbildung-jobs.css'
@@ -71,6 +72,7 @@ export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
       </header>
 
       <div className="aj-body wrap">
+        <ApplyForYouCta />
         {/* Category filter */}
         <div className="aj-filter-bar">
           <button

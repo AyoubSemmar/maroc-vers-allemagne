@@ -20,6 +20,7 @@ export type UniversityRow = {
 
 import UniLogo from '@/components/universities/UniLogo'
 import SaveButton from '@/components/SaveButton'
+import ApplyForYouCta from '@/components/ApplyForYouCta'
 
 const TYPE_LABEL_KEYS: Record<string, string> = {
   university:        'typeUniversity',
@@ -127,6 +128,7 @@ export default function UniversitiesClient({
 
       <section id="unis-list" className="unis-list">
         <div className="wrap">
+          <ApplyForYouCta />
           {filtered.length === 0 ? (
             <div className="unis-empty">
               <span aria-hidden style={{ fontSize: 36 }}>🎓</span>
