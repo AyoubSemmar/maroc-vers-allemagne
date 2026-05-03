@@ -26,8 +26,12 @@ const PILLARS: [PathPillar, PathPillar, PathPillar] = [
 ]
 
 const TOOLS: PathTool[] = [
-  { key: 'cv',          icon: <Icon name="document" size={26} />, href: '/cv-builder',           nameKey: 'cv.name',          descKey: 'cv.desc' },
-  { key: 'anschreiben', icon: <Icon name="pen"      size={26} />, href: '/anschreiben-generator', nameKey: 'anschreiben.name', descKey: 'anschreiben.desc' },
+  { key: 'cv',                 icon: <Icon name="document"     size={26} />, href: '/cv-builder',                  nameKey: 'cv.name',                 descKey: 'cv.desc' },
+  { key: 'anschreiben',        icon: <Icon name="pen"          size={26} />, href: '/anschreiben-generator',       nameKey: 'anschreiben.name',        descKey: 'anschreiben.desc' },
+  { key: 'eligibilityChecker', icon: <Icon name="check-square" size={26} />, href: '/tools/eligibility-checker',   nameKey: 'eligibilityChecker.name', descKey: 'eligibilityChecker.desc' },
+  { key: 'documentChecklist',  icon: <Icon name="list"         size={26} />, href: '/tools/document-checklist',    nameKey: 'documentChecklist.name',  descKey: 'documentChecklist.desc' },
+  { key: 'migrationTimeline',  icon: <Icon name="map"          size={26} />, href: '/tools/migration-timeline',    nameKey: 'migrationTimeline.name',  descKey: 'migrationTimeline.desc' },
+  { key: 'livingCost',         icon: <Icon name="euro"         size={26} />, href: '/tools/living-cost-calculator', nameKey: 'livingCost.name',        descKey: 'livingCost.desc' },
 ]
 
 export default async function StudiumPage({ params }: Props) {

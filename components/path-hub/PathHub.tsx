@@ -1,7 +1,7 @@
 import type { AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
-import ConsultationForm from './ConsultationForm'
+import PathConsultCta from './PathConsultCta'
 import PathHubReveal from './PathHubReveal'
 
 export type PathTool = {
@@ -228,12 +228,12 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
 
       {/* CONSULTATION */}
       <section id="consult" style={{ background: 'var(--bg-warm)' }}>
-        <div className="wrap" style={{ maxWidth: 720 }}>
+        <div className="wrap" style={{ maxWidth: 880 }}>
           <div className="section-head reveal">
             <span className="kicker">{s('nextStepTitle')}</span>
             <h2>{s('consultTitle')}</h2>
           </div>
-          <ConsultationForm path={path} />
+          <PathConsultCta path={path} />
         </div>
       </section>
     </div>
