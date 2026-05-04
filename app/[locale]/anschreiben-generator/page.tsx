@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import AnschreibenClient from './AnschreibenClient'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import './anschreiben.css'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
@@ -16,6 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: A
   })
 }
 
-export default function AnschreibenPage() {
-  return <AnschreibenClient />
+export default async function AnschreibenPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
+  const { locale } = await params
+  return (
+    <>
+      <AnschreibenClient />
+      <ToolSeoSection locale={locale} namespace="anschreiben" />
+    </>
+  )
 }

@@ -2338,6 +2338,16 @@
     }
   },
   "cvBuilder": {
+    "seoSection": {
+      "title": "Was den deutschen Lebenslauf von einem marokkanischen oder französischen CV unterscheidet",
+      "intro": "Der deutsche Lebenslauf ist ganz anders aufgebaut als ein marokkanischer oder französischer Lebenslauf. Dieser Editor formatiert deine Angaben direkt in das deutsche Standardlayout: Berufserfahrung und Ausbildung in umgekehrt-chronologischer Reihenfolge, Start- und Enddaten als Monat (nicht nur Jahr), Foto rechts oben (das erwarten 80% der deutschen Arbeitgeber trotz AGG immer noch), und die formale „Tabellarischer Lebenslauf\"-Struktur, die Ausbildungs-Recruiter sehen wollen. Das Ergebnis ist ein sauberes PDF, das du jeder Bewerbung anhängen kannst.\n\nNeben dem Layout übersetzt das Tool Stellenbezeichnungen ins Deutsche (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), schlägt deutsche Aktionsverben vor und weist auf Pflichtabschnitte hin: Sprachkenntnisse mit GER-Niveaus (A1 bis C2), Hobbies und Interessen sowie „Referenzen auf Anfrage\". Der Editor ersetzt keine manuelle Prüfung durch eine deutschsprachige Fachperson — für eine Bewerbung, die wirklich klappen soll, buche eine 30-minütige Review.",
+      "faqTitle": "Häufige Fragen zum deutschen Lebenslauf",
+      "faqs": [
+        { "q": "Soll ich ein Foto in den Lebenslauf einfügen?", "a": "Offiziell nein — das AGG hat die Pflicht abgeschafft. In der Praxis haben rund 80% der Ausbildungs-Lebensläufe in Deutschland eines. Bei traditionellen Branchen (Pflege, Hotellerie, Handel, Bank) Foto rein; bei IT und Start-ups weglassen." },
+        { "q": "Wie viele Seiten soll der Lebenslauf haben?", "a": "Eine Seite, wenn du weniger als 5 Jahre Berufserfahrung hast; maximal zwei Seiten. Drei Seiten werden von Recruitern und ATS-Systemen aussortiert." },
+        { "q": "Welches Datumsformat erwarten deutsche Arbeitgeber?", "a": "Deutsches Format: 10/2023–06/2024 oder 10.2023–06.2024 (Slash oder Punkt, kein Bindestrich zwischen Monat und Jahr). Monate ausschreiben nur, wenn pro Jahr nur eine Position drin ist." }
+      ]
+    },
     "eyebrow": "📄 Lebenslauf-Editor",
     "subtitle": "Erstelle deinen deutschen Lebenslauf Schritt für Schritt — Sofortvorschau und kostenloser PDF-Download.",
     "completion": "{n}% fertig",
@@ -2570,6 +2580,16 @@
     "metaDesc": "Erstelle einfach einen professionellen deutschen Lebenslauf — mehrere Vorlagen und kostenloser PDF-Export."
   },
   "anschreiben": {
+    "seoSection": {
+      "title": "Warum das Anschreiben entscheidet, ob dein Lebenslauf gelesen wird",
+      "intro": "Das Anschreiben ist der am häufigsten übersprungene Teil einer deutschen Bewerbung — und der Teil, der entscheidet, ob dein Lebenslauf überhaupt gelesen wird. Dieser Generator erstellt dir ein deutsches Anschreiben, das auf eine konkrete Ausbildungsstelle oder Studienbewerbung zugeschnitten ist: Firmenname, Stelle, deine Motivation, warum gerade du. Es nutzt das deutsche Standardformat: deine Adresse oben links, Empfängeradresse darunter, Datum rechts, „Sehr geehrte Damen und Herren\" oder namentlich, Hauptteil in 3–4 kurzen Absätzen, Abschluss mit „Mit freundlichen Grüßen\".\n\nDas Ergebnis ist ein Arbeitsentwurf, den du personalisieren musst — füge 2–3 konkrete Sätze aus der Stellenanzeige ein, erwähne etwas Konkretes über den Arbeitgeber (Ausbildungsprogramm, Standort, Produkte) und entferne KI-Phrasen. Deutsche Recruiter erkennen Generika sofort. Nutze den Generator, um die leere Seite zu überwinden, dann mache es zu deinem Text. Für wichtige Bewerbungen buche vor dem Abschicken eine 30-minütige Review mit einer deutschsprachigen Fachperson.",
+      "faqTitle": "Häufige Fragen zum deutschen Anschreiben",
+      "faqs": [
+        { "q": "Wie lang soll das Anschreiben sein?", "a": "Genau eine Seite. Deutsche Recruiter erwarten 250–350 Wörter Motivation. Kürzer wirkt faul, länger wird nicht gelesen." },
+        { "q": "Soll ich auf Deutsch schreiben, wenn mein Deutsch noch nicht stark ist?", "a": "Ja. Ein Anschreiben auf B1-Niveau Deutsch ist besser als ein perfektes französisches. Der Recruiter sieht den Unterschied zwischen deinem geschriebenen Deutsch und dem polierten generierten Text — das ist normal; sie stellen eine Auszubildende ein, keine Schriftstellerin. Aber lüge nie über dein Niveau." },
+        { "q": "Soll ich im Anschreiben wiederholen, was im Lebenslauf steht?", "a": "Nein. Der Lebenslauf hat die Fakten. Das Anschreiben soll erklären, warum DU und warum SIE — konkrete Beispiele für dein Interesse genau an diesem Arbeitgeber und was du über die Stichpunkte hinaus mitbringst." }
+      ]
+    },
     "eyebrow": "✍️ Anschreiben-Generator",
     "subtitle": "Gib deine Angaben in einer beliebigen Sprache ein — die KI verfasst dir ein professionelles deutsches Anschreiben, zugeschnitten auf deine Ausbildungsbewerbung.",
     "emptyHint": "Dein Anschreiben erscheint hier, sobald du auf „Generieren\" klickst.",
@@ -3348,6 +3368,16 @@
     }
   },
   "livingCost": {
+    "seoSection": {
+      "title": "Realistische Lebenshaltungskosten in Deutschland — nach Stadt",
+      "intro": "Ein realistisches Monatsbudget für das Leben in Deutschland als marokkanische:r Studierende:r, Azubi oder Arbeitnehmer:in — aufgeschlüsselt nach Stadt. Der Rechner berücksichtigt Miete (WG, Studio, Wohnheim), Krankenversicherung (TK, AOK, Mawista), Essen, Verkehr (Deutschlandticket 58 €/Monat), Handytarif und Freizeit. Die Zahlen sind auf reale Preise 2026 in 30 deutschen Städten kalibriert, von München (am teuersten) bis Chemnitz (am günstigsten), damit du Städte vergleichen kannst, bevor du entscheidest, wo du studierst oder die Ausbildung machst.\n\nNutze ihn, um ein Sperrkonto-Ziel festzulegen (Mindestbetrag 2026: 11.904 €/Jahr, viele Städte kosten aber mehr), um Erwartungen ans Ausbildungsgehalt zu kalibrieren (die meisten Ausbildungen zahlen 900–1.300 €/Monat — angemessen in Leipzig, knapp in Frankfurt) und um zu entscheiden, ob du einen Nebenjob brauchst. Der Rechner schätzt auch die einmaligen Einrichtungskosten, die Neuankömmlinge meist vergessen — typischerweise 2.500–4.500 € zusätzlich zur Sperrkonto-Einlage.",
+      "faqTitle": "Häufige Fragen zu den Lebenshaltungskosten",
+      "faqs": [
+        { "q": "Reicht das Sperrkonto zum Leben?", "a": "In günstigen Städten wie Leipzig oder Dresden ja — 11.904 € ÷ 12 = 992 €/Monat, ausreichend für ein studentisches Leben. In München oder Frankfurt brauchst du einen Nebenjob. Minijobs bis 538 €/Monat sind steuerfrei und visumkonform, sowohl für Azubis als auch für Studierende." },
+        { "q": "Wie genau sind die Mietangaben?", "a": "Sie spiegeln die Mediane 2026 von ImmoScout24 und WG-Gesucht je Stadt wider. Reale Mieten schwanken um ±20 % je nach Viertel, Wohnungsalter und ob du bei privatem Vermieter oder Hausverwaltung anmietest." },
+        { "q": "Ist die Krankenversicherung im Budget enthalten?", "a": "Ja. Gesetzliche Versicherung (TK, AOK) für Studierende rund 120 €/Monat; bei Azubis wird sie vom Gehalt einbehalten. Private Reiseversicherung (Mawista, Care Concept) für die Visumphase 30–60 €/Monat." }
+      ]
+    },
     "metaTitle": "Lebenshaltungsrechner — Deutschland",
     "metaDesc": "Schätze deine monatlichen Lebenshaltungskosten als Ausbildungs-Azubi in 15 deutschen Städten — Miete, Essen, Verkehr, Versicherung u. v. m.",
     "eyebrow": "Finanzplanung",
@@ -3517,6 +3547,16 @@
     "unsave": "Gespeichert — klicken zum Entfernen"
   },
   "migrationTimeline": {
+    "seoSection": {
+      "title": "Wie lange dauert der Umzug von Marokko nach Deutschland wirklich?",
+      "intro": "Eine realistische Monats-Timeline für den Umzug von Marokko nach Deutschland, kalibriert auf deinen Ausgangspunkt: aktuelles Deutschniveau, Zielroute (Ausbildung oder Studium) und Stunden Lernzeit pro Woche. Die meisten Bewerber unterschätzen die Sprachphase um 6–12 Monate — dieses Tool zeigt, was tatsächlich machbar ist. Das deutsche Konsulat in Rabat erteilt Ausbildungsvisa derzeit in 6–12 Wochen; der Rest der Timeline besteht hauptsächlich aus Sprachkursen und Dokumentensammlung.\n\nDas Ergebnis zeigt einen personalisierten Wochenplan: wann mit dem Sprachkurs starten, wann B1- oder B2-Prüfung ablegen, wann mit Ausbildungs- oder Studienbewerbungen beginnen, wann ein Sperrkonto eröffnen, wann den Konsulatstermin buchen. Es macht typische Engpässe sichtbar (Goethe-Prüfungstermine, die 2 Monate im Voraus ausgebucht sind, ZAB-Bearbeitungszeit von 8 Wochen, Anmeldungs-Wartelisten in Großstädten), damit du sie umgehen kannst. Nutze es 6–18 Monate vor dem Wunsch-Reisetermin für realistische Meilensteine.",
+      "faqTitle": "Häufige Fragen zur Timeline",
+      "faqs": [
+        { "q": "Welche Timeline ist realistisch, wenn ich bei null Deutsch starte?", "a": "12–18 Monate für die Ausbildung (B1 erforderlich), 18–24 Monate fürs Studium (B2 oder C1 erforderlich). Schneller geht nur, wenn du 20+ Stunden pro Woche mit einem strukturierten Kurs lernen kannst." },
+        { "q": "Kann ich eine Ausbildung auf Englisch machen?", "a": "Fast nie. Über 95% der Ausbildungsprogramme laufen auf Deutsch. Ausnahmen sind einige IT- und Hotellerie-Programme in Berlin und Hamburg, die selten Bewerber ohne mindestens B1 Deutsch nehmen." },
+        { "q": "Wann sollte ich das Sperrkonto eröffnen?", "a": "Etwa 2–3 Monate vor dem Konsulatstermin. Früher bindet Geld unnötig; später riskiert das Visumsfenster zu verpassen." }
+      ]
+    },
     "metaTitle": "Auswanderungs-Timeline-Rechner Deutschland",
     "metaDesc": "Schätze, wie lange der Umzug von Marokko nach Deutschland für Ausbildung oder Studium dauert — phasenweise, basierend auf echten BAMF- und DAAD-Zeiten.",
     "eyebrow": "Planung · Zeitplan",
@@ -3613,6 +3653,16 @@
     "applySub": "60 Minuten, um den Auftrag abzustimmen. Danach übernehmen wir das komplette Dossier: Lebenslauf auf Deutsch, individuelles Anschreiben pro Arbeitgeber oder Motivationsschreiben pro Uni, Nachfassen."
   },
   "documentChecklist": {
+    "seoSection": {
+      "title": "Eine speziell auf Marokkaner zugeschnittene Visumsdokumenten-Checkliste",
+      "intro": "Eine vollständige, personalisierte Checkliste aller Dokumente, die marokkanische Bewerber:innen für ein deutsches Visum — Ausbildung oder Studium — vorlegen müssen, basierend auf den tatsächlichen Anforderungen der deutschen Botschaft Rabat 2026. Generische Online-Listen mischen Anforderungen verschiedener Länder; diese filtert auf das, was Marokkaner wirklich brauchen. Kategorien: Identität (CIN, Reisepass, Fotos), Akademisch (Baccalauréat, Zeugnisbewertung der ZAB, Zeugnisse), Sprache (Goethe-, telc-, ÖSD-Zertifikat), Beruflich (unterzeichneter Ausbildungsvertrag oder Zulassungsbescheid), Finanziell (Sperrkonto, Verpflichtungserklärung oder Gehaltsnachweis) und Sonstiges (Versicherung, Wohnungsnachweis, beglaubigte Übersetzungen).\n\nFür jedes Dokument zeigt das Tool, wo es in Marokko zu beschaffen ist, die realistische Bearbeitungszeit und die tatsächlichen Kosten in MAD. Es markiert auch, welche Dokumente eine vereidigte Übersetzung brauchen versus welche die Botschaft direkt auf Französisch akzeptiert. Nutze es als druckbare Liste fürs Konsulat oder als Planungstool 6–12 Monate vor der Bewerbung — viele Dokumente (ZAB-Bewertung, Goethe-Zertifikat, Apostille) brauchen 2–3 Monate und lassen sich nicht beschleunigen.",
+      "faqTitle": "Häufige Fragen zu den Dokumenten",
+      "faqs": [
+        { "q": "Müssen alle Dokumente ins Deutsche übersetzt werden?", "a": "Nein. Die deutsche Botschaft in Rabat akzeptiert die meisten Dokumente auf Französisch. Reine Arabisch-Dokumente (CIN, Familienstammbuch) brauchen eine vereidigte Übersetzung ins Französische oder Deutsche. Hochschulzeugnisse marokkanischer Universitäten werden meist auf Französisch akzeptiert." },
+        { "q": "Was ist die Zeugnisbewertung?", "a": "Die offizielle deutsche Bewertung deines marokkanischen Diploms, ausgestellt von der ZAB (Zentralstelle für ausländisches Bildungswesen). Kostet 80 €, dauert 2–3 Monate. Pflicht für Studienbewerber:innen." },
+        { "q": "Brauche ich eine Apostille?", "a": "Marokko ist 2016 dem Haager Apostille-Übereinkommen beigetreten. Die meisten akademischen und Personenstandsdokumente brauchen eine Apostille des Außenministeriums in Rabat (~30 MAD/Dokument, 2–5 Tage)." }
+      ]
+    },
     "metaTitle": "Dokumenten-Checkliste — Marokko nach Deutschland",
     "metaDesc": "Personalisierte Liste aller Dokumente, die Marokkaner für das Ausbildungs- oder Studiumsvisum brauchen — wo zu beschaffen, echte Kosten in MAD/EUR, und Zeitplan.",
     "eyebrow": "Bewerbung & Unterlagen",
@@ -3827,6 +3877,16 @@
     }
   },
   "eligibilityChecker": {
+    "seoSection": {
+      "title": "Warum eine 60-Sekunden-Eignungsprüfung wichtig ist, bevor du den Konsulatstermin buchst",
+      "intro": "Dieser Eignungsprüfer für Ausbildung & Studium sagt dir in 60 Sekunden, ob dein aktuelles Profil für ein deutsches Visum aus Marokko qualifiziert — und genau, was du sonst korrigieren musst. Er funktioniert für beide Wege Ausbildung und Studium, nach den tatsächlichen Konsulatsregeln 2026, die in Rabat und Casablanca angewandt werden: Mindest-Deutschniveau (B1 für Ausbildung, B2/C1 fürs Studium), anerkanntes Abschlusszeugnis, unterzeichneter Vertrag oder Zulassungsbescheid, Finanzierungsnachweis (Sperrkonto, Gehalt oder Sponsor) und Wohnungsnachweis.\n\nDie meisten abgelehnten Visa scheitern an einem einzigen vermeidbaren Detail — Sprachnachweis nicht akzeptiert, Vertrag noch nicht unterzeichnet, Sperrkonto unter dem Schwellenwert von 11.904 € für 2026. Der Prüfer fängt das ab, bevor du Geld für einen Konsulatstermin ausgibst. Die Ergebnisseite zeigt ein klares grün/orange/rotes Urteil, die konkreten Blocker in deinem Profil und den nächsten konkreten Schritt. Er ersetzt keine echte Bewertung durch eine Fachperson; bei Grenzfällen oder ungewöhnlichen Profilen (Lücke im Lebenslauf, frühere Visumablehnung, doppelte Staatsbürgerschaft) buche eine 30-minütige Beratung.",
+      "faqTitle": "Häufige Fragen zur Eignungsprüfung",
+      "faqs": [
+        { "q": "Wie genau ist das Ergebnis?", "a": "Es wendet die veröffentlichten Konsulatskriterien für marokkanische Bewerber:innen 2026 an. Es erkennt die häufigen Ablehnungsmuster (etwa 85% der Fälle), kann aber subjektive Konsulatsentscheidungen nicht abbilden. Bei komplexen Profilen buche eine Beratung." },
+        { "q": "Welche Visumtypen deckt der Prüfer ab?", "a": "Das Ausbildungsvisum (§16a AufenthG) und das Studiumvisum (§16b AufenthG). Jobseeker- und Fachkräftevisum haben andere Regeln — derzeit nicht abgedeckt." },
+        { "q": "Werden meine Daten gespeichert?", "a": "Nein. Die Prüfung läuft komplett im Browser. Wir sehen nicht, was du eingibst, und nichts wird an unsere Server gesendet." }
+      ]
+    },
     "metaTitle": "Visum-Eignungsprüfer — Marokko nach Deutschland",
     "metaDesc": "Prüfe deine Eignung fürs deutsche Ausbildungs- oder Studiumsvisum als marokkanischer Bewerber — Score, Blocker und persönliche nächste Schritte.",
     "eyebrow": "Visumseignung",

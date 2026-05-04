@@ -2338,6 +2338,16 @@
     }
   },
   "cvBuilder": {
+    "seoSection": {
+      "title": "How a German Lebenslauf differs from a Moroccan or French CV",
+      "intro": "The German Lebenslauf is structured very differently from a Moroccan or French CV. This builder formats your information directly into the German standard layout: reverse-chronological work and study, with start–end dates as months not years, your photo top-right (still expected by 80% of German employers despite the AGG anti-discrimination guidelines), and a formal Tabellarischer Lebenslauf structure that Ausbildung recruiters expect to see. The output is a clean PDF you can attach to any Ausbildung or job application.\n\nBeyond layout, the tool translates job titles into German equivalents (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggests action verbs in German, and flags missing sections German recruiters look for: Sprachkenntnisse with CEFR levels (A1 to C2), Hobbies und Interessen, and Referenzen auf Anfrage. It does not replace a manual review of your application materials by a German-speaking specialist — for an Ausbildung application that you really need to land, book a 30-minute review.",
+      "faqTitle": "Common questions about the German Lebenslauf",
+      "faqs": [
+        { "q": "Should I include a photo on my Lebenslauf?", "a": "Officially no — the AGG anti-discrimination law removed the requirement. In practice, around 80% of Ausbildung CVs in Germany still have one. Include a professional photo for traditional sectors (healthcare, hospitality, retail, banking); skip it for tech and start-ups." },
+        { "q": "How many pages should my Lebenslauf be?", "a": "One page if you have under 5 years of experience; two pages maximum. Three-page CVs are routinely filtered out by both human recruiters and ATS software." },
+        { "q": "What date format do German employers expect?", "a": "German format: 10/2023–06/2024 or 10.2023–06.2024 (slash or dot, not dash, between month and year). Spell out months only if you have a single role per year." }
+      ]
+    },
     "eyebrow": "📄 CV Builder",
     "subtitle": "Build your German CV step by step — instant preview and free PDF download.",
     "completion": "{n}% complete",
@@ -2570,6 +2580,16 @@
     "metaDesc": "Easily build a professional German CV (Lebenslauf) — multiple templates and free PDF export."
   },
   "anschreiben": {
+    "seoSection": {
+      "title": "Why the Anschreiben decides whether your Lebenslauf gets read",
+      "intro": "The Anschreiben (cover letter) is the most-skipped piece of a German job application — and the one that decides whether your CV gets read at all. This generator produces a German Anschreiben tailored to a specific Ausbildung position or university application: company name, position, your motivation, why you (specifically) for them. It uses the standard German letter format: your address top-left, recipient address below, date right-aligned, \"Sehr geehrte Damen und Herren\" or named recipient, body in 3 to 4 short paragraphs, and \"Mit freundlichen Grüßen\" to close.\n\nThe output is a working draft you should personalise — paste in 2 to 3 specific sentences from the job posting, mention something concrete about the employer (their training programme, location, products), and remove the AI-style padding. German recruiters spot generic letters instantly. Use the generator to remove the blank-page problem, then make it yours. For high-stakes applications, book a 30-minute review with a German-speaking specialist before you send.",
+      "faqTitle": "Common questions about the German Anschreiben",
+      "faqs": [
+        { "q": "How long should the Anschreiben be?", "a": "One page exactly. German recruiters expect to see your motivation in 250 to 350 words. Shorter feels lazy, longer does not get read." },
+        { "q": "Should I write it in German if my German is not yet strong?", "a": "Yes. A B1-level Anschreiben in German beats a perfect French one. The recruiter will see the gap between your written German and the polished generated text — that is expected; they are hiring an Auszubildender, not a writer. But never lie about your level." },
+        { "q": "Should I repeat what is on my CV in the Anschreiben?", "a": "No. The CV has the facts. The Anschreiben should explain why YOU and why THEM — concrete examples of your interest in this particular employer and what you bring beyond the bullet points." }
+      ]
+    },
     "eyebrow": "✍️ Cover letter generator",
     "subtitle": "Enter your details in the language of your choice — the AI writes a professional German cover letter tailored for an Ausbildung application.",
     "emptyHint": "Your letter will appear here after you click the Generate button.",
@@ -3348,6 +3368,16 @@
     }
   },
   "livingCost": {
+    "seoSection": {
+      "title": "Realistic monthly cost of living in Germany — by city",
+      "intro": "A realistic monthly budget for living in Germany as a Moroccan student, apprentice, or worker — broken down by city. The calculator factors in housing (WG, studio, dorm), insurance (TK, AOK, Mawista), food, transport (Deutschlandticket €58/month), phone plan, and discretionary spending. Numbers are calibrated to actual 2026 prices in 30 German cities, from Munich (most expensive) to Chemnitz (cheapest), so you can compare cities before choosing where to study or train.\n\nUse it to set a Sperrkonto target (the 2026 minimum is €11,904/year, but many cities cost more), to negotiate Ausbildung salary expectations (most Ausbildung pays €900 to €1,300 a month — fine in Leipzig, tight in Frankfurt), and to plan whether you need a side job. The calculator also estimates one-time setup costs (deposit, first month rent, household items) that newcomers usually forget — typically €2,500 to €4,500 over and above the Sperrkonto deposit.",
+      "faqTitle": "Common questions about living costs in Germany",
+      "faqs": [
+        { "q": "Is the Sperrkonto enough to live on?", "a": "In cheaper cities like Leipzig or Dresden, yes — €11,904 a year ÷ 12 = €992 a month, enough for student-level living. In Munich or Frankfurt you will need a side job. Minijobs up to €538/month are tax-free and visa-compliant for both Ausbildung trainees and students." },
+        { "q": "How accurate are the rent numbers?", "a": "They reflect 2026 medians on ImmoScout24 and WG-Gesucht for each city. Actual rent varies by ±20% depending on neighborhood, apartment age, and whether you find a private landlord versus a property-management company." },
+        { "q": "Does the budget include health insurance?", "a": "Yes. Public insurance (TK, AOK) for students is around €120/month; for Ausbildung trainees it is deducted from salary. Private travel insurance (Mawista, Care Concept) for the visa application stage is €30 to €60/month." }
+      ]
+    },
     "metaTitle": "Living Cost Calculator — Estimate monthly costs in Germany",
     "metaDesc": "Estimate your monthly living costs as an Ausbildung trainee across 15 German cities — rent, food, transport, insurance, and more.",
     "eyebrow": "Financial planning",
@@ -3517,6 +3547,16 @@
     "unsave": "Saved — click to remove"
   },
   "migrationTimeline": {
+    "seoSection": {
+      "title": "How long does it really take to move from Morocco to Germany?",
+      "intro": "A realistic month-by-month migration timeline from Morocco to Germany, calibrated to your starting point: current German level, target route (Ausbildung or Studium), and how many hours per week you can study. Most candidates underestimate the language phase by 6 to 12 months — this tool shows you what is actually achievable. The German consulate in Rabat currently issues Ausbildung visas in 6 to 12 weeks; the rest of the timeline is mostly language study and document collection.\n\nThe output shows a personalised week-by-week plan: when to start the language course, when to take your B1 or B2 exam, when to begin Ausbildung applications or university applications, when to open a Sperrkonto, and when to book the consulate appointment. It surfaces the most common bottlenecks (Goethe exam slots that fill up 2 months ahead, ZAB processing time of 8 weeks, Anmeldung waiting lists in big cities) so you can plan around them. Use it 6 to 18 months before your target departure date to set realistic milestones — and to know when each piece of paperwork actually needs to start.",
+      "faqTitle": "Common questions about the timeline",
+      "faqs": [
+        { "q": "What is a realistic timeline if I am starting from zero German?", "a": "12 to 18 months for Ausbildung (you need B1), 18 to 24 months for Studium (you need B2 or C1). Faster is only possible if you can study 20+ hours per week with a structured course." },
+        { "q": "Can I do an Ausbildung in English?", "a": "Almost never. Over 95% of Ausbildung programmes are taught in German. The exceptions are some IT and hospitality programmes in Berlin and Hamburg, and they rarely accept candidates without at least B1 German." },
+        { "q": "When should I open the Sperrkonto?", "a": "About 2 to 3 months before your consulate appointment. Earlier ties up money for no reason; later risks missing the visa application deadline." }
+      ]
+    },
     "metaTitle": "Germany Migration Timeline Calculator",
     "metaDesc": "Estimate how long it takes to move from Morocco to Germany for Ausbildung or Studium — phase-by-phase, based on real BAMF and DAAD timelines.",
     "eyebrow": "Planning · timeline",
@@ -3613,6 +3653,16 @@
     "applySub": "60 minutes to scope the work. We then run your full application: CV in German, custom Anschreiben per employer or motivation letter per university, follow-ups."
   },
   "documentChecklist": {
+    "seoSection": {
+      "title": "A Morocco-specific document checklist for the German visa",
+      "intro": "A complete, personalised checklist of every document a Moroccan applicant needs for a German visa — Ausbildung or Studium — built from the actual requirements published by the German embassy in Rabat for 2026. Generic checklists you find online mix requirements from multiple countries; this one filters to what Moroccans specifically need to bring. Categories include identity (CIN, passport, photos), academic (Baccalauréat, Zeugnisbewertung from ZAB, transcripts), language (Goethe, telc, ÖSD certificate), professional (signed Ausbildung contract or university admission letter), financial (Sperrkonto, Verpflichtungserklärung, or salary proof), and miscellaneous (insurance, accommodation proof, sworn translations).\n\nFor every document, the tool shows where to obtain it in Morocco, the realistic processing time, and the actual cost in MAD. It also flags documents that need a sworn translator (Traducteur assermenté) versus those the German embassy accepts directly in French. Use it as a printable list to bring to your consulate appointment, or as a planning tool 6 to 12 months before applying — many documents (ZAB evaluation, Goethe certificate, apostille) take 2 to 3 months and cannot be fast-tracked.",
+      "faqTitle": "Common questions about the document checklist",
+      "faqs": [
+        { "q": "Do all documents need to be translated to German?", "a": "No. The German embassy in Rabat accepts most documents in French. Arabic-only documents (CIN, livret de famille) need a sworn translation to French or German. Academic transcripts from Moroccan universities are usually accepted in French." },
+        { "q": "What is the Zeugnisbewertung?", "a": "The official German evaluation of your Moroccan diploma, issued by the ZAB (Zentralstelle für ausländisches Bildungswesen). It costs €80 and takes 2 to 3 months. Mandatory for Studium applicants." },
+        { "q": "Do I need an apostille on my documents?", "a": "Morocco signed the Hague Apostille Convention in 2016. Most academic and civil-status documents need an apostille from the Ministry of Foreign Affairs in Rabat (about 30 MAD per document, 2 to 5 days)." }
+      ]
+    },
     "metaTitle": "Document Checklist Generator — Morocco to Germany",
     "metaDesc": "Personalised checklist of every document a Moroccan needs for the German Ausbildung or Studium visa — with where to obtain, real costs in MAD/EUR, and timelines.",
     "eyebrow": "Application & paperwork",
@@ -3827,6 +3877,16 @@
     }
   },
   "eligibilityChecker": {
+    "seoSection": {
+      "title": "Why a 60-second eligibility check matters before you book a consulate appointment",
+      "intro": "This Ausbildung & Studium eligibility checker tells you in 60 seconds whether your current profile qualifies for a German visa from Morocco — and exactly what you need to fix if not. It works for both apprenticeship (Ausbildung) and university (Studium) routes, applying the actual 2026 German consulate rules used in Rabat and Casablanca: minimum German level (B1 for Ausbildung, B2/C1 for Studium), recognised diploma, signed contract or admission letter, financial proof (Sperrkonto, salary, or sponsor), and proof of housing.\n\nMost rejected visa applications fail on a single missable detail — language proof not accepted, contract not yet signed, Sperrkonto below the 2026 threshold of €11,904. The checker catches these before you spend money on a consulate appointment. The result page shows a clear green/orange/red verdict, the specific blockers in your profile, and the next concrete step for each one. It does not replace a real assessment by a specialist; for borderline cases or unusual profiles (gap year, prior visa refusal, dual citizenship), book a 30-minute consultation.",
+      "faqTitle": "Common questions about the eligibility check",
+      "faqs": [
+        { "q": "How accurate is the result?", "a": "It applies the published German consulate criteria for Moroccan applicants in 2026. It catches the common rejection patterns (around 85% of cases) but cannot factor in subjective consular judgment. For complex profiles, book a consultation." },
+        { "q": "Which visa types does this cover?", "a": "Both the Ausbildung visa (§16a AufenthG) and the Studium visa (§16b AufenthG). The Jobseeker visa and Skilled Worker visa use different rules — those are not covered by this tool yet." },
+        { "q": "Is my data saved?", "a": "No. The check runs entirely in your browser. We do not see what you enter, and nothing is sent to our servers." }
+      ]
+    },
     "metaTitle": "Visa Eligibility Checker — Morocco to Germany",
     "metaDesc": "Check your eligibility for the German Ausbildung or Studium visa as a Moroccan applicant — readiness score, blockers, and personalised next steps.",
     "eyebrow": "Visa eligibility",

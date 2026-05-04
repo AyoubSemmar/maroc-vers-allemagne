@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import CVBuilderClient from './CVBuilderClient'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import './cv-builder.css'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
@@ -16,6 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: A
   })
 }
 
-export default function CVBuilderPage() {
-  return <CVBuilderClient />
+export default async function CVBuilderPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
+  const { locale } = await params
+  return (
+    <>
+      <CVBuilderClient />
+      <ToolSeoSection locale={locale} namespace="cvBuilder" />
+    </>
+  )
 }
