@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
+import RelatedTools from '@/components/seo/RelatedTools'
 import EligibilityChecker from './EligibilityChecker'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
@@ -24,6 +25,7 @@ export default async function EligibilityCheckerPage({ params }: Props) {
     <>
       <EligibilityChecker locale={locale} />
       <ToolSeoSection locale={locale} namespace="eligibilityChecker" />
+      <RelatedTools locale={locale} current="eligibilityChecker" />
     </>
   )
 }

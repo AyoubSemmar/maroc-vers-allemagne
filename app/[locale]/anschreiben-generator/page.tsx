@@ -4,6 +4,7 @@ import AnschreibenClient from './AnschreibenClient'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
+import RelatedTools from '@/components/seo/RelatedTools'
 import './anschreiben.css'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
@@ -23,6 +24,7 @@ export default async function AnschreibenPage({ params }: { params: Promise<{ lo
     <>
       <AnschreibenClient />
       <ToolSeoSection locale={locale} namespace="anschreiben" />
+      <RelatedTools locale={locale} current="anschreiben" />
     </>
   )
 }

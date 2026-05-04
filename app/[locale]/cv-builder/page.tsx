@@ -4,6 +4,7 @@ import CVBuilderClient from './CVBuilderClient'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
+import RelatedTools from '@/components/seo/RelatedTools'
 import './cv-builder.css'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
@@ -23,6 +24,7 @@ export default async function CVBuilderPage({ params }: { params: Promise<{ loca
     <>
       <CVBuilderClient />
       <ToolSeoSection locale={locale} namespace="cvBuilder" />
+      <RelatedTools locale={locale} current="cv" />
     </>
   )
 }
