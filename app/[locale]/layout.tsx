@@ -31,37 +31,17 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "common" });
   const title = t("appName");
   const description = t("tagline");
+  // The layout only declares site-level fallbacks. Each page builds
+  // its own full metadata via lib/seo/buildLocaleMetadata so that
+  // og:title, og:description, canonical, and hreflang are page-
+  // specific. Without this split, the layout's openGraph.title /
+  // description cascaded as defaults to every child page and every
+  // social-share preview said "GoGermany / Votre guide..." regardless
+  // of the actual page.
   return {
     metadataBase: new URL("https://gogermany.ma"),
     title,
     description,
-    alternates: {
-      // NOTE: do NOT set `canonical` here — it would cascade to every
-      // child page and tell Google "every page is a duplicate of the
-      // locale homepage", which is exactly what was causing 'Page with
-      // redirect / duplicate canonical' errors in Search Console for
-      // hundreds of URLs. Without this line, each page gets its actual
-      // URL as its canonical, which is what we want.
-      languages: {
-        ar: "/ar",
-        fr: "/fr",
-        en: "/en",
-        de: "/de",
-      },
-    },
-    openGraph: {
-      type: "website",
-      url: `https://gogermany.ma/${locale}`,
-      title,
-      description,
-      siteName: "GoGermany",
-      locale,
-    },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-    },
     verification: {
       google: "6nkUvguFw7fx5-A9jtaKpAT6L9bcllDaYR6ACntlfKI",
     },

@@ -5,6 +5,7 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import UniLogo from '@/components/universities/UniLogo'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale; slug: string }> }
 
@@ -30,10 +31,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!data) return {}
   const name = pick(data, 'name', locale)
   const t = await getTranslations({ locale, namespace: 'universities.detail' })
-  return {
+  return buildLocaleMetadata({
+    locale,
+    path: `/universities/${slug}`,
     title: `${name} — GoGermany`,
     description: t('metaDesc', { name, city: data.city ?? '' }),
-  }
+  })
 }
 
 export default async function UniversityDetailPage({ params }: Props) {

@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ArticlesClient from './ArticlesClient'
 
 // 10-min ISR: list pages don't need to reflect a new article instantly,
@@ -14,10 +15,12 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'articles' })
-  return {
+  return buildLocaleMetadata({
+    locale,
+    path: '/articles',
     title: t('metaTitle'),
     description: t('metaDesc'),
-  }
+  })
 }
 
 export default async function ArticlesPage({ params }: Props) {

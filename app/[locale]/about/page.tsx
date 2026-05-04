@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import StaticPage, { Section, SectionText } from '@/components/StaticPage'
 import type { AppLocale } from '@/i18n/routing'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
@@ -30,12 +31,7 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const m = META[locale] ?? META.fr
-  return {
-    title: m.title,
-    description: m.desc,
-    openGraph: { title: m.title, description: m.desc },
-    twitter: { title: m.title, description: m.desc },
-  }
+  return buildLocaleMetadata({ locale, path: '/about', title: m.title, description: m.desc })
 }
 
 export default async function AboutPage({ params }: Props) {

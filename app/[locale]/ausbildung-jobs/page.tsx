@@ -4,6 +4,7 @@ import { createClient } from '@supabase/supabase-js'
 import AusbildungJobsClient from './AusbildungJobsClient'
 import { Job } from '@/components/jobs/JobCard'
 import type { AppLocale } from '@/i18n/routing'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 // ISR: serve a cached HTML for 5 min, then re-generate in the background.
 // Listings are nightly-fed by the scraper, so 5-min staleness is fine and
@@ -14,10 +15,12 @@ export const revalidate = 300
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'ausbJobs' })
-  return {
+  return buildLocaleMetadata({
+    locale,
+    path: '/ausbildung-jobs',
     title: t('metaTitle'),
     description: t('metaDesc'),
-  }
+  })
 }
 
 async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }> {

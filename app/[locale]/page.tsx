@@ -1,10 +1,32 @@
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import RihlaLanding from '@/components/landing/RihlaLanding'
 import { localizeRows } from '@/lib/i18n-content'
 import { ARTICLE_LIST_FIELDS_WITH_READ_TIME, rehydrateTranslationsList } from '@/lib/article-list-select'
 import type { AppLocale } from '@/i18n/routing'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 export const revalidate = 600
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: AppLocale }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const tCommon = await getTranslations({ locale, namespace: 'common' })
+  const tLanding = await getTranslations({ locale, namespace: 'landing.hero' })
+  // Title: "GoGermany — <hero subline>" so the homepage stops sharing
+  // the same generic <title> across all locales.
+  const title = `${tCommon('appName')} — ${tLanding('eyebrow')}`
+  return buildLocaleMetadata({
+    locale,
+    path: '',
+    title,
+    description: tLanding('sub'),
+  })
+}
 
 export default async function Home({
   params,

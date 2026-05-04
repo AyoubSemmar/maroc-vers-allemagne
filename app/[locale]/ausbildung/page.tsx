@@ -6,6 +6,7 @@ import { ARTICLE_LIST_FIELDS_WITH_READ_TIME, rehydrateTranslationsList } from '@
 import PathHub, { type PathTool, type PathPillar } from '@/components/path-hub/PathHub'
 import Icon from '@/components/ui/Icon'
 import type { AppLocale } from '@/i18n/routing'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 export const revalidate = 600
 
@@ -14,7 +15,12 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'landing.pathHub.ausbildung' })
-  return { title: t('title'), description: t('sub') }
+  return buildLocaleMetadata({
+    locale,
+    path: '/ausbildung',
+    title: t('title'),
+    description: t('sub'),
+  })
 }
 
 const AUSBILDUNG_CATEGORIES = ['Ausbildung', 'العمل']

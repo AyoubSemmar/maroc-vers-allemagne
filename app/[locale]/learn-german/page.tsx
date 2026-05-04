@@ -4,6 +4,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import './learn-german.css'
 
 const META: Record<AppLocale, { title: string; desc: string }> = {
@@ -28,12 +29,7 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
   const { locale } = await params
   const m = META[locale] ?? META.fr
-  return {
-    title: m.title,
-    description: m.desc,
-    openGraph: { title: m.title, description: m.desc },
-    twitter: { title: m.title, description: m.desc },
-  }
+  return buildLocaleMetadata({ locale, path: '/learn-german', title: m.title, description: m.desc })
 }
 
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {

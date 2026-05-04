@@ -3,16 +3,19 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import type { AppLocale } from '@/i18n/routing'
 import UniversitiesClient, { type UniversityRow } from '@/components/universities/UniversitiesClient'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'universities' })
-  return {
+  return buildLocaleMetadata({
+    locale,
+    path: '/universities',
     title: t('metaTitle'),
     description: t('metaDesc'),
-  }
+  })
 }
 
 export default async function UniversitiesPage({ params }: Props) {
