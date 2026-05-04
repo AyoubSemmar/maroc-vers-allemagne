@@ -7,6 +7,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { useCatLabel } from '@/lib/article-cat'
 import { trackWhatsappClick } from '@/lib/analytics'
+import JsonLd from '@/components/seo/JsonLd'
 
 const WHATSAPP_NUMBER = '491771903108'
 
@@ -579,6 +580,23 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
 
       {/* ============ FAQ ============ */}
       <section id="faq">
+        {/* FAQPage schema → eligible for FAQ rich result on Google.
+            Built from the same translation keys the visible FAQs use,
+            so the schema can never drift from the displayed Q&A. */}
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: faqIds.map((n) => ({
+              '@type': 'Question',
+              name: t(`faq.q${n}` as any),
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: t(`faq.a${n}` as any),
+              },
+            })),
+          }}
+        />
         <div className="wrap">
           <div className="section-head reveal">
             <span className="kicker">{t('faq.kicker')}</span>

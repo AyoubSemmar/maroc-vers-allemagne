@@ -12,6 +12,7 @@ import HideOnDashboard from "@/components/HideOnDashboard";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
+import JsonLd from "@/components/seo/JsonLd";
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -81,6 +82,29 @@ export default async function LocaleLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* Site-wide Organization schema. Lets Google show a brand
+            knowledge panel for "GoGermany" and ties social profiles
+            to the brand. Rendered once per request via the locale
+            layout — every page on the site gets it. */}
+        <JsonLd
+          data={{
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'GoGermany',
+            alternateName: 'Maroc vers Allemagne',
+            url: 'https://gogermany.ma',
+            logo: 'https://gogermany.ma/icon.svg',
+            sameAs: [
+              'https://www.facebook.com/gogermanyma',
+              'https://www.instagram.com/gogermany.ma',
+              'https://www.tiktok.com/@gogermany.ma',
+            ],
+            inLanguage: ['ar', 'fr', 'en', 'de'],
+            areaServed: ['MA', 'DE'],
+            description:
+              'GoGermany helps Moroccans move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
+          }}
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={typedLocale} messages={messages}>

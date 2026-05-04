@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
+import JsonLd from '@/components/seo/JsonLd'
 
 type FAQ = { q: string; a: string }
 
@@ -13,6 +14,20 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
 
   return (
     <div className="mt-12 border-t border-gray-200 pt-8">
+      {/* FAQPage schema for the per-article FAQ. Pairs with the
+          one on the landing page so Google can surface FAQ rich
+          results for both the homepage and individual articles. */}
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((f) => ({
+            '@type': 'Question',
+            name: f.q,
+            acceptedAnswer: { '@type': 'Answer', text: f.a },
+          })),
+        }}
+      />
       <h2 className="text-xl font-bold text-gray-900 mb-6">{t('title')}</h2>
       <div className="flex flex-col gap-3">
         {faqs.map((faq, i) => (

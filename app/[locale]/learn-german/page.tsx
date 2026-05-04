@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+import JsonLd from '@/components/seo/JsonLd'
 import './learn-german.css'
 
 const META: Record<AppLocale, { title: string; desc: string }> = {
@@ -35,9 +36,46 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: A
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'learnGerman' })
+  const m = META[locale] ?? META.fr
 
   return (
     <div className="lg-root" dir={dirFor(locale)}>
+      {/* Course schema for the free A1→C1 German curriculum. Makes the
+          page eligible for Google's free-courses rich result and ties
+          the brand to the course offering. courseInstance entries
+          mirror the 5 CEFR levels as separate self-paced offerings. */}
+      <JsonLd
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'Course',
+          name: m.title.split('|')[0].trim(),
+          description: m.desc,
+          inLanguage: locale,
+          url: `https://gogermany.ma/${locale}/learn-german`,
+          provider: {
+            '@type': 'Organization',
+            name: 'GoGermany',
+            sameAs: 'https://gogermany.ma',
+          },
+          isAccessibleForFree: true,
+          educationalLevel: ['A1', 'A2', 'B1', 'B2', 'C1'],
+          teaches: 'German language (Deutsch)',
+          courseMode: 'online',
+          hasCourseInstance: ['A1', 'A2', 'B1', 'B2', 'C1'].map((lvl) => ({
+            '@type': 'CourseInstance',
+            name: `Deutsch ${lvl}`,
+            courseMode: 'online',
+            inLanguage: locale,
+            url: `https://gogermany.ma/${locale}/learn-german/${lvl.toLowerCase()}`,
+          })),
+          offers: {
+            '@type': 'Offer',
+            category: 'free',
+            price: 0,
+            priceCurrency: 'EUR',
+          },
+        }}
+      />
       <header className="lg-hero">
         <div className="wrap">
           <span className="lg-eyebrow"><span className="lg-eyebrow-dot" />{t('pageEyebrow') ?? '🇩🇪 Learn German'}</span>
