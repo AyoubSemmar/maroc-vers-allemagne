@@ -4962,19 +4962,27 @@ body { line-height: 1.65; }
   border-top: 1px solid var(--border);
   margin-top: 32px;
 }
+/* Self-contained centered container — the global .rihla .wrap rule
+   only applies inside .rihla, but tool pages don't have that ancestor. */
+.tool-seo-section .wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
 .tool-seo-title {
   font-size: 26px;
   font-weight: 700;
   margin: 0 0 22px;
   color: var(--ink);
   line-height: 1.25;
+  text-align: center;
 }
 .tool-seo-intro {
   display: flex;
   flex-direction: column;
   gap: 16px;
   max-width: 760px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
 }
 .tool-seo-intro p {
   font-size: 16px;
@@ -4984,12 +4992,14 @@ body { line-height: 1.65; }
 }
 .tool-seo-faq {
   max-width: 820px;
+  margin: 0 auto;
 }
 .tool-seo-faq-title {
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 16px;
   color: var(--ink);
+  text-align: center;
 }
 .tool-seo-faq-list {
   display: flex;
@@ -5044,16 +5054,23 @@ body { line-height: 1.65; }
   padding: 48px 0 64px;
   border-top: 1px solid var(--border);
 }
+.related-tools .wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
 .related-tools-title {
   font-size: 22px;
   font-weight: 700;
   margin: 0 0 6px;
   color: var(--ink);
+  text-align: center;
 }
 .related-tools-sub {
   font-size: 14.5px;
   color: var(--ink-mute);
   margin: 0 0 22px;
+  text-align: center;
 }
 .related-tools-grid {
   display: grid;
