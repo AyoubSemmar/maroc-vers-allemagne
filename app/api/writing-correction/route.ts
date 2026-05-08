@@ -37,8 +37,27 @@ function countWords(s: string): number {
 function buildPrompt(b: Body): string {
   const spec = LEVEL_SPECS[b.level]
   const localeName = { en: 'English', fr: 'French', ar: 'Arabic', de: 'German' }[b.uiLocale]
+  // A short, locale-specific example fragment so the model has a
+  // concrete anchor for the target output language. Without this,
+  // Haiku frequently defaults the explanation/tip back to German
+  // because the rest of the prompt is German-task-focused.
+  const exampleExplanation = {
+    en: 'Akkusativ required after "für".',
+    fr: "Accusatif requis après « für ».",
+    ar: 'يلزم استعمال الـ Akkusativ بعد "für".',
+    de: 'Nach "für" steht der Akkusativ.',
+  }[b.uiLocale]
+  const exampleTip = {
+    en: 'Review the four cases (Nom/Akk/Dat/Gen) before next time.',
+    fr: 'Révisez les quatre cas (Nom/Akk/Dat/Gen) avant la prochaine fois.',
+    ar: 'راجع الحالات الأربع (Nom/Akk/Dat/Gen) قبل المرة الجاية.',
+    de: 'Wiederhole die vier Fälle (Nom/Akk/Dat/Gen) vor dem nächsten Mal.',
+  }[b.uiLocale]
 
-  return `You are a German language teacher correcting a ${spec.level} learner's daily writing exercise.
+  return `OUTPUT LANGUAGE FOR FEEDBACK: ${localeName} (${b.uiLocale}).
+This is critical: every "explanation" field and the final "tip" field MUST be written in ${localeName}, not in German, not in English. The "corrected" field MUST be in German (that is the language being learned). Do not mix languages within a single field.
+
+You are a German language teacher correcting a ${spec.level} learner's daily writing exercise. The learner's interface language is ${localeName}, so your feedback must reach them in ${localeName}.
 
 LEVEL RULES:
 ${spec.rubric}
@@ -56,21 +75,26 @@ YOUR JOB:
 1. Identify real mistakes only — grammar, spelling, syntax, word choice, gender, case, punctuation. Do NOT invent or nitpick stylistic choices that are merely different from your preference.
 2. For each mistake, give the EXACT substring from the student's input as "original" so the UI can highlight it. Substrings must match character-for-character (preserve case, punctuation, German umlauts, ß).
 3. Cap mistakes at the 8 most important.
-4. Write the "explanation" for each mistake in ${localeName}, max 18 words. Be concrete: name the rule (e.g. "Akkusativ after 'für'", "Wortstellung im Nebensatz").
-5. Produce a "corrected" version: the student's text rewritten in correct German, using vocabulary AT or just slightly above their level — never C2 vocabulary in an A1 correction. Keep their voice and meaning.
-6. Give a single actionable "tip" in ${localeName}, max 25 words, focused on the biggest pattern of mistake (or biggest strength if the text is already strong).
+4. Write each "explanation" in ${localeName} (NOT in German), max 18 words. Be concrete: name the rule. German grammar terms in Latin/German (Akkusativ, Dativ, Nominativ, Genitiv, Wortstellung, Nebensatz, etc.) may stay as-is — but the surrounding sentence is in ${localeName}.
+5. Produce a "corrected" version: the student's text rewritten in correct German, using vocabulary AT or just slightly above their level — never C2 vocabulary in an A1 correction. Keep their voice and meaning. ("corrected" is the only field in German.)
+6. Give a single actionable "tip" in ${localeName} (NOT in German), max 25 words, focused on the biggest pattern of mistake (or biggest strength if the text is already strong).
 7. Score: 0–100 reflecting overall correctness AND task fulfilment (did they hit the topic, the word count, the level?).
+
+EXAMPLE of the language mix you must produce:
+- explanation (in ${localeName}): "${exampleExplanation}"
+- tip (in ${localeName}): "${exampleTip}"
+- corrected (in German): "Ich habe ein Geschenk für meinen Bruder gekauft."
 
 Return ONLY a JSON object with this exact shape (no markdown fences, no commentary):
 {
   "wordCount": <int>,
   "wordCountOk": <bool — true if within ${spec.minWords}–${spec.maxWords}>,
   "score": <int 0–100>,
-  "corrected": "<rewritten German text>",
+  "corrected": "<rewritten German text — IN GERMAN>",
   "mistakes": [
-    { "original": "<exact substring from input>", "correction": "<the fix>", "explanation": "<rule, in ${localeName}>", "type": "grammar|spelling|syntax|word_choice|punctuation|other" }
+    { "original": "<exact substring from input>", "correction": "<the fix>", "explanation": "<the rule, IN ${localeName.toUpperCase()}>", "type": "grammar|spelling|syntax|word_choice|punctuation|other" }
   ],
-  "tip": "<one short sentence in ${localeName}>"
+  "tip": "<one short sentence, IN ${localeName.toUpperCase()}>"
 }`
 }
 
