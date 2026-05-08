@@ -454,7 +454,11 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   }
   .rihla-logo { gap: 8px; font-size: 16px; }
   .rihla-logo-mark { width: 32px; height: 32px; }
-  /* Show the links as a second row on mobile, horizontally scrollable */
+  /* Show the links as a second row on mobile, horizontally scrollable.
+     The mask-image fade on the trailing edge tells users there's more
+     content past the visible viewport — the scrollbar is hidden on
+     touch devices and without this cue the extra links read as
+     cropped, not scrollable. */
   .rihla-nav-links {
     order: 3;
     flex-basis: 100%;
@@ -467,6 +471,12 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
     border-top: 1px solid var(--line);
     white-space: nowrap;
     scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+  }
+  [dir="rtl"] .rihla-nav-links {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent 100%);
   }
   .rihla-nav-links::-webkit-scrollbar { display: none; }
   .rihla-nav-links a, .rihla-nav-links .rihla-nav-linkbtn {
@@ -1127,7 +1137,11 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .rihla .journey {
   position: relative; width: 100%;
   aspect-ratio: 1 / 1; max-width: 560px;
-  justify-self: start; margin-right: auto; margin-left: 0;
+  /* margin-inline-start/end auto-flip in RTL so the visual sits on the
+     correct side of the hero in Arabic. */
+  justify-self: start;
+  margin-inline-end: auto;
+  margin-inline-start: 0;
   background: var(--bg-elev);
   border-radius: var(--r-xl);
   border: 1px solid var(--line);
@@ -1844,6 +1858,14 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
     flex-wrap: nowrap;
     overflow-x: auto;
     scrollbar-width: none;
+    /* Fade-out at the trailing edge so the scrollable nature of the
+       chip strip is visible (the scrollbar is hidden on mobile). */
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to right, #000 calc(100% - 28px), transparent 100%);
+  }
+  [dir="rtl"] .rihla-articles-filter-inner {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent 100%);
+            mask-image: linear-gradient(to left, #000 calc(100% - 28px), transparent 100%);
   }
   .rihla-articles-filter-inner::-webkit-scrollbar { display: none; }
 }

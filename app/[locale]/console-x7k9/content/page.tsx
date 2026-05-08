@@ -130,7 +130,7 @@ export default async function AdminContentPage({
             {articles?.map((a) => (
               <div key={a.id} className="adm-row-item">
                 <div className="adm-row-item-left">
-                  {a.image_url ? <img src={a.image_url} alt="" /> : <div className="adm-thumb">📰</div>}
+                  {a.image_url ? <img src={a.image_url} alt={a.title || 'Article thumbnail'} /> : <div className="adm-thumb">📰</div>}
                   <div className="adm-row-item-text">
                     <strong>{a.title}</strong>
                     <small>{catLabel(a.category)} · {a.date}</small>

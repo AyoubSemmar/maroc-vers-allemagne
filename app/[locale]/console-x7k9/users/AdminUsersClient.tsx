@@ -177,7 +177,9 @@ export default function AdminUsersClient() {
       {/* Search + filters */}
       <div className="adm-card" style={{ marginBottom: 16 }}>
         <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
+          <label htmlFor="admin-user-search" className="sr-only">Search users by email or ID</label>
           <input
+            id="admin-user-search"
             className="adm-input"
             placeholder="🔍 Search by email or user ID…"
             value={search}
@@ -202,7 +204,9 @@ export default function AdminUsersClient() {
               className="adm-btn adm-btn--ghost"
               onClick={() => setFilter(k)}
               style={{
-                padding: '6px 14px', fontSize: 12,
+                // 10px vertical padding gives ≥40px touch target height
+                // (was 6px, ~28px high, below the recommended minimum).
+                padding: '10px 14px', fontSize: 12,
                 background: filter === k ? 'var(--adm-brand)' : undefined,
                 color: filter === k ? '#1a1a1a' : undefined,
               }}

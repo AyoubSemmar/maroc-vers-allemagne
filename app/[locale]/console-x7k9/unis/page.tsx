@@ -154,7 +154,7 @@ export default async function AdminUnisPage({
             <div key={u.id} className="adm-row-item">
               <div className="adm-row-item-left">
                 {u.logo_url
-                  ? <img src={u.logo_url} alt="" />
+                  ? <img src={u.logo_url} alt={u.name_de || 'University logo'} />
                   : <div className="adm-thumb">🎓</div>}
                 <div className="adm-row-item-text">
                   <strong>{u.name_de}</strong>

@@ -150,6 +150,10 @@ async function firstSubPageResult(
             '(KHTML, like Gecko) Chrome/120.0 Safari/537.36',
           'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
         },
+        // 8s hard timeout — without this a hanging upstream could hold a
+        // serverless function open until Vercel's 60s ceiling, multiplying
+        // cost on a slow DDG day.
+        signal: AbortSignal.timeout(8000),
       },
     )
     const ddg: any = { source: 'ddg', status: res.status }
@@ -184,6 +188,7 @@ async function firstSubPageResult(
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 ' +
             '(KHTML, like Gecko) Chrome/120.0 Safari/537.36',
         },
+        signal: AbortSignal.timeout(8000),
       },
     )
     const bing: any = { source: 'bing', status: res.status }

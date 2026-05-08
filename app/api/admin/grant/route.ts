@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import {
   isAdmin,
@@ -15,6 +16,18 @@ import {
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
+
+// Service-role client created once at module load instead of inside the
+// handler. Previously we re-instantiated it inside getUsage and inside
+// the per-action branches — risky because the client referenced the
+// service-role key, which the audit flagged as load-bearing on the
+// admin check above always firing first. Hoisting also saves an
+// `import('@supabase/supabase-js')` round-trip per call.
+const sbAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  { auth: { persistSession: false, autoRefreshToken: false } },
+)
 
 /**
  * Admin-only grants. Every request is gated by profiles.is_admin of the
@@ -63,12 +76,6 @@ export async function POST(req: NextRequest) {
       ['reading', 'reading_exercise_usage'],
       ['writing', 'writing_exercise_usage'],
     ] as const
-
-    const { createClient } = await import('@supabase/supabase-js')
-    const sbAdmin = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.SUPABASE_SERVICE_ROLE_KEY!,
-    )
 
     const usage: Record<string, number> = {}
     for (const [key, table] of tables) {
