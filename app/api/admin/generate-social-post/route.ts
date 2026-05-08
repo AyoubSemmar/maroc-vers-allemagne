@@ -8,8 +8,8 @@
  * client component handles rendering and PNG export.
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
 import Anthropic from '@anthropic-ai/sdk'
+import { requireAdmin } from '@/lib/admin-gate'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
@@ -126,11 +126,6 @@ function parseJsonLoose(s: string): any {
   const last  = cleaned.lastIndexOf('}')
   if (first < 0 || last < 0) throw new Error('No JSON object found in model output')
   return JSON.parse(cleaned.slice(first, last + 1))
-}
-
-async function requireAdmin() {
-  const cookieStore = await cookies()
-  return cookieStore.get('admin_auth')?.value === 'true'
 }
 
 function buildPrompt(topic: string, templateType: TemplateType): string {
@@ -271,9 +266,8 @@ Return ONLY the JSON object — no commentary, no \`\`\` fences.`
 
 export async function POST(req: NextRequest) {
   try {
-    if (!(await requireAdmin())) {
-      return NextResponse.json({ error: 'Not authorized.' }, { status: 401 })
-    }
+    const gate = await requireAdmin()
+    if (!gate.ok) return gate.response
 
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {

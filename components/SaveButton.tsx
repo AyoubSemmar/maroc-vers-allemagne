@@ -83,8 +83,13 @@ export default function SaveButton({ itemType, itemId, className = '', size = 'n
           .eq('item_id', itemId)
         if (error) throw error
       }
-    } catch {
-      setSaved(!next) // rollback
+    } catch (err) {
+      // Rollback the optimistic UI and surface the failure. Previously
+      // we silently rolled back which made bookmark "saves" feel broken
+      // without any signal — the user couldn't tell if the network had
+      // hiccuped or the click hadn't registered.
+      console.error('[SaveButton] toggle failed', err)
+      setSaved(!next)
     } finally {
       setBusy(false)
     }

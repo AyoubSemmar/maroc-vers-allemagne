@@ -148,6 +148,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })
     }
 
+    // Cap each user-supplied field so a malicious caller can't burn through
+    // Anthropic tokens by submitting megabytes of text. Limits chosen to
+    // be roomy for genuine input and tight enough to bound cost per call.
+    if (fullName.length > 200 || rawPosition.length > 200 || userBackground.length > 5000) {
+      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
+      return NextResponse.json({ error: 'Input too long.' }, { status: 400 })
+    }
+
     // Format today's date in German
     const today = new Date()
     const germanDate = today.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })

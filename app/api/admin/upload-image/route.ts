@@ -1,6 +1,6 @@
-import { cookies } from 'next/headers'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
+import { requireAdmin } from '@/lib/admin-gate'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -27,10 +27,8 @@ const ALLOWED_MIME = new Set([
 const MAX_BYTES = 10 * 1024 * 1024 // 10 MB — generous for article hero images.
 
 export async function POST(req: NextRequest) {
-  const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
-  }
+  const gate = await requireAdmin()
+  if (!gate.ok) return gate.response
 
   let form: FormData
   try {

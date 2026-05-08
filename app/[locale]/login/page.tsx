@@ -9,6 +9,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import GoogleSignInButton from '@/components/GoogleSignInButton'
 import { trackLogin } from '@/lib/analytics'
+import { safeRedirect } from '@/lib/safe-redirect'
 
 function LoginForm() {
   const t = useTranslations('auth.login')
@@ -36,7 +37,7 @@ function LoginForm() {
       // /ar/ar/cv-builder 404 we kept seeing. Use a hard navigation
       // through window.location so the path is honoured verbatim — this
       // also fully refreshes auth state, which we want post-login.
-      const next = searchParams.get('next') || `/${locale}`
+      const next = safeRedirect(searchParams.get('next'), `/${locale}`)
       window.location.assign(next)
       return
     }
@@ -53,7 +54,7 @@ function LoginForm() {
         </div>
       )}
 
-      <GoogleSignInButton next={searchParams.get('next') || '/dashboard'} />
+      <GoogleSignInButton next={safeRedirect(searchParams.get('next'), '/dashboard')} />
 
       <div className="flex items-center gap-3 my-4">
         <div className="flex-1 h-px bg-gray-200" />

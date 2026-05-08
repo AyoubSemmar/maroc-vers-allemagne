@@ -1,6 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { cookies } from 'next/headers'
 import { NextResponse } from 'next/server'
+import { safeRedirect } from '@/lib/safe-redirect'
 
 export async function GET(request) {
   const { searchParams, origin } = new URL(request.url)
@@ -25,7 +26,10 @@ export async function GET(request) {
     await supabase.auth.exchangeCodeForSession(code)
   }
 
-  const next = searchParams.get('next')
-  const target = next && next.startsWith('/') ? next : '/dashboard'
+  // Validate `next` against an allowlist of relative paths. The pre-fix
+  // check accepted any string starting with `/`, which permitted
+  // `//evil.com` (protocol-relative) and `/\\evil.com` (some browsers
+  // normalise the backslash). safeRedirect rejects all of those.
+  const target = safeRedirect(searchParams.get('next'), '/dashboard')
   return NextResponse.redirect(`${origin}${target}`)
 }

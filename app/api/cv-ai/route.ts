@@ -172,6 +172,26 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
     }
 
+    // Aggregate-size guard. Per-document MAX_DOC_BYTES already caps single
+    // files at 3MB and oversized ones are skipped, but without this cap
+    // a malicious caller could submit 30 docs × 2.9MB each = ~90MB and
+    // burn through the Anthropic budget on multimodal-vision tokens.
+    const TOTAL_DOC_CAP_BYTES = 30_000_000
+    if (payload.documents) {
+      let total = 0
+      for (const cat of Object.values(payload.documents) as Array<Array<{ dataUrl?: string }>>) {
+        for (const doc of cat ?? []) {
+          if (!doc?.dataUrl) continue
+          // base64 length * 0.75 ≈ raw bytes
+          total += Math.floor(doc.dataUrl.length * 0.75)
+          if (total > TOTAL_DOC_CAP_BYTES) {
+            await refund(user.id, 'cv', ent.source)
+            return NextResponse.json({ error: 'Documents too large.' }, { status: 413 })
+          }
+        }
+      }
+    }
+
     const client = new Anthropic({ apiKey })
 
     // Strip documents off the payload before serializing it into the JSON block,

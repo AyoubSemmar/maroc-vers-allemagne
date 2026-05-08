@@ -66,8 +66,12 @@ export async function proxy(request: NextRequest) {
   // bounces back to /console-x7k9 until the admin_auth cookie is present.
   const { locale: pathLocale, rest } = stripLocale(pathname)
   if (rest.startsWith('/console-x7k9')) {
+    // The cookie is a signed HMAC token now (see lib/admin-gate.ts).
+    // We don't verify the signature at the proxy edge — that happens
+    // inside every admin server action and API route. The proxy only
+    // does an early UX redirect for users without any cookie at all.
     const cookie = request.cookies.get('admin_auth')?.value
-    if (cookie !== 'true' && rest !== '/console-x7k9' && rest !== '/console-x7k9/') {
+    if (!cookie && rest !== '/console-x7k9' && rest !== '/console-x7k9/') {
       const effLocale = pathLocale ?? routing.defaultLocale
       return NextResponse.redirect(new URL(`/${effLocale}/console-x7k9`, request.url))
     }

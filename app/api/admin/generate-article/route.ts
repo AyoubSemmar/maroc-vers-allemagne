@@ -13,9 +13,9 @@
  *     admin reviews, then approves via /api/admin/save-article.
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
 import Anthropic from '@anthropic-ai/sdk'
 import { createClient } from '@supabase/supabase-js'
+import { requireAdmin } from '@/lib/admin-gate'
 
 export const runtime = 'nodejs'
 // 60s is the Pro-tier sweet spot for a Sonnet call that returns a 4-
@@ -74,11 +74,6 @@ function parseJsonLoose(s: string): any {
   return JSON.parse(cleaned.slice(first, last + 1))
 }
 
-async function requireAdmin() {
-  const cookieStore = await cookies()
-  return cookieStore.get('admin_auth')?.value === 'true'
-}
-
 function buildPrompt(category: string, categoryEn: string, existingTitles: string[]) {
   const dupesBlock = existingTitles.length
     ? `\n\nExisting article titles in this category (DO NOT duplicate, pick a different angle):\n${existingTitles.map(t => '- ' + t).slice(0, 40).join('\n')}`
@@ -122,9 +117,8 @@ Return ONLY a JSON object, no commentary:
 export async function POST(req: NextRequest) {
   const tStart = Date.now()
   try {
-    if (!(await requireAdmin())) {
-      return NextResponse.json({ error: 'Not authorized.' }, { status: 401 })
-    }
+    const gate = await requireAdmin()
+    if (!gate.ok) return gate.response
 
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {

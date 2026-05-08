@@ -6,7 +6,6 @@ import { getMessages, getTranslations } from "next-intl/server";
 import "../globals.css";
 import RihlaNav from "@/components/RihlaNav";
 import RihlaFooter from "@/components/RihlaFooter";
-import LanguagePicker from "@/components/LanguagePicker";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HideOnDashboard from "@/components/HideOnDashboard";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -112,7 +111,6 @@ export default async function LocaleLayout({
           <HideOnDashboard><RihlaNav /></HideOnDashboard>
           <main className="flex-1">{children}</main>
           <HideOnDashboard><RihlaFooter /></HideOnDashboard>
-          <LanguagePicker />
           <Analytics />
         </NextIntlClientProvider>
       </body>

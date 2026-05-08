@@ -77,7 +77,7 @@ export default function NewListingPage() {
       }
     }
 
-    await supabase.from('listings').insert([{
+    const { error: insertError } = await supabase.from('listings').insert([{
       user_id: user.id,
       title,
       description,
@@ -94,6 +94,11 @@ export default function NewListingPage() {
     }])
 
     setUploading(false)
+    if (insertError) {
+      console.error('[listings/new] insert failed', insertError)
+      setError(t('form.saveFailed'))
+      return
+    }
     router.push('/listings')
   }
 

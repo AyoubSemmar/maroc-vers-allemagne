@@ -11,7 +11,12 @@ export default function DeleteListingButton({ id }: { id: number }) {
 
   async function handleDelete() {
     if (!confirm(t('confirm'))) return
-    await supabase.from('listings').delete().eq('id', id)
+    const { error } = await supabase.from('listings').delete().eq('id', id)
+    if (error) {
+      console.error('[DeleteListingButton] delete failed', error)
+      alert(t('failed'))
+      return
+    }
     router.push('/listings')
   }
 

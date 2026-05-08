@@ -4,6 +4,7 @@ import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
+import { adminSignedToken, requireAdminOrRedirect } from '@/lib/admin-gate'
 
 // Anon-key client. Used only for Supabase Storage uploads where the
 // bucket policy already controls access — reading the resulting public
@@ -32,22 +33,28 @@ export async function login(formData) {
   const password = formData.get('password')
   if (password === process.env.ADMIN_PASSWORD) {
     const cookieStore = await cookies()
+    // The cookie value is now an HMAC-SHA256 token signed with the
+    // server-side ADMIN_TOKEN_SECRET (falling back to ADMIN_PASSWORD).
+    // The previous value was the literal string 'true', which any
+    // attacker could set client-side — anyone who knew the cookie name
+    // and the obscure /console-x7k9 URL could walk in. The signed token
+    // can't be forged without knowing the server secret.
+    //
     // httpOnly: not readable by JS (anti-XSS).
     // secure: only sent over HTTPS.
     // sameSite: 'strict' — admin actions never need to be triggered by
-    //           cross-site links, and nothing in the admin UI relies on
-    //           inbound nav from external surfaces (Calendly etc. land
-    //           on public pages, not /console-x7k9). Strict beats lax here.
-    // maxAge: 4h. Was 24h; shorter window limits blast radius if the
-    //         cookie ever leaks (XSS, shared device, browser extension).
-    //         Re-login every working session is cheap.
-    cookieStore.set('admin_auth', 'true', {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
-      sameSite: 'strict',
-      path: '/',
-      maxAge: 60 * 60 * 4,
-    })
+    //           cross-site links.
+    // maxAge: 4h.
+    const token = adminSignedToken()
+    if (token) {
+      cookieStore.set('admin_auth', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production',
+        sameSite: 'strict',
+        path: '/',
+        maxAge: 60 * 60 * 4,
+      })
+    }
   }
   redirect('/console-x7k9')
 }
@@ -81,15 +88,10 @@ async function uploadImage(imageFile, bucket = 'article-images') {
   return urlData.publicUrl
 }
 
-/** Throw a redirect to the admin login if the caller doesn't have the
- *  admin_auth cookie. Used to gate every server action below — Next.js
- *  server actions are RPC endpoints reachable by anyone who knows the
- *  internal hash, so cookie auth must be checked inside each one. */
+/** Verify the signed admin cookie or redirect to the login page.
+ *  Uses the same HMAC validation as every API route via lib/admin-gate. */
 async function requireAdmin() {
-  const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') {
-    redirect('/console-x7k9')
-  }
+  await requireAdminOrRedirect('/console-x7k9')
 }
 
 export async function addArticle(formData) {
@@ -106,7 +108,13 @@ export async function addArticle(formData) {
 
   const image_url = await uploadImage(imageFile)
 
-  await adminClient().from('articles').insert([{ title, summary, content, category, date, image_url, faqs, featured }])
+  const { error: insertErr } = await adminClient()
+    .from('articles')
+    .insert([{ title, summary, content, category, date, image_url, faqs, featured }])
+  if (insertErr) {
+    console.error('createArticle failed:', insertErr)
+    throw new Error(`فشل إنشاء المقال: ${insertErr.message}`)
+  }
   redirect('/console-x7k9')
 }
 
@@ -142,17 +150,24 @@ export async function updateArticle(formData) {
 export async function deleteArticle(formData) {
   await requireAdmin()
   const id = formData.get('id')
-  await adminClient().from('articles').delete().eq('id', id)
+  const { error } = await adminClient().from('articles').delete().eq('id', id)
+  if (error) {
+    console.error('deleteArticle failed:', error)
+    throw new Error(`فشل حذف المقال: ${error.message}`)
+  }
   redirect('/console-x7k9')
 }
 
 export async function deleteListing(formData) {
-  const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/console-x7k9')
+  await requireAdmin()
 
   const id = formData.get('id')
   // service_role bypasses RLS so we can delete any user's listing.
-  await adminClient().from('listings').delete().eq('id', id)
+  const { error } = await adminClient().from('listings').delete().eq('id', id)
+  if (error) {
+    console.error('deleteListing failed:', error)
+    throw new Error(`فشل حذف الإعلان: ${error.message}`)
+  }
   revalidatePath('/console-x7k9')
   revalidatePath('/console-x7k9/content')
   redirect('/console-x7k9/content')
@@ -168,8 +183,7 @@ export async function deleteListing(formData) {
  * env var or null. Images are uploaded to the article-images bucket.
  */
 export async function addListing(formData) {
-  const cookieStore = await cookies()
-  if (cookieStore.get('admin_auth')?.value !== 'true') redirect('/console-x7k9')
+  await requireAdmin()
 
   // Outer try/catch surfaces ANY pre-insert error (uploadImage throw,
   // adminClient init failure, formData parsing, env var missing, etc.)

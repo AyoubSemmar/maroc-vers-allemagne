@@ -140,6 +140,12 @@ export async function POST(req: NextRequest) {
     if (!themeInstruction) {
       return NextResponse.json({ error: 'Missing theme.' }, { status: 400 })
     }
+    // Cap to prevent a malicious caller from stuffing megabytes of text
+    // into the prompt and burning Anthropic tokens. The legitimate themes
+    // we ship are all under 500 chars; 2KB is generous headroom.
+    if (themeInstruction.length > 2000) {
+      return NextResponse.json({ error: 'Theme too long.' }, { status: 400 })
+    }
     const uiLocale = (['en', 'fr', 'ar', 'de'] as const).includes(body.uiLocale)
       ? body.uiLocale
       : 'en'

@@ -8,16 +8,11 @@
  * each Claude call comfortably fits in 60s.
  */
 import { NextRequest, NextResponse } from 'next/server'
-import { cookies } from 'next/headers'
 import Anthropic from '@anthropic-ai/sdk'
+import { requireAdmin } from '@/lib/admin-gate'
 
 export const runtime = 'nodejs'
 export const maxDuration = 60
-
-async function requireAdmin() {
-  const cookieStore = await cookies()
-  return cookieStore.get('admin_auth')?.value === 'true'
-}
 
 function parseJsonLoose(s: string): any {
   const cleaned = s.replace(/```json\s*|\s*```/g, '').trim()
@@ -69,9 +64,8 @@ Shape:
 export async function POST(req: NextRequest) {
   const tStart = Date.now()
   try {
-    if (!(await requireAdmin())) {
-      return NextResponse.json({ error: 'Not authorized.' }, { status: 401 })
-    }
+    const gate = await requireAdmin()
+    if (!gate.ok) return gate.response
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
       return NextResponse.json({ error: 'ANTHROPIC_API_KEY missing.' }, { status: 500 })

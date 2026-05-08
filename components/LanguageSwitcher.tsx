@@ -48,7 +48,6 @@ export default function LanguageSwitcher() {
     if (next === locale) return
     try {
       localStorage.setItem('locale', next)
-      localStorage.setItem('langChosen', '1')
       document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=${60 * 60 * 24 * 365}`
     } catch {}
     // Hard navigation so the <html lang/dir> attributes and the inline
