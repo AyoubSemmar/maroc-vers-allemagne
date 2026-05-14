@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -12,6 +13,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
+
+// Hosts that should serve ONLY the StudyBuddy tracker — mirrors the
+// allow-list in proxy.ts. Keep these in sync.
+const STUDYBUDDY_HOSTS = new Set<string>([
+  'studybuddy-sprinttracker.vercel.app',
+]);
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -72,6 +79,15 @@ export default async function LocaleLayout({
   const messages = await getMessages();
   const dir = dirFor(typedLocale);
 
+  // Detect the StudyBuddy host server-side. The middleware in proxy.ts
+  // REWRITES traffic from studybuddy-sprinttracker.vercel.app to
+  // /ar/studybuddy internally, but usePathname() in client components
+  // still sees the original URL ('/'), so HideOnDashboard alone can't
+  // tell us we're on the tracker host. Reading the Host header here
+  // and gating the chrome on it is the reliable signal.
+  const hostHeader = (await headers()).get('host') ?? '';
+  const isTrackerHost = STUDYBUDDY_HOSTS.has(hostHeader.toLowerCase().split(':')[0]);
+
   return (
     <html
       lang={typedLocale}
@@ -81,40 +97,49 @@ export default async function LocaleLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        {/* Site-wide Organization schema. Lets Google show a brand
-            knowledge panel for "GoGermany" and ties social profiles
-            to the brand. Rendered once per request via the locale
-            layout — every page on the site gets it. */}
-        <JsonLd
-          data={{
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'GoGermany',
-            alternateName: 'Maroc vers Allemagne',
-            url: 'https://gogermany.ma',
-            logo: 'https://gogermany.ma/icon.svg',
-            sameAs: [
-              'https://www.facebook.com/gogermanyma',
-              'https://www.instagram.com/gogermany.ma',
-              'https://www.tiktok.com/@gogermany.ma',
-            ],
-            inLanguage: ['ar', 'fr', 'en', 'de'],
-            areaServed: ['MA', 'DE'],
-            description:
-              'GoGermany helps Moroccans move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
-          }}
-        />
+        {/* Site-wide Organization schema. Skipped entirely on the
+            StudyBuddy host so the internal tool doesn't carry brand
+            schema for gogermany.ma. */}
+        {!isTrackerHost && (
+          <JsonLd
+            data={{
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'GoGermany',
+              alternateName: 'Maroc vers Allemagne',
+              url: 'https://gogermany.ma',
+              logo: 'https://gogermany.ma/icon.svg',
+              sameAs: [
+                'https://www.facebook.com/gogermanyma',
+                'https://www.instagram.com/gogermany.ma',
+                'https://www.tiktok.com/@gogermany.ma',
+              ],
+              inLanguage: ['ar', 'fr', 'en', 'de'],
+              areaServed: ['MA', 'DE'],
+              description:
+                'GoGermany helps Moroccans move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
+            }}
+          />
+        )}
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={typedLocale} messages={messages}>
-          <HideOnDashboard><AnnouncementBanner /></HideOnDashboard>
-          <HideOnDashboard><RihlaNav /></HideOnDashboard>
+          {!isTrackerHost && (
+            <>
+              <HideOnDashboard><AnnouncementBanner /></HideOnDashboard>
+              <HideOnDashboard><RihlaNav /></HideOnDashboard>
+            </>
+          )}
           <main className="flex-1">{children}</main>
-          <HideOnDashboard><RihlaFooter /></HideOnDashboard>
+          {!isTrackerHost && (
+            <HideOnDashboard><RihlaFooter /></HideOnDashboard>
+          )}
           <Analytics />
         </NextIntlClientProvider>
       </body>
-      {process.env.NODE_ENV === "production" && (
+      {/* Skip gogermany's Google Analytics on the tracker host — the
+          internal tool isn't part of the marketing funnel. */}
+      {process.env.NODE_ENV === "production" && !isTrackerHost && (
         <GoogleAnalytics gaId="G-4E4HLM5JHJ" />
       )}
     </html>
