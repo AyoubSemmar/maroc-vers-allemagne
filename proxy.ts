@@ -42,8 +42,49 @@ function isProtected(pathname: string): boolean {
   )
 }
 
+// Hosts that should serve ONLY the StudyBuddy tracker (a separate team
+// tool). Every path on these hosts is rewritten to /ar/studybuddy so
+// the user sees just the tracker — they never reach gogermany.ma.
+// Conversely, on gogermany.ma the /studybuddy route is hidden (404)
+// so the public site doesn't expose internal tooling.
+const STUDYBUDDY_HOSTS = new Set<string>([
+  'studybuddy-sprinttracker.vercel.app',
+  // Add any preview / custom domain aliases here.
+])
+
+function isStudybuddyHost(host: string | null): boolean {
+  if (!host) return false
+  const h = host.toLowerCase().split(':')[0]
+  return STUDYBUDDY_HOSTS.has(h)
+}
+
+function pathContainsStudybuddy(pathname: string): boolean {
+  // Match /studybuddy or /<locale>/studybuddy (with optional sub-paths).
+  return /^\/(?:[a-z]{2}\/)?studybuddy(?:\/|$)/i.test(pathname)
+}
+
 export async function proxy(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  const host = request.headers.get('host')
+
+  // ── Host-based routing for the standalone StudyBuddy tracker ─────
+  if (isStudybuddyHost(host)) {
+    // On the studybuddy-sprinttracker host, every path serves the
+    // tracker. We don't expose any of gogermany's other routes here.
+    // The /ar/studybuddy target satisfies the [locale] layout — the
+    // page itself ignores the locale (content is German throughout).
+    if (!pathname.startsWith('/ar/studybuddy')) {
+      return NextResponse.rewrite(new URL('/ar/studybuddy', request.url))
+    }
+    // Already on the tracker path on the right host — pass through.
+    return NextResponse.next()
+  }
+
+  // Conversely, hide /studybuddy on any other host. The internal tool
+  // shouldn't be reachable from gogermany.ma even if the URL leaks.
+  if (pathContainsStudybuddy(pathname)) {
+    return new NextResponse('Not Found', { status: 404 })
+  }
 
   // Run the intl proxy first — it handles locale detection / redirects.
   const intlResponse = intlMiddleware(request)
