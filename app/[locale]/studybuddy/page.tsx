@@ -10,10 +10,30 @@ import './studybuddy.css'
  * even if someone shares the URL. The SQL migration in
  * db/migrations/2026-05-08_studybuddy_task_status.sql must be
  * applied to Supabase before this page can persist anything.
+ *
+ * Metadata is fully overridden here (title + description + openGraph
+ * + twitter) so link previews on WhatsApp / Slack / Discord show the
+ * tracker's own identity, not gogermany.ma's tagline. The layout's
+ * defaults would otherwise leak through openGraph.description and
+ * the OG image.
  */
 export const metadata: Metadata = {
   title: 'StudyBuddy Sprint Tracker',
+  description: 'Gemeinsame Sprint-Übersicht für unser StudyBuddy-Projektteam.',
   robots: { index: false, follow: false },
+  openGraph: {
+    title: 'StudyBuddy Sprint Tracker',
+    description: 'Gemeinsame Sprint-Übersicht für unser StudyBuddy-Projektteam.',
+    type: 'website',
+    siteName: 'StudyBuddy Sprint Tracker',
+    images: [],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'StudyBuddy Sprint Tracker',
+    description: 'Gemeinsame Sprint-Übersicht für unser StudyBuddy-Projektteam.',
+    images: [],
+  },
 }
 
 export default function StudybuddyPage() {
