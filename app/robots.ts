@@ -9,7 +9,7 @@ const AUTH_PATHS = ['/login', '/signup', '/forgot-password', '/reset-password']
 // /console-x7k9 is the renamed admin path — kept out of robots.txt
 // for the same reason as /admin: nothing on it is meant to be indexed
 // or discovered through search.
-const PRIVATE_PATHS = ['/dashboard', '/profile', '/console-x7k9']
+const PRIVATE_PATHS = ['/dashboard', '/profile', '/console-x7k9', '/studybuddy']
 
 const disallow: string[] = ['/api/', '/auth/']
 for (const loc of routing.locales) {
