@@ -21,6 +21,18 @@ export const metadata: Metadata = {
   title: 'StudyBuddy Sprint Tracker',
   description: 'Gemeinsame Sprint-Übersicht für unser StudyBuddy-Projektteam.',
   robots: { index: false, follow: false },
+  // Explicit icon override. Next.js auto-discovers `app/icon.svg`
+  // (gogermany's logo) for every route — including this one, because
+  // file-based icons inside a dynamic [locale] segment are not picked
+  // up reliably. Pointing at a stable URL under /public sidesteps the
+  // entire dynamic-segment resolution and gives the tracker its own
+  // favicon. Setting both `icon` and `shortcut` so older browsers /
+  // bookmarks (which look for shortcut icon) also pick it up.
+  icons: {
+    icon: '/studybuddy-icon.svg',
+    shortcut: '/studybuddy-icon.svg',
+    apple: '/studybuddy-icon.svg',
+  },
   openGraph: {
     title: 'StudyBuddy Sprint Tracker',
     description: 'Gemeinsame Sprint-Übersicht für unser StudyBuddy-Projektteam.',
