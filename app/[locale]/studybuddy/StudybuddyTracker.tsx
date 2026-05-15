@@ -45,8 +45,6 @@ function formatRelative(iso: string): string {
 }
 
 export default function StudybuddyTracker() {
-  // Hold the Supabase client across renders. Created lazily so SSR
-  // doesn't run the browser-only setup.
   const supabaseRef = useRef<ReturnType<typeof createClient> | null>(null)
   if (supabaseRef.current === null && typeof window !== 'undefined') {
     supabaseRef.current = createClient()
@@ -58,8 +56,8 @@ export default function StudybuddyTracker() {
   const [filter, setFilter] = useState<FilterKey>('all')
   const [live, setLive] = useState<boolean>(false)
   const [hydrated, setHydrated] = useState<boolean>(false)
+  const [promptTask, setPromptTask] = useState<Task | null>(null)
 
-  // Hydrate persisted UI prefs from localStorage on mount.
   useEffect(() => {
     try {
       const savedMe = localStorage.getItem(LS_ME) ?? ''
@@ -73,7 +71,6 @@ export default function StudybuddyTracker() {
     setHydrated(true)
   }, [])
 
-  // Initial fetch + realtime subscription.
   useEffect(() => {
     const sb = supabaseRef.current
     if (!sb) return
@@ -114,7 +111,14 @@ export default function StudybuddyTracker() {
     }
   }, [])
 
-  // Persistence helpers.
+  // Close prompt modal with Escape.
+  useEffect(() => {
+    if (!promptTask) return
+    function onKey(e: KeyboardEvent) { if (e.key === 'Escape') setPromptTask(null) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [promptTask])
+
   function selectMe(name: string) {
     setMe(name)
     try { localStorage.setItem(LS_ME, name) } catch {}
@@ -130,7 +134,6 @@ export default function StudybuddyTracker() {
 
   const sprint = SPRINTS[sprintIndex]
 
-  // Status mutation with optimistic UI + rollback on error.
   const setStatusFor = useCallback(async (task: Task, next: Status) => {
     if (!me) {
       alert('Bitte zuerst deinen Namen oben auswählen.')
@@ -166,20 +169,36 @@ export default function StudybuddyTracker() {
     }
   }, [me, statuses])
 
-  // Filter the current sprint's tasks by the filter pill.
   const visibleTasks = useMemo(() => {
     if (filter === 'all') return sprint.tasks
     return sprint.tasks.filter(t => t.who === filter)
   }, [sprint, filter])
 
-  // Tasks grouped by week.
-  const byWeek = useMemo(() => {
-    const out: Record<Task['w'], Task[]> = { W1: [], W2: [], W3: [], W4: [] }
-    for (const t of visibleTasks) out[t.w].push(t)
-    return out
+  // Tasks grouped by Welle (1..8). Each Welle is a parallel work-front;
+  // tasks within a Welle can be done concurrently, the next Welle is
+  // unlocked once all blockers in earlier Wellen are done.
+  const byWelle = useMemo(() => {
+    const groups = new Map<number, Task[]>()
+    for (const t of visibleTasks) {
+      const arr = groups.get(t.welle) ?? []
+      arr.push(t)
+      groups.set(t.welle, arr)
+    }
+    return Array.from(groups.entries()).sort(([a], [b]) => a - b)
   }, [visibleTasks])
 
-  // Sprint-level counts for the summary bar.
+  // For each task: are all its prereqs done? Used to dim/unlock cards.
+  // Computed against the full sprint (not just visibleTasks) so the
+  // filter doesn't fake-unlock tasks whose prereqs are filtered out.
+  const isUnlocked = useCallback((task: Task) => {
+    if (!task.prereqs.length) return true
+    return task.prereqs.every(num => {
+      const dep = sprint.tasks.find(t => t.taskNum === num)
+      if (!dep) return true
+      return (statuses.get(dep.id)?.status ?? 'todo') === 'done'
+    })
+  }, [sprint, statuses])
+
   const counts = useMemo(() => {
     const c = { todo: 0, wip: 0, help: 0, done: 0, total: visibleTasks.length }
     for (const t of visibleTasks) {
@@ -192,7 +211,6 @@ export default function StudybuddyTracker() {
   const pct = counts.total > 0 ? Math.round((counts.done / counts.total) * 100) : 0
 
   if (!hydrated) {
-    // Avoid a flash of "Alle Sprints" before localStorage rehydrates.
     return <div className="sb-root sb-loading">…</div>
   }
 
@@ -276,16 +294,14 @@ export default function StudybuddyTracker() {
         </div>
       </section>
 
-      {/* ============ WEEKS ============ */}
+      {/* ============ WELLEN ============ */}
       <main className="sb-weeks">
-        {(['W1','W2','W3','W4'] as const).map(w => {
-          const tasks = byWeek[w]
-          if (tasks.length === 0) return null
+        {byWelle.map(([welle, tasks]) => {
           const done = tasks.filter(t => (statuses.get(t.id)?.status ?? 'todo') === 'done').length
           return (
-            <section key={w} className="sb-week">
+            <section key={welle} className="sb-week">
               <header className="sb-week-head">
-                <h2 className="sb-week-title">Woche {w.slice(1)}</h2>
+                <h2 className="sb-week-title">Welle {welle}</h2>
                 <span className="sb-week-count">{done} / {tasks.length} erledigt</span>
               </header>
               <div className="sb-cards">
@@ -294,7 +310,9 @@ export default function StudybuddyTracker() {
                     key={t.id}
                     task={t}
                     row={statuses.get(t.id) ?? null}
+                    unlocked={isUnlocked(t)}
                     onChange={status => setStatusFor(t, status)}
+                    onShowPrompt={() => setPromptTask(t)}
                   />
                 ))}
               </div>
@@ -302,6 +320,11 @@ export default function StudybuddyTracker() {
           )
         })}
       </main>
+
+      {/* ============ PROMPT MODAL ============ */}
+      {promptTask && (
+        <PromptModal task={promptTask} onClose={() => setPromptTask(null)} />
+      )}
     </div>
   )
 }
@@ -333,17 +356,22 @@ function FilterPill({ active, onClick, children }: { active: boolean; onClick: (
 function TaskCard({
   task,
   row,
+  unlocked,
   onChange,
+  onShowPrompt,
 }: {
   task: Task
   row: StatusRow | null
+  unlocked: boolean
   onChange: (s: Status) => void
+  onShowPrompt: () => void
 }) {
   const status: Status = row?.status ?? 'todo'
   return (
-    <article className="sb-card" data-status={status}>
+    <article className={`sb-card ${unlocked ? '' : 'is-locked'}`} data-status={status}>
       <header className="sb-card-head">
         <div className="sb-card-who">
+          <span className="sb-card-id">#{task.taskNum}</span>
           <span className="sb-card-name">{task.who}</span>
           <span
             className="sb-card-role"
@@ -351,6 +379,7 @@ function TaskCard({
           >
             {task.role}
           </span>
+          {task.blocker && <span className="sb-card-blocker" title={task.priorityInfo}>BLOCKER</span>}
         </div>
         {row?.updated_by && row?.updated_at && (
           <small className="sb-card-meta">
@@ -358,7 +387,29 @@ function TaskCard({
           </small>
         )}
       </header>
-      <p className="sb-card-text">{task.text}</p>
+
+      <p className="sb-card-text">{task.title}</p>
+
+      {task.prereqs.length > 0 && (
+        <div className="sb-card-prereqs" title={unlocked ? 'Alle Voraussetzungen erfüllt' : 'Wartet auf Voraussetzungen'}>
+          <span className="sb-card-prereqs-label">Voraussetzung:</span>
+          {task.prereqs.map(n => (
+            <span key={n} className="sb-card-prereq">#{n}</span>
+          ))}
+          {!unlocked && <span className="sb-card-locked-tag">🔒 noch blockiert</span>}
+        </div>
+      )}
+
+      {task.erfolg && (
+        <div className="sb-card-success">
+          <span className="sb-card-success-label">Erfolg:</span> {task.erfolg}
+        </div>
+      )}
+
+      <button type="button" onClick={onShowPrompt} className="sb-card-prompt-btn">
+        📋 Prompt anzeigen
+      </button>
+
       <div className="sb-card-actions" role="group" aria-label="Status setzen">
         {STATUSES.map(s => (
           <button
@@ -376,5 +427,60 @@ function TaskCard({
         ))}
       </div>
     </article>
+  )
+}
+
+function PromptModal({ task, onClose }: { task: Task; onClose: () => void }) {
+  const [copied, setCopied] = useState(false)
+
+  function copy() {
+    navigator.clipboard.writeText(task.prompt).then(
+      () => { setCopied(true); setTimeout(() => setCopied(false), 1500) },
+      () => { alert('Kopieren fehlgeschlagen — bitte manuell markieren und kopieren.') },
+    )
+  }
+
+  return (
+    <div className="sb-modal-backdrop" onClick={onClose}>
+      <div className="sb-modal" onClick={e => e.stopPropagation()} role="dialog" aria-modal="true">
+        <header className="sb-modal-head">
+          <div>
+            <div className="sb-modal-meta">
+              <span>S{task.sprintNum}·#{task.taskNum}</span>
+              <span>Welle {task.welle}</span>
+              <span>{task.who}</span>
+              <span className="sb-card-role" style={{ background: ROLE_COLOR[task.role] }}>{task.role}</span>
+            </div>
+            <h3>{task.title}</h3>
+          </div>
+          <button type="button" onClick={onClose} aria-label="Schließen" className="sb-modal-close">✕</button>
+        </header>
+        <div className="sb-modal-body">
+          {task.bullets.length > 0 && (
+            <section>
+              <h4>Was du brauchst</h4>
+              <ul>
+                {task.bullets.map((b, i) => <li key={i}>{b}</li>)}
+              </ul>
+            </section>
+          )}
+          {task.erfolg && (
+            <section>
+              <h4>Erfolgskriterium</h4>
+              <p>{task.erfolg}</p>
+            </section>
+          )}
+          <section>
+            <div className="sb-modal-prompt-head">
+              <h4>Prompt für Claude Code</h4>
+              <button type="button" onClick={copy} className="sb-modal-copy">
+                {copied ? '✓ Kopiert' : '📋 Kopieren'}
+              </button>
+            </div>
+            <pre className="sb-modal-prompt">{task.prompt}</pre>
+          </section>
+        </div>
+      </div>
+    </div>
   )
 }
