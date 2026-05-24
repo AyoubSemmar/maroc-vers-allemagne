@@ -22,8 +22,14 @@ import crypto from 'crypto'
 const COOKIE_NAME = 'admin_auth'
 
 function getSecret(): string | null {
+  // Accept any non-empty secret. An 8-char minimum was too strict and
+  // silently broke login for any deployment with a shorter admin
+  // password (the HMAC returned null → cookie never set → infinite
+  // redirect to /console-x7k9). HMAC strength comes from the key
+  // itself; a short password is the operator's choice, and at least
+  // the cookie value can't be forged without it.
   const s = process.env.ADMIN_TOKEN_SECRET || process.env.ADMIN_PASSWORD
-  return s && s.length >= 8 ? s : null
+  return s && s.length > 0 ? s : null
 }
 
 /** Compute the canonical signed token. The plaintext payload is fixed
