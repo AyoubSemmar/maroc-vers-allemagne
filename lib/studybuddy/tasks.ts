@@ -60,6 +60,20 @@ export type Sprint = {
 
 export const PERSONS: Person[] = ['Leon', 'Taycir', 'Ayoub', 'Sara', 'Abder']
 
+// KI Connect (HS NRW) — replaces the planned Anthropic-Workspace.
+// The Dozent provided one personal API key per team member; they're
+// distributed alphabetically so everyone knows which one is theirs
+// without having to ask each time. Actual key values stay out of the
+// repo and live in the team password manager.
+export const KICONNECT_ENDPOINT = 'https://chat.kiconnect.nrw/app/api-docs/'
+export const KICONNECT_KEY_BY_PERSON: Record<Person, number> = {
+  Abder:  1,
+  Ayoub:  2,
+  Leon:   3,
+  Sara:   4,
+  Taycir: 5,
+}
+
 export const ROLE_COLOR: Record<Role, string> = {
   PM: '#3b6fb5',
   KI: '#e07a3f',

@@ -672,3 +672,73 @@
   .sb-modal-body { padding: 14px 16px 22px; }
   .sb-modal-prompt { font-size: 11.5px; padding: 12px; }
 }
+
+/* ============ KI CONNECT BANNER ============ */
+.sb-ki-banner {
+  background: linear-gradient(135deg, var(--sb-navy) 0%, var(--sb-navy-2) 100%);
+  color: #fff;
+  border-bottom: 3px solid var(--sb-orange);
+}
+.sb-ki-banner-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.sb-ki-banner-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.92);
+}
+.sb-ki-banner-text strong {
+  color: var(--sb-orange);
+  font-weight: 700;
+}
+.sb-ki-banner-text a {
+  color: var(--sb-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sb-ki-banner-text a:hover { color: #fff; }
+.sb-ki-banner-keys {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sb-ki-key {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.85);
+}
+.sb-ki-key b { color: #fff; font-weight: 700; margin-right: 4px; }
+.sb-ki-key.is-mine {
+  background: var(--sb-orange);
+  border-color: var(--sb-orange);
+  color: #fff;
+}
+.sb-ki-banner-mine {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 3px solid var(--sb-orange);
+  border-radius: 4px;
+}
+.sb-ki-banner-mine code {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 11.5px;
+}
+
+@media (max-width: 720px) {
+  .sb-ki-banner-inner { padding: 12px 14px; }
+  .sb-ki-banner-text { font-size: 12.5px; }
+  .sb-ki-key { font-size: 11px; padding: 4px 8px; }
+}

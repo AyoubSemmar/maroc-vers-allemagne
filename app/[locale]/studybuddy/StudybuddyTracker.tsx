@@ -7,6 +7,8 @@ import {
   PERSONS,
   ROLE_COLOR,
   STATUSES,
+  KICONNECT_ENDPOINT,
+  KICONNECT_KEY_BY_PERSON,
   type Person,
   type Status,
   type Task,
@@ -251,6 +253,9 @@ export default function StudybuddyTracker() {
         </nav>
       </header>
 
+      {/* ============ KI CONNECT BANNER ============ */}
+      <KiConnectBanner me={me} />
+
       {/* ============ SUMMARY BAR ============ */}
       <div className="sb-summary">
         <div className="sb-summary-inner">
@@ -330,6 +335,37 @@ export default function StudybuddyTracker() {
 }
 
 // ─────────────────────────────────────────────────────────────────
+function KiConnectBanner({ me }: { me: string }) {
+  const myKey = me && (me in KICONNECT_KEY_BY_PERSON)
+    ? KICONNECT_KEY_BY_PERSON[me as Person]
+    : null
+  return (
+    <aside className="sb-ki-banner" aria-label="KI Connect Zugang">
+      <div className="sb-ki-banner-inner">
+        <div className="sb-ki-banner-text">
+          <strong>KI Connect (HS NRW)</strong>{' '}
+          ersetzt unsere Anthropic-Pläne. Endpoint:{' '}
+          <a href={KICONNECT_ENDPOINT} target="_blank" rel="noopener noreferrer">{KICONNECT_ENDPOINT}</a>
+        </div>
+        <div className="sb-ki-banner-keys">
+          {PERSONS.map(p => {
+            const n = KICONNECT_KEY_BY_PERSON[p]
+            const mine = p === me
+            return (
+              <span key={p} className={`sb-ki-key ${mine ? 'is-mine' : ''}`}>
+                <b>{p}</b> → Key {n}
+              </span>
+            )
+          })}
+        </div>
+        {myKey !== null && (
+          <div className="sb-ki-banner-mine">Du benutzt Key {myKey}. Hol ihn aus dem Bitwarden-Tresor und setze ihn als <code>OPENAI_API_KEY</code>.</div>
+        )}
+      </div>
+    </aside>
+  )
+}
+
 function SummaryCell({ label, count, color }: { label: string; count: number; color: string }) {
   return (
     <div className="sb-summary-cell">

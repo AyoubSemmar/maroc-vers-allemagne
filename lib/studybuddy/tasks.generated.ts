@@ -26,15 +26,16 @@ export const RAW = [
     "who": "Taycir",
     "role": "KI",
     "blocker": true,
-    "priorityInfo": "Blockiert Claude Code für das Team",
-    "title": "Anthropic-Workspace + zwei API-Keys (Dev + Prod)",
+    "priorityInfo": "Blockiert die KI-Integration für das Team",
+    "title": "KI Connect-Zugang prüfen + Setup-Doku erstellen",
     "prereqs": [],
     "bullets": [
-      "Geteilte Team-E-Mail",
-      "Zahlungsmethode"
+      "5 persönliche KI Connect-Keys vom Dozent (aus Slack-Nachricht 26. Mai)",
+      "curl oder Postman zum Testen",
+      "Bitwarden-Tresor offen"
     ],
-    "erfolg": "Workspace + 2 Keys aktiv, docs/anthropic-setup.md fertig.",
-    "prompt": "Ich bin Taycir, AI-Lead im StudyBuddy-Team. Heute lege ich unseren Anthropic-Workspace an.\nBitte führe mich durch:\n1. Workspace „StudyBuddy\" auf console.anthropic.com anlegen.\n2. Vier Teammitglieder per E-Mail einladen.\n3. Zwei API-Keys mit jeweils eigenem Spend-Limit erstellen:\n- „claude-code-dev\" Limit 15 EUR/Monat\n- „studybuddy-prod\" Limit 0 EUR/Monat (kommt in Sprint 2)\n4. Bitwarden-Eintrag-Vorlage.\n5. Schreib mir docs/anthropic-setup.md als Code-Block (Workspace, Region,\nwie ein Teammitglied ANTHROPIC_API_KEY setzt — Windows + Bash).\nWICHTIG: keine Keys in der Datei. Erkläre auf Deutsch."
+    "erfolg": "Jedes Teammitglied kann mit dem eigenen Key einen Test-Call gegen chat.kiconnect.nrw/app/api-docs/ ausführen, docs/kiconnect-setup.md liegt im Repo.",
+    "prompt": "Ich bin Taycir, KI-Lead im StudyBuddy-Team. Der Dozent hat uns 5 persönliche API-Keys für die KI Connect-API der Hochschule (chat.kiconnect.nrw/app/api-docs/) gegeben — einen pro Teammitglied. Wir nutzen kein eigenes Anthropic-Konto, sondern nur die universitäre KI Connect-API.\n\nBitte führe mich Schritt für Schritt durch:\n1. Wie lese ich die OpenAPI-Doku unter https://chat.kiconnect.nrw/app/api-docs/ und finde den Chat-Completions-Endpoint (vermutlich OpenAI-kompatibel, also POST /v1/chat/completions).\n2. Gib mir einen curl-Befehl, mit dem ich meinen Key kurz teste — minimaler \"Hallo Welt\"-Request, der zurückgibt, welches Modell standardmäßig antwortet.\n3. Schreib docs/kiconnect-setup.md als Code-Block: Endpoint-URL, Hinweis dass jeder Key persönlich ist (NIE im Repo, NIE im Frontend), Beispiel-curl, wie man OPENAI_API_KEY + OPENAI_BASE_URL als ENV-Variable setzt (Windows + Bash), Key-Zuordnung pro Person (Abder=1, Ayoub=2, Leon=3, Sara=4, Taycir=5).\n4. Git-Befehle für feature/kiconnect-setup.\n\nErkläre auf Deutsch. WICHTIG: keine Keys in der Datei, nur Platzhalter."
   },
   {
     "id": "s1-03",
@@ -139,13 +140,14 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "Nein",
-    "title": "Claude-Sonnet-Preise & Modelle recherchieren",
+    "title": "KI Connect-Modelle recherchieren + docs/ai-models.md",
     "prereqs": [],
     "bullets": [
-      "Web-Zugang"
+      "Web-Zugang",
+      "KI Connect-OpenAPI-Doku (chat.kiconnect.nrw/app/api-docs/)"
     ],
-    "erfolg": "docs/ai-models.md mit Tabelle, Empfehlung, Quellen.",
-    "prompt": "Ich bin Leon. Heute recherchiere ich aktuelle Anthropic-Modelle.\nBitte hilf mir:\n1. Recherchiere die aktuellen Claude-Modelle (Sonnet, Haiku, Opus).\n2. Schreib mir docs/ai-models.md als Code-Block mit Vergleichstabelle:\nModell · Eingabe-$/1M · Ausgabe-$/1M · Kontextfenster · Wann einsetzen\n3. Empfehlungs-Absatz: welches Modell bei 15 EUR/Monat Budget?\n4. Quellen verlinken.\n5. Git-Befehle für feature/ai-models.\nBei Unsicherheit Preise: nutze letzten Stand mit Hinweis „bitte vor\nCommit verifizieren\". Erkläre auf Deutsch."
+    "erfolg": "docs/ai-models.md beschreibt verfügbare Modelle + welches wir wofür wählen.",
+    "prompt": "Ich bin Leon. Heute recherchiere ich, welche Modelle die KI Connect-API der Hochschule anbietet.\nBitte hilf mir:\n1. Erkläre, wie man aus der OpenAPI-Doku unter https://chat.kiconnect.nrw/app/api-docs/ die unterstützten Modell-Namen ausliest (z. B. GET /v1/models, falls vorhanden).\n2. Gib mir den curl-Befehl für GET /v1/models mit Auth-Header.\n3. Schreib docs/ai-models.md als Code-Block mit Tabelle: Modell · Kontextfenster · Wofür wir es nutzen (Q&A, Themen-Extraktion, Quiz-Bewertung). Da KI Connect kostenfrei ist, KEINE Preis-Spalte.\n4. Empfehlung welches Modell für unsere Hauptfälle (PDF-Q&A) am besten passt.\n5. Git-Befehle für feature/ai-models.\nWenn die Doku keine Modell-Liste freigibt: Fall-back: testen mit einem Default-Modell aus der KI Connect-Doku. Erkläre auf Deutsch."
   },
   {
     "id": "s1-09",
@@ -219,7 +221,7 @@ export const RAW = [
       "—"
     ],
     "erfolg": "docs/test-strategy.md gemerged.",
-    "prompt": "Ich bin Ayoub. Heute schreibe ich unsere Teststrategie.\nBitte hilf mir:\n1. Schreib docs/test-strategy.md als Code-Block mit:\n1) Ziel > 60 % Coverage bis Sprint 7\n2) Test-Ebenen + Tools (Jest, RTL, Playwright)\n3) Was wird getestet, was nicht (Anthropic-API gemockt)\n4) Coverage-Reporting via GitLab CI\n5) Bug-Triage mit 3 Prioritätsstufen.\n2. Git-Befehle für feature/test-strategy.\nErkläre auf Deutsch."
+    "prompt": "Ich bin Ayoub. Heute schreibe ich unsere Teststrategie.\nBitte hilf mir:\n1. Schreib docs/test-strategy.md als Code-Block mit:\n1) Ziel > 60 % Coverage bis Sprint 7\n2) Test-Ebenen + Tools (Jest, RTL, Playwright)\n3) Was wird getestet, was nicht (KI Connect-API gemockt)\n4) Coverage-Reporting via GitLab CI\n5) Bug-Triage mit 3 Prioritätsstufen.\n2. Git-Befehle für feature/test-strategy.\nErkläre auf Deutsch."
   },
   {
     "id": "s1-13",
@@ -333,7 +335,7 @@ export const RAW = [
       "—"
     ],
     "erfolg": "docs/prompt-engineering-101.md verständlich für Team.",
-    "prompt": "Ich bin Taycir. Heute schreibe ich eine Einführung in Prompt Engineering.\nBitte hilf mir:\n1. Schreib docs/prompt-engineering-101.md als Code-Block. Sektionen\n(je max. 5 Sätze):\n1) Was ist ein Prompt?\n2) System / User / Assistant\n3) Few-shot vs. Zero-shot\n4) JSON-Output erzwingen\n5) Chain-of-Thought\n6) Häufige Fehler\n7) Qualitäts-Tests\n2. 1 TS-Code-Beispiel pro Konzept (Anthropic SDK).\n3. Git-Befehle.\nErkläre auf Deutsch."
+    "prompt": "Ich bin Taycir. Heute schreibe ich eine Einführung in Prompt Engineering.\nBitte hilf mir:\n1. Schreib docs/prompt-engineering-101.md als Code-Block. Sektionen\n(je max. 5 Sätze):\n1) Was ist ein Prompt?\n2) System / User / Assistant\n3) Few-shot vs. Zero-shot\n4) JSON-Output erzwingen\n5) Chain-of-Thought\n6) Häufige Fehler\n7) Qualitäts-Tests\n2. 1 TS-Code-Beispiel pro Konzept (KI Connect SDK).\n3. Git-Befehle.\nErkläre auf Deutsch."
   },
   {
     "id": "s1-19",
@@ -656,7 +658,7 @@ export const RAW = [
       "Sprint-Review-Folien (#33)"
     ],
     "erfolg": "Minutengenaues Demo-Skript.",
-    "prompt": "Ich bin Taycir. Heute schreibe ich das Demo-Skript.\nBitte hilf mir:\n1. Schreib docs/sprint-reviews/sprint-1-demo-script.md als Code-Block\nmit Minuten-Slots (0–5 Begrüßung Leon · 5–10 Landing Ayoub · 10–15\nLogin Sara · 15–20 Backend Abder · 20–25 Anthropic Taycir · 25–30\nBoard Leon · 30–35 Challenges · 35–40 Sprint-2 · 40–45 Q&A;).\nPro Slot: was wird gezeigt, was gesagt, Backup-Plan.\n2. Git-Befehle.\nErkläre auf Deutsch."
+    "prompt": "Ich bin Taycir. Heute schreibe ich das Demo-Skript.\nBitte hilf mir:\n1. Schreib docs/sprint-reviews/sprint-1-demo-script.md als Code-Block\nmit Minuten-Slots (0–5 Begrüßung Leon · 5–10 Landing Ayoub · 10–15\nLogin Sara · 15–20 Backend Abder · 20–25 KI Connect Taycir · 25–30\nBoard Leon · 30–35 Challenges · 35–40 Sprint-2 · 40–45 Q&A;).\nPro Slot: was wird gezeigt, was gesagt, Backup-Plan.\n2. Git-Befehle.\nErkläre auf Deutsch."
   },
   {
     "id": "s1-36",
@@ -667,13 +669,13 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "Nein",
-    "title": "DSGVO-Notizen für Anthropic-API-Nutzung",
+    "title": "DSGVO-Notizen für KI Connect-API-Nutzung",
     "prereqs": [],
     "bullets": [
-      "docs/anthropic-setup.md (#2)"
+      "docs/kiconnect-setup.md (#2)"
     ],
     "erfolg": "DSGVO-Notizen gemerged.",
-    "prompt": "Ich bin Taycir. Heute schreibe ich DSGVO-Notizen.\nBitte hilf mir:\n1. Schreib docs/legal/anthropic-dsgvo-notes.md als Code-Block:\n1) Welche Daten senden wir? 2) Welche nicht?\n3) AVV-Status (Link recherchieren) 4) Datenresidenz\n5) Maßnahmen (Upload-Hinweis, keine PII in Logs, 90-Tage-Retention)\n6) Offene Fragen für Hochschul-DSB.\n2. Git-Befehle.\nErkläre auf Deutsch."
+    "prompt": "Ich bin Taycir. Heute schreibe ich DSGVO-Notizen.\nBitte hilf mir:\n1. Schreib docs/legal/kiconnect-dsgvo-notes.md als Code-Block:\n1) Welche Daten senden wir? 2) Welche nicht?\n3) AVV-Status (Link recherchieren) 4) Datenresidenz\n5) Maßnahmen (Upload-Hinweis, keine PII in Logs, 90-Tage-Retention)\n6) Offene Fragen für Hochschul-DSB.\n2. Git-Befehle.\nErkläre auf Deutsch."
   },
   {
     "id": "s2-01",
@@ -718,13 +720,13 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "Vor allen KI-Aufgaben",
-    "title": "Anthropic-SDK integrieren + erster API-Call",
+    "title": "OpenAI-SDK (kompatibel mit KI Connect) integrieren + erster API-Call",
     "prereqs": [],
     "bullets": [
-      "Anthropic-API-Key (S1)"
+      "KI Connect-API-Key (S1)"
     ],
-    "erfolg": "anthropic-Client funktioniert, Testfrage beantwortet.",
-    "prompt": "Ich bin Taycir. Heute integriere ich das Anthropic-SDK.\nBitte hilf mir:\n1. npm-Befehl für @anthropic-ai/sdk.\n2. Schreib src/lib/anthropic/client.ts als Code-Block (Anthropic\nClient mit ANTHROPIC_API_KEY aus env, Helper sendMessage).\n3. Schreib einen Test-Script test-anthropic.ts der „Hallo, wer bist du?\" sendet.\n4. Git-Befehle für feature/anthropic-sdk."
+    "erfolg": "KI Connect-Client funktioniert, Testfrage beantwortet.",
+    "prompt": "Ich bin Taycir. Heute integriere ich das OpenAI-SDK (kompatibel mit KI Connect).\nBitte hilf mir:\n1. npm-Befehl für openai.\n2. Schreib src/lib/ai/client.ts als Code-Block (KI Connect\nClient mit OPENAI_API_KEY aus env, Helper sendMessage).\n3. Schreib einen Test-Script test-kiconnect.ts der „Hallo, wer bist du?\" sendet.\n4. Git-Befehle für feature/kiconnect-sdk."
   },
   {
     "id": "s2-04",
@@ -812,10 +814,10 @@ export const RAW = [
     "title": "Budget-Tracking-Dashboard für API-Kosten",
     "prereqs": [],
     "bullets": [
-      "Anthropic-Console-Zugang"
+      "KI Connect-Konsole-Zugang"
     ],
     "erfolg": "Budget-Tracking-Doku, Wochenrhythmus etabliert.",
-    "prompt": "Ich bin Leon. Heute setze ich unser API-Kosten-Tracking auf.\nBitte hilf mir:\n1. Anleitung: wie ich in Anthropic-Console täglich/wöchentlich die\nKosten ablese.\n2. Schreib docs/budget-tracking.md als Code-Block (Vorlage für\nwöchentliche Erfassung: Datum · Verbrauch · Trend · Maßnahme).\n3. Slack-Reminder-Vorschlag: jeden Montag 9:00 Budget-Check.\n4. Git-Befehle."
+    "prompt": "Ich bin Leon. Heute setze ich unser API-Kosten-Tracking auf.\nBitte hilf mir:\n1. Anleitung: wie ich in KI Connect-Konsole täglich/wöchentlich die\nKosten ablese.\n2. Schreib docs/budget-tracking.md als Code-Block (Vorlage für\nwöchentliche Erfassung: Datum · Verbrauch · Trend · Maßnahme).\n3. Slack-Reminder-Vorschlag: jeden Montag 9:00 Budget-Check.\n4. Git-Befehle."
   },
   {
     "id": "s2-09",
@@ -887,10 +889,10 @@ export const RAW = [
       "09"
     ],
     "bullets": [
-      "Anthropic-SDK + extrahierter Text"
+      "OpenAI-SDK (kompatibel mit KI Connect) + extrahierter Text"
     ],
     "erfolg": "Erstes Q&A-Prompt; funktioniert mit Testdaten.",
-    "prompt": "Ich bin Taycir. Heute baue ich das erste Q&A-Prompt.;\nBitte hilf mir:\n1. Schreib src/lib/anthropic/prompts/qa-on-text.ts als Code-Block:\n- System-Message: „Beantworte Fragen ausschließlich auf Basis des\nTexts. Wenn unklar, sag das.\"\n- User-Template mit {{document_text}} + {{question}}.\n- JSON-Output: { answer: string, confidence: 'high'|'medium'|'low' }.\n2. Schreib einen Test-Aufruf-Beispiel-Script.\n3. Git-Befehle für feature/qa-prompt."
+    "prompt": "Ich bin Taycir. Heute baue ich das erste Q&A-Prompt.;\nBitte hilf mir:\n1. Schreib src/lib/ai/prompts/qa-on-text.ts als Code-Block:\n- System-Message: „Beantworte Fragen ausschließlich auf Basis des\nTexts. Wenn unklar, sag das.\"\n- User-Template mit {{document_text}} + {{question}}.\n- JSON-Output: { answer: string, confidence: 'high'|'medium'|'low' }.\n2. Schreib einen Test-Aufruf-Beispiel-Script.\n3. Git-Befehle für feature/qa-prompt."
   },
   {
     "id": "s2-13",
@@ -946,7 +948,7 @@ export const RAW = [
       "PDF-Extraktion + Q&A-Prompt;"
     ],
     "erfolg": "PDF → Text → Claude-Antwort funktioniert E2E.",
-    "prompt": "Ich bin Taycir. Heute verbinde ich alles zum End-to-End-Flow.\nBitte hilf mir:\n1. Schreib src/app/api/ask/route.ts als Code-Block: POST mit\n{ documentId, question } → liest extracted_text aus DB → ruft\nAnthropic mit qa-on-text-Prompt → gibt Antwort zurück.\n2. Token-Counting + Logging der Kosten pro Anfrage.\n3. Test-Script: PDF hochladen, Frage stellen, Antwort prüfen.\n4. Git-Befehle für feature/ask-endpoint."
+    "prompt": "Ich bin Taycir. Heute verbinde ich alles zum End-to-End-Flow.\nBitte hilf mir:\n1. Schreib src/app/api/ask/route.ts als Code-Block: POST mit\n{ documentId, question } → liest extracted_text aus DB → ruft\nKI Connect mit qa-on-text-Prompt → gibt Antwort zurück.\n2. Token-Counting + Logging der Kosten pro Anfrage.\n3. Test-Script: PDF hochladen, Frage stellen, Antwort prüfen.\n4. Git-Befehle für feature/ask-endpoint."
   },
   {
     "id": "s2-16",
@@ -1004,7 +1006,7 @@ export const RAW = [
       "PDF-Extraktion (#9)"
     ],
     "erfolg": "OCR-Empfehlung dokumentiert.",
-    "prompt": "Ich bin Abder. Heute recherchiere ich OCR-Optionen für gescannte PDFs.\nBitte hilf mir:\n1. Recherchiere: Tesseract.js, Anthropic Vision, andere Optionen.\n2. Schreib docs/ocr-research.md als Code-Block: Vergleich, Kosten,\nEmpfehlung.\n3. Git-Befehle."
+    "prompt": "Ich bin Abder. Heute recherchiere ich OCR-Optionen für gescannte PDFs.\nBitte hilf mir:\n1. Recherchiere: Tesseract.js, KI Connect Vision, andere Optionen.\n2. Schreib docs/ocr-research.md als Code-Block: Vergleich, Kosten,\nEmpfehlung.\n3. Git-Befehle."
   },
   {
     "id": "s2-19",
@@ -1195,7 +1197,7 @@ export const RAW = [
       "Topic-Extraction-Research (S1)"
     ],
     "erfolg": "Sprint-3-Konzept dokumentiert.",
-    "prompt": "Ich bin Taycir. Heute bereite ich Sprint 3 (Themen-Extraktion) vor.\nBitte hilf mir:\n1. Schreib docs/prompts/topic-clustering-concept.md als Code-Block:\n- Algorithmus-Skizze: Text → Chunks → Themen → Konsolidierung\n- Welche Anthropic-Calls in welcher Reihenfolge\n- Welches Datenmodell in der DB (topics-Tabelle Spalten).\n2. Git-Befehle."
+    "prompt": "Ich bin Taycir. Heute bereite ich Sprint 3 (Themen-Extraktion) vor.\nBitte hilf mir:\n1. Schreib docs/prompts/topic-clustering-concept.md als Code-Block:\n- Algorithmus-Skizze: Text → Chunks → Themen → Konsolidierung\n- Welche KI Connect-Calls in welcher Reihenfolge\n- Welches Datenmodell in der DB (topics-Tabelle Spalten).\n2. Git-Befehle."
   },
   {
     "id": "s2-29",
@@ -1401,7 +1403,7 @@ export const RAW = [
       "Topic-Research (S1)"
     ],
     "erfolg": "cluster-topics-Prompt funktioniert mit Testdaten.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den finalen Themen-Clustering-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/anthropic/prompts/cluster-topics.ts mit System+User-Template + JSON-Schema {topics: [{title, summary, key_concepts, bloom\n_levels}]}.\n2. Chunking-Strategie: ab welcher Textlänge in Chunks.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den finalen Themen-Clustering-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/prompts/cluster-topics.ts mit System+User-Template + JSON-Schema {topics: [{title, summary, key_concepts, bloom\n_levels}]}.\n2. Chunking-Strategie: ab welcher Textlänge in Chunks.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s3-04",
@@ -1474,7 +1476,7 @@ export const RAW = [
       "Cluster-Prompt (#3)"
     ],
     "erfolg": "generate-questions-Prompt funktioniert.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Frage-Generator.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/anthropic/prompts/generate-questions.ts: Input topic+text, Output {questions: [{type, prompt, expected_answer, options?}]\n}.\n2. Mind. 10 Fragen pro Topic, mind. 30% open / 30% MC.\n3. Bloom-Stufen Verstehen + Anwenden.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Frage-Generator.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/prompts/generate-questions.ts: Input topic+text, Output {questions: [{type, prompt, expected_answer, options?}]\n}.\n2. Mind. 10 Fragen pro Topic, mind. 30% open / 30% MC.\n3. Bloom-Stufen Verstehen + Anwenden.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s3-08",
@@ -1860,7 +1862,7 @@ export const RAW = [
       "Questions-API"
     ],
     "erfolg": "Generator robust gegen API-Fehler.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute härte ich Fehlerpfade.\nBitte führe mich Schritt für Schritt durch:\n1. Was passiert wenn Claude antwortet mit nicht-JSON?\n2. Retry-Logik (max 2x) + Fallback auf einfache Variante.\n3. Logging-Format definieren.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute härte ich Fehlerpfade.\nBitte führe mich Schritt für Schritt durch:\n1. Was passiert wenn die KI Connect-API antwortet mit nicht-JSON?\n2. Retry-Logik (max 2x) + Fallback auf einfache Variante.\n3. Logging-Format definieren.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s3-28",
@@ -2078,7 +2080,7 @@ export const RAW = [
       "Sprint-3-Konzept"
     ],
     "erfolg": "analyze-answer-Prompt funktioniert.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Antwort-Analyse-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/anthropic/prompts/analyze-answer.ts. Input: Frage, erwartete Antwort, User-Antwort. Output JSON: {verdict: 'correct'|'par\ntial'|'wrong', missing_concepts: [], suggested_followup: string}.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Antwort-Analyse-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/prompts/analyze-answer.ts. Input: Frage, erwartete Antwort, User-Antwort. Output JSON: {verdict: 'correct'|'par\ntial'|'wrong', missing_concepts: [], suggested_followup: string}.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s4-04",
@@ -3463,7 +3465,7 @@ export const RAW = [
       "Sprint-3-Prompts"
     ],
     "erfolg": "Quiz-Prompt fertig.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Quiz-Fragen-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/anthropic/prompts/quiz-questions.ts: kompakte, eindeutig-bewertbare Fragen.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute schreibe ich den Quiz-Fragen-Prompt.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/prompts/quiz-questions.ts: kompakte, eindeutig-bewertbare Fragen.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s6-06",
@@ -4113,7 +4115,7 @@ export const RAW = [
       "Prompts bisher"
     ],
     "erfolg": "Prompts injection-sicher.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute härte ich KI-Aufrufe gegen Injection.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/anthropic/sanitize.ts: filtert/escapet User-Eingaben in Prompts.\n2. Tests gegen gängige Injection-Patterns.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute härte ich KI-Aufrufe gegen Injection.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/sanitize.ts: filtert/escapet User-Eingaben in Prompts.\n2. Tests gegen gängige Injection-Patterns.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s7-05",
@@ -4236,7 +4238,7 @@ export const RAW = [
       "Bestehende KI-Aufrufe"
     ],
     "erfolg": "Kosten-Alerts aktiv.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute setze ich Kosten-Alerts auf.\nBitte führe mich Schritt für Schritt durch:\n1. Anthropic-Console-Alert bei 80% des Budgets.\n2. Slack-Webhook für Notifications.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute setze ich Kosten-Alerts auf.\nBitte führe mich Schritt für Schritt durch:\n1. KI Connect-Konsole-Alert bei 80% des Budgets.\n2. Slack-Webhook für Notifications.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s7-12",
@@ -4253,7 +4255,7 @@ export const RAW = [
       "DSGVO-Doku bisher"
     ],
     "erfolg": "DSGVO-Checkliste 100% abgeschlossen.",
-    "prompt": "Ich bin Leon im StudyBuddy-Team. Heute schließe ich die DSGVO-Checkliste ab.\nBitte führe mich Schritt für Schritt durch:\n1. docs/legal/dsgvo-final.md alle Punkte abhaken.\n2. AVV mit Anthropic Status klären.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Leon im StudyBuddy-Team. Heute schließe ich die DSGVO-Checkliste ab.\nBitte führe mich Schritt für Schritt durch:\n1. docs/legal/dsgvo-final.md alle Punkte abhaken.\n2. AVV mit KI Connect Status klären.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s7-13",
@@ -5391,13 +5393,13 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "Vor Go-Live",
-    "title": "Production-Anthropic-Key auf 30 EUR Limit setzen",
+    "title": "Production-KI Connect-Key auf 30 EUR Limit setzen",
     "prereqs": [],
     "bullets": [
       "—"
     ],
     "erfolg": "Production-Key bereit.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute setze ich Production-Key auf produktives Limit.\nBitte führe mich Schritt für Schritt durch:\n1. Anthropic-Console: studybuddy-prod auf 30 EUR/Monat.\n2. Alert bei 80%.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute setze ich Production-Key auf produktives Limit.\nBitte führe mich Schritt für Schritt durch:\n1. KI Connect-Konsole: studybuddy-prod auf 30 EUR/Monat.\n2. Alert bei 80%.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s9-04",
