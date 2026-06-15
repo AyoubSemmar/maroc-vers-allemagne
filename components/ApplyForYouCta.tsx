@@ -6,8 +6,8 @@ import BookConsultationButton from '@/components/BookConsultationButton'
 /**
  * Promo banner for the "Apply For Me" consultation, shown on the
  * Ausbildung listings and Universities pages. The booking button
- * pre-selects the apply-for-me topic which routes to the 60-min /
- * 400 MAD Calendly tier.
+ * opens the single 60-min / 200 MAD consultation; the apply-for-me
+ * topic is passed to Calendly so the host knows the context.
  */
 export default function ApplyForYouCta() {
   const t = useTranslations('applyForYouCta')

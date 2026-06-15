@@ -4917,11 +4917,14 @@ body { line-height: 1.65; }
 
 /* ============ PATH CONSULT CTA (/ausbildung & /studium) ============ */
 .path-consult-cta {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* Single consultation card now — center it with a sensible max width
+     instead of the old two-column grid. */
+  display: flex;
+  justify-content: center;
   gap: 18px;
   margin-top: 8px;
 }
+.path-consult-cta .path-consult-card { max-width: 560px; width: 100%; }
 .path-consult-card {
   position: relative;
   padding: 26px 22px;

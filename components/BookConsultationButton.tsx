@@ -4,27 +4,27 @@ import { useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { trackBookConsultation } from '@/lib/analytics'
 
-// ── Five Calendly events, each with its own duration + price ──────
-// Maps to the events the user created in their upgraded Calendly:
-//   /quick-check     15 min · 80 MAD   (eligibility / planning / docs)
-//   /cv-interview    30 min · 160 MAD  (CV review or interview prep)
-//   /path-planning   45 min · 250 MAD  (visa / Studium / Ausbildung deep dive)
-//   /apply-for-me    60 min · 400 MAD  (flagship — full application package)
-//   /german-tutoring 60 min · 300 MAD  (language lessons + exam prep)
-// priceMad is what we charge and display. priceEur is kept for GA4
-// revenue tracking continuity (analytics has prior data in EUR).
-// Conversion: 1 EUR = 10 MAD.
-// Payment is collected manually by bank transfer after booking; the
-// confirmation email (configured in Calendly) carries the IBAN + the
-// per-tier reference code so we can match wires to bookings.
-const TIERS = {
-  quick:  { url: 'https://calendly.com/contact-gogermany/quick-check',     priceEur:  8, priceMad:  80, durationMin: 15 },
-  cv:     { url: 'https://calendly.com/contact-gogermany/cv-interview',    priceEur: 16, priceMad: 160, durationMin: 30 },
-  path:   { url: 'https://calendly.com/contact-gogermany/path-planning',   priceEur: 25, priceMad: 250, durationMin: 45 },
-  apply:  { url: 'https://calendly.com/contact-gogermany/apply-for-me',    priceEur: 40, priceMad: 400, durationMin: 60 },
-  german: { url: 'https://calendly.com/contact-gogermany/german-tutoring', priceEur: 30, priceMad: 300, durationMin: 60 },
+// ── One consultation for everything ───────────────────────────────
+// We used to offer five tiers (quick-check / cv-interview / path-
+// planning / apply-for-me / german-tutoring) at different durations
+// and prices. Simplified to a SINGLE product: a 60-minute consultation
+// for 200 MAD, regardless of what the person wants to discuss. Every
+// "Book a consultation" button across the site lands on the same
+// Calendly event and shows the same price.
+//
+// The `topic` the user came from is still passed to Calendly (as a
+// prefill + UTM) so the host knows what to prepare — but it no longer
+// changes the price, duration, or event.
+//
+// priceMad is what we charge and display. priceEur (=200/10) is kept
+// only so the GA4 revenue field stays a sane number; payment is
+// collected manually by bank transfer after booking.
+const CONSULTATION = {
+  url: 'https://calendly.com/contact-gogermany/consultation',
+  priceEur: 20,
+  priceMad: 200,
+  durationMin: 60,
 } as const
-type TierKey = keyof typeof TIERS
 
 declare global {
   interface Window {
@@ -51,22 +51,6 @@ export type ConsultTopic =
   | 'visa'
   | 'german-tutoring'
   | 'german-exam-prep'
-
-// Each of the 12 site topics maps to one of the 5 Calendly events.
-const TOPIC_TIER: Record<ConsultTopic, TierKey> = {
-  'general':            'path',
-  'apply-for-me':       'apply',
-  'interview-prep':     'cv',
-  'migration-timeline': 'quick',
-  'document-checklist': 'quick',
-  'eligibility':        'quick',
-  'cv-anschreiben':     'cv',
-  'studium':            'path',
-  'ausbildung':         'path',
-  'visa':               'path',
-  'german-tutoring':    'german',
-  'german-exam-prep':   'german',
-}
 
 type LocaleKey = 'en' | 'fr' | 'ar' | 'de'
 
@@ -145,10 +129,10 @@ type Props = {
  * Opens Calendly's popup widget on click. Loads the Calendly script
  * lazily on first render so it doesn't block initial paint elsewhere.
  *
- * The button shows the price + duration of the tier the topic maps to
- * (80/15min, 160/30min, 250/45min, 300/60min, or 400/60min — all MAD).
- * Labels come from the bookConsult i18n namespace with {price}/{duration}
- * placeholders so each locale renders its own number+unit format.
+ * The button always shows the single consultation price + duration
+ * (200 MAD · 60 min). Labels come from the bookConsult i18n namespace
+ * with {price}/{duration} placeholders so each locale renders its own
+ * number+unit format.
  */
 export default function BookConsultationButton({
   variant = 'primary',
@@ -161,21 +145,20 @@ export default function BookConsultationButton({
     ? (rawLocale as LocaleKey)
     : 'en'
   const label = TOPIC_LABEL[locale][topic]
-  const tier = TIERS[TOPIC_TIER[topic] ?? 'path']
 
-  // Compose Calendly URL with UTM params + a prefill answer for the first
-  // intake question, so the host immediately sees which service the user
-  // is booking for. The label is in the user's site language.
+  // Single Calendly event for every consultation. We still pass the
+  // topic as a UTM + prefill answer so the host knows what to prepare,
+  // but it doesn't change the event, price, or duration.
   const url = (() => {
     try {
-      const u = new URL(tier.url)
+      const u = new URL(CONSULTATION.url)
       u.searchParams.set('utm_source', 'gogermany.ma')
       u.searchParams.set('utm_campaign', topic)         // stable, language-agnostic
       u.searchParams.set('utm_content', TOPIC_LABEL.en[topic]) // English for analytics
       u.searchParams.set('a1', label)                   // localised prefill
       return u.toString()
     } catch {
-      return tier.url
+      return CONSULTATION.url
     }
   })()
 
@@ -207,9 +190,9 @@ export default function BookConsultationButton({
     // mark this as a purchase-style conversion.
     trackBookConsultation({
       topic,
-      tier: TOPIC_TIER[topic] ?? 'path',
-      priceEur: tier.priceEur,
-      durationMin: tier.durationMin,
+      tier: 'consultation',
+      priceEur: CONSULTATION.priceEur,
+      durationMin: CONSULTATION.durationMin,
       locale,
     })
     if (window.Calendly) {
@@ -224,7 +207,7 @@ export default function BookConsultationButton({
   return (
     <button type="button" onClick={open} className={cls}>
       <span className="bcb-label">{t('cta')}</span>
-      <span className="bcb-price">{t('price', { price: tier.priceMad, duration: tier.durationMin })}</span>
+      <span className="bcb-price">{t('price', { price: CONSULTATION.priceMad, duration: CONSULTATION.durationMin })}</span>
     </button>
   )
 }
