@@ -66,17 +66,39 @@ export const PERSONS: Person[] = ['Leon', 'Taycir', 'Ayoub', 'Sara', 'Abder']
 // without having to ask each time. Actual key values stay out of the
 // repo and live in the team password manager.
 export const KICONNECT_ENDPOINT = 'https://chat.kiconnect.nrw/app/api-docs/'
+// OpenAI-compatible base URL (confirmed from the OpenAPI spec — note
+// the /api prefix). Set this as OPENAI_BASE_URL; auth is a plain
+// `Authorization: Bearer <key>`. Endpoints: /v1/chat/completions,
+// /v1/models, /v1/embeddings, /v1/responses.
+export const KICONNECT_BASE_URL = 'https://chat.kiconnect.nrw/api/v1'
 // GET this with `Authorization: Bearer <key>` to list the models our
 // keys can use — the Dozent asked us to confirm which model we run.
-export const KICONNECT_MODELS_ENDPOINT = 'https://chat.kiconnect.nrw/v1/models'
-// Our chosen default. KI Connect offers GPT-5.2 / GPT-5 / GPT-4.1 /
-// GPT-4.1 Mini / DeepSeek R1 / Llama 3.1 8B / Qwen 3 32B / Codestral
-// 22B / Qwen QwQ 32B. GPT-4.1 is the best balance for PDF-Q&A, topic
-// extraction and dialogue (strong reasoning, large context); GPT-4.1
-// Mini is the cheap/fast fallback for high-volume calls (quiz grading).
-// Confirm the exact id string via GET /v1/models before wiring calls.
-export const KICONNECT_DEFAULT_MODEL = 'GPT-4.1'
-export const KICONNECT_FALLBACK_MODEL = 'GPT-4.1 Mini'
+export const KICONNECT_MODELS_ENDPOINT = 'https://chat.kiconnect.nrw/api/v1/models'
+// Models actually exposed to our keys (confirmed via GET /api/v1/models,
+// owned_by w-hs.de). The id strings are inconsistent (spaces / under-
+// scores / hyphens) and MUST be passed verbatim as the `model` param.
+export const KICONNECT_CHAT_MODELS = [
+  'OpenAI GPT-5.3 Chat',
+  'OpenAI_GPT-5.2',
+  'OpenAI-GPT-5-Mini',
+  'OpenAI GPT-5.3-Codex',
+  'OpenAI GPT OSS 120B',
+  'Mistral Small 4 119B',
+] as const
+export const KICONNECT_EMBEDDING_MODELS = [
+  'Qwen 3 Embedding 8B',
+  'E5 Mistral 7B Instruct Inferenz.nrw',
+] as const
+// Our choices for the StudyBuddy app:
+//  • default chat → GPT-5.3 Chat (newest general model, best for
+//    PDF-Q&A, topic extraction and the learning dialogue)
+//  • fallback    → GPT-5 Mini (cheap/fast, for high-volume calls like
+//    quiz grading)
+//  • embeddings  → Qwen 3 Embedding 8B (for semantic search over PDF
+//    chunks in the later RAG sprints)
+export const KICONNECT_DEFAULT_MODEL = 'OpenAI GPT-5.3 Chat'
+export const KICONNECT_FALLBACK_MODEL = 'OpenAI-GPT-5-Mini'
+export const KICONNECT_EMBEDDING_MODEL = 'Qwen 3 Embedding 8B'
 export const KICONNECT_KEY_BY_PERSON: Record<Person, number> = {
   Abder:  1,
   Ayoub:  2,
