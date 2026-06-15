@@ -22,6 +22,9 @@ const path = require('path')
 const FILE = path.join(__dirname, '..', 'lib', 'studybuddy', 'tasks.generated.ts')
 
 const REPLACEMENTS = [
+  // Title arrow artifact from PDF parse (→ collapsed to spaces).
+  [/PDF\s+Text\s+Claude-Antwort/g, 'PDF → Text → KI-Antwort'],
+
   // Brand / service names
   [/Anthropic-Workspace/g, 'KI Connect-Zugang'],
   [/Anthropic-Account/g, 'KI Connect-Zugang'],
@@ -53,11 +56,16 @@ const REPLACEMENTS = [
   [/\banthropic\.ts/g, 'kiconnect.ts'],
 
   // Stray bare "Claude" mentions in narrative text.
+  // NOTE: "Claude Code" (the dev CLI the team types prompts into) is a
+  // tool, not the runtime API — it must stay. None of these patterns
+  // match "Claude Code".
   [/\bClaude-Modelle\b/g, 'die per KI Connect verfügbaren Modelle'],
   [/\bClaude-Modell\b/g, 'das KI-Connect-Modell'],
   [/\bClaude-API\b/g, 'die KI Connect-API'],
   [/\bClaude antwortet\b/g, 'die KI Connect-API antwortet'],
   [/\bClaude beantwortet\b/g, 'die KI Connect-API beantwortet'],
+  [/\bClaude-Antwort\b/g, 'KI-Antwort'],
+  [/\bClaude-Antworten\b/g, 'KI-Antworten'],
 
   // Doc filenames + lowercase leftovers.
   [/docs\/anthropic-setup\.md/g, 'docs/kiconnect-setup.md'],
@@ -119,16 +127,16 @@ const OVERRIDE_S1_08 = {
     'Web-Zugang',
     'KI Connect-OpenAPI-Doku (chat.kiconnect.nrw/app/api-docs/)',
   ],
-  erfolg: 'docs/ai-models.md beschreibt verfügbare Modelle + welches wir wofür wählen.',
+  erfolg: 'docs/ai-models.md listet die verfügbaren Modelle, GET /v1/models ist getestet, und unser Standardmodell (GPT-4.1) ist festgelegt.',
   prompt: [
-    'Ich bin Leon. Heute recherchiere ich, welche Modelle die KI Connect-API der Hochschule anbietet.',
+    'Ich bin Leon. Heute bestätige ich, welche Modelle die KI Connect-API der Hochschule (chat.kiconnect.nrw) anbietet, und lege unser Standardmodell fest — der Dozent will wissen, welches Modell wir nutzen.',
     'Bitte hilf mir:',
-    '1. Erkläre, wie man aus der OpenAPI-Doku unter https://chat.kiconnect.nrw/app/api-docs/ die unterstützten Modell-Namen ausliest (z. B. GET /v1/models, falls vorhanden).',
-    '2. Gib mir den curl-Befehl für GET /v1/models mit Auth-Header.',
-    '3. Schreib docs/ai-models.md als Code-Block mit Tabelle: Modell · Kontextfenster · Wofür wir es nutzen (Q&A, Themen-Extraktion, Quiz-Bewertung). Da KI Connect kostenfrei ist, KEINE Preis-Spalte.',
-    '4. Empfehlung welches Modell für unsere Hauptfälle (PDF-Q&A) am besten passt.',
+    '1. Gib mir den exakten curl-Befehl für GET https://chat.kiconnect.nrw/v1/models mit Header "Authorization: Bearer $OPENAI_API_KEY". Das gibt die für unseren Key freigeschalteten Modelle zurück.',
+    '2. Laut KI-Connect-Doku sind u. a. verfügbar: GPT-5.2, GPT-5, GPT-4.1, GPT-4.1 Mini, DeepSeek R1, Llama 3.1 8B Instruct, Qwen 3 32B, Codestral 22B, Qwen QwQ 32B. Hilf mir die curl-Ausgabe damit abzugleichen — welche davon hat UNSER Key wirklich frei?',
+    '3. Schreib docs/ai-models.md als Code-Block: Tabelle (Modell · Kontextfenster · Wofür wir es nutzen) + klare Festlegung: Standardmodell GPT-4.1 für PDF-Q&A, Themen-Extraktion und Dialog; GPT-4.1 Mini als günstige/schnelle Variante für Massen-Aufrufe (Quiz-Bewertung). Da KI Connect für uns kostenfrei ist, KEINE Preis-Spalte.',
+    '4. Notiere den EXAKTEN Modell-id-String aus /v1/models (z. B. "gpt-4.1"), den wir später in OPENAI-Calls als model-Parameter setzen.',
     '5. Git-Befehle für feature/ai-models.',
-    'Wenn die Doku keine Modell-Liste freigibt: Fall-back: testen mit einem Default-Modell aus der KI Connect-Doku. Erkläre auf Deutsch.',
+    'Erkläre auf Deutsch. Wenn /v1/models einen anderen id-String liefert als erwartet, nimm den echten String aus der Antwort.',
   ].join('\n'),
 }
 

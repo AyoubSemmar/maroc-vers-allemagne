@@ -66,6 +66,17 @@ export const PERSONS: Person[] = ['Leon', 'Taycir', 'Ayoub', 'Sara', 'Abder']
 // without having to ask each time. Actual key values stay out of the
 // repo and live in the team password manager.
 export const KICONNECT_ENDPOINT = 'https://chat.kiconnect.nrw/app/api-docs/'
+// GET this with `Authorization: Bearer <key>` to list the models our
+// keys can use — the Dozent asked us to confirm which model we run.
+export const KICONNECT_MODELS_ENDPOINT = 'https://chat.kiconnect.nrw/v1/models'
+// Our chosen default. KI Connect offers GPT-5.2 / GPT-5 / GPT-4.1 /
+// GPT-4.1 Mini / DeepSeek R1 / Llama 3.1 8B / Qwen 3 32B / Codestral
+// 22B / Qwen QwQ 32B. GPT-4.1 is the best balance for PDF-Q&A, topic
+// extraction and dialogue (strong reasoning, large context); GPT-4.1
+// Mini is the cheap/fast fallback for high-volume calls (quiz grading).
+// Confirm the exact id string via GET /v1/models before wiring calls.
+export const KICONNECT_DEFAULT_MODEL = 'GPT-4.1'
+export const KICONNECT_FALLBACK_MODEL = 'GPT-4.1 Mini'
 export const KICONNECT_KEY_BY_PERSON: Record<Person, number> = {
   Abder:  1,
   Ayoub:  2,

@@ -702,6 +702,17 @@
   text-underline-offset: 2px;
 }
 .sb-ki-banner-text a:hover { color: #fff; }
+.sb-ki-banner-model {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+.sb-ki-banner-model b { color: var(--sb-orange); font-weight: 700; }
+.sb-ki-banner-model a {
+  color: var(--sb-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.sb-ki-banner-model a:hover { color: #fff; }
 .sb-ki-banner-keys {
   display: flex;
   flex-wrap: wrap;

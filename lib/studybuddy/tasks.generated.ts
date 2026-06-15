@@ -146,8 +146,8 @@ export const RAW = [
       "Web-Zugang",
       "KI Connect-OpenAPI-Doku (chat.kiconnect.nrw/app/api-docs/)"
     ],
-    "erfolg": "docs/ai-models.md beschreibt verfügbare Modelle + welches wir wofür wählen.",
-    "prompt": "Ich bin Leon. Heute recherchiere ich, welche Modelle die KI Connect-API der Hochschule anbietet.\nBitte hilf mir:\n1. Erkläre, wie man aus der OpenAPI-Doku unter https://chat.kiconnect.nrw/app/api-docs/ die unterstützten Modell-Namen ausliest (z. B. GET /v1/models, falls vorhanden).\n2. Gib mir den curl-Befehl für GET /v1/models mit Auth-Header.\n3. Schreib docs/ai-models.md als Code-Block mit Tabelle: Modell · Kontextfenster · Wofür wir es nutzen (Q&A, Themen-Extraktion, Quiz-Bewertung). Da KI Connect kostenfrei ist, KEINE Preis-Spalte.\n4. Empfehlung welches Modell für unsere Hauptfälle (PDF-Q&A) am besten passt.\n5. Git-Befehle für feature/ai-models.\nWenn die Doku keine Modell-Liste freigibt: Fall-back: testen mit einem Default-Modell aus der KI Connect-Doku. Erkläre auf Deutsch."
+    "erfolg": "docs/ai-models.md listet die verfügbaren Modelle, GET /v1/models ist getestet, und unser Standardmodell (GPT-4.1) ist festgelegt.",
+    "prompt": "Ich bin Leon. Heute bestätige ich, welche Modelle die KI Connect-API der Hochschule (chat.kiconnect.nrw) anbietet, und lege unser Standardmodell fest — der Dozent will wissen, welches Modell wir nutzen.\nBitte hilf mir:\n1. Gib mir den exakten curl-Befehl für GET https://chat.kiconnect.nrw/v1/models mit Header \"Authorization: Bearer $OPENAI_API_KEY\". Das gibt die für unseren Key freigeschalteten Modelle zurück.\n2. Laut KI-Connect-Doku sind u. a. verfügbar: GPT-5.2, GPT-5, GPT-4.1, GPT-4.1 Mini, DeepSeek R1, Llama 3.1 8B Instruct, Qwen 3 32B, Codestral 22B, Qwen QwQ 32B. Hilf mir die curl-Ausgabe damit abzugleichen — welche davon hat UNSER Key wirklich frei?\n3. Schreib docs/ai-models.md als Code-Block: Tabelle (Modell · Kontextfenster · Wofür wir es nutzen) + klare Festlegung: Standardmodell GPT-4.1 für PDF-Q&A, Themen-Extraktion und Dialog; GPT-4.1 Mini als günstige/schnelle Variante für Massen-Aufrufe (Quiz-Bewertung). Da KI Connect für uns kostenfrei ist, KEINE Preis-Spalte.\n4. Notiere den EXAKTEN Modell-id-String aus /v1/models (z. B. \"gpt-4.1\"), den wir später in OPENAI-Calls als model-Parameter setzen.\n5. Git-Befehle für feature/ai-models.\nErkläre auf Deutsch. Wenn /v1/models einen anderen id-String liefert als erwartet, nimm den echten String aus der Antwort."
   },
   {
     "id": "s1-09",
@@ -939,7 +939,7 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "DoD-kritisch",
-    "title": "End-to-End: PDF \u0000 Text \u0000 Claude-Antwort",
+    "title": "End-to-End: PDF → Text → KI-Antwort",
     "prereqs": [
       "09",
       "12"
@@ -947,7 +947,7 @@ export const RAW = [
     "bullets": [
       "PDF-Extraktion + Q&A-Prompt;"
     ],
-    "erfolg": "PDF → Text → Claude-Antwort funktioniert E2E.",
+    "erfolg": "PDF → Text → KI-Antwort funktioniert E2E.",
     "prompt": "Ich bin Taycir. Heute verbinde ich alles zum End-to-End-Flow.\nBitte hilf mir:\n1. Schreib src/app/api/ask/route.ts als Code-Block: POST mit\n{ documentId, question } → liest extracted_text aus DB → ruft\nKI Connect mit qa-on-text-Prompt → gibt Antwort zurück.\n2. Token-Counting + Logging der Kosten pro Anfrage.\n3. Test-Script: PDF hochladen, Frage stellen, Antwort prüfen.\n4. Git-Befehle für feature/ask-endpoint."
   },
   {
@@ -2144,7 +2144,7 @@ export const RAW = [
     "role": "PM",
     "blocker": false,
     "priorityInfo": "Nein",
-    "title": "Daily Coordination Plan (AI \u0000 Frontend)",
+    "title": "Daily Coordination Plan (AI → Frontend)",
     "prereqs": [],
     "bullets": [
       "—"
@@ -2484,7 +2484,7 @@ export const RAW = [
       "Summary + Progress"
     ],
     "erfolg": "Motivations-Elemente sichtbar.",
-    "prompt": "Ich bin Ayoub im StudyBuddy-Team. Heute baue ich Streak-Anzeige.\nBitte führe mich Schritt für Schritt durch:\n1. \u0000 Streak-Counter wenn N Tage in Folge gelernt.\n2. Confetti bei Abschluss eines Themas (z.B. canvas-confetti).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Ayoub im StudyBuddy-Team. Heute baue ich Streak-Anzeige.\nBitte führe mich Schritt für Schritt durch:\n1. → Streak-Counter wenn N Tage in Folge gelernt.\n2. Confetti bei Abschluss eines Themas (z.B. canvas-confetti).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s4-25",
@@ -2922,7 +2922,7 @@ export const RAW = [
     "role": "KI",
     "blocker": false,
     "priorityInfo": "Nein",
-    "title": "Empfehlungslogik (schwache Themen \u0000 Review)",
+    "title": "Empfehlungslogik (schwache Themen → Review)",
     "prereqs": [
       "06"
     ],
@@ -5978,7 +5978,7 @@ export const RAW = [
     "bullets": [
       "—"
     ],
-    "erfolg": "Projekt abgeschlossen. \u0000",
+    "erfolg": "Projekt abgeschlossen.",
     "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute Abschluss.\nBitte führe mich Schritt für Schritt durch:\n1. Team-Feier organisieren.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   }
 ] as const

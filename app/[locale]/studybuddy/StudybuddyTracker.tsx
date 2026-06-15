@@ -8,6 +8,9 @@ import {
   ROLE_COLOR,
   STATUSES,
   KICONNECT_ENDPOINT,
+  KICONNECT_MODELS_ENDPOINT,
+  KICONNECT_DEFAULT_MODEL,
+  KICONNECT_FALLBACK_MODEL,
   KICONNECT_KEY_BY_PERSON,
   type Person,
   type Status,
@@ -346,6 +349,11 @@ function KiConnectBanner({ me }: { me: string }) {
           <strong>KI Connect (HS NRW)</strong>{' '}
           ersetzt unsere Anthropic-Pläne. Endpoint:{' '}
           <a href={KICONNECT_ENDPOINT} target="_blank" rel="noopener noreferrer">{KICONNECT_ENDPOINT}</a>
+        </div>
+        <div className="sb-ki-banner-model">
+          Modell: <b>{KICONNECT_DEFAULT_MODEL}</b> (Standard) · <b>{KICONNECT_FALLBACK_MODEL}</b> (Massen-Aufrufe).
+          {' '}Bestätigen via{' '}
+          <a href={KICONNECT_MODELS_ENDPOINT} target="_blank" rel="noopener noreferrer">GET /v1/models</a>.
         </div>
         <div className="sb-ki-banner-keys">
           {PERSONS.map(p => {
