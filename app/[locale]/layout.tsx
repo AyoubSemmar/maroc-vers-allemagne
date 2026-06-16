@@ -106,7 +106,6 @@ export default async function LocaleLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'GoGermany',
-              alternateName: 'Maroc vers Allemagne',
               url: 'https://gogermany.ma',
               logo: 'https://gogermany.ma/icon.svg',
               sameAs: [
@@ -115,9 +114,9 @@ export default async function LocaleLayout({
                 'https://www.tiktok.com/@gogermany.ma',
               ],
               inLanguage: ['ar', 'fr', 'en', 'de'],
-              areaServed: ['MA', 'DE'],
+              areaServed: 'Worldwide',
               description:
-                'GoGermany helps Moroccans move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
+                'GoGermany helps people from anywhere move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
             }}
           />
         )}

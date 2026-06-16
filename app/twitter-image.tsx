@@ -5,7 +5,7 @@
 import OgImage from './opengraph-image'
 
 export const runtime = 'edge'
-export const alt = 'GoGermany — Your guide to moving from Morocco to Germany'
+export const alt = 'GoGermany — Your guide to moving to Germany'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

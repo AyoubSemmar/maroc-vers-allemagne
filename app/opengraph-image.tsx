@@ -10,7 +10,7 @@ import { ImageResponse } from 'next/og'
 // https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image
 
 export const runtime = 'edge'
-export const alt = 'GoGermany — Your guide to moving from Morocco to Germany'
+export const alt = 'GoGermany — Your guide to moving to Germany'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -102,7 +102,7 @@ export default async function Image() {
               color: '#F4C842',
             }}
           >
-            🇲🇦 → 🇩🇪 · From Morocco to Germany
+            🌍 → 🇩🇪 · Your move to Germany
           </span>
           <span
             style={{
@@ -126,7 +126,7 @@ export default async function Image() {
               marginTop: 6,
             }}
           >
-            Built for Moroccans · Free articles, tools, German lessons + paid 1-on-1 consultations
+            For people moving from anywhere · Free articles, tools, German lessons + paid 1-on-1 consultations
           </span>
         </div>
 

@@ -5,20 +5,14 @@ import { useLocale, useTranslations } from 'next-intl'
 import { trackBookConsultation } from '@/lib/analytics'
 
 // ── One consultation for everything ───────────────────────────────
-// We used to offer five tiers (quick-check / cv-interview / path-
-// planning / apply-for-me / german-tutoring) at different durations
-// and prices. Simplified to a SINGLE product: a 60-minute consultation
-// for 200 MAD, regardless of what the person wants to discuss. Every
-// "Book a consultation" button across the site lands on the same
-// Calendly event and shows the same price.
+// A SINGLE product: a 60-minute consultation, regardless of what the
+// person wants to discuss. Every "Book a consultation" button across
+// the site lands on the same Calendly event and shows the same price.
 //
-// The `topic` the user came from is still passed to Calendly (as a
-// prefill + UTM) so the host knows what to prepare — but it no longer
-// changes the price, duration, or event.
-//
-// priceMad is what we charge and display. priceEur (=200/10) is kept
-// only so the GA4 revenue field stays a sane number; payment is
-// collected manually by bank transfer after booking.
+// The site is global, so we display EUR (€20 ≈ the original 200 MAD
+// price point). priceMad is retained only as a reference for manual
+// bank-transfer collection. The `topic` the user came from is still
+// passed to Calendly (UTM + prefill) so the host knows what to prepare.
 const CONSULTATION = {
   url: 'https://calendly.com/contact-gogermany/consultation',
   priceEur: 20,
@@ -207,7 +201,7 @@ export default function BookConsultationButton({
   return (
     <button type="button" onClick={open} className={cls}>
       <span className="bcb-label">{t('cta')}</span>
-      <span className="bcb-price">{t('price', { price: CONSULTATION.priceMad, duration: CONSULTATION.durationMin })}</span>
+      <span className="bcb-price">{t('price', { price: CONSULTATION.priceEur, duration: CONSULTATION.durationMin })}</span>
     </button>
   )
 }

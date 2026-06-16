@@ -11,19 +11,19 @@ import './learn-german.css'
 const META: Record<AppLocale, { title: string; desc: string }> = {
   ar: {
     title: 'تعلّم الألمانية مجاناً — A1 إلى C1 | GoGermany',
-    desc: 'دروس ألمانية تفاعلية مجانية من المستوى A1 إلى C1، مصمّمة للمغاربة المتجهين إلى ألمانيا. تمارين القراءة والكتابة بالذكاء الاصطناعي.',
+    desc: 'دروس ألمانية تفاعلية مجانية من المستوى A1 إلى C1، مصمّمة للمتعلمين الدوليين المتجهين إلى ألمانيا. تمارين القراءة والكتابة بالذكاء الاصطناعي.',
   },
   fr: {
     title: "Apprendre l'allemand gratuitement — A1 à C1 | GoGermany",
-    desc: "Cours d'allemand interactifs et gratuits du niveau A1 au C1, conçus pour les Marocains qui partent en Allemagne. Exercices de lecture et écriture par IA.",
+    desc: "Cours d'allemand interactifs et gratuits du niveau A1 au C1, conçus pour les internationaux qui partent en Allemagne. Exercices de lecture et écriture par IA.",
   },
   en: {
     title: 'Learn German free — A1 to C1 | GoGermany',
-    desc: 'Free interactive German lessons from A1 to C1, built for Moroccans heading to Germany. AI-powered reading and writing exercises.',
+    desc: 'Free interactive German lessons from A1 to C1, built for people heading to Germany. AI-powered reading and writing exercises.',
   },
   de: {
     title: 'Deutsch lernen kostenlos — A1 bis C1 | GoGermany',
-    desc: 'Kostenlose interaktive Deutschkurse von A1 bis C1, für Marokkaner mit Ziel Deutschland. KI-gestützte Lese- und Schreibübungen.',
+    desc: 'Kostenlose interaktive Deutschkurse von A1 bis C1, für internationale Lernende mit Ziel Deutschland. KI-gestützte Lese- und Schreibübungen.',
   },
 }
 

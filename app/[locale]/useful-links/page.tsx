@@ -9,19 +9,19 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 const META: Record<AppLocale, { title: string; desc: string }> = {
   ar: {
     title: 'روابط مفيدة — مواقع رسمية للهجرة إلى ألمانيا',
-    desc: 'قائمة بالمواقع الرسمية الألمانية الأساسية للهجرة من المغرب: الجامعات، الـ Ausbildung، التأشيرة، السكن، البنوك، تعلّم اللغة.',
+    desc: 'قائمة بالمواقع الرسمية الألمانية الأساسية للهجرة إلى ألمانيا: الجامعات، الـ Ausbildung، التأشيرة، السكن، البنوك، تعلّم اللغة.',
   },
   fr: {
     title: 'Liens utiles — sites officiels Allemagne',
-    desc: "Liste des sites officiels allemands essentiels pour migrer depuis le Maroc : universités, Ausbildung, visa, logement, banques, apprentissage de l'allemand.",
+    desc: "Liste des sites officiels allemands essentiels pour s'installer en Allemagne : universités, Ausbildung, visa, logement, banques, apprentissage de l'allemand.",
   },
   en: {
     title: 'Useful links — official German sites',
-    desc: 'Curated list of essential official German sites for migrating from Morocco: universities, Ausbildung, visa, housing, banks, language learning.',
+    desc: 'Curated list of essential official German sites for moving to Germany: universities, Ausbildung, visa, housing, banks, language learning.',
   },
   de: {
     title: 'Nützliche Links — offizielle deutsche Seiten',
-    desc: 'Kuratierte Liste wichtiger offizieller deutscher Seiten für Migration aus Marokko: Universitäten, Ausbildung, Visum, Wohnen, Banken, Deutschlernen.',
+    desc: 'Kuratierte Liste wichtiger offizieller deutscher Seiten für den Umzug nach Deutschland: Universitäten, Ausbildung, Visum, Wohnen, Banken, Deutschlernen.',
   },
 }
 
