@@ -7,9 +7,11 @@ import BookConsultationButton from '@/components/BookConsultationButton'
 import {
   CATEGORY_ICON,
   CATEGORY_ORDER,
-  EUR_TO_MAD,
+  COUNTRIES,
+  COUNTRY_ORDER,
   calculate,
-  type CategoryKey,
+  type AuthMethod,
+  type CountryKey,
   type ChecklistInput,
   type Doc,
   type EducationKey,
@@ -27,14 +29,15 @@ const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓'
 const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE' }
 
 const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
+const COUNTRY_KEY = 'gogermany.documentChecklist.country.v1'
 
 export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
   const t = useTranslations('documentChecklist')
   const dir = dirFor(locale)
-  const fmtMad = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
-  const fmtEur = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
+  const fmt = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
 
   // ── Inputs ────────────────────────────────────────────────
+  const [country, setCountry] = useState<CountryKey>('ma')
   const [path, setPath] = useState<PathKey>('ausbildung')
   const [education, setEducation] = useState<EducationKey>('bac')
   const [family, setFamily] = useState<FamilyKey>('single')
@@ -43,8 +46,23 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
   const [hasGermanCert, setHasGermanCert] = useState(false)
   const [bringFamily, setBringFamily] = useState(false)
 
-  const input: ChecklistInput = { path, education, family, vorab, apsDone, hasGermanCert, bringFamily }
-  const result = useMemo(() => calculate(input), [path, education, family, vorab, apsDone, hasGermanCert, bringFamily])
+  // Restore the saved country once on mount.
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(COUNTRY_KEY) as CountryKey | null
+      if (saved && saved in COUNTRIES) setCountry(saved)
+    } catch {}
+  }, [])
+  function selectCountry(c: CountryKey) {
+    setCountry(c)
+    try { localStorage.setItem(COUNTRY_KEY, c) } catch {}
+  }
+
+  const input: ChecklistInput = { country, path, education, family, vorab, apsDone, hasGermanCert, bringFamily }
+  const result = useMemo(() => calculate(input), [country, path, education, family, vorab, apsDone, hasGermanCert, bringFamily])
+
+  const rule = COUNTRIES[country]
+  const authLabel = result.authMethod === 'apostille' ? t('apostille') : t('legalization')
 
   // ── Persisted checkbox state ──────────────────────────────
   const [checked, setChecked] = useState<Set<string>>(() => new Set())
@@ -71,18 +89,11 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
     ? Math.round((checkedInScope / result.totalDocs) * 100)
     : 0
 
-  // ── Currency helpers ──────────────────────────────────────
-  function rangeMad(lo: number, hi: number) {
+  // ── Currency / time helpers (EUR is the universal anchor) ──
+  function eur(lo: number, hi: number) {
     if (lo === 0 && hi === 0) return t('free')
-    if (lo === hi) return `${fmtMad.format(lo)} MAD`
-    return `${fmtMad.format(lo)}–${fmtMad.format(hi)} MAD`
-  }
-  function rangeEur(lo: number, hi: number) {
-    if (lo === 0 && hi === 0) return ''
-    const e0 = Math.round(lo / EUR_TO_MAD)
-    const e1 = Math.round(hi / EUR_TO_MAD)
-    if (e0 === 0 && e1 === 0) return ''
-    return `≈ €${e0 === e1 ? fmtEur.format(e0) : `${fmtEur.format(e0)}–${fmtEur.format(e1)}`}`
+    if (lo === hi) return `€${fmt.format(lo)}`
+    return `€${fmt.format(lo)}–${fmt.format(hi)}`
   }
   function rangeDays(lo: number, hi: number) {
     if (lo === 0 && hi <= 1) return t('sameDay')
@@ -106,6 +117,15 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
           {/* ── FORM ─────────────────────────────────────── */}
           <section className="dcl-form-card">
             <h2 className="dcl-section-title">{t('formTitle')}</h2>
+
+            <div className="dcl-field">
+              <label className="dcl-label">🌍 {t('countryLabel')}</label>
+              <select className="dcl-select" value={country} onChange={e => selectCountry(e.target.value as CountryKey)}>
+                {COUNTRY_ORDER.map(c => (
+                  <option key={c} value={c}>{COUNTRIES[c].flag} {COUNTRIES[c].name[locale]}</option>
+                ))}
+              </select>
+            </div>
 
             <div className="dcl-field">
               <label className="dcl-label">🧭 {t('pathLabel')}</label>
@@ -144,7 +164,7 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
               </label>
             )}
 
-            {path === 'studium' && (
+            {path === 'studium' && rule.apsRequired && (
               <label className="dcl-toggle">
                 <input type="checkbox" checked={apsDone} onChange={e => setApsDone(e.target.checked)} />
                 <span className="dcl-toggle-track" aria-hidden />
@@ -180,23 +200,28 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
           <section className="dcl-summary-card">
             <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
             <h2 className="dcl-summary-total">{result.totalDocs} {t('documents')}</h2>
-            <p className="dcl-summary-sub">{t('summarySub', { path: t(`path.${path}`) })}</p>
+            <p className="dcl-summary-sub">
+              {t('summarySubCountry', { path: t(`path.${path}`), country: rule.name[locale] })}
+            </p>
 
             <div className="dcl-summary-row">
               <span>{t('totalCost')}</span>
-              <strong>
-                {rangeMad(result.totalCostMad[0], result.totalCostMad[1])}
-                <small>{rangeEur(result.totalCostMad[0], result.totalCostMad[1])}</small>
-              </strong>
+              <strong>{eur(result.totalCostEur[0], result.totalCostEur[1])}</strong>
             </div>
             <div className="dcl-summary-row">
-              <span>{t('apostilleCount', { n: result.apostilleCount })}</span>
-              <strong>{rangeMad(result.apostilleCostMad[0], result.apostilleCostMad[1])}</strong>
+              <span>{result.authMethod === 'apostille' ? t('apostilleCount', { n: result.authCount }) : t('legalizationCount', { n: result.authCount })}</span>
+              <strong>{eur(result.authCostEur[0], result.authCostEur[1])}</strong>
             </div>
             <div className="dcl-summary-row">
               <span>{t('translationPages', { n: result.translationPages })}</span>
-              <strong>{rangeMad(result.translationCostMad[0], result.translationCostMad[1])}</strong>
+              <strong>{eur(result.translationCostEur[0], result.translationCostEur[1])}</strong>
             </div>
+            {(result.apsCostEur[0] > 0 || result.apsCostEur[1] > 0) && (
+              <div className="dcl-summary-row">
+                <span>{t('apsFee')}</span>
+                <strong>{eur(result.apsCostEur[0], result.apsCostEur[1])}</strong>
+              </div>
+            )}
             <div className="dcl-summary-row dcl-summary-row--big">
               <span>{t('estimatedTimeline')}</span>
               <strong>{result.realisticTimelineWeeks[0]}–{result.realisticTimelineWeeks[1]} {t('weeks')}</strong>
@@ -209,6 +234,15 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
             </div>
           </section>
         </div>
+
+        {/* ── COUNTRY NOTE + DISCLAIMER ─────────────────────── */}
+        {rule.noteKey && (
+          <div className="dcl-country-note">
+            <span aria-hidden>ℹ️</span>
+            <p>{t(`countryNote.${rule.noteKey}` as any, { country: rule.name[locale], method: authLabel })}</p>
+          </div>
+        )}
+        <p className="dcl-disclaimer">{t('disclaimer')}</p>
 
         {/* ── DOCUMENT LIST ─────────────────────────────────── */}
         <h2 className="dcl-list-title">{t('listTitle')}</h2>
@@ -228,10 +262,11 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
                     <DocRow
                       key={d.id}
                       doc={d}
+                      authMethod={result.authMethod}
+                      authLabel={authLabel}
                       checked={checked.has(d.id)}
                       onToggle={() => toggleCheck(d.id)}
-                      rangeMad={rangeMad}
-                      rangeEur={rangeEur}
+                      eur={eur}
                       rangeDays={rangeDays}
                       t={t}
                     />
@@ -254,18 +289,19 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
 }
 
 function DocRow({
-  doc, checked, onToggle, rangeMad, rangeEur, rangeDays, t,
+  doc, authMethod, authLabel, checked, onToggle, eur, rangeDays, t,
 }: {
   doc: Doc
+  authMethod: AuthMethod
+  authLabel: string
   checked: boolean
   onToggle: () => void
-  rangeMad: (lo: number, hi: number) => string
-  rangeEur: (lo: number, hi: number) => string
+  eur: (lo: number, hi: number) => string
   rangeDays: (lo: number, hi: number) => string
   t: ReturnType<typeof useTranslations>
 }) {
   const [expanded, setExpanded] = useState(false)
-  const cost = doc.costMad
+  const cost = doc.costEur
   const days = doc.timelineDays
   return (
     <li className={`dcl-row${checked ? ' is-checked' : ''}`}>
@@ -278,15 +314,14 @@ function DocRow({
           <h4 className="dcl-row-name">{t(`docs.${doc.id}.name` as any)}</h4>
           {doc.mandatory && <span className="dcl-badge dcl-badge--mandatory">{t('mandatory')}</span>}
           {doc.alternativeTo && <span className="dcl-badge dcl-badge--alt">{t('orAlternative')}</span>}
-          {doc.needsApostille && <span className="dcl-badge dcl-badge--apostille">{t('apostille')}</span>}
+          {doc.needsAuth && (
+            <span className={`dcl-badge ${authMethod === 'apostille' ? 'dcl-badge--apostille' : 'dcl-badge--legalization'}`}>{authLabel}</span>
+          )}
           {doc.needsSwornTranslation && <span className="dcl-badge dcl-badge--translation">{t('swornTranslation')}</span>}
         </div>
         <p className="dcl-row-where"><span aria-hidden>📍</span> {t(`docs.${doc.id}.where` as any)}</p>
         <div className="dcl-row-meta">
-          <span className="dcl-row-cost">
-            💰 {rangeMad(cost[0], cost[1])}
-            {rangeEur(cost[0], cost[1]) && <small> {rangeEur(cost[0], cost[1])}</small>}
-          </span>
+          <span className="dcl-row-cost">💰 {eur(cost[0], cost[1])}</span>
           <span className="dcl-row-time">⏳ {rangeDays(days[0], days[1])}</span>
           <button type="button" className="dcl-row-more" onClick={() => setExpanded(v => !v)}>
             {expanded ? t('hideTip') : t('showTip')}

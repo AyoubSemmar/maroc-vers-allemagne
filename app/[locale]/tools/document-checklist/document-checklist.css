@@ -172,6 +172,22 @@
 }
 .dcl-list { display: flex; flex-direction: column; gap: 18px; }
 
+/* Country-specific note + global disclaimer */
+.dcl-country-note {
+  display: flex; gap: 10px; align-items: flex-start;
+  margin: 22px 0 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: color-mix(in oklch, var(--brand) 8%, transparent);
+  border: 1px solid color-mix(in oklch, var(--brand) 22%, transparent);
+}
+.dcl-country-note p { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--ink); }
+.dcl-disclaimer {
+  margin: 0 0 8px;
+  font-size: 12px; line-height: 1.5; color: var(--ink-soft);
+  font-style: italic;
+}
+
 .dcl-cat {
   background: var(--bg-elev);
   border: 1.5px solid var(--line);
@@ -245,6 +261,7 @@
 .dcl-badge--mandatory   { background: color-mix(in oklch, var(--brand) 14%, transparent); color: var(--brand); }
 .dcl-badge--alt         { background: color-mix(in oklch, oklch(0.62 0.14 200) 14%, transparent); color: oklch(0.42 0.14 200); }
 .dcl-badge--apostille   { background: color-mix(in oklch, oklch(0.66 0.14 75) 16%, transparent); color: oklch(0.46 0.14 65); }
+.dcl-badge--legalization { background: color-mix(in oklch, oklch(0.58 0.16 30) 16%, transparent); color: oklch(0.46 0.17 30); }
 .dcl-badge--translation { background: color-mix(in oklch, oklch(0.55 0.14 320) 14%, transparent); color: oklch(0.45 0.14 320); }
 
 .dcl-row-where { font-size: 12.5px; color: var(--ink-soft); margin: 4px 0; }
