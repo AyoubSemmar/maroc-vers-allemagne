@@ -120,7 +120,7 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
               </select>
             </div>
 
-            {/* Bac average — only for Studium Bachelor (Moroccan Bac ≥ 14/20 needed) */}
+            {/* Secondary-school average — only for Studium Bachelor (≥ 14/20 needed) */}
             {path === 'studium' && studiumGoal === 'bachelor' && education !== 'no_bac' && (
               <div className="ec-field">
                 <label className="ec-label">📊 {t('bacAverageLabel')}</label>

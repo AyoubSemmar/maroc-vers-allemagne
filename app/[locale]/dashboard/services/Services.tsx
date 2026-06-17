@@ -52,7 +52,7 @@ export default function Services({ locale }: { locale: AppLocale }) {
           <div className="svc-hero-badges">
             <span className="svc-hero-badge">💶 {t('badgePrice')}</span>
             <span className="svc-hero-badge">🎯 {t('badgeFormat')}</span>
-            <span className="svc-hero-badge">🇲🇦↔🇩🇪 {t('badgeLanguages')}</span>
+            <span className="svc-hero-badge">🌍↔🇩🇪 {t('badgeLanguages')}</span>
           </div>
         </div>
       </header>

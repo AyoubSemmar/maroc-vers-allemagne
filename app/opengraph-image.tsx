@@ -102,7 +102,7 @@ export default async function Image() {
               color: '#F4C842',
             }}
           >
-            🇲🇦 → 🇩🇪 · From Morocco to Germany
+            🌍 → 🇩🇪 · Your move to Germany
           </span>
           <span
             style={{
@@ -126,7 +126,7 @@ export default async function Image() {
               marginTop: 6,
             }}
           >
-            Built for Moroccans · Free articles, tools, German lessons + paid 1-on-1 consultations
+            For future internationals · Free articles, tools, German lessons + paid 1-on-1 consultations
           </span>
         </div>
 

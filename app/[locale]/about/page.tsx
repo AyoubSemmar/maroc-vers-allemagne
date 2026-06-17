@@ -10,20 +10,20 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 // covers all 4 locales without touching 4 message files.
 const META: Record<AppLocale, { title: string; desc: string }> = {
   ar: {
-    title: 'حول GoGermany — رحلتك من المغرب إلى ألمانيا',
-    desc: 'تعرّف على فريق GoGermany ومهمتنا: مساعدة المغاربة على الانتقال إلى ألمانيا للدراسة، التكوين المهني (Ausbildung) والعمل.',
+    title: 'حول GoGermany — طريقك إلى ألمانيا',
+    desc: 'تعرّف على فريق GoGermany ومهمتنا: مساعدة الناس من أي بلد على الانتقال إلى ألمانيا للدراسة، التكوين المهني (Ausbildung) والعمل.',
   },
   fr: {
-    title: 'À propos de GoGermany — votre passage Maroc → Allemagne',
-    desc: "Découvrez l'équipe et la mission de GoGermany : aider les Marocains à s'installer en Allemagne pour les études, l'Ausbildung et le travail.",
+    title: 'À propos de GoGermany — votre installation en Allemagne',
+    desc: "Découvrez l'équipe et la mission de GoGermany : aider les candidats du monde entier à s'installer en Allemagne pour les études, l'Ausbildung et le travail.",
   },
   en: {
-    title: 'About GoGermany — your bridge from Morocco to Germany',
-    desc: 'Meet the GoGermany team and mission: helping Moroccans move to Germany for studies, Ausbildung apprenticeships, and work.',
+    title: 'About GoGermany — your bridge to Germany',
+    desc: 'Meet the GoGermany team and mission: helping people from any country move to Germany for studies, Ausbildung apprenticeships, and work.',
   },
   de: {
-    title: 'Über GoGermany — Marokko → Deutschland',
-    desc: 'Lerne das Team und die Mission von GoGermany kennen: Marokkaner beim Umzug nach Deutschland für Studium, Ausbildung und Arbeit unterstützen.',
+    title: 'Über GoGermany — dein Weg nach Deutschland',
+    desc: 'Lerne das Team und die Mission von GoGermany kennen: Menschen aus aller Welt beim Umzug nach Deutschland für Studium, Ausbildung und Arbeit unterstützen.',
   },
 }
 

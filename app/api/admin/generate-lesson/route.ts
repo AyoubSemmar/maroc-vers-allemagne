@@ -36,7 +36,7 @@ function parseJsonLoose(s: string): any {
 }
 
 function buildPrompt(level: Level, lessonId: string, order: number, topic: string, grammarFocus: string) {
-  return `You are a senior German-language curriculum author for gogermany.ma — the platform that helps Moroccans pass Goethe ${level.toUpperCase()}. Write ONE complete lesson in ARABIC ONLY (Modern Standard Arabic, Darija-friendly). Translations are handled in a separate step — DO NOT translate.
+  return `You are a senior German-language curriculum author for gogermany.ma — the platform that helps international learners pass Goethe ${level.toUpperCase()}. Write ONE complete lesson in ARABIC ONLY (Modern Standard Arabic). Translations are handled in a separate step — DO NOT translate.
 
 Lesson context:
   • Level: ${level.toUpperCase()}
@@ -49,9 +49,9 @@ Quality bar — STRICT:
   • Grammar block must include 1-3 PARADIGM TABLES with proper headers/rows. Tables show real conjugations, declensions, or article forms.
   • Add 2-4 RULE CARDS (rule + example + Arabic translation).
   • Add 6-10 EXAMPLES — full German sentences each followed by " — " and Arabic translation.
-  • Vocabulary list: 30-40 items. Mix the core grammar verbs (must-haves for the topic) with thematic expansion vocabulary — synonyms, opposites, common collocations a Moroccan learner will hit at this level. Each item gets german/arabic/example/exampleArabic/type. For nouns include gender (der/die/das) and the plural form when irregular.
+  • Vocabulary list: 30-40 items. Mix the core grammar verbs (must-haves for the topic) with thematic expansion vocabulary — synonyms, opposites, common collocations an international learner will hit at this level. Each item gets german/arabic/example/exampleArabic/type. For nouns include gender (der/die/das) and the plural form when irregular.
   • Exercise: EXACTLY 20 questions covering all 5 types. Distribution: 6× fill-blank (2 of which include audioPrompt for listening), 6× multiple-choice, 3× matching, 3× drag-drop, 2× speaking. Mix harder questions toward the end (q15-q20) so learners build up.
-  • Tone: warm, practical, confidence-building. Avoid academic German labels — use Moroccan-friendly explanations.
+  • Tone: warm, practical, confidence-building. Avoid academic German labels — use learner-friendly explanations.
   • German vocabulary uses Latin script as-is; Arabic body uses ؟ ، ؛ « » (never ASCII punctuation in Arabic).
 
 Lesson schema (return EXACTLY this shape, valid JSON, no commentary):

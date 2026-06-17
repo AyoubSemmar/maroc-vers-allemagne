@@ -23,20 +23,20 @@ type TemplateType = (typeof TEMPLATE_TYPES)[number]
 // pillars so generated posts stay on-brand.
 const TOPIC_IDEAS = [
   'Anmeldung — what it is and why it matters',
-  'How to open a German bank account as a Moroccan',
+  'How to open a German bank account as a newcomer',
   'Cheapest German SIM card / data plan options for newcomers',
   'WG vs studio — finding a first apartment in Germany',
-  'Public university admission for Moroccan high-schoolers',
+  'Public university admission for international high-schoolers',
   'What jobs are most in-demand in Germany 2026',
   'Ausbildung — duration, salary, contract type',
   'Visa types: studium vs Ausbildung vs Fachkraft',
-  'Getting your Moroccan diploma recognized (ZAB)',
+  'Getting your foreign diploma recognized (ZAB)',
   'Cost of living in Berlin vs Munich vs smaller cities',
   'Tax basics — Steuer-ID, Lohnsteuer, what gets deducted',
   'German health insurance — gesetzlich vs privat',
   'Krankenkasse: TK, AOK, Barmer — which to pick',
   'Deutsch level required for each visa path',
-  'Best free B1/B2 resources to study from Morocco',
+  'Best free B1/B2 resources to study from anywhere',
   'How long visa appointments at Goethe / VFS take in 2026',
   'Common Ausbildung scams to avoid',
   'How much you really earn after taxes on €2,500/mo',
@@ -135,7 +135,7 @@ async function requireAdmin() {
 
 function buildPrompt(topic: string, templateType: TemplateType): string {
   const sharedRules = `
-You are a social-media writer for gogermany.ma — a site that helps Moroccans move to Germany.
+You are a social-media writer for gogermany.ma — a site that helps people from any country move to Germany.
 Brand voice: warm, concrete, no fluff. Bilingual: every post pairs French with an Arabic line.
 Tone: friendly, factual, slightly hopeful. Never clickbait.
 

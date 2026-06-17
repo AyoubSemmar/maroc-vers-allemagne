@@ -396,7 +396,7 @@ export default function DashProfile() {
                 className={`dashprof-pill ${status === STATUS_COMING ? 'is-active' : ''}`}
                 data-c="brand"
               >
-                🇲🇦 {tProf('status.coming')}
+                🌍 {tProf('status.coming')}
               </button>
             </div>
           </div>
