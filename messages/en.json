@@ -225,7 +225,7 @@
       "discover": "Discover",
       "banks": {
         "name": "Banks",
-        "desc": "Open an account easily from Morocco"
+        "desc": "Open an account easily, wherever you're from"
       },
       "housing": {
         "name": "Housing",
@@ -273,7 +273,7 @@
       },
       "migrationTimeline": {
         "name": "Migration timeline",
-        "desc": "Estimate your Morocco→Germany timeline phase by phase"
+        "desc": "Estimate your timeline to Germany phase by phase"
       },
       "documentChecklist": {
         "name": "Document checklist",
@@ -293,7 +293,7 @@
       "cta": "Start learning for free",
       "metaFree": "Free German lessons",
       "metaInteractive": "Interactive",
-      "metaMoroccans": "For Moroccans",
+      "metaMoroccans": "For internationals",
       "levels": {
         "A1": {
           "title": "Beginner",
@@ -381,7 +381,7 @@
     "housing": {
       "kicker": "Housing",
       "title": "Find a place to live in Germany",
-      "sub": "Rooms and apartment listings tailored for students and apprentices coming from Morocco.",
+      "sub": "Rooms and apartment listings for international students and apprentices moving to Germany.",
       "cta": "Browse listings",
       "feature1": "Real listings, updated daily",
       "feature2": "Direct contact with the landlord",
@@ -454,7 +454,7 @@
           },
           "visa": {
             "title": "Get your visa",
-            "desc": "Step-by-step guide for the Ausbildung visa from Morocco."
+            "desc": "Step-by-step guide for the Ausbildung visa from your country."
           }
         }
       },
@@ -487,7 +487,7 @@
           },
           "visa": {
             "title": "Get your student visa",
-            "desc": "Step-by-step guide for the student visa from Morocco."
+            "desc": "Step-by-step guide for the student visa from your country."
           }
         }
       }
@@ -502,9 +502,8 @@
     },
     "email": "Email",
     "whatsapp": {
-      "label": "WhatsApp number (optional)",
-      "errDe": "German numbers must have 10 or 11 digits",
-      "errMa": "Moroccan numbers must have 9 digits"
+      "label": "WhatsApp number (with country code, optional)",
+      "errInvalid": "Enter a valid phone number including your country code (e.g. +49 …)."
     },
     "status": {
       "label": "Your current status (optional)",
@@ -2339,8 +2338,8 @@
   },
   "cvBuilder": {
     "seoSection": {
-      "title": "How a German Lebenslauf differs from a Moroccan or French CV",
-      "intro": "The German Lebenslauf is structured very differently from a Moroccan or French CV. This builder formats your information directly into the German standard layout: reverse-chronological work and study, with start–end dates as months not years, your photo top-right (still expected by 80% of German employers despite the AGG anti-discrimination guidelines), and a formal Tabellarischer Lebenslauf structure that Ausbildung recruiters expect to see. The output is a clean PDF you can attach to any Ausbildung or job application.\n\nBeyond layout, the tool translates job titles into German equivalents (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggests action verbs in German, and flags missing sections German recruiters look for: Sprachkenntnisse with CEFR levels (A1 to C2), Hobbies und Interessen, and Referenzen auf Anfrage. It does not replace a manual review of your application materials by a German-speaking specialist — for an Ausbildung application that you really need to land, book a 30-minute review.",
+      "title": "How a German Lebenslauf differs from a typical international CV",
+      "intro": "The German Lebenslauf is structured very differently from a typical international CV. This builder formats your information directly into the German standard layout: reverse-chronological work and study, with start–end dates as months not years, your photo top-right (still expected by 80% of German employers despite the AGG anti-discrimination guidelines), and a formal Tabellarischer Lebenslauf structure that Ausbildung recruiters expect to see. The output is a clean PDF you can attach to any Ausbildung or job application.\n\nBeyond layout, the tool translates job titles into German equivalents (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggests action verbs in German, and flags missing sections German recruiters look for: Sprachkenntnisse with CEFR levels (A1 to C2), Hobbies und Interessen, and Referenzen auf Anfrage. It does not replace a manual review of your application materials by a German-speaking specialist — for an Ausbildung application that you really need to land, book a 30-minute review.",
       "faqTitle": "Common questions about the German Lebenslauf",
       "faqs": [
         {
@@ -2585,7 +2584,7 @@
       "shareFailed": "❌ Share failed: {msg}",
       "shareTitleFile": "CV photo"
     },
-    "metaTitle": "CV Builder — Morocco to Germany",
+    "metaTitle": "CV Builder — Move to Germany",
     "metaDesc": "Easily build a professional German CV (Lebenslauf) — multiple templates and free PDF export."
   },
   "anschreiben": {
@@ -2664,15 +2663,15 @@
       "download": "📥 PDF",
       "downloadErr": "An error occurred during download. Please try again."
     },
-    "metaTitle": "Cover Letter Generator — Morocco to Germany",
+    "metaTitle": "Cover Letter Generator — Move to Germany",
     "metaDesc": "Write a professional German cover letter for an Ausbildung with AI help — free and fast."
   },
   "articles": {
-    "metaTitle": "Articles — Morocco to Germany",
+    "metaTitle": "Articles — Move to Germany",
     "metaDesc": "Comprehensive articles on immigration, work, study and life in Germany for internationals.",
     "eyebrow": "📚 Trusted content",
     "title": "Articles",
-    "subtitle": "The Moroccan guide to Germany — practical articles on banking, work, universities, Ausbildung and more.",
+    "subtitle": "Your guide to Germany — practical articles on banking, work, universities, Ausbildung and more.",
     "stats": {
       "articles": "📝 {n} articles",
       "featured": "⭐ {n} featured"
@@ -3316,7 +3315,7 @@
     "videoStudioPage": {
       "comingSoonPill": "🎥 Coming soon",
       "title": "Video Sessions — Learn German A1 to B2",
-      "subtitle": "Live, instructor-led video classes from A1 to B2 — small groups, structured curriculum, native-speaker teachers, designed for Moroccan learners.",
+      "subtitle": "Live, instructor-led video classes from A1 to B2 — small groups, structured curriculum, native-speaker teachers, designed for international learners.",
       "feat1Title": "Live group classes",
       "feat1Body": "Twice-weekly live sessions in small groups (max 8 students). Real practice with a teacher, not pre-recorded videos.",
       "feat2Title": "A1 → B2 curriculum",
@@ -3577,8 +3576,8 @@
   },
   "migrationTimeline": {
     "seoSection": {
-      "title": "How long does it really take to move from Morocco to Germany?",
-      "intro": "A realistic month-by-month migration timeline from Morocco to Germany, calibrated to your starting point: current German level, target route (Ausbildung or Studium), and how many hours per week you can study. Most candidates underestimate the language phase by 6 to 12 months — this tool shows you what is actually achievable. The German consulate in Rabat currently issues Ausbildung visas in 6 to 12 weeks; the rest of the timeline is mostly language study and document collection.\n\nThe output shows a personalised week-by-week plan: when to start the language course, when to take your B1 or B2 exam, when to begin Ausbildung applications or university applications, when to open a Sperrkonto, and when to book the consulate appointment. It surfaces the most common bottlenecks (Goethe exam slots that fill up 2 months ahead, ZAB processing time of 8 weeks, Anmeldung waiting lists in big cities) so you can plan around them. Use it 6 to 18 months before your target departure date to set realistic milestones — and to know when each piece of paperwork actually needs to start.",
+      "title": "How long does it really take to move to Germany?",
+      "intro": "A realistic month-by-month migration timeline to Germany, calibrated to your starting point: current German level, target route (Ausbildung or Studium), and how many hours per week you can study. Most candidates underestimate the language phase by 6 to 12 months — this tool shows you what is actually achievable. German missions currently issue Ausbildung visas in roughly 6 to 12 weeks; the rest of the timeline is mostly language study and document collection.\n\nThe output shows a personalised week-by-week plan: when to start the language course, when to take your B1 or B2 exam, when to begin Ausbildung applications or university applications, when to open a Sperrkonto, and when to book the consulate appointment. It surfaces the most common bottlenecks (Goethe exam slots that fill up 2 months ahead, ZAB processing time of 8 weeks, Anmeldung waiting lists in big cities) so you can plan around them. Use it 6 to 18 months before your target departure date to set realistic milestones — and to know when each piece of paperwork actually needs to start.",
       "faqTitle": "Common questions about the timeline",
       "faqs": [
         {
@@ -3596,10 +3595,10 @@
       ]
     },
     "metaTitle": "Germany Migration Timeline Calculator",
-    "metaDesc": "Estimate how long it takes to move from Morocco to Germany for Ausbildung or Studium — phase-by-phase, based on real BAMF and DAAD timelines.",
+    "metaDesc": "Estimate how long it takes to move to Germany for Ausbildung or Studium — phase-by-phase, based on real BAMF and DAAD timelines.",
     "eyebrow": "Planning · timeline",
     "title": "Germany Migration Timeline Calculator",
-    "subtitle": "Estimate your full timeline from Morocco to Germany — German learning, application, visa, and relocation — based on real 2026 BAMF / DAAD figures.",
+    "subtitle": "Estimate your full timeline to Germany — German learning, application, visa, and relocation — based on real 2026 BAMF / DAAD figures.",
     "formTitle": "Your migration profile",
     "pathLabel": "Path",
     "levelLabel": "Current German level",
@@ -4189,9 +4188,9 @@
       },
       "why_germany": {
         "translation": "Why do you want to come to Germany?",
-        "why": "Tests whether your motivation is real and project-based — or whether Germany is just an \"exit\" from Morocco. Recruiters reject candidates who sound like they'll leave once they have the visa.",
+        "why": "Tests whether your motivation is real and project-based — or whether Germany is just an \"exit\" from your home country. Recruiters reject candidates who sound like they'll leave once they have the visa.",
         "doSay": "Give 3 reasons: dual training system, sector demand & job stability, the work culture (precision, punctuality). Frame it as a career project, not an escape.",
-        "dontSay": "Don't mention money, weather, or \"Europe is better\". Don't criticise Morocco. Don't make it sound like a temporary plan."
+        "dontSay": "Don't mention money, weather, or \"Europe is better\". Don't criticise your home country. Don't make it sound like a temporary plan."
       },
       "strengths_weaknesses": {
         "translation": "What are your strengths and weaknesses?",
@@ -4239,7 +4238,7 @@
         "translation": "Where do you see yourself in five years?",
         "why": "Tests planning ability and loyalty. They want to know if you'll stay after the Ausbildung — replacing an Azubi is expensive.",
         "doSay": "Finished Ausbildung, 1–2 years of practice ideally with them, specialised in [concrete area], possibly Meister/Techniker/Fachwirt. Anchor your future at the company.",
-        "dontSay": "Don't mention going back to Morocco. Don't mention switching companies. Don't say \"I don't know\" or \"self-employed\" — both signal flight risk."
+        "dontSay": "Don't mention going back home. Don't mention switching companies. Don't say \"I don't know\" or \"self-employed\" — both signal flight risk."
       },
       "why_this_field": {
         "translation": "Why did you choose this field?",
@@ -4269,7 +4268,7 @@
   },
   "dashboardServices": {
     "metaTitle": "Services — GoGermany",
-    "metaDesc": "All paid consultation services to move from Morocco to Germany.",
+    "metaDesc": "All paid consultation services to help you move to Germany.",
     "eyebrow": "Services",
     "title": "Pick the help that fits your case",
     "subtitle": "Every consultation is a paid 60-minute video call (€20), whatever your question. You leave with concrete answers, not generic advice.",
@@ -4326,7 +4325,7 @@
         "name": "Document checklist help",
         "blurb": "A specialist goes through every document with you — what you have, what's missing, what's wrong.",
         "bullet1": "Reviews each piece (apostille, sworn translation, validity dates)",
-        "bullet2": "Tells you the cheapest legal way to get the missing ones in Morocco",
+        "bullet2": "Tells you the cheapest legal way to get the missing ones in your country",
         "bullet3": "Spots common rejection reasons before TLS does"
       },
       "studium": {
@@ -5219,7 +5218,7 @@
   "examPrepCta": {
     "eyebrow": "Goethe & telc Exam Prep",
     "title": "Need help passing your A1, B1 or B2 exam?",
-    "subtitle": "Book a 30-minute paid 1-on-1 session with a German-speaking specialist who knows the Moroccan Goethe and telc exam routine — Casablanca, Rabat, Tanger, online.",
+    "subtitle": "Book a 30-minute paid 1-on-1 session with a German-speaking specialist who knows the Goethe and telc exam routine — online, wherever you are.",
     "bullet1": "Diagnostic in your first 5 minutes — exact gaps to fix",
     "bullet2": "Strategy for each module: lesen, hören, schreiben, sprechen",
     "bullet3": "Mock speaking part with the same format as the real exam",

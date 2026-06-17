@@ -225,7 +225,7 @@
       "discover": "Découvrir",
       "banks": {
         "name": "Banques",
-        "desc": "Ouvrez un compte facilement depuis le Maroc"
+        "desc": "Ouvrez un compte facilement, où que vous soyez"
       },
       "housing": {
         "name": "Logement",
@@ -273,7 +273,7 @@
       },
       "migrationTimeline": {
         "name": "Délai de migration",
-        "desc": "Estimez votre délai Maroc→Allemagne phase par phase"
+        "desc": "Estimez votre délai vers l'Allemagne phase par phase"
       },
       "documentChecklist": {
         "name": "Checklist documents",
@@ -381,7 +381,7 @@
     "housing": {
       "kicker": "Logement",
       "title": "Trouve ton logement en Allemagne",
-      "sub": "Annonces de chambres et d’appartements pensées pour étudiants et apprentis venus du Maroc.",
+      "sub": "Annonces de chambres et d'appartements pour étudiants et apprentis internationaux qui s'installent en Allemagne.",
       "cta": "Voir les annonces",
       "feature1": "Annonces réelles, mises à jour chaque jour",
       "feature2": "Contact direct avec le propriétaire",
@@ -454,7 +454,7 @@
           },
           "visa": {
             "title": "Obtiens ton visa",
-            "desc": "Guide pas à pas pour la demande de visa Ausbildung depuis le Maroc."
+            "desc": "Guide pas à pas pour la demande de visa Ausbildung depuis votre pays."
           }
         }
       },
@@ -487,7 +487,7 @@
           },
           "visa": {
             "title": "Obtiens ton visa étudiant",
-            "desc": "Guide pas à pas pour la demande de visa étudiant depuis le Maroc."
+            "desc": "Guide pas à pas pour la demande de visa étudiant depuis votre pays."
           }
         }
       }
@@ -495,8 +495,8 @@
   },
   "cvBuilder": {
     "seoSection": {
-      "title": "Pourquoi le Lebenslauf allemand n'a rien à voir avec un CV marocain ou français",
-      "intro": "Le Lebenslauf allemand est structuré très différemment d'un CV marocain ou français. Cet outil formate vos informations directement dans la mise en page allemande standard : expérience et formation antichronologiques, dates de début–fin en mois (pas en années), photo en haut à droite (encore attendue par 80 % des employeurs allemands malgré la loi anti-discrimination AGG), et structure formelle « Tabellarischer Lebenslauf » que les recruteurs Ausbildung attendent. Le rendu est un PDF propre que vous pouvez joindre à n'importe quelle candidature Ausbildung ou emploi.\n\nAu-delà de la mise en page, l'outil traduit les intitulés de poste en équivalents allemands (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggère des verbes d'action en allemand, et signale les sections que les recruteurs allemands cherchent : Sprachkenntnisse avec niveaux CECRL (A1 à C2), Hobbies und Interessen, et Referenzen auf Anfrage. Il ne remplace pas une relecture manuelle par un spécialiste germanophone — pour une candidature Ausbildung que vous voulez vraiment décrocher, réservez une revue de 30 minutes.",
+      "title": "Pourquoi le Lebenslauf allemand n'a rien à voir avec un CV international classique",
+      "intro": "Le Lebenslauf allemand est structuré très différemment d'un CV international classique. Cet outil formate vos informations directement dans la mise en page allemande standard : expérience et formation antichronologiques, dates de début–fin en mois (pas en années), photo en haut à droite (encore attendue par 80 % des employeurs allemands malgré la loi anti-discrimination AGG), et structure formelle « Tabellarischer Lebenslauf » que les recruteurs Ausbildung attendent. Le rendu est un PDF propre que vous pouvez joindre à n'importe quelle candidature Ausbildung ou emploi.\n\nAu-delà de la mise en page, l'outil traduit les intitulés de poste en équivalents allemands (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggère des verbes d'action en allemand, et signale les sections que les recruteurs allemands cherchent : Sprachkenntnisse avec niveaux CECRL (A1 à C2), Hobbies und Interessen, et Referenzen auf Anfrage. Il ne remplace pas une relecture manuelle par un spécialiste germanophone — pour une candidature Ausbildung que vous voulez vraiment décrocher, réservez une revue de 30 minutes.",
       "faqTitle": "Questions fréquentes sur le Lebenslauf allemand",
       "faqs": [
         {
@@ -735,13 +735,13 @@
       "downloadAria": "Télécharger",
       "shareAria": "Partager",
       "shareTitle": "Photo de CV pro",
-      "shareText": "Créée sur « Maroc vers Allemagne » 🇩🇪",
+      "shareText": "Créé sur GoGermany 🇩🇪",
       "clipboardOk": "✅ Photo copiée dans le presse-papiers — collez-la dans une app (WhatsApp, Instagram, ...).",
       "downloadedFallback": "📥 Photo téléchargée. Partagez-la manuellement.",
       "shareFailed": "❌ Partage impossible : {msg}",
       "shareTitleFile": "Photo de CV"
     },
-    "metaTitle": "Créateur de CV — Maroc vers Allemagne",
+    "metaTitle": "Créateur de CV — Partir en Allemagne",
     "metaDesc": "Crée facilement un CV allemand professionnel (Lebenslauf) — plusieurs modèles et export PDF gratuit."
   },
   "profile": {
@@ -753,9 +753,8 @@
     },
     "email": "E-mail",
     "whatsapp": {
-      "label": "Numéro WhatsApp (facultatif)",
-      "errDe": "Le numéro allemand doit contenir 10 ou 11 chiffres",
-      "errMa": "Le numéro marocain doit contenir 9 chiffres"
+      "label": "Numéro WhatsApp (avec indicatif pays, optionnel)",
+      "errInvalid": "Entrez un numéro valide avec l'indicatif du pays (ex. +49 …)."
     },
     "status": {
       "label": "Votre situation actuelle (facultatif)",
@@ -2664,11 +2663,11 @@
       "download": "📥 PDF",
       "downloadErr": "Une erreur est survenue pendant le téléchargement. Réessayez."
     },
-    "metaTitle": "Générateur de lettre de motivation — Maroc vers Allemagne",
+    "metaTitle": "Générateur de lettre de motivation — Partir en Allemagne",
     "metaDesc": "Rédige une lettre de motivation professionnelle en allemand pour une Ausbildung avec l'aide de l'IA — gratuit et rapide."
   },
   "articles": {
-    "metaTitle": "Articles — Maroc vers l'Allemagne",
+    "metaTitle": "Articles — Partir en Allemagne",
     "metaDesc": "Articles complets sur l'immigration, le travail, les études et la vie en Allemagne pour les internationaux.",
     "eyebrow": "📚 Contenu fiable",
     "title": "Articles",
@@ -3316,7 +3315,7 @@
     "videoStudioPage": {
       "comingSoonPill": "🎥 Bientôt disponible",
       "title": "Sessions vidéo — Apprendre l'allemand A1 à B2",
-      "subtitle": "Cours vidéo en direct avec un professeur, du A1 au B2 — petits groupes, programme structuré, professeurs natifs, conçu pour les apprenants marocains.",
+      "subtitle": "Cours vidéo en direct avec un professeur, du A1 au B2 — petits groupes, programme structuré, professeurs natifs, conçu pour les apprenants internationaux.",
       "feat1Title": "Cours en direct en petit groupe",
       "feat1Body": "Sessions vidéo deux fois par semaine en petit groupe (max 8 élèves). Vraie pratique avec un professeur, pas de vidéos pré-enregistrées.",
       "feat2Title": "Programme A1 → B2",
@@ -3577,7 +3576,7 @@
   },
   "migrationTimeline": {
     "seoSection": {
-      "title": "Combien de temps faut-il vraiment pour partir du Maroc en Allemagne ?",
+      "title": "Combien de temps faut-il vraiment pour partir en Allemagne ?",
       "intro": "Un calendrier de migration mois par mois, calibré sur votre point de départ : niveau d'allemand actuel, parcours visé (Ausbildung ou Studium), et nombre d'heures d'étude par semaine. La plupart des candidats sous-estiment la phase langue de 6 à 12 mois — cet outil montre ce qui est réellement atteignable. Le consulat allemand de Rabat délivre actuellement les visas Ausbildung en 6 à 12 semaines ; le reste du calendrier, c'est surtout l'apprentissage de la langue et la collecte de documents.\n\nLe résultat affiche un plan personnalisé semaine par semaine : quand commencer le cours d'allemand, quand passer l'examen B1 ou B2, quand commencer les candidatures Ausbildung ou universitaires, quand ouvrir un Sperrkonto, et quand prendre rendez-vous au consulat. Il identifie les goulots d'étranglement classiques (créneaux Goethe qui se remplissent 2 mois à l'avance, délai ZAB de 8 semaines, listes d'attente Anmeldung dans les grandes villes) pour que vous puissiez les anticiper. Utilisez-le 6 à 18 mois avant la date de départ visée pour fixer des jalons réalistes.",
       "faqTitle": "Questions fréquentes sur le calendrier",
       "faqs": [
@@ -3596,10 +3595,10 @@
       ]
     },
     "metaTitle": "Calculateur de délai de migration vers l'Allemagne",
-    "metaDesc": "Estimez le temps nécessaire pour passer du Maroc à l'Allemagne pour une Ausbildung ou un Studium — phase par phase, selon les délais réels BAMF et DAAD.",
+    "metaDesc": "Estimez le temps nécessaire pour vous installer en Allemagne pour une Ausbildung ou un Studium — phase par phase, selon les délais réels BAMF et DAAD.",
     "eyebrow": "Planification · délais",
     "title": "Calculateur de délai de migration",
-    "subtitle": "Estimez votre délai complet du Maroc vers l'Allemagne — apprentissage de l'allemand, candidature, visa, installation — basé sur les chiffres BAMF / DAAD 2026.",
+    "subtitle": "Estimez votre délai complet vers l'Allemagne — apprentissage de l'allemand, candidature, visa, installation — basé sur les chiffres BAMF / DAAD 2026.",
     "formTitle": "Votre profil de migration",
     "pathLabel": "Parcours",
     "levelLabel": "Niveau d'allemand actuel",
@@ -4189,9 +4188,9 @@
       },
       "why_germany": {
         "translation": "Pourquoi voulez-vous venir en Allemagne ?",
-        "why": "Évalue si votre motivation est réelle et structurée — ou si l'Allemagne n'est qu'une \"sortie\" du Maroc. Les recruteurs rejettent les candidats qui semblent prêts à repartir dès le visa obtenu.",
+        "why": "Évalue si votre motivation est réelle et structurée — ou si l'Allemagne n'est qu'une \"sortie\" de votre pays. Les recruteurs rejettent les candidats qui semblent prêts à repartir dès le visa obtenu.",
         "doSay": "Donnez 3 raisons : système dual, demande sectorielle et stabilité de l'emploi, culture de travail (précision, ponctualité). Présentez-le comme un projet de carrière.",
-        "dontSay": "Ne parlez ni d'argent, ni de climat, ni du fait que \"l'Europe c'est mieux\". Ne critiquez pas le Maroc. Ne donnez pas l'impression d'un plan temporaire."
+        "dontSay": "Ne parlez ni d'argent, ni de climat, ni du fait que \"l'Europe c'est mieux\". Ne critiquez pas votre pays. Ne donnez pas l'impression d'un plan temporaire."
       },
       "strengths_weaknesses": {
         "translation": "Quels sont vos points forts et vos points faibles ?",
@@ -4239,7 +4238,7 @@
         "translation": "Où vous voyez-vous dans cinq ans ?",
         "why": "Évalue capacité à planifier et fidélité. On veut savoir si vous resterez après l'Ausbildung — remplacer un Azubi coûte cher.",
         "doSay": "Ausbildung terminée, 1–2 ans de pratique idéalement chez eux, spécialisation dans [domaine concret], éventuellement Meister/Techniker/Fachwirt. Ancrez votre avenir dans l'entreprise.",
-        "dontSay": "Pas de retour au Maroc. Pas de changement d'entreprise. Pas de \"je ne sais pas\" ni \"à mon compte\" — les deux signalent un risque de fuite."
+        "dontSay": "Pas de retour au pays. Pas de changement d'entreprise. Pas de \"je ne sais pas\" ni \"à mon compte\" — les deux signalent un risque de fuite."
       },
       "why_this_field": {
         "translation": "Pourquoi avez-vous choisi cette branche ?",
@@ -4269,7 +4268,7 @@
   },
   "dashboardServices": {
     "metaTitle": "Services — GoGermany",
-    "metaDesc": "Toutes les consultations payantes pour passer du Maroc à l'Allemagne.",
+    "metaDesc": "Toutes les consultations payantes pour vous installer en Allemagne.",
     "eyebrow": "Services",
     "title": "Choisissez l'aide adaptée à votre cas",
     "subtitle": "Chaque consultation est un appel visio payant d’1 heure (20 €), quelle que soit votre question. Vous repartez avec des réponses concrètes, pas des conseils génériques.",
@@ -4326,7 +4325,7 @@
         "name": "Aide à la liste des documents",
         "blurb": "Un spécialiste passe chaque document avec vous — ce que vous avez, ce qui manque, ce qui cloche.",
         "bullet1": "Revue de chaque pièce (apostille, traduction assermentée, dates de validité)",
-        "bullet2": "Indique le moyen légal le moins cher d'obtenir le manquant au Maroc",
+        "bullet2": "Indique le moyen légal le moins cher d'obtenir le manquant dans votre pays",
         "bullet3": "Détecte les motifs de rejet avant TLS"
       },
       "studium": {
@@ -4340,7 +4339,7 @@
         "name": "Orientation Ausbildung",
         "blurb": "Choisissez le bon métier, la bonne région et le bon canal pour être recruté.",
         "bullet1": "Croise votre parcours + niveau d'allemand avec les Berufe les plus accessibles",
-        "bullet2": "Indique les Länder et villes où le taux d'acceptation marocain est le plus haut",
+        "bullet2": "Indique les Länder et villes où le taux d'acceptation international est le plus haut",
         "bullet3": "Guide de candidature : Make-it-in-Germany, Hwk, BIBB, recruteurs"
       },
       "visa": {
@@ -5219,7 +5218,7 @@
   "examPrepCta": {
     "eyebrow": "Préparation Goethe & telc",
     "title": "Besoin d'aide pour réussir votre A1, B1 ou B2 ?",
-    "subtitle": "Réservez une session payante de 30 minutes en 1-à-1 avec un spécialiste germanophone qui connaît les sessions Goethe et telc au Maroc — Casablanca, Rabat, Tanger, en ligne.",
+    "subtitle": "Réservez une session payante de 30 minutes en 1-à-1 avec un spécialiste germanophone qui connaît les sessions Goethe et telc — en ligne, où que vous soyez.",
     "bullet1": "Diagnostic dès les 5 premières minutes — vos lacunes précises",
     "bullet2": "Stratégie par module : lesen, hören, schreiben, sprechen",
     "bullet3": "Simulation orale au format exact de l'examen",
