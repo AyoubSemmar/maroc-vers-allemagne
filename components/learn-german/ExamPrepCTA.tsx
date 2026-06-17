@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import './exam-prep-cta.css'
 
 /**
@@ -11,6 +12,9 @@ import './exam-prep-cta.css'
  */
 export default function ExamPrepCTA({ compact = false }: { compact?: boolean }) {
   const t = useTranslations('examPrepCta')
+
+  // Consultation service is paused — hide the whole exam-prep promo card.
+  if (!CONSULTATIONS_ENABLED) return null
 
   return (
     <section className={`epc-card ${compact ? 'epc-card--compact' : ''}`}>

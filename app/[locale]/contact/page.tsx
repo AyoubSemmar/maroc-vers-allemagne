@@ -7,20 +7,20 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 
 const META: Record<AppLocale, { title: string; desc: string }> = {
   ar: {
-    title: 'تواصل مع GoGermany — استشارات وأسئلة',
-    desc: 'تواصل مع فريق GoGermany. احجز استشارة فردية، اطرح أسئلتك حول الانتقال إلى ألمانيا، أو راسلنا على البريد الإلكتروني.',
+    title: 'تواصل مع GoGermany',
+    desc: 'تواصل مع فريق GoGermany. اطرح أسئلتك حول الانتقال إلى ألمانيا، أو راسلنا على البريد الإلكتروني.',
   },
   fr: {
-    title: 'Contacter GoGermany — questions et consultations',
-    desc: "Contactez l'équipe GoGermany. Réservez une consultation 1-à-1, posez vos questions sur l'installation en Allemagne, ou écrivez-nous par email.",
+    title: 'Contacter GoGermany',
+    desc: "Contactez l'équipe GoGermany. Posez vos questions sur l'installation en Allemagne, ou écrivez-nous par email.",
   },
   en: {
-    title: 'Contact GoGermany — questions and consultations',
-    desc: 'Reach the GoGermany team. Book a 1-on-1 consultation, ask questions about moving to Germany, or send us an email.',
+    title: 'Contact GoGermany',
+    desc: 'Reach the GoGermany team. Ask questions about moving to Germany, or send us an email.',
   },
   de: {
-    title: 'GoGermany kontaktieren — Fragen und Beratungen',
-    desc: 'Kontaktiere das GoGermany-Team. Buche eine 1-zu-1-Beratung, stelle Fragen zum Umzug nach Deutschland, oder schreib uns per E-Mail.',
+    title: 'GoGermany kontaktieren',
+    desc: 'Kontaktiere das GoGermany-Team. Stelle Fragen zum Umzug nach Deutschland, oder schreib uns per E-Mail.',
   },
 }
 

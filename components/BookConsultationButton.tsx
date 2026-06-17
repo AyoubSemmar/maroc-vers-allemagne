@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { trackBookConsultation } from '@/lib/analytics'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 // ── Five Calendly events, each with its own duration + price ──────
 // Maps to the events the user created in their upgraded Calendly:
@@ -216,6 +217,10 @@ export default function BookConsultationButton({
       window.open(url, '_blank', 'noopener,noreferrer')
     }
   }
+
+  // Consultation service is paused — render nothing everywhere it's used.
+  // (Placed after all hooks so hook order stays stable across renders.)
+  if (!CONSULTATIONS_ENABLED) return null
 
   const cls = `bcb bcb--${variant} ${className}`.trim()
   return (

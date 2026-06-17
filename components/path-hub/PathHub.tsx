@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 import ConsultationForm from './ConsultationForm'
 import PathHubReveal from './PathHubReveal'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 export type PathTool = {
   key: string
@@ -132,12 +133,14 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </a>
-            <a href="#consult" className="btn btn-primary">
-              {s('ctaConsult')}
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </a>
+            {CONSULTATIONS_ENABLED && (
+              <a href="#consult" className="btn btn-primary">
+                {s('ctaConsult')}
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            )}
           </div>
         </div>
       </section>
@@ -227,15 +230,17 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
       )}
 
       {/* CONSULTATION */}
-      <section id="consult" style={{ background: 'var(--bg-warm)' }}>
-        <div className="wrap" style={{ maxWidth: 720 }}>
-          <div className="section-head reveal">
-            <span className="kicker">{s('nextStepTitle')}</span>
-            <h2>{s('consultTitle')}</h2>
+      {CONSULTATIONS_ENABLED && (
+        <section id="consult" style={{ background: 'var(--bg-warm)' }}>
+          <div className="wrap" style={{ maxWidth: 720 }}>
+            <div className="section-head reveal">
+              <span className="kicker">{s('nextStepTitle')}</span>
+              <h2>{s('consultTitle')}</h2>
+            </div>
+            <ConsultationForm path={path} />
           </div>
-          <ConsultationForm path={path} />
-        </div>
-      </section>
+        </section>
+      )}
     </div>
   )
 }
