@@ -3577,11 +3577,11 @@
     "price": "{price} € · {duration} Min."
   },
   "documentChecklist": {
-    "metaTitle": "Dokumenten-Checkliste — Marokko nach Deutschland",
-    "metaDesc": "Personalisierte Liste aller Dokumente, die Marokkaner für das Ausbildungs- oder Studiumsvisum brauchen — wo zu beschaffen, echte Kosten in MAD/EUR, und Zeitplan.",
+    "metaTitle": "Dokumenten-Checkliste — Dein Weg nach Deutschland",
+    "metaDesc": "Personalisierte Liste aller Dokumente, die du für das Ausbildungs- oder Studiumsvisum brauchst — wo zu beschaffen, geschätzte Kosten in EUR, und Zeitplan.",
     "eyebrow": "Bewerbung & Unterlagen",
     "title": "Dokumenten-Checkliste",
-    "subtitle": "Erhalte die genaue Liste aller Dokumente, die marokkanische Bewerber für das deutsche Ausbildungs- oder Studiumsvisum brauchen — mit Bezugsquellen, echten Kosten in MAD und EUR, sowie realistischen Zeitplänen aus Casablanca und Rabat.",
+    "subtitle": "Erhalte die genaue Liste aller Dokumente, die du für das deutsche Ausbildungs- oder Studiumsvisum brauchst — mit Bezugsquellen, geschätzten Kosten in EUR, sowie realistischen Zeitplänen. Kosten variieren je nach Land, die Beträge sind daher Richtwerte.",
     "formTitle": "Dein Bewerbungsprofil",
     "pathLabel": "Weg",
     "educationLabel": "Bildungsstand",
@@ -3589,7 +3589,7 @@
     "vorabTitle": "Ich habe bereits eine Vorab-Zustimmung",
     "vorabHint": "Vorab-Zustimmung der Bundesagentur für Arbeit. Beschleunigt das Visum.",
     "apsDoneTitle": "Ich habe bereits mein APS-Zertifikat",
-    "apsDoneHint": "Ausgestellt von der Deutschen Botschaft Rabat. Pflicht fürs Studium.",
+    "apsDoneHint": "Ausgestellt von der APS-Stelle deines Landes. Fürs Studium in einigen Ländern Pflicht (z. B. China, Indien, Vietnam, Pakistan).",
     "germanCertTitle": "Ich habe bereits mein B1/B2-Zertifikat",
     "germanCertHint": "Goethe-, telc- oder ÖSD-Zertifikat.",
     "bringFamilyTitle": "Ich werde meine Familie später nachholen",
@@ -3645,7 +3645,7 @@
     "docs": {
       "passport": {
         "name": "Reisepass (≥ 12 Monate gültig)",
-        "where": "Präfektur in deiner Wohnstadt",
+        "where": "Die Passbehörde deines Landes",
         "notes": "Erneuere, wenn er innerhalb von 12 Monaten abläuft. Die Ausländerbehörde verlangt längere Gültigkeit als das Visum."
       },
       "biometric_photos": {
@@ -3655,12 +3655,12 @@
       },
       "birth_certificate": {
         "name": "Geburtsurkunde",
-        "where": "Standesamt deines Geburtsorts",
-        "notes": "Mehrsprachiger Auszug spart Übersetzungskosten. Apostille bei der Cour d'Appel."
+        "where": "Das Standesamt in deinem Land",
+        "notes": "Mehrsprachiger Auszug spart Übersetzungskosten. Danach beglaubigen: Apostille für Länder des Haager Übereinkommens, sonst konsularische Legalisation."
       },
       "police_clearance": {
-        "name": "Polizeiliches Führungszeugnis (Bulletin n°3)",
-        "where": "Tribunal de 1ère Instance ODER online: service-public.ma",
+        "name": "Polizeiliches Führungszeugnis",
+        "where": "Die Polizei- oder Justizbehörde deines Landes",
         "notes": "Muss innerhalb von 3 Monaten vor dem Visumtermin ausgestellt werden. 2 Kopien anfordern."
       },
       "marriage_certificate": {
@@ -3674,18 +3674,18 @@
         "notes": "Apostille + beglaubigte Übersetzung pro Kind. Nur wenn Kinder mitgenommen werden."
       },
       "bac_diploma": {
-        "name": "Bac-Diplom (Abitur)",
-        "where": "Académie Régionale, an der das Bac abgelegt wurde",
-        "notes": "Original oder beglaubigte Kopie. Auch ein Duplikat braucht eine Apostille."
+        "name": "Schulabschlusszeugnis (Abitur / Bac o. Ä.)",
+        "where": "Die Stelle, die dein Schulabschlusszeugnis ausgestellt hat",
+        "notes": "Original oder beglaubigte Kopie. Auch ein Duplikat muss beglaubigt werden (Apostille oder Legalisation)."
       },
       "bac_transcripts": {
-        "name": "Bac-Notenübersichten",
-        "where": "Gleiche Académie Régionale",
-        "notes": "Beide Bac-Jahre erforderlich. Jede Seite apostillieren."
+        "name": "Schul-Notenübersichten",
+        "where": "Gleiche Stelle wie dein Zeugnis",
+        "notes": "Notenübersichten der letzten Jahre. Jede Seite beglaubigen (Apostille oder Legalisation)."
       },
       "higher_ed_diploma": {
         "name": "Hochschuldiplom",
-        "where": "Bureau de la scolarité deiner Universität",
+        "where": "Das Prüfungsamt deiner Universität",
         "notes": "Licence / Master / DUT etc. Original + Apostille + beglaubigte Übersetzung."
       },
       "higher_ed_transcripts": {
@@ -3695,8 +3695,8 @@
       },
       "aps_certificate": {
         "name": "APS-Zertifikat (Akademische Prüfstelle)",
-        "where": "Deutsche Botschaft Rabat — APS-Stelle",
-        "notes": "Pflicht für marokkanische Studium-Bewerber. ~30 € + 250 MAD. Bearbeitung 6–8 Wochen. Alle Bildungsunterlagen seit der Oberstufe einreichen."
+        "where": "Die für dein Land zuständige APS / Akademische Prüfstelle",
+        "notes": "Nur für einige Länder Pflicht (z. B. China, Indien, Vietnam, Pakistan, Mongolei). Prüfe, ob die APS für dein Land gilt. ~30 € + lokale Antragsgebühr. Bearbeitung 6–8 Wochen. Alle Bildungsunterlagen seit der Oberstufe einreichen."
       },
       "anabin_check": {
         "name": "Anabin-Anerkennungs-Check",
@@ -3706,21 +3706,21 @@
       "studienkolleg": {
         "name": "Studienkolleg-Zulassung (falls Bac nicht direkt qualifiziert)",
         "where": "Bewerbung über deine Wunschuni",
-        "notes": "Die meisten marokkanischen Bac-Sciences qualifizieren direkt. Bac Lettres / SVT kann Studienkolleg erfordern."
+        "notes": "Ob dein Schulabschluss direkt qualifiziert, hängt von Land und Fachrichtung ab. Naturwissenschaftliche Zweige qualifizieren oft; andere können ein Studienkolleg erfordern."
       },
       "german_b1": {
         "name": "Deutsch-Zertifikat B1 (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca/Rabat oder telc-Lizenzschulen",
+        "where": "Ein Goethe-Institut oder eine telc-Lizenzschule in deinem Land",
         "notes": "B1 ist das Minimum fürs Ausbildungsvisum. Die meisten Arbeitgeber bevorzugen B2."
       },
       "german_b2": {
         "name": "Deutsch-Zertifikat B2 (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca/Rabat oder telc-Lizenzschulen",
+        "where": "Ein Goethe-Institut oder eine telc-Lizenzschule in deinem Land",
         "notes": "Für die meisten Studiengänge erforderlich. Einige verlangen TestDaF oder DSH-2."
       },
       "visa_application_form": {
         "name": "Antragsformular nationales D-Visum",
-        "where": "Download bei rk.diplo.de oder de.tlscontact.com/ma",
+        "where": "Download bei der deutschen Auslandsvertretung (rk.diplo.de) oder deinem Visazentrum",
         "notes": "2 Kopien auf Deutsch oder Englisch ausfüllen. Jede Seite unterschreiben."
       },
       "cv_german": {
@@ -3765,7 +3765,7 @@
       },
       "bank_statements": {
         "name": "Kontoauszüge (letzte 3 Monate)",
-        "where": "Deine marokkanische Bank",
+        "where": "Deine Bank",
         "notes": "Manchmal als ergänzender Nachweis trotz Sperrkonto verlangt."
       },
       "travel_health_insurance": {
@@ -3779,20 +3779,20 @@
         "notes": "Eine unterschriebene Wohnungsgeberbestätigung ist optimal. Hotelres. für 4 Wochen wird akzeptiert."
       },
       "tls_appointment": {
-        "name": "TLScontact-Termin",
-        "where": "de.tlscontact.com/ma — Casablanca oder Rabat",
+        "name": "Termin im Visazentrum",
+        "where": "Das deutsche Visazentrum in deinem Land (TLScontact, VFS Global oder iDATA, je nach Land)",
         "notes": "Früh buchen — Termine 1–3 Monate, im Sommer länger. Servicegebühr separat vom Visum."
       },
       "visa_fee": {
         "name": "Nationales D-Visum (75 €)",
-        "where": "Bei TLS-Termin in MAD bezahlt",
+        "where": "In Landeswährung beim Visumtermin bezahlt",
         "notes": "Nicht erstattungsfähig. Bar oder Karte am Tag des Termins."
       }
     }
   },
   "eligibilityChecker": {
-    "metaTitle": "Visum-Eignungsprüfer — Marokko nach Deutschland",
-    "metaDesc": "Prüfe deine Eignung fürs deutsche Ausbildungs- oder Studiumsvisum als marokkanischer Bewerber — Score, Blocker und persönliche nächste Schritte.",
+    "metaTitle": "Visum-Eignungsprüfer — Dein Weg nach Deutschland",
+    "metaDesc": "Prüfe deine Eignung fürs deutsche Ausbildungs- oder Studiumsvisum als internationaler Bewerber — Score, Blocker und persönliche nächste Schritte.",
     "eyebrow": "Visumseignung",
     "title": "Visum-Eignungsprüfer",
     "subtitle": "Finde heraus, wo du genau für das deutsche Ausbildungs- oder Studiumsvisum stehst — was dich blockiert und was das Visum freischaltet.",
@@ -3802,14 +3802,14 @@
     "ageLabel": "Alter",
     "educationLabel": "Höchster Abschluss",
     "germanLabel": "Aktuelles Deutschniveau",
-    "bacAverageLabel": "Bac-Durchschnitt",
+    "bacAverageLabel": "Schulabschluss-Durchschnitt (von 20)",
     "bacAverageHint": "Deutsche Hochschulen erwarten ≥ 14/20 für direkte Bachelor-Zulassung. 12–13.99 erfordert meist Studienkolleg. Unter 12 in der Regel nicht qualifiziert.",
     "hasContractTitle": "Ich habe einen unterschriebenen Ausbildungsvertrag",
     "hasContractHint": "Vertrag eines bei IHK oder HWK eingetragenen deutschen Arbeitgebers.",
     "hasAdmissionTitle": "Ich habe eine Zulassung einer deutschen Hochschule",
     "hasAdmissionHint": "Endgültige oder bedingte Zulassung (Zulassung / Bedingungszulassung).",
     "hasApsTitle": "Ich habe mein APS-Zertifikat",
-    "hasApsHint": "Pflicht für marokkanische Studium-Bewerber. Ausgestellt von APS Rabat.",
+    "hasApsHint": "Für Studium-Bewerber aus einigen Ländern Pflicht (z. B. China, Indien, Vietnam, Pakistan). Ausgestellt von der APS-Stelle deines Landes.",
     "englishProgramTitle": "Mein Wunschprogramm wird auf Englisch unterrichtet",
     "englishProgramHint": "Manche Masterprogramme sind 100% Englisch. Lockert die Deutschanforderung.",
     "financialLabel": "Finanzieller Nachweis",
@@ -3855,7 +3855,7 @@
       "sperrkonto": "Sperrkonto (11.904 € bereit)",
       "sponsor": "Bürge in Deutschland (Verpflichtungserklärung)",
       "salary_covers": "Meine Ausbildungsvergütung deckt meine Kosten",
-      "family_support": "Familie unterstützt mich aus Marokko",
+      "family_support": "Familie unterstützt mich aus der Heimat",
       "need_help": "Ich habe noch keinen Finanzplan"
     },
     "rules": {
@@ -3884,7 +3884,7 @@
         "title": "Hochschulzulassung"
       },
       "aps_studium": {
-        "title": "APS-Zertifikat (Rabat)"
+        "title": "APS-Zertifikat"
       },
       "financial_proof": {
         "title": "Finanznachweis"
@@ -3903,8 +3903,8 @@
       "german_level_ausbildung": {
         "b2_strong": "B2 liegt deutlich über dem gesetzlichen B1-Minimum. Du hast einen klaren Vorsprung in Vorstellungsgesprächen und beim Visumsentscheid. Sprachseitig keine weiteren Schritte fürs Visum nötig.",
         "b1_min": "B1 ist das gesetzliche Minimum fürs Ausbildungsvisum — du bist berechtigt. Um in Bewerbungen aufzufallen, lohnt es sich, parallel auf B2 hinzuarbeiten — die meisten Arbeitgeber bevorzugen es.",
-        "a2_close": "A2 liegt eine GeR-Stufe unter dem B1-Minimum. Plane 4–6 Monate Intensivkurs (4h/Tag am Goethe Institut Casablanca/Rabat oder telc-Lizenzschule), um B1 zu erreichen.",
-        "below": "B1 ist das gesetzliche Minimum fürs Ausbildungsvisum. Realistisch: 4–6 Monate Intensivkurs pro GeR-Stufe (Goethe Institut Casablanca/Rabat, telc-Lizenzschulen oder online), also 8–14 Monate von A0/A1 zu B1. Intensivkurse (4h/Tag) sind am schnellsten."
+        "a2_close": "A2 liegt eine GeR-Stufe unter dem B1-Minimum. Plane 4–6 Monate Intensivkurs (4h/Tag an einem Goethe-Institut oder einer telc-Lizenzschule), um B1 zu erreichen.",
+        "below": "B1 ist das gesetzliche Minimum fürs Ausbildungsvisum. Realistisch: 4–6 Monate Intensivkurs pro GeR-Stufe (ein Goethe-Institut, telc-Lizenzschulen oder online), also 8–14 Monate von A0/A1 zu B1. Intensivkurse (4h/Tag) sind am schnellsten."
       },
       "german_level_studium": {
         "c1_strong": "C1 erfüllt jede deutsche Hochschulanforderung, inkl. TestDaF und DSH-2. Sprachlich bist du komplett gerüstet.",
@@ -3924,8 +3924,8 @@
       },
       "education_studium_master": {
         "licence_ok": "Deine Licence (Bac+3) oder dein Master (Bac+5) ist die richtige Ausgangslage für einen deutschen Master. In Anabin prüfen, ob deine Heim-Uni als H+ gelistet ist.",
-        "bac_plus_2": "Bac+2 liegt unter dem deutschen Master-Standard (180 ECTS / 3-jährige Licence). Schließe entweder ein 3. Licence-Jahr in Marokko ab, oder bewirb dich auf einen Bachelor in Deutschland mit Anrechnung deiner bisherigen Leistungen.",
-        "below": "Eine 3-jährige Licence (Bac+3, 180 ECTS) ist die Mindestvoraussetzung für einen deutschen Master. Weg vor: Licence in Marokko abschließen oder zuerst einen Bachelor in Deutschland machen."
+        "bac_plus_2": "Bac+2 liegt unter dem deutschen Master-Standard (180 ECTS / 3-jähriger Bachelor). Schließe entweder ein 3. Bachelor-Jahr in deinem Land ab, oder bewirb dich auf einen Bachelor in Deutschland mit Anrechnung deiner bisherigen Leistungen.",
+        "below": "Ein 3-jähriger Bachelor (Bac+3, 180 ECTS) ist die Mindestvoraussetzung für einen deutschen Master. Weg vor: Bachelor in deinem Land abschließen oder zuerst einen Bachelor in Deutschland machen."
       },
       "bac_grade_studium": {
         "tres_bien": "Bac-Schnitt ≥ 14/20 (mention 'Bien' oder höher) qualifiziert dich für direkte Bachelor-Zulassung. Stärkster Hebel deines Bewerbungsfiles.",
@@ -3943,10 +3943,10 @@
       },
       "aps_studium": {
         "have": "APS-Zertifikat in der Hand — der zeitaufwändigste Studium-Schritt ist erledigt.",
-        "missing": "APS ist Pflicht für marokkanische Studienbewerber. Beantrage es jetzt bei der Deutschen Botschaft Rabat — Bearbeitung 6–8 Wochen, blockiert jeden weiteren Studium-Schritt. Alle Zeugnisse seit dem Bac mitbringen."
+        "missing": "APS ist für Studienbewerber aus einigen Ländern Pflicht (China, Indien, Vietnam, Pakistan, Mongolei …). Wenn sie für dich gilt, beantrage sie bei der APS-Stelle deines Landes — Bearbeitung 6–8 Wochen, blockiert jeden weiteren Studium-Schritt. Alle Zeugnisse seit der Schule mitbringen."
       },
       "financial_proof": {
-        "sperrkonto": "Sperrkonto ist der Goldstandard. Marokkanische Bewerber nutzen meist Fintiba, Expatrio oder Coracle (89 € Einrichtung + 11.904 € Einzahlung). Das Geld wird dir nach Ankunft in 12 Monatsraten zurückgezahlt — keine Gebühr.",
+        "sperrkonto": "Sperrkonto ist der Goldstandard. Bewerber nutzen meist Fintiba, Expatrio oder Coracle (89 € Einrichtung + 11.904 € Einzahlung). Das Geld wird dir nach Ankunft in 12 Monatsraten zurückgezahlt — keine Gebühr.",
         "sponsor": "Verpflichtungserklärung wird akzeptiert. Bürge muss ≥ 1.200 € netto/Monat nachweisen, rechtliche Haftung übernehmen und bei seiner Ausländerbehörde unterschreiben. ~29 € Gebühr durch den Bürgen.",
         "salary_ausbildung": "Deine Vergütung deckt das Visum-Minimum bei ≥ 934 €/Monat netto. Liegt der Vertrag darunter, lege ein kleines Sperrkonto on top.",
         "family": "Familienunterstützungsbriefe alleine sind schwacher Nachweis — sie führen fast immer zu Nachforderungen. Stark empfohlen: zusätzlich ein Sperrkonto (11.904 € aus Familienersparnissen, nach Ankunft zurückgezahlt).",
@@ -3956,10 +3956,10 @@
       },
       "passport": {
         "valid": "Reisepass erfüllt die Anforderung. Achte darauf, dass er noch mindestens 6 Monate nach Visumsablauf gültig ist — das verlangen die meisten Botschaften.",
-        "expiring": "Dein Reisepass muss zum Visumtermin noch mindestens 12 Monate gültig sein. Erneuere ihn bei deiner Präfektur in Marokko — meist 2–4 Wochen. Plane voraus."
+        "expiring": "Dein Reisepass muss zum Visumtermin noch mindestens 12 Monate gültig sein. Erneuere ihn bei der Passbehörde deines Landes — meist 2–4 Wochen. Plane voraus."
       },
       "clean_record": {
-        "clean": "Sauberes Bulletin n°3 — kein Problem. Die marokkanische Version dauert 3–7 Tage und muss innerhalb von 3 Monaten vor dem Visumtermin ausgestellt sein.",
+        "clean": "Sauberes Führungszeugnis — kein Problem. Es dauert meist nur wenige Tage und muss innerhalb von 3 Monaten vor dem Visumtermin ausgestellt sein.",
         "case_by_case": "Jeder Fall einzeln geprüft. Kleinere Verkehrsdelikte oder alte Bußgelder sind meist OK. Schwere Verurteilungen (Gewalt, Drogen, Betrug) können das Visum blockieren — vor dem Antrag eine vertrauliche Beratung buchen."
       },
       "age_ausbildung": {

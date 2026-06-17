@@ -31,7 +31,6 @@ const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
 export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
   const t = useTranslations('documentChecklist')
   const dir = dirFor(locale)
-  const fmtMad = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
   const fmtEur = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
 
   // ── Inputs ────────────────────────────────────────────────
@@ -71,17 +70,14 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
     ? Math.round((checkedInScope / result.totalDocs) * 100)
     : 0
 
-  // ── Currency helpers ──────────────────────────────────────
-  function rangeMad(lo: number, hi: number) {
+  // ── Currency helper ───────────────────────────────────────
+  // Origin-country fees vary worldwide, so all amounts are shown as rough
+  // EUR estimates rather than any single country's currency.
+  function cost(lo: number, hi: number) {
     if (lo === 0 && hi === 0) return t('free')
-    if (lo === hi) return `${fmtMad.format(lo)} MAD`
-    return `${fmtMad.format(lo)}–${fmtMad.format(hi)} MAD`
-  }
-  function rangeEur(lo: number, hi: number) {
-    if (lo === 0 && hi === 0) return ''
     const e0 = Math.round(lo / EUR_TO_MAD)
     const e1 = Math.round(hi / EUR_TO_MAD)
-    if (e0 === 0 && e1 === 0) return ''
+    if (e0 === 0 && e1 === 0) return t('free')
     return `≈ €${e0 === e1 ? fmtEur.format(e0) : `${fmtEur.format(e0)}–${fmtEur.format(e1)}`}`
   }
   function rangeDays(lo: number, hi: number) {
@@ -185,17 +181,16 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
             <div className="dcl-summary-row">
               <span>{t('totalCost')}</span>
               <strong>
-                {rangeMad(result.totalCostMad[0], result.totalCostMad[1])}
-                <small>{rangeEur(result.totalCostMad[0], result.totalCostMad[1])}</small>
+                {cost(result.totalCostMad[0], result.totalCostMad[1])}
               </strong>
             </div>
             <div className="dcl-summary-row">
               <span>{t('apostilleCount', { n: result.apostilleCount })}</span>
-              <strong>{rangeMad(result.apostilleCostMad[0], result.apostilleCostMad[1])}</strong>
+              <strong>{cost(result.apostilleCostMad[0], result.apostilleCostMad[1])}</strong>
             </div>
             <div className="dcl-summary-row">
               <span>{t('translationPages', { n: result.translationPages })}</span>
-              <strong>{rangeMad(result.translationCostMad[0], result.translationCostMad[1])}</strong>
+              <strong>{cost(result.translationCostMad[0], result.translationCostMad[1])}</strong>
             </div>
             <div className="dcl-summary-row dcl-summary-row--big">
               <span>{t('estimatedTimeline')}</span>
@@ -230,8 +225,7 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
                       doc={d}
                       checked={checked.has(d.id)}
                       onToggle={() => toggleCheck(d.id)}
-                      rangeMad={rangeMad}
-                      rangeEur={rangeEur}
+                      cost={cost}
                       rangeDays={rangeDays}
                       t={t}
                     />
@@ -254,18 +248,17 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
 }
 
 function DocRow({
-  doc, checked, onToggle, rangeMad, rangeEur, rangeDays, t,
+  doc, checked, onToggle, cost, rangeDays, t,
 }: {
   doc: Doc
   checked: boolean
   onToggle: () => void
-  rangeMad: (lo: number, hi: number) => string
-  rangeEur: (lo: number, hi: number) => string
+  cost: (lo: number, hi: number) => string
   rangeDays: (lo: number, hi: number) => string
   t: ReturnType<typeof useTranslations>
 }) {
   const [expanded, setExpanded] = useState(false)
-  const cost = doc.costMad
+  const docCost = doc.costMad
   const days = doc.timelineDays
   return (
     <li className={`dcl-row${checked ? ' is-checked' : ''}`}>
@@ -284,8 +277,7 @@ function DocRow({
         <p className="dcl-row-where"><span aria-hidden>📍</span> {t(`docs.${doc.id}.where` as any)}</p>
         <div className="dcl-row-meta">
           <span className="dcl-row-cost">
-            💰 {rangeMad(cost[0], cost[1])}
-            {rangeEur(cost[0], cost[1]) && <small> {rangeEur(cost[0], cost[1])}</small>}
+            💰 {cost(docCost[0], docCost[1])}
           </span>
           <span className="dcl-row-time">⏳ {rangeDays(days[0], days[1])}</span>
           <button type="button" className="dcl-row-more" onClick={() => setExpanded(v => !v)}>

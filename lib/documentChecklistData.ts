@@ -1,16 +1,17 @@
 // Document Checklist Generator — pure data + filter logic.
 //
 // Sources (cross-checked Q1 2026):
-// - German Embassy Rabat / TLScontact Casablanca current document lists
-// - APS Rabat (Akademische Prüfstelle) fee schedule
-// - Goethe Institut Maroc fee schedule
-// - Cour d'Appel apostille fees (Morocco joined Hague Convention 2016)
+// - German missions' standard national-visa document lists
+// - APS (Akademische Prüfstelle) fee schedule
+// - Goethe-Institut fee schedule
 // - Sperrkonto requirement: €992/month × 12 = €11,904 (BAMF 2026)
 // - National D-visa fee €75 (BMI Schedule 2025)
 //
-// Costs in MAD (Moroccan Dirham) with EUR conversion via EUR_TO_MAD constant.
+// Origin-country fees vary worldwide. Internal cost figures are stored in a
+// single base unit and converted to rough EUR estimates via EUR_PER_BASE for
+// display; only the fixed German-side costs (Sperrkonto, D-visa fee) are exact.
 
-export const EUR_TO_MAD = 10.7  // tweak in one place if FX moves
+export const EUR_TO_MAD = 10.7  // base-unit → EUR divisor (rough estimate)
 
 export type PathKey = 'ausbildung' | 'studium'
 export type EducationKey = 'bac' | 'bac_plus_2' | 'bac_plus_3' | 'bac_plus_5'

@@ -3577,11 +3577,11 @@
     "price": "{price} € · {duration} min"
   },
   "documentChecklist": {
-    "metaTitle": "Générateur de checklist documents — Maroc vers Allemagne",
-    "metaDesc": "Liste personnalisée de tous les documents qu'un Marocain doit fournir pour le visa Ausbildung ou Studium en Allemagne — où les obtenir, coûts réels en MAD/EUR, et délais.",
+    "metaTitle": "Générateur de checklist documents — Votre installation en Allemagne",
+    "metaDesc": "Liste personnalisée de tous les documents dont vous avez besoin pour le visa Ausbildung ou Studium en Allemagne — où les obtenir, coûts estimés en EUR, et délais.",
     "eyebrow": "Candidature & documents",
     "title": "Générateur de checklist documents",
-    "subtitle": "Obtenez la liste exacte des documents que les Marocains doivent fournir pour le visa Ausbildung ou Studium — où obtenir chacun, coûts réels en MAD et EUR, et délais réalistes depuis Casablanca et Rabat.",
+    "subtitle": "Obtenez la liste exacte des documents dont vous avez besoin pour le visa Ausbildung ou Studium — où obtenir chacun, coûts estimés en EUR, et délais réalistes. Les coûts varient selon le pays, les montants sont donc indicatifs.",
     "formTitle": "Votre profil de candidature",
     "pathLabel": "Parcours",
     "educationLabel": "Niveau d'études",
@@ -3589,7 +3589,7 @@
     "vorabTitle": "J'ai déjà l'accord Vorab",
     "vorabHint": "Pré-approbation de la Bundesagentur für Arbeit. Accélère le visa.",
     "apsDoneTitle": "J'ai déjà mon certificat APS",
-    "apsDoneHint": "Délivré par l'ambassade d'Allemagne à Rabat. Obligatoire pour le Studium.",
+    "apsDoneHint": "Délivré par le bureau APS de votre pays. Requis pour le Studium dans certains pays (ex. Chine, Inde, Vietnam, Pakistan).",
     "germanCertTitle": "J'ai déjà mon certificat allemand B1/B2",
     "germanCertHint": "Certificat Goethe, telc ou ÖSD.",
     "bringFamilyTitle": "Je ferai venir ma famille plus tard",
@@ -3645,7 +3645,7 @@
     "docs": {
       "passport": {
         "name": "Passeport (validité ≥ 12 mois)",
-        "where": "Préfecture de votre ville de résidence",
+        "where": "L'autorité de délivrance des passeports de votre pays",
         "notes": "Renouvelez si expiration dans les 12 mois. La Ausländerbehörde exige une validité supérieure à celle du visa."
       },
       "biometric_photos": {
@@ -3655,37 +3655,37 @@
       },
       "birth_certificate": {
         "name": "Acte de naissance",
-        "where": "Bureau d'État Civil de votre lieu de naissance",
-        "notes": "Demandez un extrait plurilingue si possible — économise la traduction. Apostille à la Cour d'Appel."
+        "where": "L'état civil de votre pays",
+        "notes": "Demandez un extrait plurilingue si possible — économise la traduction. Puis authentifiez-le : apostille pour les pays de la Convention de La Haye, sinon légalisation consulaire."
       },
       "police_clearance": {
-        "name": "Casier judiciaire (Bulletin n°3)",
-        "where": "Tribunal de 1ère Instance OU en ligne : service-public.ma",
+        "name": "Casier judiciaire / extrait de casier",
+        "where": "L'autorité judiciaire ou policière de votre pays",
         "notes": "Doit être délivré dans les 3 mois précédant le RDV visa. Demandez 2 copies."
       },
       "marriage_certificate": {
         "name": "Acte de mariage",
-        "where": "Bureau d'État Civil du lieu de mariage",
+        "where": "L'état civil où votre mariage a été enregistré",
         "notes": "Nécessaire seulement pour le regroupement familial ultérieur. Apostillé + traduit."
       },
       "children_birth_certs": {
         "name": "Actes de naissance des enfants",
-        "where": "Bureau d'État Civil du lieu d'enregistrement de chaque enfant",
+        "where": "L'état civil où chaque enfant a été enregistré",
         "notes": "Apostille + traduction assermentée par enfant. Uniquement si vous les emmenez."
       },
       "bac_diploma": {
-        "name": "Diplôme du Baccalauréat",
-        "where": "Académie Régionale de l'Éducation et de la Formation",
-        "notes": "Original ou copie certifiée. Un duplicata doit aussi être apostillé."
+        "name": "Diplôme de fin d'études secondaires (Bac ou équivalent)",
+        "where": "L'autorité qui a délivré votre diplôme de fin d'études secondaires",
+        "notes": "Original ou copie certifiée. Un duplicata doit aussi être authentifié (apostille ou légalisation)."
       },
       "bac_transcripts": {
-        "name": "Relevés de notes du Bac",
-        "where": "Même Académie Régionale",
-        "notes": "Les deux années sont requises. Apostiller chaque page."
+        "name": "Relevés de notes du secondaire",
+        "where": "Même autorité que votre diplôme",
+        "notes": "Fournissez vos relevés des dernières années. Authentifiez chaque page (apostille ou légalisation)."
       },
       "higher_ed_diploma": {
         "name": "Diplôme d'enseignement supérieur",
-        "where": "Bureau de la scolarité de votre université",
+        "where": "Le service de scolarité de votre université",
         "notes": "Licence / Master / DUT / etc. Original + apostille + traduction assermentée."
       },
       "higher_ed_transcripts": {
@@ -3695,8 +3695,8 @@
       },
       "aps_certificate": {
         "name": "Certificat APS (Akademische Prüfstelle)",
-        "where": "Ambassade d'Allemagne à Rabat — bureau APS",
-        "notes": "Obligatoire pour les Marocains pour le Studium. ~30 € + 250 MAD. Délai 6 à 8 semaines. Joignez TOUS les documents académiques depuis le lycée."
+        "where": "Le bureau APS / Akademische Prüfstelle compétent pour votre pays",
+        "notes": "Requis seulement pour certains pays (ex. Chine, Inde, Vietnam, Pakistan, Mongolie). Vérifiez si l'APS s'applique à votre pays. ~30 € + frais de dossier locaux. Délai 6 à 8 semaines. Joignez TOUS les documents académiques depuis le secondaire."
       },
       "anabin_check": {
         "name": "Vérification Anabin",
@@ -3706,21 +3706,21 @@
       "studienkolleg": {
         "name": "Admission Studienkolleg (si le Bac ne qualifie pas directement)",
         "where": "Demande via votre université allemande cible",
-        "notes": "La plupart des Bacs Sciences marocains qualifient directement. Bac Lettres / SVT peut nécessiter un Studienkolleg."
+        "notes": "Selon votre pays et votre filière, votre diplôme du secondaire peut qualifier directement ou non. Les filières scientifiques qualifient souvent ; d'autres peuvent nécessiter un Studienkolleg."
       },
       "german_b1": {
         "name": "Certificat allemand B1 (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca/Rabat, ou écoles agréées telc",
+        "where": "Un Goethe-Institut ou un centre agréé telc dans votre pays",
         "notes": "B1 est le minimum pour le visa Ausbildung. La plupart des employeurs préfèrent B2."
       },
       "german_b2": {
         "name": "Certificat allemand B2 (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca/Rabat, ou écoles agréées telc",
+        "where": "Un Goethe-Institut ou un centre agréé telc dans votre pays",
         "notes": "Requis pour la plupart des Studium. Certains exigent TestDaF ou DSH-2."
       },
       "visa_application_form": {
         "name": "Formulaire de visa national (D)",
-        "where": "Téléchargez sur rk.diplo.de ou de.tlscontact.com/ma",
+        "where": "Téléchargez sur le site de la mission allemande (rk.diplo.de) ou votre centre de visas",
         "notes": "Remplissez 2 copies en allemand ou anglais. Signez chaque page."
       },
       "cv_german": {
@@ -3755,7 +3755,7 @@
       },
       "sperrkonto": {
         "name": "Sperrkonto (compte bloqué de 11 904 €)",
-        "where": "En ligne : Fintiba, Expatrio, Coracle (le plus populaire au Maroc)",
+        "where": "En ligne : Fintiba, Expatrio, Coracle",
         "notes": "Obligatoire pour le Studium. Apprentis Ausbildung avec salaire < 934 €/mois aussi. Frais d'ouverture ~89 € + 11 904 € de dépôt (vous est restitué en mensualités après l'arrivée)."
       },
       "verpflichtungserklaerung": {
@@ -3765,7 +3765,7 @@
       },
       "bank_statements": {
         "name": "Relevés bancaires (3 derniers mois)",
-        "where": "Votre banque marocaine",
+        "where": "Votre banque",
         "notes": "Parfois demandés comme preuve complémentaire même avec un Sperrkonto."
       },
       "travel_health_insurance": {
@@ -3779,20 +3779,20 @@
         "notes": "Une Wohnungsgeberbestätigung signée est l'idéal. Une résa hôtel pour 4 semaines est acceptable."
       },
       "tls_appointment": {
-        "name": "RDV TLScontact",
-        "where": "de.tlscontact.com/ma — centre Casablanca ou Rabat",
+        "name": "RDV au centre de visas",
+        "where": "Le centre de visas allemand de votre pays (TLScontact, VFS Global ou iDATA selon le pays)",
         "notes": "Réservez tôt — délais 1 à 3 mois, parfois plus en été. Frais de service séparés du visa."
       },
       "visa_fee": {
         "name": "Frais visa national D (75 €)",
-        "where": "Payés en MAD au RDV TLS",
+        "where": "Payés en monnaie locale au rendez-vous visa",
         "notes": "Non remboursables. Espèces ou carte le jour du RDV."
       }
     }
   },
   "eligibilityChecker": {
-    "metaTitle": "Vérificateur d'éligibilité visa — Maroc vers Allemagne",
-    "metaDesc": "Vérifiez votre éligibilité au visa Ausbildung ou Studium en Allemagne en tant que candidat marocain — score, blocages et étapes personnalisées.",
+    "metaTitle": "Vérificateur d'éligibilité visa — Votre installation en Allemagne",
+    "metaDesc": "Vérifiez votre éligibilité au visa Ausbildung ou Studium en Allemagne en tant que candidat international — score, blocages et étapes personnalisées.",
     "eyebrow": "Éligibilité visa",
     "title": "Vérificateur d'éligibilité au visa",
     "subtitle": "Découvrez exactement où vous en êtes pour le visa Ausbildung ou Studium en Allemagne — ce qui vous bloque et ce qui débloque le visa.",
@@ -3802,14 +3802,14 @@
     "ageLabel": "Âge",
     "educationLabel": "Niveau d'études",
     "germanLabel": "Niveau d'allemand actuel",
-    "bacAverageLabel": "Moyenne du Bac",
+    "bacAverageLabel": "Moyenne du secondaire (sur 20)",
     "bacAverageHint": "Les universités allemandes attendent ≥ 14/20 pour une admission directe en Licence. 12–13.99 nécessite généralement un Studienkolleg. En dessous de 12, en général non éligible.",
     "hasContractTitle": "J'ai un Ausbildungsvertrag signé",
     "hasContractHint": "Contrat signé d'un employeur allemand enregistré IHK ou HWK.",
     "hasAdmissionTitle": "J'ai une Zulassung d'une université allemande",
     "hasAdmissionHint": "Lettre d'admission finale ou conditionnelle (Zulassung / Bedingungszulassung).",
     "hasApsTitle": "J'ai mon certificat APS",
-    "hasApsHint": "Obligatoire pour les Marocains pour le Studium. Délivré par APS Rabat.",
+    "hasApsHint": "Requis pour les candidats au Studium de certains pays (ex. Chine, Inde, Vietnam, Pakistan). Délivré par le bureau APS de votre pays.",
     "englishProgramTitle": "Mon programme cible est en anglais",
     "englishProgramHint": "Certains Masters sont 100% anglais. Cela assouplit le niveau allemand requis.",
     "financialLabel": "Preuve financière",
@@ -3855,7 +3855,7 @@
       "sperrkonto": "Sperrkonto (11 904 € prêts)",
       "sponsor": "Sponsor en Allemagne (Verpflichtungserklärung)",
       "salary_covers": "Mon salaire d'Ausbildung couvre mes frais",
-      "family_support": "Ma famille me soutiendra depuis le Maroc",
+      "family_support": "Ma famille me soutiendra depuis mon pays",
       "need_help": "Je n'ai pas encore de plan financier"
     },
     "rules": {
@@ -3884,7 +3884,7 @@
         "title": "Admission universitaire (Zulassung)"
       },
       "aps_studium": {
-        "title": "Certificat APS (Rabat)"
+        "title": "Certificat APS"
       },
       "financial_proof": {
         "title": "Preuve financière"
@@ -3903,8 +3903,8 @@
       "german_level_ausbildung": {
         "b2_strong": "B2 dépasse largement le minimum légal B1. Vous aurez un avantage net en entretien et auprès de l'agent du visa. Aucune action allemande supplémentaire requise pour le visa.",
         "b1_min": "B1 est le minimum légal pour le visa Ausbildung — vous êtes en règle. Pour vous démarquer en entretien, travailler vers le B2 en parallèle paie : la plupart des employeurs le préfèrent.",
-        "a2_close": "A2 est un niveau CECRL en dessous du B1 minimum. Comptez 4 à 6 mois de cours intensif (4h/jour au Goethe Institut Casablanca/Rabat ou école agréée telc) pour atteindre B1 et devenir éligible au visa.",
-        "below": "B1 est le minimum légal pour le visa Ausbildung. Plan réaliste : 4 à 6 mois d'étude intensive par niveau CECRL (Goethe Institut Casablanca/Rabat, écoles agréées telc, ou en ligne), soit 8 à 14 mois de A0/A1 à B1. Les cours intensifs (4h/jour) accélèrent."
+        "a2_close": "A2 est un niveau CECRL en dessous du B1 minimum. Comptez 4 à 6 mois de cours intensif (4h/jour dans un Goethe-Institut ou une école agréée telc) pour atteindre B1 et devenir éligible au visa.",
+        "below": "B1 est le minimum légal pour le visa Ausbildung. Plan réaliste : 4 à 6 mois d'étude intensive par niveau CECRL (un Goethe-Institut, des écoles agréées telc, ou en ligne), soit 8 à 14 mois de A0/A1 à B1. Les cours intensifs (4h/jour) accélèrent."
       },
       "german_level_studium": {
         "c1_strong": "C1 couvre toutes les exigences universitaires allemandes, y compris TestDaF et DSH-2. Vous êtes au top sur le plan linguistique.",
@@ -3924,8 +3924,8 @@
       },
       "education_studium_master": {
         "licence_ok": "Votre Licence (Bac+3) ou Master (Bac+5) est le bon point de départ pour un Master allemand. Vérifiez sur Anabin que votre université d'origine est listée H+ (reconnue).",
-        "bac_plus_2": "Bac+2 est sous le standard des Masters allemands (180 ECTS / Licence de 3 ans). Soit terminez une 3e année de Licence au Maroc, soit candidatez à un Bachelor en Allemagne avec reconnaissance des crédits déjà obtenus.",
-        "below": "Une Licence de 3 ans (Bac+3, 180 ECTS) est le minimum pour un Master allemand. Voie possible : terminer la Licence au Maroc, ou commencer par un Bachelor en Allemagne."
+        "bac_plus_2": "Bac+2 est sous le standard des Masters allemands (180 ECTS / Licence de 3 ans). Soit terminez une 3e année de Licence dans votre pays, soit candidatez à un Bachelor en Allemagne avec reconnaissance des crédits déjà obtenus.",
+        "below": "Une Licence de 3 ans (Bac+3, 180 ECTS) est le minimum pour un Master allemand. Voie possible : terminer la Licence dans votre pays, ou commencer par un Bachelor en Allemagne."
       },
       "bac_grade_studium": {
         "tres_bien": "Moyenne ≥ 14/20 (mention 'Bien' ou 'Très Bien') vous qualifie pour une admission directe en Licence en Allemagne. Le meilleur atout de votre dossier.",
@@ -3943,10 +3943,10 @@
       },
       "aps_studium": {
         "have": "Certificat APS en main — l'étape la plus longue du Studium est passée.",
-        "missing": "L'APS est obligatoire pour les candidats marocains au Studium. Demandez-le maintenant à l'ambassade d'Allemagne à Rabat — délai 6 à 8 semaines, et il bloque toute autre étape du Studium. Apportez tous vos relevés depuis le Bac."
+        "missing": "L'APS est requis pour les candidats au Studium de certains pays (Chine, Inde, Vietnam, Pakistan, Mongolie…). S'il s'applique à vous, demandez-le au bureau APS de votre pays — délai 6 à 8 semaines, et il bloque toute autre étape du Studium. Apportez tous vos relevés depuis le secondaire."
       },
       "financial_proof": {
-        "sperrkonto": "Le Sperrkonto est la référence. La majorité des Marocains passent par Fintiba, Expatrio ou Coracle (89 € de mise en place + 11 904 € de dépôt). Le dépôt vous est restitué en 12 mensualités après l'arrivée — ce n'est pas un frais.",
+        "sperrkonto": "Le Sperrkonto est la référence. La majorité des candidats passent par Fintiba, Expatrio ou Coracle (89 € de mise en place + 11 904 € de dépôt). Le dépôt vous est restitué en 12 mensualités après l'arrivée — ce n'est pas un frais.",
         "sponsor": "Verpflichtungserklärung acceptée. Votre sponsor doit prouver ≥ 1 200 € de revenu net mensuel (après impôts), accepter la responsabilité légale, et signer à sa Ausländerbehörde locale. ~29 € de frais payés par lui.",
         "salary_ausbildung": "Votre salaire d'Ausbildung couvre le minimum visa s'il est ≥ 934 €/mois après déductions habituelles. Si le contrat indique moins, ajoutez un petit Sperrkonto pour combler.",
         "family": "Les lettres de soutien familial seules sont une preuve faible — elles déclenchent presque toujours une demande de preuve supplémentaire. Recommandation forte : combinez avec un Sperrkonto (11 904 € depuis l'épargne familiale, restitués à l'arrivée).",
@@ -3956,10 +3956,10 @@
       },
       "passport": {
         "valid": "Votre passeport remplit l'exigence de validité. Vérifiez qu'il restera valide au moins 6 mois après l'expiration de votre visa — la plupart des ambassades l'exigent.",
-        "expiring": "Votre passeport doit être valide au moins 12 mois au moment du rendez-vous visa. Renouvelez-le à votre Préfecture locale au Maroc — délai habituel 2 à 4 semaines. Anticipez."
+        "expiring": "Votre passeport doit être valide au moins 12 mois au moment du rendez-vous visa. Renouvelez-le auprès de l'autorité des passeports de votre pays — délai habituel 2 à 4 semaines. Anticipez."
       },
       "clean_record": {
-        "clean": "Bulletin n°3 vierge — pas de souci. La version marocaine s'obtient en 3 à 7 jours, et doit être délivrée dans les 3 mois précédant le rendez-vous visa.",
+        "clean": "Casier judiciaire vierge — pas de souci. Il s'obtient généralement en quelques jours, et doit être délivré dans les 3 mois précédant le rendez-vous visa.",
         "case_by_case": "Chaque cas est examiné individuellement. Petites infractions routières ou anciennes amendes passent généralement. Condamnations sérieuses (violence, drogue, fraude) peuvent bloquer le visa — réservez une consultation confidentielle avant de postuler."
       },
       "age_ausbildung": {

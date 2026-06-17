@@ -3,7 +3,7 @@
 // Sources cross-checked Q1 2026:
 // - German Residence Act (AufenthG) §16a (Ausbildung) and §16b (Studium)
 // - BAMF criteria 2025 for non-EU applicants
-// - APS Rabat requirements for Moroccan students
+// - APS (Akademische Prüfstelle) requirements — apply only to some countries
 // - Anabin database categorisation (H+, H-, H+/-)
 
 export type PathKey = 'ausbildung' | 'studium'

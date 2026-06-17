@@ -3577,11 +3577,11 @@
     "price": "€{price} · {duration} min"
   },
   "documentChecklist": {
-    "metaTitle": "Document Checklist Generator — Morocco to Germany",
-    "metaDesc": "Personalised checklist of every document a Moroccan needs for the German Ausbildung or Studium visa — with where to obtain, real costs in MAD/EUR, and timelines.",
+    "metaTitle": "Document Checklist Generator — Your move to Germany",
+    "metaDesc": "Personalised checklist of every document you need for the German Ausbildung or Studium visa — with where to obtain each one, estimated costs in EUR, and realistic timelines.",
     "eyebrow": "Application & paperwork",
     "title": "Document Checklist Generator",
-    "subtitle": "Get the exact list of documents Moroccan applicants need for the German Ausbildung or Studium visa — with where to obtain each one, real costs in MAD and EUR, and realistic timelines from Casablanca and Rabat.",
+    "subtitle": "Get the exact list of documents you need for the German Ausbildung or Studium visa — with where to obtain each one, estimated costs in EUR, and realistic timelines. Costs vary by country, so amounts are rough estimates.",
     "formTitle": "Your application profile",
     "pathLabel": "Path",
     "educationLabel": "Education level",
@@ -3589,7 +3589,7 @@
     "vorabTitle": "I already have Vorab approval",
     "vorabHint": "Pre-approval from the Bundesagentur für Arbeit. Speeds up the visa.",
     "apsDoneTitle": "I already have my APS certificate",
-    "apsDoneHint": "Issued by the German Embassy in Rabat. Mandatory for Studium.",
+    "apsDoneHint": "Issued by the APS office for your country. Required for Studium in some countries (e.g. China, India, Vietnam, Pakistan).",
     "germanCertTitle": "I already have my German B1/B2 certificate",
     "germanCertHint": "Goethe, telc or ÖSD certificate.",
     "bringFamilyTitle": "I'll apply to bring my family later",
@@ -3645,7 +3645,7 @@
     "docs": {
       "passport": {
         "name": "Passport (≥ 12 months validity)",
-        "where": "Préfecture in your city of residence",
+        "where": "Your country's passport authority",
         "notes": "Renew if expiring within 12 months. Ausländerbehörde requires longer validity than visa duration."
       },
       "biometric_photos": {
@@ -3654,38 +3654,38 @@
         "notes": "Order 6: visa form needs 2, more for residence permit + Anmeldung in Germany."
       },
       "birth_certificate": {
-        "name": "Birth certificate (Acte de naissance)",
-        "where": "Bureau d'État Civil at your birthplace",
-        "notes": "Get a multilingual extract if available — saves translation cost. Apostille at Cour d'Appel."
+        "name": "Birth certificate",
+        "where": "The civil registry in your country",
+        "notes": "Get a multilingual extract if available — saves translation cost. Then authenticate it: apostille for Hague-Convention countries, otherwise consular legalization."
       },
       "police_clearance": {
-        "name": "Police clearance (Bulletin n°3)",
-        "where": "Tribunal de 1ère Instance OR online: service-public.ma",
+        "name": "Police clearance / criminal record certificate",
+        "where": "Your country's police or judicial authority",
         "notes": "Must be issued within 3 months of visa appointment. Request 2 copies."
       },
       "marriage_certificate": {
         "name": "Marriage certificate",
-        "where": "Bureau d'État Civil where marriage was registered",
+        "where": "The civil registry where your marriage was registered",
         "notes": "Only needed if applying for family reunification later. Apostilled + translated."
       },
       "children_birth_certs": {
         "name": "Children's birth certificates",
-        "where": "Bureau d'État Civil where each child was registered",
+        "where": "The civil registry where each child was registered",
         "notes": "Apostille + sworn translation per child. Only if bringing children."
       },
       "bac_diploma": {
-        "name": "Bac diploma",
-        "where": "Académie Régionale de l'Éducation et de la Formation (where you sat the Bac)",
-        "notes": "Original or certified copy. If you only have a duplicata, it must be apostilled too."
+        "name": "Secondary-school diploma (e.g. Bac / high-school leaving certificate)",
+        "where": "The authority that issued your secondary-school diploma",
+        "notes": "Original or certified copy. A duplicate must be authenticated (apostille or legalization) too."
       },
       "bac_transcripts": {
-        "name": "Bac transcripts (Relevés de notes)",
-        "where": "Same as diploma — Académie Régionale",
-        "notes": "Both years of Bac required. Apostille each page."
+        "name": "Secondary-school transcripts",
+        "where": "Same as your diploma",
+        "notes": "Provide your final years' transcripts. Authenticate each page (apostille or legalization)."
       },
       "higher_ed_diploma": {
         "name": "Higher-education diploma",
-        "where": "Your university's Bureau de la Scolarité",
+        "where": "Your university's registrar",
         "notes": "Bachelor / Master / DUT / etc. Original + apostille + sworn translation."
       },
       "higher_ed_transcripts": {
@@ -3695,8 +3695,8 @@
       },
       "aps_certificate": {
         "name": "APS certificate (Akademische Prüfstelle)",
-        "where": "German Embassy Rabat — APS office",
-        "notes": "Mandatory for Moroccan applicants for Studium. ~30 EUR fee + 250 MAD application. 6–8 weeks processing. Submit ALL academic records since high school."
+        "where": "The APS / Akademische Prüfstelle responsible for your country",
+        "notes": "Required only for some countries (e.g. China, India, Vietnam, Pakistan, Mongolia). Check whether APS applies to your country. ~€30 fee + local application fee, 6–8 weeks processing. Submit ALL academic records since high school."
       },
       "anabin_check": {
         "name": "Anabin recognition lookup",
@@ -3706,21 +3706,21 @@
       "studienkolleg": {
         "name": "Studienkolleg admission (if Bac doesn't directly qualify)",
         "where": "Apply via your target German university",
-        "notes": "Most Moroccan Bac Sciences directly qualify. Bac Lettres / SVT may need Studienkolleg in some fields."
+        "notes": "Whether your secondary diploma directly qualifies depends on your country and stream. Science tracks often qualify; others may need a Studienkolleg in some fields."
       },
       "german_b1": {
         "name": "German B1 certificate (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca or Rabat, or telc-licensed schools",
+        "where": "A Goethe-Institut or telc-licensed test centre in your country",
         "notes": "B1 is the minimum for Ausbildung visa. Most employers prefer B2."
       },
       "german_b2": {
         "name": "German B2 certificate (Goethe / telc / ÖSD)",
-        "where": "Goethe Institut Casablanca or Rabat, or telc-licensed schools",
+        "where": "A Goethe-Institut or telc-licensed test centre in your country",
         "notes": "Required for most Studium programmes. Some require TestDaF or DSH-2 instead."
       },
       "visa_application_form": {
         "name": "National D-visa application form",
-        "where": "Download from rk.diplo.de or de.tlscontact.com/ma",
+        "where": "Download from the German mission's site (rk.diplo.de) or your visa centre",
         "notes": "Fill 2 copies in German or English. Sign each page."
       },
       "cv_german": {
@@ -3755,7 +3755,7 @@
       },
       "sperrkonto": {
         "name": "Sperrkonto (€11,904 blocked account)",
-        "where": "Online: Fintiba, Expatrio, Coracle (most popular for Moroccans)",
+        "where": "Online: Fintiba, Expatrio, Coracle",
         "notes": "Mandatory for Studium. Ausbildung trainees with salary < €934/mo also need it. €89 setup fee + the €11,904 deposit (returned to you in monthly instalments after arrival)."
       },
       "verpflichtungserklaerung": {
@@ -3765,7 +3765,7 @@
       },
       "bank_statements": {
         "name": "Bank statements (last 3 months)",
-        "where": "Your Moroccan bank",
+        "where": "Your bank",
         "notes": "Sometimes requested as supporting evidence even when Sperrkonto is in place."
       },
       "travel_health_insurance": {
@@ -3779,43 +3779,43 @@
         "notes": "A signed Wohnungsgeberbestätigung is best. Hotel reservation for the first 4 weeks is acceptable while you find a long-term flat."
       },
       "tls_appointment": {
-        "name": "TLScontact appointment",
-        "where": "de.tlscontact.com/ma — Casablanca or Rabat centre",
+        "name": "Visa-centre appointment",
+        "where": "Your country's German visa centre (TLScontact, VFS Global or iDATA, depending on country)",
         "notes": "Book early — slots are 1–3 months out, sometimes longer in summer. Service fee separate from visa fee."
       },
       "visa_fee": {
         "name": "National D-visa fee (€75)",
-        "where": "Paid in MAD at TLS appointment",
+        "where": "Paid in local currency at your visa appointment",
         "notes": "Non-refundable. Pay in cash or by card on the day of your appointment."
       }
     }
   },
   "eligibilityChecker": {
-    "metaTitle": "Visa Eligibility Checker — Morocco to Germany",
-    "metaDesc": "Check your eligibility for the German Ausbildung or Studium visa as a Moroccan applicant — readiness score, blockers, and personalised next steps.",
+    "metaTitle": "Visa Eligibility Checker — Your move to Germany",
+    "metaDesc": "Check your eligibility for the German Ausbildung or Studium visa as an international applicant — readiness score, blockers, and personalised next steps.",
     "eyebrow": "Visa eligibility",
     "title": "Visa Eligibility Checker",
-    "subtitle": "Find out exactly where you stand for the German Ausbildung or Studium visa as a Moroccan applicant — what blocks you today and what unlocks the visa.",
+    "subtitle": "Find out exactly where you stand for the German Ausbildung or Studium visa as an international applicant — what blocks you today and what unlocks the visa.",
     "formTitle": "Your profile",
     "pathLabel": "Path",
     "studiumGoalLabel": "Studium goal",
     "ageLabel": "Age",
     "educationLabel": "Highest education",
     "germanLabel": "Current German level",
-    "bacAverageLabel": "Bac average (Moyenne du Bac)",
+    "bacAverageLabel": "Secondary-school average (out of 20)",
     "bacAverageHint": "German universities expect ≥ 14/20 for direct Bachelor admission. 12–13.99 usually requires Studienkolleg. Below 12 typically does not qualify.",
     "hasContractTitle": "I have a signed Ausbildungsvertrag",
     "hasContractHint": "A signed contract from a German employer registered with IHK or HWK.",
     "hasAdmissionTitle": "I have a Zulassung from a German university",
     "hasAdmissionHint": "Final or conditional admission letter (Zulassung / Bedingungszulassung).",
     "hasApsTitle": "I have my APS certificate",
-    "hasApsHint": "Mandatory for Moroccan Studium applicants. Issued by APS Rabat.",
+    "hasApsHint": "Required for Studium applicants from some countries (e.g. China, India, Vietnam, Pakistan). Issued by the APS office for your country.",
     "englishProgramTitle": "My target program is taught in English",
     "englishProgramHint": "Some Master programs are 100% English. Relaxes the German level requirement.",
     "financialLabel": "Financial proof",
     "passportTitle": "My passport is valid for 12+ months",
     "passportHint": "Required at the time of visa interview.",
-    "cleanRecordTitle": "My police record (Bulletin n°3) is clean",
+    "cleanRecordTitle": "My police / criminal record is clean",
     "cleanRecordHint": "No serious criminal convictions.",
     "overall": {
       "eligible": "You're eligible ✅",
@@ -3855,7 +3855,7 @@
       "sperrkonto": "Sperrkonto (€11,904 ready)",
       "sponsor": "Sponsor in Germany (Verpflichtungserklärung)",
       "salary_covers": "My Ausbildung salary covers my costs",
-      "family_support": "Family will support me from Morocco",
+      "family_support": "Family will support me from home",
       "need_help": "I don't have a financial plan yet"
     },
     "rules": {
@@ -3884,7 +3884,7 @@
         "title": "University admission (Zulassung)"
       },
       "aps_studium": {
-        "title": "APS certificate (Rabat)"
+        "title": "APS certificate"
       },
       "financial_proof": {
         "title": "Financial proof"
@@ -3903,8 +3903,8 @@
       "german_level_ausbildung": {
         "b2_strong": "B2 is well above the legal B1 minimum. You'll have a clear advantage in interviews and the visa officer's first read. No further German action needed for the visa step.",
         "b1_min": "B1 is the legal minimum for the Ausbildung visa — you're cleared. To stand out in interviews, working toward B2 in your free time pays off; most employers prefer it.",
-        "a2_close": "A2 is one CEFR level below the B1 minimum. Plan 4–6 months of intensive German (4h/day at Goethe Institut Casablanca/Rabat or a telc-licensed school) to reach B1 and become visa-eligible.",
-        "below": "B1 is the legal minimum for the Ausbildung visa. Realistic plan: 4–6 months of intensive study per CEFR level (Goethe Institut Casablanca/Rabat, telc-licensed schools, or online), so 8–14 months from A0/A1 to B1. Intensive courses (4 hours/day) get you there fastest."
+        "a2_close": "A2 is one CEFR level below the B1 minimum. Plan 4–6 months of intensive German (4h/day at a Goethe-Institut or telc-licensed school) to reach B1 and become visa-eligible.",
+        "below": "B1 is the legal minimum for the Ausbildung visa. Realistic plan: 4–6 months of intensive study per CEFR level (a Goethe-Institut, telc-licensed schools, or online), so 8–14 months from A0/A1 to B1. Intensive courses (4 hours/day) get you there fastest."
       },
       "german_level_studium": {
         "c1_strong": "C1 covers every German university requirement, including TestDaF and DSH-2. You are fully set on the language front.",
@@ -3924,8 +3924,8 @@
       },
       "education_studium_master": {
         "licence_ok": "Your Licence (Bac+3) or Master (Bac+5) is the right starting level for a German Master program. Check Anabin to confirm your home university is listed as H+ (recognised).",
-        "bac_plus_2": "Bac+2 is below the German Master standard (180 ECTS / 3-year Licence). Either complete a 3rd year of Licence in Morocco, or apply for Bachelor entry in Germany with credit recognition for what you have already done.",
-        "below": "A 3-year Licence (Bac+3, 180 ECTS) is the minimum for German Master admission. Path forward: complete your Licence in Morocco, or do a Bachelor in Germany first."
+        "bac_plus_2": "Bac+2 is below the German Master standard (180 ECTS / 3-year Bachelor). Either complete a 3rd year of your Bachelor in your country, or apply for Bachelor entry in Germany with credit recognition for what you have already done.",
+        "below": "A 3-year Bachelor (Bac+3, 180 ECTS) is the minimum for German Master admission. Path forward: complete your Bachelor in your country, or do a Bachelor in Germany first."
       },
       "bac_grade_studium": {
         "tres_bien": "Bac average ≥ 14/20 (mention 'Bien' or 'Très Bien') qualifies you for direct Bachelor admission in Germany. Strongest asset for your application file.",
@@ -3943,10 +3943,10 @@
       },
       "aps_studium": {
         "have": "APS certificate is in hand — the most time-consuming Studium step is done.",
-        "missing": "APS is mandatory for Moroccan Studium applicants. Apply now at the German Embassy in Rabat — processing takes 6–8 weeks and blocks every other Studium step. Bring all your transcripts since the Bac."
+        "missing": "APS is required for Studium applicants from some countries (China, India, Vietnam, Pakistan, Mongolia, …). If it applies to you, apply at the APS office for your country — processing takes 6–8 weeks and blocks every other Studium step. Bring all your transcripts since secondary school."
       },
       "financial_proof": {
-        "sperrkonto": "Sperrkonto is the gold standard. Most Moroccan applicants use Fintiba, Expatrio, or Coracle (€89 setup + €11,904 deposit). The deposit is returned to you in 12 monthly instalments after arrival — it is not a fee.",
+        "sperrkonto": "Sperrkonto is the gold standard. Most applicants use Fintiba, Expatrio, or Coracle (€89 setup + €11,904 deposit). The deposit is returned to you in 12 monthly instalments after arrival — it is not a fee.",
         "sponsor": "Verpflichtungserklärung accepted. Your sponsor must show ≥ €1,200 net monthly income (after tax), be willing to take legal liability, and sign at their local Ausländerbehörde. ~€29 fee paid by the sponsor.",
         "salary_ausbildung": "Your Ausbildung salary covers the visa minimum if it is ≥ €934/month after typical deductions. If your contract shows less, add a small Sperrkonto to bridge the gap.",
         "family": "Family support letters alone are weak evidence — they almost always trigger a request for additional proof. Strongly recommend pairing with a Sperrkonto (€11,904 from family savings, returned to you on arrival).",
@@ -3956,10 +3956,10 @@
       },
       "passport": {
         "valid": "Your passport meets the validity requirement. Make sure it stays valid for at least 6 months past your visa expiry — most embassies require this.",
-        "expiring": "Your passport must be valid for at least 12 months at the time of your visa appointment. Renew at your local Préfecture in Morocco — typically takes 2–4 weeks. Plan ahead."
+        "expiring": "Your passport must be valid for at least 12 months at the time of your visa appointment. Renew at your country's passport authority — typically takes 2–4 weeks. Plan ahead."
       },
       "clean_record": {
-        "clean": "Clean Bulletin n°3 — no issue. The Moroccan version takes 3–7 days to obtain, and it must be issued within 3 months of your visa appointment.",
+        "clean": "Clean police record — no issue. It typically takes a few days to obtain, and it must be issued within 3 months of your visa appointment.",
         "case_by_case": "Each case is reviewed individually. Minor traffic offenses or old fines are usually fine. Serious convictions (violence, drugs, fraud) can block the visa — book a confidential consultation before applying."
       },
       "age_ausbildung": {
