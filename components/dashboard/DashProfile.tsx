@@ -44,7 +44,6 @@ export default function DashProfile() {
   // ── Editable state, seeded from shell context ─────────────────
   const [firstName, setFirstName] = useState('')
   const [lastName, setLastName]   = useState('')
-  const [countryCode, setCountryCode] = useState<'+49' | '+212'>('+212')
   const [phoneNumber, setPhoneNumber] = useState('')
   const [status, setStatus]       = useState('')
   const [avatarUrl, setAvatarUrl] = useState('')
@@ -67,9 +66,7 @@ export default function DashProfile() {
     const prof = ctx.profile
     setStatus(prof?.status || '')
     if (prof?.whatsapp) {
-      const code = prof.whatsapp.startsWith('+49') ? '+49' : '+212'
-      setCountryCode(code)
-      setPhoneNumber(prof.whatsapp.replace(code, ''))
+      setPhoneNumber(prof.whatsapp)
     }
   }, [ctx.user, ctx.profile])
 
@@ -166,10 +163,9 @@ export default function DashProfile() {
   // ── Phone validation ──────────────────────────────────────────
   function validatePhone(): boolean {
     if (!phoneNumber) return true
+    // Accept any international number in E.164 form: optional leading "+" then 8–15 digits.
     const digits = phoneNumber.replace(/\D/g, '')
-    if (countryCode === '+49') return digits.length === 10 || digits.length === 11
-    if (countryCode === '+212') return digits.length === 9
-    return false
+    return digits.length >= 8 && digits.length <= 15
   }
 
   // ── Save ──────────────────────────────────────────────────────
@@ -177,14 +173,15 @@ export default function DashProfile() {
     e.preventDefault()
     if (!ctx.user) return
     if (phoneNumber && !validatePhone()) {
-      setPhoneError(countryCode === '+49' ? tProf('whatsapp.errDe') : tProf('whatsapp.errMa'))
+      setPhoneError(tProf('whatsapp.errInvalid'))
       return
     }
     setPhoneError('')
     setSaveError('')
     setSaving(true)
 
-    const fullWhatsapp = phoneNumber ? `${countryCode}${phoneNumber}` : ''
+    // Store in E.164 form with a single leading "+".
+    const fullWhatsapp = phoneNumber ? `+${phoneNumber.replace(/\D/g, '')}` : ''
     const { data: saved, error } = await supabase
       .from('profiles')
       .upsert({
@@ -370,20 +367,13 @@ export default function DashProfile() {
           <label className="dashprof-field">
             <span>{tProf('whatsapp.label')}</span>
             <div className="dashprof-phone">
-              <select
-                value={countryCode}
-                onChange={e => { setCountryCode(e.target.value as '+49' | '+212'); setPhoneNumber(''); setPhoneError('') }}
-              >
-                <option value="+212">🇲🇦 +212</option>
-                <option value="+49">🇩🇪 +49</option>
-              </select>
               <input
                 type="tel"
                 value={phoneNumber}
-                onChange={e => { setPhoneNumber(e.target.value.replace(/\D/g, '')); setPhoneError('') }}
+                onChange={e => { setPhoneNumber(e.target.value.replace(/[^\d+\s]/g, '')); setPhoneError('') }}
                 className={phoneError ? 'has-error' : ''}
-                maxLength={countryCode === '+49' ? 11 : 9}
-                placeholder={countryCode === '+49' ? '1512345678' : '612345678'}
+                maxLength={20}
+                placeholder="+49 151 23456789"
               />
             </div>
             {phoneError && <p className="dashprof-err">{phoneError}</p>}
