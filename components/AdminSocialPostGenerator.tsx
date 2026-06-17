@@ -395,7 +395,7 @@ const TEMPLATE_CSS = `
 }
 `
 
-// Continuous "journey from Morocco to Germany" path threaded across the
+// Continuous "journey to Germany" path threaded across the
 // 5 carousel slides. Each path's left/right edge anchor matches the
 // previous/next slide so when posted as an Instagram swipe set the
 // dashed line visually flows from slide 1 to slide 5.

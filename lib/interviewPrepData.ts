@@ -37,7 +37,7 @@ export const QUESTIONS: Question[] = [
     isFree: true,
     questionDe: 'Erzählen Sie etwas über sich.',
     sampleAnswerDe:
-      'Mein Name ist [Vorname] [Nachname], ich bin [Alter] Jahre alt und komme aus Marokko. Ich habe mein Bac mit Schwerpunkt [Naturwissenschaften / Wirtschaft / etc.] abgeschlossen und in den letzten [X] Monaten intensiv Deutsch gelernt — aktuell bin ich auf dem Niveau [B1/B2]. Was mich an dieser Ausbildung als [Beruf] besonders reizt, ist [konkreter Aspekt: Kontakt mit Menschen / technische Tiefe / praktische Arbeit]. In meiner Freizeit [1 Hobby, das Eigeninitiative zeigt — Sport, Lesen, Programmieren]. Ich freue mich darauf, in Ihrem Unternehmen die Chance zu bekommen, Theorie und Praxis zu verbinden.',
+      'Mein Name ist [Vorname] [Nachname], ich bin [Alter] Jahre alt und komme aus [Heimatland]. Ich habe mein Bac mit Schwerpunkt [Naturwissenschaften / Wirtschaft / etc.] abgeschlossen und in den letzten [X] Monaten intensiv Deutsch gelernt — aktuell bin ich auf dem Niveau [B1/B2]. Was mich an dieser Ausbildung als [Beruf] besonders reizt, ist [konkreter Aspekt: Kontakt mit Menschen / technische Tiefe / praktische Arbeit]. In meiner Freizeit [1 Hobby, das Eigeninitiative zeigt — Sport, Lesen, Programmieren]. Ich freue mich darauf, in Ihrem Unternehmen die Chance zu bekommen, Theorie und Praxis zu verbinden.',
   },
   {
     id: 'why_us',
