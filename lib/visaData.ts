@@ -181,10 +181,16 @@ export const VISA_DATA: Record<VisaFlow, VisaFlowData> = {
   ausbildung: AUSBILDUNG,
 }
 
-/** Compute total in MAD (with EUR equivalent for display). */
+/** EUR amount for a cost line — uses the fixed EUR figure when present
+ *  (visa fee, Sperrkonto…), otherwise converts the MAD estimate. The
+ *  site is global, so EUR is the displayed anchor. */
+export function costEur(c: VisaCost): number {
+  return c.amountEur ?? Math.round(c.amountMad / 10.9)
+}
+
+/** Compute total in EUR (the displayed currency). */
 export function totalCost(flow: VisaFlow, includeOptional = false) {
   const items = VISA_DATA[flow].costs.filter(c => includeOptional || c.required)
-  const totalMad = items.reduce((s, c) => s + c.amountMad, 0)
-  const totalEur = Math.round(totalMad / 10.9)
-  return { totalMad, totalEur, items }
+  const totalEur = items.reduce((s, c) => s + costEur(c), 0)
+  return { totalEur, items }
 }

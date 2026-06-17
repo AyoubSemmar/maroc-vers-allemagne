@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton, { type ConsultTopic } from '@/components/BookConsultationButton'
-import { VISA_DATA, totalCost, type VisaFlow } from '@/lib/visaData'
+import { VISA_DATA, totalCost, costEur, type VisaFlow } from '@/lib/visaData'
 import './visa-guide.css'
 
 export default function VisaGuide({
@@ -18,7 +18,7 @@ export default function VisaGuide({
   const tShared = useTranslations('visaGuide.shared')
   const dir = dirFor(locale)
   const data = VISA_DATA[flow]
-  const { totalMad, totalEur } = totalCost(flow, false)
+  const { totalEur } = totalCost(flow, false)
   const topic: ConsultTopic = 'visa'
 
   return (
@@ -117,8 +117,7 @@ export default function VisaGuide({
                     {!cost.required && <small> · {tShared('optional')}</small>}
                   </span>
                   <span className="vg-cost-amount">
-                    {cost.amountEur ? <strong>{cost.amountEur} €</strong> : <strong>{cost.amountMad.toLocaleString()} MAD</strong>}
-                    {cost.amountEur && <small> ≈ {cost.amountMad.toLocaleString()} MAD</small>}
+                    <strong>{costEur(cost).toLocaleString()} €</strong>
                   </span>
                 </li>
               ))}
@@ -126,8 +125,7 @@ export default function VisaGuide({
             <div className="vg-cost-total">
               <span>{tShared('totalLabel')}</span>
               <span className="vg-cost-total-num">
-                <strong>{totalMad.toLocaleString()} MAD</strong>
-                <small> ≈ {totalEur.toLocaleString()} €</small>
+                <strong>{totalEur.toLocaleString()} €</strong>
               </span>
             </div>
             <p className="vg-cost-note">⚠️ {tShared('costsNote')}</p>
