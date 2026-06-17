@@ -1,16 +1,17 @@
-// Visa-procedure data for Moroccans. Two flows: Studium (national D-visa
-// under §16b AufenthG) and Ausbildung (national D-visa under §16a AufenthG).
+// Visa-procedure data for international applicants. Two flows: Studium
+// (national D-visa under §16b AufenthG) and Ausbildung (under §16a AufenthG).
 //
 // Sources cross-referenced 2026-04 (verify before quoting in production):
 //   • Auswärtiges Amt — Visa for studies / Berufsausbildung
-//   • Deutsche Botschaft Rabat / Generalkonsulat Casablanca
-//   • TLScontact Maroc (visa intake provider)
+//   • German missions worldwide + their visa-intake providers
+//     (TLScontact / VFS Global / iDATA, depending on country)
 //   • make-it-in-germany.com
-//   • Goethe-Institut Casablanca / Rabat
+//   • Goethe-Institut (test centres worldwide)
 //   • Fintiba / Expatrio / Coracle (Sperrkonto providers)
 //
-// Numbers are 2026 estimates rounded for clarity. The Eligibility-Checker /
-// Document-Checklist tools have the more precise per-document breakdowns.
+// Origin-country fees vary worldwide, so amounts are shown as rough EUR
+// estimates. The fixed German-side costs (visa fee, Sperrkonto) are exact.
+// The Eligibility-Checker / Document-Checklist tools have finer breakdowns.
 
 export type VisaFlow = 'studium' | 'ausbildung'
 
@@ -27,7 +28,7 @@ export type VisaDoc = {
   id: string
   /** Critical = blocker if missing. Important = strongly recommended. */
   importance: 'critical' | 'important' | 'recommended'
-  /** Whether the document needs apostille from Moroccan MAEC. */
+  /** Whether the document needs authentication (apostille or consular legalization, by country). */
   apostille?: boolean
   /** Whether the document needs sworn translation (assermentée) into German. */
   swornTranslation?: boolean
@@ -35,10 +36,18 @@ export type VisaDoc = {
 
 export type VisaCost = {
   id: string
-  amountMad: number   // approximate, MAD
-  amountEur?: number  // shown when the cost is fixed in EUR (e.g. visa fee)
+  amountMad: number   // base estimate in a single unit (≈ MAD), converted to EUR for display
+  amountEur?: number  // exact EUR when the cost is fixed in EUR (e.g. visa fee)
   /** Whether this cost is required (true) or only sometimes (false). */
   required: boolean
+}
+
+/** Divisor used to turn the base-unit estimate into a rough EUR figure. */
+export const MAD_PER_EUR = 10.9
+
+/** EUR figure to show for a cost: exact when fixed in EUR, else converted. */
+export function eurOf(c: VisaCost): number {
+  return c.amountEur ?? Math.round(c.amountMad / MAD_PER_EUR)
 }
 
 export type VisaRejection = {
@@ -181,10 +190,9 @@ export const VISA_DATA: Record<VisaFlow, VisaFlowData> = {
   ausbildung: AUSBILDUNG,
 }
 
-/** Compute total in MAD (with EUR equivalent for display). */
+/** Compute the rough EUR total for a flow (sum of per-item EUR estimates). */
 export function totalCost(flow: VisaFlow, includeOptional = false) {
   const items = VISA_DATA[flow].costs.filter(c => includeOptional || c.required)
-  const totalMad = items.reduce((s, c) => s + c.amountMad, 0)
-  const totalEur = Math.round(totalMad / 10.9)
-  return { totalMad, totalEur, items }
+  const totalEur = items.reduce((s, c) => s + eurOf(c), 0)
+  return { totalEur, items }
 }
