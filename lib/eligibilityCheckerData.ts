@@ -3,8 +3,13 @@
 // Sources cross-checked Q1 2026:
 // - German Residence Act (AufenthG) §16a (Ausbildung) and §16b (Studium)
 // - BAMF criteria 2025 for non-EU applicants
-// - APS Rabat requirements for Moroccan students
+// - APS requirement is country-dependent (China, India, Vietnam,
+//   Pakistan, … — NOT every country), so it's gated on the applicant's
+//   country via the shared COUNTRIES table.
 // - Anabin database categorisation (H+, H-, H+/-)
+
+import { COUNTRIES, type CountryKey } from './documentChecklistData'
+export type { CountryKey }
 
 export type PathKey = 'ausbildung' | 'studium'
 export type StudiumGoal = 'bachelor' | 'master'  // only relevant for studium
@@ -13,6 +18,7 @@ export type GermanLevel = 'A0' | 'A1' | 'A2' | 'B1' | 'B2' | 'C1'
 export type FinancialKey = 'sperrkonto' | 'sponsor' | 'salary_covers' | 'family_support' | 'need_help'
 
 export type EligibilityInput = {
+  country: CountryKey
   path: PathKey
   age: number
   education: EducationKey
@@ -164,7 +170,12 @@ const RULES: Rule[] = [
     blocker: true,
     weight: 3,
     appliesTo: ['studium'],
-    evaluate: ({ hasAps }) => {
+    evaluate: ({ hasAps, country }) => {
+      // APS is only required for some countries (China, India, Vietnam,
+      // Pakistan, …). For everyone else the rule doesn't apply at all —
+      // returning 'na' drops it from the results instead of wrongly
+      // blocking the applicant.
+      if (!COUNTRIES[country]?.apsRequired) return { status: 'na', explainKey: '' }
       if (hasAps) return { status: 'pass', explainKey: 'aps_studium.have' }
       return { status: 'fail', explainKey: 'aps_studium.missing' }
     },

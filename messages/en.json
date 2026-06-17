@@ -3941,7 +3941,7 @@
   "eligibilityChecker": {
     "seoSection": {
       "title": "Why a 60-second eligibility check matters before you book a consulate appointment",
-      "intro": "This Ausbildung & Studium eligibility checker tells you in 60 seconds whether your current profile qualifies for a German visa from Morocco — and exactly what you need to fix if not. It works for both apprenticeship (Ausbildung) and university (Studium) routes, applying the actual 2026 German consulate rules used in Rabat and Casablanca: minimum German level (B1 for Ausbildung, B2/C1 for Studium), recognised diploma, signed contract or admission letter, financial proof (Sperrkonto, salary, or sponsor), and proof of housing.\n\nMost rejected visa applications fail on a single missable detail — language proof not accepted, contract not yet signed, Sperrkonto below the 2026 threshold of €11,904. The checker catches these before you spend money on a consulate appointment. The result page shows a clear green/orange/red verdict, the specific blockers in your profile, and the next concrete step for each one. It does not replace a real assessment by a specialist; for borderline cases or unusual profiles (gap year, prior visa refusal, dual citizenship), book a 30-minute consultation.",
+      "intro": "This Ausbildung & Studium eligibility checker tells you in 60 seconds whether your current profile qualifies for a German visa — and exactly what you need to fix if not. It works for both apprenticeship (Ausbildung) and university (Studium) routes, applying the actual 2026 German consulate rules: minimum German level (B1 for Ausbildung, B2/C1 for Studium), recognised diploma, signed contract or admission letter, financial proof (Sperrkonto, salary, or sponsor), and proof of housing.\n\nMost rejected visa applications fail on a single missable detail — language proof not accepted, contract not yet signed, Sperrkonto below the 2026 threshold of €11,904. The checker catches these before you spend money on a consulate appointment. The result page shows a clear green/orange/red verdict, the specific blockers in your profile, and the next concrete step for each one. It does not replace a real assessment by a specialist; for borderline cases or unusual profiles (gap year, prior visa refusal, dual citizenship), book a 30-minute consultation.",
       "faqTitle": "Common questions about the eligibility check",
       "faqs": [
         {
@@ -3958,8 +3958,8 @@
         }
       ]
     },
-    "metaTitle": "Visa Eligibility Checker — Morocco to Germany",
-    "metaDesc": "Check your eligibility for the German Ausbildung or Studium visa as a international applicant — readiness score, blockers, and personalised next steps.",
+    "metaTitle": "Visa Eligibility Checker — Move to Germany",
+    "metaDesc": "Check your eligibility for a German Ausbildung or Studium visa — readiness score, blockers and personalised next steps, for applicants from any country.",
     "eyebrow": "Visa eligibility",
     "title": "Visa Eligibility Checker",
     "subtitle": "Find out exactly where you stand for the German Ausbildung or Studium visa as a international applicant — what blocks you today and what unlocks the visa.",
@@ -3976,13 +3976,13 @@
     "hasAdmissionTitle": "I have a Zulassung from a German university",
     "hasAdmissionHint": "Final or conditional admission letter (Zulassung / Bedingungszulassung).",
     "hasApsTitle": "I have my APS certificate",
-    "hasApsHint": "Mandatory for Moroccan Studium applicants. Issued by APS Rabat.",
+    "hasApsHint": "Required only for some countries (China, India, Vietnam, Pakistan…). Issued by the APS office for your country.",
     "englishProgramTitle": "My target program is taught in English",
     "englishProgramHint": "Some Master programs are 100% English. Relaxes the German level requirement.",
     "financialLabel": "Financial proof",
     "passportTitle": "My passport is valid for 12+ months",
     "passportHint": "Required at the time of visa interview.",
-    "cleanRecordTitle": "My police record (Bulletin n°3) is clean",
+    "cleanRecordTitle": "My police record is clean",
     "cleanRecordHint": "No serious criminal convictions.",
     "overall": {
       "eligible": "You're eligible ✅",
@@ -4022,7 +4022,7 @@
       "sperrkonto": "Sperrkonto (€11,904 ready)",
       "sponsor": "Sponsor in Germany (Verpflichtungserklärung)",
       "salary_covers": "My Ausbildung salary covers my costs",
-      "family_support": "Family will support me from Morocco",
+      "family_support": "Family will support me from my home country",
       "need_help": "I don't have a financial plan yet"
     },
     "rules": {
@@ -4051,7 +4051,7 @@
         "title": "University admission (Zulassung)"
       },
       "aps_studium": {
-        "title": "APS certificate (Rabat)"
+        "title": "APS certificate"
       },
       "financial_proof": {
         "title": "Financial proof"
@@ -4070,8 +4070,8 @@
       "german_level_ausbildung": {
         "b2_strong": "B2 is well above the legal B1 minimum. You'll have a clear advantage in interviews and the visa officer's first read. No further German action needed for the visa step.",
         "b1_min": "B1 is the legal minimum for the Ausbildung visa — you're cleared. To stand out in interviews, working toward B2 in your free time pays off; most employers prefer it.",
-        "a2_close": "A2 is one CEFR level below the B1 minimum. Plan 4–6 months of intensive German (4h/day at Goethe Institut Casablanca/Rabat or a telc-licensed school) to reach B1 and become visa-eligible.",
-        "below": "B1 is the legal minimum for the Ausbildung visa. Realistic plan: 4–6 months of intensive study per CEFR level (Goethe Institut Casablanca/Rabat, telc-licensed schools, or online), so 8–14 months from A0/A1 to B1. Intensive courses (4 hours/day) get you there fastest."
+        "a2_close": "A2 is one CEFR level below the B1 minimum. Plan 4–6 months of intensive German (4h/day at a Goethe-Institut or telc-licensed school) to reach B1 and become visa-eligible.",
+        "below": "B1 is the legal minimum for the Ausbildung visa. Realistic plan: 4–6 months of intensive study per CEFR level (a Goethe-Institut, telc-licensed school, or online), so 8–14 months from A0/A1 to B1. Intensive courses (4 hours/day) get you there fastest."
       },
       "german_level_studium": {
         "c1_strong": "C1 covers every German university requirement, including TestDaF and DSH-2. You are fully set on the language front.",
@@ -4091,8 +4091,8 @@
       },
       "education_studium_master": {
         "licence_ok": "Your Licence (Bac+3) or Master (Bac+5) is the right starting level for a German Master program. Check Anabin to confirm your home university is listed as H+ (recognised).",
-        "bac_plus_2": "Bac+2 is below the German Master standard (180 ECTS / 3-year Licence). Either complete a 3rd year of Licence in Morocco, or apply for Bachelor entry in Germany with credit recognition for what you have already done.",
-        "below": "A 3-year Licence (Bac+3, 180 ECTS) is the minimum for German Master admission. Path forward: complete your Licence in Morocco, or do a Bachelor in Germany first."
+        "bac_plus_2": "Bac+2 is below the German Master standard (180 ECTS / 3-year Licence). Either complete a 3rd year of your degree in your home country, or apply for Bachelor entry in Germany with credit recognition for what you have already done.",
+        "below": "A 3-year Licence (Bac+3, 180 ECTS) is the minimum for German Master admission. Path forward: complete your degree in your home country, or do a Bachelor in Germany first."
       },
       "bac_grade_studium": {
         "tres_bien": "Bac average ≥ 14/20 (mention 'Bien' or 'Très Bien') qualifies you for direct Bachelor admission in Germany. Strongest asset for your application file.",
@@ -4110,7 +4110,7 @@
       },
       "aps_studium": {
         "have": "APS certificate is in hand — the most time-consuming Studium step is done.",
-        "missing": "APS is mandatory for Moroccan Studium applicants. Apply now at the German Embassy in Rabat — processing takes 6–8 weeks and blocks every other Studium step. Bring all your transcripts since the Bac."
+        "missing": "APS is required for applicants from some countries (China, India, Vietnam, Pakistan…). Apply at the APS office for your country — processing takes 6–20 weeks and blocks every other Studium step. Bring all your transcripts since secondary school."
       },
       "financial_proof": {
         "sperrkonto": "Sperrkonto is the gold standard. Most international applicants use Fintiba, Expatrio, or Coracle (€89 setup + €11,904 deposit). The deposit is returned to you in 12 monthly instalments after arrival — it is not a fee.",
@@ -4123,10 +4123,10 @@
       },
       "passport": {
         "valid": "Your passport meets the validity requirement. Make sure it stays valid for at least 6 months past your visa expiry — most embassies require this.",
-        "expiring": "Your passport must be valid for at least 12 months at the time of your visa appointment. Renew at your local Préfecture in Morocco — typically takes 2–4 weeks. Plan ahead."
+        "expiring": "Your passport must be valid for at least 12 months at the time of your visa appointment. Renew with your country's passport authority — plan ahead, it can take weeks."
       },
       "clean_record": {
-        "clean": "Clean Bulletin n°3 — no issue. The Moroccan version takes 3–7 days to obtain, and it must be issued within 3 months of your visa appointment.",
+        "clean": "A clean police-clearance certificate is fine. It usually takes a few days to a few weeks to obtain and must be issued within 3 months of your visa appointment.",
         "case_by_case": "Each case is reviewed individually. Minor traffic offenses or old fines are usually fine. Serious convictions (violence, drugs, fraud) can block the visa — book a confidential consultation before applying."
       },
       "age_ausbildung": {
@@ -4135,7 +4135,8 @@
         "older": "36–40 is possible but more selective. Target sectors that value experience: healthcare (Pflegefachmann/frau), retail management, hospitality, and skilled trades. Your professional experience matters more than your age here.",
         "much_older": "Possible but rare. Best sectors at 40+: healthcare (Pflegefachmann/frau especially welcomed), gastronomy, and skilled trades where employers value mature, reliable workers. Position your CV around your professional experience, not the academic angle."
       }
-    }
+    },
+    "countryLabel": "Your country"
   },
   "interviewPrep": {
     "eyebrow": "Interview prep",

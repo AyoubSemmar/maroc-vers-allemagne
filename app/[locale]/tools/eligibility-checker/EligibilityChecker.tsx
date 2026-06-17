@@ -15,6 +15,7 @@ import {
   type PathKey,
   type StudiumGoal,
 } from '@/lib/eligibilityCheckerData'
+import { COUNTRIES, COUNTRY_ORDER, type CountryKey } from '@/lib/documentChecklistData'
 import './eligibility-checker.css'
 
 const PATHS: PathKey[] = ['ausbildung', 'studium']
@@ -34,6 +35,7 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
   const t = useTranslations('eligibilityChecker')
   const dir = dirFor(locale)
 
+  const [country, setCountry] = useState<CountryKey>('ma')
   const [path, setPath] = useState<PathKey>('ausbildung')
   const [age, setAge] = useState(22)
   const [education, setEducation] = useState<EducationKey>('bac')
@@ -49,12 +51,14 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
   const [cleanRecord, setCleanRecord] = useState(true)
 
   const input: EligibilityInput = {
-    path, age, education, germanLevel, studiumGoal, hasContract, hasAdmission, hasAps,
+    country, path, age, education, germanLevel, studiumGoal, hasContract, hasAdmission, hasAps,
     bacAverage, englishTaughtProgram, financial, passportValid12mo, cleanRecord,
   }
   const result = useMemo(() => evaluate(input),
-    [path, age, education, germanLevel, studiumGoal, hasContract, hasAdmission, hasAps,
+    [country, path, age, education, germanLevel, studiumGoal, hasContract, hasAdmission, hasAps,
       bacAverage, englishTaughtProgram, financial, passportValid12mo, cleanRecord])
+
+  const apsNeeded = COUNTRIES[country]?.apsRequired ?? false
 
   const overallText = result.overall === 'eligible' ? t('overall.eligible')
     : result.overall === 'conditional' ? t('overall.conditional')
@@ -79,6 +83,16 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
           {/* ── FORM ─────────────────────────────────────── */}
           <section className="ec-form-card">
             <h2 className="ec-section-title">{t('formTitle')}</h2>
+
+            {/* Country */}
+            <div className="ec-field">
+              <label className="ec-label">🌍 {t('countryLabel')}</label>
+              <select className="ec-select" value={country} onChange={e => setCountry(e.target.value as CountryKey)}>
+                {COUNTRY_ORDER.map(c => (
+                  <option key={c} value={c}>{COUNTRIES[c].flag} {COUNTRIES[c].name[locale]}</option>
+                ))}
+              </select>
+            </div>
 
             {/* Path */}
             <div className="ec-field">
@@ -174,14 +188,16 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
                     <span className="ec-toggle-sub">{t('hasAdmissionHint')}</span>
                   </span>
                 </label>
-                <label className="ec-toggle">
-                  <input type="checkbox" checked={hasAps} onChange={e => setHasAps(e.target.checked)} />
-                  <span className="ec-toggle-track" aria-hidden />
-                  <span className="ec-toggle-text">
-                    <span className="ec-toggle-title">{t('hasApsTitle')}</span>
-                    <span className="ec-toggle-sub">{t('hasApsHint')}</span>
-                  </span>
-                </label>
+                {apsNeeded && (
+                  <label className="ec-toggle">
+                    <input type="checkbox" checked={hasAps} onChange={e => setHasAps(e.target.checked)} />
+                    <span className="ec-toggle-track" aria-hidden />
+                    <span className="ec-toggle-text">
+                      <span className="ec-toggle-title">{t('hasApsTitle')}</span>
+                      <span className="ec-toggle-sub">{t('hasApsHint')}</span>
+                    </span>
+                  </label>
+                )}
                 <label className="ec-toggle">
                   <input type="checkbox" checked={englishTaughtProgram} onChange={e => setEnglishTaughtProgram(e.target.checked)} />
                   <span className="ec-toggle-track" aria-hidden />
