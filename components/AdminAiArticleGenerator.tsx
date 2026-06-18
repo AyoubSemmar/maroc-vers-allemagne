@@ -32,7 +32,7 @@ type Draft = {
 }
 
 const LANG_LABEL: Record<Lang, string> = {
-  ar: '🌍 العربية',
+  ar: '🇸🇦 العربية',
   fr: '🇫🇷 Français',
   en: '🇬🇧 English',
   de: '🇩🇪 Deutsch',
