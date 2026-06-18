@@ -39,7 +39,7 @@ export async function generateMetadata({
 
   const article: any = localizeRow(row as any, locale)
   const title       = `${article.title} — GoGermany`
-  const description = (article.summary as string)?.slice(0, 158) || `Read on GoGermany — guides for Moroccans moving to Germany.`
+  const description = (article.summary as string)?.slice(0, 158) || `Read on GoGermany — guides for moving to Germany.`
   const canonical   = `${SITE_URL}/${locale}/articles/${id}`
   const image       = article.image_url || `${SITE_URL}/opengraph-image`
 

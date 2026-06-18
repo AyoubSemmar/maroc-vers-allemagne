@@ -78,7 +78,7 @@ export const READING_SPECS: Record<ReadingLevel, ReadingLevelSpec> = {
       'B1 (Goethe-Zertifikat B1). Full Präteritum/Perfekt/Plusquamperfekt, Konjunktiv II for polite requests and wishes, simple Passiv. Connectors: obwohl, deshalb, trotzdem, falls. Express opinions, give reasons, narrate experiences. ~2700 words vocabulary.',
     topics: [
       'social media and its effect on young Germans',
-      'a young Moroccan adapting to life in Cologne',
+      'a young newcomer adapting to life in Cologne',
       'why Germans love public libraries',
       'opinion: city versus countryside',
       'the rise of cycling in German cities',
@@ -87,7 +87,7 @@ export const READING_SPECS: Record<ReadingLevel, ReadingLevelSpec> = {
       'health benefits of regular sport',
       'a controversy about smartphones in school',
       'the role of festivals in German culture',
-      'cultural surprises for a Moroccan in Germany',
+      'cultural surprises for a newcomer in Germany',
       'the importance of learning a foreign language',
       'why Berufsschule is unique to Germany',
       'a personal story of overcoming a setback',

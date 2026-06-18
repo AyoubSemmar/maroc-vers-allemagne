@@ -39,7 +39,7 @@ function buildPrompt(level: ReadingLevel, locale: string, topic: string): string
   const spec = READING_SPECS[level]
   const localeName = { en: 'English', fr: 'French', ar: 'Arabic', de: 'German' }[locale as 'en' | 'fr' | 'ar' | 'de'] || 'English'
 
-  return `You are a German language teacher creating a daily reading-comprehension exercise for ${level} learners (Moroccan audience).
+  return `You are a German language teacher creating a daily reading-comprehension exercise for ${level} learners (international audience).
 
 LEVEL RULES:
 ${spec.rubric}

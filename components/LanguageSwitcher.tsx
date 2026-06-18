@@ -12,7 +12,7 @@ type LocaleOption = {
 }
 
 export const LOCALE_OPTIONS: LocaleOption[] = [
-  { code: 'ar', label: 'العربية', flag: '🇲🇦' },
+  { code: 'ar', label: 'العربية', flag: '🌍' },
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },

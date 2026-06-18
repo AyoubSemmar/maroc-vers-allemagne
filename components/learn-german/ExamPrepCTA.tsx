@@ -35,7 +35,7 @@ export default function ExamPrepCTA({ compact = false }: { compact?: boolean }) 
           <span className="epc-pill">🎓 Goethe-Zertifikat B1</span>
           <span className="epc-pill">🎓 Goethe-Zertifikat B2</span>
           <span className="epc-pill">📜 telc Deutsch B1 / B2</span>
-          <span className="epc-pill">🇲🇦 Casablanca / Rabat</span>
+          <span className="epc-pill">🌍 Goethe-Institut worldwide</span>
         </div>
       </div>
       <div className="epc-cta">

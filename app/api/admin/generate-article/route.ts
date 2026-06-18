@@ -38,7 +38,7 @@ const CATEGORIES = [
 // English label for each category — used in the image prompt and to
 // give the model an unambiguous handle when picking the topic.
 const CATEGORY_EN: Record<string, string> = {
-  'البنوك':              'banking in Germany for Moroccans',
+  'البنوك':              'banking in Germany for international newcomers',
   'شرائح الاتصال':       'mobile sim cards and internet in Germany',
   'السكن':               'finding housing and apartments in Germany',
   'الجامعات':            'German universities and student admission',
@@ -79,13 +79,13 @@ function buildPrompt(category: string, categoryEn: string, existingTitles: strin
     ? `\n\nExisting article titles in this category (DO NOT duplicate, pick a different angle):\n${existingTitles.map(t => '- ' + t).slice(0, 40).join('\n')}`
     : ''
 
-  return `You are a senior bilingual editor for gogermany.ma — a site that helps Moroccans move to Germany. Write ONE original, useful, SEO-friendly article in ARABIC ONLY. Translations are handled by a separate step — DO NOT translate.
+  return `You are a senior bilingual editor for gogermany.ma — a site that helps people from any country move to Germany. Write ONE original, useful, SEO-friendly article in ARABIC ONLY. Translations are handled by a separate step — DO NOT translate.
 
 Category: ${category} (${categoryEn})
 
 ⚠ CRITICAL: The article's TOPIC must clearly belong to this category. If the category is "السكن" (housing), do NOT write about taxes or jobs — even tangentially. Stay tightly on-topic so admins filtering by category get relevant results. The category in the output is fixed by the system; your job is to make sure the CONTENT matches it.
 
-Audience: Moroccan readers (Darija/Arabic-first), often young, planning Ausbildung, university, work, or family migration to Germany. They care about practical steps, real costs, paperwork, deadlines, and avoiding scams.
+Audience: international readers (Arabic-first for this draft), often young, planning Ausbildung, university, work, or family migration to Germany from anywhere in the world. They care about practical steps, real costs, paperwork, deadlines, and avoiding scams. Keep guidance country-agnostic — note when something (e.g. apostille vs consular legalization, or APS) depends on the reader's country rather than assuming one.
 
 Quality bar:
 - Specific, actionable, NOT generic. Mention concrete agencies, websites, costs in EUR, document names, typical timelines.

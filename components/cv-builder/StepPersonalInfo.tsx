@@ -73,7 +73,7 @@ export default function StepPersonalInfo({ data, update }: Props) {
         </Field>
         <Field label={t('nationality')} de="Nationalität">
           <input className="rihla-cvb-input" value={p.nationality} onChange={e => set('nationality', e.target.value)}
-            placeholder="Marokkanisch" />
+            placeholder="Nationalität" />
         </Field>
         <Field label={t('dob')} de="Geburtsdatum">
           <input type="date" className="rihla-cvb-input" value={p.dateOfBirth} onChange={e => set('dateOfBirth', e.target.value)} />
