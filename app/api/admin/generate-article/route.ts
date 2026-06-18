@@ -56,7 +56,7 @@ type Draft = {
   content: string
   faqs: { q: string; a: string }[]
   // Other languages packed into the translations JSONB
-  translations: Record<'fr' | 'en' | 'de', {
+  translations: Record<'fr' | 'en' | 'de' | 'es', {
     title: string
     summary: string
     content: string
@@ -200,6 +200,7 @@ export async function POST(req: NextRequest) {
         fr: { title: '', summary: '', content: '', faqs: [] },
         en: { title: '', summary: '', content: '', faqs: [] },
         de: { title: '', summary: '', content: '', faqs: [] },
+        es: { title: '', summary: '', content: '', faqs: [] },
       },
       image_url: '',
       image_prompt_used: String(parsed.image_prompt || `${categoryEn}, Germany`),

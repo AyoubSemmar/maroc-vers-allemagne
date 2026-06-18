@@ -23,6 +23,10 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'GoGermany kontaktieren — Fragen und Beratungen',
     desc: 'Kontaktiere das GoGermany-Team. Buche eine 1-zu-1-Beratung, stelle Fragen zum Umzug nach Deutschland, oder schreib uns per E-Mail.',
   },
+  es: {
+    title: 'Contacta GoGermany — preguntas y consultas',
+    desc: 'Contacta al equipo de GoGermany. Reserva una consulta individual, pregunta sobre cómo mudarte a Alemania, o escríbenos por email.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

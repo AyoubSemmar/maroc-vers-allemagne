@@ -57,7 +57,8 @@ Shape:
     "exercise": { "questions": [...] }
   },
   "en": { ... same shape ... },
-  "de": { ... same shape ... }
+  "de": { ... same shape ... },
+  "es": { ... same shape ... }
 }`
 }
 
@@ -93,7 +94,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Translator returned malformed JSON.' }, { status: 502 })
     }
 
-    for (const lang of ['fr', 'en', 'de'] as const) {
+    for (const lang of ['fr', 'en', 'de', 'es'] as const) {
       if (!parsed[lang] || !parsed[lang].title) {
         return NextResponse.json({ error: `translator omitted "${lang}"` }, { status: 502 })
       }

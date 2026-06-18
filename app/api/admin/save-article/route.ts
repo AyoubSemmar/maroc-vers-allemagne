@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
     // to omit the slot entirely and let the fallback handle it.
     const cleanTranslations: Record<string, any> = {}
     if (d.translations && typeof d.translations === 'object') {
-      for (const lang of ['fr', 'en', 'de'] as const) {
+      for (const lang of ['fr', 'en', 'de', 'es'] as const) {
         const t = d.translations[lang]
         if (t && t.title && t.content) {
           cleanTranslations[lang] = t
@@ -98,7 +98,7 @@ export async function POST(req: NextRequest) {
     revalidatePath('/console-x7k9/content')
     revalidatePath('/articles')
     revalidatePath(`/articles/${data.id}`)
-    for (const l of ['ar', 'fr', 'en', 'de']) {
+    for (const l of ['ar', 'fr', 'en', 'de', 'es']) {
       revalidatePath(`/${l}/articles`)
       revalidatePath(`/${l}/articles/${data.id}`)
     }

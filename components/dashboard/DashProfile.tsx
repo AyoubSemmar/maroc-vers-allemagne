@@ -24,7 +24,7 @@ const STATUS_IN_DE = 'في ألمانيا'
 const STATUS_COMING = 'أحاول القدوم'
 
 const LOCALE_TO_INTL: Record<AppLocale, string> = {
-  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
+  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES',
 }
 function formatDate(iso: string, locale: AppLocale) {
   return new Date(iso).toLocaleDateString(LOCALE_TO_INTL[locale], {

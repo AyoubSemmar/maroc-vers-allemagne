@@ -17,7 +17,7 @@ type Article = {
 }
 
 const LOCALE_TO_INTL: Record<AppLocale, string> = {
-  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
+  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES',
 }
 
 export default function ArticlesClient({ articles }: { articles: Article[] }) {

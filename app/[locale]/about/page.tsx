@@ -26,6 +26,10 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Über GoGermany — Dein Weg nach Deutschland',
     desc: 'Lerne das Team und die Mission von GoGermany kennen: Menschen beim Umzug nach Deutschland für Studium, Ausbildung und Arbeit unterstützen.',
   },
+  es: {
+    title: 'Sobre GoGermany — tu puente hacia Alemania',
+    desc: 'Conoce al equipo y la misión de GoGermany: ayudar a personas de cualquier país a mudarse a Alemania para estudiar, hacer Ausbildung o trabajar.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

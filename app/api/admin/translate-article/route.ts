@@ -47,7 +47,8 @@ Return ONLY a JSON object, no commentary:
     "faqs": [{"q":"...","a":"..."}, ...]
   },
   "en": { "title":"", "summary":"", "content":"", "faqs":[{"q":"","a":""}] },
-  "de": { "title":"", "summary":"", "content":"", "faqs":[{"q":"","a":""}] }
+  "de": { "title":"", "summary":"", "content":"", "faqs":[{"q":"","a":""}] },
+  "es": { "title":"", "summary":"", "content":"", "faqs":[{"q":"","a":""}] }
 }`
 }
 
@@ -94,7 +95,7 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    for (const lang of ['fr', 'en', 'de'] as const) {
+    for (const lang of ['fr', 'en', 'de', 'es'] as const) {
       const t = parsed[lang]
       if (!t || !t.title || !t.content) {
         return NextResponse.json({ error: `Translator omitted ${lang}.` }, { status: 502 })
@@ -102,7 +103,7 @@ export async function POST(req: NextRequest) {
     }
 
     return NextResponse.json({
-      translations: { fr: parsed.fr, en: parsed.en, de: parsed.de },
+      translations: { fr: parsed.fr, en: parsed.en, de: parsed.de, es: parsed.es },
       elapsedMs: Date.now() - tStart,
     })
   } catch (e: any) {

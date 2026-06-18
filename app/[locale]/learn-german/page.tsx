@@ -25,6 +25,10 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Deutsch lernen kostenlos — A1 bis C1 | GoGermany',
     desc: 'Kostenlose interaktive Deutschkurse von A1 bis C1, für internationale Lernende mit Ziel Deutschland. KI-gestützte Lese- und Schreibübungen.',
   },
+  es: {
+    title: 'Aprende alemán gratis — A1 a C1 | GoGermany',
+    desc: 'Lecciones interactivas de alemán gratuitas de A1 a C1, diseñadas para personas que van a Alemania. Ejercicios de lectura y escritura con IA.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {

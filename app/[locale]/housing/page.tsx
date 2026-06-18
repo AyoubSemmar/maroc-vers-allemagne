@@ -23,6 +23,10 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Wohnen in Deutschland — praktischer Guide',
     desc: 'Wie findest du eine Wohnung in Deutschland: Suchportale, benötigte Unterlagen, WG vs Studio, realistische Mieten pro Stadt, häufige Fallen.',
   },
+  es: {
+    title: 'Vivienda en Alemania — guía práctica',
+    desc: 'Cómo encontrar alojamiento en Alemania: portales de búsqueda, documentos necesarios, WG vs estudio, alquileres reales por ciudad y errores frecuentes.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

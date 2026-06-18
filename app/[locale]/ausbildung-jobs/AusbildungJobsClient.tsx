@@ -15,7 +15,7 @@ type Props = {
   lastUpdated?: string | null
 }
 
-const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE' }
+const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES' }
 
 export default function AusbildungJobsClient({ jobs, lastUpdated }: Props) {
   const t = useTranslations('ausbJobs')

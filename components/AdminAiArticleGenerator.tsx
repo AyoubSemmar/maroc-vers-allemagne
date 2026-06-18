@@ -15,7 +15,7 @@
 
 import { useState } from 'react'
 
-type Lang = 'ar' | 'fr' | 'en' | 'de'
+type Lang = 'ar' | 'fr' | 'en' | 'de' | 'es'
 type Faq = { q: string; a: string }
 type Translation = { title: string; summary: string; content: string; faqs: Faq[] }
 
@@ -26,7 +26,7 @@ type Draft = {
   summary: string
   content: string
   faqs: Faq[]
-  translations: Record<'fr' | 'en' | 'de', Translation>
+  translations: Record<'fr' | 'en' | 'de' | 'es', Translation>
   image_url: string
   image_prompt_used: string
 }
@@ -36,6 +36,7 @@ const LANG_LABEL: Record<Lang, string> = {
   fr: '🇫🇷 Français',
   en: '🇬🇧 English',
   de: '🇩🇪 Deutsch',
+  es: '🇪🇸 Español',
 }
 
 export default function AdminAiArticleGenerator() {

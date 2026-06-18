@@ -23,6 +23,10 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Nützliche Links — offizielle deutsche Seiten',
     desc: 'Kuratierte Liste wichtiger offizieller deutscher Seiten für den Umzug nach Deutschland: Universitäten, Ausbildung, Visum, Wohnen, Banken, Deutschlernen.',
   },
+  es: {
+    title: 'Enlaces útiles — sitios oficiales de Alemania',
+    desc: 'Lista curada de sitios oficiales alemanes esenciales para mudarse a Alemania: universidades, Ausbildung, visado, vivienda, bancos y aprendizaje del idioma.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

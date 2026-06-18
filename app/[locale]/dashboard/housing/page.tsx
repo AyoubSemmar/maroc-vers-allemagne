@@ -11,7 +11,7 @@ import { CITIES_AR, cityLabel } from '@/lib/germanCities'
 const cities = CITIES_AR
 
 const LOCALE_TO_INTL: Record<AppLocale, string> = {
-  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE',
+  ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES',
 }
 
 function formatExpiry(dateStr: string, locale: AppLocale) {
