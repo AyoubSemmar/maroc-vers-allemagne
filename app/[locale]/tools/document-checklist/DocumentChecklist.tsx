@@ -21,25 +21,33 @@ import {
 } from '@/lib/documentChecklistData'
 import './document-checklist.css'
 
-const PATHS: PathKey[] = ['ausbildung', 'studium']
+const PATHS: PathKey[] = ['ausbildung', 'studium', 'tourist', 'family_reunification']
 const EDUCATIONS: EducationKey[] = ['bac', 'bac_plus_2', 'bac_plus_3', 'bac_plus_5']
 const FAMILIES: FamilyKey[] = ['single', 'married', 'married_kids']
 
-const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓' }
+const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓', tourist: '✈️', family_reunification: '👨‍👩‍👧' }
 
 const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU' }
 
 const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
 const COUNTRY_KEY = 'gogermany.documentChecklist.country.v1'
 
-export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
+export default function DocumentChecklist({
+  locale,
+  initialCountry,
+  initialPath,
+}: {
+  locale: AppLocale
+  initialCountry?: CountryKey
+  initialPath?: PathKey
+}) {
   const t = useTranslations('documentChecklist')
   const dir = dirFor(locale)
   const fmt = useMemo(() => new Intl.NumberFormat(INTL[locale], { maximumFractionDigits: 0 }), [locale])
 
   // ── Inputs ────────────────────────────────────────────────
-  const [country, setCountry] = useState<CountryKey>('ma')
-  const [path, setPath] = useState<PathKey>('ausbildung')
+  const [country, setCountry] = useState<CountryKey>(initialCountry ?? 'ma')
+  const [path, setPath] = useState<PathKey>(initialPath ?? 'ausbildung')
   const [education, setEducation] = useState<EducationKey>('bac')
   const [family, setFamily] = useState<FamilyKey>('single')
   const [vorab, setVorab] = useState(false)
@@ -176,16 +184,18 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
               </label>
             )}
 
-            <label className="dcl-toggle">
-              <input type="checkbox" checked={hasGermanCert} onChange={e => setHasGermanCert(e.target.checked)} />
-              <span className="dcl-toggle-track" aria-hidden />
-              <span className="dcl-toggle-text">
-                <span className="dcl-toggle-title">{t('germanCertTitle')}</span>
-                <span className="dcl-toggle-sub">{t('germanCertHint')}</span>
-              </span>
-            </label>
+            {(path === 'ausbildung' || path === 'studium') && (
+              <label className="dcl-toggle">
+                <input type="checkbox" checked={hasGermanCert} onChange={e => setHasGermanCert(e.target.checked)} />
+                <span className="dcl-toggle-track" aria-hidden />
+                <span className="dcl-toggle-text">
+                  <span className="dcl-toggle-title">{t('germanCertTitle')}</span>
+                  <span className="dcl-toggle-sub">{t('germanCertHint')}</span>
+                </span>
+              </label>
+            )}
 
-            {family !== 'single' && (
+            {(path === 'ausbildung' || path === 'studium') && family !== 'single' && (
               <label className="dcl-toggle">
                 <input type="checkbox" checked={bringFamily} onChange={e => setBringFamily(e.target.checked)} />
                 <span className="dcl-toggle-track" aria-hidden />
@@ -199,40 +209,54 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
 
           {/* ── SUMMARY ──────────────────────────────────── */}
           <section className="dcl-summary-card">
-            <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
-            <h2 className="dcl-summary-total">{result.totalDocs} {t('documents')}</h2>
-            <p className="dcl-summary-sub">
-              {t('summarySubCountry', { path: t(`path.${path}`), country: rule.name[locale] })}
-            </p>
+            {result.noVisaRequired ? (
+              <>
+                <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
+                <h2 className="dcl-summary-total dcl-no-visa-title">✅ {t('noVisaRequired')}</h2>
+                <p className="dcl-summary-sub">{t('noVisaDesc', { country: rule.name[locale], path: t(`path.${path}`) })}</p>
+              </>
+            ) : (
+              <>
+                <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
+                <h2 className="dcl-summary-total">{result.totalDocs} {t('documents')}</h2>
+                <p className="dcl-summary-sub">
+                  {t('summarySubCountry', { path: t(`path.${path}`), country: rule.name[locale] })}
+                </p>
 
-            <div className="dcl-summary-row">
-              <span>{t('totalCost')}</span>
-              <strong>{eur(result.totalCostEur[0], result.totalCostEur[1])}</strong>
-            </div>
-            <div className="dcl-summary-row">
-              <span>{result.authMethod === 'apostille' ? t('apostilleCount', { n: result.authCount }) : t('legalizationCount', { n: result.authCount })}</span>
-              <strong>{eur(result.authCostEur[0], result.authCostEur[1])}</strong>
-            </div>
-            <div className="dcl-summary-row">
-              <span>{t('translationPages', { n: result.translationPages })}</span>
-              <strong>{eur(result.translationCostEur[0], result.translationCostEur[1])}</strong>
-            </div>
-            {(result.apsCostEur[0] > 0 || result.apsCostEur[1] > 0) && (
-              <div className="dcl-summary-row">
-                <span>{t('apsFee')}</span>
-                <strong>{eur(result.apsCostEur[0], result.apsCostEur[1])}</strong>
-              </div>
+                <div className="dcl-summary-row">
+                  <span>{t('totalCost')}</span>
+                  <strong>{eur(result.totalCostEur[0], result.totalCostEur[1])}</strong>
+                </div>
+                {result.authCount > 0 && (
+                  <div className="dcl-summary-row">
+                    <span>{result.authMethod === 'apostille' ? t('apostilleCount', { n: result.authCount }) : t('legalizationCount', { n: result.authCount })}</span>
+                    <strong>{eur(result.authCostEur[0], result.authCostEur[1])}</strong>
+                  </div>
+                )}
+                {result.translationPages > 0 && (
+                  <div className="dcl-summary-row">
+                    <span>{t('translationPages', { n: result.translationPages })}</span>
+                    <strong>{eur(result.translationCostEur[0], result.translationCostEur[1])}</strong>
+                  </div>
+                )}
+                {(result.apsCostEur[0] > 0 || result.apsCostEur[1] > 0) && (
+                  <div className="dcl-summary-row">
+                    <span>{t('apsFee')}</span>
+                    <strong>{eur(result.apsCostEur[0], result.apsCostEur[1])}</strong>
+                  </div>
+                )}
+                <div className="dcl-summary-row dcl-summary-row--big">
+                  <span>{t('estimatedTimeline')}</span>
+                  <strong>{result.realisticTimelineWeeks[0]}–{result.realisticTimelineWeeks[1]} {t('weeks')}</strong>
+                </div>
+
+                {/* Progress */}
+                <div className="dcl-progress">
+                  <div className="dcl-progress-bar"><div className="dcl-progress-fill" style={{ width: `${completionPct}%` }} /></div>
+                  <p className="dcl-progress-label">{t('progressLabel', { done: checkedInScope, total: result.totalDocs })}</p>
+                </div>
+              </>
             )}
-            <div className="dcl-summary-row dcl-summary-row--big">
-              <span>{t('estimatedTimeline')}</span>
-              <strong>{result.realisticTimelineWeeks[0]}–{result.realisticTimelineWeeks[1]} {t('weeks')}</strong>
-            </div>
-
-            {/* Progress */}
-            <div className="dcl-progress">
-              <div className="dcl-progress-bar"><div className="dcl-progress-fill" style={{ width: `${completionPct}%` }} /></div>
-              <p className="dcl-progress-label">{t('progressLabel', { done: checkedInScope, total: result.totalDocs })}</p>
-            </div>
           </section>
         </div>
 
@@ -246,7 +270,7 @@ export default function DocumentChecklist({ locale }: { locale: AppLocale }) {
         <p className="dcl-disclaimer">{t('disclaimer')}</p>
 
         {/* ── DOCUMENT LIST ─────────────────────────────────── */}
-        <h2 className="dcl-list-title">{t('listTitle')}</h2>
+        {!result.noVisaRequired && <h2 className="dcl-list-title">{t('listTitle')}</h2>}
         <div className="dcl-list">
           {CATEGORY_ORDER.map(cat => {
             const docs = result.byCategory[cat]
