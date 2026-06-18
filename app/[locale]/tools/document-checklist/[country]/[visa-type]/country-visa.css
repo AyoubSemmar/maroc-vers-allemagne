@@ -1,0 +1,134 @@
+.cvp-root { min-height: 100vh; }
+
+.cvp-hero {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+  padding: 2.5rem 0 2rem;
+}
+
+.cvp-breadcrumb {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  align-items: center;
+}
+.cvp-breadcrumb a { color: var(--accent); text-decoration: none; }
+.cvp-breadcrumb a:hover { text-decoration: underline; }
+
+.cvp-h1 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1rem;
+  line-height: 1.25;
+}
+
+.cvp-intro {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 56rem;
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+.cvp-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  align-items: center;
+}
+.cvp-stat { font-size: 0.95rem; color: var(--text-secondary); }
+.cvp-stat strong { color: var(--text-primary); }
+.cvp-stat-sep { color: var(--border-strong, #bbb); }
+
+.cvp-body { padding-top: 2.5rem; padding-bottom: 4rem; }
+
+.cvp-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 1.25rem;
+}
+
+/* ── Static document list ─────────────────────────────────────────── */
+.cvp-doclist { margin-bottom: 3rem; }
+
+.cvp-cat { margin-bottom: 2rem; }
+
+.cvp-cat-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cvp-cat-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cvp-doc-item {
+  background: var(--surface-1);
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.cvp-doc-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.cvp-doc-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
+}
+
+.cvp-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.1rem 0.45rem;
+  border-radius: 0.25rem;
+  background: var(--surface-3, #e8e8e8);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.cvp-badge--req {
+  background: var(--accent-subtle, #dbeafe);
+  color: var(--accent-dark, #1d4ed8);
+}
+
+.cvp-doc-where {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Interactive section ──────────────────────────────────────────── */
+.cvp-interactive {
+  border-top: 1px solid var(--border);
+  padding-top: 2.5rem;
+  margin-bottom: 3rem;
+}
+.cvp-interactive-sub {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin: -0.75rem 0 1.5rem;
+}

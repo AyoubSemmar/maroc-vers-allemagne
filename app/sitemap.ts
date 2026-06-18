@@ -1,6 +1,9 @@
 import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
 import { supabase } from '@/lib/supabase'
+import { COUNTRY_ORDER } from '@/lib/documentChecklistData'
+
+const VISA_SLUGS = ['ausbildung', 'studium', 'tourist', 'family-reunification']
 
 const SITE = 'https://gogermany.ma'
 
@@ -90,5 +93,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If Supabase is unreachable at build time, just emit the static entries.
   }
 
-  return [...staticEntries, ...articleEntries]
+  // One entry per locale for every country × visa-type combination.
+  // Groups all locale variants under alternates so Google treats them as
+  // translations of each other, not duplicate content.
+  const checklistEntries: MetadataRoute.Sitemap = COUNTRY_ORDER.flatMap((country) =>
+    VISA_SLUGS.flatMap((visaSlug) =>
+      routing.locales.map((loc) => ({
+        url: `${SITE}/${loc}/tools/document-checklist/${country}/${visaSlug}`,
+        lastModified: yesterday,
+        changeFrequency: 'monthly' as const,
+        priority: 0.65,
+        alternates: {
+          languages: Object.fromEntries(
+            routing.locales.map((l) => [
+              l,
+              `${SITE}/${l}/tools/document-checklist/${country}/${visaSlug}`,
+            ]),
+          ),
+        },
+      })),
+    ),
+  )
+
+  return [...staticEntries, ...checklistEntries, ...articleEntries]
 }
