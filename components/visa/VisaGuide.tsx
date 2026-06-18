@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton, { type ConsultTopic } from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import { VISA_DATA, totalCost, costEur, type VisaFlow } from '@/lib/visaData'
 import './visa-guide.css'
 
@@ -63,6 +64,7 @@ export default function VisaGuide({
         </section>
 
         {/* Mid-page consultation CTA */}
+        {CONSULTATIONS_ENABLED && (
         <section className="vg-mid-cta">
           <div className="vg-mid-cta-text">
             <h3>{tShared('midCtaTitle')}</h3>
@@ -72,6 +74,7 @@ export default function VisaGuide({
             <BookConsultationButton variant="primary" topic={topic} />
           </div>
         </section>
+        )}
 
         {/* Documents */}
         <section className="vg-section">
@@ -179,6 +182,7 @@ export default function VisaGuide({
         </section>
 
         {/* Final consultation CTA */}
+        {CONSULTATIONS_ENABLED && (
         <section className="vg-final-cta">
           <div className="vg-final-cta-eyebrow">{tShared('finalCtaEyebrow')}</div>
           <h2 className="vg-final-cta-title">{t('finalCtaTitle')}</h2>
@@ -191,6 +195,7 @@ export default function VisaGuide({
           </ul>
           <BookConsultationButton variant="on-cta" topic={topic} />
         </section>
+        )}
       </div>
     </div>
   )

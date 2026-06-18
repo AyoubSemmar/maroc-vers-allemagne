@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { createClient } from '@/lib/supabase-browser'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import {
   CATEGORY_ICON,
   CATEGORY_ORDER,
@@ -130,11 +131,13 @@ export default function InterviewPrep({ locale }: { locale: AppLocale }) {
         </div>
 
         {/* Final CTA */}
+        {CONSULTATIONS_ENABLED && (
         <section className="ip-cta">
           <h2 className="ip-cta-title">{t('ctaTitle')}</h2>
           <p className="ip-cta-sub">{t('ctaSub')}</p>
           <BookConsultationButton variant="on-cta" topic="interview-prep" />
         </section>
+        )}
       </div>
     </div>
   )

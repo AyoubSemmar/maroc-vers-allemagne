@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { trackWhatsappClick } from '@/lib/analytics'
 import OpportunitiesPicker from '@/components/OpportunitiesPicker'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 type NavItem = {
   href: string
@@ -241,6 +242,7 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.whatsapp}</span>
           <span className="dashshell-nav-label">{t('whatsappSupport')}</span>
         </a>
+        {CONSULTATIONS_ENABLED && (
         <Link
           href="/dashboard/services"
           className={`dashshell-nav-item ${isActive('/dashboard/services') ? 'is-active' : ''}`}
@@ -248,6 +250,7 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.services}</span>
           <span className="dashshell-nav-label">{t('services')}</span>
         </Link>
+        )}
         <button
           type="button"
           onClick={onHelpOpen}

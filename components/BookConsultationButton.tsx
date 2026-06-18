@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
 import { trackBookConsultation } from '@/lib/analytics'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 // ── One consultation for everything ───────────────────────────────
 // A SINGLE product: a 60-minute consultation, regardless of what the
@@ -133,6 +134,7 @@ export default function BookConsultationButton({
   className = '',
   topic = 'general',
 }: Props) {
+  if (!CONSULTATIONS_ENABLED) return null
   const t = useTranslations('bookConsult')
   const rawLocale = useLocale()
   const locale: LocaleKey = (['en', 'fr', 'ar', 'de'] as const).includes(rawLocale as LocaleKey)

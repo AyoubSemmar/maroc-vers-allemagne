@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 export default function ApplyForMePage() {
   const t = useTranslations('dashboard.applyForMe')
@@ -37,6 +38,7 @@ export default function ApplyForMePage() {
           </div>
         </div>
 
+        {CONSULTATIONS_ENABLED && (
         <div className="afm-buy-card">
           <h2 className="afm-buy-title">{t('buyTitle')}</h2>
           <p className="afm-buy-sub">{t('buySub')}</p>
@@ -44,6 +46,7 @@ export default function ApplyForMePage() {
             <BookConsultationButton variant="on-cta" topic="apply-for-me" />
           </div>
         </div>
+        )}
 
         <p className="afm-soon-foot">{t('etaHint')}</p>
       </div>

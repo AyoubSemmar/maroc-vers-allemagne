@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import {
   CATEGORY_ICON,
   CATEGORY_ORDER,
@@ -315,11 +316,13 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
         )}
 
         {/* CTA */}
+        {CONSULTATIONS_ENABLED && (
         <section className="ec-cta">
           <h2 className="ec-cta-title">{t('ctaTitle')}</h2>
           <p className="ec-cta-sub">{t('ctaSub')}</p>
           <BookConsultationButton variant="on-cta" topic="eligibility" />
         </section>
+        )}
       </div>
     </div>
   )

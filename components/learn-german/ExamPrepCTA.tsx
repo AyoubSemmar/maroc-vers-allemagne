@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import BookConsultationButton from '@/components/BookConsultationButton'
 import './exam-prep-cta.css'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 /**
  * Promo card for booking a paid 1-on-1 consultation about Goethe/telc
@@ -10,6 +11,7 @@ import './exam-prep-cta.css'
  * and at the top of every level page.
  */
 export default function ExamPrepCTA({ compact = false }: { compact?: boolean }) {
+  if (!CONSULTATIONS_ENABLED) return null
   const t = useTranslations('examPrepCta')
 
   return (

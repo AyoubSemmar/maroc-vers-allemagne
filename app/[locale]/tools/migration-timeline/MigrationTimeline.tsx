@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import {
   calculate,
   fmtMonths,
@@ -239,11 +240,13 @@ export default function MigrationTimeline({ locale }: { locale: AppLocale }) {
         </section>
 
         {/* CTA */}
+        {CONSULTATIONS_ENABLED && (
         <section className="mtl-cta">
           <h2 className="mtl-cta-title">{t('ctaTitle')}</h2>
           <p className="mtl-cta-sub">{t('ctaSub')}</p>
           <BookConsultationButton variant="on-cta" topic="migration-timeline" />
         </section>
+        )}
       </div>
     </div>
   )

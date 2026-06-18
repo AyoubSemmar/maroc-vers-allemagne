@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 /**
  * Promo banner for the "Apply For Me" consultation, shown on the
@@ -10,6 +11,7 @@ import BookConsultationButton from '@/components/BookConsultationButton'
  * topic is passed to Calendly so the host knows the context.
  */
 export default function ApplyForYouCta() {
+  if (!CONSULTATIONS_ENABLED) return null
   const t = useTranslations('applyForYouCta')
   return (
     <aside className="afy-cta">

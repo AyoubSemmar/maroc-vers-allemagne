@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import BookConsultationButton from '@/components/BookConsultationButton'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 
 /**
  * Path-specific consultation block on /ausbildung and /studium.
@@ -13,6 +14,7 @@ import BookConsultationButton from '@/components/BookConsultationButton'
  * knows whether it's an Ausbildung or Studium question.
  */
 export default function PathConsultCta({ path }: { path: 'ausbildung' | 'studium' }) {
+  if (!CONSULTATIONS_ENABLED) return null
   const t = useTranslations('pathConsultCta')
   return (
     <div className="path-consult-cta reveal">

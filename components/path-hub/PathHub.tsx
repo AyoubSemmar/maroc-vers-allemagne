@@ -2,6 +2,7 @@ import type { AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 import PathConsultCta from './PathConsultCta'
+import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import PathHubReveal from './PathHubReveal'
 
 export type PathTool = {
@@ -227,6 +228,7 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
       )}
 
       {/* CONSULTATION */}
+      {CONSULTATIONS_ENABLED && (
       <section id="consult" style={{ background: 'var(--bg-warm)' }}>
         <div className="wrap" style={{ maxWidth: 880 }}>
           <div className="section-head reveal">
@@ -236,6 +238,7 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
           <PathConsultCta path={path} />
         </div>
       </section>
+      )}
     </div>
   )
 }
