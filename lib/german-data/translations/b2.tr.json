@@ -1,1 +1,3886 @@
-{ "title": "", "description": "", "lessons": {} }
+{
+  "title": "Seviye Dört",
+  "description": "İş ve üniversite için ileri Almanca.",
+  "lessons": {
+    "b2-01": {
+      "title": "Nominalisierung — Fiilleri İsme Çevirme",
+      "grammar": {
+        "title": "Nominalstil vs. Verbalstil",
+        "content": "B2 seviyesinde, resmi, akademik yazılarda ve medyada kullanılan **nominal stil** (Nominalstil) öğrenirsiniz.\n\n**Dönüştürme kuralları:**\n1. **Infinitiv → das + Infinitiv (nötr)**\n   - lesen → das Lesen (okuma)\n2. **Fiil → isim -ung eki ile**\n   - prüfen → die Prüfung\n3. **Fiil → isim -er eki ile (yapan kişi)**\n   - lehren → der Lehrer\n\n**Karşılaştırma örneği:**\n- Verbalstil: Wenn man die Regeln nicht beachtet, gibt es Probleme.\n- Nominalstil: Bei **Nichtbeachtung** der Regeln gibt es Probleme.\n\n⚠️ Nominal stil kısa ve resmidir — yasalar ve makalelerde yaygındır.",
+        "tables": [
+          {
+            "title": "Fiilleri İsme Çevirme",
+            "theme": "default",
+            "headers": [
+              "Fiil",
+              "İsim",
+              "Cinsiyet"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "lesen",
+                  "das Lesen / die Lektüre",
+                  "das / die"
+                ]
+              },
+              {
+                "cells": [
+                  "schreiben",
+                  "das Schreiben / die Schrift",
+                  "das / die"
+                ]
+              },
+              {
+                "cells": [
+                  "prüfen",
+                  "die Prüfung",
+                  "die"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "entwickeln",
+                  "die Entwicklung",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "verstehen",
+                  "das Verständnis",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "besuchen",
+                  "der Besuch",
+                  "der"
+                ]
+              },
+              {
+                "cells": [
+                  "fragen",
+                  "die Frage",
+                  "die"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Nominalstil ile Kullanılan Yaygın Edatlar",
+            "theme": "default",
+            "headers": [
+              "Präposition",
+              "Kullanım",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "bei",
+                  "-de/-da, durumunda",
+                  "bei der Prüfung"
+                ]
+              },
+              {
+                "cells": [
+                  "nach",
+                  "sonra",
+                  "nach dem Essen"
+                ]
+              },
+              {
+                "cells": [
+                  "vor",
+                  "önce",
+                  "vor der Reise"
+                ]
+              },
+              {
+                "cells": [
+                  "durch",
+                  "aracılığıyla, yoluyla",
+                  "durch das Lernen"
+                ]
+              },
+              {
+                "cells": [
+                  "wegen",
+                  "nedeniyle, yüzünden",
+                  "wegen der Verspätung"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "das + Infinitiv = nötr isim",
+            "example": "Das Lesen macht Spaß.",
+            "translation": "Okuma eğlencelidir."
+          },
+          {
+            "rule": "-ung fiili → dişil isime çevirir",
+            "example": "die Prüfung",
+            "translation": "sınav"
+          },
+          {
+            "rule": "Nominalstil resmi dilde kullanılır",
+            "example": "bei Nichterscheinen",
+            "translation": "görünmeme durumunda"
+          }
+        ],
+        "examples": [
+          "Das Lernen einer neuen Sprache braucht Zeit. — Yeni bir dil öğrenmek zaman gerektirir.",
+          "Vor der Abreise muss ich packen. — Ayrılmadan önce bavullarımı hazırlamalıyım.",
+          "Bei Regen findet die Veranstaltung nicht statt. — Yağmur durumunda etkinlik yapılmayacaktır.",
+          "Die Entwicklung der Technologie ist rasant. — Teknolojinin gelişimi çok hızlıdır.",
+          "Nach dem Abschluss suche ich Arbeit. — Mezuniyet sonrası iş arıyorum.",
+          "Das Rauchen ist hier verboten. — Sigara içmek burada yasaktır.",
+          "Durch intensives Üben habe ich Fortschritte gemacht. — Yoğun pratik yaparak ilerleme kaydettim.",
+          "Wegen der Verspätung kam ich zu spät. — Gecikmeden dolayı geç kaldım."
+        ],
+        "tip": "Alman haberlerini ve yasalarını anlamak için Nominalstil'i öğrenin — tek bir paragraf 5-10 fiilden türetilmiş isim içerebilir."
+      },
+      "vocabulary": [
+        {
+          "german": "die Entwicklung",
+          "arabic": "gelişim, gelişme",
+          "plural": "die Entwicklungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Erklärung",
+          "arabic": "açıklama",
+          "plural": "die Erklärungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Beschreibung",
+          "arabic": "tanım, betimleme",
+          "plural": "die Beschreibungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Veränderung",
+          "arabic": "değişim, değişiklik",
+          "plural": "die Veränderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verwendung",
+          "arabic": "kullanım, uygulama",
+          "plural": "die Verwendungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Untersuchung",
+          "arabic": "inceleme, araştırma",
+          "plural": "die Untersuchungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Darstellung",
+          "arabic": "sunum, temsil",
+          "plural": "die Darstellungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Herstellung",
+          "arabic": "üretim, yapım",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Behauptung",
+          "arabic": "iddia, ileri sürülen şey",
+          "plural": "die Behauptungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Begründung",
+          "arabic": "gerekçe, sebep gösterme",
+          "plural": "die Begründungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Verständnis",
+          "arabic": "anlayış, anlamak",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Ergebnis",
+          "arabic": "sonuç, netice",
+          "plural": "die Ergebnisse",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Beweis",
+          "arabic": "kanıt, ispat",
+          "plural": "die Beweise",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Anstieg",
+          "arabic": "artış, yükseliş",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "der Rückgang",
+          "arabic": "düşüş, azalış",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Wachstum",
+          "arabic": "büyüme, gelişme",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Verbot",
+          "arabic": "yasak, yasaklama",
+          "plural": "die Verbote",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Erlaubnis",
+          "arabic": "izin, müsaade",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "stattfinden",
+          "arabic": "gerçekleşmek, yapılmak",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "dikkat etmek, gözlemlemek",
+          "type": "verb"
+        },
+        {
+          "german": "zunehmen",
+          "arabic": "artmak, çoğalmak",
+          "type": "verb"
+        },
+        {
+          "german": "abnehmen",
+          "arabic": "azalmak, eksilmek",
+          "type": "verb"
+        },
+        {
+          "german": "rasant",
+          "arabic": "çok hızlı, hızlı",
+          "type": "adjective"
+        },
+        {
+          "german": "die Bedeutung",
+          "arabic": "anlam, önem",
+          "plural": "die Bedeutungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirkung",
+          "arabic": "etki, tesir",
+          "plural": "die Wirkungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "sonuç, netice",
+          "plural": "die Folgen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wahrnehmung",
+          "arabic": "algı, farkına varma",
+          "plural": "die Wahrnehmungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Mitteilung",
+          "arabic": "bildirim, haber",
+          "plural": "die Mitteilungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Forderung",
+          "arabic": "talep, istem",
+          "plural": "die Forderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Empfehlung",
+          "arabic": "tavsiye, öneri",
+          "plural": "die Empfehlungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Förderung",
+          "arabic": "destek, teşvik",
+          "plural": "die Förderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verbreitung",
+          "arabic": "yayılma, dağılım",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Übersetzung",
+          "arabic": "çeviri, tercüme",
+          "plural": "die Übersetzungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "karşılaştırma, kıyas",
+          "plural": "die Vergleiche",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Auswirkung",
+          "arabic": "etki, sonuç",
+          "plural": "die Auswirkungen",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-01-q1",
+            "type": "multiple-choice",
+            "question": "Sigara içmek (isim olarak):",
+            "options": [
+              "rauchen",
+              "das Rauchen",
+              "geraucht",
+              "Raucher"
+            ],
+            "answer": "das Rauchen"
+          },
+          {
+            "id": "b2-01-q2",
+            "type": "multiple-choice",
+            "question": "Teknolojinin gelişimi:",
+            "options": [
+              "Technologie entwickeln",
+              "die Entwicklung der Technologie",
+              "Technologie entwickelt",
+              "entwickelt Technologie"
+            ],
+            "answer": "die Entwicklung der Technologie"
+          },
+          {
+            "id": "b2-01-q3",
+            "type": "fill-blank",
+            "question": "___ Regen kalırız evde. (edat)",
+            "answer": "Bei"
+          },
+          {
+            "id": "b2-01-q4",
+            "type": "fill-blank",
+            "question": "___ Abreise sonra sessizdi. (der)",
+            "answer": "der"
+          },
+          {
+            "id": "b2-01-q5",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: [braucht / Sprache / Das / einer / Lernen / Zeit / neuen]",
+            "words": [
+              "Das",
+              "Lernen",
+              "einer",
+              "neuen",
+              "Sprache",
+              "braucht",
+              "Zeit"
+            ],
+            "answer": "Das Lernen einer neuen Sprache braucht Zeit"
+          },
+          {
+            "id": "b2-01-q6",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: [rasant / Technologie / Die / der / ist / Entwicklung]",
+            "words": [
+              "Die",
+              "Entwicklung",
+              "der",
+              "Technologie",
+              "ist",
+              "rasant"
+            ],
+            "answer": "Die Entwicklung der Technologie ist rasant"
+          },
+          {
+            "id": "b2-01-q7",
+            "type": "matching",
+            "question": "Fiili isimle eşleştirin:",
+            "pairs": [
+              {
+                "left": "prüfen",
+                "right": "die Prüfung"
+              },
+              {
+                "left": "entwickeln",
+                "right": "die Entwicklung"
+              },
+              {
+                "left": "lesen",
+                "right": "das Lesen"
+              },
+              {
+                "left": "beschreiben",
+                "right": "die Beschreibung"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-01-q8",
+            "type": "multiple-choice",
+            "question": "\"verstehen\" fiilinin ismi:",
+            "options": [
+              "der Verstehen",
+              "das Verständnis",
+              "die Versteht",
+              "das Verstehen"
+            ],
+            "answer": "das Verständnis"
+          },
+          {
+            "id": "b2-01-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Okuma eğlencelidir.\"",
+            "answer": "Das Lesen macht Spaß"
+          },
+          {
+            "id": "b2-01-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Wegen der Verspätung kam ich zu spät zur Arbeit.",
+            "options": [
+              "Gecikmeden dolayı işe geç kaldım",
+              "Erken geldim",
+              "İşe gitmedim",
+              "Evden çalıştım"
+            ],
+            "answer": "Gecikmeden dolayı işe geç kaldım"
+          },
+          {
+            "id": "b2-01-q11",
+            "type": "fill-blank",
+            "question": "Dönüştürün: \"die Wirtschaft entwickelt sich\" → \"die ___ der Wirtschaft\"",
+            "answer": "Entwicklung",
+            "hint": "entwickeln → die Entwicklung"
+          },
+          {
+            "id": "b2-01-q12",
+            "type": "multiple-choice",
+            "question": "\"untersuchen\" fiilinin ismi:",
+            "options": [
+              "die Untersuchung",
+              "der Untersuch",
+              "das Untersuchen",
+              "die Untersuche"
+            ],
+            "answer": "die Untersuchung"
+          },
+          {
+            "id": "b2-01-q13",
+            "type": "fill-blank",
+            "question": "Doldurun: \"Die ___ der Preise ist hoch.\" (artış)",
+            "answer": "Erhöhung",
+            "hint": "erhöhen → die Erhöhung"
+          },
+          {
+            "id": "b2-01-q14",
+            "type": "multiple-choice",
+            "question": "En \"Nominalstil\" cümlesi:",
+            "options": [
+              "Wir entwickeln das Produkt.",
+              "Bei der Entwicklung des Produkts...",
+              "Das Produkt wird entwickelt.",
+              "Wir haben entwickelt."
+            ],
+            "answer": "Bei der Entwicklung des Produkts..."
+          },
+          {
+            "id": "b2-01-q15",
+            "type": "matching",
+            "question": "Fiili isimle eşleştirin:",
+            "pairs": [
+              {
+                "left": "wirken",
+                "right": "die Wirkung"
+              },
+              {
+                "left": "fordern",
+                "right": "die Forderung"
+              },
+              {
+                "left": "übersetzen",
+                "right": "die Übersetzung"
+              },
+              {
+                "left": "vergleichen",
+                "right": "der Vergleich"
+              },
+              {
+                "left": "empfehlen",
+                "right": "die Empfehlung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-01-q16",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: \"Ekonominin büyümesi hızlıdır\"",
+            "words": [
+              "Das",
+              "Wachstum",
+              "der",
+              "Wirtschaft",
+              "ist",
+              "rasant"
+            ],
+            "answer": "Das Wachstum der Wirtschaft ist rasant"
+          },
+          {
+            "id": "b2-01-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"İnternetin yayılması hızlıydı\"",
+            "answer": "Die Verbreitung des Internets war schnell"
+          },
+          {
+            "id": "b2-01-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Die ___ auf die Umwelt ist groß.\" (etki)",
+            "audioPrompt": "Die Auswirkung auf die Umwelt ist groß.",
+            "answer": "Auswirkung",
+            "hint": "sich auswirken → die Auswirkung"
+          },
+          {
+            "id": "b2-01-q19",
+            "type": "multiple-choice",
+            "question": "Nominalstil ne zaman kullanılır?",
+            "options": [
+              "günlük konuşmada",
+              "resmi ve gazetecilik metinlerinde",
+              "sadece reklamda",
+              "şiirde"
+            ],
+            "answer": "resmi ve gazetecilik metinlerinde"
+          },
+          {
+            "id": "b2-01-q20",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: \"Metnin çevirisi sonrası her şeyi anladım\"",
+            "words": [
+              "Nach",
+              "der",
+              "Übersetzung",
+              "des",
+              "Textes",
+              "verstand",
+              "ich",
+              "alles"
+            ],
+            "answer": "Nach der Übersetzung des Textes verstand ich alles"
+          }
+        ]
+      }
+    },
+    "b2-02": {
+      "title": "Partizip I & II als Attribute — Katılım Sıfatları",
+      "grammar": {
+        "title": "der lesende Mann / das gelesene Buch",
+        "content": "Almancada **Partizip I** ve **Partizip II** ikisi de isimlerden önce sıfat olarak kullanılabilir.\n\n**Partizip I** = fiil + **-end** → **devam eden** bir eylemi gösterir (aktif, devam eden)\n- lesen → lesend → der **lesende** Mann (okuyan adam)\n- schlafen → schlafend → das **schlafende** Kind (uyuyan çocuk)\n\n**Partizip II** = geçmiş katılım → **tamamlanmış** bir eylemi veya **pasif** durumu gösterir\n- lesen → gelesen → das **gelesene** Buch (okunan kitap)\n- öffnen → geöffnet → die **geöffnete** Tür (açılan kapı)\n\n⚠️ Her iki tür de **Adjektivdeklination** kurallarını takip eder (-e/-en, duruma göre).",
+        "tables": [
+          {
+            "title": "Partizip I vs Partizip II",
+            "theme": "default",
+            "headers": [
+              "Tür",
+              "Oluşum",
+              "Anlam",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Partizip I",
+                  "fiil + end",
+                  "devam eden eylem (aktif)",
+                  "der singende Mann"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "Partizip II",
+                  "geçmiş katılım",
+                  "tamamlanmış/pasif",
+                  "das gebackene Brot"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Adjektivdeklination ile Örnekler",
+            "theme": "cases",
+            "headers": [
+              "Durum",
+              "Partizip I",
+              "Partizip II"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ",
+                  "der lesende Mann",
+                  "das geschriebene Buch"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "den lesenden Mann",
+                  "das geschriebene Buch"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ",
+                  "dem lesenden Mann",
+                  "dem geschriebenen Buch"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Partizip I = aktif özne",
+            "example": "die singende Frau",
+            "translation": "şarkı söyleyen kadın (şarkı söylemekte olan)"
+          },
+          {
+            "rule": "Partizip II = nesne/tamamlanmış",
+            "example": "das gekochte Essen",
+            "translation": "pişirilen yemek"
+          },
+          {
+            "rule": "sıfat çekimi kurallarını takip eder",
+            "example": "mit dem laufenden Kind",
+            "translation": "koşan çocukla"
+          }
+        ],
+        "examples": [
+          "Der schreiende Mann stört alle. — Çığlık atan adam herkesi rahatsız ediyor.",
+          "Das weinende Kind braucht Hilfe. — Ağlayan çocuk yardıma ihtiyaç duyuyor.",
+          "Die geöffneten Fenster lassen Luft herein. — Açılan pencereler havayı içeri alıyor.",
+          "Ein lachendes Gesicht ist schön. — Gülen bir yüz güzeldir.",
+          "Das gebackene Brot duftet. — Pişirilen ekmek güzel kokuyor.",
+          "Die gut informierte Bevölkerung wählt klug. — İyi bilgilendirilmiş nüfus akıllıca oy verir.",
+          "Ein schlafender Hund wurde aufgeweckt. — Uyuyan bir köpek uyandırıldı.",
+          "Der verlorene Schlüssel wurde gefunden. — Kayıp anahtar bulundu."
+        ],
+        "tip": "Partizip I günlük konuşmada nadirdir ancak edebi ve resmi metinlerde yaygındır. Partizip II her yerde yaygındır."
+      },
+      "vocabulary": [
+        {
+          "german": "singen",
+          "arabic": "şarkı söylemek",
+          "type": "verb"
+        },
+        {
+          "german": "laufen",
+          "arabic": "koşmak",
+          "type": "verb"
+        },
+        {
+          "german": "schreien",
+          "arabic": "çığlık atmak",
+          "type": "verb"
+        },
+        {
+          "german": "weinen",
+          "arabic": "ağlamak",
+          "type": "verb"
+        },
+        {
+          "german": "lachen",
+          "arabic": "gülmek",
+          "type": "verb"
+        },
+        {
+          "german": "schlafen",
+          "arabic": "uyumak",
+          "type": "verb"
+        },
+        {
+          "german": "wachen",
+          "arabic": "uyanmak / bekçilik yapmak",
+          "type": "verb"
+        },
+        {
+          "german": "wachsen",
+          "arabic": "büyümek",
+          "type": "verb"
+        },
+        {
+          "german": "fließen",
+          "arabic": "akmak",
+          "type": "verb"
+        },
+        {
+          "german": "brennen",
+          "arabic": "yanmak",
+          "type": "verb"
+        },
+        {
+          "german": "verlieren",
+          "arabic": "kaybetmek",
+          "type": "verb"
+        },
+        {
+          "german": "finden",
+          "arabic": "bulmak",
+          "type": "verb"
+        },
+        {
+          "german": "backen",
+          "arabic": "pişirmek",
+          "type": "verb"
+        },
+        {
+          "german": "kochen",
+          "arabic": "yemek pişirmek",
+          "type": "verb"
+        },
+        {
+          "german": "informieren",
+          "arabic": "bilgilendirmek",
+          "type": "verb"
+        },
+        {
+          "german": "begeistert",
+          "arabic": "heyecanlı (Part. II)",
+          "type": "adjective"
+        },
+        {
+          "german": "erschöpft",
+          "arabic": "yorgun",
+          "type": "adjective"
+        },
+        {
+          "german": "verletzt",
+          "arabic": "yaralı",
+          "type": "adjective"
+        },
+        {
+          "german": "überrascht",
+          "arabic": "şaşırmış",
+          "type": "adjective"
+        },
+        {
+          "german": "gebraucht",
+          "arabic": "kullanılmış",
+          "type": "adjective"
+        },
+        {
+          "german": "erwartet",
+          "arabic": "beklenen",
+          "type": "adjective"
+        },
+        {
+          "german": "bekannt",
+          "arabic": "bilinen",
+          "type": "adjective"
+        },
+        {
+          "german": "die Bevölkerung",
+          "arabic": "nüfus",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gesicht",
+          "arabic": "yüz",
+          "plural": "die Gesichter",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Tür",
+          "arabic": "kapı",
+          "plural": "die Türen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Fenster",
+          "arabic": "pencere",
+          "plural": "die Fenster",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "das Brot",
+          "arabic": "ekmek",
+          "plural": "die Brote",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "aufgeweckt",
+          "arabic": "uyanık / zeki",
+          "type": "adjective"
+        },
+        {
+          "german": "wachsend",
+          "arabic": "büyüyen",
+          "type": "adjective"
+        },
+        {
+          "german": "fließend",
+          "arabic": "akan / akıcı",
+          "type": "adjective"
+        },
+        {
+          "german": "brennend",
+          "arabic": "yanan",
+          "type": "adjective"
+        },
+        {
+          "german": "duftend",
+          "arabic": "kokulu",
+          "type": "adjective"
+        },
+        {
+          "german": "spielend",
+          "arabic": "oynayan",
+          "type": "adjective"
+        },
+        {
+          "german": "verbessert",
+          "arabic": "iyileştirilmiş",
+          "type": "adjective"
+        },
+        {
+          "german": "gestoppt",
+          "arabic": "durdurulmuş",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-02-q1",
+            "type": "multiple-choice",
+            "question": "Okuyan adam:",
+            "options": [
+              "der lesen Mann",
+              "der lesende Mann",
+              "der gelesene Mann",
+              "der las Mann"
+            ],
+            "answer": "der lesende Mann"
+          },
+          {
+            "id": "b2-02-q2",
+            "type": "multiple-choice",
+            "question": "Okunan kitap:",
+            "options": [
+              "das lesende Buch",
+              "das gelesene Buch",
+              "das lesen Buch",
+              "das Lesen Buch"
+            ],
+            "answer": "das gelesene Buch"
+          },
+          {
+            "id": "b2-02-q3",
+            "type": "fill-blank",
+            "question": "Das ___ Kind. (uyuyan çocuk - schlafende)",
+            "answer": "schlafende"
+          },
+          {
+            "id": "b2-02-q4",
+            "type": "fill-blank",
+            "question": "Die ___ Tür. (açılan kapı - geöffnete)",
+            "answer": "geöffnete"
+          },
+          {
+            "id": "b2-02-q5",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: [stört / schreiende / alle / Der / Mann]",
+            "words": [
+              "Der",
+              "schreiende",
+              "Mann",
+              "stört",
+              "alle"
+            ],
+            "answer": "Der schreiende Mann stört alle"
+          },
+          {
+            "id": "b2-02-q6",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: [duftet / gebackene / Das / Brot]",
+            "words": [
+              "Das",
+              "gebackene",
+              "Brot",
+              "duftet"
+            ],
+            "answer": "Das gebackene Brot duftet"
+          },
+          {
+            "id": "b2-02-q7",
+            "type": "matching",
+            "question": "Fiili Partizip I ile eşleştirin:",
+            "pairs": [
+              {
+                "left": "singen",
+                "right": "singend"
+              },
+              {
+                "left": "laufen",
+                "right": "laufend"
+              },
+              {
+                "left": "schlafen",
+                "right": "schlafend"
+              },
+              {
+                "left": "lachen",
+                "right": "lachend"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-02-q8",
+            "type": "multiple-choice",
+            "question": "\"finden\" fiilinin Partizip II'si:",
+            "options": [
+              "findend",
+              "gefunden",
+              "finde",
+              "findet"
+            ],
+            "answer": "gefunden"
+          },
+          {
+            "id": "b2-02-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Gülen çocuk güzeldir.\"",
+            "answer": "Das lachende Kind ist schön"
+          },
+          {
+            "id": "b2-02-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Der verlorene Schlüssel wurde gestern gefunden.",
+            "options": [
+              "Kayıp anahtar dün bulundu",
+              "Anahtarımı kaybettim",
+              "Anahtarı arıyorum",
+              "Anahtar yeni"
+            ],
+            "answer": "Kayıp anahtar dün bulundu"
+          },
+          {
+            "id": "b2-02-q11",
+            "type": "fill-blank",
+            "question": "Partizip I ile doldurun: \"der ___ Hund\" (singen)",
+            "answer": "singende",
+            "hint": "singen → singend → singende"
+          },
+          {
+            "id": "b2-02-q12",
+            "type": "multiple-choice",
+            "question": "\"öffnen\" fiilinin Partizip II'si sıfat olarak:",
+            "options": [
+              "öffnend",
+              "geöffnet",
+              "öffnen",
+              "öffne"
+            ],
+            "answer": "geöffnet"
+          },
+          {
+            "id": "b2-02-q13",
+            "type": "fill-blank",
+            "question": "\"Das ___ Brot duftet.\" (pişirilen)",
+            "answer": "gebackene",
+            "hint": "backen → gebacken → gebackene"
+          },
+          {
+            "id": "b2-02-q14",
+            "type": "multiple-choice",
+            "question": "Partizip I şunu ifade eder:",
+            "options": [
+              "tamamlanmış eylem",
+              "devam eden / aktif eylem",
+              "pasif",
+              "gelecek"
+            ],
+            "answer": "devam eden / aktif eylem"
+          },
+          {
+            "id": "b2-02-q15",
+            "type": "matching",
+            "question": "Fiili Partizip I ile eşleştirin:",
+            "pairs": [
+              {
+                "left": "lesen",
+                "right": "lesend"
+              },
+              {
+                "left": "schlafen",
+                "right": "schlafend"
+              },
+              {
+                "left": "lachen",
+                "right": "lachend"
+              },
+              {
+                "left": "laufen",
+                "right": "laufend"
+              },
+              {
+                "left": "singen",
+                "right": "singend"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-02-q16",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: \"Açılan pencereler havayı içeri alıyor\"",
+            "words": [
+              "Die",
+              "geöffneten",
+              "Fenster",
+              "lassen",
+              "Luft",
+              "herein"
+            ],
+            "answer": "Die geöffneten Fenster lassen Luft herein"
+          },
+          {
+            "id": "b2-02-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Uyuyan çocuğu uyandırmamalısın\"",
+            "answer": "Das schlafende Kind soll man nicht wecken"
+          },
+          {
+            "id": "b2-02-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Ein ___ Gesicht ist schön.\" (lachen'in Partizip I'i)",
+            "audioPrompt": "Ein lachendes Gesicht ist schön.",
+            "answer": "lachendes",
+            "hint": "lachen → lachend → lachendes (das)"
+          },
+          {
+            "id": "b2-02-q19",
+            "type": "multiple-choice",
+            "question": "Günlük konuşmada hangi Partizip daha yaygındır?",
+            "options": [
+              "Partizip I",
+              "Partizip II",
+              "her ikisi",
+              "hiçbiri"
+            ],
+            "answer": "Partizip II"
+          },
+          {
+            "id": "b2-02-q20",
+            "type": "drag-drop",
+            "question": "Sözcükleri sıralayın: \"İyi bilgilendirilmiş nüfus akıllıca oy verir\"",
+            "words": [
+              "Die",
+              "gut",
+              "informierte",
+              "Bevölkerung",
+              "wählt",
+              "klug"
+            ],
+            "answer": "Die gut informierte Bevölkerung wählt klug"
+          }
+        ]
+      }
+    },
+    "b2-03": {
+      "title": "Finalsätze — Amaç Cümleleri (um...zu / damit)",
+      "grammar": {
+        "title": "Amacı İfade Etme",
+        "content": "**Amaç veya hedefi** ifade etmek için şunları kullanırız:\n\n**1. um ... zu + Infinitiv** (aynı özne):\n- Ich lerne Deutsch, **um** in Deutschland **zu arbeiten**.\n  (Almanya'da çalışmak için Almanca öğreniyorum.)\n\n**2. damit + Nebensatz** (farklı özne):\n- Ich spreche langsam, **damit** du mich **verstehst**.\n  (Beni anlamanız için yavaş konuşuyorum.)\n\n**Kural:**\n- Aynı özne → **um...zu**\n- Farklı özne → **damit**\n\n**weil ile Fark:**\n- weil = sebep (bir şey neden oldu)\n- um...zu / damit = amaç (hangi hedef için)",
+        "tables": [
+          {
+            "title": "um...zu vs damit",
+            "theme": "default",
+            "headers": [
+              "Bağlaç",
+              "Koşul",
+              "Fiil"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um ... zu",
+                  "Aynı özne",
+                  "Sonda Infinitiv"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "damit",
+                  "Farklı özne",
+                  "Sonda Çekimli"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Karşılaştırma: Amaç (Finalsatz) vs Sebep (Kausalsatz)",
+            "theme": "default",
+            "headers": [
+              "Tür",
+              "Bağlaç",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Amaç (Final)",
+                  "um...zu / damit",
+                  "Ich lerne, um zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "Sebep (Kausal)",
+                  "weil / denn",
+                  "Ich lerne, weil ich muss."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "um + zu + Infinitiv (aynı özne)",
+            "example": "Ich gehe zum Arzt, um gesund zu werden.",
+            "translation": "Sağlıklı olmak için doktora gidiyorum."
+          },
+          {
+            "rule": "damit + Nebensatz (farklı özne)",
+            "example": "Ich lerne, damit meine Eltern stolz sind.",
+            "translation": "Ailelerim gurur duysun diye ders çalışıyorum."
+          },
+          {
+            "rule": "Her ikisinde de fiil sonda",
+            "example": "damit du kommst",
+            "translation": "sen gelsin diye"
+          }
+        ],
+        "examples": [
+          "Ich arbeite, um Geld zu verdienen. — Para kazanmak için çalışıyorum.",
+          "Er spart, um ein Auto zu kaufen. — Araba almak için tasarruf yapıyor.",
+          "Wir lernen, um die Prüfung zu bestehen. — Sınavı geçmek için ders çalışıyoruz.",
+          "Ich spreche laut, damit alle mich hören. — Herkes beni duysun diye yüksek sesle konuşuyorum.",
+          "Sie kauft ein Geschenk, damit ihre Mutter sich freut. — Annesi sevinsin diye hediye alıyor.",
+          "Ich stehe früh auf, um pünktlich zu sein. — Zamanında olmak için erken kalkıyorum.",
+          "Er erklärt langsam, damit wir verstehen. — Biz anlayalım diye yavaş açıklıyor.",
+          "Um fit zu bleiben, treibe ich Sport. — Fit kalmak için spor yapıyorum."
+        ],
+        "tip": "Hızlı test: \"um zu\" diyebiliyorsanız (aynı özne), bunu kullanın. Aksi takdirde \"damit\" kullanın."
+      },
+      "vocabulary": [
+        {
+          "german": "das Ziel",
+          "arabic": "hedef",
+          "plural": "die Ziele",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "der Zweck",
+          "arabic": "amaç",
+          "plural": "die Zwecke",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Absicht",
+          "arabic": "niyet",
+          "plural": "die Absichten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Plan",
+          "arabic": "plan",
+          "plural": "die Pläne",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Motivation",
+          "arabic": "motivasyon",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "ulaşmak",
+          "type": "verb"
+        },
+        {
+          "german": "verfolgen",
+          "arabic": "takip etmek",
+          "type": "verb"
+        },
+        {
+          "german": "planen",
+          "arabic": "planlamak",
+          "type": "verb"
+        },
+        {
+          "german": "beabsichtigen",
+          "arabic": "niyetlemek",
+          "type": "verb"
+        },
+        {
+          "german": "anstreben",
+          "arabic": "hedeflenmek",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "tasarruf etmek",
+          "type": "verb"
+        },
+        {
+          "german": "verdienen",
+          "arabic": "kazanmak",
+          "type": "verb"
+        },
+        {
+          "german": "investieren",
+          "arabic": "yatırım yapmak",
+          "type": "verb"
+        },
+        {
+          "german": "fit",
+          "arabic": "fit",
+          "type": "adjective"
+        },
+        {
+          "german": "pünktlich",
+          "arabic": "zamanında",
+          "type": "adjective"
+        },
+        {
+          "german": "erfolgreich",
+          "arabic": "başarılı",
+          "type": "adjective"
+        },
+        {
+          "german": "stolz",
+          "arabic": "gurur duyuyor",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "memnun",
+          "type": "adjective"
+        },
+        {
+          "german": "der Erfolg",
+          "arabic": "başarı",
+          "plural": "die Erfolge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "das Vorhaben",
+          "arabic": "girişim",
+          "plural": "die Vorhaben",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Bemühung",
+          "arabic": "çaba",
+          "plural": "die Bemühungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Strategie",
+          "arabic": "strateji",
+          "plural": "die Strategien",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Maßnahme",
+          "arabic": "önlem",
+          "plural": "die Maßnahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Vorgehen",
+          "arabic": "yaklaşım",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Aufgabe",
+          "arabic": "görev",
+          "plural": "die Aufgaben",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Hoffnung",
+          "arabic": "umut",
+          "plural": "die Hoffnungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Fähigkeit",
+          "arabic": "yetenek",
+          "plural": "die Fähigkeiten",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "sich bemühen",
+          "arabic": "çaba göstermek",
+          "type": "verb"
+        },
+        {
+          "german": "umsetzen",
+          "arabic": "uygulamak",
+          "type": "verb"
+        },
+        {
+          "german": "sich konzentrieren",
+          "arabic": "yoğunlaşmak",
+          "type": "verb"
+        },
+        {
+          "german": "meistern",
+          "arabic": "ustalaşmak",
+          "type": "verb"
+        },
+        {
+          "german": "ehrgeizig",
+          "arabic": "hırslı",
+          "type": "adjective"
+        },
+        {
+          "german": "entschlossen",
+          "arabic": "kararlı",
+          "type": "adjective"
+        },
+        {
+          "german": "realistisch",
+          "arabic": "gerçekçi",
+          "type": "adjective"
+        },
+        {
+          "german": "gezielt",
+          "arabic": "hedefli",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-03-q1",
+            "type": "multiple-choice",
+            "question": "Para kazanmak için çalışıyorum:",
+            "options": [
+              "Ich arbeite zu Geld verdienen",
+              "Ich arbeite, um Geld zu verdienen",
+              "Ich arbeite, damit Geld",
+              "Ich arbeite für Geld"
+            ],
+            "answer": "Ich arbeite, um Geld zu verdienen"
+          },
+          {
+            "id": "b2-03-q2",
+            "type": "multiple-choice",
+            "question": "Beni anlamanız için yavaş konuşuyorum:",
+            "options": [
+              "Ich spreche langsam, um du verstehst",
+              "Ich spreche langsam, damit du verstehst",
+              "Ich spreche langsam weil du verstehst",
+              "Ich spreche langsam, um zu verstehen"
+            ],
+            "answer": "Ich spreche langsam, damit du verstehst"
+          },
+          {
+            "id": "b2-03-q3",
+            "type": "fill-blank",
+            "question": "Sınavı geçmek için ders çalışıyorum: Ich lerne, ___ die Prüfung zu bestehen. (um)",
+            "answer": "um"
+          },
+          {
+            "id": "b2-03-q4",
+            "type": "fill-blank",
+            "question": "Biz anlayalım diye yavaş açıklıyor: Er erklärt langsam, ___ wir verstehen. (damit)",
+            "answer": "damit"
+          },
+          {
+            "id": "b2-03-q5",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [, / verdienen / arbeite / Geld / um / Ich / zu]",
+            "words": [
+              "Ich",
+              "arbeite",
+              ",",
+              "um",
+              "Geld",
+              "zu",
+              "verdienen"
+            ],
+            "answer": "Ich arbeite , um Geld zu verdienen"
+          },
+          {
+            "id": "b2-03-q6",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [, / mich / damit / laut / Ich / hört / er / spreche]",
+            "words": [
+              "Ich",
+              "spreche",
+              "laut",
+              ",",
+              "damit",
+              "er",
+              "mich",
+              "hört"
+            ],
+            "answer": "Ich spreche laut , damit er mich hört"
+          },
+          {
+            "id": "b2-03-q7",
+            "type": "matching",
+            "question": "Eşleştirin:",
+            "pairs": [
+              {
+                "left": "um...zu",
+                "right": "aynı özne"
+              },
+              {
+                "left": "damit",
+                "right": "farklı özne"
+              },
+              {
+                "left": "weil",
+                "right": "sebep"
+              },
+              {
+                "left": "trotzdem",
+                "right": "buna rağmen"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-03-q8",
+            "type": "multiple-choice",
+            "question": "Um fit ___ bleiben, treibe ich Sport.",
+            "options": [
+              "damit",
+              "zu",
+              "für",
+              "mit"
+            ],
+            "answer": "zu"
+          },
+          {
+            "id": "b2-03-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Sınavı geçmek için ders çalışıyorum.\"",
+            "answer": "Ich lerne, um zu bestehen"
+          },
+          {
+            "id": "b2-03-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Ich stehe früh auf, um pünktlich zur Arbeit zu kommen.",
+            "options": [
+              "İşe zamanında gelmek için erken kalkıyorum",
+              "Geç varıyorum",
+              "Çok uyuyorum",
+              "Çalışmıyorum"
+            ],
+            "answer": "İşe zamanında gelmek için erken kalkıyorum"
+          },
+          {
+            "id": "b2-03-q11",
+            "type": "fill-blank",
+            "question": "Doldurun: \"Ich lerne, ___ die Prüfung zu bestehen.\" (aynı özne)",
+            "answer": "um",
+            "hint": "um + zu + Inf"
+          },
+          {
+            "id": "b2-03-q12",
+            "type": "multiple-choice",
+            "question": "um zu yerine damit ne zaman kullanılır?",
+            "options": [
+              "her zaman aynı özne",
+              "farklı özne",
+              "sebep",
+              "fark yok"
+            ],
+            "answer": "farklı özne"
+          },
+          {
+            "id": "b2-03-q13",
+            "type": "fill-blank",
+            "question": "\"Sie kauft ein Geschenk, ___ ihre Mutter sich freut.\"",
+            "answer": "damit",
+            "hint": "farklı özne → damit"
+          },
+          {
+            "id": "b2-03-q14",
+            "type": "multiple-choice",
+            "question": "\"um zu\" da fiil nerede?",
+            "options": [
+              "başında",
+              "ortasında",
+              "sonda Infinitiv olarak",
+              "atlanmış"
+            ],
+            "answer": "sonda Infinitiv olarak"
+          },
+          {
+            "id": "b2-03-q15",
+            "type": "matching",
+            "question": "Fiili isimle eşleştirin:",
+            "pairs": [
+              {
+                "left": "planen",
+                "right": "der Plan"
+              },
+              {
+                "left": "erfolgen",
+                "right": "der Erfolg"
+              },
+              {
+                "left": "sich bemühen",
+                "right": "die Bemühung"
+              },
+              {
+                "left": "investieren",
+                "right": "die Investition"
+              },
+              {
+                "left": "ziehen",
+                "right": "das Ziel (verwandt)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-03-q16",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Para kazanmak için çalışıyorum\"",
+            "words": [
+              "Ich",
+              "arbeite,",
+              "um",
+              "Geld",
+              "zu",
+              "verdienen"
+            ],
+            "answer": "Ich arbeite, um Geld zu verdienen"
+          },
+          {
+            "id": "b2-03-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Ev almak için tasarruf yapıyorum\"",
+            "answer": "Ich spare, um ein Haus zu kaufen"
+          },
+          {
+            "id": "b2-03-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Er erklärt langsam, ___ wir verstehen.\" (böylece)",
+            "audioPrompt": "Er erklärt langsam, damit wir verstehen.",
+            "answer": "damit",
+            "hint": "farklı özne"
+          },
+          {
+            "id": "b2-03-q19",
+            "type": "multiple-choice",
+            "question": "Final ve Kausal arasındaki fark:",
+            "options": [
+              "amaç vs sebep",
+              "her ikisi sebep",
+              "her ikisi amaç",
+              "fark yok"
+            ],
+            "answer": "amaç vs sebep"
+          },
+          {
+            "id": "b2-03-q20",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Hedefinize ulaşmak için iyi hazırlanmalısınız\"",
+            "words": [
+              "Du",
+              "solltest",
+              "dich",
+              "gut",
+              "vorbereiten,",
+              "um",
+              "dein",
+              "Ziel",
+              "zu",
+              "erreichen"
+            ],
+            "answer": "Du solltest dich gut vorbereiten, um dein Ziel zu erreichen"
+          }
+        ]
+      }
+    },
+    "b2-04": {
+      "title": "Modalverben subjektiv — Öznel Kiplik",
+      "grammar": {
+        "title": "Spekülasyon ve Olasılık için Modalverben",
+        "content": "B2 seviyesinde, Modalverben **öznel/varsayımsal** anlamda kullanılarak şunları ifade eder:\n- **Spekülasyon** (olasılık)\n- **Şüphe** (şüphe)\n- **İddia** (iddia)\n\n**Kesinlik Dereceleri:**\n| Derece | Modalverb | Örnek |\n|---|---|---|\n| 100% | muss | Er muss krank sein. (Hasta olmalı) |\n| 90% | dürfte | Er dürfte krank sein. (Muhtemelen hasta) |\n| 60% | könnte | Er könnte krank sein. (Hasta olabilir) |\n| İddia | soll | Er soll krank sein. (Hasta olduğu söyleniyor) |\n| Kendi İddias | will | Er will krank sein. (Hasta olduğunu iddia ediyor) |\n\n**Geçmiş zamanda:** Modalverb + Infinitiv II (Partizip II + haben/sein)\n- Er **muss** krank **gewesen sein**. (Hasta olmuş olmalı)",
+        "tables": [
+          {
+            "title": "Modalverben subjektiv",
+            "theme": "conjugation",
+            "headers": [
+              "Modalverb",
+              "Öznel Anlamı",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "güçlü kesinlik",
+                  "Er muss zu Hause sein."
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "dürfen (Konj II)",
+                  "güçlü olasılık",
+                  "Es dürfte regnen."
+                ]
+              },
+              {
+                "cells": [
+                  "können (Konj II)",
+                  "olasılık",
+                  "Er könnte kommen."
+                ]
+              },
+              {
+                "cells": [
+                  "mögen",
+                  "tahmin",
+                  "Er mag etwa 30 sein."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "söylendiğine göre / söylenti",
+                  "Er soll reich sein."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "kendi iddiası",
+                  "Er will es gesehen haben."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "muss = %99 kesinlik",
+            "example": "Er muss krank sein.",
+            "translation": "Hasta olmalı."
+          },
+          {
+            "rule": "soll = başkalarının iddiası",
+            "example": "Sie soll reich sein.",
+            "translation": "Zengin olduğu söyleniyor."
+          },
+          {
+            "rule": "Geçmiş için Infinitiv II",
+            "example": "Er muss es vergessen haben.",
+            "translation": "Bunu unutmuş olmalı."
+          }
+        ],
+        "examples": [
+          "Er muss sehr müde sein. — Çok yorgun olmalı.",
+          "Das könnte stimmen. — Bu doğru olabilir.",
+          "Sie dürfte bald kommen. — Muhtemelen yakında gelecek.",
+          "Er soll ein guter Arzt sein. — İyi bir doktor olduğu söyleniyor.",
+          "Sie will alles gewusst haben. — Her şeyi bildiğini iddia ediyor.",
+          "Das mag wahr sein. — Bu doğru olabilir.",
+          "Er muss es vergessen haben. — Bunu unutmuş olmalı.",
+          "Das kann nicht wahr sein. — Bu doğru olamaz."
+        ],
+        "tip": "Almanca haberlerde **soll** çok yaygındır (söylentiler için). Bilimsel tartışmalarda **dürfte** (bilimsel olasılık) kullanılır."
+      },
+      "vocabulary": [
+        {
+          "german": "die Vermutung",
+          "arabic": "varsayım",
+          "plural": "die Vermutungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wahrscheinlichkeit",
+          "arabic": "olasılık",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Zweifel",
+          "arabic": "şüphe",
+          "plural": "die Zweifel",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Sicherheit",
+          "arabic": "kesinlik",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Gerüchteküche",
+          "arabic": "söylenti kaynağı",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gerücht",
+          "arabic": "söylenti",
+          "plural": "die Gerüchte",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Behauptung",
+          "arabic": "iddia",
+          "plural": "die Behauptungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "offensichtlich",
+          "arabic": "açık",
+          "type": "adjective"
+        },
+        {
+          "german": "wahrscheinlich",
+          "arabic": "muhtemel",
+          "type": "adjective"
+        },
+        {
+          "german": "vermutlich",
+          "arabic": "muhtemelen",
+          "type": "adverb"
+        },
+        {
+          "german": "angeblich",
+          "arabic": "iddia edildiğine göre",
+          "type": "adverb"
+        },
+        {
+          "german": "sicher",
+          "arabic": "kesin",
+          "type": "adjective"
+        },
+        {
+          "german": "unsicher",
+          "arabic": "belirsiz",
+          "type": "adjective"
+        },
+        {
+          "german": "möglich",
+          "arabic": "mümkün",
+          "type": "adjective"
+        },
+        {
+          "german": "unmöglich",
+          "arabic": "imkansız",
+          "type": "adjective"
+        },
+        {
+          "german": "vermuten",
+          "arabic": "tahmin etmek",
+          "type": "verb"
+        },
+        {
+          "german": "bezweifeln",
+          "arabic": "şüphe etmek",
+          "type": "verb"
+        },
+        {
+          "german": "behaupten",
+          "arabic": "iddia etmek",
+          "type": "verb"
+        },
+        {
+          "german": "glauben",
+          "arabic": "inanmak",
+          "type": "verb"
+        },
+        {
+          "german": "scheinen",
+          "arabic": "görünmek",
+          "type": "verb"
+        },
+        {
+          "german": "wirken",
+          "arabic": "görünmek/izlenim vermek",
+          "type": "verb"
+        },
+        {
+          "german": "etwa",
+          "arabic": "yaklaşık",
+          "type": "adverb"
+        },
+        {
+          "german": "die Annahme",
+          "arabic": "varsayım",
+          "plural": "die Annahmen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Verdacht",
+          "arabic": "şüphe",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Tatsache",
+          "arabic": "gerçek",
+          "plural": "die Tatsachen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Information",
+          "arabic": "bilgi",
+          "plural": "die Informationen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "feststellen",
+          "arabic": "tespit etmek, belirlemek",
+          "type": "verb"
+        },
+        {
+          "german": "einschätzen",
+          "arabic": "değerlendirmek, tahmin etmek",
+          "type": "verb"
+        },
+        {
+          "german": "schließen auf",
+          "arabic": "çıkarsama yapmak",
+          "type": "verb"
+        },
+        {
+          "german": "sich vorstellen",
+          "arabic": "hayal etmek",
+          "type": "verb"
+        },
+        {
+          "german": "beweisen",
+          "arabic": "kanıtlamak",
+          "type": "verb"
+        },
+        {
+          "german": "glaubhaft",
+          "arabic": "inandırıcı",
+          "type": "adjective"
+        },
+        {
+          "german": "zweifelhaft",
+          "arabic": "şüpheli",
+          "type": "adjective"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "açık",
+          "type": "adjective"
+        },
+        {
+          "german": "fraglich",
+          "arabic": "tartışmalı",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-04-q1",
+            "type": "multiple-choice",
+            "question": "\"Hasta olmalı\" (kesinlik):",
+            "options": [
+              "Er soll krank sein",
+              "Er muss krank sein",
+              "Er will krank sein",
+              "Er mag krank sein"
+            ],
+            "answer": "Er muss krank sein"
+          },
+          {
+            "id": "b2-04-q2",
+            "type": "multiple-choice",
+            "question": "\"Zengin olduğu söyleniyor\":",
+            "options": [
+              "Er muss reich sein",
+              "Er soll reich sein",
+              "Er will reich sein",
+              "Er kann reich sein"
+            ],
+            "answer": "Er soll reich sein"
+          },
+          {
+            "id": "b2-04-q3",
+            "type": "fill-blank",
+            "question": "Das ___ stimmen. (doğru olabilir - könnte)",
+            "answer": "könnte"
+          },
+          {
+            "id": "b2-04-q4",
+            "type": "fill-blank",
+            "question": "Er ___ alles gewusst haben. (iddia ediyor - will)",
+            "answer": "will"
+          },
+          {
+            "id": "b2-04-q5",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [sein / sehr / muss / Er / müde]",
+            "words": [
+              "Er",
+              "muss",
+              "sehr",
+              "müde",
+              "sein"
+            ],
+            "answer": "Er muss sehr müde sein"
+          },
+          {
+            "id": "b2-04-q6",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [Arzt / guter / soll / ein / Er / sein]",
+            "words": [
+              "Er",
+              "soll",
+              "ein",
+              "guter",
+              "Arzt",
+              "sein"
+            ],
+            "answer": "Er soll ein guter Arzt sein"
+          },
+          {
+            "id": "b2-04-q7",
+            "type": "matching",
+            "question": "Eşleştirin:",
+            "pairs": [
+              {
+                "left": "muss",
+                "right": "%99 kesinlik"
+              },
+              {
+                "left": "könnte",
+                "right": "olasılık"
+              },
+              {
+                "left": "soll",
+                "right": "söylenti"
+              },
+              {
+                "left": "will",
+                "right": "kendi iddiası"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-04-q8",
+            "type": "multiple-choice",
+            "question": "\"Er muss es vergessen ___.\" (geçmiş zamanda)",
+            "options": [
+              "haben",
+              "hat",
+              "ist",
+              "sein"
+            ],
+            "answer": "haben"
+          },
+          {
+            "id": "b2-04-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Bu doğru olabilir.\"",
+            "answer": "Das könnte stimmen"
+          },
+          {
+            "id": "b2-04-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Er soll in Berlin wohnen.",
+            "options": [
+              "Berlin'de yaşıyor (kesin)",
+              "Berlin'de yaşadığı söyleniyor",
+              "Berlin'de yaşamıyor",
+              "Berlin'deydi"
+            ],
+            "answer": "Berlin'de yaşadığı söyleniyor"
+          },
+          {
+            "id": "b2-04-q11",
+            "type": "fill-blank",
+            "question": "%99 kesinlik: \"Er ___ krank sein.\"",
+            "answer": "muss",
+            "hint": "muss = kesinlik"
+          },
+          {
+            "id": "b2-04-q12",
+            "type": "multiple-choice",
+            "question": "Söylenti için: \"Er ___ reich sein.\"",
+            "options": [
+              "muss",
+              "soll",
+              "will",
+              "kann"
+            ],
+            "answer": "soll"
+          },
+          {
+            "id": "b2-04-q13",
+            "type": "fill-blank",
+            "question": "Kendi iddiası: \"Er ___ es gesehen haben.\"",
+            "answer": "will",
+            "hint": "will = iddia ediyor"
+          },
+          {
+            "id": "b2-04-q14",
+            "type": "multiple-choice",
+            "question": "%60 olasılık:",
+            "options": [
+              "muss",
+              "könnte",
+              "soll",
+              "will"
+            ],
+            "answer": "könnte"
+          },
+          {
+            "id": "b2-04-q15",
+            "type": "matching",
+            "question": "Modalverb'i öznel anlamıyla eşleştirin:",
+            "pairs": [
+              {
+                "left": "muss",
+                "right": "güçlü kesinlik"
+              },
+              {
+                "left": "könnte",
+                "right": "olasılık"
+              },
+              {
+                "left": "soll",
+                "right": "söylenti"
+              },
+              {
+                "left": "will",
+                "right": "kendi iddiası"
+              },
+              {
+                "left": "dürfte",
+                "right": "güçlü olasılık"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-04-q16",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Randevuyu unutmuş olmalı\"",
+            "words": [
+              "Er",
+              "muss",
+              "den",
+              "Termin",
+              "vergessen",
+              "haben"
+            ],
+            "answer": "Er muss den Termin vergessen haben"
+          },
+          {
+            "id": "b2-04-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Hasta görünüyor\"",
+            "answer": "Er scheint krank zu sein"
+          },
+          {
+            "id": "b2-04-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Es ___ heute regnen.\" (olasılık — dürfte)",
+            "audioPrompt": "Es dürfte heute regnen.",
+            "answer": "dürfte",
+            "hint": "dürfte = güçlü olasılık"
+          },
+          {
+            "id": "b2-04-q19",
+            "type": "multiple-choice",
+            "question": "Haberlerde söylenti için:",
+            "options": [
+              "muss",
+              "soll",
+              "kann",
+              "darf"
+            ],
+            "answer": "soll"
+          },
+          {
+            "id": "b2-04-q20",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Yarın gelebilir\"",
+            "words": [
+              "Er",
+              "könnte",
+              "morgen",
+              "kommen"
+            ],
+            "answer": "Er könnte morgen kommen"
+          }
+        ]
+      }
+    },
+    "b2-05": {
+      "title": "Modalverben ile Pasif",
+      "grammar": {
+        "title": "Pasif + können/müssen/sollen",
+        "content": "Pasif, **pasif yapıda zorunluluk veya olasılık ifade etmek** için Modalverben ile birleştirilebilir.\n\n**Yapı:**\n**Modalverb + Partizip II + werden**\n\n**Örnek:**\n- Aktiv: Man muss das Formular ausfüllen.\n- Pasif: Das Formular **muss** ausgefüllt **werden**.\n  (Form mutlaka doldurulmalıdır.)\n\n**Diğer zamanlar:**\n- Präteritum: Das Formular **musste** ausgefüllt **werden**.\n- Perfekt (nadir): Das Formular **hat** ausgefüllt **werden müssen**.\n\n**B2 seviyesinde yaygın Pasif alternatifi:** **sein + zu + Infinitiv**\n- Das Formular **ist** auszufüllen. = muss ausgefüllt werden\n- Das Auto **ist zu reparieren**. = kann/muss repariert werden",
+        "tables": [
+          {
+            "title": "Modalverben ile Pasif",
+            "theme": "conjugation",
+            "headers": [
+              "Modalverb",
+              "Aktiv",
+              "Pasif"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "Man muss es machen",
+                  "Es muss gemacht werden"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "können",
+                  "Man kann es sehen",
+                  "Es kann gesehen werden"
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "Man soll es lesen",
+                  "Es soll gelesen werden"
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "Man darf es nicht",
+                  "Es darf nicht gemacht werden"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Pasif Alternatifleri",
+            "theme": "default",
+            "headers": [
+              "Form",
+              "Anlam",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sein + zu + Inf",
+                  "muss/kann + werden",
+                  "Das ist zu lesen."
+                ]
+              },
+              {
+                "cells": [
+                  "sich lassen + Inf",
+                  "kann + werden",
+                  "Das lässt sich machen."
+                ]
+              },
+              {
+                "cells": [
+                  "-bar (sıfat)",
+                  "kann + werden",
+                  "Das ist lesbar."
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Modalverb + PII + werden",
+            "example": "Das muss erledigt werden.",
+            "translation": "Bu mutlaka tamamlanmalıdır."
+          },
+          {
+            "rule": "sein + zu + Inf = Pasif + müssen/können",
+            "example": "Das ist zu beachten.",
+            "translation": "Buna dikkat edilmelidir."
+          },
+          {
+            "rule": "-bar = kann + werden (pasif)",
+            "example": "essbar = kann gegessen werden",
+            "translation": "yenilebilir"
+          }
+        ],
+        "examples": [
+          "Das Formular muss sofort ausgefüllt werden. — Form hemen doldurulmalıdır.",
+          "Die Tür kann nicht geöffnet werden. — Kapı açılamaz.",
+          "Das Problem soll gelöst werden. — Sorun çözülmelidir.",
+          "Hier darf nicht geraucht werden. — Burada sigara içilmesi yasaktır.",
+          "Die Regeln sind zu befolgen. — Kurallar uyulmalıdır.",
+          "Das lässt sich nicht ändern. — Bu değiştirilemez.",
+          "Dieses Wort ist leicht lesbar. — Bu kelime kolayca okunabilir.",
+          "Der Text musste bis morgen geschrieben werden. — Metin yarına kadar yazılmalıydı."
+        ],
+        "tip": "Alman yasaları ve talimatlarında Pasif + Modalverben en yaygın kalıptır — resmi belgeleri anlamak için bunu öğrenin."
+      },
+      "vocabulary": [
+        {
+          "german": "erledigen",
+          "arabic": "tamamlamak/bitirmek",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "doldurmak",
+          "type": "verb"
+        },
+        {
+          "german": "befolgen",
+          "arabic": "uyulmak/itaat etmek",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "dikkat etmek/not almak",
+          "type": "verb"
+        },
+        {
+          "german": "einhalten",
+          "arabic": "uyum sağlamak",
+          "type": "verb"
+        },
+        {
+          "german": "lösen",
+          "arabic": "çözmek",
+          "type": "verb"
+        },
+        {
+          "german": "ändern",
+          "arabic": "değiştirmek",
+          "type": "verb"
+        },
+        {
+          "german": "verbieten",
+          "arabic": "yasaklamak",
+          "type": "verb"
+        },
+        {
+          "german": "erlauben",
+          "arabic": "izin vermek",
+          "type": "verb"
+        },
+        {
+          "german": "das Formular",
+          "arabic": "form",
+          "plural": "die Formulare",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Regel",
+          "arabic": "kural",
+          "plural": "die Regeln",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Vorschrift",
+          "arabic": "yönetmelik",
+          "plural": "die Vorschriften",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Gesetz",
+          "arabic": "kanun",
+          "plural": "die Gesetze",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Anweisung",
+          "arabic": "talimat",
+          "plural": "die Anweisungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "gerekli",
+          "type": "adjective"
+        },
+        {
+          "german": "notwendig",
+          "arabic": "gerekli/zorunlu",
+          "type": "adjective"
+        },
+        {
+          "german": "unbedingt",
+          "arabic": "kesinlikle/mutlaka",
+          "type": "adverb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "hemen",
+          "type": "adverb"
+        },
+        {
+          "german": "essbar",
+          "arabic": "yenilebilir",
+          "type": "adjective"
+        },
+        {
+          "german": "lesbar",
+          "arabic": "okunabilir",
+          "type": "adjective"
+        },
+        {
+          "german": "lösbar",
+          "arabic": "çözülebilir",
+          "type": "adjective"
+        },
+        {
+          "german": "machbar",
+          "arabic": "yapılabilir/mümkün",
+          "type": "adjective"
+        },
+        {
+          "german": "die Genehmigung",
+          "arabic": "izin/onay",
+          "plural": "die Genehmigungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Verpflichtung",
+          "arabic": "yükümlülük",
+          "plural": "die Verpflichtungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Anforderung",
+          "arabic": "gereksinim/şart",
+          "plural": "die Anforderungen",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Antrag",
+          "arabic": "resmi başvuru",
+          "plural": "die Anträge",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "die Unterlagen",
+          "arabic": "belgeler",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "genehmigen",
+          "arabic": "onaylamak",
+          "type": "verb"
+        },
+        {
+          "german": "unterzeichnen",
+          "arabic": "imzalamak",
+          "type": "verb"
+        },
+        {
+          "german": "beantragen",
+          "arabic": "başvurmak",
+          "type": "verb"
+        },
+        {
+          "german": "einreichen",
+          "arabic": "sunmak",
+          "type": "verb"
+        },
+        {
+          "german": "realisierbar",
+          "arabic": "gerçekleştirilebilir",
+          "type": "adjective"
+        },
+        {
+          "german": "verfügbar",
+          "arabic": "mevcut",
+          "type": "adjective"
+        },
+        {
+          "german": "optional",
+          "arabic": "isteğe bağlı",
+          "type": "adjective"
+        },
+        {
+          "german": "verpflichtend",
+          "arabic": "zorunlu",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-05-q1",
+            "type": "multiple-choice",
+            "question": "Form doldurulmalıdır:",
+            "options": [
+              "Das Formular muss ausfüllen",
+              "Das Formular muss ausgefüllt werden",
+              "Das Formular füllt aus",
+              "Das Formular ist ausfüllen"
+            ],
+            "answer": "Das Formular muss ausgefüllt werden"
+          },
+          {
+            "id": "b2-05-q2",
+            "type": "multiple-choice",
+            "question": "Kapı açılamaz:",
+            "options": [
+              "Die Tür kann nicht öffnen",
+              "Die Tür öffnet nicht",
+              "Die Tür kann nicht geöffnet werden",
+              "Die Tür hat nicht geöffnet"
+            ],
+            "answer": "Die Tür kann nicht geöffnet werden"
+          },
+          {
+            "id": "b2-05-q3",
+            "type": "fill-blank",
+            "question": "Hier darf nicht ___ werden. (sigara içilmek - geraucht)",
+            "answer": "geraucht"
+          },
+          {
+            "id": "b2-05-q4",
+            "type": "fill-blank",
+            "question": "Das Problem soll ___ werden. (çözülmek - gelöst)",
+            "answer": "gelöst"
+          },
+          {
+            "id": "b2-05-q5",
+            "type": "drag-drop",
+            "question": "Sırasını düzenleyin: [werden / muss / Das Formular / ausgefüllt]",
+            "words": [
+              "Das",
+              "Formular",
+              "muss",
+              "ausgefüllt",
+              "werden"
+            ],
+            "answer": "Das Formular muss ausgefüllt werden"
+          },
+          {
+            "id": "b2-05-q6",
+            "type": "drag-drop",
+            "question": "Sırasını düzenleyin: [zu / Die Regeln / befolgen / sind]",
+            "words": [
+              "Die",
+              "Regeln",
+              "sind",
+              "zu",
+              "befolgen"
+            ],
+            "answer": "Die Regeln sind zu befolgen"
+          },
+          {
+            "id": "b2-05-q7",
+            "type": "matching",
+            "question": "Aktivi Pasif ile eşleştirin:",
+            "pairs": [
+              {
+                "left": "Man muss es machen",
+                "right": "Es muss gemacht werden"
+              },
+              {
+                "left": "Man kann es sehen",
+                "right": "Es kann gesehen werden"
+              },
+              {
+                "left": "Man darf nicht rauchen",
+                "right": "Es darf nicht geraucht werden"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-05-q8",
+            "type": "multiple-choice",
+            "question": "\"essbar\" = ?",
+            "options": [
+              "muss gegessen werden",
+              "kann gegessen werden",
+              "isst",
+              "aß"
+            ],
+            "answer": "kann gegessen werden"
+          },
+          {
+            "id": "b2-05-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Sorun çözülmelidir.\"",
+            "answer": "Das Problem muss gelöst werden"
+          },
+          {
+            "id": "b2-05-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Hier darf nicht geraucht werden.",
+            "options": [
+              "Burada sigara içilmesine izin verilir",
+              "Burada sigara içilmesi yasaktır",
+              "Burada duman vardır",
+              "Sigara içmek iyidir"
+            ],
+            "answer": "Burada sigara içilmesi yasaktır"
+          },
+          {
+            "id": "b2-05-q11",
+            "type": "fill-blank",
+            "question": "Doldurun: \"Das Formular muss ___ werden.\" (ausfüllen'in Partizip II'si)",
+            "answer": "ausgefüllt",
+            "hint": "ausfüllen → ausgefüllt"
+          },
+          {
+            "id": "b2-05-q12",
+            "type": "multiple-choice",
+            "question": "Pasif + Modalverb yapısı:",
+            "options": [
+              "Modal + werden + PII",
+              "Modal + PII + werden",
+              "werden + Modal + PII",
+              "PII + Modal + werden"
+            ],
+            "answer": "Modal + PII + werden"
+          },
+          {
+            "id": "b2-05-q13",
+            "type": "fill-blank",
+            "question": "\"Das Auto ___ zu reparieren.\" (sein + zu = muss/kann)",
+            "answer": "ist",
+            "hint": "sein + zu + Inf"
+          },
+          {
+            "id": "b2-05-q14",
+            "type": "multiple-choice",
+            "question": "\"Das ist machbar\" anlamı:",
+            "options": [
+              "mussbar",
+              "kann gemacht werden",
+              "wird gemacht",
+              "gemacht"
+            ],
+            "answer": "kann gemacht werden"
+          },
+          {
+            "id": "b2-05-q15",
+            "type": "matching",
+            "question": "Sıfatı Pasif anlamı ile eşleştirin:",
+            "pairs": [
+              {
+                "left": "lesbar",
+                "right": "kann gelesen werden"
+              },
+              {
+                "left": "essbar",
+                "right": "kann gegessen werden"
+              },
+              {
+                "left": "lösbar",
+                "right": "kann gelöst werden"
+              },
+              {
+                "left": "machbar",
+                "right": "kann gemacht werden"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-05-q16",
+            "type": "drag-drop",
+            "question": "Sözcükleri sırasını düzenleyin: \"Başvuru hemen imzalanmalıdır\"",
+            "words": [
+              "Der",
+              "Antrag",
+              "muss",
+              "sofort",
+              "unterzeichnet",
+              "werden"
+            ],
+            "answer": "Der Antrag muss sofort unterzeichnet werden"
+          },
+          {
+            "id": "b2-05-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Bu kolayca çözülebilir.\"",
+            "answer": "Das lässt sich leicht lösen"
+          },
+          {
+            "id": "b2-05-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Die Regeln müssen ___ werden.\" (uyulmak)",
+            "audioPrompt": "Die Regeln müssen befolgt werden.",
+            "answer": "befolgt",
+            "hint": "befolgen → befolgt"
+          },
+          {
+            "id": "b2-05-q19",
+            "type": "multiple-choice",
+            "question": "Resmi yasalarda en sık kullanılan form:",
+            "options": [
+              "Aktiv",
+              "Pasif + Modalverb",
+              "Imperativ",
+              "Konjunktiv"
+            ],
+            "answer": "Pasif + Modalverb"
+          },
+          {
+            "id": "b2-05-q20",
+            "type": "drag-drop",
+            "question": "Sözcükleri sırasını düzenleyin (sein + zu): \"Buna dikkat edilmelidir\"",
+            "words": [
+              "Das",
+              "ist",
+              "zu",
+              "beachten"
+            ],
+            "answer": "Das ist zu beachten"
+          }
+        ]
+      }
+    },
+    "b2-06": {
+      "title": "Prepozyonlu Fiiller — Verben mit Präpositionen",
+      "grammar": {
+        "title": "warten auf, denken an, sprechen über",
+        "content": "Birçok Almanca fiil **sabit bir prepozyson** ve belirli bir hâl ile kullanılır. Bunları birlikte ezberlemek zorundasınız.\n\n**Önemli örnekler:**\n- **warten auf + Akk** — beklemek\n- **denken an + Akk** — düşünmek\n- **sprechen über + Akk** — konuşmak\n- **sich freuen auf + Akk** — sabırsızlıkla beklemek\n- **sich freuen über + Akk** — sevinmek\n- **sich interessieren für + Akk** — ilgilenmek\n- **teilnehmen an + Dat** — katılmak\n- **arbeiten an + Dat** — çalışmak\n- **Angst haben vor + Dat** — korkmak\n\n⚠️ **wo-/da-Komposita:** Şeyler için \"auf es\" yerine **darauf, daran, darüber** kullanırız:\n- Ich denke **daran**. (Bunu düşünüyorum - şey)\n- Ich denke **an ihn**. (Onun hakkında düşünüyorum - kişi)",
+        "tables": [
+          {
+            "title": "En Önemli Prepozyonlu Fiiller",
+            "theme": "default",
+            "headers": [
+              "Fiil",
+              "Prepozyson",
+              "Hâl",
+              "Anlamı"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "warten",
+                  "auf",
+                  "Akk",
+                  "beklemek"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "denken",
+                  "an",
+                  "Akk",
+                  "düşünmek"
+                ]
+              },
+              {
+                "cells": [
+                  "sich erinnern",
+                  "an",
+                  "Akk",
+                  "hatırlamak"
+                ]
+              },
+              {
+                "cells": [
+                  "sprechen",
+                  "über/von",
+                  "Akk/Dat",
+                  "konuşmak"
+                ]
+              },
+              {
+                "cells": [
+                  "sich freuen",
+                  "auf/über",
+                  "Akk",
+                  "sabırsızlıkla beklemek / sevinmek"
+                ]
+              },
+              {
+                "cells": [
+                  "sich interessieren",
+                  "für",
+                  "Akk",
+                  "ilgilenmek"
+                ]
+              },
+              {
+                "cells": [
+                  "teilnehmen",
+                  "an",
+                  "Dat",
+                  "katılmak"
+                ]
+              },
+              {
+                "cells": [
+                  "Angst haben",
+                  "vor",
+                  "Dat",
+                  "korkmak"
+                ]
+              },
+              {
+                "cells": [
+                  "träumen",
+                  "von",
+                  "Dat",
+                  "rüya görmek"
+                ]
+              }
+            ]
+          },
+          {
+            "title": "wo-/da-Komposita",
+            "theme": "default",
+            "headers": [
+              "Prepozyson",
+              "şeyler için (da-)",
+              "sorular için (wo-)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "auf",
+                  "darauf",
+                  "worauf"
+                ]
+              },
+              {
+                "cells": [
+                  "an",
+                  "daran",
+                  "woran"
+                ]
+              },
+              {
+                "cells": [
+                  "über",
+                  "darüber",
+                  "worüber"
+                ]
+              },
+              {
+                "cells": [
+                  "für",
+                  "dafür",
+                  "wofür"
+                ]
+              },
+              {
+                "cells": [
+                  "von",
+                  "davon",
+                  "wovon"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Fiil + prepozyson + hâli ezberleyin",
+            "example": "warten auf + Akk",
+            "translation": "beklemek"
+          },
+          {
+            "rule": "Şeyler için da-",
+            "example": "Ich denke daran.",
+            "translation": "Bunu düşünüyorum (şey)."
+          },
+          {
+            "rule": "Kişiler için auf + ihn",
+            "example": "Ich warte auf ihn.",
+            "translation": "Onu bekliyorum."
+          }
+        ],
+        "examples": [
+          "Ich warte auf den Bus. — Otobüsü bekliyorum.",
+          "Sie denkt an ihre Familie. — Ailesi hakkında düşünüyor.",
+          "Wir sprechen über das Wetter. — Hava hakkında konuşuyoruz.",
+          "Er interessiert sich für Politik. — Siyasete ilgileniyor.",
+          "Sie freut sich auf das Wochenende. — Hafta sonunu sabırsızlıkla bekliyor.",
+          "Ich habe Angst vor Spinnen. — Örümceklerden korkuyorum.",
+          "Woran denkst du? — Ne hakkında düşünüyorsun?",
+          "Ich träume davon, nach Japan zu reisen. — Japonya'ya seyahat etme rüyası görüyorum."
+        ],
+        "tip": "Prepozyonlu fiiller için bir defter oluşturun — her hafta 5 yeni fiil ezberleyin, 100'e ulaşana kadar."
+      },
+      "vocabulary": [
+        {
+          "german": "warten auf",
+          "arabic": "beklemek",
+          "type": "verb"
+        },
+        {
+          "german": "denken an",
+          "arabic": "düşünmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich erinnern an",
+          "arabic": "hatırlamak",
+          "type": "verb"
+        },
+        {
+          "german": "sich freuen auf",
+          "arabic": "sabırsızlıkla beklemek",
+          "type": "verb"
+        },
+        {
+          "german": "sich freuen über",
+          "arabic": "sevinmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich interessieren für",
+          "arabic": "ilgilenmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich ärgern über",
+          "arabic": "kızmak",
+          "type": "verb"
+        },
+        {
+          "german": "sich kümmern um",
+          "arabic": "bakmak, ilgilenmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich entschuldigen für",
+          "arabic": "özür dilemek",
+          "type": "verb"
+        },
+        {
+          "german": "sich bewerben um",
+          "arabic": "başvurmak",
+          "type": "verb"
+        },
+        {
+          "german": "teilnehmen an",
+          "arabic": "katılmak",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten an",
+          "arabic": "çalışmak",
+          "type": "verb"
+        },
+        {
+          "german": "glauben an",
+          "arabic": "inanmak",
+          "type": "verb"
+        },
+        {
+          "german": "helfen bei",
+          "arabic": "yardım etmek",
+          "type": "verb"
+        },
+        {
+          "german": "Angst haben vor",
+          "arabic": "korkmak",
+          "type": "verb"
+        },
+        {
+          "german": "träumen von",
+          "arabic": "rüya görmek",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen über",
+          "arabic": "konuşmak",
+          "type": "verb"
+        },
+        {
+          "german": "achten auf",
+          "arabic": "dikkat etmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich gewöhnen an",
+          "arabic": "alışmak",
+          "type": "verb"
+        },
+        {
+          "german": "bestehen aus",
+          "arabic": "oluşmak",
+          "type": "verb"
+        },
+        {
+          "german": "verzichten auf",
+          "arabic": "vazgeçmek",
+          "type": "verb"
+        },
+        {
+          "german": "hoffen auf",
+          "arabic": "umut etmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschäftigen mit",
+          "arabic": "meşgul olmak",
+          "type": "verb"
+        },
+        {
+          "german": "sich beschweren über",
+          "arabic": "şikayet etmek",
+          "type": "verb"
+        },
+        {
+          "german": "sich konzentrieren auf",
+          "arabic": "yoğunlaşmak",
+          "type": "verb"
+        },
+        {
+          "german": "sich verlassen auf",
+          "arabic": "güvenmek",
+          "type": "verb"
+        },
+        {
+          "german": "reagieren auf",
+          "arabic": "tepki göstermek",
+          "type": "verb"
+        },
+        {
+          "german": "überzeugen von",
+          "arabic": "ikna etmek",
+          "type": "verb"
+        },
+        {
+          "german": "streben nach",
+          "arabic": "çabalamak",
+          "type": "verb"
+        },
+        {
+          "german": "leiden unter",
+          "arabic": "çekmek",
+          "type": "verb"
+        },
+        {
+          "german": "protestieren gegen",
+          "arabic": "protesto etmek",
+          "type": "verb"
+        },
+        {
+          "german": "kämpfen für",
+          "arabic": "mücadele etmek",
+          "type": "verb"
+        },
+        {
+          "german": "rechnen mit",
+          "arabic": "saymak, beklemek",
+          "type": "verb"
+        },
+        {
+          "german": "sich bedanken für",
+          "arabic": "teşekkür etmek",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-06-q1",
+            "type": "multiple-choice",
+            "question": "\"Otobüsü bekliyorum\":",
+            "options": [
+              "Ich warte für den Bus",
+              "Ich warte auf den Bus",
+              "Ich warte zu dem Bus",
+              "Ich warte mit dem Bus"
+            ],
+            "answer": "Ich warte auf den Bus"
+          },
+          {
+            "id": "b2-06-q2",
+            "type": "multiple-choice",
+            "question": "\"Ailesi hakkında düşünüyorum\":",
+            "options": [
+              "Ich denke an meine Familie",
+              "Ich denke über meine Familie",
+              "Ich denke für meine Familie",
+              "Ich denke von meine Familie"
+            ],
+            "answer": "Ich denke an meine Familie"
+          },
+          {
+            "id": "b2-06-q3",
+            "type": "fill-blank",
+            "question": "Sie interessiert sich ___ Politik. (için)",
+            "answer": "für"
+          },
+          {
+            "id": "b2-06-q4",
+            "type": "fill-blank",
+            "question": "Ich habe Angst ___ Spinnen. (korkusu)",
+            "answer": "vor"
+          },
+          {
+            "id": "b2-06-q5",
+            "type": "drag-drop",
+            "question": "Sıralayın: [Wochenende / das / auf / freue / mich / Ich]",
+            "words": [
+              "Ich",
+              "freue",
+              "mich",
+              "auf",
+              "das",
+              "Wochenende"
+            ],
+            "answer": "Ich freue mich auf das Wochenende"
+          },
+          {
+            "id": "b2-06-q6",
+            "type": "drag-drop",
+            "question": "Sıralayın: [denkst / Woran / du / ?]",
+            "words": [
+              "Woran",
+              "denkst",
+              "du",
+              "?"
+            ],
+            "answer": "Woran denkst du ?"
+          },
+          {
+            "id": "b2-06-q7",
+            "type": "matching",
+            "question": "Fiili prepozysonla eşleştirin:",
+            "pairs": [
+              {
+                "left": "warten",
+                "right": "auf + Akk"
+              },
+              {
+                "left": "träumen",
+                "right": "von + Dat"
+              },
+              {
+                "left": "Angst haben",
+                "right": "vor + Dat"
+              },
+              {
+                "left": "sich interessieren",
+                "right": "für + Akk"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-06-q8",
+            "type": "multiple-choice",
+            "question": "\"Bunu düşünüyorum\" (şey):",
+            "options": [
+              "Ich denke an es",
+              "Ich denke darauf",
+              "Ich denke daran",
+              "Ich denke ihn"
+            ],
+            "answer": "Ich denke daran"
+          },
+          {
+            "id": "b2-06-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Otobüsü bekliyorum.\"",
+            "answer": "Ich warte auf den Bus"
+          },
+          {
+            "id": "b2-06-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Er träumt davon, Arzt zu werden.",
+            "options": [
+              "O doktor",
+              "O doktor olmak rüyası görüyor",
+              "O doktor olmak istemiyor",
+              "O doktordu"
+            ],
+            "answer": "O doktor olmak rüyası görüyor"
+          },
+          {
+            "id": "b2-06-q11",
+            "type": "fill-blank",
+            "question": "Doldurun: \"Ich verlasse mich ___ dich.\" (auf + Akk)",
+            "answer": "auf",
+            "hint": "sich verlassen + auf + Akk"
+          },
+          {
+            "id": "b2-06-q12",
+            "type": "multiple-choice",
+            "question": "\"leiden\" fiili şunu alır:",
+            "options": [
+              "unter + Dat",
+              "auf + Akk",
+              "an + Dat",
+              "für + Akk"
+            ],
+            "answer": "unter + Dat"
+          },
+          {
+            "id": "b2-06-q13",
+            "type": "fill-blank",
+            "question": "\"Wofür interessierst du dich?\" — soru şununla başlar ___",
+            "answer": "Wofür",
+            "hint": "wo + für (şey)"
+          },
+          {
+            "id": "b2-06-q14",
+            "type": "multiple-choice",
+            "question": "Kişi için \"an + ihn\", şey için:",
+            "options": [
+              "daran",
+              "darauf",
+              "damit",
+              "dafür"
+            ],
+            "answer": "daran"
+          },
+          {
+            "id": "b2-06-q15",
+            "type": "matching",
+            "question": "Fiili prepozysonla eşleştirin:",
+            "pairs": [
+              {
+                "left": "sich beschweren",
+                "right": "über + Akk"
+              },
+              {
+                "left": "rechnen",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "protestieren",
+                "right": "gegen + Akk"
+              },
+              {
+                "left": "kämpfen",
+                "right": "für + Akk"
+              },
+              {
+                "left": "sich gewöhnen",
+                "right": "an + Akk"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-06-q16",
+            "type": "drag-drop",
+            "question": "Sıralayın: \"Her şeyde sana güveniyorum\"",
+            "words": [
+              "Ich",
+              "verlasse",
+              "mich",
+              "in",
+              "allem",
+              "auf",
+              "dich"
+            ],
+            "answer": "Ich verlasse mich in allem auf dich"
+          },
+          {
+            "id": "b2-06-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Stressten çekiyorum\"",
+            "answer": "Ich leide unter Stress"
+          },
+          {
+            "id": "b2-06-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Ich bedanke mich ___ deine Hilfe.\" (için)",
+            "audioPrompt": "Ich bedanke mich für deine Hilfe.",
+            "answer": "für",
+            "hint": "sich bedanken + für + Akk"
+          },
+          {
+            "id": "b2-06-q19",
+            "type": "multiple-choice",
+            "question": "wo-Komposita şunlar için kullanılır:",
+            "options": [
+              "kişiler",
+              "sadece şeyler",
+              "sadece yerler",
+              "zamanlar"
+            ],
+            "answer": "sadece şeyler"
+          },
+          {
+            "id": "b2-06-q20",
+            "type": "drag-drop",
+            "question": "Sıralayın: \"Çalışmalarıma yoğunlaşıyorum\"",
+            "words": [
+              "Ich",
+              "konzentriere",
+              "mich",
+              "auf",
+              "mein",
+              "Studium"
+            ],
+            "answer": "Ich konzentriere mich auf mein Studium"
+          }
+        ]
+      }
+    },
+    "b2-07": {
+      "title": "Prepozyonlu Sıfatlar",
+      "grammar": {
+        "title": "stolz auf, verliebt in, zufrieden mit",
+        "content": "Fiiller gibi birçok sıfat da **sabit bir prepozyonla** kullanılır.\n\n**En yaygın olanlar:**\n- **stolz auf + Akk** — gurur duymak\n- **verliebt in + Akk** — aşık olmak\n- **zufrieden mit + Dat** — memnun olmak\n- **böse auf + Akk** — kızmak\n- **bereit zu + Dat** — hazır olmak\n- **abhängig von + Dat** — bağımlı olmak\n- **interessiert an + Dat** — ilgilenmiş olmak\n- **fähig zu + Dat** — yetenekli olmak\n- **freundlich zu + Dat** — dostça olmak\n- **reich an + Dat** — zengin olmak\n- **arm an + Dat** — fakir olmak\n\n⚠️ Bu sıfatlar genellikle **sein** ile kullanılır: Ich bin stolz auf dich.",
+        "tables": [
+          {
+            "title": "En Önemli Prepozyonlu Sıfatlar",
+            "theme": "default",
+            "headers": [
+              "Sıfat",
+              "Prep.",
+              "Kasus",
+              "Anlamı"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "stolz",
+                  "auf",
+                  "Akk",
+                  "gurur duymak"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "zufrieden",
+                  "mit",
+                  "Dat",
+                  "memnun olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "verliebt",
+                  "in",
+                  "Akk",
+                  "aşık olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "eifersüchtig",
+                  "auf",
+                  "Akk",
+                  "kıskanç olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "böse",
+                  "auf",
+                  "Akk",
+                  "kızmak"
+                ]
+              },
+              {
+                "cells": [
+                  "interessiert",
+                  "an",
+                  "Dat",
+                  "ilgilenmiş olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "abhängig",
+                  "von",
+                  "Dat",
+                  "bağımlı olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "verantwortlich",
+                  "für",
+                  "Akk",
+                  "sorumlu olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "traurig",
+                  "über",
+                  "Akk",
+                  "üzgün olmak"
+                ]
+              },
+              {
+                "cells": [
+                  "fähig",
+                  "zu",
+                  "Dat",
+                  "yetenekli olmak"
+                ]
+              }
+            ]
+          }
+        ],
+        "rules": [
+          {
+            "rule": "sein + Sıfat + Prep + Kasus",
+            "example": "Ich bin stolz auf dich.",
+            "translation": "Senden gurur duyuyorum."
+          },
+          {
+            "rule": "auf + Akk duygular için yaygındır",
+            "example": "böse auf ihn",
+            "translation": "ona kızmak"
+          },
+          {
+            "rule": "mit + Dat memnuniyet ve anlaşma için",
+            "example": "zufrieden mit dem Ergebnis",
+            "translation": "sonuçtan memnun olmak"
+          }
+        ],
+        "examples": [
+          "Ich bin stolz auf meine Eltern. — Aileme gurur duyuyorum.",
+          "Er ist zufrieden mit seiner Arbeit. — İşinden memnun.",
+          "Sie ist verliebt in ihn. — Ona aşık.",
+          "Bist du böse auf mich? — Bana mı kızdın?",
+          "Ich bin bereit zum Abflug. — Kalkışa hazırım.",
+          "Marokko ist reich an Kultur. — Fas kültürde zengin.",
+          "Er ist verantwortlich für das Projekt. — Projeden sorumlu.",
+          "Wir sind alle abhängig vom Internet. — Hepimiz internete bağımlıyız."
+        ],
+        "tip": "Bölüm ipucu: Sıfat + prepozyonu bir birim olarak ezberleyin: \"stolz-auf\", \"zufrieden-mit\"."
+      },
+      "vocabulary": [
+        {
+          "german": "stolz",
+          "arabic": "gururlu",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "memnun",
+          "type": "adjective"
+        },
+        {
+          "german": "unzufrieden",
+          "arabic": "memnun olmayan",
+          "type": "adjective"
+        },
+        {
+          "german": "verliebt",
+          "arabic": "aşık",
+          "type": "adjective"
+        },
+        {
+          "german": "eifersüchtig",
+          "arabic": "kıskanç",
+          "type": "adjective"
+        },
+        {
+          "german": "böse",
+          "arabic": "kızgın/kötü",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "dostça",
+          "type": "adjective"
+        },
+        {
+          "german": "nett",
+          "arabic": "hoş",
+          "type": "adjective"
+        },
+        {
+          "german": "bereit",
+          "arabic": "hazır",
+          "type": "adjective"
+        },
+        {
+          "german": "fähig",
+          "arabic": "yetenekli",
+          "type": "adjective"
+        },
+        {
+          "german": "unfähig",
+          "arabic": "yeteneksiz",
+          "type": "adjective"
+        },
+        {
+          "german": "verantwortlich",
+          "arabic": "sorumlu",
+          "type": "adjective"
+        },
+        {
+          "german": "abhängig",
+          "arabic": "bağımlı",
+          "type": "adjective"
+        },
+        {
+          "german": "unabhängig",
+          "arabic": "bağımsız",
+          "type": "adjective"
+        },
+        {
+          "german": "interessiert",
+          "arabic": "ilgilenmiş",
+          "type": "adjective"
+        },
+        {
+          "german": "begeistert",
+          "arabic": "heyecanlı",
+          "type": "adjective"
+        },
+        {
+          "german": "überrascht",
+          "arabic": "şaşırmış",
+          "type": "adjective"
+        },
+        {
+          "german": "traurig",
+          "arabic": "üzgün",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "mutlu",
+          "type": "adjective"
+        },
+        {
+          "german": "dankbar",
+          "arabic": "minnettar",
+          "type": "adjective"
+        },
+        {
+          "german": "reich",
+          "arabic": "zengin",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "fakir",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "yorgun",
+          "type": "adjective"
+        },
+        {
+          "german": "wütend",
+          "arabic": "öfkeli",
+          "type": "adjective"
+        },
+        {
+          "german": "sicher",
+          "arabic": "emin/güvenli",
+          "type": "adjective"
+        },
+        {
+          "german": "unsicher",
+          "arabic": "emin olmayan",
+          "type": "adjective"
+        },
+        {
+          "german": "erstaunt",
+          "arabic": "hayrete düşmüş",
+          "type": "adjective"
+        },
+        {
+          "german": "enttäuscht",
+          "arabic": "hayal kırıklığına uğramış",
+          "type": "adjective"
+        },
+        {
+          "german": "überzeugt",
+          "arabic": "ikna olmuş",
+          "type": "adjective"
+        },
+        {
+          "german": "gespannt",
+          "arabic": "meraklı, heyecanlı",
+          "type": "adjective"
+        },
+        {
+          "german": "eifrig",
+          "arabic": "istekli, gayretli",
+          "type": "adjective"
+        },
+        {
+          "german": "neidisch",
+          "arabic": "imrenmiş",
+          "type": "adjective"
+        },
+        {
+          "german": "höflich",
+          "arabic": "nazik",
+          "type": "adjective"
+        },
+        {
+          "german": "unhöflich",
+          "arabic": "kaba",
+          "type": "adjective"
+        },
+        {
+          "german": "ehrlich",
+          "arabic": "dürüst",
+          "type": "adjective"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "id": "b2-07-q1",
+            "type": "multiple-choice",
+            "question": "\"senden gurur duyuyorum\":",
+            "options": [
+              "stolz über dich",
+              "stolz auf dich",
+              "stolz für dich",
+              "stolz von dich"
+            ],
+            "answer": "stolz auf dich"
+          },
+          {
+            "id": "b2-07-q2",
+            "type": "multiple-choice",
+            "question": "\"işinden memnun\":",
+            "options": [
+              "zufrieden auf seine Arbeit",
+              "zufrieden für seine Arbeit",
+              "zufrieden mit seiner Arbeit",
+              "zufrieden über seine Arbeit"
+            ],
+            "answer": "zufrieden mit seiner Arbeit"
+          },
+          {
+            "id": "b2-07-q3",
+            "type": "fill-blank",
+            "question": "Sie ist verliebt ___ ihn. (in)",
+            "answer": "in"
+          },
+          {
+            "id": "b2-07-q4",
+            "type": "fill-blank",
+            "question": "Er ist verantwortlich ___ das Projekt. (für)",
+            "answer": "für"
+          },
+          {
+            "id": "b2-07-q5",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [stolz / meine / auf / Eltern / bin / Ich]",
+            "words": [
+              "Ich",
+              "bin",
+              "stolz",
+              "auf",
+              "meine",
+              "Eltern"
+            ],
+            "answer": "Ich bin stolz auf meine Eltern"
+          },
+          {
+            "id": "b2-07-q6",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: [Kultur / Marokko / an / ist / reich]",
+            "words": [
+              "Marokko",
+              "ist",
+              "reich",
+              "an",
+              "Kultur"
+            ],
+            "answer": "Marokko ist reich an Kultur"
+          },
+          {
+            "id": "b2-07-q7",
+            "type": "matching",
+            "question": "Sıfatı prepozyonuyla eşleştirin:",
+            "pairs": [
+              {
+                "left": "stolz",
+                "right": "auf + Akk"
+              },
+              {
+                "left": "zufrieden",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "abhängig",
+                "right": "von + Dat"
+              },
+              {
+                "left": "fähig",
+                "right": "zu + Dat"
+              }
+            ],
+            "answer": "match"
+          },
+          {
+            "id": "b2-07-q8",
+            "type": "multiple-choice",
+            "question": "\"Wir sind abhängig ___ Internet.\"",
+            "options": [
+              "über dem",
+              "mit dem",
+              "vom",
+              "bei dem"
+            ],
+            "answer": "vom"
+          },
+          {
+            "id": "b2-07-q9",
+            "type": "speaking",
+            "question": "Söyleyin: \"Aileme gurur duyuyorum.\"",
+            "answer": "Ich bin stolz auf meine Eltern"
+          },
+          {
+            "id": "b2-07-q10",
+            "type": "multiple-choice",
+            "question": "Dinleyin:",
+            "audioPrompt": "Bist du böse auf mich?",
+            "options": [
+              "Bana mı kızdın?",
+              "Hoş musun?",
+              "Beni seviyor musun?",
+              "Yardıma ihtiyacın var mı?"
+            ],
+            "answer": "Bana mı kızdın?"
+          },
+          {
+            "id": "b2-07-q11",
+            "type": "fill-blank",
+            "question": "\"Ich bin überzeugt ___ deinem Erfolg.\" (von + Dat)",
+            "answer": "von",
+            "hint": "überzeugt von"
+          },
+          {
+            "id": "b2-07-q12",
+            "type": "multiple-choice",
+            "question": "\"Ich bin abhängig ___ Internet.\"",
+            "options": [
+              "für",
+              "mit",
+              "von",
+              "auf"
+            ],
+            "answer": "von"
+          },
+          {
+            "id": "b2-07-q13",
+            "type": "fill-blank",
+            "question": "\"Sie ist eifersüchtig ___ ihre Schwester.\" (auf + Akk)",
+            "answer": "auf",
+            "hint": "eifersüchtig auf"
+          },
+          {
+            "id": "b2-07-q14",
+            "type": "multiple-choice",
+            "question": "\"interessiert\" şu prepozyonla kullanılır:",
+            "options": [
+              "für + Akk",
+              "an + Dat",
+              "auf + Akk",
+              "in + Akk"
+            ],
+            "answer": "an + Dat"
+          },
+          {
+            "id": "b2-07-q15",
+            "type": "matching",
+            "question": "Sıfatı prepozyonuyla eşleştirin:",
+            "pairs": [
+              {
+                "left": "stolz",
+                "right": "auf + Akk"
+              },
+              {
+                "left": "zufrieden",
+                "right": "mit + Dat"
+              },
+              {
+                "left": "verantwortlich",
+                "right": "für + Akk"
+              },
+              {
+                "left": "abhängig",
+                "right": "von + Dat"
+              },
+              {
+                "left": "interessiert",
+                "right": "an + Dat"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "id": "b2-07-q16",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Yardımın için çok minnettarım\"",
+            "words": [
+              "Ich",
+              "bin",
+              "sehr",
+              "dankbar",
+              "für",
+              "deine",
+              "Hilfe"
+            ],
+            "answer": "Ich bin sehr dankbar für deine Hilfe"
+          },
+          {
+            "id": "b2-07-q17",
+            "type": "speaking",
+            "question": "Söyleyin: \"Halkıma gurur duyuyorum\"",
+            "answer": "Ich bin stolz auf mein Volk"
+          },
+          {
+            "id": "b2-07-q18",
+            "type": "fill-blank",
+            "question": "Dinleyin: \"Wir sind reich ___ Kultur.\" (an + Dat)",
+            "audioPrompt": "Wir sind reich an Kultur.",
+            "answer": "an",
+            "hint": "reich an + Dat"
+          },
+          {
+            "id": "b2-07-q19",
+            "type": "multiple-choice",
+            "question": "\"bereit\" şu prepozyonla kullanılır:",
+            "options": [
+              "für + Akk",
+              "zu + Dat",
+              "mit + Dat",
+              "auf + Akk"
+            ],
+            "answer": "zu + Dat"
+          },
+          {
+            "id": "b2-07-q20",
+            "type": "drag-drop",
+            "question": "Kelimeleri sıralayın: \"Seni görmek için meraklı\"",
+            "words": [
+              "Sie",
+              "ist",
+              "gespannt",
+              "darauf,",
+              "dich",
+              "zu",
+              "sehen"
+            ],
+            "answer": "Sie ist gespannt darauf, dich zu sehen"
+          }
+        ]
+      }
+    }
+  }
+}
