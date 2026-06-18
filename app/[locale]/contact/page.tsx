@@ -27,6 +27,22 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Contacta GoGermany — preguntas y consultas',
     desc: 'Contacta al equipo de GoGermany. Reserva una consulta individual, pregunta sobre cómo mudarte a Alemania, o escríbenos por email.',
   },
+  tr: {
+    title: "GoGermany'ye Ulaşın — sorular ve danışmanlık",
+    desc: "GoGermany ekibiyle iletişime geçin. Bire bir danışmanlık rezervasyonu yapın, Almanya'ya taşınma hakkında sorular sorun veya e-posta gönderin.",
+  },
+  fa: {
+    title: 'تماس با GoGermany — سوالات و مشاوره',
+    desc: 'با تیم GoGermany در تماس باشید. یک مشاوره فردی رزرو کنید، سوالات خود درباره مهاجرت به آلمان را بپرسید یا ایمیل بزنید.',
+  },
+  pt: {
+    title: 'Contacte GoGermany — perguntas e consultas',
+    desc: 'Entre em contacto com a equipa GoGermany. Reserve uma consulta individual, tire dúvidas sobre como se mudar para a Alemanha, ou envie um email.',
+  },
+  ru: {
+    title: 'Связаться с GoGermany — вопросы и консультации',
+    desc: 'Свяжитесь с командой GoGermany. Забронируйте индивидуальную консультацию, задайте вопросы о переезде в Германию или напишите нам на email.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

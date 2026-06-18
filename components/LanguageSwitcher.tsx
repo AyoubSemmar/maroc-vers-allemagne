@@ -17,6 +17,10 @@ export const LOCALE_OPTIONS: LocaleOption[] = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
+  { code: 'fa', label: 'فارسی', flag: '🇮🇷' },
+  { code: 'pt', label: 'Português', flag: '🇧🇷' },
+  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
 ]
 
 export default function LanguageSwitcher() {

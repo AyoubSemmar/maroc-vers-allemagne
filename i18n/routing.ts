@@ -2,7 +2,7 @@ import { defineRouting } from 'next-intl/routing'
 
 export const routing = defineRouting({
   // Add/remove locales here. Order matters: the first is the default.
-  locales: ['ar', 'fr', 'en', 'de', 'es'] as const,
+  locales: ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru'] as const,
   defaultLocale: 'ar',
   // "as-needed": the default locale (ar) stays at `/...` (no prefix),
   // other locales get `/fr/...`, `/en/...`, `/de/...`.
@@ -12,7 +12,7 @@ export const routing = defineRouting({
 })
 
 export type AppLocale = (typeof routing.locales)[number]
-export const RTL_LOCALES: AppLocale[] = ['ar']
+export const RTL_LOCALES: AppLocale[] = ['ar', 'fa']
 export function dirFor(locale: AppLocale): 'rtl' | 'ltr' {
   return RTL_LOCALES.includes(locale) ? 'rtl' : 'ltr'
 }

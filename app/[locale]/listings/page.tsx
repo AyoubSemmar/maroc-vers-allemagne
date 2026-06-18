@@ -9,6 +9,7 @@ const cities = CITIES_AR
 
 const LOCALE_TO_INTL: Record<AppLocale, string> = {
   ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES',
+  tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU',
 }
 
 function formatExpiry(dateStr: string, locale: AppLocale) {

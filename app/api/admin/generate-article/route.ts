@@ -56,12 +56,12 @@ type Draft = {
   content: string
   faqs: { q: string; a: string }[]
   // Other languages packed into the translations JSONB
-  translations: Record<'fr' | 'en' | 'de' | 'es', {
+  translations: Partial<Record<'fr' | 'en' | 'de' | 'es' | 'tr' | 'fa' | 'pt' | 'ru', {
     title: string
     summary: string
     content: string
     faqs: { q: string; a: string }[]
-  }>
+  }>>
   image_url: string
   image_prompt_used: string
 }

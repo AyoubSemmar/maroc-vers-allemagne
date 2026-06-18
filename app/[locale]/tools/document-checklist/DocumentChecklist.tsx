@@ -27,7 +27,7 @@ const FAMILIES: FamilyKey[] = ['single', 'married', 'married_kids']
 
 const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓' }
 
-const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES' }
+const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU' }
 
 const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
 const COUNTRY_KEY = 'gogermany.documentChecklist.country.v1'

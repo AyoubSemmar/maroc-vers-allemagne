@@ -48,7 +48,7 @@ export type AuthMethod = 'apostille' | 'legalization'
 
 export type CountryRule = {
   /** Localised display names. */
-  name: { ar: string; fr: string; en: string; de: string; es: string }
+  name: { ar: string; fr: string; en: string; de: string; es: string; tr: string; fa: string; pt: string; ru: string }
   flag: string
   /** apostille (Hague + Germany accepts) OR full consular legalization. */
   auth: AuthMethod
@@ -71,43 +71,43 @@ export type CountryRule = {
 // auth method reflects whether Germany accepts apostille from the country
 // (not merely Hague membership).
 export const COUNTRIES: Record<CountryKey, CountryRule> = {
-  ma: { name: { ar: 'المغرب', fr: 'Maroc', en: 'Morocco', de: 'Marokko', es: 'Marruecos' }, flag: '🇲🇦',
+  ma: { name: { ar: 'المغرب', fr: 'Maroc', en: 'Morocco', de: 'Marokko', es: 'Marruecos', tr: 'Fas', fa: 'مراکش', pt: 'Marrocos', ru: 'Марокко' }, flag: '🇲🇦',
         auth: 'legalization', authFeeEur: [30, 80], authDays: [21, 42], translationPerPageEur: [15, 30],
         apsRequired: false, apsFeeEur: [0, 0], noteKey: 'ma' },
-  dz: { name: { ar: 'الجزائر', fr: 'Algérie', en: 'Algeria', de: 'Algerien', es: 'Argelia' }, flag: '🇩🇿',
+  dz: { name: { ar: 'الجزائر', fr: 'Algérie', en: 'Algeria', de: 'Algerien', es: 'Argelia', tr: 'Cezayir', fa: 'الجزایر', pt: 'Argélia', ru: 'Алжир' }, flag: '🇩🇿',
         auth: 'legalization', authFeeEur: [30, 80], authDays: [21, 42], translationPerPageEur: [20, 45],
         apsRequired: false, apsFeeEur: [0, 0] },
-  tn: { name: { ar: 'تونس', fr: 'Tunisie', en: 'Tunisia', de: 'Tunesien', es: 'Túnez' }, flag: '🇹🇳',
+  tn: { name: { ar: 'تونس', fr: 'Tunisie', en: 'Tunisia', de: 'Tunesien', es: 'Túnez', tr: 'Tunus', fa: 'تونس', pt: 'Tunísia', ru: 'Тунис' }, flag: '🇹🇳',
         auth: 'legalization', authFeeEur: [30, 80], authDays: [21, 42], translationPerPageEur: [20, 45],
         apsRequired: false, apsFeeEur: [0, 0] },
-  eg: { name: { ar: 'مصر', fr: 'Égypte', en: 'Egypt', de: 'Ägypten', es: 'Egipto' }, flag: '🇪🇬',
+  eg: { name: { ar: 'مصر', fr: 'Égypte', en: 'Egypt', de: 'Ägypten', es: 'Egipto', tr: 'Mısır', fa: 'مصر', pt: 'Egito', ru: 'Египет' }, flag: '🇪🇬',
         auth: 'legalization', authFeeEur: [40, 100], authDays: [28, 56], translationPerPageEur: [20, 50],
         apsRequired: false, apsFeeEur: [0, 0] },
-  ng: { name: { ar: 'نيجيريا', fr: 'Nigéria', en: 'Nigeria', de: 'Nigeria', es: 'Nigeria' }, flag: '🇳🇬',
+  ng: { name: { ar: 'نيجيريا', fr: 'Nigéria', en: 'Nigeria', de: 'Nigeria', es: 'Nigeria', tr: 'Nijerya', fa: 'نیجریه', pt: 'Nigéria', ru: 'Нигерия' }, flag: '🇳🇬',
         auth: 'legalization', authFeeEur: [40, 120], authDays: [28, 70], translationPerPageEur: [25, 60],
         apsRequired: false, apsFeeEur: [0, 0], noteKey: 'legalizationSlow' },
-  in: { name: { ar: 'الهند', fr: 'Inde', en: 'India', de: 'Indien', es: 'India' }, flag: '🇮🇳',
+  in: { name: { ar: 'الهند', fr: 'Inde', en: 'India', de: 'Indien', es: 'India', tr: 'Hindistan', fa: 'هند', pt: 'Índia', ru: 'Индия' }, flag: '🇮🇳',
         auth: 'apostille', authFeeEur: [3, 15], authDays: [7, 21], translationPerPageEur: [20, 50],
         apsRequired: true, apsFeeEur: [225, 225], noteKey: 'aps' },
-  cn: { name: { ar: 'الصين', fr: 'Chine', en: 'China', de: 'China', es: 'China' }, flag: '🇨🇳',
+  cn: { name: { ar: 'الصين', fr: 'Chine', en: 'China', de: 'China', es: 'China', tr: 'Çin', fa: 'چین', pt: 'China', ru: 'Китай' }, flag: '🇨🇳',
         auth: 'apostille', authFeeEur: [10, 40], authDays: [7, 21], translationPerPageEur: [25, 60],
         apsRequired: true, apsFeeEur: [340, 340], noteKey: 'aps' },
-  vn: { name: { ar: 'فيتنام', fr: 'Vietnam', en: 'Vietnam', de: 'Vietnam', es: 'Vietnam' }, flag: '🇻🇳',
+  vn: { name: { ar: 'فيتنام', fr: 'Vietnam', en: 'Vietnam', de: 'Vietnam', es: 'Vietnam', tr: 'Vietnam', fa: 'ویتنام', pt: 'Vietnã', ru: 'Вьетнам' }, flag: '🇻🇳',
         auth: 'legalization', authFeeEur: [20, 60], authDays: [21, 42], translationPerPageEur: [20, 50],
         apsRequired: true, apsFeeEur: [140, 140], noteKey: 'aps' },
-  pk: { name: { ar: 'باكستان', fr: 'Pakistan', en: 'Pakistan', de: 'Pakistan', es: 'Pakistán' }, flag: '🇵🇰',
+  pk: { name: { ar: 'باكستان', fr: 'Pakistan', en: 'Pakistan', de: 'Pakistan', es: 'Pakistán', tr: 'Pakistan', fa: 'پاکستان', pt: 'Paquistão', ru: 'Пакистан' }, flag: '🇵🇰',
         auth: 'legalization', authFeeEur: [20, 70], authDays: [21, 49], translationPerPageEur: [20, 50],
         apsRequired: true, apsFeeEur: [100, 200], noteKey: 'aps' },
-  tr: { name: { ar: 'تركيا', fr: 'Turquie', en: 'Turkey', de: 'Türkei', es: 'Turquía' }, flag: '🇹🇷',
+  tr: { name: { ar: 'تركيا', fr: 'Turquie', en: 'Turkey', de: 'Türkei', es: 'Turquía', tr: 'Türkiye', fa: 'ترکیه', pt: 'Turquia', ru: 'Турция' }, flag: '🇹🇷',
         auth: 'apostille', authFeeEur: [5, 25], authDays: [3, 14], translationPerPageEur: [15, 40],
         apsRequired: false, apsFeeEur: [0, 0] },
-  ph: { name: { ar: 'الفلبين', fr: 'Philippines', en: 'Philippines', de: 'Philippinen', es: 'Filipinas' }, flag: '🇵🇭',
+  ph: { name: { ar: 'الفلبين', fr: 'Philippines', en: 'Philippines', de: 'Philippinen', es: 'Filipinas', tr: 'Filipinler', fa: 'فیلیپین', pt: 'Filipinas', ru: 'Филиппины' }, flag: '🇵🇭',
         auth: 'apostille', authFeeEur: [3, 15], authDays: [7, 21], translationPerPageEur: [20, 45],
         apsRequired: false, apsFeeEur: [0, 0] },
-  br: { name: { ar: 'البرازيل', fr: 'Brésil', en: 'Brazil', de: 'Brasilien', es: 'Brasil' }, flag: '🇧🇷',
+  br: { name: { ar: 'البرازيل', fr: 'Brésil', en: 'Brazil', de: 'Brasilien', es: 'Brasil', tr: 'Brezilya', fa: 'برزیل', pt: 'Brasil', ru: 'Бразилия' }, flag: '🇧🇷',
         auth: 'apostille', authFeeEur: [10, 30], authDays: [3, 14], translationPerPageEur: [25, 60],
         apsRequired: false, apsFeeEur: [0, 0] },
-  other: { name: { ar: 'بلد آخر', fr: 'Autre pays', en: 'Other country', de: 'Anderes Land', es: 'Otro país' }, flag: '🌍',
+  other: { name: { ar: 'بلد آخر', fr: 'Autre pays', en: 'Other country', de: 'Anderes Land', es: 'Otro país', tr: 'Diğer ülke', fa: 'کشور دیگر', pt: 'Outro país', ru: 'Другая страна' }, flag: '🌍',
         auth: 'legalization', authFeeEur: [30, 100], authDays: [21, 56], translationPerPageEur: [20, 60],
         apsRequired: false, apsFeeEur: [0, 0], noteKey: 'generic' },
 }

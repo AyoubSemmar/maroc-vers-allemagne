@@ -15,7 +15,7 @@
 
 import { useState } from 'react'
 
-type Lang = 'ar' | 'fr' | 'en' | 'de' | 'es'
+type Lang = 'ar' | 'fr' | 'en' | 'de' | 'es' | 'tr' | 'fa' | 'pt' | 'ru'
 type Faq = { q: string; a: string }
 type Translation = { title: string; summary: string; content: string; faqs: Faq[] }
 
@@ -26,7 +26,7 @@ type Draft = {
   summary: string
   content: string
   faqs: Faq[]
-  translations: Record<'fr' | 'en' | 'de' | 'es', Translation>
+  translations: Partial<Record<'fr' | 'en' | 'de' | 'es' | 'tr' | 'fa' | 'pt' | 'ru', Translation>>
   image_url: string
   image_prompt_used: string
 }
@@ -37,6 +37,10 @@ const LANG_LABEL: Record<Lang, string> = {
   en: '🇬🇧 English',
   de: '🇩🇪 Deutsch',
   es: '🇪🇸 Español',
+  tr: '🇹🇷 Türkçe',
+  fa: '🇮🇷 فارسی',
+  pt: '🇧🇷 Português',
+  ru: '🇷🇺 Русский',
 }
 
 export default function AdminAiArticleGenerator() {
@@ -185,7 +189,7 @@ export default function AdminAiArticleGenerator() {
     if (activeLang === 'ar') {
       return { title: draft.title, summary: draft.summary, content: draft.content, faqs: draft.faqs }
     }
-    return draft.translations[activeLang]
+    return draft.translations[activeLang] ?? null
   })()
   // Translations load after the AR article. While the call is in flight,
   // each non-AR view will have empty title/content — surface that as a
