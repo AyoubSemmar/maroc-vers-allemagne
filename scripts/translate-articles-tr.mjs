@@ -13,8 +13,8 @@ const LANG_FULL = 'Turkish (Turkey, tr-TR)'
 const envPath = path.resolve('.env.local')
 if (fs.existsSync(envPath)) {
   for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
-    const m = line.match(/^([^#=]+)=(.*)$/)
-    if (m) process.env[m[1].trim()] ??= m[2].trim().replace(/^["']|["']$/g, '')
+    const m = line.replace(/\r$/, '').match(/^([^#=]+)=(.*)$/)
+    if (m && !process.env[m[1].trim()]) process.env[m[1].trim()] = m[2].trim().replace(/^["']|["']$/g, '')
   }
 }
 
