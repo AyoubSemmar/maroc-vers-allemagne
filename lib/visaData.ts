@@ -1,12 +1,11 @@
-// Visa-procedure data for Moroccans. Two flows: Studium (national D-visa
-// under §16b AufenthG) and Ausbildung (national D-visa under §16a AufenthG).
+// Visa-procedure data for international applicants. Two flows: Studium
+// (national D-visa under §16b AufenthG) and Ausbildung (§16a AufenthG).
 //
 // Sources cross-referenced 2026-04 (verify before quoting in production):
 //   • Auswärtiges Amt — Visa for studies / Berufsausbildung
-//   • Deutsche Botschaft Rabat / Generalkonsulat Casablanca
-//   • TLScontact Maroc (visa intake provider)
+//   • German embassies / consulates and official visa centres (TLScontact, VFS Global)
 //   • make-it-in-germany.com
-//   • Goethe-Institut Casablanca / Rabat
+//   • Goethe-Institut (network)
 //   • Fintiba / Expatrio / Coracle (Sperrkonto providers)
 //
 // Numbers are 2026 estimates rounded for clarity. The Eligibility-Checker /
@@ -27,7 +26,7 @@ export type VisaDoc = {
   id: string
   /** Critical = blocker if missing. Important = strongly recommended. */
   importance: 'critical' | 'important' | 'recommended'
-  /** Whether the document needs apostille from Moroccan MAEC. */
+  /** Whether the document needs apostille (Hague Convention) or consular legalization. */
   apostille?: boolean
   /** Whether the document needs sworn translation (assermentée) into German. */
   swornTranslation?: boolean
@@ -35,8 +34,8 @@ export type VisaDoc = {
 
 export type VisaCost = {
   id: string
-  amountMad: number   // approximate, MAD
-  amountEur?: number  // shown when the cost is fixed in EUR (e.g. visa fee)
+  amountMad: number   // legacy MAD fallback for EUR conversion (not displayed)
+  amountEur?: number  // shown in the UI when the cost is fixed in EUR (e.g. visa fee)
   /** Whether this cost is required (true) or only sometimes (false). */
   required: boolean
 }

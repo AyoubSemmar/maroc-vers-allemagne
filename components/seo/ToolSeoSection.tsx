@@ -7,7 +7,7 @@ import type { AppLocale } from '@/i18n/routing'
  *
  * Tool pages are JS-driven and short on indexable text. Without this
  * section, Google has very little crawlable content to rank against
- * the queries Moroccans actually type ("calendrier visa allemagne",
+ * the queries visitors actually type ("calendrier visa allemagne",
  * "checklist documents ausbildung", etc). Each tool's namespace
  * declares:
  *   seoSection.title          page-section heading
