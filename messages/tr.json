@@ -4892,5 +4892,353 @@
     "bullet2": "Her modül için strateji: lesen, hören, schreiben, sprechen",
     "bullet3": "Gerçek sınavla aynı formatta konuşma bölümü simülasyonu",
     "bullet4": "Pratik ipuçları: zaman yönetimi, kayıt olma, sınav günü neler getireceğiniz"
+  },
+  "writingExercise": {
+    "eyebrow": "Günlük Yazı Çalışması",
+    "title": "Bugünün yazı yazma çalışması",
+    "subtitle": "{level} · {min}–{max} kelime yazın. Gönder ve metninizi açıklamalarla düzeltilmiş olarak al.",
+    "themeBadge": "Bugünün Teması",
+    "wordsShort": "kelime",
+    "placeholder": "Metninizi burada Almanca olarak yazın…",
+    "submit": {
+      "writingExercise.submit": {
+        "value": "Düzeltme için gönder"
+      }
+    },
+    "submitting": "Düzeltiliyor…",
+    "errorGeneric": {
+      "writingExercise.errorGeneric": {
+        "value": "Bir şeyler yanlış gitti. Lütfen biraz sonra tekrar deneyin."
+      }
+    },
+    "inRange": "aralık içinde",
+    "outOfRange": "{min}–{max} arasında hedefleyin",
+    "mistakesTitle": "{n} {n, plural, one {hata} other {hata}} bulundu",
+    "mistakesSub": "Altı çizili her bölüm bir hatadır. Nedenini görmek için üzerine gelin veya aşağıdaki listeyi kontrol edin.",
+    "correctedTitle": "Düzeltilmiş versiyon",
+    "correctedSub": "Metniniz doğru Almanca olarak yeniden yazıldı, seviyenize uygun şekilde tutuldu.",
+    "comeBackTomorrow": {
+      "writingExercise.comeBackTomorrow": {
+        "value": "Yeni bir tema için yarın geri dön"
+      }
+    },
+    "signInTitle": {
+      "writingExercise.signInTitle": {
+        "value": "Yazmaya başlamak için giriş yapın"
+      }
+    },
+    "signInBody": "Günlük yazı alıştırması ücretsiz bir hesapla ücretsizdir, böylece ilerlemenizi kaydedebilir ve size adil günlük limitler verebiliriz.",
+    "signInCta": "Giriş Yap",
+    "doneTitle": "Bugünün egzersizini tamamladınız",
+    "doneBody": "Yarının teması için {hours} {hours, plural, one {saat} other {saat}} sonra geri dön.",
+    "grade": {
+      "excellent": "Mükemmel!",
+      "good": "İyi iş",
+      "ok": "Devam et",
+      "practice": "Daha fazla pratik yap"
+    },
+    "themes": {
+      "a1_self": {
+        "title": "Kendinizi tanıtın",
+        "instruction_de": "Stelle dich vor: Name, Alter, Herkunft, Beruf oder Studium, eine Sache, die du gerne machst. Schreibe in vollständigen Sätzen.",
+        "instruction": "Kendinizi tanıtın: Adınız, yaşınız, nereden geldiğiniz, mesleğiniz veya eğitim durumunuz, sevdiğiniz bir şey. Tam cümleler yazın.",
+        "hint": "Kullanın: ich heiße, ich bin … Jahre alt, ich komme aus, ich mag"
+      },
+      "a1_family": {
+        "title": "Ailem",
+        "instruction_de": "Beschreibe deine Familie: Wer gehört dazu? Wie heißen sie? Wie alt sind sie? Was machen sie?",
+        "instruction": "Ailenizi tanımlayın: Kimler var? Adları neler? Kaç yaşındalar? Ne yapıyorlar?",
+        "hint": "Faydalı: Mutter, Vater, Bruder, Schwester, mein/meine"
+      },
+      "a1_daily": {
+        "title": "Normal bir gün",
+        "instruction_de": "Beschreibe einen normalen Tag: Was machst du am Morgen, am Mittag und am Abend? Schreibe einfache Sätze.",
+        "instruction": "Normal bir günü tanımlayın: Sabah, öğle ve akşam ne yapıyorsunuz? Basit cümleler yazın.",
+        "hint": "Kullanın: aufstehen, frühstücken, arbeiten, essen, schlafen"
+      },
+      "a1_hobby": {
+        "title": "Hobilerim",
+        "instruction_de": "Was sind deine Hobbys? Was machst du gerne in deiner Freizeit? Wann und wo machst du das?",
+        "instruction": "Hobileriniz neler? Boş zamanınızda ne yapmaktan hoşlanıyorsunuz? Ne zaman ve nerede yapıyorsunuz?",
+        "hint": "Kullanın: ich spiele, ich lese, ich höre, gerne"
+      },
+      "a1_weekend": {
+        "title": "Hafta sonlarım",
+        "instruction_de": "Was machst du am Wochenende? Wo gehst du hin? Mit wem? Wie lange?",
+        "instruction": "Hafta sonunda ne yapıyorsunuz? Nereye gidiyorsunuz? Kiminle? Ne kadar süre?",
+        "hint": "am Samstag / am Sonntag, mit Freunden, ich gehe"
+      },
+      "a1_food": {
+        "title": "Sevdiğim yemekler",
+        "instruction_de": "Was isst und trinkst du gerne? Was magst du nicht? Was isst du heute?",
+        "instruction": "Ne yemek ve içecek seviyorsunuz? Ne sevmiyorsunuz? Bugün ne yiyorsunuz?",
+        "hint": "ich esse / trinke gern, ich mag … nicht"
+      },
+      "a1_room": {
+        "title": "Odamı",
+        "instruction_de": "Beschreibe dein Zimmer: Was gibt es dort? Welche Farben? Wo stehen die Möbel?",
+        "instruction": "Odanızı tanımlayın: Neler var? Hangi renkler? Mobilyalar nerede?",
+        "hint": "es gibt, links, rechts, vor, neben"
+      },
+      "a1_weather": {
+        "title": "Bugünün hava durumu",
+        "instruction_de": "Wie ist das Wetter heute? Was trägst du? Was machst du bei diesem Wetter?",
+        "instruction": "Bugün hava nasıl? Ne giyiyorsunuz? Bu havada ne yapıyorsunuz?",
+        "hint": "es ist sonnig / regnerisch / kalt / warm"
+      },
+      "a1_friend": {
+        "title": "En iyi arkadaşım",
+        "instruction_de": "Beschreibe deinen besten Freund oder deine beste Freundin: Name, Alter, Charakter, was ihr zusammen macht.",
+        "instruction": "En iyi arkadaşınızı tanımlayın: Adı, yaşı, kişiliği, birlikte ne yapıyorsunuz.",
+        "hint": "er/sie ist nett, lustig, wir machen zusammen"
+      },
+      "a1_city": {
+        "title": "Şehrim",
+        "instruction_de": "Beschreibe deine Stadt: Wie heißt sie? Was gibt es dort? Was magst du, was magst du nicht?",
+        "instruction": "Şehrinizi tanımlayın: Adı ne? Neler var? Neyi seviyorsunuz, neyi sevmiyorsunuz?",
+        "hint": "meine Stadt heißt, es gibt, ich finde … schön"
+      },
+      "a2_holiday": {
+        "title": "Son tatilim",
+        "instruction_de": "Beschreibe deinen letzten Urlaub: Wohin bist du gefahren? Mit wem? Was hast du gemacht? Wie war es?",
+        "instruction": "Son tatilini tanımlayın: Nereye gittiniz? Kiminle? Ne yaptınız? Nasıldı?",
+        "hint": "Perfekt kullanın: ich bin gefahren, ich habe gesehen"
+      },
+      "a2_school_day": {
+        "title": "Okulda/İşte bir gün",
+        "instruction_de": "Wie war dein Tag in der Schule oder bei der Arbeit? Was hast du gemacht? Wer war dabei?",
+        "instruction": "Okulda veya işte gününüz nasıldı? Ne yaptınız? Kimler vardı?",
+        "hint": "Perfekt + Zeitangaben: zuerst, dann, danach"
+      },
+      "a2_shopping": {
+        "title": "Son alışveriş gezim",
+        "instruction_de": "Beschreibe einen Einkauf: Wo warst du? Was hast du gekauft? Wie viel hat es gekostet? War es gut?",
+        "instruction": "Bir alışverişi tanımlayın: Nerede iddiniz? Ne aldınız? Ne kadar tuttu? İyiydi mi?",
+        "hint": "kosten, Euro, ich habe gekauft, billig/teuer"
+      },
+      "a2_doctor": {
+        "title": "Doktorda",
+        "instruction_de": "Du warst beim Arzt. Was tat dir weh? Was hast du gemacht? Was hat der Arzt gesagt?",
+        "instruction": "Doktordaydınız. Nereniz ağrıyordu? Ne yaptınız? Doktor ne dedi?",
+        "hint": "mir tut … weh, der Arzt hat gesagt, Tabletten"
+      },
+      "a2_birthday": {
+        "title": "Bir doğum günü partisi",
+        "instruction_de": "Beschreibe einen Geburtstag, den du gefeiert hast: Wer war da? Was habt ihr gemacht? Was war das Geschenk?",
+        "instruction": "Kutladığınız bir doğum gününü tanımlayın: Kimler vardı? Ne yaptınız? Hediye ne oldu?",
+        "hint": "Geschenk, feiern, Kuchen, eingeladen"
+      },
+      "a2_dream_trip": {
+        "title": "Rüya tatilim",
+        "instruction_de": "Wohin möchtest du in den nächsten Sommer fahren? Mit wem? Was möchtest du dort machen? Schreibe deine Pläne.",
+        "instruction": "Gelecek yaz nereye gitmek istiyorsunuz? Kiminle? Orada ne yapmak istiyorsunuz? Planlarınızı yazın.",
+        "hint": "Gelecek zaman: ich werde, ich möchte"
+      },
+      "a2_work_day": {
+        "title": "İşte bir gün",
+        "instruction_de": "Wie sieht dein Arbeitstag aus? Was machst du? Welche Kollegen hast du? Was magst du an deiner Arbeit?",
+        "instruction": "İş gününüz nasıl görünüyor? Ne yapıyorsunuz? Hangi meslektaşlarınız var? İşinizde neyi seviyorsunuz?",
+        "hint": "Kollege, Chef, Aufgaben, ich beginne"
+      },
+      "a2_apartment": {
+        "title": "Apartmanım",
+        "instruction_de": "Beschreibe deine Wohnung: Wie viele Zimmer? Welche Möbel? Was ist gut, was ist nicht so gut?",
+        "instruction": "Dairenizi tanımlayın: Kaç oda? Hangi mobilyalar? Neyi iyi, neyi kötü buluyorsunuz?",
+        "hint": "Zimmer, Küche, Bad, Balkon, Möbel"
+      },
+      "a2_movie": {
+        "title": "İzlediğim bir film",
+        "instruction_de": "Beschreibe einen Film, den du gesehen hast. Worum ging es? Wer hat gespielt? Hat er dir gefallen? Warum?",
+        "instruction": "İzlediğiniz bir filmi tanımlayın. Neyle ilgiliydi? Kim oynadı? Beğendiniz mi? Neden?",
+        "hint": "es geht um, der Hauptdarsteller, mir hat … gefallen"
+      },
+      "a2_germany_first": {
+        "title": "Almanya'da ilk günüm",
+        "instruction_de": "Was würdest du als Erstes in Deutschland machen? Wohin würdest du gehen? Was möchtest du essen, sehen, lernen?",
+        "instruction": "Almanya'da ilk olarak ne yapardınız? Nereye giderdiniz? Ne yemek, görmek, öğrenmek isterdiniz?",
+        "hint": "ich möchte, zuerst, dann, danach"
+      },
+      "b1_opinion_phone": {
+        "title": "Gençler için akıllı telefonlar",
+        "instruction_de": "Schreibe deine Meinung: Sind Smartphones für Jugendliche gut oder schlecht? Gib zwei Argumente und ein Beispiel.",
+        "instruction": "Görüşünüzü yazın: Akıllı telefonlar gençler için iyi mi yoksa kötü mü? İki argüman ve bir örnek verin.",
+        "hint": "meiner Meinung nach, einerseits, andererseits, zum Beispiel"
+      },
+      "b1_complaint": {
+        "title": "Otel şikayeti e-postası",
+        "instruction_de": "Schreibe eine kurze Beschwerde-E-Mail an ein Hotel: Du warst unzufrieden mit deinem Zimmer. Erkläre das Problem und was du dir wünschst.",
+        "instruction": "Bir otele kısa bir şikayet e-postası yazın: Odanızdan memnun değildiniz. Sorunu açıklayın ve ne istediğinizi belirtin.",
+        "hint": "Sehr geehrte Damen und Herren, leider, ich erwarte"
+      },
+      "b1_email_friend": {
+        "title": "Arkadaşa e-posta",
+        "instruction_de": "Schreibe eine E-Mail an einen Freund in Deutschland: Du planst einen Besuch. Erkläre, wann du kommst und was du gerne machen möchtest.",
+        "instruction": "Almanya'daki bir arkadaşa e-posta yazın: Bir ziyaret planlıyorsunuz. Ne zaman geleceğinizi ve ne yapmak istediğinizi açıklayın.",
+        "hint": "Hallo …, ich plane, vielleicht können wir, freue mich"
+      },
+      "b1_pros_cons_city": {
+        "title": "Şehir vs. kırsal alan",
+        "instruction_de": "Lebt man besser in der Stadt oder auf dem Land? Nenne je zwei Vorteile und Nachteile und gib deine Meinung.",
+        "instruction": "Şehirde mi yoksa kırsal alanda mı daha iyi yaşanır? Her biri için iki avantaj ve dezavantaj belirtin ve görüşünüzü verin.",
+        "hint": "der Vorteil, der Nachteil, im Gegensatz dazu"
+      },
+      "b1_my_career": {
+        "title": "Kariyer planım",
+        "instruction_de": "Beschreibe deine Karrierepläne: Was möchtest du beruflich machen? Warum? Welche Schritte hast du schon gemacht?",
+        "instruction": "Kariyer planlarınızı tanımlayın: Profesyonel olarak ne yapmak istiyorsunuz? Neden? Hangi adımları attınız?",
+        "hint": "mein Ziel ist, ich plane, weil, deshalb"
+      },
+      "b1_health_tip": {
+        "title": "Arkadaş için sağlık tavsiyesi",
+        "instruction_de": "Gib einer Freundin Tipps: Sie fühlt sich gestresst und schläft schlecht. Was sollte sie tun? Erkläre warum.",
+        "instruction": "Bir arkadaşa tavsiye verin: Stresli hissediyor ve kötü uyuyor. Ne yapmalı? Neden açıklayın.",
+        "hint": "du solltest, es ist wichtig, weil, sonst"
+      },
+      "b1_bad_day": {
+        "title": "Kötü bir gün",
+        "instruction_de": "Erzähle einen schlechten Tag aus deinem Leben: Was ist passiert? Wie hast du reagiert? Was hast du daraus gelernt?",
+        "instruction": "Hayatınızdan kötü bir günü anlatın: Ne oldu? Nasıl tepki verdiniz? Bundan ne öğrendiniz?",
+        "hint": "plötzlich, danach, schließlich, ich habe gelernt"
+      },
+      "b1_culture_shock": {
+        "title": "Kültürel bir sürpriz",
+        "instruction_de": "Was findest du in der deutschen Kultur überraschend oder anders als in deinem Land? Gib zwei konkrete Beispiele.",
+        "instruction": "Alman kültüründe neyi şaşırtıcı veya kendi ülkenizden farklı buluyorsunuz? İki somut örnek verin.",
+        "hint": "im Vergleich zu, ich war überrascht, dass"
+      },
+      "b1_environment": {
+        "title": "Çevreye yardım etmek",
+        "instruction_de": "Was kann jeder Mensch im Alltag tun, um die Umwelt zu schützen? Nenne drei konkrete Tipps.",
+        "instruction": "Her insan günlük hayatta çevreyi korumak için ne yapabilir? Üç somut tavsiye verin.",
+        "hint": "man sollte, statt, indem, deshalb"
+      },
+      "b1_app_review": {
+        "title": "Bir uygulamayı değerlendirmek",
+        "instruction_de": "Beschreibe eine App oder Website, die du oft benutzt: Was kann man damit machen? Was findest du gut und nicht so gut?",
+        "instruction": "Sık kullandığınız bir uygulamayı veya web sitesini tanımlayın: Bununla ne yapabilir? Neyi iyi, neyi kötü buluyorsunuz?",
+        "hint": "damit kann man, ich finde gut, allerdings"
+      },
+      "b2_social_media": {
+        "title": "Sosyal medyanın etkisi",
+        "instruction_de": "Diskutiere: Wie verändern soziale Medien das Verhalten junger Menschen? Nenne positive und negative Aspekte und gib deine begründete Meinung.",
+        "instruction": "Tartışın: Sosyal medya gençlerin davranışını nasıl değiştiriyor? Olumlu ve olumsuz yönleri belirtin ve gerekçeli görüşünüzü verin.",
+        "hint": "darüber hinaus, dennoch, infolgedessen"
+      },
+      "b2_remote_work": {
+        "title": "Uzaktan çalışma iyi mi?",
+        "instruction_de": "Sollten Unternehmen Mitarbeiter dauerhaft im Homeoffice arbeiten lassen? Argumentiere mit Vor- und Nachteilen für beide Seiten.",
+        "instruction": "Şirketler çalışanları kalıcı olarak evden çalıştırmalı mı? Her iki taraf için avantaj ve dezavantajlarla argüman sunun.",
+        "hint": "einerseits/andererseits, zudem, allerdings"
+      },
+      "b2_immigration": {
+        "title": "Nitelikli göç",
+        "instruction_de": "Welche Vorteile bringt qualifizierte Zuwanderung für Deutschland? Welche Herausforderungen gibt es? Gib eine begründete Stellungnahme.",
+        "instruction": "Nitelikli göç Almanya için hangi avantajları getiriyor? Hangi zorluklar var? Gerekçeli bir görüş belirtin.",
+        "hint": "zur Folge haben, beitragen zu, voraussetzen"
+      },
+      "b2_climate": {
+        "title": "İklim sorumluluğu",
+        "instruction_de": "Wer trägt mehr Verantwortung für den Klimaschutz: der einzelne Bürger oder die Politik? Begründe deine Position mit Beispielen.",
+        "instruction": "İklim koruması için daha fazla sorumluluk kimin? Bireysel vatandaş mı yoksa politika mı? Konumunuzu örneklerle gerekçelendirin.",
+        "hint": "verantwortlich für, im Vergleich zu, letztendlich"
+      },
+      "b2_education_reform": {
+        "title": "Geleceğin okulu",
+        "instruction_de": "Wie sollte die Schule der Zukunft aussehen? Schlage zwei konkrete Reformen vor und begründe sie.",
+        "instruction": "Geleceğin okulu nasıl görünmeli? İki somut reform önerin ve gerekçelendirin.",
+        "hint": "es bedarf, ich schlage vor, vorausgesetzt, dass"
+      },
+      "b2_ai_jobs": {
+        "title": "Yapay zeka ve işler",
+        "instruction_de": "Wird KI mehr Arbeitsplätze schaffen oder vernichten? Argumentiere differenziert mit zwei Beispielen aus verschiedenen Branchen.",
+        "instruction": "Yapay zeka daha fazla iş yaratacak mı yoksa yok edecek mi? Farklı sektörlerden iki örnek ile ayrıntılı argüman sunun.",
+        "hint": "ersetzen, automatisieren, neu entstehen"
+      },
+      "b2_consumerism": {
+        "title": "Tüketim toplumu",
+        "instruction_de": "Konsumieren wir zu viel? Diskutiere die Folgen unseres Konsumverhaltens und schlage Lösungen vor.",
+        "instruction": "Çok mu tüketiyoruz? Tüketim davranışımızın sonuçlarını tartışın ve çözümler önerin.",
+        "hint": "der Konsum, das Bewusstsein, nachhaltig"
+      },
+      "b2_generation_gap": {
+        "title": "Nesil farkı",
+        "instruction_de": "Worin unterscheiden sich die Werte der Generation deiner Eltern und deiner eigenen Generation? Gib konkrete Beispiele.",
+        "instruction": "Ebeveynlerinizin nesli ile kendi nesinizin değerleri nasıl farklılaşıyor? Somut örnekler verin.",
+        "hint": "im Gegensatz zu, früher, heutzutage"
+      },
+      "b2_health_systems": {
+        "title": "Sağlık sistemleri karşılaştırması",
+        "instruction_de": "Was unterscheidet ein gutes Gesundheitssystem von einem schlechten? Vergleiche zwei Aspekte aus deinem Heimatland und Deutschland.",
+        "instruction": "İyi bir sağlık sistemi kötü birinden ne ile farklılaşır? Kendi ülkeniz ve Almanya'dan iki yönü karşılaştırın.",
+        "hint": "während, hingegen, der Zugang zu"
+      },
+      "b2_minimum_wage": {
+        "title": "Asgari ücret tartışması",
+        "instruction_de": "Sollte der Mindestlohn weiter erhöht werden? Diskutiere die wirtschaftlichen und sozialen Folgen mit Pro- und Contra-Argumenten.",
+        "instruction": "Asgari ücret daha da yükseltilmeli mi? Ekonomik ve sosyal sonuçları lehte ve aleyhte argümanlarla tartışın.",
+        "hint": "erhöhen, sich auswirken auf, Arbeitsmarkt"
+      },
+      "c1_digitalisation": {
+        "title": "Dijitalleşme ve toplum",
+        "instruction_de": "Erörtere, inwiefern die Digitalisierung des Alltags die soziale Interaktion verändert hat. Gehe auf positive und negative Aspekte ein und nimm begründet Stellung.",
+        "instruction": "Günlük hayatın dijitalleşmesinin sosyal etkileşimi nasıl değiştirdiğini tartışın. Olumlu ve olumsuz yönleri ele alın ve gerekçeli bir konumlanış yapın.",
+        "hint": "eine ambivalente Entwicklung, gleichwohl, sich gewahr werden"
+      },
+      "c1_demography": {
+        "title": "Demografik değişim",
+        "instruction_de": "Diskutiere die Folgen des demografischen Wandels für die deutsche Sozialversicherung. Welche Maßnahmen hältst du für erforderlich?",
+        "instruction": "Demografik değişimin Alman sosyal sigortası için sonuçlarını tartışın. Hangi önlemleri gerekli buluyorsunuz?",
+        "hint": "Überalterung, generationengerecht, struktureller Reformbedarf"
+      },
+      "c1_freedom_security": {
+        "title": "Özgürlük vs. güvenlik",
+        "instruction_de": "Wie lässt sich das Spannungsfeld zwischen Freiheit und Sicherheit im modernen Staat ausbalancieren? Begründe deine Position kritisch.",
+        "instruction": "Modern devlette özgürlük ve güvenlik arasındaki gerilim nasıl dengelenebilir? Konumunuzu eleştirel olarak gerekçelendirin.",
+        "hint": "Grundrechte abwägen, ungeachtet dessen, einen Kompromiss erfordern"
+      },
+      "c1_globalisation": {
+        "title": "Küreselleşmenin kazananları",
+        "instruction_de": "Inwiefern profitieren Schwellenländer von der Globalisierung – und welche Risiken trägt sie? Erörtere mit fundierten Argumenten.",
+        "instruction": "Gelişmekte olan ülkeler küreselleşmeden ne kadar faydalanıyor ve hangi riskleri taşıyor? Temelli argümanlarla tartışın.",
+        "hint": "Schwellenländer, Wertschöpfungskette, einseitige Abhängigkeit"
+      },
+      "c1_meritocracy": {
+        "title": "Meritokrasi adil mi?",
+        "instruction_de": "Ist Leistung wirklich ein gerechtes Kriterium für sozialen Erfolg? Diskutiere kritisch unter Berücksichtigung struktureller Ungleichheiten.",
+        "instruction": "Başarı gerçekten sosyal başarı için adil bir kriter mi? Yapısal eşitsizlikleri göz önünde bulundurarak eleştirel olarak tartışın.",
+        "hint": "Chancengleichheit, soziale Mobilität, vermeintlich"
+      },
+      "c1_arts_funding": {
+        "title": "Sanat ve kültür için devlet finansmanı",
+        "instruction_de": "Sollte der Staat Kunst und Kultur stärker fördern, oder sollte sich Kultur am Markt selbst tragen? Begründe deine Position.",
+        "instruction": "Devlet sanat ve kültürü daha güçlü desteklemeli mi, yoksa kültür kendini pazarda taşımalı mı? Konumunuzu gerekçelendirin.",
+        "hint": "kulturelle Vielfalt, marktwirtschaftlich, gemeinwohlorientiert"
+      },
+      "c1_renewables": {
+        "title": "Almanya'nın enerji geçişi",
+        "instruction_de": "Diskutiere die Energiewende in Deutschland: Welche Erfolge gibt es, welche Hindernisse bleiben? Welche politischen Maßnahmen wären sinnvoll?",
+        "instruction": "Almanya'nın enerji geçişini tartışın: Hangi başarılar var, hangi engeller kalıyor? Hangi siyasi önlemler mantıklı olurdu?",
+        "hint": "erneuerbare Energien, Versorgungssicherheit, Netzausbau"
+      },
+      "c1_journalism": {
+        "title": "Kaliteli gazetecilik",
+        "instruction_de": "Welche Rolle spielen Qualitätsmedien in einer Demokratie und wie wirken sich soziale Medien auf diese Rolle aus? Argumentiere differenziert.",
+        "instruction": "Kaliteli medya demokraside hangi rolü oynar ve sosyal medya bu rolü nasıl etkiliyor? Ayrıntılı argüman sunun.",
+        "hint": "vierte Gewalt, Filterblase, Diskursqualität"
+      },
+      "c1_urban_rural": {
+        "title": "Şehir-kırsal bölge ayrışması",
+        "instruction_de": "Erörtere die wachsende Kluft zwischen Stadt und Land in entwickelten Ländern. Welche politischen Maßnahmen könnten Abhilfe schaffen?",
+        "instruction": "Gelişmiş ülkelerde şehir ve kırsal alan arasındaki artan uçurumu tartışın. Hangi siyasi önlemler yardımcı olabilir?",
+        "hint": "strukturschwache Regionen, Daseinsvorsorge, Abwanderung"
+      },
+      "c1_lifelong_learning": {
+        "title": "Yaşam boyu öğrenme",
+        "instruction_de": "Welche Bedeutung hat lebenslanges Lernen im 21. Jahrhundert? Welche Verantwortung tragen Staat, Arbeitgeber und Individuum?",
+        "instruction": "21. yüzyılda yaşam boyu öğrenmenin anlamı nedir? Devlet, işveren ve birey hangi sorumluluğu taşıyor?",
+        "hint": "Wandel der Arbeitswelt, Eigenverantwortung, Weiterbildungsförderung"
+      }
+    },
+    "tryAnotherToday": "Bugün bir tane daha deneyin ({n} kaldı)"
   }
 }
