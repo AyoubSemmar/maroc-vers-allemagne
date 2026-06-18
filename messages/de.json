@@ -4014,7 +4014,151 @@
     "seoPageNoVisaStats": "No visa required",
     "seoPageDocSection": "Erforderliche Dokumente",
     "seoPageInteractiveTitle": "Diese Checkliste personalisieren",
-    "seoPageInteractiveSub": "Passen Sie Ihr Bildungsniveau, Ihre Familiensituation und andere Optionen für eine genaue Liste an."
+    "seoPageInteractiveSub": "Passen Sie Ihr Bildungsniveau, Ihre Familiensituation und andere Optionen für eine genaue Liste an.",
+    "seoArticleTitle": "Über das {path}-Visum für Staatsangehörige aus {country}",
+    "seoFaqTitle": "Häufig gestellte Fragen",
+    "authMethodDetail": {
+      "apostille": "{country} ist Mitglied der Hague Convention und Deutschland akzeptiert Apostillen. Ihre Dokumente werden mit einem Apostille-Stempel der zuständigen nationalen Behörde beglaubigt.",
+      "legalization": "Obwohl {country} Mitglied der Hague Convention ist, hat Deutschland formell Einspruch gegen den Beitritt erhoben. Eine vollständige konsularische Legalisierung über die deutsche Botschaft oder eine Kette nationaler Behörden ist daher erforderlich — keine Apostille."
+    },
+    "apsDetail": {
+      "required": "ein APS-Zertifikat (Akademische Prüfstelle) IST erforderlich. Sie müssen Ihre akademischen Dokumente von der APS-Stelle überprüfen lassen, bevor Sie Ihren Visumantrag einreichen.",
+      "notRequired": "ein APS-Zertifikat ist NICHT erforderlich. Sie können Ihre beglaubigten akademischen Dokumente direkt in Ihrer Visumdatei einreichen."
+    },
+    "seoContent": {
+      "ausbildung": {
+        "p1": "Deutschlands Ausbildungssystem (duale Berufsausbildung) ist einer der gefragtesten Einwanderungswege für Staatsangehörige aus {country}. Das nationale D-Visum für Berufsausbildung, geregelt durch §17a des Aufenthaltsgesetzes (AufenthG), berechtigt Sie, ein 2–3-jähriges akkreditiertes Ausbildungsprogramm bei einem deutschen Unternehmen zu absolvieren und dabei ein Gehalt zu verdienen. Im Gegensatz zum Studium erfordert die Ausbildung keinen Hochschulabschluss — ein Sekundarschulabschluss (Baccalauréat oder gleichwertiger Abschluss) und ein unterzeichneter Ausbildungsvertrag sind die Kernvoraussetzungen.",
+        "p2": "Die Beglaubigung von Dokumenten ist ein entscheidender Faktor dafür, wie schnell Antragsteller aus {country} ihre Visumdatei einreichen können. Deutschland verlangt eine Beglaubigung durch {authMethod} für alle offiziellen Dokumente, die in {country} ausgestellt wurden, einschließlich Ihrer Geburtsurkunde, Diplome, Schulzeugnisse und polizeiliches Führungszeugnis. Der {authMethod}-Schritt kostet €{authFeeMin}–{authFeeMax} pro Dokument und dauert {authDaysMin}–{authDaysMax} Tage. Beglaubigte deutsche Übersetzungen sind auch für alle nicht-deutschen Dokumente erforderlich — planen Sie mit €20–60 pro Seite von einem beeidigten Übersetzer.",
+        "p3": "Das Visumverfahren selbst beginnt mit einem deutschen B1-Sprachzertifikat (Goethe, telc oder ÖSD), da dies das Minimum für die meisten Ausbildungsvisa ist. Ihr zukünftiger Arbeitgeber in Deutschland reicht eine Vorab-Zustimmung bei der Bundesagentur für Arbeit ein — wenn diese genehmigt wird, verkürzt sich die Visumbearbeitung von etwa 8 Monaten auf etwa 2 Monate. Ein Finanznachweis ist ebenfalls erforderlich: Je nach Ihrem Ausbildungsgehalt benötigen Sie möglicherweise ein Sperrkonto mit €11.904 für das Jahr oder eine alternative Garantie (Verpflichtungserklärung) von einem in Deutschland ansässigen Sponsor.",
+        "p4": "Von {country} aus ist die realistische Gesamtdauer — vom Sammeln von Dokumenten bis zu Ihrem ersten Arbeitstag in Deutschland — {timelineMin}–{timelineMax} Wochen. Visumtermine bei der deutschen Vertretung oder dem TLScontact/VFS-Zentrum in {country} sind oft Monate im Voraus ausgebucht. Reichen Sie Ihre vollständige Akte beim Termin ein: unvollständige Dateien werden nicht akzeptiert und es gibt keine Rückerstattungen. Die Gebühr für das nationale D-Visum beträgt €{visaFee}, zahlbar am Tag der Antragstellung."
+      },
+      "studium": {
+        "p1": "Deutschland ist eines der Top-Ziele der Welt für internationale Studierende — und für Staatsangehörige aus {country} öffnet ein deutsches Studium-Visum die Tür zu gebührenfreier oder kostengünstiger Ausbildung an weltbekannten Institutionen. Das nationale D-Visum für Hochschulstudium ist geregelt durch §16b AufenthG und ermöglicht Ihnen die Immatrikulation in einem vollständigen Bachelor-, Master- oder PhD-Programm.",
+        "p2": "Alle akademischen Dokumente aus {country} müssen durch {authMethod} beglaubigt werden, bevor sie der deutschen Vertretung eingereicht werden können. Dies gilt für Ihr Baccalauréat-Diplom, Zeugnisse, Hochschuldiplome und alle anderen offiziell ausgestellten Zertifikate. Der {{authMethod}-Schritt dauert {authDaysMin}–{authDaysMax} Tage und kostet €{authFeeMin}–{authFeeMax} pro Dokument — und jedes Dokument benötigt auch eine beglaubigte deutsche Übersetzung (€20–60 pro Seite). Das Gesamtbudget für Beglaubigung und Übersetzung für eine durchschnittliche Studium-Datei aus {country} liegt typischerweise bei €300–800.",
+        "p3": "Das Studienkolleg ist ein Vorbereitungsjahr, das erforderlich ist, wenn Ihr Sekundarschulabschluss Sie nicht direkt für die Zulassung an einer deutschen Universität qualifiziert. Nutzen Sie die Anabin-Datenbank (anabin.kmk.org), um den Status Ihres Abschlusses vor der Bewerbung zu überprüfen. Antragsteller müssen auch ein Sperrkonto mit €11.904 als Finanznachweis eröffnen — Online-Anbieter wie Fintiba, Expatrio oder Coracle eröffnen eines innerhalb weniger Tage. Ein deutsches B2-Sprachzertifikat (Goethe, telc, ÖSD oder TestDaF) ist für deutschsprachige Programme erforderlich; englischsprachige Programme akzeptieren stattdessen IELTS/TOEFL.",
+        "p4": "Die Gesamtzahl der Dokumente für ein Studium-Visum aus {country} beträgt {totalDocs} Positionen, und die geschätzten Gesamtkosten (Dokumente, Beglaubigung, Übersetzungen, Sperrkonto-Eröffnung und Visumgebühr) betragen €{totalCostMin}–{totalCostMax}. Die realistische Vorbereitungsdauer ist {timelineMin}–{timelineMax} Wochen. Beginnen Sie mindestens 6 Monate vor Ihrem geplanten Studienbeginn — deutsche Universitäten versenden Zulassungsschreiben spät, und Apostille- oder Legalisierungswarteschlangen in {country} können mehrere Wochen dauern."
+      },
+      "tourist": {
+        "p1": "Staatsangehörige aus {country} benötigen ein Schengen-C-Visum (auch Kurzzeit- oder Touristenvisum genannt), um Deutschland und den breiteren Schengen-Raum zu besuchen. Das Schengen-C-Visum ermöglicht bis zu 90 Tage Aufenthalt in jedem 180-Tage-Zeitraum und deckt Tourismus, Familienbesuche, kurze Geschäftsreisen und Kulturveranstaltungen ab. Der Antrag wird bei der deutschen Botschaft, einem Konsulat oder einem autorisierten Visumzentrum (VFS Global oder TLScontact) in {country} eingereicht.",
+        "p2": "Die Gebühr für das Schengen-Touristenvisum beträgt €{visaFee} ab 2024 (erhöht von €80 im Juni 2024 unter dem überarbeiteten EU-Visumkodex). Kinder unter 6 Jahren sind befreit; Kinder im Alter von 6–12 Jahren zahlen €45. Die Gebühr ist nicht rückerstattbar, auch wenn das Visum abgelehnt wird. Sie zahlen auch alle Servicegebühren des Visumzentrums zusätzlich zur Konsulargebühr. In {country} liegen die Gesamtantragskosten einschließlich Versicherung und Dokumentenvorbereitung typischerweise zwischen €150 und €350.",
+        "p3": "Der stärkste Faktor für die Genehmigung eines Schengen-Visums ist der Nachweis starker Bindungen an Ihr Heimatland — ein Beweis, dass Sie zurückkehren möchten. Ein Schreiben des Arbeitgebers, das Ihnen genehmigten Urlaub gewährt, eine Grundstücksurkunde, eine Geschäftsregistrierung oder ein Studentenimmatrikulationszertifikat dienen alle diesem Zweck. Der Finanznachweis muss zeigen, dass Sie etwa €45–100 pro Tag Ihres Aufenthalts decken können. Eine Reisekrankenversicherung mit einer Mindestdeckung von €30.000 und gültig für alle Schengen-Länder ist erforderlich.",
+        "p4": "Die Wartezeiten für Termine bei der deutschen Vertretung oder dem Visumzentrum in {country} variieren je nach Jahreszeit: erwarten Sie {authDaysMin}–{authDaysMax} Arbeitstage in der Nebensaison und bis zu 8 Wochen im Sommer. Die Bearbeitung nach Einreichung dauert maximal 15 Kalendertage für unkomplizierte Anträge (bis zu 30 Tage für komplexe Fälle, 45 Tage in Ausnahmefällen). Mehrfachvisa mit Gültigkeit von 1–5 Jahren können an Vielreisende mit sauberer Reisehistorie ausgestellt werden."
+      },
+      "family_reunification": {
+        "p1": "Familienzusammenführung nach Deutschland — das Mitbringen eines Ehepartners, minderjähriger Kinder oder abhängiger Eltern zu einem in Deutschland ansässigen Familienmitglied — ist durch §§27–36 des AufenthG geregelt. Staatsangehörige aus {country}, die sich einer Familie in Deutschland anschließen möchten, müssen vor der Ankunft ein nationales D-Visum erhalten. Der häufigste Fall ist die Ehegattennachzug, die dem Ehepartner das Recht gibt, in Deutschland sofort nach der Ankunft zu arbeiten.",
+        "p2": "Die charakteristischste Anforderung für Ehepartner, die aus {country} antragen, ist das deutsche A1-Sprachzertifikat. Bevor ein Ehegattennachzug-Visum ausgestellt wird, muss der Antragsteller grundlegende deutsche Sprachkenntnisse auf CEFR-Niveau A1 nachweisen (Goethe-Zertifikat A1, telc Deutsch A1 oder ÖSD Zertifikat A1). Ausnahmen bestehen, wenn der Sponsor einen deutschen Hochschulabschluss hat oder C1-Deutsch spricht, wenn der Antragsteller über 67 Jahre alt ist, oder wenn ein nachgewiesener Härtefall vorliegt. Die Dokumentenbeglaubigung aus {country} erfolgt durch {{authMethod} und kostet €{authFeeMin}–{authFeeMax} pro Dokument, was {authDaysMin}–{authDaysMax} Tage dauert.",
+        "p3": "Der Sponsor (die Person, die bereits in Deutschland ist) spielt eine zentrale Rolle: Sie müssen nachweisen, dass ihr Einkommen ausreicht, um die wiedervereintigte Familie ohne Rückgriff auf öffentliche Mittel zu unterstützen. Die erforderliche Einkommensschwelle variiert je nach Bundesland und Haushaltsgröße, entspricht aber typischerweise der Grundsicherung plus 20%. Der Sponsor muss auch angemessenen Wohnraum nachweisen — ein Minimum von 12 m² Wohnfläche pro zusätzliche Person ist der Maßstab, den die meisten Ausländerbehörden verwenden. Diese Dokumente (Einkommensnachweis, Wohnungsbestätigung) müssen Ihnen in {country} vor Ihrem Visumtermin zugesandt werden.",
+        "p4": "Von {country} aus dauert der gesamte Prozess — Sammeln von Dokumenten, Beglaubigung ({{authMethod}), A1-Zertifikat und Visumtermin — {timelineMin}–{timelineMax} Wochen. Die Gebühr für das nationale D-Visum beträgt €{visaFee}. Nach der Ankunft in Deutschland muss sich das gesponserte Familienmitglied innerhalb von zwei Wochen beim örtlichen Einwohnermeldeamt anmelden und einen Aufenthaltstitel bei der Ausländerbehörde beantragen. Ehepartner haben das Recht, sofort eine Beschäftigung aufzunehmen; schulpflichtige Kinder werden ohne zusätzliche Genehmigungsanforderungen in das öffentliche Schulsystem integriert."
+      },
+      "noVisaEu": "Als Staatsangehöriger aus {country} profitieren Sie von der Freizügigkeit der Europäischen Union — einem der bedeutendsten Rechte in der EU-Rechtsordnung. Sie können in Deutschland für jede Dauer leben, arbeiten, studieren oder in den Ruhestand gehen, ohne ein Visum, eine Aufenthaltserlaubnis oder eine Arbeitserlaubnis zu erhalten. Der einzige erforderliche Verwaltungsschritt ist die Anmeldung Ihrer Adresse beim örtlichen Einwohnermeldeamt (Anmeldung) innerhalb von zwei Wochen nach der Ankunft und die Anmeldung bei einer Krankenversicherung, wenn Sie beschäftigt sind.",
+      "touristFree": "Staatsangehörige aus {country} sind von dem Schengen-C-Touristenvisum durch ein bilaterales visumfreies Abkommen oder die EU/EWR-Freizügigkeit befreit. Sie können Deutschland und den Schengen-Raum für Aufenthalte von bis zu 90 Tagen in jedem 180-Tage-Zeitraum ohne Visum betreten. Für Aufenthalte länger als 90 Tage — für Ausbildung, Studium oder Familienzusammenführung — ist ein nationales D-Visum erforderlich. Der D-Visumantrag wird bei der deutschen Botschaft oder dem Honorarkonsulat eingereicht, das für Ihren Wohnort in {country} zuständig ist."
+    },
+    "seoFaqs": {
+      "ausbildung": [
+        {
+          "q": "Wie viele Dokumente benötige ich für das deutsche Ausbildungsvisum aus {country}?",
+          "a": "Ein Standard-Ausbildungsvisumantrag aus {country} erfordert {totalDocs} Dokumente. Die wichtigsten sind der unterzeichnete Ausbildungsvertrag von Ihrem deutschen Arbeitgeber, ein deutsches B1/B2-Sprachzertifikat, beglaubigte Schulabschlüsse und Zeugnisse sowie ein Nachweis der finanziellen Mittel. Jedes Dokument in einer anderen Sprache als Deutsch muss von einer beglaubigten deutschen Übersetzung begleitet werden."
+        },
+        {
+          "q": "Wie lange dauert es, ein deutsches Ausbildungsvisum aus {country} zu erhalten?",
+          "a": "Die realistische Gesamtdauer aus {country} beträgt {timelineMin}–{timelineMax} Wochen. Der Engpass ist normalerweise die Dokumentenbeglaubigung ({authMethod}: {authDaysMin}–{authDaysMax} Tage), gefolgt von der Wartezeit für den Visumtermin (oft 4–12 Wochen) und der Konsulatsbearbeitung (8–12 Wochen ohne Vorab-Zustimmung, etwa 8 Wochen mit Vorab-Zustimmung). Beginnen Sie mindestens 6 Monate vor Ihrem Ausbildungsstartdatum mit den Vorbereitungen."
+        },
+        {
+          "q": "Verlangt {country} eine Apostille oder konsularische Legalisierung für ein deutsches Visum?",
+          "a": "Für deutsche Visumanträge müssen Dokumente aus {country} einer {authMethod} unterzogen werden. {authMethodDetail} Die Kosten betragen €{authFeeMin}–{authFeeMax} pro Dokument und der Prozess dauert {authDaysMin}–{authDaysMax} Tage. Planen Sie diesen Schritt zuerst ein, da er am schwierigsten zu beschleunigen ist."
+        },
+        {
+          "q": "Wie hoch ist die Gebühr für das deutsche Ausbildungsvisum?",
+          "a": "Die nationale D-Visumgebühr für Ausbildung beträgt €{visaFee}, zahlbar in bar oder per Karte bei Ihrem Termin. Die Gebühr ist nicht erstattbar, wenn das Visum abgelehnt wird. Einige deutsche Visa-Center (TLScontact, VFS) erheben eine zusätzliche Servicegebühr von €20–40."
+        },
+        {
+          "q": "Muss ich Deutsch sprechen, bevor ich ein Ausbildungsvisum aus {country} beantrage?",
+          "a": "Ja. Die meisten Ausbildungsvisa erfordern ein deutsches B1-Zertifikat (Goethe-Institut, telc oder ÖSD). Viele Arbeitgeber und einige Ausbildungssektoren (Gesundheitswesen, Handwerk) verlangen B2. Beginnen Sie früh mit Deutschkursen — die B1-Prüfung dauert 3–6 Monate Unterricht von Anfang an, und B2 dauert weitere 3–4 Monate. Das Zertifikat darf zum Zeitpunkt Ihres Visumtermins nicht älter als 2 Jahre sein."
+        },
+        {
+          "q": "Benötige ich ein Sperrkonto für das Ausbildungsvisum aus {country}?",
+          "a": "Das hängt von Ihrem Ausbildungsgehalt ab. Wenn Ihr brutto monatliches Gehalt unter etwa €934 liegt, benötigen Sie wahrscheinlich ein Sperrkonto mit €11.904. Auszubildende mit höheren Gehältern oder diejenigen, deren deutscher Arbeitgeber eine Verpflichtungserklärung bereitstellt, können befreit sein. Bestätigen Sie dies bei der deutschen Vertretung in {country}, da die Anforderungen variieren."
+        }
+      ],
+      "studium": [
+        {
+          "q": "Wie viele Dokumente werden für ein deutsches Studiumvisum aus {country} benötigt?",
+          "a": "Ein Studiumvisumantrag aus {country} erfordert normalerweise {totalDocs} Dokumente, darunter: Universitätszulassungsschreiben (Zulassung), deutsches B2- oder TestDaF-Sprachzertifikat, Baccalauréat-Diplom und Zeugnisse (beglaubigt und übersetzt), Hochschulabschlüsse (falls zutreffend), Nachweis der finanziellen Mittel (Sperrkonto mit €11.904 oder Äquivalent) und Reisekrankenversicherung."
+        },
+        {
+          "q": "Wie lange dauert es, ein Studiumvisum aus {country} zu erhalten?",
+          "a": "Aus {country} beträgt die realistische Dauer {timelineMin}–{timelineMax} Wochen. Die Dokumentenbeglaubigungsphase ({authMethod}: {authDaysMin}–{authDaysMax} Tage) und das Universitätszulassungsverfahren (das 3–6 Monate über uni-assist oder direkt dauern kann) sind die längsten Schritte. Bewerben Sie sich ein volles Jahr vor Ihrem geplanten Startdatum an deutschen Universitäten."
+        },
+        {
+          "q": "Was ist das Sperrkonto und ist es für Studenten aus {country} obligatorisch?",
+          "a": "Das Sperrkonto ist ein gesperrtes Bankkonto mit €11.904 (ab 2026), das nachweist, dass Sie Ihre Lebenshaltungskosten für das erste Jahr in Deutschland decken können. Die Mittel werden Ihnen nach Ihrer Ankunft in monatlichen Raten von €992 freigegeben. Es ist für die meisten Studiumvisumantragsteller aus {country} obligatorisch, es sei denn, Sie haben ein gleichwertiges Stipendium oder eine starke Verpflichtungserklärung. Eröffnen Sie ein Konto über Fintiba, Expatrio oder Coracle — sie können das Konto innerhalb weniger Geschäftstage eröffnen."
+        },
+        {
+          "q": "Benötige ich ein APS-Zertifikat aus {country} für ein deutsches Studiumvisum?",
+          "a": "APS-Zertifikate (Akademische Prüfstelle) sind erforderlich für Antragsteller aus China, Indien, Vietnam, der Mongolei und Pakistan. Für {country} gilt: {apsDetail}. Falls erforderlich, beantragen Sie die APS frühzeitig, da die Bearbeitung 6–20 Wochen dauert und das Zertifikat obligatorisch ist, bevor die deutsche Vertretung Ihr Visum bearbeitet."
+        },
+        {
+          "q": "Was kostet die Dokumentenbeglaubigung für Studenten aus {country}?",
+          "a": "Für Antragsteller aus {country} verwendet die Beglaubigung {authMethod} und kostet €{authFeeMin}–{authFeeMax} pro Dokument, dauert {authDaysMin}–{authDaysMax} Tage. Für eine Standard-Studiumakte beglaubigen Sie etwa 4–6 Dokumente (Diplome, Zeugnisse, Geburtsurkunde, polizeiliches Führungszeugnis). Addieren Sie beglaubigte Übersetzungen mit €20–60 pro Seite. Gesamtbudget für Beglaubigung und Übersetzung: typischerweise €300–800 aus {country}."
+        },
+        {
+          "q": "Kann ich in Deutschland arbeiten, während ich mit einem Studiumvisum studiere?",
+          "a": "Ja. Studenten mit einem deutschen Studiumvisum dürfen bis zu 120 Vollzeitstage oder 240 Halbtage pro Jahr arbeiten, ohne dass eine separate Arbeitserlaubnis erforderlich ist. Stunden über diesem Limit erfordern eine Genehmigung der Ausländerbehörde und der Bundesagentur für Arbeit. Studentenjobs (Werkstudent, Hiwi oder Mini-Job) sind eine häufige Möglichkeit, die Lebenshaltungskosten zu ergänzen."
+        }
+      ],
+      "tourist": [
+        {
+          "q": "Benötigen Bürger von {country} ein Visum, um Deutschland zu besuchen?",
+          "a": "Ja, Bürger von {country} benötigen ein Schengen-C-Visum (Touristen-/Kurzaufenthaltsvisum), um Deutschland und alle Schengen-Länder zu betreten. Das Visum erlaubt bis zu 90 Tage Aufenthalt in jedem 180-Tage-Zeitraum. Der Antrag wird bei der deutschen Botschaft, einem Konsulat oder einem autorisierten Visazentrum (VFS Global, TLScontact) eingereicht, das {country} bedient."
+        },
+        {
+          "q": "Welche Dokumente benötige ich für ein deutsches Touristenvisum von {country}?",
+          "a": "Ein deutsches Schengen-Touristenvisum von {country} erfordert {totalDocs} Dokumente: ausgefülltes Schengen-Antragsformular, gültiger Reisepass (mindestens 3 Monate über die Reise hinaus gültig), biometrische Fotos (2 Stück), Reisekrankenversicherung (Deckung von mindestens 30.000 €), Hin- und Rückflugbuchung, Unterkunftsnachweis (Hotel oder Einladungsschreiben), Kontoauszüge der letzten 3 Monate, die ausreichende Deckung zeigen (45–100 € pro Tag), und Nachweise von Bindungen zu {country} wie ein Arbeitsvertrag oder eine Eigentumsurkunde."
+        },
+        {
+          "q": "Wie hoch ist die Gebühr für ein deutsches Touristenvisum für Bürger von {country}?",
+          "a": "Die standardmäßige Schengen-C-Visumgebühr beträgt €{visaFee} (aktualisiert Juni 2024). Kinder unter 6 Jahren sind kostenlos; Kinder von 6–12 Jahren zahlen 45 €. Die Gebühr ist nicht rückerstattbar. Zusätzliche Servicegebühren des Visazentrums (VFS/TLScontact) von 20–40 € können anfallen. Die Gesamtzahlung erfolgt beim Termin — erkundigen Sie sich bei Ihrem örtlichen Visazentrum nach akzeptierten Zahlungsmethoden."
+        },
+        {
+          "q": "Wie lange dauert es, ein deutsches Touristenvisum von {country} zu erhalten?",
+          "a": "Die Standardbearbeitung dauert 15 Kalendertage ab dem Antragsdatum. Sie kann sich auf 30 Tage erstrecken und in Ausnahmefällen bis zu 45 Tage. Berücksichtigen Sie die Wartezeit für einen Termin im Visazentrum: {authDaysMin}–{authDaysMax} Tage in normalen Zeiten, bis zu 8 Wochen während der Hochsaison im Sommer. Buchen Sie Ihren Termin so früh wie möglich — mindestens 3 Monate vor Ihrem geplanten Reisedatum."
+        },
+        {
+          "q": "Wie viel Geld muss ich für ein deutsches Touristenvisum von {country} nachweisen?",
+          "a": "Deutschland verlangt einen Nachweis von ungefähr 45–100 € pro Tag Ihres Aufenthalts im Schengen-Raum. Für eine 14-tägige Reise sind das ungefähr 630–1.400 €. Kontoauszüge der letzten 3 Monate sind der Standardnachweis. Wenn ein Familienmitglied oder ein deutscher Gastgeber Sie unterstützt, kann eine Verpflichtungserklärung (finanzielle Garantie, ausgestellt bei einer deutschen Ausländerbehörde) Ihre eigenen Mittel ersetzen."
+        },
+        {
+          "q": "Kann ein Schengen-Touristenvisum verlängert oder in ein längerfristiges Visum in Deutschland umgewandelt werden?",
+          "a": "Ein Schengen-C-Touristenvisum kann normalerweise nicht über 90 Tage hinaus verlängert werden und kann nicht in ein nationales D-Visum in Deutschland umgewandelt werden. Wenn Sie länger bleiben möchten — für Ausbildung, Studium oder familiäre Gründe — müssen Sie nach {country} zurückkehren und das entsprechende nationale D-Visum bei der deutschen Auslandsvertretung beantragen, bevor Sie Deutschland erneut betreten."
+        }
+      ],
+      "family_reunification": [
+        {
+          "q": "Welche Dokumente benötige ich für ein deutsches Familiennachzugsvisum von {country}?",
+          "a": "Ein Familiennachzugsvisum von {country} erfordert {totalDocs} Dokumente auf beiden Seiten: Ihre Dokumente (Reisepass, Geburtsurkunde, Heiratsurkunde, polizeiliches Führungszeugnis, deutsches A1-Zertifikat, falls Sie zu einem Ehepartner nachziehen, plus beglaubigte Übersetzungen) und die Dokumente Ihres Sponsors aus Deutschland (Kopie seines Aufenthaltstitel, letzte 3 Gehaltsabrechnungen, Steuerbescheid und Wohnungsbestätigung, die mindestens 12 m² pro zusätzliche Person zeigt)."
+        },
+        {
+          "q": "Ist das deutsche A1-Sprachzertifikat für den Familiennachzug von {country} obligatorisch?",
+          "a": "Ja, für den Ehegattennachzug von {country} müssen Sie ein deutsches A1-Sprachzertifikat (Goethe-Zertifikat A1, telc Deutsch A1 oder ÖSD Zertifikat A1) bei Ihrem Visum-Termin vorlegen. Ausnahmen: Ihr Sponsor hat einen deutschen Hochschulabschluss oder verfügt über dokumentiertes C1+-Deutsch, Sie sind über 67 Jahre alt, Sie haben eine anerkannte Behinderung, die das Sprachenlernen verhindert, oder es liegt ein zwingender Härtefall vor. Kinder unter 16 Jahren, die zu ihren Eltern nachziehen, sind befreit."
+        },
+        {
+          "q": "Wie lange dauert der Familiennachzug von {country}?",
+          "a": "Der gesamte Prozess — Dokumentensammlung, Beglaubigung ({authMethod}: {authDaysMin}–{authDaysMax} Tage), A1-Zertifikatsprüfung und Visum-Termin — dauert {timelineMin}–{timelineMax} Wochen von {country} aus. Die deutsche Auslandsvertretung muss über einen vollständigen Antrag innerhalb von 3 Monaten entscheiden. Unvollständige Unterlagen werden ohne Entscheidung zurückgewiesen, was den Prozess neu startet."
+        },
+        {
+          "q": "Wie viel Einkommen muss der Sponsor in Deutschland für den Familiennachzug haben?",
+          "a": "Der Sponsor muss genug verdienen, um die Familie ohne öffentliche Unterstützung zu versorgen. Die Schwelle variiert je nach Bundesland und Familiengröße: ungefähr 1.600–2.200 € netto pro Monat für ein Ehepaar, plus 300–400 € pro zusätzliches Kind. Der Sponsor reicht die letzten 3 Gehaltsabrechnungen und einen Steuerbescheid bei der deutschen Auslandsvertretung in Ihrem Namen ein. Selbstständige Sponsoren können Gewinn- und Verlustrechnung vorlegen."
+        },
+        {
+          "q": "Kann der Ehepartner nach dem Familiennachzug in Deutschland arbeiten?",
+          "a": "Ja. Ein Ehepartner, der zu einem deutschen Resident oder EU-/EWR-Bürger nachzieht, erhält einen Aufenthaltstitel, der volle, uneingeschränkte Arbeitserlaubnis einschließt — keine Arbeitgebersponsoring erforderlich. Er oder sie kann unmittelbar nach Erhalt des Aufenthaltstitels jede abhängige oder selbstständige Tätigkeit aufnehmen. Schulpflichtige Kinder werden automatisch in das öffentliche Schulsystem integriert."
+        },
+        {
+          "q": "Welche Beglaubigungsmethode verwendet {country} für Familiennachzugsdokumente?",
+          "a": "Dokumente von {country} müssen für deutsche Visumzwecke über {authMethod} beglaubigt werden. {authMethodDetail} Die Beglaubigung kostet €{authFeeMin}–{authFeeMax} pro Dokument und dauert {authDaysMin}–{authDaysMax} Tage. Jedes beglaubigte Dokument muss auch von einer beeidigten deutschen Übersetzung begleitet werden (20–60 € pro Seite). Beginnen Sie den Beglaubigungsprozess so früh wie möglich — dies ist der Schritt, den die meisten Antragsteller unterschätzen."
+        }
+      ]
+    }
   },
   "eligibilityChecker": {
     "seoSection": {

@@ -4014,7 +4014,151 @@
     "seoPageNoVisaStats": "No visa required",
     "seoPageDocSection": "Documentos necessários",
     "seoPageInteractiveTitle": "Personalize esta lista de verificação",
-    "seoPageInteractiveSub": "Ajuste seu nível de educação, situação familiar e outras opções para obter uma lista exata."
+    "seoPageInteractiveSub": "Ajuste seu nível de educação, situação familiar e outras opções para obter uma lista exata.",
+    "seoArticleTitle": "Sobre o visto {path} para cidadãos de {country}",
+    "seoFaqTitle": "Perguntas frequentes",
+    "authMethodDetail": {
+      "apostille": "{country} é membro da Convenção de Haia e a Alemanha aceita suas apostilas. Seus documentos são autenticados com um carimbo de apostila da autoridade nacional competente.",
+      "legalization": "Apesar de ser membro da Convenção de Haia, a Alemanha apresentou objeção formal à adesão de {country}. Portanto, é necessária legalização consular completa pela embaixada alemã ou por uma cadeia de autoridades nacionais — não uma apostila."
+    },
+    "apsDetail": {
+      "required": "um certificado APS (Akademische Prüfstelle) É OBRIGATÓRIO. Você deve ter seus documentos acadêmicos verificados pelo escritório APS antes de enviar sua solicitação de visto.",
+      "notRequired": "um certificado APS NÃO é obrigatório. Você pode enviar seus documentos acadêmicos autenticados diretamente em seu dossiê de visto."
+    },
+    "seoContent": {
+      "ausbildung": {
+        "p1": "O sistema Ausbildung (treinamento vocacional dual) da Alemanha é uma das rotas de imigração mais procuradas para cidadãos de {country}. O visto nacional D para treinamento vocacional, regido pelo §17a da Lei de Residência Alemã (AufenthG), permite que você conclua um programa de treinamento acreditado de 2 a 3 anos em uma empresa alemã enquanto ganha um salário. Diferentemente do Studium, o Ausbildung não requer diploma universitário — um diploma de ensino médio (Baccalauréat ou equivalente) e um contrato de treinamento assinado são os requisitos principais.",
+        "p2": "A autenticação de documentos é um fator decisivo na rapidez com que candidatos de {country} podem enviar seu dossiê de visto. A Alemanha exige autenticação por {authMethod} para todos os documentos oficiais emitidos em {country}, incluindo sua certidão de nascimento, diplomas, históricos escolares e atestado de antecedentes criminais. A etapa {authMethod} custa €{authFeeMin}–{authFeeMax} por documento e adiciona {authDaysMin}–{authDaysMax} dias à sua preparação. Traduções juramentadas para o alemão também são obrigatórias para todos os documentos não-alemães — planeje um custo adicional de €20–60 por página de um tradutor certificado.",
+        "p3": "O processo de visto em si começa com um certificado de idioma alemão B1 (Goethe, telc ou ÖSD), pois este é o mínimo exigido para a maioria dos vistos Ausbildung. Seu futuro empregador na Alemanha apresenta uma Vorab-Zustimmung (aprovação prévia) à Bundesagentur für Arbeit — se concedida, o processamento do visto diminui de cerca de 8 meses para aproximadamente 2 meses. Comprovação financeira também é necessária: dependendo do seu salário de treinamento, você pode precisar de um Sperrkonto (conta bloqueada) com €11.904 para o ano, ou uma garantia alternativa (Verpflichtungserklärung) de um patrocinador residente na Alemanha.",
+        "p4": "De {country}, o cronograma realista de ponta a ponta — desde a coleta de documentos até seu primeiro dia de trabalho na Alemanha — é {timelineMin}–{timelineMax} semanas. Os slots de agendamento de visto na missão alemã ou centro TLScontact/VFS em {country} tendem a se preencher meses antes. Envie seu dossiê completo no agendamento: arquivos incompletos não são aceitos e nenhum reembolso é concedido. A taxa do visto nacional D é €{visaFee}, pagável no dia."
+      },
+      "studium": {
+        "p1": "A Alemanha é um dos principais destinos do mundo para estudantes internacionais — e para cidadãos de {country}, um visto de Studium (estudo universitário) alemão abre a porta para educação sem mensalidades ou com baixas taxas em instituições de classe mundial. O visto nacional D para ensino superior é regido pelo §16b AufenthG e permite que você se matricule em um programa completo de Bacharelado, Mestrado ou Doutorado.",
+        "p2": "Todos os documentos acadêmicos de {country} devem ser autenticados por {authMethod} antes de serem enviados à missão alemã. Isso se aplica ao seu diploma Baccalauréat, históricos, diplomas de ensino superior e qualquer outro certificado oficialmente emitido. A etapa {authMethod} leva {authDaysMin}–{authDaysMax} dias e custa €{authFeeMin}–{authFeeMax} por documento — e cada documento também precisará de uma tradução juramentada para o alemão (€20–60 por página). O orçamento total de autenticação e tradução para um arquivo Studium médio de {country} normalmente varia de €300–800.",
+        "p3": "O Studienkolleg é um ano preparatório necessário se seu diploma de ensino médio não o qualificar diretamente para admissão em universidade alemã. Use o banco de dados Anabin (anabin.kmk.org) para verificar o status de sua qualificação antes de se candidatar. Os candidatos também são obrigados a abrir um Sperrkonto (conta bloqueada) com €11.904 como comprovação de meios financeiros — provedores online como Fintiba, Expatrio ou Coracle abrem um em poucos dias. Um certificado de idioma alemão B2 (Goethe, telc, ÖSD ou TestDaF) é obrigatório para programas em alemão; programas em inglês aceitam IELTS/TOEFL.",
+        "p4": "A contagem total de documentos para um visto Studium de {country} é {totalDocs} itens, e o custo total estimado (documentos, autenticação, traduções, configuração de Sperrkonto e taxa de visto) é €{totalCostMin}–{totalCostMax}. O cronograma realista de preparação é {timelineMin}–{timelineMax} semanas. Comece pelo menos 6 meses antes do seu início de estudos pretendido — as universidades alemãs enviam cartas de admissão tardiamente, e as filas de apostila ou legalização em {country} podem levar várias semanas."
+      },
+      "tourist": {
+        "p1": "Cidadãos de {country} precisam de um visto Schengen C (também chamado de visto de curta permanência ou turista) para visitar a Alemanha e a área Schengen mais ampla. O visto Schengen C permite até 90 dias de permanência em qualquer período de 180 dias e cobre turismo, visitas familiares, viagens de negócios curtas e eventos culturais. A solicitação é enviada à embaixada alemã, consulado ou centro de visto autorizado (VFS Global ou TLScontact) em {country}.",
+        "p2": "A taxa do visto turista Schengen é €{visaFee} a partir de 2024 (aumentada de €80 em junho de 2024 sob o Código de Visto da UE revisado). Crianças menores de 6 anos estão isentas; crianças de 6 a 12 anos pagam €45. A taxa é não-reembolsável mesmo se o visto for recusado. Você também pagará qualquer taxa de serviço do centro de visto além da taxa consular. Em {country}, os custos totais de solicitação, incluindo seguro e preparação de documentos, normalmente variam de €150 a €350.",
+        "p3": "O fator mais forte na aprovação de um visto Schengen é demonstrar fortes vínculos com seu país de origem — prova de que você pretende retornar. Uma carta de emprego concedendo licença aprovada, uma escritura de propriedade, um registro comercial ou um certificado de matrícula estudantil servem para este propósito. Comprovação financeira deve mostrar que você pode cobrir aproximadamente €45–100 por dia de sua permanência. Seguro de saúde de viagem com cobertura mínima de €30.000 e válido para todos os países Schengen é obrigatório.",
+        "p4": "Os tempos de espera de agendamento na missão alemã ou centro de visto em {country} variam conforme a estação: espere {authDaysMin}–{authDaysMax} dias úteis em períodos de baixa demanda e até 8 semanas no verão. O processamento após envio leva no máximo 15 dias corridos para aplicações diretas (até 30 dias para casos complexos, 45 dias em circunstâncias excepcionais). Vistos de múltiplas entradas válidos por 1–5 anos podem ser emitidos para viajantes frequentes com histórico de viagem limpo."
+      },
+      "family_reunification": {
+        "p1": "A reunificação familiar na Alemanha — trazer um cônjuge, filhos menores ou pais dependentes para se juntar a um residente alemão — é regulada pelos §§27–36 do AufenthG. Cidadãos de {country} que se candidatam a se juntar a um membro da família na Alemanha devem obter um visto nacional D antes de chegar. O caso mais comum é reunião conjugal (Ehegattennachzug), que dá ao cônjuge o direito de trabalhar na Alemanha imediatamente após a chegada.",
+        "p2": "O requisito mais distintivo para cônjuges que se candidatam de {country} é o certificado de idioma alemão A1. Antes que um visto de reunião conjugal seja emitido, o candidato deve demonstrar proficiência básica em idioma alemão no nível CEFR A1 (Goethe-Zertifikat A1, telc Deutsch A1 ou ÖSD Zertifikat A1). Exceções existem se o patrocinador possui um Hochschulabschluss alemão ou tem alemão de nível C1, se o candidato tem mais de 67 anos, ou se há um caso comprovado de dificuldade. Autenticação de documentos de {country} usa {authMethod} e custa €{authFeeMin}–{authFeeMax} por documento, adicionando {authDaysMin}–{authDaysMax} dias.",
+        "p3": "O patrocinador (a pessoa já na Alemanha) desempenha um papel central: deve provar que sua renda é suficiente para apoiar a família reunida sem recorrer a fundos públicos. O limite de renda necessário varia por Bundesland e tamanho da família, mas normalmente equivale ao mínimo de Grundsicherung mais 20%. O patrocinador também deve provar moradia adequada — um mínimo de 12 m² de espaço vital por pessoa adicional é o parâmetro usado pela maioria das Ausländerbehörden. Esses documentos (comprovação de renda, confirmação de moradia) devem ser enviados para você em {country} antes de seu agendamento de visto.",
+        "p4": "De {country}, o processo completo — coleta de documentos, autenticação ({authMethod}), certificado A1 e agendamento de visto — leva {timelineMin}–{timelineMax} semanas. A taxa do visto nacional D é €{visaFee}. Uma vez na Alemanha, o membro da família patrocinado deve se registrar no Einwohnermeldeamt local dentro de duas semanas e solicitar um permesso de residência (Aufenthaltstitel) na Ausländerbehörde. Cônjuges têm o direito de assumir qualquer emprego imediatamente; crianças em idade escolar são integradas ao sistema de escola pública sem requisitos de permesso adicional."
+      },
+      "noVisaEu": "Como cidadão de {country}, você se beneficia da liberdade de movimento da União Europeia — um dos direitos mais significativos da ordem jurídica da UE. Você pode viver, trabalhar, estudar ou se aposentar na Alemanha por qualquer período de tempo sem obter visto, permesso de residência ou permesso de trabalho. A única etapa administrativa necessária é registrar seu endereço no Einwohnermeldeamt local (Anmeldung) dentro de duas semanas após a chegada e se inscrever em seguro de saúde se você estiver empregado.",
+      "touristFree": "Cidadãos de {country} estão isentos do visto turista Schengen C sob um acordo bilateral de isenção de visto ou liberdade de movimento da UE/EEA. Você pode entrar na Alemanha e na área Schengen para permanências de até 90 dias em qualquer período de 180 dias sem qualquer visto. Para permanências mais longas que 90 dias — para Ausbildung, Studium ou reunificação familiar — um visto nacional D é necessário. A solicitação de visto D é enviada à embaixada alemã ou consulado honorário responsável por sua residência em {country}."
+    },
+    "seoFaqs": {
+      "ausbildung": [
+        {
+          "q": "Quantos documentos preciso para o visto alemão Ausbildung de {country}?",
+          "a": "Uma solicitação padrão de visto Ausbildung de {country} requer {totalDocs} documentos. Os mais críticos são o Ausbildungsvertrag (contrato de treinamento) assinado de seu empregador alemão, um certificado de idioma alemão B1/B2, diplomas e históricos escolares autenticados, e comprovação de meios financeiros. Todo documento em idioma diferente do alemão deve ser acompanhado por uma tradução juramentada para o alemão."
+        },
+        {
+          "q": "Quanto tempo leva para obter um visto alemão Ausbildung de {country}?",
+          "a": "O cronograma realista de ponta a ponta de {country} é {timelineMin}–{timelineMax} semanas. O gargalo geralmente é a autenticação de documentos ({authMethod}: {authDaysMin}–{authDaysMax} dias), seguido pelo tempo de espera do agendamento de visto (frequentemente 4–12 semanas) e processamento do consulado (8–12 semanas sem Vorab-Zustimmung, ~8 semanas com ela). Comece a preparação pelo menos 6 meses antes da data de início do seu treinamento."
+        },
+        {
+          "q": "O {country} requer apostila ou legalização consular para um visto alemão?",
+          "a": "Para solicitações de visto alemão, documentos de {country} devem passar por {authMethod}. {authMethodDetail} O custo é €{authFeeMin}–{authFeeMax} por documento e o processo leva {authDaysMin}–{authDaysMax} dias. Planeje esta etapa primeiro, pois é a mais difícil de acelerar."
+        },
+        {
+          "q": "Qual é a taxa do visto alemão Ausbildung?",
+          "a": "A taxa do visto nacional D para Ausbildung é €{visaFee}, paga em dinheiro ou cartão no seu agendamento. A taxa é não-reembolsável se o visto for recusado. Alguns centros de visto alemães (TLScontact, VFS) cobram uma taxa de serviço adicional de €20–40."
+        },
+        {
+          "q": "Preciso falar alemão antes de me candidatar a um visto Ausbildung de {country}?",
+          "a": "Sim. A maioria dos vistos Ausbildung requer um certificado mínimo de alemão B1 (Goethe-Institut, telc ou ÖSD). Muitos empregadores e alguns setores de treinamento (saúde, ofícios) exigem B2. Comece suas aulas de alemão cedo — o exame B1 leva 3–6 meses de estudo do zero, e B2 leva mais 3–4 meses. O certificado não deve ter mais de 2 anos no momento do seu agendamento de visto."
+        },
+        {
+          "q": "Preciso de um Sperrkonto para o visto Ausbildung de {country}?",
+          "a": "Depende do seu salário de treinamento. Se seu salário bruto mensal for inferior a aproximadamente €934, você provavelmente precisará de um Sperrkonto (conta bloqueada) com €11.904. Aprendizes com salários mais altos ou aqueles cujo empregador alemão fornece uma Verpflichtungserklärung (garantia financeira) podem estar isentos. Confirme com a missão alemã em {country}, pois os requisitos variam."
+        }
+      ],
+      "studium": [
+        {
+          "q": "Quantos documentos são necessários para um visto alemão Studium de {country}?",
+          "a": "Uma solicitação de visto Studium de {country} normalmente requer {totalDocs} documentos, incluindo: carta de admissão universitária (Zulassung), certificado de idioma alemão B2 ou TestDaF, diploma Baccalauréat e históricos (autenticados e traduzidos), diplomas de ensino superior (se aplicável), comprovação de meios financeiros (Sperrkonto em €11.904 ou equivalente) e seguro de saúde de viagem."
+        },
+        {
+          "q": "Quanto tempo leva para obter um visto Studium de {country}?",
+          "a": "De {country}, o cronograma realista é {timelineMin}–{timelineMax} semanas. A etapa de autenticação de documentos ({authMethod}: {authDaysMin}–{authDaysMax} dias) e o processo de admissão universitária (que pode levar 3–6 meses via uni-assist ou diretamente) são os passos mais longos. Candidatar-se a universidades alemãs um ano inteiro antes da data de início pretendida."
+        },
+        {
+          "q": "O que é o Sperrkonto e é obrigatório para estudantes de {country}?",
+          "a": "O Sperrkonto é uma conta bancária bloqueada com €11.904 (a partir de 2026), que prova que você pode cobrir seus custos de vida no primeiro ano na Alemanha. Os fundos são liberados para você em parcelas mensais de €992 após sua chegada. É obrigatório para a maioria dos candidatos a visto Studium de {country}, a menos que você tenha uma bolsa equivalente ou uma Verpflichtungserklärung forte. Abra uma através de Fintiba, Expatrio ou Coracle — eles podem abrir a conta em poucos dias úteis."
+        },
+        {
+          "q": "Preciso de um certificado APS de {country} para um visto alemão Studium?",
+          "a": "Certificados APS (Akademische Prüfstelle) são necessários para candidatos da China, Índia, Vietnã, Mongólia e Paquistão. Para {country}, {apsDetail}. Se necessário, solicite o APS cedo, pois o processamento leva 6–20 semanas e o certificado é obrigatório antes que a missão alemã processe seu visto."
+        },
+        {
+          "q": "Quanto custa a autenticação de documentos para estudantes de {country}?",
+          "a": "Para candidatos de {country}, a autenticação usa {authMethod} e custa €{authFeeMin}–{authFeeMax} por documento, levando {authDaysMin}–{authDaysMax} dias. Para um arquivo Studium padrão, você autenticará aproximadamente 4–6 documentos (diplomas, históricos, certidão de nascimento, atestado de antecedentes criminais). Adicione traduções juramentadas em €20–60 por página. Orçamento total de autenticação e tradução: normalmente €300–800 de {country}."
+        },
+        {
+          "q": "Posso trabalhar na Alemanha enquanto estudo com um visto Studium?",
+          "a": "Sim. Estudantes com visto alemão Studium podem trabalhar até 120 dias inteiros ou 240 meios-dias por ano sem precisar de um permesso de trabalho separado. Horas acima deste limite exigem aprovação da Ausländerbehörde e Bundesagentur für Arbeit. Empregos estudantis (Werkstudent, Hiwi ou mini-job) são uma forma comum de complementar custos de vida."
+        }
+      ],
+      "tourist": [
+        {
+          "q": "Cidadãos de {country} precisam de visto para visitar a Alemanha?",
+          "a": "Sim, cidadãos de {country} precisam de um visto Schengen C (turista/curta permanência) para entrar na Alemanha e em todos os países Schengen. O visto permite até 90 dias de permanência em qualquer período de 180 dias. A solicitação é enviada à embaixada alemã, consulado ou centro de visto autorizado (VFS Global, TLScontact) que serve {country}."
+        },
+        {
+          "q": "Que documentos preciso para um visto alemão turista de {country}?",
+          "a": "Um visto turista alemão Schengen de {country} requer {totalDocs} documentos: formulário de solicitação Schengen preenchido, passaporte válido (3+ meses além da viagem), fotos biométricas (2×), seguro de saúde de viagem (cobertura €30.000+), reserva de voo de ida e volta, comprovação de acomodação (hotel ou carta de convite), extratos bancários mostrando fundos suficientes (€45–100/dia) e comprovação de vínculos com {country}, como carta de emprego ou escritura de propriedade."
+        },
+        {
+          "q": "Qual é a taxa do visto turista alemão para cidadãos de {country}?",
+          "a": "A taxa padrão do visto Schengen C é €{visaFee} (revisada em junho de 2024). Crianças menores de 6 anos são gratuitas; crianças de 6 a 12 anos pagam €45. A taxa é não-reembolsável. Taxas de serviço adicionais do centro de visto (VFS/TLScontact) de €20–40 podem se aplicar. O pagamento total é feito no agendamento — verifique com seu centro de visto local os métodos de pagamento aceitos."
+        },
+        {
+          "q": "Quanto tempo leva para obter um visto alemão turista de {country}?",
+          "a": "O processamento padrão é 15 dias corridos a partir da data de solicitação. Pode se estender para 30 dias e excepcionalmente até 45 dias. Considere o tempo de espera do agendamento no centro de visto: {authDaysMin}–{authDaysMax} dias em períodos normais, até 8 semanas durante a alta temporada de verão. Agende seu agendamento o mais cedo possível — pelo menos 3 meses antes da data de viagem planejada."
+        },
+        {
+          "q": "Quanto dinheiro preciso mostrar para um visto alemão turista de {country}?",
+          "a": "A Alemanha exige comprovação de aproximadamente €45–100 por dia de sua permanência na área Schengen. Para uma viagem de 14 dias, isso é aproximadamente €630–1.400. Extratos bancários dos últimos 3 meses são a evidência padrão. Se um membro da família ou anfitrião alemão está patrocinando você, uma Verpflichtungserklärung (garantia financeira, emitida em uma Ausländerbehörde alemã) pode substituir seus próprios fundos."
+        },
+        {
+          "q": "Um visto turista Schengen pode ser estendido ou convertido em um visto mais longo na Alemanha?",
+          "a": "Um visto turista Schengen C normalmente não pode ser estendido além de 90 dias e não pode ser convertido em um visto nacional D dentro da Alemanha. Se você deseja ficar mais tempo — para Ausbildung, Studium ou razões familiares — você deve retornar a {country} e se candidatar ao visto nacional D apropriado através da missão alemã antes de reingressar na Alemanha."
+        }
+      ],
+      "family_reunification": [
+        {
+          "q": "Que documentos preciso para um visto alemão de reunificação familiar de {country}?",
+          "a": "Um visto de reunificação familiar de {country} requer {totalDocs} documentos em ambos os lados: seus documentos (passaporte, certidão de nascimento, certidão de casamento, atestado de antecedentes criminais, certificado de alemão A1 se se juntando a um cônjuge, mais traduções autenticadas) e documentos de seu patrocinador da Alemanha (cópia de seu Aufenthaltstitel, últimos 3 contracheques, avaliação fiscal e confirmação de moradia mostrando ≥12 m² por pessoa adicional)."
+        },
+        {
+          "q": "O certificado de idioma alemão A1 é obrigatório para reunificação familiar de {country}?",
+          "a": "Sim, para reunião conjugal (Ehegattennachzug) de {country}, você deve apresentar um certificado de idioma alemão A1 (Goethe-Zertifikat A1, telc Deutsch A1 ou ÖSD Zertifikat A1) no seu agendamento de visto. Exceções: seu patrocinador possui um Hochschulabschluss alemão ou tem alemão documentado de nível C1+, você tem mais de 67 anos, você tem uma deficiência reconhecida que impede aprendizado de idioma, ou existe um caso comprovado de dificuldade. Crianças menores de 16 se juntando aos pais estão isentas."
+        },
+        {
+          "q": "Quanto tempo leva a reunificação familiar de {country}?",
+          "a": "O processo completo — coleta de documentos, autenticação ({authMethod}: {authDaysMin}–{authDaysMax} dias), exame de certificado A1 e agendamento de visto — leva {timelineMin}–{timelineMax} semanas de {country}. A missão alemã é obrigada a decidir sobre uma solicitação completa dentro de 3 meses. Arquivos incompletos são devolvidos sem decisão, reiniciando o cronograma."
+        },
+        {
+          "q": "Quanto de renda o patrocinador na Alemanha precisa para reunificação familiar?",
+          "a": "O patrocinador deve ganhar o suficiente para apoiar a família sem assistência pública. O limite varia por Bundesland e tamanho da família: aproximadamente €1.600–2.200 líquido por mês para um casal, mais €300–400 por filho adicional. O patrocinador envia os últimos 3 contracheques e uma avaliação fiscal (Steuerbescheid) para a missão alemã em seu nome. Patrocinadores autônomos podem usar demonstrações de lucros e perdas."
+        },
+        {
+          "q": "O cônjuge pode trabalhar na Alemanha após reunificação familiar?",
+          "a": "Sim. Um cônjuge se juntando a um residente alemão ou nacional da UE/EEA recebe um Aufenthaltstitel (permesso de residência) que inclui autorização de trabalho completa e irrestrita — nenhum patrocínio de empregador necessário. Ele pode assumir qualquer trabalho empregado ou autônomo imediatamente após receber seu permesso. Crianças em idade escolar são automaticamente integradas ao sistema de escola pública."
+        },
+        {
+          "q": "Qual método de autenticação {country} usa para documentos de reunificação familiar?",
+          "a": "Documentos de {country} devem ser autenticados via {authMethod} para fins de visto alemão. {authMethodDetail} A autenticação custa €{authFeeMin}–{authFeeMax} por documento e leva {authDaysMin}–{authDaysMax} dias. Todo documento autenticado também deve ser acompanhado por uma tradução juramentada para o alemão (€20–60 por página). Comece o processo de autenticação o mais cedo possível — é a etapa que a maioria dos candidatos subestima."
+        }
+      ]
+    }
   },
   "eligibilityChecker": {
     "seoSection": {

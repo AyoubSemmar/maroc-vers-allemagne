@@ -5,6 +5,7 @@ import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import RelatedTools from '@/components/seo/RelatedTools'
 import DocumentChecklist from '../../DocumentChecklist'
+import SeoContent from './SeoContent'
 import {
   COUNTRIES,
   COUNTRY_ORDER,
@@ -170,6 +171,16 @@ export default async function CountryVisaPage({ params }: Props) {
             initialPath={pathKey}
           />
         </section>
+
+        {/* ── SEO ARTICLE + FAQs ────────────────────────────────────── */}
+        <SeoContent
+          country={country}
+          countryKey={countryKey}
+          countryName={countryName}
+          path={pathKey}
+          result={result}
+          t={t as any}
+        />
 
         <RelatedTools locale={locale} current="documentChecklist" />
       </div>

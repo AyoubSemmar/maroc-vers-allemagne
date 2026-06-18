@@ -4014,7 +4014,151 @@
     "seoPageNoVisaStats": "No visa required",
     "seoPageDocSection": "Gerekli belgeler",
     "seoPageInteractiveTitle": "Bu kontrol listesini kişiselleştirin",
-    "seoPageInteractiveSub": "Eğitim seviyenizi, aile durumunuzu ve diğer seçenekleri ayarlayarak tam bir liste alın."
+    "seoPageInteractiveSub": "Eğitim seviyenizi, aile durumunuzu ve diğer seçenekleri ayarlayarak tam bir liste alın.",
+    "seoArticleTitle": "{country} vatandaşları için {path} vizesi hakkında",
+    "seoFaqTitle": "Sıkça sorulan sorular",
+    "authMethodDetail": {
+      "apostille": "{country}, La Haye Sözleşmesi'nin üyesidir ve Almanya onun apostillerini kabul eder. Belgeleriniz ilgili ulusal makamdan apostil damgasıyla onaylanır.",
+      "legalization": "{country} La Haye Sözleşmesi üyesi olmasına rağmen, Almanya resmi olarak {country}'nin katılışına itiraz etmiştir. Bu nedenle apostil yerine Alman büyükelçiliği veya ulusal makamlar zinciri aracılığıyla tam konsolosluk legalleştirmesi gereklidir."
+    },
+    "apsDetail": {
+      "required": "APS (Akademische Prüfstelle) sertifikası GEREKLİDİR. Vize başvurusunu göndermeden önce akademik belgelerinizin APS ofisi tarafından doğrulanması gerekir.",
+      "notRequired": "APS sertifikası GEREKLİ DEĞİLDİR. Onaylanmış akademik belgelerinizi doğrudan vize dosyanıza ekleyebilirsiniz."
+    },
+    "seoContent": {
+      "ausbildung": {
+        "p1": "Almanya'nın Ausbildung (çift meslek eğitimi) sistemi, {country} vatandaşları için en çok aranan göç yollarından biridir. Alman İkamet Yasası'nın (AufenthG) §17a maddesi tarafından yönetilen meslek eğitimi için ulusal D-vizesi, bir Alman şirketinde 2–3 yıllık akredite bir eğitim programını tamamlamanıza ve maaş kazanmanıza hak verir. Studium'un aksine, Ausbildung üniversite derecesi gerektirmez — ortaöğretim diploması (Baccalauréat veya eşdeğeri) ve imzalı bir eğitim sözleşmesi temel gereksinimlerdir.",
+        "p2": "Belge onayı, {country}'den gelen başvuranların vize dosyasını ne kadar hızlı gönderebileceklerinin belirleyici bir faktörüdür. Almanya, {country}'de verilen doğum sertifikası, diplomalar, okul transkriptleri ve polis belgesi dahil olmak üzere tüm resmi belgeler için {authMethod} ile onay gerektirir. {authMethod} adımı belge başına €{authFeeMin}–{authFeeMax} maliyetinde ve {authDaysMin}–{authDaysMax} gün ekler. Tüm Almanca olmayan belgeler için yemin edilmiş Almanca çeviriler de zorunludur — sertifikalı bir çevirmen tarafından sayfa başına ek €20–60 planlayın.",
+        "p3": "Vize süreci, çoğu Ausbildung vizesi için gerekli olan minimum seviye olan Almanca B1 sertifikası (Goethe, telc veya ÖSD) ile başlar. Almanya'daki gelecekteki işvereniniz Bundesagentur für Arbeit'e Vorab-Zustimmung (ön onay) başvurusu yapar — onaylanırsa, vize işleme yaklaşık 8 aydan kabaca 2 aya düşer. Mali kanıt da gereklidir: eğitim maaşınıza bağlı olarak, yıl için €11.904 tutan Sperrkonto (blokeli hesap) veya Almanya'da ikamet eden bir sponsor'dan alternatif bir garanti (Verpflichtungserklärung) gerekebilir.",
+        "p4": "{country}'den, belgeleri toplamaktan Almanya'da işinizin ilk gününe kadar gerçekçi uçtan uca zaman çizelgesi {timelineMin}–{timelineMax} haftadır. Alman misyonu veya {country}'deki TLScontact/VFS merkezi'ndeki vize randevu slotları aylar öncesinden dolma eğilimindedir. Randevuda tam dosyanızı gönderin: eksik dosyalar kabul edilmez ve geri ödeme yapılmaz. Ulusal D-vize ücreti €{visaFee}'dir ve gün içinde ödenebilir."
+      },
+      "studium": {
+        "p1": "Almanya, dünyada uluslararası öğrenciler için en iyi destinasyonlardan biridir — ve {country} vatandaşları için, bir Almanca Studium (üniversite eğitimi) vizesi, dünya sıralamasında yer alan kurumlarda tuition-free veya düşük ücretli eğitim kapısını açar. Yüksek öğretim için ulusal D-vizesi §16b AufenthG tarafından yönetilir ve tam Bachelor, Master veya PhD programına kayıt olmanıza izin verir.",
+        "p2": "{country}'den gelen tüm akademik belgeler, Alman misyonuna sunulmadan önce {authMethod} ile onaylanmalıdır. Bu, Baccalauréat diplomanız, transkriptleriniz, yüksek öğretim diplomaları ve diğer resmi olarak verilen sertifikalar için geçerlidir. {authMethod} adımı {authDaysMin}–{authDaysMax} gün sürer ve belge başına €{authFeeMin}–{authFeeMax} maliyetinde — ve her belgenin ayrıca yemin edilmiş Almanca çevirisi gerekir (sayfa başına €20–60). {country}'den ortalama bir Studium dosyası için toplam onay ve çeviri bütçesi tipik olarak €300–800 arasında çalışır.",
+        "p3": "Studienkolleg, ortaöğretim diplomanız Alman üniversitesine doğrudan kabul için nitelik taşımıyorsa gerekli olan hazırlık yılıdır. Başvurmadan önce niteliğinizin durumunu kontrol etmek için Anabin veritabanını (anabin.kmk.org) kullanın. Başvuranlar ayrıca mali kaynakların kanıtı olarak €11.904 tutan Sperrkonto (blokeli hesap) açmak zorundadır — Fintiba, Expatrio veya Coracle gibi çevrimiçi sağlayıcılar birkaç gün içinde bir hesap açarlar. Almanca öğretilen programlar için Almanca B2 sertifikası (Goethe, telc, ÖSD veya TestDaF) zorunludur; İngilizce öğretilen programlar bunun yerine IELTS/TOEFL kabul eder.",
+        "p4": "{country}'den Studium vizesi için toplam belge sayısı {totalDocs} öğedir ve tahmini toplam maliyet (belgeler, onay, çeviriler, Sperrkonto kurulumu ve vize ücreti) €{totalCostMin}–{totalCostMax}'dir. Gerçekçi hazırlık zaman çizelgesi {timelineMin}–{timelineMax} haftadır. Amaçlanan eğitim başlangıcından en az 6 ay öncesinde başlayın — Alman üniversiteleri kabul mektuplarını geç gönderir ve {country}'deki apostil veya legalleştirme kuyrukları birkaç hafta sürebilir."
+      },
+      "tourist": {
+        "p1": "{country} vatandaşları, Almanya'yı ve daha geniş Schengen Alanı'nı ziyaret etmek için Schengen C vizesi (kısa vadeli veya turist vizesi olarak da adlandırılır) gerektirir. Schengen C vizesi, herhangi bir 180 günlük dönemde 90 güne kadar kalış sağlar ve turizm, aile ziyaretleri, kısa iş seyahatleri ve kültürel etkinlikleri kapsar. Başvuru, {country}'deki Alman büyükelçiliğine, konsolosluğuna veya yetkili bir vize merkezine (VFS Global veya TLScontact) sunulur.",
+        "p2": "Schengen turist vizesi ücreti 2024 itibariyle €{visaFee}'dir (Haziran 2024'te revize edilen AB Vize Kodunun altında €80'den yükseltilmiştir). 6 yaşından küçük çocuklar muaftır; 6–12 yaş arası çocuklar €45 öderler. Ücret, vize reddedilse bile iade edilmez. Konsolosluk ücretinin üstüne herhangi bir vize merkezi hizmet ücretini de ödeyeceksiniz. {country}'de, sigorta ve belge hazırlığı dahil toplam başvuru maliyetleri tipik olarak €150 ile €350 arasında değişir.",
+        "p3": "Schengen vizesi onayında en güçlü faktör, ana ülkenize güçlü bağlantılar göstermektir — geri dönmeyi amaçladığınızın kanıtı. Onaylı izin veren bir istihdam mektubu, bir mülk belgesi, bir işletme kaydı veya bir öğrenci kayıt sertifikası hepsi bu amaca hizmet eder. Mali kanıt, kalışınızın günde yaklaşık €45–100'ü karşılayabileceğinizi göstermelidir. Tüm Schengen ülkeleri için geçerli ve minimum €30.000 kapsamlı seyahat sağlık sigortası zorunludur.",
+        "p4": "{country}'deki Alman misyonu veya vize merkezi'ndeki randevu bekleme süreleri mevsime göre değişir: düşük sezon dönemlerinde {authDaysMin}–{authDaysMax} iş günü ve yaz aylarında 8 haftaya kadar bekleyin. Gönderildikten sonra işleme, basit başvurular için maksimum 15 takvim günü (karmaşık durumlar için 30 gün, istisnai durumlarda 45 gün) sürer. Temiz seyahat geçmişine sahip sık seyahat edenler için 1–5 yıl geçerli çok girişli vizeler verilebilir."
+      },
+      "family_reunification": {
+        "p1": "Almanya'ya aile birleşimi — bir eş, küçük çocuklar veya bağımlı ebeveynleri Almanya'da ikamet eden bir aile üyesine katılmak için — AufenthG'nin §§27–36 maddesi tarafından düzenlenmiştir. {country} vatandaşları Almanya'da bir aile üyesine katılmak için başvuran kişiler, gelmeden önce ulusal D-vizesi almalıdır. En yaygın durum, eşin Almanya'ya gelmesinin hemen ardından çalışma hakkı veren eş birleşimi (Ehegattennachzug)'dir.",
+        "p2": "{country}'den başvuran eşler için en belirgin gereksinim, Almanca A1 dil sertifikasıdır. Eş birleşimi vizesi verilmeden önce, başvuranın CEFR seviyesi A1'de temel Almanca dil yeterliliğini göstermesi gerekir (Goethe-Zertifikat A1, telc Deutsch A1 veya ÖSD Zertifikat A1). İstisnalar, sponsor Almanca Hochschulabschluss'a sahipse veya C1 seviyesi Almancaya sahipse, başvuran 67 yaşından büyükse veya kanıtlanmış bir zorluk durumu varsa mevcuttur. {country}'den belge onayı {authMethod} kullanır ve belge başına €{authFeeMin}–{authFeeMax} maliyetinde, {authDaysMin}–{authDaysMax} gün ekler.",
+        "p3": "Sponsor (zaten Almanya'da olan kişi) merkezi bir rol oynar: gelir düzeyinin birleştirilmiş aileyi kamu fonlarına başvurmadan desteklemek için yeterli olduğunu kanıtlamalıdır. Gerekli gelir eşiği Bundesland ve hane halkı büyüklüğüne göre değişir ancak tipik olarak Grundsicherung minimumunun artı %20'sine eşittir. Sponsor ayrıca yeterli konut kanıtlamalıdır — ek kişi başına minimum 12 m² yaşam alanı, çoğu Ausländerbehörde tarafından kullanılan kıyaslama noktasıdır. Bu belgeler (gelir kanıtı, konut onayı) vize randevunuzdan önce {country}'deki size gönderilmelidir.",
+        "p4": "{country}'den, tam süreç — belgeleri toplamak, onay ({authMethod}), A1 sertifikası ve vize randevusu — {timelineMin}–{timelineMax} haftasını alır. Ulusal D-vize ücreti €{visaFee}'dir. Almanya'ya geldikten sonra, desteklenen aile üyesi iki hafta içinde yerel Einwohnermeldeamt'a kaydolmalı ve Ausländerbehörde'de ikamet izni (Aufenthaltstitel) için başvurmalıdır. Eşler hemen herhangi bir işi üstlenme hakkına sahiptir; okul çağındaki çocuklar ek izin gereksinimleri olmaksızın kamu okul sistemine entegre edilir."
+      },
+      "noVisaEu": "{country} vatandaşı olarak, Avrupa Birliği'nin hareket özgürlüğünden yararlanırsınız — AB hukuk düzeninde en önemli haklardan biri. Vize, ikamet izni veya çalışma izni almadan herhangi bir süre için Almanya'da yaşayabilir, çalışabilir, okuyabilir veya emekli olabilirsiniz. Gerekli olan tek idari adım, varıştan sonra iki hafta içinde yerel Einwohnermeldeamt'a adresinizi kaydetmek (Anmeldung) ve istihdam halinde sağlık sigortasına kaydolmaktır.",
+      "touristFree": "{country} vatandaşları, ikili vize muafiyeti anlaşması veya AB/AEA hareket özgürlüğü kapsamında Schengen C turist vizesinden muaftır. Herhangi bir vize olmadan Almanya'ya ve Schengen Alanı'na herhangi bir 180 günlük dönemde 90 güne kadar kalış için girebilirsiniz. Ausbildung, Studium veya aile birleşimi için 90 günden daha uzun kalışlar için ulusal D-vizesi gereklidir. D-vize başvurusu, {country}'deki ikametinizden sorumlu Alman büyükelçiliğine veya fahri konsolosluğuna sunulur."
+    },
+    "seoFaqs": {
+      "ausbildung": [
+        {
+          "q": "{country} adresinden Alman Ausbildung vizesi için kaç belgeye ihtiyacım var?",
+          "a": "{country} adresinden standart bir Ausbildung viza başvurusu {totalDocs} belge gerektirir. En kritik olanlar, Alman işvereninizden imzalı Ausbildungsvertrag (eğitim sözleşmesi), Almanca B1/B2 dil sertifikası, onaylanmış okul diplomaları ve transkriptleri ile finansal kaynakların kanıtıdır. Almanca dışında herhangi bir dildeki her belgenin yanında yemin edilmiş bir Almanca çeviri bulunmalıdır."
+        },
+        {
+          "q": "{country} adresinden Alman Ausbildung vizesi almak ne kadar sürer?",
+          "a": "{country} adresinden uçtan uca gerçekçi zaman çizelgesi {timelineMin}–{timelineMax} haftadır. Darboğaz genellikle belge onaylaması ({authMethod}: {authDaysMin}–{authDaysMax} gün), ardından viza randevu bekleme süresi (sıklıkla 4–12 hafta) ve konsolosluk işleme (Vorab-Zustimmung olmadan 8–12 hafta, onunla ~8 hafta) olur. Eğitim başlangıç tarihinizden en az 6 ay önce hazırlık yapmaya başlayın."
+        },
+        {
+          "q": "{country} Alman vizesi için apostil veya konsolosluk tasdiki gerektiriyor mu?",
+          "a": "Alman viza başvuruları için {country} belgeleri {authMethod} işlemine tabi tutulmalıdır. {authMethodDetail} Maliyet belge başına €{authFeeMin}–{authFeeMax} ve işlem {authDaysMin}–{authDaysMax} gün sürer. Bu adımı ilk olarak planlayın çünkü hızlandırması en zordur."
+        },
+        {
+          "q": "Alman Ausbildung viza ücreti nedir?",
+          "a": "Ausbildung için ulusal D-viza ücreti €{visaFee} olup, randevunuzda nakit veya kartla ödenir. Viza reddedilirse ücret iade edilmez. Bazı Alman viza merkezleri (TLScontact, VFS) €20–40 ek hizmet ücreti talep eder."
+        },
+        {
+          "q": "{country} adresinden Ausbildung vizesi için başvurmadan önce Almanca konuşmam gerekir mi?",
+          "a": "Evet. Çoğu Ausbildung vizesi minimum Almanca B1 sertifikası (Goethe-Institut, telc veya ÖSD) gerektirir. Birçok işveren ve bazı eğitim sektörleri (sağlık, zanaat) B2 talep eder. Almanca derslerine erken başlayın — B1 sınavı sıfırdan 3–6 aylık çalışma gerektirir ve B2 ek 3–4 ay sürer. Sertifika viza randevunuzun tarihinde 2 yıldan eski olmamalıdır."
+        },
+        {
+          "q": "{country} adresinden Ausbildung vizesi için Sperrkonto'ya ihtiyacım var mı?",
+          "a": "Bu, eğitim maaşınıza bağlıdır. Brüt aylık maaşınız yaklaşık €934'ün altındaysa, muhtemelen €11.904 tutarında Sperrkonto (bloke hesap) gerekecektir. Daha yüksek maaşlı çıraklar veya Alman işvereni Verpflichtungserklärung (finansal garanti) sağlayanlar muaf tutulabilir. {country} adresindeki Alman temsilciliğine danışın çünkü gereksinimler değişiklik gösterir."
+        }
+      ],
+      "studium": [
+        {
+          "q": "{country} adresinden Alman Studium vizesi için kaç belge gereklidir?",
+          "a": "{country} adresinden bir Studium viza başvurusu tipik olarak {totalDocs} belge gerektirir: üniversite kabul mektubu (Zulassung), Almanca B2 veya TestDaF dil sertifikası, Baccalauréat diploması ve transkriptleri (onaylanmış ve çevrilmiş), yüksek öğrenim diplomaları (varsa), finansal kaynakların kanıtı (€11.904 Sperrkonto veya eşdeğeri) ve seyahat sağlık sigortası."
+        },
+        {
+          "q": "{country} adresinden Studium vizesi almak ne kadar sürer?",
+          "a": "{country} adresinden gerçekçi zaman çizelgesi {timelineMin}–{timelineMax} haftadır. Belge onaylama aşaması ({authMethod}: {authDaysMin}–{authDaysMax} gün) ve üniversite kabul süreci (uni-assist veya doğrudan aracılığıyla 3–6 ay sürebilir) en uzun adımlardır. Amaçlanan başlangıç tarihinizden tam bir yıl önce Alman üniversitelerine başvurun."
+        },
+        {
+          "q": "Sperrkonto nedir ve {country} adresindeki öğrenciler için zorunlu mu?",
+          "a": "Sperrkonto, Almanya'daki ilk yılınız için yaşam maliyetlerinizi karşılayabileceğinizi kanıtlayan €11.904 tutarında bloke bir banka hesabıdır (2026 itibariyle). Fonlar gelişinizden sonra aylık €992 taksitler halinde size serbest bırakılır. Çoğu {country} adresindeki Studium viza başvurusu için zorunludur; ancak güçlü bir burs veya Verpflichtungserklärung'unuz varsa muaf olabilirsiniz. Fintiba, Expatrio veya Coracle aracılığıyla bir tane açın — birkaç iş günü içinde hesabı açabilirler."
+        },
+        {
+          "q": "{country} adresinden Alman Studium vizesi için APS sertifikası gerekli mi?",
+          "a": "APS (Akademische Prüfstelle) sertifikaları Çin, Hindistan, Vietnam, Moğolistan ve Pakistan'dan gelen başvuranlar için gereklidir. {country} için, {apsDetail}. Gerekli ise, APS'ye erken başvurun çünkü işleme 6–20 hafta sürer ve sertifika Alman temsilciliğinin vizenizi işlemesi için zorunludur."
+        },
+        {
+          "q": "{country} adresindeki öğrenciler için belge onaylaması ne kadara mal olur?",
+          "a": "{country} adresindeki başvuranlar için onaylama {authMethod} kullanır ve belge başına €{authFeeMin}–{authFeeMax} maliyetlidir, {authDaysMin}–{authDaysMax} gün sürer. Standart bir Studium dosyası için yaklaşık 4–6 belgeyi onaylayacaksınız (diplomalar, transkriptler, doğum belgesi, polis izni). Yemin edilmiş çeviriler için sayfa başına €20–60 ekleyin. {country} adresinden toplam onaylama ve çeviri bütçesi: tipik olarak €300–800."
+        },
+        {
+          "q": "Studium vizesiyle Almanya'da okudum sırasında çalışabilir miyim?",
+          "a": "Evet. Alman Studium vizesiyle öğrenciler, ayrı bir çalışma izni olmadan yılda 120 tam gün veya 240 yarım güne kadar çalışabilir. Bu sınırı aşan saatler Ausländerbehörde ve Bundesagentur für Arbeit'ten onay gerektirir. Öğrenci işleri (Werkstudent, Hiwi veya mini-job) yaşam maliyetlerini desteklemenin yaygın bir yoludur."
+        }
+      ],
+      "tourist": [
+        {
+          "q": "{country} vatandaşları Almanya'yı ziyaret etmek için vize gerekli mi?",
+          "a": "Evet, {country} vatandaşları Almanya'ya ve tüm Schengen ülkelerine girmek için Schengen C (turist/kısa dönem) vizesi gereklidir. Vize, herhangi bir 180 günlük dönemde 90 güne kadar kalış izni verir. Başvuru, {country}'ye hizmet veren Alman büyükelçiliğine, konsolosluğuna veya yetkili vize merkezine (VFS Global, TLScontact) sunulur."
+        },
+        {
+          "q": "{country}'den Alman turist vizesi için hangi belgeler gerekli?",
+          "a": "{country}'den Alman Schengen turist vizesi {totalDocs} belge gerektirir: doldurulmuş Schengen başvuru formu, geçerli pasaport (seyahatten 3+ ay sonra), biyometrik fotoğraflar (2 adet), seyahat sağlık sigortası (€30.000+ teminat), gidiş-dönüş uçak rezervasyonu, konaklama kanıtı (otel veya davetiye mektubu), yeterli fonları gösteren banka ekstreleri (€45–100/gün) ve {country}'ye bağlılığınızı gösteren belgeler (istihdam mektubu veya gayrimenkul tapusu gibi)."
+        },
+        {
+          "q": "{country} vatandaşları için Alman turist vizesi ücreti nedir?",
+          "a": "Standart Schengen C vize ücreti €{visaFee}'dir (Haziran 2024'te revize edilmiştir). 6 yaşından küçük çocuklar ücretsiz; 6–12 yaş arası çocuklar €45 öderler. Ücret iade edilmez. Vize merkezi hizmet ücretleri (VFS/TLScontact) €20–40 arasında eklenebilir. Toplam ödeme randevuda yapılır — kabul edilen ödeme yöntemleri için yerel vize merkezinize danışın."
+        },
+        {
+          "q": "{country}'den Alman turist vizesi almak ne kadar sürer?",
+          "a": "Standart işlem, başvuru tarihinden itibaren 15 takvim günüdür. 30 güne kadar uzayabilir ve istisnai olarak 45 güne kadar çıkabilir. Vize merkezindeki randevu bekleme süresini hesaba katın: normal dönemlerde {authDaysMin}–{authDaysMax} gün, yaz yoğun sezonunda 8 haftaya kadar. Randevunuzu mümkün olduğunca erken alın — planlanan seyahat tarihinizden en az 3 ay önce."
+        },
+        {
+          "q": "{country}'den Alman turist vizesi için ne kadar para göstermem gerekir?",
+          "a": "Almanya, Schengen alanında kalışınızın her günü için yaklaşık €45–100 kanıtı gerektirir. 14 günlük bir seyahat için bu, kabaca €630–1.400'dür. Son 3 aylık banka ekstreleri standart kanıttır. Bir aile üyesi veya Alman ev sahibi sizi destekliyorsa, Verpflichtungserklärung (Alman Ausländerbehörde tarafından verilen mali garanti) kendi fonlarınızın yerine geçebilir."
+        },
+        {
+          "q": "Schengen turist vizesi Almanya'da uzatılabilir veya daha uzun bir vizeye dönüştürülebilir mi?",
+          "a": "Schengen C turist vizesi normalde 90 günün ötesine uzatılamaz ve Almanya içinde ulusal D-vizesine dönüştürülemez. Daha uzun süre kalmak istiyorsanız — Ausbildung, Studium veya aile nedenleriyle — {country}'ye dönüp Almanya'ya yeniden girmeden önce Alman misyonu aracılığıyla uygun ulusal D-vizesi için başvuru yapmalısınız."
+        }
+      ],
+      "family_reunification": [
+        {
+          "q": "{country}'den Alman aile birleşimi vizesi için hangi belgeler gerekli?",
+          "a": "{country}'den aile birleşimi vizesi, iki taraf arasında {totalDocs} belge gerektirir: sizin belgeleriniz (pasaport, doğum belgesi, evlilik belgesi, polis izni, eş ile birleşiyorsanız Alman A1 sertifikası, artı onaylı çeviriler) ve Almanya'daki sponsor belgeleriniz (Aufenthaltstitel kopyası, son 3 maaş bordrosu, vergi değerlendirmesi ve ek kişi başına ≥12 m² gösteren konut onayı)."
+        },
+        {
+          "q": "{country}'den aile birleşimi için Alman A1 dil sertifikası zorunlu mu?",
+          "a": "Evet, eş birleşimi (Ehegattennachzug) için {country}'den, vize randevunuzda Alman A1 dil sertifikası (Goethe-Zertifikat A1, telc Deutsch A1 veya ÖSD Zertifikat A1) sunmalısınız. İstisnalar: sponsorunuz Alman Hochschulabschluss'a sahipse veya belgelenmiş C1+ Almanca konuşuyorsa, 67 yaşından büyükseniz, dil öğrenimini engelleyen tanınmış bir engelliliğiniz varsa veya zorlayıcı bir zorluk durumu varsa. Ebeveynlerine katılan 16 yaşından küçük çocuklar muaftır."
+        },
+        {
+          "q": "{country}'den aile birleşimi ne kadar sürer?",
+          "a": "Tam süreç — belge toplama, kimlik doğrulama ({authMethod}: {authDaysMin}–{authDaysMax} gün), A1 sertifika sınavı ve vize randevusu — {country}'den {timelineMin}–{timelineMax} hafta sürer. Alman misyonu, tam bir başvuruya 3 ay içinde karar vermelidir. Eksik dosyalar karar verilmeden iade edilir, saati yeniden başlatır."
+        },
+        {
+          "q": "Almanya'daki sponsor aile birleşimi için ne kadar gelire ihtiyaç duyar?",
+          "a": "Sponsor, aileyi kamu yardımı olmadan destekleyecek kadar kazanmalıdır. Eşik, Bundesland ve aile büyüklüğüne göre değişir: bir çift için kabaca €1.600–2.200 net aylık, artı her ek çocuk için €300–400. Sponsor, son 3 maaş bordrosunu ve vergi değerlendirmesini (Steuerbescheid) sizin adınıza Alman misyonuna sunar. Serbest meslek sahibi sponsorlar kar-zarar tablolarını kullanabilir."
+        },
+        {
+          "q": "Aile birleşiminden sonra eş Almanya'da çalışabilir mi?",
+          "a": "Evet. Alman ikamet edeni veya AB/AEA vatandaşına katılan bir eş, tam ve sınırsız çalışma yetkilendirmesi içeren bir Aufenthaltstitel (ikamet izni) alır — işveren sponsorluğu gerekmez. Permit aldıktan sonra hemen herhangi bir istihdam veya serbest meslek faaliyetine başlayabilirler. Okul çağındaki çocuklar otomatik olarak devlet okul sistemine entegre edilir."
+        },
+        {
+          "q": "{country} aile birleşimi belgeleri için hangi kimlik doğrulama yöntemini kullanır?",
+          "a": "{country}'den belgeler, Alman vize amaçları için {authMethod} aracılığıyla kimlik doğrulanmalıdır. {authMethodDetail} Kimlik doğrulama, belge başına €{authFeeMin}–{authFeeMax} maliyetlidir ve {authDaysMin}–{authDaysMax} gün sürer. Her kimlik doğrulanmış belgenin yanında yemin edilmiş Almanca çeviri (sayfa başına €20–60) olmalıdır. Kimlik doğrulama sürecini mümkün olduğunca erken başlatın — bu, başvuru sahiplerinin en çok hafife aldığı adımdır."
+        }
+      ]
+    }
   },
   "eligibilityChecker": {
     "seoSection": {

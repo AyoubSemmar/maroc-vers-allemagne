@@ -4014,7 +4014,151 @@
     "seoPageNoVisaStats": "No visa required",
     "seoPageDocSection": "Documentos requeridos",
     "seoPageInteractiveTitle": "Personaliza esta lista de verificación",
-    "seoPageInteractiveSub": "Ajusta tu nivel educativo, situación familiar y otras opciones para obtener una lista exacta."
+    "seoPageInteractiveSub": "Ajusta tu nivel educativo, situación familiar y otras opciones para obtener una lista exacta.",
+    "seoArticleTitle": "Acerca de la visa {path} para ciudadanos de {country}",
+    "seoFaqTitle": "Preguntas frecuentes",
+    "authMethodDetail": {
+      "apostille": "{country} es miembro de la Convención de La Haya y Alemania acepta sus apostillas. Sus documentos se autentican con un sello de apostilla de la autoridad nacional competente.",
+      "legalization": "A pesar de ser miembro de la Convención de La Haya, Alemania ha presentado una objeción formal a la adhesión de {country}. Por lo tanto, se requiere legalización consular completa a través de la embajada alemana o una cadena de autoridades nacionales — no una apostilla."
+    },
+    "apsDetail": {
+      "required": "un certificado APS (Akademische Prüfstelle) SÍ es obligatorio. Debe hacer que sus documentos académicos sean verificados por la oficina APS antes de presentar su solicitud de visa.",
+      "notRequired": "un certificado APS NO es obligatorio. Puede presentar sus documentos académicos autenticados directamente en su expediente de visa."
+    },
+    "seoContent": {
+      "ausbildung": {
+        "p1": "El sistema Ausbildung (formación profesional dual) de Alemania es una de las vías de inmigración más buscadas para ciudadanos de {country}. La visa nacional D para formación profesional, regulada por el §17a de la Ley de Residencia Alemana (AufenthG), le permite completar un programa de capacitación acreditado de 2–3 años en una empresa alemana mientras gana un salario. A diferencia del Studium, Ausbildung no requiere un título universitario — un diploma de educación secundaria (Baccalauréat o equivalente) y un contrato de capacitación firmado son los requisitos principales.",
+        "p2": "La autenticación de documentos es un factor decisivo en la rapidez con que los solicitantes de {country} pueden presentar su expediente de visa. Alemania requiere autenticación por {authMethod} para todos los documentos oficiales emitidos en {country}, incluido su certificado de nacimiento, diplomas, expedientes académicos y certificado de antecedentes penales. El paso de {authMethod} cuesta €{authFeeMin}–{authFeeMax} por documento y añade {authDaysMin}–{authDaysMax} días a su preparación. Las traducciones juradas al alemán también son obligatorias para todos los documentos no alemanes — calcule entre €20–60 por página de un traductor certificado.",
+        "p3": "El proceso de visa comienza con un certificado de idioma alemán B1 (Goethe, telc u ÖSD), ya que este es el mínimo requerido para la mayoría de visas Ausbildung. Su futuro empleador en Alemania presenta una Vorab-Zustimmung (aprobación preliminar) ante la Bundesagentur für Arbeit — si se aprueba, el procesamiento de la visa se reduce de aproximadamente 8 meses a aproximadamente 2 meses. También se requiere comprobante financiero: dependiendo de su salario de capacitación, puede necesitar un Sperrkonto (cuenta bloqueada) con €11.904 para el año, o una garantía alternativa (Verpflichtungserklärung) de un patrocinador residente en Alemania.",
+        "p4": "Desde {country}, el cronograma realista de principio a fin — desde recopilar documentos hasta su primer día de trabajo en Alemania — es de {timelineMin}–{timelineMax} semanas. Las citas de visa en la misión alemana o en el centro de TLScontact/VFS en {country} tienden a agotarse meses antes. Presente su expediente completo en la cita: los archivos incompletos no se aceptan y no se reembolsan. La tarifa de la visa nacional D es €{visaFee}, pagadera el día de la cita."
+      },
+      "studium": {
+        "p1": "Alemania es uno de los principales destinos del mundo para estudiantes internacionales — y para ciudadanos de {country}, una visa alemana de Studium (educación universitaria) abre la puerta a educación sin matrícula o de bajo costo en instituciones de clase mundial. La visa nacional D para educación superior está regulada por el §16b AufenthG y le permite inscribirse en un programa completo de Licenciatura, Maestría o Doctorado.",
+        "p2": "Todos los documentos académicos de {country} deben autenticarse por {authMethod} antes de poder presentarse a la misión alemana. Esto se aplica a su diploma de Baccalauréat, expedientes, diplomas de educación superior y cualquier otro certificado emitido oficialmente. El paso de {authMethod} toma {authDaysMin}–{authDaysMax} días y cuesta €{authFeeMin}–{authFeeMax} por documento — y cada documento también necesitará una traducción jurada al alemán (€20–60 por página). El presupuesto total de autenticación y traducción para un expediente Studium promedio de {country} típicamente oscila entre €300–800.",
+        "p3": "El Studienkolleg es un año preparatorio requerido si su diploma de educación secundaria no lo califica directamente para la admisión a la universidad alemana. Use la base de datos Anabin (anabin.kmk.org) para verificar el estado de su calificación antes de solicitar. Los solicitantes también deben abrir un Sperrkonto (cuenta bloqueada) con €11.904 como comprobante de medios financieros — proveedores en línea como Fintiba, Expatrio o Coracle abren uno en pocos días. Un certificado de idioma alemán B2 (Goethe, telc, ÖSD o TestDaF) es obligatorio para programas en alemán; los programas en inglés aceptan IELTS/TOEFL en su lugar.",
+        "p4": "El recuento total de documentos para una visa Studium de {country} es {totalDocs} elementos, y el costo total estimado (documentos, autenticación, traducciones, configuración de Sperrkonto y tarifa de visa) es €{totalCostMin}–{totalCostMax}. El cronograma realista de preparación es {timelineMin}–{timelineMax} semanas. Comience al menos 6 meses antes de su inicio de estudios previsto — las universidades alemanas envían cartas de admisión tarde, y las colas de apostilla o legalización en {country} pueden durar varias semanas."
+      },
+      "tourist": {
+        "p1": "Los ciudadanos de {country} necesitan una visa Schengen C (también llamada visa de corta estancia o turística) para visitar Alemania y el área Schengen más amplia. La visa Schengen C permite hasta 90 días de estancia en cualquier período de 180 días y cubre turismo, visitas familiares, viajes de negocios cortos y eventos culturales. La solicitud se presenta en la embajada alemana, consulado o un centro de visa autorizado (VFS Global o TLScontact) en {country}.",
+        "p2": "La tarifa de la visa turística Schengen es €{visaFee} a partir de 2024 (aumentada de €80 en junio de 2024 bajo el Código de Visas de la UE revisado). Los menores de 6 años están exentos; los niños de 6–12 años pagan €45. La tarifa no es reembolsable incluso si se rechaza la visa. También pagará cualquier cargo de servicio del centro de visa además de la tarifa consular. En {country}, los costos totales de solicitud incluyendo seguro y preparación de documentos típicamente oscilan entre €150 a €350.",
+        "p3": "El factor más fuerte en la aprobación de una visa Schengen es demostrar vínculos sólidos con su país de origen — prueba de que tiene la intención de regresar. Una carta de empleador otorgando licencia aprobada, una escritura de propiedad, un registro comercial o un certificado de inscripción de estudiante sirven para este propósito. La comprobación financiera debe mostrar que puede cubrir aproximadamente €45–100 por día de su estancia. El seguro de viaje de salud con cobertura mínima de €30.000 y válido para todos los países Schengen es obligatorio.",
+        "p4": "Los tiempos de espera de cita en la misión alemana o centro de visa en {country} varían según la temporada: espere {authDaysMin}–{authDaysMax} días hábiles en períodos de baja demanda y hasta 8 semanas en verano. El procesamiento después de la presentación toma un máximo de 15 días calendario para solicitudes directas (hasta 30 días para casos complejos, 45 días en circunstancias excepcionales). Las visas de entrada múltiple válidas por 1–5 años pueden emitirse a viajeros frecuentes con un historial de viaje limpio."
+      },
+      "family_reunification": {
+        "p1": "La reunificación familiar en Alemania — traer a un cónyuge, hijos menores o padres dependientes para reunirse con un residente alemán — está regulada por los §§27–36 del AufenthG. Los ciudadanos de {country} que solicitan reunirse con un miembro de la familia en Alemania deben obtener una visa nacional D antes de llegar. El caso más común es la reunión conyugal (Ehegattennachzug), que otorga al cónyuge el derecho a trabajar en Alemania inmediatamente después de la llegada.",
+        "p2": "El requisito más distintivo para cónyuges que solicitan desde {country} es el certificado de idioma alemán A1. Antes de que se emita una visa de reunificación conyugal, el solicitante debe demostrar competencia básica en idioma alemán en el nivel MCER A1 (Goethe-Zertifikat A1, telc Deutsch A1 u ÖSD Zertifikat A1). Existen excepciones si el patrocinador tiene un Hochschulabschluss alemán o tiene alemán de nivel C1, si el solicitante tiene más de 67 años, o si existe un caso de dificultad comprobada. La autenticación de documentos de {country} utiliza {authMethod} y cuesta €{authFeeMin}–{authFeeMax} por documento, añadiendo {authDaysMin}–{authDaysMax} días.",
+        "p3": "El patrocinador (la persona ya en Alemania) juega un papel central: debe demostrar que sus ingresos son suficientes para mantener a la familia reunida sin recurrir a fondos públicos. El umbral de ingresos requerido varía según el Bundesland y el tamaño del hogar pero típicamente equivale al mínimo de Grundsicherung más 20%. El patrocinador también debe demostrar vivienda adecuada — un mínimo de 12 m² de espacio habitable por persona adicional es el criterio utilizado por la mayoría de Ausländerbehörden. Estos documentos (comprobante de ingresos, confirmación de vivienda) deben serle enviados en {country} antes de su cita de visa.",
+        "p4": "Desde {country}, el proceso completo — recopilar documentos, autenticación ({authMethod}), certificado A1 y cita de visa — toma {timelineMin}–{timelineMax} semanas. La tarifa de la visa nacional D es €{visaFee}. Una vez en Alemania, el miembro de la familia patrocinado debe registrarse en el Einwohnermeldeamt local dentro de dos semanas y solicitar un permiso de residencia (Aufenthaltstitel) en la Ausländerbehörde. Los cónyuges tienen derecho a asumir cualquier empleo inmediatamente; los niños en edad escolar se integran en el sistema de escuelas públicas sin requisitos de permiso adicionales."
+      },
+      "noVisaEu": "Como ciudadano de {country}, se beneficia de la libertad de movimiento de la Unión Europea — uno de los derechos más significativos en el ordenamiento jurídico de la UE. Puede vivir, trabajar, estudiar o jubilarse en Alemania por cualquier período de tiempo sin obtener visa, permiso de residencia o permiso de trabajo. El único paso administrativo requerido es registrar su dirección en el Einwohnermeldeamt local (Anmeldung) dentro de dos semanas de su llegada e inscribirse en un seguro de salud si está empleado.",
+      "touristFree": "Los ciudadanos de {country} están exentos de la visa turística Schengen C bajo un acuerdo bilateral de exención de visa o libertad de movimiento de la UE/EEE. Puede entrar a Alemania y al área Schengen para estancias de hasta 90 días en cualquier período de 180 días sin visa alguna. Para estancias más largas que 90 días — para Ausbildung, Studium o reunificación familiar — se requiere una visa nacional D. La solicitud de visa D se presenta en la embajada alemana o consulado honorario responsable de su residencia en {country}."
+    },
+    "seoFaqs": {
+      "ausbildung": [
+        {
+          "q": "¿Cuántos documentos necesito para la visa alemana Ausbildung desde {country}?",
+          "a": "Una solicitud estándar de visa Ausbildung desde {country} requiere {totalDocs} documentos. Los más críticos son el Ausbildungsvertrag (contrato de capacitación) firmado de su empleador alemán, un certificado de idioma alemán B1/B2, diplomas y expedientes escolares autenticados, y comprobante de medios financieros. Cada documento en un idioma distinto al alemán debe acompañarse de una traducción jurada al alemán."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda en obtener una visa alemana Ausbildung desde {country}?",
+          "a": "El cronograma realista de principio a fin desde {country} es {timelineMin}–{timelineMax} semanas. El cuello de botella suele ser la autenticación de documentos ({authMethod}: {authDaysMin}–{authDaysMax} días), seguido del tiempo de espera de cita de visa (a menudo 4–12 semanas) y procesamiento consular (8–12 semanas sin Vorab-Zustimmung, ~8 semanas con ella). Comience a prepararse al menos 6 meses antes de su fecha de inicio de capacitación."
+        },
+        {
+          "q": "¿{country} requiere apostilla o legalización consular para una visa alemana?",
+          "a": "Para solicitudes de visa alemana, los documentos de {country} deben someterse a {authMethod}. {authMethodDetail} El costo es €{authFeeMin}–{authFeeMax} por documento y el proceso toma {authDaysMin}–{authDaysMax} días. Planifique este paso primero ya que es el más difícil de acelerar."
+        },
+        {
+          "q": "¿Cuál es la tarifa de visa alemana Ausbildung?",
+          "a": "La tarifa de visa nacional D para Ausbildung es €{visaFee}, pagada en efectivo o tarjeta en su cita. La tarifa no es reembolsable si se rechaza la visa. Algunos centros de visa alemanes (TLScontact, VFS) cobran una tarifa de servicio adicional de €20–40."
+        },
+        {
+          "q": "¿Necesito hablar alemán antes de solicitar una visa Ausbildung desde {country}?",
+          "a": "Sí. La mayoría de visas Ausbildung requieren un certificado de alemán mínimo B1 (Goethe-Institut, telc u ÖSD). Muchos empleadores y algunos sectores de capacitación (salud, oficios) requieren B2. Comience sus clases de alemán temprano — el examen B1 toma 3–6 meses de estudio desde cero, y B2 toma otros 3–4 meses. El certificado no debe tener más de 2 años en el momento de su cita de visa."
+        },
+        {
+          "q": "¿Necesito un Sperrkonto para la visa Ausbildung desde {country}?",
+          "a": "Depende de su salario de capacitación. Si su salario bruto mensual es inferior a aproximadamente €934, probablemente necesitará un Sperrkonto (cuenta bloqueada) con €11.904. Los aprendices con salarios más altos o aquellos cuyo empleador alemán proporciona una Verpflichtungserklärung (garantía financiera) pueden estar exentos. Confirme con la misión alemana en {country} ya que los requisitos varían."
+        }
+      ],
+      "studium": [
+        {
+          "q": "¿Cuántos documentos se requieren para una visa alemana Studium desde {country}?",
+          "a": "Una solicitud de visa Studium desde {country} típicamente requiere {totalDocs} documentos, incluyendo: carta de admisión universitaria (Zulassung), certificado de idioma alemán B2 o TestDaF, diploma de Baccalauréat y expedientes (autenticados y traducidos), diplomas de educación superior (si aplica), comprobante de medios financieros (Sperrkonto de €11.904 o equivalente) y seguro de viaje de salud."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda en obtener una visa Studium desde {country}?",
+          "a": "Desde {country}, el cronograma realista es {timelineMin}–{timelineMax} semanas. La etapa de autenticación de documentos ({authMethod}: {authDaysMin}–{authDaysMax} días) y el proceso de admisión universitaria (que puede tomar 3–6 meses a través de uni-assist o directamente) son los pasos más largos. Solicite a universidades alemanas un año completo antes de su fecha de inicio prevista."
+        },
+        {
+          "q": "¿Qué es el Sperrkonto y es obligatorio para estudiantes de {country}?",
+          "a": "El Sperrkonto es una cuenta bancaria bloqueada con €11.904 (a partir de 2026), que demuestra que puede cubrir sus costos de vida durante el primer año en Alemania. Los fondos se le liberan en cuotas mensuales de €992 después de su llegada. Es obligatorio para la mayoría de solicitantes de visa Studium de {country} a menos que tenga una beca equivalente o una Verpflichtungserklärung sólida. Abra una a través de Fintiba, Expatrio o Coracle — pueden abrir la cuenta en pocos días hábiles."
+        },
+        {
+          "q": "¿Necesito un certificado APS de {country} para una visa alemana Studium?",
+          "a": "Los certificados APS (Akademische Prüfstelle) son requeridos para solicitantes de China, India, Vietnam, Mongolia y Pakistán. Para {country}, {apsDetail}. Si es requerido, solicite el APS temprano ya que el procesamiento toma 6–20 semanas y el certificado es obligatorio antes de que la misión alemana procese su visa."
+        },
+        {
+          "q": "¿Cuánto cuesta la autenticación de documentos para estudiantes de {country}?",
+          "a": "Para solicitantes de {country}, la autenticación utiliza {authMethod} y cuesta €{authFeeMin}–{authFeeMax} por documento, tomando {authDaysMin}–{authDaysMax} días. Para un expediente Studium estándar autenticará aproximadamente 4–6 documentos (diplomas, expedientes, certificado de nacimiento, certificado de antecedentes penales). Agregue traducciones juradas a €20–60 por página. Presupuesto total de autenticación y traducción: típicamente €300–800 desde {country}."
+        },
+        {
+          "q": "¿Puedo trabajar en Alemania mientras estudio con una visa Studium?",
+          "a": "Sí. Los estudiantes con visa alemana Studium pueden trabajar hasta 120 días completos o 240 medios días por año sin necesidad de un permiso de trabajo separado. Las horas por encima de este límite requieren aprobación de la Ausländerbehörde y Bundesagentur für Arbeit. Los trabajos de estudiante (Werkstudent, Hiwi o mini-job) son una forma común de complementar los costos de vida."
+        }
+      ],
+      "tourist": [
+        {
+          "q": "¿Los ciudadanos de {country} necesitan visa para visitar Alemania?",
+          "a": "Sí, los ciudadanos de {country} necesitan una visa Schengen C (turística/corta estancia) para entrar a Alemania y todos los países Schengen. La visa permite hasta 90 días de estancia en cualquier período de 180 días. La solicitud se presenta en la embajada alemana, consulado o un centro de visa autorizado (VFS Global, TLScontact) que sirve a {country}."
+        },
+        {
+          "q": "¿Qué documentos necesito para una visa alemana turística desde {country}?",
+          "a": "Una visa turística alemana Schengen desde {country} requiere {totalDocs} documentos: formulario de solicitud Schengen completado, pasaporte válido (3+ meses después del viaje), fotos biométricas (2×), seguro de viaje de salud (cobertura de €30.000+), reserva de vuelo de ida y vuelta, comprobante de alojamiento (hotel o carta de invitación), extractos bancarios mostrando fondos suficientes (€45–100/día) y comprobante de vínculos con {country} como carta de empleador o escritura de propiedad."
+        },
+        {
+          "q": "¿Cuál es la tarifa de visa alemana turística para ciudadanos de {country}?",
+          "a": "La tarifa estándar de visa Schengen C es €{visaFee} (revisada en junio de 2024). Los menores de 6 años son gratuitos; los niños de 6–12 años pagan €45. La tarifa no es reembolsable. Pueden aplicarse tarifas de servicio adicionales del centro de visa (VFS/TLScontact) de €20–40. El pago total se realiza en la cita — verifique con su centro de visa local los métodos de pago aceptados."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda en obtener una visa alemana turística desde {country}?",
+          "a": "El procesamiento estándar es 15 días calendario desde la fecha de solicitud. Puede extenderse a 30 días y excepcionalmente hasta 45 días. Tenga en cuenta el tiempo de espera de cita en el centro de visa: {authDaysMin}–{authDaysMax} días en períodos normales, hasta 8 semanas durante la temporada alta de verano. Reserve su cita lo antes posible — al menos 3 meses antes de su fecha de viaje planeada."
+        },
+        {
+          "q": "¿Cuánto dinero necesito mostrar para una visa alemana turística desde {country}?",
+          "a": "Alemania requiere comprobante de aproximadamente €45–100 por día de su estancia en el área Schengen. Para un viaje de 14 días, eso es aproximadamente €630–1.400. Los extractos bancarios de los últimos 3 meses son la evidencia estándar. Si un miembro de la familia o anfitrión alemán lo patrocina, una Verpflichtungserklärung (garantía financiera, emitida en una Ausländerbehörde alemana) puede sustituir sus propios fondos."
+        },
+        {
+          "q": "¿Puede una visa turística Schengen extenderse o convertirse en una visa más larga en Alemania?",
+          "a": "Una visa turística Schengen C normalmente no puede extenderse más allá de 90 días ni convertirse en una visa nacional D dentro de Alemania. Si desea quedarse más tiempo — para Ausbildung, Studium o razones familiares — debe regresar a {country} y solicitar la visa nacional D apropiada a través de la misión alemana antes de reingresar a Alemania."
+        }
+      ],
+      "family_reunification": [
+        {
+          "q": "¿Qué documentos necesito para una visa alemana de reunificación familiar desde {country}?",
+          "a": "Una visa de reunificación familiar desde {country} requiere {totalDocs} documentos en ambos lados: sus documentos (pasaporte, certificado de nacimiento, certificado de matrimonio, certificado de antecedentes penales, certificado de alemán A1 si se une a un cónyuge, más traducciones autenticadas) y documentos de su patrocinador de Alemania (copia de su Aufenthaltstitel, últimos 3 recibos de salario, evaluación fiscal y confirmación de vivienda mostrando ≥12 m² por persona adicional)."
+        },
+        {
+          "q": "¿Es obligatorio el certificado de idioma alemán A1 para reunificación familiar desde {country}?",
+          "a": "Sí, para reunificación conyugal (Ehegattennachzug) desde {country}, debe presentar un certificado de idioma alemán A1 (Goethe-Zertifikat A1, telc Deutsch A1 u ÖSD Zertifikat A1) en su cita de visa. Excepciones: su patrocinador tiene un Hochschulabschluss alemán o tiene alemán documentado de nivel C1+, tiene más de 67 años, tiene una discapacidad reconocida que impide el aprendizaje de idiomas, o existe un caso de dificultad comprobada. Los menores de 16 años que se unen a padres están exentos."
+        },
+        {
+          "q": "¿Cuánto tiempo tarda la reunificación familiar desde {country}?",
+          "a": "El proceso completo — recopilación de documentos, autenticación ({authMethod}: {authDaysMin}–{authDaysMax} días), examen de certificado A1 y cita de visa — toma {timelineMin}–{timelineMax} semanas desde {country}. La misión alemana debe decidir sobre una solicitud completa dentro de 3 meses. Los archivos incompletos se devuelven sin decisión, reiniciando el reloj."
+        },
+        {
+          "q": "¿Cuántos ingresos necesita el patrocinador en Alemania para la reunificación familiar?",
+          "a": "El patrocinador debe ganar lo suficiente para mantener a la familia sin asistencia pública. El umbral varía según el Bundesland y el tamaño de la familia: aproximadamente €1.600–2.200 netos por mes para una pareja, más €300–400 por hijo adicional. El patrocinador presenta los últimos 3 recibos de salario y una evaluación fiscal (Steuerbescheid) a la misión alemana en su nombre. Los patrocinadores autónomos pueden usar estados de pérdidas y ganancias."
+        },
+        {
+          "q": "¿Puede el cónyuge trabajar en Alemania después de la reunificación familiar?",
+          "a": "Sí. Un cónyuge que se une a un residente alemán o nacional de la UE/EEE recibe un Aufenthaltstitel (permiso de residencia) que incluye autorización de trabajo completa e irrestricta — no se necesita patrocinio del empleador. Puede asumir cualquier trabajo empleado o autónomo inmediatamente después de recibir su permiso. Los niños en edad escolar se integran automáticamente en el sistema de escuelas públicas."
+        },
+        {
+          "q": "¿Qué método de autenticación utiliza {country} para documentos de reunificación familiar?",
+          "a": "Los documentos de {country} deben autenticarse a través de {authMethod} para propósitos de visa alemana. {authMethodDetail} La autenticación cuesta €{authFeeMin}–{authFeeMax} por documento y toma {authDaysMin}–{authDaysMax} días. Cada documento autenticado también debe acompañarse de una traducción jurada al alemán (€20–60 por página). Comience el proceso de autenticación lo antes posible — es el paso que la mayoría de solicitantes subestiman."
+        }
+      ]
+    }
   },
   "eligibilityChecker": {
     "seoSection": {
