@@ -1065,7 +1065,7 @@ export const RAW = [
       "Q&A-Prompt; produktiv (#15)"
     ],
     "erfolg": "Prompt-Patterns dokumentiert.",
-    "prompt": "Ich bin Taycir. Heute dokumentiere ich unsere Prompt-Patterns.\nBitte hilf mir:\n1. Schreib docs/prompts/patterns.md als Code-Block:\n- System+User+JSON-Output Pattern\n- Token-Counting-Helper\n- Wann Sonnet vs Haiku\n- Wo Eval-Sets liegen\n2. Git-Befehle."
+    "prompt": "Ich bin Taycir. Heute dokumentiere ich unsere Prompt-Patterns.\nBitte hilf mir:\n1. Schreib docs/prompts/patterns.md als Code-Block:\n- System+User+JSON-Output Pattern\n- Token-Counting-Helper\n- Wann OpenAI GPT-5.3 Chat (Default) vs OpenAI-GPT-5-Mini (Fast-Lane) — beides KI-Connect-Modelle, kein Anthropic\n- Wo Eval-Sets liegen\n2. Git-Befehle."
   },
   {
     "id": "s2-22",
@@ -2741,13 +2741,14 @@ export const RAW = [
     "role": "BE",
     "blocker": true,
     "priorityInfo": "Blockiert alles",
-    "title": "Supabase Auth aktivieren + RLS auf alle Tabellen",
+    "title": "Email/Password-Auth aktivieren + RLS auf alle Tabellen",
     "prereqs": [],
     "bullets": [
-      "Supabase-Projekt"
+      "Supabase-Projekt",
+      "Bestehende anonyme Auth-Bridge aus Sprint 2 (ensureSession)"
     ],
-    "erfolg": "Auth aktiv, RLS überall.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute aktiviere ich Supabase Auth.\nBitte führe mich Schritt für Schritt durch:\n1. Auth in Supabase aktivieren (Email + Password).\n2. supabase/migrations/0007_auth_rls.sql: RLS-Policies auf documents, topics, questions, sessions, messages (auth.uid() = user_id).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "erfolg": "Email/Password-Login aktiv (ersetzt die anonyme Bridge), RLS überall.",
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute aktiviere ich echtes Email/Password-Auth.\nKontext: Seit Sprint 2 läuft bereits anonymous Auth als Bridge (ensureSession() in src/lib/supabase/client.ts), und documents.user_id zeigt schon auf auth.users — heute kommt echtes Login dazu.\nBitte führe mich Schritt für Schritt durch:\n1. Email + Password-Provider in Supabase aktivieren (anonyme Anmeldung vorerst als Fallback an lassen).\n2. supabase/migrations/<nächste freie Nummer>_auth_rls.sql: RLS-Policies auf documents, topics, questions, sessions, messages (auth.uid() = user_id) — prüfe zuerst die höchste vorhandene Migrationsnummer im Repo.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s5-03",
@@ -2783,7 +2784,7 @@ export const RAW = [
       "Auth (#2)"
     ],
     "erfolg": "Echtes Login + Signup funktioniert.",
-    "prompt": "Ich bin Ayoub im StudyBuddy-Team. Heute verdrahte ich die Auth-Formulare.\nBitte führe mich Schritt für Schritt durch:\n1. /login + /signup mit supabase.auth.signIn/signUp.\n2. Fehler-Handling + Loading-State.\n3. Redirect nach /dashboard bei Erfolg.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Ayoub im StudyBuddy-Team. Heute verdrahte ich die Auth-Formulare.\nKontext: Das ersetzt die anonyme Session-Bridge (ensureSession() in src/lib/supabase/client.ts) aus Sprint 2 durch echtes Login.\nBitte führe mich Schritt für Schritt durch:\n1. /login + /signup mit supabase.auth.signInWithPassword/signUp.\n2. ensureSession()-Aufrufe entfernen bzw. nur noch als Gast-Fallback nutzen.\n3. Fehler-Handling + Loading-State.\n4. Redirect nach /dashboard bei Erfolg.\n5. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s5-05",
@@ -3670,7 +3671,7 @@ export const RAW = [
       "Prompt (#5)"
     ],
     "erfolg": "Quiz-Antworten < 1 Sek.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute beschleunige ich Quiz-Eval.\nBitte führe mich Schritt für Schritt durch:\n1. Schneller Model-Fallback (Haiku) für Quiz-Bewertung.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute beschleunige ich Quiz-Eval.\nBitte führe mich Schritt für Schritt durch:\n1. Schneller Model-Fallback auf OpenAI-GPT-5-Mini (unser Fast-Lane-Modell auf KI Connect) für die Quiz-Bewertung — exakt diese Model-ID; 'Haiku'/Anthropic-Modelle gibt es bei KI Connect NICHT.\n2. WICHTIG: keinen custom temperature-Parameter senden — KI-Connect-GPT-5-Modelle erlauben nur den Default (sonst HTTP 400).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s6-17",
@@ -3880,7 +3881,7 @@ export const RAW = [
       "Performance-Tuning"
     ],
     "erfolg": "Modell-Entscheidung dokumentiert.",
-    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute finalisiere ich Quiz-Modell.\nBitte führe mich Schritt für Schritt durch:\n1. docs/ki-reports/quiz-model-choice.md.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Taycir im StudyBuddy-Team. Heute finalisiere ich Quiz-Modell.\nBitte führe mich Schritt für Schritt durch:\n1. docs/ki-reports/quiz-model-choice.md: Vergleich der realen KI-Connect-Modelle — OpenAI-GPT-5-Mini (Fast-Lane, günstig/schnell) vs. OpenAI GPT-5.3 Chat (Default, stärker). Empfehlung fürs Quiz: Mini wegen Tempo. Model-IDs verbatim übernehmen, kein custom temperature.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s6-28",
@@ -5382,7 +5383,7 @@ export const RAW = [
       "RC-Tag (Sprint 8)"
     ],
     "erfolg": "Production deploy-ready.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute bereite ich Production-Deploy vor.\nBitte führe mich Schritt für Schritt durch:\n1. Vercel-Production-Env-Variablen final prüfen.\n2. Custom-Domain (falls vorhanden) + SSL.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute bereite ich Production-Deploy vor.\nKontext: Deploy ist bei uns MANUELL — `vercel --prod` aus dem Repo-Ordner (CLI ist verlinkt + eingeloggt als Team-Account). Vercel ist NICHT mit der Hochschul-GitLab verbunden, es gibt KEIN Auto-Deploy; `vercel --prod` deployt den lokalen Working-Tree, nicht einen Git-Branch.\nBitte führe mich Schritt für Schritt durch:\n1. Vercel-Production-Env-Variablen final prüfen (inkl. OPENAI_API_KEY = KI-Connect-Token, OPENAI_BASE_URL).\n2. Sicherstellen, dass der lokale Working-Tree dem RC-Tag entspricht, dann `vercel --prod`.\n3. Custom-Domain (falls vorhanden) + SSL.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s9-03",
