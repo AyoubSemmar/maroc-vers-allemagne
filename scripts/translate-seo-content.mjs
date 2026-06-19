@@ -27,6 +27,9 @@ const LOCALES = [
   { code: 'fa', full: 'Persian/Farsi (fa-IR)', dir: 'rtl' },
   { code: 'pt', full: 'Portuguese (pt-BR)', dir: 'ltr' },
   { code: 'ru', full: 'Russian (ru-RU)', dir: 'ltr' },
+  { code: 'hi', full: 'Hindi (India, hi-IN)', dir: 'ltr' },
+  { code: 'ur', full: 'Urdu (Pakistan, ur-PK)', dir: 'rtl' },
+  { code: 'nl', full: 'Dutch (Netherlands, nl-NL)', dir: 'ltr' },
 ]
 
 const en = JSON.parse(fs.readFileSync('messages/en.json', 'utf8')).documentChecklist
