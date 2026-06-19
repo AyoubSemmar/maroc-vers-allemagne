@@ -81,24 +81,30 @@ export default function LanguageSwitcher() {
       </button>
 
       {open && (
-        <div role="menu" className="lang-menu">
-          {(routing.locales as readonly AppLocale[]).map((loc) => {
-            const opt = LOCALE_OPTIONS.find((o) => o.code === loc)!
-            const active = loc === locale
-            return (
-              <button
-                key={loc}
-                role="menuitem"
-                onClick={() => pickLocale(loc)}
-                aria-label={opt.label}
-                title={opt.label}
-                className={`lang-menu-item ${active ? 'is-active' : ''}`}
-              >
-                <span style={{ fontSize: 22, lineHeight: 1 }}>{opt.flag}</span>
-              </button>
-            )
-          })}
-        </div>
+        <>
+          {/* Backdrop — visible only on mobile via CSS, closes the bottom sheet */}
+          <div className="lang-backdrop" onClick={() => setOpen(false)} aria-hidden />
+
+          <div role="menu" className="lang-menu">
+            {(routing.locales as readonly AppLocale[]).map((loc) => {
+              const opt = LOCALE_OPTIONS.find((o) => o.code === loc)!
+              const active = loc === locale
+              return (
+                <button
+                  key={loc}
+                  role="menuitem"
+                  onClick={() => pickLocale(loc)}
+                  aria-label={opt.label}
+                  title={opt.label}
+                  className={`lang-menu-item ${active ? 'is-active' : ''}`}
+                >
+                  <span className="lang-flag" aria-hidden>{opt.flag}</span>
+                  <span className="lang-label">{opt.label}</span>
+                </button>
+              )
+            })}
+          </div>
+        </>
       )}
     </div>
   )

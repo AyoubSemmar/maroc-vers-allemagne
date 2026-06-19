@@ -889,7 +889,12 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   .tools-dd-menu-portal .tools-dd-item { padding: 14px 14px; font-size: 15px; }
 }
 
-/* ===== Language switcher menu (flags only) ===== */
+/* ===== Language switcher menu ===== */
+.lang-backdrop { display: none; }
+.lang-label { display: none; }
+.lang-flag { font-size: 22px; line-height: 1; }
+
+/* Desktop: horizontal pill */
 .lang-menu {
   position: absolute;
   top: calc(100% + 8px);
@@ -920,10 +925,66 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 }
 .lang-menu-item:hover { background: var(--bg-warm, rgba(0,0,0,.04)); transform: scale(1.08); }
 .lang-menu-item.is-active { border-color: var(--brand, oklch(0.72 0.26 25)); background: color-mix(in oklch, var(--brand, oklch(0.72 0.26 25)) 10%, transparent); }
-@media (max-width: 480px) {
-  .lang-menu { padding: 4px; gap: 2px; }
-  .lang-menu-item { width: 32px; height: 32px; }
-  .lang-menu-item span { font-size: 18px !important; }
+
+@keyframes lang-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes lang-sheet-in {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile: bottom sheet with 3-column grid */
+@media (max-width: 600px) {
+  .lang-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 190;
+    animation: lang-fade-in 0.18s ease;
+  }
+  .lang-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: auto;
+    inset-inline-end: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px 16px 36px;
+    border-radius: 20px 20px 0 0;
+    border: none;
+    border-top: 1px solid var(--line, rgba(0,0,0,.1));
+    z-index: 200;
+    animation: lang-sheet-in 0.22s cubic-bezier(.2,.8,.2,1);
+  }
+  .lang-menu-item {
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 8px;
+    border-radius: 14px;
+    border-width: 2px;
+  }
+  .lang-flag { font-size: 28px !important; }
+  .lang-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--ink, #1a1a1a);
+    text-align: center;
+    line-height: 1.2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .lang-menu-item.is-active .lang-label { color: var(--brand, oklch(0.72 0.26 25)); }
 }
 
 /* ============ RIHLA FOOTER ============ */
