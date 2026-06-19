@@ -1386,7 +1386,7 @@ export const RAW = [
       "Documents-Schema (S1)"
     ],
     "erfolg": "Tabellen topics + questions mit RLS in DB.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Datenmodell für Themen und Fragen.\nBitte führe mich Schritt für Schritt durch:\n1. supabase/migrations/0004_topics_questions.sql: topics (id, document_id, title, summary, bloom_level), questions (id, topic_id, ty\npe 'open'|'mc', prompt, expected_answer, options jsonb).\n2. RLS + Indizes auf document_id und topic_id.\n3. SQL im Supabase-Editor ausführen — Anleitung.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Datenmodell für Themen und Fragen.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_topics_questions.sql (prüfe zuerst die höchste vorhandene Nummer im Verzeichnis — NICHT raten/hardcoden): topics (id, document_id, title, summary, bloom_level), questions (id, topic_id, type 'open'|'mc', prompt, expected_answer, options jsonb).\n2. RLS so, dass sie mit der anonymen Auth-Bridge aus Sprint 2 funktioniert: Zugriff über die Eigentümerschaft des zugehörigen documents-Eintrags (auth.uid() der Session); + Indizes auf document_id und topic_id.\n3. SQL im Supabase-Editor ausführen — Anleitung.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s3-03",
@@ -1766,7 +1766,7 @@ export const RAW = [
       "Schema (#2)"
     ],
     "erfolg": "Wichtige Queries unter 100 ms.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute optimiere ich DB-Performance.\nBitte führe mich Schritt für Schritt durch:\n1. EXPLAIN für die häufigsten Queries laufen lassen.\n2. Indizes ergänzen wo nötig (insbesondere topic_id, document_id).\n3. Schreib supabase/migrations/0005_indexes.sql.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute optimiere ich DB-Performance.\nBitte führe mich Schritt für Schritt durch:\n1. EXPLAIN für die häufigsten Queries laufen lassen.\n2. Indizes ergänzen wo nötig (insbesondere topic_id, document_id).\n3. Schreib eine neue Migration supabase/migrations/<nächste freie Nummer>_indexes.sql (höchste vorhandene Nummer prüfen, nicht hardcoden).\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s3-23",
@@ -2063,7 +2063,7 @@ export const RAW = [
       "Documents+Topics (S2+S3)"
     ],
     "erfolg": "Dialog-Tabellen mit RLS in DB.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Dialog-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. supabase/migrations/0006_dialog_schema.sql: sessions (id, user_id, topic_id, status, started_at, finished_at), messages (id, sess\nion_id, role 'user'|'assistant'|'system', content, created_at), progress (user_id, topic_id, mastery_level, last_session_at).\n2. RLS-Policies.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Dialog-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_dialog_schema.sql (prüfe zuerst die höchste vorhandene Nummer): sessions (id, user_id, topic_id, status, started_at, finished_at), messages (id, session_id, role 'user'|'assistant'|'system', content, created_at), progress (user_id, topic_id, mastery_level, last_session_at).\n2. WICHTIG: user_id referenziert auth.users (genau wie documents.user_id — NICHT public.users), damit es mit der anonymen Auth-Bridge läuft.\n3. RLS-Policies mit auth.uid() = user_id (funktioniert auch für anonyme Sessions).\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s4-03",
@@ -2912,7 +2912,7 @@ export const RAW = [
       "Auth (#2)"
     ],
     "erfolg": "Profil-API funktioniert.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich /api/profile.\nBitte führe mich Schritt für Schritt durch:\n1. GET liest aus auth.users + public.profiles. PUT aktualisiert public.profiles.\n2. Migration 0008_profiles.sql für profiles-Tabelle.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich /api/profile.\nBitte führe mich Schritt für Schritt durch:\n1. GET liest aus auth.users + public.profiles. PUT aktualisiert public.profiles.\n2. Neue Migration supabase/migrations/<nächste freie Nummer>_profiles.sql für die profiles-Tabelle; profiles.id referenziert auth.users(id) on delete cascade, RLS auth.uid() = id.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s5-12",
@@ -3101,7 +3101,7 @@ export const RAW = [
       "Progress (S4)"
     ],
     "erfolg": "Lernhistorie persistent.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute persistiere ich Lernverlauf konsistent.\nBitte führe mich Schritt für Schritt durch:\n1. Migration: history_entries (user_id, action, topic_id, created_at) für Analytics.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute persistiere ich Lernverlauf konsistent.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_history.sql: history_entries (user_id, action, topic_id, created_at) für Analytics. user_id referenziert auth.users (NICHT public.users), RLS auth.uid() = user_id.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s5-22",
@@ -3430,7 +3430,7 @@ export const RAW = [
       "Schema bisher"
     ],
     "erfolg": "Quiz-Tabellen mit RLS.",
-    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Quiz-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. supabase/migrations/0009_quiz_schema.sql: quizzes (id, topic_id, time_limit_sec), quiz_attempts (id, user_id, quiz_id, score, sta\nrted_at, finished_at).\n2. RLS-Policies.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
+    "prompt": "Ich bin Abder im StudyBuddy-Team. Heute baue ich das Quiz-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_quiz_schema.sql (prüfe zuerst die höchste vorhandene Nummer): quizzes (id, topic_id, time_limit_sec), quiz_attempts (id, user_id, quiz_id, score, started_at, finished_at).\n2. WICHTIG: quiz_attempts.user_id referenziert auth.users (wie documents — NICHT public.users), RLS auth.uid() = user_id (gilt auch für anonyme Sessions).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch."
   },
   {
     "id": "s6-04",

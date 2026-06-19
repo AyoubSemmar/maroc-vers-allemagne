@@ -39,6 +39,28 @@ const OUT_PATH = path.join(__dirname, '..', 'lib', 'studybuddy', 'tasks.generate
 //   • Deploy is MANUAL: `vercel --prod` from the repo (deploys the local
 //     working tree). Vercel is NOT wired to the self-hosted GitLab.
 const OVERRIDES = {
+  // Deployment-safety: de-hardcode migration numbers (the real repo's
+  // sequence diverged once Sprints 1–2 shipped) and pin every user_id FK
+  // to auth.users (not public.users) so tables work with the anonymous
+  // auth bridge, matching documents.user_id.
+  's3-02': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute baue ich das Datenmodell für Themen und Fragen.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_topics_questions.sql (prüfe zuerst die höchste vorhandene Nummer im Verzeichnis — NICHT raten/hardcoden): topics (id, document_id, title, summary, bloom_level), questions (id, topic_id, type \'open\'|\'mc\', prompt, expected_answer, options jsonb).\n2. RLS so, dass sie mit der anonymen Auth-Bridge aus Sprint 2 funktioniert: Zugriff über die Eigentümerschaft des zugehörigen documents-Eintrags (auth.uid() der Session); + Indizes auf document_id und topic_id.\n3. SQL im Supabase-Editor ausführen — Anleitung.\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
+  's3-22': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute optimiere ich DB-Performance.\nBitte führe mich Schritt für Schritt durch:\n1. EXPLAIN für die häufigsten Queries laufen lassen.\n2. Indizes ergänzen wo nötig (insbesondere topic_id, document_id).\n3. Schreib eine neue Migration supabase/migrations/<nächste freie Nummer>_indexes.sql (höchste vorhandene Nummer prüfen, nicht hardcoden).\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
+  's4-02': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute baue ich das Dialog-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_dialog_schema.sql (prüfe zuerst die höchste vorhandene Nummer): sessions (id, user_id, topic_id, status, started_at, finished_at), messages (id, session_id, role \'user\'|\'assistant\'|\'system\', content, created_at), progress (user_id, topic_id, mastery_level, last_session_at).\n2. WICHTIG: user_id referenziert auth.users (genau wie documents.user_id — NICHT public.users), damit es mit der anonymen Auth-Bridge läuft.\n3. RLS-Policies mit auth.uid() = user_id (funktioniert auch für anonyme Sessions).\n4. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
+  's5-11': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute baue ich /api/profile.\nBitte führe mich Schritt für Schritt durch:\n1. GET liest aus auth.users + public.profiles. PUT aktualisiert public.profiles.\n2. Neue Migration supabase/migrations/<nächste freie Nummer>_profiles.sql für die profiles-Tabelle; profiles.id referenziert auth.users(id) on delete cascade, RLS auth.uid() = id.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
+  's5-21': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute persistiere ich Lernverlauf konsistent.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_history.sql: history_entries (user_id, action, topic_id, created_at) für Analytics. user_id referenziert auth.users (NICHT public.users), RLS auth.uid() = user_id.\n2. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
+  's6-03': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute baue ich das Quiz-Datenmodell.\nBitte führe mich Schritt für Schritt durch:\n1. Neue Migration supabase/migrations/<nächste freie Nummer>_quiz_schema.sql (prüfe zuerst die höchste vorhandene Nummer): quizzes (id, topic_id, time_limit_sec), quiz_attempts (id, user_id, quiz_id, score, started_at, finished_at).\n2. WICHTIG: quiz_attempts.user_id referenziert auth.users (wie documents — NICHT public.users), RLS auth.uid() = user_id (gilt auch für anonyme Sessions).\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
   's2-21': {
     prompt: 'Ich bin Taycir. Heute dokumentiere ich unsere Prompt-Patterns.\nBitte hilf mir:\n1. Schreib docs/prompts/patterns.md als Code-Block:\n- System+User+JSON-Output Pattern\n- Token-Counting-Helper\n- Wann OpenAI GPT-5.3 Chat (Default) vs OpenAI-GPT-5-Mini (Fast-Lane) — beides KI-Connect-Modelle, kein Anthropic\n- Wo Eval-Sets liegen\n2. Git-Befehle.',
   },
