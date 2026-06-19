@@ -892,7 +892,16 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 /* ===== Language switcher menu ===== */
 .lang-backdrop { display: none; }
 .lang-label { display: none; }
-.lang-flag { font-size: 22px; line-height: 1; }
+
+/* Flag image — desktop: 24×18, slightly rounded */
+.lang-flag-img {
+  display: block;
+  width: 24px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
 
 /* Desktop: horizontal pill */
 .lang-menu {
@@ -954,7 +963,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
     inset-inline-end: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    gap: 8px;
     padding: 20px 16px 36px;
     border-radius: 20px 20px 0 0;
     border: none;
@@ -963,15 +972,21 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
     animation: lang-sheet-in 0.22s cubic-bezier(.2,.8,.2,1);
   }
   .lang-menu-item {
-    width: auto;
+    width: 100%;
     height: auto;
+    display: flex;
     flex-direction: column;
-    gap: 6px;
+    align-items: center;
+    gap: 8px;
     padding: 14px 8px;
     border-radius: 14px;
     border-width: 2px;
   }
-  .lang-flag { font-size: 28px !important; }
+  .lang-flag-img {
+    width: 40px;
+    height: 30px;
+    border-radius: 5px;
+  }
   .lang-label {
     display: block;
     font-size: 11px;

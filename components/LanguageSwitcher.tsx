@@ -7,21 +7,26 @@ import { routing, type AppLocale } from '@/i18n/routing'
 
 type LocaleOption = {
   code: AppLocale
-  label: string     // Native name shown in the button
-  flag: string      // Emoji flag
+  label: string
+  /** ISO 3166-1 alpha-2 country code for flagcdn.com */
+  countryCode: string
 }
 
 export const LOCALE_OPTIONS: LocaleOption[] = [
-  { code: 'ar', label: 'العربية', flag: '🇸🇦' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
-  { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'tr', label: 'Türkçe', flag: '🇹🇷' },
-  { code: 'fa', label: 'فارسی', flag: '🇮🇷' },
-  { code: 'pt', label: 'Português', flag: '🇧🇷' },
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
+  { code: 'ar', label: 'العربية',  countryCode: 'sa' },
+  { code: 'fr', label: 'Français', countryCode: 'fr' },
+  { code: 'en', label: 'English',  countryCode: 'gb' },
+  { code: 'de', label: 'Deutsch',  countryCode: 'de' },
+  { code: 'es', label: 'Español',  countryCode: 'es' },
+  { code: 'tr', label: 'Türkçe',   countryCode: 'tr' },
+  { code: 'fa', label: 'فارسی',    countryCode: 'ir' },
+  { code: 'pt', label: 'Português',countryCode: 'br' },
+  { code: 'ru', label: 'Русский',  countryCode: 'ru' },
 ]
+
+function flagSrc(countryCode: string) {
+  return `https://flagcdn.com/w40/${countryCode}.png`
+}
 
 export default function LanguageSwitcher() {
   const locale = useLocale() as AppLocale
@@ -55,9 +60,6 @@ export default function LanguageSwitcher() {
       localStorage.setItem('locale', next)
       document.cookie = `NEXT_LOCALE=${next}; path=/; max-age=${60 * 60 * 24 * 365}`
     } catch {}
-    // Hard navigation so the <html lang/dir> attributes and the inline
-    // theme init script re-run cleanly. A soft navigation loses the
-    // data-theme attribute set by the init script.
     const cleanPath = pathname === '/' ? '' : pathname
     window.location.href = `/${next}${cleanPath}${window.location.search}${window.location.hash}`
   }
@@ -77,12 +79,19 @@ export default function LanguageSwitcher() {
         title={t('change')}
         style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', padding: 0, overflow: 'hidden' }}
       >
-        <span style={{ fontSize: 20, lineHeight: 1 }} aria-hidden>{current.flag}</span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={flagSrc(current.countryCode)}
+          alt={current.label}
+          width={24}
+          height={18}
+          style={{ display: 'block', borderRadius: 3, objectFit: 'cover' }}
+        />
       </button>
 
       {open && (
         <>
-          {/* Backdrop — visible only on mobile via CSS, closes the bottom sheet */}
+          {/* Backdrop — mobile only via CSS, closes the bottom sheet */}
           <div className="lang-backdrop" onClick={() => setOpen(false)} aria-hidden />
 
           <div role="menu" className="lang-menu">
@@ -98,7 +107,13 @@ export default function LanguageSwitcher() {
                   title={opt.label}
                   className={`lang-menu-item ${active ? 'is-active' : ''}`}
                 >
-                  <span className="lang-flag" aria-hidden>{opt.flag}</span>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={flagSrc(opt.countryCode)}
+                    alt={opt.label}
+                    className="lang-flag-img"
+                    aria-hidden
+                  />
                   <span className="lang-label">{opt.label}</span>
                 </button>
               )
