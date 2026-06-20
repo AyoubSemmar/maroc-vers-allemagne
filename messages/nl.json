@@ -2852,7 +2852,8 @@
       "tabs": {
         "grammar": "Grammatica",
         "vocab": "Woordenschat",
-        "exercise": "Oefeningen"
+        "exercise": "Oefeningen",
+        "watch": "Kijken"
       },
       "meta": "Les {n} · {vocab} woorden · {q} oefeningen",
       "grammarCard": {
@@ -2907,6 +2908,13 @@
         "levelDone": "🎉 Niveau voltooid! Terug →",
         "tryAgain": "Probeer opnieuw",
         "reviewAnswers": "Bekijk antwoorden"
+      },
+      "watchCard": {
+        "heading": "Kijken & luisteren",
+        "sub": "Authentiek Duits van Easy German voor dit niveau",
+        "play": "Video afspelen",
+        "tip": "Luister naar de woorden en grammatica uit deze les. Zet Duitse ondertitels aan en kijk vervolgens opnieuw zonder ondertitels.",
+        "nextEx": "Oefen met opdrachten"
       }
     },
     "dragDrop": {
@@ -3385,5 +3393,2066 @@
       "masterDescUniAssist": "Masterprogramma's open voor internationale aanvragers via uni-assist, met deadlines en toelatiseisen.",
       "seeOnUniAssist": "Bekijk op uni-assist"
     }
+  },
+  "visaGuide": {
+    "shared": {
+      "badgeWhere": "Duits visumcentrum van jouw land",
+      "badgeProcessing": "4–12 weken verwerkingstijd",
+      "badgeFee": "€75 visumtarief",
+      "stepsTitle": "Stap voor stap — wat je moet doen, in welke volgorde",
+      "stepsSub": "Realistisch tijdschema voor een internationale aanvrager. Begin bij stap 1, eindig bij stap 10–11. Stappen overslaan is de #1 oorzaak van vertragingen.",
+      "docsTitle": "Documenten om voor te bereiden",
+      "docsSub": "Breng het origineel + 2 fotocopieën van elk document mee. Het Duitse consulaat staat erom bekend streng te zijn — één ontbrekend item = een nieuwe afspraak.",
+      "legendCritical": "🔴 Kritiek (verplicht)",
+      "legendImportant": "🟡 Belangrijk",
+      "legendRecommended": "⚪ Aanbevolen",
+      "legendApostille": "Apostille vereist",
+      "legendTranslation": "Beëdigde vertaling vereist",
+      "flagApostille": "Apostille / legalisatie",
+      "flagTranslation": "Beëdigde vertaling (DE)",
+      "importance": {
+        "critical": "Verplicht",
+        "important": "Belangrijk",
+        "recommended": "Aanbevolen"
+      },
+      "costsTitle": "Realistisch budget — ruwe schatting",
+      "costsSub": "Geschatte prijzen voor 2026. De Sperrkonto (geblokkeerde rekening) is de grootste post en de meest gestelde vraag. Verplichte items eerst; optionele onderaan.",
+      "optional": "optioneel",
+      "totalLabel": "Verplicht totaal",
+      "costsNote": "Prijzen variëren per land en fluctueren, dus bedragen zijn ruwe EUR-schattingen. Het Sperrkonto-bedrag wordt jaarlijks vastgesteld door BAföG — €11.904 voor 2026.",
+      "rejectionsTitle": "Waarom visa's worden geweigerd — en hoe je dit voorkomt",
+      "rejectionsSub": "Dit zijn de werkelijke redenen waarom we aanvragen bij het visumcentrum zien afwijzen. Elk daarvan is te voorkomen.",
+      "severity": {
+        "high": "Hoog risico",
+        "medium": "Gemiddeld risico"
+      },
+      "midCtaTitle": "Vast zitten bij een stap? Praat met een specialist.",
+      "midCtaSub": "1 uur, echte antwoorden, in het Arabisch, Frans of Duits. €20 — bankoverschrijving.",
+      "finalCtaEyebrow": "Persoonlijke hulp",
+      "finalCta1": "Ga je dossier samen door, document voor document",
+      "finalCta2": "Identificeer wat ontbreekt, wat fout is, wat je eerst moet aanpakken",
+      "finalCta3": "Nep-consulaire interview als je afspraak dichtbij is",
+      "finalCta4": "Concrete takenlijst die je van het gesprek meeneemt",
+      "toolsTitle": "Gratis tools om je te helpen",
+      "toolsSub": "Gebruik deze naast de bovenstaande gids — ze zijn gebouwd voor het pad naar Duitsland.",
+      "toolDocs": "Documentenchecklist",
+      "toolDocsDesc": "Volg elk document met een persoonlijke checklist",
+      "toolTimeline": "Migratietijdlijn",
+      "toolTimelineDesc": "Plan je volgende 12 maanden maand voor maand",
+      "toolEligibility": "Geschiktheidscheck",
+      "toolEligibilityDesc": "13-regeltest: Bac, Duits niveau, financiën…",
+      "toolCost": "Levenskosten calculator",
+      "toolCostDesc": "Realistisch maandbudget per Duitse stad"
+    },
+    "studium": {
+      "metaTitle": "Studentenvisum Duitsland voor internationals — Studium D-Visum Gids 2026",
+      "metaDesc": "Stap-voor-stap gids studentenvisum (§16b AufenthG) voor internationale studenten via het Duitse visumcentrum — documenten, kosten, tijdlijn, veelvoorkomende afwijzingen.",
+      "eyebrow": "Studium · Nationaal D-Visum",
+      "title": "Duits studentenvisum voor internationals, stap voor stap",
+      "subtitle": "Echte procedure onder §16b AufenthG. Aanvragen bij het visumcentrum van je land. Hieronder: elke stap, elk document, elke kost — met EUR-schattingen en landspecifieke tips die geen generieke gids je geeft.",
+      "finalCtaTitle": "Wil je dat een specialist je visummap controleert?",
+      "finalCtaSub": "De meeste afwijzingen zijn te voorkomen. Een 1-uursgesprek met een specialist die dagelijks afwijzingspatronen van Duitse consulaten leest — €20, in jouw taal.",
+      "steps": {
+        "aps": {
+          "title": "1. Haal je APS-certificaat (als het voor jouw land geldt)",
+          "desc": "De Akademische Prüfstelle verifieert je middelbare school- en hogeronderwijsdiploma's. Vereist voor aanvragers uit bepaalde landen (China, India, Vietnam, Pakistan, Mongolië…); sla deze stap over als APS niet voor jou geldt. Solliciteer online op aps.diplo.de.",
+          "duration": "6–12 weken"
+        },
+        "language": {
+          "title": "2. Bereik het vereiste Duitse niveau",
+          "desc": "De meeste Duitstalige bachelorprogramma's vereisen C1 (TestDaF/DSH). Engelstalige programma's vereisen C1 Engels (IELTS 6,5+ / TOEFL 90+). Een Goethe-Institut in jouw land is het standaard testcentrum.",
+          "duration": "6–18 maanden afhankelijk van startniveau"
+        },
+        "apply_uni": {
+          "title": "3. Solliciteer naar universiteiten en krijg een toelatingsbesluit",
+          "desc": "Gebruik uni-assist voor de meeste universiteiten. Deadlines: 15 juli (winter) / 15 januari (zomer). De Zulassungsbescheid (toelatingsbesluit) is het document dat het consulaat nodig heeft.",
+          "duration": "4–12 weken na indiening"
+        },
+        "sperrkonto": {
+          "title": "4. Open een Sperrkonto (geblokkeerde rekening) met €11.904",
+          "desc": "Voor 2026: €11.904 = €992/maand voor 12 maanden. Open bij Fintiba, Expatrio of Coracle (allemaal accepteren internationale aanvragers). Het bankbewijs toont dat je jezelf kunt financieren.",
+          "duration": "1–4 weken om te openen + over te maken"
+        },
+        "insurance": {
+          "title": "5. Zorg voor expat-ziekteverzekering voor het visum",
+          "desc": "Reis-/expatverzekering geldig vanaf je aankomstdag in Duitsland. Mawista, Care Concept of DR-WALTER zijn de goedkoopste geaccepteerde (~€30–60/maand). Je schakelt over naar publieke verzekering zodra je bent ingeschreven.",
+          "duration": "1 week"
+        },
+        "apostille": {
+          "title": "6. Authenticeer + laat je diploma's beëdigd vertalen",
+          "desc": "Authenticeer je middelbare schooldiploma, transcripten en geboorteakte — apostille voor Haagse Conventie-landen, anders consulaire legalisatie. Laat ze vervolgens door een beëdigd/erkend vertaler in het Duits vertalen.",
+          "duration": "1–4 weken"
+        },
+        "tls_appt": {
+          "title": "7. Boek je afspraak bij het visumcentrum",
+          "desc": "Online via het portaal van het Duitse visumcentrum van jouw land (TLScontact, VFS Global of iDATA). Slots zijn schaars — boek zodra je je toelatingsbesluit hebt. Maak een screenshot van de bevestiging. Annuleringskosten zijn echt.",
+          "duration": "1–3 maanden wachttijd"
+        },
+        "submit": {
+          "title": "8. Dien je map in bij het visumcentrum",
+          "desc": "Breng originelen + 2 kopieën van elk document mee, in de volgorde op de checklist van het visumcentrum. Betaal de €75 visumtarief ter plaatse in lokale valuta (contant of kaart). Biometrische foto's en vingerafdrukken worden genomen.",
+          "duration": "Dezelfde dag"
+        },
+        "decision": {
+          "title": "9. Wacht op het besluit van het Duitse consulaat",
+          "desc": "Het visumcentrum verzamelt alleen — het werkelijke besluit wordt genomen door de Duitse missie die verantwoordelijk is voor jouw regio. Ze kunnen contact opnemen met je Duitse universiteit voor aanvullende controles.",
+          "duration": "4–12 weken"
+        },
+        "pickup": {
+          "title": "10. Haal je paspoort met het visum op",
+          "desc": "Het visumcentrum stuurt je een e-mail wanneer het klaar is. Breng je visumcentrumbon en ID mee. Het visum in je paspoort is 3–6 maanden geldig — kom Duitsland binnen in dat venster en zet het om in een verblijfsvergunning.",
+          "duration": "Dezelfde dag"
+        }
+      },
+      "docs": {
+        "passport": {
+          "title": "Geldig paspoort",
+          "desc": "Geldig voor minstens 12 maanden vanaf je visumcentrumafspraak. Minstens 2 blanco pagina's.",
+          "tip": "Als je paspoort binnen 18 maanden verloopt, vernieuw het VOOR je visumcentrumafspraak boekt — het nieuwe paspoortnummer moet overeenkomen met de aanvraag."
+        },
+        "photos": {
+          "title": "Biometrische foto's (2)",
+          "desc": "Duits biometrisch formaat: 35×45 mm, witte achtergrond, geen bril, geen glimlach, gemaakt in de afgelopen 6 maanden.",
+          "tip": "De meeste fotostudio's kennen het Duitse biometrische formaat — vraag om een \"Duits visumfoto\". Vermijd glimlachen, bril en schaduwen."
+        },
+        "aps_certificate": {
+          "title": "APS-certificaat (Akademische Prüfstelle)",
+          "desc": "Verificatie van je buitenlandse diploma's, vereist voor aanvragers uit bepaalde landen (China, India, Vietnam, Pakistan…). Solliciteer online op aps.diplo.de als APS voor jou geldt.",
+          "tip": "Waar APS geldt, wordt je map zonder afgewezen. Solliciteer 3–4 maanden voor je visumcentrumafspraak. Tarief ~€250, geldig voor het leven."
+        },
+        "admission_letter": {
+          "title": "Toelatingsbesluit (Zulassungsbescheid)",
+          "desc": "Officieel toelatingsbesluit van je Duitse universiteit. Voorwaardelijke toelating (Zulassung mit Auflage) wordt ook geaccepteerd maar vermindert visuumkansen.",
+          "tip": "Haal de onvoorwaardelijke Zulassung als je kunt. Bewaar zowel de PDF als de afgedrukte ondertekende versie. Sommige universiteiten sturen alleen een digitale handtekening — druk het toch af."
+        },
+        "sperrkonto_proof": {
+          "title": "Sperrkonto (geblokkeerde rekening) bewijs",
+          "desc": "Rekening geopend bij Fintiba/Expatrio/Coracle met €11.904 (2026-bedrag) voor 12 maanden dekking. De bank geeft een Sperrkonto-certificaat uit.",
+          "tip": "Fintiba is het meest gebruikelijk — accepteert internationale SWIFT-overschrijvingen van de meeste banken. Reken ~2 weken voor de overschrijving om te verwerken."
+        },
+        "health_insurance": {
+          "title": "Reis-/expatziekteverzekering",
+          "desc": "Dekking geldig vanaf je geplande aankomstdatum tot inschrijving in Duitse publieke verzekering. Minimaal €30.000 dekking vereist.",
+          "tip": "Mawista Student VISUM is het goedkoopste algemeen geaccepteerde (~€33/maand). Koop het NA je visumgoedkeuring als geld krap is; anders koop het voor de afspraak."
+        },
+        "language_cert": {
+          "title": "Duits of Engels taalcertificaat",
+          "desc": "Voor Duitse programma's: TestDaF (TDN 4×4) of DSH 2 of telc Hochschule. Voor Engelstalige programma's: IELTS 6,5+ of TOEFL 90+. Goethe-certificaten worden geaccepteerd als taalproof voor Studienkolleg.",
+          "tip": "TestDaF wordt meerdere keren per jaar aangeboden op Goethe-Institut testcentra. Registreer ~8 weken van tevoren — slots vullen snel voor de herfstintake."
+        },
+        "bac_diploma": {
+          "title": "Middelbare schooldiploma (bijv. Baccalauréat / Abitur)",
+          "desc": "Origineel + authenticatie (apostille of consulaire legalisatie) + beëdigd Duitse vertaling. Sommige missies willen ook het volledige transcript.",
+          "tip": "Je diploma moet je eindgemiddelde/cijfer tonen. Als dat niet het geval is, vraag een officieel duplicaat aan bij de uitgevende instantie — meestal 1–2 weken."
+        },
+        "transcripts": {
+          "title": "Hogeronderwijstranscripten (indien van toepassing)",
+          "desc": "Voor aanvragers die enig hoger onderwijs hebben voltooid — alle jaar-voor-jaar transcripten, geverifieerd en beëdigd vertaald.",
+          "tip": "Vraag het volledige, definitieve transcript (niet alleen jaar-voor-jaar uittrekels), plus een officiële verklaring voor elk programma dat je niet hebt afgemaakt."
+        },
+        "birth_certificate": {
+          "title": "Geboorteakte (≤ 3 maanden oud)",
+          "desc": "Uitgegeven binnen de 3 maanden voor je visumcentrumafspraak. Geverifieerd (apostille of consulaire legalisatie) en vertaald in het Duits door een beëdigd vertaler.",
+          "tip": "Van je lokale burgerlijke stand. Bestel ~4 kopieën: 1 voor het consulaat, 1 voor de vertaler, 1 reserve, 1 voor Duitse bureaucratie na aankomst."
+        },
+        "cv": {
+          "title": "CV in tabellarisch Duits formaat",
+          "desc": "Lebenslauf in het Duits met je studies en werkervaring, foto rechtsboven, ondertekend onderaan.",
+          "tip": "Gebruik onze gratis CV Builder — het geeft het Duitse formaat met de juiste velden, secties en datumindeling. Onderteken het in blauwe inkt."
+        },
+        "motivation_letter": {
+          "title": "Motivatiebrief in het Duits",
+          "desc": "Minimaal 1 pagina, waarin je uitlegt: waarom dit programma, waarom deze universiteit, waarom Duitsland, je plan na afstuderen thuis of carrièredoelen.",
+          "tip": "De \"terug naar huis\"-hoek is cruciaal om twijfel over terugkeer te overwinnen. Wees specifiek over wat je NA afstuderen gaat doen."
+        },
+        "criminal_record": {
+          "title": "Politieverklaring — schoon strafblad",
+          "desc": "Uitgegeven door de politie-/gerechtelijke autoriteit van je land, ≤ 3 maanden oud, geverifieerd, vertaald.",
+          "tip": "Verwerkingstijd varieert per land — meestal een paar dagen. Vraag het vroeg aan zodat het nog binnen het 3-maanden venster valt bij je afspraak."
+        },
+        "application_form": {
+          "title": "VIDEX-aanvraagformulier",
+          "desc": "Online ingevuld op videx-national.diplo.de, afgedrukt, ondertekend (twee keer — eenmaal onderaan, eenmaal op de gegevensbeschermingspagina).",
+          "tip": "Gebruik de nieuwste VIDEX-versie (2024+). Oude PDF's worden afgewezen. Druk het AF NA je visumcentrumafspraak boeken zodat de datum overeenkomt."
+        },
+        "declaration_truth": {
+          "title": "Verklaring van waarheidsgetrouwheid (§54 AufenthG)",
+          "desc": "Ondertekende verklaring dat alle informatie in de map correct is. Formulier verstrekt door het consulaat.",
+          "tip": "Liegen hier is een permanent verbod op het Schengengebied. Zelfs kleine omissies worden ontdekt bij de consulaat-AusländerBehörde kruiscontrole."
+        }
+      },
+      "costs": {
+        "visa_fee": {
+          "label": "Visumtarief (consulaat)"
+        },
+        "sperrkonto_setup": {
+          "label": "Sperrkonto-instellingen (Fintiba/Expatrio)"
+        },
+        "sperrkonto_block": {
+          "label": "Sperrkonto-storting (€11.904 / jaar — 2026)"
+        },
+        "health_insurance": {
+          "label": "Reisverzekering (3 maanden)"
+        },
+        "language_test": {
+          "label": "TestDaF of telc Hochschule"
+        },
+        "aps_fee": {
+          "label": "APS-tarief (waar APS geldt)"
+        },
+        "apostille_total": {
+          "label": "Apostille/legalisatie voor ~6 documenten"
+        },
+        "sworn_translation": {
+          "label": "Beëdigde vertalingen (~10–15 pagina's)"
+        },
+        "tls_service_fee": {
+          "label": "Visumcentrum-servicekosten"
+        },
+        "photos": {
+          "label": "Biometrische foto's (2)"
+        },
+        "passport": {
+          "label": "Nieuw paspoort (indien nodig)"
+        }
+      },
+      "rejections": {
+        "weak_finances": {
+          "title": "Onvoldoende of twijfelachtig financieel bewijs",
+          "desc": "De Sperrkonto is korter dan €11.904, OF de bron van de storting is onduidelijk (bijv. onverklaard geld van derden).",
+          "fix": "Stort het volledige bedrag. Als het geld van familie kwam, voeg een gelegaliseerde ouderlijke steunverklaring (déclaration de prise en charge) in het Duits vertaald bij."
+        },
+        "doubt_return": {
+          "title": "Twijfel over terugkeer naar huis na studies",
+          "desc": "Het consulaat verdenkt de kandidaat van plannen om te blijven. Triggers: vage motivatiebrief, geen familiebanden, geen carrièreplan, leeftijd boven programmanorm.",
+          "fix": "Motivatiebrief moet expliciet je plan na afstuderen thuis of je carrièrethesis vermelden. Voeg je familiebanden thuis in (ouders, broers/zussen)."
+        },
+        "weak_motivation": {
+          "title": "Vage of gekopieerde motivatiebrief",
+          "desc": "Generieke zinnen (\"Duitsland heeft de beste universiteiten\"), geen specifieke info over programma/professor/lab, geen link naar echte behoefte thuis.",
+          "fix": "Noem 2 specifieke professoren/labs/cursussen uit je programma, en leg uit hoe het diploma zich vertaalt naar een carrière thuis of internationaal."
+        },
+        "language_below": {
+          "title": "Taalcertificaat onder de programmadrempel",
+          "desc": "TestDaF TDN 3 meebrengen naar een TDN 4-vereist programma, of B2 naar een C1-programma. Automatische afwijzing.",
+          "fix": "Doe de test opnieuw. Goethe-Institut testcentra bieden TestDaF meerdere keren per jaar aan. Als je afspraak dicht bij is, vraag om uitstel — beter dan een afwijzing in je dossier."
+        },
+        "fake_documents": {
+          "title": "Valse of gewijzigde documenten",
+          "desc": "Vervalste diploma's, valse bankafschriften, valse werkgeversverklaringen. Het consulaat kruist met autoriteiten in je land.",
+          "fix": "Nooit. Detectie is een Schengenbreed verbod. Als een document ongunstig is, pak het frontaal aan in de motivatiebrief — het consulaat respecteert eerlijkheid."
+        },
+        "no_aps": {
+          "title": "Ontbrekend of verlopen APS-certificaat",
+          "desc": "Geen APS = geen beoordeling van je map. APS verloopt niet maar je moet het origineel tonen.",
+          "fix": "Solliciteer op aps.diplo.de 4 maanden voor je visumcentrumafspraak. Breng zowel de PDF als het origineel ondertekende certificaat mee naar de afspraak."
+        },
+        "incomplete_file": {
+          "title": "Onvolledige of ongeordende map",
+          "desc": "Ontbrekend document, of uit volgorde, of fotokopieën in plaats van originelen. Het consulaat pikt het ontbrekende stuk niet op — ze wijzen de hele map af.",
+          "fix": "Gebruik de exacte checklist van het visumcentrum. Volgorde: paspoort, foto's, aanvraagformulier, dan APS, toelating, financiën, taal, onderwijs, burgerlijke staat. Tab-verdeel."
+        },
+        "health_insurance": {
+          "title": "Verzekering niet geaccepteerd door het consulaat",
+          "desc": "Sommige reisverzekeringen worden niet erkend. Dekkingsperiode is ook belangrijk: moet dekking geven van aankomst tot inschrijving.",
+          "fix": "Gebruik Mawista, Care Concept of DR-WALTER — allemaal expliciet geaccepteerd. Dekking minstens €30.000, geldig vanaf je reisdatum."
+        },
+        "apostille_missing": {
+          "title": "Documenten niet gelegaliseerd of niet correct vertaald",
+          "desc": "Diploma zonder apostille/legalisatie, of vertaling door niet-beëdigd vertaler. Het consulaat vereist beide.",
+          "fix": "Authenticeer via de bevoegde autoriteit van je land (apostille of consulaire legalisatie). Gebruik een beëdigd vertaler op de officiële lijst."
+        }
+      }
+    },
+    "ausbildung": {
+      "metaTitle": "Ausbildung Visa Duitsland voor internationals — D-Visa Beroepsopleiding 2026",
+      "metaDesc": "Stap-voor-stap Ausbildung visumgids (§16a AufenthG) voor internationale aanvragers — documenten, kosten, BA-ZAV goedkeuring, tijdlijn, veelvoorkomende afwijzingen.",
+      "eyebrow": "Ausbildung · Nationaal D-Visum",
+      "title": "Duits Ausbildung visum voor internationals, stap voor stap",
+      "subtitle": "Echte procedure onder §16a AufenthG. Het Ausbildung visum vereist zowel een contract ALS BA-ZAV goedkeuring. Hieronder: elke stap, elk document, elke kosten — met EUR schattingen en landspecifieke tips.",
+      "finalCtaTitle": "Wil je dat een specialist je Ausbildung dossier controleert?",
+      "finalCtaSub": "Visumambtenaren richten zich op taalbewijzen en contractauthenticiteit voor Ausbildung. Een 1-uursgesprek met iemand die deze dossiers wekelijks beoordeelt — €20, in jouw taal.",
+      "steps": {
+        "language_b1": {
+          "title": "1. Bereik Duits B1 (minimum)",
+          "desc": "B1 is het minimum voor de meeste Ausbildungen. Sommige gezondheidszorg- en horeca-functies accepteren A2 instap met B1 via Berufsschule. Laat je certificeren bij een Goethe-Institut in jouw land.",
+          "duration": "6–12 maanden"
+        },
+        "find_employer": {
+          "title": "2. Vind een werkgever met een Ausbildungsplatz",
+          "desc": "Solliciteer via Make-it-in-Germany, BIBB, IHK portals, Hwk, of rechtstreeks bij bedrijven. Categorieën met de hoogste acceptatie: gezondheidszorg (Pflege), horeca (Hotelfach), ambachten (Metaal/Elektro), IT, logistiek.",
+          "duration": "1–6 maanden"
+        },
+        "sign_contract": {
+          "title": "3. Onderteken de Ausbildungsvertrag",
+          "desc": "Een 3-jarig contract met maandelijkse Vergütung (800–1.400 € bruto). Het contract moet officieel geregistreerd zijn bij IHK of Hwk voordat je het visumdossier indient.",
+          "duration": "1–4 weken"
+        },
+        "finances": {
+          "title": "4. Bewijs dat je de tussenperiode kunt financieren",
+          "desc": "Je salaris dekt de meeste behoeften, maar het consulaat wil vaak bewijs voor de eerste 3 maanden. Ofwel een Sperrkonto (~6.000 €) OF een steunbrief van ouders (Verpflichtungserklärung) van een familielid in Duitsland.",
+          "duration": "1–4 weken"
+        },
+        "insurance": {
+          "title": "5. Zorg voor ziekteverzekering bij aankomst",
+          "desc": "Hetzelfde als Studium: reisverzekering van aankomst tot je aansluit bij het publieke systeem via je werkgever. Mawista, Care Concept, DR-WALTER (~30–60 €/maand).",
+          "duration": "1 week"
+        },
+        "apostille": {
+          "title": "6. Authenticeer + beëdigde vertalingen van diploma's",
+          "desc": "Je middelbare schooldiploma (of gelijkwaardig) + geboorteakte + strafblad — geverifieerd (apostille voor Haags Verdrag landen, anders consulaire legalisatie). Daarna beëdigde vertaling naar het Duits.",
+          "duration": "1–4 weken"
+        },
+        "tls_appt": {
+          "title": "7. Boek de afspraak bij het visumcentrum",
+          "desc": "Hetzelfde als Studium: het visumcentrumportaal van jouw land. Geef \"Ausbildung / Berufsausbildung\" aan als visumtype.",
+          "duration": "1–3 maanden wachttijd"
+        },
+        "submit": {
+          "title": "8. Dien je dossier in bij het visumcentrum",
+          "desc": "Originelen + 2 kopieën van elk document. Betaal 75 € ter plaatse in lokale valuta. Biometrische foto's en vingerafdrukken.",
+          "duration": "Dezelfde dag"
+        },
+        "ba_zav": {
+          "title": "9. BA-ZAV (Bundesagentur für Arbeit) goedkeuring",
+          "desc": "Voor Ausbildung moet ook de Duitse Federale Arbeidsbureau goedkeuren. Dit gebeurt parallel met consulaatbeoordeling. Vereiste controle: contractvoorwaarden voldoen aan arbeidsrecht (geen uitbuiting).",
+          "duration": "2–6 weken"
+        },
+        "decision": {
+          "title": "10. Definitieve beslissing",
+          "desc": "Zodra zowel BA-ZAV als het consulaat het dossier hebben goedgekeurd, wordt het visum afgegeven. Het Konsulat is de beslissingsautoriteit.",
+          "duration": "4–12 weken totaal"
+        },
+        "pickup": {
+          "title": "11. Haal je paspoort op",
+          "desc": "Het visumcentrum stuurt een e-mail wanneer het klaar is. Het visum is 3–6 maanden geldig — kom Duitsland binnen dat venster binnen. Zet om naar Aufenthaltserlaubnis bij de lokale Ausländerbehörde binnen 90 dagen na aankomst.",
+          "duration": "Dezelfde dag"
+        }
+      },
+      "docs": {
+        "passport": {
+          "title": "Geldig paspoort",
+          "desc": "Geldig voor minstens 12 maanden vanaf je visumafspraak. Minstens 2 blanco pagina's.",
+          "tip": "Bewaar je oude paspoort ook — Duitse bureaucratie vraagt soms om eerdere reisgeschiedenis."
+        },
+        "photos": {
+          "title": "Biometrische foto's (2)",
+          "desc": "Duits biometrisch formaat: 35×45 mm, witte achtergrond.",
+          "tip": "Dezelfde studio's als voor Studium. Zorg voor extra's — je Anmeldung in Duitsland zal nog 2 nodig hebben."
+        },
+        "ausbildung_contract": {
+          "title": "Ausbildungsvertrag (geregistreerd)",
+          "desc": "Ondertekend door werkgever + IHK/Hwk-gestempeld contract. Moet salaris, duur (3 jaar), Berufsschule en je rol vermelden.",
+          "tip": "Zonder IHK/Hwk registratie wordt het visum afgewezen. De HR van je werkgever kent het proces; als ze dat niet doen, is dat een waarschuwingssignaal."
+        },
+        "language_cert": {
+          "title": "Duits taaldiploma (B1 minimum)",
+          "desc": "Goethe B1, telc B1, of ÖSD B1. Sommige gezondheidszorg-/horecafuncties accepteren A2 met B1 bij start.",
+          "tip": "Goethe-Institut centra bieden B1 regelmatig aan. Kosten ~155 €. Registreer ~6 weken van tevoren — plaatsen vullen zich voor de grote intakes."
+        },
+        "finances_proof": {
+          "title": "Financieel bewijs voor eerste 3 maanden",
+          "desc": "Ofwel een Sperrkonto met ~6.000 €, OF een Verpflichtungserklärung (formele sponsoring van een familielid in Duitsland), OF salarisbewijs van werkgever.",
+          "tip": "Als je een familielid in Duitsland hebt met stabiel inkomen, is de Verpflichtungserklärung bij hun lokale Ausländerbehörde sneller en goedkoper dan een Sperrkonto."
+        },
+        "health_insurance": {
+          "title": "Reisverzekering/expat ziekteverzekering",
+          "desc": "Dekking van aankomst tot je werkgever je registreert in het publieke gezondheidssysteem (~2–4 weken).",
+          "tip": "Mawista, Care Concept, DR-WALTER. ~30 €/maand is voldoende."
+        },
+        "school_diploma": {
+          "title": "Middelbare schooldiploma of gelijkwaardig",
+          "desc": "Origineel + authenticatie + beëdigde vertaling. Sommige Ausbildungen vereisen geen schoolverlatingsdiploma (bijv. handwerk) maar het consulaat wil nog steeds je hoogste diploma.",
+          "tip": "Een beroeps-/technisch secundair diploma is vaak nog beter dan een academisch diploma voor technische Ausbildungen — vraag een gecertificeerde kopie aan bij je trainingscentrum."
+        },
+        "birth_certificate": {
+          "title": "Geboorteakte (≤ 3 maanden)",
+          "desc": "Geverifieerd en vertaald, hetzelfde als Studium.",
+          "tip": "Van je lokale burgerlijke stand. ~4 kopieën aanbevolen."
+        },
+        "cv": {
+          "title": "CV in het Duits",
+          "desc": "Lebenslauf met je studies en werkervaring.",
+          "tip": "Gebruik onze gratis CV Builder. Voor Ausbildung, prioriteer elke stage of bijbaan — zelfs informeel — om werkgereedheid aan te tonen."
+        },
+        "motivation_letter": {
+          "title": "Motivatiebrief in het Duits",
+          "desc": "Waarom dit Beruf, waarom deze werkgever, waarom Duitsland. Vermeld je Duitse leertraject en plan na Ausbildung.",
+          "tip": "Voor Ausbildung wil het consulaat toewijding zien. Vermeld dat je na Ausbildung bij de werkgever wilt blijven als mogelijk."
+        },
+        "criminal_record": {
+          "title": "Politieverklaring",
+          "desc": "Van de politie-/gerechtelijke autoriteit van jouw land, ≤ 3 maanden, geverifieerd, vertaald.",
+          "tip": "Verwerkingstijd varieert per land — meestal enkele dagen. Vraag het vroeg aan."
+        },
+        "application_form": {
+          "title": "VIDEX aanvraagformulier",
+          "desc": "videx-national.diplo.de, afgedrukt, twee keer ondertekend.",
+          "tip": "Geef \"Berufsausbildung\" aan als visumdoel. Gebruik nieuwste VIDEX (2024+)."
+        },
+        "declaration_truth": {
+          "title": "Verklaring van waarheid (§54 AufenthG)",
+          "desc": "Ondertekende verklaring dat dossierinformatie correct is.",
+          "tip": "Liegen = permanent Schengen-verbod."
+        },
+        "professional_recognition": {
+          "title": "Erkenning van beroepskwalificatie (indien van toepassing)",
+          "desc": "Voor gereglementeerde beroepen (bijv. verpleging, elektricien), is Anerkennung van de Anerkennungsbescheid nodig voor of tijdens de Ausbildung.",
+          "tip": "De meeste eenvoudige Ausbildungen hebben dit niet nodig. Gezondheidszorg: ja, vraag aan via de Anerkennung-Finder website."
+        }
+      },
+      "costs": {
+        "visa_fee": {
+          "label": "Visumtarief (consulaat)"
+        },
+        "language_courses": {
+          "label": "Duitse B1 cursussen (12 maanden)"
+        },
+        "language_test": {
+          "label": "Goethe B1 / telc B1"
+        },
+        "sperrkonto_block": {
+          "label": "Sperrkonto (~6.000 € — 3 maanden dekking, optioneel als Verpflichtungserklärung)"
+        },
+        "health_insurance": {
+          "label": "Reisverzekering (3 maanden)"
+        },
+        "apostille_total": {
+          "label": "Apostille/legalisatie voor ~5 documenten"
+        },
+        "sworn_translation": {
+          "label": "Beëdigde vertalingen (~8–10 pagina's)"
+        },
+        "tls_service_fee": {
+          "label": "Visumcentrum servicetarief"
+        },
+        "photos": {
+          "label": "Biometrische foto's (2)"
+        },
+        "passport": {
+          "label": "Nieuw paspoort (indien nodig)"
+        }
+      },
+      "rejections": {
+        "weak_finances": {
+          "title": "Financieel bewijs voor de tussenperiode voor eerste betaling",
+          "desc": "Geen Sperrkonto, geen Verpflichtungserklärung, en Ausbildung salaris alleen geeft geen zekerheid voor de eerste 1–3 maanden.",
+          "fix": "Sperrkonto met 6.000 € OF Verpflichtungserklärung van een in Duitsland woonachtig familielid OF een werkgeversbrief die een salarisbijdrage bevestigt."
+        },
+        "language_below": {
+          "title": "Duits onder B1",
+          "desc": "A2 meebrengen naar een B1-vereiste Ausbildung. Automatische afwijzing (of voorwaardelijk).",
+          "fix": "Doe B1 opnieuw bij Goethe — 6 sessies per jaar. Als je afspraak dichtbij is, stel uit — beter dan een \"taal onvoldoende\" stempel."
+        },
+        "contract_doubts": {
+          "title": "Twijfels over het Ausbildung contract",
+          "desc": "Contract niet geregistreerd bij IHK/Hwk, salaris onder tarief (minder dan €730 in 2026), werkgever niet eerder bekend bij BA-ZAV.",
+          "fix": "Controleer of je contract IHK/Hwk-geregistreerd is. Als salaris onder tarief is, vraag je werkgever het op te lossen. Gerenommeerde werkgevers kennen het proces."
+        },
+        "doubt_return": {
+          "title": "Twijfel dat kandidaat illegaal wil blijven",
+          "desc": "Triggers: zwakke familiebanden, leeftijd buiten Ausbildung norm (35+), motivatiebrief zegt \"Ik wil voor altijd in Duitsland blijven\".",
+          "fix": "Herformuleer motivatie als \"Ik wil dit beroep leren, dan evalueren\". Vermeld familiebanden thuis. Verberg het plan na Ausbildung niet."
+        },
+        "fake_documents": {
+          "title": "Valse/gewijzigde documenten",
+          "desc": "Valse werkgeversattest, valse bankafschriften, valse schooldiploma's.",
+          "fix": "Nooit. Schengen-breed verbod."
+        },
+        "incomplete_file": {
+          "title": "Onvolledig of ongeordend dossier",
+          "desc": "1 document ontbreekt, of fotokopieën in plaats van originelen.",
+          "fix": "Gebruik de exacte checklist van het visumcentrum. Tabbladen verdelen."
+        },
+        "apostille_missing": {
+          "title": "Documenten niet geverifieerd of niet correct vertaald",
+          "desc": "Diploma zonder apostille/legalisatie, of niet-beëdigde vertaling.",
+          "fix": "Authenticeer via de bevoegde autoriteit van jouw land (apostille of consulaire legalisatie). Alleen beëdigde vertaler."
+        },
+        "school_diploma": {
+          "title": "Onvoldoende schooldiploma",
+          "desc": "Voor sommige Ausbildungen geen Bac en geen Brevet aangetoond.",
+          "fix": "Zelfs gedeeltelijk onderwijs telt. Geef wat je hebt. CAP/BTS voor technische Ausbildungen wordt vaak zelfs beter gewaardeerd."
+        }
+      }
+    }
+  },
+  "saves": {
+    "save": "Opslaan",
+    "saved": "Opgeslagen",
+    "unsave": "Opgeslagen — klik om te verwijderen"
+  },
+  "bookConsult": {
+    "cta": "Boek een consultatie",
+    "price": "€{price} · {duration} min"
+  },
+  "relatedTools": {
+    "title": "Dit heb je misschien ook nodig",
+    "subtitle": "Andere gratis tools die goed bij deze passen."
+  },
+  "applyForYouCta": {
+    "badge": "✨ Apply For Me service",
+    "title": "Geen tijd voor sollicitaties? Wij doen het voor je.",
+    "subtitle": "Onze specialist verzorgt het volledige dossier: CV in het Duits, aangepaste Anschreiben voor elke werkgever, vervolgacties. Boek een gesprek om te beginnen."
+  },
+  "pathConsultCta": {
+    "planTag": "Plan je stappen",
+    "planTitle": "Zet je verhuizing uit met een specialist",
+    "planSub": "45 minuten één-op-één. We bepalen je exacte volgende stappen — geschiktheid, documenten, taalniveau, timing — en beantwoorden elke vraag in jouw taal.",
+    "applyTag": "✨ Volledig verzorgd",
+    "applyTitle": "Laat ons de aanvraag afhandelen",
+    "applySub": "60 minuten om de werkzaamheden in kaart te brengen. We voeren vervolgens je volledige aanvraag uit: CV in het Duits, aangepaste Anschreiben per werkgever of motivatiebrief per universiteit, vervolgstappen."
+  },
+  "migrationTimeline": {
+    "seoSection": {
+      "title": "Hoe lang duurt het echt om naar Duitsland te verhuizen?",
+      "intro": "Een realistische maand-voor-maand migratietijdlijn naar Duitsland, afgestemd op uw startpunt: huidige Duitse niveau, doelroute (Ausbildung of Studium), en hoeveel uur per week u kunt studeren. De meeste kandidaten onderschatten de taaffase met 6 tot 12 maanden — deze tool laat zien wat werkelijk haalbaar is. Duitse ambassades geven momenteel Ausbildung-visa's af in ongeveer 6 tot 12 weken; de rest van de tijdlijn bestaat vooral uit taalonderwijs en documentverzameling.\n\nDe uitvoer toont een gepersonaliseerd week-voor-week plan: wanneer u de taalcursus start, wanneer u uw B1- of B2-examen aflegt, wanneer u begint met Ausbildung- of universiteitsaanvragen, wanneer u een Sperrkonto opent, en wanneer u de consulaatafspraak boekt. Het geeft de meest voorkomende knelpunten aan (Goethe-examenslots die 2 maanden van tevoren volraken, ZAB-verwerkingstijd van 8 weken, Anmeldung-wachtlijsten in grote steden) zodat u eromheen kunt plannen. Gebruik het 6 tot 18 maanden voor uw geplande vertrekdatum om realistische mijlpalen in te stellen — en om te weten wanneer elk stuk papierwerk werkelijk moet beginnen.",
+      "faqTitle": "Veelgestelde vragen over de tijdlijn",
+      "faqs": [
+        {
+          "q": "Wat is een realistische tijdlijn als ik helemaal geen Duits spreek?",
+          "a": "12 tot 18 maanden voor Ausbildung (u hebt B1 nodig), 18 tot 24 maanden voor Studium (u hebt B2 of C1 nodig). Sneller is alleen mogelijk als u 20+ uur per week kunt studeren met een gestructureerde cursus."
+        },
+        {
+          "q": "Kan ik een Ausbildung in het Engels doen?",
+          "a": "Bijna nooit. Meer dan 95% van de Ausbildung-programma's worden in het Duits gegeven. De uitzonderingen zijn enkele IT- en horecaprogramma's in Berlijn en Hamburg, en zij accepteren zelden kandidaten zonder minstens B1 Duits."
+        },
+        {
+          "q": "Wanneer moet ik het Sperrkonto openen?",
+          "a": "Ongeveer 2 tot 3 maanden voor uw consulaatafspraak. Eerder bindt geld vast zonder reden; later riskeert het visumaanvraagdeadline te missen."
+        }
+      ]
+    },
+    "metaTitle": "Duitsland Migratietijdlijn Calculator",
+    "metaDesc": "Schat hoe lang het duurt om naar Duitsland te verhuizen voor Ausbildung of Studium — fase voor fase, gebaseerd op echte BAMF- en DAAD-tijdlijnen.",
+    "eyebrow": "Planning · tijdlijn",
+    "title": "Duitsland Migratietijdlijn Calculator",
+    "subtitle": "Schat uw volledige tijdlijn naar Duitsland — Duitse taalvaardigheid, aanvraag, visum en verhuizing — gebaseerd op echte 2026 BAMF / DAAD-cijfers.",
+    "formTitle": "Uw migratieprofielprofiel",
+    "pathLabel": "Route",
+    "levelLabel": "Huidiging Duitse niveau",
+    "levelHint": "Doel voor deze route: {target}.",
+    "intensityLabel": "Leerintensiteit",
+    "educationLabel": "Onderwijsniveau",
+    "vorabLabel": "Ik heb Vorab-goedkeuring (Voorgoedkeuring)",
+    "vorabHint": "Vermindert visumverwerking van ~8 maanden tot ~2 maanden.",
+    "months": "maanden",
+    "mo": "mnd",
+    "fast": "Snel",
+    "average": "Gemiddeld",
+    "slow": "Langzaam",
+    "resultEyebrow": "Geschatte totale tijdlijn",
+    "avgScenario": "Gemiddeld scenario: {n} maanden",
+    "phasesTitle": "Faseverdeling",
+    "insightsTitle": "Wat vertraagt u",
+    "tipsTitle": "Hoe u uw tijdlijn kunt verkorten",
+    "ctaTitle": "Wilt u een sneller pad?",
+    "ctaSub": "Boek een 30-minuten consult met een Duitse immigratiespecialist. We kaarten uw exacte volgende stappen in kaart en verwijderen de knelpunten die uw tijdlijn vertragen.",
+    "ctaButton": "Boek een 30-min consult",
+    "path": {
+      "ausbildung": {
+        "name": "Ausbildung",
+        "sub": "Beroepsopleiding",
+        "target": "B1"
+      },
+      "studium": {
+        "name": "Studium",
+        "sub": "Universitaire studies",
+        "target": "B2"
+      }
+    },
+    "intensity": {
+      "slow": {
+        "name": "Langzaam",
+        "sub": "4–6 u/week"
+      },
+      "normal": {
+        "name": "Normaal",
+        "sub": "8–12 u/week"
+      },
+      "intensive": {
+        "name": "Intensief",
+        "sub": "20+ u/week"
+      }
+    },
+    "education": {
+      "bac": "Baccalaureaat",
+      "university": "Universitaire graad",
+      "other": "Overig"
+    },
+    "phase": {
+      "german": "Duitse taalvaardigheid",
+      "application": "Aanvraag",
+      "visa": "Visumverwerking",
+      "relocation": "Verhuizing"
+    },
+    "insights": {
+      "lowGerman": "Laag Duitse niveau — taal is de langste enkele fase.",
+      "noVorab": "Zonder Vorab-goedkeuring duurt visumverwerking 6–10 maanden in plaats van 2–3.",
+      "slowPace": "Een langzaam leertempo voegt 30% toe aan de Duitse fase.",
+      "studyDocs": "Studium vereist APS, Uni-Assist en gevalideerde APS-documenten — papierwerk is dichter dan Ausbildung."
+    },
+    "tips": {
+      "intensiveCourse": "Volg een intensieve Duitse cursus (Goethe / DSH-Kurs / online) — 4 uur per dag scheelt maanden in Fase 1.",
+      "getVorab": "Vraag uw toekomstige werkgever om Vorab-goedkeuring in het contractstadium. Sla 6 maanden visumwacht over.",
+      "switchPace": "Ga naar minstens normaal tempo (8–12 u/week) — grootste enkele hefboom op totale tijdlijn.",
+      "uniAssistEarly": "Dien in bij Uni-Assist 6+ maanden voor het semester. Vermijd de lente-deadline-drukte.",
+      "startDocs": "Begin nu met het verzamelen van documenten (gelegaliseerd diploma, paspoort, bankafschrift) — ze verlopen en heruitgifte is traag.",
+      "bookConsult": "Boek een consult met een specialist (€20): een gepersonaliseerde checklist verwijdert onduidelijkheid en scheelt verspilde weken."
+    }
+  },
+  "livingCost": {
+    "seoSection": {
+      "title": "Realistische maandelijkse kosten voor leven in Duitsland — per stad",
+      "intro": "Een realistisch maandelijks budget voor leven in Duitsland als internationale student, leerling of werknemer — uitgesplitst per stad. De calculator houdt rekening met huisvesting (WG, studio, studentenhuis), verzekeringen (TK, AOK, Mawista), voeding, vervoer (Deutschlandticket €58/maand), telefoonabonnement en uitgaven voor vrije tijd. De cijfers zijn gebaseerd op werkelijke prijzen van 2026 in 30 Duitse steden, van München (duurste) tot Chemnitz (goedkoopste), zodat je steden kunt vergelijken voordat je besluit waar je wilt studeren of trainen.\n\nGebruik het om een Sperrkonto-doel in te stellen (het minimum voor 2026 is €11.904/jaar, maar veel steden kosten meer), om salarisverwachtingen voor Ausbildung te onderhandelen (de meeste Ausbildung betaalt €900 tot €1.300 per maand — prima in Leipzig, krap in Frankfurt), en om te plannen of je een bijbaantje nodig hebt. De calculator schat ook eenmalige inrichtingskosten (borg, eerste maand huur, huishoudelijke spullen) die nieuwkomers meestal vergeten — meestal €2.500 tot €4.500 bovenop de Sperrkonto-storting.",
+      "faqTitle": "Veelgestelde vragen over kosten voor leven in Duitsland",
+      "faqs": [
+        {
+          "q": "Is de Sperrkonto genoeg om van te leven?",
+          "a": "In goedkopere steden zoals Leipzig of Dresden, ja — €11.904 per jaar ÷ 12 = €992 per maand, genoeg voor leven op studentenniveau. In München of Frankfurt heb je een bijbaantje nodig. Minijobs tot €538/maand zijn belastingvrij en visum-conform voor zowel Ausbildung-leerlingen als studenten."
+        },
+        {
+          "q": "Hoe nauwkeurig zijn de huurramen?",
+          "a": "Ze weerspiegelen 2026-medianen op ImmoScout24 en WG-Gesucht voor elke stad. Werkelijke huur varieert met ±20% afhankelijk van buurt, leeftijd van het appartement en of je een particuliere verhuurder of vastgoedmaatschappij vindt."
+        },
+        {
+          "q": "Bevat het budget ziektekostenverzekering?",
+          "a": "Ja. Publieke verzekering (TK, AOK) voor studenten is ongeveer €120/maand; voor Ausbildung-leerlingen wordt het van het salaris afgetrokken. Particuliere reisverzekering (Mawista, Care Concept) voor de visumaanvraagfase is €30 tot €60/maand."
+        }
+      ]
+    },
+    "metaTitle": "Levenskosten Calculator — Schat maandelijkse kosten in Duitsland",
+    "metaDesc": "Schat je maandelijkse levenskosten als Ausbildung-leerling in 15 Duitse steden — huur, voeding, vervoer, verzekering en meer.",
+    "eyebrow": "Financiële planning",
+    "title": "Levenskosten Calculator",
+    "subtitle": "Schat je maandelijkse uitgaven in 15 Duitse steden. Vergelijk huur, voeding, vervoer en verzekering met je Ausbildung-stipendium.",
+    "badgeOfficial": "Cijfers 2026",
+    "badgeDestatis": "DAAD + Destatis",
+    "badgeFree": "Gratis",
+    "formTitle": "Vertel ons over jezelf",
+    "cityLabel": "Duitse stad",
+    "accommodationLabel": "Type huisvesting",
+    "lifestyleLabel": "Levensstijl",
+    "sectorLabel": "Ausbildung-sector",
+    "stipendLabel": "Maandelijks stipendium",
+    "stipendHint": "Je verwachte maandelijks Ausbildung-salaris. Automatisch ingevuld op basis van je sector — je kunt het aanpassen.",
+    "perMonth": "maand",
+    "partnerLabel": "Partner of onderhoudsgerechtigde",
+    "partnerHint": "Inclusief een partner die huisvesting deelt. Voegt ongeveer {pct}% toe aan totale maandelijkse kosten.",
+    "resultEyebrow": "Geschatte maandelijkse kosten",
+    "resultSubtitle": "Voor een typische Ausbildung-leerling die in {city} woont",
+    "stipendShort": "Stipendium",
+    "costsShort": "Levenskosten",
+    "surplus": "Overschot",
+    "deficit": "Tekort",
+    "surplusHint": "Je stipendium dekt je maandelijkse kosten met geld over voor sparen of extra's.",
+    "deficitHint": "Je hebt mogelijk een bijbaantje nodig (tot 20u/week is toegestaan tijdens Ausbildung) of steun van familie om dit gat te dichten.",
+    "breakdownTitle": "Waar het geld heen gaat",
+    "infoTitle": "Goed om te weten",
+    "infoSetup": "Inrichtingskosten voor de eerste maand (borg, registratie, basisbenodigdheden) voegen meestal €2.500–4.500 toe aan de maandelijkse cijfers hier.",
+    "infoEstimate": "Dit zijn 2026-schattingen op basis van openbare DAAD- en Destatis-gegevens. Werkelijke kosten variëren per buurt en persoonlijke gewoonten.",
+    "tier": {
+      "1": "Tier 1 · duurste",
+      "2": "Tier 2 · hoog",
+      "3": "Tier 3 · gemiddeld",
+      "4": "Tier 4 · meest betaalbaar"
+    },
+    "city": {
+      "munich": "München",
+      "frankfurt": "Frankfurt",
+      "hamburg": "Hamburg",
+      "stuttgart": "Stuttgart",
+      "dusseldorf": "Düsseldorf",
+      "cologne": "Keulen",
+      "berlin": "Berlijn",
+      "hannover": "Hannover",
+      "bremen": "Bremen",
+      "nuremberg": "Neurenberg",
+      "dortmund": "Dortmund",
+      "leipzig": "Leipzig",
+      "dresden": "Dresden",
+      "bochum": "Bochum",
+      "chemnitz": "Chemnitz"
+    },
+    "accommodation": {
+      "dormitory": {
+        "name": "Studentenhuis",
+        "hint": "Goedkoopste optie, maar wachtlijsten in populaire steden kunnen 6–12 maanden zijn."
+      },
+      "shared": {
+        "name": "Gedeeld (WG)",
+        "hint": "Meest populair onder leerlingen — betaalbaar, sociaal, flexibel."
+      },
+      "studio": {
+        "name": "Studio",
+        "hint": "Privéruimte; verwacht hogere huur en een borg van 1–3 maanden."
+      },
+      "apartment": {
+        "name": "1-kamer appartement",
+        "hint": "Meeste ruimte en privacy — ook de hoogste maandelijkse huur."
+      }
+    },
+    "lifestyle": {
+      "budget": {
+        "name": "Budget",
+        "sub": "~€{food}/mnd voeding"
+      },
+      "moderate": {
+        "name": "Gemiddeld",
+        "sub": "~€{food}/mnd voeding"
+      },
+      "comfortable": {
+        "name": "Comfortabel",
+        "sub": "~€{food}/mnd voeding"
+      }
+    },
+    "sector": {
+      "healthcare": "Gezondheidszorg",
+      "it": "IT",
+      "engineering": "Techniek",
+      "automotive": "Automobiel",
+      "handwerk": "Bouw & ambachten",
+      "hospitality": "Horeca",
+      "retail": "Detailhandel",
+      "education": "Onderwijs",
+      "media": "Media",
+      "public_service": "Openbare dienst",
+      "finance": "Financiën",
+      "logistics": "Logistiek"
+    },
+    "category": {
+      "rent": "Huur",
+      "food": "Voeding & boodschappen",
+      "transport": "Vervoer",
+      "utilities": "Nutsvoorzieningen & internet",
+      "insurance": "Ziektekostenverzekering",
+      "entertainment": "Vermaak & overig"
+    },
+    "faqTitle": "Veelgestelde vragen",
+    "faqs": [
+      {
+        "q": "Hoeveel kost het om in Duitsland te leven als Ausbildung-leerling in 2026?",
+        "a": "Levenskosten voor Ausbildung-leerlingen in Duitsland in 2026 variëren meestal van €800 tot €2.200 per maand, afhankelijk van de stad en levensstijl. In betaalbare steden zoals Leipzig, Dresden of Chemnitz kun je comfortabel leven van €900–1.300/maand. In dure steden zoals München, Frankfurt en Hamburg verwacht je €1.600–2.200/maand. De meeste leerlingen verdienen €900–1.300/maand, wat basiskosten in gemiddelde steden en de meeste goedkopere steden volledig dekt."
+      },
+      {
+        "q": "Welke Duitse steden zijn het meest betaalbaar voor Ausbildung-leerlingen?",
+        "a": "De meest betaalbare Duitse steden voor Ausbildung zijn Chemnitz (€780–1.180/maand), Bochum (€800–1.200), Dresden (€850–1.250), Leipzig (€900–1.300) en Erfurt (€850–1.280). Tier-4-steden hebben huren voor gedeelde appartementen rond €290–520 versus €500–800 in München, plus goedkopere voeding en vervoer. Ondanks lagere kosten hebben ze sterke Ausbildung-pijplijnen in gezondheidszorg, IT, productie en techniek — betaalbaarheid betekent niet minder kansen."
+      },
+      {
+        "q": "Kan ik van mijn Ausbildung-stipendium alleen leven zonder extra inkomsten?",
+        "a": "Dat hangt af van de stad en levensstijl. In betaalbare steden (Leipzig, Dresden, Chemnitz, Bochum) dekt een stipendium van €1.000–1.200/maand basiskosten comfortabel. In gemiddelde steden (Berlijn, Hannover) werkt voorzichtig budgetteren. In dure steden (München, Frankfurt, Hamburg) kan het stipendium alleen een maandelijks tekort van €200–400 achterlaten. Veel leerlingen nemen een bijbaantje — tot 20 uur per week is toegestaan tijdens Ausbildung tegen €12–15/uur, wat €400–600/maand oplevert."
+      },
+      {
+        "q": "Hoe verschillen levenskosten tussen München en Leipzig?",
+        "a": "München is ongeveer 50–80% duurder dan Leipzig. Gedeelde appartementen in München kosten €500–800 versus €330–520 in Leipzig. Totale maandelijkse kosten variëren van €1.600–2.200 in München versus €900–1.300 in Leipzig. Huur is €300–400 hoger in München, voeding kost 15–20% meer, en overige uitgaven zijn 30–40% hoger. München betaalt wel hogere Ausbildung-stipendia (€1.200–1.500 versus €900–1.100), wat het gat gedeeltelijk opvult."
+      },
+      {
+        "q": "Is studentenhuisvesting (studentenhuis) goedkoper dan particuliere appartementen in Duitsland?",
+        "a": "Ja — studentenhuizen kosten €180–500/maand versus €500–1.500 voor particuliere studio's of €300–800 voor gedeelde appartementen. Studentenhuizen bevatten meestal nutsvoorzieningen, internet en soms meubels. Het nadeel: wachtlijsten zijn 6–12 maanden in populaire steden. Gedeelde appartementen (WG — Wohngemeinschaft) zijn de populaire middenweg tegen €300–600/maand, balancerend tussen betaalbaarheid, privacy en sociale interactie."
+      },
+      {
+        "q": "Wat zijn typische voedingskosten voor Ausbildung-leerlingen in Duitsland in 2026?",
+        "a": "Voedingskosten variëren van €125 tot €450/maand op basis van levensstijl. Budget (thuis koken, Aldi/Lidl): €125–220. Gemiddeld (mix van koken en af en toe uit eten): €175–320. Comfortabel (regelmatig uit eten, premium boodschappen): €255–450. Bespaar door te eten in student-Mensas (€2,50–5/maaltijd), winkelen bij discountsupermarkten, Too Good To Go gebruiken voor gereduceerde restjes en in batches koken."
+      },
+      {
+        "q": "Kan ik deeltijds werken tijdens Ausbildung om extra levenskosten te dekken?",
+        "a": "Ja — Ausbildung-leerlingen kunnen tot 20 uur per week werken (of 120 volledige dagen/jaar) zonder de visum-status te beïnvloeden. Typische lonen zijn €12–15/uur (minimumloon is €12,82 in 2026), wat €400–600/maand extra oplevert. Populaire opties: weekendshifts in verzorgingstehuizen (€15–18/uur), detailhandel of horeca (€12–14/uur), tutoring (€15–25/uur), bezorging (€13–16/uur). Controleer altijd je Ausbildung-contract — sommige werkgevers beperken buitenwerk tijdens training."
+      },
+      {
+        "q": "Welke initiële kosten moet ik voor mijn eerste maand in Duitsland inplannen?",
+        "a": "Plan voor €2.500–4.500 eenmalige inrichtingskosten bovenop je maandelijks budget. Uitsplitsing: borg (3 maanden huur: €900–2.400), eerste maand huur (€300–800), Anmeldung (€30–50), activering ziektekostenverzekering (€120), verblijfsvergunning (€100), beddengoed & keukengerei (€200–400), winterkleding (€150–300), Duitse SIM (€10–30), fiets of vervoerpas (€30–100), plus een €300–500 noodbuffer."
+      },
+      {
+        "q": "Hoeveel moet ik sparen voordat ik naar Duitsland kom voor Ausbildung?",
+        "a": "Streef naar €3.000–5.500 spaargeld voor aankomst: €2.500–4.500 voor inrichtingskosten eerste maand (borg, registratie, activering ziektekostenverzekering, basismeubels, winterkleding) plus een €500–1.000 noodbuffer. Dit draagt je door je eerste 2–3 maanden terwijl je je installeert, permanente huisvesting zoekt en wacht op je eerste Ausbildung-stipendium (betaald aan maandeinde). Spaar indien mogelijk nog €1.000–2.000 extra voor aanpassingsflexibiliteit."
+      }
+    ],
+    "relatedTitle": "Gerelateerde tools die je misschien nodig hebt",
+    "relatedSub": "Zet je Ausbildung-reis voort met deze handige tools.",
+    "related": {
+      "cv": {
+        "name": "CV Builder",
+        "desc": "Bouw een Duitse Lebenslauf met AI-ondersteuning."
+      },
+      "anschreiben": {
+        "name": "Anschreiben Generator",
+        "desc": "Schrijf in minuten een op maat gemaakte sollicitatiebrief."
+      },
+      "jobs": {
+        "name": "Ausbildung Jobs",
+        "desc": "Blader door 1.000+ open Ausbildung-posities in 12 sectoren."
+      }
+    }
+  },
+  "interviewPrep": {
+    "eyebrow": "Voorbereiding op interview",
+    "title": "Beheers je Duitse Ausbildung interview",
+    "subtitle": "15 van de meest gestelde vragen, met voorbeeldantwoorden in het Duits plus de \"waarom wordt dit gevraagd\" en wat je moet zeggen (en vermijden).",
+    "badgeQuestions": "{n} vragen",
+    "badgeAnswers": "Voorbeeldantwoorden in het Duits",
+    "badgeGerman": "B1–B2 niveau",
+    "badgeFreePreview": "{n} gratis, rest na inloggen",
+    "allFilter": "Alles",
+    "showWhy": "Waarom wordt dit gevraagd?",
+    "hideWhy": "Verbergen",
+    "revealAnswer": "Klik om het antwoord te onthullen",
+    "hideAnswer": "Verbergen",
+    "sampleAnswerLabel": "Voorbeeldantwoord",
+    "doSayLabel": "Zeg dit",
+    "dontSayLabel": "Zeg dit niet",
+    "lockedTitle": "Log in om de rest te ontgrendelen",
+    "lockedBody": "De eerste 3 vragen zijn gratis. Maak een gratis account aan om toegang te krijgen tot alle 15 vragen, voorbeeldantwoorden en tips.",
+    "lockedCta": "Inloggen / Registreren",
+    "ctaTitle": "Wil je een persoonlijk oefeninterview?",
+    "ctaSub": "Boek een 1-uur durend consult. We voeren een echte Vorstellungsgespräch in het Duits, geven je een score en concrete verbeterpunten — €20.",
+    "category": {
+      "intro": "Introductie",
+      "motivation": "Motivatie",
+      "strengths": "Sterke punten",
+      "experience": "Ervaring",
+      "workplace": "Werkplek",
+      "goals": "Doelen",
+      "logistics": "Logistiek",
+      "closing": "Afsluiting"
+    },
+    "difficulty": {
+      "1": "Makkelijk",
+      "2": "Gemiddeld",
+      "3": "Lastig"
+    },
+    "questions": {
+      "tell_about_yourself": {
+        "translation": "Vertel me iets over jezelf.",
+        "why": "De openingsvraag. Recruiters gebruiken dit om je Duitse vloeiendheid, structuur en zelfvertrouwen in 60–90 seconden in te schatten.",
+        "doSay": "Houd je aan een 3-delige structuur: wie je bent (naam, leeftijd, waar je vandaan komt) → wat je biedt (Abitur, Duitsniveau, motivatie) → waarom deze Ausbildung. Blijf onder de 90 seconden.",
+        "dontSay": "Reciteer niet je hele Lebenslauf. Praat niet meer dan één zin over hobby's. Noem geen salaris, vakantie of familieproblemen."
+      },
+      "why_us": {
+        "translation": "Waarom heb je je bij ons aangemeld?",
+        "why": "Test of je het bedrijf hebt onderzocht. Het verkeerde antwoord (\"jullie hebben een goede reputatie\") signaleert een copy-paste sollicitatie.",
+        "doSay": "Noem 2 specifieke dingen van hun website / pers / LinkedIn — een productlijn, trainingsprogramma, locatie, recent project. Verbind dit met je doelen.",
+        "dontSay": "Zeg niet \"ik heb gewoon een Ausbildung nodig\". Kritiseer geen concurrenten. Pretendeeer niet dingen te weten die je niet weet — onderzoek voordat je belt."
+      },
+      "why_germany": {
+        "translation": "Waarom wil je naar Duitsland?",
+        "why": "Test of je motivatie echt en projectgebaseerd is — of Duitsland slechts een \"uitweg\" uit je thuisland is. Recruiters verwerpen kandidaten die klinken alsof ze vertrekken zodra ze het visum hebben.",
+        "doSay": "Geef 3 redenen: het duale trainingsysteem, sectorbehoefte & baanzekerheid, de werkculuur (precisie, stiptheid). Frame het als een carrièreproject, niet als een vlucht.",
+        "dontSay": "Noem geen geld, weer of \"Europa is beter\". Kritiseer je thuisland niet. Maak het niet klinken als een tijdelijk plan."
+      },
+      "strengths_weaknesses": {
+        "translation": "Wat zijn je sterke punten en zwakke punten?",
+        "why": "Klassieke valstrik. Sterke punten moeten relevant zijn, zwakke punten moeten echt maar verbeterbaar zijn — nep-bescheidenheid (\"ik werk te hard\") wordt direct doorzien.",
+        "doSay": "Kies 1–2 sterke punten gekoppeld aan de baan (betrouwbaarheid, leercapaciteit, talen). Voor zwakheid: kies een echte, leg dan uit hoe je deze actief beheert.",
+        "dontSay": "Zeg niet dat je geen zwakke punten hebt. Claim niet \"perfectionism\" — het is het meest overgebruikte nep-antwoord. Onthul geen dealbreaker (bijv. slecht met deadlines)."
+      },
+      "mistake": {
+        "translation": "Vertel me over een fout die je hebt gemaakt.",
+        "why": "Test eerlijkheid, zelfbewustzijn en leervermogen. Het verkeerde antwoord (\"ik maak nooit fouten\") is een instant disqualificatie.",
+        "doSay": "Kies een echte, laagrisico fout. Gebruik de structuur: wat gebeurde → wat ik deed om het op te lossen → wat ik leerde en nu anders doe.",
+        "dontSay": "Zeg niet dat je nooit fouten maakt. Blaam anderen niet. Kies niet iets catastrofaals (verloor een grote klant) of iets triviaals (vergat de printer bij te vullen)."
+      },
+      "what_sets_you_apart": {
+        "translation": "Wat onderscheidt je van andere kandidaten?",
+        "why": "Je verkoopargument. Andere internationale kandidaten hebben vergelijkbare profielen — wat is jouw voordeel?",
+        "doSay": "Kies 3 concrete onderscheidingsfactoren: talen (AR/FR/DE), onafhankelijkheid (organiseerde je eigen verhuizing), bewuste carrièrekeuze. Wees specifiek, niet generiek.",
+        "dontSay": "Zeg niet \"ik ben gemotiveerd en hardwerkend\" — elke kandidaat zegt dat. Kritiseer andere kandidaten niet. Noem niet 10 kwaliteiten — kies 3."
+      },
+      "stress": {
+        "translation": "Hoe ga je met stress om?",
+        "why": "Test je werkstijl onder druk. Ze willen weten of je het redt wanneer een Ausbildung deadline botst met het Berufsschule examen.",
+        "doSay": "Beschrijf een methode: prioriteiten stellen → één taak tegelijk aanpakken → vroeg communiceren als een deadline verschuift. Frame stress als een signaal, niet als een probleem.",
+        "dontSay": "Zeg niet \"ik word niet gestrest\" — onrealistisch. Beschrijf niet paniek, hele nachten werken of pauzes overslaan. Blaam de werkbelasting niet."
+      },
+      "criticism": {
+        "translation": "Hoe reageer je op kritiek?",
+        "why": "Test leerbaarheid — de belangrijkste eigenschap in een Auszubildender. Ze willen een leerling, niet iemand die tegensputtert.",
+        "doSay": "Beschrijf een proces: luisteren → verduidelijkingsvragen stellen → concrete vervolgstappen identificeren. Toon dat je het bericht van de boodschapper scheidt.",
+        "dontSay": "Zeg niet \"kritiek raakt me niet\" — klinkt defensief. Beschrijf niet tegensputterings. Klaag niet over een vorige baas."
+      },
+      "team_or_alone": {
+        "translation": "Werk je liever alleen of in een team?",
+        "why": "Test fit. De meeste Ausbildung rollen zijn teamintensief, maar Berufsschule en examvoorbereiding zijn solo. Ze willen iemand die beide kan.",
+        "doSay": "Zeg \"beide, afhankelijk van de taak\". Geef één voorbeeld van elk: team voor gezamenlijk leren, solo voor gefocuste uitvoering. Toon zelfbewustzijn.",
+        "dontSay": "Kies niet slechts één. Zeg niet \"ik ben een eenling\". Zeg niet \"ik hou ervan in teams te werken\" zonder uit te leggen wanneer solo werk ook belangrijk is."
+      },
+      "overtime": {
+        "translation": "Zou je bereid zijn in het weekend of meer dan 40 uur per week te werken?",
+        "why": "Een loyaliteitstest, maar ook een juridische valstrik. Duitse Ausbildung wet beperkt je uren — \"ja altijd\" zeggen klinkt naïef, \"nee nooit\" klinkt lui.",
+        "doSay": "Ja wanneer er een piekbelasting is of het team het nodig heeft. Maar ook opmerken: chronische overuren signaleren meestal een organisatieprobleem dat samen opgelost moet worden.",
+        "dontSay": "Zeg niet \"absoluut wanneer dan ook\". Citeer juridische limieten niet agressief (de §17 BBiG). Klaag niet over salaris."
+      },
+      "five_years": {
+        "translation": "Waar zie je jezelf over vijf jaar?",
+        "why": "Test planningsvermogen en loyaliteit. Ze willen weten of je na de Ausbildung blijft — een Azubi vervangen is duur.",
+        "doSay": "Ausbildung afgerond, 1–2 jaar praktijk bij voorkeur bij hen, gespecialiseerd in [concreet gebied], mogelijk Meister/Techniker/Fachwirt. Verankering je toekomst bij het bedrijf.",
+        "dontSay": "Noem niet dat je naar huis gaat. Noem niet van bedrijf wisselen. Zeg niet \"ik weet het niet\" of \"zelfstandig\" — beide signaleren vluchtrisico."
+      },
+      "why_this_field": {
+        "translation": "Waarom heb je dit vak gekozen?",
+        "why": "Test authenticiteit. Willekeurige Ausbildung keuzes (\"het was beschikbaar\") worden afgewezen — ze willen een verhaal dat toont dat je het beroep begrijpt.",
+        "doSay": "Drie lagen: een persoonlijk verhaal of ervaring → onderzoek dat je deed (LinkedIn, YouTube, blogs) → de stabiliteit van de sector. Toon echt interesse.",
+        "dontSay": "Zeg niet \"voor het visum\". Zeg niet \"ik had geen ander keuze\". Noem niet willekeurige redenen — vertel een samenhangend verhaal."
+      },
+      "salary": {
+        "translation": "Wat zijn je salarisverwachtingen?",
+        "why": "Een valstrik — een getal noemen dat te hoog is krijgt je afgewezen, te laag signaleert gebrek aan eigenwaarde. Voor Ausbildung is het antwoord meestal vastgesteld door tarief.",
+        "doSay": "Voor Ausbildung: accepteer het tariefsalaris. Stel dat je typische jaar-1 bereiken hebt gezien (€800–1200 brutto afhankelijk van sector) en prioriteer trainskwaliteit.",
+        "dontSay": "Noem geen hoog getal. Pretendeeer niet dat geld niet uitmaakt. Vraag niet naar salaris in de eerste 30 minuten van het interview."
+      },
+      "relocate": {
+        "translation": "Ben je bereid te verhuizen?",
+        "why": "Makkelijke vraag, maar test praktische gereedheid. Ze willen horen dat je al hebt nagedacht over huisvesting, vervoer en levenskosten.",
+        "doSay": "Ja — verhuizing is onderdeel van het plan. Noem dat je de stad al hebt onderzocht (wijken, vervoer, kosten). Toon flexibiliteit.",
+        "dontSay": "Zeg niet \"alleen als ik dicht bij mijn familie kan blijven\". Aarzel niet. Vraag niet of het bedrijf helpt met huisvesting in hetzelfde antwoord."
+      },
+      "questions_for_us": {
+        "translation": "Heb je vragen voor ons?",
+        "why": "De meest onderschatte vraag. \"Nee, geen\" signaleert gebrek aan voorbereiding en interesse. Gebruik dit om onderzoek en fit aan te tonen.",
+        "doSay": "Heb 3 vragen klaar: over een typische eerste maand, de kwaliteiten van succesvolle vorige Auszubildende, de behoudingspercentage na Ausbildung. Toon dat je langetermijn denkt.",
+        "dontSay": "Zeg niet \"geen vragen\". Vraag niet alleen naar salaris, vakantie of voordelen. Vraag niet naar dingen die je op de website kunt vinden."
+      }
+    }
+  },
+  "eligibilityChecker": {
+    "seoSection": {
+      "title": "Waarom een 60-secondengeschiktheidscheck belangrijk is voordat je een consulaatafspraak boekt",
+      "intro": "Deze Ausbildung & Studium geschiktheidschecker vertelt je in 60 seconden of je huidige profiel kwalificeert voor een Duits visum — en precies wat je moet aanpassen als dat niet het geval is. Het werkt voor zowel de apprenticeship (Ausbildung) als de universiteit (Studium) route, met toepassing van de werkelijke Duitse consulaatregels van 2026: minimaal Duits niveau (B1 voor Ausbildung, B2/C1 voor Studium), erkend diploma, ondertekend contract of toelatingsbewijs, financieel bewijs (Sperrkonto, salaris of sponsor), en bewijs van huisvesting.\n\nDe meeste afgewezen visumaanvragen mislukken op een enkel detail dat je over het hoofd ziet — taalproof niet geaccepteerd, contract nog niet ondertekend, Sperrkonto onder de drempel van €11.904 voor 2026. De checker vangt deze problemen op voordat je geld uitgeeft aan een consulaatafspraak. De resultaatpagina toont een duidelijk groen/oranje/rood oordeel, de specifieke blokkades in je profiel, en de volgende concrete stap voor elk ervan. Het vervangt geen echte beoordeling door een specialist; voor grensgevallen of ongebruikelijke profielen (gap year, eerdere visumweigering, dubbele nationaliteit), boek een 30-minuten consult.",
+      "faqTitle": "Veelgestelde vragen over de geschiktheidscheck",
+      "faqs": [
+        {
+          "q": "Hoe nauwkeurig is het resultaat?",
+          "a": "Het past de gepubliceerde Duitse consulaatcriteria voor internationale aanvragers in 2026 toe. Het vangt de veel voorkomende afwijzingspatronen (ongeveer 85% van de gevallen), maar kan geen rekening houden met subjectieve consulaire beoordeling. Voor complexe profielen, boek een consult."
+        },
+        {
+          "q": "Welke visumtypen worden hier behandeld?",
+          "a": "Zowel het Ausbildung visum (§16a AufenthG) als het Studium visum (§16b AufenthG). Het Jobseeker visum en Skilled Worker visum hanteren andere regels — deze worden nog niet door deze tool behandeld."
+        },
+        {
+          "q": "Worden mijn gegevens opgeslagen?",
+          "a": "Nee. De check wordt volledig in je browser uitgevoerd. We zien niet wat je invoert, en niets wordt naar onze servers verzonden."
+        }
+      ]
+    },
+    "metaTitle": "Visumgeschiktheidschecker — Verhuizen naar Duitsland",
+    "metaDesc": "Controleer je geschiktheid voor een Duits Ausbildung of Studium visum — gereedheidscore, blokkades en gepersonaliseerde volgende stappen, voor aanvragers uit elk land.",
+    "eyebrow": "Visumgeschiktheid",
+    "title": "Visumgeschiktheidschecker",
+    "subtitle": "Ontdek precies waar je staat voor het Duitse Ausbildung of Studium visum als internationale aanvrager — wat blokkeert je vandaag en wat ontgrendelt het visum.",
+    "formTitle": "Je profiel",
+    "pathLabel": "Route",
+    "studiumGoalLabel": "Studium doel",
+    "ageLabel": "Leeftijd",
+    "educationLabel": "Hoogste opleiding",
+    "germanLabel": "Huidiging Duits niveau",
+    "bacAverageLabel": "Bac gemiddelde (Moyenne du Bac)",
+    "bacAverageHint": "Duitse universiteiten verwachten ≥ 14/20 voor directe Bachelor toelating. 12–13.99 vereist meestal Studienkolleg. Onder de 12 kwalificeert meestal niet.",
+    "hasContractTitle": "Ik heb een ondertekend Ausbildungsvertrag",
+    "hasContractHint": "Een ondertekend contract van een Duitse werkgever geregistreerd bij IHK of HWK.",
+    "hasAdmissionTitle": "Ik heb een Zulassung van een Duitse universiteit",
+    "hasAdmissionHint": "Definitief of voorwaardelijk toelatingsbewijs (Zulassung / Bedingungszulassung).",
+    "hasApsTitle": "Ik heb mijn APS certificaat",
+    "hasApsHint": "Alleen vereist voor bepaalde landen (China, India, Vietnam, Pakistan…). Uitgegeven door het APS kantoor voor jouw land.",
+    "englishProgramTitle": "Mijn doelprogramma wordt in het Engels gegeven",
+    "englishProgramHint": "Sommige Masterprogramma's zijn 100% Engels. Dit versoepelt de Duitse niveauvereiste.",
+    "financialLabel": "Financieel bewijs",
+    "passportTitle": "Mijn paspoort is 12+ maanden geldig",
+    "passportHint": "Vereist op het moment van je visumgesprek.",
+    "cleanRecordTitle": "Mijn strafblad is schoon",
+    "cleanRecordHint": "Geen ernstige strafrechtelijke veroordelingen.",
+    "overall": {
+      "eligible": "Je bent geschikt ✅",
+      "eligibleSub": "Geen kritieke blokkades. Je kunt doorgaan met je visumaanvraag.",
+      "conditional": "Bijna daar ⚠️",
+      "conditionalSub": "Geen visumblokkades, maar een paar dingen om aan te pakken voordat je aanvraagt.",
+      "notYet": "Nog niet geschikt ❌",
+      "notYetSub": "Er zijn kritieke blokkades die je aanvraag verhinderen. Zie de lijst hieronder."
+    },
+    "readinessLabel": "Gereedheidscore",
+    "countPass": "Sterke punten",
+    "countWarn": "Waarschuwingen",
+    "countBlocker": "Blokkades",
+    "blockersTitle": "Wat blokkeert je visum vandaag",
+    "blockersSub": "Deze items moeten worden opgelost voordat je een visumaanvraag kunt indienen.",
+    "warningsTitle": "Dingen om in de gaten te houden",
+    "warningsSub": "Geen blokkades, maar ze zullen je vertragen of afwijzing riskeren als ze niet worden aangepakt.",
+    "passesTitle": "Wat je al hebt",
+    "ctaTitle": "Wil je een gepersonaliseerd plan?",
+    "ctaSub": "Boek een 30-minuten consult met onze Duitse immigratiespecialist. We brengen je exacte gaten in kaart, geven een stap-voor-stap routekaart, en vertellen je de realistische tijdlijn.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium"
+    },
+    "studiumGoal": {
+      "bachelor": "Bachelor",
+      "master": "Master"
+    },
+    "education": {
+      "no_bac": "Nog geen Bac",
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "financial": {
+      "sperrkonto": "Sperrkonto (€11.904 klaar)",
+      "sponsor": "Sponsor in Duitsland (Verpflichtungserklärung)",
+      "salary_covers": "Mijn Ausbildung salaris dekt mijn kosten",
+      "family_support": "Familie zal me ondersteunen vanuit mijn thuisland",
+      "need_help": "Ik heb nog geen financieel plan"
+    },
+    "rules": {
+      "german_level_ausbildung": {
+        "title": "Duits B1 minimum (Ausbildung)"
+      },
+      "german_level_studium": {
+        "title": "Duits B2 minimum (Studium)"
+      },
+      "education_ausbildung": {
+        "title": "Onderwijsniveau"
+      },
+      "education_studium_bachelor": {
+        "title": "Bac vereist voor Bachelor"
+      },
+      "education_studium_master": {
+        "title": "Bac+3 vereist voor Master"
+      },
+      "bac_grade_studium": {
+        "title": "Bac gemiddelde ≥ 14/20"
+      },
+      "contract_ausbildung": {
+        "title": "Ausbildungsvertrag ondertekend"
+      },
+      "admission_studium": {
+        "title": "Universiteitstoelating (Zulassung)"
+      },
+      "aps_studium": {
+        "title": "APS certificaat"
+      },
+      "financial_proof": {
+        "title": "Financieel bewijs"
+      },
+      "passport": {
+        "title": "Geldig paspoort"
+      },
+      "clean_record": {
+        "title": "Schoon strafblad"
+      },
+      "age_ausbildung": {
+        "title": "Leeftijd (Ausbildung)"
+      }
+    },
+    "explain": {
+      "german_level_ausbildung": {
+        "b2_strong": "B2 is duidelijk boven het wettelijke B1 minimum. Je hebt een duidelijk voordeel in gesprekken en bij de eerste lezing van de visumambtenaar. Geen verdere Duitse actie nodig voor de visum stap.",
+        "b1_min": "B1 is het wettelijke minimum voor het Ausbildung visum — je bent goedgekeurd. Om op te vallen in gesprekken, is werken aan B2 in je vrije tijd nuttig; de meeste werkgevers geven er de voorkeur aan.",
+        "a2_close": "A2 is één CEFR niveau onder het B1 minimum. Plan 4–6 maanden intensief Duits (4u/dag bij een Goethe-Institut of telc-gelicentieerde school) in om B1 te bereiken en visumgeschikt te worden.",
+        "below": "B1 is het wettelijke minimum voor het Ausbildung visum. Realistisch plan: 4–6 maanden intensieve studie per CEFR niveau (een Goethe-Institut, telc-gelicentieerde school, of online), dus 8–14 maanden van A0/A1 naar B1. Intensieve cursussen (4 uur/dag) brengen je het snelst daar."
+      },
+      "german_level_studium": {
+        "c1_strong": "C1 dekt elke Duitse universiteitsvereiste, inclusief TestDaF en DSH-2. Je bent volledig ingesteld op het taalfront.",
+        "b2_min": "B2 is de standaard universiteitsvereiste, geaccepteerd door de meeste programma's. Een paar selectieve tracks (geneeskunde, tophumanoria) vragen om C1 / TestDaF 4 / DSH-2 — controleer op de pagina van je doeluniversiteit.",
+        "b1_close": "Ongeveer 30% van de Duitse universiteiten accepteert B1 met voorwaardelijke toelating — je verbindt je ertoe C1 tijdens je studies te bereiken. De andere 70% vereist B2 of hoger van tevoren. Solliciteer bij meerdere universiteiten om je kansen te maximaliseren.",
+        "below": "De meeste Studium programma's vereisen B2 minimum. Realistisch plan: 8–14 maanden intensief Duits (Goethe Institut, telc, of DSH-Vorbereitungskurs) om B2 van A0/A1 te bereiken. Alternatief: richt je op Engels-onderwezen Masterprogramma's en vink de \"Engels programma\" toggle hierboven aan.",
+        "english_program": "Voor een Engels-onderwezen programma is A1 Duits vaak genoeg — sommige programma's accepteren elk niveau. Je zult nog steeds wat Duits willen oppikken voor het dagelijks leven, maar het blokkeert het visum niet.",
+        "english_program_a1": "Zelfs voor een volledig Engels programma maakt A1 Duits Anmeldung, bankieren en het dagelijks leven in je eerste maanden veel soepeler."
+      },
+      "education_ausbildung": {
+        "no_bac": "Een paar Ausbildungen accepteren kandidaten zonder Bac (Pflegehelfer in gezondheidszorg, enkele retail- en gastronomieposities), maar je opties worden aanzienlijk beperkt. Het Bac eerst afmaken wordt sterk aanbevolen — opent ongeveer 5× meer posities.",
+        "bac_ok": "Je Bac kwalificeert je voor elk van de 1.100+ Ausbildung posities op ons platform — IT, gezondheidszorg, engineering, horeca, automotive, en meer."
+      },
+      "education_studium_bachelor": {
+        "no_bac": "Een Bac (of een erkend equivalent) is niet onderhandelbaar voor Bachelor toelating in Duitsland. Als je in plaats daarvan een Bac+2 of beroepsdiploma hebt, controleer de Anabin database om te zien hoe het in het Duitse systeem wordt ingedeeld.",
+        "bac_ok": "Je Bac kwalificeert je voor Bachelor toelating in Duitsland — op voorwaarde dat je gemiddelde aan de drempel voldoet (zie Bac gemiddelde regel)."
+      },
+      "education_studium_master": {
+        "licence_ok": "Je Licence (Bac+3) of Master (Bac+5) is het juiste startniveau voor een Duits Masterprogramma. Controleer Anabin om te bevestigen dat je thuisuniversiteit wordt vermeld als H+ (erkend).",
+        "bac_plus_2": "Bac+2 ligt onder de Duitse Masterstandaard (180 ECTS / 3-jarige Licence). Voltooi ofwel een 3e jaar van je graad in je thuisland, ofwel solliciteer voor Bachelor toelating in Duitsland met kredietherkenning voor wat je al hebt gedaan.",
+        "below": "Een 3-jarige Licence (Bac+3, 180 ECTS) is het minimum voor Duitse Master toelating. Vervolgstap: voltooi je graad in je thuisland, of doe eerst een Bachelor in Duitsland."
+      },
+      "bac_grade_studium": {
+        "tres_bien": "Bac gemiddelde ≥ 14/20 (vermeld 'Bien' of 'Très Bien') kwalificeert je voor directe Bachelor toelating in Duitsland. Sterkste troef voor je aanvraagdossier.",
+        "assez_bien": "Bac gemiddelde 12–13.99 (vermeld 'Assez Bien') vereist meestal een Studienkolleg voordat directe Bachelor toelating. Studienkolleg is een 1-jarig voorbereidingsprogramma in Duitsland — solliciteer via je doeluniversiteit, B1 Duits minimum.",
+        "passable": "Bac gemiddelde 10–11.99 kwalificeert meestal niet voor Duitse universiteiten, zelfs niet via Studienkolleg. Overweeg sterk de Ausbildung route in plaats daarvan — hetzelfde resultaat (carrière in Duitsland) zonder de academische drempel.",
+        "failing": "Een Bac gemiddelde onder de 10 kwalificeert niet voor Duitse universiteiten. De Ausbildung route is de betere route voor jou — Duitse werkgevers waarderen motivatie en concrete vaardigheden meer dan Bac cijfers."
+      },
+      "contract_ausbildung": {
+        "have": "Je hebt de visumblokkade. Zorg ervoor dat je contract startdatum, maandelijks salaris (idealiter ≥ €934), 3-jarige trainingsperiode en het IHK of HWK registratienummer specificeert.",
+        "missing": "Je hebt een ondertekend Ausbildungsvertrag van een Duitse werkgever geregistreerd bij IHK of HWK nodig voordat je voor het visum kunt aanvragen. Begin met onze 1.100+ open Ausbildung posities, solliciteer dan met een Duits CV (Lebenslauf) en motivatiebrief (Anschreiben). Het vragen van de werkgever om een Vorab-Zustimmung verkort de visumwachttijd met 6 maanden."
+      },
+      "admission_studium": {
+        "have": "Zulassung in hand — de visumblokkade is opgelost. Draag het origineel plus 2 fotokopieën mee in je visumaanvraagdossier.",
+        "missing": "Solliciteer via Uni-Assist (uni-assist.de) voor de meeste universiteiten, of rechtstreeks voor de rest. Deadlines: 15 juli voor het wintersemester, 15 januari voor het zomersemester. Solliciteer minstens 4 maanden voor elke deadline — de verwerking door Uni-Assist alleen duurt al 4–6 weken."
+      },
+      "aps_studium": {
+        "have": "APS certificaat in hand — de meest tijdrovende Studium stap is voltooid.",
+        "missing": "APS is vereist voor aanvragers uit bepaalde landen (China, India, Vietnam, Pakistan…). Solliciteer bij het APS kantoor voor je land — verwerking duurt 6–20 weken en blokkeert elke andere Studium stap. Breng al je transcripten sinds de middelbare school mee."
+      },
+      "financial_proof": {
+        "sperrkonto": "Sperrkonto is de gouden standaard. De meeste internationale aanvragers gebruiken Fintiba, Expatrio, of Coracle (€89 setup + €11.904 storting). De storting wordt je na aankomst in 12 maandelijkse termijnen terugbetaald — het is geen vergoeding.",
+        "sponsor": "Verpflichtungserklärung geaccepteerd. Je sponsor moet ≥ €1.200 netto maandelijks inkomen (na belasting) aantonen, bereid zijn juridische aansprakelijkheid op zich te nemen, en ondertekenen bij hun lokale Ausländerbehörde. ~€29 vergoeding betaald door de sponsor.",
+        "salary_ausbildung": "Je Ausbildung salaris dekt het visumminimum als het ≥ €934/maand is na typische inhoudingen. Als je contract minder aangeeft, voeg een kleine Sperrkonto toe om het gat te dichten.",
+        "family": "Alleen familieondersteuningsbrieven zijn zwak bewijs — ze triggeren bijna altijd een verzoek om aanvullend bewijs. Sterk aanbevolen om te combineren met een Sperrkonto (€11.904 uit familiespaargeld, terugbetaald aan jou bij aankomst).",
+        "need_help": "Je hebt één van drie nodig: Sperrkonto (€11.904 uit elke bron), Verpflichtungserklärung van een Duitse sponsor, of een Ausbildung salaris ≥ €934/maand. Zonder één ervan wordt het visum automatisch afgewezen. Boek een consult om de beste route voor je situatie te vinden.",
+        "studium_no_salary": "Voor Studium kun je niet vertrouwen op een toekomstige deeltijdbaan als student als financieel bewijs — je hebt het nog niet. Vereist: Sperrkonto €11.904 OF Verpflichtungserklärung van een Duitse sponsor.",
+        "unclear": "Zet je financiële bewijs vast voordat je aanvraagt. Standaardroute: Sperrkonto via Fintiba / Expatrio / Coracle (~€89 setup + €11.904 storting, terugbetaald aan jou in maandelijkse termijnen na aankomst)."
+      },
+      "passport": {
+        "valid": "Je paspoort voldoet aan de geldigheidseis. Zorg ervoor dat het minstens 6 maanden geldig blijft na je visumverloopdatum — de meeste ambassades vereisen dit.",
+        "expiring": "Je paspoort moet minstens 12 maanden geldig zijn op het moment van je visumafspraak. Vernieuw bij de paspoortautoriteit van je land — plan vooruit, het kan weken duren."
+      },
+      "clean_record": {
+        "clean": "Een schoon politieverklaring is prima. Het duurt meestal een paar dagen tot een paar weken om te verkrijgen en moet binnen 3 maanden voor je visumafspraak worden uitgegeven.",
+        "case_by_case": "Elk geval wordt individueel beoordeeld. Kleine verkeersdelicten of oude boetes zijn meestal prima. Ernstige veroordelingen (geweld, drugs, fraude) kunnen het visum blokkeren — boek een vertrouwelijk consult voordat je aanvraagt."
+      },
+      "age_ausbildung": {
+        "young": "Ideale leeftijdsgroep. De meeste Ausbildung werkgevers geven de voorkeur aan kandidaten onder de 30 voor de 3-jarige verplichting. Je hebt de breedste keuze aan posities.",
+        "mid": "31–35 is goed binnen bereik — geen juridisch probleem, alleen iets minder gebruikelijk. Gezondheidszorg, horeca en IT zijn bijzonder leeftijdsflexibele sectoren.",
+        "older": "36–40 is mogelijk maar selectiever. Richt je op sectoren die ervaring waarderen: gezondheidszorg (Pflegefachmann/frau), retailmanagement, horeca, en vakmanschappen. Je professionele ervaring telt hier meer dan je leeftijd.",
+        "much_older": "Mogelijk maar zeldzaam. Beste sectoren op 40+: gezondheidszorg (Pflegefachmann/frau vooral welkom), gastronomie, en vakmanschappen waar werkgevers volwassen, betrouwbare werknemers waarderen. Positioneer je CV rond je professionele ervaring, niet de academische hoek."
+      }
+    },
+    "countryLabel": "Je land"
+  },
+  "dashboardServices": {
+    "metaTitle": "Services — GoGermany",
+    "metaDesc": "Alle betaalde consultatieservices om je verhuizing naar Duitsland te ondersteunen.",
+    "eyebrow": "Services",
+    "title": "Kies de hulp die bij jouw situatie past",
+    "subtitle": "Elke consultatie is een betaalde videogesprek van 60 minuten (€20), ongeacht je vraag. Je gaat weg met concrete antwoorden, niet met generieke adviezen.",
+    "badgePrice": "€20 · 1 uur",
+    "badgeFormat": "Google Meet · 60 min",
+    "badgeLanguages": "Arabisch, Frans, Duits",
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Hoe betaal ik voor de consultatie?",
+    "faq1A": "Via bankoverschrijving. Nadat je je inschrijft op Calendly, ontvang je een bevestigingsmail met de bankgegevens (FR + AR) en de prijs (€20). De sessie wordt bevestigd zodra de betaling is ontvangen.",
+    "faq2Q": "Wat als ik hulp nodig heb bij meerdere services?",
+    "faq2A": "Boek één sessie — we behandelen wat in het tijdslot past, en vertellen je daarna of een tweede sessie zinvol is of dat je de rest zelf kunt aanpakken.",
+    "faq3Q": "In welke taal vindt het gesprek plaats?",
+    "faq3A": "Jouw keuze: Arabisch, Frans of Duits. Vermeld dit bij het boeken; het is de tweede vraag op Calendly.",
+    "faq4Q": "Kan ik mijn geld terugkrijgen als het niet nuttig is?",
+    "faq4A": "Als de sessie na 5 minuten echt niet op jou van toepassing is, beëindigen we het gesprek en geven we je geld terug. Eerlijkheid gaat voor geld.",
+    "services": {
+      "apply-for-me": {
+        "name": "Apply For Me",
+        "blurb": "We verzorgen je volledige Ausbildung-aanvraag van begin tot uitnodiging.",
+        "bullet1": "CV + Anschreiben herschreven in het Duits voor elke werkgever",
+        "bullet2": "Directe benadering van 30+ geverifieerde Ausbildung-werkgevers",
+        "bullet3": "Interviewcoaching zodra je terugbellen krijgt",
+        "ribbon": "Meest geboekt"
+      },
+      "interview-prep": {
+        "name": "Mock Vorstellungsgespräch",
+        "blurb": "Voer een realistisch Duits interview, krijg een score, verbeter wat je de baan kost.",
+        "bullet1": "30 min echt Duits interview met een native-getrainde coach",
+        "bullet2": "Live scoring op taal, structuur, inhoud, lichaamstaal",
+        "bullet3": "Concrete verbeteringen voor je top 3 zwakke antwoorden — schriftelijke samenvatting daarna"
+      },
+      "cv-anschreiben": {
+        "name": "CV & Anschreiben review",
+        "blurb": "Laat je CV en motivatiebrief controleren door iemand die dagelijks Duitse recruiter-inboxen leest.",
+        "bullet1": "Regel-voor-regel herschrijving van CV (Lebenslauf) in Duits formaat",
+        "bullet2": "Anschreiben herschreven voor één specifieke vacature die je meebrengt",
+        "bullet3": "Formaatcontrole (PDF, foto, paginaantal, bestandsnaam)"
+      },
+      "eligibility": {
+        "name": "Eligibility deep-dive",
+        "blurb": "Een specialist toetst je profiel aan de echte visumregels — geen giswerk.",
+        "bullet1": "Controleert je Bac, Duitsniveau, financiën, strafblad-vereisten",
+        "bullet2": "Vertelt je precies wat je blokkeert en hoe lang de oplossing duurt",
+        "bullet3": "Gepersonaliseerd pad: Studium, Studienkolleg, Ausbildung of wachten"
+      },
+      "migration-timeline": {
+        "name": "Migration timeline review",
+        "blurb": "Plan je volgende 12 maanden maand-voor-maand — Duits, aanvraag, visum, aankomst.",
+        "bullet1": "Test je doeldatum tegen huidige Goethe-slots & TLS-wachttijden",
+        "bullet2": "Identificeert knelpunten (B1-examendatum, APS, visumafspraak)",
+        "bullet3": "Geeft je een afdrukbaar maandelijks actieplan"
+      },
+      "document-checklist": {
+        "name": "Document checklist help",
+        "blurb": "Een specialist gaat elk document met je door — wat je hebt, wat ontbreekt, wat fout is.",
+        "bullet1": "Controleert elk stuk (apostille, beëdigde vertaling, geldigheidsdatums)",
+        "bullet2": "Vertelt je de goedkoopste juridische manier om de ontbrekende documenten in jouw land te krijgen",
+        "bullet3": "Spot veelvoorkomende afwijzingsredenen voordat TLS dat doet"
+      },
+      "studium": {
+        "name": "Studium begeleiding",
+        "blurb": "Kies de juiste universiteit en opleiding — openbaar, Engelstalig, Studienkolleg of direct Bachelor.",
+        "bullet1": "Match je Bac-gemiddelde + budget + stadskeuze met 5–10 echte programma's",
+        "bullet2": "Legt uni-assist, APS uit en hoe je de aanvraag correct indient",
+        "bullet3": "Checklist met deadlines per universiteit zodat je toelatingingen niet mist"
+      },
+      "ausbildung": {
+        "name": "Ausbildung begeleiding",
+        "blurb": "Kies het juiste Beruf, de juiste regio en het juiste kanaal om aangenomen te worden.",
+        "bullet1": "Match je achtergrond + Duitsniveau met Berufe met hoge acceptatiepercentages",
+        "bullet2": "Vertelt je welke staten & steden de beste acceptatiesnelheid voor internationals hebben",
+        "bullet3": "Aanvraaghandleiding: Make-it-in-Germany, HWK, BIBB, recruiters"
+      },
+      "visa": {
+        "name": "Visa afspraak hulp",
+        "blurb": "Loop het consulaat in met het juiste dossier, de juiste antwoorden en de juiste mentaliteit.",
+        "bullet1": "Pre-afspraak dossiercontrole (elke pagina, in volgorde)",
+        "bullet2": "Mock interview voor de consulaatsvragen",
+        "bullet3": "Actieplan als je afspraak ver weg is (of al gemist)"
+      },
+      "german-tutoring": {
+        "name": "Duits tutoring (A1–B2)",
+        "blurb": "Één-op-één gerichte sessies om je van waar je bent naar het volgende CEFR-niveau te brengen.",
+        "bullet1": "Diagnose in sessie 1 — exacte gaten in grammatica, woordenschat, spreken",
+        "bullet2": "Aangepast lesplan voor je doelexamen (Goethe, telc, ÖSD)",
+        "bullet3": "Spreken + luisteren oefeningen met echt Vorstellungsgespräch-materiaal"
+      },
+      "general": {
+        "name": "Algemene consultatie",
+        "blurb": "Niet zeker welke service je nodig hebt? Boek een open gesprek van 30 min — we zoeken het samen uit.",
+        "bullet1": "Vertel ons waar je bent, waar je heen wilt",
+        "bullet2": "We vertellen je welke van de bovenstaande services echt past",
+        "bullet3": "Geen druk — als geen ervan past, zeggen we dat eerlijk"
+      },
+      "german-exam-prep": {
+        "name": "Goethe / telc Examenvoorbereiding",
+        "blurb": "Slaag voor je A1, B1 of B2 met vertrouwen — strategie, mock spreken, examendag-plan.",
+        "bullet1": "Module-voor-module strategie: lesen, hören, schreiben, sprechen",
+        "bullet2": "Mock sprekend deel opgenomen in het echte Goethe-formaat",
+        "bullet3": "Examendag-plan: waar je testcentrum is, wat je meeneemt, tijd per taak"
+      }
+    }
+  },
+  "writingExercise": {
+    "eyebrow": "Dagelijks schrijven",
+    "title": "Vandaag's schrijfuitdaging",
+    "subtitle": "{level} · Schrijf {min}–{max} woorden. Dien in en krijg je tekst gecorrigeerd met uitleg.",
+    "themeBadge": "Vandaag's thema",
+    "wordsShort": "woorden",
+    "placeholder": "Schrijf hier je tekst in het Duits…",
+    "submit": "Indienen voor correctie",
+    "submitting": "Corrigeren…",
+    "errorGeneric": "Er is iets misgegaan. Probeer het over een moment opnieuw.",
+    "inRange": "binnen bereik",
+    "outOfRange": "streef naar {min}–{max}",
+    "mistakesTitle": "{n} {n, plural, one {fout} other {fouten}} gevonden",
+    "mistakesSub": "Elk onderstreepte gedeelte is een fout. Beweeg erover of controleer de lijst hieronder om te zien waarom.",
+    "correctedTitle": "Gecorrigeerde versie",
+    "correctedSub": "Je tekst herschreven in correct Duits, aangepast aan jouw niveau.",
+    "comeBackTomorrow": "Kom morgen terug voor een nieuw thema",
+    "signInTitle": "Meld je aan om te gaan schrijven",
+    "signInBody": "De dagelijkse schrijfoefening is gratis met een gratis account, zodat we je voortgang kunnen opslaan en je eerlijke dagelijkse limieten kunnen geven.",
+    "signInCta": "Meld je aan",
+    "doneTitle": "Je hebt vandaag's oefening afgerond",
+    "doneBody": "Kom over {hours} {hours, plural, one {uur} other {uur}} terug voor morgen's thema.",
+    "grade": {
+      "excellent": "Uitstekend!",
+      "good": "Goed gedaan",
+      "ok": "Ga door",
+      "practice": "Oefen meer"
+    },
+    "themes": {
+      "a1_self": {
+        "title": "Stel jezelf voor",
+        "instruction_de": "Stelle dich vor: Name, Alter, Herkunft, Beruf oder Studium, eine Sache, die du gerne machst. Schreibe in vollständigen Sätzen.",
+        "instruction": "Stel jezelf voor: naam, leeftijd, herkomst, beroep of studie, iets wat je graag doet. Schrijf in volledige zinnen.",
+        "hint": "Gebruik: ich heiße, ich bin … Jahre alt, ich komme aus, ich mag"
+      },
+      "a1_family": {
+        "title": "Mijn familie",
+        "instruction_de": "Beschreibe deine Familie: Wer gehört dazu? Wie heißen sie? Wie alt sind sie? Was machen sie?",
+        "instruction": "Beschrijf je familie: wie hoort erbij? Hoe heten ze? Hoe oud zijn ze? Wat doen ze?",
+        "hint": "Nuttig: Mutter, Vater, Bruder, Schwester, mein/meine"
+      },
+      "a1_daily": {
+        "title": "Een normale dag",
+        "instruction_de": "Beschreibe einen normalen Tag: Was machst du am Morgen, am Mittag und am Abend? Schreibe einfache Sätze.",
+        "instruction": "Beschrijf een normale dag: wat doe je 's ochtends, 's middags en 's avonds? Schrijf eenvoudige zinnen.",
+        "hint": "Gebruik: aufstehen, frühstücken, arbeiten, essen, schlafen"
+      },
+      "a1_hobby": {
+        "title": "Mijn hobby's",
+        "instruction_de": "Was sind deine Hobbys? Was machst du gerne in deiner Freizeit? Wann und wo machst du das?",
+        "instruction": "Wat zijn je hobby's? Wat doe je graag in je vrije tijd? Wanneer en waar doe je dat?",
+        "hint": "Gebruik: ich spiele, ich lese, ich höre, gerne"
+      },
+      "a1_weekend": {
+        "title": "Mijn weekend",
+        "instruction_de": "Was machst du am Wochenende? Wo gehst du hin? Mit wem? Wie lange?",
+        "instruction": "Wat doe je in het weekend? Waar ga je heen? Met wie? Hoe lang?",
+        "hint": "am Samstag / am Sonntag, mit Freunden, ich gehe"
+      },
+      "a1_food": {
+        "title": "Eten dat ik lekker vind",
+        "instruction_de": "Was isst und trinkst du gerne? Was magst du nicht? Was isst du heute?",
+        "instruction": "Wat eet en drink je graag? Wat vind je niet lekker? Wat eet je vandaag?",
+        "hint": "ich esse / trinke gern, ich mag … nicht"
+      },
+      "a1_room": {
+        "title": "Mijn kamer",
+        "instruction_de": "Beschreibe dein Zimmer: Was gibt es dort? Welche Farben? Wo stehen die Möbel?",
+        "instruction": "Beschrijf je kamer: wat staat daar? Welke kleuren? Waar staan de meubels?",
+        "hint": "es gibt, links, rechts, vor, neben"
+      },
+      "a1_weather": {
+        "title": "Het weer vandaag",
+        "instruction_de": "Wie ist das Wetter heute? Was trägst du? Was machst du bei diesem Wetter?",
+        "instruction": "Hoe is het weer vandaag? Wat draag je? Wat doe je bij dit weer?",
+        "hint": "es ist sonnig / regnerisch / kalt / warm"
+      },
+      "a1_friend": {
+        "title": "Mijn beste vriend(in)",
+        "instruction_de": "Beschreibe deinen besten Freund oder deine beste Freundin: Name, Alter, Charakter, was ihr zusammen macht.",
+        "instruction": "Beschrijf je beste vriend of vriendin: naam, leeftijd, karakter, wat jullie samen doen.",
+        "hint": "er/sie ist nett, lustig, wir machen zusammen"
+      },
+      "a1_city": {
+        "title": "Mijn stad",
+        "instruction_de": "Beschreibe deine Stadt: Wie heißt sie? Was gibt es dort? Was magst du, was magst du nicht?",
+        "instruction": "Beschrijf je stad: hoe heet die? Wat is daar? Wat vind je ervan, wat niet?",
+        "hint": "meine Stadt heißt, es gibt, ich finde … schön"
+      },
+      "a2_holiday": {
+        "title": "Mijn laatste vakantie",
+        "instruction_de": "Beschreibe deinen letzten Urlaub: Wohin bist du gefahren? Mit wem? Was hast du gemacht? Wie war es?",
+        "instruction": "Beschrijf je laatste vakantie: waar ben je heen gereisd? Met wie? Wat heb je gedaan? Hoe was het?",
+        "hint": "Gebruik Perfekt: ich bin gefahren, ich habe gesehen"
+      },
+      "a2_school_day": {
+        "title": "Een dag op school/werk",
+        "instruction_de": "Wie war dein Tag in der Schule oder bei der Arbeit? Was hast du gemacht? Wer war dabei?",
+        "instruction": "Hoe was je dag op school of op het werk? Wat heb je gedaan? Wie was erbij?",
+        "hint": "Perfekt + Zeitangaben: zuerst, dann, danach"
+      },
+      "a2_shopping": {
+        "title": "Mijn laatste winkeltrip",
+        "instruction_de": "Beschreibe einen Einkauf: Wo warst du? Was hast du gekauft? Wie viel hat es gekostet? War es gut?",
+        "instruction": "Beschrijf een aankoop: waar was je? Wat heb je gekocht? Hoeveel kostte het? Was het goed?",
+        "hint": "kosten, Euro, ich habe gekauft, billig/teuer"
+      },
+      "a2_doctor": {
+        "title": "Bij de dokter",
+        "instruction_de": "Du warst beim Arzt. Was tat dir weh? Was hast du gemacht? Was hat der Arzt gesagt?",
+        "instruction": "Je was bij de dokter. Wat deed pijn? Wat heb je gedaan? Wat zei de dokter?",
+        "hint": "mir tut … weh, der Arzt hat gesagt, Tabletten"
+      },
+      "a2_birthday": {
+        "title": "Een verjaardagsfeest",
+        "instruction_de": "Beschreibe einen Geburtstag, den du gefeiert hast: Wer war da? Was habt ihr gemacht? Was war das Geschenk?",
+        "instruction": "Beschrijf een verjaardag die je hebt gevierd: wie waren er? Wat hebben jullie gedaan? Wat was het cadeau?",
+        "hint": "Geschenk, feiern, Kuchen, eingeladen"
+      },
+      "a2_dream_trip": {
+        "title": "Mijn droomreis",
+        "instruction_de": "Wohin möchtest du in den nächsten Sommer fahren? Mit wem? Was möchtest du dort machen? Schreibe deine Pläne.",
+        "instruction": "Waar wil je volgende zomer heen? Met wie? Wat wil je daar doen? Schrijf je plannen op.",
+        "hint": "Future: ich werde, ich möchte"
+      },
+      "a2_work_day": {
+        "title": "Een werkdag",
+        "instruction_de": "Wie sieht dein Arbeitstag aus? Was machst du? Welche Kollegen hast du? Was magst du an deiner Arbeit?",
+        "instruction": "Hoe ziet je werkdag eruit? Wat doe je? Welke collega's heb je? Wat vind je ervan?",
+        "hint": "Kollege, Chef, Aufgaben, ich beginne"
+      },
+      "a2_apartment": {
+        "title": "Mijn appartement",
+        "instruction_de": "Beschreibe deine Wohnung: Wie viele Zimmer? Welche Möbel? Was ist gut, was ist nicht so gut?",
+        "instruction": "Beschrijf je woning: hoeveel kamers? Welke meubels? Wat is goed, wat niet?",
+        "hint": "Zimmer, Küche, Bad, Balkon, Möbel"
+      },
+      "a2_movie": {
+        "title": "Een film die ik zag",
+        "instruction_de": "Beschreibe einen Film, den du gesehen hast. Worum ging es? Wer hat gespielt? Hat er dir gefallen? Warum?",
+        "instruction": "Beschrijf een film die je hebt gezien. Waar ging het over? Wie speelden erin? Vond je het leuk? Waarom?",
+        "hint": "es geht um, der Hauptdarsteller, mir hat … gefallen"
+      },
+      "a2_germany_first": {
+        "title": "Mijn eerste dag in Duitsland",
+        "instruction_de": "Was würdest du als Erstes in Deutschland machen? Wohin würdest du gehen? Was möchtest du essen, sehen, lernen?",
+        "instruction": "Wat zou je eerst in Duitsland doen? Waar zou je heen gaan? Wat wil je eten, zien, leren?",
+        "hint": "ich möchte, zuerst, dann, danach"
+      },
+      "b1_opinion_phone": {
+        "title": "Smartphones voor tieners",
+        "instruction_de": "Schreibe deine Meinung: Sind Smartphones für Jugendliche gut oder schlecht? Gib zwei Argumente und ein Beispiel.",
+        "instruction": "Schrijf je mening: zijn smartphones goed of slecht voor tieners? Geef twee argumenten en een voorbeeld.",
+        "hint": "meiner Meinung nach, einerseits, andererseits, zum Beispiel"
+      },
+      "b1_complaint": {
+        "title": "Klachte-e-mail naar hotel",
+        "instruction_de": "Schreibe eine kurze Beschwerde-E-Mail an ein Hotel: Du warst unzufrieden mit deinem Zimmer. Erkläre das Problem und was du dir wünschst.",
+        "instruction": "Schrijf een korte klachte-e-mail naar een hotel: je was ontevreden over je kamer. Leg het probleem uit en wat je wilt.",
+        "hint": "Sehr geehrte Damen und Herren, leider, ich erwarte"
+      },
+      "b1_email_friend": {
+        "title": "E-mail naar een vriend",
+        "instruction_de": "Schreibe eine E-Mail an einen Freund in Deutschland: Du planst einen Besuch. Erkläre, wann du kommst und was du gerne machen möchtest.",
+        "instruction": "Schrijf een e-mail naar een vriend in Duitsland: je plant een bezoek. Leg uit wanneer je komt en wat je graag wilt doen.",
+        "hint": "Hallo …, ich plane, vielleicht können wir, freue mich"
+      },
+      "b1_pros_cons_city": {
+        "title": "Stad vs. platteland",
+        "instruction_de": "Lebt man besser in der Stadt oder auf dem Land? Nenne je zwei Vorteile und Nachteile und gib deine Meinung.",
+        "instruction": "Leeft men beter in de stad of op het platteland? Noem elk twee voordelen en nadelen en geef je mening.",
+        "hint": "der Vorteil, der Nachteil, im Gegensatz dazu"
+      },
+      "b1_my_career": {
+        "title": "Mijn carrièreplan",
+        "instruction_de": "Beschreibe deine Karrierepläne: Was möchtest du beruflich machen? Warum? Welche Schritte hast du schon gemacht?",
+        "instruction": "Beschrijf je carrièreplannen: wat wil je beroepsmatig doen? Waarom? Welke stappen heb je al gezet?",
+        "hint": "mein Ziel ist, ich plane, weil, deshalb"
+      },
+      "b1_health_tip": {
+        "title": "Gezondheidsadvies voor een vriend",
+        "instruction_de": "Gib einer Freundin Tipps: Sie fühlt sich gestresst und schläft schlecht. Was sollte sie tun? Erkläre warum.",
+        "instruction": "Geef een vriendin tips: ze voelt zich gestrest en slaapt slecht. Wat moet ze doen? Leg uit waarom.",
+        "hint": "du solltest, es ist wichtig, weil, sonst"
+      },
+      "b1_bad_day": {
+        "title": "Een slechte dag",
+        "instruction_de": "Erzähle einen schlechten Tag aus deinem Leben: Was ist passiert? Wie hast du reagiert? Was hast du daraus gelernt?",
+        "instruction": "Vertel over een slechte dag uit je leven: wat gebeurde er? Hoe reageerde je? Wat heb je ervan geleerd?",
+        "hint": "plötzlich, danach, schließlich, ich habe gelernt"
+      },
+      "b1_culture_shock": {
+        "title": "Een culturele verrassing",
+        "instruction_de": "Was findest du in der deutschen Kultur überraschend oder anders als in deinem Land? Gib zwei konkrete Beispiele.",
+        "instruction": "Wat vind je verrassend of anders in de Duitse cultuur dan in je land? Geef twee concrete voorbeelden.",
+        "hint": "im Vergleich zu, ich war überrascht, dass"
+      },
+      "b1_environment": {
+        "title": "Het milieu helpen",
+        "instruction_de": "Was kann jeder Mensch im Alltag tun, um die Umwelt zu schützen? Nenne drei konkrete Tipps.",
+        "instruction": "Wat kan iedereen dagelijks doen om het milieu te beschermen? Noem drie concrete tips.",
+        "hint": "man sollte, statt, indem, deshalb"
+      },
+      "b1_app_review": {
+        "title": "Een app beoordelen",
+        "instruction_de": "Beschreibe eine App oder Website, die du oft benutzt: Was kann man damit machen? Was findest du gut und nicht so gut?",
+        "instruction": "Beschrijf een app of website die je vaak gebruikt: wat kun je ermee doen? Wat vind je goed en niet goed?",
+        "hint": "damit kann man, ich finde gut, allerdings"
+      },
+      "b2_social_media": {
+        "title": "Impact van sociale media",
+        "instruction_de": "Diskutiere: Wie verändern soziale Medien das Verhalten junger Menschen? Nenne positive und negative Aspekte und gib deine begründete Meinung.",
+        "instruction": "Discussieer: hoe veranderen sociale media het gedrag van jongeren? Noem positieve en negatieve aspecten en geef je onderbouwde mening.",
+        "hint": "darüber hinaus, dennoch, infolgedessen"
+      },
+      "b2_remote_work": {
+        "title": "Thuiswerk voor het goede?",
+        "instruction_de": "Sollten Unternehmen Mitarbeiter dauerhaft im Homeoffice arbeiten lassen? Argumentiere mit Vor- und Nachteilen für beide Seiten.",
+        "instruction": "Moeten bedrijven werknemers permanent thuis laten werken? Argumenteer met voor- en nadelen voor beide zijden.",
+        "hint": "einerseits/andererseits, zudem, allerdings"
+      },
+      "b2_immigration": {
+        "title": "Geschoolde immigratie",
+        "instruction_de": "Welche Vorteile bringt qualifizierte Zuwanderung für Deutschland? Welche Herausforderungen gibt es? Gib eine begründete Stellungnahme.",
+        "instruction": "Welke voordelen brengt geschoolde immigratie voor Duitsland? Welke uitdagingen zijn er? Geef een onderbouwde stellingname.",
+        "hint": "zur Folge haben, beitragen zu, voraussetzen"
+      },
+      "b2_climate": {
+        "title": "Klimaatverantwoordelijkheid",
+        "instruction_de": "Wer trägt mehr Verantwortung für den Klimaschutz: der einzelne Bürger oder die Politik? Begründe deine Position mit Beispielen.",
+        "instruction": "Wie draagt meer verantwoordelijkheid voor klimaatbescherming: de individuele burger of de politiek? Onderbouw je standpunt met voorbeelden.",
+        "hint": "verantwortlich für, im Vergleich zu, letztendlich"
+      },
+      "b2_education_reform": {
+        "title": "School van de toekomst",
+        "instruction_de": "Wie sollte die Schule der Zukunft aussehen? Schlage zwei konkrete Reformen vor und begründe sie.",
+        "instruction": "Hoe zou de school van de toekomst eruit moeten zien? Stel twee concrete hervormingen voor en onderbouw ze.",
+        "hint": "es bedarf, ich schlage vor, vorausgesetzt, dass"
+      },
+      "b2_ai_jobs": {
+        "title": "AI en banen",
+        "instruction_de": "Wird KI mehr Arbeitsplätze schaffen oder vernichten? Argumentiere differenziert mit zwei Beispielen aus verschiedenen Branchen.",
+        "instruction": "Zal AI meer banen creëren of vernietigen? Argumenteer genuanceerd met twee voorbeelden uit verschillende sectoren.",
+        "hint": "ersetzen, automatisieren, neu entstehen"
+      },
+      "b2_consumerism": {
+        "title": "Consumptiemaatschappij",
+        "instruction_de": "Konsumieren wir zu viel? Diskutiere die Folgen unseres Konsumverhaltens und schlage Lösungen vor.",
+        "instruction": "Consumeren we te veel? Discussieer de gevolgen van ons consumptiegedrag en stel oplossingen voor.",
+        "hint": "der Konsum, das Bewusstsein, nachhaltig"
+      },
+      "b2_generation_gap": {
+        "title": "Generatiekloof",
+        "instruction_de": "Worin unterscheiden sich die Werte der Generation deiner Eltern und deiner eigenen Generation? Gib konkrete Beispiele.",
+        "instruction": "Waarin verschillen de waarden van de generatie van je ouders en je eigen generatie? Geef concrete voorbeelden.",
+        "hint": "im Gegensatz zu, früher, heutzutage"
+      },
+      "b2_health_systems": {
+        "title": "Gezondheidsstelsels vergeleken",
+        "instruction_de": "Was unterscheidet ein gutes Gesundheitssystem von einem schlechten? Vergleiche zwei Aspekte aus deinem Heimatland und Deutschland.",
+        "instruction": "Wat onderscheidt een goed gezondheidsstelsel van een slecht? Vergelijk twee aspecten uit je thuisland en Duitsland.",
+        "hint": "während, hingegen, der Zugang zu"
+      },
+      "b2_minimum_wage": {
+        "title": "Minimumloon debat",
+        "instruction_de": "Sollte der Mindestlohn weiter erhöht werden? Diskutiere die wirtschaftlichen und sozialen Folgen mit Pro- und Contra-Argumenten.",
+        "instruction": "Moet het minimumloon verder worden verhoogd? Discussieer de economische en sociale gevolgen met voor- en tegenargumenten.",
+        "hint": "erhöhen, sich auswirken auf, Arbeitsmarkt"
+      },
+      "c1_digitalisation": {
+        "title": "Digitalisering & samenleving",
+        "instruction_de": "Erörtere, inwiefern die Digitalisierung des Alltags die soziale Interaktion verändert hat. Gehe auf positive und negative Aspekte ein und nimm begründet Stellung.",
+        "instruction": "Bespreek in hoeverre de digitalisering van het dagelijks leven de sociale interactie heeft veranderd. Ga in op positieve en negatieve aspecten en neem onderbouwd stelling.",
+        "hint": "eine ambivalente Entwicklung, gleichwohl, sich gewahr werden"
+      },
+      "c1_demography": {
+        "title": "Demografische verandering",
+        "instruction_de": "Diskutiere die Folgen des demografischen Wandels für die deutsche Sozialversicherung. Welche Maßnahmen hältst du für erforderlich?",
+        "instruction": "Discussieer de gevolgen van demografische verandering voor de Duitse sociale zekerheid. Welke maatregelen acht je noodzakelijk?",
+        "hint": "Überalterung, generationengerecht, struktureller Reformbedarf"
+      },
+      "c1_freedom_security": {
+        "title": "Vrijheid vs. veiligheid",
+        "instruction_de": "Wie lässt sich das Spannungsfeld zwischen Freiheit und Sicherheit im modernen Staat ausbalancieren? Begründe deine Position kritisch.",
+        "instruction": "Hoe kan de spanning tussen vrijheid en veiligheid in de moderne staat in evenwicht worden gebracht? Onderbouw je standpunt kritisch.",
+        "hint": "Grundrechte abwägen, ungeachtet dessen, einen Kompromiss erfordern"
+      },
+      "c1_globalisation": {
+        "title": "Winnaars van globalisering",
+        "instruction_de": "Inwiefern profitieren Schwellenländer von der Globalisierung – und welche Risiken trägt sie? Erörtere mit fundierten Argumenten.",
+        "instruction": "In hoeverre profiteren opkomende landen van globalisering – en welke risico's brengt het met zich mee? Bespreek met onderbouwde argumenten.",
+        "hint": "Schwellenländer, Wertschöpfungskette, einseitige Abhängigkeit"
+      },
+      "c1_meritocracy": {
+        "title": "Is meritocratie eerlijk?",
+        "instruction_de": "Ist Leistung wirklich ein gerechtes Kriterium für sozialen Erfolg? Diskutiere kritisch unter Berücksichtigung struktureller Ungleichheiten.",
+        "instruction": "Is prestatie echt een eerlijk criterium voor sociaal succes? Discussieer kritisch rekening houdend met structurele ongelijkheden.",
+        "hint": "Chancengleichheit, soziale Mobilität, vermeintlich"
+      },
+      "c1_arts_funding": {
+        "title": "Staatssteun voor kunst",
+        "instruction_de": "Sollte der Staat Kunst und Kultur stärker fördern, oder sollte sich Kultur am Markt selbst tragen? Begründe deine Position.",
+        "instruction": "Moet de staat kunst en cultuur sterker ondersteunen, of moet cultuur zich op de markt zelf bedruipen? Onderbouw je standpunt.",
+        "hint": "kulturelle Vielfalt, marktwirtschaftlich, gemeinwohlorientiert"
+      },
+      "c1_renewables": {
+        "title": "Duitse energietransitie",
+        "instruction_de": "Diskutiere die Energiewende in Deutschland: Welche Erfolge gibt es, welche Hindernisse bleiben? Welche politischen Maßnahmen wären sinnvoll?",
+        "instruction": "Discussieer de energietransitie in Duitsland: welke successen zijn er, welke obstakels blijven? Welke politieke maatregelen zouden zinvol zijn?",
+        "hint": "erneuerbare Energien, Versorgungssicherheit, Netzausbau"
+      },
+      "c1_journalism": {
+        "title": "Kwaliteitsjournalistiek",
+        "instruction_de": "Welche Rolle spielen Qualitätsmedien in einer Demokratie und wie wirken sich soziale Medien auf diese Rolle aus? Argumentiere differenziert.",
+        "instruction": "Welke rol spelen kwaliteitsmedia in een democratie en hoe beïnvloeden sociale media deze rol? Argumenteer genuanceerd.",
+        "hint": "vierte Gewalt, Filterblase, Diskursqualität"
+      },
+      "c1_urban_rural": {
+        "title": "Kloof tussen stad en platteland",
+        "instruction_de": "Erörtere die wachsende Kluft zwischen Stadt und Land in entwickelten Ländern. Welche politischen Maßnahmen könnten Abhilfe schaffen?",
+        "instruction": "Bespreek de groeiende kloof tussen stad en platteland in ontwikkelde landen. Welke politieke maatregelen zouden uitkomst kunnen bieden?",
+        "hint": "strukturschwache Regionen, Daseinsvorsorge, Abwanderung"
+      },
+      "c1_lifelong_learning": {
+        "title": "Levenslang leren",
+        "instruction_de": "Welche Bedeutung hat lebenslanges Lernen im 21. Jahrhundert? Welche Verantwortung tragen Staat, Arbeitgeber und Individuum?",
+        "instruction": "Welke betekenis heeft levenslang leren in de 21e eeuw? Welke verantwoordelijkheid dragen staat, werkgever en individu?",
+        "hint": "Wandel der Arbeitswelt, Eigenverantwortung, Weiterbildungsförderung"
+      }
+    },
+    "tryAnotherToday": "Probeer er nog een vandaag ({n} over)"
+  },
+  "readingExercise": {
+    "eyebrow": "Dagelijks lezen",
+    "title": "Vandaag's leesopdracht",
+    "subtitle": "{level} · Een vers {min}–{max}-woord Duitse tekst en {n} begripsvragen, speciaal voor jou gegenereerd, nooit herhaald.",
+    "topicBadge": "Vandaag's onderwerp",
+    "wordsShort": "woorden",
+    "questionsTitle": "Begripsvragen",
+    "answered": "beantwoord",
+    "submit": "Controleer mijn antwoorden",
+    "generating": "Je tekst wordt gegenereerd…",
+    "correct": "{n} correct",
+    "startBody": "Lees een korte Duitse tekst op jouw niveau en beantwoord vervolgens de vragen hieronder. De tekst is elke dag nieuw en wordt nooit herhaald.",
+    "startCta": "Begin vandaag met lezen",
+    "errorGeneric": "Kon vandaag's tekst niet genereren. Probeer het over een moment opnieuw.",
+    "signInTitle": "Meld je aan om te beginnen met lezen",
+    "signInBody": "De dagelijkse leesopdrachtis gratis met een gratis account, zodat we je voortgang kunnen opslaan en eerlijke dagelijkse limieten kunnen toepassen.",
+    "signInCta": "Meld je aan",
+    "doneTitle": "Je hebt vandaag's lezen voltooid",
+    "doneBody": "Kom terug over {hours} {hours, plural, one {uur} other {uur}} voor morgen's tekst.",
+    "comeBackTomorrow": "Kom morgen terug voor een nieuwe tekst",
+    "grade": {
+      "excellent": "Uitstekend!",
+      "good": "Goed gedaan",
+      "ok": "Doorgaan",
+      "practice": "Lees voorzichtig opnieuw"
+    },
+    "tryAnotherToday": "Probeer er vandaag nog één ({n} resterend)"
+  },
+  "examPrepCta": {
+    "eyebrow": "Goethe & telc Examenvoorbereiding",
+    "title": "Hulp nodig bij het behalen van je A1, B1 of B2 examen?",
+    "subtitle": "Boek een betaalde 1-op-1 sessie van 30 minuten met een Duitse taalspecialist die de Goethe en telc examenroutine kent — online, waar je ook bent.",
+    "bullet1": "Diagnose in je eerste 5 minuten — exact welke gaten je moet dichten",
+    "bullet2": "Strategie voor elke module: lesen, hören, schreiben, sprechen",
+    "bullet3": "Nep-sprekend deel met hetzelfde format als het echte examen",
+    "bullet4": "Praktische tips: timing, inschrijving, wat je op examendag moet meenemen"
+  },
+  "documentChecklist": {
+    "metaTitle": "Document Checklist Generator — Uw verhuizing naar Duitsland",
+    "metaDesc": "Persoonlijke checklist van elk document dat je nodig hebt voor het Duitse Ausbildung of Studium visum — met waar je elk document kunt verkrijgen, geschatte kosten in EUR en tijdlijnen.",
+    "eyebrow": "Aanvraag & administratie",
+    "title": "Documentencontrolelijs Generator",
+    "formTitle": "Uw toepassingsprofiel",
+    "subtitle": "Krijg de exacte lijst met documenten die internationale aanvragers nodig hebben voor het Duitse Ausbildung of Studium visum — met informatie over waar je elk document kunt verkrijgen, geschatte kosten in EUR en realistische tijdlijnen. Kosten variëren per land, dus bedragen zijn ruwe schattingen.",
+    "pathLabel": "Pad",
+    "educationLabel": "Onderwijsniveau",
+    "familyLabel": "Familiale status",
+    "vorabTitle": "Ik heb al Vorab-goedkeuring",
+    "apsDoneTitle": "Ik heb al mijn APS-certificaat",
+    "seoSection": {
+      "title": "Een persoonlijke documentenchecklist voor het Duitse visum",
+      "intro": "Een volledige, persoonlijke checklist van elk document dat een internationale aanvrager nodig heeft voor een Duits visum — Ausbildung of Studium — samengesteld op basis van de werkelijke vereisten die Duitse missies voor 2026 publiceren. Generieke checklists die je online vindt, mengen vereisten uit meerdere landen; deze filtert precies wat jij nodig hebt. Categorieën omvatten identiteit (ID-kaart, paspoort, foto's), academisch (diploma voortgezet onderwijs, Zeugnisbewertung van ZAB, transcripten), taal (Goethe, telc, ÖSD-certificaat), professioneel (ondertekend Ausbildung-contract of universiteitstoelatingsbesluit), financieel (Sperrkonto, Verpflichtungserklärung, of salarisbewijzen), en overig (verzekering, huisvestingsbewijzen, beëdigde vertalingen).\n\nVoor elk document toont het hulpmiddel waar je het kunt verkrijgen, de realistische verwerkingstijd en de geschatte kosten in EUR. Het markeert ook welke documenten een beëdigde vertaling naar het Duits nodig hebben. Gebruik het als een afdrukbare lijst voor je visumafspraak, of als planningshulpmiddel 6 tot 12 maanden voor je aanvraag — veel documenten (ZAB-evaluatie, Goethe-certificaat, apostille of legalisatie) duren 2 tot 3 maanden en kunnen niet worden versneld.",
+      "faqTitle": "Veelgestelde vragen over de documentenchecklist",
+      "faqs": [
+        {
+          "q": "Moeten alle documenten naar het Duits worden vertaald?",
+          "a": "Dit hangt af van de Duitse missie in jouw land. Documenten die niet in het Duits zijn uitgegeven (en soms ook niet in het Engels) hebben over het algemeen een beëdigde vertaling naar het Duits nodig. Controleer de exacte lijst die jouw ambassade of visumcentrum publiceert."
+        },
+        {
+          "q": "Wat is de Zeugnisbewertung?",
+          "a": "De officiële Duitse evaluatie van je buitenlands diploma, uitgegeven door de ZAB (Zentralstelle für ausländisches Bildungswesen). Het kost €80 en duurt 2 tot 3 maanden. Vaak vereist voor Studium-aanvragers."
+        },
+        {
+          "q": "Heb ik een apostille op mijn documenten nodig?",
+          "a": "Dit hangt af van jouw land. De meeste academische en burgerlijke documenten hebben authenticatie nodig — een apostille voor Haagse-Conventielanden die Duitsland erkent, anders consulaire legalisatie — meestal van je Ministerie van Buitenlandse Zaken."
+        }
+      ]
+    },
+    "vorabHint": "Vorab-goedkeuring van de Bundesagentur für Arbeit. Versnelt het visum.",
+    "germanCertTitle": "Ik heb al mijn Duitse B1/B2-certificaat",
+    "germanCertHint": "Goethe, telc of ÖSD certificaat.",
+    "apsDoneHint": "Uitgegeven door het APS-kantoor voor uw land. Vereist voor Studium in sommige landen (bijv. China, India, Vietnam, Pakistan).",
+    "bringFamilyTitle": "Ik zal later een aanvraag indienen om mijn familie mee te nemen",
+    "summaryEyebrow": "Uw checklist",
+    "bringFamilyHint": "Voegt gezinsherenigingsdocumenten toe (apart visum).",
+    "documents": "documenten",
+    "totalCost": "Geschatte totale kosten",
+    "summarySub": "Voor uw {path} visumaanvraag",
+    "apostilleCount": "Apostille op {n} documenten",
+    "translationPages": "Beëdigde vertaling · {n} pagina's",
+    "estimatedTimeline": "Realistische tijdlijn",
+    "listTitle": "Documentenlijst",
+    "progressLabel": "{done} van {total} verkregen",
+    "days": "dagen",
+    "weeks": "weken",
+    "free": "Gratis",
+    "sameDay": "Dezelfde dag",
+    "hideTip": "Verbergen",
+    "mandatory": "Verplicht",
+    "orAlternative": "Alternatief",
+    "apostille": "Apostille",
+    "swornTranslation": "Beëdigde vertaling",
+    "ctaTitle": "Hulp nodig bij het valideren van uw bestand?",
+    "ctaSub": "Boek een 30-minuten consult met onze Duitse immigratiespecialist. We beoordelen elk document, wijzen op ontbrekende stukken en geven je een persoonlijk actieplan.",
+    "path": {
+      "ausbildung": "Ausbildung",
+      "studium": "Studium",
+      "tourist": "Toerist (Schengen C visum)",
+      "family_reunification": "Gezinshereniging"
+    },
+    "education": {
+      "bac": "Bac",
+      "bac_plus_2": "Bac+2",
+      "bac_plus_3": "Licence (Bac+3)",
+      "bac_plus_5": "Master (Bac+5)"
+    },
+    "family": {
+      "single": "Alleenstaand",
+      "married": "Getrouwd",
+      "married_kids": "Getrouwd met kinderen"
+    },
+    "countryLabel": "Jouw land",
+    "summarySubCountry": "Voor uw {path} visum van {country}",
+    "legalization": "Legalisering",
+    "category": {
+      "identity": "Identiteit & burgerlijke staat",
+      "academic": "Academisch",
+      "language": "Duitse taal",
+      "application": "Sollicitatiedossier",
+      "employer": "Werkgeverdocumenten",
+      "university": "Universiteitstoelating",
+      "financial": "Financieel bewijs",
+      "health": "Ziektekostenverzekering",
+      "housing": "Huisvesting",
+      "visa_procedure": "Visumprocedure",
+      "sponsor": "Sponsordocumenten (Duitsland)"
+    },
+    "legalizationCount": "Legalisatie van {n} documenten",
+    "apsFee": "APS-certificaatvergoeding",
+    "disclaimer": "Alleen schattingen — kosten, tarieven en verwerkingstijden variëren en regels veranderen. Bevestig altijd met de Duitse vertegenwoordiging (ambassade/consulaat of officieel visumcentrum) die verantwoordelijk is voor jouw land voordat je aanvraagt.",
+    "noVisaRequired": "Geen visum vereist",
+    "noVisaDesc": "{country} burgers hebben geen visum nodig voor dit doel in Duitsland. EU/EER/Zwitserse onderdanen genieten vrijheid van beweging — je kunt in Duitsland wonen, werken en studeren zonder visum of vergunning.",
+    "countryNote": {
+      "ma": "Duitsland accepteert de apostille uit {country} niet — uw burgerlijke en academische documenten moeten volledig gelegaliseerd worden door de Duitse missie. Dit kost enkele weken extra, dus begin op tijd.",
+      "aps": "Aanvragers uit {country} moeten een APS-certificaat verkrijgen voordat zij een Studium-visum aanvragen. Begin hiermee eerst — dit is de langste stap.",
+      "legalizationSlow": "Documenten uit {country} moeten gelegaliseerd worden door de consulaire dienst, wat enige tijd kan duren. Verzamel en authentificeer ze zo vroeg mogelijk.",
+      "generic": "De vereisten verschillen per land. Dit is een algemene Duitse checklist voor nationale visa — bevestig de exacte documenten en de authentificatiemethode ({method}) bij de Duitse missie die verantwoordelijk is voor uw land.",
+      "eu": "Als EU/EER/Zwitserse burger hebt u het recht om vrij in Duitsland te wonen, te werken en te studeren — geen visum of verblijfsvergunning vereist voor verblijven van welke duur dan ook.",
+      "touristFree": "Burgers van {country} zijn vrijgesteld van het Schengenvisum voor korte verblijven (tot 90 dagen in elke 180-dagenperiode). Voor verblijven langer dan 90 dagen (Ausbildung, Studium, gezinshereniging) is een nationaal D-visum vereist."
+    },
+    "seoCountryPageTitle": "Duitsland visumdocumenten — {country} — {path}",
+    "seoPageH1": "{country} — {path} visum: documentenlijst ({year})",
+    "seoCountryPageDesc": "Volledige, geverifieerde checklist van documenten die nodig zijn voor het Duitse {path} visum uit {country}. Inclusief kosten, tijdlijnen en authenticatievereisten.",
+    "seoPageIntroNoVisa": "{country} burgers hebben geen visum nodig om in Duitsland te wonen, te werken of te studeren. Als EU/EER/Zwitserse onderdaan profiteer je van vrijheid van beweging — geen visum, geen vergunning voor enige duur.",
+    "seoPageIntroVisa": "Volledige, geverifieerde lijst met documenten die vereist zijn voor {country} burgers die een Duits {path} visum aanvragen. Inclusief verificatiemethode, kostenschattingen en verwerkingstijden — gebaseerd op officiële gegevens van de Duitse ambassade.",
+    "seoPageStats": "{docs} documenten · {method} · Geschat €{min}–{max}",
+    "seoPageIntroTouristFree": "{country} burgers zijn vrijgesteld van het Schengen C toeristenvisum voor verblijven tot 90 dagen. Voor langetermijndoeleinden (Ausbildung, Studium, gezinshereniging) is nog steeds een nationaal D-visum vereist.",
+    "seoPageNoVisaStats": "Geen visum vereist",
+    "seoPageDocSection": "Vereiste documenten",
+    "seoPageInteractiveTitle": "Personaliseer deze checklist",
+    "seoPageInteractiveSub": "Pas uw onderwijsniveau, familiaire situatie en andere opties aan voor een exacte lijst.",
+    "docs": {
+      "passport": {
+        "name": "Paspoort (≥ 12 maanden geldigheid)",
+        "where": "Gemeente waar u ingeschreven staat",
+        "notes": "Vernieuw indien het binnen 12 maanden vervalt. De Ausländerbehörde vereist een langere geldigheid dan de visumduur."
+      },
+      "biometric_photos": {
+        "name": "Biometrische foto's (×6)",
+        "where": "Lokale fotograaf — vraag om 35×45mm biometrisch formaat",
+        "notes": "Bestel 6 stuks: visumformulier heeft er 2 nodig, meer voor verblijfsvergunning + Anmeldung in Duitsland."
+      },
+      "birth_certificate": {
+        "name": "Geboorteakte",
+        "where": "Burgerlijke stand op uw geboorteplaats",
+        "notes": "Vraag een meertalig/internationaal uittreksel aan als uw land dit uitgeeft — dit kan vertaalkosten besparen."
+      },
+      "police_clearance": {
+        "name": "Politieke verklaring (Bulletin n°3)",
+        "where": "Tribunal de 1ère Instance OF online: service-public.ma",
+        "notes": "Moet binnen 3 maanden voor uw visumafspraak zijn uitgegeven. Vraag 2 kopieën aan."
+      },
+      "marriage_certificate": {
+        "name": "Huwelijksakte",
+        "where": "Bureau d'État Civil waar het huwelijk is ingeschreven",
+        "notes": "Alleen nodig bij gezinshereniging later. Voorzien van apostille + vertaald."
+      },
+      "children_birth_certs": {
+        "name": "Geboortecertificaten van kinderen",
+        "where": "Bureau d'État Civil waar elk kind is ingeschreven",
+        "notes": "Apostille + beëdigde vertaling per kind. Alleen als u kinderen meeneemt."
+      },
+      "bac_diploma": {
+        "name": "Bac-diploma",
+        "where": "Académie Régionale de l'Éducation et de la Formation (waar u het Bac hebt gedaan)",
+        "notes": "Origineel of gelegaliseerde kopie. Indien u alleen een duplicaat hebt, moet dit ook voorzien van apostille."
+      },
+      "bac_transcripts": {
+        "name": "Bac-cijferlijsten (Relevés de notes)",
+        "where": "Hetzelfde als diploma — Académie Régionale",
+        "notes": "Beide jaren van het Bac vereist. Apostille elke pagina."
+      },
+      "higher_ed_diploma": {
+        "name": "Diploma hoger onderwijs",
+        "where": "Bureau de la Scolarité van uw universiteit",
+        "notes": "Bachelor / Master / DUT / etc. Origineel + apostille + beëdigde vertaling."
+      },
+      "higher_ed_transcripts": {
+        "name": "Cijferlijsten hoger onderwijs",
+        "where": "Uw universiteit",
+        "notes": "Alle jaren. Cumulatief gemiddelde helpt bij APS-evaluatie."
+      },
+      "aps_certificate": {
+        "name": "APS-certificaat (Akademische Prüfstelle)",
+        "where": "Het APS-kantoor voor uw land (Duitse ambassade / DAAD)",
+        "notes": "Vereist voor sommige landen (bijv. China, India, Vietnam, Pakistan). Begin hiermee eerst — verwerking kan 6–20 weken duren. Dien alle academische gegevens sinds de middelbare school in."
+      },
+      "anabin_check": {
+        "name": "Anabin-herkenningscontrole",
+        "where": "anabin.kmk.org (online, gratis)",
+        "notes": "Controleer of uw universiteit en diploma in de Anabin-database als H+ staan vermeld. Maak een schermafbeelding voor uw administratie — geen formeel certificaat nodig."
+      },
+      "studienkolleg": {
+        "name": "Studienkolleg-toelating (als uw diploma niet direct kwalificeert)",
+        "where": "Solliciteer via uw doeluniversiteit in Duitsland",
+        "notes": "Of u dit nodig hebt, hangt af van hoe uw middelbare diploma zich verhoudt tot het Duitse Abitur. Controleer anabin / uw doeluniversiteit."
+      },
+      "german_b1": {
+        "name": "Duits B1-certificaat (Goethe / telc / ÖSD)",
+        "where": "Een Goethe-Institut, telc of ÖSD testcentrum in uw land",
+        "notes": "B1 is het minimum voor een Ausbildung-visum. De meeste werkgevers geven de voorkeur aan B2."
+      },
+      "german_b2": {
+        "name": "Duits B2-certificaat (Goethe / telc / ÖSD)",
+        "where": "Een Goethe-Institut, telc of ÖSD testcentrum in uw land",
+        "notes": "Vereist voor de meeste Studium-programma's. Sommige vereisen TestDaF of DSH-2 in plaats daarvan."
+      },
+      "visa_application_form": {
+        "name": "Nationaal D-visumformulier",
+        "where": "Download van de website van de Duitse missie (rk.diplo.de) of uw visumcentrum",
+        "notes": "Vul 2 kopieën in het Duits of Engels in. Onderteken elke pagina."
+      },
+      "cv_german": {
+        "name": "CV in het Duits (Lebenslauf)",
+        "where": "Zelf opgesteld — gebruik de CV-builder op deze site",
+        "notes": "Alleen tabellarisch formaat. Foto rechtsboven. Onderteken en dateer onderaan."
+      },
+      "motivation_letter": {
+        "name": "Motivatiebrief (Anschreiben) in het Duits",
+        "where": "Zelf opgesteld — gebruik de Anschreiben-generator op deze site",
+        "notes": "Maximaal één pagina. Adresseer het aan de Duitse consul of uw toekomstige werkgever/universiteit."
+      },
+      "ausbildungsvertrag": {
+        "name": "Ausbildungsvertrag (ondertekend Ausbildung-contract)",
+        "where": "Van uw toekomstige Duitse werkgever",
+        "notes": "Moet startdatum, salaris, trainingsperiode, IHK/HWK-registratienummer bevatten."
+      },
+      "taetigkeitsbeschreibung": {
+        "name": "Tätigkeitsbeschreibung (functiebeschrijving)",
+        "where": "Van uw toekomstige werkgever",
+        "notes": "Vereist voor de Bundesagentur Vorab-controle. Werkgever vult het gestandaardiseerde formulier in."
+      },
+      "vorab_zustimmung": {
+        "name": "Vorab-Zustimmung (voorafgoedkeuring)",
+        "where": "Bundesagentur für Arbeit (werkgever vraagt dit aan)",
+        "notes": "Verkort visumverwerking van ~8 maanden naar ~2 maanden. Het is de moeite waard uw werkgever hierom te vragen."
+      },
+      "university_admission": {
+        "name": "Universiteitstoelatingsbesluit (Zulassung)",
+        "where": "Toelatingsbureau van uw Duitse universiteit",
+        "notes": "Definitieve Zulassung of Bedingungszulassung beide geaccepteerd. Origineel + 2 kopieën."
+      },
+      "sperrkonto": {
+        "name": "Sperrkonto (€11.904 geblokkeerde rekening)",
+        "where": "Online: Fintiba, Expatrio of Coracle",
+        "notes": "Verplicht voor Studium; Ausbildung-stagiaires met salaris < €934/mnd hebben dit ook nodig. ~€89 instellingskosten + de €11.904 storting (wordt na aankomst maandelijks aan u terugbetaald)."
+      },
+      "verpflichtungserklaerung": {
+        "name": "Verpflichtungserklärung (sponsorverklaring)",
+        "where": "Sponsor in Duitsland gaat naar hun lokale Ausländerbehörde",
+        "notes": "Alternatief voor Sperrkonto. Sponsor moet voldoende inkomen aantonen. ~€29 kosten betaald door sponsor."
+      },
+      "bank_statements": {
+        "name": "Bankafschriften (laatste 3 maanden)",
+        "where": "Uw bank",
+        "notes": "Soms aangevraagd als ondersteunend bewijs, zelfs als een Sperrkonto aanwezig is."
+      },
+      "travel_health_insurance": {
+        "name": "Reisverzekering (eerste 90 dagen)",
+        "where": "Online: Coracle, MAWISTA, DR-WALTER",
+        "notes": "Moet ≥ €30.000 medische kosten dekken en de gehele periode vóór de verblijfsvergunning."
+      },
+      "accommodation_proof": {
+        "name": "Huisvestingsbewijs (Wohnungsgeberbestätigung of hotelreservering)",
+        "where": "Uw toekomstige Duitse huisbaas OF hotelboekingssite",
+        "notes": "Een ondertekende Wohnungsgeberbestätigung is het beste. Hotelreservering voor de eerste 4 weken is acceptabel terwijl u een lange termijn appartement zoekt."
+      },
+      "visa_fee": {
+        "name": "Nationaal D-visumtarief (€75)",
+        "where": "Betaald bij uw visumafspraak",
+        "notes": "Niet terugbetaalbaar. Betaalmethode hangt af van het visumcentrum."
+      },
+      "visa_appointment": {
+        "name": "Visumafspraak",
+        "where": "Het officiële Duitse visumcentrum voor uw land (VFS Global, TLScontact, of de ambassade/consulaat)",
+        "notes": "Boek vroeg — slots zijn vaak 1–3 maanden uit, langer in de zomer. Eventuele servicekosten zijn apart van het visumtarief."
+      },
+      "german_a1_cert": {
+        "name": "Duits A1-certificaat (Goethe / telc / ÖSD)",
+        "where": "Een Goethe-Institut, telc of ÖSD testcentrum in uw land",
+        "notes": "Verplicht voor gezinshereniging van echtgenoten (Ehegattennachzug) onder §28 AufenthG. Uitzonderingen: echtgenoot heeft een universiteitsdiploma uit een Duitstalig land, of aanvrager is ouder dan 67."
+      },
+      "sponsor_permit_copy": {
+        "name": "Verblijfsvergunning van sponsor (Aufenthaltstitel) — kopie",
+        "where": "Uw sponsor in Duitsland (echtgenoot/ouder)",
+        "notes": "Een kopie van hun huidige Aufenthaltstitel. Zorg ervoor dat deze de herenigingsperiode dekt en gezinshereniging toestaat."
+      },
+      "sponsor_income_proof": {
+        "name": "Inkomstenbewijs sponsor (laatste 3 salarissen + belastingaangifte)",
+        "where": "Werkgever van uw sponsor / belastingkantoor in Duitsland",
+        "notes": "Moet voldoende inkomen aantonen om het gezin te ondersteunen. Minimumdrempel varieert per Bundesland — controleer bij de verantwoordelijke Ausländerbehörde."
+      },
+      "sponsor_housing_proof": {
+        "name": "Huisvestingsbewijs — Wohnflächennachweis (min. 12 m² per persoon)",
+        "where": "Huisbaas van sponsor of eigendomsdocumenten",
+        "notes": "Toont dat de huisvesting aan minimale ruimtevereisten voldoet. Een huisbaasbevestiging (Wohnungsgeberbestätigung) of huurovereenkomst is meestal voldoende."
+      },
+      "schengen_visa_form": {
+        "name": "Schengen C-visumformulier",
+        "where": "Download van de website van de Duitse missie of het visumcentrum (VFS / TLScontact)",
+        "notes": "Vul in het Duits of Engels in. Onderteken elke pagina. Breng 2 identieke kopieën mee naar uw afspraak."
+      },
+      "travel_insurance_tourist": {
+        "name": "Reisverzekering (min. €30.000 dekking)",
+        "where": "Online: Coracle, MAWISTA, DR-WALTER, Allianz Travel",
+        "notes": "Moet de volledige Schengen-reisduur plus in- en uitreisdagen dekken. Minimale dekking €30.000. Moet repatriëringskosten omvatten."
+      },
+      "flight_reservation": {
+        "name": "Retourvluchtreservering",
+        "where": "Uw luchtvaartmaatschappij of online boekingssite",
+        "notes": "Een reserveringsbevestiging is voldoende — u hoeft het ticket niet te kopen voordat het visum is verleend. Veel services bieden gratis 24-uurs wachtplaatsen."
+      },
+      "accommodation_tourist": {
+        "name": "Huisvestingsbewijs voor het gehele verblijf",
+        "where": "Hotel-, hostel-, Airbnb-bevestiging — of een ondertekende uitnodigingsbrief van een gastheer",
+        "notes": "Elke nacht van de reis moet verantwoord zijn. Bij verblijf bij een gastheer in Duitsland, een ondertekende Verpflichtungserklärung (uitnodigings-/garantiebriefje) uitgegeven door de Ausländerbehörde is voorkeur."
+      },
+      "financial_means_proof": {
+        "name": "Bewijs van voldoende middelen (bankafschriften — laatste 3 maanden)",
+        "where": "Uw bank",
+        "notes": "Duitsland vereist ongeveer €45–€100 per dag verblijf. Afschriften moeten regelmatig inkomen of voldoende spaargeld aantonen. Sommige missies accepteren ook een sponsorgarantie."
+      },
+      "employment_ties_proof": {
+        "name": "Bewijs van banden met thuisland (werkgever-/inschrijvingsbrief of eigendomsdocument)",
+        "where": "Uw werkgever, universiteit, of kadaster",
+        "notes": "Toont aan dat u na de reis terugkeert. Een verlofgoedkeuringsbriefje van uw werkgever, een studenteninschrijvingscertificaat, of bewijs van eigendom zijn de meest voorkomende vormen."
+      },
+      "schengen_visa_fee": {
+        "name": "Schengen C-visumtarief (€90)",
+        "where": "Betaald bij uw afspraak (contant of kaart — controleer bij het visumcentrum)",
+        "notes": "Niet terugbetaalbaar, zelfs als het visum wordt geweigerd. Sommige landen hebben gereduceerde tarieven onder bilaterale overeenkomsten (bijv. Armenië, Azerbeidzjan: €35). Kinderen onder 6: gratis. Kinderen 6–12: €45."
+      },
+      "schengen_appointment": {
+        "name": "Visumafspraak bij de Duitse missie of het visumcentrum",
+        "where": "De Duitse ambassade, consulaat of erkend visumcentrum (VFS Global, TLScontact) voor uw land",
+        "notes": "Boek zo vroeg mogelijk — slots in het seizoen (juni–augustus) kunnen 4–8 weken uit liggen. Biometrische vingerafdrukken worden bij de afspraak vastgelegd."
+      }
+    },
+    "seoArticleTitle": "Over het {path} visum voor {country} onderdanen",
+    "seoFaqTitle": "Veelgestelde vragen",
+    "authMethodDetail": {
+      "apostille": "{country} is lid van het Haags Apostille Verdrag en Duitsland accepteert apostilles daarvan. Uw documenten worden geverifieerd met een apostillestempel van de relevante nationale autoriteit.",
+      "legalization": "Hoewel {country} lid is van het Haags Apostille Verdrag, heeft Duitsland formeel bezwaar aangetekend tegen de toetreding van {country}. Volledige consulaire legalisatie via de Duitse ambassade of een keten van nationale autoriteiten is daarom vereist — geen apostille."
+    },
+    "apsDetail": {
+      "required": "een APS (Akademische Prüfstelle) certificaat IS vereist. U moet uw academische documenten laten verifiëren door het APS-kantoor voordat u uw visumaanvraag indient.",
+      "notRequired": "een APS certificaat is NIET vereist. U kunt uw geverifieerde academische documenten rechtstreeks in uw visumbestand indienen."
+    },
+    "seoContent": {
+      "ausbildung": {
+        "p1": "Het Ausbildung-systeem (duale beroepsopleiding) in Duitsland is een van de meest gewilde immigratieroutes voor onderdanen van {country}. Het nationale D-visum voor beroepsopleiding, geregeld in §17a van de Duitse Residence Act (AufenthG), geeft u het recht om een 2-3 jaar durend erkend trainingsprogramma bij een Duits bedrijf af te ronden terwijl u een salaris verdient. In tegenstelling tot Studium vereist Ausbildung geen universitaire graad — een diploma voortgezet onderwijs (Baccalauréat of gelijkwaardig) en een ondertekend trainingscontract zijn de kernvereisten.",
+        "p2": "Documentauthenticatie is een doorslaggevende factor in hoe snel aanvragers uit {country} hun visadossier kunnen indienen. Duitsland vereist authenticatie door {authMethod} voor alle officiële documenten die in {country} zijn uitgegeven, inclusief uw geboorteakte, diploma's, schooltranscripten en politieverklaring. De {authMethod}-stap kost €{authFeeMin}–{authFeeMax} per document en voegt {authDaysMin}–{authDaysMax} dagen toe aan uw voorbereiding. Beëdigde Duitse vertalingen zijn ook verplicht voor alle niet-Duitse documenten — plan voor een extra €20–60 per pagina bij een erkende vertaler.",
+        "p3": "Het visumproces begint met een Duits B1-taaltcertificaat (Goethe, telc of ÖSD), omdat dit het minimum is dat voor de meeste Ausbildung-visa's vereist is. Uw toekomstige werkgever in Duitsland dient een Vorab-Zustimmung (voorafgaande goedkeuring) in bij de Bundesagentur für Arbeit — indien goedgekeurd, wordt de visumverwerking teruggebracht van ongeveer 8 maanden naar ongeveer 2 maanden. Financieel bewijs is ook vereist: afhankelijk van uw trainingssalaris, hebt u mogelijk een Sperrkonto (geblokkeerde rekening) met €11.904 voor het jaar nodig, of een alternatieve garantie (Verpflichtungserklärung) van een in Duitsland woonachtige sponsor.",
+        "p4": "Vanuit {country} is de realistische totale tijdlijn — van het verzamelen van documenten tot uw eerste werkdag in Duitsland — {timelineMin}–{timelineMax} weken. Visumafspraakslots bij de Duitse missie of TLScontact/VFS-centrum in {country} raken maanden van tevoren vol. Dien uw volledige dossier in bij de afspraak: onvolledige dossiers worden niet geaccepteerd en er worden geen terugbetalingen gegeven. Het nationale D-visumtarief is €{visaFee}, betaalbaar op de dag zelf."
+      },
+      "studium": {
+        "p1": "Duitsland is een van de topbestemmingen ter wereld voor internationale studenten — en voor onderdanen van {country} opent een Duits Studium-visum de deur naar gratis of goedkope onderwijs aan wereldwijd gerangschikte instellingen. Het nationale D-visum voor hoger onderwijs wordt geregeld door §16b AufenthG en stelt u in staat om in te schrijven voor een volledige Bachelor-, Master- of PhD-programma.",
+        "p2": "Alle academische documenten uit {country} moeten door {authMethod} worden geverifieerd voordat ze kunnen worden ingediend bij de Duitse missie. Dit geldt voor uw Baccalauréat-diploma, transcripten, hogeronderwijsdiploma's en andere officieel uitgegeven certificaten. De {authMethod}-stap duurt {authDaysMin}–{authDaysMax} dagen en kost €{authFeeMin}–{authFeeMax} per document — en elk document heeft ook een beëdigde Duitse vertaling nodig (€20–60 per pagina). Het totale authenticatie- en vertalingsbudget voor een gemiddeld Studium-dossier uit {country} bedraagt meestal €300–800.",
+        "p3": "Het Studienkolleg is een voorbereidingsjaar dat vereist is als uw diploma voortgezet onderwijs u niet rechtstreeks kwalificeert voor toelating tot Duitse universiteiten. Gebruik de Anabin-database (anabin.kmk.org) om de status van uw kwalificatie te controleren voordat u solliciteert. Aanvragers moeten ook een Sperrkonto (geblokkeerde rekening) openen met €11.904 als bewijs van financiële middelen — onlineproviders zoals Fintiba, Expatrio of Coracle openen er een binnen enkele dagen. Een Duits B2-taaltcertificaat (Goethe, telc, ÖSD of TestDaF) is verplicht voor Duitstalige programma's; Engelstalige programma's accepteren IELTS/TOEFL in plaats daarvan.",
+        "p4": "Het totale aantal documenten voor een Studium-visum uit {country} is {totalDocs} items, en de geschatte totale kosten (documenten, authenticatie, vertalingen, Sperrkonto-setup en visumtarief) bedragen €{totalCostMin}–{totalCostMax}. De realistische voorbereidingstijdlijn is {timelineMin}–{timelineMax} weken. Begin minstens 6 maanden voor uw beoogde studiestart — Duitse universiteiten sturen toelatingsbrieven laat, en wachtrijen voor apostille of legalisatie in {country} kunnen enkele weken duren."
+      },
+      "tourist": {
+        "p1": "Onderdanen van {country} hebben een Schengen C-visum (ook wel kortetermijn- of toeristenvisum genoemd) nodig om Duitsland en het bredere Schengengebied te bezoeken. Het Schengen C-visum staat tot 90 dagen verblijf in elke 180-daagse periode toe en dekt toerisme, familiebezoeken, korte zakenreizen en culturele evenementen. De aanvraag wordt ingediend bij de Duitse ambassade, consulaat of een erkend visumcentrum (VFS Global of TLScontact) in {country}.",
+        "p2": "Het Schengen-toeristenvisumtarief is €{visaFee} vanaf 2024 (verhoogd van €80 in juni 2024 onder de herziene EU-visumcode). Kinderen onder de 6 jaar zijn vrijgesteld; kinderen van 6–12 jaar betalen €45. Het tarief kan niet worden terugbetaald, zelfs niet als het visum wordt geweigerd. U betaalt ook eventuele servicekosten van het visumcentrum bovenop het consulaire tarief. In {country} bedragen de totale aanvraagkosten inclusief verzekering en documentvoorbereiding meestal €150 tot €350.",
+        "p3": "De sterkste factor in een Schengen-visumgoedkeuring is het aantonen van sterke banden met uw thuisland — bewijs dat u van plan bent terug te keren. Een werkgeversbrief die u goedgekeurde verlof verleent, een eigendomsbewijs, een bedrijfsregistratie of een studenteninschrijvingscertificaat dienen allemaal dit doel. Financieel bewijs moet aantonen dat u ongeveer €45–100 per dag van uw verblijf kunt dekken. Reisverzekering voor gezondheid met een minimale dekking van €30.000 en geldig voor alle Schengen-landen is verplicht.",
+        "p4": "Wachttijden voor afspraken bij de Duitse missie of het visumcentrum in {country} variëren per seizoen: verwacht {authDaysMin}–{authDaysMax} werkdagen in rustige perioden en tot 8 weken in de zomer. Verwerking na indiening duurt maximaal 15 kalenderdagen voor eenvoudige aanvragen (tot 30 dagen voor complexe zaken, 45 dagen in uitzonderlijke omstandigheden). Meervoudige inreisvisum's geldig voor 1–5 jaar kunnen worden afgegeven aan regelmatige reizigers met een schone reisgeschiedenis."
+      },
+      "family_reunification": {
+        "p1": "Gezinshereniging in Duitsland — het brengen van een echtgenoot, minderjarige kinderen of afhankelijke ouders om zich bij een Duitse ingezetene aan te sluiten — wordt geregeld door §§27–36 van de AufenthG. Onderdanen van {country} die zich bij een familielid in Duitsland willen aansluiten, moeten een nationaal D-visum verkrijgen voordat zij aankomen. Het meest voorkomende geval is echtgenoothereniging (Ehegattennachzug), die de echtgenoot het recht geeft om onmiddellijk na aankomst in Duitsland te werken.",
+        "p2": "De meest onderscheidende vereiste voor echtgenoten die vanuit {country} aanvragen is het Duitse A1-taaltcertificaat. Voordat een echtgenootherenigingsvisum wordt afgegeven, moet de aanvrager basiskennis van de Duitse taal op CEFR-niveau A1 aantonen (Goethe-Zertifikat A1, telc Deutsch A1 of ÖSD Zertifikat A1). Uitzonderingen bestaan als de sponsor een Duits Hochschulabschluss bezit of C1-niveau Duits heeft, als de aanvrager ouder is dan 67, of als er een aangetoonde hardshipcase is. Documentauthenticatie uit {country} gebruikt {authMethod} en kost €{authFeeMin}–{authFeeMax} per document, wat {authDaysMin}–{authDaysMax} dagen toevoegt.",
+        "p3": "De sponsor (de persoon die al in Duitsland is) speelt een centrale rol: zij moeten aantonen dat hun inkomsten voldoende zijn om het herenigde gezin zonder beroep op openbare middelen te ondersteunen. De vereiste inkomstendrempel varieert per Bundesland en huishoudensgrootte, maar bedraagt meestal het Grundsicherung-minimum plus 20%. De sponsor moet ook voldoende huisvesting aantonen — een minimum van 12 m² woonruimte per extra persoon is de maatstaf die door de meeste Ausländerbehörden wordt gebruikt. Deze documenten (inkomstenbewijs, huisvestingsbevestiging) moeten naar u in {country} worden gestuurd voordat uw visumafspraak.",
+        "p4": "Vanuit {country} duurt het volledige proces — het verzamelen van documenten, authenticatie ({authMethod}), A1-certificaat en de visumafspraak — {timelineMin}–{timelineMax} weken. Het nationale D-visumtarief is €{visaFee}. Eenmaal in Duitsland moet het gesponsorde familielid zich binnen twee weken inschrijven bij de lokale Einwohnermeldeamt en een verblijfsvergunning (Aufenthaltstitel) aanvragen bij de Ausländerbehörde. Echtgenoten hebben het recht om onmiddellijk elk werk op te nemen; kinderen van schoolgaande leeftijd worden zonder aanvullende vergunningsvereisten in het openbare schoolsysteem geïntegreerd."
+      },
+      "noVisaEu": "Als onderdaan van {country} profiteert u van het vrij verkeer van personen van de Europese Unie — een van de meest significante rechten in de EU-rechtsorde. U kunt in Duitsland wonen, werken, studeren of met pensioen gaan voor onbeperkte tijd zonder een visum, verblijfsvergunning of werkvergunning te verkrijgen. De enige vereiste administratieve stap is het registreren van uw adres bij de lokale Einwohnermeldeamt (Anmeldung) binnen twee weken na aankomst, en inschrijving voor ziektekostenverzekering als u werkzaam bent.",
+      "touristFree": "Onderdanen van {country} zijn vrijgesteld van het Schengen C-toeristenvisum onder een bilateraal visumvrij akkoord of EU/EER-vrij verkeer. U kunt Duitsland en het Schengengebied voor verblijven van maximaal 90 dagen in elke 180-daagse periode zonder visum betreden. Voor verblijven langer dan 90 dagen — voor Ausbildung, Studium of gezinshereniging — is een nationaal D-visum vereist. De D-visumaanvraag wordt ingediend bij de Duitse ambassade of eredienst die verantwoordelijk is voor uw woonplaats in {country}."
+    },
+    "seoFaqs": {
+      "ausbildung": [
+        {
+          "q": "Hoeveel documenten heb ik nodig voor het Duitse Ausbildung visum uit {country}?",
+          "a": "Een standaard Ausbildung visumaanvraag uit {country} vereist {totalDocs} documenten. De belangrijkste zijn het ondertekende Ausbildungsvertrag (trainingscontract) van uw Duitse werkgever, een Duits B1/B2 taaltcertificaat, geverifieerde schooldiploma's en transcripten, en bewijzen van financiële middelen. Elk document in een ander taal dan het Duits moet vergezeld gaan van een beëdigde Duitse vertaling."
+        },
+        {
+          "q": "Hoe lang duurt het om een Duits Ausbildung visum uit {country} te krijgen?",
+          "a": "De realistische end-to-end tijdlijn uit {country} is {timelineMin}–{timelineMax} weken. Het knelpunt is meestal documentverificatie ({authMethod}: {authDaysMin}–{authDaysMax} dagen), gevolgd door de wachttijd voor een visumafspraak (vaak 4–12 weken) en consulaire verwerking (8–12 weken zonder Vorab-Zustimmung, ongeveer 8 weken met). Begin minstens 6 maanden voor uw trainingsstart met voorbereiding."
+        },
+        {
+          "q": "Vereist {country} apostille of consulaire legalisatie voor een Duits visum?",
+          "a": "Voor Duitse visumaanvragen moeten documenten uit {country} worden onderworpen aan {authMethod}. {authMethodDetail} De kosten bedragen €{authFeeMin}–{authFeeMax} per document en het proces duurt {authDaysMin}–{authDaysMax} dagen. Plan deze stap eerst in, omdat deze het moeilijkst te versnellen is."
+        },
+        {
+          "q": "Wat zijn de kosten voor het Duitse Ausbildung visum?",
+          "a": "De nationale D-visumtarief voor Ausbildung is €{visaFee}, betaald in contanten of per kaart bij uw afspraak. De vergoeding is niet terugbetaalbaar als het visum wordt geweigerd. Sommige Duitse visumcentra (TLScontact, VFS) berekenen een extra servicegebeur van €20–40."
+        },
+        {
+          "q": "Moet ik Duits spreken voordat ik een Ausbildung visum uit {country} aanvraag?",
+          "a": "Ja. De meeste Ausbildung visa vereisen minimaal een Duits B1-certificaat (Goethe-Institut, telc of ÖSD). Veel werkgevers en sommige trainingssectoren (gezondheidszorg, ambachten) vereisen B2. Begin vroeg met Duitse lessen — het B1-examen duurt 3–6 maanden studeren vanaf nul, en B2 duurt nog eens 3–4 maanden. Het certificaat mag niet ouder zijn dan 2 jaar op het moment van uw visumafspraak."
+        },
+        {
+          "q": "Heb ik een Sperrkonto nodig voor het Ausbildung visum uit {country}?",
+          "a": "Dit hangt af van uw trainningssalaris. Als uw bruto maandsalaris onder ongeveer €934 ligt, hebt u waarschijnlijk een Sperrkonto (geblokkeerde rekening) nodig met €11.904. Stagiaires met hogere salarissen of degenen wiens Duitse werkgever een Verpflichtungserklärung (financiële garantie) verstrekt, kunnen vrijgesteld zijn. Bevestig dit bij de Duitse vertegenwoordiging in {country}, omdat de vereisten variëren."
+        }
+      ],
+      "studium": [
+        {
+          "q": "Hoeveel documenten zijn vereist voor een Duits Studium visum uit {country}?",
+          "a": "Een Studium visumaanvraag uit {country} vereist doorgaans {totalDocs} documenten, waaronder: universiteitstoelatingsbesluit (Zulassung), Duits B2 of TestDaF taaltcertificaat, Baccalauréat diploma en transcripten (geverifieerd en vertaald), hogeronderwijsdiploma's (indien van toepassing), bewijzen van financiële middelen (Sperrkonto van €11.904 of gelijkwaardig) en reisverzekering voor gezondheidszorg."
+        },
+        {
+          "q": "Hoe lang duurt het om een Studium visum uit {country} te krijgen?",
+          "a": "Uit {country} is de realistische tijdlijn {timelineMin}–{timelineMax} weken. De documentverificatiefase ({authMethod}: {authDaysMin}–{authDaysMax} dagen) en het universiteitstoelatingproces (dat 3–6 maanden kan duren via uni-assist of rechtstreeks) zijn de langste stappen. Solliciteer een volledig jaar voor uw beoogde startdatum naar Duitse universiteiten."
+        },
+        {
+          "q": "Wat is de Sperrkonto en is deze verplicht voor studenten uit {country}?",
+          "a": "De Sperrkonto is een geblokkeerde bankrekening met €11.904 (vanaf 2026), die aantoont dat u uw levenskosten voor het eerste jaar in Duitsland kunt dekken. De middelen worden na aankomst maandelijks in termijnen van €992 aan u vrijgegeven. Dit is verplicht voor de meeste Studium visumaanvragers uit {country}, tenzij u een gelijkwaardige beurs hebt of een sterke Verpflichtungserklärung. Open er een via Fintiba, Expatrio of Coracle — zij kunnen de rekening binnen enkele werkdagen openen."
+        },
+        {
+          "q": "Heb ik een APS-certificaat uit {country} nodig voor een Duits Studium visum?",
+          "a": "APS-certificaten (Akademische Prüfstelle) zijn vereist voor aanvragers uit China, India, Vietnam, Mongolië en Pakistan. Voor {country}, {apsDetail}. Indien vereist, vraag het APS vroeg aan, omdat de verwerking 6–20 weken duurt en het certificaat verplicht is voordat de Duitse vertegenwoordiging uw visum verwerkt."
+        },
+        {
+          "q": "Wat kost documentverificatie voor studenten uit {country}?",
+          "a": "Voor aanvragers uit {country} gebruikt verificatie {authMethod} en kost €{authFeeMin}–{authFeeMax} per document, duurt {authDaysMin}–{authDaysMax} dagen. Voor een standaard Studium-dossier verifieert u ongeveer 4–6 documenten (diploma's, transcripten, geboorteakte, politieverklaring). Voeg beëdigde vertalingen toe voor €20–60 per pagina. Totaal verificatie- en vertaalbudget: doorgaans €300–800 uit {country}."
+        },
+        {
+          "q": "Kan ik in Duitsland werken terwijl ik studeer op een Studium visum?",
+          "a": "Ja. Studenten op een Duits Studium visum mogen tot 120 volledige dagen of 240 halve dagen per jaar werken zonder aparte werkvergunning. Uren boven deze limiet vereisen goedkeuring van de Ausländerbehörde en Bundesagentur für Arbeit. Studentenbanen (Werkstudent, Hiwi of mini-job) zijn een gebruikelijke manier om levenskosten aan te vullen."
+        }
+      ],
+      "tourist": [
+        {
+          "q": "Hebben burgers van {country} een visum nodig om Duitsland te bezoeken?",
+          "a": "Ja, burgers van {country} hebben een Schengen C (toerist/korte verblijf) visum nodig om Duitsland en alle Schengen-landen binnen te gaan. Het visum staat tot 90 dagen verblijf in elke 180-dagenperiode toe. De aanvraag wordt ingediend bij de Duitse ambassade, consulaat of een erkend visumcentrum (VFS Global, TLScontact) dat {country} bedient."
+        },
+        {
+          "q": "Welke documenten heb ik nodig voor een Duits toeristenvisum uit {country}?",
+          "a": "Een Duits Schengen toeristenvisum uit {country} vereist {totalDocs} documenten: ingevuld Schengen-aanvraagformulier, geldig paspoort (3+ maanden na reis), biometrische foto's (2×), reisverzekering voor gezondheidszorg (€30.000+ dekking), retourtickets, accommodatiebewijs (hotel of uitnodigingsbrief), bankafschriften met voldoende middelen (€45–100/dag) en bewijzen van banden met {country} zoals een werkgeversbrief of eigendomsdocument."
+        },
+        {
+          "q": "Wat zijn de kosten voor het Duitse toeristenvisum voor burgers van {country}?",
+          "a": "De standaard Schengen C visumtarief is €{visaFee} (herzien juni 2024). Kinderen onder de 6 jaar zijn gratis; kinderen van 6–12 jaar betalen €45. De vergoeding is niet terugbetaalbaar. Aanvullende visumcentrumservicegeburen (VFS/TLScontact) van €20–40 kunnen van toepassing zijn. Totale betaling vindt plaats bij de afspraak — controleer bij uw lokale visumcentrum welke betaalmethoden worden geaccepteerd."
+        },
+        {
+          "q": "Hoe lang duurt het om een Duits toeristenvisum uit {country} te krijgen?",
+          "a": "Standaardverwerking is 15 kalenderdagen vanaf de aanvraagdatum. Dit kan uitlopen tot 30 dagen en uitzonderlijk tot 45 dagen. Houd rekening met de afspraakwachttijd bij het visumcentrum: {authDaysMin}–{authDaysMax} dagen in normale perioden, tot 8 weken tijdens het zomerseizoen. Boek uw afspraak zo vroeg mogelijk — minstens 3 maanden voor uw geplande reisdatum."
+        },
+        {
+          "q": "Hoeveel geld moet ik aantonen voor een Duits toeristenvisum uit {country}?",
+          "a": "Duitsland vereist bewijzen van ongeveer €45–100 per dag van uw verblijf in het Schengengebied. Voor een 14-daagse reis is dat ongeveer €630–1.400. Bankafschriften van de afgelopen 3 maanden zijn het standaardbewijs. Als een familielid of Duitse gastheer u sponsort, kan een Verpflichtungserklärung (financiële garantie, uitgegeven bij een Duitse Ausländerbehörde) uw eigen middelen vervangen."
+        },
+        {
+          "q": "Kan een Schengen toeristenvisum worden verlengd of omgezet in een langer visum in Duitsland?",
+          "a": "Een Schengen C toeristenvisum kan normaal niet worden verlengd voorbij 90 dagen en kan niet in Duitsland worden omgezet in een nationaal D-visum. Als u langer wilt blijven — voor Ausbildung, Studium of familieredo — moet u terugkeren naar {country} en het passende nationale D-visum aanvragen via de Duitse vertegenwoordiging voordat u Duitsland opnieuw binnenkomt."
+        }
+      ],
+      "family_reunification": [
+        {
+          "q": "Welke documenten heb ik nodig voor een Duits gezinsherenigingsvisum uit {country}?",
+          "a": "Een gezinsherenigingsvisum uit {country} vereist {totalDocs} documenten aan beide zijden: uw documenten (paspoort, geboorteakte, huwelijksakte, politieverklaring, Duits A1-certificaat bij aansluiting bij een echtgenoot, plus geverifieerde vertalingen) en documenten van uw sponsor uit Duitsland (kopie van hun Aufenthaltstitel, laatste 3 salarisbrieven, belastingbeoordeling en huisvestingsbevestiging met ≥12 m² per extra persoon)."
+        },
+        {
+          "q": "Is het Duitse A1-taaltcertificaat verplicht voor gezinshereniging uit {country}?",
+          "a": "Ja, voor echtgenoothereniging (Ehegattennachzug) uit {country} moet u een Duits A1-taaltcertificaat (Goethe-Zertifikat A1, telc Deutsch A1 of ÖSD Zertifikat A1) bij uw visumafspraak overleggen. Uitzonderingen: uw sponsor heeft een Duits Hochschulabschluss of heeft gedocumenteerd C1+ Duits, u bent ouder dan 67, u hebt een erkende handicap die taalonderwijs verhindert, of er bestaat een dwingende hardshipcase. Kinderen onder de 16 jaar die bij ouders aansluiten, zijn vrijgesteld."
+        },
+        {
+          "q": "Hoe lang duurt gezinshereniging uit {country}?",
+          "a": "Het volledige proces — documentverzameling, verificatie ({authMethod}: {authDaysMin}–{authDaysMax} dagen), A1-certificaatexamen en visumafspraak — duurt {timelineMin}–{timelineMax} weken uit {country}. De Duitse vertegenwoordiging moet binnen 3 maanden over een volledige aanvraag beslissen. Onvolledige dossiers worden zonder beslissing geretourneerd, waardoor de klok opnieuw begint."
+        },
+        {
+          "q": "Hoeveel inkomsten moet de sponsor in Duitsland hebben voor gezinshereniging?",
+          "a": "De sponsor moet genoeg verdienen om het gezin zonder overheidssteun te ondersteunen. De drempel varieert per Bundesland en gezinsgrootte: ongeveer €1.600–2.200 netto per maand voor een paar, plus €300–400 per extra kind. De sponsor dient de laatste 3 salarisbrieven en een belastingbeoordeling (Steuerbescheid) namens u in bij de Duitse vertegenwoordiging. Zelfstandige sponsors kunnen winst- en verliesrekeningen gebruiken."
+        },
+        {
+          "q": "Kan de echtgenoot in Duitsland werken na gezinshereniging?",
+          "a": "Ja. Een echtgenoot die aansluit bij een Duitse ingezetene of EU/EER-onderdaan ontvangt een Aufenthaltstitel (verblijfsvergunning) met volledige, onbeperkte werkvergunning — geen werkgeverspatroonage nodig. Zij kunnen onmiddellijk na ontvangst van hun vergunning elk betaald of zelfstandig werk aanvaarden. Schoolgaande kinderen worden automatisch in het openbare schoolstelsel opgenomen."
+        },
+        {
+          "q": "Welke verificatiemethode gebruikt {country} voor gezinsherenigingsdocumenten?",
+          "a": "Documenten uit {country} moeten voor Duitse visumtoepassing worden geverifieerd via {authMethod}. {authMethodDetail} Verificatie kost €{authFeeMin}–{authFeeMax} per document en duurt {authDaysMin}–{authDaysMax} dagen. Elk geverifieerd document moet ook vergezeld gaan van een beëdigde Duitse vertaling (€20–60 per pagina). Begin het verificatieproces zo vroeg mogelijk — dit is de stap die aanvragers het meest onderschatten."
+        }
+      ]
+    },
+    "showTip": "Tips"
   }
 }

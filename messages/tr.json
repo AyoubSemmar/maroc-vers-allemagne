@@ -2852,7 +2852,8 @@
       "tabs": {
         "grammar": "Gramer",
         "vocab": "Kelime Hazinesi",
-        "exercise": "Alıştırmalar"
+        "exercise": "Alıştırmalar",
+        "watch": "İzle"
       },
       "meta": "Ders {n} · {vocab} kelime · {q} alıştırma",
       "grammarCard": {
@@ -2907,6 +2908,13 @@
         "levelDone": "🎉 Seviye tamamlandı! Geri →",
         "tryAgain": "Tekrar dene",
         "reviewAnswers": "Cevapları gözden geçir"
+      },
+      "watchCard": {
+        "heading": "İzle ve dinle",
+        "sub": "Easy German'dan bu seviye için otantik Almanca",
+        "play": "Videoyu oynat",
+        "tip": "Bu dersten kelimeler ve dilbilgisini dinleyin. Almanca altyazıları açın, sonra bunlar olmadan tekrar izleyin.",
+        "nextEx": "Alıştırmalarla pratik yapın"
       }
     },
     "dragDrop": {
@@ -4861,7 +4869,8 @@
         "apostille_missing": {
           "title": "Belgeler apostillenmiş veya düzgün tercüme edilmemiş",
           "desc": "Apostil/tasdik olmayan diploma, veya yeminli olmayan tercüman tarafından yapılan tercüme. Konsolosluk her ikisini de gerektirir.",
-          "tip": "Ülkenizin yetkili makamı aracılığıyla doğrulayın (apostil veya konsolosluk tasdiki). Resmi listede yer alan yeminli bir tercüman kullanın."
+          "tip": "Ülkenizin yetkili makamı aracılığıyla doğrulayın (apostil veya konsolosluk tasdiki). Resmi listede yer alan yeminli bir tercüman kullanın.",
+          "fix": "Ülkenizin yetkili makamı aracılığıyla kimlik doğrulaması yapın (apostille veya konsolosluk tasdiki). Resmi listede yer alan yemin edilmiş bir tercüman kullanın."
         }
       }
     },
@@ -5122,33 +5131,17 @@
     "themeBadge": "Bugünün Teması",
     "wordsShort": "kelime",
     "placeholder": "Metninizi burada Almanca olarak yazın…",
-    "submit": {
-      "writingExercise.submit": {
-        "value": "Düzeltme için gönder"
-      }
-    },
+    "submit": "Düzeltme için gönder",
     "submitting": "Düzeltiliyor…",
-    "errorGeneric": {
-      "writingExercise.errorGeneric": {
-        "value": "Bir şeyler yanlış gitti. Lütfen biraz sonra tekrar deneyin."
-      }
-    },
+    "errorGeneric": "Bir şeyler yanlış gitti. Lütfen biraz sonra tekrar deneyin.",
     "inRange": "aralık içinde",
     "outOfRange": "{min}–{max} arasında hedefleyin",
     "mistakesTitle": "{n} {n, plural, one {hata} other {hata}} bulundu",
     "mistakesSub": "Altı çizili her bölüm bir hatadır. Nedenini görmek için üzerine gelin veya aşağıdaki listeyi kontrol edin.",
     "correctedTitle": "Düzeltilmiş versiyon",
     "correctedSub": "Metniniz doğru Almanca olarak yeniden yazıldı, seviyenize uygun şekilde tutuldu.",
-    "comeBackTomorrow": {
-      "writingExercise.comeBackTomorrow": {
-        "value": "Yeni bir tema için yarın geri dön"
-      }
-    },
-    "signInTitle": {
-      "writingExercise.signInTitle": {
-        "value": "Yazmaya başlamak için giriş yapın"
-      }
-    },
+    "comeBackTomorrow": "Yeni bir tema için yarın geri dön",
+    "signInTitle": "Yazmaya başlamak için giriş yapın",
     "signInBody": "Günlük yazı alıştırması ücretsiz bir hesapla ücretsizdir, böylece ilerlemenizi kaydedebilir ve size adil günlük limitler verebiliriz.",
     "signInCta": "Giriş Yap",
     "doneTitle": "Bugünün egzersizini tamamladınız",

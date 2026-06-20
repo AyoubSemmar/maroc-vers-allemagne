@@ -2852,7 +2852,8 @@
       "tabs": {
         "grammar": "دستور زبان",
         "vocab": "واژگان",
-        "exercise": "تمرین‌ها"
+        "exercise": "تمرین‌ها",
+        "watch": "تماشا کنید"
       },
       "meta": "درس {n} · {vocab} واژه · {q} تمرین",
       "grammarCard": {
@@ -2907,6 +2908,13 @@
         "levelDone": "🎉 سطح تکمیل شد! بازگشت →",
         "tryAgain": "دوباره سعی کنید",
         "reviewAnswers": "مرور پاسخ‌ها"
+      },
+      "watchCard": {
+        "heading": "تماشا و گوش دهید",
+        "sub": "آلمانی واقعی از Easy German برای این سطح",
+        "play": "پخش ویدیو",
+        "tip": "برای یادگیری لغات و گرامر این درس گوش دهید. زیرنویس آلمانی را فعال کنید، سپس دوباره بدون آن تماشا کنید.",
+        "nextEx": "تمرین با تمرین‌ها"
       }
     },
     "dragDrop": {
@@ -4935,114 +4943,32 @@
         }
       ]
     },
-    "metaTitle": {
-      "eligibilityChecker.metaTitle": "بررسی واجد شرایط ویزا — مهاجرت به آلمان"
-    },
+    "metaTitle": "بررسی واجد شرایط ویزا — مهاجرت به آلمان",
     "metaDesc": "بررسی واجد شرایط بودن شما برای ویزای Ausbildung یا Studium آلمان — امتیاز آمادگی، موانع و مراحل بعدی شخصی‌سازی‌شده، برای متقاضیان از هر کشوری.",
-    "eyebrow": {
-      "eligibilityChecker.eyebrow": {
-        "value": "واجد شرایط ویزا"
-      }
-    },
+    "eyebrow": "واجد شرایط ویزا",
     "title": "بررسی کننده واجد شرایط ویزا",
     "subtitle": "دقیقاً بفهمید که برای ویزای Ausbildung یا Studium آلمان به عنوان متقاضی بین‌المللی در چه موضعی قرار دارید — چه چیزی امروز مانع شما است و چه چیزی ویزا را برای شما باز می‌کند.",
-    "formTitle": {
-      "eligibilityChecker.formTitle": {
-        "value": "پروفایل شما"
-      }
-    },
+    "formTitle": "پروفایل شما",
     "pathLabel": "مسیر",
-    "studiumGoalLabel": {
-      "eligibilityChecker.studiumGoalLabel": {
-        "value": "هدف Studium"
-      }
-    },
-    "ageLabel": {
-      "eligibilityChecker.ageLabel": {
-        "value": "سن"
-      }
-    },
-    "educationLabel": {
-      "eligibilityChecker.educationLabel": {
-        "value": "بالاترین سطح تحصیلات"
-      }
-    },
-    "germanLabel": {
-      "eligibilityChecker.germanLabel": {
-        "value": "سطح فعلی زبان آلمانی"
-      }
-    },
-    "bacAverageLabel": {
-      "eligibilityChecker.bacAverageLabel": {
-        "value": "میانگین باکالوریا (Moyenne du Bac)"
-      }
-    },
+    "studiumGoalLabel": "هدف Studium",
+    "ageLabel": "سن",
+    "educationLabel": "بالاترین سطح تحصیلات",
+    "germanLabel": "سطح فعلی زبان آلمانی",
+    "bacAverageLabel": "میانگین باکالوریا (Moyenne du Bac)",
     "bacAverageHint": "دانشگاه‌های آلمانی برای پذیرش مستقیم Bachelorدرجه ≥ 14/20 را انتظار می‌رند. معمولاً 12–13.99 نیاز به Studienkolleg دارد. زیر 12 معمولاً واجد شرایط نیست.",
-    "hasContractTitle": {
-      "eligibilityChecker.hasContractTitle": {
-        "value": "من یک Ausbildungsvertrag امضا شده دارم"
-      }
-    },
-    "hasContractHint": {
-      "eligibilityChecker.hasContractHint": {
-        "value": "قرارداد امضاء شده از سوی کارفرمای آلمانی ثبت‌شده در IHK یا HWK."
-      }
-    },
-    "hasAdmissionTitle": {
-      "eligibilityChecker.hasAdmissionTitle": {
-        "value": "من دارای Zulassung از یک دانشگاه آلمانی هستم"
-      }
-    },
-    "hasAdmissionHint": {
-      "eligibilityChecker.hasAdmissionHint": {
-        "value": "نامه پذیرش نهایی یا مشروط (Zulassung / Bedingungszulassung)."
-      }
-    },
-    "hasApsTitle": {
-      "eligibilityChecker.hasApsTitle": {
-        "value": "من گواهینامه APS خود را دارم"
-      }
-    },
-    "hasApsHint": {
-      "eligibilityChecker.hasApsHint": {
-        "value": "تنها برای برخی کشورها (چین، هند، ویتنام، پاکستان و...) الزامی است. توسط دفتر APS کشور شما صادر می‌شود."
-      }
-    },
-    "englishProgramTitle": {
-      "eligibilityChecker.englishProgramTitle": {
-        "value": "برنامه هدف من به زبان انگلیسی تدریس می‌شود"
-      }
-    },
-    "englishProgramHint": {
-      "eligibilityChecker.englishProgramHint": {
-        "value": "برخی از برنامه‌های کارشناسی ارشد به طور کامل به زبان انگلیسی ارائه می‌شوند. این امر نیاز به سطح زبان آلمانی را کاهش می‌دهد."
-      }
-    },
-    "financialLabel": {
-      "eligibilityChecker.financialLabel": {
-        "value": "اثبات مالی"
-      }
-    },
-    "passportTitle": {
-      "eligibilityChecker.passportTitle": {
-        "value": "گذرنامه من برای ۱۲ ماه یا بیشتر معتبر است"
-      }
-    },
-    "passportHint": {
-      "eligibilityChecker.passportHint": {
-        "value": "در زمان مصاحبه ویزا الزامی است."
-      }
-    },
-    "cleanRecordTitle": {
-      "eligibilityChecker.cleanRecordTitle": {
-        "value": "سوابق پلیسی من پاک است"
-      }
-    },
-    "cleanRecordHint": {
-      "eligibilityChecker.cleanRecordHint": {
-        "value": "عدم وجود محکومیت جنایی جدی."
-      }
-    },
+    "hasContractTitle": "من یک Ausbildungsvertrag امضا شده دارم",
+    "hasContractHint": "قرارداد امضاء شده از سوی کارفرمای آلمانی ثبت‌شده در IHK یا HWK.",
+    "hasAdmissionTitle": "من دارای Zulassung از یک دانشگاه آلمانی هستم",
+    "hasAdmissionHint": "نامه پذیرش نهایی یا مشروط (Zulassung / Bedingungszulassung).",
+    "hasApsTitle": "من گواهینامه APS خود را دارم",
+    "hasApsHint": "تنها برای برخی کشورها (چین، هند، ویتنام، پاکستان و...) الزامی است. توسط دفتر APS کشور شما صادر می‌شود.",
+    "englishProgramTitle": "برنامه هدف من به زبان انگلیسی تدریس می‌شود",
+    "englishProgramHint": "برخی از برنامه‌های کارشناسی ارشد به طور کامل به زبان انگلیسی ارائه می‌شوند. این امر نیاز به سطح زبان آلمانی را کاهش می‌دهد.",
+    "financialLabel": "اثبات مالی",
+    "passportTitle": "گذرنامه من برای ۱۲ ماه یا بیشتر معتبر است",
+    "passportHint": "در زمان مصاحبه ویزا الزامی است.",
+    "cleanRecordTitle": "سوابق پلیسی من پاک است",
+    "cleanRecordHint": "عدم وجود محکومیت جنایی جدی.",
     "overall": {
       "eligible": "شما واجد شرایط هستید ✅",
       "eligibleSub": "هیچ مانع حیاتی وجود ندارد. می‌توانید با درخواست ویزای خود پیش بروید.",
@@ -5051,42 +4977,16 @@
       "notYet": "هنوز واجد شرایط نیستید ❌",
       "notYetSub": "موانع حیاتی وجود دارند که از درخواست شما جلوگیری می‌کنند. لیست زیر را ببینید."
     },
-    "readinessLabel": {
-      "eligibilityChecker.readinessLabel": {
-        "value": "امتیاز آمادگی"
-      }
-    },
-    "countPass": {
-      "eligibilityChecker.countPass": {
-        "value": "نقاط قوت"
-      }
-    },
-    "countWarn": {
-      "eligibilityChecker.countWarn": {
-        "value": "هشدارها"
-      }
-    },
+    "readinessLabel": "امتیاز آمادگی",
+    "countPass": "نقاط قوت",
+    "countWarn": "هشدارها",
     "countBlocker": "موانع",
-    "blockersTitle": {
-      "eligibilityChecker.blockersTitle": {
-        "value": "چه چیزی امروز ویزای شما را مسدود می‌کند"
-      }
-    },
+    "blockersTitle": "چه چیزی امروز ویزای شما را مسدود می‌کند",
     "blockersSub": "این موارد باید قبل از ارسال درخواست ویزا حل شوند.",
-    "warningsTitle": {
-      "eligibilityChecker.warningsTitle": {
-        "value": "نکاتی که باید مورد توجه قرار گیرند"
-      }
-    },
+    "warningsTitle": "نکاتی که باید مورد توجه قرار گیرند",
     "warningsSub": "موانع مطلق نیستند، اما اگر رفع نشوند، روند را کند می‌کنند یا خطر رد شدن را افزایش می‌دهند.",
-    "passesTitle": {
-      "eligibilityChecker.passesTitle": "آنچه شما در حال حاضر دارید"
-    },
-    "ctaTitle": {
-      "eligibilityChecker.ctaTitle": {
-        "value": "آیا می‌خواهید یک برنامه شخصی‌سازی‌شده داشته باشید؟"
-      }
-    },
+    "passesTitle": "آنچه شما در حال حاضر دارید",
+    "ctaTitle": "آیا می‌خواهید یک برنامه شخصی‌سازی‌شده داشته باشید؟",
     "ctaSub": "یک مشاوره ۳۰ دقیقه‌ای با متخصص مهاجرت آلمان ما را رزرو کنید. ما شکاف‌های دقیق شما را شناسایی می‌کنیم، یک نقشه راه مرحله به مرحله ارائه می‌دهیم، و جدول زمانی واقع‌بینانه را به شما اطلاع می‌دهیم.",
     "path": {
       "ausbildung": "Ausbildung",
@@ -5216,20 +5116,20 @@
         "mid": "31–35 کاملاً در محدوده است — هیچ مسئله قانونی، فقط کمی کمتر معمول. بهداشت و درمان، میهمانداری، و IT به ویژه بخش‌های انعطاف‌پذیر سنی هستند.",
         "older": "36–40 ممکن است اما انتخابی‌تر. بخش‌های هدف که تجربه را ارزش می‌دهند: بهداشت و درمان (Pflegefachmann/frau)، مدیریت خرده‌فروشی، میهمانداری، و مشاغل ماهرانه. تجربه حرفه‌ای شما بیشتر از سن شما در اینجا اهمیت دارد.",
         "much_older": "ممکن است اما نادر. بهترین بخش‌ها در 40+: بهداشت و درمان (Pflegefachmann/frau به ویژه استقبال می‌شود)، آشپزخانه، و مشاغل ماهرانه جایی که کارفرمایان کارگران بالغ و قابل‌اعتماد را ارزش می‌دهند. CV خود را حول تجربه حرفه‌ای خود قرار دهید، نه زاویه تحصیلی."
+      },
+      "german_level_studium": {
+        "c1_strong": "C1 تمام نیازمندی‌های دانشگاه آلمان را پوشش می‌دهد، از جمله TestDaF و DSH-2. از نظر زبانی کاملاً آماده هستید.",
+        "b2_min": "B2 استاندارد نیازمندی دانشگاه است و توسط اکثر برنامه‌ها پذیرفته می‌شود. برخی رشته‌های انتخابی (پزشکی، علوم انسانی برتر) C1 / TestDaF 4 / DSH-2 می‌خواهند — در صفحه دانشگاه هدفتان تأیید کنید.",
+        "b1_close": "حدود 30% از دانشگاه‌های آلمان B1 را با پذیرش مشروط می‌پذیرند — شما متعهد می‌شوید در طول تحصیل به C1 برسید. 70% دیگر B2 یا بالاتر را از ابتدا می‌خواهند. برای افزایش شانس خود در چندین دانشگاه درخواست دهید.",
+        "below": "اکثر برنامه‌های Studium حداقل B2 می‌خواهند. برنامه واقع‌بینانه: 8 تا 14 ماه آلمانی فشرافزار (Goethe Institut، telc، یا DSH-Vorbereitungskurs) برای رسیدن به B2 از A0/A1. جایگزین: برنامه‌های Master تدریس‌شده به انگلیسی را هدف قرار دهید و گزینه \"برنامه انگلیسی\" را در بالا فعال کنید.",
+        "english_program": "برای برنامه تدریس‌شده به انگلیسی، اغلب A1 آلمانی کافی است — برخی برنامه‌ها هر سطحی را می‌پذیرند. شما هنوز می‌خواهید آلمانی را برای زندگی روزمره یاد بگیرید، اما این مانع ویزا نمی‌شود.",
+        "english_program_a1": "حتی برای برنامه کاملاً انگلیسی، A1 آلمانی Anmeldung، بانکداری، و زندگی روزمره را در ماه‌های اول بسیار آسان‌تر می‌کند."
       }
     },
-    "countryLabel": {
-      "eligibilityChecker.countryLabel": {
-        "value": "کشور شما"
-      }
-    }
+    "countryLabel": "کشور شما"
   },
   "writingExercise": {
-    "eyebrow": {
-      "writingExercise.eyebrow": {
-        "value": "نوشتن روزانه"
-      }
-    },
+    "eyebrow": "نوشتن روزانه",
     "title": "چالش نوشتاری امروز",
     "subtitle": "{level} · {min}–{max} کلمه بنویسید. متن خود را ارسال کنید و با توضیحات تصحیح شده دریافت کنید.",
     "themeBadge": "تم امروز",
@@ -5244,23 +5144,11 @@
     "mistakesSub": "هر بخش زیرخط‌شده یک اشتباه است. برای دیدن دلیل آن، روی آن بگذارید یا فهرست زیر را بررسی کنید.",
     "correctedTitle": "نسخه اصلاح‌شده",
     "correctedSub": "متن شما با زبان آلمانی صحیح بازنویسی شده است و در سطح شما نگاه داشته شده است.",
-    "comeBackTomorrow": {
-      "writingExercise.comeBackTomorrow": {
-        "value": "فردا برای یک موضوع جدید بازگردید"
-      }
-    },
-    "signInTitle": {
-      "writingExercise.signInTitle": {
-        "value": "برای شروع نوشتن وارد شوید"
-      }
-    },
+    "comeBackTomorrow": "فردا برای یک موضوع جدید بازگردید",
+    "signInTitle": "برای شروع نوشتن وارد شوید",
     "signInBody": "تمرین نوشتاری روزانه با حساب رایگان رایگان است، بنابراین می‌توانیم پیشرفت شما را ذخیره کنیم و محدودیت‌های منصفانه روزانه را برای شما تعیین کنیم.",
     "signInCta": "ورود",
-    "doneTitle": {
-      "writingExercise.doneTitle": {
-        "value": "شما تمرین امروز را انجام دادید"
-      }
-    },
+    "doneTitle": "شما تمرین امروز را انجام دادید",
     "doneBody": "برای موضوع فردای خود در {hours} {hours, plural, one {ساعت} other {ساعت}} بازگردید.",
     "grade": {
       "excellent": "عالی!",

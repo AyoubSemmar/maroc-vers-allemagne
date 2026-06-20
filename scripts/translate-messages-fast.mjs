@@ -70,8 +70,11 @@ OUTPUT RULES (CRITICAL):
 - Keep German terms: Ausbildung, Anmeldung, Lebenslauf, Anschreiben, Sperrkonto, Krankenkasse, BAföG, ZAB, IHK, Goethe, Telc, ÖSD, Studium, BAMF, DAAD, Vorab, Steuer-ID, Minijob, Deutschlandticket, WG, HWK, Finanzamt
 - Keep brand names: GoGermany, TLScontact, VFS Global, Fintiba, Expatrio, ImmoScout24, WG-Gesucht
 
+The value to translate is wrapped under "value" — return the SAME shape:
+{ "value": <translated, same JSON type as input> }
+
 Section to translate (key: "${key}"):
-${JSON.stringify(value, null, 2)}`
+${JSON.stringify({ value }, null, 2)}`
 
   const resp = await client.messages.create({
     model: 'claude-haiku-4-5',
@@ -80,7 +83,10 @@ ${JSON.stringify(value, null, 2)}`
     messages: [{ role: 'user', content: prompt }],
   })
   const text = resp.content.map(c => c.type === 'text' ? c.text : '').join('')
-  return parseJsonLoose(text)
+  const parsed = parseJsonLoose(text)
+  // Uniform unwrap — works for both string and object values, avoiding the
+  // model echoing the dotted key name back as a wrapper.
+  return ('value' in parsed) ? parsed.value : parsed
 }
 
 async function pool(items, concurrency, worker) {
