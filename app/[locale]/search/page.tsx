@@ -2,6 +2,8 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
+import { localizeRows } from '@/lib/i18n-content'
+import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -40,12 +42,16 @@ export default async function SearchPage({ params, searchParams }: Props) {
 
   if (q) {
     // Only the card list fields — full bodies aren't rendered here.
-    const { data: articleResults } = await supabase
-      .from('articles')
-      .select('id, title, summary, category, image_url')
-      .or(`title.ilike.%${q}%,summary.ilike.%${q}%`)
-      .order('date', { ascending: false })
-      .limit(50)
+    // Availability filter keeps Morocco-only articles out of global locales.
+    const { data: articleResults } = await applyLocaleAvailability(
+      supabase
+        .from('articles')
+        .select(articleListFields(locale))
+        .or(`title.ilike.%${q}%,summary.ilike.%${q}%`)
+        .order('date', { ascending: false })
+        .limit(50),
+      locale,
+    )
 
     const { data: listingResults } = await supabase
       .from('listings')
@@ -54,7 +60,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
       .order('created_at', { ascending: false })
       .limit(50)
 
-    articles = articleResults || []
+    articles = localizeRows(rehydrateTranslationsList(articleResults as any, locale), locale) as any[]
     listings = listingResults || []
   }
 

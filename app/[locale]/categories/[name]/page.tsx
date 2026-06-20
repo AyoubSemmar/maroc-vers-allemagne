@@ -3,7 +3,7 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
-import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 
 export const revalidate = 600
 
@@ -14,12 +14,15 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
 
   // Lightweight select with per-locale title/summary — see
   // lib/article-list-select.ts for the egress story.
-  const { data: rawArticles } = await supabase
-    .from('articles')
-    .select(ARTICLE_LIST_FIELDS)
-    .eq('category', categoryName)
-    .order('date', { ascending: false })
-  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
+  const { data: rawArticles } = await applyLocaleAvailability(
+    supabase
+      .from('articles')
+      .select(articleListFields(locale))
+      .eq('category', categoryName)
+      .order('date', { ascending: false }),
+    locale,
+  )
+  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any, locale), locale) as any[]
 
   let catLabel: string = categoryName
   try { catLabel = t(`cat.${categoryName}` as any) } catch {}

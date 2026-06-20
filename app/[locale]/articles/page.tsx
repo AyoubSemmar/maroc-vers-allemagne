@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
-import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ArticlesClient from './ArticlesClient'
 
@@ -30,13 +30,16 @@ export default async function ArticlesPage({ params }: Props) {
   // Featured articles first, then by date descending. Lightweight select
   // grabs only title/summary per locale (not the full translations JSONB)
   // — see lib/article-list-select.ts for the egress story.
-  const { data: rawArticles } = await supabase
-    .from('articles')
-    .select(ARTICLE_LIST_FIELDS)
-    .order('featured', { ascending: false })
-    .order('date',     { ascending: false })
+  const { data: rawArticles } = await applyLocaleAvailability(
+    supabase
+      .from('articles')
+      .select(articleListFields(locale))
+      .order('featured', { ascending: false })
+      .order('date',     { ascending: false }),
+    locale,
+  )
 
-  const localized = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
+  const localized = localizeRows(rehydrateTranslationsList(rawArticles as any, locale), locale) as any[]
   const articles = localized.map(({ translations, ...rest }) => rest)
   const total = articles.length
   const featCount = articles.filter((a: any) => a.featured).length

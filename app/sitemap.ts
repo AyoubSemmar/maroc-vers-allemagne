@@ -67,27 +67,33 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // translations of each other rather than separate pages. Without
   // this, GSC's "Discovered – currently not indexed" pile fills up
   // with locale duplicates that Google rations crawl budget on.
+  // Morocco-specific articles only exist in ar/fr/en/de (see memory
+  // article-locale-policy); global articles exist in every locale. Emitting
+  // a locale URL (and hreflang alternate) for a locale the article isn't
+  // translated into would point Google at fallback/duplicate content.
+  const MOROCCO_LOCALES = ['ar', 'fr', 'en', 'de']
   let articleEntries: MetadataRoute.Sitemap = []
   try {
     const { data: articles } = await supabase
       .from('articles')
-      .select('id, date')
+      .select('id, date, audience:translations->_meta->>audience')
       .order('date', { ascending: false })
       .limit(500)
     if (articles) {
-      articleEntries = articles.flatMap((a: any) =>
-        routing.locales.map((loc) => ({
+      articleEntries = articles.flatMap((a: any) => {
+        const locs = a.audience === 'morocco'
+          ? routing.locales.filter((l) => MOROCCO_LOCALES.includes(l))
+          : [...routing.locales]
+        return locs.map((loc) => ({
           url: `${SITE}/${loc}/articles/${a.id}`,
           lastModified: a.date ? new Date(a.date) : yesterday,
           changeFrequency: 'monthly' as const,
           priority: 0.6,
           alternates: {
-            languages: Object.fromEntries(
-              routing.locales.map((l) => [l, `${SITE}/${l}/articles/${a.id}`]),
-            ),
+            languages: Object.fromEntries(locs.map((l) => [l, `${SITE}/${l}/articles/${a.id}`])),
           },
-        })),
-      )
+        }))
+      })
     }
   } catch {
     // If Supabase is unreachable at build time, just emit the static entries.

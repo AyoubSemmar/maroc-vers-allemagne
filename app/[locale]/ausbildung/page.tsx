@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { localizeRows } from '@/lib/i18n-content'
-import { ARTICLE_LIST_FIELDS_WITH_READ_TIME, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { articleListFieldsWithReadTime, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import PathHub, { type PathTool, type PathPillar } from '@/components/path-hub/PathHub'
 import Icon from '@/components/ui/Icon'
 import type { AppLocale } from '@/i18n/routing'
@@ -43,14 +43,17 @@ const TOOLS: PathTool[] = [
 export default async function AusbildungPage({ params }: Props) {
   const { locale } = await params
 
-  const { data: rawArticles } = await supabase
-    .from('articles')
-    .select(ARTICLE_LIST_FIELDS_WITH_READ_TIME)
-    .in('category', AUSBILDUNG_CATEGORIES)
-    .order('date', { ascending: false })
-    .limit(12)
+  const { data: rawArticles } = await applyLocaleAvailability(
+    supabase
+      .from('articles')
+      .select(articleListFieldsWithReadTime(locale))
+      .in('category', AUSBILDUNG_CATEGORIES)
+      .order('date', { ascending: false })
+      .limit(12),
+    locale,
+  )
 
-  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
+  const articles = localizeRows(rehydrateTranslationsList(rawArticles as any, locale), locale) as any[]
 
   return (
     <PathHub

@@ -4,7 +4,7 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
-import { ARTICLE_LIST_FIELDS, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import ArticleContent from '@/components/ArticleContent'
 import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
@@ -97,14 +97,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     )
   }
 
-  const { data: rawRelated } = await supabase
-    .from('articles')
-    .select(ARTICLE_LIST_FIELDS)
-    .eq('category', article.category)
-    .neq('id', id)
-    .order('date', { ascending: false })
-    .limit(3)
-  const related = localizeRows(rehydrateTranslationsList(rawRelated as any), locale)
+  const { data: rawRelated } = await applyLocaleAvailability(
+    supabase
+      .from('articles')
+      .select(articleListFields(locale))
+      .eq('category', article.category)
+      .neq('id', id)
+      .order('date', { ascending: false })
+      .limit(3),
+    locale,
+  )
+  const related = localizeRows(rehydrateTranslationsList(rawRelated as any, locale), locale)
 
   function catLabel(cat: string): string {
     try { return t(`cat.${cat}` as any) } catch { return cat }

@@ -3,7 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import RihlaLanding from '@/components/landing/RihlaLanding'
 import { localizeRows } from '@/lib/i18n-content'
-import { ARTICLE_LIST_FIELDS_WITH_READ_TIME, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { articleListFieldsWithReadTime, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
@@ -36,13 +36,16 @@ export default async function Home({
   const { locale } = await params
   // Lightweight select: title/summary per locale via JSONB selectors
   // (not the full translations blob). See lib/article-list-select.ts.
-  const { data: rawArticles } = await supabase
-    .from('articles')
-    .select(ARTICLE_LIST_FIELDS_WITH_READ_TIME)
-    .order('date', { ascending: false })
-    .limit(20)
+  const { data: rawArticles } = await applyLocaleAvailability(
+    supabase
+      .from('articles')
+      .select(articleListFieldsWithReadTime(locale))
+      .order('date', { ascending: false })
+      .limit(20),
+    locale,
+  )
 
-  const localized = localizeRows(rehydrateTranslationsList(rawArticles as any), locale) as any[]
+  const localized = localizeRows(rehydrateTranslationsList(rawArticles as any, locale), locale) as any[]
   const featured = localized.filter((a) => a.featured)
   const picked = featured.length > 0 ? featured.slice(0, 3) : localized.slice(0, 3)
   // Drop `translations` after localization — title is already overridden,
