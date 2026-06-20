@@ -31,7 +31,10 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - run: npm ci
+      # npm install (not ci) so a package-lock drift between npm versions
+      # doesn't break this utility job. Only needs the supabase/anthropic/
+      # replicate clients, which are in package.json.
+      - run: npm install --no-audit --no-fund
 
       - name: Generate articles
         env:
