@@ -33,6 +33,23 @@ const OFFSET = parseInt(args.find(a => a.startsWith('--offset='))?.split('=')[1]
 const NO_IMAGE = args.includes('--no-image')
 const CONCURRENCY = parseInt(args.find(a => a.startsWith('--concurrency='))?.split('=')[1] || '3', 10)
 
+// Preflight: fail with a clear message if a required key is missing/misnamed,
+// instead of a cryptic SDK error 12s into the CI run.
+{
+  const anthropicKey = process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY
+  const replicateKey = process.env.ARTICLE_GEN_REPLICATE_TOKEN || process.env.REPLICATE_API_TOKEN
+  const missing = []
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL) missing.push('NEXT_PUBLIC_SUPABASE_URL')
+  if (!process.env.SUPABASE_SERVICE_ROLE_KEY) missing.push('SUPABASE_SERVICE_ROLE_KEY')
+  if (!anthropicKey) missing.push('ARTICLE_GEN_ANTHROPIC_KEY (or ANTHROPIC_API_KEY)')
+  if (!replicateKey && !NO_IMAGE) missing.push('REPLICATE_API_TOKEN (or ARTICLE_GEN_REPLICATE_TOKEN)')
+  if (missing.length) {
+    console.error('Missing required environment variable(s): ' + missing.join(', '))
+    console.error('Set these as GitHub repo secrets (Settings → Secrets and variables → Actions).')
+    process.exit(1)
+  }
+}
+
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY,
