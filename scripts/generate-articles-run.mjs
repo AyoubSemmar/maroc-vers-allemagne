@@ -107,8 +107,22 @@ Provide 5 FAQ items with concrete answers, separated by ---FAQ--- on its own lin
 
 const sysTrans = (lang) => `You translate an SEO article from English into ${lang}. Input is in <title>/<summary>/<content>/<faqs> tags. Return the SAME tags with every value translated into ${lang}. Preserve all markdown (## ### bullets links). Do NOT translate proper nouns (Ausbildung, Sperrkonto, ELSTER, company/office names). Match the persuasive tone.${lang === 'Arabic' ? ' Use Modern Standard Arabic, Western numerals 0-9.' : ''} Output ONLY the four tags.`
 
-async function genEnglish(topic) {
-  const user = `Title to write: "${topic.title}"\nPrimary keyword: ${topic.keyword}\nCategory: ${topic.category}\nAngle: ${topic.brief}\n\nWrite the full English article to the SEO spec.`
+// Titles of already-published articles in the same category, so a new article
+// covers a DISTINCT angle (anti-duplication) and can cross-link to them.
+async function fetchSiblings(category, limit = 30) {
+  const { data } = await supabase
+    .from('articles').select('id, t:translations->en->>title, base:title')
+    .eq('category', category).limit(limit)
+  return (data || []).map(r => ({ id: r.id, title: r.t || r.base })).filter(s => s.title)
+}
+
+async function genEnglish(topic, siblings = []) {
+  let user = `Title to write: "${topic.title}"\nPrimary keyword: ${topic.keyword}\nCategory: ${topic.category}\nAngle: ${topic.brief}`
+  if (siblings.length) {
+    user += `\n\nAlready-published articles in this category. Your article MUST cover a clearly different angle and must NOT repeat their content. Where it genuinely helps the reader, cross-link to a relevant one using markdown [their title](/articles/ID):\n` +
+      siblings.map(s => `- (ID ${s.id}) ${s.title}`).join('\n')
+  }
+  user += `\n\nWrite the full English article to the SEO spec.`
   const stream = await anthropic.messages.stream({
     model: 'claude-opus-4-8', max_tokens: 16000,
     thinking: { type: 'adaptive' }, output_config: { effort: 'high' },
@@ -201,7 +215,8 @@ function readTime(content) { return Math.max(3, Math.round((content || '').split
 async function processTopic(topic) {
   if (state[topic.slug]?.id) return { slug: topic.slug, skipped: true }
 
-  const en = await genEnglish(topic)
+  const siblings = await fetchSiblings(topic.category)
+  const en = await genEnglish(topic, siblings)
   const locales = topic.locales
   const hasAr = locales.includes('ar')
   const baseLang = hasAr ? 'ar' : 'en'
