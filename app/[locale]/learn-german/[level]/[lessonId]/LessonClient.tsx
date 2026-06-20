@@ -10,8 +10,10 @@ import AudioButton from '@/components/learn-german/AudioButton'
 import DragDropExercise from '@/components/learn-german/DragDropExercise'
 import MatchingExercise from '@/components/learn-german/MatchingExercise'
 import SpeakingExercise from '@/components/learn-german/SpeakingExercise'
+import LessonVideo from '@/components/learn-german/LessonVideo'
+import { getLessonVideo, EASY_GERMAN_CHANNEL } from '@/lib/german-data/videos'
 
-type Tab = 'grammar' | 'vocab' | 'exercise'
+type Tab = 'grammar' | 'vocab' | 'exercise' | 'watch'
 
 function BidiText({ text, className }: { text: string; className?: string }) {
   const regex = /"[^"]+"|„[^"]+(?:"|")|«[^»]+»|'[^']+'|[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß0-9 ,.\-!?':;()]*[A-Za-zÄÖÜäöüß.!?]/g
@@ -195,10 +197,25 @@ export default function LessonClient({
     try { return t(`types.${key}` as any) } catch { return key }
   }
 
+  // Safe translation: falls back to the supplied English default when a
+  // locale hasn't translated the watch.* keys yet (avoids render errors).
+  function tw(key: string, fallback: string): string {
+    try {
+      const v = t(key as any)
+      return v && !v.includes(key) ? v : fallback
+    } catch {
+      return fallback
+    }
+  }
+
+  // Easy German video for this lesson (level playlist or a specific video).
+  const video = getLessonVideo(level.id, lesson.id)
+
   const tabs: { id: Tab; labelKey: string; emoji: string }[] = [
     { id: 'grammar', labelKey: 'grammar', emoji: '📖' },
     { id: 'vocab', labelKey: 'vocab', emoji: '📝' },
     { id: 'exercise', labelKey: 'exercise', emoji: '✏️' },
+    ...(video ? [{ id: 'watch' as Tab, labelKey: 'watch', emoji: '🎬' }] : []),
   ]
 
   const questions = lesson.exercise.questions
@@ -299,7 +316,7 @@ export default function LessonClient({
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
-                <span>{tb.emoji}</span> {t(`tabs.${tb.labelKey}` as any)}
+                <span>{tb.emoji}</span> {tb.id === 'watch' ? tw('tabs.watch', 'Watch') : t(`tabs.${tb.labelKey}` as any)}
                 {tb.id === 'vocab' && <span className="text-xs opacity-70">({lesson.vocabulary.length})</span>}
                 {tb.id === 'exercise' && <span className="text-xs opacity-70">({questions.length})</span>}
               </button>
@@ -663,6 +680,35 @@ export default function LessonClient({
                 </div>
               </div>
             )}
+          </div>
+        )}
+
+        {/* ══════════════════ WATCH TAB ══════════════════ */}
+        {tab === 'watch' && video && (
+          <div className="flex flex-col gap-6">
+            <LessonVideo
+              videoId={video.videoId}
+              playlistId={video.playlistId}
+              title={tw('watchCard.heading', 'Watch & listen')}
+              subtitle={tw('watchCard.sub', `Authentic German from Easy German — ${level.id} playlist`)}
+              channelName={EASY_GERMAN_CHANNEL.name}
+              channelUrl={EASY_GERMAN_CHANNEL.url}
+              playLabel={tw('watchCard.play', 'Play video')}
+              dir={dirFor(locale)}
+            />
+            <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4 flex gap-3">
+              <span className="text-xl shrink-0">🎧</span>
+              <p className="text-sm text-blue-900 leading-relaxed">
+                {tw('watchCard.tip', 'Listen for the words and grammar from this lesson. Turn on German subtitles, then watch again without them.')}
+              </p>
+            </div>
+            <button
+              onClick={() => setTab('exercise')}
+              className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
+            >
+              {tw('watchCard.nextEx', 'Practice with exercises')}
+              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/></svg>
+            </button>
           </div>
         )}
       </div>
