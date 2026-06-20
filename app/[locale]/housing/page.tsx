@@ -43,6 +43,18 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Жильё в Германии — практическое руководство',
     desc: 'Как найти жильё в Германии: сайты поиска, необходимые документы, WG против студии, реальные арендные ставки по городам и типичные ошибки.',
   },
+  hi: {
+    title: 'जर्मनी में आवास — व्यावहारिक मार्गदर्शिका',
+    desc: 'जर्मनी में आवास खोजने का तरीका: खोज साइटें, आवश्यक दस्तावेज, WG बनाम स्टूडियो, शहर अनुसार किराए और सामान्य गलतियां।',
+  },
+  ur: {
+    title: 'جرمنی میں رہائش — عملی رہنما',
+    desc: 'جرمنی میں رہائش تلاش کرنے کا طریقہ: تلاش سائٹس، ضروری دستاویزات، WG بمقابلہ اسٹوڈیو، شہر کے لحاظ سے کرایے اور عام غلطیاں۔',
+  },
+  nl: {
+    title: 'Wonen in Duitsland — praktische gids',
+    desc: 'Hoe u woonruimte vindt in Duitsland: zoeksites, benodigde documenten, WG versus studio, realistische huurprijzen per stad en valkuilen.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

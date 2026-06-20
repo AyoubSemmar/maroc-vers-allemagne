@@ -45,6 +45,18 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Учи немецкий бесплатно — A1 до C1 | GoGermany',
     desc: 'Бесплатные интерактивные уроки немецкого от A1 до C1 для тех, кто едет в Германию. Упражнения на чтение и письмо с ИИ.',
   },
+  hi: {
+    title: 'जर्मन मुफ्त सीखें — A1 से C1 | GoGermany',
+    desc: 'A1 से C1 तक मुफ्त इंटरएक्टिव जर्मन पाठ, जर्मनी जाने वालों के लिए। AI-संचालित पठन और लेखन अभ्यास।',
+  },
+  ur: {
+    title: 'جرمن مفت سیکھیں — A1 سے C1 | GoGermany',
+    desc: 'A1 سے C1 تک مفت انٹرایکٹو جرمن اسباق، جرمنی جانے والوں کے لیے۔ AI سے چلنے والی پڑھنے اور لکھنے کی مشقیں۔',
+  },
+  nl: {
+    title: 'Gratis Duits leren — A1 tot C1 | GoGermany',
+    desc: 'Gratis interactieve Duits lessen van A1 tot C1, speciaal voor mensen die naar Duitsland gaan. AI-aangedreven lees- en schrijfoefeningen.',
+  },
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {

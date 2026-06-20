@@ -27,7 +27,7 @@ const FAMILIES: FamilyKey[] = ['single', 'married', 'married_kids']
 
 const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓', tourist: '✈️', family_reunification: '👨‍👩‍👧' }
 
-const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU' }
+const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU', hi: 'hi-IN', ur: 'ur-PK', nl: 'nl-NL' }
 
 const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
 const COUNTRY_KEY = 'gogermany.documentChecklist.country.v1'
@@ -213,14 +213,14 @@ export default function DocumentChecklist({
               <>
                 <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
                 <h2 className="dcl-summary-total dcl-no-visa-title">✅ {t('noVisaRequired')}</h2>
-                <p className="dcl-summary-sub">{t('noVisaDesc', { country: rule.name[locale], path: t(`path.${path}`) })}</p>
+                <p className="dcl-summary-sub">{t('noVisaDesc', { country: rule.name[locale] ?? rule.name.en, path: t(`path.${path}`) })}</p>
               </>
             ) : (
               <>
                 <span className="dcl-summary-eyebrow">{t('summaryEyebrow')}</span>
                 <h2 className="dcl-summary-total">{result.totalDocs} {t('documents')}</h2>
                 <p className="dcl-summary-sub">
-                  {t('summarySubCountry', { path: t(`path.${path}`), country: rule.name[locale] })}
+                  {t('summarySubCountry', { path: t(`path.${path}`), country: rule.name[locale] ?? rule.name.en })}
                 </p>
 
                 <div className="dcl-summary-row">
@@ -264,7 +264,7 @@ export default function DocumentChecklist({
         {rule.noteKey && (
           <div className="dcl-country-note">
             <span aria-hidden>ℹ️</span>
-            <p>{t(`countryNote.${rule.noteKey}` as any, { country: rule.name[locale], method: authLabel })}</p>
+            <p>{t(`countryNote.${rule.noteKey}` as any, { country: rule.name[locale] ?? rule.name.en, method: authLabel })}</p>
           </div>
         )}
         <p className="dcl-disclaimer">{t('disclaimer')}</p>

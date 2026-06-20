@@ -46,6 +46,18 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'О GoGermany — ваш мост в Германию',
     desc: 'Познакомьтесь с командой и миссией GoGermany: помощь людям со всего мира в переезде в Германию для учёбы, Ausbildung и работы.',
   },
+  hi: {
+    title: 'GoGermany के बारे में — जर्मनी का आपका पुल',
+    desc: 'GoGermany की टीम और मिशन से मिलें: दुनिया भर के लोगों को जर्मनी में पढ़ाई, Ausbildung और काम के लिए जाने में मदद।',
+  },
+  ur: {
+    title: 'GoGermany کے بارے میں — جرمنی کا آپ کا پُل',
+    desc: 'GoGermany کی ٹیم اور مشن سے ملیں: دنیا بھر کے لوگوں کو جرمنی میں تعلیم، Ausbildung اور کام کے لیے جانے میں مدد۔',
+  },
+  nl: {
+    title: 'Over GoGermany — uw brug naar Duitsland',
+    desc: 'Maak kennis met het GoGermany-team en onze missie: mensen van over de hele wereld helpen naar Duitsland te verhuizen voor studie, Ausbildung en werk.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

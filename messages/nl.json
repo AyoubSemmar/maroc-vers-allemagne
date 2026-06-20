@@ -1,1 +1,3389 @@
-{}
+{
+  "common": {
+    "appName": "GoGermany",
+    "tagline": "Jouw gids voor verhuizen naar Duitsland",
+    "brandSubtitle": "Jouw gids",
+    "loading": "Laden...",
+    "pager": {
+      "label": "Paginering",
+      "prev": "Vorige",
+      "next": "Volgende",
+      "page": "Pagina {n}"
+    },
+    "save": "Opslaan",
+    "cancel": "Annuleren",
+    "confirm": "Bevestigen",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige",
+    "close": "Sluiten",
+    "submit": "Verzenden",
+    "search": "Zoeken",
+    "yes": "Ja",
+    "no": "Nee",
+    "error": "Er is iets misgegaan",
+    "tryAgain": "Opnieuw proberen",
+    "tipLabel": "Tip"
+  },
+  "nav": {
+    "home": "Home",
+    "homeAria": "Startpagina",
+    "about": "Over ons",
+    "articles": "Artikelen",
+    "jobs": "Vacatures",
+    "tools": "Tools",
+    "faq": "Veelgestelde vragen",
+    "ausbildung": "Ausbildung",
+    "ausbildungJobs": "Ausbildung aanbiedingen",
+    "learnGerman": "Duits leren",
+    "cvBuilder": "CV-builder",
+    "anschreiben": "Motivatiebrief",
+    "profile": "Profiel",
+    "myAccount": "Mijn account",
+    "login": "Inloggen",
+    "signup": "Registreren",
+    "logout": "Uitloggen",
+    "contact": "Contact",
+    "lightMode": "Lichte modus",
+    "darkMode": "Donkere modus",
+    "enableLight": "Lichte modus inschakelen",
+    "enableDark": "Donkere modus inschakelen",
+    "dashboard": "Dashboard",
+    "learn": "Leren",
+    "opportunities": "Kansen"
+  },
+  "footer": {
+    "warning": "⚠️ De informatie die hier wordt verstrekt, is alleen ter begeleiding en vormt geen juridisch of officieel advies. Controleer altijd met officiële bronnen.",
+    "brandTag": "Uw complete gids voor immigratie, werk en studeren in Duitsland — voor mensen die van overal ter wereld verhuizen.",
+    "contactMail": "✉️ Schrijf ons",
+    "copyright": "© {year} GoGermany · Uw verhuizing naar Duitsland",
+    "disclaimer": "Informatie alleen ter begeleiding · Controleer altijd met officiële bronnen",
+    "sections": {
+      "about": {
+        "heading": "Over ons",
+        "aboutUs": "Over ons",
+        "mission": "Onze missie",
+        "contact": "Neem contact op"
+      },
+      "guides": {
+        "heading": "Praktische gidsen",
+        "housing": "Huisvesting",
+        "banking": "Banken & rekeningen",
+        "simcards": "SIM-kaarten & internet",
+        "universities": "Universiteiten",
+        "jobs": "Arbeidsmarkt",
+        "ausbildung": "Ausbildung",
+        "visa": "Visa & documenten"
+      },
+      "resources": {
+        "heading": "Bronnen",
+        "learnGerman": "Duits leren",
+        "articles": "Artikelen",
+        "usefulLinks": "Nuttige links"
+      },
+      "legal": {
+        "heading": "Juridisch",
+        "terms": "Gebruiksvoorwaarden",
+        "privacy": "Privacybeleid",
+        "disclaimer": "Disclaimer"
+      }
+    }
+  },
+  "auth": {
+    "shared": {
+      "emailPlaceholder": "E-mailadres",
+      "passwordPlaceholder": "Wachtwoord",
+      "backHome": "→ Terug naar startpagina",
+      "backLogin": "→ Terug naar inloggen",
+      "continueWithGoogle": "Doorgaan met Google",
+      "connecting": "Verbinding maken...",
+      "or": "OF"
+    },
+    "login": {
+      "title": "Inloggen",
+      "submit": "Inloggen",
+      "submitting": "Bezig met inloggen...",
+      "invalidCredentials": "E-mailadres of wachtwoord is onjuist",
+      "noAccount": "Heb je nog geen account?",
+      "signupLink": "Registreren",
+      "forgot": "Wachtwoord vergeten?"
+    },
+    "signup": {
+      "title": "Maak een nieuw account aan",
+      "submit": "Account aanmaken",
+      "submitting": "Bezig met aanmaken...",
+      "passwordPlaceholder": "Wachtwoord (minimaal 6 tekens)",
+      "haveAccount": "Heb je al een account?",
+      "loginLink": "Inloggen",
+      "error": "Er is iets misgegaan: {message}",
+      "emailExists": "Dit e-mailadres is al gekoppeld aan een bestaand account. Je kunt inloggen.",
+      "checkInbox": "Een verificatielink is naar je e-mail verzonden. Controleer je inbox!"
+    },
+    "forgot": {
+      "title": "Wachtwoord vergeten?",
+      "sub": "Voer je e-mailadres in en we sturen je een link om je wachtwoord opnieuw in te stellen.",
+      "submit": "Resetlink verzenden",
+      "submitting": "Bezig met verzenden...",
+      "success": "De resetlink is naar je e-mail verzonden. Controleer je inbox!",
+      "error": "Er is iets misgegaan. Controleer je e-mailadres en probeer opnieuw."
+    },
+    "reset": {
+      "title": "Wachtwoord opnieuw instellen",
+      "sub": "Kies een nieuw wachtwoord voor je account.",
+      "newPassword": "Nieuw wachtwoord",
+      "confirm": "Bevestig wachtwoord",
+      "submit": "Wachtwoord bijwerken",
+      "submitting": "Bezig met opslaan...",
+      "success": "Wachtwoord bijgewerkt! Je wordt doorgestuurd naar de inlogpagina...",
+      "mismatch": "Wachtwoorden komen niet overeen.",
+      "tooShort": "Wachtwoord moet minimaal 6 tekens zijn.",
+      "updateError": "Er is iets misgegaan bij het bijwerken van het wachtwoord. Probeer alstublieft opnieuw."
+    }
+  },
+  "language": {
+    "pickerTitle": "Kies je taal",
+    "pickerSubtitle": "Je kunt dit altijd wijzigen",
+    "change": "Taal wijzigen",
+    "ar": "Arabisch",
+    "fr": "Frans",
+    "en": "Engels",
+    "de": "Duits"
+  },
+  "landing": {
+    "hero": {
+      "eyebrow": "Jouw verhuizing naar Duitsland",
+      "titleLine1": "Werk, studie, ",
+      "titleHighlight": "leef",
+      "titleLine2": " in Duitsland.",
+      "sub": "Solliciteer op geverifieerde Ausbildung-banen en Duitse universiteiten die open staan voor internationale kandidaten — CV, motivatiebrief, visum en huisvesting op één plek.",
+      "ctaStart": "Start Ausbildung",
+      "ctaBrowse": "Studie in Duitsland",
+      "ctaWhatsapp": "Chat met ons op WhatsApp",
+      "ctaWhatsappHint": "Heb je een vraag? Stuur ons direct een bericht",
+      "whatsappMessage": "Hallo, ik heb een vraag over verhuizen naar Duitsland.",
+      "trust": "Sluit je aan bij duizenden mensen op weg naar Duitsland",
+      "journeyTitle": "Jouw reis",
+      "stopContract": "Contract",
+      "stopVisa": "Visum",
+      "stopHouse": "Huisvesting",
+      "willkommenSub": "welkom · ahlan",
+      "gutenTagSub": "hallo · marhaba"
+    },
+    "marquee": {
+      "banks": "🏦 Duitse banken",
+      "studium": "🎓 Studium & Universiteit",
+      "visa": "📄 Visum & Verblijf",
+      "jobs": "💼 Arbeidsmarkt",
+      "ausbildung": "🔧 Ausbildung",
+      "housing": "🏠 Woning & WG",
+      "levels": "📚 Van A1 tot C1",
+      "sim": "📱 SIM-kaarten"
+    },
+    "stats": {
+      "articlesLabel": "Artikelen en praktische gidsen",
+      "levelsSuffix": " niveaus",
+      "levelsLabel": "Duitse lessen van A1 tot C1",
+      "categoriesSuffix": " categorieën",
+      "categoriesLabel": "Georganiseerde praktische tools",
+      "freeText": "Gratis",
+      "freeLabel": "Volledige toegang, altijd",
+      "jobs": {
+        "num": "5K+",
+        "label": "geverifieerde Ausbildung-banen"
+      },
+      "universities": {
+        "num": "400+",
+        "label": "Duitse universiteiten voor internationale studenten"
+      },
+      "stipend": {
+        "text": "€1.100",
+        "label": "gemiddelde maandelijkse beurs"
+      },
+      "tuition": {
+        "text": "€250",
+        "label": "collegegeld om in Duitsland te studeren"
+      }
+    },
+    "how": {
+      "kicker": "Hoe het werkt",
+      "title": "Drie stappen om aan de slag te gaan",
+      "sub": "Van het vinden van een tool tot het leren van de taal tot aankomst — alles vereenvoudigd.",
+      "step": "Stap {n}",
+      "step1Title": "Vind je tool",
+      "step1Desc": "Van huisvesting en banken tot visa's — alles is netjes georganiseerd in gemakkelijk te doorzoeken categorieën.",
+      "step2Title": "Leer Duits",
+      "step2Desc": "Interactieve lessen speciaal ontworpen voor internationals, met woordenschat, grammatica en oefeningen van A1 tot C1.",
+      "step3Title": "Vertrek met vertrouwen",
+      "step3Desc": "Gewapend met kennis, tools en gemeenschap, begin je nieuwe leven in Duitsland zonder complicaties."
+    },
+    "tools": {
+      "kicker": "Praktische tools",
+      "title": "Alles wat je nodig hebt, op één plek",
+      "sub": "Acht secties, tientallen artikelen en alle tools die je nodig hebt gedurende je reis.",
+      "discover": "Ontdek",
+      "banks": {
+        "name": "Banken",
+        "desc": "Open gemakkelijk een rekening, waar je ook vandaan komt"
+      },
+      "housing": {
+        "name": "Huisvesting",
+        "desc": "Appartementen en gedeelde flats (WG)"
+      },
+      "universities": {
+        "name": "Universiteiten",
+        "desc": "Studie in Duitsland gratis"
+      },
+      "work": {
+        "name": "Werk",
+        "desc": "Vind de juiste baan voor jou"
+      },
+      "cv": {
+        "name": "CV",
+        "desc": "Professionele Lebenslauf + AI"
+      },
+      "anschreiben": {
+        "name": "Motivatiebrief",
+        "desc": "Anschreiben in het Duits in seconden"
+      },
+      "ausbildung": {
+        "name": "Ausbildung",
+        "desc": "De duale beroepsopleiding"
+      },
+      "ausbildungJobs": {
+        "name": "Ausbildung-aanbiedingen",
+        "desc": "Echte aanbiedingen dagelijks bijgewerkt"
+      },
+      "visa": {
+        "name": "Visum",
+        "desc": "Alle papierwerk en procedures"
+      },
+      "learnGerman": {
+        "name": "Leer Duits",
+        "desc": "Lessen van A1 tot C1"
+      },
+      "sim": {
+        "name": "SIM-kaarten",
+        "desc": "Blijf vanaf dag één verbonden"
+      },
+      "livingCost": {
+        "name": "Levenskosten calculator",
+        "desc": "Schat maandelijkse kosten in 15 steden"
+      },
+      "migrationTimeline": {
+        "name": "Migratietijdlijn",
+        "desc": "Schat je tijdlijn naar Duitsland fase voor fase"
+      },
+      "documentChecklist": {
+        "name": "Documentenchecklist",
+        "desc": "Gepersonaliseerde lijst van elk document dat je nodig hebt voor het Duitse visum, met kosten in EUR"
+      },
+      "eligibilityChecker": {
+        "name": "Geschiktheidschecker",
+        "desc": "Zie waar je staat voor het Duitse visum — gereedheidscore en exacte blokkades"
+      }
+    },
+    "ladder": {
+      "kicker": "Leer Duits",
+      "titlePrefix": "Van",
+      "titleBetween": "tot",
+      "titleSuffix": "— stap voor stap",
+      "sub": "Grammatica, woordenschat en interactieve oefeningen speciaal ontworpen voor Arabische sprekers. Werk in je eigen tempo met directe voortgangsregistratie.",
+      "cta": "Begin gratis te leren",
+      "metaFree": "Gratis Duitse lessen",
+      "metaInteractive": "Interactief",
+      "metaMoroccans": "Voor internationals",
+      "levels": {
+        "A1": {
+          "title": "Beginner",
+          "desc": "Groeten, getallen, jezelf voorstellen"
+        },
+        "A2": {
+          "title": "Basis",
+          "desc": "Winkelen, afspraken, mensen beschrijven"
+        },
+        "B1": {
+          "title": "Intermediate",
+          "desc": "Dagelijkse gesprekken, meningen, werk"
+        },
+        "B2": {
+          "title": "Gevorderd",
+          "desc": "Complexe discussies, formele teksten"
+        },
+        "C1": {
+          "title": "Meesterschap",
+          "desc": "Academisch en professioneel niveau"
+        }
+      }
+    },
+    "articles": {
+      "kicker": "Uitgelichte artikelen",
+      "title": "Nieuwste gidsen en tips",
+      "readMore": "Lees meer",
+      "readTime": "Lezen · {time}"
+    },
+    "faq": {
+      "kicker": "Veelgestelde vragen",
+      "title": "Alles wat je wilt weten",
+      "q1": "Is de site echt gratis?",
+      "a1": "Ja — alle artikelen, tools en Duitse lessen (A1 tot C1) zijn gratis te gebruiken. Voor persoonlijke 1-op-1 hulp bieden we ook betaalde consultaties (€20 voor 1 uur) met een specialist — maar de educatieve inhoud blijft altijd gratis.",
+      "q2": "Moet ik Duits kennen voordat ik reis?",
+      "a2": "Minstens B1 wordt aanbevolen voor werk en universiteit, en A2 voor Ausbildung. Maar veel programma's accepteren beginners en bieden geïntegreerde taalcursussen. Onze lessen dekken elk niveau.",
+      "q3": "Wat is het verschil tussen Studium en Ausbildung?",
+      "a3": "Een Studium is academische universitaire studie, terwijl een Ausbildung een betaalde duale beroepsopleiding is (theorie + praktijk) die je in 2-3 jaar kwalificeert voor een specifiek beroep. Beide zijn uitstekende immigratiepaden.",
+      "q4": "Hoe lang duren visumprocedures?",
+      "a4": "Dit hangt af van het visumtype en de ambassade, maar meestal tussen 4 en 12 weken. We raden altijd aan om 4-6 maanden voor je doeldatum met voorbereidingen te beginnen. We bieden een volledige gids voor elk visumtype.",
+      "q5": "Is de informatie actueel en officieel?",
+      "a5": "We werken inhoud continu bij op basis van officiële Duitse bronnen en ambassades. Maar voor officiële beslissingen raden we altijd aan om contact op te nemen met de relevante autoriteiten. Onze informatie is ter begeleiding."
+    },
+    "newsletter": {
+      "title": "Blijf op de hoogte",
+      "sub": "Een wekelijkse nieuwsbrief met de nieuwste gidsen, baankansen en praktische tips voor verhuizen naar Duitsland.",
+      "placeholder": "Je e-mailadres",
+      "submit": "Abonneren",
+      "submitting": "...",
+      "success": "✓ Succesvol geabonneerd!",
+      "duplicate": "Dit e-mailadres is al geabonneerd",
+      "error": "Er is iets misgegaan, probeer het opnieuw",
+      "disclaimer": "We zullen je e-mailadres nooit delen · je kunt je op elk moment afmelden"
+    },
+    "paths": {
+      "kicker": "Kies je pad",
+      "title": "Twee routes naar Duitsland",
+      "sub": "Kies degene die bij je past — we begeleiden je stap voor stap.",
+      "ausbildung": {
+        "title": "Ausbildung (Beroepsopleiding)",
+        "desc": "Leer en werk tegelijk met een maandsalaris en een formeel contract in Duitsland.",
+        "cta": "Start Ausbildung"
+      },
+      "studium": {
+        "title": "Studie in Duitsland",
+        "desc": "Solliciteer op Duitse universiteiten en studie gratis of tegen zeer lage kosten.",
+        "cta": "Verken universiteiten"
+      }
+    },
+    "opportunities": {
+      "kicker": "Kansen",
+      "title": "Echte banen en programma's wachten op je",
+      "sub": "Blader door live Ausbildung-aanbiedingen en universiteiten die open staan voor internationale kandidaten.",
+      "ausbildungJobs": {
+        "title": "Ausbildung-aanbiedingen",
+        "desc": "Duizenden trainingsposities met een formeel contract in heel Duitsland.",
+        "cta": "Blader door aanbiedingen"
+      },
+      "universities": {
+        "title": "Duitse universiteiten",
+        "desc": "Een volledige gids voor universiteiten en toelatingsvoorwaarden voor internationale kandidaten.",
+        "cta": "Verken"
+      }
+    },
+    "housing": {
+      "kicker": "Huisvesting",
+      "title": "Vind een plek om te wonen in Duitsland",
+      "sub": "Kamers en appartementenaanbiedingen voor internationale studenten en leerlingen die naar Duitsland verhuizen.",
+      "cta": "Blader door aanbiedingen",
+      "feature1": "Echte aanbiedingen, dagelijks bijgewerkt",
+      "feature2": "Direct contact met de huiseigenaar",
+      "feature3": "Geschikt voor studenten en leerlingen"
+    },
+    "guides": {
+      "kicker": "Gidsen",
+      "title": "Gidsen & artikelen voor je reis"
+    },
+    "banner": {
+      "messages": [
+        "🇲🇦 → 🇩🇪 Nieuw: 1.200+ Ausbildung-aanbiedingen deze week",
+        "📄 Gratis CV & motivatiebrief — geen registratie nodig",
+        "🎓 Universiteiten: Winterintake 2026 is open"
+      ],
+      "dismiss": "Sluiten"
+    },
+    "pathHub": {
+      "shared": {
+        "articlesTitle": "Artikelen & gidsen",
+        "articlesCta": "Alle artikelen",
+        "toolsTitle": "AI-tools",
+        "toolsCta": "Zie alle tools",
+        "nextStepTitle": "Volgende stap",
+        "consultTitle": "Boek een consultatie",
+        "consultSub": "Onze adviseurs begeleiden je stap voor stap — in het Arabisch of Frans.",
+        "consultName": "Volledige naam",
+        "consultEmail": "E-mailadres",
+        "consultPhone": "Telefoonnummer",
+        "consultMsg": "Vertel ons over je project",
+        "consultSubmit": "Boek mijn consultatie",
+        "consultSending": "Verzenden…",
+        "consultSuccess": "Bedankt! We nemen binnenkort contact op.",
+        "consultError": "Kon niet verzenden, probeer het opnieuw.",
+        "ctaTools": "Zie de tools",
+        "ctaConsult": "Boek een consultatie",
+        "pillarsKicker": "Drie stappen",
+        "pillarsTitleAus": "Je Ausbildung in drie stappen",
+        "pillarsTitleStud": "Je studie in drie stappen",
+        "stepLabel": "Stap",
+        "discover": "Ontdek",
+        "comingSoon": "Binnenkort beschikbaar"
+      },
+      "ausbildung": {
+        "eyebrow": "Ausbildung-pad",
+        "title": "Alles voor je Ausbildung in Duitsland",
+        "sub": "CV, motivatiebrief, Duits leren, echte aanbiedingen en persoonlijke consultatie — alles op één plek.",
+        "ctaOffers": "Blader door Ausbildung-aanbiedingen",
+        "offersKicker": "Aanbiedingen",
+        "offersTitle": "5.000+ echte Ausbildung-aanbiedingen",
+        "offersDesc": "Vind trainingsposities met een officieel contract in heel Duitsland, dagelijks bijgewerkt.",
+        "offersCta": "Zie aanbiedingen",
+        "heroPre": "Verdien ",
+        "heroHighlight": "€1.100/mnd",
+        "heroPost": " terwijl je in Duitsland traint",
+        "subNew": "Officieel contract, betaalde training, 5.000+ Ausbildung-aanbiedingen open voor internationale kandidaten.",
+        "chips": [
+          "📋 Officieel contract",
+          "💶 Maandsalaris",
+          "🇩🇪 Wettelijk verblijf"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Leer Duits",
+            "desc": "Van A1 tot C1 — interactieve, gratis lessen gemaakt voor internationals."
+          },
+          "find": {
+            "title": "Vind je Ausbildung",
+            "desc": "Blader door 5.000+ trainingsposities met een officieel contract in heel Duitsland."
+          },
+          "visa": {
+            "title": "Krijg je visum",
+            "desc": "Stap-voor-stap gids voor het Ausbildung-visum vanuit je land."
+          }
+        }
+      },
+      "studium": {
+        "eyebrow": "Studium-pad",
+        "title": "Alles om in Duitsland te studeren",
+        "sub": "CV, motivatiebrief, universiteitsgids, Duits leren en consultatie — alles op één plek.",
+        "ctaUnis": "Verken universiteiten",
+        "unisKicker": "Universiteiten",
+        "unisTitle": "Duitse universiteiten open voor internationale kandidaten",
+        "unisDesc": "Volledige gids met toelatingsvoorwaarden, programma's en kosten.",
+        "unisCta": "Verken de gids",
+        "heroPre": "Studie ",
+        "heroHighlight": "gratis",
+        "heroPost": " aan een Duitse universiteit",
+        "subNew": "Bijna nul collegegeld, 400+ universiteiten open voor internationale kandidaten, en een diploma dat wereldwijd erkend is.",
+        "chips": [
+          "🎓 Bijna nul collegegeld",
+          "🌍 400+ universiteiten",
+          "📜 Erkend diploma"
+        ],
+        "pillars": {
+          "learnGerman": {
+            "title": "Leer Duits",
+            "desc": "Van A1 tot C1 — interactieve, gratis lessen gemaakt voor internationals."
+          },
+          "find": {
+            "title": "Kies je universiteit",
+            "desc": "Blader door 400+ universiteiten met toelatingsvoorwaarden en programma's."
+          },
+          "visa": {
+            "title": "Krijg je studentenvisum",
+            "desc": "Stap-voor-stap gids voor het studentenvisum vanuit je land."
+          }
+        }
+      }
+    }
+  },
+  "profile": {
+    "title": "Mijn profiel",
+    "errorPrefix": "Fout: ",
+    "avatar": {
+      "uploading": "Uploaden...",
+      "change": "Foto wijzigen"
+    },
+    "email": "E-mailadres",
+    "whatsapp": {
+      "label": "WhatsApp-nummer (met landcode, optioneel)",
+      "errInvalid": "Voer een geldig telefoonnummer in met uw landcode (bijv. +49 …)."
+    },
+    "status": {
+      "label": "Uw huidige status (optioneel)",
+      "inDe": "In Duitsland",
+      "coming": "Voorbereiding op verhuizing"
+    },
+    "save": {
+      "saving": "Opslaan...",
+      "saved": "Opgeslagen ✓",
+      "submit": "Wijzigingen opslaan"
+    },
+    "docs": {
+      "heading": "🗂 Mijn documenten",
+      "uploadOpen": "+ Document uploaden",
+      "uploadClose": "✕ Annuleren",
+      "formTitle": "Nieuw document uploaden",
+      "type": "Documenttype",
+      "fileLabel": "Bestand (PDF of Word · max 8MB)",
+      "dropHint": "Sleep het bestand hier of",
+      "clickSelect": "klik om te selecteren",
+      "pickFirst": "Selecteer eerst een bestand",
+      "uploadErr": "Uploadfout",
+      "sizeErr": "Maximale grootte 8MB",
+      "uploadSuccess": "✅ Document succesvol geüpload",
+      "uploading": "⏳ Uploaden...",
+      "uploadBtn": "📤 Document uploaden",
+      "loading": "Laden...",
+      "emptyTitle": "Nog geen documenten opgeslagen.",
+      "emptyHint": "Maak een",
+      "emptyCv": "CV",
+      "emptyOr": "of een",
+      "emptyLetter": "motivatiebrief",
+      "emptyOrUpload": "of upload een bestand.",
+      "confirmDelete": "\"{title}\" verwijderen?",
+      "deleted": "✅ Verwijderd",
+      "deleteErr": "❌ Verwijderingsfout",
+      "aiBadge": "AI-gegenereerd",
+      "openInBuilder": "✏️ Openen in builder",
+      "viewLetter": "👁 Brief weergeven",
+      "openFile": "🔗 Bestand openen",
+      "delete": "🗑 Verwijderen",
+      "openCvErr": "❌ Kon CV niet openen",
+      "close": "✕ Sluiten"
+    },
+    "listings": {
+      "heading": "Mijn advertenties",
+      "add": "+ Advertentie toevoegen",
+      "empty": "U heeft nog geen advertenties geplaatst.",
+      "expired": "Verlopen",
+      "expiresOn": "Verloopt op {date}"
+    },
+    "deleteAccount": {
+      "button": "Mijn account verwijderen",
+      "title": "Weet u het zeker?",
+      "body": "Uw account wordt permanent verwijderd en u kunt zich niet meer aanmelden. Deze actie kan niet ongedaan worden gemaakt.",
+      "cancel": "Annuleren",
+      "confirm": "Ja, account verwijderen",
+      "deleting": "⏳ Verwijderen...",
+      "genericErr": "Er is een fout opgetreden bij het verwijderen van het account"
+    },
+    "name": {
+      "heading": "Naam",
+      "firstLabel": "Voornaam",
+      "lastLabel": "Achternaam",
+      "firstPlaceholder": "bijv. Ahmed",
+      "lastPlaceholder": "bijv. El Alaoui"
+    }
+  },
+  "search": {
+    "resultsFor": "Zoekresultaten voor:",
+    "count": "{n} resultaat(en)",
+    "noResults": "Geen resultaten",
+    "articles": "📰 Artikelen ({n})",
+    "listings": "🏠 Aanbiedingen ({n})",
+    "emptyTitle": "Geen resultaten voor \"{q}\"",
+    "emptySub": "Probeer andere woorden"
+  },
+  "static": {
+    "about": {
+      "title": "Over het project",
+      "subtitle": "Wie we zijn en wat we bieden",
+      "s1_h": "Het idee achter het project",
+      "s1_b": "GoGermany is een digitale gids die is gemaakt om mensen uit elk land te helpen die naar Duitsland willen verhuizen — of het nu voor werk, studie of om zich daar te vestigen. We streven ernaar betrouwbare, praktische informatie te bieden die deze reis gemakkelijker maakt.",
+      "s2_h": "Waarom dit project?",
+      "s2_b": "Verhuizen naar Duitsland kan ingewikkeld zijn: veel documenten, een nieuwe taal en een volledig ander systeem. Ons doel is de reis te vereenvoudigen met duidelijke, praktische informatie die je tijd bespaart en je ervan weerhoudt verdwaald te raken.",
+      "s3_h": "Voor wie is deze site?",
+      "s3_b": "De site is gericht op studenten die in Duitsland willen studeren, werkzoekenden, Ausbildung (duale beroepsopleiding) sollicitanten en nieuwe bewoners die praktische begeleiding nodig hebben aan het begin van hun reis.",
+      "s4_h": "Onze missie",
+      "s4_b": "Complexe procedures vereenvoudigen en betrouwbare, actuele informatie bieden, omdat iedereen een echte kans in Duitsland verdient.",
+      "s5_h": "Neem contact met ons op",
+      "s5_b": "Heb je een vraag of suggestie? Stuur ons een bericht op contact@gogermany.ma — we horen graag van je en beantwoorden je vragen."
+    },
+    "contact": {
+      "title": "Neem contact met ons op",
+      "subtitle": "We helpen je graag",
+      "s1_h": "E-mail",
+      "s1_b": "Voor algemene vragen: contact@gogermany.ma",
+      "s2_h": "Inhoud en artikelen",
+      "s2_b": "Heb je een ervaring om te delen of een artikel om te publiceren? Stuur ons een bericht: contact@gogermany.ma — we ontvangen graag alle serieuze, nuttige bijdragen.",
+      "s3_h": "Samenwerkingen",
+      "s3_b": "Ben je een school, instelling of dienst die wil samenwerken: contact@gogermany.ma — we bespreken graag samenwerkingsmogelijkheden.",
+      "s4_h": "Reactietijd",
+      "s4_b": "We reageren meestal binnen 2–3 werkdagen. Als je binnen die tijd niets van ons hoort, controleer dan je spammap.",
+      "s5_h": "Opmerking",
+      "s5_b": "We zijn een klein team dat met passie werkt. Dank je voor je geduld en begrip!"
+    },
+    "terms": {
+      "title": "Gebruiksvoorwaarden",
+      "subtitle": "Lees deze voorwaarden alstublieft voordat u de site gebruikt",
+      "s1_h": "Aanvaarding van voorwaarden",
+      "s1_b": "Door deze site te gebruiken, gaat u akkoord met deze voorwaarden. Als u het niet eens bent met enig onderdeel ervan, stop dan alstublieft met het gebruik van de site.",
+      "s2_h": "Aard van de inhoud",
+      "s2_b": "De hier verstrekte informatie is alleen bedoeld als richtlijn. Dit vormt geen juridisch of officieel advies. Gebruikers moeten zich voordat zij een beslissing nemen tot de bevoegde officiële autoriteiten wenden.",
+      "s3_h": "Gebruikersverantwoordelijkheid",
+      "s3_b": "U bent verantwoordelijk voor het verifiëren van de nauwkeurigheid van informatie bij officiële bronnen voordat u een beslissing neemt. De site aanvaardt geen aansprakelijkheid voor gevolgen voortvloeiend uit vertrouwen op gepubliceerde inhoud.",
+      "s4_h": "Intellectueel eigendom",
+      "s4_b": "Alle inhoud van de site is beschermd door intellectuele eigendomsrechten. Kopiëren, opnieuw publiceren of distribueren zonder expliciete toestemming van de sitebeheerder is niet toegestaan.",
+      "s5_h": "Wijzigingen",
+      "s5_b": "We behouden ons het recht voor deze voorwaarden op elk moment zonder voorafgaande kennisgeving te wijzigen. Voortgezet gebruik van de site na wijzigingen betekent aanvaarding van de nieuwe voorwaarden."
+    },
+    "privacy": {
+      "title": "Privacybeleid",
+      "subtitle": "Hoe we omgaan met uw persoonlijke gegevens",
+      "s1_h": "Welke gegevens verzamelen we?",
+      "s1_b": "We verzamelen uw e-mailadres bij registratie en basisgebruiksgegevens zoals de pagina's die u bezoekt en de acties die u op de site onderneemt.",
+      "s2_h": "Hoe gebruiken we uw gegevens?",
+      "s2_b": "We gebruiken uw gegevens om uw ervaring te verbeteren en nuttige updates te sturen als u zich abonneert op de nieuwsbrief. Uw gegevens worden niet voor ander doeleinden gebruikt zonder uw toestemming.",
+      "s3_h": "Delen we uw gegevens?",
+      "s3_b": "Nee. We verkopen of delen uw gegevens niet met derden voor commerciële doeleinden. Uw gegevens blijven alleen bij ons.",
+      "s4_h": "Opslag en beveiliging",
+      "s4_b": "We gebruiken Supabase om gegevens veilig op te slaan. Gegevens zijn versleuteld volgens industriestandaarden en worden behandeld volgens best practices voor beveiliging.",
+      "s5_h": "Uw rechten",
+      "s5_b": "U kunt op elk moment verwijdering van uw account en gegevens aanvragen door ons per e-mail te contacteren. We verwerken uw verzoek binnen een redelijke termijn."
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "subtitle": "Belangrijke informatie voordat u de inhoud van de site gebruikt",
+      "s1_h": "Geen juridisch advies",
+      "s1_b": "Alle informatie op deze site is alleen voor informatieve en richtinggevende doeleinden en vervangt geen juridisch of officieel advies. We raden altijd aan om professionals of officiële autoriteiten te raadplegen voordat u een belangrijke beslissing neemt.",
+      "s2_h": "Controleer bij officiële bronnen",
+      "s2_b": "Controleer informatie altijd bij officiële bronnen zoals de Ausländerbehörde, ambassades of andere bevoegde autoriteiten. De inhoud van deze site vervangt geen raadpleging van deze instanties.",
+      "s3_h": "Wetten veranderen",
+      "s3_b": "Immigratie- en verblijfswetten veranderen regelmatig. Sommige informatie op de site kan verouderd zijn of weerspiegelt mogelijk niet de nieuwste wettelijke wijzigingen. Controleer alstublieft de publicatiedatums en officiële bronnen.",
+      "s4_h": "Verantwoordelijkheid",
+      "s4_b": "De site aanvaardt geen verantwoordelijkheid voor beslissingen die op basis van de inhoud ervan worden genomen. De gebruiker is volledig verantwoordelijk voor het verifiëren van de nauwkeurigheid van informatie en het nemen van beslissingen die passend zijn voor hun situatie."
+    },
+    "usefulLinks": {
+      "title": "Nuttige links",
+      "subtitle": "Officiële websites en belangrijke bronnen voor inwoners en nieuwkomers",
+      "s1_h": "Officiële Duitse instanties",
+      "s1_i1": "Make-it-in-Germany.com — het officiële portaal voor werk en immigratie naar Duitsland",
+      "s1_i2": "BAMF.de — Federaal Kantoor voor Migratie en Vluchtelingen",
+      "s1_i3": "Arbeitsagentur.de — Federaal Arbeidsbureau",
+      "s1_i4": "DAAD.de — studiebeurzen in Duitsland voor internationale studenten",
+      "s2_h": "Huisvesting",
+      "s2_i1": "ImmobilienScout24.de — de populairste site voor appartementen en huizen",
+      "s2_i2": "WG-Gesucht.de — het beste voor kamers in gedeelde appartementen",
+      "s2_i3": "eBay Kleinanzeigen — directe aanbiedingen van huisbazen en particulieren",
+      "s3_h": "Duits leren",
+      "s3_i1": "Goethe Institut (goethe.de) — officiële centra om Duits te leren en examens af te leggen",
+      "s3_i2": "Deutsche Welle (dw.com/ar) — leermateriaal in het Arabisch",
+      "s3_i3": "DuoLingo en Babbel — handige apps voor beginners",
+      "s4_h": "Banen en Ausbildung sites",
+      "s4_i1": "Ausbildung.de — de grootste site voor Ausbildung-posities",
+      "s4_i2": "StepStone.de — een van de grootste jobportals in Duitsland",
+      "s4_i3": "Indeed.de — uitgebreide zoekmotor voor banen",
+      "s4_i4": "LinkedIn — wereldwijd professioneel netwerk",
+      "s5_h": "Ziektekostenverzekering",
+      "s5_i1": "TK (tk.de) — Techniker Krankenkasse, een van de beste verzekeringsfondsen",
+      "s5_i2": "AOK (aok.de) — aanwezig in alle Duitse deelstaten",
+      "s5_i3": "Barmer (barmer.de) — een populaire keuze voor studenten en werknemers",
+      "s6_h": "Arabische gemeenschappen",
+      "s6_b": "Zoek naar \"internationals in Germany\" groepen op Facebook en WhatsApp — geweldige gemeenschappen voor hulp en praktische tips van mensen die dezelfde ervaring hebben doorgemaakt. Contact maken met degenen die eerder zijn gegaan bespaart je veel."
+    },
+    "housing": {
+      "title": "Woonwijzer voor Duitsland",
+      "subtitle": "Hoe vind je een appartement of kamer in Duitsland",
+      "s1_h": "Beschikbare soorten huisvesting",
+      "s1_i1": "Zelfstandig appartement (Wohnung): je huurt het hele appartement voor jezelf.",
+      "s1_i2": "Kamer in een gedeeld appartement (WG - Wohngemeinschaft): je deelt het appartement met anderen en betaalt alleen de kosten van je kamer.",
+      "s1_i3": "Studentenhuisvesting (Studentenwohnheim): voor studenten ingeschreven aan universiteiten, meestal met gereduceerde prijzen.",
+      "s2_h": "WG of zelfstandig appartement?",
+      "s2_b": "Een WG is goedkoper en gemakkelijker te krijgen als nieuwkomer. Een zelfstandig appartement vereist een kredietgeschiedenis (Schufa) en meer garanties, wat het moeilijker maakt voor degenen die net in Duitsland zijn aangekomen.",
+      "s3_h": "Belangrijkste zoeksites",
+      "s3_i1": "ImmobilienScout24.de — de populairste site voor zelfstandige appartementen",
+      "s3_i2": "WG-Gesucht.de — het beste voor het vinden van kamers in gedeelde appartementen",
+      "s3_i3": "eBay Kleinanzeigen — gevarieerde aanbiedingen rechtstreeks van verhuurders",
+      "s3_i4": "Studenten-WG.de — speciaal voor studenten",
+      "s4_h": "Meestal vereiste documenten",
+      "s4_i1": "Paspoort of verblijfsvergunning",
+      "s4_i2": "Laatste 3 salarisbrieven (of universiteitstoelatingsbewijs voor studenten)",
+      "s4_i3": "Schufa-Auskunft (kredietrapport)",
+      "s4_i4": "Mietschuldenfreiheitsbescheinigung (verklaring van geen eerdere huurschulden)",
+      "s5_h": "Waarschuwingen voor oplichting",
+      "s5_i1": "Betaal nooit een borg (Kaution) voordat je het appartement persoonlijk hebt gezien.",
+      "s5_i2": "Vermijd aanbiedingen die veel lager geprijsd zijn dan de marktprijs.",
+      "s5_i3": "Stuur geen persoonlijke gegevens of foto's van je documenten naar onbekenden online.",
+      "s6_h": "Na het vinden van het appartement",
+      "s6_b": "Je moet je binnen twee weken na inschrijving aanmelden bij het stadhuis (Anmeldung). Deze stap is verplicht en noodzakelijk om een bankrekening te openen en met Duitse officiële instanties om te gaan."
+    },
+    "banking": {
+      "metaTitle": "Bankieren in Duitsland — je complete gids",
+      "metaDesc": "20 artikelen over alles wat je moet weten om een bankrekening te openen en je geld in Duitsland te beheren.",
+      "eyebrow": "Geld & bankieren",
+      "title": "Bankieren en rekeningen in Duitsland",
+      "subtitle": "Alles wat je nodig hebt om je financiële leven in Duitsland te starten — van het kiezen van een bank tot overboekingen en kosten.",
+      "intro": "20 uitgebreide artikelen gebaseerd op echte ervaringen, die elk stadium behandelen: voor aankomst, bij aankomst en tijdens je eerste jaren in Duitsland.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Waarom heb je een Duitse bankrekening nodig?",
+          "summary": "Een bankrekening is geen luxe in Duitsland — zonder er een zul je je salaris niet ontvangen, je huur niet betalen of bijna geen officieel proces kunnen voltooien.",
+          "tag": "Basis",
+          "paragraph": "Duitsland is bovenal een land van bankoverschrijvingen (Überweisung). Salarissen komen via overboeking aan, huur wordt automatisch afgehaald via automatische incasso (Lastschrift), elke rekening gaat via je rekening, zelfs beurzen en sociale zekerheid hebben een Duitse IBAN nodig.",
+          "bullets": [
+            "Je werkgever vraagt om een Duitse IBAN voordat je eerste salaris wordt uitbetaald.",
+            "Je huisbaas heeft een rekening nodig om een Lastschrift voor huur in te stellen.",
+            "Ziektekostenverzekering, belastingen, elektriciteit, internet — alles loopt via automatische incasso."
+          ],
+          "tip": "Open een online rekening voordat je je land verlaat als dat mogelijk is, of uiterlijk in je eerste week na aankomst."
+        },
+        {
+          "num": 2,
+          "title": "Het verschil tussen Girokonto, Sparkonto en Tagesgeld",
+          "summary": "Drie rekeningtypen in Duitsland, elk voor een ander doel. Kies verkeerd en je verliest rendement of je geld zit vast.",
+          "tag": "Rekeningtypen",
+          "bullets": [
+            "**Girokonto:** betaalrekening — voor het ontvangen van salaris en het betalen van rekeningen. Dit is wat je eerst nodig hebt.",
+            "**Sparkonto:** traditionele spaarrekening met lage rente, op elk moment opneembaar.",
+            "**Tagesgeldkonto:** dagelijks beschikbare rekening met hogere rente (momenteel 2–4%), volledig liquide, ideaal voor een reserve.",
+            "**Festgeld:** termijndeposito met hogere rente, maar je geld zit vast."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "N26 — de eerste keuze voor nieuwkomers",
+          "summary": "100% digitale bank, opent in 15 minuten via je telefoon, geen Schufa of bezoek aan een filiaal nodig. Perfect voor je eerste weken in Duitsland.",
+          "tag": "Digitale bank",
+          "bullets": [
+            "Geen maandelijkse kosten op het gratis plan.",
+            "Vereist niet altijd Anmeldung — paspoort en een Duits adres zijn vaak genoeg.",
+            "VideoIdent-identiteitscontrole niet beschikbaar in het Arabisch — maar Engels of Duits werkt.",
+            "Maestro/Debit Mastercard komt per post in 5–10 dagen.",
+            "Geweldige app: directe meldingen, automatische categorisering, spaargoals."
+          ],
+          "tip": "Sommige oudere Duitse bedrijven weigeren niet-DE IBAN's van N26 (ze beginnen soms met FR of ES). Controleer dit voordat je het aan je werkgever geeft."
+        },
+        {
+          "num": 4,
+          "title": "DKB — gratis met een echte creditcard",
+          "summary": "Een van de beste gratis banken. Biedt een echte Visa-creditcard (niet alleen Debit) met gratis geldopnames.",
+          "tag": "Gratis bank",
+          "paragraph": "DKB is ideaal als je veel reist of online in vreemde valuta's winkelt. De creditcard maakt gratis opnames mogelijk bij elk geldautomaat wereldwijd (na het overmaken van saldo).",
+          "bullets": [
+            "Gratis Girokonto zonder minimale salariseisen.",
+            "Fatsoenlijke app, hoewel minder gepolijst dan N26.",
+            "Vereist een voltooide Anmeldung om je aan te melden.",
+            "Klantenservice in het Duits of Engels."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Sparkasse — de lokale bank het dichtst bij je",
+          "summary": "Een enorm netwerk van regionale banken. Elke stad heeft zijn eigen Sparkasse. Niet de goedkoopste, maar sociaal het meest geruststellend.",
+          "tag": "Traditionele bank",
+          "paragraph": "Als een huurovereenkomst of werkgever een rekening vraagt bij een \"echte\" bank met een fysieke vestiging, is Sparkasse geschikt. Waarschuwing echter: de meeste filialen rekenen maandelijkse kosten (€5–10) op de betaalrekening.",
+          "bullets": [
+            "Filialen overal, zelfs in kleine dorpen.",
+            "Gratis geldautomaten binnen het Sparkasse-netwerk.",
+            "Baliertransacties (persoonlijk) voor wie face-to-face service nodig heeft.",
+            "Vereist Anmeldung en een persoonlijke afspraak om te openen."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "Commerzbank en Deutsche Bank — de grote banken",
+          "summary": "Geschikt als je leningen of geavanceerde beleggingsdiensten nodig hebt. Beide bieden gratis rekeningen voor studenten en voor wie een groot genoeg salaris overmaakt.",
+          "tag": "Grote banken",
+          "bullets": [
+            "Commerzbank: gratis rekening met salarisboeking ≥ €700/maand.",
+            "Deutsche Bank: goed voor internationale relaties en beleggingen.",
+            "Sommige filialen hebben personeel dat Engels of Frans spreekt.",
+            "Kosten zijn relatief hoog als je niet aan de voorwaarden voldoet."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "ING en Comdirect — uitstekende digitale alternatieven",
+          "summary": "Twee digitale banken met virtuele filialen, ondersteund door grote groepen (ING DiBa en Commerzbank).",
+          "tag": "Digitale banken",
+          "bullets": [
+            "ING: gratis Girokonto met maandelijks inkomen ≥ €700, gratis opnames bij elke geldautomaat in de EU.",
+            "Comdirect: gratis voor de eerste 3 jaar, daarna afhankelijk van maandelijks inkomen.",
+            "Beide ondersteunen Apple Pay en Google Pay.",
+            "Ondersteuning vooral in het Duits."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "Documenten vereist om een rekening te openen",
+          "summary": "Precieze checklist van wat elke Duitse bank vraagt. Verzamel ze voordat je aanvraagt om tijd te besparen.",
+          "tag": "Documenten",
+          "bullets": [
+            "Paspoort of verblijfsvergunning (Aufenthaltstitel).",
+            "Anmeldebestätigung (bevestiging van gemeentelijke registratie).",
+            "Volledig woonadres in Duitsland.",
+            "Steuer-ID (belastingnummer) indien beschikbaar.",
+            "Duits telefoonnummer voor verificatie.",
+            "Sommige banken: inkomstenbewijs of een werk-/studiecontract."
+          ],
+          "tip": "Digitale banken (N26, Vivid) kunnen je aanvankelijk zonder Anmeldung accepteren, maar zullen dit later voor volledige verificatie vragen."
+        },
+        {
+          "num": 9,
+          "title": "VideoIdent en PostIdent — hoe je identiteit wordt geverifieerd",
+          "summary": "Je kunt geen rekening openen zonder identiteitsverificatie. Dit zijn de twee meest voorkomende opties.",
+          "tag": "Identiteitscontrole",
+          "bullets": [
+            "**VideoIdent:** 5–10 min videogesprek met een agent, beschikbaar van overal. Het snelste.",
+            "**PostIdent:** ga naar het dichtstbijzijnde postkantoor (Deutsche Post) met een afgedrukt formulier en je paspoort. Gratis.",
+            "Beide zijn gratis als aangevraagd door de bank.",
+            "Kies VideoIdent als je nog in het buitenland bent of onlangs bent aangekomen."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Schufa — het Duitse kredietdossier",
+          "summary": "Een dossier dat je financieel vertrouwen bepaalt. Het beïnvloedt het huren van een appartement, het openen van sommige rekeningen en het krijgen van leningen.",
+          "tag": "Krediet",
+          "paragraph": "Schufa wordt automatisch berekend op basis van je financiële activiteit in Duitsland. Bij aankomst is je dossier \"leeg\" — niet slecht op zich, maar sommige bedrijven zien dit als risico. Het verbetert in de loop der tijd naarmate je je rekeningen op tijd betaalt.",
+          "bullets": [
+            "Je eerste Schufa Auskunft (gratis kopie) is je recht elk jaar via meineschufa.de.",
+            "Neem niet onnodig leningen op om je dossier op te bouwen — regelmatig Girokonto-gebruik is genoeg.",
+            "Huur en rekeningen op tijd betalen verhogen je score."
+          ],
+          "tip": "Sommige huisbazen vragen om een Schufa-Bonitätscheck — krijg de korte huurversie voor ongeveer €30."
+        },
+        {
+          "num": 11,
+          "title": "IBAN en SEPA — de taal van Europese overboekingen",
+          "summary": "IBAN is je internationaal rekeningnummer. SEPA is het Europese overboekingsnetwerk dat interne overboekingen gratis en snel maakt.",
+          "tag": "Overboekingen",
+          "bullets": [
+            "Een Duitse IBAN begint met DE en is 22 tekens lang.",
+            "SEPA-overboeking binnen de EU: gratis, aankomst in 1–2 werkdagen.",
+            "SEPA Instant: directe overboeking (10 seconden), sommige banken rekenen een klein bedrag.",
+            "BIC is alleen in bepaalde internationale gevallen nodig; IBAN alleen is meestal voldoende."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Automatische incasso (Lastschrift) — hoe het werkt en wanneer je het afwijst",
+          "summary": "Lastschrift laat een bedrijf geld rechtstreeks van je rekening afhalen na je toestemming. Een geweldig hulpmiddel — maar ga voorzichtig om.",
+          "tag": "Betalingen",
+          "bullets": [
+            "Je geeft het bedrijf eenmaal een Mandat (toestemming), dan haalt het automatisch af (huur, internet, verzekering…).",
+            "Je hebt het recht om elke afboeking binnen 8 weken om te keren, met of zonder reden.",
+            "Controleer je afschrift maandelijks — valse afboekingen gebeuren.",
+            "Om een Mandat te annuleren: e-mail het bedrijf en stel de bank op de hoogte."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Staande opdrachten (Dauerauftrag) — om huur automatisch te betalen",
+          "summary": "Het tegenovergestelde van Lastschrift — jij bent degene die een vaste overboeking op een bepaalde datum elke maand ordert. Ideaal voor huur.",
+          "tag": "Betalingen",
+          "bullets": [
+            "Stel in in een minuut via de bank-app.",
+            "Op elk moment aanpasbaar of annuleerbaar.",
+            "Beste manier om huur aan de huisbaas te betalen.",
+            "Sommige banken rekenen voor het instellen van een Dauerauftrag op papier, maar het is gratis online."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "EC-Karte (Girocard) en creditcards in Duitsland",
+          "summary": "Duitsland is nog steeds een EC-Karte (Girocard)-land. Veel winkels accepteren geen Visa/Mastercard. Begrijp het verschil.",
+          "tag": "Kaarten",
+          "bullets": [
+            "Girocard (EC): lokale betaalpas, geaccepteerd in bijna elke winkel.",
+            "Debit Mastercard/Visa: werkt internationaal maar kan in sommige bakkerijen en markten worden geweigerd.",
+            "Creditcard (echte creditcard): voor reizen en internationale boekingen.",
+            "Veel winkels geven nog steeds de voorkeur aan contant geld — draag altijd wat mee."
+          ],
+          "tip": "Vraag je digitale bank om een extra Girocard als dat mogelijk is, of open een tweede rekening bij Sparkasse voor dit doel."
+        },
+        {
+          "num": 15,
+          "title": "Geld opnemen — geldautomaat netwerken en hoe je kosten vermijdt",
+          "summary": "Niet elke geldautomaat is gratis. Het gebruik van een buitenlandse geldautomaat kan je €5 per opname kosten.",
+          "tag": "Geldautomaten",
+          "bullets": [
+            "**Cash Group:** Deutsche Bank + Commerzbank + Postbank + HypoVereinsbank — gratis voor hun klanten.",
+            "**Cash Pool:** inclusief Santander + Sparda + Targobank en anderen.",
+            "**Sparkassen:** hun eigen netwerk, gratis voor Sparkasse-kaarten.",
+            "DKB en ING: gratis opnames bij de meeste geldautomaten in de EU.",
+            "Eenvoudigste oplossing: gebruik Cashback in de supermarkt (Rewe, Lidl) — gratis."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Internationale overboekingen — de goedkoopste routes",
+          "summary": "Bankkosten op internationale overboekingen zijn erg hoog. Gebruik gespecialiseerde diensten om tientallen euro's te besparen.",
+          "tag": "Internationale overboekingen",
+          "bullets": [
+            "**Wise (TransferWise):** dicht bij de midmarketkoers, transparante kosten, snelste optie.",
+            "**Revolut:** goed voor kleine terugkerende overboekingen.",
+            "**Western Union / MoneyGram:** snel maar erg duur (5–8%).",
+            "Directe bankoverboeking (SWIFT): €15–40 kosten + slechte wisselkoers.",
+            "Pas op voor verleidelijke aanbiedingen via \"een vriend\" — vaak witwassen."
+          ],
+          "tip": "Vergelijk altijd de echte koers op Google voordat je overmaakt — de meeste kosten zijn verborgen in de koers."
+        },
+        {
+          "num": 17,
+          "title": "Belastingen en je bankrekening — wat je moet weten",
+          "summary": "Het Finanzamt is gekoppeld aan je rekening. Alle rente of winst wordt automatisch gerapporteerd. Begrijp de basis.",
+          "tag": "Belastingen",
+          "bullets": [
+            "Freistellungsauftrag: automatische vrijstelling op de eerste €1.000 jaarlijkse rente (€2.000 voor stellen).",
+            "Zonder dit houdt de bank 25% (Abgeltungssteuer) op elke rente rechtstreeks in.",
+            "Steuer-ID (belastingnummer) vereist om sinds 2024 een rekening te openen.",
+            "Spaarbanken sturen jaarlijks een Steuerbescheinigung voor je belastingaangifte."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Online veiligheid — je rekening beschermen",
+          "summary": "Online bankingfraude is wijdverbreid. Volg deze gouden regels om jezelf te beschermen.",
+          "tag": "Veiligheid",
+          "bullets": [
+            "Voer je bankgegevens alleen in op de officiële website/app.",
+            "Geen bank vraagt ooit om je wachtwoord per telefoon of e-mail — nooit.",
+            "Schakel 2FA (SMS of TAN-app) in voor elke bewerking.",
+            "Controleer je afschrift wekelijks — een hele maand wachten is riskant.",
+            "\"Bank\"-e-mails die je vragen je gegevens bij te werken = phishing-poging."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Gezamenlijke rekening (Gemeinschaftskonto) voor stellen",
+          "summary": "Twee soorten gezamenlijke rekeningen in Duitsland, elk met verschillende juridische gevolgen in geval van overlijden of scheiding.",
+          "tag": "Partnerschap",
+          "bullets": [
+            "**Oder-Konto:** elke partner handelt onafhankelijk (het meest voorkomend).",
+            "**Und-Konto:** vereist beide handtekeningen voor elke bewerking.",
+            "Oder-Konto is gemakkelijker in het dagelijks leven, maar opent de deur voor vertrouwensrisico's.",
+            "Bij een scheiding wordt het geld standaard 50/50 eigendom verondersteld.",
+            "Houd altijd een aparte persoonlijke rekening ernaast."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "De rekening sluiten wanneer je voorgoed vertrekt",
+          "summary": "Je rekening van buitenaf sluiten is bijna onmogelijk. Zorg ervoor dat je het afhandelt voordat je vertrekt om latere problemen te voorkomen.",
+          "tag": "Sluiting",
+          "bullets": [
+            "Annuleer elke Lastschrift en Dauerauftrag voordat je sluit.",
+            "Krijg een definitief Kontoauszug en een sluitingsbrief (Kontoauflösungsbestätigung).",
+            "Stel het Finanzamt en Einwohnermeldeamt op de hoogte van je nieuwe adres.",
+            "Sommige banken rekenen een sluitingskosten (€10–30).",
+            "Bewaar alle correspondentie minstens 10 jaar."
+          ],
+          "tip": "Sluit de rekening niet totdat je laatste salaris is ontvangen en je laatste huur is betaald. Een extra maand wachten voorkomt enorme problemen."
+        }
+      ]
+    },
+    "simcards": {
+      "metaTitle": "SIM-kaarten en internet in Duitsland — gids voor nieuwkomers",
+      "metaDesc": "20 artikelen over SIM-kaarten, thuisinternet, abonnementen en hoe je scams in Duitsland vermijdt.",
+      "eyebrow": "Telecom & internet",
+      "title": "SIM-kaarten en internet in Duitsland",
+      "subtitle": "Een Duits nummer is niet optioneel, het is een noodzaak. Hier lees je hoe je de juiste provider, het juiste abonnement en oplossingen voor elke situatie kiest.",
+      "intro": "20 artikelen die elk vraag beantwoorden: Prepaid of Vertrag? Telekom of O2? eSIM of fysieke kaart? En hoe je lange-termijncontractvalstrikken vermijdt.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Waarom je vanaf dag één een Duits nummer nodig hebt",
+          "summary": "Zonder een actief Duits nummer kun je niet inschrijven bij een bank, je niet aanmelden bij het stadhuis, geen flat zoeken of zelfs geen pakket ontvangen.",
+          "tag": "Basis",
+          "bullets": [
+            "Banken verifiëren je identiteit via SMS, alleen naar een Duits nummer.",
+            "Flatbewerkingen worden afgewezen zonder bereikbaar Duits nummer.",
+            "De Ausländerbehörde belt je voor bepaalde afspraken.",
+            "In sommige steden vereist Anmeldung een lokaal telefoonnummer."
+          ],
+          "tip": "Houd je nummer uit je thuisland actief via virtuele nummers (WhatsApp/Google Voice) voor minstens twee maanden na aankomst."
+        },
+        {
+          "num": 2,
+          "title": "Prepaid vs Vertrag — de eerste keuze",
+          "summary": "Een beslissing die je flexibiliteit en kosten voor twee jaar bepaalt. Kies op basis van je stabiliteit, niet op de advertentieprijs.",
+          "tag": "Vergelijking",
+          "bullets": [
+            "**Prepaid:** betaal vooraf, geen contract, geen Schufa, direct geactiveerd.",
+            "**Vertrag:** 24-maands contract, lagere tarieven, vereist Schufa + bankrekening.",
+            "Als nieuwe student: begin met Prepaid, port je nummer later naar een Vertrag.",
+            "Vertrag met een iPhone/nieuw toestel: meestal duurder dan het toestel apart kopen."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "De drie grote netwerken in Duitsland",
+          "summary": "Drie fysieke netwerken en tientallen merken die erop draaien. Het werkelijke netwerk is belangrijker dan de naam.",
+          "tag": "Netwerken",
+          "bullets": [
+            "**Deutsche Telekom (D1):** beste dekking, vooral op het platteland.",
+            "**Vodafone (D2):** snelste in grote steden, behoorlijk in dorpen.",
+            "**O2 (Telefónica):** goedkoopste, goede dekking in steden, zwak op het platteland.",
+            "Elke kleine provider (Aldi Talk, Lidl Connect, Congstar…) draait op een van deze netwerken."
+          ],
+          "tip": "Controleer de dekking op je adres op breitbandmessung.de of netzabdeckung.o2online.de voordat je een provider kiest."
+        },
+        {
+          "num": 4,
+          "title": "Telekom (Magenta) — duurste, beste dekking",
+          "summary": "Als je in een dorp woont of vaak met de trein reist, is Telekom de veilige keuze. Hoge prijs, maar het waard.",
+          "tag": "Telekom",
+          "bullets": [
+            "MagentaMobil Start: €30/maand, 20 GB, onbeperkte gesprekken.",
+            "Familieabonnementen (MagentaEins) uitstekend als je ook thuisinternet bij hen hebt.",
+            "Het enige netwerk dat stabiel is op snelle treinen (ICE).",
+            "5G beschikbaar in de meeste grote steden."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Vodafone — een evenwichtige concurrent",
+          "summary": "Een grote provider met een sterk netwerk en concurrerende abonnementen. Ideaal als je in een grote of middelgrote stad woont.",
+          "tag": "Vodafone",
+          "bullets": [
+            "GigaMobil S: ~€25/maand, 15 GB.",
+            "Onbeperkte abonnementen beschikbaar tegen redelijke prijzen.",
+            "5G goed uitgerold in Hamburg, München, Köln, Berlijn.",
+            "Goede \"Unterwegs\" dekking op de snelweg."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "O2 — goedkoopste in steden",
+          "summary": "Als je in een grote stad woont en veel data gebruikt, is O2 de beste waarde. Vermijd het op het platteland.",
+          "tag": "O2",
+          "bullets": [
+            "o2 Mobile M: ~€20/maand, 20 GB.",
+            "Echte onbeperkte abonnementen (€30–40).",
+            "Zwakke dekking in dorpen en op sommige regionale treinen.",
+            "Gemiddelde klantenservice — meestal alleen Duits."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "Aldi Talk — de populairste Prepaid-optie",
+          "summary": "Gebruikt door honderdduizenden. Lage prijs, gemakkelijke activering, draait in de praktijk op O2.",
+          "tag": "Aldi Talk",
+          "bullets": [
+            "Paket S: €7,99/2 weken, 5 GB + onbeperkte gesprekken.",
+            "Paket M: €12,99/4 weken, 12 GB + onbeperkte gesprekken.",
+            "Activering via PostIdent of VideoIdent in enkele minuten.",
+            "Beschikbaar in elke Aldi Süd en Aldi Nord winkel."
+          ],
+          "tip": "Je telefoon heeft NFC nodig voor online activering. Als het dat niet heeft, ga naar een Aldi-winkel met je paspoort."
+        },
+        {
+          "num": 8,
+          "title": "Lidl Connect — het Aldi Talk-alternatief",
+          "summary": "Draait op het Vodafone-netwerk, dus betere dekking op het platteland dan Aldi Talk.",
+          "tag": "Lidl",
+          "bullets": [
+            "Smart S: €7,99/4 weken, 5 GB.",
+            "Smart L: €17,99/4 weken, 25 GB.",
+            "Verkocht in Lidl-winkels en online.",
+            "Activering via VideoIdent of in-store."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Congstar — Telekom tegen lagere prijzen",
+          "summary": "Telecom's budgetmerk. Je krijgt hetzelfde uitstekende netwerk voor 30–40% minder.",
+          "tag": "Congstar",
+          "bullets": [
+            "Allnet Flat M: €17/maand, 10 GB.",
+            "24-maands of maandelijks contract (iets duurder).",
+            "Gespreksgeluid identiek aan Telekom.",
+            "Goede Duitstalige klantenservice."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Blau — Vodafone met korting",
+          "summary": "Vodafone's budgetmerk. Ideaal voor iedereen die een sterk netwerk wil zonder Vodafone's catalogusprijs te betalen.",
+          "tag": "Blau",
+          "bullets": [
+            "Blau Allnet L: €15/4 weken, 15 GB.",
+            "Maandelijkse optie beschikbaar zonder contract.",
+            "Gratis roaming in de hele Europese Unie.",
+            "Snelle activering via de app."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Identiteitsverificatie (PostIdent / VideoIdent)",
+          "summary": "Je kunt geen SIM kopen zonder je identiteit te bewijzen. Duitsland neemt dit sinds 2017 serieus.",
+          "tag": "Verificatie",
+          "bullets": [
+            "VideoIdent: 5 minuten videogesprek, paspoort + goed licht, beschikbaar bij de meeste providers.",
+            "PostIdent: bezoek een postkantoor met een afgedrukt formulier — gratis voor de provider.",
+            "In-store: breng je paspoort mee, activering gebeurt in 10 minuten.",
+            "Een buitenlands nummer wordt niet geaccepteerd voor verificatie — je hebt een e-mailadres nodig."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Je nummer overzetten tussen providers (Rufnummermitnahme)",
+          "summary": "Je kunt je nummer behouden wanneer je van provider wisselt. Het proces is bijna gratis.",
+          "tag": "Overzetten",
+          "bullets": [
+            "Geef de nieuwe provider: je oude nummer + Kundennummer + Kündigungstermin.",
+            "De nieuwe provider regelt bijna alles.",
+            "Overzettingstijd: 1–7 dagen.",
+            "Sinds 2020 is het wettelijk tarief begrensd tot €6,82."
+          ],
+          "tip": "Zet je nummer 3 maanden voor het einde van het contract over om onderbreking of verlies van het nummer te voorkomen."
+        },
+        {
+          "num": 13,
+          "title": "eSIM — het moderne digitale alternatief",
+          "summary": "eSIM is in Duitsland beschikbaar van de meeste providers. Ideaal voor recente telefoons en voor reizen.",
+          "tag": "eSIM",
+          "bullets": [
+            "Telekom, Vodafone, O2, Congstar, 1&1 ondersteunen allemaal eSIM.",
+            "Aldi Talk begon het in 2024 te ondersteunen.",
+            "iPhone XS+ en Samsung Galaxy S20+ ondersteunen eSIM.",
+            "Je kunt twee lijnen tegelijk activeren (fysieke SIM + eSIM)."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Roaming in de Europese Unie",
+          "summary": "Sinds 2017 is roaming binnen de EU gratis op elke Duitse SIM. Maar er zijn limieten.",
+          "tag": "Roaming",
+          "bullets": [
+            "Fair Use: als je te lang buiten Duitsland bent, kan de provider je gebruik vertragen.",
+            "Dagelijks gebruik in Frankrijk/Spanje/Italië werkt net als in Duitsland, zonder extra kosten.",
+            "Buiten de EU = betaald roaming (€10–20 per MB).",
+            "Reizen buiten de EU: koop een tijdelijke reizigers-eSIM (Holafly, Airalo)."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Thuisinternet (DSL, Kabel, Glasfaser)",
+          "summary": "Drie technologieën, een breed scala aan prijzen en contracten die je 24 maanden vastleggen. Neem je tijd voordat je ondertekent.",
+          "tag": "Thuisinternet",
+          "bullets": [
+            "**DSL:** het meest verbreid, snelheden 50–250 Mbit.",
+            "**Kabel:** Vodafone + Pyur, snelheden 100–1000 Mbit.",
+            "**Glasfaser:** glasvezel, het snelste (1 GB+), maar niet in elke buurt beschikbaar.",
+            "Controleer je adres op verfügbarkeit-check.de voordat je ondertekent.",
+            "Activeringstijd: 2–8 weken — stel de bestelling niet uit."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Tijdelijke internetoplossingen (LTE-router)",
+          "summary": "Als je wacht op DSL-aansluiting, krijgt een LTE-router met een SIM je meteen online. Handig voor studentenhuisvesting.",
+          "tag": "LTE",
+          "bullets": [
+            "Mobiele router (MiFi) + 50 GB/maand SIM: ~€30/maand.",
+            "Congstar Homespot en Telekom SpeedStick zijn bekende opties.",
+            "Geschikt voor korte verblijven (één maand Airbnb, lang hotelverblijf).",
+            "Geen lange-termijnoplossing — duurder dan DSL over tijd."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "Hoe je het contract opzegt (Kündigung)",
+          "summary": "Elk contract in Duitsland wacht op een schriftelijke Kündigung. Zonder officiële brief verlengt het automatisch.",
+          "tag": "Opzegging",
+          "bullets": [
+            "Wettelijke opzeggingstermijn: 3 maanden voor het einde van het contract (maximum).",
+            "Stuur de Kündigung schriftelijk via Einschreiben (aangetekende post) of via de website van de provider.",
+            "Vraag om schriftelijke bevestiging (Kündigungsbestätigung).",
+            "Sinds 2022 moeten bedrijven een directe annuleringsknop op hun website bieden."
+          ],
+          "tip": "De site kuendigung.org genereert een juridisch, officieel schrijven en stuurt het namens jou — zeer betrouwbaar."
+        },
+        {
+          "num": 18,
+          "title": "Student- en jongerendeals",
+          "summary": "Veel providers bieden kortingen aan houders van studentenpassen of aan iedereen onder de 28.",
+          "tag": "Kortingen",
+          "bullets": [
+            "Telekom MagentaMobil Young: 30% korting tot 28 jaar.",
+            "Vodafone Young: 10 GB voor €15 in plaats van €25.",
+            "O2 My Young: soortgelijke voorwaarden.",
+            "Pas voor de korting aan via de website van de provider en upload je Studierendenausweis.",
+            "De korting duurt tot de dag dat je 28 wordt."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "SIM-kaarten zonder Duits adres",
+          "summary": "Wat te doen als je in Duitsland aankomt zonder vast adres. Beperkte opties, maar ze bestaan.",
+          "tag": "Geen adres",
+          "bullets": [
+            "Lycamobile en Lebara Prepaid: accepteren registratie met een hotel- of Airbnb-adres.",
+            "Aldi Talk: kan een tijdelijk adres accepteren, later bij te werken.",
+            "Vodafone CallYa: koop in-store met alleen je paspoort.",
+            "Zodra Anmeldung klaar is, werk je adres bij in de app."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Pas op voor scams en fraude",
+          "summary": "Telecomwinkels in treinstations en sommige websites verkopen contracten met verborgen voorwaarden. Een echt risico.",
+          "tag": "Waarschuwingen",
+          "bullets": [
+            "Onderteken nooit een document in het Duits dat je niet 100% begrijpt.",
+            "Vermijd telefoonwinkels in grote treinstations — opgeblazen prijzen.",
+            "Wees voorzichtig met oproepen van \"de provider\" die om persoonlijke gegevens vragen — fraude is wijdverbreid.",
+            "Laat een Duitse vriend het contract lezen voordat je ondertekent.",
+            "Bewaar het contract en alle bonnen minstens 3 jaar."
+          ],
+          "tip": "Beste aanpak: open het contract online op de officiële site van de provider. Geen tussenpersoon, geen problemen later."
+        }
+      ]
+    },
+    "universities": {
+      "metaTitle": "Universiteiten en studeren in Duitsland — de complete gids",
+      "metaDesc": "20 artikelen over aanmelden bij Duitse universiteiten, beurzen, visa's en studentenleven.",
+      "eyebrow": "Universitair onderwijs",
+      "title": "Universiteiten in Duitsland",
+      "subtitle": "Een volledige routekaart voor elke internationale student die overweegt aan een universiteit in Duitsland te studeren — van erkenning van je diploma tot afstuderen voor een master.",
+      "intro": "20 beknopte artikelen die antwoord geven op echte vragen die duizenden mensen elk jaar stellen: hoe kies ik een universiteit? Hoelang duurt het? Hoe financier ik mezelf? Is mijn taalniveau voldoende?",
+      "items": [
+        {
+          "num": 1,
+          "title": "Waarom Duitsland en niet een ander Europees land?",
+          "summary": "Studeren in Duitsland is bijna gratis, en de arbeidsmarkt staat open voor afgestudeerden. Maar je moet weten wat je kunt verwachten.",
+          "tag": "Introductie",
+          "bullets": [
+            "Openbare universiteiten heffen geen collegegeld (behalve Baden-Württemberg voor internationale studenten: €1500/semester).",
+            "De Semesterbeitrag (semesterbijdrage) is €150–350 en bevat vaak een gratis vervoersbewijs in sommige deelstaten.",
+            "Een wereldwijd erkend diploma en een Duitse arbeidsmarkt die hongerig is naar vaardigheden.",
+            "Een garantie van 18 maanden verblijfsvergunning na afstuderen om naar werk te zoeken."
+          ],
+          "tip": "Canada en Frankrijk hebben kortere aanmeldingsprocedures, maar Duitsland is goedkoper over 5 jaar studeren."
+        },
+        {
+          "num": 2,
+          "title": "Universität vs Fachhochschule (FH/HAW)",
+          "summary": "Het verschil is fundamenteel en beïnvloedt je carrière. Kies op basis van je vakgebied en ambitie, niet op basis van de naam.",
+          "tag": "Soorten",
+          "bullets": [
+            "**Universität (Uni):** onderzoeksgericht, theoretisch, leidt tot een promotie, geschikt voor fundamentele wetenschappen, geneeskunde en recht.",
+            "**Fachhochschule (FH/HAW):** praktijkgericht, echte projecten, verplichte stage, sneller pad naar de arbeidsmarkt.",
+            "Kunsthochschule / Musikhochschule: voor kunstenaars en muzikanten, met een specifiek toelatingsexamen.",
+            "Duale Hochschule: combineert universiteit en een bedrijf (een betaald traject)."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "De bekendste Duitse universiteiten en hun ranglijsten",
+          "summary": "De topuniversiteiten zijn niet altijd het gemakkelijkst om in te komen. Controleer de ranglijsten maar kies op basis van je programma.",
+          "tag": "Ranglijst",
+          "bullets": [
+            "**TU München, LMU München:** sterkst in wetenschappen en technologie.",
+            "**Heidelberg, Göttingen, Tübingen:** diepe onderzoekstraditie in geneeskunde en geesteswetenschappen.",
+            "**RWTH Aachen, KIT Karlsruhe, TU Berlin:** techniek en informatica.",
+            "**Humboldt, FU Berlin:** maatschappijwetenschappen en geesteswetenschappen.",
+            "**Mannheim, Frankfurt:** economie en financiën."
+          ],
+          "tip": "Shanghai en THE ranglijsten zijn nuttig voor informatie, maar Duitse wervingspanels besteden er zelden veel aandacht aan."
+        },
+        {
+          "num": 4,
+          "title": "Je middelbare schooldiploma erkennen (uni-assist)",
+          "summary": "Voordat je ergens aanmeldt, moet je diploma via uni-assist of rechtstreeks door de universiteit worden geëvalueerd. Dit is altijd de eerste stap.",
+          "tag": "Erkenning",
+          "bullets": [
+            "Een niet-EU middelbare schooldiploma is meestal niet direct gelijk aan het Duitse Abitur — je hebt een Studienkolleg of een universiteitsjaar nodig.",
+            "uni-assist evalueert je dossier en geeft een VPD (Vorprüfungsdokumentation) uit die je kunt hergebruiken voor aanmeldingen.",
+            "Kosten: €75 voor de eerste universiteit + €30 per extra universiteit in dezelfde semester.",
+            "Sommige universiteiten (TUM, Heidelberg) evalueren intern zonder uni-assist."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Studienkolleg — het verplichte voorbereidingsjaar",
+          "summary": "Als je geen universiteitsjaar in je land hebt gedaan, heb je eerst een Studienkolleg nodig. Een intensief jaar dat eindigt met het Feststellungsprüfung examen.",
+          "tag": "Voorbereiding",
+          "bullets": [
+            "Duur: één jaar, gratis aan openbare universiteiten.",
+            "Trajecten: T (technisch), M (medisch), W (economie), G (talen), S (maatschappijwetenschappen).",
+            "Je hebt B1-B2 Duits nodig voor toelating + een toelatingsexamen (Aufnahmeprüfung).",
+            "Na het behalen van de Feststellungsprüfung wordt je diploma behandeld als een Duits Abitur."
+          ],
+          "tip": "Als je succesvol een universiteitsjaar in je land hebt voltooid, kun je het Studienkolleg overslaan en rechtstreeks een bachelorprogramma volgen."
+        },
+        {
+          "num": 6,
+          "title": "Taaleisen: DSH, TestDaF, TELC, Goethe",
+          "summary": "B2 is meestal niet voldoende voor Duitse programma's. Je hebt een gecertificeerd C1 nodig via een van deze tests.",
+          "tag": "Taal",
+          "bullets": [
+            "**TestDaF:** het meest erkend internationaal, geaccepteerd door elke universiteit. Vereist niveau: TDN 4 in elk onderdeel.",
+            "**DSH-2 of DSH-3:** een examen uitgevoerd door de universiteit zelf, vaak gratis.",
+            "**Goethe-Zertifikat C1/C2:** breed geaccepteerd, relatief duur (€230).",
+            "**TELC C1 Hochschule:** een goed alternatief, goedkoper.",
+            "Sommige universiteiten stellen het examen uit als je een C1 certificaat hebt + een bepaald TOEFL niveau voor gemengde programma's."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "Engelse programma's — het snelle alternatief",
+          "summary": "Meer dan 2000 Duitse programma's worden in het Engels aangeboden, vooral op masterniveau. Geen Duits vereist voor toelating.",
+          "tag": "Engels",
+          "bullets": [
+            "DAAD.de heeft een volledige database van Engelse programma's.",
+            "IELTS 6.5 of TOEFL 90 is het gebruikelijke minimum.",
+            "Er zijn veel meer masterprogramma's in het Engels dan bachelorprogramma's.",
+            "Meest voorkomende vakgebieden: techniek, informatica, economie, milieuwetenschap."
+          ],
+          "tip": "Zelfs als je in het Engels studeert, leer je parallel Duits — je hebt het nodig voor het dagelijks leven en bijwerk."
+        },
+        {
+          "num": 8,
+          "title": "Aanmeldingsstappen — een tijdlijn",
+          "summary": "Een realistisch plan: begin ongeveer een jaar voor het begin van de lessen om stress en fouten te vermijden.",
+          "tag": "Stappen",
+          "bullets": [
+            "12 maanden ervoor: onderzoek programma's, begin de taal te leren.",
+            "9 maanden ervoor: vertaal en certificeer je documenten + uni-assist.",
+            "6 maanden ervoor: dien aanmeldingen in (Wintersemester deadline: 15 juli).",
+            "4 maanden ervoor: boek je ambassadeafspraak + bereid je financieel bewijs voor.",
+            "2 maanden ervoor: boek studentenhuisvesting + ziektekostenverzekering."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "De motivatiebrief (Motivationsschreiben)",
+          "summary": "Het belangrijkste document in je dossier. Het moet een duidelijk verhaal vertellen: waarom jij, waarom dit programma, waarom deze universiteit.",
+          "tag": "Dossier",
+          "bullets": [
+            "Één pagina (400–500 woorden) in Duits of Engels, afhankelijk van de programmataal.",
+            "Begin met een persoonlijk gebeuren dat je interesse aanwakkerde — niet met \"Ik ben altijd geïnteresseerd geweest\".",
+            "Verbind elke paragraaf met specifieke cursussen in het programma.",
+            "Eindig met een 5-jarenplan na afstuderen."
+          ],
+          "tip": "Laat je brief controleren door een professor + een vriend + een Duitse moedertaalspreker voordat je het verzendt — taalfouten zijn fataal."
+        },
+        {
+          "num": 10,
+          "title": "Financieel bewijs (Finanzierungsnachweis)",
+          "summary": "Duitsland vereist bewijs dat je een volledig jaar kunt leven. Zonder dit geen visum. Het bedrag is vast en wordt jaarlijks bijgewerkt.",
+          "tag": "Financiering",
+          "bullets": [
+            "Huidig bedrag: €11.904 (2024) op een Sperrkonto (geblokkeerde rekening) op jouw naam.",
+            "De geblokkeerde rekening staat alleen maandelijkse opnames toe (~€992/maand).",
+            "Alternatieven: officiële beurs, toezegging door een Duitse ingezetene (Verpflichtungserklärung), bankgarantie.",
+            "Meest gebruikte Sperrkonto diensten: Expatrio, Fintiba, Coracle (allemaal goedgekeurd)."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "De DAAD beurs — de grootste en bekendste",
+          "summary": "De Duitse Academische Uitwisselingsdienst biedt elk jaar honderden beurzen aan. Competitief maar realistisch.",
+          "tag": "Beurzen",
+          "bullets": [
+            "Volledige masterbeurzen (€850/maand + kosten + verzekering + kaartje).",
+            "Promotie beurzen (€1200/maand + gezin).",
+            "Korte onderzoeksbeurzen (3–6 maanden) tijdens je studie.",
+            "Je meldt je meestal een jaar voordat de beurs begint aan."
+          ],
+          "tip": "De sleutel tot je DAAD dossier: het onderzoeksvoorstel. Lees het werk van je potentiële begeleider voordat je het schrijft."
+        },
+        {
+          "num": 12,
+          "title": "Politieke stichtingsbeurzen (Stiftungen)",
+          "summary": "13 Duitse politieke stichtingen bieden beurzen aan internationale studenten. Minder competitief dan DAAD, net zo genereus.",
+          "tag": "Beurzen",
+          "bullets": [
+            "**Konrad-Adenauer:** christelijk-democratisch.",
+            "**Friedrich-Ebert:** sociaal-democratisch.",
+            "**Heinrich-Böll:** groen/ecologisch.",
+            "**Rosa-Luxemburg:** linkse.",
+            "**Friedrich-Naumann:** liberaal.",
+            "Elke stichting verwacht ideologische afstemming + academische uitmuntendheid + vrijwilligerswerk."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Het studentenvisum — van aanvraag tot afgifte",
+          "summary": "Het studievisum (C of D) wordt uitgegeven door de Duitse ambassade. Wachttijden kunnen 3 maanden bereiken tijdens piekzomer.",
+          "tag": "Visum",
+          "bullets": [
+            "Twee soorten: Visum zur Studienbewerbung (aanmeldingsfase) en Visum zu Studienzwecken (toelating bevestigd).",
+            "Boek de afspraak via maroc.diplo.de — zeer vroeg.",
+            "Documenten: universitaire toelating, financieel bewijs, ziektekostenverzekering, vertalingen van elk document.",
+            "Kosten: €75. Meestal afgegeven voor 3 maanden, daarna omgezet in een Aufenthaltstitel."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Studentenziektekostenverzekering",
+          "summary": "Ziektekostenverzekering is verplicht om in te schrijven aan de universiteit. Onder de 30: openbaar (GKV). Boven de 30: privé (PKV).",
+          "tag": "Verzekering",
+          "bullets": [
+            "Openbare verzekering (TK, AOK, Barmer): ~€120/maand voor studenten, dekking van bijna alles.",
+            "Privéverzekering: soms goedkoper, maar beperkte dekking.",
+            "Reisverzekeringen (Mawista, Dr. Walter) worden alleen geaccepteerd tot 2 maanden, daarna moet je overstappen.",
+            "TK is het populairst onder internationale studenten — fatsoenlijke Engelse website en ondersteuning."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Studentenhuisvesting (Studentenwohnheim)",
+          "summary": "De goedkoopste optie, maar wachtlijsten zijn lang. Meld je aan zodra je je toelatingsbesluit ontvangt.",
+          "tag": "Huisvesting",
+          "bullets": [
+            "De Studierendenwerk beheert het — elke stad heeft zijn eigen website.",
+            "Huur: €180–400 alles inbegrepen.",
+            "Wachtlijsten: 3–12 maanden in grote steden.",
+            "Alternatieven: WG (gedeeld appartement) via WG-Gesucht.",
+            "Pas op voor oplichting — betaal nooit voordat je het appartement hebt bezocht of het contract hebt gezien."
+          ],
+          "tip": "Voor je eerste week boek je een Jugendherberge of een Airbnb, en accepteer nooit een appartement onder tijdsdruk. Een overhaaste beslissing = een lange nachtmerrie."
+        },
+        {
+          "num": 16,
+          "title": "Semesterinschrijving en studentenkaart",
+          "summary": "Zodra je aankomt, moet je de Immatrikulation (officiële inschrijving) voltooien. Je ontvangt een Studentenausweis en een vervoerskaart.",
+          "tag": "Inschrijving",
+          "bullets": [
+            "Meenemen: paspoort, visum, Anmeldung, verzekeringsbewijs, Semesterbeitrag betalingsbewijs.",
+            "Inschrijving geeft je een Matrikelnummer — bewaar het voor het leven.",
+            "De studentenkaart geeft kortingen in musea, bioscopen en sportclubs.",
+            "In veel deelstaten: gratis semestervervoerkaart in de regio."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "Werken tijdens je studie — de wettelijke grenzen",
+          "summary": "Internationale studenten kunnen 140 volledige dagen of 280 halve dagen per jaar werken. Erbuiten gaan = problemen bij verlenging van je verblijfsvergunning.",
+          "tag": "Werk",
+          "bullets": [
+            "Werkstudent: een specifiek studentencontract, tot 20 uur/week tijdens het semester.",
+            "Minijob: tot €538/maand zonder belasting of verzekeringsbijdragen.",
+            "HiWi (onderzoeksassistent): de beste baan binnen de universiteit, fatsoenlijk salaris en ervaring.",
+            "Tijdens vakanties kun je Vollzeit (fulltime) werken tot twee volledige maanden."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "BAföG voor internationale studenten",
+          "summary": "Een overheidsfinancieringssteun — half beurs, half renteloos lening. Strikte voorwaarden voor buitenlanders, maar mogelijk.",
+          "tag": "Financiering",
+          "bullets": [
+            "Internationale studenten komen in aanmerking na 5 jaar werk in Duitsland of met een ingezetene ouder.",
+            "Vluchtelingen en houders van een Niederlassungserlaubnis komen direct in aanmerking.",
+            "Maandelijks plafond: ~€934 (2024).",
+            "Terugbetaling begint 5 jaar na het einde van de studie."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Aufenthaltstitel na afstuderen",
+          "summary": "Na het afronden van je studie heb je recht op 18 maanden om een baan te vinden. Maak optimaal gebruik van dat venster.",
+          "tag": "Na afstuderen",
+          "bullets": [
+            "Dien de omzetting van de verblijfsvergunning in 6 weken voordat je studievisum afloopt.",
+            "Meenemen: diploma, financieel bewijs (Sperrkonto of baan).",
+            "Tijdens de zoektocht kun je zonder beperkingen werken (Vollzeit).",
+            "Zodra je een baan vindt die bij je vakgebied past, schakel je over naar een Blaue Karte EU (gemakkelijker voorwaarden dan de standaardvergunning)."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Fatale fouten om te vermijden",
+          "summary": "Deze fouten herhalen zich elk jaar en beëindigen studiedromen. Vermijd ze zorgvuldig.",
+          "tag": "Waarschuwingen",
+          "bullets": [
+            "Taalleren tot het laatste moment uitstellen — je hebt het nodig voor inschrijving en dagelijks leven.",
+            "Aanmelden bij slechts één universiteit — streef naar minstens 5 tot 10.",
+            "Documenten laten vertalen door een niet-beëdigde vertaler — ze worden afgewezen.",
+            "Het openen van een Sperrkonto uitstellen — geen ambassadeafspraak is mogelijk zonder.",
+            "Meer dan 140 dagen werken en het aangeven op je belastingen = verlenging verblijfsvergunning geweigerd.",
+            "De Anmeldung missen binnen twee weken na aankomst — boetes tot €1000."
+          ],
+          "tip": "Sluit je aan bij Facebook groepen voor internationale studenten in Duitsland — 90% van de fouten worden opgemerkt met een enkele vraag voordat ze gebeuren."
+        }
+      ]
+    },
+    "jobs": {
+      "metaTitle": "De Duitse arbeidsmarkt — een gids voor nieuwkomers",
+      "metaDesc": "20 artikelen over jobhunting, de Bewerbung, salarissen, contracten, werknemersrechten en belastingen in Duitsland.",
+      "eyebrow": "Arbeidsmarkt",
+      "title": "Werken in Duitsland",
+      "subtitle": "Alles wat je moet weten om een baan te vinden, te onderhandelen en een succesvolle carrière op de Duitse markt op te bouwen.",
+      "intro": "20 uitgebreide artikelen: van het schrijven van je eerste Bewerbung tot het begrijpen van je loonstrook en het onderhandelen over een promotie, met tips speciaal voor internationals.",
+      "items": [
+        {
+          "num": 1,
+          "title": "Waarom heeft Duitsland jou nodig?",
+          "summary": "De Fachkräftemangel (tekort aan geschoolde arbeidskrachten) is een echt probleem, niet slechts een slogan. Duitsland heeft elk jaar 400.000 professionals tekort.",
+          "tag": "Intro",
+          "bullets": [
+            "Sectoren met de hoogste vraag: verpleging, IT, engineering, ambachten, onderwijs, logistiek.",
+            "De immigratiewet van 2024 heeft de toegang voor professionals vergemakkelijkt (Chancenkarte, Blaue Karte).",
+            "Duitse bedrijven spreken nu meer Engels in technische interviews.",
+            "Gemiddeld salaris voor een gekwalificeerde professional: €3.500–5.500 bruto per maand."
+          ],
+          "tip": "Zelfs zonder Duits kun je in IT of een startup beginnen. Maar het later leren is essentieel om vooruit te gaan."
+        },
+        {
+          "num": 2,
+          "title": "De top 10 platforms voor het vinden van een baan",
+          "summary": "Ze zijn niet allemaal gelijk. Elk is gespecialiseerd in een sector of niveau.",
+          "tag": "Platforms",
+          "bullets": [
+            "**StepStone.de:** het bekendste, geschikt voor elke sector.",
+            "**Indeed.de:** enorm aanbod, uitstekende filters.",
+            "**LinkedIn:** sterkste voor IT en internationale bedrijven.",
+            "**Xing:** de Duitse versie van LinkedIn, nog steeds actief.",
+            "**Arbeitsagentur.de:** officieel, nauwkeurig, inclusief vacatures die niet privé worden geadverteerd.",
+            "**Make-it-in-Germany.com:** gericht op buitenlanders.",
+            "**Glassdoor:** bedrijfsreviews + echte salarissen.",
+            "**Kimeta, Jobware, Monster:** solide alternatieven."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "Een overtuigende Duitse Bewerbung schrijven",
+          "summary": "Het Duitse sollicitatiedossier volgt een streng protocol. Elke afwijking leidt tot onmiddellijke afwijzing.",
+          "tag": "Application",
+          "bullets": [
+            "**Anschreiben:** één pagina, intro + waarom ik + waarom jij + afsluiting.",
+            "**Lebenslauf:** omgekeerd chronologisch, professionele foto, 1–2 pagina's.",
+            "**Zeugnisse:** diploma's en geverifieerde vertalingen.",
+            "**Arbeitszeugnisse:** referenties van vorige werkgevers.",
+            "Het hele dossier als één PDF, genaamd: Bewerbung_Voornaam_Achternaam.pdf"
+          ],
+          "tip": "De motivatiebrief moet op elke baan worden afgestemd — \"copy-paste\" wordt onmiddellijk opgemerkt."
+        },
+        {
+          "num": 4,
+          "title": "Lebenslauf — de juiste Duitse sjabloon",
+          "summary": "CV-elementen verschillen van het Amerikaanse of Franse format. Houd je aan de sjabloon.",
+          "tag": "CV",
+          "bullets": [
+            "Koptekst: volledige naam, adres, telefoonnummer, e-mail, geboortedatum, nationaliteit.",
+            "Foto: professioneel (witte/grijze achtergrond, formele kleding).",
+            "Berufserfahrung (ervaring): datum – bedrijf – functie – 3–5 bullets.",
+            "Ausbildung (onderwijs): kwalificaties met data en cijfers.",
+            "Sprachen: CEFR-schaal (A1–C2), niet \"vloeiend\" of \"basis\".",
+            "Kenntnisse (vaardigheden): software, technologieën, certificeringen."
+          ]
+        },
+        {
+          "num": 5,
+          "title": "Anschreiben — de motivatiebrief stap voor stap",
+          "summary": "Een document dat in 30 seconden wordt gelezen. Elke regel moet de lezer ervan overtuigen dat jij de juiste persoon bent.",
+          "tag": "Anschreiben",
+          "bullets": [
+            "Betreff (onderwerp): \"Bewerbung als [functie], Referenz [nummer]\".",
+            "Aanhef: \"Sehr geehrte Frau X\" of \"Sehr geehrter Herr Y\".",
+            "Opening: zeg waar je de advertentie zag en waarom het je aandacht trok.",
+            "Alinea 2: wat maakt jou de beste keuze? Koppel je ervaring aan de vereisten.",
+            "Alinea 3: waarom dit bedrijf specifiek? (Vind iets concreets over hen.)",
+            "Afsluiting: \"Über ein persönliches Gespräch freue ich mich sehr\"."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "Het sollicitatiegesprek (Vorstellungsgespräch)",
+          "summary": "Het Duitse interview is gestructureerd en direct. Bereid je voor op elke vraag en wees rechtdoorzee.",
+          "tag": "Interview",
+          "bullets": [
+            "Duur: meestal 45–90 minuten.",
+            "Eerste ronde: met HR + een technische manager.",
+            "Typische vragen: \"vertel over jezelf\", \"je sterke/zwakke punten\", \"waarom wij?\".",
+            "Een pauze na een vraag is geen fout — denk na voordat je antwoord geeft.",
+            "Stel je eigen vragen aan het einde — ze tonen de ernst van je interesse."
+          ],
+          "tip": "Dresscode: een formeel pak voor traditionele sectoren (bankwezen/recht), Business Casual voor IT en startups."
+        },
+        {
+          "num": 7,
+          "title": "Salarisonderhandeling",
+          "summary": "Onderhandeling wordt in Duitsland geaccepteerd maar op professionele wijze. Onderzoek, bereid je cijfers voor en geef niet toe bij het eerste aanbod.",
+          "tag": "Salary",
+          "bullets": [
+            "Onderzoek op gehalt.de, kununu.com, glassdoor.de om de markt te kennen.",
+            "Vraag 10–15% meer dan wat je eigenlijk wilt.",
+            "Noem het \"bruto jaarlijkse\" bedrag, niet het maandelijkse: bijv. €55.000 bruto.",
+            "Breng extra voordelen ter sprake: 30 dagen verlof, Home Office, snelle promotie.",
+            "Noem je oude salaris in Duitsland niet — bedrijven vragen daar meestal niet naar."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "De loonstrook begrijpen (Lohnabrechnung)",
+          "summary": "Nettoloon is veel lager dan bruto. Begrijp elke inhouding voordat je een contract ondertekent.",
+          "tag": "Salary",
+          "bullets": [
+            "**Brutto:** brutosalaris (voor inhoudingen).",
+            "**Lohnsteuer:** inkomstenbelasting (14–42% afhankelijk van de schijf).",
+            "**Solidaritätszuschlag:** 5,5% — afgeschaft voor meeste werknemers in 2021.",
+            "**Kirchensteuer:** 8–9% (alleen voor praktiserende christenen).",
+            "**Rentenversicherung:** 9,3%.",
+            "**Krankenversicherung:** ~7,3–8,1%.",
+            "**Arbeitslosenversicherung:** 1,3%.",
+            "**Pflegeversicherung:** 1,7–2,3%.",
+            "Netto is meestal ~55–65% van Brutto voor alleenstaanden."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Belastingklassen (Steuerklassen)",
+          "summary": "Zes belastingklassen bepalen wat van je loon wordt ingehouden. Je keuze kan je duizenden euro's per jaar besparen of kosten.",
+          "tag": "Taxes",
+          "bullets": [
+            "**Klasse 1:** alleenstaand, gescheiden, weduwe/weduwnaar, geen kinderen.",
+            "**Klasse 2:** alleenstaande ouder.",
+            "**Klasse 3:** getrouwd met hoger inkomen dan je partner.",
+            "**Klasse 4:** getrouwd met vergelijkbare inkomens.",
+            "**Klasse 5:** de andere partner in de 3/5-combinatie.",
+            "**Klasse 6:** tweede baan."
+          ],
+          "tip": "De 3/5-combinatie voordelen stellen wanneer het inkomensverschil groot is. Raadpleeg een accountant (Steuerberater) voordat je wisselt."
+        },
+        {
+          "num": 10,
+          "title": "Het Duitse contract (Arbeitsvertrag)",
+          "summary": "Lees elke clausule zorgvuldig. DeepL is niet genoeg — laat het door een advocaat of juridisch onderlegde vriend controleren.",
+          "tag": "Contract",
+          "bullets": [
+            "Probezeit (proeftijd): 6 maanden, kan met 2 weken opzegging worden beëindigd.",
+            "Gehalt: het salaris + eventuele bonus.",
+            "Arbeitszeit: wekelijkse werkuren.",
+            "Urlaub: aantal verlofdays (minimum 20, gemiddeld 25–30).",
+            "Kündigungsfrist: opzegtermijn voor ontslag/ontslag.",
+            "Wettbewerbsverbot: non-concurrentiebeding na vertrek."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Basiswerknemersrechten",
+          "summary": "Duitse wet beschermt werknemers sterk. Ken je rechten voordat een bedrijf je uitbuit.",
+          "tag": "Rights",
+          "bullets": [
+            "Mindestlohn (minimumloon): €12,41/uur (2024).",
+            "Betaald verlof: 24 werkdagen = minimum 4 weken.",
+            "Betaald ziekverlof tot 6 weken.",
+            "Elternzeit: 3 jaar gegarandeerd ouderschapsverlof na geboorte.",
+            "Je kunt niet zonder reden worden ontslagen na 6 maanden bij bedrijven met 10+ werknemers.",
+            "Toetreding tot een vakbond (Gewerkschaft) is wettelijk gegarandeerd."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Blaue Karte EU — de snelle route",
+          "summary": "Als je een engineer, arts of developer bent met een voldoende salaris, versnelt dit visum alles.",
+          "tag": "Blue Card",
+          "bullets": [
+            "Minimumsalaris (2024): €45.300/jaar, €38.688 in tekortberoepen.",
+            "Een erkende universitaire graad op Anabin is vereist.",
+            "Permanente verblijfsvergunning na slechts 27 maanden (21 met B1).",
+            "Vrij verkeer binnen de EU na 18 maanden.",
+            "Gezinshereniging zonder taalstest."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Thuiswerk (Home Office) in Duitsland",
+          "summary": "Sinds 2020 is Home Office de norm geworden in de meeste IT-bedrijven en kantoren. Duidelijke voorwaarden gelden.",
+          "tag": "Home Office",
+          "bullets": [
+            "Geen algemeen wettelijk recht — gedefinieerd in het contract of een Betriebsvereinbarung.",
+            "Meeste IT-bedrijven: 2–3 dagen/week.",
+            "Belastingen: thuiswerkkosten zijn aftrekbaar (Homeoffice-Pauschale).",
+            "Tijdelijk werken vanuit je land: wettelijk, maar onder strikte voorwaarden (meestal 30 dagen/jaar)."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "De jaarlijkse belastingaangifte (Einkommensteuererklärung)",
+          "summary": "De meeste werknemers krijgen elk jaar €800–1.500 terug via hun belastingaangifte. Mis het niet.",
+          "tag": "Taxes",
+          "bullets": [
+            "Niet verplicht voor meeste werknemers, maar raadzaam.",
+            "Deadline: 31 juli (of 30 september met een accountant).",
+            "Gebruik ELSTER (gratis) of Taxfix / WISO / Lohnsteuer kompakt.",
+            "Veelvoorkomende aftrekposten: woon-werkverkeer, thuiswerk, training, taalcursussen, werkmateriaal.",
+            "Accountant (Steuerberater): €150–300, maar het waard voor complexe zaken."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Erkenning van buitenlandse kwalificaties (Anabin)",
+          "summary": "Je buitenlandse diploma kan een officiële beoordeling nodig hebben voordat het op de Duitse arbeidsmarkt wordt geaccepteerd.",
+          "tag": "Qualifications",
+          "bullets": [
+            "anabin.kmk.org: de officiële database voor beoordeling van buitenlandse kwalificaties.",
+            "ZAB: het officiële evaluatieorgaan, geeft de Zeugnisbewertung uit (€80).",
+            "Voor gereglementeerde beroepen (geneeskunde, verpleging, onderwijs): Anerkennung van het Land is vereist.",
+            "Particuliere bedrijven vragen het niet altijd — maar het is verplicht in de publieke sector."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Duits op het werk",
+          "summary": "Je taalniveau bepaalt je salarisgrenzen. Dat is de algemene regel.",
+          "tag": "Language",
+          "bullets": [
+            "A2–B1: handwerk, logistiek, restaurants.",
+            "B2: verpleging, kantoorwerk, klantenservice, veel IT.",
+            "C1: management, onderwijs, advies, recht.",
+            "Internationale / IT-bedrijven: Engels is genoeg, maar verwacht geen snelle promotie zonder Duits.",
+            "Leer via Goethe, VHS, Volkshochschule, of platforms zoals Babbel/Lingoda."
+          ],
+          "tip": "Vraag je bedrijf om de cursus te betalen als Weiterbildung — veel bedrijven doen dat."
+        },
+        {
+          "num": 17,
+          "title": "Rassendiscriminatie op de arbeidsmarkt",
+          "summary": "Het bestaat, maar je juridische instrumenten zijn sterk. Zwijg niet over duidelijke onrechtvaardigheid.",
+          "tag": "Challenges",
+          "bullets": [
+            "De AGG (Gelijkbehandelingswet) beschermt je tegen discriminatie op basis van afkomst of religie.",
+            "Je kunt klagen bij het federale anti-discriminatiebureau (Antidiskriminierungsstelle).",
+            "Als je je gediscrimineerd voelt in een interview: noteer de details onmiddellijk.",
+            "Veel grote bedrijven hebben \"Diversity & Inclusion\"-functionarissen.",
+            "Een buitenlandse voornaam kan reacties verminderen — sommigen gebruiken een cultureel neutrale verkorte naam."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Opzegging en ontslag (Kündigung)",
+          "summary": "Strikte regels gelden voor beide zijden aan het einde van het contract. Ken ze voordat je ze nodig hebt.",
+          "tag": "Ending",
+          "bullets": [
+            "Basis Kündigungsfrist: 4 weken tot het einde van de maand.",
+            "Het neemt toe met anciënniteit (2 jaar = 2 maanden, 10 jaar = 4 maanden).",
+            "Opzegging moet schriftelijk — geen SMS, geen e-mail.",
+            "Bij ontslag: vraag om een Aufhebungsvertrag + Abfindung (ontslagvergoeding).",
+            "Meld je aan voor Arbeitslosengeld bij de Arbeitsagentur binnen 3 dagen om opschorting te voorkomen."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Arbeitslosengeld — werkloosheidsverzekering",
+          "summary": "Als je 12 opeenvolgende maanden hebt gewerkt, heb je recht op 60–67% van je nettosalaris tot 12 maanden.",
+          "tag": "Unemployment",
+          "bullets": [
+            "Aanmelden bij de Arbeitsagentur binnen 3 dagen na kennisgeving van ontslag is essentieel.",
+            "Arbeitslosengeld I: 60% (67% voor ouders) van het laatste nettosalaris.",
+            "Duur: 6–24 maanden afhankelijk van je leeftijd en jaren van bijdragen.",
+            "Je moet actief naar werk zoeken en dit maandelijks rapporteren.",
+            "Arbeitslosengeld II (Bürgergeld) nadat I afloopt."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Fatale fouten die internationals maken",
+          "summary": "Deze fouten herhalen zich en kosten degenen die ze maken jaren verloren kansen.",
+          "tag": "Warnings",
+          "bullets": [
+            "Solliciteren met een CV uit je thuisland niet aangepast aan het Duitse format — automatische afwijzing.",
+            "Zelf vertaalde diploma's — niet officieel geaccepteerd.",
+            "Het eerste salarisamanod accepteren — de markt laat 10–20% ruimte voor onderhandeling.",
+            "Het volledige Arbeitsvertrag niet lezen — \"non-compete\"-vallen zijn kostbaar.",
+            "Duits laten vallen omdat \"het bedrijf Engels-sprekend is\" — het beperkt je promotie.",
+            "Opzeggen voordat je een nieuwe baan hebt gevonden — vertraagt Arbeitslosengeld met 12 weken.",
+            "Geen belastingaangifte indienen — €800–1.500 per jaar verliezen."
+          ],
+          "tip": "Na 3 maanden in je baan, vraag om een interim Arbeitszeugnis onder welk voorwendsel dan ook. Veel bedrijven houden het na opzegging in slechte trouw in."
+        }
+      ]
+    },
+    "ausbildung": {
+      "metaTitle": "Ausbildung in Duitsland — complete gids",
+      "metaDesc": "20 artikelen over duale beroepsopleiding: topberoepen, salarissen, sollicitaties en carrièremogelijkheden na afstuderen.",
+      "eyebrow": "Beroepsopleiding",
+      "title": "Ausbildung in Duitsland",
+      "subtitle": "Duale beroepsopleiding — je route naar de Duitse arbeidsmarkt zonder universiteitsdiploma, met salaris vanaf dag één.",
+      "intro": "20 artikelen die alles beantwoorden wat internationals vragen over de Ausbildung: geschiktheid, sollicitaties, beste sectoren, salarissen en hoe je een lange carrière opbouwt.",
+      "cta": {
+        "title": "🔍 Op zoek naar echte Ausbildung-aanbiedingen nu?",
+        "description": "",
+        "buttonLabel": "Bekijk aanbiedingen ←",
+        "href": "/ausbildung-jobs"
+      },
+      "items": [
+        {
+          "num": 1,
+          "title": "Wat is de Ausbildung eigenlijk?",
+          "summary": "Een uniek systeem: bedrijf plus beroepsschool tegelijk, je leert door te werken en krijgt betaald. Een pijler van de Duitse economie.",
+          "tag": "Basis",
+          "bullets": [
+            "Duur: twee tot drieënhalf jaar afhankelijk van het beroep.",
+            "Wekelijkse verdeling: 2–4 dagen bij het bedrijf + 1–2 dagen bij de Berufsschule.",
+            "Ausbildungsvertrag ondertekend met het bedrijf en geregistreerd bij de IHK of HWK.",
+            "Het salaris (Ausbildungsvergütung) is verplicht en stijgt elk jaar.",
+            "Eindigt met het IHK Abschlussprüfung examen en een kwalificatie die in heel Duitsland erkend is."
+          ]
+        },
+        {
+          "num": 2,
+          "title": "Duale vs Schulische Ausbildung",
+          "summary": "Twee soorten beroepsopleiding, met zeer verschillende financiële resultaten. De eerste is wat de meeste internationals nastreven.",
+          "tag": "Soorten",
+          "bullets": [
+            "**Duale Ausbildung:** bedrijf + school, met salaris — veruit het meest voorkomend.",
+            "**Schulische Ausbildung:** alleen op een beroepsschool, vaak onbetaald (verpleging, fysiotherapie).",
+            "De schulische Ausbildung vraagt soms schoolgeld (€200–400/maand).",
+            "Sinds 2020 is verpleging in het duale model overgegaan en betaalt nu goed."
+          ]
+        },
+        {
+          "num": 3,
+          "title": "De 10 meest gevraagde beroepen voor internationals",
+          "summary": "Deze beroepen accepteren in hoog percentage en nemen je direct na afstuderen aan.",
+          "tag": "Sectoren",
+          "bullets": [
+            "**Pflegefachkraft:** verpleging — hoogste vraag en betaling (~€1.300/maand bij aanvang).",
+            "**Fachkraft für Lagerlogistik:** magazijnlogistiek.",
+            "**Elektroniker:** elektrotechnicus.",
+            "**Kfz-Mechatroniker:** automechanica.",
+            "**Fachinformatiker:** IT (applicaties / systemen).",
+            "**Kaufmann für Büromanagement:** kantooradministratie.",
+            "**Koch / Köchin:** professioneel koken en restaurantwerk.",
+            "**Anlagenmechaniker (SHK):** sanitair- en verwarmingsinstallatie.",
+            "**Industriemechaniker:** industriële mechanica.",
+            "**Fachverkäufer:** gespecialiseerde verkoop (bakkerij, slagerij, apotheek…)."
+          ]
+        },
+        {
+          "num": 4,
+          "title": "Salarissen tijdens de Ausbildung-jaren",
+          "summary": "Het salaris stijgt elk jaar. Banken en industrie betalen veel meer dan horeca, bijvoorbeeld.",
+          "tag": "Salarissen",
+          "bullets": [
+            "Eerste jaar: €620–1.100 gemiddeld.",
+            "Tweede jaar: €720–1.200.",
+            "Derde jaar: €850–1.400.",
+            "Premiumsectoren (banken, industrie): tot €1.600 in het laatste jaar.",
+            "Lage sectoren (horeca, retail): dicht bij minimumloon."
+          ],
+          "tip": "Het salaris ondersteunt een bescheiden leven in middelgrote steden (Leipzig, Dortmund), maar is zeer moeilijk vol te houden in München of Hamburg zonder ondersteuning."
+        },
+        {
+          "num": 5,
+          "title": "Het vereiste taalniveau",
+          "summary": "B1 is het theoretische minimum, maar de werkelijkheid verschilt. B2 is wat je echt nodig hebt om succesvol te zijn.",
+          "tag": "Taal",
+          "bullets": [
+            "B1: je begrijpt basisinstructies, communiceert met moeite.",
+            "B2: solide genoeg om professionele handboeken te lezen en de leraar op school te volgen.",
+            "C1: ideaal voor gezondheids- en administratieve beroepen.",
+            "Goethe B2, telc B2 of TestDaF certificaten worden door alle bedrijven geaccepteerd."
+          ],
+          "tip": "Voordat je solliciteert, kijk je een YouTube-video van een Berufsschule-les in jouw vakgebied — als je het begrijpt, is je taal klaar."
+        },
+        {
+          "num": 6,
+          "title": "Waar je naar een Ausbildung zoekt",
+          "summary": "Tientallen platforms, maar slechts enkele zijn echt effectief. Concentreer je energie daar.",
+          "tag": "Zoeken",
+          "bullets": [
+            "**Make-it-in-Germany.com:** het officiële platform voor geschoolde migratie.",
+            "**Ausbildung.de:** het grootste gespecialiseerde platform.",
+            "**Arbeitsagentur.de:** de staatsarbeidsbeurs, zeer nauwkeurig.",
+            "**AZUBIYO.de:** goed om het juiste beroep voor je te identificeren.",
+            "**LinkedIn:** verrassend genoeg werkt het ook voor de Ausbildung.",
+            "Direct solliciteren via een bedrijfswebsite: het hoogste acceptatiepercentage."
+          ]
+        },
+        {
+          "num": 7,
+          "title": "Een overtuigende Bewerbung schrijven",
+          "summary": "Het Duitse sollicitatiedossier verschilt volledig van wat je gewend bent. Hier zijn de essentiële elementen.",
+          "tag": "Dossier",
+          "bullets": [
+            "**Anschreiben:** één pagina, waarin je uitlegt waarom je bij dit specifieke beroep en dit specifieke bedrijf past.",
+            "**Lebenslauf:** Duitse CV: onderwijs + ervaring + talen + vaardigheden, professionele foto.",
+            "**Zeugnisse:** Baccalauréat-certificaat en eerdere trainingen, vertaald.",
+            "**Zertifikate:** taaldiploma's + eventueel gevolgde cursussen."
+          ],
+          "tip": "Maak er één goed georganiseerde PDF van, niet 10 aparte bestanden. De bestandsnaam moet zijn: Bewerbung_Voornaam_Achternaam.pdf"
+        },
+        {
+          "num": 8,
+          "title": "De Duitse Lebenslauf — de juiste sjabloon",
+          "summary": "Geen selfies, geen felle kleuren. Eenvoud en strikte volgorde.",
+          "tag": "Dossier",
+          "bullets": [
+            "Koptekst: naam, adres, telefoon, e-mail, geboortedatum, nationaliteit.",
+            "Foto: professioneel, witte achtergrond, formele kleding.",
+            "Omgekeerde chronologische volgorde: meest recent eerst.",
+            "Lengte: slechts één of twee pagina's.",
+            "Handtekening en datum onderaan."
+          ]
+        },
+        {
+          "num": 9,
+          "title": "Vorstellungsgespräch — het sollicitatiegesprek",
+          "summary": "Als je dit stadium bereikt, zijn je kansen 50%. Goed voorbereiding verdubbelt ze.",
+          "tag": "Interview",
+          "bullets": [
+            "Ken alles over het bedrijf: oprichtingsjaar, producten, waarden.",
+            "Bereid antwoorden voor op de klassiekers: waarom jullie? waarom Duitsland? waarom dit beroep?",
+            "Formele kleding (Business Casual minimaal).",
+            "Kom 10 minuten voor de afspraak, niet eerder, niet later.",
+            "Stel vragen aan het einde — het toont echte interesse."
+          ],
+          "tip": "Veel bedrijven beginnen met een kort videogesprek voordat het persoonlijke interview plaatsvindt. Neem het net zo serieus."
+        },
+        {
+          "num": 10,
+          "title": "Ausbildungsvisum — het trainingsvisum",
+          "summary": "Een visum speciaal voor de Ausbildung. De voorwaarden zijn duidelijker dan die van andere visa's.",
+          "tag": "Visum",
+          "bullets": [
+            "Documenten: ondertekende Ausbildungsvertrag + B1 taaldiploma + huisvesting.",
+            "Geen Sperrkonto vereist als het trainingsalaris voldoende is (~€934/maand).",
+            "Tarief: €75.",
+            "Afgegeven voor één jaar en verlengbaar tot het einde van de training."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "De Chancenkarte (kanskaart) om naar een Ausbildung te zoeken",
+          "summary": "Sinds 2024 kun je 12 maanden naar Duitsland komen om naar training te zoeken, als je genoeg punten haalt.",
+          "tag": "Nieuw",
+          "bullets": [
+            "Puntensysteem: taal + leeftijd + onderwijs + ervaring.",
+            "Duits A1 certificaat minimaal + 6 punten.",
+            "Laat je 20 uur/week werken terwijl je zoekt.",
+            "Converteert naar een Ausbildungsvisum zodra je training vindt."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Einstiegsqualifizierung (EQ) — de brug voor de Ausbildung",
+          "summary": "Een 6–12 maanden durend proefprogramma voor de Ausbildung, voor degenen die nog niet helemaal klaar zijn.",
+          "tag": "Voorbereiding",
+          "bullets": [
+            "Gedeeltelijk salaris (~€250–300/maand) van de Arbeitsagentur.",
+            "Geeft het bedrijf een kans om je te evalueren voordat een 3-jarig contract.",
+            "70% van degenen die de EQ voltooien krijgen een Ausbildung bij hetzelfde bedrijf.",
+            "Een uitstekende optie voor degenen wiens taal nog relatief zwak is."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "De Ausbildung in verpleging",
+          "summary": "De meest gevraagde sector voor internationals. Hoog salaris, snelle acceptatie en een directe route naar inwonerschap.",
+          "tag": "Verpleging",
+          "bullets": [
+            "Pflegefachkraft: de uniforme titel sinds 2020, combinatie van de drie oude takken.",
+            "3 jaar training, salaris ~€1.300 in het eerste jaar.",
+            "De meeste ziekenhuizen bieden gesubsidieerde huisvesting.",
+            "Na afstuderen: ~€2.800–3.200 bruto maandelijks.",
+            "Constante vraag — werkloosheid in deze sector is zeldzaam."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "De Ausbildung in IT",
+          "summary": "Fachinformatiker is het populairste pad. Je studeert af met €3.000+ startloon op een hongerige markt.",
+          "tag": "IT",
+          "bullets": [
+            "Drie specialisaties: Anwendungsentwicklung (ontwikkeling), Systemintegration (netwerken), Daten- und Prozessanalyse.",
+            "Trainingsalaris ~€1.100 aan het begin, ~€1.300 aan het einde.",
+            "Toelatingseisen bevoordelen degenen met eerdere vaardigheden (HTML/Python/Linux).",
+            "Na afstuderen: €3.200–4.500 maandelijks, met optie om in fulltime-ontwikkeling over te stappen."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "De Ausbildung in mechanica en industrie",
+          "summary": "Duitsland = industrie. Elk groot bedrijf (BMW, Bosch, Siemens, Mercedes) neemt elk jaar leerlingen aan.",
+          "tag": "Industrie",
+          "bullets": [
+            "Industriemechaniker, Mechatroniker, Elektroniker zijn het meest voorkomend.",
+            "Contracten met grote groepen = hogere salarissen + voordelen (gratis trein, gesubsidieerde maaltijden).",
+            "Bij Mercedes en BMW openen sollicitaties ongeveer een jaar van tevoren.",
+            "Na training: €3.000–4.000 startloon, met snelle progressie."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Dagelijks leven als Azubi",
+          "summary": "Typische uitdagingen die elke internationale leerling meemaakt. Bereid jezelf mentaal voor.",
+          "tag": "Leven",
+          "bullets": [
+            "Werkdruk (40 uur) + studie + huiswerk = uitputting in de eerste twee maanden.",
+            "Duitse collega's zijn meestal jonger (18–20) — de culturele kloof is echt.",
+            "Halal-eten in de Kantine is zeldzaam — breng je eigen maaltijden mee.",
+            "Islamitische feestdagen zijn geen officiële feestdagen — plan je verlof van tevoren."
+          ],
+          "tip": "Zoek een gemeenschap uit je eigen land in je stad voordat je aankomt. Wekelijkse bijeenkomsten beschermen je mentale gezondheid meer dan wat dan ook."
+        },
+        {
+          "num": 17,
+          "title": "Rechten van leerlingen (Azubi-Rechte)",
+          "summary": "Duitse wet beschermt de leerling sterk. Accepteer geen uitbuiting — je hebt duidelijke rechten.",
+          "tag": "Rechten",
+          "bullets": [
+            "Betaald verlof: 24–30 dagen per jaar.",
+            "Werkuren: max 8/dag, met 30 minuten pauze na 6 uur.",
+            "Geen nachtdiensten of feestdagwerk als je onder de 18 bent.",
+            "Je werkgever mag je geen taken toewijzen die niet gerelateerd zijn aan de training.",
+            "Je hebt recht op een eindwerkgetuigschrift (Zeugnis)."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Het eindexamen van de IHK (Abschlussprüfung)",
+          "summary": "Het examen dat je de kwalificatie geeft. Theoretisch + praktisch + soms mondeling. Mislukking is mogelijk, maar je kunt het opnieuw doen.",
+          "tag": "Examen",
+          "bullets": [
+            "Georganiseerd door de IHK (kamer van industrie) of HWK (ambachten).",
+            "Twee delen: tussentijds (einde tweede jaar) + eindexamen.",
+            "Nationaal slagingspercentage: ~90%.",
+            "Je kunt het examen twee keer opnieuw doen.",
+            "Het bedrijf moet je tijd geven om te studeren."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Na de Ausbildung — wat gebeurt er?",
+          "summary": "70% van de leerlingen krijgt een vast contract bij hetzelfde bedrijf. De anderen vinden werk binnen maanden.",
+          "tag": "Daarna",
+          "bullets": [
+            "**Übernahme:** directe aanstelling op een vast contract bij hetzelfde bedrijf.",
+            "**Meister:** hoger gekwalificeerde kwalificatie (1–3 jaar), waarmee je je eigen bedrijf kunt openen.",
+            "**Weiterbildung:** aanvullende technische specialisatie.",
+            "**Studium:** je kunt zonder Abitur naar de universiteit na 3 jaar werk.",
+            "Je visum converteert naar een werkverblijfsvergunning, dan naar permanent na slechts 2 jaar (in plaats van 5)."
+          ]
+        },
+        {
+          "num": 20,
+          "title": "Veelgemaakte fouten door internationals",
+          "summary": "Herhaald bij tientallen sollicitanten. Leer ervan en herhaal ze niet.",
+          "tag": "Waarschuwingen",
+          "bullets": [
+            "Solliciteren naar een beroep dat je niet leuk vindt alleen omdat het sneller accepteert — een 3-jarig pad is moeilijk af te breken.",
+            "Solliciteren met een CV uit je thuisland niet aangepast aan de Duitse sjabloon — directe afwijzing.",
+            "Je Duits op B1 laten — de beroepsschool zal je overweldigen.",
+            "Het contract niet lezen voordat je ondertekent — sommige bedrijven stoppen oneerlijke clausules erin.",
+            "Geen kopie van de Anmeldung en Aufenthaltstitel altijd bij je houden — de politie vraagt ernaar.",
+            "Huiswerk op de Berufsschule verwaarlozen — je zult het officiële examen niet halen."
+          ],
+          "tip": "Sluit je aan bij \"Ausbildung in Duitsland\" groepen op Facebook en Telegram — de juiste info komt van echte ervaring."
+        }
+      ]
+    },
+    "visa": {
+      "metaTitle": "Visum en officiële documenten voor Duitsland",
+      "metaDesc": "20 artikelen over visumtypen, Anmeldung, Aufenthaltstitel, Blaue Karte, Chancenkarte en alle benodigde papierwerk.",
+      "eyebrow": "Visum & papierwerk",
+      "title": "Visum en officiële documenten",
+      "subtitle": "Alles wat je moet weten over Duitse visa's en de bureaucratie die op je wacht na aankomst.",
+      "intro": "20 analytische artikelen over je papierwerk: van het boeken van je ambassadeafspraak tot het verkrijgen van Duitse nationaliteit.",
+      "items": [
+        {
+          "num": 1,
+          "title": "De belangrijkste visumtypen voor Duitsland",
+          "summary": "Het juiste visum bepaalt je toekomst in Duitsland. Solliciteer niet voor een type voordat je de alternatieven hebt begrepen.",
+          "tag": "Introductie",
+          "bullets": [
+            "**Studienvisum:** voor studenten die zijn toegelaten tot een universiteit.",
+            "**Ausbildungsvisum:** voor duale beroepsopleiding.",
+            "**Arbeitsvisum:** voor iedereen met een bevestigd arbeidscontract.",
+            "**Blaue Karte EU:** voor gekwalificeerde professionals die een salarisisdrempel halen.",
+            "**Jobsuchevisum:** 6 maanden om naar een baan te zoeken (universitaire afgestudeerde).",
+            "**Chancenkarte:** kansenkaart — 12 maanden op basis van een puntensysteem.",
+            "**Familienzusammenführung:** gezinshereniging."
+          ]
+        },
+        {
+          "num": 2,
+          "title": "De ambassadeafspraak boeken",
+          "summary": "Praktisch gezien de moeilijkste stap. Plekken zijn zeldzaam en openen zonder waarschuwing. Volg deze methode om binnen redelijke tijd een afspraak veilig te stellen.",
+          "tag": "Ambassade",
+          "bullets": [
+            "Officiële ambassadesite: maroc.diplo.de — de enige betrouwbare bron.",
+            "Plekken openen meestal tussen 8:00 en 10:00 (Duitse tijd).",
+            "Elk visumtype heeft een ander \"portaal\" — lees zorgvuldig.",
+            "Pas op voor makelaars — zij verkopen afspraken voor 200–500 €, allemaal oplichting.",
+            "Gebruik een schone browser (Incognito) en controleer elke dag."
+          ],
+          "tip": "Als je een plek krijgt, bevestig onmiddellijk en noteer de boeking — het wijzigen van gegevens kan de boeking annuleren."
+        },
+        {
+          "num": 3,
+          "title": "Schengen versus nationaal visum",
+          "summary": "Een doorslaggevend verschil. De eerste is voor korte verblijven, de tweede voor wonen. Verwar de dossiers niet.",
+          "tag": "Basis",
+          "bullets": [
+            "**Schengen (type C):** tot 90 dagen, toerisme/bezoek/zakelijk.",
+            "**Nationaal (type D):** meer dan 90 dagen, studie/werk/gezinshereniging.",
+            "Een Schengen-visum kan niet worden omgezet in verblijf in Duitsland.",
+            "Een D-visum geeft je 3–12 maanden verblijf, dat vervolgens wordt omgezet in een Aufenthaltstitel."
+          ]
+        },
+        {
+          "num": 4,
+          "title": "Financieel bewijs (Finanzierungsnachweis)",
+          "summary": "Duitsland wil een garantie dat je kunt leven zonder een last voor de staat te worden. De geaccepteerde methoden zijn beperkt.",
+          "tag": "Financiën",
+          "bullets": [
+            "Sperrkonto: de meest gebruikelijke methode. Momenteel 11.904 € (2024), maandelijks vrijgegeven (992 €).",
+            "Verpflichtungserklärung: een persoon in Duitsland verplicht zich je uitgaven te dekken.",
+            "Officiële beurs (DAAD, Erasmus, een Duitse stichting).",
+            "Arbeidscontract met voldoende inkomsten (voor een werkvisum).",
+            "Bankgarantie van een lokale bank (zelden geaccepteerd)."
+          ],
+          "tip": "Toonaangevende Sperrkonto-aanbieders: Expatrio, Fintiba, Coracle, Deutsche Bank. De ambassade accepteert ze allemaal."
+        },
+        {
+          "num": 5,
+          "title": "Verplichte ziektekostenverzekering vóór vertrek",
+          "summary": "Geen verzekering, geen visum. Maar niet elke verzekering wordt geaccepteerd, en er is verschil tussen korte reizen en langdurig verblijf.",
+          "tag": "Verzekering",
+          "bullets": [
+            "Reisverzekering (Reiseversicherung) wordt alleen voor de eerste 3 maanden geaccepteerd.",
+            "Daarna is wettelijke verzekering (GKV) verplicht: TK, AOK, Barmer, DAK.",
+            "Dr. Walter, Mawista, Care Concept zijn de populairste overgangsverzekeringsaanbieders.",
+            "Studenten onder de 30 = GKV. Boven de 30 = particuliere verzekering.",
+            "Staatsverzekering voor werknemers: ~15,5% van het salaris, helft betaald door werkgever."
+          ]
+        },
+        {
+          "num": 6,
+          "title": "Documentvertaling — de beëdigde vertaler",
+          "summary": "De ambassade accepteert geen gewone vertalingen. De vertaling moet worden gemaakt door een gerechtelijk gecertificeerde vertaler.",
+          "tag": "Vertaling",
+          "bullets": [
+            "Vereidigter Übersetzer in Duitsland, of een vertaler geregistreerd bij de Duitse ambassade in je land.",
+            "Elk vertaald document moet het stempel en nummer van de vertaler dragen.",
+            "Tarieven: 25–60 € per pagina afhankelijk van specialisatie.",
+            "Essentiële documenten om te vertalen: diploma's, geboorteakte, strafblad."
+          ],
+          "tip": "Sommige ambassades accepteren vertalingen die in je land zijn gecertificeerd (een lokale beëdigde vertaler), anderen niet. Vraag van tevoren."
+        },
+        {
+          "num": 7,
+          "title": "Documentlegalisatie (Apostille / Legalisatie)",
+          "summary": "Legalisatie is het internationale bewijs van de authenticiteit van een document. Vereist voor bijna elk officieel papier.",
+          "tag": "Legalisatie",
+          "bullets": [
+            "Of je een apostille of volledige consulaire legalisatie nodig hebt, hangt af van je land en of Duitsland de Haagse toetreding erkent.",
+            "De apostille (of legalisatie) wordt uitgegeven door de bevoegde autoriteit in je land — vaak het Ministerie van Buitenlandse Zaken.",
+            "Sommige documenten hebben aanvullende legalisatie van de Duitse ambassade nodig (Legalisatie).",
+            "Doorlooptijd: 1–3 weken in normale gevallen."
+          ]
+        },
+        {
+          "num": 8,
+          "title": "Anmeldung — de eerste stap na aankomst",
+          "summary": "Binnen 14 dagen na aankomst in Duitsland moet je je adres registreren bij het Bürgeramt of Einwohnermeldeamt. Niets werkt zonder dit.",
+          "tag": "Registratie",
+          "bullets": [
+            "Boek een afspraak vóór aankomst — of op je eerste dag.",
+            "Documenten: paspoort + Wohnungsgeberbestätigung van je huisbaas.",
+            "Het resulterende papier (Anmeldebestätigung) wordt gebruikt om een bankrekening te openen, een telefoonlijn, voor belastingen.",
+            "Vertraging van meer dan 14 dagen = boetes tot 1.000 €."
+          ],
+          "tip": "Als je geen Bürgeramt-plek kunt vinden, ga vroeg zonder afspraak naar een klein kantoor buiten het centrum — zij accepteren je vaak."
+        },
+        {
+          "num": 9,
+          "title": "Steuer-ID en Sozialversicherungsnummer",
+          "summary": "Twee nummers die je je hele leven in Duitsland volgen. Zonder deze krijg je geen salaris.",
+          "tag": "Nummers",
+          "bullets": [
+            "**Steuer-ID:** komt per post binnen twee weken na de Anmeldung.",
+            "**Sozialversicherungsnummer:** verzonden door je eerste ziektekostenverzekering of door Deutsche Rentenversicherung.",
+            "Bewaar ze ergens veilig — twee extra gratis kopieën krijgen is niet gemakkelijk.",
+            "Ze worden aangevraagd voor elk nieuw arbeidscontract en elke nieuwe verzekering."
+          ]
+        },
+        {
+          "num": 10,
+          "title": "Aufenthaltstitel — de verblijfsvergunning",
+          "summary": "Na je eerste visum wordt je verblijf omgezet in een Aufenthaltstitel (een verblijfskaart in ID-kaartformaat). Dit is waar je officiële leven begint.",
+          "tag": "Verblijf",
+          "bullets": [
+            "Dien de aanvraag in bij de Ausländerbehörde 6 weken voordat je visum afloopt.",
+            "Documenten: paspoort, Anmeldung, bewijs van werk/studie, ziektekostenverzekering, inkomstenbewijs.",
+            "Vergoeding: ongeveer 100 €.",
+            "De kaart komt binnen 4–8 weken.",
+            "Deze wordt meestal voor twee of drie jaar verlengd, afhankelijk van je situatie."
+          ]
+        },
+        {
+          "num": 11,
+          "title": "Blaue Karte EU — voor gekwalificeerde professionals",
+          "summary": "Het snelste spoor naar verblijfsvergunning om nationaliteit te bereiken. Strikte voorwaarden maar zeer aanzienlijke voordelen.",
+          "tag": "Blauwe Kaart",
+          "bullets": [
+            "Salarisisdrempel 2024: 45.300 €/jaar (38.688 € in tekortberoepen).",
+            "Diplomavereiste: een universiteitsdiploma van een instelling erkend in Anabin.",
+            "Geldig voor vijf jaar, verlengbaar.",
+            "Permanent verblijf na slechts 27 maanden (21 met Duits B1-niveau).",
+            "Staat vrij reizen en werken in de hele Europese Unie toe."
+          ]
+        },
+        {
+          "num": 12,
+          "title": "Chancenkarte (kansenkaart)",
+          "summary": "Nieuw sinds 2024. De gemakkelijkste manier voor internationals om naar Duitsland te komen en naar werk te zoeken, zelfs zonder voorafgaand contract.",
+          "tag": "Nieuw",
+          "bullets": [
+            "Puntensysteem (Punktesystem): onderwijs + ervaring + leeftijd + taal + verbinding met Duitsland.",
+            "Minimaal 6 punten + A1 Duits certificaat of B2 Engels.",
+            "12-maands visum, staat 20 uur werk per week toe.",
+            "Zodra je werk vindt, wordt het omgezet in een reguliere werkverblijfsvergunning of Blaue Karte.",
+            "Financieel bewijs vereist: ~12.000 € of een deeltijdwerkcontract."
+          ]
+        },
+        {
+          "num": 13,
+          "title": "Arbeitsvisum — het klassieke werkvisum",
+          "summary": "Als je vóór vertrek een contract hebt ondertekend, is dit je visum. De bureaucratie gaat sneller dan mensen zeggen.",
+          "tag": "Werk",
+          "bullets": [
+            "Documenten: arbeidscontract + diploma + Zustimmung der Arbeitsagentur (goedkeuring arbeidsbureau).",
+            "Gebruikelijke verwerking: 2–3 maanden vanaf de afspraakdatum.",
+            "Vergoeding: 75 €.",
+            "Afgegeven voor de duur van het contract, maximaal 4 jaar.",
+            "Verlengbaar zolang het contract voortduurt."
+          ]
+        },
+        {
+          "num": 14,
+          "title": "Gezinshereniging (Familienzusammenführung)",
+          "summary": "Voor de echtgenoot of kinderen van iemand die al in Duitsland woont. De voorwaarden zijn nauwkeurig maar het resultaat is duidelijk.",
+          "tag": "Familie",
+          "bullets": [
+            "Echtgenoot: A1 Duits certificaat vóór vertrek (met enkele uitzonderingen).",
+            "Kinderen: onder de 16 jaar, geen taaleisen.",
+            "De ingezetene moet voldoende inkomsten + adequate huisvesting aantonen.",
+            "Verwerking: 2–4 maanden in de meeste gevallen.",
+            "Eenjarig visum, omgezet in volledige verblijfsvergunning na aankomst."
+          ]
+        },
+        {
+          "num": 15,
+          "title": "Je buitenlands rijbewijs omwisselen",
+          "summary": "Je buitenlands rijbewijs is 6 maanden na de Anmeldung geldig. Daarna moet je het omwisselen of een examen doen.",
+          "tag": "Rijden",
+          "bullets": [
+            "Directe omwisseling hangt af van de overeenkomst van je land met Duitsland; anders moet je een theoretisch + praktisch examen doen.",
+            "Het examen is in veel Länder beschikbaar in het Arabisch en Engels.",
+            "Geschatte kosten: 1.500–2.500 € inclusief lessen.",
+            "Voorbereidingstijd: 2–4 maanden.",
+            "Een Fahrschule (rijschool) in je buurt is het startpunt."
+          ]
+        },
+        {
+          "num": 16,
+          "title": "Integrationskurs — integratiecursus",
+          "summary": "600–900-uurs cursus (taal + burgerlijke cultuur). Versnelt permanent verblijf met een volledig jaar.",
+          "tag": "Integratie",
+          "bullets": [
+            "600 uur Duits (A1 → B1) + 100 uur \"Orientierungskurs\".",
+            "Gedeeltelijk of volledig gefinancierd door BAMF — een symbolische vergoeding van 1,95 €/uur.",
+            "De cursus kan verplicht zijn afhankelijk van je verblijfsvergunning.",
+            "Het \"Zertifikat Integrationskurs\" stelt je vrij van enkele vereisten voor nationaliteit."
+          ]
+        },
+        {
+          "num": 17,
+          "title": "Niederlassungserlaubnis (permanent verblijf)",
+          "summary": "Na een bepaald aantal jaren krijg je permanent verblijf zonder verlenging. Dit is het doel waar elke immigrant naar streeft.",
+          "tag": "Permanent",
+          "bullets": [
+            "Algemene regel: 5 jaar legaal verblijf + werk + Rente-bijdragen ≥ 60 maanden.",
+            "Blaue Karte: slechts 27 maanden (21 met B1-taalniveau).",
+            "Duitse afgestudeerden: slechts 24 maanden.",
+            "Echtgenoten van Duitsers: 3 jaar.",
+            "Sleutelvereiste: B1 certificaat + Leben in Deutschland cursus."
+          ]
+        },
+        {
+          "num": 18,
+          "title": "Duitse nationaliteit (Einbürgerung)",
+          "summary": "De hervorming van 2024 versnelde nationaliteit voor de meeste ingezetenen. Normaal 5 jaar, 3 voor de volledig geïntegreerden.",
+          "tag": "Nationaliteit",
+          "bullets": [
+            "Gebruikelijke duur: 5 jaar (was 8) + B1 certificaat + onafhankelijk inkomsten.",
+            "Snelspoor van 3 jaar voor degenen met C1 + sociale bijdragen (vrijwilligerswerk…).",
+            "Duitsland staat nu dubbele nationaliteit toe — maar controleer of je eigen land je verplicht deze op te geven.",
+            "Leben in Deutschland test is verplicht (33 vragen, gemakkelijk met wat studie).",
+            "Aanvraagvergoeding: ~255 €."
+          ]
+        },
+        {
+          "num": 19,
+          "title": "Ausländerbehörde — omgaan met het vreemdelingenkantoor",
+          "summary": "Je relatie met dit kantoor duurt jaren. Begrijp de cultuur ervan voordat je je eerste bezoek aflegt.",
+          "tag": "Vreemdelingenkantoor",
+          "bullets": [
+            "Afspraken zijn moeilijk — boek zeer vroeg (2–3 maanden van tevoren).",
+            "Personeel is overbelast — wees nauwkeurig en beknopt met je papierwerk.",
+            "Duits spreken is niet verplicht maar versnelt zaken.",
+            "Betwijfel niet een wet die je niet kent — vraag naar het alternatief.",
+            "Bewaar elke brief en elk schriftelijk ontvangstbewijs."
+          ],
+          "tip": "Breng altijd extra kopieën van elk document mee. Originelen + kopie + back-upkopie — het is niet overdreven."
+        },
+        {
+          "num": 20,
+          "title": "Papierfouten die je alles kunnen kosten",
+          "summary": "Deze zes fouten komen regelmatig voor bij internationals en leiden tot weigering van verblijf of deportatie.",
+          "tag": "Waarschuwingen",
+          "bullets": [
+            "De Anmeldung overslaan: boete + onmogelijkheid om een bankrekening te openen = alles stopt.",
+            "Je visum laten verlopen voordat je de Aufenthaltstitel-verlenging indient: je status wordt onregelmatig.",
+            "Adres wijzigen zonder Ummeldung binnen 14 dagen: 500 € boete en geblokkeerde officiële post.",
+            "De Aufenthaltstitel verliezen zonder onmiddellijk te rapporteren: latere verlenging weigering.",
+            "Illegaal werken (voorbij de studentenlimiet): mogelijke deportatie.",
+            "Geen ziektekostenverzekering openen zodra het werk begint: enorme opgelopen schulden."
+          ]
+        }
+      ]
+    }
+  },
+  "cvBuilder": {
+    "seoSection": {
+      "title": "Hoe een Duitse Lebenslauf verschilt van een typisch internationaal CV",
+      "intro": "De Duitse Lebenslauf is zeer anders gestructureerd dan een typisch internationaal CV. Deze builder formatteert uw informatie direct in de Duitse standaardindeling: omgekeerd chronologisch werk en studie, met start- en einddatums als maanden, niet jaren, uw foto rechtsboven (nog steeds verwacht door 80% van Duitse werkgevers ondanks de AGG anti-discriminatierichtlijnen), en een formele Tabellarischer Lebenslauf-structuur die Ausbildung-recruiters verwachten te zien. De uitvoer is een schoon PDF-bestand dat u aan elke Ausbildung- of baantoepassing kunt toevoegen.\n\nNaast de indeling vertaalt het gereedschap functietitels naar Duitse equivalenten (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), stelt het werkwoorden in het Duits voor, en markeert het ontbrekende secties die Duitse recruiters zoeken: Sprachkenntnisse met CEFR-niveaus (A1 tot C2), Hobbies und Interessen, en Referenzen auf Anfrage. Het vervangt geen handmatige beoordeling van uw sollicitatiedocumenten door een Duitssprekende specialist — voor een Ausbildung-sollicitatie die u echt moet binnenhalen, boekt u een 30-minuten review.",
+      "faqTitle": "Veelgestelde vragen over de Duitse Lebenslauf",
+      "faqs": [
+        {
+          "q": "Moet ik een foto op mijn Lebenslauf opnemen?",
+          "a": "Officieel nee — de AGG anti-discriminatiewet verwijderde de verplichting. In de praktijk hebben ongeveer 80% van de Ausbildung CV's in Duitsland er nog steeds een. Voeg een professionele foto toe voor traditionele sectoren (gezondheidszorg, horeca, detailhandel, bankwezen); sla het over voor tech en startups."
+        },
+        {
+          "q": "Hoeveel pagina's moet mijn Lebenslauf zijn?",
+          "a": "Één pagina als u minder dan 5 jaar ervaring heeft; maximaal twee pagina's. CV's van drie pagina's worden routinematig gefilterd door zowel menselijke recruiters als ATS-software."
+        },
+        {
+          "q": "Welk datumformat verwachten Duitse werkgevers?",
+          "a": "Duits formaat: 10/2023–06/2024 of 10.2023–06.2024 (schuine streep of punt, geen streepje, tussen maand en jaar). Schrijf maanden alleen uit als u één rol per jaar heeft."
+        }
+      ]
+    },
+    "eyebrow": "📄 CV Builder",
+    "subtitle": "Bouw uw Duitse CV stap voor stap — instant preview en gratis PDF-download.",
+    "completion": "{n}% voltooid",
+    "next": "Volgende →",
+    "prev": "← Terug",
+    "warn": "⚠ {msg}",
+    "stepLabel": {
+      "personal": "Persoonlijke gegevens",
+      "education": "Opleiding",
+      "experience": "Werkervaring",
+      "skills": "Vaardigheden",
+      "languages": "Talen",
+      "documents": "Documenten",
+      "preview": "Preview & Download"
+    },
+    "validation": {
+      "firstName": "Voornaam is verplicht",
+      "lastName": "Achternaam is verplicht",
+      "emailReq": "E-mail is verplicht",
+      "emailInvalid": "Ongeldig e-mailformaat"
+    },
+    "personal": {
+      "title": "Persoonlijke gegevens",
+      "hint": "Begin met de basisgegevens — deze verschijnen bovenaan uw CV.",
+      "changePhoto": "Foto wijzigen",
+      "uploadPhoto": "Foto uploaden",
+      "delete": "Verwijderen",
+      "photoHint": "JPG / PNG — max 5MB. Aanbevolen voor Duitse sollicitaties.",
+      "photoTooLarge": "⚠ Foto is te groot (max 5MB)",
+      "firstName": "Voornaam *",
+      "lastName": "Achternaam *",
+      "jobTitle": "Gewenste positie",
+      "nationality": "Nationaliteit",
+      "dob": "Geboortedatum",
+      "pob": "Geboorteplaats",
+      "email": "E-mail *",
+      "phone": "Telefoon *",
+      "address": "Adres",
+      "postal": "Postcode",
+      "city": "Plaats",
+      "careerGoal": "Carrièredoelstelling",
+      "careerGoalPh": "bijv. Motivierter Softwareentwickler mit Fokus auf Full-Stack-Entwicklung, suche eine Position, in der ich moderne Webtechnologien einsetzen und wachsen kann.",
+      "careerGoalHint": "Laat leeg om automatisch te genereren met AI via de knop \"Corrigeren & vertalen naar Duits\" in de laatste stap.",
+      "jobTitlePh": "bijv. Softwareentwickler"
+    },
+    "education": {
+      "title": "Opleiding & Training",
+      "hint": "Voeg al uw academische kwalificaties toe — meest recent eerst.",
+      "empty": "Nog geen kwalificaties toegevoegd.",
+      "entry": "Kwalificatie #{n}",
+      "remove": "Verwijderen",
+      "add": "+ Kwalificatie toevoegen",
+      "institution": "Instelling",
+      "degree": "Diploma",
+      "field": "Studierichting",
+      "start": "Startdatum",
+      "endLabel": "Einddatum",
+      "endHint": "Laat leeg voor \"heden\"",
+      "desc": "Aanvullende details",
+      "descPh": "Eindcijfer, onderzoeksonderwerpen, projecten..."
+    },
+    "experience": {
+      "title": "Werkervaring",
+      "hint": "Voeg uw vorige functies toe — focus op prestaties, niet alleen taken.",
+      "empty": "Nog geen ervaring toegevoegd.",
+      "entry": "Ervaring #{n}",
+      "remove": "Verwijderen",
+      "add": "+ Ervaring toevoegen",
+      "jobTitle": "Functietitel",
+      "company": "Bedrijf",
+      "location": "Locatie",
+      "start": "Startdatum",
+      "endLabel": "Einddatum",
+      "endHint": "Laat leeg voor \"heden\"",
+      "tasks": "Taken & prestaties",
+      "tasksHint": "Één regel per bullet",
+      "tasksPh": "REST API's ontwikkeld\nPrestaties met 40% verbeterd\nTeam van 4 ontwikkelaars geleid",
+      "preview": "Preview:"
+    },
+    "skills": {
+      "title": "Vaardigheden",
+      "hint": "Voeg technische en soft skills toe — druk op Enter of komma om elk item toe te voegen.",
+      "technical": "Technische vaardigheden",
+      "technicalPh": "JavaScript, Python, SAP, Excel...",
+      "soft": "Soft skills",
+      "softPh": "Teamarbeit, Zuverlässigkeit, Kommunikation...",
+      "inputHint": "Druk op Enter of , om een vaardigheid toe te voegen · Backspace om de laatste te verwijderen"
+    },
+    "languages": {
+      "title": "Talen",
+      "hint": "Niveaus volgen het Europese kader (CEFR): A1 beginner — C2 volledige beheersing.",
+      "empty": "Nog geen talen toegevoegd.",
+      "add": "+ Taal toevoegen",
+      "placeholder": "Deutsch / English / العربية...",
+      "level": {
+        "A1": "Beginner",
+        "A2": "Elementair",
+        "B1": "Gemiddeld",
+        "B2": "Boven gemiddeld",
+        "C1": "Gevorderd",
+        "C2": "Volledige beheersing",
+        "Native": "Moedertaal"
+      }
+    },
+    "documents": {
+      "title": "Bijgevoegde documenten",
+      "hint": "Upload gescande kopieën van uw certificaten — ze worden automatisch opgeslagen in uw account en gebruikt om uw CV via AI te verrijken.",
+      "tooLarge": "⚠ {name} is groter dan 4MB — overgeslagen",
+      "choose": "📎 Bestanden kiezen (PDF / afbeeldingen)",
+      "limit": "Max 4MB per bestand · automatisch opgeslagen in uw account",
+      "saving": "⏳ Opslaan...",
+      "saved": "✓ Opgeslagen in uw account",
+      "saveFailed": "⚠ Niet opgeslagen",
+      "saveError": "Kon niet opslaan",
+      "remove": "Verwijderen",
+      "confirmDelete": "Permanent verwijderen \"{name}\"?",
+      "cat": {
+        "certificates": "Algemene certificaten",
+        "diploma": "Diploma's",
+        "languageCertificates": "Taalbescheinigingen",
+        "optionalCoverLetter": "Motivatiebrief (optioneel)"
+      }
+    },
+    "preview": {
+      "title": "Preview & Download",
+      "hint": "Kies de sjabloon die bij u past, download vervolgens uw CV als PDF.",
+      "chooseTemplate": "Kies een sjabloon",
+      "currentTemplate": "Huidige sjabloon:",
+      "premiumBadge": "🔒 Premium",
+      "aiTitle": "✨ Corrigeren, vertalen & verbeteren naar Duits",
+      "aiHint": "Schrijf in elke taal (Arabisch, Frans, Engels, Duits). De AI corrigeert fouten, vertaalt naar professioneel Duits, genereert een carrièredoelstelling en verrijkt beschrijvingen en soft skills realistisch zonder overdrijving.",
+      "aiCta": "✨ Corrigeren & verbeteren",
+      "aiProcessing": "⏳ Verwerken...",
+      "aiRemaining": "resterend vandaag",
+      "aiConfirm": "Uw gegevens worden naar de AI-service verzonden om te worden gecorrigeerd en vertaald naar Duits. Doorgaan?",
+      "aiSuccess": "✅ Succesvol gecorrigeerd en vertaald naar Duits.",
+      "aiFail": "❌ Vertaling mislukt: {msg}",
+      "unknownErr": "Onbekende fout",
+      "clear": "Gegevens wissen",
+      "confirmClear": "Alle gegevens echt wissen?",
+      "save": "💾 Opslaan in mijn account",
+      "saveBusy": "⏳...",
+      "saveOk": "✅ Opgeslagen in uw account",
+      "saveErr": "❌ {msg}",
+      "saveErrDefault": "Opslagfout",
+      "loginPrompt": "U moet zich aanmelden om het document op te slaan. Naar de aanmeldingspagina?",
+      "defaultName": "CV",
+      "download": "📥 PDF downloaden",
+      "downloadBusy": "⏳ Genereren...",
+      "downloadLocked": "🔒 Upgrade om te downloaden",
+      "downloadErr": "Er is een fout opgetreden bij het genereren van het bestand. Probeer het opnieuw.",
+      "upgradeDone": "✅ Premium-sjablonen ontgrendeld (demomodus). In productie linkt dit naar de betalingsgateway."
+    },
+    "templates": {
+      "classic": {
+        "name": "Duits Klassiek",
+        "desc": "Traditionele Duitse indeling — past in elk veld"
+      },
+      "modern": {
+        "name": "Modern Blauw",
+        "desc": "Modern ontwerp met een elegante blauwe tint"
+      },
+      "minimal": {
+        "name": "Minimaal Schoon",
+        "desc": "Eenvoudig en schoon — inhoudgericht"
+      },
+      "dark": {
+        "name": "Professioneel Donker",
+        "desc": "Donkere sjabloon voor creatieve en tech-carrières"
+      },
+      "compact": {
+        "name": "Compact Eén Pagina",
+        "desc": "Compact ontwerp dat op één pagina past"
+      }
+    },
+    "upgrade": {
+      "closeAria": "Sluiten",
+      "title": "Premium-sjabloon",
+      "body": "De <strong>{name}</strong> sjabloon is alleen beschikbaar met de upgrade. U kunt deze nu bekijken, maar PDF-download vereist een abonnement.",
+      "f1": "✓ Toegang tot alle vijf sjablonen",
+      "f2": "✓ Onbeperkte downloads van PDF's van hoge kwaliteit",
+      "f3": "✓ Toekomstige updates en nieuwe sjablonen",
+      "f4": "✓ Prioriteitsondersteuning",
+      "cta": "Nu upgraden — 4,99€",
+      "later": "Misschien later"
+    },
+    "photo": {
+      "title": "📸 Maak van uw foto een professionele CV-foto",
+      "hint": "Realistische achtergrond, kleding passend voor uw vakgebied, kenmerken behouden.",
+      "remaining": "Resterend vandaag: {rem}/{lim}",
+      "kind": "🎯 Fototype:",
+      "hijabLabel": "🧕 Hijab:",
+      "hijabNone": "Ik draag geen hijab",
+      "hijabKeep": "Hijab behouden",
+      "hijabRemove": "Hijab verwijderen",
+      "pro": {
+        "office": "Kantoor / zakelijk",
+        "health": "Gezondheidszorg / verpleging",
+        "lkw": "Vrachtwagenchauffeur (LKW)",
+        "handwerk": "Vakmanschap (elektriciteit, mechanica)",
+        "gastronomie": "Restaurant / horeca"
+      },
+      "gallery": "🖼️ Uw gegenereerde foto's ({n}):",
+      "showDetails": "Details weergeven →",
+      "useSelected": "✓ Gebruik de geselecteerde in het CV",
+      "generateFirst": "✨ Genereer een professionele foto",
+      "generateAnother": "✨ Genereer nog een",
+      "processing": "⏳ Verwerken...",
+      "noPhoto": "Upload eerst een foto",
+      "dailyLimit": "U heeft de dagelijkse limiet bereikt ({lim} pogingen). Probeer morgen opnieuw.",
+      "loginRequired": "U moet zich aanmelden om deze functie te gebruiken.",
+      "enhanceFail": "Kon de foto niet verbeteren. Probeer het opnieuw.",
+      "modalTitle": "Uw gegenereerde foto's — kies de beste",
+      "before": "Voor (origineel)",
+      "after": "Na ✨",
+      "allImages": "Alle foto's ({n}) — klik om te selecteren:",
+      "close": "✕ Sluiten",
+      "regenerate": "↻ Genereer nog een",
+      "regenShort": "⏳...",
+      "downloadAria": "Downloaden",
+      "shareAria": "Delen",
+      "shareTitle": "Professionele CV-foto",
+      "shareText": "Gemaakt op \"Your Guide to Germany\" 🇩🇪",
+      "clipboardOk": "✅ Foto gekopieerd naar klembord — plak het in elke app (WhatsApp, Instagram, ...).",
+      "downloadedFallback": "📥 Foto gedownload. Deel het handmatig in elke app.",
+      "shareFailed": "❌ Delen mislukt: {msg}",
+      "shareTitleFile": "CV-foto"
+    },
+    "metaTitle": "CV Builder — Verhuizen naar Duitsland",
+    "metaDesc": "Bouw eenvoudig een professioneel Duits CV (Lebenslauf) — meerdere sjablonen en gratis PDF-export."
+  },
+  "anschreiben": {
+    "seoSection": {
+      "title": "Waarom het Anschreiben bepaalt of je Lebenslauf wordt gelezen",
+      "intro": "Het Anschreiben (motivatiebrief) is het meest overgeslagen onderdeel van een Duitse sollicitatie — en het onderdeel dat bepaalt of je CV überhaupt wordt gelezen. Deze generator produceert een Duits Anschreiben op maat voor een specifieke Ausbildung-positie of universitaire aanmelding: bedrijfsnaam, functie, jouw motivatie, waarom jij (specifiek) voor hen. Het gebruikt het standaard Duitse briefformaat: jouw adres linksboven, adres ontvanger eronder, datum rechtsgelijk, \"Sehr geehrte Damen und Herren\" of naamgenoemde ontvanger, tekst in 3 tot 4 korte alinea's, en \"Mit freundlichen Grüßen\" als afsluiting.\n\nDe uitvoer is een werkversie die je moet personaliseren — plak 2 tot 3 specifieke zinnen uit de vacature in, noem iets concreets over de werkgever (hun trainingsprogramma, locatie, producten), en verwijder de AI-achtige opvulling. Duitse recruiters herkennen generieke brieven direct. Gebruik de generator om het blanco-paginaprobleem op te lossen, maak het dan van jezelf. Voor belangrijke sollicitaties kun je een 30-minuten review boeken met een Duitse specialist voordat je het verstuurt.",
+      "faqTitle": "Veelgestelde vragen over het Duitse Anschreiben",
+      "faqs": [
+        {
+          "q": "Hoe lang moet het Anschreiben zijn?",
+          "a": "Precies één pagina. Duitse recruiters verwachten je motivatie in 250 tot 350 woorden. Korter voelt lui, langer wordt niet gelezen."
+        },
+        {
+          "q": "Moet ik het in het Duits schrijven als mijn Duits nog niet sterk is?",
+          "a": "Ja. Een B1-niveau Anschreiben in het Duits is beter dan een perfecte Franse. De recruiter zal het verschil zien tussen je geschreven Duits en de gepolijste gegenereerde tekst — dat wordt verwacht; ze huren een Auszubildender in, geen schrijver. Maar lieg nooit over je niveau."
+        },
+        {
+          "q": "Moet ik herhalen wat op mijn CV staat in het Anschreiben?",
+          "a": "Nee. De CV bevat de feiten. Het Anschreiben moet uitleggen waarom JIJ en waarom ZIJ — concrete voorbeelden van je interesse in deze specifieke werkgever en wat je meebrengt buiten de opsommingen."
+        }
+      ]
+    },
+    "eyebrow": "✍️ Motivatiebrief generator",
+    "subtitle": "Voer je gegevens in in de taal van je keuze — de AI schrijft een professionele Duitse motivatiebrief op maat voor een Ausbildung-sollicitatie.",
+    "emptyHint": "Je brief verschijnt hier nadat je op de knop Genereren klikt.",
+    "loadingTitle": "De AI schrijft je brief...",
+    "loadingHint": "Dit duurt meestal 5–15 seconden",
+    "unknownErr": "Er is een onbekende fout opgetreden. Probeer het opnieuw.",
+    "banner": {
+      "premiumUnlimited": "✨ Premium plan — onbeperkt genereren",
+      "premiumRemaining": "✨ Premium plan — resterend vandaag: {rem}/{lim}",
+      "freeTryTitle": "🎁 Je hebt één gratis proefversie!",
+      "freeTryBody": " Probeer de motivatiebrief generator eenmaal gratis — daarna heb je credits nodig.",
+      "dailyAvailable": "🎁 {rem}/{lim} motivatiebrieven beschikbaar vandaag",
+      "creditsTitleOne": "Je saldo: {n} brief",
+      "creditsTitleMany": "Je saldo: {n} brieven",
+      "creditsBody": " Eén credit wordt afgetrokken voor elke succesvolle generatie.",
+      "emptyTitle": "❌ Geen credits",
+      "emptyBody": " Je hebt je gratis proefversie gebruikt. Koop credits of upgrade naar het premium plan om door te gaan.",
+      "buyCreditsSoon": "💳 Credits kopen (binnenkort beschikbaar)"
+    },
+    "form": {
+      "section": "Je persoonlijke gegevens",
+      "fullName": "Volledige naam",
+      "fullNamePh": "bijv. Ahmed El Mansouri",
+      "gender": "Geslacht",
+      "male": "👨 Man",
+      "female": "👩 Vrouw",
+      "position": "Beoogde Ausbildung-positie",
+      "positionPh": "bijv. Pflegefachmann · Mechatroniker · Kaufmann im Einzelhandel",
+      "background": "Beschrijf je achtergrond, ervaring en doelen",
+      "backgroundPh": "Schrijf over je ervaring, interesses en doelen. Je kunt in het Arabisch, Frans of Engels schrijven — de AI begrijpt en vertaalt automatisch.",
+      "cvLabel": "CV (PDF)",
+      "cvDrop": "Sleep een PDF hier of",
+      "cvClick": "klik om te kiezen",
+      "cvHint": "Alleen PDF · max 5MB · optioneel maar verbetert het resultaat",
+      "pdfOnly": "⚠ Alleen PDF-bestanden.",
+      "tooLarge": "⚠ Max grootte 5MB.",
+      "generating": "Genereren...",
+      "needCredit": "🔒 Credits of premium plan vereist",
+      "generate": "✨ Motivatiebrief genereren"
+    },
+    "preview": {
+      "title": "Motivatiebrief",
+      "subtitle": "Bewerbungsanschreiben · {pos}",
+      "copy": "📋 Kopiëren",
+      "copied": "✅ Gekopieerd",
+      "save": "💾 Opslaan",
+      "saveBusy": "⏳...",
+      "saveOk": "✅ Opgeslagen!",
+      "saveErr": "❌ {msg}",
+      "saveErrDefault": "Fout",
+      "loginPrompt": "Je moet inloggen om het document op te slaan. Ga naar de inlogpagina?",
+      "defaultName": "Anschreiben",
+      "downloadBusy": "⏳ ...",
+      "download": "📥 PDF",
+      "downloadErr": "Er is een fout opgetreden bij het downloaden. Probeer het opnieuw."
+    },
+    "metaTitle": "Motivatiebrief Generator — Verhuizen naar Duitsland",
+    "metaDesc": "Schrijf een professionele Duitse motivatiebrief voor een Ausbildung met AI-hulp — gratis en snel."
+  },
+  "articles": {
+    "metaTitle": "Artikelen — Verhuizen naar Duitsland",
+    "metaDesc": "Uitgebreide artikelen over immigratie, werk, studeren en leven in Duitsland voor internationals.",
+    "eyebrow": "📚 Betrouwbare inhoud",
+    "title": "Artikelen",
+    "subtitle": "Jouw gids voor Duitsland — praktische artikelen over bankieren, werk, universiteiten, Ausbildung en meer.",
+    "stats": {
+      "articles": "📝 {n} artikelen",
+      "featured": "⭐ {n} uitgelicht"
+    },
+    "backToHome": "→ Terug naar startpagina",
+    "allFilter": "🗂 Alles",
+    "featuredBadge": "⭐ Uitgelicht",
+    "featuredHeading": "Uitgelichte artikelen",
+    "allHeading": "Alle artikelen",
+    "emptyCategory": "Nog geen artikelen in deze categorie.",
+    "notFound": "Artikel niet gevonden",
+    "related": "Lees ook",
+    "share": {
+      "title": "Delen met je vrienden",
+      "whatsapp": "WhatsApp",
+      "facebook": "Facebook",
+      "telegram": "Telegram",
+      "copyLink": "Link kopiëren",
+      "copied": "Gekopieerd ✓"
+    },
+    "helpful": {
+      "question": "Was dit artikel nuttig?",
+      "yes": "Ja",
+      "no": "Nee",
+      "thanks": "Dank je voor je feedback! 🙏"
+    },
+    "faq": {
+      "title": "Veelgestelde vragen"
+    },
+    "cat": {
+      "البنوك": "🏦 Bankieren",
+      "شرائح الاتصال": "📱 Mobiele abonnementen",
+      "الجامعات": "🎓 Universiteiten",
+      "العمل": "💼 Werk",
+      "Ausbildung": "🛠 Ausbildung",
+      "التأشيرة والأوراق": "📄 Visum",
+      "السكن": "🏠 Huisvesting",
+      "ausbildung": "🛠 Ausbildung",
+      "universities": "🎓 Universiteiten",
+      "banking": "🏦 Bankieren",
+      "work": "💼 Werk",
+      "simcards": "📱 Mobiele abonnementen",
+      "healthcare": "🏥 Gezondheidszorg",
+      "bureaucracy": "📋 Bureaucratie",
+      "family": "👨‍👩‍👧 Familie",
+      "work-culture": "🤝 Werkcultuur",
+      "taxes": "💶 Belastingen",
+      "career-growth": "📈 Carrièregroei",
+      "driving-transport": "🚗 Rijden & vervoer",
+      "religion-community": "🕌 Religie & gemeenschap",
+      "money": "💰 Geld"
+    }
+  },
+  "listings": {
+    "pageTitle": "Huisvesting in Duitsland",
+    "withAnmeldung": "Anmeldung OK",
+    "withoutAnmeldung": "Geen Anmeldung",
+    "genderMaleBadge": "Alleen mannen",
+    "genderFemaleBadge": "Alleen vrouwen",
+    "addListing": "+ Advertentie plaatsen",
+    "backToListings": "← Terug naar advertenties",
+    "emptyState": "Nog geen advertenties",
+    "priceSuffix": "€/maand",
+    "expires": "Vervalt {date}",
+    "notFound": "Advertentie niet gevonden",
+    "types": {
+      "all": "Alle",
+      "room": "Kamer",
+      "apartment": "Appartement"
+    },
+    "cityAll": "Alle steden",
+    "detail": {
+      "edit": "Bewerken",
+      "whatsappCta": "💬 Contact via WhatsApp",
+      "loginPromptBody": "Log in om het WhatsApp-nummer van de eigenaar te zien",
+      "login": "Log in",
+      "signup": "Registreren"
+    },
+    "del": {
+      "confirm": "Weet je zeker dat je deze advertentie wilt verwijderen?",
+      "button": "Advertentie verwijderen",
+      "failed": "Kon de advertentie niet verwijderen — probeer het opnieuw."
+    },
+    "form": {
+      "title": "Huisvestingsadvertentie plaatsen",
+      "whatsappMissing": "Je moet eerst een WhatsApp-nummer aan je profiel toevoegen",
+      "saveFailed": "Kon de advertentie niet opslaan — probeer het opnieuw.",
+      "whatsappBanner": "⚠️ Je moet eerst een WhatsApp-nummer toevoegen in",
+      "whatsappBannerLink": "je profiel",
+      "whatsappBannerAfter": "voordat je een advertentie plaatst.",
+      "titlePh": "Titel van de advertentie",
+      "descPh": "Beschrijving (grootte, inrichting, huur...)",
+      "selectCity": "Selecteer stad",
+      "pricePh": "Maandelijkse huur (€)",
+      "typeRoom": "Kamer",
+      "typeApt": "Appartement",
+      "anmeldungLabel": "Is Anmeldung op dit adres toegestaan?",
+      "anmeldungYes": "Met Anmeldung",
+      "anmeldungNo": "Zonder Anmeldung",
+      "anmeldungSkip": "Niet opgegeven",
+      "anmeldungHint": "Anmeldung is de verplichte inschrijving van je woonadres bij het gemeentehuis — nodig voor visum, bank en administratie. Veel sublets staan dit niet toe.",
+      "genderLabel": "Voorkeur geslacht huurder",
+      "genderAny": "Gemengd",
+      "genderMale": "Alleen mannen",
+      "genderFemale": "Alleen vrouwen",
+      "genderHint": "Frauen-WGs en Männer-WGs zijn gebruikelijk in Duitsland. Vermeld dit zodat kandidaten geen tijd verspillen aan een plek die hen niet kan accepteren.",
+      "imagesLabel": "Foto's (1 tot 5 afbeeldingen)",
+      "imagesCount": "{n}/5 foto's",
+      "publishing": "Publiceren...",
+      "publish": "Advertentie publiceren"
+    },
+    "edit": {
+      "loading": "Laden...",
+      "noPermission": "Je hebt geen toestemming om deze advertentie te bewerken",
+      "backToListing": "← Terug naar advertentie",
+      "title": "Huisvestingsadvertentie bewerken",
+      "available": "Advertentie beschikbaar",
+      "existingImages": "Huidige foto's:",
+      "newImages": "Nieuwe foto's:",
+      "saveErr": "Fout bij opslaan: {msg}",
+      "saving": "Opslaan...",
+      "save": "Wijzigingen opslaan"
+    }
+  },
+  "learnGerman": {
+    "drill": {
+      "metaTitle": "Dagelijkse Conjugatie Oefening | GoGermany",
+      "metaDesc": "Vijf minuten per dag om Duitse werkwoordvervoegingen onder de knie te krijgen. 10 willekeurig gekozen werkwoorden op jouw niveau, direct feedback, dagelijkse reeks.",
+      "title": "Conjugatie Oefening",
+      "intro": "10 willekeurige werkwoorden, één vorm elk. Doe het elke dag — vijf minuten is genoeg om vervoegingen in te slijpen.",
+      "streak": "Reeks: {n} {n, plural, one {dag} other {dagen}}",
+      "pickLevel": "Kies je niveau",
+      "poolSize": "{n} werkwoorden in deze verzameling",
+      "startCta": "Start de oefening",
+      "againCta": "Opnieuw uitvoeren",
+      "inputPh": "Typ de vervoeging…",
+      "check": "Controleer",
+      "nextCta": "Volgende →",
+      "finishCta": "Klaar",
+      "correctAnswer": "Juist antwoord",
+      "grade": {
+        "excellent": "Uitstekend!",
+        "good": "Goed gedaan",
+        "ok": "Doorgaan",
+        "practice": "Herhaal de basis — lees de vervoegingsles opnieuw"
+      }
+    },
+    "pageTitle": "Duits leren",
+    "pageSubtitle": "Van nul tot pro — lessen gemaakt voor mensen die van overal verhuizen, van A1 tot C1.",
+    "chooseLevel": "Kies je niveau",
+    "levels": {
+      "lessonsCount": "{n} lessen",
+      "comingSoon": "Binnenkort beschikbaar",
+      "resume": "Doorgaan →",
+      "start": "Nu starten →",
+      "completeFirst": "Maak eerst {prev} af",
+      "progressCount": "{done} / {total} lessen",
+      "completed": "Voltooid",
+      "tipNotAuthed": "Alle Duitse lessen zijn gratis. Meld je aan om je voortgang op alle apparaten op te slaan en door te gaan waar je bent gebleven."
+    },
+    "level": {
+      "backToLevels": "← Terug naar niveaus",
+      "lessonsHeading": "Lessen",
+      "progress": "Voortgang",
+      "progressCount": "{done} / {total} lessen",
+      "resumeHere": "▶ Hervat waar je bent gestopt — {title}",
+      "lessonMeta": {
+        "grammar": "📖 Grammatica",
+        "vocab": "📝 Woordenschat ({n})",
+        "exercise": "✏️ Oefening ({n} vragen)"
+      },
+      "authNudgeTitle": "Meld je aan om je voortgang op te slaan",
+      "authNudgeBody": "Alle Duitse lessen zijn 100% gratis. Maak een gratis account aan zodat we kunnen opslaan waar je bent gebleven en synchroniseren op je apparaten.",
+      "authNudgeCta": "Meld je aan"
+    },
+    "lesson": {
+      "breadcrumbAria": "broodkruimel",
+      "tabs": {
+        "grammar": "Grammatica",
+        "vocab": "Woordenschat",
+        "exercise": "Oefeningen"
+      },
+      "meta": "Les {n} · {vocab} woorden · {q} oefeningen",
+      "grammarCard": {
+        "subtitle": "Grammatica van de les",
+        "tables": "Grammaticatabel",
+        "rules": "Kernregels",
+        "tipTitle": "Gouden tip",
+        "examples": "Uitgewerkte voorbeelden",
+        "nextVocab": "Volgende: Woordenschat"
+      },
+      "vocabCard": {
+        "heading": "Woordenschat",
+        "sub": "{n} woorden · tik op een kaart om de vertaling te zien",
+        "searchPh": "Zoeken…",
+        "noResults": "Geen resultaten",
+        "nextEx": "Volgende: Oefeningen",
+        "gender": {
+          "der": "mannelijk",
+          "die": "vrouwelijk",
+          "das": "onzijdig",
+          "pl": "meervoud"
+        }
+      },
+      "types": {
+        "noun": "zelfstandig naamwoord",
+        "verb": "werkwoord",
+        "adjective": "bijvoeglijk naamwoord",
+        "adverb": "bijwoord",
+        "phrase": "uitdrukking",
+        "preposition": "voorzetsel",
+        "conjunction": "voegwoord",
+        "pronoun": "voornaamwoord",
+        "number": "getal"
+      },
+      "exerciseCard": {
+        "progress": "Voortgang",
+        "types": {
+          "mcq": "Meerkeuze",
+          "fill": "Vul in",
+          "drag": "Rangschik de woorden",
+          "match": "Koppel",
+          "speak": "🎤 Spreek"
+        },
+        "fillPh": "Typ je antwoord hier…",
+        "correctAnswer": "✅ Juist antwoord: ",
+        "correct": "✅ Juist!",
+        "submit": "Controleer antwoorden ({done}/{total})",
+        "scoreExcellent": "Uitstekend! Je hebt deze les perfect gemaakt 🌟",
+        "scorePass": "Prima! Je kunt naar de volgende les gaan.",
+        "scoreRetry": "Herhaal de grammatica en woordenschat, probeer het dan opnieuw.",
+        "nextLesson": "Volgende les: {title} →",
+        "levelDone": "🎉 Niveau voltooid! Terug →",
+        "tryAgain": "Probeer opnieuw",
+        "reviewAnswers": "Bekijk antwoorden"
+      }
+    },
+    "dragDrop": {
+      "hint": "Tik op de woorden om de zin op te bouwen…",
+      "correctAnswer": "✅ Juist antwoord: ",
+      "excellent": "✅ Uitstekend! Juiste volgorde."
+    },
+    "matching": {
+      "de": "🇩🇪 Deutsch",
+      "ar": "🇲🇦 English"
+    },
+    "speaking": {
+      "press": "Tik en spreek in het Duits",
+      "listening": "Luisteren… tik om te stoppen",
+      "success": "Uitstekend! Juiste uitspraak",
+      "retry": "Probeer opnieuw",
+      "heard": "Gehoord: ",
+      "retryBtn": "Opnieuw proberen",
+      "tryAgain": "Probeer opnieuw",
+      "unsupported": "Spraakherkenning is niet beschikbaar in deze browser. Probeer de nieuwste Chrome, Edge of Safari.",
+      "noSpeech": "We hebben niets gehoord. Probeer opnieuw, iets luider.",
+      "noMicTitle": "Microfoonaccesss geblokkeerd",
+      "noMicBody": "Klik op het slotpictogram in de adresbalk van je browser en sta microfoonaccesss toe voor deze site, vernieuw vervolgens.",
+      "insecure": "Spreekoefeningen vereisen HTTPS. Open de site via https://gogermany.ma om de microfoon te gebruiken."
+    },
+    "audio": {
+      "listen": "Luister naar uitspraak"
+    },
+    "data": {
+      "levels": {
+        "A1": {
+          "title": "Niveau 1",
+          "description": "Leer de basis van het Duits — van nul tot dagelijkse communicatie."
+        },
+        "A2": {
+          "title": "Niveau 2",
+          "description": "Verleden tijd, vergelijkingen, complexe zinnen en dagelijkse communicatie."
+        },
+        "B1": {
+          "title": "Niveau 3",
+          "description": "Meningen uiten, werk en reizen."
+        },
+        "B2": {
+          "title": "Niveau 4",
+          "description": "Gevorderd Duits voor werk en universiteit."
+        },
+        "C1": {
+          "title": "Niveau 5",
+          "description": "Duits beheersen — professioneel niveau."
+        }
+      },
+      "lessons": {
+        "a1-01": "Jezelf voorstellen — Sich vorstellen",
+        "a1-02": "Getallen en prijzen — Zahlen und Preise",
+        "a1-03": "Mijn dagelijks leven in Duitsland — Mein Alltag",
+        "a1-04": "In het restaurant en winkel — Im Restaurant",
+        "a1-05": "Familie en bezit — Familie und Possessivpronomen",
+        "a1-06": "Thuis en wonen — Wohnen und Wohnung",
+        "a1-07": "Beroepen en ontkenning — Berufe und Negation",
+        "a1-08": "Tijd en datum — Uhrzeit und Datum",
+        "a1-09": "Winkelen en kleuren — Einkaufen und Farben",
+        "a1-10": "Gezondheid en lichaam — Gesundheit und Körper",
+        "a1-11": "Scheidbare werkwoorden — Trennbare Verben",
+        "a1-12": "Herhaling en dagelijks gesprek — Kommunikation und Wiederholung",
+        "a2-01": "Verleden tijd met hebben — Perfekt mit haben",
+        "a2-02": "Verleden tijd met zijn — Perfekt mit sein",
+        "a2-03": "De datief — Dativ",
+        "a2-04": "Twee-richtingsvoorzetsels — Wechselpräpositionen",
+        "a2-05": "Vergelijkend en overtreffend — Komparativ und Superlativ",
+        "a2-06": "Bijzinnen — Nebensätze",
+        "a2-07": "Wederkerige werkwoorden — Reflexive Verben",
+        "a2-08": "Eenvoudig verleden — Präteritum",
+        "a2-09": "Reizen en vervoer — Reisen und Verkehr",
+        "a2-10": "Weer en seizoenen — Wetter und Jahreszeiten",
+        "a2-11": "Gezondheid en voeding — Gesundheit und Ernährung",
+        "a2-12": "Herhaling en gesprek — Wiederholung und Kommunikation",
+        "b1-01": "Konjunktiv II — voorwaardelijk en wensen",
+        "b1-02": "Passiv — passieve vorm",
+        "b1-03": "Genitiv — genitief",
+        "b1-04": "Relativsätze — betrekkelijke bijzinnen",
+        "b1-05": "Konnektoren — geavanceerde voegwoorden",
+        "b1-06": "Arbeit und Bewerbung — werk en sollicitaties",
+        "b1-07": "Indirekte Rede — indirecte rede",
+        "b1-08": "Plusquamperfekt — voltooid verleden",
+        "b1-09": "Adjektivdeklination — bijvoeglijk naamwoord verbuiging",
+        "b1-10": "Umwelt und Gesellschaft — milieu en maatschappij",
+        "b1-11": "Reisen und Erfahrungen — reizen en ervaringen",
+        "b1-12": "Wiederholung B1 — volledige herhaling",
+        "b2-01": "Nominalisierung — nominalisering",
+        "b2-02": "Partizip I & II als Attribute — deelwoord attributen",
+        "b2-03": "Finalsätze — doelbijzinnen (um…zu / damit)",
+        "b2-04": "Modalverben subjektiv — subjectief modale gebruik",
+        "b2-05": "Passiv mit Modalverben — passief met modale werkwoorden",
+        "b2-06": "Verben mit Präpositionen — werkwoorden met voorzetsels",
+        "b2-07": "Adjektive mit Präpositionen — bijvoeglijke naamwoorden met voorzetsels",
+        "b2-08": "Konnektoren B2 — sodass, je…desto, anstatt",
+        "b2-09": "Arbeitswelt und Karriere — werkwereld en carrière",
+        "b2-10": "Bildung und Studium — onderwijs en studies",
+        "b2-11": "Meinung und Argumentation — mening en argumentatie",
+        "b2-12": "Wiederholung B2 — volledige herhaling",
+        "c1-01": "Konjunktiv II verleden — wensen en spijt",
+        "c1-02": "n-Deklination — zwakke zelfstandige naamwoord verbuiging",
+        "c1-03": "Passieve alternatieven — Passiversatzformen",
+        "c1-04": "Voorwaarden zonder als — Konditional ohne \"wenn\"",
+        "c1-05": "Functionaalverbfrasen — Funktionsverbgefüge",
+        "c1-06": "Uitgebreide deelwoord attributen — Erweiterte Partizipialattribute",
+        "c1-07": "Academische taal — Wissenschaftliche Sprache",
+        "c1-08": "Idiomatische uitdrukkingen — Redewendungen",
+        "c1-09": "Economie en politiek — Wirtschaft und Politik",
+        "c1-10": "Literatuur en cultuur — Literatur und Kultur",
+        "c1-11": "Presentatie en discussie — Präsentation und Diskussion",
+        "c1-12": "Volledige herhaling — Wiederholung C1",
+        "a1-13": "Modale werkwoorden — Modalverben",
+        "a1-14": "De accusatief — Akkusativ",
+        "a1-15": "De imperatief — Imperativ",
+        "a1-16": "Meervoud van zelfstandige naamwoorden — Plural der Nomen",
+        "a2-13": "Bijvoeglijk naamwoord verbuiging — Adjektivdeklination",
+        "a2-14": "Modale werkwoorden in het verleden — Modalverben Perfekt",
+        "a2-15": "De beleefde vorm — Konjunktiv II für Höflichkeit",
+        "a2-16": "Pronominale bijwoorden — Pronominaladverbien",
+        "b1-13": "De toekomst — Futur I + Futur II",
+        "b1-14": "Werkwoorden met voorzetsels — Verben mit Präpositionen",
+        "b2-13": "Formele indirecte rede — Konjunktiv I",
+        "b2-14": "Modale partikels — Modalpartikeln",
+        "b2-15": "Woordvorming — Wortbildung",
+        "b2-16": "Voorwaardelijke zinnen — Konditionalsätze",
+        "b2-17": "Geavanceerde voegwoorden — Konnektoren erweitert",
+        "c1-13": "Geavanceerde modale partikels — Modalpartikeln (C1)",
+        "c1-14": "Verbale vs nominale stijl — Verbalstil vs Nominalstil",
+        "c1-15": "Interpunctie — Kommasetzung",
+        "c1-16": "Complexe zinnen — Hypotaxe vs Parataxe"
+      }
+    },
+    "pageEyebrow": "🇩🇪 Duits leren",
+    "badgeGrammar": "Grammatica",
+    "badgeVocab": "Woordenschat",
+    "badgeExercises": "Oefeningen",
+    "badgeFree": "100% gratis"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "login": "Inloggen",
+    "password": "Wachtwoord",
+    "site": "Website",
+    "logout": "Uitloggen",
+    "addArticleHeading": "Nieuw artikel toevoegen",
+    "titlePh": "Titel",
+    "summaryPh": "Samenvatting",
+    "contentPh": "Volledige inhoud",
+    "selectCategory": "Selecteer categorie",
+    "imageLabel": "Artikelafbeelding (optioneel)",
+    "imageEditLabel": "Artikelafbeelding (laat leeg om huidige afbeelding te behouden)",
+    "featured": "⭐ Uitgelicht artikel (wordt bovenaan de startpagina weergegeven)",
+    "publishArticle": "Artikel publiceren",
+    "articlesHeading": "Artikelen ({n})",
+    "edit": "Bewerken",
+    "del": "Verwijderen",
+    "listingsHeading": "Aanbiedingen ({n})",
+    "listingsEmpty": "Geen aanbiedingen.",
+    "view": "Bekijken",
+    "editArticleTitle": "Artikel bewerken",
+    "backToDashboard": "Terug naar dashboard",
+    "save": "Wijzigingen opslaan"
+  },
+  "ausbJobs": {
+    "metaTitle": "Ausbildung Vacatures — Beroepsopleidingsaanbiedingen | Jouw Gids voor Duitsland",
+    "metaDesc": "Ausbildung aanbiedingen in Duitsland dagelijks bijgewerkt van de Bundesagentur für Arbeit, gesorteerd per sector.",
+    "eyebrow": "🔍 Ausbildung Aanbiedingen",
+    "title": "Ausbildung Vacatures",
+    "subtitle": "Nieuwste beroepsopleidingsaanbiedingen van de Duitse Federale Arbeidsbureau (Bundesagentur für Arbeit), gesorteerd per sector. Solliciteer direct met een AI-gegenereerde e-mail.",
+    "offersCount": "📊 {n} aanbiedingen beschikbaar",
+    "lastUpdated": "🔄 Laatst bijgewerkt: {date}",
+    "all": "Alles ({n})",
+    "emptyTitle": "Momenteel geen aanbiedingen beschikbaar.",
+    "emptyHint": "Aanbiedingen worden dagelijks bijgewerkt. Kom morgen terug.",
+    "catEmpty": "Momenteel geen aanbiedingen beschikbaar in deze sector. Controleer later.",
+    "showMore": "{n} meer aanbiedingen weergeven",
+    "showLess": "Minder weergeven",
+    "cats": {
+      "hospitality": "Horeca",
+      "handwerk": "Bouw & Ambachten",
+      "it": "IT",
+      "healthcare": "Gezondheidszorg",
+      "logistics": "Logistiek & Transport",
+      "education": "Onderwijs & Training",
+      "media": "Media & Communicatie",
+      "public_service": "Openbare Diensten & Administratie",
+      "retail": "Verkoop & Detailhandel",
+      "automotive": "Automobiel & Voertuigen",
+      "engineering": "Engineering & Technologie",
+      "finance": "Financiën & Bankwezen"
+    },
+    "card": {
+      "apply": "Solliciteer →",
+      "freshPrefix": "🆕 "
+    },
+    "rel": {
+      "today": "Vandaag",
+      "oneDay": "1 dag geleden",
+      "twoDays": "2 dagen geleden",
+      "fewDays": "{n} dagen geleden",
+      "manyDays": "{n} dagen geleden"
+    },
+    "modal": {
+      "howTo": "📬 Hoe solliciteren",
+      "noContact": "De werkgever heeft geen e-mailadres of sollicitatielink verstrekt. Je kunt het bedrijf rechtstreeks zoeken.",
+      "emailLabel": "📧 Sollicitatie-e-mail",
+      "copy": "📋 Kopiëren",
+      "copied": "✅ E-mail gekopieerd",
+      "copyFail": "❌ Kopiëren mislukt",
+      "urlLabel": "🌐 Sollicitatielink",
+      "openApply": "Sollicitatiepagina openen",
+      "tipPrefix": "💡 Tip: bereid je Lebenslauf en Anschreiben in het Duits voor voordat je contact opneemt met de werkgever. Je kunt de gratis",
+      "tipLink": "CV Builder",
+      "tipSuffix": "gebruiken.",
+      "phoneLabel": "Telefoonnummer",
+      "descriptionLabel": "Vacaturebeschrijving"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "guestBanner": {
+      "text": "Je bladert als gast — meld je aan om je aanbiedingen op te slaan, je voortgang bij te houden en alle functies te ontgrendelen.",
+      "action": "Aanmelden"
+    },
+    "welcomeBack": "Welkom terug",
+    "greeting": "Hallo, {name}",
+    "subtitle": "Hier zijn je volgende stappen op weg naar Duitsland",
+    "path": {
+      "label": "Jouw pad",
+      "ausbildung": "Ausbildung-pad",
+      "studium": "Studium-pad",
+      "unset": "Kies je pad",
+      "chooseAus": "Kies Ausbildung",
+      "chooseStud": "Kies Studium"
+    },
+    "profile": {
+      "title": "Profielafronding",
+      "percent": "{p}% voltooid",
+      "complete": "Geweldig! Je profiel is compleet 🎉",
+      "nextStep": "Volgende stap",
+      "items": {
+        "avatar": "Voeg een profielfoto toe",
+        "whatsapp": "Voeg je WhatsApp-nummer toe",
+        "status": "Stel je huidige status in",
+        "cv": "Bouw je CV",
+        "letter": "Genereer een motivatiebrief"
+      },
+      "fix": "Corrigeren"
+    },
+    "journey": {
+      "title": "Je reis in 3 stappen",
+      "status": {
+        "todo": "Niet gestart",
+        "doing": "Bezig",
+        "done": "Voltooid",
+        "soon": "Binnenkort beschikbaar"
+      },
+      "continue": "Doorgaan",
+      "start": "Starten"
+    },
+    "docs": {
+      "title": "Mijn documenten",
+      "count": "{n} document(en)",
+      "countZero": "Nog geen documenten",
+      "empty": "Begin met het maken van je CV of motivatiebrief",
+      "viewAll": "Alles weergeven"
+    },
+    "tools": {
+      "title": "Snelle tools",
+      "cv": "CV-builder",
+      "cvDesc": "Een professioneel Duits CV in enkele minuten",
+      "letter": "Motivatiebrief-generator",
+      "letterDesc": "Overtuigende motivatiebrieven met AI"
+    },
+    "cta": {
+      "profile": "Profiel beheren",
+      "consult": "Boek een consultatie"
+    },
+    "sidebar": {
+      "myProfile": "Mijn profiel",
+      "tapToComplete": "Tik om in te vullen",
+      "sectionMarketplace": "Marktplaats",
+      "sectionPreparation": "Voorbereiding",
+      "sectionTools": "Tools",
+      "browse": "Bladeren door kansen",
+      "saved": "Opgeslagen kansen",
+      "applyForMe": "Solliciteer voor mij",
+      "newBadge": "Nieuw",
+      "dashboard": "Dashboard",
+      "germanLearning": "Duits leren",
+      "interviewPrep": "Sollicitatietraining",
+      "videoStudio": "Videostudio",
+      "culture": "Cultuur",
+      "eligibility": "Geschiktheid",
+      "timeline": "Tijdlijn",
+      "cvBuilder": "CV-builder",
+      "coverLetter": "Motivatiebrief",
+      "whatsappSupport": "WhatsApp-ondersteuning",
+      "services": "Services",
+      "help": "Help & Documentatie",
+      "complete": "Voltooid",
+      "livingCost": "Levenskosten",
+      "housing": "Huisvesting",
+      "migrationTimeline": "Migratietijdlijn",
+      "documentChecklist": "Documentenchecklist",
+      "eligibilityChecker": "Geschiktheid"
+    },
+    "topbar": {
+      "help": "Help",
+      "whatsapp": "WhatsApp",
+      "notifications": "Meldingen",
+      "account": "Account",
+      "themeLight": "Lichte modus",
+      "themeDark": "Donkere modus",
+      "logout": "Afmelden"
+    },
+    "profilePage": {
+      "heroBannerTitle": "Je profiel is {pct}% voltooid",
+      "heroBannerSub": "Vul de ontbrekende velden hieronder in om je afronding te verhogen.",
+      "unlockNext": "{pct}% meer om te ontgrendelen:",
+      "unlockTargetGerman": "Duits leren",
+      "quickUpdate": "Snel bijwerken via CV",
+      "updateManually": "Handmatig bijwerken",
+      "goalPct": "Doel: 100%",
+      "completionLabel": "Profielafronding: {pct}%",
+      "completeness": "Profielafronding",
+      "completenessCompleteSuffix": "voltooid",
+      "strength": "Profielsterkte",
+      "strengthPoints": "punten",
+      "strengthComparison": "Sterker dan 50% van de kandidaten",
+      "tier": "Niveau",
+      "incomplete": "Onvolledig",
+      "weak": "Zwak",
+      "good": "Goed",
+      "strong": "Sterk",
+      "mostFieldsEmpty": "Meeste velden leeg",
+      "gettingThere": "25% — Gaat goed",
+      "nextGoal": "Volgende doel",
+      "tierWeak": "Zwak profiel",
+      "tierFair": "Redelijk profiel",
+      "tierStrong": "Sterk profiel",
+      "missing": {
+        "photo": "Upload een profielfoto",
+        "phone": "Voeg je telefoonnummer toe",
+        "dob": "Voeg je geboortedatum toe",
+        "status": "Stel je huidige status in",
+        "cv": "Bouw je CV",
+        "letter": "Genereer een motivatiebrief",
+        "firstName": "Voeg je voornaam toe",
+        "lastName": "Voeg je achternaam toe",
+        "email": "Voeg je e-mailadres toe"
+      },
+      "sections": {
+        "education": "Onderwijs",
+        "experience": "Ervaring",
+        "languages": "Talen",
+        "skills": "Vaardigheden",
+        "personal": "Persoonlijke informatie",
+        "contact": "Contactgegevens",
+        "add": "Toevoegen",
+        "comingSoon": "Binnenkort beschikbaar"
+      },
+      "promo": {
+        "title": "Laat ons team voor je solliciteren",
+        "body": "Onze Apply-For-Me-service stuurt automatisch sollicitaties naar tientallen passende kansen.",
+        "cta": "Ontdek de service"
+      }
+    },
+    "stubs": {
+      "savedTitle": "Opgeslagen kansen",
+      "savedEmpty": "Je hebt nog geen kansen opgeslagen. Blader door de marktplaats en klik op het bladwijzerpictogram om ze hier te verzamelen.",
+      "applyTitle": "Solliciteer voor mij",
+      "applyBody": "We sturen sollicitaties naar kansen die bij je profiel passen. Binnenkort beschikbaar.",
+      "lockedTitle": "{feature} — Binnenkort beschikbaar",
+      "lockedBody": "Deze functie is in ontwikkeling. We laten je weten wanneer deze beschikbaar is.",
+      "browseCta": "Bladeren door kansen"
+    },
+    "applyForMe": {
+      "comingSoonPill": "🚀 Binnenkort beschikbaar",
+      "title": "Solliciteer voor mij — helemaal voor je gedaan",
+      "subtitle": "We verzorgen je hele sollicitatieprocedure van begin tot eind — Ausbildung of Studium. Stuur ons je CV eenmaal en we solliciteren namens jou naar passende posities of universiteiten.",
+      "feat1Title": "Je uploadt eenmaal",
+      "feat1Body": "Je CV, certificaten en een kort profiel gaan eenmaal in. We vertalen, formatteren en slaan ze veilig op — werkt voor zowel Ausbildung als Studium-trajecten.",
+      "feat2Title": "AI past elke sollicitatie aan",
+      "feat2Body": "Aangepaste Anschreiben voor elke Ausbildung-werkgever of motivatiebrief voor elke universiteit — geschreven in het Duits, afgestemd op de rol, beoordeeld door ons team.",
+      "feat3Title": "Je krijgt de reacties",
+      "feat3Body": "Werkgevers en toelatingskantoren antwoorden rechtstreeks aan jou. We volgen elke sollicitatie en laten je weten wanneer interviews of toelatingsgesprekken zijn ingepland.",
+      "etaHint": "Lancering medio 2026 · sluit je aan bij de early-access-lijst vanuit je dashboardprofiel.",
+      "buyTitle": "Sla het wachten over — boek nu een betaalde consultatie",
+      "buySub": "Wil je vandaag beginnen? Boek een 1-uur betaalde consultatie (€20) met onze specialist. We bepalen je exacte volgende stappen voor Ausbildung of Studium en zetten je meteen in beweging."
+    },
+    "savedOpps": {
+      "title": "Opgeslagen kansen",
+      "countLabel": "{n} item(s) opgeslagen",
+      "emptyHint": "Zet een bladwijzer bij Ausbildung-posities en universiteiten om er later naar terug te keren.",
+      "emptyTitle": "Nog niets opgeslagen",
+      "emptyBody": "Wanneer je een Ausbildung of universiteit vindt die je bevalt, klik je op het bladwijzerpictogram — het verschijnt hier.",
+      "browseJobs": "Blader door Ausbildung",
+      "browseUnis": "Blader door universiteiten",
+      "jobsHeading": "Ausbildung-posities",
+      "unisHeading": "Universiteiten",
+      "apply": "Solliciteren",
+      "website": "Website"
+    },
+    "videoStudioPage": {
+      "comingSoonPill": "🎥 Binnenkort beschikbaar",
+      "title": "Videosessies — Leer Duits A1 tot B2",
+      "subtitle": "Live, docent-geleide videolessen van A1 tot B2 — kleine groepen, gestructureerd curriculum, native-speaker docenten, ontworpen voor internationale leerlingen.",
+      "feat1Title": "Live groepslessen",
+      "feat1Body": "Twee keer per week live sessies in kleine groepen (max 8 studenten). Echte oefening met een docent, geen vooraf opgenomen video's.",
+      "feat2Title": "A1 → B2 curriculum",
+      "feat2Body": "Volledig gestructureerd CEFR-traject: A1, A2, B1, B2. Elk niveau 12 weken. Materiaal, huiswerk en voortgangsbewaking inbegrepen.",
+      "feat3Title": "Flexibel schema",
+      "feat3Body": "Avond- en weekendslots die passen bij je werk of studies. Opnames beschikbaar als je een sessie mist.",
+      "etaHint": "Lancering zomer 2026 · early-bird wachtlijst opent binnenkort."
+    }
+  },
+  "opportunitiesPicker": {
+    "title": "Waar ben je naar op zoek?",
+    "subtitle": "Kies het soort kans dat je wilt verkennen.",
+    "ausbildung": "Ausbildung aanbiedingen",
+    "ausbildungDesc": "Betaalde trainingsposities met een officieel contract in Duitsland.",
+    "universities": "Universiteiten",
+    "universitiesDesc": "Studieprogramma's en studierichtingen in heel Duitsland.",
+    "close": "Sluiten"
+  },
+  "universities": {
+    "eyebrow": "CATALOGUS",
+    "title": "Duitse openbare universiteiten",
+    "subtitle": "Blader door {n} openbare universiteiten in Duitsland. Zoeken, filteren, vind jouw match.",
+    "searchPlaceholder": "Zoek een universiteit of stad...",
+    "cityFilter": "Stad",
+    "allCities": "Alle steden",
+    "typeFilter": "Type",
+    "allTypes": "Alle types",
+    "clearFilters": "Filters wissen",
+    "resultsCount": "{n} resultaat(en)",
+    "noResults": "Geen universiteit komt overeen met je zoekopdracht.",
+    "students": "{n} studenten",
+    "metaTitle": "Duitse openbare universiteiten — GoGermany",
+    "metaDesc": "Ontdek elke openbare universiteit in Duitsland. Zoeken op stad, type of specialisatie.",
+    "typeUniversity": "Universiteit",
+    "typeAppliedSciences": "Toegepaste wetenschappen",
+    "typeTechnical": "Technisch",
+    "typeArt": "Kunst",
+    "typeMusic": "Muziek",
+    "typeMedical": "Medisch",
+    "typePedagogical": "Pedagogisch",
+    "typeTheological": "Theologisch",
+    "typeDual": "Duaal",
+    "detail": {
+      "backToList": "Terug naar lijst",
+      "founded": "Opgericht",
+      "students": "Studenten",
+      "programsTitle": "Beschikbare programma's",
+      "programsSoon": "De programmalijst wordt voorbereid. Zeer binnenkort beschikbaar.",
+      "visitOfficialSite": "Bezoek officiële website",
+      "metaDesc": "{name} in {city} — informatie, toelatiseisen, programma's.",
+      "officialWebsite": "OFFICIËLE WEBSITE",
+      "bachelorTitle": "Bachelor",
+      "bachelorDesc": "Aangeboden bachelorprogramma's, toelatiseisen en specialisaties.",
+      "masterTitle": "Master",
+      "masterDesc": "Masterprogramma's, specialisaties en toelatiseisen.",
+      "comingSoon": "Binnenkort beschikbaar",
+      "bachelorDescLive": "Zoek bachelorprogramma's aangeboden door deze universiteit via de officiële Hochschulkompass-directory.",
+      "masterDescLive": "Zoek masterprogramma's aangeboden door deze universiteit via de officiële Hochschulkompass-directory.",
+      "searchOnHochschulkompass": "Zoeken op Hochschulkompass",
+      "hochschulkompassNote": "Hochschulkompass is de officiële catalogus van de Duitse Rectorenconferentie (HRK) met elk erkend programma.",
+      "bachelorDescOnSite": "Opent direct de officiële bachelorprogramma's-pagina van de universiteit.",
+      "masterDescOnSite": "Opent direct de officiële masterprogramma's-pagina van de universiteit.",
+      "seeOnUniSite": "Officiële pagina openen",
+      "googleSearchNote": "",
+      "viaUniAssist": "Solliciteer via uni-assist",
+      "bachelorDescUniAssist": "Bachelorprogramma's open voor internationale aanvragers via uni-assist, met deadlines en toelatiseisen.",
+      "masterDescUniAssist": "Masterprogramma's open voor internationale aanvragers via uni-assist, met deadlines en toelatiseisen.",
+      "seeOnUniAssist": "Bekijk op uni-assist"
+    }
+  }
+}

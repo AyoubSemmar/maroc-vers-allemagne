@@ -43,6 +43,18 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'Полезные ссылки — официальные сайты Германии',
     desc: 'Подборка ключевых официальных немецких сайтов для переезда в Германию: университеты, Ausbildung, виза, жильё, банки и изучение языка.',
   },
+  hi: {
+    title: 'उपयोगी लिंक — आधिकारिक जर्मन साइटें',
+    desc: 'जर्मनी जाने के लिए आवश्यक आधिकारिक जर्मन साइटों की सूची: विश्वविद्यालय, Ausbildung, वीजा, आवास, बैंक, भाषा सीखना।',
+  },
+  ur: {
+    title: 'مفید لنکس — سرکاری جرمن ویب سائٹس',
+    desc: 'جرمنی جانے کے لیے ضروری سرکاری جرمن ویب سائٹس کی فہرست: یونیورسٹیاں، Ausbildung، ویزا، رہائش، بینک، زبان سیکھنا۔',
+  },
+  nl: {
+    title: 'Nuttige links — officiële Duitse sites',
+    desc: 'Samengestelde lijst van essentiële officiële Duitse sites voor verhuizen naar Duitsland: universiteiten, Ausbildung, visum, wonen, banken, taalonderwijs.',
+  },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

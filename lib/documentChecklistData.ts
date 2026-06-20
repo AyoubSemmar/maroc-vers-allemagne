@@ -57,7 +57,7 @@ export type CountryKey =
 export type AuthMethod = 'apostille' | 'legalization'
 
 export type CountryRule = {
-  name: { ar: string; fr: string; en: string; de: string; es: string; tr: string; fa: string; pt: string; ru: string }
+  name: { en: string } & Partial<Record<string, string>>
   flag: string
   /** apostille (Hague + Germany accepts) OR full consular legalization. */
   auth: AuthMethod
