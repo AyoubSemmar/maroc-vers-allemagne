@@ -67,23 +67,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // translations of each other rather than separate pages. Without
   // this, GSC's "Discovered – currently not indexed" pile fills up
   // with locale duplicates that Google rations crawl budget on.
-  // Morocco-specific articles only exist in ar/fr/en/de (see memory
-  // article-locale-policy); global articles exist in every locale. Emitting
-  // a locale URL (and hreflang alternate) for a locale the article isn't
-  // translated into would point Google at fallback/duplicate content.
-  const MOROCCO_LOCALES = ['ar', 'fr', 'en', 'de']
+  // Each article is emitted only for the locales it's actually available in
+  // (translations._meta.locales — see memory article-locale-policy). Emitting
+  // a locale URL or hreflang alternate for a language the article wasn't
+  // written for would point Google at fallback/duplicate content.
+  const ALL_LOCALES = [...routing.locales]
   let articleEntries: MetadataRoute.Sitemap = []
   try {
     const { data: articles } = await supabase
       .from('articles')
-      .select('id, date, audience:translations->_meta->>audience')
+      .select('id, date, locales:translations->_meta->locales')
       .order('date', { ascending: false })
-      .limit(500)
+      .limit(2000)
     if (articles) {
       articleEntries = articles.flatMap((a: any) => {
-        const locs = a.audience === 'morocco'
-          ? routing.locales.filter((l) => MOROCCO_LOCALES.includes(l))
-          : [...routing.locales]
+        const metaLocs: string[] = Array.isArray(a.locales) ? a.locales : ALL_LOCALES
+        const locs = routing.locales.filter((l) => metaLocs.includes(l))
         return locs.map((loc) => ({
           url: `${SITE}/${loc}/articles/${a.id}`,
           lastModified: a.date ? new Date(a.date) : yesterday,

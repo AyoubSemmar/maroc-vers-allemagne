@@ -53,19 +53,20 @@ export const ARTICLE_LIST_FIELDS = articleListFields()
 export const ARTICLE_LIST_FIELDS_WITH_READ_TIME = ARTICLE_LIST_FIELDS + ', read_time'
 
 /**
- * Restrict a list query to articles available in `locale`. For base locales
- * (ar/fr/en/de) every article qualifies, so no filter is added. For any other
- * locale, only rows whose `translations.<locale>` exists are returned — which,
- * per policy, are exactly the `global` articles.
+ * Restrict a list query to articles available in `locale`, driven by each
+ * article's `translations._meta.locales` array (set per the locale policy:
+ * global → all 12, morocco → ar/fr/en/de, country-specific → that country's
+ * languages + en + de). This is uniform across every locale, so a country
+ * article never leaks into a listing for a language it wasn't written for.
  *
- * Usage: applyLocaleAvailability(supabase.from('articles').select(...), locale)
+ * Requires every article to carry `_meta.locales` (backfilled). Usage:
+ *   applyLocaleAvailability(supabase.from('articles').select(...), locale)
  */
-export function applyLocaleAvailability<Q extends { not: (col: string, op: string, val: unknown) => Q }>(
+export function applyLocaleAvailability<Q extends { filter: (col: string, op: string, val: unknown) => Q }>(
   query: Q,
   locale: string,
 ): Q {
-  if ((BASE_LOCALES as readonly string[]).includes(locale)) return query
-  return query.not(`translations->${locale}`, 'is', null)
+  return query.filter('translations->_meta->locales', 'cs', JSON.stringify([locale]))
 }
 
 type FlatRow = {
