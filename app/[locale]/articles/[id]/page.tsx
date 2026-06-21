@@ -18,11 +18,13 @@ export const revalidate = 3600
 const SITE_URL = 'https://gogermany.ma'
 
 /** Per-article metadata pulls the localised title/summary/image straight
- *  from the DB row so each of the 136 articles × 4 locales gets a
- *  unique <title>, description, OG image and canonical. Hreflang
- *  alternates declared for all 4 locales (the translations JSONB has
- *  the same article in each language). Without this, Google sees 544
- *  pages with the same generic GoGermany title — none of them rank. */
+ *  from the DB row so each article × locale gets a unique <title>,
+ *  description, OG image and canonical. Hreflang alternates are declared
+ *  ONLY for the locales the article was actually written in
+ *  (translations._meta.locales); a locale it wasn't translated into renders
+ *  a fallback for UX but is marked noindex so Google doesn't index the
+ *  duplicate. Without the per-locale title, Google saw many pages with the
+ *  same generic GoGermany title — none of them ranked. */
 export async function generateMetadata({
   params,
 }: { params: Promise<{ id: string; locale: AppLocale }> }): Promise<Metadata> {
@@ -41,19 +43,39 @@ export async function generateMetadata({
   const article: any = localizeRow(row as any, locale)
   const title       = `${article.title} — GoGermany`
   const description = (article.summary as string)?.slice(0, 158) || `Read on GoGermany — guides for moving to Germany.`
-  const canonical   = `${SITE_URL}/${locale}/articles/${id}`
   const image       = article.image_url || `${SITE_URL}/opengraph-image`
 
-  // Hreflang alternates — every locale has its own URL for this same
-  // article (the translations JSONB serves the right language per locale).
+  // Locales this article was actually written in (see memory
+  // article-locale-policy). Older articles with no _meta predate the policy
+  // and are treated as available in every locale, matching sitemap.ts.
+  const metaLocs: string[] = Array.isArray((row as any)?.translations?._meta?.locales)
+    ? (row as any).translations._meta.locales
+    : [...routing.locales]
+  const available = routing.locales.filter((l) => metaLocs.includes(l))
+  const isAvailable = available.includes(locale)
+
+  // Hreflang must list ONLY the locales the article exists in — otherwise
+  // every country-specific article advertises 12 URLs, 8 of which serve
+  // duplicate fallback content and self-canonicalise. Google then can't pick
+  // a canonical → "duplicate without user-selected canonical" in GSC.
   const languages: Record<string, string> = {}
-  for (const l of routing.locales) {
+  for (const l of available) {
     languages[l] = `${SITE_URL}/${l}/articles/${id}`
   }
+
+  // For a locale the article was NOT translated into, the page still renders
+  // a fallback (English/Arabic) for UX, but it must NOT be indexed — it's a
+  // duplicate. Point its canonical at the primary available locale and mark
+  // it noindex,follow so Google drops the duplicate while still crawling out.
+  const primaryLocale = available.includes('en') ? 'en' : available.includes('ar') ? 'ar' : available[0] ?? locale
+  const canonical = isAvailable
+    ? `${SITE_URL}/${locale}/articles/${id}`
+    : `${SITE_URL}/${primaryLocale}/articles/${id}`
 
   return {
     title,
     description,
+    ...(isAvailable ? {} : { robots: { index: false, follow: true } }),
     alternates: {
       canonical,
       languages,
