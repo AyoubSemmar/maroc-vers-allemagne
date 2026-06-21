@@ -6,6 +6,7 @@ import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import ArticleContent from '@/components/ArticleContent'
+import ArticleComments from '@/components/ArticleComments'
 import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
 import ShareButtons from '@/components/ShareButtons'
@@ -195,6 +196,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           initialYes={article.helpful_yes ?? 0}
           initialNo={article.helpful_no ?? 0}
         />
+
+        <ArticleComments articleId={article.id} />
 
         {related && related.length > 0 && (
           <div className="mt-12 border-t border-gray-200 pt-8">
