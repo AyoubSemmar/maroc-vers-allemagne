@@ -26,7 +26,14 @@ const ALLMODE = args.includes('--all')
 let ids = args.filter(a => /^\d+$/.test(a)).map(Number)
 if (!ids.length && !ALLMODE) for (let i = 142; i <= 154; i++) ids.push(i)
 
-function parse(s) { const c = s.replace(/```json\s*|\s*```/g, '').trim(); const a = c.indexOf('{'), b = c.lastIndexOf('}'); if (a < 0) { const x = c.indexOf('['), y = c.lastIndexOf(']'); return JSON.parse(c.slice(x, y + 1)) } return JSON.parse(c.slice(a, b + 1)) }
+function parse(s) {
+  const c = s.replace(/```json\s*|\s*```/g, '').trim()
+  const oa = c.indexOf('{'), ob = c.lastIndexOf('}')
+  const la = c.indexOf('['), lb = c.lastIndexOf(']')
+  // Pick whichever bracket type opens first (array of faqs vs object).
+  if (la >= 0 && (oa < 0 || la < oa)) return JSON.parse(c.slice(la, lb + 1))
+  return JSON.parse(c.slice(oa, ob + 1))
+}
 const norm = f => Array.isArray(f) ? f.map(x => ({ q: String(x.q ?? x.question ?? '').trim(), a: String(x.a ?? x.answer ?? '').trim() })).filter(x => x.q && x.a) : []
 
 async function genFaqs(title, content) {
