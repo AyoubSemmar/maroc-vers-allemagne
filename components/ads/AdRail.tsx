@@ -1,12 +1,15 @@
 import AdSlot from './AdSlot'
 
-// Show the rail only when there's something to put in it: ads are configured
-// (publisher id set), or we're in development (so placements are visible while
-// building). In production before approval the rail collapses entirely — no
-// empty 300px column squeezing the content.
+// Show the rail only when there's something to put in it: at least one ad-unit
+// slot id is configured, or we're in development (so placements are visible
+// while building). The publisher script loads independently (in the layout) so
+// the site stays verifiable/review-ready even while the rail is collapsed —
+// this just avoids an empty 300px column before any ad units are created.
 const SHOW_RAIL =
-  Boolean(process.env.NEXT_PUBLIC_ADSENSE_CLIENT) ||
-  process.env.NODE_ENV !== 'production'
+  Boolean(
+    process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR ||
+      process.env.NEXT_PUBLIC_ADSENSE_SLOT_INARTICLE,
+  ) || process.env.NODE_ENV !== 'production'
 
 /**
  * Page wrapper that adds a sticky ad rail on the side (desktop) and a single

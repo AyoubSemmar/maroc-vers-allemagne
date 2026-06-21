@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react'
 //   NEXT_PUBLIC_ADSENSE_CLIENT          = ca-pub-XXXXXXXXXXXXXXXX
 //   NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR    = <ad unit id for the desktop rail>
 //   NEXT_PUBLIC_ADSENSE_SLOT_INARTICLE  = <ad unit id for the in-content unit>
-const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT
+const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || 'ca-pub-4265650830157827'
 const SLOT_BY_FORMAT: Record<AdFormat, string | undefined> = {
   vertical: process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR,
   'in-article': process.env.NEXT_PUBLIC_ADSENSE_SLOT_INARTICLE,

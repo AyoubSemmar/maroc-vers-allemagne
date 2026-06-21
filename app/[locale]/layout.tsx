@@ -15,10 +15,11 @@ import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
 import Script from "next/script";
 
-// Public AdSense publisher id. When unset, no ad script loads and every
-// AdSlot renders nothing in production — so ads stay fully dormant until
-// approval, with no code change needed to switch them on.
-const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
+// Public AdSense publisher id (permanent, safe to commit — it's in the page
+// source for every visitor). The loader script below makes the site verifiable
+// and review-ready; actual ad units only render once their slot ids are set
+// (see AdSlot). Overridable via env if the account ever changes.
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-4265650830157827";
 
 // Hosts that should serve ONLY the StudyBuddy tracker — mirrors the
 // allow-list in proxy.ts. Keep these in sync.
