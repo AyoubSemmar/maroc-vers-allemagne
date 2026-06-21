@@ -13,6 +13,12 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
+import Script from "next/script";
+
+// Public AdSense publisher id. When unset, no ad script loads and every
+// AdSlot renders nothing in production — so ads stay fully dormant until
+// approval, with no code change needed to switch them on.
+const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT;
 
 // Hosts that should serve ONLY the StudyBuddy tracker — mirrors the
 // allow-list in proxy.ts. Keep these in sync.
@@ -134,6 +140,16 @@ export default async function LocaleLayout({
             <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           )}
           <Analytics />
+          {/* AdSense loader — only when a publisher id is set, and never on
+              the StudyBuddy tracker host. */}
+          {ADSENSE_CLIENT && !isTrackerHost && (
+            <Script
+              id="adsbygoogle-init"
+              strategy="afterInteractive"
+              crossOrigin="anonymous"
+              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            />
+          )}
         </NextIntlClientProvider>
       </body>
       {/* Skip gogermany's Google Analytics on the tracker host — the

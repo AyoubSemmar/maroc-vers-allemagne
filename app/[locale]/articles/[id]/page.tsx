@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import AdRail from '@/components/ads/AdRail'
 import ArticleContent from '@/components/ArticleContent'
 import ArticleComments from '@/components/ArticleComments'
 import HelpfulButton from '@/components/HelpfulButton'
@@ -188,7 +189,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
         />
       )}
-      <div className="max-w-3xl mx-auto px-4 py-12">
+      <AdRail className="py-12">
+        <div className="max-w-3xl">
         <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
           {t('backToHome')}
         </Link>
@@ -261,7 +263,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
             </div>
           </div>
         )}
-      </div>
+        </div>
+      </AdRail>
     </div>
   )
 }
