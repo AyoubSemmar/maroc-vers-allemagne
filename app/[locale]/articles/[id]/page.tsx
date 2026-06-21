@@ -138,8 +138,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         '@type': 'FAQPage',
         mainEntity: article.faqs.map((f: any) => ({
           '@type': 'Question',
-          name: f.question,
-          acceptedAnswer: { '@type': 'Answer', text: f.answer },
+          name: f.q ?? f.question,
+          acceptedAnswer: { '@type': 'Answer', text: f.a ?? f.answer },
         })),
       }
     : null

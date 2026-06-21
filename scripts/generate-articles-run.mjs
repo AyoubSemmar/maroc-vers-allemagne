@@ -71,41 +71,32 @@ const STATE_PATH = 'scripts/out/generated-articles.json'
 const state = fs.existsSync(STATE_PATH) ? JSON.parse(fs.readFileSync(STATE_PATH, 'utf8')) : {}
 const saveState = () => fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2))
 
-// ── tag (de)serialization ──────────────────────────────────────────
-const FAQ_DELIM = '\n---FAQ---\n'
-function serialize(a) {
-  const faqs = (a.faqs || []).map(f => `Q: ${f.question}\nA: ${f.answer}`).join(FAQ_DELIM)
-  return `<title>${a.title}</title>\n<summary>${a.summary}</summary>\n<content>\n${a.content}\n</content>\n<faqs>\n${faqs}\n</faqs>`
+// ── JSON (de)serialization ──────────────────────────────────────────
+function parseJsonLoose(s) {
+  const c = s.replace(/```json\s*|\s*```/g, '').trim()
+  const a = c.indexOf('{'), b = c.lastIndexOf('}')
+  if (a < 0 || b < 0) throw new Error('no JSON object')
+  return JSON.parse(c.slice(a, b + 1))
 }
-function tagval(t, n) { const m = new RegExp(`<${n}>([\\s\\S]*?)<\\/${n}>`).exec(t); return m ? m[1].trim() : null }
-function parseArticle(text) {
-  const title = tagval(text, 'title'); const content = tagval(text, 'content')
-  if (!title || !content) throw new Error('missing title/content')
-  const faqs = (tagval(text, 'faqs') || '').split(FAQ_DELIM).map(s => s.trim()).filter(Boolean).map(b => {
-    const m = b.match(/^Q:\s*([\s\S]*?)\nA:\s*([\s\S]*)$/); return m ? { question: m[1].trim(), answer: m[2].trim() } : null
-  }).filter(Boolean)
-  return { title, summary: tagval(text, 'summary') || '', content, faqs }
+// Normalize FAQs to the {q,a} shape the site renders (FAQAccordion + schema).
+function normFaqs(faqs) {
+  return Array.isArray(faqs)
+    ? faqs.map(f => ({ q: String(f.q ?? f.question ?? '').trim(), a: String(f.a ?? f.answer ?? '').trim() })).filter(f => f.q && f.a)
+    : []
+}
+function asArticle(obj) {
+  if (!obj?.title || !obj?.content) throw new Error('missing title/content')
+  return { title: String(obj.title).trim(), summary: String(obj.summary || '').trim(), content: String(obj.content).trim(), faqs: normFaqs(obj.faqs) }
 }
 
 const SYS_GEN = `You are an expert SEO content writer for GoGermany, a platform helping people move to Germany.
 Produce ONE complete article in ENGLISH:
 Length 1200–1800 words. An engaging 3-sentence intro; 4–7 ## H2 sections; ### H3 where useful; bullet lists for steps/costs/documents; real € amounts, real website/office names, real city examples; a "Common mistakes" section near the end; a conclusion with a soft CTA. Use the main keyword in the title, intro, and one H2. Natural semantic keywords, no stuffing. Clear human 2nd-person tone. Keep German terms (Ausbildung, Anmeldung, Sperrkonto, etc.) untranslated.
-OUTPUT: exactly the four tags, nothing before/after, no JSON, no markdown fences:
-<title>...</title>
-<summary>≤155 char meta description</summary>
-<content>
-markdown body
-</content>
-<faqs>
-Q: ...
-A: ...
----FAQ---
-Q: ...
-A: ...
-</faqs>
-Provide 5 FAQ items with concrete answers, separated by ---FAQ--- on its own line.`
+Return ONLY a valid JSON object (no markdown fences, no text before/after):
+{"title":"...","summary":"meta description ≤155 chars","content":"full markdown body with ## H2 and ### H3","faqs":[{"q":"question","a":"answer"}]}
+The "faqs" array MUST contain EXACTLY 5 concrete, useful question/answer pairs that real readers ask about this topic.`
 
-const sysTrans = (lang) => `You translate an SEO article from English into ${lang}. Input is in <title>/<summary>/<content>/<faqs> tags. Return the SAME tags with every value translated into ${lang}. Preserve all markdown (## ### bullets links). Do NOT translate proper nouns (Ausbildung, Sperrkonto, ELSTER, company/office names). Match the persuasive tone.${lang === 'Arabic' ? ' Use Modern Standard Arabic, Western numerals 0-9.' : ''} Output ONLY the four tags.`
+const sysTrans = (lang) => `You translate an SEO article from English into ${lang}. Input is a JSON object {title,summary,content,faqs:[{q,a}]}. Return the SAME JSON shape with every value translated into ${lang} — including ALL 5 faqs (keep the same number of faqs). Preserve markdown (## ### bullet lists links). Do NOT translate proper nouns (Ausbildung, Sperrkonto, ELSTER, company/office names). Match the persuasive tone.${lang === 'Arabic' ? ' Use Modern Standard Arabic, Western numerals 0-9.' : ''} Return ONLY the JSON object, no fences.`
 
 // Titles of already-published articles in the same category, so a new article
 // covers a DISTINCT angle (anti-duplication) and can cross-link to them.
@@ -117,30 +108,36 @@ async function fetchSiblings(category, limit = 30) {
 }
 
 async function genEnglish(topic, siblings = []) {
-  let user = `Title to write: "${topic.title}"\nPrimary keyword: ${topic.keyword}\nCategory: ${topic.category}\nAngle: ${topic.brief}`
+  let base = `Title to write: "${topic.title}"\nPrimary keyword: ${topic.keyword}\nCategory: ${topic.category}\nAngle: ${topic.brief}`
   if (siblings.length) {
-    user += `\n\nAlready-published articles in this category. Your article MUST cover a clearly different angle and must NOT repeat their content. Where it genuinely helps the reader, cross-link to a relevant one using markdown [their title](/articles/ID):\n` +
+    base += `\n\nAlready-published articles in this category. Your article MUST cover a clearly different angle and must NOT repeat their content. Where it genuinely helps the reader, cross-link to a relevant one using markdown [their title](/articles/ID):\n` +
       siblings.map(s => `- (ID ${s.id}) ${s.title}`).join('\n')
   }
-  user += `\n\nWrite the full English article to the SEO spec.`
-  const stream = await anthropic.messages.stream({
-    model: 'claude-opus-4-8', max_tokens: 16000,
-    thinking: { type: 'adaptive' }, output_config: { effort: 'high' },
-    system: SYS_GEN, messages: [{ role: 'user', content: user }],
-  })
-  const msg = await stream.finalMessage()
-  return parseArticle(msg.content.map(c => c.type === 'text' ? c.text : '').join(''))
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const user = base + `\n\nWrite the full English article to the SEO spec as the JSON object.` +
+      (attempt === 2 ? `\n\nIMPORTANT: the previous attempt lacked 5 FAQs. The "faqs" array MUST have exactly 5 {q,a} pairs.` : '')
+    const stream = await anthropic.messages.stream({
+      model: 'claude-opus-4-8', max_tokens: 16000,
+      thinking: { type: 'adaptive' }, output_config: { effort: 'high' },
+      system: SYS_GEN, messages: [{ role: 'user', content: user }],
+    })
+    const msg = await stream.finalMessage()
+    const art = asArticle(parseJsonLoose(msg.content.map(c => c.type === 'text' ? c.text : '').join('')))
+    if (art.faqs.length >= 4) return art
+    if (attempt === 2) return art // accept whatever we got on final try
+  }
 }
 
 async function translate(enArticle, locale) {
-  const serialized = serialize(enArticle)
+  const payload = JSON.stringify({ title: enArticle.title, summary: enArticle.summary, content: enArticle.content, faqs: enArticle.faqs })
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const resp = await anthropic.messages.create({
         model: 'claude-haiku-4-5', max_tokens: DENSE.has(locale) ? 16000 : 8000, temperature: 0.3,
-        system: sysTrans(LANG_NAME[locale]), messages: [{ role: 'user', content: serialized }],
+        system: sysTrans(LANG_NAME[locale]), messages: [{ role: 'user', content: payload }],
       })
-      return parseArticle(resp.content.map(c => c.type === 'text' ? c.text : '').join(''))
+      const art = asArticle(parseJsonLoose(resp.content.map(c => c.type === 'text' ? c.text : '').join('')))
+      if (art.faqs.length >= Math.min(4, enArticle.faqs.length) || attempt === 2) return art
     } catch (e) { if (attempt === 2) throw e }
   }
 }
