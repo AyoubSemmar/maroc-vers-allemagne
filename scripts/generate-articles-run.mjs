@@ -1,6 +1,7 @@
 /**
  * Generate full articles from scripts/out/article-plan.json:
- *   1. Opus 4.8 writes the English source (SEO spec, tag format).
+ *   1. Sonnet 4.6 writes the English source (SEO spec, tag format).
+ *      Override the draft model with DRAFT_MODEL (e.g. claude-opus-4-8).
  *   2. Haiku translates into the topic's policy locales.
  *   3. Replicate FLUX hero image → article-images Supabase bucket.
  *   4. Insert into Supabase with translations._meta.{audience,locales}.
@@ -60,6 +61,18 @@ const supabase = createClient(
 const anthropic = new Anthropic({ apiKey: process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY })
 const replicate = new Replicate({ auth: process.env.ARTICLE_GEN_REPLICATE_TOKEN || process.env.REPLICATE_API_TOKEN })
 
+// Model that writes the English source article. Sonnet 4.6 is the sweet spot
+// for templated SEO writing — ~40% cheaper than Opus with near-identical
+// quality on this task. Override with DRAFT_MODEL to A/B against Opus
+// (e.g. DRAFT_MODEL=claude-opus-4-8). Keep on a model that supports
+// adaptive thinking + effort (Opus 4.x / Sonnet 4.6); Haiku rejects `effort`.
+const DRAFT_MODEL = process.env.DRAFT_MODEL || 'claude-sonnet-4-6'
+// Effort for the draft. 'medium' is the sweet spot for this templated SEO task:
+// A/B showed Sonnet at 'high' OVER-thinks it (8k+ thinking tokens, slower, and
+// sometimes burns the 16k budget before emitting JSON → truncated output). At
+// 'medium' it's reliable, ~half the cost, and quality-equivalent to Opus 'high'.
+const DRAFT_EFFORT = process.env.DRAFT_EFFORT || 'medium'
+
 const LANG_NAME = {
   ar: 'Arabic', fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish',
   fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch',
@@ -117,8 +130,8 @@ async function genEnglish(topic, siblings = []) {
     const user = base + `\n\nWrite the full English article to the SEO spec as the JSON object.` +
       (attempt === 2 ? `\n\nIMPORTANT: the previous attempt lacked 5 FAQs. The "faqs" array MUST have exactly 5 {q,a} pairs.` : '')
     const stream = await anthropic.messages.stream({
-      model: 'claude-opus-4-8', max_tokens: 16000,
-      thinking: { type: 'adaptive' }, output_config: { effort: 'high' },
+      model: DRAFT_MODEL, max_tokens: 16000,
+      thinking: { type: 'adaptive' }, output_config: { effort: DRAFT_EFFORT },
       system: SYS_GEN, messages: [{ role: 'user', content: user }],
     })
     const msg = await stream.finalMessage()
