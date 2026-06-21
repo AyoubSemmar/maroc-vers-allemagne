@@ -903,11 +903,10 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   flex-shrink: 0;
 }
 
-/* Desktop: horizontal pill */
+/* Desktop: horizontal pill. Portaled to <body>; anchored via inline
+   top/right coords computed from the trigger (fixed, viewport-relative). */
 .lang-menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  inset-inline-end: 0;
+  position: fixed;
   display: flex;
   gap: 4px;
   padding: 6px;
@@ -916,11 +915,11 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   border-radius: 999px;
   box-shadow: 0 10px 30px -8px rgba(0,0,0,.18), 0 2px 6px -2px rgba(0,0,0,.08);
   z-index: 60;
-  animation: lang-menu-in 0.16s cubic-bezier(.2,.8,.2,1);
+  animation: lang-menu-in 0.16s ease;
 }
 @keyframes lang-menu-in {
-  from { opacity: 0; transform: translateY(-4px) scale(0.96); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .lang-menu-item {
   width: 36px; height: 36px;
@@ -940,8 +939,8 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   to   { opacity: 1; }
 }
 @keyframes lang-sheet-in {
-  from { opacity: 0; transform: translateY(40px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 /* Mobile: bottom sheet with 3-column grid */
@@ -955,21 +954,30 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
     animation: lang-fade-in 0.18s ease;
   }
   .lang-menu {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    top: auto;
-    inset-inline-end: auto;
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    inset-inline-end: auto !important;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    padding: 20px 16px 36px;
+    /* Bottom padding clears the iOS home indicator / Android gesture bar so
+       the last row never hides behind it. */
+    padding: 18px 16px calc(20px + env(safe-area-inset-bottom, 0px));
+    /* Never exceed the *visible* viewport (dvh tracks the dynamic browser
+       chrome). If the grid is taller — e.g. all 12 locales on a short
+       screen — it scrolls internally instead of running off-frame. */
+    max-height: 88dvh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     border-radius: 20px 20px 0 0;
     border: none;
     border-top: 1px solid var(--line, rgba(0,0,0,.1));
     z-index: 200;
-    animation: lang-sheet-in 0.22s cubic-bezier(.2,.8,.2,1);
+    animation: lang-sheet-in 0.22s ease;
   }
   .lang-menu-item {
     width: 100%;

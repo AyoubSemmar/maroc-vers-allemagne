@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useLocale, useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
 import { routing, type AppLocale } from '@/i18n/routing'
@@ -36,12 +37,35 @@ export default function LanguageSwitcher() {
   const t = useTranslations('language')
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [mounted, setMounted] = useState(false)
+  const [menuStyle, setMenuStyle] = useState<Record<string, string | number> | undefined>(undefined)
   const wrapRef = useRef<HTMLDivElement | null>(null)
+  const btnRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => { setMounted(true) }, [])
+
+  // The menu is portaled to <body> to escape the nav's backdrop-filter
+  // containing block (otherwise position:fixed is relative to the nav, not
+  // the viewport, and the mobile sheet renders off-screen). Positioning is
+  // set inline so it always wins: a full-width bottom sheet on mobile, or an
+  // anchor under the trigger on desktop.
+  function openMenu() {
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600
+    if (isMobile) {
+      setMenuStyle({ position: 'fixed', left: 0, right: 0, bottom: 0, top: 'auto', width: '100%', transform: 'none' })
+    } else {
+      const r = btnRef.current?.getBoundingClientRect()
+      setMenuStyle({ position: 'fixed', top: Math.round((r?.bottom ?? 56) + 8), right: Math.round(window.innerWidth - (r?.right ?? window.innerWidth - 12)) })
+    }
+    setOpen(true)
+  }
 
   useEffect(() => {
     function onDocClick(e: MouseEvent) {
-      if (!wrapRef.current) return
-      if (!wrapRef.current.contains(e.target as Node)) setOpen(false)
+      const target = e.target as HTMLElement
+      if (wrapRef.current?.contains(target)) return
+      if (target.closest?.('.lang-menu')) return
+      setOpen(false)
     }
     function onEsc(e: KeyboardEvent) {
       if (e.key === 'Escape') setOpen(false)
@@ -70,11 +94,42 @@ export default function LanguageSwitcher() {
   const current =
     LOCALE_OPTIONS.find((o) => o.code === locale) ?? LOCALE_OPTIONS[0]
 
+  const menu = open && mounted ? createPortal(
+    <>
+      {/* Backdrop — mobile only via CSS, closes the bottom sheet */}
+      <div className="lang-backdrop" onClick={() => setOpen(false)} aria-hidden />
+
+      {/* Desktop anchor via inline coords; mobile CSS overrides to a bottom sheet */}
+      <div role="menu" className="lang-menu" style={menuStyle}>
+        {(routing.locales as readonly AppLocale[]).map((loc) => {
+          const opt = LOCALE_OPTIONS.find((o) => o.code === loc)!
+          const active = loc === locale
+          return (
+            <button
+              key={loc}
+              role="menuitem"
+              onClick={() => pickLocale(loc)}
+              aria-label={opt.label}
+              title={opt.label}
+              className={`lang-menu-item ${active ? 'is-active' : ''}`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={flagSrc(opt.countryCode)} alt={opt.label} className="lang-flag-img" aria-hidden />
+              <span className="lang-label">{opt.label}</span>
+            </button>
+          )
+        })}
+      </div>
+    </>,
+    document.body,
+  ) : null
+
   return (
     <div ref={wrapRef} style={{ position: 'relative', display: 'inline-flex' }}>
       <button
+        ref={btnRef}
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => (open ? setOpen(false) : openMenu())}
         className="rihla-icon-btn"
         aria-label={t('change')}
         aria-haspopup="menu"
@@ -91,39 +146,7 @@ export default function LanguageSwitcher() {
           style={{ display: 'block', borderRadius: 3, objectFit: 'cover' }}
         />
       </button>
-
-      {open && (
-        <>
-          {/* Backdrop — mobile only via CSS, closes the bottom sheet */}
-          <div className="lang-backdrop" onClick={() => setOpen(false)} aria-hidden />
-
-          <div role="menu" className="lang-menu">
-            {(routing.locales as readonly AppLocale[]).map((loc) => {
-              const opt = LOCALE_OPTIONS.find((o) => o.code === loc)!
-              const active = loc === locale
-              return (
-                <button
-                  key={loc}
-                  role="menuitem"
-                  onClick={() => pickLocale(loc)}
-                  aria-label={opt.label}
-                  title={opt.label}
-                  className={`lang-menu-item ${active ? 'is-active' : ''}`}
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={flagSrc(opt.countryCode)}
-                    alt={opt.label}
-                    className="lang-flag-img"
-                    aria-hidden
-                  />
-                  <span className="lang-label">{opt.label}</span>
-                </button>
-              )
-            })}
-          </div>
-        </>
-      )}
+      {menu}
     </div>
   )
 }
