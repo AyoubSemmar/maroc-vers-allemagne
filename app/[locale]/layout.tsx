@@ -13,7 +13,6 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
-import Script from "next/script";
 
 // Public AdSense publisher id (permanent, safe to commit — it's in the page
 // source for every visitor). The loader script below makes the site verifiable
@@ -104,6 +103,18 @@ export default async function LocaleLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {/* AdSense loader — emitted as a literal <script> in <head> (React 19
+            hoists it) so AdSense's verifier finds the exact snippet. next/script
+            only renders a preload + JS injector, which the crawler doesn't
+            recognise. Skipped on the StudyBuddy host. */}
+        {ADSENSE_CLIENT && !isTrackerHost && (
+          // eslint-disable-next-line @next/next/no-sync-scripts
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
+            crossOrigin="anonymous"
+          />
+        )}
         {/* Site-wide Organization schema. Skipped entirely on the
             StudyBuddy host so the internal tool doesn't carry brand
             schema for gogermany.ma. */}
@@ -141,16 +152,6 @@ export default async function LocaleLayout({
             <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           )}
           <Analytics />
-          {/* AdSense loader — only when a publisher id is set, and never on
-              the StudyBuddy tracker host. */}
-          {ADSENSE_CLIENT && !isTrackerHost && (
-            <Script
-              id="adsbygoogle-init"
-              strategy="afterInteractive"
-              crossOrigin="anonymous"
-              src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`}
-            />
-          )}
         </NextIntlClientProvider>
       </body>
       {/* Skip gogermany's Google Analytics on the tracker host — the
