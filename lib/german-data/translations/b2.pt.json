@@ -7923,6 +7923,2071 @@
           }
         ]
       }
+    },
+    "b2-17": {
+      "title": "Conectores avançados — Konnektoren erweitert",
+      "grammar": {
+        "title": "indem, ohne dass, anstatt zu, dadurch, sodass — como conectar ideias com precisão",
+        "content": "Em B2, frases simples não são mais suficientes. Você precisa de **conectores precisos** para expressar modo, causa, contraste e consequência.\n\n**Tipos de conectores:**\n- **Modo (Modal):** indem, dadurch, ohne dass\n- **Concessão (Konzessiv):** trotzdem, obwohl, dennoch\n- **Consequência (Konsekutiv):** sodass, deshalb, daher\n- **Alternativa (Alternativ):** anstatt zu, anstatt dass\n\nCada conector impõe uma ordem de verbo.",
+        "tables": [
+          {
+            "title": "Conectores de modo e meios",
+            "headers": [
+              "Conector",
+              "Significado",
+              "Exemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "indem",
+                  "por meio de (meios)",
+                  "Ich lerne, indem ich viel lese."
+                ]
+              },
+              {
+                "cells": [
+                  "dadurch, dass",
+                  "pelo fato de que",
+                  "Dadurch, dass ich übe, werde ich besser."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne zu",
+                  "sem + gerúndio",
+                  "Er ging weg, ohne zu sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "ohne dass",
+                  "sem (sujeito diferente)",
+                  "Er ging, ohne dass ich es merkte."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt zu",
+                  "em vez de + gerúndio",
+                  "Anstatt zu lernen, schaut er fern."
+                ]
+              },
+              {
+                "cells": [
+                  "anstatt dass",
+                  "em vez de (sujeito diferente)",
+                  "Anstatt dass er kam, blieb er zu Hause."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "zu + Inf para o mesmo sujeito. dass para sujeitos diferentes."
+          },
+          {
+            "title": "Conectores de consequência e concessão",
+            "headers": [
+              "Conector",
+              "Significado",
+              "Posição do verbo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sodass / so dass",
+                  "de modo que (consequência)",
+                  "Hauptsatz, sodass + verbo no final"
+                ]
+              },
+              {
+                "cells": [
+                  "so..., dass",
+                  "tão... que",
+                  "Es ist so kalt, dass wir frieren."
+                ]
+              },
+              {
+                "cells": [
+                  "deshalb",
+                  "por isso",
+                  "Es regnet. Deshalb bleiben wir."
+                ]
+              },
+              {
+                "cells": [
+                  "trotzdem",
+                  "mesmo assim",
+                  "Es regnet. Trotzdem gehen wir."
+                ]
+              },
+              {
+                "cells": [
+                  "je...desto",
+                  "quanto mais... mais",
+                  "Je mehr, desto besser."
+                ]
+              },
+              {
+                "cells": [
+                  "zumal",
+                  "ainda mais porque",
+                  "Ich komme, zumal ich Zeit habe."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "deshalb/trotzdem no início da 2ª oração principal. sodass inicia uma oração subordinada."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "indem descreve os meios — verbo no final: \"Ich lerne, indem ich Filme schaue.\"",
+            "example": "Sie verbessert ihr Deutsch, indem sie täglich liest.",
+            "translation": "Ela melhora seu alemão lendo diariamente."
+          },
+          {
+            "rule": "ohne zu/anstatt zu para o mesmo sujeito. ohne dass/anstatt dass para sujeitos diferentes.",
+            "example": "Er ging, ohne zu sprechen. (mesmo sujeito) / Er ging, ohne dass ich es wusste. (sujeitos diferentes)",
+            "translation": "Ele saiu sem falar. / Ele saiu sem eu saber."
+          },
+          {
+            "rule": "sodass vem após uma vírgula com verbo no final. so + adj + dass enfatiza uma causa.",
+            "example": "Er ist krank, sodass er nicht kommen kann. / Es ist so kalt, dass wir frieren.",
+            "translation": "Ele está doente, então não pode vir. / Está tão frio que estamos congelando."
+          },
+          {
+            "rule": "je...desto começa cada oração com uma vírgula, usando comparativos.",
+            "example": "Je mehr du übst, desto besser wirst du.",
+            "translation": "Quanto mais você pratica, melhor você fica."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, indem ich Filme schaue. — Aprendo alemão assistindo a filmes.",
+          "Sie verbessert sich, dadurch dass sie täglich übt. — Ela melhora praticando diariamente.",
+          "Er ging, ohne zu fragen. — Ele saiu sem perguntar.",
+          "Anstatt zu lernen, schaut er fern. — Em vez de estudar, ele assiste TV.",
+          "Es ist so kalt, dass wir frieren. — Está tão frio que estamos congelando.",
+          "Je mehr ich lerne, desto besser werde ich. — Quanto mais aprendo, melhor fico.",
+          "Trotzdem ist er gekommen. — Mesmo assim, ele veio.",
+          "Ich komme, zumal ich Zeit habe. — Vou, ainda mais porque tenho tempo."
+        ],
+        "tip": "Memorize 5 novos conectores por semana e forme uma frase para cada um. Em dois meses, você escreverá frases complexas com facilidade. O exame B2 valoriza Konnektoren — quanto mais variedade, maior sua pontuação em escrita."
+      },
+      "vocabulary": [
+        {
+          "german": "indem",
+          "arabic": "por meio de + gerúndio",
+          "example": "Ich lerne, indem ich übe.",
+          "exampleArabic": "Aprendo praticando.",
+          "type": "conjunction"
+        },
+        {
+          "german": "dadurch dass",
+          "arabic": "pelo fato de que",
+          "example": "Dadurch dass er hilft, lerne ich schneller.",
+          "exampleArabic": "Pelo fato de ele ajudar, aprendo mais rápido.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne zu",
+          "arabic": "sem + gerúndio",
+          "example": "Er ging, ohne zu sprechen.",
+          "exampleArabic": "Ele saiu sem falar.",
+          "type": "conjunction"
+        },
+        {
+          "german": "ohne dass",
+          "arabic": "sem (sujeito diferente)",
+          "example": "Er kam, ohne dass ich es wusste.",
+          "exampleArabic": "Ele veio sem eu saber.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt zu",
+          "arabic": "em vez de",
+          "example": "Anstatt zu lernen, spielt er.",
+          "exampleArabic": "Em vez de estudar, ele brinca.",
+          "type": "conjunction"
+        },
+        {
+          "german": "anstatt dass",
+          "arabic": "em vez de (sujeito diferente)",
+          "example": "Anstatt dass er hilft, lacht er.",
+          "exampleArabic": "Em vez de ajudar, ele ri.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sodass",
+          "arabic": "de modo que",
+          "example": "Es regnet, sodass wir bleiben.",
+          "exampleArabic": "Está chovendo, então ficamos.",
+          "type": "conjunction"
+        },
+        {
+          "german": "so...dass",
+          "arabic": "tão... que",
+          "example": "Es ist so kalt, dass wir frieren.",
+          "exampleArabic": "Está tão frio que congelamos.",
+          "type": "conjunction"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "mesmo assim",
+          "example": "Es regnet. Trotzdem gehe ich.",
+          "exampleArabic": "Está chovendo. Mesmo assim, vou.",
+          "type": "adverb"
+        },
+        {
+          "german": "dennoch",
+          "arabic": "ainda assim / contudo",
+          "example": "Er ist müde, dennoch arbeitet er.",
+          "exampleArabic": "Ele está cansado, contudo trabalha.",
+          "type": "adverb"
+        },
+        {
+          "german": "jedoch",
+          "arabic": "porém",
+          "example": "Er kam, jedoch zu spät.",
+          "exampleArabic": "Ele veio, porém muito tarde.",
+          "type": "adverb"
+        },
+        {
+          "german": "allerdings",
+          "arabic": "porém / é verdade que",
+          "example": "Allerdings ist es kalt.",
+          "exampleArabic": "É verdade que está frio.",
+          "type": "adverb"
+        },
+        {
+          "german": "deshalb",
+          "arabic": "por isso",
+          "example": "Es regnet. Deshalb bleiben wir.",
+          "exampleArabic": "Está chovendo. Por isso ficamos.",
+          "type": "adverb"
+        },
+        {
+          "german": "daher",
+          "arabic": "portanto",
+          "example": "Daher ist es wichtig.",
+          "exampleArabic": "Portanto, é importante.",
+          "type": "adverb"
+        },
+        {
+          "german": "demzufolge",
+          "arabic": "consequentemente",
+          "example": "Demzufolge ändert sich alles.",
+          "exampleArabic": "Consequentemente, tudo muda.",
+          "type": "adverb"
+        },
+        {
+          "german": "je...desto",
+          "arabic": "quanto mais... mais",
+          "example": "Je mehr, desto besser.",
+          "exampleArabic": "Quanto mais, melhor.",
+          "type": "phrase"
+        },
+        {
+          "german": "zumal",
+          "arabic": "ainda mais porque",
+          "example": "Ich komme, zumal ich Zeit habe.",
+          "exampleArabic": "Vou, ainda mais porque tenho tempo.",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "contanto que / na medida em que",
+          "example": "Sofern es geht, helfe ich.",
+          "exampleArabic": "Na medida do possível, ajudo.",
+          "type": "conjunction"
+        },
+        {
+          "german": "insofern",
+          "arabic": "nesse sentido",
+          "example": "Insofern stimme ich zu.",
+          "exampleArabic": "Nesse sentido, concordo.",
+          "type": "adverb"
+        },
+        {
+          "german": "falls",
+          "arabic": "caso",
+          "example": "Falls es regnet...",
+          "exampleArabic": "Caso chova...",
+          "type": "conjunction"
+        },
+        {
+          "german": "sobald",
+          "arabic": "assim que",
+          "example": "Sobald er kommt, gehen wir.",
+          "exampleArabic": "Assim que ele chegar, vamos.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "enquanto",
+          "example": "Während er liest, koche ich.",
+          "exampleArabic": "Enquanto ele lê, eu cozinho.",
+          "type": "conjunction"
+        },
+        {
+          "german": "inzwischen",
+          "arabic": "enquanto isso",
+          "example": "Inzwischen ist es spät geworden.",
+          "exampleArabic": "Enquanto isso, ficou tarde.",
+          "type": "adverb"
+        },
+        {
+          "german": "mittlerweile",
+          "arabic": "entretanto",
+          "example": "Mittlerweile habe ich es verstanden.",
+          "exampleArabic": "Entretanto, entendi.",
+          "type": "adverb"
+        },
+        {
+          "german": "die Folge",
+          "arabic": "consequência",
+          "example": "Die Folgen sind klar.",
+          "exampleArabic": "As consequências são claras.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Folgen"
+        },
+        {
+          "german": "die Ursache",
+          "arabic": "causa",
+          "example": "Was ist die Ursache?",
+          "exampleArabic": "Qual é a causa?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Ursachen"
+        },
+        {
+          "german": "der Zusammenhang",
+          "arabic": "conexão / contexto",
+          "example": "Der Zusammenhang ist klar.",
+          "exampleArabic": "O contexto é claro.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Zusammenhänge"
+        },
+        {
+          "german": "der Vergleich",
+          "arabic": "comparação",
+          "example": "Im Vergleich dazu...",
+          "exampleArabic": "Em comparação...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Vergleiche"
+        },
+        {
+          "german": "der Gegensatz",
+          "arabic": "contraste",
+          "example": "Im Gegensatz zu ihm...",
+          "exampleArabic": "Em contraste com ele...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Gegensätze"
+        },
+        {
+          "german": "das Argument",
+          "arabic": "argumento",
+          "example": "Ein starkes Argument.",
+          "exampleArabic": "Um argumento forte.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Argumente"
+        },
+        {
+          "german": "die Begründung",
+          "arabic": "justificativa",
+          "example": "Die Begründung ist überzeugend.",
+          "exampleArabic": "A justificativa é convincente.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Begründungen"
+        },
+        {
+          "german": "die Voraussetzung",
+          "arabic": "pré-condição",
+          "plural": "die Voraussetzungen",
+          "example": "Die Voraussetzung ist erfüllt.",
+          "exampleArabic": "A pré-condição foi atendida.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "condição",
+          "plural": "die Bedingungen",
+          "example": "Unter dieser Bedingung.",
+          "exampleArabic": "Sob esta condição.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Gegenüberstellung",
+          "arabic": "justaposição",
+          "plural": "die Gegenüberstellungen",
+          "example": "Eine kritische Gegenüberstellung.",
+          "exampleArabic": "Uma justaposição crítica.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Schlussfolgerung",
+          "arabic": "conclusão",
+          "plural": "die Schlussfolgerungen",
+          "example": "Eine logische Schlussfolgerung.",
+          "exampleArabic": "Uma conclusão lógica.",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q1",
+            "question": "Modo: \"Ich lerne, ___ ich Filme schaue.\"",
+            "answer": "indem",
+            "hint": "indem = por meio de + gerúndio"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q2",
+            "question": "Em vez de (mesmo sujeito):",
+            "options": [
+              "anstatt dass",
+              "anstatt zu",
+              "ohne zu",
+              "sodass"
+            ],
+            "answer": "anstatt zu"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q3",
+            "question": "Consequência: \"Es ist so kalt, ___ wir frieren.\"",
+            "answer": "dass",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q4",
+            "question": "\"Quanto mais... mais\"",
+            "options": [
+              "je...desto",
+              "wenn...dann",
+              "so...wie",
+              "als...so"
+            ],
+            "answer": "je...desto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q5",
+            "question": "Concessão: \"Es regnet. ___ gehe ich.\" (mesmo assim)",
+            "answer": "Trotzdem",
+            "hint": "trotzdem = mesmo assim"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q6",
+            "question": "Associe o conector ao seu tipo:",
+            "pairs": [
+              {
+                "left": "indem",
+                "right": "modo"
+              },
+              {
+                "left": "sodass",
+                "right": "consequência"
+              },
+              {
+                "left": "trotzdem",
+                "right": "concessão"
+              },
+              {
+                "left": "anstatt zu",
+                "right": "alternativa"
+              },
+              {
+                "left": "während",
+                "right": "tempo simultâneo"
+              },
+              {
+                "left": "sobald",
+                "right": "tempo posterior"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q7",
+            "question": "Ordene: \"Aprendo assistindo a filmes\"",
+            "words": [
+              "Ich",
+              "lerne,",
+              "indem",
+              "ich",
+              "Filme",
+              "schaue"
+            ],
+            "answer": "Ich lerne, indem ich Filme schaue"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q8",
+            "question": "Diga: \"Quanto mais você pratica, melhor você fica\"",
+            "answer": "Je mehr du übst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q9",
+            "question": "Escute: \"Er ging, ___ zu sprechen.\"",
+            "audioPrompt": "Er ging, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu = sem + gerúndio"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q10",
+            "question": "Após sodass, o verbo fica:",
+            "options": [
+              "no início",
+              "em 2ª posição",
+              "no final",
+              "sem diferença"
+            ],
+            "answer": "no final"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q11",
+            "question": "Ênfase de causa: \"Es ist ___ kalt, dass wir frieren.\" (tão)",
+            "answer": "so",
+            "hint": "so + adj + dass"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q12",
+            "question": "Sem (sujeitos diferentes):",
+            "options": [
+              "ohne zu",
+              "ohne dass",
+              "sodass",
+              "als ob"
+            ],
+            "answer": "ohne dass"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q13",
+            "question": "\"Sie verbessert sich ___ tägliches Üben.\" (por meio de — modo, substantivo)",
+            "answer": "durch",
+            "hint": "durch + Akk = meios"
+          },
+          {
+            "type": "matching",
+            "id": "b2-17-q14",
+            "question": "Associe o conector ao tipo:",
+            "pairs": [
+              {
+                "left": "während",
+                "right": "tempo simultâneo"
+              },
+              {
+                "left": "sobald",
+                "right": "tempo posterior"
+              },
+              {
+                "left": "zumal",
+                "right": "causa adicional"
+              },
+              {
+                "left": "allerdings",
+                "right": "concessão suavizada"
+              },
+              {
+                "left": "sofern",
+                "right": "condição"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-17-q15",
+            "question": "Ordene: \"Quanto mais você aprende, melhor você fica\"",
+            "words": [
+              "Je",
+              "mehr",
+              "du",
+              "lernst,",
+              "desto",
+              "besser",
+              "wirst",
+              "du"
+            ],
+            "answer": "Je mehr du lernst, desto besser wirst du"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q16",
+            "question": "Escute: \"Er ging weg, ___ zu sprechen.\" (sem)",
+            "audioPrompt": "Er ging weg, ohne zu sprechen.",
+            "answer": "ohne",
+            "hint": "ohne zu + Inf"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q17",
+            "question": "Após je, o verbo:",
+            "options": [
+              "no final",
+              "em 2ª posição",
+              "padrão verbo-vírgula-verbo",
+              "omitido"
+            ],
+            "answer": "no final"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-17-q18",
+            "question": "Diga: \"Aprendo lendo livros de alemão\"",
+            "answer": "Ich lerne, indem ich deutsche Bücher lese"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-17-q19",
+            "question": "\"Sie kam, ___ ich es wusste.\" (sem, sujeito diferente)",
+            "answer": "ohne dass",
+            "hint": "ohne dass + sujeito diferente"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-17-q20",
+            "question": "Diferença entre trotzdem e obwohl?",
+            "options": [
+              "mesma coisa",
+              "trotzdem advérbio, obwohl conjunção",
+              "trotzdem no final, obwohl no início",
+              "sem diferença"
+            ],
+            "answer": "trotzdem advérbio, obwohl conjunção"
+          }
+        ]
+      }
+    },
+    "b2-16": {
+      "title": "Orações condicionais — Konditionalsätze",
+      "grammar": {
+        "title": "wenn (condicional) + condição real vs irreal + Konjunktiv II para desejos",
+        "content": "Orações condicionais expressam causa e consequência. O alemão distingue:\n\n**Real (Realer Bedingung):** algo que pode acontecer.\n→ **Wenn** ich Zeit **habe**, **komme** ich. (Se tenho tempo, venho)\n\n**Irreal (Irrealer Bedingung):** hipótese, desejo, algo que não aconteceu.\n→ **Wenn** ich Zeit **hätte**, **würde** ich kommen. (Se tivesse tempo, viria)\n\n**Passado irreal:** arrependimento sobre o passado.\n→ **Wenn** ich Zeit **gehabt hätte**, **wäre** ich gekommen. (Se tivesse tido tempo ontem, teria vindo)",
+        "tables": [
+          {
+            "title": "Os três tipos de orações condicionais",
+            "headers": [
+              "Tipo",
+              "Condição",
+              "Consequência",
+              "Exemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "real (presente/futuro)",
+                  "Indikativ",
+                  "Indikativ",
+                  "Wenn es regnet, bleibe ich zu Hause."
+                ]
+              },
+              {
+                "cells": [
+                  "irreal (presente/futuro)",
+                  "Konj. II",
+                  "würde + Inf",
+                  "Wenn ich reich wäre, würde ich reisen."
+                ]
+              },
+              {
+                "cells": [
+                  "irreal (passado)",
+                  "hätte/wäre + Partizip",
+                  "hätte/wäre + Partizip",
+                  "Wenn ich Zeit gehabt hätte, wäre ich gekommen."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Vírgula sempre após a oração com wenn: \"Wenn..., (verbo)...\""
+          },
+          {
+            "title": "Alternativas a wenn",
+            "headers": [
+              "Palavra",
+              "Significado",
+              "Exemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "falls",
+                  "caso",
+                  "Falls es regnet, nehmen wir Schirme."
+                ]
+              },
+              {
+                "cells": [
+                  "sofern",
+                  "contanto que / na medida em que",
+                  "Sofern du Zeit hast, komm vorbei."
+                ]
+              },
+              {
+                "cells": [
+                  "unter der Bedingung, dass",
+                  "sob a condição de que",
+                  "Ich helfe dir unter der Bedingung, dass du auch hilfst."
+                ]
+              },
+              {
+                "cells": [
+                  "sem wenn (inversão de verbo)",
+                  "omitindo wenn",
+                  "Hätte ich Zeit, würde ich kommen."
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Sem wenn, o verbo vem primeiro: \"Hätte ich..., würde ich...\""
+          },
+          {
+            "title": "Konjunktiv II — exemplos para verbos comuns",
+            "headers": [
+              "Infinitiv",
+              "Konj. II",
+              "Exemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "sein",
+                  "wäre",
+                  "Wenn ich du wäre..."
+                ]
+              },
+              {
+                "cells": [
+                  "haben",
+                  "hätte",
+                  "Wenn ich Zeit hätte..."
+                ]
+              },
+              {
+                "cells": [
+                  "werden",
+                  "würde",
+                  "Ich würde reisen."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "könnte",
+                  "Ich könnte helfen."
+                ]
+              },
+              {
+                "cells": [
+                  "wissen",
+                  "wüsste",
+                  "Wenn ich es wüsste..."
+                ]
+              },
+              {
+                "cells": [
+                  "gehen",
+                  "ginge / würde gehen",
+                  "Ich würde gehen."
+                ]
+              }
+            ],
+            "theme": "conjugation",
+            "note": "Verbos regulares em Konj. II = Präteritum + ä/ö/ü. Caso contrário: würde + Inf."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Em condicionais reais, o verbo na oração com wenn está em 2ª posição; na oração principal vem em primeiro lugar (após a oração com wenn).",
+            "example": "Wenn es regnet, bleibe ich zu Hause.",
+            "translation": "Se chover, fico em casa."
+          },
+          {
+            "rule": "Irreal presente = Konj. II (corresponde a \"would\" em inglês).",
+            "example": "Wenn ich reich wäre, würde ich helfen.",
+            "translation": "Se eu fosse rico, ajudaria."
+          },
+          {
+            "rule": "Irreal passado = hätte/wäre + Partizip — \"teria...\"",
+            "example": "Wenn du gekommen wärst, hätten wir gespielt.",
+            "translation": "Se você tivesse vindo, teríamos jogado."
+          },
+          {
+            "rule": "Sem wenn = verbo primeiro: \"Hätte ich Zeit, würde ich...\"",
+            "example": "Wäre ich du, würde ich es tun.",
+            "translation": "Se eu fosse você, faria isso."
+          }
+        ],
+        "examples": [
+          "Wenn ich Zeit habe, lerne ich Deutsch. — Quando tenho tempo, aprendo alemão.",
+          "Falls es regnet, bleiben wir zu Hause. — Caso chova, ficamos em casa.",
+          "Wenn ich reich wäre, würde ich nach Japan reisen. — Se eu fosse rico, viajaria para o Japão.",
+          "Wenn ich du wäre, würde ich das machen. — Se eu fosse você, faria isso.",
+          "Hätten wir mehr Zeit, könnten wir mehr lernen. — Se tivéssemos mais tempo, poderíamos aprender mais.",
+          "Wenn du gekommen wärst, hätten wir gefeiert. — Se você tivesse vindo, teríamos comemorado.",
+          "Sofern du einverstanden bist, fangen wir an. — Contanto que você concorde, começamos.",
+          "Ich würde dir helfen, wenn ich könnte. — Eu ajudaria você se pudesse."
+        ],
+        "tip": "Pratique: \"Wenn ich + Konj. II, würde ich + Inf\". Este padrão cobre 80% das orações condicionais em B2. Adicione o passado irreal (hätte gehabt) depois."
+      },
+      "vocabulary": [
+        {
+          "german": "wenn",
+          "arabic": "se / quando",
+          "example": "Wenn ich Zeit habe...",
+          "exampleArabic": "Quando tenho tempo...",
+          "type": "conjunction"
+        },
+        {
+          "german": "falls",
+          "arabic": "caso",
+          "example": "Falls es regnet...",
+          "exampleArabic": "Caso chova...",
+          "type": "conjunction"
+        },
+        {
+          "german": "sofern",
+          "arabic": "contanto que / na medida em que",
+          "example": "Sofern du willst...",
+          "exampleArabic": "Contanto que você queira...",
+          "type": "conjunction"
+        },
+        {
+          "german": "unter der Bedingung",
+          "arabic": "sob a condição de que",
+          "example": "Unter der Bedingung, dass du hilfst.",
+          "exampleArabic": "Sob a condição de que você ajude.",
+          "type": "phrase"
+        },
+        {
+          "german": "wäre",
+          "arabic": "seria (Konj. II de sein)",
+          "example": "Wenn ich reich wäre...",
+          "exampleArabic": "Se eu fosse rico...",
+          "type": "verb"
+        },
+        {
+          "german": "hätte",
+          "arabic": "teria",
+          "example": "Wenn ich Zeit hätte...",
+          "exampleArabic": "Se eu tivesse tempo...",
+          "type": "verb"
+        },
+        {
+          "german": "würde",
+          "arabic": "seria / faria (condicional)",
+          "example": "Ich würde gerne kommen.",
+          "exampleArabic": "Eu gostaria de vir.",
+          "type": "verb"
+        },
+        {
+          "german": "könnte",
+          "arabic": "poderia",
+          "example": "Ich könnte helfen.",
+          "exampleArabic": "Eu poderia ajudar.",
+          "type": "verb"
+        },
+        {
+          "german": "müsste",
+          "arabic": "teria que",
+          "example": "Du müsstest jetzt gehen.",
+          "exampleArabic": "Você teria que ir agora.",
+          "type": "verb"
+        },
+        {
+          "german": "sollte",
+          "arabic": "deveria",
+          "example": "Du solltest mehr lernen.",
+          "exampleArabic": "Você deveria estudar mais.",
+          "type": "verb"
+        },
+        {
+          "german": "wüsste",
+          "arabic": "soubesse",
+          "example": "Wenn ich es wüsste!",
+          "exampleArabic": "Se eu soubesse!",
+          "type": "verb"
+        },
+        {
+          "german": "die Bedingung",
+          "arabic": "a condição",
+          "example": "Eine wichtige Bedingung.",
+          "exampleArabic": "Uma condição importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bedingungen"
+        },
+        {
+          "german": "die Voraussetzung",
+          "arabic": "o requisito / pré-requisito",
+          "example": "Was sind die Voraussetzungen?",
+          "exampleArabic": "Quais são os requisitos?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Voraussetzungen"
+        },
+        {
+          "german": "die Möglichkeit",
+          "arabic": "a possibilidade",
+          "example": "Es gibt eine Möglichkeit.",
+          "exampleArabic": "Há uma possibilidade.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "der Fall",
+          "arabic": "o caso",
+          "example": "In diesem Fall...",
+          "exampleArabic": "Neste caso...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Fälle"
+        },
+        {
+          "german": "der Wunsch",
+          "arabic": "o desejo",
+          "example": "Mein Wunsch ist...",
+          "exampleArabic": "Meu desejo é...",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Wünsche"
+        },
+        {
+          "german": "die Konsequenz",
+          "arabic": "a consequência",
+          "example": "Die Konsequenzen sind klar.",
+          "exampleArabic": "As consequências são claras.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Konsequenzen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "a decisão",
+          "example": "Die Entscheidung war richtig.",
+          "exampleArabic": "A decisão foi correta.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "das Risiko",
+          "arabic": "o risco",
+          "example": "Das Risiko ist groß.",
+          "exampleArabic": "O risco é grande.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Risiken"
+        },
+        {
+          "german": "die Gelegenheit",
+          "arabic": "a oportunidade",
+          "example": "Eine gute Gelegenheit.",
+          "exampleArabic": "Uma boa oportunidade.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gelegenheiten"
+        },
+        {
+          "german": "reich",
+          "arabic": "rico",
+          "example": "Wenn ich reich wäre...",
+          "exampleArabic": "Se eu fosse rico...",
+          "type": "adjective"
+        },
+        {
+          "german": "arm",
+          "arabic": "pobre",
+          "example": "Niemand will arm sein.",
+          "exampleArabic": "Ninguém quer ser pobre.",
+          "type": "adjective"
+        },
+        {
+          "german": "frei",
+          "arabic": "livre",
+          "example": "Wenn ich frei wäre...",
+          "exampleArabic": "Se eu fosse livre...",
+          "type": "adjective"
+        },
+        {
+          "german": "glücklich",
+          "arabic": "feliz",
+          "example": "Ich wäre glücklich.",
+          "exampleArabic": "Eu seria feliz.",
+          "type": "adjective"
+        },
+        {
+          "german": "zufrieden",
+          "arabic": "satisfeito",
+          "example": "Wir wären zufrieden.",
+          "exampleArabic": "Estaríamos satisfeitos.",
+          "type": "adjective"
+        },
+        {
+          "german": "theoretisch",
+          "arabic": "teoricamente",
+          "example": "Theoretisch ist es möglich.",
+          "exampleArabic": "Teoricamente é possível.",
+          "type": "adverb"
+        },
+        {
+          "german": "praktisch",
+          "arabic": "praticamente / na prática",
+          "example": "Praktisch geht das nicht.",
+          "exampleArabic": "Na prática isso não funciona.",
+          "type": "adverb"
+        },
+        {
+          "german": "angenommen",
+          "arabic": "suponha que",
+          "example": "Angenommen, du gewinnst.",
+          "exampleArabic": "Suponha que você ganhe.",
+          "type": "phrase"
+        },
+        {
+          "german": "realisieren",
+          "arabic": "realizar / concretizar",
+          "example": "Träume realisieren.",
+          "exampleArabic": "Realizar sonhos.",
+          "type": "verb"
+        },
+        {
+          "german": "verwirklichen",
+          "arabic": "tornar real / concretizar",
+          "example": "Pläne verwirklichen.",
+          "exampleArabic": "Concretizar planos.",
+          "type": "verb"
+        },
+        {
+          "german": "feiern",
+          "arabic": "comemorar",
+          "example": "Wir feiern den Erfolg.",
+          "exampleArabic": "Comemoramos o sucesso.",
+          "type": "verb"
+        },
+        {
+          "german": "die Hypothese",
+          "arabic": "a hipótese",
+          "plural": "die Hypothesen",
+          "example": "Eine Hypothese aufstellen.",
+          "exampleArabic": "Formular uma hipótese.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Vermutung",
+          "arabic": "a suposição",
+          "plural": "die Vermutungen",
+          "example": "Eine reine Vermutung.",
+          "exampleArabic": "Pura suposição.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Wirklichkeit",
+          "arabic": "a realidade",
+          "example": "Die Wirklichkeit ist anders.",
+          "exampleArabic": "A realidade é diferente.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Schicksal",
+          "arabic": "o destino",
+          "example": "Das ist mein Schicksal.",
+          "exampleArabic": "Esse é meu destino.",
+          "type": "noun",
+          "gender": "das"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q1",
+            "question": "Condicional real: \"Wenn ich Zeit ___, komme ich.\" (haben)",
+            "answer": "habe",
+            "hint": "presente — Indikativ"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q2",
+            "question": "Irreal: \"Wenn ich reich ___, würde ich reisen.\" (sein)",
+            "options": [
+              "bin",
+              "war",
+              "wäre",
+              "wäre gewesen"
+            ],
+            "answer": "wäre"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q3",
+            "question": "Sem wenn: \"___ ich Zeit, würde ich kommen.\" (haben Konj. II)",
+            "answer": "Hätte",
+            "hint": "verbo primeiro"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q4",
+            "question": "Irreal passado usa?",
+            "options": [
+              "hätte/wäre + Partizip",
+              "würde + Inf",
+              "Konj. II simples",
+              "Indikativ Perfekt"
+            ],
+            "answer": "hätte/wäre + Partizip"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q5",
+            "question": "Alternativa a wenn: \"___ es regnet, bleiben wir zu Hause.\" (caso)",
+            "answer": "Falls",
+            "hint": "falls = wenn formal"
+          },
+          {
+            "type": "matching",
+            "id": "b2-16-q6",
+            "question": "Associe o verbo ao seu Konj. II:",
+            "pairs": [
+              {
+                "left": "sein",
+                "right": "wäre"
+              },
+              {
+                "left": "haben",
+                "right": "hätte"
+              },
+              {
+                "left": "werden",
+                "right": "würde"
+              },
+              {
+                "left": "können",
+                "right": "könnte"
+              },
+              {
+                "left": "wissen",
+                "right": "wüsste"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-16-q7",
+            "question": "Ordene: \"Se eu tivesse tido tempo, teria vindo\" (irreal passado)",
+            "words": [
+              "Wenn",
+              "ich",
+              "Zeit",
+              "gehabt",
+              "hätte,",
+              "wäre",
+              "ich",
+              "gekommen"
+            ],
+            "answer": "Wenn ich Zeit gehabt hätte, wäre ich gekommen"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-16-q8",
+            "question": "Diga: \"Se eu fosse você, faria isso\"",
+            "answer": "Wenn ich du wäre, würde ich das machen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q9",
+            "question": "Escute: \"Wenn du gekommen ___, hätten wir gefeiert.\" (sein Konj. II passado)",
+            "audioPrompt": "Wenn du gekommen wärst, hätten wir gefeiert.",
+            "answer": "wärst",
+            "hint": "wärst = sein Konj. II com du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q10",
+            "question": "Estrutura mais comum para irreal presente:",
+            "options": [
+              "hätte gehabt",
+              "Wenn + Konj. II + würde + Inf",
+              "wenn + Indikativ",
+              "Imperativ"
+            ],
+            "answer": "Wenn + Konj. II + würde + Inf"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q11",
+            "question": "Konj. II de können?",
+            "answer": "könnte",
+            "hint": "können → könnte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q12",
+            "question": "Mais natural na fala para \"se eu fizesse\":",
+            "options": [
+              "ich täte",
+              "ich würde tun",
+              "ich tüte",
+              "ich werde tun"
+            ],
+            "answer": "ich würde tun"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q13",
+            "question": "\"Wenn ich es ___, würde ich antworten.\" (wissen Konj. II)",
+            "answer": "wüsste",
+            "hint": "wissen → wüsste"
+          },
+          {
+            "type": "matching",
+            "id": "b2-16-q14",
+            "question": "Associe o tipo à estrutura:",
+            "pairs": [
+              {
+                "left": "real presente",
+                "right": "wenn + Indikativ"
+              },
+              {
+                "left": "irreal presente",
+                "right": "wenn + Konj. II + würde"
+              },
+              {
+                "left": "irreal passado",
+                "right": "wenn + hätte/wäre + Partizip"
+              },
+              {
+                "left": "sem wenn",
+                "right": "verbo primeiro"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-16-q15",
+            "question": "Ordene: \"Se eu soubesse, eu te diria\"",
+            "words": [
+              "Wenn",
+              "ich",
+              "es",
+              "wüsste,",
+              "würde",
+              "ich",
+              "es",
+              "dir",
+              "sagen"
+            ],
+            "answer": "Wenn ich es wüsste, würde ich es dir sagen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q16",
+            "question": "Escute: \"___ ich Geld, würde ich reisen.\" (sem wenn)",
+            "audioPrompt": "Hätte ich Geld, würde ich reisen.",
+            "answer": "Hätte",
+            "hint": "verbo primeiro"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q17",
+            "question": "Qual é uma alternativa a wenn?",
+            "options": [
+              "falls",
+              "sofern",
+              "unter der Bedingung dass",
+              "todas as anteriores"
+            ],
+            "answer": "todas as anteriores"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-16-q18",
+            "question": "Diga: \"Se você tivesse vindo, teríamos comemorado\"",
+            "answer": "Wenn du gekommen wärst, hätten wir gefeiert"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-16-q19",
+            "question": "\"Wenn ich Zeit ___ ___, wäre ich gekommen.\" (haben — Konj. II passado)",
+            "answer": "gehabt hätte",
+            "hint": "gehabt + hätte"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-16-q20",
+            "question": "A frase \"Hätte ich Geld\" significa:",
+            "options": [
+              "Tenho dinheiro",
+              "Se eu tivesse dinheiro",
+              "Terei dinheiro",
+              "Eu tinha dinheiro"
+            ],
+            "answer": "Se eu tivesse dinheiro"
+          }
+        ]
+      }
+    },
+    "b2-15": {
+      "title": "Formação de palavras — Wortbildung",
+      "grammar": {
+        "title": "Nomes compostos (Komposita) + sufixos -keit/-heit/-ung + prefixos ver-/ent-/be-/zer-",
+        "content": "O alemão cria facilmente novas palavras através de **composição** (Komposita) e **sufixos e prefixos**. Se você dominar esses padrões, conseguirá entender milhares de palavras, até mesmo aquelas que nunca viu.\n\n**Komposita:** duas ou mais palavras unidas para formar uma. A **última** palavra determina o gênero.\n→ die Tür + der Schlüssel = **der Türschlüssel** (chave da porta)\n→ die Hand + die Tasche = **die Handtasche** (bolsa de mão)\n\n**Sufixos:** criam nomes a partir de verbos ou adjetivos. -ung, -heit, -keit, -er, -in.\n**Prefixos:** mudam o significado do verbo. ver-, ent-, be-, zer-, er-.",
+        "tables": [
+          {
+            "title": "Sufixos formadores de nomes",
+            "headers": [
+              "Sufixo",
+              "De",
+              "Exemplo",
+              "Significado"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-ung",
+                  "verbo",
+                  "lernen → die Lernung (aprendizado)",
+                  "verbo como nome"
+                ]
+              },
+              {
+                "cells": [
+                  "-heit",
+                  "adjetivo",
+                  "frei → die Freiheit (liberdade)",
+                  "adjetivo como estado"
+                ]
+              },
+              {
+                "cells": [
+                  "-keit",
+                  "adjetivo (em -ig/-lich)",
+                  "möglich → die Möglichkeit",
+                  "adjetivo como estado"
+                ]
+              },
+              {
+                "cells": [
+                  "-er",
+                  "verbo",
+                  "lehren → der Lehrer (professor)",
+                  "agente masculino"
+                ]
+              },
+              {
+                "cells": [
+                  "-in",
+                  "nome masculino",
+                  "der Lehrer → die Lehrerin",
+                  "contraparte feminina"
+                ]
+              },
+              {
+                "cells": [
+                  "-schaft",
+                  "nome/adjetivo",
+                  "die Freundschaft (amizade)",
+                  "grupo ou estado"
+                ]
+              },
+              {
+                "cells": [
+                  "-tum",
+                  "nome",
+                  "das Eigentum (propriedade)",
+                  "estado ou posse"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Nomes terminados em -ung/-heit/-keit/-schaft/-tion são **sempre femininos (die)**."
+          },
+          {
+            "title": "Prefixos que mudam o significado do verbo",
+            "headers": [
+              "Prefixo",
+              "Significado",
+              "Exemplo",
+              "Efeito"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ver-",
+                  "mudança de estado / conclusão",
+                  "kaufen → verkaufen",
+                  "vender (vs comprar)"
+                ]
+              },
+              {
+                "cells": [
+                  "ent-",
+                  "remoção / partida",
+                  "fliehen → entfliehen",
+                  "fugir de"
+                ]
+              },
+              {
+                "cells": [
+                  "be-",
+                  "ação sobre algo",
+                  "arbeiten → bearbeiten",
+                  "processar / editar"
+                ]
+              },
+              {
+                "cells": [
+                  "zer-",
+                  "destruição",
+                  "brechen → zerbrechen",
+                  "quebrar completamente"
+                ]
+              },
+              {
+                "cells": [
+                  "er-",
+                  "realização / conquista",
+                  "reichen → erreichen",
+                  "alcançar"
+                ]
+              },
+              {
+                "cells": [
+                  "miss-",
+                  "negativo / errado",
+                  "verstehen → missverstehen",
+                  "entender mal"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Esses prefixos são **inseparáveis** — permanecem ligados em todos os tempos."
+          },
+          {
+            "title": "Komposita — a última palavra determina o gênero",
+            "headers": [
+              "Composto",
+              "Gênero",
+              "Tradução"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der Bahn + der Hof = der Bahnhof",
+                  "der",
+                  "estação de trem"
+                ]
+              },
+              {
+                "cells": [
+                  "die Hand + die Tasche = die Handtasche",
+                  "die",
+                  "bolsa de mão"
+                ]
+              },
+              {
+                "cells": [
+                  "das Haus + die Tür = die Haustür",
+                  "die",
+                  "porta da frente"
+                ]
+              },
+              {
+                "cells": [
+                  "der Geburts + der Tag = der Geburtstag",
+                  "der",
+                  "aniversário"
+                ]
+              },
+              {
+                "cells": [
+                  "die Sprache + die Schule = die Sprachschule",
+                  "die",
+                  "escola de idiomas"
+                ]
+              }
+            ],
+            "theme": "default",
+            "note": "Lembre-se: o último nome no composto determina der/die/das."
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Todos os nomes terminados em -ung/-heit/-keit/-schaft/-tion/-ität são **femininos** (die).",
+            "example": "die Lösung, die Schönheit, die Möglichkeit, die Universität",
+            "translation": "a solução, beleza, possibilidade, universidade."
+          },
+          {
+            "rule": "Os prefixos ver/ent/be/zer/er/miss são inseparáveis e não recebem ge- no Partizip II.",
+            "example": "verkaufen → verkauft (não geverkauft)",
+            "translation": "vendido."
+          },
+          {
+            "rule": "Em Komposita, elementos de ligação (-s-/-n-/-en-) às vezes aparecem: Tageszeitung, Schweinefleisch.",
+            "example": "der Tag + die Zeitung → die Tageszeitung",
+            "translation": "jornal diário."
+          },
+          {
+            "rule": "Não tenha medo de palavras longas — divida-as da direita para a esquerda: Lebensversicherungsgesellschaft = Gesellschaft (empresa) ← Versicherung (seguro) ← Leben (vida).",
+            "example": "der Donaudampfschifffahrtskapitän",
+            "translation": "o capitão da companhia de navios a vapor do Danúbio."
+          }
+        ],
+        "examples": [
+          "der Bahnhof = die Bahn + der Hof — estação de trem.",
+          "die Möglichkeit = möglich + -keit — possibilidade.",
+          "die Schönheit = schön + -heit — beleza.",
+          "die Lehrerin = der Lehrer + -in — professora.",
+          "Er hat das Buch verkauft. — Ele vendeu o livro.",
+          "Das Glas ist zerbrochen. — O copo está quebrado.",
+          "Ich erreiche mein Ziel. — Estou alcançando meu objetivo.",
+          "Er hat mich missverstanden. — Ele me entendeu mal."
+        ],
+        "tip": "Aprenda 5 sufixos e 5 prefixos. Quando encontrar uma palavra longa nova, decomponha-a: ver- + kauf + -en. Dessa forma você compreenderá 50% do novo vocabulário sem dicionário."
+      },
+      "vocabulary": [
+        {
+          "german": "die Möglichkeit",
+          "arabic": "possibilidade",
+          "example": "Es gibt viele Möglichkeiten.",
+          "exampleArabic": "Há muitas possibilidades.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Möglichkeiten"
+        },
+        {
+          "german": "die Schwierigkeit",
+          "arabic": "dificuldade",
+          "example": "Die Schwierigkeit ist groß.",
+          "exampleArabic": "A dificuldade é grande.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwierigkeiten"
+        },
+        {
+          "german": "die Wirklichkeit",
+          "arabic": "realidade",
+          "example": "In der Wirklichkeit ist es anders.",
+          "exampleArabic": "Na realidade é diferente.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Freiheit",
+          "arabic": "liberdade",
+          "example": "Freiheit ist wichtig.",
+          "exampleArabic": "Liberdade é importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freiheiten"
+        },
+        {
+          "german": "die Gesundheit",
+          "arabic": "saúde",
+          "example": "Gesundheit ist alles.",
+          "exampleArabic": "Saúde é tudo.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Schönheit",
+          "arabic": "beleza",
+          "example": "Die Schönheit der Stadt.",
+          "exampleArabic": "A beleza da cidade.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schönheiten"
+        },
+        {
+          "german": "die Lösung",
+          "arabic": "solução",
+          "example": "Wir suchen eine Lösung.",
+          "exampleArabic": "Estamos procurando uma solução.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lösungen"
+        },
+        {
+          "german": "die Bewegung",
+          "arabic": "movimento",
+          "example": "In Bewegung bleiben.",
+          "exampleArabic": "Permanecer em movimento.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Bewegungen"
+        },
+        {
+          "german": "die Entscheidung",
+          "arabic": "decisão",
+          "example": "Eine wichtige Entscheidung.",
+          "exampleArabic": "Uma decisão importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Entscheidungen"
+        },
+        {
+          "german": "die Erfahrung",
+          "arabic": "experiência",
+          "example": "Aus Erfahrung weiß ich es.",
+          "exampleArabic": "Sei por experiência.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Erfahrungen"
+        },
+        {
+          "german": "die Gesellschaft",
+          "arabic": "sociedade / empresa",
+          "example": "Die Gesellschaft verändert sich.",
+          "exampleArabic": "A sociedade está mudando.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Gesellschaften"
+        },
+        {
+          "german": "die Freundschaft",
+          "arabic": "amizade",
+          "example": "Wir haben eine alte Freundschaft.",
+          "exampleArabic": "Temos uma amizade antiga.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundschaften"
+        },
+        {
+          "german": "die Universität",
+          "arabic": "universidade",
+          "example": "Ich studiere an der Universität.",
+          "exampleArabic": "Estudo na universidade.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Universitäten"
+        },
+        {
+          "german": "die Information",
+          "arabic": "informação",
+          "example": "Eine wichtige Information.",
+          "exampleArabic": "Uma informação importante.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Informationen"
+        },
+        {
+          "german": "die Nation",
+          "arabic": "nação",
+          "example": "Die deutsche Nation.",
+          "exampleArabic": "A nação alemã.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Nationen"
+        },
+        {
+          "german": "verkaufen",
+          "arabic": "vender",
+          "example": "Ich verkaufe mein Auto.",
+          "exampleArabic": "Estou vendendo meu carro.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "entender",
+          "example": "Ich verstehe dich.",
+          "exampleArabic": "Eu te entendo.",
+          "type": "verb"
+        },
+        {
+          "german": "vergessen",
+          "arabic": "esquecer",
+          "example": "Vergiss das nicht!",
+          "exampleArabic": "Não esqueça disso!",
+          "type": "verb"
+        },
+        {
+          "german": "entdecken",
+          "arabic": "descobrir",
+          "example": "Wir haben es entdeckt.",
+          "exampleArabic": "Nós descobrimos.",
+          "type": "verb"
+        },
+        {
+          "german": "entscheiden",
+          "arabic": "decidir",
+          "example": "Du musst entscheiden.",
+          "exampleArabic": "Você tem que decidir.",
+          "type": "verb"
+        },
+        {
+          "german": "bearbeiten",
+          "arabic": "processar / editar",
+          "example": "Ich bearbeite den Text.",
+          "exampleArabic": "Estou editando o texto.",
+          "type": "verb"
+        },
+        {
+          "german": "besuchen",
+          "arabic": "visitar",
+          "example": "Ich besuche meine Familie.",
+          "exampleArabic": "Estou visitando minha família.",
+          "type": "verb"
+        },
+        {
+          "german": "zerbrechen",
+          "arabic": "quebrar / despedaçar",
+          "example": "Das Glas ist zerbrochen.",
+          "exampleArabic": "O copo está quebrado.",
+          "type": "verb"
+        },
+        {
+          "german": "zerstören",
+          "arabic": "destruir",
+          "example": "Der Krieg zerstört alles.",
+          "exampleArabic": "A guerra destrói tudo.",
+          "type": "verb"
+        },
+        {
+          "german": "erreichen",
+          "arabic": "alcançar / atingir",
+          "example": "Ich erreiche das Ziel.",
+          "exampleArabic": "Estou alcançando o objetivo.",
+          "type": "verb"
+        },
+        {
+          "german": "missverstehen",
+          "arabic": "entender mal",
+          "example": "Du missverstehst mich!",
+          "exampleArabic": "Você está me entendendo mal!",
+          "type": "verb"
+        },
+        {
+          "german": "der Bahnhof",
+          "arabic": "estação de trem",
+          "example": "Wir treffen uns am Bahnhof.",
+          "exampleArabic": "Nos encontramos na estação.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Bahnhöfe"
+        },
+        {
+          "german": "der Geburtstag",
+          "arabic": "aniversário",
+          "example": "Mein Geburtstag ist im Mai.",
+          "exampleArabic": "Meu aniversário é em maio.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Geburtstage"
+        },
+        {
+          "german": "die Handtasche",
+          "arabic": "bolsa de mão",
+          "example": "Wo ist meine Handtasche?",
+          "exampleArabic": "Onde está minha bolsa?",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Handtaschen"
+        },
+        {
+          "german": "die Tageszeitung",
+          "arabic": "jornal diário",
+          "example": "Ich lese die Tageszeitung.",
+          "exampleArabic": "Leio o jornal diário.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Tageszeitungen"
+        },
+        {
+          "german": "die Sprachschule",
+          "arabic": "escola de idiomas",
+          "example": "Goethe ist eine Sprachschule.",
+          "exampleArabic": "Goethe é uma escola de idiomas.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachschulen"
+        },
+        {
+          "german": "die Wortbildung",
+          "arabic": "formação de palavras",
+          "example": "Wortbildung im Deutschen.",
+          "exampleArabic": "Formação de palavras em alemão.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Vorsilbe",
+          "arabic": "o prefixo",
+          "plural": "die Vorsilben",
+          "example": "be- ist eine Vorsilbe.",
+          "exampleArabic": "be- é um prefixo.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Endsilbe",
+          "arabic": "o sufixo",
+          "plural": "die Endsilben",
+          "example": "-ung ist eine Endsilbe.",
+          "exampleArabic": "-ung é um sufixo.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "die Zusammensetzung",
+          "arabic": "a palavra composta",
+          "plural": "die Zusammensetzungen",
+          "example": "Eine deutsche Zusammensetzung.",
+          "exampleArabic": "Um composto alemão.",
+          "type": "noun",
+          "gender": "die"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q1",
+            "question": "O sufixo -ung sempre faz a palavra ser ___ (gênero).",
+            "answer": "die",
+            "hint": "Todos os nomes em -ung são femininos"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q2",
+            "question": "Em Komposita \"der Bahnhof\", o gênero vem de?",
+            "options": [
+              "a primeira palavra",
+              "a última palavra",
+              "a gramática decide",
+              "sem gênero"
+            ],
+            "answer": "a última palavra"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q3",
+            "question": "O prefixo para significar \"vender\" de kaufen é ___-.",
+            "answer": "ver",
+            "hint": "verkaufen"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q4",
+            "question": "Adjetivo → nome em -keit: möglich → ?",
+            "options": [
+              "Möglichung",
+              "Möglichkeit",
+              "Möglichheit",
+              "Möglichschaft"
+            ],
+            "answer": "Möglichkeit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q5",
+            "question": "die Hand + die Tasche = die ___.",
+            "answer": "Handtasche",
+            "hint": "Komposita sem sufixo"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q6",
+            "question": "Relacione o prefixo ao seu significado:",
+            "pairs": [
+              {
+                "left": "ver-",
+                "right": "mudança de estado"
+              },
+              {
+                "left": "ent-",
+                "right": "remoção"
+              },
+              {
+                "left": "zer-",
+                "right": "destruição"
+              },
+              {
+                "left": "be-",
+                "right": "ação sobre"
+              },
+              {
+                "left": "er-",
+                "right": "realização"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q7",
+            "question": "Forme: \"A estação de trem fica em Berlim\"",
+            "words": [
+              "Der",
+              "Bahnhof",
+              "ist",
+              "in",
+              "Berlin"
+            ],
+            "answer": "Der Bahnhof ist in Berlin"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q8",
+            "question": "Diga: \"Estou procurando uma solução\" (com Lösung)",
+            "answer": "Ich suche eine Lösung"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q9",
+            "question": "Ouça: \"Die ___ ist groß.\" (a dificuldade)",
+            "audioPrompt": "Die Schwierigkeit ist groß.",
+            "answer": "Schwierigkeit",
+            "hint": "schwierig + -keit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q10",
+            "question": "Quais verbos não recebem \"ge-\" no Partizip II?",
+            "options": [
+              "ver/ent/be",
+              "kaufen/lernen",
+              "os verbos inseparáveis ver/ent/be",
+              "todos os verbos"
+            ],
+            "answer": "os verbos inseparáveis ver/ent/be"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q11",
+            "question": "Adjetivo → nome em -heit: schön → die ___",
+            "answer": "Schönheit",
+            "hint": "schön + heit"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q12",
+            "question": "O sufixo para o nome do agente feminino:",
+            "options": [
+              "-er",
+              "-in",
+              "-tum",
+              "-schaft"
+            ],
+            "answer": "-in"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q13",
+            "question": "die Hand + der Schuh = der ___",
+            "answer": "Handschuh",
+            "hint": "a última palavra → der"
+          },
+          {
+            "type": "matching",
+            "id": "b2-15-q14",
+            "question": "Relacione a palavra ao seu sufixo:",
+            "pairs": [
+              {
+                "left": "die Möglichkeit",
+                "right": "-keit"
+              },
+              {
+                "left": "die Freundschaft",
+                "right": "-schaft"
+              },
+              {
+                "left": "die Universität",
+                "right": "-ität"
+              },
+              {
+                "left": "die Lösung",
+                "right": "-ung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b2-15-q15",
+            "question": "Decomponha Komposita: \"die Sprachschule\"",
+            "words": [
+              "die",
+              "Sprache",
+              "+",
+              "die",
+              "Schule"
+            ],
+            "answer": "die Sprache + die Schule"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q16",
+            "question": "Ouça: \"Eine wichtige ___\" (desenvolvimento)",
+            "audioPrompt": "Eine wichtige Entwicklung.",
+            "answer": "Entwicklung",
+            "hint": "entwickeln + ung"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q17",
+            "question": "O prefixo zer- significa:",
+            "options": [
+              "repetição",
+              "realização",
+              "destruição",
+              "remoção"
+            ],
+            "answer": "destruição"
+          },
+          {
+            "type": "speaking",
+            "id": "b2-15-q18",
+            "question": "Diga: \"Alcanço meu objetivo\" (com erreichen)",
+            "answer": "Ich erreiche mein Ziel"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b2-15-q19",
+            "question": "die Tat + die Sache = die ___ (coisa real)",
+            "answer": "Tatsache",
+            "hint": "Komposita simples"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b2-15-q20",
+            "question": "Todos os nomes em -ung, -heit, -keit são femininos. Verdadeiro ou falso?",
+            "options": [
+              "verdadeiro",
+              "falso",
+              "apenas -ung",
+              "depende"
+            ],
+            "answer": "verdadeiro"
+          }
+        ]
+      }
     }
   }
 }
