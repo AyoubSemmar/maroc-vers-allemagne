@@ -144,13 +144,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     headline: article.title,
     description: article.summary,
     datePublished: article.date,
+    dateModified: article.date,
     image: article.image_url ? [article.image_url] : undefined,
     inLanguage: locale,
-    author: { '@type': 'Organization', name: 'GoGermany.ma' },
+    // Editorial-team authorship for E-E-A-T, linked to the about page that
+    // describes who writes/reviews the content.
+    author: {
+      '@type': 'Organization',
+      name: 'GoGermany Editorial Team',
+      url: `${SITE}/${locale}/about`,
+    },
     publisher: {
       '@type': 'Organization',
       name: 'GoGermany.ma',
       url: SITE,
+      logo: { '@type': 'ImageObject', url: `${SITE}/icon.svg` },
     },
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/${locale}/articles/${article.id}` },
     articleSection: catLabel(article.category),
@@ -201,7 +209,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {article.title}
         </h1>
 
-        <p className="text-xs text-gray-400 mb-6">{article.date}</p>
+        {/* Visible byline — E-E-A-T authorship signal, links to the
+            editorial team's about page. */}
+        <p className="text-xs text-gray-400 mb-6">
+          <Link href="/about" className="hover:underline">{t('byline')}</Link>
+          {' · '}{article.date}
+        </p>
 
         <p className="text-lg text-gray-600 mb-8 border-r-4 border-green-500 pr-4">
           {article.summary}
