@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
+import { classesStrings } from '@/components/classes/strings'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import JsonLd from '@/components/seo/JsonLd'
@@ -123,6 +124,29 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       </header>
 
       <div className="lg-body wrap">
+        {/* Live A1 classes CTA — taught online in small groups (paid, 200 DH/mo) */}
+        {(() => {
+          const ct = classesStrings(locale)
+          return (
+            <Link
+              href="/learn-german/classes"
+              className="lg-live-cta"
+              style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                gap: 16, flexWrap: 'wrap',
+                background: 'linear-gradient(135deg,#F08A2E 0%,#F4C842 100%)',
+                color: '#1a1a1a', borderRadius: 16, padding: '18px 22px', marginBottom: 28,
+                textDecoration: 'none', boxShadow: '0 10px 28px -12px rgba(232,124,55,.5)',
+              }}
+            >
+              <span style={{ fontWeight: 800, fontSize: 17 }}>🎥 {ct.title}</span>
+              <span style={{ fontWeight: 700, fontSize: 14, background: 'rgba(255,255,255,.55)', padding: '8px 16px', borderRadius: 999 }}>
+                {ct.book} →
+              </span>
+            </Link>
+          )
+        })()}
+
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />
 
