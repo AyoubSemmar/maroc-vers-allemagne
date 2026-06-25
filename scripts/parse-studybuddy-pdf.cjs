@@ -39,6 +39,10 @@ const OUT_PATH = path.join(__dirname, '..', 'lib', 'studybuddy', 'tasks.generate
 //   • Deploy is MANUAL: `vercel --prod` from the repo (deploys the local
 //     working tree). Vercel is NOT wired to the self-hosted GitLab.
 const OVERRIDES = {
+  // DSGVO guard on production monitoring: no PII / user content in error reports.
+  's7-24': {
+    prompt: 'Ich bin Abder im StudyBuddy-Team. Heute härte ich Production.\nBitte führe mich Schritt für Schritt durch:\n1. Sentry oder Logflare integrieren — DSGVO-konform: EU-Region wählen und beforeSend so konfigurieren, dass KEINE personenbezogenen Daten oder Nutzer-/PDF-Inhalte im Fehlerbericht landen (PII scrubben).\n2. Uptime-Monitor (z.B. UptimeRobot) nur auf /api/health, ohne Nutzerdaten.\n3. Git-Befehle.\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.',
+  },
   // Deployment-safety: de-hardcode migration numbers (the real repo's
   // sequence diverged once Sprints 1–2 shipped) and pin every user_id FK
   // to auth.users (not public.users) so tables work with the anonymous
@@ -87,6 +91,61 @@ const OVERRIDES = {
 // Person + role mapping (matches our existing types).
 const VALID_PEOPLE = new Set(['Leon', 'Taycir', 'Ayoub', 'Sara', 'Abder'])
 const VALID_ROLES  = new Set(['PM', 'KI', 'FE', 'QA', 'BE'])
+
+// Extra easy-but-technical tasks for Leon (PM/KI-Lead) so he also gets hands-on
+// coding practice. Not in the source PDF — added here and kept across re-runs.
+// All non-blocking (blocker:false, prereqs:[]), high taskNum (37) so they never
+// collide with PDF task numbers referenced by other tasks' prereqs.
+const EXTRA_TASKS = [
+  {
+    id: "s3-37", sprintNum: "03", taskNum: "37", welle: 3, who: "Leon", role: "KI",
+    blocker: false, priorityInfo: "Technische Übung — parallel möglich, blockiert niemanden",
+    title: "Token-Zähler-Helper schreiben (+ Unit-Test)",
+    prereqs: [], bullets: ["docs/ai-models.md (Token-Strategie)", "Node + npm lokal"],
+    erfolg: "src/lib/ai/token-count.ts schätzt Tokens, Unit-Test grün.",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Als PM lerne ich auch die Technik — heute eine kleine, einfache Aufgabe: ein Token-Zähler.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/ai/token-count.ts: eine einfache Funktion estimateTokens(text: string): number (grobe Schätzung, z. B. Anzahl Wörter * 1.3) mit kurzem englischem JSDoc-Kommentar.\n2. Ein Jest-Unit-Test __tests__/lib/ai/token-count.test.ts mit 2-3 Fällen (leerer String, ein Satz, langer Text).\n3. Erkläre mir jede Zeile kurz auf Deutsch, damit ich es verstehe.\n4. Git-Befehle für feature/token-count-helper.\nWichtig: kein Aufruf der echten KI nötig, reine Hilfsfunktion. Gib mir alles als Code-Block, ich kopiere selbst.",
+  },
+  {
+    id: "s4-37", sprintNum: "04", taskNum: "37", welle: 4, who: "Leon", role: "FE",
+    blocker: false, priorityInfo: "Technische Übung — parallel möglich, blockiert niemanden",
+    title: "Kleine UI-Komponente: Fortschritts-Badge (+ Snapshot-Test)",
+    prereqs: [], bullets: ["Tailwind-Design-Tokens", "Node + npm lokal"],
+    erfolg: "ProgressBadge zeigt 'Frage X von Y', Snapshot-Test grün.",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Heute baue ich als technische Übung eine kleine UI-Komponente.\nBitte führe mich Schritt für Schritt durch:\n1. src/components/ui/ProgressBadge.tsx: zeigt 'Frage {current} von {total}'. Nutze ausschließlich Tailwind-Klassen mit unseren Tokens (navy/orange/cream), KEINE Inline-Styles.\n2. Props sauber mit TypeScript typisieren (current: number, total: number), kurzer englischer Kommentar.\n3. Snapshot-Test __tests__/components/ui/ProgressBadge.test.tsx.\n4. Erkläre mir die Komponente Schritt für Schritt auf Deutsch.\n5. Git-Befehle für feature/progress-badge.\nGib mir alles als Code-Block, ich kopiere selbst.",
+  },
+  {
+    id: "s5-37", sprintNum: "05", taskNum: "37", welle: 5, who: "Leon", role: "FE",
+    blocker: false, priorityInfo: "Technische Übung — parallel möglich, blockiert niemanden",
+    title: "Footer-Datenschutz-Link über siteConfig",
+    prereqs: [], bullets: ["src/config/site.ts", "src/components/layout/Footer.tsx"],
+    erfolg: "Footer zeigt Datenschutz-Link aus siteConfig (kein hartcodierter String).",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Heute eine kleine technische Aufgabe rund um saubere Konfiguration.\nBitte führe mich Schritt für Schritt durch:\n1. In src/config/site.ts einen Eintrag links.privacy = '/datenschutz' ergänzen (so behalten wir Strings zentral, keine hartcodierten Texte in Komponenten).\n2. Im Footer (src/components/layout/Footer.tsx) diesen Link aus siteConfig rendern.\n3. Kurzer Check, dass der Link sichtbar ist.\n4. Erkläre mir auf Deutsch, warum zentrale Konfiguration besser ist als hartcodierte Strings.\n5. Git-Befehle für feature/footer-privacy-link.\nGib mir alles als Code-Block, ich kopiere selbst.",
+  },
+  {
+    id: "s6-37", sprintNum: "06", taskNum: "37", welle: 5, who: "Leon", role: "FE",
+    blocker: false, priorityInfo: "Technische Übung — parallel möglich, blockiert niemanden",
+    title: "Hilfsfunktion: deutsches Datum formatieren (+ Unit-Test)",
+    prereqs: [], bullets: ["src/lib/", "Node + npm lokal"],
+    erfolg: "src/lib/format-date.ts + Test grün, in der Dokumenten-Liste genutzt.",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Heute schreibe ich als technische Übung eine kleine Hilfsfunktion.\nBitte führe mich Schritt für Schritt durch:\n1. src/lib/format-date.ts: formatGermanDate(date: Date | string): string -> liefert z. B. '25. Juni 2026' auf Deutsch (mit Intl.DateTimeFormat, locale 'de-DE').\n2. Jest-Unit-Test __tests__/lib/format-date.test.ts mit 2 Fällen.\n3. Zeig mir, wie ich die Funktion in der Dokumenten-Liste für das Upload-Datum verwende.\n4. Erkläre mir Intl.DateTimeFormat kurz auf Deutsch.\n5. Git-Befehle für feature/format-date.\nGib mir alles als Code-Block, ich kopiere selbst.",
+  },
+  {
+    id: "s7-37", sprintNum: "07", taskNum: "37", welle: 5, who: "Leon", role: "QA",
+    blocker: false, priorityInfo: "Technische Übung — hilft der Test-Coverage",
+    title: "Unit-Tests für eine bestehende Hilfsfunktion schreiben",
+    prereqs: [], bullets: ["bestehende src/lib/-Funktionen", "Coverage-Ziel > 60 %"],
+    erfolg: "Mind. 4 neue Unit-Tests grün, Coverage steigt messbar.",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Heute helfe ich bei der Test-Abdeckung mit einer einfachen Aufgabe.\nBitte führe mich Schritt für Schritt durch:\n1. Schau dir eine bestehende Hilfsfunktion in src/lib/ an (z. B. utils.ts, token-count.ts oder format-date.ts).\n2. Schreib mind. 4 Jest-Unit-Tests dafür (Normalfall + Randfälle wie leerer/ungültiger Input).\n3. Zeig mir, wie ich 'npm test -- --coverage' lese und welche Zeilen jetzt abgedeckt sind.\n4. Git-Befehle für feature/leon-unit-tests.\nGib mir alles als Code-Block, ich kopiere selbst.",
+  },
+  {
+    id: "s8-37", sprintNum: "08", taskNum: "37", welle: 3, who: "Leon", role: "FE",
+    blocker: false, priorityInfo: "Technische Übung — parallel möglich, blockiert niemanden",
+    title: "README: Tech-Stack-Tabelle + 'Lokal starten'",
+    prereqs: [], bullets: ["README.md"],
+    erfolg: "README hat aktuelle Tech-Stack-Tabelle + Start-Anleitung.",
+    prompt: "Ich bin Leon im StudyBuddy-Team. Heute aktualisiere ich das README technisch.\nBitte führe mich Schritt für Schritt durch:\n1. Eine Markdown-Tabelle mit unserem echten Stack: Next.js 14 (App Router), TypeScript, Tailwind v3, Supabase (EU Frankfurt), KI Connect / OpenAI-GPT-5-Mini, Vercel (manuelles Deploy).\n2. Ein paar statische Shields.io-Badges (Next.js, TypeScript, License).\n3. Abschnitt 'Lokal starten': npm install, npm run dev, npm run check:all.\n4. Git-Befehle für feature/readme-stack.\nGib mir alles als Code-Block, ich kopiere selbst.",
+  },
+]
 
 async function main() {
   const buf = fs.readFileSync(PDF_PATH)
@@ -208,6 +267,14 @@ async function main() {
   for (const id of Object.keys(OVERRIDES)) {
     if (!tasks.some(t => t.id === id)) console.error(`WARN: override ${id} matched no task`)
   }
+
+  // Append the extra "easy technical" Leon tasks (not in the source PDF) so a
+  // re-run keeps them. They are non-blocking with no prereqs, so they never
+  // affect the dependency graph.
+  for (const t of EXTRA_TASKS) {
+    if (!tasks.some(x => x.id === t.id)) tasks.push(t)
+  }
+  console.error(`appended ${EXTRA_TASKS.length} extra tasks`)
 
   // Group by sprint
   const bySprint = {}
