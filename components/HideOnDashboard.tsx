@@ -5,14 +5,16 @@ import { usePathname } from 'next/navigation'
 // The dashboard provides its own shell (sidebar + topbar) and hides the
 // global site chrome (announcement banner, RihlaNav, RihlaFooter).
 // /studybuddy is an internal team-only page with its own design; it
-// shouldn't carry the public site chrome either.
+// shouldn't carry the public site chrome either. /console-x7k9 (admin) has
+// its own AdminShell, so the public nav/footer must not wrap it.
 // `usePathname` from next/navigation includes the locale prefix.
 const IS_DASHBOARD  = /^\/[^/]+\/dashboard(\/|$)/
 const IS_STUDYBUDDY = /^\/[^/]+\/studybuddy(\/|$)/
+const IS_CONSOLE    = /^\/[^/]+\/console-x7k9(\/|$)/
 
 export default function HideOnDashboard({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   if (!pathname) return <>{children}</>
-  if (IS_DASHBOARD.test(pathname) || IS_STUDYBUDDY.test(pathname)) return null
+  if (IS_DASHBOARD.test(pathname) || IS_STUDYBUDDY.test(pathname) || IS_CONSOLE.test(pathname)) return null
   return <>{children}</>
 }
