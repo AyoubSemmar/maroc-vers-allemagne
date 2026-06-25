@@ -16,6 +16,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
 import { createClient } from '@supabase/supabase-js'
 import { requireAdmin } from '@/lib/admin-gate'
+import { localesFor } from '@/lib/article-audience'
 
 export const runtime = 'nodejs'
 // 60s is the Pro-tier sweet spot for a Sonnet call that returns a 4-
@@ -74,14 +75,18 @@ function parseJsonLoose(s: string): any {
   return JSON.parse(cleaned.slice(first, last + 1))
 }
 
-function buildPrompt(category: string, categoryEn: string, existingTitles: string[]) {
+function buildPrompt(category: string, categoryEn: string, existingTitles: string[], givenTitle: string) {
   const dupesBlock = existingTitles.length
     ? `\n\nExisting article titles in this category (DO NOT duplicate, pick a different angle):\n${existingTitles.map(t => '- ' + t).slice(0, 40).join('\n')}`
     : ''
 
+  const titleBlock = givenTitle
+    ? `\n\n⚠ WRITE THE ARTICLE FOR THIS EXACT TOPIC/TITLE (translate the title into natural Arabic for the "title" field, keep the same meaning): "${givenTitle}"`
+    : ''
+
   return `You are a senior bilingual editor for gogermany.ma — a site that helps people from any country move to Germany. Write ONE original, useful, SEO-friendly article in ARABIC ONLY. Translations are handled by a separate step — DO NOT translate.
 
-Category: ${category} (${categoryEn})
+Category: ${category} (${categoryEn})${titleBlock}
 
 ⚠ CRITICAL: The article's TOPIC must clearly belong to this category. If the category is "السكن" (housing), do NOT write about taxes or jobs — even tangentially. Stay tightly on-topic so admins filtering by category get relevant results. The category in the output is fixed by the system; your job is to make sure the CONTENT matches it.
 
@@ -90,7 +95,7 @@ Audience: international readers (Arabic-first for this draft), often young, plan
 Quality bar:
 - Specific, actionable, NOT generic. Mention concrete agencies, websites, costs in EUR, document names, typical timelines.
 - 500–750 words for the Arabic content (markdown allowed: headings ##, lists, **bold**). Tight beats long.
-- 4 FAQs at the end, each genuinely useful.
+- EXACTLY 5 FAQs at the end, each a genuinely useful question/answer real readers ask.
 - Friendly, plain language. No fluff intros.
 - Title is concrete and click-worthy (no clickbait), under 80 chars.
 - Summary is one sentence, under 160 chars (used as meta description).
@@ -132,6 +137,10 @@ export async function POST(req: NextRequest) {
       ? requested
       : CATEGORIES[Math.floor(Math.random() * CATEGORIES.length)]
     const categoryEn = CATEGORY_EN[category]
+    // Admin-supplied title (new flow) — the model writes the article for this
+    // exact topic instead of inventing one.
+    const givenTitle = typeof body?.title === 'string' ? body.title.trim().slice(0, 200) : ''
+    const audience = typeof body?.audience === 'string' ? body.audience : 'global'
 
     // Pull existing titles in this category so the model can avoid repeating.
     const supabase = createClient(
@@ -156,9 +165,9 @@ export async function POST(req: NextRequest) {
     const client = new Anthropic({ apiKey })
     const resp = await client.messages.create({
       model: 'claude-haiku-4-5',
-      max_tokens: 3500,
+      max_tokens: 4000,
       temperature: 0.8,
-      messages: [{ role: 'user', content: buildPrompt(category, categoryEn, existingTitles) }],
+      messages: [{ role: 'user', content: buildPrompt(category, categoryEn, existingTitles, givenTitle) }],
     })
 
     const text = resp.content.map(c => (c.type === 'text' ? c.text : '')).join('')
@@ -189,8 +198,10 @@ export async function POST(req: NextRequest) {
 
     // Translations + image fill in via separate endpoints called by the
     // client after this one returns. Each step has its own 60s budget.
-    const draft: Draft = {
+    const draft: Draft & { audience: string; locales: string[] } = {
       category,
+      audience,
+      locales: localesFor(audience),
       date: new Date().toISOString().slice(0, 10),
       title: String(parsed.title),
       summary: String(parsed.summary),

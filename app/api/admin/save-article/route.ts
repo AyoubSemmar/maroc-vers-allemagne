@@ -53,15 +53,23 @@ export async function POST(req: NextRequest) {
     // failed / was skipped). The localizer (lib/i18n-content.ts) uses
     // `??` so empty strings would override the Arabic source — better
     // to omit the slot entirely and let the fallback handle it.
+    const ALL_LOCALES = ['fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl'] as const
     const cleanTranslations: Record<string, any> = {}
     if (d.translations && typeof d.translations === 'object') {
-      for (const lang of ['fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru'] as const) {
+      for (const lang of ALL_LOCALES) {
         const t = d.translations[lang]
-        if (t && t.title && t.content) {
-          cleanTranslations[lang] = t
-        }
+        if (t && t.title && t.content) cleanTranslations[lang] = t
       }
     }
+
+    // Locale policy: base is Arabic, so the available set is ['ar', ...the
+    // locales we actually have translations for]. Stamp _meta so listings,
+    // search and the sitemap show this article only in those languages.
+    const audience = typeof d.audience === 'string' ? d.audience : 'global'
+    const policyLocales: string[] = Array.isArray(d.locales) && d.locales.length ? d.locales : null
+    const availableLocales = (policyLocales ?? ['ar', ...Object.keys(cleanTranslations)])
+      .filter((l: string) => l === 'ar' || cleanTranslations[l])
+    cleanTranslations._meta = { audience, locales: availableLocales }
 
     const row = {
       title:        d.title,
@@ -72,7 +80,7 @@ export async function POST(req: NextRequest) {
       image_url:    d.image_url || null,
       faqs:         Array.isArray(d.faqs) ? d.faqs : [],
       featured:     false,
-      translations: Object.keys(cleanTranslations).length ? cleanTranslations : null,
+      translations: cleanTranslations,
     }
 
     const { data, error } = await supabase
