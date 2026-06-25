@@ -14,7 +14,6 @@ const sbAdmin = createClient(
 )
 
 const ADSENSE_CONNECTED = !!process.env.ADSENSE_OAUTH_REFRESH_TOKEN
-const GA_CONNECTED = !!process.env.GA4_PROPERTY_ID
 
 export default async function AdminRevenuePage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   await params
@@ -54,11 +53,11 @@ export default async function AdminRevenuePage({ params }: { params: Promise<{ l
           <div className="adm-kpi-value">{ADSENSE_CONNECTED ? '—' : 'Not connected'}</div>
           <div className="adm-kpi-sub">{ADSENSE_CONNECTED ? 'Live earnings' : 'See setup below'}</div>
         </div>
-        <div className="adm-kpi adm-kpi--violet">
-          <div className="adm-kpi-label">Traffic (GA)</div>
-          <div className="adm-kpi-value">{GA_CONNECTED ? '—' : 'Not connected'}</div>
-          <div className="adm-kpi-sub">{GA_CONNECTED ? 'Live sessions' : 'See setup below'}</div>
-        </div>
+        <Link href="/console-x7k9/analytics" className="adm-kpi adm-kpi--violet" style={{ textDecoration: 'none' }}>
+          <div className="adm-kpi-label">Traffic</div>
+          <div className="adm-kpi-value" style={{ fontSize: 20 }}>Analytics →</div>
+          <div className="adm-kpi-sub">First-party pageviews & searches</div>
+        </Link>
       </div>
 
       {/* Per-group class revenue */}
@@ -86,18 +85,6 @@ export default async function AdminRevenuePage({ params }: { params: Promise<{ l
             Once the account is approved: create an OAuth client in Google Cloud, authorize the AdSense scope, and set
             <code> ADSENSE_OAUTH_REFRESH_TOKEN</code>, <code>ADSENSE_OAUTH_CLIENT_ID</code>, <code>ADSENSE_OAUTH_CLIENT_SECRET</code>,
             and <code>ADSENSE_ACCOUNT_ID</code> in Vercel. Tell me when you have them and I&rsquo;ll wire the live numbers.
-          </p>
-        </section>
-      )}
-      {!GA_CONNECTED && (
-        <section className="adm-card" style={{ marginTop: 12 }}>
-          <div className="adm-card-head"><h3 className="adm-card-title">📊 Connect Google Analytics traffic</h3></div>
-          <p style={{ fontSize: 13, color: '#5a6072', lineHeight: 1.6 }}>
-            Show sessions, top pages and country breakdown from GA4 via the Data API. Needs a Google Cloud
-            <strong> service account</strong> with Viewer access to your GA4 property. Steps: create a service account →
-            add its email as a Viewer in GA4 Admin → download the JSON key → set <code>GA4_PROPERTY_ID</code> and
-            <code> GA4_SERVICE_ACCOUNT_JSON</code> (the key, single line) in Vercel. Send me those and I&rsquo;ll wire the
-            traffic dashboard.
           </p>
         </section>
       )}

@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import TrackSearch from '@/components/analytics/TrackSearch'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -68,6 +69,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
+      {q && <TrackSearch term={q} />}
       <div className="max-w-5xl mx-auto px-4 py-10">
 
         <h1 className="text-2xl font-bold text-gray-900 mb-2">

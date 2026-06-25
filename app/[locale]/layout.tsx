@@ -13,6 +13,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
+import AnalyticsBeacon from "@/components/analytics/AnalyticsBeacon";
 
 // Public AdSense publisher id (permanent, safe to commit — it's in the page
 // source for every visitor). The loader script below makes the site verifiable
@@ -152,6 +153,7 @@ export default async function LocaleLayout({
             <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           )}
           <Analytics />
+          {!isTrackerHost && <AnalyticsBeacon />}
         </NextIntlClientProvider>
       </body>
       {/* Skip gogermany's Google Analytics on the tracker host — the
