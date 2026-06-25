@@ -5,8 +5,11 @@
 // login screen is shown directly (without the shell).
 import { cookies } from 'next/headers'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { Link } from '@/i18n/navigation'
 import AdminShell from '@/components/admin/AdminShell'
 import { login } from './actions.js'
+import { createClient } from '@/lib/supabase-server'
+import { isAdmin } from '@/lib/entitlements'
 import '@/components/admin/admin.css'
 
 type Props = {
@@ -17,7 +20,18 @@ type Props = {
 export default async function AdminLayout({ children, params }: Props) {
   const { locale } = await params
   const cookieStore = await cookies()
-  const isAuthenticated = cookieStore.get('admin_auth')?.value === 'true'
+  let isAuthenticated = cookieStore.get('admin_auth')?.value === 'true'
+
+  // Identity-based access: a signed-in Supabase user flagged profiles.is_admin
+  // gets straight in — no shared password needed. This is the "log in with my
+  // account and the console opens" path.
+  if (!isAuthenticated) {
+    try {
+      const sb = await createClient()
+      const { data: { user } } = await sb.auth.getUser()
+      if (user && (await isAdmin(user.id))) isAuthenticated = true
+    } catch {}
+  }
 
   if (!isAuthenticated) {
     return (
@@ -50,6 +64,9 @@ export default async function AdminLayout({ children, params }: Props) {
             />
             <button type="submit" className="adm-btn">Sign in →</button>
           </form>
+          <p style={{ marginTop: 16, fontSize: 13, color: '#7d8398' }}>
+            Or <Link href="/login" style={{ color: '#F08A2E', fontWeight: 600 }}>log in with your admin account</Link> — admins skip the password.
+          </p>
         </div>
       </div>
     )

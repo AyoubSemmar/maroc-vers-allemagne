@@ -112,7 +112,15 @@ export async function proxy(request: NextRequest) {
     // inside every admin server action and API route. The proxy only
     // does an early UX redirect for users without any cookie at all.
     const cookie = request.cookies.get('admin_auth')?.value
-    if (!cookie && rest !== '/console-x7k9' && rest !== '/console-x7k9/') {
+    // A logged-in Supabase user is also let through the edge; the layout then
+    // enforces profiles.is_admin (non-admins still get the login screen). This
+    // is the "log in with my admin account and the console opens" path — no
+    // shared password needed. Presence-only cookie check keeps the edge cheap;
+    // the real authz is the is_admin lookup in the layout + every action/API.
+    const hasSupabaseSession = request.cookies
+      .getAll()
+      .some((c) => c.name.startsWith('sb-') && c.name.includes('auth-token'))
+    if (!cookie && !hasSupabaseSession && rest !== '/console-x7k9' && rest !== '/console-x7k9/') {
       const effLocale = pathLocale ?? routing.defaultLocale
       return NextResponse.redirect(new URL(`/${effLocale}/console-x7k9`, request.url))
     }
