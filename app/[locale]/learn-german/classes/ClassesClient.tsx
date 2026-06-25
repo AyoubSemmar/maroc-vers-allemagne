@@ -15,6 +15,9 @@ export type ClassGroup = {
   booked_count: number
 }
 
+const LEVELS = ['a1', 'a2', 'b1'] as const
+const LEVEL_LABEL: Record<string, string> = { a1: 'A1', a2: 'A2', b1: 'B1' }
+
 export default function ClassesClient({
   locale,
   groups,
@@ -74,7 +77,16 @@ export default function ClassesClient({
         </div>
       )}
 
-      {groups.map((g) => {
+      {LEVELS.map((level) => {
+        const lvlGroups = groups.filter((g) => (g.level || 'a1') === level)
+        if (lvlGroups.length === 0) return null
+        return (
+        <div key={level} className="flex flex-col gap-4">
+          <h2 className="text-sm font-bold text-gray-900 mt-3 flex items-center gap-2">
+            <span className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-green-600 text-white text-xs">{LEVEL_LABEL[level]}</span>
+            <span>{t.level.replace(/A1/g, LEVEL_LABEL[level])}</span>
+          </h2>
+          {lvlGroups.map((g) => {
         const isMine = myGroupId === g.id
         const isFull = g.booked_count >= g.capacity
         const bookedElsewhere = !!myGroupId && !isMine
@@ -91,7 +103,7 @@ export default function ClassesClient({
               <div className="flex items-center gap-2 flex-wrap">
                 <h3 className="font-semibold text-gray-900">{g.label}</h3>
                 <span className="text-[11px] font-medium text-green-700 bg-green-50 px-2 py-0.5 rounded-full uppercase">
-                  {t.level}
+                  {(g.level || 'a1').toUpperCase()}
                 </span>
               </div>
               <p className="text-sm text-gray-500 mt-1">{g.schedule}</p>
@@ -154,6 +166,9 @@ export default function ClassesClient({
               )}
             </div>
           </div>
+        )
+          })}
+        </div>
         )
       })}
     </div>
