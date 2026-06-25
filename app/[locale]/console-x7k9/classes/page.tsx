@@ -41,6 +41,11 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
       })),
   }))
 
+  const reserved = model.reduce((s, g) => s + g.booked_count, 0)
+  const seats = model.reduce((s, g) => s + g.capacity, 0)
+  const revenue = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * 200, 0)
+  const fullGroups = model.filter((g) => g.booked_count >= g.capacity).length
+
   return (
     <>
       <header className="adm-page-head">
@@ -49,6 +54,25 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
           <p className="adm-page-sub">A1 group bookings. Match emails against offline payments (200 MAD/month); remove anyone who didn&rsquo;t pay to free their seat. Removal requires a Supabase admin session.</p>
         </div>
       </header>
+
+      <div className="adm-kpi-grid" style={{ marginBottom: 16 }}>
+        <div className="adm-kpi adm-kpi--green">
+          <div className="adm-kpi-label">Monthly revenue (reserved)</div>
+          <div className="adm-kpi-value">{revenue.toLocaleString()} DH</div>
+          <div className="adm-kpi-sub">{reserved} seats × 200 DH</div>
+        </div>
+        <div className="adm-kpi adm-kpi--brand">
+          <div className="adm-kpi-label">Seats filled</div>
+          <div className="adm-kpi-value">{reserved}/{seats}</div>
+          <div className="adm-kpi-sub">{seats ? Math.round((reserved / seats) * 100) : 0}% across all groups</div>
+        </div>
+        <div className="adm-kpi adm-kpi--gold">
+          <div className="adm-kpi-label">Full groups</div>
+          <div className="adm-kpi-value">{fullGroups}/{model.length}</div>
+          <div className="adm-kpi-sub">Cohorts ready to start</div>
+        </div>
+      </div>
+
       <AdminClassesClient groups={model} />
     </>
   )
