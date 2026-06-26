@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
+import { isMorocco } from '@/lib/geo'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -26,6 +28,11 @@ export default async function ClassesPage({
   params,
 }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
+
+  // Live classes are Morocco-only — non-MA visitors are sent back to the
+  // Learn German hub so the booking page never shows for them.
+  if (!(await isMorocco())) redirect(`/${locale}/learn-german`)
+
   const t = classesStrings(locale)
 
   const { data: groups } = await supabase
