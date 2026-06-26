@@ -124,7 +124,7 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       </header>
 
       <div className="lg-body wrap">
-        {/* Live A1 classes CTA — taught online in small groups (paid, 200 DH/mo) */}
+        {/* Live classes CTA — taught online in small groups (paid, 300 DH/mo) */}
         {(() => {
           const ct = classesStrings(locale)
           return (

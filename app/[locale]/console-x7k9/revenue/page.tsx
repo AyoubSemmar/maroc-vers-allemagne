@@ -23,7 +23,7 @@ export default async function AdminRevenuePage({ params }: { params: Promise<{ l
     sbAdmin.from('profiles').select('premium_until').eq('is_premium', true),
   ])
 
-  const classMonthly = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * (g.price_mad || 200), 0)
+  const classMonthly = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * (g.price_mad || 300), 0)
   const reserved = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0), 0)
   const premiumActive = (premiumRows ?? []).filter((p: any) => !p.premium_until || new Date(p.premium_until).getTime() > Date.now()).length
 
@@ -69,7 +69,7 @@ export default async function AdminRevenuePage({ params }: { params: Promise<{ l
               <tr key={g.id} style={{ borderTop: '1px solid #eef0f4' }}>
                 <td style={{ padding: '8px 4px' }}>{g.label}</td>
                 <td style={{ padding: '8px 4px', color: '#9aa0b0', width: 90 }}>{g.booked_count}/{g.capacity}</td>
-                <td style={{ padding: '8px 4px', textAlign: 'right', fontWeight: 700, width: 120 }}>{((g.booked_count || 0) * (g.price_mad || 200)).toLocaleString()} DH</td>
+                <td style={{ padding: '8px 4px', textAlign: 'right', fontWeight: 700, width: 120 }}>{((g.booked_count || 0) * (g.price_mad || 300)).toLocaleString()} DH</td>
               </tr>
             ))}
           </tbody>

@@ -35,7 +35,7 @@ function dayList(n: number): string[] {
   })
 }
 const today = new Date().toISOString().slice(0, 10)
-const CLASS_PRICE = 200 // MAD/month
+const CLASS_PRICE = 300 // MAD/month
 
 function Bars({ data, color = 'var(--adm-brand)', height = 48 }: { data: { k: string; v: number }[]; color?: string; height?: number }) {
   const max = Math.max(1, ...data.map((d) => d.v))

@@ -43,7 +43,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
 
   const reserved = model.reduce((s, g) => s + g.booked_count, 0)
   const seats = model.reduce((s, g) => s + g.capacity, 0)
-  const revenue = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * 200, 0)
+  const revenue = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * (g.price_mad || 300), 0)
   const fullGroups = model.filter((g) => g.booked_count >= g.capacity).length
 
   return (
@@ -51,7 +51,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
       <header className="adm-page-head">
         <div>
           <h1 className="adm-page-title">Live classes</h1>
-          <p className="adm-page-sub">A1 group bookings. Match emails against offline payments (200 MAD/month); remove anyone who didn&rsquo;t pay to free their seat. Removal requires a Supabase admin session.</p>
+          <p className="adm-page-sub">A1/A2/B1 group bookings. Match emails against offline payments (300 MAD/month); remove anyone who didn&rsquo;t pay to free their seat. Removal requires a Supabase admin session.</p>
         </div>
       </header>
 
@@ -59,7 +59,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         <div className="adm-kpi adm-kpi--green">
           <div className="adm-kpi-label">Monthly revenue (reserved)</div>
           <div className="adm-kpi-value">{revenue.toLocaleString()} DH</div>
-          <div className="adm-kpi-sub">{reserved} seats × 200 DH</div>
+          <div className="adm-kpi-sub">{reserved} seats × 300 DH</div>
         </div>
         <div className="adm-kpi adm-kpi--brand">
           <div className="adm-kpi-label">Seats filled</div>
