@@ -47,10 +47,16 @@ create policy "assignments read published" on public.assignments
 create policy "assignments admin write" on public.assignments
   for all using (public.is_admin()) with check (public.is_admin());
 
--- Column security: hide the answer key from non-admins. Admin access goes
--- through the service-role key (bypasses column grants), so the gradebook
--- and grading routes still see it.
-revoke select (answer_key) on public.assignments from anon, authenticated;
+-- Column security: hide the answer key from non-admins. A table-level SELECT
+-- (which Supabase grants by default) covers every column, so a per-column
+-- REVOKE is a no-op — we must revoke the whole-table SELECT and re-grant
+-- every column EXCEPT answer_key. Admin access uses the service-role key,
+-- which bypasses column grants, so the gradebook/grading routes still see it.
+revoke select on public.assignments from anon, authenticated;
+grant select (
+  id, skill, level_id, group_id, title, instructions, content,
+  max_points, due_at, is_published, created_by, created_at
+) on public.assignments to anon, authenticated;
 
 -- ── BLOCK 2 ── assignment_submissions ────────────────────────
 create table if not exists public.assignment_submissions (
