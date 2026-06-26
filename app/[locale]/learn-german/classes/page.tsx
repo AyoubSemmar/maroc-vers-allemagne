@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { isMorocco } from '@/lib/geo'
+import { isAdmin } from '@/lib/entitlements'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -28,10 +29,14 @@ export default async function ClassesPage({
   params,
 }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
+  const sb = await createServerSupabase()
+  const { data: { user } } = await sb.auth.getUser()
 
-  // Live classes are Morocco-only — non-MA visitors are sent back to the
-  // Learn German hub so the booking page never shows for them.
-  if (!(await isMorocco())) redirect(`/${locale}/learn-german`)
+  // Live classes are Morocco-only — non-MA visitors are sent back to the Learn
+  // German hub. Signed-in admins (the owner/teacher) bypass the gate so they
+  // can see and manage it from anywhere.
+  const admin = user ? await isAdmin(user.id) : false
+  if (!admin && !(await isMorocco())) redirect(`/${locale}/learn-german`)
 
   const t = classesStrings(locale)
 
@@ -42,8 +47,6 @@ export default async function ClassesPage({
     .order('sort_order', { ascending: true })
 
   // Which group (if any) the signed-in student already holds a seat in.
-  const sb = await createServerSupabase()
-  const { data: { user } } = await sb.auth.getUser()
   let myGroupId: string | null = null
   let myWhatsapp = ''
   if (user) {

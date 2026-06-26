@@ -1,14 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { isAdmin } from '@/lib/entitlements'
 
-export const runtime = 'edge'
+export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-// Returns the visitor's country (Vercel sets x-vercel-ip-country at the edge).
-// In dev there's no edge header, so we report MA to make local testing possible.
-export function GET(req: NextRequest) {
+// Tells the client whether to show the Morocco-only live classes. Allowed when
+// the visitor is in Morocco (Vercel x-vercel-ip-country) OR is a signed-in
+// admin (so the owner can see/manage it from anywhere). Dev → allowed.
+export async function GET(req: NextRequest) {
   const country =
     process.env.NODE_ENV !== 'production'
       ? 'MA'
       : req.headers.get('x-vercel-ip-country') || null
-  return NextResponse.json({ country }, { headers: { 'Cache-Control': 'no-store' } })
+
+  let admin = false
+  try {
+    const sb = await createServerSupabase()
+    const { data: { user } } = await sb.auth.getUser()
+    if (user) admin = await isAdmin(user.id)
+  } catch {}
+
+  const allow = country === 'MA' || admin
+  return NextResponse.json({ country, allow }, { headers: { 'Cache-Control': 'no-store' } })
 }

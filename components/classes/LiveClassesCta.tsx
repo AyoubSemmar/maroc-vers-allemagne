@@ -15,7 +15,7 @@ export default function LiveClassesCta({ locale }: { locale: string }) {
     let alive = true
     fetch('/api/geo')
       .then((r) => r.json())
-      .then((d) => { if (alive && d?.country === 'MA') setShow(true) })
+      .then((d) => { if (alive && d?.allow) setShow(true) })
       .catch(() => {})
     return () => { alive = false }
   }, [])
