@@ -12,14 +12,16 @@ import type { AbstractIntlMessages } from 'next-intl'
  * client subtree with <NextIntlClientProvider messages={pickNamespaces(...)}>.
  */
 export const HEAVY_NAMESPACES = [
+  'static',            // disclaimer / privacy / terms (legal pages)
   'documentChecklist', // tools/document-checklist
   'visaGuide',         // visa/* guides
   'eligibilityChecker',// tools/eligibility-checker
   'livingCost',        // tools/living-cost-calculator
   'cvBuilder',         // cv-builder
   'interviewPrep',     // dashboard/interview-prep
-  // 'static' (disclaimer/privacy/terms) — biggest at ~86 KB, but those pages
-  // are 'use client', so excluding it needs a server/client split. Pending.
+  // 'writingExercise' is intentionally NOT here: it's rendered by LessonsList,
+  // which is also pulled in by the client ReadingExercise — too entangled to
+  // isolate for only ~19 KB.
 ] as const
 
 export function omitNamespaces(messages: AbstractIntlMessages, keys: readonly string[]): AbstractIntlMessages {

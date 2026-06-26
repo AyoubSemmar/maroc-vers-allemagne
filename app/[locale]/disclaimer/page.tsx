@@ -1,24 +1,12 @@
-'use client'
+import ProvideNamespaces from '@/components/i18n/ProvideNamespaces'
+import DisclaimerContent from './DisclaimerContent'
 
-import { useTranslations } from 'next-intl'
-import StaticPage, { Section, SectionText } from '@/components/StaticPage'
-
+// Server wrapper: the 'static' namespace (~86 KB) is stripped from the global
+// client bundle (lib/i18n-heavy); re-provide it here for the legal pages only.
 export default function DisclaimerPage() {
-  const t = useTranslations('static.disclaimer')
   return (
-    <StaticPage title={t('title')} subtitle={t('subtitle')}>
-      <Section heading={t('s1_h')}>
-        <SectionText>{t('s1_b')}</SectionText>
-      </Section>
-      <Section heading={t('s2_h')}>
-        <SectionText>{t('s2_b')}</SectionText>
-      </Section>
-      <Section heading={t('s3_h')}>
-        <SectionText>{t('s3_b')}</SectionText>
-      </Section>
-      <Section heading={t('s4_h')}>
-        <SectionText>{t('s4_b')}</SectionText>
-      </Section>
-    </StaticPage>
+    <ProvideNamespaces only={['static']}>
+      <DisclaimerContent />
+    </ProvideNamespaces>
   )
 }

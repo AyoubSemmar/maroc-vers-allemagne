@@ -1,16 +1,18 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
+import { unstable_cache } from 'next/cache'
 import { createClient } from '@supabase/supabase-js'
 import AusbildungJobsClient from './AusbildungJobsClient'
 import { Job } from '@/components/jobs/JobCard'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
-// ISR: serve a cached HTML for 5 min, then re-generate in the background.
-// Listings are nightly-fed by the scraper, so 5-min staleness is fine and
-// this turns the heavy ~10k-row Supabase fetch into a once-per-300s job
-// instead of once-per-click. Mobile TTFB drops from seconds to <100ms.
-export const revalidate = 300
+// NOTE: page-level `export const revalidate` is ineffective here — the root
+// layout calls headers() (StudyBuddy host detection), which forces every
+// route to render dynamically, so nothing is ISR/edge-cached. Instead we
+// cache the EXPENSIVE PART — the ~1k-row Supabase fetch — with
+// unstable_cache, so it runs once per 300s across all requests rather than
+// on every click. Listings are nightly-fed, so 5-min staleness is fine.
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
   const { locale } = await params
@@ -84,7 +86,7 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
   //    requirements, benefits, summary, salary, tags…) that are not
   //    rendered on the listing.
   // For the same reason, translations are also previewed at 280 chars.
-  const PREVIEW = 280
+  const PREVIEW = 160
   const trimText = (s: unknown) =>
     typeof s === 'string' && s.length > PREVIEW ? s.slice(0, PREVIEW) : (s ?? null)
   const jobs = (data || []).map((r: any) => {
@@ -108,7 +110,13 @@ async function fetchJobs(): Promise<{ jobs: Job[]; lastUpdated: string | null }>
   return { jobs, lastUpdated }
 }
 
+// Cache the heavy fetch across requests/users for 5 min. unstable_cache works
+// independently of the page's (forced-dynamic) render mode, so the Supabase
+// round-trips happen once per 300s instead of on every request. Payload is
+// trimmed to ~1.4 MB, under the 2 MB data-cache entry limit.
+const getCachedJobs = unstable_cache(fetchJobs, ['ausbildung-jobs'], { revalidate: 300 })
+
 export default async function AusbildungJobsPage() {
-  const { jobs, lastUpdated } = await fetchJobs()
+  const { jobs, lastUpdated } = await getCachedJobs()
   return <AusbildungJobsClient jobs={jobs} lastUpdated={lastUpdated} />
 }
