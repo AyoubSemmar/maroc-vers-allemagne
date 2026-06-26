@@ -52,7 +52,10 @@ export default function MyCourseClient({
         .eq('is_published', true)
         .eq('level_id', level!.id)
         .order('created_at', { ascending: false })
-      const visible = (rows ?? []).filter(r => !r.group_id || r.group_id === groupId) as ClientAssignment[]
+      // Whole-level assignments (no group) show to everyone at the level; a
+      // group-scoped one shows to students booked in that group. Teachers
+      // preview everything at the level regardless of group.
+      const visible = (rows ?? []).filter(r => isTeacher || !r.group_id || r.group_id === groupId) as ClientAssignment[]
       if (!active) return
       setAssignments(visible)
 
@@ -71,7 +74,7 @@ export default function MyCourseClient({
     }
     load()
     return () => { active = false }
-  }, [level?.id, groupId])
+  }, [level?.id, groupId, isTeacher])
 
   if (!level) {
     return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">Niveau introuvable.</div>
