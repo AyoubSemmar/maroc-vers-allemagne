@@ -26,27 +26,31 @@ export default function ClassesClient({
   groups,
   myGroupId,
   isAuthed,
+  myWhatsapp,
 }: {
   locale: string
   groups: ClassGroup[]
   myGroupId: string | null
   isAuthed: boolean
+  myWhatsapp: string
 }) {
   const t = classesStrings(locale)
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
+  const [whatsapp, setWhatsapp] = useState(myWhatsapp || '')
   const myGroupLabel = groups.find((g) => g.id === myGroupId)?.label ?? ''
   const payMsg = `Bonjour, j'ai réservé une place (${myGroupLabel}) pour les cours d'allemand en ligne. Je souhaite régler les 300 DH/mois.`
   const [msg, setMsg] = useState<string | null>(null)
 
   async function book(groupId: string) {
+    if (!whatsapp.trim()) { setMsg(t.waRequired); return }
     setBusy(groupId)
     setMsg(null)
     try {
       const res = await fetch('/api/classes/book', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ groupId }),
+        body: JSON.stringify({ groupId, whatsapp: whatsapp.trim() }),
       })
       const { status } = await res.json()
       if (status === 'ok') { router.refresh(); return }
@@ -95,6 +99,20 @@ export default function ClassesClient({
               💬 {t.payWhatsapp}
             </a>
           )}
+        </div>
+      )}
+
+      {/* WhatsApp capture — required to book, so we can send payment instructions. */}
+      {isAuthed && !myGroupId && (
+        <div className="rounded-xl border border-gray-200 bg-white px-4 py-3">
+          <label className="block text-xs font-medium text-gray-500 mb-1">{t.waLabel}</label>
+          <input
+            value={whatsapp}
+            onChange={(e) => setWhatsapp(e.target.value)}
+            placeholder="+212 6XX XX XX XX"
+            dir="ltr"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-green-500 focus:outline-none"
+          />
         </div>
       )}
 

@@ -9,7 +9,13 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
-  students: { bookingId: string; email: string; bookedAt: string }[]
+  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string }[]
+}
+
+function waLink(num: string, label: string): string {
+  const digits = (num || '').replace(/\D/g, '')
+  const msg = encodeURIComponent(`Bonjour, voici les instructions de paiement pour votre place (${label}) au cours d'allemand GoGermany — 300 DH/mois.`)
+  return `https://wa.me/${digits}?text=${msg}`
 }
 
 export default function AdminClassesClient({ groups }: { groups: AdminGroup[] }) {
@@ -54,7 +60,15 @@ export default function AdminClassesClient({ groups }: { groups: AdminGroup[] })
                 {g.students.map((s) => (
                   <tr key={s.bookingId} style={{ borderTop: '1px solid #eef0f4' }}>
                     <td style={{ padding: '6px 4px' }}>{s.email}</td>
-                    <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 100 }}>{s.bookedAt}</td>
+                    <td style={{ padding: '6px 4px', width: 170 }}>
+                      {s.whatsapp ? (
+                        <a href={waLink(s.whatsapp, g.label)} target="_blank" rel="noreferrer"
+                          style={{ color: '#16a34a', fontWeight: 600, textDecoration: 'none' }}>
+                          💬 {s.whatsapp}
+                        </a>
+                      ) : <span style={{ color: '#c0c4ce' }}>no WhatsApp</span>}
+                    </td>
+                    <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 90 }}>{s.bookedAt}</td>
                     <td style={{ padding: '6px 4px', width: 90, textAlign: 'right' }}>
                       <button
                         onClick={() => remove(s.bookingId, s.email)}

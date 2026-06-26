@@ -17,14 +17,17 @@ const sbAdmin = createClient(
 export default async function AdminClassesPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   await params
 
-  const [{ data: groups }, { data: bookings }, usersRes] = await Promise.all([
+  const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
     sbAdmin.from('class_groups').select('id,label,schedule,capacity,booked_count').order('sort_order'),
     sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at').eq('status', 'reserved').order('created_at'),
     sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
+    sbAdmin.from('profiles').select('user_id,whatsapp'),
   ])
 
   const emailById = new Map<string, string>()
   for (const u of usersRes.data?.users ?? []) emailById.set(u.id, u.email ?? '—')
+  const waById = new Map<string, string>()
+  for (const p of profiles ?? []) if (p.whatsapp) waById.set(p.user_id, p.whatsapp)
 
   const model: AdminGroup[] = (groups ?? []).map((g) => ({
     id: g.id,
@@ -37,6 +40,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
       .map((b) => ({
         bookingId: b.id,
         email: emailById.get(b.user_id) ?? b.user_id,
+        whatsapp: waById.get(b.user_id) ?? '',
         bookedAt: (b.created_at as string)?.slice(0, 10) ?? '',
       })),
   }))
