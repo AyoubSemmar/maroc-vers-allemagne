@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useLocale, useTranslations } from 'next-intl'
 import ReactMarkdown from 'react-markdown'
 import { Job } from './JobCard'
@@ -16,6 +17,8 @@ export default function ApplyModal({ job, onClose }: Props) {
   const t = useTranslations('ausbJobs.modal')
   const locale = useLocale()
   const [toast, setToast] = useState('')
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => { setMounted(true) }, [])
 
   const translated = (locale === 'ar' || locale === 'fr' || locale === 'en')
     ? job.enrichment_json?.translations?.[locale]
@@ -49,7 +52,11 @@ export default function ApplyModal({ job, onClose }: Props) {
   const hasPhone = !!job.phone
   const hasAny = hasEmail || hasUrl || hasPhone
 
-  return (
+  // Portal to <body> so the fixed overlay escapes any transformed/animated
+  // ancestor (which would otherwise become its containing block and push the
+  // modal out of the viewport — the "out of frame" bug on desktop).
+  if (!mounted) return null
+  return createPortal(
     <div
       className="aj-modal-overlay"
       onClick={e => { if (e.target === e.currentTarget) onClose() }}
@@ -138,6 +145,7 @@ export default function ApplyModal({ job, onClose }: Props) {
 
         {toast && <div className="aj-toast">{toast}</div>}
       </div>
-    </div>
+    </div>,
+    document.body,
   )
 }
