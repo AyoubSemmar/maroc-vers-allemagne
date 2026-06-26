@@ -1,12 +1,17 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Link } from '@/i18n/navigation'
+import { createClient } from '@/lib/supabase-browser'
 import { getLevel } from '@/lib/german-data'
 import { collectLevelVocab } from '@/lib/learn-german/vocab'
+import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
 import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
+import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
+
+const SKILL_EMOJI: Record<string, string> = { grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧' }
 
 export default function MyCourseClient({
   locale,
@@ -29,6 +34,45 @@ export default function MyCourseClient({
 
   const vocabTotal = useMemo(() => (level ? collectLevelVocab(level).length : 0), [level])
 
+  // ── Assignments + this student's grades on them ──
+  const [assignments, setAssignments] = useState<ClientAssignment[]>([])
+  const [subScores, setSubScores] = useState<Record<string, number>>({})
+  const [openAssignment, setOpenAssignment] = useState<ClientAssignment | null>(null)
+
+  useEffect(() => {
+    if (!level) return
+    const supabase = createClient()
+    let active = true
+    async function load() {
+      const { data: { user } } = await supabase.auth.getUser()
+      // answer_key is column-revoked for students — select explicit columns.
+      const { data: rows } = await supabase
+        .from('assignments')
+        .select('id, skill, level_id, group_id, title, instructions, content, due_at')
+        .eq('is_published', true)
+        .eq('level_id', level!.id)
+        .order('created_at', { ascending: false })
+      const visible = (rows ?? []).filter(r => !r.group_id || r.group_id === groupId) as ClientAssignment[]
+      if (!active) return
+      setAssignments(visible)
+
+      if (user && visible.length) {
+        const { data: subs } = await supabase
+          .from('assignment_submissions')
+          .select('assignment_id, auto_score, ai_score, teacher_score')
+          .eq('user_id', user.id)
+          .in('assignment_id', visible.map(a => a.id))
+        const map: Record<string, number> = {}
+        for (const s of subs ?? []) {
+          map[s.assignment_id] = s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0
+        }
+        if (active) setSubScores(map)
+      }
+    }
+    load()
+    return () => { active = false }
+  }, [level?.id, groupId])
+
   if (!level) {
     return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">Niveau introuvable.</div>
   }
@@ -36,12 +80,19 @@ export default function MyCourseClient({
   const lessons = [...level.lessons].sort((a, b) => a.order - b.order)
   const completed = new Set(progress.completedLessons)
 
-  // ── Running grade ── lessons (best score, unattempted = 0) + vocab mastery %.
+  // ── Running grade ── lessons (best score, unattempted = 0) + vocab mastery %
+  // + assignments (final score, not-done = 0). Assignments only weigh in once
+  // the teacher has posted some — otherwise lessons/vocab carry the grade.
   const lessonComponent = lessons.length
     ? lessons.reduce((sum, l) => sum + (scores[l.id]?.best ?? 0), 0) / lessons.length
     : 0
   const vocabComponent = vocabTotal ? (vocab.learnedCount / vocabTotal) * 100 : 0
-  const grade = Math.round(0.6 * lessonComponent + 0.4 * vocabComponent)
+  const assignmentComponent = assignments.length
+    ? assignments.reduce((sum, a) => sum + (subScores[a.id] ?? 0), 0) / assignments.length
+    : 0
+  const grade = assignments.length
+    ? Math.round(0.4 * lessonComponent + 0.3 * vocabComponent + 0.3 * assignmentComponent)
+    : Math.round(0.6 * lessonComponent + 0.4 * vocabComponent)
 
   const gradeColor = grade >= 70 ? 'text-green-700' : grade >= 50 ? 'text-amber-600' : 'text-gray-400'
 
@@ -88,6 +139,43 @@ export default function MyCourseClient({
         <VocabQuiz level={level} vocab={vocab} />
       </div>
 
+      {/* Assignments / Devoirs */}
+      {assignments.length > 0 && (
+        <div className="mb-8">
+          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Devoirs</h2>
+          <div className="flex flex-col gap-2">
+            {assignments.map(a => {
+              const score = subScores[a.id]
+              const done = score != null
+              const overdue = a.due_at && !done && new Date(a.due_at) < new Date()
+              return (
+                <button
+                  key={a.id}
+                  onClick={() => setOpenAssignment(a)}
+                  className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-green-300 transition-colors text-left"
+                >
+                  <span className="text-xl shrink-0">{SKILL_EMOJI[a.skill]}</span>
+                  <span className="flex-1 min-w-0">
+                    <span className="block text-sm font-medium text-gray-800 truncate" dir="ltr">{a.title}</span>
+                    <span className="block text-xs text-gray-400">
+                      {SKILL_LABELS[a.skill]}
+                      {a.due_at && ` · échéance ${new Date(a.due_at).toLocaleDateString('fr-FR')}`}
+                    </span>
+                  </span>
+                  {done ? (
+                    <span className={`text-xs font-bold px-2 py-1 rounded-md shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
+                  ) : (
+                    <span className={`text-xs font-semibold px-2 py-1 rounded-md shrink-0 ${overdue ? 'bg-red-50 text-red-600' : 'bg-blue-50 text-blue-600'}`}>
+                      {overdue ? 'En retard' : 'À faire'}
+                    </span>
+                  )}
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      )}
+
       {/* Syllabus */}
       <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Programme · {level.id}</h2>
       <div className="flex flex-col gap-2">
@@ -119,9 +207,18 @@ export default function MyCourseClient({
       </div>
 
       {isTeacher && (
-        <p className="text-xs text-gray-400 mt-8 text-center">
-          👋 Vue enseignant (aperçu A1). Le tableau de bord par élève arrive en Phase 2.
-        </p>
+        <Link href="/console-x7k9/classes" className="block text-xs text-green-700 hover:underline mt-8 text-center">
+          👋 Vue enseignant — ouvrir le carnet de notes →
+        </Link>
+      )}
+
+      {openAssignment && (
+        <AssignmentRunner
+          assignment={openAssignment}
+          locale={locale}
+          onClose={() => setOpenAssignment(null)}
+          onGraded={(id, score) => setSubScores(prev => ({ ...prev, [id]: score }))}
+        />
       )}
     </div>
   )

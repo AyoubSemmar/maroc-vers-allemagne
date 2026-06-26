@@ -33,6 +33,7 @@ const SECTIONS: Section[] = [
   { href: '/console-x7k9/revenue', label: 'Revenue', icon: I.revenue },
   { href: '/console-x7k9/users', label: 'Users', icon: I.users },
   { href: '/console-x7k9/classes', label: 'Live Classes', icon: I.classes },
+  { href: '/console-x7k9/assignments', label: 'Devoirs & Notes', icon: I.classes },
   { href: '/console-x7k9/articles', label: 'Articles', icon: I.content },
   { href: '/console-x7k9/listings', label: 'Listings', icon: I.listings },
   { href: '/console-x7k9/comments', label: 'Comments', icon: I.comments },
