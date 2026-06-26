@@ -15,7 +15,7 @@ const sbAdmin = createClient(
 )
 
 export default async function AdminClassesPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
-  await params
+  const { locale } = await params
 
   const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
     sbAdmin.from('class_groups').select('id,label,schedule,capacity,booked_count').order('sort_order'),
@@ -77,7 +77,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         </div>
       </div>
 
-      <AdminClassesClient groups={model} />
+      <AdminClassesClient groups={model} locale={locale} />
     </>
   )
 }
