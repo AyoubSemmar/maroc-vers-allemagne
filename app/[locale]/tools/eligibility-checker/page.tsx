@@ -4,6 +4,7 @@ import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import RelatedTools from '@/components/seo/RelatedTools'
+import ProvideNamespaces from '@/components/i18n/ProvideNamespaces'
 import EligibilityChecker from './EligibilityChecker'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
@@ -23,7 +24,9 @@ export default async function EligibilityCheckerPage({ params }: Props) {
   const { locale } = await params
   return (
     <>
-      <EligibilityChecker locale={locale} />
+      <ProvideNamespaces only={['eligibilityChecker']}>
+        <EligibilityChecker locale={locale} />
+      </ProvideNamespaces>
       <ToolSeoSection locale={locale} namespace="eligibilityChecker" />
       <RelatedTools locale={locale} current="eligibilityChecker" />
     </>

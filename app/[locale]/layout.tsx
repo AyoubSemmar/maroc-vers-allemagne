@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
 import AnalyticsBeacon from "@/components/analytics/AnalyticsBeacon";
+import { omitNamespaces, HEAVY_NAMESPACES } from "@/lib/i18n-heavy";
 
 // Public AdSense publisher id (permanent, safe to commit — it's in the page
 // source for every visitor). The loader script below makes the site verifiable
@@ -83,7 +84,10 @@ export default async function LocaleLayout({
     notFound();
   }
   const typedLocale = locale as AppLocale;
-  const messages = await getMessages();
+  // Big page-specific namespaces are stripped from the global client bundle
+  // and re-provided on their own route (see lib/i18n-heavy). This keeps every
+  // page from shipping ~300 KB of JSON it never uses.
+  const messages = omitNamespaces(await getMessages(), HEAVY_NAMESPACES);
   const dir = dirFor(typedLocale);
 
   // Detect the StudyBuddy host server-side. The middleware in proxy.ts

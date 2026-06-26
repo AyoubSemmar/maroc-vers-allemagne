@@ -3,6 +3,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import VisaGuide from '@/components/visa/VisaGuide'
+import ProvideNamespaces from '@/components/i18n/ProvideNamespaces'
 import type { AppLocale } from '@/i18n/routing'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
@@ -15,5 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function DashboardVisaAusbildungPage({ params }: Props) {
   const { locale } = await params
-  return <VisaGuide flow="ausbildung" locale={locale} />
+  return (
+    <ProvideNamespaces only={['visaGuide']}>
+      <VisaGuide flow="ausbildung" locale={locale} />
+    </ProvideNamespaces>
+  )
 }
