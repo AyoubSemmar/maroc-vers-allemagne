@@ -48,15 +48,11 @@ export default async function ClassesPage({
 
   // Which group (if any) the signed-in student already holds a seat in.
   let myGroupId: string | null = null
-  let myWhatsapp = ''
   if (user) {
-    const [{ data: booking }, { data: profile }] = await Promise.all([
-      sb.from('class_bookings').select('group_id')
-        .eq('user_id', user.id).eq('status', 'reserved').maybeSingle(),
-      sb.from('profiles').select('whatsapp').eq('user_id', user.id).maybeSingle(),
-    ])
+    const { data: booking } = await sb
+      .from('class_bookings').select('group_id')
+      .eq('user_id', user.id).eq('status', 'reserved').maybeSingle()
     myGroupId = booking?.group_id ?? null
-    myWhatsapp = profile?.whatsapp ?? ''
   }
 
   return (
@@ -72,7 +68,6 @@ export default async function ClassesPage({
             groups={(groups ?? []) as ClassGroup[]}
             myGroupId={myGroupId}
             isAuthed={!!user}
-            myWhatsapp={myWhatsapp}
           />
         </div>
       </div>
