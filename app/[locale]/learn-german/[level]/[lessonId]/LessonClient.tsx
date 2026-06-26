@@ -191,7 +191,7 @@ export default function LessonClient({
   const [matchingResults, setMatchingResults] = useState<Record<string, boolean>>({})
   const [submitted, setSubmitted] = useState(false)
   const [vocabSearch, setVocabSearch] = useState('')
-  const { completeLesson, isAdmin } = useProgress(level.id)
+  const { completeLesson, saveLessonScore, isAdmin } = useProgress(level.id)
 
   function typeLabel(key: string): string {
     try { return t(`types.${key}` as any) } catch { return key }
@@ -252,6 +252,7 @@ export default function LessonClient({
     if (nonMatchingNonSpeaking.some(q => !answers[q.id])) return
     const s = calculateScore()
     setSubmitted(true)
+    saveLessonScore(lesson.id, s)
     if (s >= 70 || isAdmin) completeLesson(lesson.id, nextLesson?.id ?? null)
   }
 

@@ -9,6 +9,9 @@ type LevelProgress = {
   currentLesson: string | null
 }
 
+export type LessonScore = { best: number; last: number; attempts: number }
+type ScoreMap = Record<string, LessonScore>
+
 const defaultProgress = (): LevelProgress => ({
   completedLessons: [],
   currentLesson: null,
@@ -35,6 +38,7 @@ const ADMIN_EMAIL = 'ayoubsemmar@gmail.com'
 
 export function useProgress(levelId: LevelId) {
   const [progress, setProgress] = useState<LevelProgress>(defaultProgress())
+  const [scores, setScores] = useState<ScoreMap>({})
   const [loaded, setLoaded] = useState(false)
   const [isAdmin, setIsAdmin] = useState(false)
   const [isAuthed, setIsAuthed] = useState(false)
@@ -47,6 +51,20 @@ export function useProgress(levelId: LevelId) {
       if (user?.email === ADMIN_EMAIL) setIsAdmin(true)
 
       if (user) {
+        // Load banked exercise scores for this level (best-effort).
+        const { data: scoreRows } = await supabase
+          .from('lesson_scores')
+          .select('lesson_id, best_score, last_score, attempts')
+          .eq('user_id', user.id)
+          .eq('level_id', levelId)
+        if (scoreRows) {
+          const map: ScoreMap = {}
+          for (const r of scoreRows) {
+            map[r.lesson_id] = { best: r.best_score ?? 0, last: r.last_score ?? 0, attempts: r.attempts ?? 0 }
+          }
+          setScores(map)
+        }
+
         // Load from Supabase
         const { data } = await supabase
           .from('user_progress')
@@ -104,6 +122,34 @@ export function useProgress(levelId: LevelId) {
   }
 
   /**
+   * Bank an exercise score for a lesson. Tracks best + last + attempts so the
+   * course dashboard and teacher gradebook can show real grades. No-op for
+   * signed-out users (nothing to attach the grade to).
+   */
+  async function saveLessonScore(lessonId: string, score: number) {
+    const s = Math.max(0, Math.min(100, Math.round(score)))
+    const prev = scores[lessonId] ?? { best: 0, last: 0, attempts: 0 }
+    const updated: LessonScore = {
+      best: Math.max(prev.best, s),
+      last: s,
+      attempts: prev.attempts + 1,
+    }
+    setScores(prevMap => ({ ...prevMap, [lessonId]: updated }))
+
+    const { data: { user } } = await supabase.auth.getUser()
+    if (!user) return
+    await supabase.from('lesson_scores').upsert({
+      user_id: user.id,
+      level_id: levelId,
+      lesson_id: lessonId,
+      best_score: updated.best,
+      last_score: updated.last,
+      attempts: updated.attempts,
+      updated_at: new Date().toISOString(),
+    }, { onConflict: 'user_id,lesson_id' })
+  }
+
+  /**
    * All lessons are free. Lesson 1 is open to anyone (no account needed
    * to taste the experience). Lesson 2+ requires the user to be signed
    * in — not because the content is paid, but so we can save their
@@ -122,5 +168,5 @@ export function useProgress(levelId: LevelId) {
 
   const completedCount = progress.completedLessons.length
 
-  return { progress, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, loaded, isAdmin, isAuthed }
+  return { progress, scores, completedCount, isLessonUnlocked, isLessonCompleted, completeLesson, saveLessonScore, loaded, isAdmin, isAuthed }
 }

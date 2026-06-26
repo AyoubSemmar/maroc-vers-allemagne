@@ -46,6 +46,9 @@ export default function ClassroomClient({
           {isTeacher && (
             <span className="text-[11px] bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded-full">Teacher</span>
           )}
+          <Link href="/learn-german/my-course" className="text-sm text-gray-400 hover:text-white shrink-0">
+            📋 Mon cours
+          </Link>
         </div>
         <a
           href={callUrl}
