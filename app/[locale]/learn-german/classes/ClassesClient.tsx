@@ -17,6 +17,9 @@ export type ClassGroup = {
 
 const LEVELS = ['a1', 'a2', 'b1'] as const
 const LEVEL_LABEL: Record<string, string> = { a1: 'A1', a2: 'A2', b1: 'B1' }
+// Business WhatsApp for arranging the offline payment (digits only, with country
+// code). Set NEXT_PUBLIC_CLASSES_WHATSAPP in Vercel to enable the "pay" button.
+const WHATSAPP = (process.env.NEXT_PUBLIC_CLASSES_WHATSAPP || '').replace(/\D/g, '')
 
 export default function ClassesClient({
   locale,
@@ -32,6 +35,8 @@ export default function ClassesClient({
   const t = classesStrings(locale)
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
+  const myGroupLabel = groups.find((g) => g.id === myGroupId)?.label ?? ''
+  const payMsg = `Bonjour, j'ai réservé une place (${myGroupLabel}) pour les cours d'allemand en ligne. Je souhaite régler les 300 DH/mois.`
   const [msg, setMsg] = useState<string | null>(null)
 
   async function book(groupId: string) {
@@ -47,7 +52,7 @@ export default function ClassesClient({
       if (status === 'ok') { router.refresh(); return }
       if (status === 'already') setMsg(t.alreadyMsg)
       else if (status === 'full') { setMsg(t.fullMsg); router.refresh() }
-      else if (status === 'auth') { router.push(`/${locale}/login`); return }
+      else if (status === 'auth') { router.push(`/${locale}/login?next=${encodeURIComponent(`/${locale}/learn-german/classes`)}`); return }
       else setMsg(t.errMsg)
     } catch {
       setMsg(t.errMsg)
@@ -74,6 +79,22 @@ export default function ClassesClient({
       {msg && (
         <div className="rounded-lg bg-amber-50 border border-amber-200 px-4 py-2 text-sm text-amber-800">
           {msg}
+        </div>
+      )}
+
+      {/* You have a reserved seat → tell the student how to confirm (pay). */}
+      {myGroupId && (
+        <div className="rounded-xl bg-green-50 border border-green-300 px-4 py-3 text-sm text-green-900 flex items-center justify-between gap-3 flex-wrap">
+          <span>✅ {t.enrolledNote}</span>
+          {WHATSAPP && (
+            <a
+              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
+              target="_blank" rel="noreferrer"
+              className="shrink-0 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2"
+            >
+              💬 {t.payWhatsapp}
+            </a>
+          )}
         </div>
       )}
 
@@ -149,7 +170,7 @@ export default function ClassesClient({
                 </button>
               ) : !isAuthed ? (
                 <Link
-                  href="/login"
+                  href={`/login?next=${encodeURIComponent(`/${locale}/learn-german/classes`)}`}
                   className="text-center rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-medium px-4 py-2"
                 >
                   {t.loginToBook}
