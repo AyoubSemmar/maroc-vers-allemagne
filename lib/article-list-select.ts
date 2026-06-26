@@ -44,13 +44,17 @@ export function articleListFields(locale?: string): string {
   )
 }
 
+// NOTE: there is no `read_time` column on `articles` — selecting it made the
+// query error and return zero rows (the homepage, /ausbildung and /studium
+// silently showed no articles). Read time is computed from content where
+// needed; cards fall back to "read more" when it's absent. Kept for callers.
 export function articleListFieldsWithReadTime(locale?: string): string {
-  return articleListFields(locale) + ', read_time'
+  return articleListFields(locale)
 }
 
 /** Back-compat constants (fr/en/de only) for callers that are locale-agnostic. */
 export const ARTICLE_LIST_FIELDS = articleListFields()
-export const ARTICLE_LIST_FIELDS_WITH_READ_TIME = ARTICLE_LIST_FIELDS + ', read_time'
+export const ARTICLE_LIST_FIELDS_WITH_READ_TIME = ARTICLE_LIST_FIELDS
 
 /**
  * Restrict a list query to articles available in `locale`, driven by each
