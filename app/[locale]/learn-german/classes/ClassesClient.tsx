@@ -82,14 +82,14 @@ export default function ClassesClient({
         </div>
       )}
 
-      {/* You have a reserved seat → tell the student how to confirm (pay). */}
+      {/* You have a reserved seat → payment instructions come via WhatsApp. */}
       {myGroupId && (
-        <div className="rounded-xl bg-green-50 border border-green-300 px-4 py-3 text-sm text-green-900 flex items-center justify-between gap-3 flex-wrap">
-          <span>✅ {t.enrolledNote}</span>
+        <div className="rounded-xl bg-green-600 border border-green-500 shadow-sm px-4 py-3 text-sm text-white flex items-center justify-between gap-3 flex-wrap">
+          <span className="font-medium">✅ {t.enrolledNote}</span>
           <div className="flex items-center gap-2 shrink-0">
             <Link
               href="/learn-german/my-course"
-              className="rounded-lg bg-green-700 hover:bg-green-800 text-white text-xs font-semibold px-4 py-2"
+              className="rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
             >
               📋 Mon cours
             </Link>
@@ -97,7 +97,7 @@ export default function ClassesClient({
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
                 target="_blank" rel="noreferrer"
-                className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2"
+                className="rounded-lg bg-green-800 hover:bg-green-900 text-white text-xs font-semibold px-4 py-2"
               >
                 💬 {t.payWhatsapp}
               </a>
