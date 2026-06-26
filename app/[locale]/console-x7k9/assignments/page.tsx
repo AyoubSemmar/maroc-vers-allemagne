@@ -10,6 +10,8 @@ import AdminAssignmentsClient, {
   type AdminAssignment,
   type RosterRow,
   type GroupOpt,
+  type SubmissionDetail,
+  type Kpis,
 } from './AdminAssignmentsClient'
 
 export const dynamic = 'force-dynamic'
@@ -35,7 +37,7 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
     await Promise.all([
       sbAdmin.from('class_groups').select('id,label,level').order('sort_order'),
       sbAdmin.from('assignments').select('id,skill,level_id,group_id,title,is_published,due_at,created_at').order('created_at', { ascending: false }),
-      sbAdmin.from('assignment_submissions').select('assignment_id,user_id,auto_score,ai_score,teacher_score'),
+      sbAdmin.from('assignment_submissions').select('assignment_id,user_id,auto_score,ai_score,teacher_score,answers,ai_feedback,submitted_at'),
       sbAdmin.from('class_bookings').select('user_id,group_id').eq('status', 'reserved'),
       sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
       sbAdmin.from('lesson_scores').select('user_id,level_id,best_score'),
@@ -50,6 +52,24 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
   const finalByAU = new Map<string, number>()
   for (const s of submissions ?? []) {
     finalByAU.set(`${s.assignment_id}|${s.user_id}`, s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0)
+  }
+
+  // Detailed submissions per assignment (for the teacher drill-down).
+  const skillByAssignment = new Map((assignments ?? []).map(a => [a.id, a.skill]))
+  const submissionsByAssignment: Record<string, SubmissionDetail[]> = {}
+  for (const s of submissions ?? []) {
+    ;(submissionsByAssignment[s.assignment_id] ||= []).push({
+      userId: s.user_id,
+      email: emailById.get(s.user_id) ?? s.user_id,
+      skill: skillByAssignment.get(s.assignment_id) ?? 'grammar',
+      autoScore: s.auto_score ?? null,
+      aiScore: s.ai_score ?? null,
+      teacherScore: s.teacher_score ?? null,
+      finalScore: s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0,
+      answers: s.answers ?? null,
+      aiFeedback: s.ai_feedback ?? null,
+      submittedAt: (s.submitted_at as string)?.slice(0, 16).replace('T', ' ') ?? null,
+    })
   }
 
   // Assignment list with avg + count.
@@ -128,6 +148,15 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
     id: g.id, label: g.label, level: (g.level || 'a1').toUpperCase(),
   }))
 
+  const publishedCount = (assignments ?? []).filter(a => a.is_published).length
+  const kpis: Kpis = {
+    students: roster.length,
+    avgGrade: roster.length ? Math.round(roster.reduce((s, r) => s + r.grade, 0) / roster.length) : 0,
+    atRisk: roster.filter(r => r.grade < 50).length,
+    published: publishedCount,
+    submissions: (submissions ?? []).length,
+  }
+
   return (
     <>
       <header className="adm-page-head">
@@ -136,7 +165,13 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
           <p className="adm-page-sub">Crée des exercices corrigés par l&rsquo;IA (Grammatik, Lesen, Schreiben, Hören), publie-les à un niveau ou à un groupe, et suis la note de chaque élève.</p>
         </div>
       </header>
-      <AdminAssignmentsClient assignments={adminAssignments} roster={roster} groups={groupOpts} />
+      <AdminAssignmentsClient
+        assignments={adminAssignments}
+        roster={roster}
+        groups={groupOpts}
+        kpis={kpis}
+        submissionsByAssignment={submissionsByAssignment}
+      />
     </>
   )
 }

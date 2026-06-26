@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
+import MyCourseEntry from '@/components/learn-german/MyCourseEntry'
 import LiveClassesCta from '@/components/classes/LiveClassesCta'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -124,6 +125,9 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       </header>
 
       <div className="lg-body wrap">
+        {/* Signed-in students: jump straight to their graded course dashboard */}
+        <MyCourseEntry />
+
         {/* Live classes CTA — Morocco-only (gated client-side by geo) */}
         <LiveClassesCta locale={locale} />
 

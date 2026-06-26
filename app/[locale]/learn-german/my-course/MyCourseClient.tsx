@@ -12,6 +12,33 @@ import VocabQuiz from '@/components/learn-german/VocabQuiz'
 import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
 
 const SKILL_EMOJI: Record<string, string> = { grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧' }
+const SKILLS_ORDER = ['grammar', 'lesen', 'schreiben', 'hoeren'] as const
+
+// Qualitative label + German school note (1 best … 6) for a 0-100 grade.
+function gradeInfo(g: number): { note: string; text: string; color: string; bar: string } {
+  if (g >= 90) return { note: '1', text: 'Ausgezeichnet', color: 'text-green-700', bar: 'bg-green-500' }
+  if (g >= 80) return { note: '2', text: 'Sehr gut', color: 'text-green-700', bar: 'bg-green-500' }
+  if (g >= 70) return { note: '3', text: 'Gut', color: 'text-green-600', bar: 'bg-green-500' }
+  if (g >= 60) return { note: '3', text: 'Befriedigend', color: 'text-amber-600', bar: 'bg-amber-500' }
+  if (g >= 50) return { note: '4', text: 'Ausreichend', color: 'text-amber-600', bar: 'bg-amber-500' }
+  if (g > 0)   return { note: '5', text: 'À améliorer', color: 'text-red-500', bar: 'bg-red-400' }
+  return { note: '—', text: 'Pas encore commencé', color: 'text-gray-400', bar: 'bg-gray-300' }
+}
+
+function Bar({ label, value, weight, emoji }: { label: string; value: number; weight: number; emoji: string }) {
+  const v = Math.round(value)
+  return (
+    <div>
+      <div className="flex items-center justify-between text-xs mb-1">
+        <span className="text-gray-600">{emoji} {label} <span className="text-gray-300">· {weight}%</span></span>
+        <span className="font-semibold text-gray-700">{v}%</span>
+      </div>
+      <div className="w-full bg-gray-100 rounded-full h-2">
+        <div className="bg-green-500 h-2 rounded-full transition-all duration-500" style={{ width: `${v}%` }} />
+      </div>
+    </div>
+  )
+}
 
 export default function MyCourseClient({
   locale,
@@ -97,7 +124,18 @@ export default function MyCourseClient({
     ? Math.round(0.4 * lessonComponent + 0.3 * vocabComponent + 0.3 * assignmentComponent)
     : Math.round(0.6 * lessonComponent + 0.4 * vocabComponent)
 
-  const gradeColor = grade >= 70 ? 'text-green-700' : grade >= 50 ? 'text-amber-600' : 'text-gray-400'
+  const info = gradeInfo(grade)
+  const weights = assignments.length
+    ? { lesson: 40, vocab: 30, assign: 30 }
+    : { lesson: 60, vocab: 40, assign: 0 }
+
+  // Per-skill devoir averages (done items only).
+  const skillAvgs = SKILLS_ORDER.map(sk => {
+    const items = assignments.filter(a => a.skill === sk)
+    const graded = items.filter(a => subScores[a.id] != null)
+    const avg = graded.length ? Math.round(graded.reduce((s, a) => s + subScores[a.id], 0) / graded.length) : null
+    return { skill: sk, avg, assigned: items.length, done: graded.length }
+  }).filter(s => s.assigned > 0)
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
@@ -120,20 +158,52 @@ export default function MyCourseClient({
         )}
       </div>
 
-      {/* Grade + vocab summary */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
-        <div className="bg-white rounded-2xl border border-gray-200 p-5 text-center">
-          <p className="text-xs text-gray-400">Note globale</p>
-          <p className={`text-4xl font-black ${gradeColor}`}>{grade}<span className="text-lg text-gray-300">/100</span></p>
+      {/* Report card — overall grade + transparent breakdown */}
+      <div className="bg-white rounded-2xl border border-gray-200 p-5 mb-8">
+        <div className="flex flex-col md:flex-row gap-6">
+          {/* Overall */}
+          <div className="flex items-center gap-4 md:w-56 md:flex-col md:text-center md:justify-center md:border-r md:border-gray-100 md:pr-6">
+            <div className="relative shrink-0">
+              <svg viewBox="0 0 36 36" className="w-20 h-20 -rotate-90">
+                <circle cx="18" cy="18" r="15.9" fill="none" stroke="#f1f5f9" strokeWidth="3" />
+                <circle cx="18" cy="18" r="15.9" fill="none" stroke="currentColor" strokeWidth="3"
+                  className={info.color} strokeDasharray={`${grade} ${100 - grade}`} strokeLinecap="round" />
+              </svg>
+              <span className={`absolute inset-0 flex items-center justify-center text-2xl font-black ${info.color}`}>{grade}</span>
+            </div>
+            <div>
+              <p className="text-xs text-gray-400">Note globale</p>
+              <p className={`font-bold ${info.color}`}>{info.text}</p>
+              <p className="text-[11px] text-gray-400">Note allemande : {info.note}</p>
+            </div>
+          </div>
+
+          {/* Breakdown */}
+          <div className="flex-1 flex flex-col gap-3 justify-center">
+            <Bar emoji="📚" label="Leçons" value={lessonComponent} weight={weights.lesson} />
+            <Bar emoji="🧠" label="Vocabulaire" value={vocabComponent} weight={weights.vocab} />
+            {assignments.length > 0 && (
+              <Bar emoji="📝" label="Devoirs" value={assignmentComponent} weight={weights.assign} />
+            )}
+            <div className="flex gap-4 text-xs text-gray-400 pt-1 flex-wrap">
+              <span>✓ {completed.size}/{lessons.length} leçons</span>
+              <span>🧠 {vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
+              {assignments.length > 0 && <span>📝 {Object.keys(subScores).length}/{assignments.length} devoirs</span>}
+            </div>
+          </div>
         </div>
-        <div className="bg-white rounded-2xl border border-gray-200 p-5 text-center">
-          <p className="text-xs text-gray-400">Leçons terminées</p>
-          <p className="text-4xl font-black text-gray-800">{completed.size}<span className="text-lg text-gray-300">/{lessons.length}</span></p>
-        </div>
-        <div className="bg-white rounded-2xl border border-gray-200 p-5 text-center">
-          <p className="text-xs text-gray-400">Mots mémorisés</p>
-          <p className="text-4xl font-black text-gray-800">{vocab.loaded ? vocab.learnedCount : '…'}<span className="text-lg text-gray-300">/{vocabTotal}</span></p>
-        </div>
+
+        {/* Per-skill devoir averages */}
+        {skillAvgs.length > 0 && (
+          <div className="flex gap-2 flex-wrap mt-4 pt-4 border-t border-gray-100">
+            {skillAvgs.map(s => (
+              <span key={s.skill} className="text-xs px-2.5 py-1 rounded-lg bg-gray-50 border border-gray-200 text-gray-600">
+                {SKILL_EMOJI[s.skill]} {SKILL_LABELS[s.skill]} : <strong className={s.avg == null ? 'text-gray-400' : s.avg >= 70 ? 'text-green-700' : 'text-amber-700'}>{s.avg == null ? '—' : `${s.avg}%`}</strong>
+                <span className="text-gray-300"> ({s.done}/{s.assigned})</span>
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Vocabulary trainer */}

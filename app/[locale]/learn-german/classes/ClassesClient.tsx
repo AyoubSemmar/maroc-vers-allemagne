@@ -86,15 +86,23 @@ export default function ClassesClient({
       {myGroupId && (
         <div className="rounded-xl bg-green-50 border border-green-300 px-4 py-3 text-sm text-green-900 flex items-center justify-between gap-3 flex-wrap">
           <span>✅ {t.enrolledNote}</span>
-          {WHATSAPP && (
-            <a
-              href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
-              target="_blank" rel="noreferrer"
-              className="shrink-0 rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2"
+          <div className="flex items-center gap-2 shrink-0">
+            <Link
+              href="/learn-german/my-course"
+              className="rounded-lg bg-green-700 hover:bg-green-800 text-white text-xs font-semibold px-4 py-2"
             >
-              💬 {t.payWhatsapp}
-            </a>
-          )}
+              📋 Mon cours
+            </Link>
+            {WHATSAPP && (
+              <a
+                href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
+                target="_blank" rel="noreferrer"
+                className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-xs font-semibold px-4 py-2"
+              >
+                💬 {t.payWhatsapp}
+              </a>
+            )}
+          </div>
         </div>
       )}
 
@@ -153,6 +161,12 @@ export default function ClassesClient({
                     className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
                   >
                     {t.enterClass}
+                  </Link>
+                  <Link
+                    href="/learn-german/my-course"
+                    className="text-center rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-medium px-4 py-2"
+                  >
+                    📋 Mon cours
                   </Link>
                   <button
                     onClick={cancel}
