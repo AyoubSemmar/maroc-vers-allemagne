@@ -157,14 +157,8 @@ export default function ClassesClient({
               {isMine ? (
                 <>
                   <Link
-                    href={`/learn-german/classes/${g.id}/room`}
-                    className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
-                  >
-                    {t.enterClass}
-                  </Link>
-                  <Link
                     href="/learn-german/my-course"
-                    className="text-center rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-medium px-4 py-2"
+                    className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
                   >
                     📋 Mon cours
                   </Link>

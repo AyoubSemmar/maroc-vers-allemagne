@@ -47,6 +47,7 @@ export default function MyCourseClient({
   groupLabel,
   displayName,
   isTeacher,
+  callUrl,
 }: {
   locale: string
   levelId: string
@@ -54,6 +55,7 @@ export default function MyCourseClient({
   groupLabel: string | null
   displayName: string
   isTeacher: boolean
+  callUrl: string | null
 }) {
   const level = getLevel(levelId)
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
@@ -148,13 +150,15 @@ export default function MyCourseClient({
           </h1>
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
         </div>
-        {groupId && (
-          <Link
-            href={`/learn-german/classes/${groupId}/room`}
+        {callUrl && (
+          <a
+            href={callUrl}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
           >
-            🎥 Salle de classe
-          </Link>
+            🎥 Rejoindre l’appel vidéo ↗
+          </a>
         )}
       </div>
 

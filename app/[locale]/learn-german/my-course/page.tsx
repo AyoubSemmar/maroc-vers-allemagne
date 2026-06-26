@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { buildCallUrl } from '@/lib/jitsi'
 import MyCourseClient from './MyCourseClient'
 
 // Personal course dashboard — always reflect the latest grades.
@@ -26,26 +27,28 @@ export default async function MyCoursePage({
   const isTeacher = profile?.is_admin === true
   if (!booking && !isTeacher) redirect(`/${locale}/learn-german/classes`)
 
+  const displayName =
+    (user.user_metadata?.full_name as string) ||
+    user.email?.split('@')[0] ||
+    'Student'
+
   let level = 'a1'
   let groupId: string | null = null
   let groupLabel: string | null = null
+  let callUrl: string | null = null
   if (booking?.group_id) {
     groupId = booking.group_id
     const { data: g } = await supabase
       .from('class_groups')
-      .select('label,level')
+      .select('label,level,room_slug')
       .eq('id', booking.group_id)
       .maybeSingle()
     if (g) {
       level = (g.level as string) || 'a1'
       groupLabel = g.label as string
+      if (g.room_slug) callUrl = buildCallUrl(g.room_slug, displayName, isTeacher)
     }
   }
-
-  const displayName =
-    (user.user_metadata?.full_name as string) ||
-    user.email?.split('@')[0] ||
-    'Student'
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
@@ -56,6 +59,7 @@ export default async function MyCoursePage({
         groupLabel={groupLabel}
         displayName={displayName}
         isTeacher={isTeacher}
+        callUrl={callUrl}
       />
     </div>
   )
