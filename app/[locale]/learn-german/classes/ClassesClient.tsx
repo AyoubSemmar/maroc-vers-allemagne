@@ -25,11 +25,13 @@ export default function ClassesClient({
   locale,
   groups,
   myGroupId,
+  myAccessGranted,
   isAuthed,
 }: {
   locale: string
   groups: ClassGroup[]
   myGroupId: string | null
+  myAccessGranted: boolean
   isAuthed: boolean
 }) {
   const t = classesStrings(locale)
@@ -82,18 +84,23 @@ export default function ClassesClient({
         </div>
       )}
 
-      {/* You have a reserved seat → payment instructions come via WhatsApp. */}
+      {/* Reserved seat. Until the admin grants access (after payment) the
+          banner explains the WhatsApp payment step; once granted it links to
+          the course. */}
       {myGroupId && (
         <div className="rounded-xl bg-green-600 border border-green-500 shadow-sm px-4 py-3 text-sm text-white flex items-center justify-between gap-3 flex-wrap">
-          <span className="font-medium">✅ {t.enrolledNote}</span>
+          <span className="font-medium">
+            {myAccessGranted ? '✅ Votre accès au cours est activé.' : `✅ ${t.enrolledNote}`}
+          </span>
           <div className="flex items-center gap-2 shrink-0">
-            <Link
-              href="/learn-german/my-course"
-              className="rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
-            >
-              📋 Mon cours
-            </Link>
-            {WHATSAPP && (
+            {myAccessGranted ? (
+              <Link
+                href="/learn-german/my-course"
+                className="rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
+              >
+                📋 Mon cours
+              </Link>
+            ) : WHATSAPP ? (
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
                 target="_blank" rel="noreferrer"
@@ -101,7 +108,7 @@ export default function ClassesClient({
               >
                 💬 {t.payWhatsapp}
               </a>
-            )}
+            ) : null}
           </div>
         </div>
       )}
@@ -156,12 +163,18 @@ export default function ClassesClient({
             <div className="sm:w-44 flex flex-col gap-2">
               {isMine ? (
                 <>
-                  <Link
-                    href="/learn-german/my-course"
-                    className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
-                  >
-                    📋 Mon cours
-                  </Link>
+                  {myAccessGranted ? (
+                    <Link
+                      href="/learn-german/my-course"
+                      className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
+                    >
+                      📋 Mon cours
+                    </Link>
+                  ) : (
+                    <span className="text-center rounded-lg bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium px-3 py-2">
+                      ⏳ En attente de paiement
+                    </span>
+                  )}
                   <button
                     onClick={cancel}
                     disabled={busy === 'cancel'}

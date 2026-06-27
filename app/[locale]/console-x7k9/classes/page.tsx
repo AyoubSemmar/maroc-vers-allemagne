@@ -19,7 +19,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
 
   const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
     sbAdmin.from('class_groups').select('id,label,schedule,capacity,booked_count').order('sort_order'),
-    sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at').eq('status', 'reserved').order('created_at'),
+    sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at,access_granted').eq('status', 'reserved').order('created_at'),
     sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
     sbAdmin.from('profiles').select('user_id,whatsapp'),
   ])
@@ -42,6 +42,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         email: emailById.get(b.user_id) ?? b.user_id,
         whatsapp: waById.get(b.user_id) ?? '',
         bookedAt: (b.created_at as string)?.slice(0, 10) ?? '',
+        accessGranted: (b as any).access_granted === true,
       })),
   }))
 

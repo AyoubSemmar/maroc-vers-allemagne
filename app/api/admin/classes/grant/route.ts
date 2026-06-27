@@ -1,0 +1,46 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { createClient } from '@supabase/supabase-js'
+import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { isAdmin } from '@/lib/entitlements'
+
+export const runtime = 'nodejs'
+export const dynamic = 'force-dynamic'
+
+const sbAdmin = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  { auth: { persistSession: false, autoRefreshToken: false } },
+)
+
+/**
+ * Grant (or revoke) a booked student's course access after payment.
+ * Sets class_bookings.access_granted. Gated by the caller's profiles.is_admin.
+ * Body: { bookingId: string, granted: boolean }
+ */
+export async function POST(req: NextRequest) {
+  try {
+    const sb = await createServerSupabase()
+    const { data: { user } } = await sb.auth.getUser()
+    if (!user || !(await isAdmin(user.id))) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
+    }
+
+    const body = await req.json().catch(() => ({}))
+    const bookingId = typeof body?.bookingId === 'string' ? body.bookingId : ''
+    const granted = body?.granted === true
+    if (!bookingId) return NextResponse.json({ error: 'Missing bookingId' }, { status: 400 })
+
+    const { error } = await sbAdmin
+      .from('class_bookings')
+      .update({ access_granted: granted })
+      .eq('id', bookingId)
+    if (error) {
+      console.error('[admin/classes/grant] update error:', error)
+      return NextResponse.json({ error: 'Update failed' }, { status: 500 })
+    }
+    return NextResponse.json({ ok: true, granted })
+  } catch (e: any) {
+    console.error('[admin/classes/grant] error:', e)
+    return NextResponse.json({ error: e?.message || 'Internal error' }, { status: 500 })
+  }
+}

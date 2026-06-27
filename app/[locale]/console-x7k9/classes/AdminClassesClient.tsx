@@ -9,7 +9,7 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
-  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string }[]
+  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessGranted: boolean }[]
 }
 
 function waLink(num: string, label: string): string {
@@ -21,6 +21,25 @@ function waLink(num: string, label: string): string {
 export default function AdminClassesClient({ groups, locale }: { groups: AdminGroup[]; locale: string }) {
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
+
+  async function setAccess(bookingId: string, granted: boolean) {
+    setBusy(bookingId)
+    try {
+      const res = await fetch('/api/admin/classes/grant', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ bookingId, granted }),
+      })
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
+        alert(error || 'Failed to update access')
+      } else {
+        router.refresh()
+      }
+    } finally {
+      setBusy(null)
+    }
+  }
 
   async function remove(bookingId: string, email: string) {
     if (!confirm(`Remove ${email} and free their seat?`)) return
@@ -68,7 +87,12 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
               <tbody>
                 {g.students.map((s) => (
                   <tr key={s.bookingId} style={{ borderTop: '1px solid #eef0f4' }}>
-                    <td style={{ padding: '6px 4px' }}>{s.email}</td>
+                    <td style={{ padding: '6px 4px' }}>
+                      {s.email}
+                      {s.accessGranted && (
+                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#16a34a', background: '#dcfce7', borderRadius: 6, padding: '1px 6px' }}>✓ accès</span>
+                      )}
+                    </td>
                     <td style={{ padding: '6px 4px', width: 170 }}>
                       {s.whatsapp ? (
                         <a href={waLink(s.whatsapp, g.label)} target="_blank" rel="noreferrer"
@@ -77,8 +101,23 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
                         </a>
                       ) : <span style={{ color: '#c0c4ce' }}>no WhatsApp</span>}
                     </td>
-                    <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 90 }}>{s.bookedAt}</td>
-                    <td style={{ padding: '6px 4px', width: 90, textAlign: 'right' }}>
+                    <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 80 }}>{s.bookedAt}</td>
+                    <td style={{ padding: '6px 4px', width: 120 }}>
+                      <button
+                        onClick={() => setAccess(s.bookingId, !s.accessGranted)}
+                        disabled={busy === s.bookingId}
+                        style={{
+                          fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
+                          opacity: busy === s.bookingId ? 0.5 : 1,
+                          ...(s.accessGranted
+                            ? { color: '#7d8398', background: 'none', border: '1px solid #e2e5ea' }
+                            : { color: 'white', background: '#16a34a', border: '1px solid #16a34a' }),
+                        }}
+                      >
+                        {s.accessGranted ? 'Révoquer' : '✓ Donner accès'}
+                      </button>
+                    </td>
+                    <td style={{ padding: '6px 4px', width: 80, textAlign: 'right' }}>
                       <button
                         onClick={() => remove(s.bookingId, s.email)}
                         disabled={busy === s.bookingId}

@@ -46,13 +46,16 @@ export default async function ClassesPage({
     .eq('is_active', true)
     .order('sort_order', { ascending: true })
 
-  // Which group (if any) the signed-in student already holds a seat in.
+  // Which group (if any) the signed-in student already holds a seat in, and
+  // whether the admin has granted them access (paid) yet.
   let myGroupId: string | null = null
+  let myAccessGranted = false
   if (user) {
     const { data: booking } = await sb
-      .from('class_bookings').select('group_id')
+      .from('class_bookings').select('group_id, access_granted')
       .eq('user_id', user.id).eq('status', 'reserved').maybeSingle()
     myGroupId = booking?.group_id ?? null
+    myAccessGranted = booking?.access_granted === true
   }
 
   return (
@@ -67,6 +70,7 @@ export default async function ClassesPage({
             locale={locale}
             groups={(groups ?? []) as ClassGroup[]}
             myGroupId={myGroupId}
+            myAccessGranted={myAccessGranted}
             isAuthed={!!user}
           />
         </div>

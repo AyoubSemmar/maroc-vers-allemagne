@@ -1,23 +1,17 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { Link } from '@/i18n/navigation'
-import { createClient } from '@/lib/supabase-browser'
+import { useCourseAccess } from '@/lib/useCourseAccess'
 
 /**
- * Prominent entry to the personal course dashboard. Renders only for
- * signed-in users (students who have an account / a class seat). Kept
- * client-side so the learn-german landing page stays static.
+ * Prominent entry to the personal course dashboard. Renders only once the
+ * admin has granted the student paid access. Kept client-side so the
+ * learn-german landing page stays static.
  */
 export default function MyCourseEntry() {
-  const [show, setShow] = useState(false)
+  const { hasAccess } = useCourseAccess()
 
-  useEffect(() => {
-    const supabase = createClient()
-    supabase.auth.getUser().then(({ data }) => setShow(!!data.user))
-  }, [])
-
-  if (!show) return null
+  if (!hasAccess) return null
 
   return (
     <Link

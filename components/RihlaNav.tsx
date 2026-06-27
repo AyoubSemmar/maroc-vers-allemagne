@@ -7,6 +7,7 @@ import { createClient } from '@/lib/supabase-browser'
 import { Link, useRouter } from '@/i18n/navigation'
 import LanguageSwitcher from './LanguageSwitcher'
 import OpportunitiesPicker from './OpportunitiesPicker'
+import { useCourseAccess } from '@/lib/useCourseAccess'
 
 type Theme = 'light' | 'dark'
 
@@ -29,6 +30,7 @@ function initialFromEmail(email?: string | null) {
 export default function RihlaNav() {
   const tNav = useTranslations('nav')
   const tCommon = useTranslations('common')
+  const { hasAccess: hasCourseAccess } = useCourseAccess()
   const [user, setUser] = useState<SbUser | null>(null)
   const [profileAvatar, setProfileAvatar] = useState<string | null>(null)
   const [theme, setTheme] = useState<Theme>('light')
@@ -228,6 +230,11 @@ export default function RihlaNav() {
               a guest banner asking them to sign in. */}
           {mounted && (
             <Link href="/dashboard">{tNav('dashboard')}</Link>
+          )}
+
+          {/* Paid live-class students get a direct link to their course. */}
+          {mounted && hasCourseAccess && (
+            <Link href="/learn-german/my-course" style={{ fontWeight: 600, color: '#16a34a' }}>📋 Mon cours</Link>
           )}
         </div>
 

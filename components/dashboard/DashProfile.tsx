@@ -17,6 +17,7 @@ import {
   fetchDocuments, uploadDocument, deleteDocument,
 } from '@/lib/documents'
 import { STORAGE_KEY } from '@/components/cv-builder/utils'
+import { useCourseAccess } from '@/lib/useCourseAccess'
 import { useShell } from './DashShell'
 
 const DATE_MARKER = '>>DATE>>'
@@ -40,6 +41,7 @@ export default function DashProfile() {
   const tProf = useTranslations('profile')
   const router = useRouter()
   const supabase = createClient()
+  const { hasAccess: hasCourseAccess } = useCourseAccess()
 
 
   // ── Editable state, seeded from shell context ─────────────────
@@ -305,6 +307,25 @@ export default function DashProfile() {
         <div className="dashprof-alert dashprof-alert-err">
           {tProf('errorPrefix')}{saveError}
         </div>
+      )}
+
+      {/* Live-class students: quick link to their graded course. */}
+      {hasCourseAccess && (
+        <Link
+          href="/learn-german/my-course"
+          style={{
+            display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none',
+            border: '1px solid #bbf7d0', background: 'linear-gradient(90deg,#f0fdf4,#fff)',
+            borderRadius: 16, padding: 16, marginBottom: 16,
+          }}
+        >
+          <span style={{ fontSize: 28 }}>📋</span>
+          <span style={{ flex: 1, minWidth: 0 }}>
+            <strong style={{ display: 'block', color: '#14532d' }}>Mon cours</strong>
+            <span style={{ fontSize: 13, color: '#16a34a' }}>Ta note, ton programme, tes devoirs et l’appel vidéo.</span>
+          </span>
+          <span style={{ background: '#16a34a', color: 'white', fontSize: 13, fontWeight: 600, borderRadius: 8, padding: '6px 14px' }}>Ouvrir →</span>
+        </Link>
       )}
 
       {/* SETTINGS FORM */}
