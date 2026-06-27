@@ -15,6 +15,10 @@ export type ClientAssignment = {
     questions?: { q: string; options: string[] }[]
     minWords?: number
     maxWords?: number
+    // Lesson grouping for pre-generated devoirs (see scripts/generate-devoirs).
+    lessonOrder?: number
+    lessonId?: string
+    lessonTitle?: string
   } | null
   due_at: string | null
 }
