@@ -22,13 +22,15 @@ export function useCourseAccess(): CourseAccess {
     const sb = createClient()
     sb.auth.getUser().then(async ({ data }) => {
       if (!data.user) { if (active) setState({ loading: false, hasBooking: false, hasAccess: false }); return }
-      const { data: b } = await sb
-        .from('class_bookings')
-        .select('access_granted')
-        .eq('user_id', data.user.id)
-        .eq('status', 'reserved')
-        .maybeSingle()
-      if (active) setState({ loading: false, hasBooking: !!b, hasAccess: b?.access_granted === true })
+      // Admins (the owner/teacher) always have access. The bookings select is
+      // separate so a missing-column error doesn't sink the admin check.
+      const [{ data: b }, { data: prof }] = await Promise.all([
+        sb.from('class_bookings').select('access_granted')
+          .eq('user_id', data.user.id).eq('status', 'reserved').maybeSingle(),
+        sb.from('profiles').select('is_admin').eq('user_id', data.user.id).maybeSingle(),
+      ])
+      const isAdmin = prof?.is_admin === true
+      if (active) setState({ loading: false, hasBooking: !!b, hasAccess: isAdmin || b?.access_granted === true })
     })
     return () => { active = false }
   }, [])
