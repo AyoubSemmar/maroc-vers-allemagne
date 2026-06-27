@@ -6,6 +6,7 @@ import { createClient } from '@/lib/supabase-browser'
 import { getLevel } from '@/lib/german-data'
 import { collectLevelVocab } from '@/lib/learn-german/vocab'
 import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
+import { callWindowState, type ClassWindow } from '@/lib/classSchedule'
 import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
@@ -48,6 +49,7 @@ export default function MyCourseClient({
   displayName,
   isTeacher,
   callUrl,
+  classWindow,
 }: {
   locale: string
   levelId: string
@@ -56,6 +58,7 @@ export default function MyCourseClient({
   displayName: string
   isTeacher: boolean
   callUrl: string | null
+  classWindow: ClassWindow | null
 }) {
   const level = getLevel(levelId)
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
@@ -67,6 +70,22 @@ export default function MyCourseClient({
   const [assignments, setAssignments] = useState<ClientAssignment[]>([])
   const [subScores, setSubScores] = useState<Record<string, number>>({})
   const [openAssignment, setOpenAssignment] = useState<ClientAssignment | null>(null)
+
+  // Live join-window state (15 min before → 30 min after start, Morocco time).
+  // Re-checked every 30s so the button flips on/off without a refresh.
+  const [callOpen, setCallOpen] = useState(false)
+  const [windowLabel, setWindowLabel] = useState<{ opensAtLabel: string; closesAtLabel: string } | null>(null)
+  useEffect(() => {
+    if (!classWindow) return
+    const tick = () => {
+      const s = callWindowState(classWindow)
+      setCallOpen(s.open)
+      setWindowLabel({ opensAtLabel: s.opensAtLabel, closesAtLabel: s.closesAtLabel })
+    }
+    tick()
+    const id = setInterval(tick, 30_000)
+    return () => clearInterval(id)
+  }, [classWindow])
 
   useEffect(() => {
     if (!level) return
@@ -151,14 +170,23 @@ export default function MyCourseClient({
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
         </div>
         {callUrl && (
-          <a
-            href={callUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
-          >
-            🎥 Rejoindre l’appel vidéo ↗
-          </a>
+          callOpen ? (
+            <a
+              href={callUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
+            >
+              🎥 Rejoindre l’appel vidéo ↗
+            </a>
+          ) : (
+            <span
+              className="rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold px-4 py-2 cursor-not-allowed select-none"
+              title={windowLabel ? `Ouvert de ${windowLabel.opensAtLabel} à ${windowLabel.closesAtLabel}` : undefined}
+            >
+              🎥 Appel vidéo{windowLabel ? ` — dès ${windowLabel.opensAtLabel}` : ''}
+            </span>
+          )
         )}
       </div>
 

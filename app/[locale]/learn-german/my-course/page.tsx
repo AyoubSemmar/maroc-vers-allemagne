@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildCallUrl } from '@/lib/jitsi'
+import { parseClassWindow, type ClassWindow } from '@/lib/classSchedule'
 import MyCourseClient from './MyCourseClient'
 
 // Personal course dashboard — always reflect the latest grades.
@@ -36,17 +37,21 @@ export default async function MyCoursePage({
   let groupId: string | null = null
   let groupLabel: string | null = null
   let callUrl: string | null = null
+  let classWindow: ClassWindow | null = null
   if (booking?.group_id) {
     groupId = booking.group_id
     const { data: g } = await supabase
       .from('class_groups')
-      .select('label,level,room_slug')
+      .select('label,level,room_slug,schedule')
       .eq('id', booking.group_id)
       .maybeSingle()
     if (g) {
       level = (g.level as string) || 'a1'
       groupLabel = g.label as string
-      if (g.room_slug) callUrl = buildCallUrl(g.room_slug, displayName, isTeacher)
+      if (g.room_slug) {
+        callUrl = buildCallUrl(g.room_slug, displayName, isTeacher)
+        classWindow = parseClassWindow(g.schedule as string, booking.group_id)
+      }
     }
   }
 
@@ -60,6 +65,7 @@ export default async function MyCoursePage({
         displayName={displayName}
         isTeacher={isTeacher}
         callUrl={callUrl}
+        classWindow={classWindow}
       />
     </div>
   )
