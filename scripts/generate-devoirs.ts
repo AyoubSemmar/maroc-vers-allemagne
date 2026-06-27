@@ -56,6 +56,11 @@ function germanTitle(lesson: Lesson): string {
   return (parts.length > 1 ? parts[parts.length - 1] : lesson.title).trim()
 }
 
+// Telc texts often contain quotation marks; if the model emits them as raw "
+// inside a JSON string value it breaks parsing. Instruct the model to avoid
+// straight quotes + raw newlines in text fields.
+const JSON_SAFE = 'JSON SAFETY: return strictly valid JSON. Inside any German "text"/string value, never use the straight double-quote character (use „ … " or none) and write each string on a single line (no raw line breaks).'
+
 function parseJsonLoose(s: string): any {
   const c = s.replace(/```json\s*|\s*```/g, '').trim()
   return JSON.parse(c.slice(c.indexOf('{'), c.lastIndexOf('}') + 1))
@@ -70,6 +75,39 @@ async function ask(prompt: string, maxTokens = 2600): Promise<any> {
   return parseJsonLoose(raw)
 }
 
+// MCQ via tool-use: the SDK returns the tool input already parsed, so a
+// stray quote/newline in the German text can never break JSON parsing.
+const MCQ_TOOL = {
+  name: 'submit_exercise',
+  description: 'Return the generated reading/listening exercise.',
+  input_schema: {
+    type: 'object' as const,
+    properties: {
+      title: { type: 'string' },
+      text: { type: 'string' },
+      questions: {
+        type: 'array',
+        items: { type: 'object', properties: { q: { type: 'string' }, options: { type: 'array', items: { type: 'string' } } }, required: ['q', 'options'] },
+      },
+      correct: { type: 'array', items: { type: 'integer' } },
+      explanations: { type: 'array', items: { type: 'string' } },
+    },
+    required: ['title', 'text', 'questions', 'correct', 'explanations'],
+  },
+}
+
+async function askMcq(prompt: string): Promise<any> {
+  const resp = await ai.messages.create({
+    model: MODEL, max_tokens: 4096, temperature: 0.6,
+    tools: [MCQ_TOOL as any],
+    tool_choice: { type: 'tool', name: 'submit_exercise' },
+    messages: [{ role: 'user', content: prompt }],
+  })
+  const block = resp.content.find(c => c.type === 'tool_use') as any
+  if (!block) throw new Error('no tool_use block')
+  return block.input
+}
+
 function validateMcq(p: any): { questions: { q: string; options: string[] }[]; correct: number[]; explanations: string[] } {
   const qs = Array.isArray(p.questions) ? p.questions : []
   const correct = Array.isArray(p.correct) ? p.correct.map(Number) : []
@@ -77,7 +115,7 @@ function validateMcq(p: any): { questions: { q: string; options: string[] }[]; c
   const clean = qs.map((q: any, i: number) => ({
     q: String(q?.q ?? ''), options: Array.isArray(q?.options) ? q.options.slice(0, 4).map(String) : [],
     _c: correct[i], _e: exps[i] ?? '',
-  })).filter((q: any) => q.q && q.options.length === 4 && Number.isInteger(q._c) && q._c >= 0 && q._c <= 3)
+  })).filter((q: any) => q.q && q.options.length >= 2 && q.options.length <= 4 && Number.isInteger(q._c) && q._c >= 0 && q._c < q.options.length)
   if (clean.length < 3) throw new Error('too few valid questions')
   return { questions: clean.map((q: any) => ({ q: q.q, options: q.options })), correct: clean.map((q: any) => q._c), explanations: clean.map((q: any) => q._e) }
 }
@@ -95,6 +133,7 @@ TASK:
 2. Write 5 multiple-choice comprehension questions IN FRENCH that test real understanding (main idea, details, inference, vocabulary in context — not trivia). Each has exactly 4 options IN GERMAN, exactly one correct. Distribute correct indices.
 3. Each explanation IN FRENCH (max 22 words), citing where in the text.
 
+${JSON_SAFE}
 Return ONLY JSON: {"title":"<short German title>","text":"<the German text>","questions":[{"q":"<question in French>","options":["<de>","<de>","<de>","<de>"]}],"correct":[<0-3>],"explanations":["<French>"]}`
 }
 
@@ -110,6 +149,7 @@ TASK:
 2. Write 5 multiple-choice questions IN FRENCH about what was heard. Each has 4 options IN GERMAN, one correct. Distribute correct indices.
 3. Each explanation IN FRENCH (max 22 words).
 
+${JSON_SAFE}
 Return ONLY JSON: {"title":"<short German title>","text":"<spoken German script>","questions":[{"q":"<French>","options":["<de>","<de>","<de>","<de>"]}],"correct":[<0-3>],"explanations":["<French>"]}`
 }
 
@@ -153,7 +193,7 @@ async function genSkill(levelId: string, lesson: Lesson, skill: 'lesen' | 'hoere
     }
   }
   const prompt = skill === 'lesen' ? lesenPrompt(levelId, theme, grammar, vocab) : hoerenPrompt(levelId, theme, vocab)
-  const p = await ask(prompt)
+  const p = await askMcq(prompt) // tool-use → guaranteed-valid structured JSON
   const mcq = validateMcq(p)
   return {
     skill, level_id: levelId, group_id: null,
