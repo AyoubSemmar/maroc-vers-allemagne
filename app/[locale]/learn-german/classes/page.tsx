@@ -3,6 +3,7 @@ import { redirect } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { isMorocco } from '@/lib/geo'
 import { isAdmin } from '@/lib/entitlements'
+import { CLASSES_LAUNCHED } from '@/lib/classes-flags'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -36,7 +37,12 @@ export default async function ClassesPage({
   // German hub. Signed-in admins (the owner/teacher) bypass the gate so they
   // can see and manage it from anywhere.
   const admin = user ? await isAdmin(user.id) : false
-  if (!admin && !(await isMorocco())) redirect(`/${locale}/learn-german`)
+  // Pre-launch: the whole course is hidden from the public — only admins reach
+  // it. After launch, it's Morocco-only (non-MA visitors go back to the hub).
+  if (!admin) {
+    if (!CLASSES_LAUNCHED) redirect(`/${locale}/learn-german`)
+    if (!(await isMorocco())) redirect(`/${locale}/learn-german`)
+  }
 
   const t = classesStrings(locale)
 

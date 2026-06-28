@@ -5,6 +5,7 @@ import { Link } from '@/i18n/navigation'
 import LevelsGrid from '@/components/learn-german/LevelsGrid'
 import MyCourseEntry from '@/components/learn-german/MyCourseEntry'
 import LiveClassesCta from '@/components/classes/LiveClassesCta'
+import { CLASSES_LAUNCHED } from '@/lib/classes-flags'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import JsonLd from '@/components/seo/JsonLd'
@@ -128,8 +129,9 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
         {/* Signed-in students: jump straight to their graded course dashboard */}
         <MyCourseEntry />
 
-        {/* Live classes CTA — Morocco-only (gated client-side by geo) */}
-        <LiveClassesCta locale={locale} />
+        {/* Live classes CTA — Morocco-only (gated client-side by geo).
+            Hidden entirely until public launch (CLASSES_LAUNCHED). */}
+        {CLASSES_LAUNCHED && <LiveClassesCta locale={locale} />}
 
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />

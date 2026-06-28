@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
+import { isAdmin } from '@/lib/entitlements'
+import { CLASSES_LAUNCHED } from '@/lib/classes-flags'
 import { sendEmail } from '@/lib/email'
 
 export const runtime = 'nodejs'
@@ -27,6 +29,11 @@ export async function POST(req: NextRequest) {
     const sb = await createServerSupabase()
     const { data: { user } } = await sb.auth.getUser()
     if (!user) return NextResponse.json({ status: 'auth' }, { status: 401 })
+
+    // Pre-launch the course is hidden — only admins can book (for testing).
+    if (!CLASSES_LAUNCHED && !(await isAdmin(user.id))) {
+      return NextResponse.json({ status: 'error' }, { status: 403 })
+    }
 
     let groupId = ''
     let whatsapp = ''
