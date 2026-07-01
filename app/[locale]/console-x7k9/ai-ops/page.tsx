@@ -10,9 +10,14 @@ import AdminAiOpsRefresh from '@/components/AdminAiOpsRefresh'
 export const dynamic = 'force-dynamic'
 export const revalidate = 0
 
+// Service-role: the usage tables have RLS ("read own row" only), so the anon
+// key sees 0 rows here (no session) and every number reads as 0. This page is
+// already admin-gated by the console layout, so the service role is safe and
+// lets us see the full ledger.
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
+  { auth: { persistSession: false, autoRefreshToken: false } },
 )
 
 const COST_PER_CALL = {
