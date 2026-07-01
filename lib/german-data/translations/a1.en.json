@@ -8362,49 +8362,207 @@
         "tables": [
           {
             "title": "Conjugation of the six modal verbs in the present",
-            "headers": ["Pronoun", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "headers": [
+              "Pronoun",
+              "können",
+              "müssen",
+              "wollen",
+              "mögen",
+              "dürfen",
+              "sollen"
+            ],
             "rows": [
-              { "cells": ["ich", "kann", "muss", "will", "mag", "darf", "soll"] },
-              { "cells": ["du", "kannst", "musst", "willst", "magst", "darfst", "sollst"] },
-              { "cells": ["er / sie / es", "kann", "muss", "will", "mag", "darf", "soll"], "highlight": true },
-              { "cells": ["wir", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] },
-              { "cells": ["ihr", "könnt", "müsst", "wollt", "mögt", "dürft", "sollt"] },
-              { "cells": ["sie / Sie", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] }
+              {
+                "cells": [
+                  "ich",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "kannst",
+                  "musst",
+                  "willst",
+                  "magst",
+                  "darfst",
+                  "sollst"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "könnt",
+                  "müsst",
+                  "wollt",
+                  "mögt",
+                  "dürft",
+                  "sollt"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "The highlighted row (er/sie/es) matches ich — this is the most important feature of modal verbs."
           },
           {
             "title": "Meanings of the modal verbs",
-            "headers": ["Verb", "Meaning", "Example"],
+            "headers": [
+              "Verb",
+              "Meaning",
+              "Example"
+            ],
             "rows": [
-              { "cells": ["können", "ability (can)", "Ich kann schwimmen."] },
-              { "cells": ["müssen", "strong obligation (must)", "Du musst lernen."] },
-              { "cells": ["wollen", "will (want to)", "Ich will nach Berlin."] },
-              { "cells": ["mögen", "like (mögen) or would like (möchte)", "Ich mag Kaffee."] },
-              { "cells": ["dürfen", "permission (be allowed)", "Hier darf man rauchen."] },
-              { "cells": ["sollen", "advice/duty (should)", "Du sollst zum Arzt gehen."] }
+              {
+                "cells": [
+                  "können",
+                  "ability (can)",
+                  "Ich kann schwimmen."
+                ]
+              },
+              {
+                "cells": [
+                  "müssen",
+                  "strong obligation (must)",
+                  "Du musst lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "will (want to)",
+                  "Ich will nach Berlin."
+                ]
+              },
+              {
+                "cells": [
+                  "mögen",
+                  "like (mögen) or would like (möchte)",
+                  "Ich mag Kaffee."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "permission (be allowed)",
+                  "Hier darf man rauchen."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "advice/duty (should)",
+                  "Du sollst zum Arzt gehen."
+                ]
+              }
             ],
             "theme": "default"
           },
           {
             "title": "Sentence structure with a modal verb",
-            "headers": ["Position 1", "Position 2 (Modal)", "Middle", "End (Infinitiv)"],
+            "headers": [
+              "Position 1",
+              "Position 2 (Modal)",
+              "Middle",
+              "End (Infinitiv)"
+            ],
             "rows": [
-              { "cells": ["Ich", "kann", "gut Deutsch", "sprechen."] },
-              { "cells": ["Heute", "müssen", "wir früh", "aufstehen."] },
-              { "cells": ["Wo", "darf", "ich", "parken?"] },
-              { "cells": ["Mein Bruder", "will", "in Marokko", "studieren."] }
+              {
+                "cells": [
+                  "Ich",
+                  "kann",
+                  "gut Deutsch",
+                  "sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "Heute",
+                  "müssen",
+                  "wir früh",
+                  "aufstehen."
+                ]
+              },
+              {
+                "cells": [
+                  "Wo",
+                  "darf",
+                  "ich",
+                  "parken?"
+                ]
+              },
+              {
+                "cells": [
+                  "Mein Bruder",
+                  "will",
+                  "in Marokko",
+                  "studieren."
+                ]
+              }
             ],
             "theme": "default",
             "note": "The modal verb is always in Position 2, and the main verb at the end."
           }
         ],
         "rules": [
-          { "rule": "Don't forget: with modal verbs, ich and er/sie/es have **the same** form, with no -t at the end.", "example": "Er kann Deutsch. — Ich kann Deutsch. (not \"er kannt\")", "translation": "He knows German. — I know German." },
-          { "rule": "In a question (Ja/Nein-Frage), the modal verb starts the sentence.", "example": "Kannst du Arabisch sprechen?", "translation": "Can you speak Arabic?" },
-          { "rule": "The polite form \"möchte\" (would like) comes from mögen — use it instead of will in restaurants and shops.", "example": "Ich möchte einen Kaffee, bitte.", "translation": "I'd like a coffee, please. (more polite than Ich will...)" },
-          { "rule": "With a modal verb, the main verb is sometimes dropped if it's clear from context.", "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)", "translation": "I know German. (= I can speak German.)" }
+          {
+            "rule": "Don't forget: with modal verbs, ich and er/sie/es have **the same** form, with no -t at the end.",
+            "example": "Er kann Deutsch. — Ich kann Deutsch. (not \"er kannt\")",
+            "translation": "He knows German. — I know German."
+          },
+          {
+            "rule": "In a question (Ja/Nein-Frage), the modal verb starts the sentence.",
+            "example": "Kannst du Arabisch sprechen?",
+            "translation": "Can you speak Arabic?"
+          },
+          {
+            "rule": "The polite form \"möchte\" (would like) comes from mögen — use it instead of will in restaurants and shops.",
+            "example": "Ich möchte einen Kaffee, bitte.",
+            "translation": "I'd like a coffee, please. (more polite than Ich will...)"
+          },
+          {
+            "rule": "With a modal verb, the main verb is sometimes dropped if it's clear from context.",
+            "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)",
+            "translation": "I know German. (= I can speak German.)"
+          }
         ],
         "examples": [
           "Ich kann ein bisschen Deutsch sprechen. — I can speak a little German.",
@@ -8421,76 +8579,491 @@
         "tip": "Memorize the big table by heart. Modal verb + main verb at the end = a pattern you'll use in almost every A1 sentence. Practice 5 minutes a day on the Drill page."
       },
       "vocabulary": [
-        { "german": "können", "arabic": "can / be able to", "example": "Ich kann gut schwimmen.", "exampleArabic": "I can swim well.", "type": "verb" },
-        { "german": "müssen", "arabic": "must / have to", "example": "Wir müssen lernen.", "exampleArabic": "We have to study.", "type": "verb" },
-        { "german": "wollen", "arabic": "want", "example": "Ich will Wasser.", "exampleArabic": "I want water.", "type": "verb" },
-        { "german": "mögen", "arabic": "like", "example": "Magst du Tee?", "exampleArabic": "Do you like tea?", "type": "verb" },
-        { "german": "möchten", "arabic": "would like (polite)", "example": "Ich möchte einen Kaffee.", "exampleArabic": "I'd like a coffee.", "type": "verb" },
-        { "german": "dürfen", "arabic": "be allowed to", "example": "Hier darf man parken.", "exampleArabic": "Parking is allowed here.", "type": "verb" },
-        { "german": "sollen", "arabic": "should", "example": "Du sollst zum Arzt gehen.", "exampleArabic": "You should go to the doctor.", "type": "verb" },
-        { "german": "der Infinitiv", "arabic": "the infinitive", "example": "sprechen ist ein Infinitiv.", "exampleArabic": "sprechen is an infinitive.", "type": "noun", "gender": "der" },
-        { "german": "rauchen", "arabic": "smoke", "example": "Hier darf man nicht rauchen.", "exampleArabic": "Smoking is not allowed here.", "type": "verb" },
-        { "german": "parken", "arabic": "park", "example": "Wo kann ich parken?", "exampleArabic": "Where can I park?", "type": "verb" },
-        { "german": "helfen", "arabic": "help", "example": "Können Sie mir helfen?", "exampleArabic": "Can you help me?", "type": "verb" },
-        { "german": "reisen", "arabic": "travel", "example": "Wir wollen nach Berlin reisen.", "exampleArabic": "We want to travel to Berlin.", "type": "verb" },
-        { "german": "studieren", "arabic": "study (at university)", "example": "Ich will in Deutschland studieren.", "exampleArabic": "I want to study in Germany.", "type": "verb" },
-        { "german": "arbeiten", "arabic": "work", "example": "Mein Vater muss arbeiten.", "exampleArabic": "My father has to work.", "type": "verb" },
-        { "german": "lernen", "arabic": "learn", "example": "Du musst Deutsch lernen.", "exampleArabic": "You have to learn German.", "type": "verb" },
-        { "german": "schlafen", "arabic": "sleep", "example": "Ich will jetzt schlafen.", "exampleArabic": "I want to sleep now.", "type": "verb" },
-        { "german": "kaufen", "arabic": "buy", "example": "Ich möchte Brot kaufen.", "exampleArabic": "I'd like to buy bread.", "type": "verb" },
-        { "german": "sprechen", "arabic": "speak", "example": "Kannst du Englisch sprechen?", "exampleArabic": "Can you speak English?", "type": "verb" },
-        { "german": "verstehen", "arabic": "understand", "example": "Ich kann das nicht verstehen.", "exampleArabic": "I can't understand that.", "type": "verb" },
-        { "german": "gehen", "arabic": "go", "example": "Wir wollen ins Kino gehen.", "exampleArabic": "We want to go to the cinema.", "type": "verb" },
-        { "german": "das Wasser", "arabic": "water", "example": "Ich möchte Wasser, bitte.", "exampleArabic": "I'd like water, please.", "type": "noun", "gender": "das" },
-        { "german": "die Hilfe", "arabic": "help", "example": "Ich brauche Hilfe.", "exampleArabic": "I need help.", "type": "noun", "gender": "die" },
-        { "german": "der Arzt", "arabic": "doctor", "example": "Du musst zum Arzt gehen.", "exampleArabic": "You have to go to the doctor.", "type": "noun", "gender": "der", "plural": "die Ärzte" },
-        { "german": "die Schule", "arabic": "school", "example": "Mein Sohn muss in die Schule.", "exampleArabic": "My son has to go to school.", "type": "noun", "gender": "die", "plural": "die Schulen" },
-        { "german": "die Arbeit", "arabic": "work / job", "example": "Ich muss zur Arbeit.", "exampleArabic": "I have to go to work.", "type": "noun", "gender": "die" },
-        { "german": "das Auto", "arabic": "car", "example": "Wo kann ich das Auto parken?", "exampleArabic": "Where can I park the car?", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "der Bus", "arabic": "bus", "example": "Wir können den Bus nehmen.", "exampleArabic": "We can take the bus.", "type": "noun", "gender": "der", "plural": "die Busse" },
-        { "german": "die Apotheke", "arabic": "pharmacy", "example": "Ich muss zur Apotheke gehen.", "exampleArabic": "I have to go to the pharmacy.", "type": "noun", "gender": "die", "plural": "die Apotheken" },
-        { "german": "gern", "arabic": "gladly / with pleasure", "example": "Ich möchte gern einen Tee.", "exampleArabic": "I'd love a tea.", "type": "adverb" },
-        { "german": "lieber", "arabic": "rather / prefer", "example": "Ich möchte lieber Wasser.", "exampleArabic": "I'd rather have water.", "type": "adverb" },
-        { "german": "vielleicht", "arabic": "maybe", "example": "Vielleicht kann ich morgen kommen.", "exampleArabic": "Maybe I can come tomorrow.", "type": "adverb" },
-        { "german": "unbedingt", "arabic": "absolutely / definitely", "example": "Du musst unbedingt das Brandenburger Tor sehen!", "exampleArabic": "You absolutely have to see the Brandenburg Gate!", "type": "adverb" },
-        { "german": "leider", "arabic": "unfortunately", "example": "Ich kann leider nicht kommen.", "exampleArabic": "Unfortunately I can't come.", "type": "adverb" },
-        { "german": "Entschuldigung", "arabic": "excuse me / sorry", "example": "Entschuldigung, kann ich Sie etwas fragen?", "exampleArabic": "Excuse me, can I ask you something?", "type": "phrase" },
-        { "german": "kein Problem", "arabic": "no problem", "example": "Du kannst kommen — kein Problem.", "exampleArabic": "You can come — no problem.", "type": "phrase" }
+        {
+          "german": "können",
+          "arabic": "can / be able to",
+          "example": "Ich kann gut schwimmen.",
+          "exampleArabic": "I can swim well.",
+          "type": "verb"
+        },
+        {
+          "german": "müssen",
+          "arabic": "must / have to",
+          "example": "Wir müssen lernen.",
+          "exampleArabic": "We have to study.",
+          "type": "verb"
+        },
+        {
+          "german": "wollen",
+          "arabic": "want",
+          "example": "Ich will Wasser.",
+          "exampleArabic": "I want water.",
+          "type": "verb"
+        },
+        {
+          "german": "mögen",
+          "arabic": "like",
+          "example": "Magst du Tee?",
+          "exampleArabic": "Do you like tea?",
+          "type": "verb"
+        },
+        {
+          "german": "möchten",
+          "arabic": "would like (polite)",
+          "example": "Ich möchte einen Kaffee.",
+          "exampleArabic": "I'd like a coffee.",
+          "type": "verb"
+        },
+        {
+          "german": "dürfen",
+          "arabic": "be allowed to",
+          "example": "Hier darf man parken.",
+          "exampleArabic": "Parking is allowed here.",
+          "type": "verb"
+        },
+        {
+          "german": "sollen",
+          "arabic": "should",
+          "example": "Du sollst zum Arzt gehen.",
+          "exampleArabic": "You should go to the doctor.",
+          "type": "verb"
+        },
+        {
+          "german": "der Infinitiv",
+          "arabic": "the infinitive",
+          "example": "sprechen ist ein Infinitiv.",
+          "exampleArabic": "sprechen is an infinitive.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "rauchen",
+          "arabic": "smoke",
+          "example": "Hier darf man nicht rauchen.",
+          "exampleArabic": "Smoking is not allowed here.",
+          "type": "verb"
+        },
+        {
+          "german": "parken",
+          "arabic": "park",
+          "example": "Wo kann ich parken?",
+          "exampleArabic": "Where can I park?",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "help",
+          "example": "Können Sie mir helfen?",
+          "exampleArabic": "Can you help me?",
+          "type": "verb"
+        },
+        {
+          "german": "reisen",
+          "arabic": "travel",
+          "example": "Wir wollen nach Berlin reisen.",
+          "exampleArabic": "We want to travel to Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "studieren",
+          "arabic": "study (at university)",
+          "example": "Ich will in Deutschland studieren.",
+          "exampleArabic": "I want to study in Germany.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "work",
+          "example": "Mein Vater muss arbeiten.",
+          "exampleArabic": "My father has to work.",
+          "type": "verb"
+        },
+        {
+          "german": "lernen",
+          "arabic": "learn",
+          "example": "Du musst Deutsch lernen.",
+          "exampleArabic": "You have to learn German.",
+          "type": "verb"
+        },
+        {
+          "german": "schlafen",
+          "arabic": "sleep",
+          "example": "Ich will jetzt schlafen.",
+          "exampleArabic": "I want to sleep now.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "buy",
+          "example": "Ich möchte Brot kaufen.",
+          "exampleArabic": "I'd like to buy bread.",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen",
+          "arabic": "speak",
+          "example": "Kannst du Englisch sprechen?",
+          "exampleArabic": "Can you speak English?",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "understand",
+          "example": "Ich kann das nicht verstehen.",
+          "exampleArabic": "I can't understand that.",
+          "type": "verb"
+        },
+        {
+          "german": "gehen",
+          "arabic": "go",
+          "example": "Wir wollen ins Kino gehen.",
+          "exampleArabic": "We want to go to the cinema.",
+          "type": "verb"
+        },
+        {
+          "german": "das Wasser",
+          "arabic": "water",
+          "example": "Ich möchte Wasser, bitte.",
+          "exampleArabic": "I'd like water, please.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Hilfe",
+          "arabic": "help",
+          "example": "Ich brauche Hilfe.",
+          "exampleArabic": "I need help.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "doctor",
+          "example": "Du musst zum Arzt gehen.",
+          "exampleArabic": "You have to go to the doctor.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Ärzte"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "school",
+          "example": "Mein Sohn muss in die Schule.",
+          "exampleArabic": "My son has to go to school.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schulen"
+        },
+        {
+          "german": "die Arbeit",
+          "arabic": "work / job",
+          "example": "Ich muss zur Arbeit.",
+          "exampleArabic": "I have to go to work.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "car",
+          "example": "Wo kann ich das Auto parken?",
+          "exampleArabic": "Where can I park the car?",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "der Bus",
+          "arabic": "bus",
+          "example": "Wir können den Bus nehmen.",
+          "exampleArabic": "We can take the bus.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Busse"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "pharmacy",
+          "example": "Ich muss zur Apotheke gehen.",
+          "exampleArabic": "I have to go to the pharmacy.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Apotheken"
+        },
+        {
+          "german": "gern",
+          "arabic": "gladly / with pleasure",
+          "example": "Ich möchte gern einen Tee.",
+          "exampleArabic": "I'd love a tea.",
+          "type": "adverb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "rather / prefer",
+          "example": "Ich möchte lieber Wasser.",
+          "exampleArabic": "I'd rather have water.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "maybe",
+          "example": "Vielleicht kann ich morgen kommen.",
+          "exampleArabic": "Maybe I can come tomorrow.",
+          "type": "adverb"
+        },
+        {
+          "german": "unbedingt",
+          "arabic": "absolutely / definitely",
+          "example": "Du musst unbedingt das Brandenburger Tor sehen!",
+          "exampleArabic": "You absolutely have to see the Brandenburg Gate!",
+          "type": "adverb"
+        },
+        {
+          "german": "leider",
+          "arabic": "unfortunately",
+          "example": "Ich kann leider nicht kommen.",
+          "exampleArabic": "Unfortunately I can't come.",
+          "type": "adverb"
+        },
+        {
+          "german": "Entschuldigung",
+          "arabic": "excuse me / sorry",
+          "example": "Entschuldigung, kann ich Sie etwas fragen?",
+          "exampleArabic": "Excuse me, can I ask you something?",
+          "type": "phrase"
+        },
+        {
+          "german": "kein Problem",
+          "arabic": "no problem",
+          "example": "Du kannst kommen — kein Problem.",
+          "exampleArabic": "You can come — no problem.",
+          "type": "phrase"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-13-q1", "question": "Complete: \"Ich ___ gut Deutsch sprechen.\" (can)", "answer": "kann", "hint": "können — remember: ich kann (no -e)" },
-          { "type": "multiple-choice", "id": "a1-13-q2", "question": "What's the correct form of er with müssen?", "options": ["er müsst", "er muss", "er musst", "er müssen"], "answer": "er muss" },
-          { "type": "fill-blank", "id": "a1-13-q3", "question": "Complete: \"Du ___ mehr Wasser trinken.\" (should)", "answer": "sollst", "hint": "sollen — du form" },
-          { "type": "multiple-choice", "id": "a1-13-q4", "question": "Which sentence is correct?", "options": ["Ich kann sprechen Deutsch gut.", "Ich Deutsch gut sprechen kann.", "Ich kann gut Deutsch sprechen.", "Sprechen ich kann gut Deutsch."], "answer": "Ich kann gut Deutsch sprechen." },
-          { "type": "fill-blank", "id": "a1-13-q5", "question": "Complete: \"___ ich hier parken?\" (Am I allowed?)", "answer": "Darf", "hint": "dürfen — ich form in a question" },
-          { "type": "matching", "id": "a1-13-q6", "question": "Match the modal verb with its meaning:", "pairs": [
-            { "left": "können", "right": "can / be able to" },
-            { "left": "müssen", "right": "must" },
-            { "left": "wollen", "right": "want" },
-            { "left": "mögen", "right": "like" },
-            { "left": "dürfen", "right": "be allowed to" },
-            { "left": "sollen", "right": "should" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-13-q7", "question": "Order: \"I want to travel to Germany\"", "words": ["Ich", "will", "nach", "Deutschland", "reisen"], "answer": "Ich will nach Deutschland reisen" },
-          { "type": "speaking", "id": "a1-13-q8", "question": "Say in German: \"I'd like a coffee please\" (polite)", "answer": "Ich möchte einen Kaffee bitte" },
-          { "type": "fill-blank", "id": "a1-13-q9", "question": "Listen and complete: \"Hier ___ man nicht rauchen.\" (not allowed)", "audioPrompt": "Hier darf man nicht rauchen.", "answer": "darf", "hint": "dürfen + man (general permission)" },
-          { "type": "multiple-choice", "id": "a1-13-q10", "question": "How do you ask for help politely?", "options": ["Hilf mir!", "Du musst mir helfen!", "Können Sie mir helfen, bitte?", "Ich helfe dir."], "answer": "Können Sie mir helfen, bitte?" },
-          { "type": "fill-blank", "id": "a1-13-q11", "question": "Complete: \"Wir ___ heute viel arbeiten.\" (we have to)", "answer": "müssen", "hint": "müssen with wir" },
-          { "type": "multiple-choice", "id": "a1-13-q12", "question": "Form of wollen with ihr?", "options": ["will", "willst", "wollen", "wollt"], "answer": "wollt" },
-          { "type": "fill-blank", "id": "a1-13-q13", "question": "\"Magst ___ Tee oder Kaffee?\" (you)", "answer": "du", "hint": "Yes/No question" },
-          { "type": "drag-drop", "id": "a1-13-q14", "question": "Order: \"Can you speak English?\"", "words": ["Kannst", "du", "Englisch", "sprechen"], "answer": "Kannst du Englisch sprechen" },
-          { "type": "matching", "id": "a1-13-q15", "question": "Match the sentence to its meaning:", "pairs": [
-            { "left": "Ich kann.", "right": "I can." },
-            { "left": "Ich darf.", "right": "I'm allowed." },
-            { "left": "Ich möchte.", "right": "I'd like." },
-            { "left": "Ich soll.", "right": "I should." }
-          ], "answer": "matched" },
-          { "type": "fill-blank", "id": "a1-13-q16", "question": "Listen: \"Du ___ jetzt schlafen!\" (must)", "audioPrompt": "Du musst jetzt schlafen!", "answer": "musst", "hint": "müssen + du" },
-          { "type": "multiple-choice", "id": "a1-13-q17", "question": "\"Möchtest du Wasser?\" — comes from:", "options": ["möchten", "mögen", "wollen", "müssen"], "answer": "mögen" },
-          { "type": "speaking", "id": "a1-13-q18", "question": "Say in German: \"We want to travel to Germany\"", "answer": "Wir wollen nach Deutschland reisen" },
-          { "type": "fill-blank", "id": "a1-13-q19", "question": "\"Hier ___ man rauchen?\" (Is it allowed?)", "answer": "darf", "hint": "dürfen in a question" },
-          { "type": "multiple-choice", "id": "a1-13-q20", "question": "Which sentence is polite in a restaurant?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q1",
+            "question": "Complete: \"Ich ___ gut Deutsch sprechen.\" (can)",
+            "answer": "kann",
+            "hint": "können — remember: ich kann (no -e)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q2",
+            "question": "What's the correct form of er with müssen?",
+            "options": [
+              "er müsst",
+              "er muss",
+              "er musst",
+              "er müssen"
+            ],
+            "answer": "er muss"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q3",
+            "question": "Complete: \"Du ___ mehr Wasser trinken.\" (should)",
+            "answer": "sollst",
+            "hint": "sollen — du form"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q4",
+            "question": "Which sentence is correct?",
+            "options": [
+              "Ich kann sprechen Deutsch gut.",
+              "Ich Deutsch gut sprechen kann.",
+              "Ich kann gut Deutsch sprechen.",
+              "Sprechen ich kann gut Deutsch."
+            ],
+            "answer": "Ich kann gut Deutsch sprechen."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q5",
+            "question": "Complete: \"___ ich hier parken?\" (Am I allowed?)",
+            "answer": "Darf",
+            "hint": "dürfen — ich form in a question"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q6",
+            "question": "Match the modal verb with its meaning:",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "can / be able to"
+              },
+              {
+                "left": "müssen",
+                "right": "must"
+              },
+              {
+                "left": "wollen",
+                "right": "want"
+              },
+              {
+                "left": "mögen",
+                "right": "like"
+              },
+              {
+                "left": "dürfen",
+                "right": "be allowed to"
+              },
+              {
+                "left": "sollen",
+                "right": "should"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q7",
+            "question": "Order: \"I want to travel to Germany\"",
+            "words": [
+              "Ich",
+              "will",
+              "nach",
+              "Deutschland",
+              "reisen"
+            ],
+            "answer": "Ich will nach Deutschland reisen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q8",
+            "question": "Say in German: \"I'd like a coffee please\" (polite)",
+            "answer": "Ich möchte einen Kaffee bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q9",
+            "question": "Listen and complete: \"Hier ___ man nicht rauchen.\" (not allowed)",
+            "audioPrompt": "Hier darf man nicht rauchen.",
+            "answer": "darf",
+            "hint": "dürfen + man (general permission)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q10",
+            "question": "How do you ask for help politely?",
+            "options": [
+              "Hilf mir!",
+              "Du musst mir helfen!",
+              "Können Sie mir helfen, bitte?",
+              "Ich helfe dir."
+            ],
+            "answer": "Können Sie mir helfen, bitte?"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q11",
+            "question": "Complete: \"Wir ___ heute viel arbeiten.\" (we have to)",
+            "answer": "müssen",
+            "hint": "müssen with wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q12",
+            "question": "Form of wollen with ihr?",
+            "options": [
+              "will",
+              "willst",
+              "wollen",
+              "wollt"
+            ],
+            "answer": "wollt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q13",
+            "question": "\"Magst ___ Tee oder Kaffee?\" (you)",
+            "answer": "du",
+            "hint": "Yes/No question"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q14",
+            "question": "Order: \"Can you speak English?\"",
+            "words": [
+              "Kannst",
+              "du",
+              "Englisch",
+              "sprechen"
+            ],
+            "answer": "Kannst du Englisch sprechen"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q15",
+            "question": "Match the sentence to its meaning:",
+            "pairs": [
+              {
+                "left": "Ich kann.",
+                "right": "I can."
+              },
+              {
+                "left": "Ich darf.",
+                "right": "I'm allowed."
+              },
+              {
+                "left": "Ich möchte.",
+                "right": "I'd like."
+              },
+              {
+                "left": "Ich soll.",
+                "right": "I should."
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q16",
+            "question": "Listen: \"Du ___ jetzt schlafen!\" (must)",
+            "audioPrompt": "Du musst jetzt schlafen!",
+            "answer": "musst",
+            "hint": "müssen + du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q17",
+            "question": "\"Möchtest du Wasser?\" — comes from:",
+            "options": [
+              "möchten",
+              "mögen",
+              "wollen",
+              "müssen"
+            ],
+            "answer": "mögen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q18",
+            "question": "Say in German: \"We want to travel to Germany\"",
+            "answer": "Wir wollen nach Deutschland reisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q19",
+            "question": "\"Hier ___ man rauchen?\" (Is it allowed?)",
+            "answer": "darf",
+            "hint": "dürfen in a question"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q20",
+            "question": "Which sentence is polite in a restaurant?",
+            "options": [
+              "Ich will Wasser!",
+              "Wasser, jetzt!",
+              "Ich möchte ein Wasser, bitte.",
+              "Du gibst mir Wasser."
+            ],
+            "answer": "Ich möchte ein Wasser, bitte."
+          }
         ]
       }
     },
@@ -9814,39 +10387,154 @@
         "tables": [
           {
             "title": "The five patterns with examples",
-            "headers": ["Pattern", "Singular", "Plural", "Note"],
+            "headers": [
+              "Pattern",
+              "Singular",
+              "Plural",
+              "Note"
+            ],
             "rows": [
-              { "cells": ["+ -e", "der Tag", "die Tage", "most common for masculines"] },
-              { "cells": ["+ -(e)n", "die Frau", "die Frauen", "almost all feminines ending in -e/-in"] },
-              { "cells": ["+ -er + Umlaut", "das Buch", "die Bücher", "with a/o/u → ä/ö/ü"], "highlight": true },
-              { "cells": ["+ -s", "das Auto", "die Autos", "foreign words and abbreviations"] },
-              { "cells": ["no / Umlaut", "der Vater", "die Väter", "nouns ending in -er, -el, -en"] }
+              {
+                "cells": [
+                  "+ -e",
+                  "der Tag",
+                  "die Tage",
+                  "most common for masculines"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -(e)n",
+                  "die Frau",
+                  "die Frauen",
+                  "almost all feminines ending in -e/-in"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -er + Umlaut",
+                  "das Buch",
+                  "die Bücher",
+                  "with a/o/u → ä/ö/ü"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "+ -s",
+                  "das Auto",
+                  "die Autos",
+                  "foreign words and abbreviations"
+                ]
+              },
+              {
+                "cells": [
+                  "no / Umlaut",
+                  "der Vater",
+                  "die Väter",
+                  "nouns ending in -er, -el, -en"
+                ]
+              }
             ],
             "theme": "default",
             "note": "Try to predict the plural, but always check the dictionary — there are exceptions."
           },
           {
             "title": "Practical examples with the five patterns",
-            "headers": ["Gender", "Singular", "Plural"],
+            "headers": [
+              "Gender",
+              "Singular",
+              "Plural"
+            ],
             "rows": [
-              { "cells": ["der", "der Tisch", "die Tische"] },
-              { "cells": ["der", "der Stuhl", "die Stühle"] },
-              { "cells": ["die", "die Lampe", "die Lampen"] },
-              { "cells": ["die", "die Schwester", "die Schwestern"] },
-              { "cells": ["das", "das Haus", "die Häuser"] },
-              { "cells": ["das", "das Kind", "die Kinder"] },
-              { "cells": ["das", "das Hotel", "die Hotels"] },
-              { "cells": ["der", "der Lehrer", "die Lehrer"] },
-              { "cells": ["die", "die Mutter", "die Mütter"] }
+              {
+                "cells": [
+                  "der",
+                  "der Tisch",
+                  "die Tische"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Stuhl",
+                  "die Stühle"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Lampe",
+                  "die Lampen"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Schwester",
+                  "die Schwestern"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Haus",
+                  "die Häuser"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Kind",
+                  "die Kinder"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Hotel",
+                  "die Hotels"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Lehrer",
+                  "die Lehrer"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Mutter",
+                  "die Mütter"
+                ]
+              }
             ],
             "theme": "default"
           }
         ],
         "rules": [
-          { "rule": "All plural nouns take die — no difference between der/die/das.", "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder", "translation": "The men / the women / the children — all die." },
-          { "rule": "Feminines ending in -in double the n: die Lehrerin → die Lehrerinnen.", "example": "die Studentin → die Studentinnen", "translation": "The female students." },
-          { "rule": "Foreign words (auto, hotel, café, taxi) take -s.", "example": "das Auto → die Autos / das Café → die Cafés", "translation": "The cars / the cafés." },
-          { "rule": "Some nouns are only used in plural: die Eltern (parents), die Leute (people), die Ferien (vacation).", "example": "Meine Eltern wohnen in Casablanca.", "translation": "My parents live in Casablanca." }
+          {
+            "rule": "All plural nouns take die — no difference between der/die/das.",
+            "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder",
+            "translation": "The men / the women / the children — all die."
+          },
+          {
+            "rule": "Feminines ending in -in double the n: die Lehrerin → die Lehrerinnen.",
+            "example": "die Studentin → die Studentinnen",
+            "translation": "The female students."
+          },
+          {
+            "rule": "Foreign words (auto, hotel, café, taxi) take -s.",
+            "example": "das Auto → die Autos / das Café → die Cafés",
+            "translation": "The cars / the cafés."
+          },
+          {
+            "rule": "Some nouns are only used in plural: die Eltern (parents), die Leute (people), die Ferien (vacation).",
+            "example": "Meine Eltern wohnen in Casablanca.",
+            "translation": "My parents live in Casablanca."
+          }
         ],
         "examples": [
           "Ich habe zwei Brüder. — I have two brothers.",
@@ -9861,75 +10549,886 @@
         "tip": "In daily life you'll need to know at most 50 plurals — memorize them. The rest you'll pick up by use. Try the Drill page to refresh your memory."
       },
       "vocabulary": [
-        { "german": "der Tag", "arabic": "day", "example": "Es gibt sieben Tage in der Woche.", "exampleArabic": "There are seven days in the week.", "type": "noun", "gender": "der", "plural": "die Tage" },
-        { "german": "der Tisch", "arabic": "table", "example": "Die Tische sind groß.", "exampleArabic": "The tables are big.", "type": "noun", "gender": "der", "plural": "die Tische" },
-        { "german": "der Stuhl", "arabic": "chair", "example": "Wir brauchen vier Stühle.", "exampleArabic": "We need four chairs.", "type": "noun", "gender": "der", "plural": "die Stühle" },
-        { "german": "die Lampe", "arabic": "lamp", "example": "Die Lampen sind neu.", "exampleArabic": "The lamps are new.", "type": "noun", "gender": "die", "plural": "die Lampen" },
-        { "german": "das Buch", "arabic": "book", "example": "Ich lese drei Bücher.", "exampleArabic": "I'm reading three books.", "type": "noun", "gender": "das", "plural": "die Bücher" },
-        { "german": "das Kind", "arabic": "child", "example": "Die Kinder sind im Park.", "exampleArabic": "The children are in the park.", "type": "noun", "gender": "das", "plural": "die Kinder" },
-        { "german": "das Haus", "arabic": "house", "example": "Die Häuser sind alt.", "exampleArabic": "The houses are old.", "type": "noun", "gender": "das", "plural": "die Häuser" },
-        { "german": "das Auto", "arabic": "car", "example": "Wir kaufen zwei Autos.", "exampleArabic": "We're buying two cars.", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "das Hotel", "arabic": "hotel", "example": "Es gibt viele Hotels.", "exampleArabic": "There are many hotels.", "type": "noun", "gender": "das", "plural": "die Hotels" },
-        { "german": "der Vater", "arabic": "father", "example": "Die Väter arbeiten.", "exampleArabic": "The fathers are working.", "type": "noun", "gender": "der", "plural": "die Väter" },
-        { "german": "die Mutter", "arabic": "mother", "example": "Die Mütter sind hier.", "exampleArabic": "The mothers are here.", "type": "noun", "gender": "die", "plural": "die Mütter" },
-        { "german": "der Bruder", "arabic": "brother", "example": "Ich habe zwei Brüder.", "exampleArabic": "I have two brothers.", "type": "noun", "gender": "der", "plural": "die Brüder" },
-        { "german": "die Schwester", "arabic": "sister", "example": "Sie hat drei Schwestern.", "exampleArabic": "She has three sisters.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
-        { "german": "der Mann", "arabic": "man", "example": "Die Männer sprechen.", "exampleArabic": "The men are talking.", "type": "noun", "gender": "der", "plural": "die Männer" },
-        { "german": "die Frau", "arabic": "woman", "example": "Die Frauen lernen Deutsch.", "exampleArabic": "The women are learning German.", "type": "noun", "gender": "die", "plural": "die Frauen" },
-        { "german": "der Freund", "arabic": "friend (m.)", "example": "Meine Freunde wohnen in Berlin.", "exampleArabic": "My friends live in Berlin.", "type": "noun", "gender": "der", "plural": "die Freunde" },
-        { "german": "die Freundin", "arabic": "friend (f.)", "example": "Meine Freundinnen sind hier.", "exampleArabic": "My female friends are here.", "type": "noun", "gender": "die", "plural": "die Freundinnen" },
-        { "german": "der Lehrer", "arabic": "teacher (m.)", "example": "Die Lehrer sind nett.", "exampleArabic": "The teachers are nice.", "type": "noun", "gender": "der", "plural": "die Lehrer" },
-        { "german": "die Lehrerin", "arabic": "teacher (f.)", "example": "Die Lehrerinnen helfen.", "exampleArabic": "The female teachers help.", "type": "noun", "gender": "die", "plural": "die Lehrerinnen" },
-        { "german": "der Student", "arabic": "student (m.)", "example": "Die Studenten lernen viel.", "exampleArabic": "The students study a lot.", "type": "noun", "gender": "der", "plural": "die Studenten" },
-        { "german": "die Studentin", "arabic": "student (f.)", "example": "Die Studentinnen kommen.", "exampleArabic": "The female students are coming.", "type": "noun", "gender": "die", "plural": "die Studentinnen" },
-        { "german": "der Apfel", "arabic": "apple", "example": "Ich kaufe drei Äpfel.", "exampleArabic": "I'm buying three apples.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
-        { "german": "das Brot", "arabic": "bread", "example": "Die Brote sind frisch.", "exampleArabic": "The breads are fresh.", "type": "noun", "gender": "das", "plural": "die Brote" },
-        { "german": "der Schlüssel", "arabic": "key", "example": "Wo sind die Schlüssel?", "exampleArabic": "Where are the keys?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
-        { "german": "das Zimmer", "arabic": "room", "example": "Die Zimmer sind klein.", "exampleArabic": "The rooms are small.", "type": "noun", "gender": "das", "plural": "die Zimmer" },
-        { "german": "die Stadt", "arabic": "city", "example": "Diese Städte sind schön.", "exampleArabic": "These cities are beautiful.", "type": "noun", "gender": "die", "plural": "die Städte" },
-        { "german": "das Land", "arabic": "country", "example": "Diese Länder sind in Europa.", "exampleArabic": "These countries are in Europe.", "type": "noun", "gender": "das", "plural": "die Länder" },
-        { "german": "die Sprache", "arabic": "language", "example": "Sie spricht drei Sprachen.", "exampleArabic": "She speaks three languages.", "type": "noun", "gender": "die", "plural": "die Sprachen" },
-        { "german": "die Eltern", "arabic": "parents", "example": "Meine Eltern arbeiten.", "exampleArabic": "My parents work.", "type": "noun", "gender": "pl" },
-        { "german": "die Leute", "arabic": "people", "example": "Die Leute sind freundlich.", "exampleArabic": "The people are friendly.", "type": "noun", "gender": "pl" },
-        { "german": "die Ferien", "arabic": "holidays / vacation", "example": "In den Ferien fahren wir nach Spanien.", "exampleArabic": "On vacation we go to Spain.", "type": "noun", "gender": "pl" },
-        { "german": "die Geschwister", "arabic": "siblings", "example": "Hast du Geschwister?", "exampleArabic": "Do you have siblings?", "type": "noun", "gender": "pl" },
-        { "german": "viele", "arabic": "many", "example": "Es gibt viele Bücher.", "exampleArabic": "There are many books.", "type": "adjective" },
-        { "german": "wenige", "arabic": "few", "example": "Wenige Studenten lernen Arabisch.", "exampleArabic": "Few students learn Arabic.", "type": "adjective" },
-        { "german": "einige", "arabic": "some / a few", "example": "Einige Kinder spielen draußen.", "exampleArabic": "Some children are playing outside.", "type": "adjective" }
+        {
+          "german": "der Tag",
+          "arabic": "day",
+          "example": "Es gibt sieben Tage in der Woche.",
+          "exampleArabic": "There are seven days in the week.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tage"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "table",
+          "example": "Die Tische sind groß.",
+          "exampleArabic": "The tables are big.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "chair",
+          "example": "Wir brauchen vier Stühle.",
+          "exampleArabic": "We need four chairs.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Stühle"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "lamp",
+          "example": "Die Lampen sind neu.",
+          "exampleArabic": "The lamps are new.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lampen"
+        },
+        {
+          "german": "das Buch",
+          "arabic": "book",
+          "example": "Ich lese drei Bücher.",
+          "exampleArabic": "I'm reading three books.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Bücher"
+        },
+        {
+          "german": "das Kind",
+          "arabic": "child",
+          "example": "Die Kinder sind im Park.",
+          "exampleArabic": "The children are in the park.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kinder"
+        },
+        {
+          "german": "das Haus",
+          "arabic": "house",
+          "example": "Die Häuser sind alt.",
+          "exampleArabic": "The houses are old.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Häuser"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "car",
+          "example": "Wir kaufen zwei Autos.",
+          "exampleArabic": "We're buying two cars.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "hotel",
+          "example": "Es gibt viele Hotels.",
+          "exampleArabic": "There are many hotels.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Hotels"
+        },
+        {
+          "german": "der Vater",
+          "arabic": "father",
+          "example": "Die Väter arbeiten.",
+          "exampleArabic": "The fathers are working.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Väter"
+        },
+        {
+          "german": "die Mutter",
+          "arabic": "mother",
+          "example": "Die Mütter sind hier.",
+          "exampleArabic": "The mothers are here.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Mütter"
+        },
+        {
+          "german": "der Bruder",
+          "arabic": "brother",
+          "example": "Ich habe zwei Brüder.",
+          "exampleArabic": "I have two brothers.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Brüder"
+        },
+        {
+          "german": "die Schwester",
+          "arabic": "sister",
+          "example": "Sie hat drei Schwestern.",
+          "exampleArabic": "She has three sisters.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwestern"
+        },
+        {
+          "german": "der Mann",
+          "arabic": "man",
+          "example": "Die Männer sprechen.",
+          "exampleArabic": "The men are talking.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Männer"
+        },
+        {
+          "german": "die Frau",
+          "arabic": "woman",
+          "example": "Die Frauen lernen Deutsch.",
+          "exampleArabic": "The women are learning German.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Frauen"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "friend (m.)",
+          "example": "Meine Freunde wohnen in Berlin.",
+          "exampleArabic": "My friends live in Berlin.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Freunde"
+        },
+        {
+          "german": "die Freundin",
+          "arabic": "friend (f.)",
+          "example": "Meine Freundinnen sind hier.",
+          "exampleArabic": "My female friends are here.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundinnen"
+        },
+        {
+          "german": "der Lehrer",
+          "arabic": "teacher (m.)",
+          "example": "Die Lehrer sind nett.",
+          "exampleArabic": "The teachers are nice.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Lehrer"
+        },
+        {
+          "german": "die Lehrerin",
+          "arabic": "teacher (f.)",
+          "example": "Die Lehrerinnen helfen.",
+          "exampleArabic": "The female teachers help.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lehrerinnen"
+        },
+        {
+          "german": "der Student",
+          "arabic": "student (m.)",
+          "example": "Die Studenten lernen viel.",
+          "exampleArabic": "The students study a lot.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Studenten"
+        },
+        {
+          "german": "die Studentin",
+          "arabic": "student (f.)",
+          "example": "Die Studentinnen kommen.",
+          "exampleArabic": "The female students are coming.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Studentinnen"
+        },
+        {
+          "german": "der Apfel",
+          "arabic": "apple",
+          "example": "Ich kaufe drei Äpfel.",
+          "exampleArabic": "I'm buying three apples.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Äpfel"
+        },
+        {
+          "german": "das Brot",
+          "arabic": "bread",
+          "example": "Die Brote sind frisch.",
+          "exampleArabic": "The breads are fresh.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Brote"
+        },
+        {
+          "german": "der Schlüssel",
+          "arabic": "key",
+          "example": "Wo sind die Schlüssel?",
+          "exampleArabic": "Where are the keys?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Schlüssel"
+        },
+        {
+          "german": "das Zimmer",
+          "arabic": "room",
+          "example": "Die Zimmer sind klein.",
+          "exampleArabic": "The rooms are small.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Zimmer"
+        },
+        {
+          "german": "die Stadt",
+          "arabic": "city",
+          "example": "Diese Städte sind schön.",
+          "exampleArabic": "These cities are beautiful.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Städte"
+        },
+        {
+          "german": "das Land",
+          "arabic": "country",
+          "example": "Diese Länder sind in Europa.",
+          "exampleArabic": "These countries are in Europe.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Länder"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "language",
+          "example": "Sie spricht drei Sprachen.",
+          "exampleArabic": "She speaks three languages.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachen"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "parents",
+          "example": "Meine Eltern arbeiten.",
+          "exampleArabic": "My parents work.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Leute",
+          "arabic": "people",
+          "example": "Die Leute sind freundlich.",
+          "exampleArabic": "The people are friendly.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "holidays / vacation",
+          "example": "In den Ferien fahren wir nach Spanien.",
+          "exampleArabic": "On vacation we go to Spain.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Geschwister",
+          "arabic": "siblings",
+          "example": "Hast du Geschwister?",
+          "exampleArabic": "Do you have siblings?",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "viele",
+          "arabic": "many",
+          "example": "Es gibt viele Bücher.",
+          "exampleArabic": "There are many books.",
+          "type": "adjective"
+        },
+        {
+          "german": "wenige",
+          "arabic": "few",
+          "example": "Wenige Studenten lernen Arabisch.",
+          "exampleArabic": "Few students learn Arabic.",
+          "type": "adjective"
+        },
+        {
+          "german": "einige",
+          "arabic": "some / a few",
+          "example": "Einige Kinder spielen draußen.",
+          "exampleArabic": "Some children are playing outside.",
+          "type": "adjective"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-16-q1", "question": "Plural of der Tag? \"die ___\"", "answer": "Tage", "hint": "-e pattern" },
-          { "type": "multiple-choice", "id": "a1-16-q2", "question": "Plural of das Buch?", "options": ["die Buchen", "die Bücher", "die Buchs", "die Buches"], "answer": "die Bücher" },
-          { "type": "fill-blank", "id": "a1-16-q3", "question": "Plural of die Frau? \"die ___\"", "answer": "Frauen", "hint": "-en pattern" },
-          { "type": "multiple-choice", "id": "a1-16-q4", "question": "Which is the correct article for the plural of der Mann?", "options": ["der", "die", "das", "den"], "answer": "die" },
-          { "type": "fill-blank", "id": "a1-16-q5", "question": "Plural of das Auto? \"die ___\"", "answer": "Autos", "hint": "foreign word → -s" },
-          { "type": "matching", "id": "a1-16-q6", "question": "Match the singular to the plural:", "pairs": [
-            { "left": "der Vater", "right": "die Väter" },
-            { "left": "das Kind", "right": "die Kinder" },
-            { "left": "die Lampe", "right": "die Lampen" },
-            { "left": "das Hotel", "right": "die Hotels" },
-            { "left": "der Apfel", "right": "die Äpfel" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q7", "question": "Order: \"The children are playing in the park\"", "words": ["Die", "Kinder", "spielen", "im", "Park"], "answer": "Die Kinder spielen im Park" },
-          { "type": "speaking", "id": "a1-16-q8", "question": "Say in German: \"I have two brothers and a sister\"", "answer": "Ich habe zwei Brüder und eine Schwester" },
-          { "type": "fill-blank", "id": "a1-16-q9", "question": "Listen and complete: \"Die ___ sind alt.\" (the houses)", "audioPrompt": "Die Häuser sind alt.", "answer": "Häuser", "hint": "das Haus → die Häuser" },
-          { "type": "multiple-choice", "id": "a1-16-q10", "question": "Which word is used only in plural?", "options": ["der Tag", "die Eltern", "das Auto", "der Lehrer"], "answer": "die Eltern" },
-          { "type": "fill-blank", "id": "a1-16-q11", "question": "Plural of der Stuhl? \"die ___\"", "answer": "Stühle", "hint": "-e + Umlaut pattern" },
-          { "type": "multiple-choice", "id": "a1-16-q12", "question": "Plural of die Lehrerin?", "options": ["die Lehrerinen", "die Lehrerinnen", "die Lehrerins", "die Lehrerin"], "answer": "die Lehrerinnen" },
-          { "type": "fill-blank", "id": "a1-16-q13", "question": "Plural of der Vater? \"die ___\"", "answer": "Väter", "hint": "no ending + Umlaut" },
-          { "type": "matching", "id": "a1-16-q14", "question": "Match the singular to the plural:", "pairs": [
-            { "left": "das Buch", "right": "die Bücher" },
-            { "left": "der Mann", "right": "die Männer" },
-            { "left": "die Stadt", "right": "die Städte" },
-            { "left": "das Auto", "right": "die Autos" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q15", "question": "Order: \"There are many children in the park\"", "words": ["Es", "gibt", "viele", "Kinder", "im", "Park"], "answer": "Es gibt viele Kinder im Park" },
-          { "type": "fill-blank", "id": "a1-16-q16", "question": "Listen: \"Die ___ sind in der Schule.\" (the children)", "audioPrompt": "Die Kinder sind in der Schule.", "answer": "Kinder", "hint": "das Kind → die Kinder" },
-          { "type": "multiple-choice", "id": "a1-16-q17", "question": "Foreign words follow the pattern:", "options": ["-er", "-en", "-s", "-e"], "answer": "-s" },
-          { "type": "speaking", "id": "a1-16-q18", "question": "Say: \"I need two books and a pen\"", "answer": "Ich brauche zwei Bücher und einen Stift" },
-          { "type": "fill-blank", "id": "a1-16-q19", "question": "Plural of die Mutter? \"die ___\"", "answer": "Mütter", "hint": "no ending + Umlaut" },
-          { "type": "multiple-choice", "id": "a1-16-q20", "question": "All plural nouns take the article:", "options": ["der", "die", "das", "ein"], "answer": "die" }
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q1",
+            "question": "Plural of der Tag? \"die ___\"",
+            "answer": "Tage",
+            "hint": "-e pattern"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q2",
+            "question": "Plural of das Buch?",
+            "options": [
+              "die Buchen",
+              "die Bücher",
+              "die Buchs",
+              "die Buches"
+            ],
+            "answer": "die Bücher"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q3",
+            "question": "Plural of die Frau? \"die ___\"",
+            "answer": "Frauen",
+            "hint": "-en pattern"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q4",
+            "question": "Which is the correct article for the plural of der Mann?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "den"
+            ],
+            "answer": "die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q5",
+            "question": "Plural of das Auto? \"die ___\"",
+            "answer": "Autos",
+            "hint": "foreign word → -s"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q6",
+            "question": "Match the singular to the plural:",
+            "pairs": [
+              {
+                "left": "der Vater",
+                "right": "die Väter"
+              },
+              {
+                "left": "das Kind",
+                "right": "die Kinder"
+              },
+              {
+                "left": "die Lampe",
+                "right": "die Lampen"
+              },
+              {
+                "left": "das Hotel",
+                "right": "die Hotels"
+              },
+              {
+                "left": "der Apfel",
+                "right": "die Äpfel"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q7",
+            "question": "Order: \"The children are playing in the park\"",
+            "words": [
+              "Die",
+              "Kinder",
+              "spielen",
+              "im",
+              "Park"
+            ],
+            "answer": "Die Kinder spielen im Park"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q8",
+            "question": "Say in German: \"I have two brothers and a sister\"",
+            "answer": "Ich habe zwei Brüder und eine Schwester"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q9",
+            "question": "Listen and complete: \"Die ___ sind alt.\" (the houses)",
+            "audioPrompt": "Die Häuser sind alt.",
+            "answer": "Häuser",
+            "hint": "das Haus → die Häuser"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q10",
+            "question": "Which word is used only in plural?",
+            "options": [
+              "der Tag",
+              "die Eltern",
+              "das Auto",
+              "der Lehrer"
+            ],
+            "answer": "die Eltern"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q11",
+            "question": "Plural of der Stuhl? \"die ___\"",
+            "answer": "Stühle",
+            "hint": "-e + Umlaut pattern"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q12",
+            "question": "Plural of die Lehrerin?",
+            "options": [
+              "die Lehrerinen",
+              "die Lehrerinnen",
+              "die Lehrerins",
+              "die Lehrerin"
+            ],
+            "answer": "die Lehrerinnen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q13",
+            "question": "Plural of der Vater? \"die ___\"",
+            "answer": "Väter",
+            "hint": "no ending + Umlaut"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q14",
+            "question": "Match the singular to the plural:",
+            "pairs": [
+              {
+                "left": "das Buch",
+                "right": "die Bücher"
+              },
+              {
+                "left": "der Mann",
+                "right": "die Männer"
+              },
+              {
+                "left": "die Stadt",
+                "right": "die Städte"
+              },
+              {
+                "left": "das Auto",
+                "right": "die Autos"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q15",
+            "question": "Order: \"There are many children in the park\"",
+            "words": [
+              "Es",
+              "gibt",
+              "viele",
+              "Kinder",
+              "im",
+              "Park"
+            ],
+            "answer": "Es gibt viele Kinder im Park"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q16",
+            "question": "Listen: \"Die ___ sind in der Schule.\" (the children)",
+            "audioPrompt": "Die Kinder sind in der Schule.",
+            "answer": "Kinder",
+            "hint": "das Kind → die Kinder"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q17",
+            "question": "Foreign words follow the pattern:",
+            "options": [
+              "-er",
+              "-en",
+              "-s",
+              "-e"
+            ],
+            "answer": "-s"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q18",
+            "question": "Say: \"I need two books and a pen\"",
+            "answer": "Ich brauche zwei Bücher und einen Stift"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q19",
+            "question": "Plural of die Mutter? \"die ___\"",
+            "answer": "Mütter",
+            "hint": "no ending + Umlaut"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q20",
+            "question": "All plural nouns take the article:",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "die"
+          }
+        ]
+      }
+    },
+    "a1-17": {
+      "id": "a1-17",
+      "title": "Conjunctions: und, oder, aber, denn, sondern — Konjunktionen: und, oder, aber, denn, sondern",
+      "grammar": {
+        "title": "Basic Conjunctions Between Sentences — Konjunktionen",
+        "content": "**Conjunctions (Konjunktionen)** are words that connect two sentences or two ideas.\n\nThe key feature of these conjunctions at the A1 level is that they **do not change the word order** of the verb in the following sentence — the verb stays in **second position**, just as it normally would.\n\n📌 The five conjunctions and what they mean:\n\n• **und** = and (for addition)\n• **oder** = or (for choosing between two things)\n• **aber** = but / however (for contrast or contradiction)\n• **denn** = because (for stating a reason)\n• **sondern** = but rather / on the contrary (for correction after a negation)\n\n⚠️ **Important difference:** We use **aber** for a simple contrast, while **sondern** is used only after a **negated** sentence to correct the information.\n\nExample:\n- Ich bin nicht müde, **aber** ich schlafe. (I'm not tired, but I'm sleeping.)\n- Ich bin nicht müde, **sondern** fit. (I'm not tired, but rather I'm fit.)\n\n✅ **Word order in the sentence:**\nFirst sentence + **conjunction** + second sentence (verb in second position)",
+        "tables": [
+          {
+            "title": "Conjunctions and Their Functions",
+            "headers": [
+              "Conjunction",
+              "Meaning in English",
+              "Function",
+              "Example"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "und",
+                  "and",
+                  "Addition",
+                  "Ich lerne und du arbeitest."
+                ]
+              },
+              {
+                "cells": [
+                  "oder",
+                  "or",
+                  "Choosing between two alternatives",
+                  "Trinkst du Tee oder Kaffee?"
+                ]
+              },
+              {
+                "cells": [
+                  "aber",
+                  "but",
+                  "Contrast / contradiction",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "because",
+                  "Stating a reason",
+                  "Ich lerne, denn ich habe eine Prüfung."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "but rather / on the contrary",
+                  "Correction after a negation",
+                  "Er ist nicht alt, sondern jung."
+                ]
+              }
+            ],
+            "note": "All of these conjunctions do not change the word order of the verb in the following sentence.",
+            "theme": "default"
+          },
+          {
+            "title": "Comparison: aber vs. sondern",
+            "headers": [
+              "Conjunction",
+              "Condition",
+              "Example",
+              "Translation"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "aber",
+                  "Used after an affirmative or negative sentence",
+                  "Ich bin müde, aber ich lerne.",
+                  "I am tired, but I am learning."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "Used only after a negated sentence to correct the information",
+                  "Ich bin nicht müde, sondern fit.",
+                  "I am not tired, but rather I am fit."
+                ]
+              }
+            ],
+            "note": "💡 sondern = negation + correction. aber = general contrast.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "und means 'and' and is used to connect two complementary or sequential ideas. The verb stays in its natural position.",
+            "example": "Ich wohne in Berlin und ich lerne Deutsch.",
+            "translation": "I live in Berlin and I am learning German."
+          },
+          {
+            "rule": "oder means 'or' and is used to express a choice between two alternatives.",
+            "example": "Kommst du heute oder kommst du morgen?",
+            "translation": "Are you coming today or tomorrow?"
+          },
+          {
+            "rule": "aber means 'but' and expresses contrast or contradiction between two sentences.",
+            "example": "Das Essen ist gut, aber es ist teuer.",
+            "translation": "The food is good, but it is expensive."
+          },
+          {
+            "rule": "denn means 'because' and is followed by the reason. sondern means 'but rather' and is used only after a negated sentence to correct the information.",
+            "example": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein.",
+            "translation": "I drink water because I am thirsty. — He is not tall, but rather short."
+          }
+        ],
+        "examples": [
+          "Ich bin müde, aber ich lerne Deutsch. — I am tired, but I am learning German.",
+          "Trinkst du Kaffee oder Tee? — Are you drinking coffee or tea?",
+          "Sie wohnt in Rabat und sie arbeitet dort. — She lives in Rabat and works there.",
+          "Ich esse nicht viel, denn ich bin nicht hungrig. — I don't eat much because I am not hungry.",
+          "Das ist nicht mein Buch, sondern sein Buch. — This is not my book, but rather his book.",
+          "Er spricht Arabisch und Deutsch. — He speaks Arabic and German.",
+          "Ich gehe nicht ins Kino, sondern ich bleibe zu Hause. — I am not going to the cinema, but rather I am staying at home.",
+          "Bist du Student oder arbeitest du? — Are you a student or do you work?"
+        ],
+        "tip": "💡 Always remember: these five conjunctions (und, oder, aber, denn, sondern) are 'neutral' conjunctions — they do not move the verb from its position! The verb stays in second position in the sentence that follows, just as if there were no conjunction at all. This is what sets them apart from other conjunctions found at higher levels."
+      },
+      "vocabulary": [
+        {
+          "german": "lernen",
+          "arabic": "to learn",
+          "example": "Ich lerne Deutsch.",
+          "exampleArabic": "I am learning German.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "to work",
+          "example": "Sie arbeitet in Berlin.",
+          "exampleArabic": "She works in Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "to live / to reside",
+          "example": "Er wohnt in Rabat.",
+          "exampleArabic": "He lives in Rabat.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "tired",
+          "example": "Ich bin müde, aber ich lerne.",
+          "exampleArabic": "I am tired, but I am learning.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "hungry",
+          "example": "Ich bin hungrig, denn ich esse nicht.",
+          "exampleArabic": "I am hungry because I am not eating.",
+          "type": "adjective"
+        },
+        {
+          "german": "durstig",
+          "arabic": "thirsty",
+          "example": "Er ist durstig und trinkt Wasser.",
+          "exampleArabic": "He is thirsty and is drinking water.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kaffee",
+          "arabic": "coffee",
+          "gender": "der",
+          "plural": "-",
+          "example": "Trinkst du Kaffee oder Tee?",
+          "exampleArabic": "Are you drinking coffee or tea?",
+          "type": "noun"
+        },
+        {
+          "german": "Tee",
+          "arabic": "tea",
+          "gender": "der",
+          "plural": "-",
+          "example": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "exampleArabic": "I drink tea because I don't like coffee.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "book",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist nicht mein Buch, sondern sein Buch.",
+          "exampleArabic": "This is not my book, but rather his book.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "exam / test",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich lerne, denn ich habe eine Prüfung.",
+          "exampleArabic": "I am studying because I have an exam.",
+          "type": "noun"
+        },
+        {
+          "german": "heute",
+          "arabic": "today",
+          "example": "Kommst du heute oder morgen?",
+          "exampleArabic": "Are you coming today or tomorrow?",
+          "type": "adverb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "tomorrow",
+          "example": "Ich lerne heute und morgen.",
+          "exampleArabic": "I am studying today and tomorrow.",
+          "type": "adverb"
+        },
+        {
+          "german": "klein",
+          "arabic": "small / short",
+          "example": "Er ist nicht groß, sondern klein.",
+          "exampleArabic": "He is not tall, but rather short.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "expensive",
+          "example": "Das Essen ist gut, aber teuer.",
+          "exampleArabic": "The food is good, but expensive.",
+          "type": "adjective"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "to stay / to remain",
+          "example": "Ich bleibe zu Hause, denn es regnet.",
+          "exampleArabic": "I am staying at home because it is raining.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q1",
+            "question": "Choose the correct conjunction: Ich bin müde, ___ ich lerne.",
+            "answer": "aber",
+            "options": [
+              "denn",
+              "aber",
+              "sondern",
+              "oder"
+            ],
+            "hint": "The sentence expresses a contrast between being tired and learning."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q2",
+            "question": "Complete the sentence with the appropriate conjunction: Ich trinke Wasser, ___ ich bin durstig.",
+            "answer": "denn",
+            "hint": "We need a conjunction that expresses a reason."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q3",
+            "question": "Which sentence is grammatically correct?",
+            "answer": "Er ist nicht groß, sondern klein.",
+            "options": [
+              "Er ist nicht groß, aber klein.",
+              "Er ist nicht groß, sondern klein.",
+              "Er ist nicht groß, denn klein.",
+              "Er ist nicht groß, oder klein."
+            ],
+            "hint": "After a negation and a correction of information, we use sondern."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-17-q4",
+            "question": "Arrange the words to form a correct sentence:",
+            "answer": "ich lerne Deutsch , denn ich habe eine Prüfung",
+            "words": [
+              "ich",
+              "lerne",
+              "Deutsch",
+              "denn",
+              "habe",
+              "eine",
+              "Prüfung",
+              "ich",
+              ","
+            ],
+            "hint": "The conjunction denn comes in the middle, and the verb stays in second position."
+          },
+          {
+            "type": "matching",
+            "id": "a1-17-q5",
+            "question": "Match each conjunction to its correct meaning in English:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "und",
+                "right": "و"
+              },
+              {
+                "left": "oder",
+                "right": "أو"
+              },
+              {
+                "left": "aber",
+                "right": "لكن"
+              },
+              {
+                "left": "denn",
+                "right": "لأن"
+              },
+              {
+                "left": "sondern",
+                "right": "بل / وإنما"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q6",
+            "question": "🎧 Listen to the sentence and fill in the blank: Das ist nicht mein Buch, ___ sein Buch.",
+            "answer": "sondern",
+            "hint": "The sentence is negated and we need a correction of information.",
+            "audioPrompt": "Das ist nicht mein Buch, sondern sein Buch."
+          },
+          {
+            "type": "speaking",
+            "id": "a1-17-q7",
+            "question": "Pronounce the following sentence clearly: Ich bin müde, aber ich lerne Deutsch.",
+            "answer": "Ich bin müde, aber ich lerne Deutsch.",
+            "hint": "Pay attention to the pronunciation: aber = AH-ber, müde = MYU-deh."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q8",
+            "question": "Choose the sentence that uses 'oder' correctly:",
+            "answer": "Trinkst du Kaffee oder Tee?",
+            "options": [
+              "Ich lerne oder ich bin müde.",
+              "Trinkst du Kaffee oder Tee?",
+              "Er ist nicht groß oder klein.",
+              "Ich wohne oder ich arbeite."
+            ],
+            "hint": "oder is used to choose between two logical alternatives."
+          }
         ]
       }
     }

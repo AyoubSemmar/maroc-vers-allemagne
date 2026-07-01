@@ -8362,49 +8362,207 @@
         "tables": [
           {
             "title": "Conjugaison des six verbes de modalité au présent",
-            "headers": ["Pronom", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "headers": [
+              "Pronom",
+              "können",
+              "müssen",
+              "wollen",
+              "mögen",
+              "dürfen",
+              "sollen"
+            ],
             "rows": [
-              { "cells": ["ich", "kann", "muss", "will", "mag", "darf", "soll"] },
-              { "cells": ["du", "kannst", "musst", "willst", "magst", "darfst", "sollst"] },
-              { "cells": ["er / sie / es", "kann", "muss", "will", "mag", "darf", "soll"], "highlight": true },
-              { "cells": ["wir", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] },
-              { "cells": ["ihr", "könnt", "müsst", "wollt", "mögt", "dürft", "sollt"] },
-              { "cells": ["sie / Sie", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] }
+              {
+                "cells": [
+                  "ich",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "kannst",
+                  "musst",
+                  "willst",
+                  "magst",
+                  "darfst",
+                  "sollst"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "könnt",
+                  "müsst",
+                  "wollt",
+                  "mögt",
+                  "dürft",
+                  "sollt"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "La ligne en couleur (er/sie/es) est identique à ich — c'est la caractéristique la plus importante des verbes de modalité."
           },
           {
             "title": "Sens des verbes de modalité",
-            "headers": ["Verbe", "Sens", "Exemple"],
+            "headers": [
+              "Verbe",
+              "Sens",
+              "Exemple"
+            ],
             "rows": [
-              { "cells": ["können", "la capacité (pouvoir)", "Ich kann schwimmen."] },
-              { "cells": ["müssen", "obligation forte (devoir)", "Du musst lernen."] },
-              { "cells": ["wollen", "volonté (vouloir)", "Ich will nach Berlin."] },
-              { "cells": ["mögen", "aimer (mögen) ou souhaiter (möchte)", "Ich mag Kaffee."] },
-              { "cells": ["dürfen", "permission (avoir le droit)", "Hier darf man rauchen."] },
-              { "cells": ["sollen", "conseil/devoir moral", "Du sollst zum Arzt gehen."] }
+              {
+                "cells": [
+                  "können",
+                  "la capacité (pouvoir)",
+                  "Ich kann schwimmen."
+                ]
+              },
+              {
+                "cells": [
+                  "müssen",
+                  "obligation forte (devoir)",
+                  "Du musst lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "volonté (vouloir)",
+                  "Ich will nach Berlin."
+                ]
+              },
+              {
+                "cells": [
+                  "mögen",
+                  "aimer (mögen) ou souhaiter (möchte)",
+                  "Ich mag Kaffee."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "permission (avoir le droit)",
+                  "Hier darf man rauchen."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "conseil/devoir moral",
+                  "Du sollst zum Arzt gehen."
+                ]
+              }
             ],
             "theme": "default"
           },
           {
             "title": "Structure de la phrase avec un verbe de modalité",
-            "headers": ["Position 1", "Position 2 (Modal)", "Milieu", "Fin (Infinitiv)"],
+            "headers": [
+              "Position 1",
+              "Position 2 (Modal)",
+              "Milieu",
+              "Fin (Infinitiv)"
+            ],
             "rows": [
-              { "cells": ["Ich", "kann", "gut Deutsch", "sprechen."] },
-              { "cells": ["Heute", "müssen", "wir früh", "aufstehen."] },
-              { "cells": ["Wo", "darf", "ich", "parken?"] },
-              { "cells": ["Mein Bruder", "will", "in Marokko", "studieren."] }
+              {
+                "cells": [
+                  "Ich",
+                  "kann",
+                  "gut Deutsch",
+                  "sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "Heute",
+                  "müssen",
+                  "wir früh",
+                  "aufstehen."
+                ]
+              },
+              {
+                "cells": [
+                  "Wo",
+                  "darf",
+                  "ich",
+                  "parken?"
+                ]
+              },
+              {
+                "cells": [
+                  "Mein Bruder",
+                  "will",
+                  "in Marokko",
+                  "studieren."
+                ]
+              }
             ],
             "theme": "default",
             "note": "Le verbe de modalité est toujours en Position 2, et le verbe principal va à la fin."
           }
         ],
         "rules": [
-          { "rule": "N'oublie pas : avec les verbes de modalité, ich et er/sie/es ont **la même** forme, sans -t à la fin.", "example": "Er kann Deutsch. — Ich kann Deutsch. (et non « er kannt »)", "translation": "Il sait l'allemand. — Je sais l'allemand." },
-          { "rule": "Dans une question (Ja/Nein-Frage), le verbe de modalité commence la phrase.", "example": "Kannst du Arabisch sprechen?", "translation": "Sais-tu parler arabe ?" },
-          { "rule": "La forme polie « möchte » (je voudrais) vient de mögen — utilise-la à la place de will dans les restaurants et les magasins.", "example": "Ich möchte einen Kaffee, bitte.", "translation": "Je voudrais un café, s'il vous plaît. (plus poli que Ich will...)" },
-          { "rule": "Avec un verbe de modalité, on omet parfois le verbe principal s'il est compris d'après le contexte.", "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)", "translation": "Je sais l'allemand. (= Je sais parler allemand.)" }
+          {
+            "rule": "N'oublie pas : avec les verbes de modalité, ich et er/sie/es ont **la même** forme, sans -t à la fin.",
+            "example": "Er kann Deutsch. — Ich kann Deutsch. (et non « er kannt »)",
+            "translation": "Il sait l'allemand. — Je sais l'allemand."
+          },
+          {
+            "rule": "Dans une question (Ja/Nein-Frage), le verbe de modalité commence la phrase.",
+            "example": "Kannst du Arabisch sprechen?",
+            "translation": "Sais-tu parler arabe ?"
+          },
+          {
+            "rule": "La forme polie « möchte » (je voudrais) vient de mögen — utilise-la à la place de will dans les restaurants et les magasins.",
+            "example": "Ich möchte einen Kaffee, bitte.",
+            "translation": "Je voudrais un café, s'il vous plaît. (plus poli que Ich will...)"
+          },
+          {
+            "rule": "Avec un verbe de modalité, on omet parfois le verbe principal s'il est compris d'après le contexte.",
+            "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)",
+            "translation": "Je sais l'allemand. (= Je sais parler allemand.)"
+          }
         ],
         "examples": [
           "Ich kann ein bisschen Deutsch sprechen. — Je peux parler un peu allemand.",
@@ -8421,76 +8579,491 @@
         "tip": "Apprends le grand tableau par cœur. Verbe de modalité + verbe principal à la fin = un schéma que tu utiliseras dans presque toutes les phrases A1. Entraîne-toi 5 minutes par jour sur la page Drill (entraînement de conjugaison)."
       },
       "vocabulary": [
-        { "german": "können", "arabic": "pouvoir / savoir", "example": "Ich kann gut schwimmen.", "exampleArabic": "Je sais bien nager.", "type": "verb" },
-        { "german": "müssen", "arabic": "devoir", "example": "Wir müssen lernen.", "exampleArabic": "Nous devons étudier.", "type": "verb" },
-        { "german": "wollen", "arabic": "vouloir", "example": "Ich will Wasser.", "exampleArabic": "Je veux de l'eau.", "type": "verb" },
-        { "german": "mögen", "arabic": "aimer (bien)", "example": "Magst du Tee?", "exampleArabic": "Aimes-tu le thé ?", "type": "verb" },
-        { "german": "möchten", "arabic": "voudrais (poli)", "example": "Ich möchte einen Kaffee.", "exampleArabic": "Je voudrais un café.", "type": "verb" },
-        { "german": "dürfen", "arabic": "avoir le droit / être autorisé", "example": "Hier darf man parken.", "exampleArabic": "Il est permis de se garer ici.", "type": "verb" },
-        { "german": "sollen", "arabic": "devoir (conseil)", "example": "Du sollst zum Arzt gehen.", "exampleArabic": "Tu devrais aller chez le médecin.", "type": "verb" },
-        { "german": "der Infinitiv", "arabic": "l'infinitif", "example": "sprechen ist ein Infinitiv.", "exampleArabic": "sprechen est un infinitif.", "type": "noun", "gender": "der" },
-        { "german": "rauchen", "arabic": "fumer", "example": "Hier darf man nicht rauchen.", "exampleArabic": "Il est interdit de fumer ici.", "type": "verb" },
-        { "german": "parken", "arabic": "se garer", "example": "Wo kann ich parken?", "exampleArabic": "Où puis-je me garer ?", "type": "verb" },
-        { "german": "helfen", "arabic": "aider", "example": "Können Sie mir helfen?", "exampleArabic": "Pouvez-vous m'aider ?", "type": "verb" },
-        { "german": "reisen", "arabic": "voyager", "example": "Wir wollen nach Berlin reisen.", "exampleArabic": "Nous voulons voyager à Berlin.", "type": "verb" },
-        { "german": "studieren", "arabic": "étudier (à l'université)", "example": "Ich will in Deutschland studieren.", "exampleArabic": "Je veux étudier en Allemagne.", "type": "verb" },
-        { "german": "arbeiten", "arabic": "travailler", "example": "Mein Vater muss arbeiten.", "exampleArabic": "Mon père doit travailler.", "type": "verb" },
-        { "german": "lernen", "arabic": "apprendre", "example": "Du musst Deutsch lernen.", "exampleArabic": "Tu dois apprendre l'allemand.", "type": "verb" },
-        { "german": "schlafen", "arabic": "dormir", "example": "Ich will jetzt schlafen.", "exampleArabic": "Je veux dormir maintenant.", "type": "verb" },
-        { "german": "kaufen", "arabic": "acheter", "example": "Ich möchte Brot kaufen.", "exampleArabic": "Je voudrais acheter du pain.", "type": "verb" },
-        { "german": "sprechen", "arabic": "parler", "example": "Kannst du Englisch sprechen?", "exampleArabic": "Sais-tu parler anglais ?", "type": "verb" },
-        { "german": "verstehen", "arabic": "comprendre", "example": "Ich kann das nicht verstehen.", "exampleArabic": "Je n'arrive pas à comprendre cela.", "type": "verb" },
-        { "german": "gehen", "arabic": "aller", "example": "Wir wollen ins Kino gehen.", "exampleArabic": "Nous voulons aller au cinéma.", "type": "verb" },
-        { "german": "das Wasser", "arabic": "l'eau", "example": "Ich möchte Wasser, bitte.", "exampleArabic": "Je voudrais de l'eau, s'il vous plaît.", "type": "noun", "gender": "das" },
-        { "german": "die Hilfe", "arabic": "l'aide", "example": "Ich brauche Hilfe.", "exampleArabic": "J'ai besoin d'aide.", "type": "noun", "gender": "die" },
-        { "german": "der Arzt", "arabic": "le médecin", "example": "Du musst zum Arzt gehen.", "exampleArabic": "Tu dois aller chez le médecin.", "type": "noun", "gender": "der", "plural": "die Ärzte" },
-        { "german": "die Schule", "arabic": "l'école", "example": "Mein Sohn muss in die Schule.", "exampleArabic": "Mon fils doit aller à l'école.", "type": "noun", "gender": "die", "plural": "die Schulen" },
-        { "german": "die Arbeit", "arabic": "le travail", "example": "Ich muss zur Arbeit.", "exampleArabic": "Je dois aller au travail.", "type": "noun", "gender": "die" },
-        { "german": "das Auto", "arabic": "la voiture", "example": "Wo kann ich das Auto parken?", "exampleArabic": "Où puis-je garer la voiture ?", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "der Bus", "arabic": "le bus", "example": "Wir können den Bus nehmen.", "exampleArabic": "Nous pouvons prendre le bus.", "type": "noun", "gender": "der", "plural": "die Busse" },
-        { "german": "die Apotheke", "arabic": "la pharmacie", "example": "Ich muss zur Apotheke gehen.", "exampleArabic": "Je dois aller à la pharmacie.", "type": "noun", "gender": "die", "plural": "die Apotheken" },
-        { "german": "gern", "arabic": "volontiers / bien aimer", "example": "Ich möchte gern einen Tee.", "exampleArabic": "Je voudrais bien un thé.", "type": "adverb" },
-        { "german": "lieber", "arabic": "plutôt / je préfère", "example": "Ich möchte lieber Wasser.", "exampleArabic": "Je préfère de l'eau.", "type": "adverb" },
-        { "german": "vielleicht", "arabic": "peut-être", "example": "Vielleicht kann ich morgen kommen.", "exampleArabic": "Peut-être que je pourrai venir demain.", "type": "adverb" },
-        { "german": "unbedingt", "arabic": "absolument / vraiment", "example": "Du musst unbedingt das Brandenburger Tor sehen!", "exampleArabic": "Tu dois absolument voir la porte de Brandebourg !", "type": "adverb" },
-        { "german": "leider", "arabic": "malheureusement", "example": "Ich kann leider nicht kommen.", "exampleArabic": "Malheureusement, je ne peux pas venir.", "type": "adverb" },
-        { "german": "Entschuldigung", "arabic": "pardon / excusez-moi", "example": "Entschuldigung, kann ich Sie etwas fragen?", "exampleArabic": "Pardon, puis-je vous demander quelque chose ?", "type": "phrase" },
-        { "german": "kein Problem", "arabic": "pas de problème", "example": "Du kannst kommen — kein Problem.", "exampleArabic": "Tu peux venir — pas de problème.", "type": "phrase" }
+        {
+          "german": "können",
+          "arabic": "pouvoir / savoir",
+          "example": "Ich kann gut schwimmen.",
+          "exampleArabic": "Je sais bien nager.",
+          "type": "verb"
+        },
+        {
+          "german": "müssen",
+          "arabic": "devoir",
+          "example": "Wir müssen lernen.",
+          "exampleArabic": "Nous devons étudier.",
+          "type": "verb"
+        },
+        {
+          "german": "wollen",
+          "arabic": "vouloir",
+          "example": "Ich will Wasser.",
+          "exampleArabic": "Je veux de l'eau.",
+          "type": "verb"
+        },
+        {
+          "german": "mögen",
+          "arabic": "aimer (bien)",
+          "example": "Magst du Tee?",
+          "exampleArabic": "Aimes-tu le thé ?",
+          "type": "verb"
+        },
+        {
+          "german": "möchten",
+          "arabic": "voudrais (poli)",
+          "example": "Ich möchte einen Kaffee.",
+          "exampleArabic": "Je voudrais un café.",
+          "type": "verb"
+        },
+        {
+          "german": "dürfen",
+          "arabic": "avoir le droit / être autorisé",
+          "example": "Hier darf man parken.",
+          "exampleArabic": "Il est permis de se garer ici.",
+          "type": "verb"
+        },
+        {
+          "german": "sollen",
+          "arabic": "devoir (conseil)",
+          "example": "Du sollst zum Arzt gehen.",
+          "exampleArabic": "Tu devrais aller chez le médecin.",
+          "type": "verb"
+        },
+        {
+          "german": "der Infinitiv",
+          "arabic": "l'infinitif",
+          "example": "sprechen ist ein Infinitiv.",
+          "exampleArabic": "sprechen est un infinitif.",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "rauchen",
+          "arabic": "fumer",
+          "example": "Hier darf man nicht rauchen.",
+          "exampleArabic": "Il est interdit de fumer ici.",
+          "type": "verb"
+        },
+        {
+          "german": "parken",
+          "arabic": "se garer",
+          "example": "Wo kann ich parken?",
+          "exampleArabic": "Où puis-je me garer ?",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "aider",
+          "example": "Können Sie mir helfen?",
+          "exampleArabic": "Pouvez-vous m'aider ?",
+          "type": "verb"
+        },
+        {
+          "german": "reisen",
+          "arabic": "voyager",
+          "example": "Wir wollen nach Berlin reisen.",
+          "exampleArabic": "Nous voulons voyager à Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "studieren",
+          "arabic": "étudier (à l'université)",
+          "example": "Ich will in Deutschland studieren.",
+          "exampleArabic": "Je veux étudier en Allemagne.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "travailler",
+          "example": "Mein Vater muss arbeiten.",
+          "exampleArabic": "Mon père doit travailler.",
+          "type": "verb"
+        },
+        {
+          "german": "lernen",
+          "arabic": "apprendre",
+          "example": "Du musst Deutsch lernen.",
+          "exampleArabic": "Tu dois apprendre l'allemand.",
+          "type": "verb"
+        },
+        {
+          "german": "schlafen",
+          "arabic": "dormir",
+          "example": "Ich will jetzt schlafen.",
+          "exampleArabic": "Je veux dormir maintenant.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "acheter",
+          "example": "Ich möchte Brot kaufen.",
+          "exampleArabic": "Je voudrais acheter du pain.",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen",
+          "arabic": "parler",
+          "example": "Kannst du Englisch sprechen?",
+          "exampleArabic": "Sais-tu parler anglais ?",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "comprendre",
+          "example": "Ich kann das nicht verstehen.",
+          "exampleArabic": "Je n'arrive pas à comprendre cela.",
+          "type": "verb"
+        },
+        {
+          "german": "gehen",
+          "arabic": "aller",
+          "example": "Wir wollen ins Kino gehen.",
+          "exampleArabic": "Nous voulons aller au cinéma.",
+          "type": "verb"
+        },
+        {
+          "german": "das Wasser",
+          "arabic": "l'eau",
+          "example": "Ich möchte Wasser, bitte.",
+          "exampleArabic": "Je voudrais de l'eau, s'il vous plaît.",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Hilfe",
+          "arabic": "l'aide",
+          "example": "Ich brauche Hilfe.",
+          "exampleArabic": "J'ai besoin d'aide.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "le médecin",
+          "example": "Du musst zum Arzt gehen.",
+          "exampleArabic": "Tu dois aller chez le médecin.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Ärzte"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "l'école",
+          "example": "Mein Sohn muss in die Schule.",
+          "exampleArabic": "Mon fils doit aller à l'école.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schulen"
+        },
+        {
+          "german": "die Arbeit",
+          "arabic": "le travail",
+          "example": "Ich muss zur Arbeit.",
+          "exampleArabic": "Je dois aller au travail.",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "la voiture",
+          "example": "Wo kann ich das Auto parken?",
+          "exampleArabic": "Où puis-je garer la voiture ?",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "der Bus",
+          "arabic": "le bus",
+          "example": "Wir können den Bus nehmen.",
+          "exampleArabic": "Nous pouvons prendre le bus.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Busse"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "la pharmacie",
+          "example": "Ich muss zur Apotheke gehen.",
+          "exampleArabic": "Je dois aller à la pharmacie.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Apotheken"
+        },
+        {
+          "german": "gern",
+          "arabic": "volontiers / bien aimer",
+          "example": "Ich möchte gern einen Tee.",
+          "exampleArabic": "Je voudrais bien un thé.",
+          "type": "adverb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "plutôt / je préfère",
+          "example": "Ich möchte lieber Wasser.",
+          "exampleArabic": "Je préfère de l'eau.",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "peut-être",
+          "example": "Vielleicht kann ich morgen kommen.",
+          "exampleArabic": "Peut-être que je pourrai venir demain.",
+          "type": "adverb"
+        },
+        {
+          "german": "unbedingt",
+          "arabic": "absolument / vraiment",
+          "example": "Du musst unbedingt das Brandenburger Tor sehen!",
+          "exampleArabic": "Tu dois absolument voir la porte de Brandebourg !",
+          "type": "adverb"
+        },
+        {
+          "german": "leider",
+          "arabic": "malheureusement",
+          "example": "Ich kann leider nicht kommen.",
+          "exampleArabic": "Malheureusement, je ne peux pas venir.",
+          "type": "adverb"
+        },
+        {
+          "german": "Entschuldigung",
+          "arabic": "pardon / excusez-moi",
+          "example": "Entschuldigung, kann ich Sie etwas fragen?",
+          "exampleArabic": "Pardon, puis-je vous demander quelque chose ?",
+          "type": "phrase"
+        },
+        {
+          "german": "kein Problem",
+          "arabic": "pas de problème",
+          "example": "Du kannst kommen — kein Problem.",
+          "exampleArabic": "Tu peux venir — pas de problème.",
+          "type": "phrase"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-13-q1", "question": "Complète : « Ich ___ gut Deutsch sprechen. » (je peux)", "answer": "kann", "hint": "können — rappelle-toi : ich kann (sans -e)" },
-          { "type": "multiple-choice", "id": "a1-13-q2", "question": "Quelle est la forme correcte de er avec müssen ?", "options": ["er müsst", "er muss", "er musst", "er müssen"], "answer": "er muss" },
-          { "type": "fill-blank", "id": "a1-13-q3", "question": "Complète : « Du ___ mehr Wasser trinken. » (tu devrais)", "answer": "sollst", "hint": "sollen — forme du" },
-          { "type": "multiple-choice", "id": "a1-13-q4", "question": "Quelle phrase est correcte ?", "options": ["Ich kann sprechen Deutsch gut.", "Ich Deutsch gut sprechen kann.", "Ich kann gut Deutsch sprechen.", "Sprechen ich kann gut Deutsch."], "answer": "Ich kann gut Deutsch sprechen." },
-          { "type": "fill-blank", "id": "a1-13-q5", "question": "Complète : « ___ ich hier parken? » (Ai-je le droit ?)", "answer": "Darf", "hint": "dürfen — forme ich dans la question" },
-          { "type": "matching", "id": "a1-13-q6", "question": "Associe le verbe de modalité à son sens :", "pairs": [
-            { "left": "können", "right": "pouvoir / savoir" },
-            { "left": "müssen", "right": "devoir" },
-            { "left": "wollen", "right": "vouloir" },
-            { "left": "mögen", "right": "aimer" },
-            { "left": "dürfen", "right": "avoir le droit" },
-            { "left": "sollen", "right": "devoir (conseil)" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-13-q7", "question": "Ordonne : « Je veux voyager en Allemagne »", "words": ["Ich", "will", "nach", "Deutschland", "reisen"], "answer": "Ich will nach Deutschland reisen" },
-          { "type": "speaking", "id": "a1-13-q8", "question": "Dis en allemand : « Je voudrais un café s'il vous plaît » (poli)", "answer": "Ich möchte einen Kaffee bitte" },
-          { "type": "fill-blank", "id": "a1-13-q9", "question": "Écoute et complète : « Hier ___ man nicht rauchen. » (interdit)", "audioPrompt": "Hier darf man nicht rauchen.", "answer": "darf", "hint": "dürfen + man (permission générale)" },
-          { "type": "multiple-choice", "id": "a1-13-q10", "question": "Comment demander de l'aide poliment ?", "options": ["Hilf mir!", "Du musst mir helfen!", "Können Sie mir helfen, bitte?", "Ich helfe dir."], "answer": "Können Sie mir helfen, bitte?" },
-          { "type": "fill-blank", "id": "a1-13-q11", "question": "Complète : « Wir ___ heute viel arbeiten. » (nous devons)", "answer": "müssen", "hint": "müssen avec wir" },
-          { "type": "multiple-choice", "id": "a1-13-q12", "question": "Forme de wollen avec ihr ?", "options": ["will", "willst", "wollen", "wollt"], "answer": "wollt" },
-          { "type": "fill-blank", "id": "a1-13-q13", "question": "« Magst ___ Tee oder Kaffee? » (toi)", "answer": "du", "hint": "Question Ja/Nein" },
-          { "type": "drag-drop", "id": "a1-13-q14", "question": "Ordonne : « Sais-tu parler anglais ? »", "words": ["Kannst", "du", "Englisch", "sprechen"], "answer": "Kannst du Englisch sprechen" },
-          { "type": "matching", "id": "a1-13-q15", "question": "Associe la phrase à son sens :", "pairs": [
-            { "left": "Ich kann.", "right": "Je peux." },
-            { "left": "Ich darf.", "right": "J'ai le droit." },
-            { "left": "Ich möchte.", "right": "Je voudrais." },
-            { "left": "Ich soll.", "right": "Je devrais." }
-          ], "answer": "matched" },
-          { "type": "fill-blank", "id": "a1-13-q16", "question": "Écoute : « Du ___ jetzt schlafen! » (tu dois)", "audioPrompt": "Du musst jetzt schlafen!", "answer": "musst", "hint": "müssen + du" },
-          { "type": "multiple-choice", "id": "a1-13-q17", "question": "« Möchtest du Wasser? » — son origine est :", "options": ["möchten", "mögen", "wollen", "müssen"], "answer": "mögen" },
-          { "type": "speaking", "id": "a1-13-q18", "question": "Dis en allemand : « Nous voulons voyager en Allemagne »", "answer": "Wir wollen nach Deutschland reisen" },
-          { "type": "fill-blank", "id": "a1-13-q19", "question": "« Hier ___ man rauchen? » (a-t-on le droit ?)", "answer": "darf", "hint": "dürfen dans la question" },
-          { "type": "multiple-choice", "id": "a1-13-q20", "question": "Quelle phrase est polie au restaurant ?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q1",
+            "question": "Complète : « Ich ___ gut Deutsch sprechen. » (je peux)",
+            "answer": "kann",
+            "hint": "können — rappelle-toi : ich kann (sans -e)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q2",
+            "question": "Quelle est la forme correcte de er avec müssen ?",
+            "options": [
+              "er müsst",
+              "er muss",
+              "er musst",
+              "er müssen"
+            ],
+            "answer": "er muss"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q3",
+            "question": "Complète : « Du ___ mehr Wasser trinken. » (tu devrais)",
+            "answer": "sollst",
+            "hint": "sollen — forme du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q4",
+            "question": "Quelle phrase est correcte ?",
+            "options": [
+              "Ich kann sprechen Deutsch gut.",
+              "Ich Deutsch gut sprechen kann.",
+              "Ich kann gut Deutsch sprechen.",
+              "Sprechen ich kann gut Deutsch."
+            ],
+            "answer": "Ich kann gut Deutsch sprechen."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q5",
+            "question": "Complète : « ___ ich hier parken? » (Ai-je le droit ?)",
+            "answer": "Darf",
+            "hint": "dürfen — forme ich dans la question"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q6",
+            "question": "Associe le verbe de modalité à son sens :",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "pouvoir / savoir"
+              },
+              {
+                "left": "müssen",
+                "right": "devoir"
+              },
+              {
+                "left": "wollen",
+                "right": "vouloir"
+              },
+              {
+                "left": "mögen",
+                "right": "aimer"
+              },
+              {
+                "left": "dürfen",
+                "right": "avoir le droit"
+              },
+              {
+                "left": "sollen",
+                "right": "devoir (conseil)"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q7",
+            "question": "Ordonne : « Je veux voyager en Allemagne »",
+            "words": [
+              "Ich",
+              "will",
+              "nach",
+              "Deutschland",
+              "reisen"
+            ],
+            "answer": "Ich will nach Deutschland reisen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q8",
+            "question": "Dis en allemand : « Je voudrais un café s'il vous plaît » (poli)",
+            "answer": "Ich möchte einen Kaffee bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q9",
+            "question": "Écoute et complète : « Hier ___ man nicht rauchen. » (interdit)",
+            "audioPrompt": "Hier darf man nicht rauchen.",
+            "answer": "darf",
+            "hint": "dürfen + man (permission générale)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q10",
+            "question": "Comment demander de l'aide poliment ?",
+            "options": [
+              "Hilf mir!",
+              "Du musst mir helfen!",
+              "Können Sie mir helfen, bitte?",
+              "Ich helfe dir."
+            ],
+            "answer": "Können Sie mir helfen, bitte?"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q11",
+            "question": "Complète : « Wir ___ heute viel arbeiten. » (nous devons)",
+            "answer": "müssen",
+            "hint": "müssen avec wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q12",
+            "question": "Forme de wollen avec ihr ?",
+            "options": [
+              "will",
+              "willst",
+              "wollen",
+              "wollt"
+            ],
+            "answer": "wollt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q13",
+            "question": "« Magst ___ Tee oder Kaffee? » (toi)",
+            "answer": "du",
+            "hint": "Question Ja/Nein"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q14",
+            "question": "Ordonne : « Sais-tu parler anglais ? »",
+            "words": [
+              "Kannst",
+              "du",
+              "Englisch",
+              "sprechen"
+            ],
+            "answer": "Kannst du Englisch sprechen"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q15",
+            "question": "Associe la phrase à son sens :",
+            "pairs": [
+              {
+                "left": "Ich kann.",
+                "right": "Je peux."
+              },
+              {
+                "left": "Ich darf.",
+                "right": "J'ai le droit."
+              },
+              {
+                "left": "Ich möchte.",
+                "right": "Je voudrais."
+              },
+              {
+                "left": "Ich soll.",
+                "right": "Je devrais."
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q16",
+            "question": "Écoute : « Du ___ jetzt schlafen! » (tu dois)",
+            "audioPrompt": "Du musst jetzt schlafen!",
+            "answer": "musst",
+            "hint": "müssen + du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q17",
+            "question": "« Möchtest du Wasser? » — son origine est :",
+            "options": [
+              "möchten",
+              "mögen",
+              "wollen",
+              "müssen"
+            ],
+            "answer": "mögen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q18",
+            "question": "Dis en allemand : « Nous voulons voyager en Allemagne »",
+            "answer": "Wir wollen nach Deutschland reisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q19",
+            "question": "« Hier ___ man rauchen? » (a-t-on le droit ?)",
+            "answer": "darf",
+            "hint": "dürfen dans la question"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q20",
+            "question": "Quelle phrase est polie au restaurant ?",
+            "options": [
+              "Ich will Wasser!",
+              "Wasser, jetzt!",
+              "Ich möchte ein Wasser, bitte.",
+              "Du gibst mir Wasser."
+            ],
+            "answer": "Ich möchte ein Wasser, bitte."
+          }
         ]
       }
     },
@@ -9814,39 +10387,154 @@
         "tables": [
           {
             "title": "Les cinq schémas avec exemples",
-            "headers": ["Schéma", "Singulier", "Pluriel", "Remarque"],
+            "headers": [
+              "Schéma",
+              "Singulier",
+              "Pluriel",
+              "Remarque"
+            ],
             "rows": [
-              { "cells": ["+ -e", "der Tag", "die Tage", "le plus fréquent au masculin"] },
-              { "cells": ["+ -(e)n", "die Frau", "die Frauen", "presque tous les féminins en -e/-in"] },
-              { "cells": ["+ -er + Umlaut", "das Buch", "die Bücher", "avec a/o/u → ä/ö/ü"], "highlight": true },
-              { "cells": ["+ -s", "das Auto", "die Autos", "mots étrangers et abréviations"] },
-              { "cells": ["sans / Umlaut", "der Vater", "die Väter", "noms en -er, -el, -en"] }
+              {
+                "cells": [
+                  "+ -e",
+                  "der Tag",
+                  "die Tage",
+                  "le plus fréquent au masculin"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -(e)n",
+                  "die Frau",
+                  "die Frauen",
+                  "presque tous les féminins en -e/-in"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -er + Umlaut",
+                  "das Buch",
+                  "die Bücher",
+                  "avec a/o/u → ä/ö/ü"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "+ -s",
+                  "das Auto",
+                  "die Autos",
+                  "mots étrangers et abréviations"
+                ]
+              },
+              {
+                "cells": [
+                  "sans / Umlaut",
+                  "der Vater",
+                  "die Väter",
+                  "noms en -er, -el, -en"
+                ]
+              }
             ],
             "theme": "default",
             "note": "Essaie de prédire le pluriel, mais vérifie toujours dans le dictionnaire — il y a des exceptions."
           },
           {
             "title": "Exemples pratiques avec les cinq schémas",
-            "headers": ["Genre", "Singulier", "Pluriel"],
+            "headers": [
+              "Genre",
+              "Singulier",
+              "Pluriel"
+            ],
             "rows": [
-              { "cells": ["der", "der Tisch", "die Tische"] },
-              { "cells": ["der", "der Stuhl", "die Stühle"] },
-              { "cells": ["die", "die Lampe", "die Lampen"] },
-              { "cells": ["die", "die Schwester", "die Schwestern"] },
-              { "cells": ["das", "das Haus", "die Häuser"] },
-              { "cells": ["das", "das Kind", "die Kinder"] },
-              { "cells": ["das", "das Hotel", "die Hotels"] },
-              { "cells": ["der", "der Lehrer", "die Lehrer"] },
-              { "cells": ["die", "die Mutter", "die Mütter"] }
+              {
+                "cells": [
+                  "der",
+                  "der Tisch",
+                  "die Tische"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Stuhl",
+                  "die Stühle"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Lampe",
+                  "die Lampen"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Schwester",
+                  "die Schwestern"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Haus",
+                  "die Häuser"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Kind",
+                  "die Kinder"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Hotel",
+                  "die Hotels"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Lehrer",
+                  "die Lehrer"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Mutter",
+                  "die Mütter"
+                ]
+              }
             ],
             "theme": "default"
           }
         ],
         "rules": [
-          { "rule": "Tous les noms au pluriel prennent die — pas de différence entre der/die/das.", "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder", "translation": "Les hommes / les femmes / les enfants — tous die." },
-          { "rule": "Les féminins en -in doublent le n : die Lehrerin → die Lehrerinnen.", "example": "die Studentin → die Studentinnen", "translation": "Les étudiantes." },
-          { "rule": "Les mots étrangers (auto, hotel, café, taxi) prennent -s.", "example": "das Auto → die Autos / das Café → die Cafés", "translation": "Les voitures / les cafés." },
-          { "rule": "Certains noms ne s'utilisent qu'au pluriel : die Eltern (les parents), die Leute (les gens), die Ferien (les vacances).", "example": "Meine Eltern wohnen in Casablanca.", "translation": "Mes parents habitent à Casablanca." }
+          {
+            "rule": "Tous les noms au pluriel prennent die — pas de différence entre der/die/das.",
+            "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder",
+            "translation": "Les hommes / les femmes / les enfants — tous die."
+          },
+          {
+            "rule": "Les féminins en -in doublent le n : die Lehrerin → die Lehrerinnen.",
+            "example": "die Studentin → die Studentinnen",
+            "translation": "Les étudiantes."
+          },
+          {
+            "rule": "Les mots étrangers (auto, hotel, café, taxi) prennent -s.",
+            "example": "das Auto → die Autos / das Café → die Cafés",
+            "translation": "Les voitures / les cafés."
+          },
+          {
+            "rule": "Certains noms ne s'utilisent qu'au pluriel : die Eltern (les parents), die Leute (les gens), die Ferien (les vacances).",
+            "example": "Meine Eltern wohnen in Casablanca.",
+            "translation": "Mes parents habitent à Casablanca."
+          }
         ],
         "examples": [
           "Ich habe zwei Brüder. — J'ai deux frères.",
@@ -9861,75 +10549,886 @@
         "tip": "Dans la vie quotidienne, tu auras besoin de connaître au maximum 50 pluriels — apprends-les. Pour le reste, tu les retiendras à l'usage. Essaie la page Drill (entraînement de conjugaison) pour rafraîchir ta mémoire."
       },
       "vocabulary": [
-        { "german": "der Tag", "arabic": "le jour", "example": "Es gibt sieben Tage in der Woche.", "exampleArabic": "Il y a sept jours dans la semaine.", "type": "noun", "gender": "der", "plural": "die Tage" },
-        { "german": "der Tisch", "arabic": "la table", "example": "Die Tische sind groß.", "exampleArabic": "Les tables sont grandes.", "type": "noun", "gender": "der", "plural": "die Tische" },
-        { "german": "der Stuhl", "arabic": "la chaise", "example": "Wir brauchen vier Stühle.", "exampleArabic": "Nous avons besoin de quatre chaises.", "type": "noun", "gender": "der", "plural": "die Stühle" },
-        { "german": "die Lampe", "arabic": "la lampe", "example": "Die Lampen sind neu.", "exampleArabic": "Les lampes sont neuves.", "type": "noun", "gender": "die", "plural": "die Lampen" },
-        { "german": "das Buch", "arabic": "le livre", "example": "Ich lese drei Bücher.", "exampleArabic": "Je lis trois livres.", "type": "noun", "gender": "das", "plural": "die Bücher" },
-        { "german": "das Kind", "arabic": "l'enfant", "example": "Die Kinder sind im Park.", "exampleArabic": "Les enfants sont au parc.", "type": "noun", "gender": "das", "plural": "die Kinder" },
-        { "german": "das Haus", "arabic": "la maison", "example": "Die Häuser sind alt.", "exampleArabic": "Les maisons sont anciennes.", "type": "noun", "gender": "das", "plural": "die Häuser" },
-        { "german": "das Auto", "arabic": "la voiture", "example": "Wir kaufen zwei Autos.", "exampleArabic": "Nous achetons deux voitures.", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "das Hotel", "arabic": "l'hôtel", "example": "Es gibt viele Hotels.", "exampleArabic": "Il y a beaucoup d'hôtels.", "type": "noun", "gender": "das", "plural": "die Hotels" },
-        { "german": "der Vater", "arabic": "le père", "example": "Die Väter arbeiten.", "exampleArabic": "Les pères travaillent.", "type": "noun", "gender": "der", "plural": "die Väter" },
-        { "german": "die Mutter", "arabic": "la mère", "example": "Die Mütter sind hier.", "exampleArabic": "Les mères sont ici.", "type": "noun", "gender": "die", "plural": "die Mütter" },
-        { "german": "der Bruder", "arabic": "le frère", "example": "Ich habe zwei Brüder.", "exampleArabic": "J'ai deux frères.", "type": "noun", "gender": "der", "plural": "die Brüder" },
-        { "german": "die Schwester", "arabic": "la sœur", "example": "Sie hat drei Schwestern.", "exampleArabic": "Elle a trois sœurs.", "type": "noun", "gender": "die", "plural": "die Schwestern" },
-        { "german": "der Mann", "arabic": "l'homme", "example": "Die Männer sprechen.", "exampleArabic": "Les hommes parlent.", "type": "noun", "gender": "der", "plural": "die Männer" },
-        { "german": "die Frau", "arabic": "la femme", "example": "Die Frauen lernen Deutsch.", "exampleArabic": "Les femmes apprennent l'allemand.", "type": "noun", "gender": "die", "plural": "die Frauen" },
-        { "german": "der Freund", "arabic": "l'ami", "example": "Meine Freunde wohnen in Berlin.", "exampleArabic": "Mes amis habitent à Berlin.", "type": "noun", "gender": "der", "plural": "die Freunde" },
-        { "german": "die Freundin", "arabic": "l'amie", "example": "Meine Freundinnen sind hier.", "exampleArabic": "Mes amies sont ici.", "type": "noun", "gender": "die", "plural": "die Freundinnen" },
-        { "german": "der Lehrer", "arabic": "l'enseignant", "example": "Die Lehrer sind nett.", "exampleArabic": "Les enseignants sont sympas.", "type": "noun", "gender": "der", "plural": "die Lehrer" },
-        { "german": "die Lehrerin", "arabic": "l'enseignante", "example": "Die Lehrerinnen helfen.", "exampleArabic": "Les enseignantes aident.", "type": "noun", "gender": "die", "plural": "die Lehrerinnen" },
-        { "german": "der Student", "arabic": "l'étudiant", "example": "Die Studenten lernen viel.", "exampleArabic": "Les étudiants étudient beaucoup.", "type": "noun", "gender": "der", "plural": "die Studenten" },
-        { "german": "die Studentin", "arabic": "l'étudiante", "example": "Die Studentinnen kommen.", "exampleArabic": "Les étudiantes arrivent.", "type": "noun", "gender": "die", "plural": "die Studentinnen" },
-        { "german": "der Apfel", "arabic": "la pomme", "example": "Ich kaufe drei Äpfel.", "exampleArabic": "J'achète trois pommes.", "type": "noun", "gender": "der", "plural": "die Äpfel" },
-        { "german": "das Brot", "arabic": "le pain", "example": "Die Brote sind frisch.", "exampleArabic": "Les pains sont frais.", "type": "noun", "gender": "das", "plural": "die Brote" },
-        { "german": "der Schlüssel", "arabic": "la clé", "example": "Wo sind die Schlüssel?", "exampleArabic": "Où sont les clés ?", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
-        { "german": "das Zimmer", "arabic": "la chambre", "example": "Die Zimmer sind klein.", "exampleArabic": "Les chambres sont petites.", "type": "noun", "gender": "das", "plural": "die Zimmer" },
-        { "german": "die Stadt", "arabic": "la ville", "example": "Diese Städte sind schön.", "exampleArabic": "Ces villes sont belles.", "type": "noun", "gender": "die", "plural": "die Städte" },
-        { "german": "das Land", "arabic": "le pays", "example": "Diese Länder sind in Europa.", "exampleArabic": "Ces pays sont en Europe.", "type": "noun", "gender": "das", "plural": "die Länder" },
-        { "german": "die Sprache", "arabic": "la langue", "example": "Sie spricht drei Sprachen.", "exampleArabic": "Elle parle trois langues.", "type": "noun", "gender": "die", "plural": "die Sprachen" },
-        { "german": "die Eltern", "arabic": "les parents", "example": "Meine Eltern arbeiten.", "exampleArabic": "Mes parents travaillent.", "type": "noun", "gender": "pl" },
-        { "german": "die Leute", "arabic": "les gens", "example": "Die Leute sind freundlich.", "exampleArabic": "Les gens sont sympathiques.", "type": "noun", "gender": "pl" },
-        { "german": "die Ferien", "arabic": "les vacances", "example": "In den Ferien fahren wir nach Spanien.", "exampleArabic": "Pendant les vacances, nous allons en Espagne.", "type": "noun", "gender": "pl" },
-        { "german": "die Geschwister", "arabic": "les frères et sœurs", "example": "Hast du Geschwister?", "exampleArabic": "As-tu des frères et sœurs ?", "type": "noun", "gender": "pl" },
-        { "german": "viele", "arabic": "beaucoup (de)", "example": "Es gibt viele Bücher.", "exampleArabic": "Il y a beaucoup de livres.", "type": "adjective" },
-        { "german": "wenige", "arabic": "peu (de)", "example": "Wenige Studenten lernen Arabisch.", "exampleArabic": "Peu d'étudiants apprennent l'arabe.", "type": "adjective" },
-        { "german": "einige", "arabic": "quelques", "example": "Einige Kinder spielen draußen.", "exampleArabic": "Quelques enfants jouent dehors.", "type": "adjective" }
+        {
+          "german": "der Tag",
+          "arabic": "le jour",
+          "example": "Es gibt sieben Tage in der Woche.",
+          "exampleArabic": "Il y a sept jours dans la semaine.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tage"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "la table",
+          "example": "Die Tische sind groß.",
+          "exampleArabic": "Les tables sont grandes.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "la chaise",
+          "example": "Wir brauchen vier Stühle.",
+          "exampleArabic": "Nous avons besoin de quatre chaises.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Stühle"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "la lampe",
+          "example": "Die Lampen sind neu.",
+          "exampleArabic": "Les lampes sont neuves.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lampen"
+        },
+        {
+          "german": "das Buch",
+          "arabic": "le livre",
+          "example": "Ich lese drei Bücher.",
+          "exampleArabic": "Je lis trois livres.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Bücher"
+        },
+        {
+          "german": "das Kind",
+          "arabic": "l'enfant",
+          "example": "Die Kinder sind im Park.",
+          "exampleArabic": "Les enfants sont au parc.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kinder"
+        },
+        {
+          "german": "das Haus",
+          "arabic": "la maison",
+          "example": "Die Häuser sind alt.",
+          "exampleArabic": "Les maisons sont anciennes.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Häuser"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "la voiture",
+          "example": "Wir kaufen zwei Autos.",
+          "exampleArabic": "Nous achetons deux voitures.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "l'hôtel",
+          "example": "Es gibt viele Hotels.",
+          "exampleArabic": "Il y a beaucoup d'hôtels.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Hotels"
+        },
+        {
+          "german": "der Vater",
+          "arabic": "le père",
+          "example": "Die Väter arbeiten.",
+          "exampleArabic": "Les pères travaillent.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Väter"
+        },
+        {
+          "german": "die Mutter",
+          "arabic": "la mère",
+          "example": "Die Mütter sind hier.",
+          "exampleArabic": "Les mères sont ici.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Mütter"
+        },
+        {
+          "german": "der Bruder",
+          "arabic": "le frère",
+          "example": "Ich habe zwei Brüder.",
+          "exampleArabic": "J'ai deux frères.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Brüder"
+        },
+        {
+          "german": "die Schwester",
+          "arabic": "la sœur",
+          "example": "Sie hat drei Schwestern.",
+          "exampleArabic": "Elle a trois sœurs.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwestern"
+        },
+        {
+          "german": "der Mann",
+          "arabic": "l'homme",
+          "example": "Die Männer sprechen.",
+          "exampleArabic": "Les hommes parlent.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Männer"
+        },
+        {
+          "german": "die Frau",
+          "arabic": "la femme",
+          "example": "Die Frauen lernen Deutsch.",
+          "exampleArabic": "Les femmes apprennent l'allemand.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Frauen"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "l'ami",
+          "example": "Meine Freunde wohnen in Berlin.",
+          "exampleArabic": "Mes amis habitent à Berlin.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Freunde"
+        },
+        {
+          "german": "die Freundin",
+          "arabic": "l'amie",
+          "example": "Meine Freundinnen sind hier.",
+          "exampleArabic": "Mes amies sont ici.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundinnen"
+        },
+        {
+          "german": "der Lehrer",
+          "arabic": "l'enseignant",
+          "example": "Die Lehrer sind nett.",
+          "exampleArabic": "Les enseignants sont sympas.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Lehrer"
+        },
+        {
+          "german": "die Lehrerin",
+          "arabic": "l'enseignante",
+          "example": "Die Lehrerinnen helfen.",
+          "exampleArabic": "Les enseignantes aident.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lehrerinnen"
+        },
+        {
+          "german": "der Student",
+          "arabic": "l'étudiant",
+          "example": "Die Studenten lernen viel.",
+          "exampleArabic": "Les étudiants étudient beaucoup.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Studenten"
+        },
+        {
+          "german": "die Studentin",
+          "arabic": "l'étudiante",
+          "example": "Die Studentinnen kommen.",
+          "exampleArabic": "Les étudiantes arrivent.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Studentinnen"
+        },
+        {
+          "german": "der Apfel",
+          "arabic": "la pomme",
+          "example": "Ich kaufe drei Äpfel.",
+          "exampleArabic": "J'achète trois pommes.",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Äpfel"
+        },
+        {
+          "german": "das Brot",
+          "arabic": "le pain",
+          "example": "Die Brote sind frisch.",
+          "exampleArabic": "Les pains sont frais.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Brote"
+        },
+        {
+          "german": "der Schlüssel",
+          "arabic": "la clé",
+          "example": "Wo sind die Schlüssel?",
+          "exampleArabic": "Où sont les clés ?",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Schlüssel"
+        },
+        {
+          "german": "das Zimmer",
+          "arabic": "la chambre",
+          "example": "Die Zimmer sind klein.",
+          "exampleArabic": "Les chambres sont petites.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Zimmer"
+        },
+        {
+          "german": "die Stadt",
+          "arabic": "la ville",
+          "example": "Diese Städte sind schön.",
+          "exampleArabic": "Ces villes sont belles.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Städte"
+        },
+        {
+          "german": "das Land",
+          "arabic": "le pays",
+          "example": "Diese Länder sind in Europa.",
+          "exampleArabic": "Ces pays sont en Europe.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Länder"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "la langue",
+          "example": "Sie spricht drei Sprachen.",
+          "exampleArabic": "Elle parle trois langues.",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachen"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "les parents",
+          "example": "Meine Eltern arbeiten.",
+          "exampleArabic": "Mes parents travaillent.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Leute",
+          "arabic": "les gens",
+          "example": "Die Leute sind freundlich.",
+          "exampleArabic": "Les gens sont sympathiques.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "les vacances",
+          "example": "In den Ferien fahren wir nach Spanien.",
+          "exampleArabic": "Pendant les vacances, nous allons en Espagne.",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Geschwister",
+          "arabic": "les frères et sœurs",
+          "example": "Hast du Geschwister?",
+          "exampleArabic": "As-tu des frères et sœurs ?",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "viele",
+          "arabic": "beaucoup (de)",
+          "example": "Es gibt viele Bücher.",
+          "exampleArabic": "Il y a beaucoup de livres.",
+          "type": "adjective"
+        },
+        {
+          "german": "wenige",
+          "arabic": "peu (de)",
+          "example": "Wenige Studenten lernen Arabisch.",
+          "exampleArabic": "Peu d'étudiants apprennent l'arabe.",
+          "type": "adjective"
+        },
+        {
+          "german": "einige",
+          "arabic": "quelques",
+          "example": "Einige Kinder spielen draußen.",
+          "exampleArabic": "Quelques enfants jouent dehors.",
+          "type": "adjective"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-16-q1", "question": "Pluriel de der Tag ? « die ___ »", "answer": "Tage", "hint": "schéma -e" },
-          { "type": "multiple-choice", "id": "a1-16-q2", "question": "Pluriel de das Buch ?", "options": ["die Buchen", "die Bücher", "die Buchs", "die Buches"], "answer": "die Bücher" },
-          { "type": "fill-blank", "id": "a1-16-q3", "question": "Pluriel de die Frau ? « die ___ »", "answer": "Frauen", "hint": "schéma -en" },
-          { "type": "multiple-choice", "id": "a1-16-q4", "question": "Quel est l'article correct au pluriel de der Mann ?", "options": ["der", "die", "das", "den"], "answer": "die" },
-          { "type": "fill-blank", "id": "a1-16-q5", "question": "Pluriel de das Auto ? « die ___ »", "answer": "Autos", "hint": "mot étranger → -s" },
-          { "type": "matching", "id": "a1-16-q6", "question": "Associe le singulier au pluriel :", "pairs": [
-            { "left": "der Vater", "right": "die Väter" },
-            { "left": "das Kind", "right": "die Kinder" },
-            { "left": "die Lampe", "right": "die Lampen" },
-            { "left": "das Hotel", "right": "die Hotels" },
-            { "left": "der Apfel", "right": "die Äpfel" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q7", "question": "Ordonne : « Les enfants jouent dans le parc »", "words": ["Die", "Kinder", "spielen", "im", "Park"], "answer": "Die Kinder spielen im Park" },
-          { "type": "speaking", "id": "a1-16-q8", "question": "Dis en allemand : « J'ai deux frères et une sœur »", "answer": "Ich habe zwei Brüder und eine Schwester" },
-          { "type": "fill-blank", "id": "a1-16-q9", "question": "Écoute et complète : « Die ___ sind alt. » (les maisons)", "audioPrompt": "Die Häuser sind alt.", "answer": "Häuser", "hint": "das Haus → die Häuser" },
-          { "type": "multiple-choice", "id": "a1-16-q10", "question": "Quel mot ne s'emploie qu'au pluriel ?", "options": ["der Tag", "die Eltern", "das Auto", "der Lehrer"], "answer": "die Eltern" },
-          { "type": "fill-blank", "id": "a1-16-q11", "question": "Pluriel de der Stuhl ? « die ___ »", "answer": "Stühle", "hint": "schéma -e + Umlaut" },
-          { "type": "multiple-choice", "id": "a1-16-q12", "question": "Pluriel de die Lehrerin ?", "options": ["die Lehrerinen", "die Lehrerinnen", "die Lehrerins", "die Lehrerin"], "answer": "die Lehrerinnen" },
-          { "type": "fill-blank", "id": "a1-16-q13", "question": "Pluriel de der Vater ? « die ___ »", "answer": "Väter", "hint": "sans terminaison + Umlaut" },
-          { "type": "matching", "id": "a1-16-q14", "question": "Associe le singulier au pluriel :", "pairs": [
-            { "left": "das Buch", "right": "die Bücher" },
-            { "left": "der Mann", "right": "die Männer" },
-            { "left": "die Stadt", "right": "die Städte" },
-            { "left": "das Auto", "right": "die Autos" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q15", "question": "Ordonne : « Il y a beaucoup d'enfants dans le parc »", "words": ["Es", "gibt", "viele", "Kinder", "im", "Park"], "answer": "Es gibt viele Kinder im Park" },
-          { "type": "fill-blank", "id": "a1-16-q16", "question": "Écoute : « Die ___ sind in der Schule. » (les enfants)", "audioPrompt": "Die Kinder sind in der Schule.", "answer": "Kinder", "hint": "das Kind → die Kinder" },
-          { "type": "multiple-choice", "id": "a1-16-q17", "question": "Les mots étrangers prennent le schéma :", "options": ["-er", "-en", "-s", "-e"], "answer": "-s" },
-          { "type": "speaking", "id": "a1-16-q18", "question": "Dis : « J'ai besoin de deux livres et d'un stylo »", "answer": "Ich brauche zwei Bücher und einen Stift" },
-          { "type": "fill-blank", "id": "a1-16-q19", "question": "Pluriel de die Mutter ? « die ___ »", "answer": "Mütter", "hint": "sans terminaison + Umlaut" },
-          { "type": "multiple-choice", "id": "a1-16-q20", "question": "Tous les noms au pluriel prennent l'article :", "options": ["der", "die", "das", "ein"], "answer": "die" }
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q1",
+            "question": "Pluriel de der Tag ? « die ___ »",
+            "answer": "Tage",
+            "hint": "schéma -e"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q2",
+            "question": "Pluriel de das Buch ?",
+            "options": [
+              "die Buchen",
+              "die Bücher",
+              "die Buchs",
+              "die Buches"
+            ],
+            "answer": "die Bücher"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q3",
+            "question": "Pluriel de die Frau ? « die ___ »",
+            "answer": "Frauen",
+            "hint": "schéma -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q4",
+            "question": "Quel est l'article correct au pluriel de der Mann ?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "den"
+            ],
+            "answer": "die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q5",
+            "question": "Pluriel de das Auto ? « die ___ »",
+            "answer": "Autos",
+            "hint": "mot étranger → -s"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q6",
+            "question": "Associe le singulier au pluriel :",
+            "pairs": [
+              {
+                "left": "der Vater",
+                "right": "die Väter"
+              },
+              {
+                "left": "das Kind",
+                "right": "die Kinder"
+              },
+              {
+                "left": "die Lampe",
+                "right": "die Lampen"
+              },
+              {
+                "left": "das Hotel",
+                "right": "die Hotels"
+              },
+              {
+                "left": "der Apfel",
+                "right": "die Äpfel"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q7",
+            "question": "Ordonne : « Les enfants jouent dans le parc »",
+            "words": [
+              "Die",
+              "Kinder",
+              "spielen",
+              "im",
+              "Park"
+            ],
+            "answer": "Die Kinder spielen im Park"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q8",
+            "question": "Dis en allemand : « J'ai deux frères et une sœur »",
+            "answer": "Ich habe zwei Brüder und eine Schwester"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q9",
+            "question": "Écoute et complète : « Die ___ sind alt. » (les maisons)",
+            "audioPrompt": "Die Häuser sind alt.",
+            "answer": "Häuser",
+            "hint": "das Haus → die Häuser"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q10",
+            "question": "Quel mot ne s'emploie qu'au pluriel ?",
+            "options": [
+              "der Tag",
+              "die Eltern",
+              "das Auto",
+              "der Lehrer"
+            ],
+            "answer": "die Eltern"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q11",
+            "question": "Pluriel de der Stuhl ? « die ___ »",
+            "answer": "Stühle",
+            "hint": "schéma -e + Umlaut"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q12",
+            "question": "Pluriel de die Lehrerin ?",
+            "options": [
+              "die Lehrerinen",
+              "die Lehrerinnen",
+              "die Lehrerins",
+              "die Lehrerin"
+            ],
+            "answer": "die Lehrerinnen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q13",
+            "question": "Pluriel de der Vater ? « die ___ »",
+            "answer": "Väter",
+            "hint": "sans terminaison + Umlaut"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q14",
+            "question": "Associe le singulier au pluriel :",
+            "pairs": [
+              {
+                "left": "das Buch",
+                "right": "die Bücher"
+              },
+              {
+                "left": "der Mann",
+                "right": "die Männer"
+              },
+              {
+                "left": "die Stadt",
+                "right": "die Städte"
+              },
+              {
+                "left": "das Auto",
+                "right": "die Autos"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q15",
+            "question": "Ordonne : « Il y a beaucoup d'enfants dans le parc »",
+            "words": [
+              "Es",
+              "gibt",
+              "viele",
+              "Kinder",
+              "im",
+              "Park"
+            ],
+            "answer": "Es gibt viele Kinder im Park"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q16",
+            "question": "Écoute : « Die ___ sind in der Schule. » (les enfants)",
+            "audioPrompt": "Die Kinder sind in der Schule.",
+            "answer": "Kinder",
+            "hint": "das Kind → die Kinder"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q17",
+            "question": "Les mots étrangers prennent le schéma :",
+            "options": [
+              "-er",
+              "-en",
+              "-s",
+              "-e"
+            ],
+            "answer": "-s"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q18",
+            "question": "Dis : « J'ai besoin de deux livres et d'un stylo »",
+            "answer": "Ich brauche zwei Bücher und einen Stift"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q19",
+            "question": "Pluriel de die Mutter ? « die ___ »",
+            "answer": "Mütter",
+            "hint": "sans terminaison + Umlaut"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q20",
+            "question": "Tous les noms au pluriel prennent l'article :",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "die"
+          }
+        ]
+      }
+    },
+    "a1-17": {
+      "id": "a1-17",
+      "title": "Conjonctions de coordination : und, oder, aber, denn, sondern — Konjunktionen: und, oder, aber, denn, sondern",
+      "grammar": {
+        "title": "Les conjonctions de coordination fondamentales — Konjunktionen",
+        "content": "**Les conjonctions de coordination (Konjunktionen)** sont des mots qui relient deux phrases ou deux idées.\n\nLa caractéristique essentielle de ces conjonctions au niveau A1 est qu'elles **ne modifient pas l'ordre du verbe** dans la phrase qui suit — le verbe reste en **deuxième position**, comme d'habitude.\n\n📌 Les cinq conjonctions et leur signification :\n\n• **und** = et (pour l'addition)\n• **oder** = ou (pour le choix entre deux éléments)\n• **aber** = mais (pour l'opposition ou la contradiction)\n• **denn** = car / parce que (pour exprimer la cause)\n• **sondern** = mais plutôt / mais au contraire (pour corriger après une négation)\n\n⚠️ **Différence importante :** On utilise **aber** pour une simple opposition, tandis que **sondern** n'apparaît qu'après une phrase **négative** pour corriger l'information.\n\nExemple :\n- Ich bin nicht müde, **aber** ich schlafe. (Je ne suis pas fatigué, mais je dors.)\n- Ich bin nicht müde, **sondern** fit. (Je ne suis pas fatigué, mais plutôt en forme.)\n\n✅ **L'ordre dans la phrase :**\nPremière phrase + **conjonction** + deuxième phrase (le verbe en deuxième position)",
+        "tables": [
+          {
+            "title": "Les conjonctions et leur fonction",
+            "headers": [
+              "Conjonction",
+              "Signification en français",
+              "Fonction",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "und",
+                  "et",
+                  "Addition / cumul",
+                  "Ich lerne und du arbeitest."
+                ]
+              },
+              {
+                "cells": [
+                  "oder",
+                  "ou",
+                  "Choix entre deux alternatives",
+                  "Trinkst du Tee oder Kaffee?"
+                ]
+              },
+              {
+                "cells": [
+                  "aber",
+                  "mais",
+                  "Opposition / restriction",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "car / parce que",
+                  "Expression de la cause",
+                  "Ich lerne, denn ich habe eine Prüfung."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "mais plutôt / mais au contraire",
+                  "Correction après une négation",
+                  "Er ist nicht alt, sondern jung."
+                ]
+              }
+            ],
+            "note": "Toutes ces conjonctions ne modifient pas l'ordre du verbe dans la phrase qui suit.",
+            "theme": "default"
+          },
+          {
+            "title": "Comparaison : aber face à sondern",
+            "headers": [
+              "Conjonction",
+              "Condition d'emploi",
+              "Exemple",
+              "Traduction"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "aber",
+                  "Après une phrase affirmative ou négative",
+                  "Ich bin müde, aber ich lerne.",
+                  "Je suis fatigué, mais j'apprends."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "Uniquement après une phrase négative pour corriger l'information",
+                  "Ich bin nicht müde, sondern fit.",
+                  "Je ne suis pas fatigué, mais plutôt en forme."
+                ]
+              }
+            ],
+            "note": "💡 sondern = négation + correction. aber = opposition générale.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "und signifie « et » et s'utilise pour relier deux idées complémentaires ou successives. Le verbe reste à sa place habituelle.",
+            "example": "Ich wohne in Berlin und ich lerne Deutsch.",
+            "translation": "J'habite à Berlin et j'apprends l'allemand."
+          },
+          {
+            "rule": "oder signifie « ou » et s'utilise pour exprimer un choix entre deux alternatives.",
+            "example": "Kommst du heute oder kommst du morgen?",
+            "translation": "Tu viens aujourd'hui ou tu viens demain ?"
+          },
+          {
+            "rule": "aber signifie « mais » et exprime l'opposition ou la restriction entre deux phrases.",
+            "example": "Das Essen ist gut, aber es ist teuer.",
+            "translation": "La nourriture est bonne, mais elle est chère."
+          },
+          {
+            "rule": "denn signifie « car » et introduit la cause. sondern signifie « mais plutôt » et n'apparaît qu'après une phrase négative pour corriger l'information.",
+            "example": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein.",
+            "translation": "Je bois de l'eau car j'ai soif. — Il n'est pas grand, mais plutôt petit."
+          }
+        ],
+        "examples": [
+          "Ich bin müde, aber ich lerne Deutsch. — Je suis fatigué, mais j'apprends l'allemand.",
+          "Trinkst du Kaffee oder Tee? — Tu bois du café ou du thé ?",
+          "Sie wohnt in Rabat und sie arbeitet dort. — Elle habite à Rabat et elle y travaille.",
+          "Ich esse nicht viel, denn ich bin nicht hungrig. — Je ne mange pas beaucoup car je n'ai pas faim.",
+          "Das ist nicht mein Buch, sondern sein Buch. — Ce n'est pas mon livre, mais plutôt le sien.",
+          "Er spricht Arabisch und Deutsch. — Il parle arabe et allemand.",
+          "Ich gehe nicht ins Kino, sondern ich bleibe zu Hause. — Je ne vais pas au cinéma, mais plutôt je reste à la maison.",
+          "Bist du Student oder arbeitest du? — Es-tu étudiant ou tu travailles ?"
+        ],
+        "tip": "💡 Rappelle-toi toujours : ces cinq conjonctions (und, oder, aber, denn, sondern) sont des conjonctions « neutres » — elles ne déplacent pas le verbe de sa place ! Le verbe reste en deuxième position dans la phrase qui suit, exactement comme s'il n'y avait pas de conjonction. C'est ce qui les distingue des autres conjonctions des niveaux supérieurs."
+      },
+      "vocabulary": [
+        {
+          "german": "lernen",
+          "arabic": "apprendre",
+          "example": "Ich lerne Deutsch.",
+          "exampleArabic": "J'apprends l'allemand.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "travailler",
+          "example": "Sie arbeitet in Berlin.",
+          "exampleArabic": "Elle travaille à Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "habiter / vivre",
+          "example": "Er wohnt in Rabat.",
+          "exampleArabic": "Il habite à Rabat.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué(e)",
+          "example": "Ich bin müde, aber ich lerne.",
+          "exampleArabic": "Je suis fatigué, mais j'apprends.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "affamé(e) / qui a faim",
+          "example": "Ich bin hungrig, denn ich esse nicht.",
+          "exampleArabic": "J'ai faim car je ne mange pas.",
+          "type": "adjective"
+        },
+        {
+          "german": "durstig",
+          "arabic": "assoiffé(e) / qui a soif",
+          "example": "Er ist durstig und trinkt Wasser.",
+          "exampleArabic": "Il a soif et boit de l'eau.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kaffee",
+          "arabic": "café",
+          "gender": "der",
+          "plural": "-",
+          "example": "Trinkst du Kaffee oder Tee?",
+          "exampleArabic": "Tu bois du café ou du thé ?",
+          "type": "noun"
+        },
+        {
+          "german": "Tee",
+          "arabic": "thé",
+          "gender": "der",
+          "plural": "-",
+          "example": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "exampleArabic": "Je bois du thé car je n'aime pas le café.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "livre",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist nicht mein Buch, sondern sein Buch.",
+          "exampleArabic": "Ce n'est pas mon livre, mais plutôt le sien.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "examen",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich lerne, denn ich habe eine Prüfung.",
+          "exampleArabic": "J'apprends car j'ai un examen.",
+          "type": "noun"
+        },
+        {
+          "german": "heute",
+          "arabic": "aujourd'hui",
+          "example": "Kommst du heute oder morgen?",
+          "exampleArabic": "Tu viens aujourd'hui ou demain ?",
+          "type": "adverb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "demain",
+          "example": "Ich lerne heute und morgen.",
+          "exampleArabic": "J'apprends aujourd'hui et demain.",
+          "type": "adverb"
+        },
+        {
+          "german": "klein",
+          "arabic": "petit(e) / de petite taille",
+          "example": "Er ist nicht groß, sondern klein.",
+          "exampleArabic": "Il n'est pas grand, mais plutôt petit.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "cher / coûteux",
+          "example": "Das Essen ist gut, aber teuer.",
+          "exampleArabic": "La nourriture est bonne, mais chère.",
+          "type": "adjective"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "rester",
+          "example": "Ich bleibe zu Hause, denn es regnet.",
+          "exampleArabic": "Je reste à la maison car il pleut.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q1",
+            "question": "Choisissez la bonne conjonction : Ich bin müde, ___ ich lerne.",
+            "answer": "aber",
+            "options": [
+              "denn",
+              "aber",
+              "sondern",
+              "oder"
+            ],
+            "hint": "La phrase exprime une opposition entre la fatigue et l'apprentissage."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q2",
+            "question": "Complétez la phrase avec la conjonction appropriée : Ich trinke Wasser, ___ ich bin durstig.",
+            "answer": "denn",
+            "hint": "Nous avons besoin d'une conjonction qui exprime la cause."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q3",
+            "question": "Quelle phrase est grammaticalement correcte ?",
+            "answer": "Er ist nicht groß, sondern klein.",
+            "options": [
+              "Er ist nicht groß, aber klein.",
+              "Er ist nicht groß, sondern klein.",
+              "Er ist nicht groß, denn klein.",
+              "Er ist nicht groß, oder klein."
+            ],
+            "hint": "Après une négation suivie d'une correction, on utilise sondern."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-17-q4",
+            "question": "Remettez les mots dans l'ordre pour former une phrase correcte :",
+            "answer": "ich lerne Deutsch , denn ich habe eine Prüfung",
+            "words": [
+              "ich",
+              "lerne",
+              "Deutsch",
+              "denn",
+              "habe",
+              "eine",
+              "Prüfung",
+              "ich",
+              ","
+            ],
+            "hint": "La conjonction denn se place au milieu, et le verbe reste en deuxième position."
+          },
+          {
+            "type": "matching",
+            "id": "a1-17-q5",
+            "question": "Associez chaque conjonction à sa signification correcte en français :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "und",
+                "right": "و"
+              },
+              {
+                "left": "oder",
+                "right": "أو"
+              },
+              {
+                "left": "aber",
+                "right": "لكن"
+              },
+              {
+                "left": "denn",
+                "right": "لأن"
+              },
+              {
+                "left": "sondern",
+                "right": "بل / وإنما"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q6",
+            "question": "🎧 Écoutez la phrase et complétez le blanc : Das ist nicht mein Buch, ___ sein Buch.",
+            "answer": "sondern",
+            "hint": "La phrase est négative et nous avons besoin de corriger l'information.",
+            "audioPrompt": "Das ist nicht mein Buch, sondern sein Buch."
+          },
+          {
+            "type": "speaking",
+            "id": "a1-17-q7",
+            "question": "Prononcez la phrase suivante à voix haute : Ich bin müde, aber ich lerne Deutsch.",
+            "answer": "Ich bin müde, aber ich lerne Deutsch.",
+            "hint": "Attention à la prononciation : aber = « âber », müde = « müdé »."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q8",
+            "question": "Choisissez la phrase qui utilise « oder » correctement :",
+            "answer": "Trinkst du Kaffee oder Tee?",
+            "options": [
+              "Ich lerne oder ich bin müde.",
+              "Trinkst du Kaffee oder Tee?",
+              "Er ist nicht groß oder klein.",
+              "Ich wohne oder ich arbeite."
+            ],
+            "hint": "oder s'utilise pour choisir entre deux alternatives logiques."
+          }
         ]
       }
     }

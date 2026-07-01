@@ -8078,6 +8078,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "کمزور اسم (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "کمزور اسم — n-Deklination (schwache Nomen)",
+        "content": "جرمن زبان میں مذکر اسماء کا ایک خاص گروہ ہوتا ہے جسے **schwache Nomen** (کمزور اسم) کہا جاتا ہے۔ یہ اسم دوسروں سے اس لیے مختلف ہیں کیونکہ یہ **Nominativ کے علاوہ تمام اعرابی حالتوں میں -(e)n کا لاحقہ لیتے ہیں**۔\n\n**یہ اسم کون سے ہیں؟**\nان میں سے زیادہ تر مذکر اسم درج ذیل فئات میں سے کسی ایک سے تعلق رکھتے ہیں:\n- **افراد، پیشوں یا قومیتوں** پر دلالت کرنے والے اسم، جیسے: *der Student، der Journalist، der Kollege*\n- **-e** پر ختم ہونے والے اسم، جیسے: *der Junge، der Kunde، der Zeuge*\n- **-ist، -ent، -ant، -at** پر ختم ہونے والے اسم، جیسے: *der Tourist، der Patient، der Praktikant*\n- خاص استثناء: **der Herr** واحد میں *-n* اور جمع میں *-en* لیتا ہے\n\n**سنہری اصول:**\nGenitiv، Dativ اور Akkusativ کی حالتوں میں — اسم کے ساتھ ہمیشہ **-(e)n** لگائیں۔\n\n**اہم نوٹ:** ان میں سے کچھ اسم واحد Genitiv میں **-s** بھی لیتے ہیں، جیسے: *des Studenten* — غور کریں کہ لاحقہ **-en** ہے نہ کہ **-s** جیسا کہ عام اسماء میں ہوتا ہے۔",
+        "tables": [
+          {
+            "title": "کمزور اسماء کی گردان — مثال: der Student / der Junge / der Herr",
+            "headers": [
+              "اعرابی حالت",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (فاعل)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (مفعول بہ)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (بالواسطہ مفعول)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (اضافت)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "-(e)n کا لاحقہ Nominativ کے علاوہ تمام حالتوں میں لگایا جاتا ہے۔ der Herr صرف واحد میں -n لیتا ہے۔",
+            "theme": "default"
+          },
+          {
+            "title": "عام کمزور اسماء کی فئات کی مثالیں",
+            "headers": [
+              "قسم",
+              "مثالیں",
+              "لاحقہ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-e پر ختم ہونے والے",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "-ent / -ant پر ختم ہونے والے",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-ist پر ختم ہونے والے",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-at / -ot پر ختم ہونے والے",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "استثناء",
+                  "der Herr",
+                  "-n (واحد) / -en (جمع)"
+                ]
+              }
+            ],
+            "note": "یہ تمام اسم مذکر ہیں۔ اگر یقین نہ ہو تو ہمیشہ لغت سے تصدیق کریں۔",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "کمزور اسم Akkusativ، Dativ اور Genitiv کی حالتوں میں -(e)n لیتے ہیں — اور صرف Nominativ میں بغیر لاحقے کے رہتے ہیں۔",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "طالب علم سیکھتا ہے۔ — میں طالب علم کو جانتا ہوں۔"
+          },
+          {
+            "rule": "-e پر ختم ہونے والے اسم (جیسے der Junge, der Kunde) صرف -n لیتے ہیں (اضافی e کے بغیر)۔",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "میں لڑکے کی مدد کرتا ہوں۔"
+          },
+          {
+            "rule": "-ent, -ist, -ant, -at, -ot پر ختم ہونے والے اسم Nominativ کے علاوہ تمام حالتوں میں -en لیتے ہیں۔",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "یہ طالب علم کا کمرہ ہے۔"
+          },
+          {
+            "rule": "der Herr ایک استثناء ہے: واحد میں -n (Herrn) اور جمع میں -en (Herren) لیتا ہے۔",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "میں صاحب سے بات کرتا ہوں۔"
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — صحافی ایک مضمون لکھتا ہے۔",
+          "Ich kenne den Journalisten gut. — میں صحافی کو اچھی طرح جانتا ہوں۔",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — ہم طالب علم کی ہوم ورک میں مدد کرتے ہیں۔",
+          "Das ist das Buch des Kollegen. — یہ ساتھی کی کتاب ہے۔",
+          "Der Kunde möchte ein Zimmer reservieren. — گاہک ایک کمرہ بک کرنا چاہتا ہے۔",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — استانی لڑکے کو سوال سمجھاتی ہے۔",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — میں نے Herr Müller کو ای میل بھیجی۔",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — انٹرن ایک مہینے سے کمپنی میں کام کر رہا ہے۔"
+        ],
+        "tip": "💡 جب بھی آپ کوئی مذکر اسم دیکھیں جو -e، -ent، -ist یا -ant پر ختم ہو، تو یاد رکھیں کہ وہ غالباً ایک کمزور اسم ہے! خود سے پوچھیں: کیا یہ Nominativ میں ہے؟ اگر نہیں، تو فوراً -(e)n لگائیں۔ یہ اصول B1 کے 90% سے زیادہ معاملات کا احاطہ کرتا ہے۔"
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "طالب علم (یونیورسٹی کا)",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "طالب علم ہر روز جرمن سیکھتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "صحافی",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "صحافی ایک اخبار کے لیے کام کرتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "ساتھی / ہم کار",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "میں ساتھی کے ساتھ دوپہر کا کھانا کھاتا ہوں۔",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "لڑکا / بچہ",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "ماں لڑکے کو بلاتی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "گاہک / کلائنٹ",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "دکاندار گاہک کی مدد کرتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "صاحب / جناب",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "صبح بخیر، Herr Schmidt!",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "سیاح",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "سیاح راستہ پوچھتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "انٹرن / زیرِ تربیت",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "ہم نئے انٹرن کا خیرمقدم کرتے ہیں۔",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "گواہ",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "پولیس گواہ سے پوچھ گچھ کرتی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "فوجی / سپاہی",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "فوجی کو اس کی خدمت پر شکریہ ادا کیا جاتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "پائلٹ / طیارہ بان",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "مسافر پائلٹ پر بھروسہ کرتے ہیں۔",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "انسان / شخص",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "میں اس شخص کی مدد کرتا ہوں جسے مدد کی ضرورت ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "مریض",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "ڈاکٹر مریض کا معائنہ کرتا ہے۔",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Akkusativ کے جملے میں کمزور اسم کی درست شکل چنیں:\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "Akkusativ کی حالت میں کمزور اسم -(e)n لیتا ہے اور آرٹیکل den بن جاتا ہے۔"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "کمزور اسم کی درست شکل سے جملہ مکمل کریں:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "dem کے بعد ہم Dativ میں ہیں — کمزور اسم کے ساتھ -en لگائیں۔"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 سنیں اور جملے میں خالی جگہ مناسب لفظ سے پُر کریں:",
+            "answer": "Kollegen",
+            "hint": "des کے بعد ہم Genitiv میں ہیں — کمزور اسم -en لیتا ہے۔",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "الفاظ کو ترتیب دے کر درست جملہ بنائیں:",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "فعل erklärt کو Dativ کی ضرورت ہے اس شخص کے لیے جسے سمجھایا جا رہا ہو — dem + Jungen استعمال کریں۔"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "ان جملوں میں سے کس میں کمزور اسم کے استعمال میں غلطی ہے؟",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde ایک کمزور اسم ہے — Dativ میں اسے dem Kunden ہونا چاہیے۔"
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "ہر اسم کو Nominativ میں اس کی Akkusativ شکل سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "درست شکل سے جملہ مکمل کریں:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den سے ظاہر ہوتا ہے کہ ہم Akkusativ میں ہیں — کمزور اسم -en لیتا ہے۔"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "درج ذیل جملے کو بلند آواز سے پڑھیں اور -en لاحقے کے تلفظ پر خاص توجہ دیں:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "یاد رکھیں: Herrn = der Herr بحالتِ Dativ۔ -en کا تلفظ لفظ کے آخر میں ہلکا ہوتا ہے۔"
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "مجہول فعل ناقص کے ساتھ — Passiv mit Modalverben",
+      "grammar": {
+        "title": "مجہول فعل ناقص کے ساتھ — Passiv mit Modalverben",
+        "content": "## Passiv mit Modalverben کیا ہے؟\n\nجرمن زبان میں ہم **مجہول (Passiv)** کو **ناقص افعال (Modalverben)** جیسے *müssen، können، dürfen، sollen، wollen* کے ساتھ ملا کر یہ ظاہر کر سکتے ہیں کہ کوئی کام ضروری ہے یا ممکن ہے — بغیر فاعل کا ذکر کیے۔\n\n---\n\n### 🔧 یہ ترکیب کیسے بناتے ہیں؟\n\nبنیادی صیغہ یہ ہے:\n\n**Modalverb (مصرَّف) + Partizip II + werden**\n\n> مثال: Das Zimmer **muss** sauber gemacht **werden**.\n> (کمرہ صاف کرنا ضروری ہے۔)\n\n---\n\n### 📌 فوری موازنہ\n\n| معلوم جملہ (Aktiv) | مجہول جملہ (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 اہم نکات\n\n- **فعل ناقص** جملے میں اپنی فطری جگہ لیتا ہے (مرکزی جملوں میں دوسری پوزیشن)۔\n- **werden** ہمیشہ مرکزی جملے کے آخر میں مصدر (Infinitiv) کی شکل میں رہتا ہے۔\n- **Partizip II** جملے کے آخر میں *werden* سے فوری پہلے آتا ہے۔\n- **ثانوی جملوں (Nebensatz)** میں فعل ناقص *Partizip II + werden* کے بعد سب سے آخر میں آتا ہے:\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "مجہول میں ناقص افعال کی گردان — Präsens",
+            "headers": [
+              "فعل ناقص",
+              "معنی",
+              "مجہول کے ساتھ مثال",
+              "ترجمہ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "ضروری ہے / لازم ہے",
+                  "Das muss gemacht werden.",
+                  "یہ کرنا ضروری ہے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "ممکن ہے / کر سکتا ہے",
+                  "Das kann geändert werden.",
+                  "یہ تبدیل کیا جا سکتا ہے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "اجازت ہے / جائز ہے",
+                  "Hier darf nicht geraucht werden.",
+                  "یہاں سگریٹ نوشی کی اجازت نہیں۔"
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "سمجھا جاتا ہے / مطلوب ہے",
+                  "Das soll sofort erledigt werden.",
+                  "یہ فوری طور پر مکمل کیا جانا چاہیے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "ارادہ ہے / مقصود ہے",
+                  "Das will gut geplant werden.",
+                  "اس کی اچھی منصوبہ بندی مطلوب ہے۔"
+                ]
+              }
+            ],
+            "note": "صیغہ ہمیشہ: Modalverb (مصرَّف) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "جملے میں افعال کی ترتیب — Satzstellung",
+            "headers": [
+              "جملے کی قسم",
+              "پوزیشن 1",
+              "پوزیشن 2 (Verb)",
+              "درمیان",
+              "آخر"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (مرکزی جملہ)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (مرکزی جملہ)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (ثانوی جملہ)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (ثانوی جملہ)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "ثانوی جملے میں: فعل ناقص Partizip II + werden کے بعد سب سے آخر میں آتا ہے",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "بنیادی صیغہ: مصرَّف فعل ناقص + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "پارسل بھیجنا ضروری ہے۔"
+          },
+          {
+            "rule": "مرکزی جملے میں فعل ناقص دوسری پوزیشن پر آتا ہے، اور جملے کا آخر ہوتا ہے: Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "آج ہوم ورک جمع کرانا ضروری ہے۔"
+          },
+          {
+            "rule": "ثانوی جملے میں فعل ناقص Partizip II + werden کے بعد سب سے آخر میں آتا ہے",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "وہ کہتا ہے کہ دروازہ بند کرنا ضروری ہے۔"
+          },
+          {
+            "rule": "مجہول میں فاعل کا ذکر نہیں کیا جاتا؛ توجہ فعل پر ہوتی ہے نہ کہ اسے کرنے والے پر",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "بتی بجھانا ضروری ہے۔ (یہ اہم نہیں کہ کون بجھائے)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — فارم بھرنا ضروری ہے۔",
+          "Die Wohnung kann sofort gemietet werden. — فلیٹ فوری طور پر کرائے پر لیا جا سکتا ہے۔",
+          "Hier darf nicht fotografiert werden. — یہاں تصویر کشی کی اجازت نہیں۔",
+          "Die Rechnung soll bis Freitag bezahlt werden. — بل جمعہ تک ادا کیا جانا چاہیے۔",
+          "Das kaputte Fahrrad muss repariert werden. — خراب سائیکل کی مرمت ضروری ہے۔",
+          "Ich glaube, dass das Problem gelöst werden kann. — مجھے یقین ہے کہ مسئلہ حل کیا جا سکتا ہے۔",
+          "Die Medikamente dürfen nicht vergessen werden. — دوائیں بھولنا جائز نہیں۔",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — وہ جانتا ہے کہ کام وقت پر مکمل کرنا ضروری ہے۔"
+        ],
+        "tip": "💡 مرکزی جملے کے آخر کی سنہری ترتیب یاد رکھیں: **پہلے Partizip II، پھر werden**۔ اور ثانوی جملے میں: **Partizip II + werden + Modalverb**۔ جتنا زیادہ یہ ترتیب یاد کریں گے، یہ ترکیب اتنی ہی خودبخود آئے گی!"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "فارم / نمونہ",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "فارم بھرنا ضروری ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "بل / رسید",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "بل ادا کرنا ضروری ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "وقت / ملاقات کا وقت",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "ملاقات کا وقت ملتوی کرنا ضروری ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "پارسل / پیکٹ",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "پارسل وصول کیا جا سکتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "قاعدہ / اصول",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "قواعد کی پابندی ضروری ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "مرمت کرنا",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "گاڑی کی مرمت ضروری ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "بھرنا (فارم وغیرہ)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "درخواست بھرنا ضروری ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "مکمل کرنا / نمٹانا",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "کام مکمل کیا جانا چاہیے۔",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "ملتوی کرنا / آگے بڑھانا",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "میٹنگ ملتوی کی جا سکتی ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "پابندی کرنا / خیال رکھنا",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "ضوابط کی پابندی ضروری ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "فوری طور پر / ابھی",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "یہ فوری طور پر مکمل کرنا ضروری ہے۔",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "وقت پر / بروقت",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "کام وقت پر جمع کرانا ضروری ہے۔",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "درخواست / عرضی",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "درخواست جمع کرانا ضروری ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "ضابطہ / ہدایات",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "ضوابط کو نظرانداز کرنا جائز نہیں۔",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "مجہول اور فعل ناقص کے ساتھ درست جملہ منتخب کریں:",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "ترتیب یاد رکھیں: Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "درست شکل منتخب کر کے جملہ مکمل کریں: Das Problem _____ gelöst werden. (مسئلہ حل کیا جا سکتا ہے۔)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "فعل ناقص فاعل کے مطابق مصرَّف ہوتا ہے — Das (واحد غیر جاندار) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "الفاظ کو ترتیب دے کر مجہول کا درست جملہ بنائیں:",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "فعل ناقص دوسری پوزیشن پر، اور جملے کا آخر: Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "فعل rauchen ہے — اس کا Partizip II کیا ہوگا؟",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "جرمن میں کیسے کہیں گے: 'درخواست کل جمع کرائی جانی چاہیے'؟",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — مرکزی جملے میں درست ترتیب"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "ہر مجہول جملے کو اس کے درست ترجمے سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "الفاظ کو ترتیب دے کر درست ثانوی جملہ (Nebensatz) بنائیں:",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "ثانوی جملے میں: فعل ناقص Partizip II + werden کے بعد سب سے آخر میں آتا ہے"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "یہ جملہ واضح آواز میں بولیں: 'Das Paket muss sofort verschickt werden.' — پارسل فوری طور پر بھیجنا ضروری ہے۔",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "تلفظ پر دھیان دیں: verschickt — فِر-شِکٹ"
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "Konjunktiv II der Vergangenheit — ماضی کا Konjunktiv II",
+      "grammar": {
+        "title": "Konjunktiv II der Vergangenheit — hätte/wäre + Partizip II",
+        "content": "## Konjunktiv II der Vergangenheit کیا ہے؟\n\n**Konjunktiv II der Vergangenheit** کا استعمال ان چیزوں کے اظہار کے لیے کیا جاتا ہے جو **ماضی میں نہیں ہوئیں**، جیسے:\n- کسی گزری ہوئی بات پر **افسوس** کا اظہار: *کاش میں نے ایسا کیا ہوتا...*\n- ماضی میں کسی **فرضی صورتحال** یا **شرط** کا اظہار: *اگر میں نے ایسا کیا ہوتا، تو...*\n\n---\n\n## یہ زمانہ کیسے بنتے ہیں؟\n\nیہ صیغہ دو حصوں پر مشتمل ہے:\n\n**hätte / wäre** (Konjunktiv II کی شکل میں) **+ Partizip II** مرکزی فعل کا\n\n- **hätte** زیادہ تر افعال کے ساتھ استعمال ہوتا ہے (متعدی افعال اور حالت کے افعال)۔\n- **wäre** حرکت اور تبدیلی کے افعال کے ساتھ استعمال ہوتا ہے (جیسے: *gehen, kommen, fahren, werden, sein*)۔\n\n---\n\n## فوری موازنہ:\n\n| زمانہ | مطلب | مثال |\n|---|---|---|\n| Konjunktiv II der Gegenwart | حال میں فرضی صورتحال | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | ماضی میں فرضی صورتحال / افسوس | Ich **hätte** gelernt. |\n\n---\n\n**یاد رکھیں:** اس صیغے میں **Partizip II** کبھی نہیں بدلتا — تمام تصریف **hätte** یا **wäre** میں ہوتی ہے۔",
+        "tables": [
+          {
+            "title": "Partizip II کے ساتھ hätte کی گردان — haben والے افعال",
+            "headers": [
+              "ضمیر",
+              "Konjunktiv II",
+              "مکمل مثال",
+              "مطلب"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "میں نے سیکھا ہوتا / کاش میں نے سیکھا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "تم نے سیکھا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "اس نے سیکھا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "ہم نے سیکھا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "تم سب نے سیکھا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "انہوں نے سیکھا ہوتا"
+                ]
+              }
+            ],
+            "note": "hätte ان افعال کے ساتھ استعمال ہوتا ہے جو Perfekt میں haben کے ساتھ بنتے ہیں",
+            "theme": "default"
+          },
+          {
+            "title": "Partizip II کے ساتھ wäre کی گردان — sein والے افعال",
+            "headers": [
+              "ضمیر",
+              "Konjunktiv II",
+              "مکمل مثال",
+              "مطلب"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "میں گیا ہوتا / کاش میں گیا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "تم گئے ہوتے"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "وہ گیا ہوتا"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "ہم گئے ہوتے"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "تم سب گئے ہوتے"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "وہ گئے ہوتے"
+                ]
+              }
+            ],
+            "note": "wäre حرکت اور تبدیلی کے ان افعال کے ساتھ استعمال ہوتا ہے جو Perfekt میں sein کے ساتھ بنتے ہیں",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "hätte کے ساتھ بنیادی صیغہ: ان افعال کے لیے جو Perfekt میں haben استعمال کرتے ہیں",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "کاش میں نے زیادہ سویا ہوتا۔"
+          },
+          {
+            "rule": "wäre کے ساتھ بنیادی صیغہ: ان افعال کے لیے جو Perfekt میں sein استعمال کرتے ہیں (حرکت اور تبدیلی)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "وہ پہلے آئی ہوتی۔"
+          },
+          {
+            "rule": "شرطی جملے (Wenn-Satz) میں hätte/wäre ضمنی جملے کے آخر میں آتا ہے",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "اگر میرے پاس زیادہ وقت ہوتا، تو میں مدد کرتا۔"
+          },
+          {
+            "rule": "Partizip II ضمیر بدلنے سے نہیں بدلتا — صرف hätte/wäre کی گردان ہوتی ہے",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "میں نے خریدا ہوتا۔ / ہم نے خریدا ہوتا۔"
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — میں نے کتاب پڑھی ہوتی (لیکن میں نے نہیں پڑھی)۔",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — اگر اس نے زیادہ پڑھا ہوتا تو وہ امتحان میں کامیاب ہو جاتا۔",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — ہم پہلے پہنچ گئے ہوتے، لیکن ٹرین کو تاخیر ہو گئی۔",
+          "Sie hätte mir helfen können. — وہ میری مدد کر سکتی تھی۔",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — اگر تم ہمارے ساتھ آئے ہوتے، تو ہم نے خوب مزہ کیا ہوتا۔",
+          "Ich wäre lieber zu Hause geblieben. — میں گھر پر ہی رہنا پسند کرتا۔",
+          "Er hätte das Geld nicht ausgegeben. — اسے یہ پیسے خرچ نہیں کرنے چاہیے تھے۔",
+          "Hättest du früher angerufen, hätte ich gewartet. — اگر تم نے پہلے فون کیا ہوتا، تو میں انتظار کرتا۔"
+        ],
+        "tip": "💡 hätte اور wäre کا فرق یاد رکھنے کا آسان طریقہ: اگر فعل حرکت یا تبدیلی کا ہو (gehen, kommen, fahren, werden, sein) تو **wäre** استعمال کریں، باقی تمام صورتوں میں **hätte** — بالکل ویسے ہی جیسے عام Perfekt میں کرتے ہیں!"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "غلطی",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "میں اس غلطی سے بچ سکتا تھا۔",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "موقع",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "اسے یہ موقع استعمال کرنا چاہیے تھا۔",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "فیصلہ",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "وہ کوئی اور فیصلہ کرتی۔",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "تاخیر",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "اگر تاخیر نہ ہوتی تو ہم وقت پر ہوتے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "امتحان",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "میں امتحان میں کامیاب ہو جاتا۔",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "پچھتانا",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "وہ اپنے فیصلے پر پچھتاتا۔",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "چھوڑ دینا / گنوا دینا",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "وہ ٹرین چھوڑ دیتی۔",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "رہنا",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "میں گھر پر ہی رہنا پسند کرتا۔",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "پہنچنا",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "ہم پہلے پہنچ گئے ہوتے۔",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "خرچ کرنا (پیسے)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "اسے یہ پیسے خرچ نہیں کرنے چاہیے تھے۔",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "ترجیحاً / زیادہ پسند",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "میں گھر پر ہی رہنا پسند کرتا۔",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "پہلے / قبل از وقت",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "تمہیں پہلے آنا چاہیے تھا۔",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "موقع / قسمت",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "ہم یہ موقع نہ گنواتے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "مشورہ",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "وہ میرا مشورہ مانتی۔",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "صحیح صیغہ چنیں: اگر اس نے زیادہ پڑھا ہوتا، تو وہ امتحان میں کامیاب ہو جاتا۔",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "ماضی میں فرضی صورتحال کے اظہار کے لیے hätte + Partizip II استعمال ہوتا ہے، اس فعل کے ساتھ جو haben لیتا ہے"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "جملہ مکمل کریں صحیح شکل کے ساتھ: Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "فعل losfahren، Perfekt میں sein کے ساتھ بنتا ہے، اس لیے Konjunktiv II میں wären استعمال ہوگا"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "فعل bleiben، Perfekt میں sein کے ساتھ بنتا ہے",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "الفاظ کو ترتیب دے کر صحیح جملہ بنائیں: کاش اس نے مجھے پہلے فون کیا ہوتا۔",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte دوسری جگہ پر آتا ہے، اور Partizip II جملے کے آخر میں"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "کون سا جملہ ماضی میں کسی نہ ہونے والی بات پر افسوس ظاہر کرتا ہے؟",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "hätte + Partizip II کا صیغہ ماضی میں افسوس کا اظہار کرتا ہے"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "ہر جرمن جملے کو اس کے صحیح اردو ترجمے سے ملائیں۔",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "الفاظ کو ترتیب دے کر صحیح شرطی جملہ بنائیں: اگر اس کے پاس وقت ہوتا، تو وہ ہماری مدد کرتا۔",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "Wenn والے جملے میں hätte آخر میں آتا ہے؛ اور مرکزی جملے میں hätte پہلی جگہ پر آتا ہے"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "یہ جملہ واضح آواز میں بولیں: 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "اس کا مطلب ہے: مجھے یہ موقع استعمال کرنا چاہیے تھا۔"
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "وقتی اور رعایتی ضمنی جملے — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "وقتی اور رعایتی ضمنی جملے — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "جرمن زبان میں ہم **ضمنی جملے** (Nebensätze) استعمال کرتے ہیں تاکہ دو خیالات کو آپس میں جوڑ سکیں۔ اس سبق میں یہ دو اہم اقسام میں تقسیم ہوتے ہیں:\n\n**اول: وقتی ضمنی جملے (Temporale Nebensätze)**\nیہ دو واقعات کے درمیان وقتی تعلق ظاہر کرتے ہیں۔ یہ ایک وقتی ربط کے لفظ سے شروع ہوتے ہیں اور ضمنی جملے کا فعل آخر میں آتا ہے۔\n\n- **nachdem** (بعد اس کے کہ): اس وقت استعمال ہوتا ہے جب کوئی واقعہ کسی *دوسرے واقعے کے بعد* پیش آئے۔ ضمنی جملے کا واقعہ وقت کے لحاظ سے مرکزی جملے کے واقعے سے پہلے ہوتا ہے۔ عموماً **Perfekt** یا **Plusquamperfekt** کے ساتھ استعمال ہوتا ہے۔\n- **bevor** (اس سے پہلے کہ): اس وقت استعمال ہوتا ہے جب کوئی واقعہ کسی *دوسرے واقعے سے پہلے* پیش آئے۔\n- **während** (جبکہ / دوران): دو ایسے واقعات کے لیے استعمال ہوتا ہے جو *ایک ہی وقت میں* پیش آئیں۔\n- **seit / seitdem** (جب سے): ایسے واقعے کے لیے استعمال ہوتا ہے جو ماضی میں شروع ہوا اور ابھی تک جاری ہے۔\n\n**دوم: رعایتی ضمنی جملے (Konzessive Nebensätze)**\nیہ دو خیالات کے درمیان **تضاد** یا **استثناء** ظاہر کرتے ہیں۔ اس کا بنیادی ربط کا لفظ ہے:\n\n- **obwohl** (اگرچہ / باوجود اس کے کہ): اس وقت استعمال ہوتا ہے جب کوئی نتیجہ ہماری توقعات کے برعکس ہو۔\n\n**ضمنی جملوں کا سنہری اصول:**\nان تمام جملوں میں، **فعل ہمیشہ ضمنی جملے کے آخر میں جاتا ہے**۔\nاگر مرکزی جملہ ضمنی جملے سے شروع ہو، تو **مرکزی جملے کا فعل کوما کے فوراً بعد آتا ہے** (Verb-Zweitstellung)۔",
+        "tables": [
+          {
+            "title": "وقتی اور رعایتی ربط کے الفاظ — ایک نظر میں",
+            "headers": [
+              "ربط کا لفظ",
+              "اردو معنی",
+              "وقتی / منطقی تعلق",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "بعد اس کے کہ",
+                  "ضمنی واقعہ مرکزی واقعے سے پہلے",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "اس سے پہلے کہ",
+                  "ضمنی واقعہ مرکزی واقعے کے بعد",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "جبکہ / دوران",
+                  "دو بیک وقت واقعات",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "جب سے",
+                  "ماضی سے جاری واقعہ",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "اگرچہ",
+                  "تضاد / رعایت",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "ان تمام جملوں میں فعل ضمنی جملے کے آخر میں آتا ہے۔",
+            "theme": "default"
+          },
+          {
+            "title": "ضمنی جملے میں الفاظ کی ترتیب (Wortstellung)",
+            "headers": [
+              "قسم",
+              "پہلے مرکزی جملہ",
+              "پہلے ضمنی جملہ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ساخت",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "nachdem کے ساتھ مثال",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl کے ساتھ مثال",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "während کے ساتھ مثال",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ جب جملہ ضمنی جملے سے شروع ہو، تو مرکزی جملے کا فعل کوما کے فوراً بعد (دوسری پوزیشن پر) آتا ہے۔",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ضمنی جملے میں فعل ہمیشہ آخر میں: ربط کے الفاظ (nachdem, bevor, während, seitdem, obwohl) کے بعد فعل ضمنی جملے کے آخر میں چلا جاتا ہے۔",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "میں تمہیں فون کروں گا اس سے پہلے کہ گھر واپس آؤں۔"
+          },
+          {
+            "rule": "nachdem کے ساتھ: اگر مرکزی جملہ Präsens یا Perfekt میں ہو تو ضمنی جملے میں Perfekt استعمال کریں، اور اگر مرکزی جملہ Präteritum میں ہو تو Plusquamperfekt استعمال کریں۔",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "کتاب پڑھنے کے بعد، وہ سونے چلا گیا۔"
+          },
+          {
+            "rule": "obwohl تضاد ظاہر کرتا ہے: ضمنی جملے میں ایسی وجہ ہوتی ہے جس سے توقع تھی کہ واقعہ نہیں ہوگا، لیکن پھر بھی ہوا۔",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "اگرچہ وہ بیمار ہے، پھر بھی کام پر جاتا ہے۔"
+          },
+          {
+            "rule": "اگر جملہ ضمنی جملے سے شروع ہو، تو مرکزی جملے کا فعل کوما کے فوراً بعد دوسری پوزیشن پر آتا ہے۔",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "جبکہ وہ سو رہی ہے، میں جرمن سیکھ رہا ہوں۔"
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — ناشتہ کرنے کے بعد، میں کام پر جاتا ہوں۔",
+          "Bevor du schläfst, musst du die Zähne putzen. — سونے سے پہلے، تمہیں دانت صاف کرنے ہوں گے۔",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — جبکہ میری ماں کھانا پکا رہی ہے، میں اپنا ہوم ورک کرتا ہوں۔",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — جب سے وہ جرمنی میں رہتا ہے، بہت اچھی جرمن بولتا ہے۔",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — اگرچہ موسم خراب ہے، ہم سیر پر جا رہے ہیں۔",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — امتحان دینے سے پہلے، وہ ہر روز پڑھتی ہے۔",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — فلم ختم ہونے کے بعد، ہم گھر چلے گئے۔",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — اگرچہ وہ تھکا ہوا تھا، پھر بھی اس نے پوری کتاب پڑھ لی۔"
+        ],
+        "tip": "💡 ہمیشہ یاد رکھو: یہ ربط کے الفاظ 'فعل کے قاتل' ہیں — یہ فعل کو ضمنی جملے کے آخر میں بھیج دیتے ہیں! اور اگر تم اپنا جملہ obwohl، nachdem یا کسی اور ربط کے لفظ سے شروع کرو، تو مرکزی جملے کا فعل کوما کے فوراً بعد آتا ہے۔ اس انداز کی مشق اونچی آواز میں کرو تاکہ یہ تمہارے لیے فطری بن جائے۔"
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "امتحان",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "امتحان دینے سے پہلے، وہ بہت پڑھتی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "سیر / تفریح",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "اگرچہ بارش ہو رہی ہے، ہم سیر پر جا رہے ہیں۔",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "اسکول کا ہوم ورک",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "جبکہ میرا بھائی کھیل رہا ہے، میں اپنا ہوم ورک کرتا ہوں۔",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "ناشتہ کرنا",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "ناشتہ کرنے کے بعد، میں اسکول جاتا ہوں۔",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "نیند آنا / سو جانا",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "سونے سے پہلے، وہ ایک کتاب پڑھتا ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "ترتیب دینا / صفائی کرنا",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "کھانے کے بعد، اس نے باورچی خانہ ترتیب دیا۔",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "تھکا ہوا / تھکی ہوئی",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "اگرچہ وہ تھکی ہوئی ہے، پھر بھی کام جاری رکھتی ہے۔",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "پھر بھی / اس کے باوجود",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "بارش ہو رہی ہے، پھر بھی ہم سیر کو جاتے ہیں۔",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "اس وقت سے / جب سے",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "جب سے وہ یہاں رہتی ہے، اس کے بہت سے دوست ہیں۔",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "اگرچہ / باوجود اس کے کہ",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "اگرچہ وہ بیمار ہے، پھر بھی کام پر آتا ہے۔",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "جبکہ / دوران",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "جبکہ میں پڑھ رہا ہوں، میرا بھائی موسیقی سنتا ہے۔",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "موسم",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "اگرچہ موسم خراب ہے، ہم باہر جاتے ہیں۔",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "پہنچنا",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "پہنچنے کے بعد، اس نے اپنے خاندان کو فون کیا۔",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "دانت صاف کرنا",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "سونے سے پہلے، تمہیں دانت صاف کرنے ہوں گے۔",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "درست ربط کا لفظ چنیں: ___ er gegessen hat, geht er schlafen. (کھانے کے بعد، وہ سونے چلا گیا)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "ہم ایسا لفظ ڈھونڈ رہے ہیں جس کا مطلب 'بعد اس کے کہ' ہو اور یہ ظاہر کرے کہ ضمنی واقعہ پہلے پیش آیا۔"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "مناسب ربط کا لفظ استعمال کرتے ہوئے جملہ مکمل کریں: ___ es kalt ist, trägt er keine Jacke. (اگرچہ موسم ٹھنڈا ہے، وہ جیکٹ نہیں پہنتا)",
+            "answer": "Obwohl",
+            "hint": "ہم ایسا لفظ ڈھونڈ رہے ہیں جو تضاد اور رعایت ظاہر کرے۔"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "während کے ساتھ ضمنی جملے میں فعل آخر میں آتا ہے۔",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "الفاظ کو ترتیب دے کر درست جملہ بنائیں: (اسکول جانے سے پہلے، وہ ناشتہ کرتی ہے)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "یاد رکھیں: ضمنی جملے میں فعل آخر میں، اور مرکزی جملے کا فعل کوما کے فوراً بعد آتا ہے۔"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "گرامر کے لحاظ سے کون سا جملہ درست ہے؟",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "ضمنی جملے میں فعل آخر میں آتا ہے، اور مرکزی جملے میں کوما کے بعد فعل دوسری پوزیشن پر آتا ہے۔"
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "ہر ربط کے لفظ کو اس کے درست اردو معنی سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "درج ذیل جملے کو اونچی آواز میں اور درست طریقے سے بولیں: 'Seitdem er in Marokko wohnt, vermisst er Deutschland.'",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "فعل کی پوزیشن پر دھیان دیں: 'wohnt' ضمنی جملے کے آخر میں، اور 'vermisst' مرکزی جملے کی دوسری پوزیشن پر۔"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "فعل کی درست شکل سے جملہ مکمل کریں: Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "nachdem کے ساتھ ضمنی جملے میں Perfekt استعمال ہوتا ہے: Partizip II + hat/haben آخر میں۔"
+          }
+        ]
+      }
     }
   }
 }

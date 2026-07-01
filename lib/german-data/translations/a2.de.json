@@ -8148,29 +8148,82 @@
         "tables": [
           {
             "title": "Nach der/die/das (schwache Deklination)",
-            "headers": ["", "der (maskulin)", "die (feminin)", "das (neutrum)", "die (Plural)"],
+            "headers": [
+              "",
+              "der (maskulin)",
+              "die (feminin)",
+              "das (neutrum)",
+              "die (Plural)"
+            ],
             "rows": [
-              { "cells": ["Nominativ", "der **schöne** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] },
-              { "cells": ["Akkusativ", "den **schönen** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] }
+              {
+                "cells": [
+                  "Nominativ",
+                  "der **schöne** Mann",
+                  "die **schöne** Frau",
+                  "das **schöne** Kind",
+                  "die **schönen** Männer"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "den **schönen** Mann",
+                  "die **schöne** Frau",
+                  "das **schöne** Kind",
+                  "die **schönen** Männer"
+                ]
+              }
             ],
             "theme": "cases",
             "note": "Nur Akkusativ-der wird zu schönen. Der Rest endet auf -e."
           },
           {
             "title": "Nach ein/eine (gemischte Deklination)",
-            "headers": ["", "ein (maskulin)", "eine (feminin)", "ein (neutrum)"],
+            "headers": [
+              "",
+              "ein (maskulin)",
+              "eine (feminin)",
+              "ein (neutrum)"
+            ],
             "rows": [
-              { "cells": ["Nominativ", "ein **schöner** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] },
-              { "cells": ["Akkusativ", "einen **schönen** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] }
+              {
+                "cells": [
+                  "Nominativ",
+                  "ein **schöner** Mann",
+                  "eine **schöne** Frau",
+                  "ein **schönes** Kind"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "einen **schönen** Mann",
+                  "eine **schöne** Frau",
+                  "ein **schönes** Kind"
+                ]
+              }
             ],
             "theme": "cases",
             "note": "Nach unbestimmtem ein trägt das Adjektiv die Genusendung: -er (m), -e (f), -es (n)."
           }
         ],
         "rules": [
-          { "rule": "Ohne Artikel trägt das Adjektiv immer die Genusendung: kalter Tee, warme Milch.", "example": "Ich trinke kalten Tee.", "translation": "Nullartikel: starke Endung am Adjektiv selbst." },
-          { "rule": "Im Akkusativ erzwingt nur der maskuline der die Endung -en. Der Rest bleibt unverändert.", "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.", "translation": "Nur Maskulinum ändert sich im Akkusativ." },
-          { "rule": "kein verhält sich wie ein. mein, dein, sein, ihr, unser, euer, Ihr — genauso.", "example": "mein neuer Bruder / keine alte Frau", "translation": "Possessivartikel folgen dem ein-Muster." }
+          {
+            "rule": "Ohne Artikel trägt das Adjektiv immer die Genusendung: kalter Tee, warme Milch.",
+            "example": "Ich trinke kalten Tee.",
+            "translation": "Nullartikel: starke Endung am Adjektiv selbst."
+          },
+          {
+            "rule": "Im Akkusativ erzwingt nur der maskuline der die Endung -en. Der Rest bleibt unverändert.",
+            "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.",
+            "translation": "Nur Maskulinum ändert sich im Akkusativ."
+          },
+          {
+            "rule": "kein verhält sich wie ein. mein, dein, sein, ihr, unser, euer, Ihr — genauso.",
+            "example": "mein neuer Bruder / keine alte Frau",
+            "translation": "Possessivartikel folgen dem ein-Muster."
+          }
         ],
         "examples": [
           "Der nette Lehrer kommt aus Berlin. — Bestimmter Artikel + schwache Endung -e.",
@@ -8185,75 +8238,481 @@
         "tip": "Lerne nicht alles auf einmal. Beginne mit „der + Adjektiv + e“ und „ein + Adjektiv + er/e/es“ und übe sie täglich an zehn Sätzen. Nach einer Woche wird es automatisch."
       },
       "vocabulary": [
-        { "german": "schön", "arabic": "ansprechend, hübsch", "example": "eine schöne Stadt", "exampleArabic": "positives Aussehen", "type": "adjective" },
-        { "german": "gut", "arabic": "von guter Qualität", "example": "ein guter Tag", "exampleArabic": "allgemein positiv", "type": "adjective" },
-        { "german": "neu", "arabic": "frisch erworben, aktuell", "example": "mein neues Auto", "exampleArabic": "Gegenteil von alt", "type": "adjective" },
-        { "german": "alt", "arabic": "betagt, schon lange existierend", "example": "das alte Haus", "exampleArabic": "Alter / Vorhandensein seit langem", "type": "adjective" },
-        { "german": "jung", "arabic": "in jungen Jahren", "example": "eine junge Frau", "exampleArabic": "geringes Alter", "type": "adjective" },
-        { "german": "groß", "arabic": "umfangreich, hochgewachsen", "example": "ein großes Zimmer", "exampleArabic": "Maß / Größe", "type": "adjective" },
-        { "german": "klein", "arabic": "von geringer Größe", "example": "die kleine Katze", "exampleArabic": "Gegenteil von groß", "type": "adjective" },
-        { "german": "kalt", "arabic": "niedrige Temperatur", "example": "kalter Kaffee", "exampleArabic": "Gegenteil von warm", "type": "adjective" },
-        { "german": "warm", "arabic": "angenehm temperiert", "example": "warme Milch", "exampleArabic": "leicht erwärmt", "type": "adjective" },
-        { "german": "heiß", "arabic": "sehr hohe Temperatur", "example": "heißer Tee", "exampleArabic": "stärker als warm", "type": "adjective" },
-        { "german": "frisch", "arabic": "neu zubereitet, nicht alt", "example": "frisches Brot", "exampleArabic": "noch nicht abgestanden", "type": "adjective" },
-        { "german": "lecker", "arabic": "köstlich, gut schmeckend", "example": "ein leckeres Essen", "exampleArabic": "Geschmack positiv", "type": "adjective" },
-        { "german": "schnell", "arabic": "mit hoher Geschwindigkeit", "example": "ein schnelles Auto", "exampleArabic": "Tempo hoch", "type": "adjective" },
-        { "german": "langsam", "arabic": "mit geringem Tempo", "example": "ein langsamer Bus", "exampleArabic": "Gegenteil von schnell", "type": "adjective" },
-        { "german": "einfach", "arabic": "leicht zu verstehen", "example": "eine einfache Frage", "exampleArabic": "ohne Komplikation", "type": "adjective" },
-        { "german": "schwer", "arabic": "schwierig oder gewichtig", "example": "eine schwere Prüfung", "exampleArabic": "anspruchsvoll", "type": "adjective" },
-        { "german": "leicht", "arabic": "geringes Gewicht oder einfach", "example": "ein leichter Koffer", "exampleArabic": "wenig Gewicht / Mühe", "type": "adjective" },
-        { "german": "teuer", "arabic": "kostspielig", "example": "ein teures Hotel", "exampleArabic": "hoher Preis", "type": "adjective" },
-        { "german": "billig", "arabic": "preiswert, günstig", "example": "ein billiger Tisch", "exampleArabic": "niedriger Preis", "type": "adjective" },
-        { "german": "nett", "arabic": "freundlich, sympathisch", "example": "eine nette Lehrerin", "exampleArabic": "sympathische Person", "type": "adjective" },
-        { "german": "freundlich", "arabic": "zugewandt, höflich", "example": "ein freundlicher Mann", "exampleArabic": "warmherzig im Umgang", "type": "adjective" },
-        { "german": "müde", "arabic": "erschöpft", "example": "Ich bin sehr müde.", "exampleArabic": "ohne Energie", "type": "adjective" },
-        { "german": "hungrig", "arabic": "Hunger habend", "example": "ein hungriges Kind", "exampleArabic": "braucht Essen", "type": "adjective" },
-        { "german": "fleißig", "arabic": "arbeitsam, strebsam", "example": "eine fleißige Studentin", "exampleArabic": "lernt / arbeitet viel", "type": "adjective" },
-        { "german": "intelligent", "arabic": "klug, begabt", "example": "ein intelligenter Schüler", "exampleArabic": "geistig fähig", "type": "adjective" },
-        { "german": "das Kleid", "arabic": "weibliches Kleidungsstück", "example": "Sie trägt ein rotes Kleid.", "exampleArabic": "Damenoberbekleidung", "type": "noun", "gender": "das", "plural": "die Kleider" },
-        { "german": "das Hemd", "arabic": "Oberkörperkleidung mit Knöpfen", "example": "ein weißes Hemd", "exampleArabic": "Oberbekleidung", "type": "noun", "gender": "das", "plural": "die Hemden" },
-        { "german": "die Hose", "arabic": "Beinkleidung", "example": "eine neue Hose", "exampleArabic": "bedeckt die Beine", "type": "noun", "gender": "die", "plural": "die Hosen" },
-        { "german": "die Schuhe", "arabic": "Fußbekleidung (Plural)", "example": "schwarze Schuhe", "exampleArabic": "wird paarweise getragen", "type": "noun", "gender": "pl" },
-        { "german": "rot", "arabic": "Farbe wie Blut", "example": "das rote Auto", "exampleArabic": "Farbe Rot", "type": "adjective" },
-        { "german": "blau", "arabic": "Farbe des Himmels", "example": "der blaue Himmel", "exampleArabic": "Farbe Blau", "type": "adjective" },
-        { "german": "grün", "arabic": "Farbe der Natur", "example": "grüner Tee", "exampleArabic": "Farbe Grün", "type": "adjective" },
-        { "german": "schwarz", "arabic": "dunkelste Farbe", "example": "eine schwarze Tasche", "exampleArabic": "Farbe Schwarz", "type": "adjective" },
-        { "german": "weiß", "arabic": "hellste Farbe", "example": "ein weißes Hemd", "exampleArabic": "Farbe Weiß", "type": "adjective" },
-        { "german": "sehr", "arabic": "in hohem Maß", "example": "sehr gut", "exampleArabic": "Gradadverb", "type": "adverb" }
+        {
+          "german": "schön",
+          "arabic": "ansprechend, hübsch",
+          "example": "eine schöne Stadt",
+          "exampleArabic": "positives Aussehen",
+          "type": "adjective"
+        },
+        {
+          "german": "gut",
+          "arabic": "von guter Qualität",
+          "example": "ein guter Tag",
+          "exampleArabic": "allgemein positiv",
+          "type": "adjective"
+        },
+        {
+          "german": "neu",
+          "arabic": "frisch erworben, aktuell",
+          "example": "mein neues Auto",
+          "exampleArabic": "Gegenteil von alt",
+          "type": "adjective"
+        },
+        {
+          "german": "alt",
+          "arabic": "betagt, schon lange existierend",
+          "example": "das alte Haus",
+          "exampleArabic": "Alter / Vorhandensein seit langem",
+          "type": "adjective"
+        },
+        {
+          "german": "jung",
+          "arabic": "in jungen Jahren",
+          "example": "eine junge Frau",
+          "exampleArabic": "geringes Alter",
+          "type": "adjective"
+        },
+        {
+          "german": "groß",
+          "arabic": "umfangreich, hochgewachsen",
+          "example": "ein großes Zimmer",
+          "exampleArabic": "Maß / Größe",
+          "type": "adjective"
+        },
+        {
+          "german": "klein",
+          "arabic": "von geringer Größe",
+          "example": "die kleine Katze",
+          "exampleArabic": "Gegenteil von groß",
+          "type": "adjective"
+        },
+        {
+          "german": "kalt",
+          "arabic": "niedrige Temperatur",
+          "example": "kalter Kaffee",
+          "exampleArabic": "Gegenteil von warm",
+          "type": "adjective"
+        },
+        {
+          "german": "warm",
+          "arabic": "angenehm temperiert",
+          "example": "warme Milch",
+          "exampleArabic": "leicht erwärmt",
+          "type": "adjective"
+        },
+        {
+          "german": "heiß",
+          "arabic": "sehr hohe Temperatur",
+          "example": "heißer Tee",
+          "exampleArabic": "stärker als warm",
+          "type": "adjective"
+        },
+        {
+          "german": "frisch",
+          "arabic": "neu zubereitet, nicht alt",
+          "example": "frisches Brot",
+          "exampleArabic": "noch nicht abgestanden",
+          "type": "adjective"
+        },
+        {
+          "german": "lecker",
+          "arabic": "köstlich, gut schmeckend",
+          "example": "ein leckeres Essen",
+          "exampleArabic": "Geschmack positiv",
+          "type": "adjective"
+        },
+        {
+          "german": "schnell",
+          "arabic": "mit hoher Geschwindigkeit",
+          "example": "ein schnelles Auto",
+          "exampleArabic": "Tempo hoch",
+          "type": "adjective"
+        },
+        {
+          "german": "langsam",
+          "arabic": "mit geringem Tempo",
+          "example": "ein langsamer Bus",
+          "exampleArabic": "Gegenteil von schnell",
+          "type": "adjective"
+        },
+        {
+          "german": "einfach",
+          "arabic": "leicht zu verstehen",
+          "example": "eine einfache Frage",
+          "exampleArabic": "ohne Komplikation",
+          "type": "adjective"
+        },
+        {
+          "german": "schwer",
+          "arabic": "schwierig oder gewichtig",
+          "example": "eine schwere Prüfung",
+          "exampleArabic": "anspruchsvoll",
+          "type": "adjective"
+        },
+        {
+          "german": "leicht",
+          "arabic": "geringes Gewicht oder einfach",
+          "example": "ein leichter Koffer",
+          "exampleArabic": "wenig Gewicht / Mühe",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "kostspielig",
+          "example": "ein teures Hotel",
+          "exampleArabic": "hoher Preis",
+          "type": "adjective"
+        },
+        {
+          "german": "billig",
+          "arabic": "preiswert, günstig",
+          "example": "ein billiger Tisch",
+          "exampleArabic": "niedriger Preis",
+          "type": "adjective"
+        },
+        {
+          "german": "nett",
+          "arabic": "freundlich, sympathisch",
+          "example": "eine nette Lehrerin",
+          "exampleArabic": "sympathische Person",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "zugewandt, höflich",
+          "example": "ein freundlicher Mann",
+          "exampleArabic": "warmherzig im Umgang",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "erschöpft",
+          "example": "Ich bin sehr müde.",
+          "exampleArabic": "ohne Energie",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "Hunger habend",
+          "example": "ein hungriges Kind",
+          "exampleArabic": "braucht Essen",
+          "type": "adjective"
+        },
+        {
+          "german": "fleißig",
+          "arabic": "arbeitsam, strebsam",
+          "example": "eine fleißige Studentin",
+          "exampleArabic": "lernt / arbeitet viel",
+          "type": "adjective"
+        },
+        {
+          "german": "intelligent",
+          "arabic": "klug, begabt",
+          "example": "ein intelligenter Schüler",
+          "exampleArabic": "geistig fähig",
+          "type": "adjective"
+        },
+        {
+          "german": "das Kleid",
+          "arabic": "weibliches Kleidungsstück",
+          "example": "Sie trägt ein rotes Kleid.",
+          "exampleArabic": "Damenoberbekleidung",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kleider"
+        },
+        {
+          "german": "das Hemd",
+          "arabic": "Oberkörperkleidung mit Knöpfen",
+          "example": "ein weißes Hemd",
+          "exampleArabic": "Oberbekleidung",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Hemden"
+        },
+        {
+          "german": "die Hose",
+          "arabic": "Beinkleidung",
+          "example": "eine neue Hose",
+          "exampleArabic": "bedeckt die Beine",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Hosen"
+        },
+        {
+          "german": "die Schuhe",
+          "arabic": "Fußbekleidung (Plural)",
+          "example": "schwarze Schuhe",
+          "exampleArabic": "wird paarweise getragen",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "rot",
+          "arabic": "Farbe wie Blut",
+          "example": "das rote Auto",
+          "exampleArabic": "Farbe Rot",
+          "type": "adjective"
+        },
+        {
+          "german": "blau",
+          "arabic": "Farbe des Himmels",
+          "example": "der blaue Himmel",
+          "exampleArabic": "Farbe Blau",
+          "type": "adjective"
+        },
+        {
+          "german": "grün",
+          "arabic": "Farbe der Natur",
+          "example": "grüner Tee",
+          "exampleArabic": "Farbe Grün",
+          "type": "adjective"
+        },
+        {
+          "german": "schwarz",
+          "arabic": "dunkelste Farbe",
+          "example": "eine schwarze Tasche",
+          "exampleArabic": "Farbe Schwarz",
+          "type": "adjective"
+        },
+        {
+          "german": "weiß",
+          "arabic": "hellste Farbe",
+          "example": "ein weißes Hemd",
+          "exampleArabic": "Farbe Weiß",
+          "type": "adjective"
+        },
+        {
+          "german": "sehr",
+          "arabic": "in hohem Maß",
+          "example": "sehr gut",
+          "exampleArabic": "Gradadverb",
+          "type": "adverb"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a2-13-q1", "question": "Ergänze: „der schön__ Mann“ (Nominativ)", "answer": "e", "hint": "der + Adjektiv + e" },
-          { "type": "multiple-choice", "id": "a2-13-q2", "question": "Korrigiere: „Ich kaufe ein ___ Auto.“", "options": ["neu", "neue", "neues", "neuer"], "answer": "neues" },
-          { "type": "fill-blank", "id": "a2-13-q3", "question": "Ergänze: „Ich habe einen gut___ Freund.“", "answer": "en", "hint": "einen + Akk-mask → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q4", "question": "Welcher Satz ist korrekt?", "options": ["Sie trägt eine rotes Kleid.", "Sie trägt ein rotes Kleid.", "Sie trägt ein rote Kleid.", "Sie trägt einen rotes Kleid."], "answer": "Sie trägt ein rotes Kleid." },
-          { "type": "fill-blank", "id": "a2-13-q5", "question": "Ergänze: „die jung__ Studenten“ (Plural, Nominativ)", "answer": "en", "hint": "nach die-Plural → -en" },
-          { "type": "matching", "id": "a2-13-q6", "question": "Verbinde Adjektiv mit Bedeutung:", "pairs": [
-            { "left": "schön", "right": "ansprechend" },
-            { "left": "alt", "right": "betagt" },
-            { "left": "klein", "right": "von geringer Größe" },
-            { "left": "teuer", "right": "kostspielig" },
-            { "left": "lecker", "right": "köstlich" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-13-q7", "question": "Ordne: „Ich kaufe ein weißes Hemd“", "words": ["Ich", "kaufe", "ein", "weißes", "Hemd"], "answer": "Ich kaufe ein weißes Hemd" },
-          { "type": "speaking", "id": "a2-13-q8", "question": "Sage auf Deutsch: „Das neue Haus ist groß“", "answer": "Das neue Haus ist groß" },
-          { "type": "fill-blank", "id": "a2-13-q9", "question": "Hör zu: „Wir trinken heiß___ Tee.“ (ohne Artikel)", "audioPrompt": "Wir trinken heißen Tee.", "answer": "en", "hint": "Akk-mask ohne Artikel → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q10", "question": "Das Wort kein wird dekliniert wie:", "options": ["der", "die", "das", "ein"], "answer": "ein" },
-          { "type": "fill-blank", "id": "a2-13-q11", "question": "Ergänze: „Die alt___ Häuser sind schön.“ (Plural, Nom)", "answer": "en", "hint": "nach die-Plural → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q12", "question": "Welches Adjektiv ohne Artikel im Akk-mask?", "options": ["kalt Tee", "kalter Tee", "kalten Tee", "kalte Tee"], "answer": "kalten Tee" },
-          { "type": "fill-blank", "id": "a2-13-q13", "question": "„Mein neu___ Auto ist schnell.“ (Neutrum, Nom)", "answer": "es", "hint": "mein/dein/sein... + Neutrum → -es" },
-          { "type": "matching", "id": "a2-13-q14", "question": "Verbinde Endung mit Form:", "pairs": [
-            { "left": "der schöne...", "right": "-e" },
-            { "left": "einen schönen...", "right": "-en" },
-            { "left": "ein schönes Kind", "right": "-es" },
-            { "left": "kalter Tee", "right": "-er" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-13-q15", "question": "Ordne: „Ich kaufe ein schönes Auto“", "words": ["Ich", "kaufe", "ein", "schönes", "Auto"], "answer": "Ich kaufe ein schönes Auto" },
-          { "type": "fill-blank", "id": "a2-13-q16", "question": "Hör zu: „Sie hat eine ___ Tasche.“ (schwarz)", "audioPrompt": "Sie hat eine schwarze Tasche.", "answer": "schwarze", "hint": "eine + adj + -e (fem. Akk)" },
-          { "type": "multiple-choice", "id": "a2-13-q17", "question": "Adjektiv nach kein folgt dem Muster von:", "options": ["der", "die", "das", "ein"], "answer": "ein" },
-          { "type": "speaking", "id": "a2-13-q18", "question": "Sage: „Ich mag heißen Kaffee“", "answer": "Ich mag heißen Kaffee" },
-          { "type": "fill-blank", "id": "a2-13-q19", "question": "„Wir essen frisch___ Brot.“ (ohne Artikel, Neutrum Akk)", "answer": "es", "hint": "Nullartikel, Akk-Neutrum → -es" },
-          { "type": "multiple-choice", "id": "a2-13-q20", "question": "Welcher Satz hat die korrekte Deklination?", "options": ["Der grüner Tee.", "Der grüne Tee.", "Der grünen Tee.", "Den grüne Tee."], "answer": "Der grüne Tee." }
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q1",
+            "question": "Ergänze: „der schön__ Mann“ (Nominativ)",
+            "answer": "e",
+            "hint": "der + Adjektiv + e"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q2",
+            "question": "Korrigiere: „Ich kaufe ein ___ Auto.“",
+            "options": [
+              "neu",
+              "neue",
+              "neues",
+              "neuer"
+            ],
+            "answer": "neues"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q3",
+            "question": "Ergänze: „Ich habe einen gut___ Freund.“",
+            "answer": "en",
+            "hint": "einen + Akk-mask → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q4",
+            "question": "Welcher Satz ist korrekt?",
+            "options": [
+              "Sie trägt eine rotes Kleid.",
+              "Sie trägt ein rotes Kleid.",
+              "Sie trägt ein rote Kleid.",
+              "Sie trägt einen rotes Kleid."
+            ],
+            "answer": "Sie trägt ein rotes Kleid."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q5",
+            "question": "Ergänze: „die jung__ Studenten“ (Plural, Nominativ)",
+            "answer": "en",
+            "hint": "nach die-Plural → -en"
+          },
+          {
+            "type": "matching",
+            "id": "a2-13-q6",
+            "question": "Verbinde Adjektiv mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "schön",
+                "right": "ansprechend"
+              },
+              {
+                "left": "alt",
+                "right": "betagt"
+              },
+              {
+                "left": "klein",
+                "right": "von geringer Größe"
+              },
+              {
+                "left": "teuer",
+                "right": "kostspielig"
+              },
+              {
+                "left": "lecker",
+                "right": "köstlich"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-13-q7",
+            "question": "Ordne: „Ich kaufe ein weißes Hemd“",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "weißes",
+              "Hemd"
+            ],
+            "answer": "Ich kaufe ein weißes Hemd"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-13-q8",
+            "question": "Sage auf Deutsch: „Das neue Haus ist groß“",
+            "answer": "Das neue Haus ist groß"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q9",
+            "question": "Hör zu: „Wir trinken heiß___ Tee.“ (ohne Artikel)",
+            "audioPrompt": "Wir trinken heißen Tee.",
+            "answer": "en",
+            "hint": "Akk-mask ohne Artikel → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q10",
+            "question": "Das Wort kein wird dekliniert wie:",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "ein"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q11",
+            "question": "Ergänze: „Die alt___ Häuser sind schön.“ (Plural, Nom)",
+            "answer": "en",
+            "hint": "nach die-Plural → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q12",
+            "question": "Welches Adjektiv ohne Artikel im Akk-mask?",
+            "options": [
+              "kalt Tee",
+              "kalter Tee",
+              "kalten Tee",
+              "kalte Tee"
+            ],
+            "answer": "kalten Tee"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q13",
+            "question": "„Mein neu___ Auto ist schnell.“ (Neutrum, Nom)",
+            "answer": "es",
+            "hint": "mein/dein/sein... + Neutrum → -es"
+          },
+          {
+            "type": "matching",
+            "id": "a2-13-q14",
+            "question": "Verbinde Endung mit Form:",
+            "pairs": [
+              {
+                "left": "der schöne...",
+                "right": "-e"
+              },
+              {
+                "left": "einen schönen...",
+                "right": "-en"
+              },
+              {
+                "left": "ein schönes Kind",
+                "right": "-es"
+              },
+              {
+                "left": "kalter Tee",
+                "right": "-er"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-13-q15",
+            "question": "Ordne: „Ich kaufe ein schönes Auto“",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "schönes",
+              "Auto"
+            ],
+            "answer": "Ich kaufe ein schönes Auto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q16",
+            "question": "Hör zu: „Sie hat eine ___ Tasche.“ (schwarz)",
+            "audioPrompt": "Sie hat eine schwarze Tasche.",
+            "answer": "schwarze",
+            "hint": "eine + adj + -e (fem. Akk)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q17",
+            "question": "Adjektiv nach kein folgt dem Muster von:",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "ein"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-13-q18",
+            "question": "Sage: „Ich mag heißen Kaffee“",
+            "answer": "Ich mag heißen Kaffee"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q19",
+            "question": "„Wir essen frisch___ Brot.“ (ohne Artikel, Neutrum Akk)",
+            "answer": "es",
+            "hint": "Nullartikel, Akk-Neutrum → -es"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q20",
+            "question": "Welcher Satz hat die korrekte Deklination?",
+            "options": [
+              "Der grüner Tee.",
+              "Der grüne Tee.",
+              "Der grünen Tee.",
+              "Den grüne Tee."
+            ],
+            "answer": "Der grüne Tee."
+          }
         ]
       }
     },
@@ -10225,6 +10684,1046 @@
               "Präposition allein"
             ],
             "answer": "Präposition + Pronomen"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "Relativsätze — Nominativ und Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "Einfache Relativsätze — Relativsätze im Nominativ und Akkusativ",
+        "content": "**Was ist ein Relativsatz?**\nEin Relativsatz (Relativsatz) ist ein Nebensatz, der einem bereits erwähnten Nomen hinzugefügt wird, um es zu erklären oder zu beschreiben. Er beginnt immer mit einem **Relativpronomen** (Relativpronomen) wie: **der, die, das**.\n\n**Wie wählt man das Relativpronomen?**\nDie Wahl des Pronomens hängt von zwei Dingen ab:\n1. **Das Genus des Nomens**, das beschrieben wird (maskulin, feminin oder neutral) — das bestimmt die Grundform des Pronomens.\n2. **Die Funktion des Pronomens im Relativsatz** — ist es das Subjekt (Nominativ) oder das Objekt (Akkusativ)?\n\n**Nominativ:** Das Relativpronomen ist das **Subjekt** des Relativsatzes.\nBeispiel: Das ist der Mann, **der** hier arbeitet. ← (der Mann ist derjenige, der arbeitet → Subjekt)\n\n**Akkusativ:** Das Relativpronomen ist das **Objekt** im Relativsatz.\nBeispiel: Das ist der Mann, **den** ich kenne. ← (ich kenne den Mann → Objekt)\n\n**Eine sehr wichtige Regel:** Das Verb im Relativsatz steht immer **am Ende des Satzes**.\n\n**Das Komma (Komma):** Der Relativsatz wird immer durch ein Komma vom Hauptsatz getrennt.",
+        "tables": [
+          {
+            "title": "Relativpronomen — Relativpronomen (Nominativ und Akkusativ)",
+            "headers": [
+              "Genus / Art",
+              "Beispiel (Nomen)",
+              "Nominativ (Subjekt)",
+              "Akkusativ (Objekt)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "maskulin — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "feminin — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "neutral — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Achtung: Das Relativpronomen im Akkusativ für Maskulinum ändert sich von der zu den — das ist der einzige Unterschied!",
+            "theme": "default"
+          },
+          {
+            "title": "Vergleich: Bestimmter Artikel (Artikel) und Relativpronomen (Relativpronomen)",
+            "headers": [
+              "Genus",
+              "Bestimmter Artikel",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "maskulin",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "feminin",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "neutral",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Die Relativpronomen ähneln stark den bestimmten Artikeln — das macht das Lernen einfacher!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Das Relativpronomen richtet sich nach dem **Genus des Nomens**, das es im Hauptsatz beschreibt.",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "Die Frau, die dort steht, ist meine Lehrerin."
+          },
+          {
+            "rule": "Wenn das Relativpronomen das **Subjekt** im Relativsatz ist, verwenden wir den **Nominativ**: der / die / das / die.",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "Das ist das Kind, das Fußball spielt."
+          },
+          {
+            "rule": "Wenn das Relativpronomen das **Objekt** im Relativsatz ist, verwenden wir den **Akkusativ**: den / die / das / die.",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "Der Film, den ich gesehen habe, war toll."
+          },
+          {
+            "rule": "Das Verb im Relativsatz steht immer **am Ende**, und der Satz wird durch ein **Komma** abgetrennt.",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "Ich habe einen Freund, der gut Gitarre spielt."
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — Das ist der Mann, der jeden Tag joggt.",
+          "Die Frau, die ich kenne, wohnt in Berlin. — Die Frau, die ich kenne, wohnt in Berlin.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — Das Buch, das auf dem Tisch liegt, gehört mir.",
+          "Ich suche einen Job, den ich liebe. — Ich suche einen Job, den ich liebe.",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — Der Hund, den wir gefunden haben, ist sehr süß.",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — Die Kinder, die im Park spielen, sind meine Nachbarn.",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — Das Restaurant, das wir besucht haben, war sehr gut.",
+          "Er hat eine Schwester, die in Marokko lebt. — Er hat eine Schwester, die in Marokko lebt."
+        ],
+        "tip": "💡 Denk daran: Der einzige Unterschied zwischen Nominativ und Akkusativ bei den Relativpronomen betrifft nur das Maskulinum! **der** wird im Akkusativ zu **den**. Feminin, Neutral und Plural ändern sich nicht. Konzentriere dich auf diesen einen Unterschied und du wirst die Regel leicht beherrschen!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "Mann",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "Der Mann, der dort steht, ist mein Vater.",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "Frau / Dame",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "Die Frau, die ich sehe, lächelt.",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "Kind",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "Das Kind, das weint, ist müde.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "Buch",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "Das Buch, das ich lese, ist interessant.",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "Film",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "Der Film, den wir sehen, ist lustig.",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "Freund",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "Ich habe einen Freund, der gut kocht.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "Wohnung",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "Die Wohnung, die ich suche, ist groß.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "Hund",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "Der Hund, den ich habe, heißt Max.",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "kennen (eine Person oder einen Ort)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "Die Frau, die ich kenne, ist sehr nett.",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "suchen nach",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "Er sucht einen Job, den er mag.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "kaufen",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "Das Auto, das ich kaufe, ist rot.",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "interessant",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "Das Buch, das er liest, ist sehr interessant.",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "Nachbar",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "Der Nachbar, den ich kenne, ist freundlich.",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "Restaurant",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "Das Restaurant, das wir besuchen, ist neu.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "Wähle das richtige Relativpronomen: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "Das Nomen ist maskulin (der Mann) und das Pronomen ist das Subjekt des Relativsatzes → Nominativ Maskulinum"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "Wähle das richtige Relativpronomen: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "Das Nomen ist maskulin (der Film), aber das Pronomen ist das Objekt (ich habe ihn gesehen) → Akkusativ Maskulinum"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "Ergänze den Satz mit dem passenden Relativpronomen: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "Das Nomen ist feminin (die Frau) und das Pronomen ist das Subjekt → Nominativ Feminin = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "Höre den Satz und ergänze die Lücke: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "Das Nomen ist neutral (das Kind) und das Pronomen ist das Objekt → Akkusativ Neutral = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "Ordne die Wörter zu einem richtigen Satz: (Ich suche eine Wohnung, die groß ist.)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "Das Verb im Relativsatz steht am Ende!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "Ordne die Wörter zu einem richtigen Satz: (Das Buch, das ich lese, ist interessant.)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Beginne mit Das Buch, dann der Relativsatz, dann der Hauptsatz"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "Ordne jeden Satz seiner richtigen Übersetzung zu:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "Sprich den folgenden Satz laut und korrekt aus: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "Denk daran: Das Verb möchte steht am Ende des Relativsatzes, und das Komma steht vor die"
+          }
+        ]
+      }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "Besitzverhältnisse — der Genitiv — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "Grundlagen des Genitivs — Eigennamen (Peters Auto) und Artikel des / der",
+        "content": "Im Deutschen verwenden wir den **Genitiv**, um Zugehörigkeit oder eine Beziehung zwischen zwei Dingen auszudrücken, also um die Frage zu beantworten: **Wem gehört das?**\n\nAuf dem Niveau A2 gibt es zwei Hauptwege, diesen Fall zu bilden:\n\n**① Eigennamen:**\nWenn wir sagen möchten, dass etwas einer bestimmten Person gehört, hängen wir einfach **-s** an den Namen an – ohne Apostroph.\nBeispiel: **Peter → Peters Auto**\nBeispiel: **Anna → Annas Buch**\n\n**② Bestimmte Artikel bei gewöhnlichen Nomen:**\nWenn wir ein gewöhnliches Nomen (keinen Eigennamen) verwenden, ändert sich der Artikel je nach Genus des Nomens:\n- Maskuline (Maskulinum) und neutrale (Neutrum) Nomen: Der Artikel wird zu **des**, und das Nomen erhält die Endung **-s** oder **-es**.\n- Feminine (Femininum) und Plural-Nomen: Der Artikel wird zu **der**, das Nomen bleibt unverändert.\n\nBeispiel: **das Auto des Mannes**\nBeispiel: **das Buch der Frau**\n\n**Wichtiger Hinweis:** In der gesprochenen Alltagssprache ersetzen viele Deutsche den Genitiv durch die Präposition **von + Dativ**, z. B.: **das Auto von Peter**. In der formellen Schriftsprache und in Prüfungen wird jedoch der korrekte Genitiv bevorzugt.",
+        "tables": [
+          {
+            "title": "Veränderung des bestimmten Artikels im Genitiv",
+            "headers": [
+              "Genus",
+              "Nominativ",
+              "Genitiv",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Maskulinum",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutrum",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "Femininum",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 Maskulinum und Neutrum: des + Nomen + s/es | 🔴 Femininum und Plural: der + Nomen ohne Änderung",
+            "theme": "default"
+          },
+          {
+            "title": "Eigennamen im Genitiv (Eigenname + -s)",
+            "headers": [
+              "Originalname",
+              "Genitiv",
+              "Vollständiger Satz",
+              "Übersetzung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "Peters Auto ist neu."
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "Annas Tasche ist schön."
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "Thomas' Hund ist groß."
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "Marias Wohnung ist klein."
+                ]
+              }
+            ],
+            "note": "⚠️ Endet der Name auf -s, -z oder -x, wird nur ein Apostroph gesetzt: Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Eigennamen: Hänge -s direkt an den Namen an, um Besitz auszudrücken – ohne Apostroph.",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "Das ist Lauras Fahrrad."
+          },
+          {
+            "rule": "Maskuline und neutrale Nomen: Verwende des und hänge -s oder -es an das Nomen an.",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "Die Farbe des Autos ist blau."
+          },
+          {
+            "rule": "Feminine Nomen und Plural: Verwende nur der, das Nomen bleibt unverändert.",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "Der Name der Lehrerin ist Müller."
+          },
+          {
+            "rule": "Endet ein Eigenname auf -s, -z oder -x, setze nur einen Apostroph (') statt -s anzuhängen.",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "Das ist Thomas' Buch."
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — Das ist Peters Auto.",
+          "Annas Tasche ist sehr schön. — Annas Tasche ist sehr schön.",
+          "Der Hund des Mannes ist groß. — Der Hund des Mannes ist groß.",
+          "Das Zimmer des Kindes ist klein. — Das Zimmer des Kindes ist klein.",
+          "Die Wohnung der Frau ist modern. — Die Wohnung der Frau ist modern.",
+          "Die Spielzeuge der Kinder sind neu. — Die Spielzeuge der Kinder sind neu.",
+          "Ich nehme das Fahrrad meines Bruders. — Ich nehme das Fahrrad meines Bruders.",
+          "Der Name des Lehrers ist Schmidt. — Der Name des Lehrers ist Schmidt."
+        ],
+        "tip": "💡 Merke dir die goldene Regel: **des** für Maskulinum und Neutrum (mit -s am Nomen), **der** für Femininum und Plural (ohne Änderung am Nomen). Und bei Eigennamen hängst du einfach direkt -s ans Ende!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "das Auto (Autos) — Kraftfahrzeug",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "Das ist Peters Auto.",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "die Tasche (Taschen) — Handtasche, Beutel",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "Annas Tasche ist neu.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "der Hund (Hunde) — Haustier, Hund",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "Der Hund des Mannes ist groß.",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "das Zimmer (Zimmer) — Raum in einer Wohnung",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "Das Zimmer des Kindes ist klein.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "die Wohnung (Wohnungen) — Apartment, Unterkunft",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "Die Wohnung der Frau ist modern.",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "der Name (Namen) — Bezeichnung einer Person oder Sache",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "Der Name des Lehrers ist Schmidt.",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "das Fahrrad (Fahrräder) — Zweirad ohne Motor",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "Das Fahrrad des Kindes ist rot.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "das Buch (Bücher) — gedrucktes oder gebundenes Werk",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "Das ist Annas Buch.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "der Lehrer (Lehrer) — männliche Lehrkraft",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "Der Name des Lehrers ist Müller.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "die Lehrerin (Lehrerinnen) — weibliche Lehrkraft",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "Das Buch der Lehrerin ist alt.",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "die Farbe (Farben) — Farbton, Färbung",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "Die Farbe des Autos ist blau.",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "gehören (+ Dativ) — jemandem gehören, Eigentum von jemandem sein",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "Das Auto gehört Peters Vater.",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "neu — frisch, nicht gebraucht, modern",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "Peters Auto ist neu.",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "das Spielzeug (Spielzeuge) — Gegenstand zum Spielen",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "Die Spielzeuge der Kinder sind bunt.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "اختر أداة التعريف الصحيحة في حالة الملكية: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "كلمة Mann مذكرة → نستخدم des"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "أكمل الجملة بالشكل الصحيح لاسم العلم: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "أضف -s مباشرة بعد اسم العلم Anna"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "اختر الصيغة الصحيحة لحالة الملكية: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "كلمة Lehrerin مؤنثة → نستخدم der"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "رتّب الكلمات لتكوين جملة صحيحة:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "الترتيب: الفاعل + الفعل + باقي الجملة"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "صل كل جملة بترجمتها الصحيحة:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "استمع إلى الجملة وأكمل الفراغ: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto محايد → نستخدم des",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "توماس اسمه ينتهي بـ -s. كيف نكتب الملكية بشكل صحيح؟",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "إذا انتهى الاسم بـ s، نضع فاصلة علوية (') فقط"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "انطق الجملة التالية بصوت عالٍ بشكل صحيح: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "انتبه لنطق: Annas (آناس) و der Frau (دير فراو)"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "Ziele ausdrücken: um…zu und damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "الجمل الغائية (Finalsätze): um…zu مقابل damit",
+        "content": "في اللغة الألمانية، نستخدم **Finalsätze** (الجمل الغائية) للتعبير عن **الهدف** أو **الغرض** من فعل ما، أي للإجابة عن سؤال: \"لماذا تفعل هذا؟\" أو \"ما هدفك؟\"\\n\\nتوجد طريقتان رئيسيتان:\\n\\n**1. um … zu + Infinitiv**\\nنستخدمها عندما يكون **فاعل الجملة الرئيسية وفاعل جملة الهدف هو نفس الشخص**.\\nالبنية: الجملة الرئيسية + **um** + … + **zu** + فعل في المصدر (Infinitiv) في نهاية الجملة.\\nمثال: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\\n(أنا أتعلم الألمانية — الهدف: أنا أعمل في ألمانيا ← نفس الفاعل: ich)\\n\\n**2. damit + Nebensatz**\\nنستخدمها عندما يكون **فاعل جملة الهدف شخصًا مختلفًا** عن فاعل الجملة الرئيسية.\\nالبنية: الجملة الرئيسية + **damit** + جملة فرعية (الفعل في النهاية).\\nمثال: *Ich spreche langsam, damit du mich verstehst.*\\n(أنا أتكلم ببطء — الهدف: أنت تفهمني ← فاعلان مختلفان: ich / du)\\n\\n**ملاحظة مهمة:** بعد **um…zu** لا يوجد فاعل صريح، أما بعد **damit** فلا بد من ذكر الفاعل والفعل المصرَّف.",
+        "tables": [
+          {
+            "title": "متى نستخدم um…zu ومتى نستخدم damit؟",
+            "headers": [
+              "الأداة",
+              "الفاعلان",
+              "بنية الجملة",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "نفس الفاعل ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "فاعل مختلف ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "القاعدة الذهبية: إذا تغيّر الفاعل → damit. إذا بقي نفسه → um…zu.",
+            "theme": "default"
+          },
+          {
+            "title": "موضع الفعل في الجملة الفرعية",
+            "headers": [
+              "النوع",
+              "الأداة",
+              "موضع الفعل",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv في النهاية",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "الفعل المصرَّف في النهاية",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "في كلتا الحالتين، الفعل يأتي في نهاية الجملة الفرعية.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "استخدم um…zu عندما يكون فاعل الجملتين واحدًا، ويأتي الفعل في المصدر (Infinitiv) بعد zu في نهاية الجملة.",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "تذهب إلى المكتبة لتقرأ كتابًا."
+          },
+          {
+            "rule": "استخدم damit عندما يختلف فاعل جملة الهدف عن فاعل الجملة الرئيسية، ويأتي الفعل المصرَّف في نهاية الجملة الفرعية.",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "تطبخ الأم حتى يأكل الأطفال."
+          },
+          {
+            "rule": "بعد um…zu لا نذكر الفاعل مرة أخرى، لأنه مفهوم من الجملة الرئيسية.",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "أوفّر المال لأشتري سيارة."
+          },
+          {
+            "rule": "damit هي接続词 (Konjunktion) تُدخل جملة فرعية كاملة بفاعل وفعل مصرَّف في النهاية.",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "يتكلم بصوت عالٍ حتى يسمعه الجميع."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — أتعلم الألمانية لأدرس في ألمانيا.",
+          "Sie spart Geld, um eine Reise zu machen. — توفّر المال لتقوم برحلة.",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — يستيقظ مبكرًا حتى لا يفوته الحافلة.",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — نتكلم ببطء حتى يفهمنا الأطفال.",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — تكتب المعلمة على السبورة حتى يرى الطلاب الكلمات.",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — يفتح النافذة للحصول على هواء نقي.",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — أكتب قائمة حتى لا أنسى شيئًا.",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — تتدرب كل يوم لتبقى بصحة جيدة."
+        ],
+        "tip": "💡 الحيلة السهلة: قبل أن تختار بين um…zu و damit، اسأل نفسك: \"من يقوم بالفعل الهدف؟\" — إذا كان نفس شخص الجملة الأولى → um…zu. إذا كان شخص آخر → damit. هذا السؤال البسيط يحل 99% من الأخطاء!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "das Ziel",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "Mein Ziel ist es, Deutsch zu lernen.",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "der Grund",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "Was ist der Grund dafür?",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "lernen / studieren",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "Sie lernt Deutsch, um zu arbeiten.",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "sparen (Geld)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "verstehen",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "Sprich langsam, damit ich dich verstehe.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "helfen",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "Sie erklärt es, damit er helfen kann.",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "die Prüfung",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "Er lernt viel, um die Prüfung zu bestehen.",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "die Reise / das Reisen",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "Sie spart, um eine Reise zu machen.",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "gesund / fit",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "Er isst Obst, um gesund zu bleiben.",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "früh / frühzeitig",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "Sie steht früh auf, um zu joggen.",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "erklären",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "die Arbeit",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "kaufen",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "Ich spare, um ein Buch zu kaufen.",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "langsam",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "Sprich langsam, damit ich verstehe.",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "Wähle das richtige Mittel: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (Das Subjekt in beiden Sätzen ist dasselbe: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "Das Subjekt in beiden Sätzen ist dasselbe (ich) → wir verwenden um…zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "Wähle das richtige Mittel: Die Mutter liest vor, ___ das Kind schlafen kann. (Die Mutter liest – das Kind schläft)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "Das Subjekt wechselt: die Mutter ← → das Kind → wir verwenden damit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "Vervollständige den Satz mit um…zu: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "Setze um an den Anfang und zu direkt vor das Verb am Satzende."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "Ordne die Wörter zu einem grammatisch korrekten Satz mit damit:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "Das konjugierte Verb im Nebensatz steht am Ende."
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "Ordne jeden Satz seiner richtigen Übersetzung zu:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "Höre den Satz und fülle die Lücke aus: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "Hat das Subjekt gewechselt? Nein → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "Sprich den folgenden Satz deutlich aus: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "Achte darauf: zu steht direkt vor dem Verb am Satzende."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "Welcher Satz ist grammatisch korrekt?",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "Das Subjekt wechselt (sie ← ihr Sohn) → damit + vollständiger Nebensatz mit Verb am Ende."
           }
         ]
       }

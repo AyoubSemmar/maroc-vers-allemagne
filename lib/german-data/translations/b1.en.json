@@ -8114,6 +8114,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "Weak Nouns (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "Weak Nouns — n-Deklination (schwache Nomen)",
+        "content": "In German, there is a special group of masculine nouns called **schwache Nomen** (weak nouns). These nouns differ from others because they **take the suffix -(e)n in all grammatical cases except Nominativ** (the subject case).\n\n**Which nouns belong to this group?**\nMost of them are masculine nouns that fall into one of the following categories:\n- Nouns referring to **people, professions, or nationalities**, such as: *der Student, der Journalist, der Kollege*\n- Nouns ending in **-e**, such as: *der Junge, der Kunde, der Zeuge*\n- Nouns ending in **-ist, -ent, -ant, -at**, such as: *der Tourist, der Patient, der Praktikant*\n- A special exception: **der Herr** takes *-n* in the singular and *-en* in the plural\n\n**The golden rule:**\nIn the Genitiv, Dativ, and Akkusativ cases — always add **-(e)n** to the noun.\n\n**Important note:** Some of these nouns also take **-s** in the Genitiv singular, such as: *des Studenten* — note that the suffix is **-en** and not **-s** as with regular nouns.",
+        "tables": [
+          {
+            "title": "Declension of weak nouns — example: der Student / der Junge / der Herr",
+            "headers": [
+              "Case",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (subject)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (direct object)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (indirect object)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (possessive)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "The suffix -(e)n is added in all cases except Nominativ. der Herr takes -n in the singular only.",
+            "theme": "default"
+          },
+          {
+            "title": "Examples of common weak noun categories",
+            "headers": [
+              "Type",
+              "Examples",
+              "Suffix"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Ending in -e",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "Ending in -ent / -ant",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Ending in -ist",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Ending in -at / -ot",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Exception",
+                  "der Herr",
+                  "-n (singular) / -en (plural)"
+                ]
+              }
+            ],
+            "note": "All of these nouns are masculine. Always check the dictionary if you are not sure.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Weak nouns take -(e)n in the Akkusativ, Dativ, and Genitiv cases — and remain without a suffix only in the Nominativ.",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "The student is learning. — I know the student."
+          },
+          {
+            "rule": "Nouns ending in -e (such as der Junge, der Kunde) take only -n (without an extra e).",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "I am helping the boy."
+          },
+          {
+            "rule": "Nouns ending in -ent, -ist, -ant, -at, -ot take -en in all cases except Nominativ.",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "This is the student's room."
+          },
+          {
+            "rule": "der Herr is an exception: it takes -n in the singular (Herrn) and -en in the plural (Herren).",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "I am speaking with the gentleman."
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — The journalist is writing an article.",
+          "Ich kenne den Journalisten gut. — I know the journalist well.",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — We are helping the student with the homework.",
+          "Das ist das Buch des Kollegen. — This is the colleague's book.",
+          "Der Kunde möchte ein Zimmer reservieren. — The customer would like to reserve a room.",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — The teacher explains the exercise to the boy.",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — I sent Mr. Müller an email.",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — The intern has been working at the company for a month."
+        ],
+        "tip": "💡 Whenever you see a masculine noun ending in -e, -ent, -ist, or -ant, remember that it is most likely a weak noun! Ask yourself: is it in the Nominativ? If not, add -(e)n right away. This rule covers more than 90% of cases at the B1 level."
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "The (university) student",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "The student learns German every day.",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "The journalist",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "The journalist works for a newspaper.",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "The colleague",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "I eat lunch with the colleague.",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "The boy",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "The mother calls the boy.",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "The customer / client",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "The salesperson helps the customer.",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "The gentleman / Mr.",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "Good morning, Mr. Schmidt!",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "The tourist",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "The tourist asks for directions.",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "The intern / trainee",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "We welcome the new intern.",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "The witness",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "The police question the witness.",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "The soldier",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "They thank the soldier for his service.",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "The pilot",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "The passengers trust the pilot.",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "The human being / person",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "I help the person who needs help.",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "The patient",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "The doctor examines the patient.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Choose the correct form of the weak noun in an Akkusativ sentence:\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "In the Akkusativ case, weak nouns take -(e)n and the article becomes den."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "Complete the sentence with the correct form of the weak noun:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "After dem we are in the Dativ case — add -en to the weak noun."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 Listen and complete the sentence with the missing word:",
+            "answer": "Kollegen",
+            "hint": "After des we are in the Genitiv case — the weak noun takes -en.",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "Arrange the words to form a correct sentence:",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "The verb erklärt requires Dativ for the person being explained to — use dem + Jungen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "Which of these sentences contains an error in the use of a weak noun?",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde is a weak noun — in the Dativ case it must become dem Kunden."
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "Match each noun in the Nominativ to its correct form in the Akkusativ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "Complete the sentence with the correct form:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den indicates the Akkusativ case — the weak noun takes -en."
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "Say the following sentence out loud, paying attention to the pronunciation of the suffix -en:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "Remember: Herrn = der Herr in the Dativ case. The -en suffix is pronounced lightly at the end of the word."
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "Passive Voice with Modal Verbs — Passiv mit Modalverben",
+      "grammar": {
+        "title": "Passive Voice with Modal Verbs — Passiv mit Modalverben",
+        "content": "## What is Passiv mit Modalverben?\n\nIn German, we can combine the **passive voice (Passiv)** with **modal verbs (Modalverben)** such as *müssen, können, dürfen, sollen, wollen* to express the necessity or possibility of doing something without mentioning the subject.\n\n---\n\n### 🔧 How do we build this structure?\n\nThe basic formula is:\n\n**Modalverb (conjugated) + Partizip II + werden**\n\n> Example: Das Zimmer **muss** sauber gemacht **werden**.\n> (The room must be cleaned.)\n\n---\n\n### 📌 Quick Comparison\n\n| Active sentence (Aktiv) | Passive sentence (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 Important Notes\n\n- The **modal verb** takes its natural position in the sentence (second position in main clauses).\n- **werden** always stays at the end of the main clause in its infinitive form (Infinitiv).\n- **Partizip II** comes directly before *werden* at the end of the sentence.\n- In **subordinate clauses (Nebensatz)**, the modal verb comes at the very end after *Partizip II + werden*:\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "Conjugation of Modal Verbs in the Passive Voice — Präsens",
+            "headers": [
+              "Modal Verb",
+              "Meaning",
+              "Passive Example",
+              "Translation"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "must / have to",
+                  "Das muss gemacht werden.",
+                  "This must be done."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "can / to be able to",
+                  "Das kann geändert werden.",
+                  "This can be changed."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "may / to be allowed to",
+                  "Hier darf nicht geraucht werden.",
+                  "Smoking is not allowed here."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "should / to be supposed to",
+                  "Das soll sofort erledigt werden.",
+                  "This is supposed to be completed immediately."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "to be intended / meant to",
+                  "Das will gut geplant werden.",
+                  "This is meant to be well planned."
+                ]
+              }
+            ],
+            "note": "The formula is always: Modalverb (conjugated) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "Word Order in the Sentence — Satzstellung",
+            "headers": [
+              "Sentence Type",
+              "Position 1",
+              "Position 2 (Verb)",
+              "Middle",
+              "End"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (main clause)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (main clause)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (subordinate clause)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (subordinate clause)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "In the subordinate clause: the modal verb comes last, after Partizip II + werden",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Basic formula: conjugated modal verb + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "The package must be sent."
+          },
+          {
+            "rule": "In the main clause, the modal verb comes in second position, and the end of the sentence is: Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "The homework must be handed in today."
+          },
+          {
+            "rule": "In the subordinate clause, the modal verb comes at the very end after Partizip II + werden",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "He says that the door must be closed."
+          },
+          {
+            "rule": "The subject is not mentioned in the passive voice; the focus is on the action itself, not on who performs it",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "The light must be turned off. (It doesn't matter who turns it off.)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — The form must be filled out.",
+          "Die Wohnung kann sofort gemietet werden. — The apartment can be rented immediately.",
+          "Hier darf nicht fotografiert werden. — Photography is not allowed here.",
+          "Die Rechnung soll bis Freitag bezahlt werden. — The bill is supposed to be paid by Friday.",
+          "Das kaputte Fahrrad muss repariert werden. — The broken bicycle must be repaired.",
+          "Ich glaube, dass das Problem gelöst werden kann. — I believe that the problem can be solved.",
+          "Die Medikamente dürfen nicht vergessen werden. — The medication must not be forgotten.",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — He knows that the work must be completed on time."
+        ],
+        "tip": "💡 Remember the golden order at the end of the main clause: **Partizip II first, then werden**. And in the subordinate clause: **Partizip II + werden + Modalverb**. The more you memorize this order, the more automatic the structure becomes!"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "form / blank form",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "The form must be filled out.",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "bill / invoice",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "The bill must be paid.",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "appointment",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "The appointment must be postponed.",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "package / parcel",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "The package can be picked up.",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "rule",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "The rules must be observed.",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "to repair / to fix",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "The car must be repaired.",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "to fill out (a form)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "The application must be filled out.",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "to complete / to take care of",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "The task is supposed to be completed.",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "to postpone / to reschedule",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "The meeting can be postponed.",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "to observe / to comply with",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "The regulations must be complied with.",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "immediately / right away",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "This must be completed immediately.",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "on time",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "The work must be submitted on time.",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "application / request",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "The application must be submitted.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "regulation / instruction",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "The regulations must not be ignored.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "Choose the correct passive sentence with a modal verb:",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "Remember the order: Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "Complete the sentence by choosing the correct form: Das Problem _____ gelöst werden. (The problem can be solved.)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "The modal verb is conjugated according to the subject — Das (singular neuter) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "Arrange the words to form a correct passive sentence:",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "The modal verb goes in second position, and the end of the sentence is: Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "Listen to the sentence and fill in the blank: Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "The verb is rauchen — what is its Partizip II?",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "How do you say in German: 'The application is supposed to be submitted tomorrow'?",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — the correct order in the main clause"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "Match each passive sentence to its correct translation:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "Arrange the words to form a correct subordinate clause (Nebensatz):",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "In the subordinate clause: the modal verb comes at the very end after Partizip II + werden"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "Pronounce the following sentence clearly: 'Das Paket muss sofort verschickt werden.' — The package must be sent immediately.",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "Pay attention to the pronunciation of: verschickt — fer-shickt"
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "Konjunktiv II of the Past — Konjunktiv II der Vergangenheit",
+      "grammar": {
+        "title": "Konjunktiv II of the Past — hätte/wäre + Partizip II",
+        "content": "## What is Konjunktiv II der Vergangenheit?\n\n**Konjunktiv II der Vergangenheit** is used to express things that **did not happen in the past**, such as:\n- Expressing **regret** about something that is gone: *If only I had done that...*\n- Expressing a **hypothesis** or **condition** in the past: *If I had done that, it would have been...*\n\n---\n\n## How do we form this tense?\n\nThe structure consists of two parts:\n\n**hätte / wäre** (in Konjunktiv II form) **+ Partizip II** of the main verb\n\n- We use **hätte** with most verbs (transitive verbs and stative verbs).\n- We use **wäre** with verbs of movement and change (e.g.: *gehen, kommen, fahren, werden, sein*).\n\n---\n\n## Quick comparison:\n\n| Tense | Meaning | Example |\n|---|---|---|\n| Konjunktiv II der Gegenwart | Hypothesis in the present | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | Hypothesis/regret in the past | Ich **hätte** gelernt. |\n\n---\n\n**Remember:** The **Partizip II** never changes in this structure — all the conjugation happens in **hätte** or **wäre**.",
+        "tables": [
+          {
+            "title": "Conjugation of hätte with Partizip II — haben verbs",
+            "headers": [
+              "Pronoun",
+              "Konjunktiv II",
+              "Full example",
+              "Meaning"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "I would have learned / If only I had learned"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "You would have learned"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "He would have learned"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "We would have learned"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "You (plural) would have learned"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "They would have learned"
+                ]
+              }
+            ],
+            "note": "hätte is used with verbs that form Perfekt with haben",
+            "theme": "default"
+          },
+          {
+            "title": "Conjugation of wäre with Partizip II — sein verbs",
+            "headers": [
+              "Pronoun",
+              "Konjunktiv II",
+              "Full example",
+              "Meaning"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "I would have gone / If only I had gone"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "You would have gone"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "He would have gone"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "We would have gone"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "You (plural) would have gone"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "They would have gone"
+                ]
+              }
+            ],
+            "note": "wäre is used with verbs of movement and change that form Perfekt with sein",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Basic structure with hätte: for verbs that use haben in Perfekt",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "If only I had slept more."
+          },
+          {
+            "rule": "Basic structure with wäre: for verbs that use sein in Perfekt (movement and change)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "She would have come earlier."
+          },
+          {
+            "rule": "In a conditional clause (Wenn-Satz), hätte/wäre comes at the end of the subordinate clause",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "If I had had more time, I would have helped."
+          },
+          {
+            "rule": "Partizip II never changes regardless of the pronoun — only hätte/wäre is conjugated",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "I would have bought. / We would have bought."
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — I would have read the book (but I didn't).",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — He would have passed the exam if he had studied more.",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — We would have arrived earlier, but the train was delayed.",
+          "Sie hätte mir helfen können. — She could have helped me.",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — If you had come with us, we would have had fun.",
+          "Ich wäre lieber zu Hause geblieben. — I would have preferred to stay at home.",
+          "Er hätte das Geld nicht ausgegeben. — He should not have spent the money.",
+          "Hättest du früher angerufen, hätte ich gewartet. — If you had called earlier, I would have waited."
+        ],
+        "tip": "💡 Remember the difference between hätte and wäre this way: if the verb is a verb of movement or change (gehen, kommen, fahren, werden, sein), use **wäre**; in all other cases use **hätte** — just as you do in the regular Perfekt tense!"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "mistake",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "I could have avoided this mistake.",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "opportunity",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "He should have taken advantage of the opportunity.",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "decision",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "She would have made a different decision.",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "delay",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "We would have been on time if there had been no delay.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "exam",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "I would have passed the exam.",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "to regret",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "He would have regretted his decision.",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "to miss / to lose",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "She would have missed the train.",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "to stay",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "I would have preferred to stay at home.",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "to arrive",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "We would have arrived earlier.",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "to spend (money)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "He should not have spent the money.",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "rather / preferably",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "I would have preferred to stay at home.",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "earlier / sooner",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "You should have come earlier.",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "chance / opportunity",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "We would not have missed the chance.",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "advice",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "She would have followed my advice.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "Choose the correct form: If he had studied more, he would have passed the exam.",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "We use hätte + Partizip II to express a past hypothesis with a verb that uses haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "Complete the sentence with the correct form: Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "The verb losfahren uses sein in Perfekt, so we use wären in Konjunktiv II"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "Listen to the sentence and fill in the blank: Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "The verb bleiben uses sein in Perfekt",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "Arrange the words to form a correct sentence: If only she had called me earlier.",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte comes in second position, and the Partizip II comes at the end of the sentence"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "Which sentence expresses regret about something that did not happen in the past?",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "The structure hätte + Partizip II indicates regret in the past"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "Match each German sentence with its correct English translation.",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "Arrange the words to form a correct conditional sentence: If he had had time, he would have helped us.",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "In the Wenn clause, hätte comes at the end; in the main clause, hätte comes in first position"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "Pronounce the following sentence clearly: 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "It means: I should have taken advantage of the opportunity."
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "Temporal and Concessive Clauses — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "Temporal and Concessive Clauses — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "In German, we use **subordinate clauses** (Nebensätze) to connect two ideas. In this lesson, they fall into two main types:\n\n**Part One: Temporal Subordinate Clauses (Temporale Nebensätze)**\nThese express the time relationship between two events. They begin with a temporal connector and end with the verb at the end of the subordinate clause.\n\n- **nachdem** (after): Used when one event occurs *after* another. The event in the subordinate clause happens first chronologically. It is usually used with **Perfekt** or **Plusquamperfekt**.\n- **bevor** (before): Used when one event occurs *before* another.\n- **während** (while / during): Used to express two events happening *at the same time*.\n- **seit / seitdem** (since): Used to express an event that started in the past and is still ongoing.\n\n**Part Two: Concessive Subordinate Clauses (Konzessive Nebensätze)**\nThese express a **contradiction** or **concession** between two ideas. The main connector is:\n\n- **obwohl** (although / even though): Used when a result contradicts our expectations.\n\n**The Golden Rule for Subordinate Clauses:**\nIn all of these clauses, **the verb always goes to the end of the subordinate clause**.\nIf the main clause begins with the subordinate clause, the **main clause verb comes directly after the comma** (Verb-Zweitstellung).",
+        "tables": [
+          {
+            "title": "Temporal and Concessive Connectors — Overview",
+            "headers": [
+              "Connector",
+              "Meaning in English",
+              "Temporal / Logical Relationship",
+              "Example"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "after",
+                  "The subordinate event precedes the main event",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "before",
+                  "The subordinate event follows the main event",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "while / during",
+                  "Two simultaneous events",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "since",
+                  "An ongoing event from the past",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "although / even though",
+                  "Contradiction / concession",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "In all of these clauses, the verb comes at the end of the subordinate clause.",
+            "theme": "default"
+          },
+          {
+            "title": "Word Order in Subordinate Clauses (Wortstellung)",
+            "headers": [
+              "Type",
+              "Main Clause First",
+              "Subordinate Clause First"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Structure",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "Example with nachdem",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "Example with obwohl",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "Example with während",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ When the sentence begins with the subordinate clause, the main clause verb comes directly after the comma (second position).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "The verb always goes to the end of the subordinate clause: after the connectors (nachdem, bevor, während, seitdem, obwohl), the verb moves to the end of the subordinate clause.",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "I will call you before I come home."
+          },
+          {
+            "rule": "With nachdem: use Perfekt in the subordinate clause if the main clause is in Präsens or Perfekt, and use Plusquamperfekt if the main clause is in Präteritum.",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "After he read the book, he goes to sleep."
+          },
+          {
+            "rule": "obwohl expresses a contradiction: the subordinate clause contains a reason that was expected to prevent the event, but did not.",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "Although he is sick, he goes to work."
+          },
+          {
+            "rule": "If the sentence begins with the subordinate clause, the main clause verb comes in second position directly after the comma.",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "While she is sleeping, I am learning German."
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — After I had breakfast, I go to work.",
+          "Bevor du schläfst, musst du die Zähne putzen. — Before you sleep, you have to brush your teeth.",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — While my mother is cooking, I do my homework.",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — Since he has been living in Germany, he speaks German very well.",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — Although the weather is bad, we are going on a trip.",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — Before she takes the exam, she studies every day.",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — After the film had ended, we went home.",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — Although he was tired, he read the entire book."
+        ],
+        "tip": "💡 Always remember: these connectors are 'verb killers' — they send the verb to the end of the subordinate clause! And if your sentence starts with obwohl, nachdem, or any other connector, the main clause verb comes directly after the comma. Practice this pattern out loud until it feels natural to you."
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "exam / test",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "Before she takes the exam, she studies a lot.",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "trip / outing",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "Although it is raining, we are going on a trip.",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "homework / school assignment",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "While my brother is playing, I do my homework.",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "to have breakfast",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "After I had breakfast, I go to school.",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "to fall asleep / to doze off",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "Before he falls asleep, he reads a book.",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "to tidy up / to clean up",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "After she ate, she tidied up the kitchen.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "tired",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "Although she is tired, she keeps working.",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "nevertheless / despite that",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "It is raining; nevertheless, we go for a walk.",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "since then / since",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "Since she has been living here, she has many friends.",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "although / even though",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "Although he is sick, he comes to work.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "while / during",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "While I am studying, my brother listens to music.",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "weather",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "Although the weather is bad, we go outside.",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "to arrive",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "After he arrived, he called his family.",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "to brush one's teeth",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "Before you sleep, you have to brush your teeth.",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "Choose the correct connector: ___ er gegessen hat, geht er schlafen. (After he ate, he went to sleep.)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "We are looking for a connector that means 'after' and indicates that the subordinate event happened first."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "Complete the sentence using the appropriate connector: ___ es kalt ist, trägt er keine Jacke. (Although it is cold, he is not wearing a jacket.)",
+            "answer": "Obwohl",
+            "hint": "We are looking for a connector that expresses contradiction and concession."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "Listen to the sentence and fill in the blank: Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "The verb in the subordinate clause with während comes at the end.",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "Arrange the words to form a correct sentence: (Before she goes to school, she has breakfast.)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "Remember: the verb goes to the end of the subordinate clause, and the main clause verb comes directly after the comma."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "Which sentence is grammatically correct?",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "In the subordinate clause the verb goes to the end, and in the main clause the verb is in second position after the comma."
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "Match each connector to its correct meaning in English:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "Pronounce the following sentence aloud and correctly: 'Seitdem er in Marokko wohnt, vermisst er Deutschland.'",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "Pay attention to the verb positions: 'wohnt' at the end of the subordinate clause, and 'vermisst' in second position in the main clause."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "Complete the sentence with the correct verb form: Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "With nachdem we use Perfekt in the subordinate clause: Partizip II + hat/haben at the end."
+          }
+        ]
+      }
     }
   },
   "title": "Level Three",

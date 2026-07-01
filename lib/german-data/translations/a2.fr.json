@@ -8148,29 +8148,82 @@
         "tables": [
           {
             "title": "Après der/die/das (déclinaison faible)",
-            "headers": ["", "der (masc.)", "die (fém.)", "das (neutre)", "die (pluriel)"],
+            "headers": [
+              "",
+              "der (masc.)",
+              "die (fém.)",
+              "das (neutre)",
+              "die (pluriel)"
+            ],
             "rows": [
-              { "cells": ["Nominativ", "der **schöne** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] },
-              { "cells": ["Akkusativ", "den **schönen** Mann", "die **schöne** Frau", "das **schöne** Kind", "die **schönen** Männer"] }
+              {
+                "cells": [
+                  "Nominativ",
+                  "der **schöne** Mann",
+                  "die **schöne** Frau",
+                  "das **schöne** Kind",
+                  "die **schönen** Männer"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "den **schönen** Mann",
+                  "die **schöne** Frau",
+                  "das **schöne** Kind",
+                  "die **schönen** Männer"
+                ]
+              }
             ],
             "theme": "cases",
             "note": "Seul l'Akkusativ-der devient schönen. Le reste prend -e."
           },
           {
             "title": "Après ein/eine (déclinaison mixte)",
-            "headers": ["", "ein (masc.)", "eine (fém.)", "ein (neutre)"],
+            "headers": [
+              "",
+              "ein (masc.)",
+              "eine (fém.)",
+              "ein (neutre)"
+            ],
             "rows": [
-              { "cells": ["Nominativ", "ein **schöner** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] },
-              { "cells": ["Akkusativ", "einen **schönen** Mann", "eine **schöne** Frau", "ein **schönes** Kind"] }
+              {
+                "cells": [
+                  "Nominativ",
+                  "ein **schöner** Mann",
+                  "eine **schöne** Frau",
+                  "ein **schönes** Kind"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ",
+                  "einen **schönen** Mann",
+                  "eine **schöne** Frau",
+                  "ein **schönes** Kind"
+                ]
+              }
             ],
             "theme": "cases",
             "note": "Après ein indéfini, l'adjectif porte la terminaison : -er (masc.), -e (fém.), -es (neutre)."
           }
         ],
         "rules": [
-          { "rule": "Sans article, l'adjectif porte toujours la marque du genre : kalter Tee (thé froid), warme Milch (lait chaud).", "example": "Ich trinke kalten Tee.", "translation": "Je bois du thé froid." },
-          { "rule": "À l'Akkusativ, seul der masculin force l'adjectif à -en. Le reste reste identique.", "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.", "translation": "J'achète la nouvelle table / la nouvelle lampe / la nouvelle voiture." },
-          { "rule": "kein se comporte comme ein. mein, dein, sein, ihr, unser, euer, Ihr — pareil.", "example": "mein neuer Bruder / keine alte Frau", "translation": "mon nouveau frère / pas de vieille femme." }
+          {
+            "rule": "Sans article, l'adjectif porte toujours la marque du genre : kalter Tee (thé froid), warme Milch (lait chaud).",
+            "example": "Ich trinke kalten Tee.",
+            "translation": "Je bois du thé froid."
+          },
+          {
+            "rule": "À l'Akkusativ, seul der masculin force l'adjectif à -en. Le reste reste identique.",
+            "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.",
+            "translation": "J'achète la nouvelle table / la nouvelle lampe / la nouvelle voiture."
+          },
+          {
+            "rule": "kein se comporte comme ein. mein, dein, sein, ihr, unser, euer, Ihr — pareil.",
+            "example": "mein neuer Bruder / keine alte Frau",
+            "translation": "mon nouveau frère / pas de vieille femme."
+          }
         ],
         "examples": [
           "Der nette Lehrer kommt aus Berlin. — Le gentil professeur vient de Berlin.",
@@ -8185,75 +8238,481 @@
         "tip": "N'apprends pas tout le tableau d'un coup. Commence par « der + adjectif + e » et « ein + adjectif + er/e/es », puis fais dix phrases par jour. En une semaine, ça devient automatique."
       },
       "vocabulary": [
-        { "german": "schön", "arabic": "beau / belle", "example": "eine schöne Stadt", "exampleArabic": "une belle ville", "type": "adjective" },
-        { "german": "gut", "arabic": "bon", "example": "ein guter Tag", "exampleArabic": "une bonne journée", "type": "adjective" },
-        { "german": "neu", "arabic": "nouveau / neuf", "example": "mein neues Auto", "exampleArabic": "ma nouvelle voiture", "type": "adjective" },
-        { "german": "alt", "arabic": "vieux / âgé", "example": "das alte Haus", "exampleArabic": "la vieille maison", "type": "adjective" },
-        { "german": "jung", "arabic": "jeune", "example": "eine junge Frau", "exampleArabic": "une jeune femme", "type": "adjective" },
-        { "german": "groß", "arabic": "grand", "example": "ein großes Zimmer", "exampleArabic": "une grande chambre", "type": "adjective" },
-        { "german": "klein", "arabic": "petit", "example": "die kleine Katze", "exampleArabic": "le petit chat", "type": "adjective" },
-        { "german": "kalt", "arabic": "froid", "example": "kalter Kaffee", "exampleArabic": "café froid", "type": "adjective" },
-        { "german": "warm", "arabic": "chaud (tiède)", "example": "warme Milch", "exampleArabic": "lait chaud", "type": "adjective" },
-        { "german": "heiß", "arabic": "très chaud / brûlant", "example": "heißer Tee", "exampleArabic": "thé brûlant", "type": "adjective" },
-        { "german": "frisch", "arabic": "frais", "example": "frisches Brot", "exampleArabic": "pain frais", "type": "adjective" },
-        { "german": "lecker", "arabic": "délicieux", "example": "ein leckeres Essen", "exampleArabic": "un repas délicieux", "type": "adjective" },
-        { "german": "schnell", "arabic": "rapide", "example": "ein schnelles Auto", "exampleArabic": "une voiture rapide", "type": "adjective" },
-        { "german": "langsam", "arabic": "lent", "example": "ein langsamer Bus", "exampleArabic": "un bus lent", "type": "adjective" },
-        { "german": "einfach", "arabic": "simple / facile", "example": "eine einfache Frage", "exampleArabic": "une question simple", "type": "adjective" },
-        { "german": "schwer", "arabic": "difficile / lourd", "example": "eine schwere Prüfung", "exampleArabic": "un examen difficile", "type": "adjective" },
-        { "german": "leicht", "arabic": "léger / facile", "example": "ein leichter Koffer", "exampleArabic": "une valise légère", "type": "adjective" },
-        { "german": "teuer", "arabic": "cher", "example": "ein teures Hotel", "exampleArabic": "un hôtel cher", "type": "adjective" },
-        { "german": "billig", "arabic": "bon marché", "example": "ein billiger Tisch", "exampleArabic": "une table bon marché", "type": "adjective" },
-        { "german": "nett", "arabic": "gentil", "example": "eine nette Lehrerin", "exampleArabic": "une enseignante gentille", "type": "adjective" },
-        { "german": "freundlich", "arabic": "aimable", "example": "ein freundlicher Mann", "exampleArabic": "un homme aimable", "type": "adjective" },
-        { "german": "müde", "arabic": "fatigué", "example": "Ich bin sehr müde.", "exampleArabic": "Je suis très fatigué.", "type": "adjective" },
-        { "german": "hungrig", "arabic": "affamé", "example": "ein hungriges Kind", "exampleArabic": "un enfant affamé", "type": "adjective" },
-        { "german": "fleißig", "arabic": "appliqué / studieux", "example": "eine fleißige Studentin", "exampleArabic": "une étudiante studieuse", "type": "adjective" },
-        { "german": "intelligent", "arabic": "intelligent", "example": "ein intelligenter Schüler", "exampleArabic": "un élève intelligent", "type": "adjective" },
-        { "german": "das Kleid", "arabic": "la robe", "example": "Sie trägt ein rotes Kleid.", "exampleArabic": "Elle porte une robe rouge.", "type": "noun", "gender": "das", "plural": "die Kleider" },
-        { "german": "das Hemd", "arabic": "la chemise", "example": "ein weißes Hemd", "exampleArabic": "une chemise blanche", "type": "noun", "gender": "das", "plural": "die Hemden" },
-        { "german": "die Hose", "arabic": "le pantalon", "example": "eine neue Hose", "exampleArabic": "un nouveau pantalon", "type": "noun", "gender": "die", "plural": "die Hosen" },
-        { "german": "die Schuhe", "arabic": "les chaussures", "example": "schwarze Schuhe", "exampleArabic": "des chaussures noires", "type": "noun", "gender": "pl" },
-        { "german": "rot", "arabic": "rouge", "example": "das rote Auto", "exampleArabic": "la voiture rouge", "type": "adjective" },
-        { "german": "blau", "arabic": "bleu", "example": "der blaue Himmel", "exampleArabic": "le ciel bleu", "type": "adjective" },
-        { "german": "grün", "arabic": "vert", "example": "grüner Tee", "exampleArabic": "thé vert", "type": "adjective" },
-        { "german": "schwarz", "arabic": "noir", "example": "eine schwarze Tasche", "exampleArabic": "un sac noir", "type": "adjective" },
-        { "german": "weiß", "arabic": "blanc", "example": "ein weißes Hemd", "exampleArabic": "une chemise blanche", "type": "adjective" },
-        { "german": "sehr", "arabic": "très", "example": "sehr gut", "exampleArabic": "très bien", "type": "adverb" }
+        {
+          "german": "schön",
+          "arabic": "beau / belle",
+          "example": "eine schöne Stadt",
+          "exampleArabic": "une belle ville",
+          "type": "adjective"
+        },
+        {
+          "german": "gut",
+          "arabic": "bon",
+          "example": "ein guter Tag",
+          "exampleArabic": "une bonne journée",
+          "type": "adjective"
+        },
+        {
+          "german": "neu",
+          "arabic": "nouveau / neuf",
+          "example": "mein neues Auto",
+          "exampleArabic": "ma nouvelle voiture",
+          "type": "adjective"
+        },
+        {
+          "german": "alt",
+          "arabic": "vieux / âgé",
+          "example": "das alte Haus",
+          "exampleArabic": "la vieille maison",
+          "type": "adjective"
+        },
+        {
+          "german": "jung",
+          "arabic": "jeune",
+          "example": "eine junge Frau",
+          "exampleArabic": "une jeune femme",
+          "type": "adjective"
+        },
+        {
+          "german": "groß",
+          "arabic": "grand",
+          "example": "ein großes Zimmer",
+          "exampleArabic": "une grande chambre",
+          "type": "adjective"
+        },
+        {
+          "german": "klein",
+          "arabic": "petit",
+          "example": "die kleine Katze",
+          "exampleArabic": "le petit chat",
+          "type": "adjective"
+        },
+        {
+          "german": "kalt",
+          "arabic": "froid",
+          "example": "kalter Kaffee",
+          "exampleArabic": "café froid",
+          "type": "adjective"
+        },
+        {
+          "german": "warm",
+          "arabic": "chaud (tiède)",
+          "example": "warme Milch",
+          "exampleArabic": "lait chaud",
+          "type": "adjective"
+        },
+        {
+          "german": "heiß",
+          "arabic": "très chaud / brûlant",
+          "example": "heißer Tee",
+          "exampleArabic": "thé brûlant",
+          "type": "adjective"
+        },
+        {
+          "german": "frisch",
+          "arabic": "frais",
+          "example": "frisches Brot",
+          "exampleArabic": "pain frais",
+          "type": "adjective"
+        },
+        {
+          "german": "lecker",
+          "arabic": "délicieux",
+          "example": "ein leckeres Essen",
+          "exampleArabic": "un repas délicieux",
+          "type": "adjective"
+        },
+        {
+          "german": "schnell",
+          "arabic": "rapide",
+          "example": "ein schnelles Auto",
+          "exampleArabic": "une voiture rapide",
+          "type": "adjective"
+        },
+        {
+          "german": "langsam",
+          "arabic": "lent",
+          "example": "ein langsamer Bus",
+          "exampleArabic": "un bus lent",
+          "type": "adjective"
+        },
+        {
+          "german": "einfach",
+          "arabic": "simple / facile",
+          "example": "eine einfache Frage",
+          "exampleArabic": "une question simple",
+          "type": "adjective"
+        },
+        {
+          "german": "schwer",
+          "arabic": "difficile / lourd",
+          "example": "eine schwere Prüfung",
+          "exampleArabic": "un examen difficile",
+          "type": "adjective"
+        },
+        {
+          "german": "leicht",
+          "arabic": "léger / facile",
+          "example": "ein leichter Koffer",
+          "exampleArabic": "une valise légère",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "cher",
+          "example": "ein teures Hotel",
+          "exampleArabic": "un hôtel cher",
+          "type": "adjective"
+        },
+        {
+          "german": "billig",
+          "arabic": "bon marché",
+          "example": "ein billiger Tisch",
+          "exampleArabic": "une table bon marché",
+          "type": "adjective"
+        },
+        {
+          "german": "nett",
+          "arabic": "gentil",
+          "example": "eine nette Lehrerin",
+          "exampleArabic": "une enseignante gentille",
+          "type": "adjective"
+        },
+        {
+          "german": "freundlich",
+          "arabic": "aimable",
+          "example": "ein freundlicher Mann",
+          "exampleArabic": "un homme aimable",
+          "type": "adjective"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué",
+          "example": "Ich bin sehr müde.",
+          "exampleArabic": "Je suis très fatigué.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "affamé",
+          "example": "ein hungriges Kind",
+          "exampleArabic": "un enfant affamé",
+          "type": "adjective"
+        },
+        {
+          "german": "fleißig",
+          "arabic": "appliqué / studieux",
+          "example": "eine fleißige Studentin",
+          "exampleArabic": "une étudiante studieuse",
+          "type": "adjective"
+        },
+        {
+          "german": "intelligent",
+          "arabic": "intelligent",
+          "example": "ein intelligenter Schüler",
+          "exampleArabic": "un élève intelligent",
+          "type": "adjective"
+        },
+        {
+          "german": "das Kleid",
+          "arabic": "la robe",
+          "example": "Sie trägt ein rotes Kleid.",
+          "exampleArabic": "Elle porte une robe rouge.",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kleider"
+        },
+        {
+          "german": "das Hemd",
+          "arabic": "la chemise",
+          "example": "ein weißes Hemd",
+          "exampleArabic": "une chemise blanche",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Hemden"
+        },
+        {
+          "german": "die Hose",
+          "arabic": "le pantalon",
+          "example": "eine neue Hose",
+          "exampleArabic": "un nouveau pantalon",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Hosen"
+        },
+        {
+          "german": "die Schuhe",
+          "arabic": "les chaussures",
+          "example": "schwarze Schuhe",
+          "exampleArabic": "des chaussures noires",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "rot",
+          "arabic": "rouge",
+          "example": "das rote Auto",
+          "exampleArabic": "la voiture rouge",
+          "type": "adjective"
+        },
+        {
+          "german": "blau",
+          "arabic": "bleu",
+          "example": "der blaue Himmel",
+          "exampleArabic": "le ciel bleu",
+          "type": "adjective"
+        },
+        {
+          "german": "grün",
+          "arabic": "vert",
+          "example": "grüner Tee",
+          "exampleArabic": "thé vert",
+          "type": "adjective"
+        },
+        {
+          "german": "schwarz",
+          "arabic": "noir",
+          "example": "eine schwarze Tasche",
+          "exampleArabic": "un sac noir",
+          "type": "adjective"
+        },
+        {
+          "german": "weiß",
+          "arabic": "blanc",
+          "example": "ein weißes Hemd",
+          "exampleArabic": "une chemise blanche",
+          "type": "adjective"
+        },
+        {
+          "german": "sehr",
+          "arabic": "très",
+          "example": "sehr gut",
+          "exampleArabic": "très bien",
+          "type": "adverb"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a2-13-q1", "question": "Complète : « der schön__ Mann » (Nominativ)", "answer": "e", "hint": "der + adjectif + e" },
-          { "type": "multiple-choice", "id": "a2-13-q2", "question": "Corrige : « Ich kaufe ein ___ Auto. »", "options": ["neu", "neue", "neues", "neuer"], "answer": "neues" },
-          { "type": "fill-blank", "id": "a2-13-q3", "question": "Complète : « Ich habe einen gut___ Freund. »", "answer": "en", "hint": "einen + Akk-masc → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q4", "question": "Quelle phrase est correcte ?", "options": ["Sie trägt eine rotes Kleid.", "Sie trägt ein rotes Kleid.", "Sie trägt ein rote Kleid.", "Sie trägt einen rotes Kleid."], "answer": "Sie trägt ein rotes Kleid." },
-          { "type": "fill-blank", "id": "a2-13-q5", "question": "Complète : « die jung__ Studenten » (pluriel, Nominativ)", "answer": "en", "hint": "après die pluriel → -en" },
-          { "type": "matching", "id": "a2-13-q6", "question": "Associe l'adjectif à son sens :", "pairs": [
-            { "left": "schön", "right": "beau" },
-            { "left": "alt", "right": "vieux" },
-            { "left": "klein", "right": "petit" },
-            { "left": "teuer", "right": "cher" },
-            { "left": "lecker", "right": "délicieux" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-13-q7", "question": "Ordonne : « J'achète une chemise blanche »", "words": ["Ich", "kaufe", "ein", "weißes", "Hemd"], "answer": "Ich kaufe ein weißes Hemd" },
-          { "type": "speaking", "id": "a2-13-q8", "question": "Dis en allemand : « La nouvelle maison est grande »", "answer": "Das neue Haus ist groß" },
-          { "type": "fill-blank", "id": "a2-13-q9", "question": "Écoute : « Wir trinken heiß___ Tee. » (sans article)", "audioPrompt": "Wir trinken heißen Tee.", "answer": "en", "hint": "Akk-masc sans article → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q10", "question": "Le mot kein se décline comme :", "options": ["der", "die", "das", "ein"], "answer": "ein" },
-          { "type": "fill-blank", "id": "a2-13-q11", "question": "Complète : « Die alt___ Häuser sind schön. » (pluriel, Nom)", "answer": "en", "hint": "après die pluriel → -en" },
-          { "type": "multiple-choice", "id": "a2-13-q12", "question": "Quelle est la forme adjectif sans article à l'Akk-masc ?", "options": ["kalt Tee", "kalter Tee", "kalten Tee", "kalte Tee"], "answer": "kalten Tee" },
-          { "type": "fill-blank", "id": "a2-13-q13", "question": "« Mein neu___ Auto ist schnell. » (masc/neutre, Nom)", "answer": "es", "hint": "mein/dein/sein... + neutre → -es" },
-          { "type": "matching", "id": "a2-13-q14", "question": "Associe la terminaison au cas :", "pairs": [
-            { "left": "der schöne...", "right": "-e" },
-            { "left": "einen schönen...", "right": "-en" },
-            { "left": "ein schönes Kind", "right": "-es" },
-            { "left": "kalter Tee", "right": "-er" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a2-13-q15", "question": "Ordonne : « J'achète une belle voiture »", "words": ["Ich", "kaufe", "ein", "schönes", "Auto"], "answer": "Ich kaufe ein schönes Auto" },
-          { "type": "fill-blank", "id": "a2-13-q16", "question": "Écoute : « Sie hat eine ___ Tasche. » (noir)", "audioPrompt": "Sie hat eine schwarze Tasche.", "answer": "schwarze", "hint": "eine + adj + -e (féminin Akk)" },
-          { "type": "multiple-choice", "id": "a2-13-q17", "question": "L'adjectif après kein suit le schéma :", "options": ["der", "die", "das", "ein"], "answer": "ein" },
-          { "type": "speaking", "id": "a2-13-q18", "question": "Dis : « J'aime le café chaud »", "answer": "Ich mag heißen Kaffee" },
-          { "type": "fill-blank", "id": "a2-13-q19", "question": "« Wir essen frisch___ Brot. » (sans article, neutre Akk)", "answer": "es", "hint": "sans article, Akk-neutre → -es" },
-          { "type": "multiple-choice", "id": "a2-13-q20", "question": "Quelle phrase a une déclinaison correcte ?", "options": ["Der grüner Tee.", "Der grüne Tee.", "Der grünen Tee.", "Den grüne Tee."], "answer": "Der grüne Tee." }
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q1",
+            "question": "Complète : « der schön__ Mann » (Nominativ)",
+            "answer": "e",
+            "hint": "der + adjectif + e"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q2",
+            "question": "Corrige : « Ich kaufe ein ___ Auto. »",
+            "options": [
+              "neu",
+              "neue",
+              "neues",
+              "neuer"
+            ],
+            "answer": "neues"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q3",
+            "question": "Complète : « Ich habe einen gut___ Freund. »",
+            "answer": "en",
+            "hint": "einen + Akk-masc → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q4",
+            "question": "Quelle phrase est correcte ?",
+            "options": [
+              "Sie trägt eine rotes Kleid.",
+              "Sie trägt ein rotes Kleid.",
+              "Sie trägt ein rote Kleid.",
+              "Sie trägt einen rotes Kleid."
+            ],
+            "answer": "Sie trägt ein rotes Kleid."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q5",
+            "question": "Complète : « die jung__ Studenten » (pluriel, Nominativ)",
+            "answer": "en",
+            "hint": "après die pluriel → -en"
+          },
+          {
+            "type": "matching",
+            "id": "a2-13-q6",
+            "question": "Associe l'adjectif à son sens :",
+            "pairs": [
+              {
+                "left": "schön",
+                "right": "beau"
+              },
+              {
+                "left": "alt",
+                "right": "vieux"
+              },
+              {
+                "left": "klein",
+                "right": "petit"
+              },
+              {
+                "left": "teuer",
+                "right": "cher"
+              },
+              {
+                "left": "lecker",
+                "right": "délicieux"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-13-q7",
+            "question": "Ordonne : « J'achète une chemise blanche »",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "weißes",
+              "Hemd"
+            ],
+            "answer": "Ich kaufe ein weißes Hemd"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-13-q8",
+            "question": "Dis en allemand : « La nouvelle maison est grande »",
+            "answer": "Das neue Haus ist groß"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q9",
+            "question": "Écoute : « Wir trinken heiß___ Tee. » (sans article)",
+            "audioPrompt": "Wir trinken heißen Tee.",
+            "answer": "en",
+            "hint": "Akk-masc sans article → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q10",
+            "question": "Le mot kein se décline comme :",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "ein"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q11",
+            "question": "Complète : « Die alt___ Häuser sind schön. » (pluriel, Nom)",
+            "answer": "en",
+            "hint": "après die pluriel → -en"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q12",
+            "question": "Quelle est la forme adjectif sans article à l'Akk-masc ?",
+            "options": [
+              "kalt Tee",
+              "kalter Tee",
+              "kalten Tee",
+              "kalte Tee"
+            ],
+            "answer": "kalten Tee"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q13",
+            "question": "« Mein neu___ Auto ist schnell. » (masc/neutre, Nom)",
+            "answer": "es",
+            "hint": "mein/dein/sein... + neutre → -es"
+          },
+          {
+            "type": "matching",
+            "id": "a2-13-q14",
+            "question": "Associe la terminaison au cas :",
+            "pairs": [
+              {
+                "left": "der schöne...",
+                "right": "-e"
+              },
+              {
+                "left": "einen schönen...",
+                "right": "-en"
+              },
+              {
+                "left": "ein schönes Kind",
+                "right": "-es"
+              },
+              {
+                "left": "kalter Tee",
+                "right": "-er"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-13-q15",
+            "question": "Ordonne : « J'achète une belle voiture »",
+            "words": [
+              "Ich",
+              "kaufe",
+              "ein",
+              "schönes",
+              "Auto"
+            ],
+            "answer": "Ich kaufe ein schönes Auto"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q16",
+            "question": "Écoute : « Sie hat eine ___ Tasche. » (noir)",
+            "audioPrompt": "Sie hat eine schwarze Tasche.",
+            "answer": "schwarze",
+            "hint": "eine + adj + -e (féminin Akk)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q17",
+            "question": "L'adjectif après kein suit le schéma :",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "ein"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-13-q18",
+            "question": "Dis : « J'aime le café chaud »",
+            "answer": "Ich mag heißen Kaffee"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-13-q19",
+            "question": "« Wir essen frisch___ Brot. » (sans article, neutre Akk)",
+            "answer": "es",
+            "hint": "sans article, Akk-neutre → -es"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-13-q20",
+            "question": "Quelle phrase a une déclinaison correcte ?",
+            "options": [
+              "Der grüner Tee.",
+              "Der grüne Tee.",
+              "Der grünen Tee.",
+              "Den grüne Tee."
+            ],
+            "answer": "Der grüne Tee."
+          }
         ]
       }
     },
@@ -10221,6 +10680,1046 @@
               "préposition seule"
             ],
             "answer": "préposition + pronom"
+          }
+        ]
+      }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "Le cas du génitif — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "Les bases du Genitiv — noms propres (Peters Auto) et articles définis des / der",
+        "content": "En allemand, on utilise le **Genitiv** pour exprimer l'appartenance ou la relation entre deux choses, c'est-à-dire pour répondre à la question : **À qui appartient ceci ?**\n\nIl existe deux façons principales de former ce cas au niveau A2 :\n\n**① Les noms propres (Eigennamen) :**\nLorsqu'on veut dire qu'une chose appartient à une personne désignée par son prénom, on ajoute simplement la lettre **-s** à la fin du nom, sans apostrophe.\nExemple : **Peter → Peters Auto** (la voiture de Peter)\nExemple : **Anna → Annas Buch** (le livre d'Anna)\n\n**② Les articles définis avec les noms communs :**\nLorsqu'on utilise un nom commun (pas un nom propre), l'article défini change selon le genre du nom :\n- Les noms masculins (Maskulinum) et neutres (Neutrum) : l'article devient **des** et on ajoute **-s** ou **-es** à la fin du nom.\n- Les noms féminins (Femininum) et pluriels (Plural) : l'article devient **der** et le nom ne change pas.\n\nExemple : **das Auto des Mannes** (la voiture de l'homme)\nExemple : **das Buch der Frau** (le livre de la femme)\n\n**Remarque importante :** Dans la langue parlée quotidienne, beaucoup d'Allemands remplacent le Genitiv par la préposition **von + Dativ**, par exemple : **das Auto von Peter**. Mais à l'écrit formel et dans les examens, il est préférable d'utiliser le Genitiv correct.",
+        "tables": [
+          {
+            "title": "Changement de l'article défini au Genitiv",
+            "headers": [
+              "Genre",
+              "Nominativ (sujet)",
+              "Genitiv (possession)",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculin (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutre (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "Féminin (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "Pluriel (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 Masculin et neutre : des + nom + s/es | 🔴 Féminin et pluriel : der + nom sans changement",
+            "theme": "default"
+          },
+          {
+            "title": "Les noms propres au Genitiv (Eigennamen + -s)",
+            "headers": [
+              "Nom original",
+              "Genitiv",
+              "Phrase complète",
+              "Traduction"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "La voiture de Peter est neuve."
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "Le sac d'Anna est beau."
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "Le chien de Thomas est grand."
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "L'appartement de Maria est petit."
+                ]
+              }
+            ],
+            "note": "⚠️ Si le nom se termine par -s, -z ou -x, on place uniquement une apostrophe (Apostroph) : Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Noms propres : ajoutez -s directement après le nom pour indiquer la possession, sans apostrophe.",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "C'est le vélo de Laura."
+          },
+          {
+            "rule": "Noms masculins et neutres : utilisez des et ajoutez -s ou -es à la fin du nom.",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "La couleur de la voiture est bleue."
+          },
+          {
+            "rule": "Noms féminins et pluriels : utilisez uniquement der, le nom ne change pas.",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "Le nom de l'enseignante est Müller."
+          },
+          {
+            "rule": "Si un nom propre se termine par -s, -z ou -x, placez une apostrophe (') à la place de -s.",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "C'est le livre de Thomas."
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — C'est la voiture de Peter.",
+          "Annas Tasche ist sehr schön. — Le sac d'Anna est très beau.",
+          "Der Hund des Mannes ist groß. — Le chien de l'homme est grand.",
+          "Das Zimmer des Kindes ist klein. — La chambre de l'enfant est petite.",
+          "Die Wohnung der Frau ist modern. — L'appartement de la femme est moderne.",
+          "Die Spielzeuge der Kinder sind neu. — Les jouets des enfants sont neufs.",
+          "Ich nehme das Fahrrad meines Bruders. — Je prends le vélo de mon frère.",
+          "Der Name des Lehrers ist Schmidt. — Le nom de l'enseignant est Schmidt."
+        ],
+        "tip": "💡 Retenez la règle d'or : **des** pour le masculin et le neutre (avec ajout de -s au nom), et **der** pour le féminin et le pluriel (sans changement du nom). Et si c'est un nom propre, ajoutez simplement -s directement à la fin !"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "voiture",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "C'est la voiture de Peter.",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "sac",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "Le sac d'Anna est neuf.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "chien",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "Le chien de l'homme est grand.",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "chambre",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "La chambre de l'enfant est petite.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "appartement",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "L'appartement de la femme est moderne.",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "prénom / nom",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "Le nom de l'enseignant est Schmidt.",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "vélo",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "Le vélo de l'enfant est rouge.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "livre",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "C'est le livre d'Anna.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "enseignant",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "Le nom de l'enseignant est Müller.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "enseignante",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "Le livre de l'enseignante est vieux.",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "couleur",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "La couleur de la voiture est bleue.",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "appartenir à",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "La voiture appartient au père de Peter.",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "nouveau / neuf",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "La voiture de Peter est neuve.",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "jouet",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "Les jouets des enfants sont colorés.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "Choisissez l'article défini correct au Genitiv : Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "Le mot Mann est masculin → on utilise des"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "Complétez la phrase avec la forme correcte du nom propre : ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "Ajoutez -s directement après le nom propre Anna"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "Choisissez la forme correcte du Genitiv : Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "Le mot Lehrerin est féminin → on utilise der"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "Remettez les mots dans le bon ordre pour former une phrase correcte :",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "Ordre : sujet + verbe + reste de la phrase"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "Associez chaque phrase à sa traduction correcte :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "Écoutez la phrase et complétez le blanc : Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto est neutre → on utilise des",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "Le nom Thomas se termine par -s. Comment écrit-on correctement la possession ?",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "Si le nom se termine par s, on place uniquement une apostrophe (')"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "Prononcez la phrase suivante à voix haute correctement : 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "Faites attention à la prononciation de : Annas (a-nas) et der Frau (dèr frau)"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "Les propositions relatives — Nominativ et Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "Les propositions relatives simples — Relativsätze im Nominativ und Akkusativ",
+        "content": "**Qu'est-ce qu'une proposition relative ?**\nLa proposition relative (Relativsatz) est une proposition subordonnée que l'on ajoute à un nom déjà mentionné pour le préciser ou le décrire. Elle commence toujours par un **pronom relatif** (Relativpronomen) tel que : **der, die, das**.\n\n**Comment choisir le pronom relatif ?**\nLe choix du pronom dépend de deux éléments :\n1. **Le genre du nom** que l'on décrit (masculin, féminin ou neutre) — cela détermine la forme de base du pronom.\n2. **La fonction du pronom à l'intérieur de la proposition relative** — est-il sujet (Nominativ) ou complément d'objet direct (Akkusativ) ?\n\n**Nominativ :** le pronom relatif est le **sujet** de la proposition relative.\nExemple : Das ist der Mann, **der** hier arbeitet. ← (der Mann est celui qui travaille → sujet)\n\n**Akkusativ :** le pronom relatif est le **complément d'objet direct** dans la proposition relative.\nExemple : Das ist der Mann, **den** ich kenne. ← (je connais l'homme → complément d'objet direct)\n\n**Règle très importante :** le verbe dans la proposition relative vient toujours **à la fin de la proposition**.\n\n**La virgule (Komma) :** la proposition relative est toujours séparée de la proposition principale par une virgule.",
+        "tables": [
+          {
+            "title": "Pronoms relatifs — Relativpronomen (Nominativ et Akkusativ)",
+            "headers": [
+              "Genre / Type",
+              "Exemple (le nom)",
+              "Nominativ (sujet)",
+              "Akkusativ (complément d'objet direct)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculin — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Féminin — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutre — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Pluriel — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Remarque : le pronom relatif à l'Akkusativ pour le masculin change de der en den — c'est la seule différence !",
+            "theme": "default"
+          },
+          {
+            "title": "Comparaison : l'article défini (Artikel) et le pronom relatif (Relativpronomen)",
+            "headers": [
+              "Genre",
+              "Article défini",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculin",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Féminin",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutre",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Pluriel",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Les pronoms relatifs ressemblent beaucoup aux articles définis — ce qui les rend plus faciles à mémoriser !",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Le pronom relatif s'accorde avec le **genre du nom** qu'il décrit dans la proposition principale.",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "La femme qui se tient là-bas est mon professeur."
+          },
+          {
+            "rule": "Si le pronom relatif est **sujet** dans la proposition relative, on utilise le **Nominativ** : der / die / das / die.",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "C'est l'enfant qui joue au football."
+          },
+          {
+            "rule": "Si le pronom relatif est **complément d'objet direct** dans la proposition relative, on utilise l'**Akkusativ** : den / die / das / die.",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "Le film que j'ai vu était formidable."
+          },
+          {
+            "rule": "Le verbe dans la proposition relative vient toujours **à la fin**, et la proposition est séparée par une **virgule**.",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "J'ai un ami qui joue bien de la guitare."
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — C'est l'homme qui fait du jogging tous les jours.",
+          "Die Frau, die ich kenne, wohnt in Berlin. — La femme que je connais habite à Berlin.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — Le livre qui est posé sur la table m'appartient.",
+          "Ich suche einen Job, den ich liebe. — Je cherche un travail que j'aime.",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — Le chien que nous avons trouvé est très mignon.",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — Les enfants qui jouent dans le parc sont mes voisins.",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — Le restaurant que nous avons visité était très bon.",
+          "Er hat eine Schwester, die in Marokko lebt. — Il a une sœur qui vit au Maroc."
+        ],
+        "tip": "💡 Rappelle-toi : la seule différence entre le Nominativ et l'Akkusativ dans les pronoms relatifs concerne uniquement le masculin ! **der** devient **den** à l'Akkusativ. Le féminin, le neutre et le pluriel ne changent pas. Concentre-toi sur cette unique différence et tu maîtriseras la règle facilement !"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "homme",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "L'homme qui se tient là-bas est mon père.",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "femme / dame",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "La femme que je vois sourit.",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "enfant",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "L'enfant qui pleure est fatigué.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "livre",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "Le livre que je lis est intéressant.",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "film",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "Le film que nous regardons est drôle.",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "ami",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "J'ai un ami qui cuisine bien.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "appartement",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "L'appartement que je cherche est grand.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "chien",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "Le chien que j'ai s'appelle Max.",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "connaître (une personne ou un lieu)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "La femme que je connais est très gentille.",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "chercher",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "Il cherche un travail qu'il aime.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "acheter",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "La voiture que j'achète est rouge.",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "intéressant",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "Le livre qu'il lit est très intéressant.",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "voisin",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "Le voisin que je connais est sympathique.",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "restaurant",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "Le restaurant que nous visitons est nouveau.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "Choisis le pronom relatif correct : Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "Le nom est masculin (der Mann) et le pronom est le sujet de la proposition relative → Nominativ masculin"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "Choisis le pronom relatif correct : Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "Le nom est masculin (der Film) mais le pronom est complément d'objet direct (ich habe ihn gesehen) → Akkusativ masculin"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "Complète la phrase avec le pronom relatif approprié : Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "Le nom est féminin (die Frau) et le pronom est sujet → Nominativ féminin = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "Écoute la phrase et complète le blanc : Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "Le nom est neutre (das Kind) et le pronom est complément d'objet direct → Akkusativ neutre = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "Remets les mots dans l'ordre pour former une phrase correcte : (Je cherche un appartement qui soit grand)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "Le verbe dans la proposition relative vient à la fin !"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "Remets les mots dans l'ordre pour former une phrase correcte : (Le livre que je lis est intéressant)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Commence par Das Buch, puis la proposition relative, puis la proposition principale"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "Associe chaque phrase à sa traduction correcte :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "Prononce la phrase suivante à voix haute correctement : 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "Rappelle-toi : le verbe möchte vient à la fin de la proposition relative, et la virgule se place avant die"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "Exprimer le but : um…zu et damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "Les propositions de but (Finalsätze) : um…zu vs damit",
+        "content": "En allemand, on utilise les **Finalsätze** (propositions de but) pour exprimer le **but** ou l'**objectif** d'une action, c'est-à-dire pour répondre à la question : « Pourquoi fais-tu cela ? » ou « Quel est ton but ? »\n\nIl existe deux façons principales :\n\n**1. um … zu + Infinitiv**\nOn l'utilise lorsque le **sujet de la proposition principale et le sujet de la proposition de but sont la même personne**.\nStructure : proposition principale + **um** + … + **zu** + verbe à l'infinitif (Infinitiv) en fin de proposition.\nExemple : *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(J'apprends l'allemand — but : je travaille en Allemagne ← même sujet : ich)\n\n**2. damit + Nebensatz**\nOn l'utilise lorsque le **sujet de la proposition de but est une personne différente** de celui de la proposition principale.\nStructure : proposition principale + **damit** + proposition subordonnée (verbe en fin de proposition).\nExemple : *Ich spreche langsam, damit du mich verstehst.*\n(Je parle lentement — but : tu me comprends ← deux sujets différents : ich / du)\n\n**Remarque importante :** Après **um…zu**, il n'y a pas de sujet explicite, tandis qu'après **damit**, le sujet et le verbe conjugué doivent obligatoirement être mentionnés.",
+        "tables": [
+          {
+            "title": "Quand utiliser um…zu et quand utiliser damit ?",
+            "headers": [
+              "Outil",
+              "Les sujets",
+              "Structure de la phrase",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "Même sujet ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "Sujet différent ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "La règle d'or : si le sujet change → damit. S'il reste le même → um…zu.",
+            "theme": "default"
+          },
+          {
+            "title": "Position du verbe dans la proposition subordonnée",
+            "headers": [
+              "Type",
+              "Outil",
+              "Position du verbe",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv en fin de proposition",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "Verbe conjugué en fin de proposition",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "Dans les deux cas, le verbe se place en fin de proposition subordonnée.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Utilisez um…zu lorsque le sujet des deux propositions est le même ; le verbe à l'infinitif (Infinitiv) vient après zu en fin de proposition.",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "Elle va à la bibliothèque pour lire un livre."
+          },
+          {
+            "rule": "Utilisez damit lorsque le sujet de la proposition de but est différent de celui de la proposition principale ; le verbe conjugué se place en fin de proposition subordonnée.",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "La mère cuisine pour que les enfants puissent manger."
+          },
+          {
+            "rule": "Après um…zu, on ne répète pas le sujet, car il est sous-entendu grâce à la proposition principale.",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "J'économise de l'argent pour acheter une voiture."
+          },
+          {
+            "rule": "damit est une Konjunktion qui introduit une proposition subordonnée complète avec un sujet et un verbe conjugué en fin de proposition.",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "Il parle fort pour que tout le monde l'entende."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — J'apprends l'allemand pour étudier en Allemagne.",
+          "Sie spart Geld, um eine Reise zu machen. — Elle économise de l'argent pour faire un voyage.",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — Il se lève tôt pour ne pas rater le bus.",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — Nous parlons lentement pour que les enfants nous comprennent.",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — La maîtresse écrit au tableau pour que les élèves voient les mots.",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — Il ouvre la fenêtre pour avoir de l'air frais.",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — J'écris une liste pour ne rien oublier.",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — Elle s'entraîne chaque jour pour rester en forme."
+        ],
+        "tip": "💡 L'astuce facile : avant de choisir entre um…zu et damit, demandez-vous : « Qui effectue l'action du but ? » — Si c'est la même personne que dans la première proposition → um…zu. Si c'est une autre personne → damit. Cette simple question résout 99 % des erreurs !"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "le but / l'objectif",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "Mon but est d'apprendre l'allemand.",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "la raison / le motif",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "Quelle est la raison de cela ?",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "apprendre / étudier",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "Elle apprend l'allemand pour travailler.",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "économiser (de l'argent)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "Il économise de l'argent pour acheter un vélo.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "comprendre",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "Parle lentement pour que je te comprenne.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "aider",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "Elle explique pour qu'il puisse aider.",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "l'examen",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "Il étudie beaucoup pour réussir l'examen.",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "le voyage",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "Elle économise pour faire un voyage.",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "en bonne santé / sain",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "Il mange des fruits pour rester en bonne santé.",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "tôt / de bonne heure",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "Elle se lève tôt pour faire du jogging.",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "expliquer",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "La maîtresse explique pour que les élèves comprennent.",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "le travail / l'emploi",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "Il cherche un emploi pour gagner de l'argent.",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "acheter",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "J'économise pour acheter un livre.",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "lentement / lent",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "Parle lentement pour que je comprenne.",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "Choisissez le bon outil : Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (Le sujet des deux propositions est le même : ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "Le sujet des deux propositions est le même (ich) → on utilise um…zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "Choisissez le bon outil : Die Mutter liest vor, ___ das Kind schlafen kann. (La mère lit — l'enfant s'endort)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "Le sujet a changé : die Mutter ← → das Kind → on utilise damit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "Complétez la phrase en utilisant um…zu : Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "Placez um au début et zu directement avant le verbe en fin de proposition."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "Remettez les mots dans l'ordre pour former une phrase correcte avec damit :",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "Le verbe conjugué de la proposition subordonnée se place en fin de phrase."
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "Associez chaque phrase à sa traduction correcte :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "Écoutez la phrase et complétez le blanc : Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "Le sujet a-t-il changé ? Non → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "Prononcez la phrase suivante à voix haute et clairement : 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "Attention : zu vient directement avant le verbe en fin de proposition."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "Laquelle de ces deux phrases est grammaticalement correcte ?",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "Le sujet a changé (sie ← ihr Sohn) → damit + proposition subordonnée complète avec le verbe en fin de phrase."
           }
         ]
       }

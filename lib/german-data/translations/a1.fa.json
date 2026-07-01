@@ -11050,6 +11050,357 @@
           }
         ]
       }
+    },
+    "a1-17": {
+      "id": "a1-17",
+      "title": "ادات ربط: und, oder, aber, denn, sondern — Konjunktionen: und, oder, aber, denn, sondern",
+      "grammar": {
+        "title": "ادات ربط اساسی بین جملات — Konjunktionen",
+        "content": "**ادات ربط (Konjunktionen)** کلماتی هستند که دو جمله یا دو ایده را به هم متصل می‌کنند.\n\nویژگی اصلی این ادات در سطح A1 این است که **ترتیب فعل** در جمله‌ای که پس از آن‌ها می‌آید را **تغییر نمی‌دهند** — فعل همچنان در **جایگاه دوم** باقی می‌ماند.\n\n📌 پنج ادات و معنای آن‌ها:\n\n• **und** = و (برای جمع و افزودن)\n• **oder** = یا (برای انتخاب بین دو چیز)\n• **aber** = اما / ولی (برای تضاد یا تناقض)\n• **denn** = چون / زیرا (برای بیان دلیل)\n• **sondern** = بلکه (برای تصحیح پس از نفی)\n\n⚠️ **تفاوت مهم:** از **aber** برای تضاد ساده استفاده می‌کنیم، اما **sondern** فقط پس از یک جمله **منفی** می‌آید تا اطلاعات را تصحیح کند.\n\nمثال:\n- Ich bin nicht müde, **aber** ich schlafe. (خسته نیستم، اما می‌خوابم.)\n- Ich bin nicht müde, **sondern** fit. (خسته نیستم، بلکه سرحالم.)\n\n✅ **ترتیب در جمله:**\nجمله اول + **ادات ربط** + جمله دوم (فعل در جایگاه دوم)",
+        "tables": [
+          {
+            "title": "ادات ربط و نقش آن‌ها",
+            "headers": [
+              "ادات",
+              "معنا به فارسی",
+              "نقش",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "und",
+                  "و",
+                  "افزودن / جمع",
+                  "Ich lerne und du arbeitest."
+                ]
+              },
+              {
+                "cells": [
+                  "oder",
+                  "یا",
+                  "انتخاب بین دو گزینه",
+                  "Trinkst du Tee oder Kaffee?"
+                ]
+              },
+              {
+                "cells": [
+                  "aber",
+                  "اما / ولی",
+                  "تضاد / استدراک",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "چون / زیرا",
+                  "بیان دلیل",
+                  "Ich lerne, denn ich habe eine Prüfung."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "بلکه",
+                  "تصحیح پس از نفی",
+                  "Er ist nicht alt, sondern jung."
+                ]
+              }
+            ],
+            "note": "تمام این ادات ترتیب فعل را در جمله بعدی تغییر نمی‌دهند.",
+            "theme": "default"
+          },
+          {
+            "title": "مقایسه: aber در برابر sondern",
+            "headers": [
+              "ادات",
+              "شرط",
+              "مثال",
+              "ترجمه"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "aber",
+                  "پس از جمله مثبت یا منفی می‌آید",
+                  "Ich bin müde, aber ich lerne.",
+                  "من خسته‌ام، اما یاد می‌گیرم."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "فقط پس از جمله منفی برای تصحیح اطلاعات می‌آید",
+                  "Ich bin nicht müde, sondern fit.",
+                  "خسته نیستم، بلکه سرحالم."
+                ]
+              }
+            ],
+            "note": "💡 sondern = نفی + تصحیح. aber = تضاد عمومی.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "und به معنای 'و' است و برای پیوند دو ایده مکمل یا پیاپی به کار می‌رود. فعل در جایگاه طبیعی خود باقی می‌ماند.",
+            "example": "Ich wohne in Berlin und ich lerne Deutsch.",
+            "translation": "من در برلین زندگی می‌کنم و آلمانی یاد می‌گیرم."
+          },
+          {
+            "rule": "oder به معنای 'یا' است و برای بیان انتخاب بین دو گزینه به کار می‌رود.",
+            "example": "Kommst du heute oder kommst du morgen?",
+            "translation": "آیا امروز می‌آیی یا فردا؟"
+          },
+          {
+            "rule": "aber به معنای 'اما / ولی' است و تضاد یا استدراک بین دو جمله را نشان می‌دهد.",
+            "example": "Das Essen ist gut, aber es ist teuer.",
+            "translation": "غذا خوب است، اما گران است."
+          },
+          {
+            "rule": "denn به معنای 'چون / زیرا' است و دلیل را بیان می‌کند. sondern به معنای 'بلکه' است و فقط پس از جمله منفی برای تصحیح اطلاعات می‌آید.",
+            "example": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein.",
+            "translation": "آب می‌نوشم چون تشنه‌ام. — او بلند نیست، بلکه کوتاه است."
+          }
+        ],
+        "examples": [
+          "Ich bin müde, aber ich lerne Deutsch. — من خسته‌ام، اما آلمانی یاد می‌گیرم.",
+          "Trinkst du Kaffee oder Tee? — آیا قهوه می‌نوشی یا چای؟",
+          "Sie wohnt in Rabat und sie arbeitet dort. — او در رباط زندگی می‌کند و آنجا کار می‌کند.",
+          "Ich esse nicht viel, denn ich bin nicht hungrig. — زیاد نمی‌خورم چون گرسنه نیستم.",
+          "Das ist nicht mein Buch, sondern sein Buch. — این کتاب من نیست، بلکه کتاب اوست.",
+          "Er spricht Arabisch und Deutsch. — او عربی و آلمانی صحبت می‌کند.",
+          "Ich gehe nicht ins Kino, sondern ich bleibe zu Hause. — به سینما نمی‌روم، بلکه در خانه می‌مانم.",
+          "Bist du Student oder arbeitest du? — آیا دانشجو هستی یا کار می‌کنی؟"
+        ],
+        "tip": "💡 همیشه به یاد داشته باش: این پنج ادات (und, oder, aber, denn, sondern) ادات ربط «خنثی» هستند — فعل را از جایش تکان نمی‌دهند! فعل در جمله بعدی همچنان در جایگاه دوم باقی می‌ماند، درست مثل وقتی که هیچ ادات ربطی وجود ندارد. این همان چیزی است که آن‌ها را از ادات ربط دیگر در سطوح بالاتر متمایز می‌کند."
+      },
+      "vocabulary": [
+        {
+          "german": "lernen",
+          "arabic": "یاد می‌گیرد",
+          "example": "Ich lerne Deutsch.",
+          "exampleArabic": "من آلمانی یاد می‌گیرم.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "کار می‌کند",
+          "example": "Sie arbeitet in Berlin.",
+          "exampleArabic": "او در برلین کار می‌کند.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "زندگی می‌کند / ساکن است",
+          "example": "Er wohnt in Rabat.",
+          "exampleArabic": "او در رباط زندگی می‌کند.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "خسته",
+          "example": "Ich bin müde, aber ich lerne.",
+          "exampleArabic": "من خسته‌ام، اما یاد می‌گیرم.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "گرسنه",
+          "example": "Ich bin hungrig, denn ich esse nicht.",
+          "exampleArabic": "گرسنه‌ام چون نمی‌خورم.",
+          "type": "adjective"
+        },
+        {
+          "german": "durstig",
+          "arabic": "تشنه",
+          "example": "Er ist durstig und trinkt Wasser.",
+          "exampleArabic": "او تشنه است و آب می‌نوشد.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kaffee",
+          "arabic": "قهوه",
+          "gender": "der",
+          "plural": "-",
+          "example": "Trinkst du Kaffee oder Tee?",
+          "exampleArabic": "آیا قهوه می‌نوشی یا چای؟",
+          "type": "noun"
+        },
+        {
+          "german": "Tee",
+          "arabic": "چای",
+          "gender": "der",
+          "plural": "-",
+          "example": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "exampleArabic": "چای می‌نوشم چون قهوه دوست ندارم.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "کتاب",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist nicht mein Buch, sondern sein Buch.",
+          "exampleArabic": "این کتاب من نیست، بلکه کتاب اوست.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "امتحان",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich lerne, denn ich habe eine Prüfung.",
+          "exampleArabic": "یاد می‌گیرم چون امتحان دارم.",
+          "type": "noun"
+        },
+        {
+          "german": "heute",
+          "arabic": "امروز",
+          "example": "Kommst du heute oder morgen?",
+          "exampleArabic": "آیا امروز می‌آیی یا فردا؟",
+          "type": "adverb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "فردا",
+          "example": "Ich lerne heute und morgen.",
+          "exampleArabic": "امروز و فردا یاد می‌گیرم.",
+          "type": "adverb"
+        },
+        {
+          "german": "klein",
+          "arabic": "کوچک / کوتاه",
+          "example": "Er ist nicht groß, sondern klein.",
+          "exampleArabic": "او بلند نیست، بلکه کوتاه است.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "گران / پرهزینه",
+          "example": "Das Essen ist gut, aber teuer.",
+          "exampleArabic": "غذا خوب است، اما گران است.",
+          "type": "adjective"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "می‌ماند",
+          "example": "Ich bleibe zu Hause, denn es regnet.",
+          "exampleArabic": "در خانه می‌مانم چون باران می‌بارد.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q1",
+            "question": "ادات ربط درست را انتخاب کن: Ich bin müde, ___ ich lerne.",
+            "answer": "aber",
+            "options": [
+              "denn",
+              "aber",
+              "sondern",
+              "oder"
+            ],
+            "hint": "جمله تضادی بین خستگی و یادگیری را بیان می‌کند."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q2",
+            "question": "جمله را با ادات ربط مناسب کامل کن: Ich trinke Wasser, ___ ich bin durstig.",
+            "answer": "denn",
+            "hint": "به ادات‌ای نیاز داریم که دلیل را بیان کند."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q3",
+            "question": "کدام جمله از نظر دستوری درست است؟",
+            "answer": "Er ist nicht groß, sondern klein.",
+            "options": [
+              "Er ist nicht groß, aber klein.",
+              "Er ist nicht groß, sondern klein.",
+              "Er ist nicht groß, denn klein.",
+              "Er ist nicht groß, oder klein."
+            ],
+            "hint": "پس از نفی و تصحیح اطلاعات از sondern استفاده می‌کنیم."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-17-q4",
+            "question": "کلمات را مرتب کن تا جمله درستی بسازی:",
+            "answer": "ich lerne Deutsch , denn ich habe eine Prüfung",
+            "words": [
+              "ich",
+              "lerne",
+              "Deutsch",
+              "denn",
+              "habe",
+              "eine",
+              "Prüfung",
+              "ich",
+              ","
+            ],
+            "hint": "ادات ربط denn در وسط می‌آید و فعل در جایگاه دوم باقی می‌ماند."
+          },
+          {
+            "type": "matching",
+            "id": "a1-17-q5",
+            "question": "هر ادات ربط را با معنای درست فارسی‌اش وصل کن:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "und",
+                "right": "و"
+              },
+              {
+                "left": "oder",
+                "right": "أو"
+              },
+              {
+                "left": "aber",
+                "right": "لكن"
+              },
+              {
+                "left": "denn",
+                "right": "لأن"
+              },
+              {
+                "left": "sondern",
+                "right": "بل / وإنما"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q6",
+            "question": "🎧 به جمله گوش بده و جای خالی را پر کن: Das ist nicht mein Buch, ___ sein Buch.",
+            "answer": "sondern",
+            "hint": "جمله منفی است و به تصحیح اطلاعات نیاز دارد.",
+            "audioPrompt": "Das ist nicht mein Buch, sondern sein Buch."
+          },
+          {
+            "type": "speaking",
+            "id": "a1-17-q7",
+            "question": "جمله زیر را با صدای واضح بخوان: Ich bin müde, aber ich lerne Deutsch.",
+            "answer": "Ich bin müde, aber ich lerne Deutsch.",
+            "hint": "به تلفظ توجه کن: aber = آبِر، و müde = میودِه."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q8",
+            "question": "جمله‌ای را انتخاب کن که 'oder' را به درستی به کار برده است:",
+            "answer": "Trinkst du Kaffee oder Tee?",
+            "options": [
+              "Ich lerne oder ich bin müde.",
+              "Trinkst du Kaffee oder Tee?",
+              "Er ist nicht groß oder klein.",
+              "Ich wohne oder ich arbeite."
+            ],
+            "hint": "oder برای انتخاب بین دو گزینه منطقی استفاده می‌شود."
+          }
+        ]
+      }
     }
   }
 }

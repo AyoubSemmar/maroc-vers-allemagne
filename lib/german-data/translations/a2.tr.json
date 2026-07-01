@@ -10650,6 +10650,1046 @@
           }
         ]
       }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "Mülkiyet Hâli — Genitiv — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "Mülkiyet Hâlinin Temelleri — Özel İsimler (Peters Auto) ve Belirteçler des / der",
+        "content": "Almancada **mülkiyet hâli (Genitiv)**, iki şey arasındaki aitlik ya da ilişkiyi ifade etmek için kullanılır; yani şu soruyu yanıtlar: **Bu kime ait?**\n\nA2 düzeyinde bu hâli oluşturmanın iki temel yolu vardır:\n\n**① Özel İsimler (Eigennamen):**\nBir şeyin belirli bir kişiye ait olduğunu söylemek istediğimizde, ismin sonuna kesme işareti (Apostroph) kullanmadan doğrudan **-s** ekleriz.\nÖrnek: **Peter → Peters Auto** (Peter'ın arabası)\nÖrnek: **Anna → Annas Buch** (Anna'nın kitabı)\n\n**② Sıradan İsimlerle Belirteçler:**\nSıradan bir isim (özel isim değil) kullandığımızda, belirteç ismin cinsiyetine göre değişir:\n- Eril (Maskulinum) ve yansız (Neutrum) isimler: Belirteç **des** olur ve ismin sonuna **-s** ya da **-es** eklenir.\n- Dişil (Femininum) ve çoğul (Plural) isimler: Belirteç **der** olur ve isimde herhangi bir değişiklik olmaz.\n\nÖrnek: **das Auto des Mannes** (adamın arabası)\nÖrnek: **das Buch der Frau** (kadının kitabı)\n\n**Önemli Not:** Günlük konuşma dilinde pek çok Alman, Genitiv yerine **von + Dativ** yapısını kullanır; örneğin: **das Auto von Peter**. Ancak resmî yazışmalarda ve sınavlarda doğru Genitiv kullanımı tercih edilir.",
+        "tables": [
+          {
+            "title": "Mülkiyet Hâlinde (Genitiv) Belirteç Değişimi",
+            "headers": [
+              "Cinsiyet",
+              "Nominativ (Özne)",
+              "Genitiv (Mülkiyet)",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Eril (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "Yansız (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "Dişil (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "Çoğul (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 Eril ve Yansız: des + isim + s/es | 🔴 Dişil ve Çoğul: der + isim (değişmez)",
+            "theme": "default"
+          },
+          {
+            "title": "Mülkiyet Hâlinde Özel İsimler (Eigennamen + -s)",
+            "headers": [
+              "Özgün İsim",
+              "Genitiv",
+              "Tam Cümle",
+              "Çeviri"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "Peter'ın arabası yeni."
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "Anna'nın çantası güzel."
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "Thomas'ın köpeği büyük."
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "Maria'nın dairesi küçük."
+                ]
+              }
+            ],
+            "note": "⚠️ İsim -s, -z veya -x ile bitiyorsa yalnızca kesme işareti (Apostroph) konur: Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Özel isimler: Mülkiyeti belirtmek için ismin sonuna doğrudan -s ekle, kesme işareti kullanma.",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "Bu Laura'nın bisikleti."
+          },
+          {
+            "rule": "Eril ve yansız isimler: des kullan ve ismin sonuna -s ya da -es ekle.",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "Arabanın rengi mavi."
+          },
+          {
+            "rule": "Dişil ve çoğul isimler: Yalnızca der kullan; isimde değişiklik olmaz.",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "Öğretmenin adı Müller."
+          },
+          {
+            "rule": "Özel isim -s, -z veya -x ile bitiyorsa, -s eklemek yerine yalnızca kesme işareti (') koy.",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "Bu Thomas'ın kitabı."
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — Bu Peter'ın arabası.",
+          "Annas Tasche ist sehr schön. — Anna'nın çantası çok güzel.",
+          "Der Hund des Mannes ist groß. — Adamın köpeği büyük.",
+          "Das Zimmer des Kindes ist klein. — Çocuğun odası küçük.",
+          "Die Wohnung der Frau ist modern. — Kadının dairesi modern.",
+          "Die Spielzeuge der Kinder sind neu. — Çocukların oyuncakları yeni.",
+          "Ich nehme das Fahrrad meines Bruders. — Kardeşimin bisikletini alıyorum.",
+          "Der Name des Lehrers ist Schmidt. — Öğretmenin adı Schmidt."
+        ],
+        "tip": "💡 Altın kuralı unutma: Eril ve yansız için **des** (isme -s ekle), dişil ve çoğul için **der** (isim değişmez). Özel isimse sonuna doğrudan -s ekle!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "araba",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "Bu Peter'ın arabası.",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "çanta",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "Anna'nın çantası yeni.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "köpek",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "Adamın köpeği büyük.",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "oda",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "Çocuğun odası küçük.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "daire",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "Kadının dairesi modern.",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "isim / ad",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "Öğretmenin adı Schmidt.",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "bisiklet",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "Çocuğun bisikleti kırmızı.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "kitap",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "Bu Anna'nın kitabı.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "öğretmen (erkek)",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "Öğretmenin adı Müller.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "öğretmen (kadın)",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "Öğretmenin kitabı eski.",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "renk",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "Arabanın rengi mavi.",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "ait olmak / -e ait",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "Araba Peter'ın babasına ait.",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "yeni",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "Peter'ın arabası yeni.",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "oyuncak",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "Çocukların oyuncakları renkli.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "Mülkiyet hâlinde doğru belirteci seç: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "Mann kelimesi eril → des kullanılır"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "Cümleyi özel ismin doğru biçimiyle tamamla: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "Anna özel isminin sonuna doğrudan -s ekle"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "Mülkiyet hâlinin doğru biçimini seç: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "Lehrerin kelimesi dişil → der kullanılır"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "Kelimeleri doğru cümleyi oluşturacak şekilde sırala:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "Sıralama: özne + fiil + cümlenin geri kalanı"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "Her cümleyi doğru çevirisiyle eşleştir:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "Cümleyi dinle ve boşluğu tamamla: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto yansız → des kullanılır",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "Thomas ismi -s ile bitiyor. Mülkiyeti doğru nasıl yazarız?",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "İsim -s ile bitiyorsa yalnızca kesme işareti (') konur"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "Aşağıdaki cümleyi yüksek sesle doğru biçimde söyle: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "Telaffuza dikkat et: Annas (Annas) ve der Frau (deer frav)"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "İlgi Cümleleri — Nominativ ve Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "Temel İlgi Cümleleri — Relativsätze im Nominativ und Akkusativ",
+        "content": "**İlgi cümlesi nedir?**\nİlgi cümlesi (Relativsatz), daha önce bahsedilen bir ismi açıklamak veya tanımlamak için ona eklenen bir yan cümledir. Her zaman **ilgi zamiri** (Relativpronomen) ile başlar; örneğin: **der, die, das**.\n\n**İlgi zamiri nasıl seçilir?**\nZamirin seçimi iki şeye bağlıdır:\n1. Tanımladığımız **ismin cinsiyeti** (eril, dişil veya nötr) — bu, zamirin temel biçimini belirler.\n2. **Zamirin ilgi cümlesi içindeki işlevi** — özne mi (Nominativ) yoksa nesne mi (Akkusativ)?\n\n**Nominativ:** İlgi zamiri, ilgi cümlesinin **öznesidir**.\nÖrnek: Das ist der Mann, **der** hier arbeitet. ← (der Mann çalışan kişidir → özne)\n\n**Akkusativ:** İlgi zamiri, ilgi cümlesinde **nesnedir**.\nÖrnek: Das ist der Mann, **den** ich kenne. ← (adamı ben tanıyorum → nesne)\n\n**Çok önemli kural:** İlgi cümlesindeki fiil her zaman **cümlenin sonuna** gelir.\n\n**Virgül (Komma):** İlgi cümlesi, ana cümleden her zaman virgülle ayrılır.",
+        "tables": [
+          {
+            "title": "İlgi Zamirleri — Relativpronomen (Nominativ ve Akkusativ)",
+            "headers": [
+              "Cinsiyet / Tür",
+              "Örnek (İsim)",
+              "Nominativ (Özne)",
+              "Akkusativ (Nesne)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Eril — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Dişil — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Nötr — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Çoğul — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Dikkat: Akkusativ'deki eril ilgi zamiri der'den den'e değişir — tek fark budur!",
+            "theme": "default"
+          },
+          {
+            "title": "Karşılaştırma: Belirli Artikel ve İlgi Zamiri (Relativpronomen)",
+            "headers": [
+              "Cinsiyet",
+              "Belirli Artikel",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Eril",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Dişil",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Nötr",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Çoğul",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "İlgi zamirleri belirli artikellere çok benzer — bu da ezberlemelerini kolaylaştırır!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "İlgi zamiri, ana cümlede tanımladığı **ismin cinsiyetiyle** uyuşur.",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "Orada duran kadın benim öğretmenimdir."
+          },
+          {
+            "rule": "İlgi zamiri ilgi cümlesinde **özne** ise **Nominativ** kullanılır: der / die / das / die.",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "Bu, futbol oynayan çocuktur."
+          },
+          {
+            "rule": "İlgi zamiri ilgi cümlesinde **nesne** ise **Akkusativ** kullanılır: den / die / das / die.",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "İzlediğim film harikaydı."
+          },
+          {
+            "rule": "İlgi cümlesindeki fiil her zaman **sona** gelir ve cümle **virgülle** ayrılır.",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "Gitar çalmayı iyi bilen bir arkadaşım var."
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — Bu, her gün koşu yapan adamdır.",
+          "Die Frau, die ich kenne, wohnt in Berlin. — Tanıdığım kadın Berlin'de yaşıyor.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — Masanın üzerinde duran kitap bana ait.",
+          "Ich suche einen Job, den ich liebe. — Sevdiğim bir iş arıyorum.",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — Bulduğumuz köpek çok sevimli.",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — Parkta oynayan çocuklar benim komşularım.",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — Gittiğimiz restoran çok iyiydi.",
+          "Er hat eine Schwester, die in Marokko lebt. — Fas'ta yaşayan bir kız kardeşi var."
+        ],
+        "tip": "💡 Hatırla: İlgi zamirlerinde Nominativ ile Akkusativ arasındaki tek fark eril cinsiyettedir! **der**, Akkusativ'de **den**'e dönüşür. Dişil, nötr ve çoğul değişmez. Bu tek farka odaklanırsan kuralı kolayca öğrenirsin!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "adam / erkek",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "Orada duran adam babam.",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "kadın / bayan",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "Gördüğüm kadın gülümsüyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "çocuk",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "Ağlayan çocuk yorgun.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "kitap",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "Okuduğum kitap ilginç.",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "film",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "İzlediğimiz film komik.",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "arkadaş / dost",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "İyi yemek pişiren bir arkadaşım var.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "daire / apartman dairesi",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "Aradığım daire büyük.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "köpek",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "Benim köpeğimin adı Max.",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "tanımak (bir kişiyi veya yeri)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "Tanıdığım kadın çok nazik.",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "aramak",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "Sevdiği bir iş arıyor.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "satın almak",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "Satın aldığım araba kırmızı.",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "ilginç / ilgi çekici",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "Okuduğu kitap çok ilginç.",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "komşu",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "Tanıdığım komşu arkadaş canlısı.",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "restoran",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "Gittiğimiz restoran yeni.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "Doğru ilgi zamirini seçin: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "İsim eril (der Mann) ve zamir ilgi cümlesinin öznesidir → Nominativ eril"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "Doğru ilgi zamirini seçin: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "İsim eril (der Film) ancak zamir nesnedir (ich habe ihn gesehen) → Akkusativ eril"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "Uygun ilgi zamiriyle cümleyi tamamlayın: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "İsim dişil (die Frau) ve zamir öznedir → Nominativ dişil = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "Cümleyi dinleyin ve boşluğu doldurun: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "İsim nötr (das Kind) ve zamir nesnedir → Akkusativ nötr = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "Kelimeleri doğru sıraya koyarak cümle oluşturun: (Büyük bir daire arıyorum)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "İlgi cümlesindeki fiil sona gelir!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "Kelimeleri doğru sıraya koyarak cümle oluşturun: (Okuduğum kitap ilginç)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Das Buch ile başlayın, ardından ilgi cümlesi, sonra ana cümle"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "Her cümleyi doğru çevirisiyle eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "Aşağıdaki cümleyi yüksek sesle ve doğru şekilde söyleyin: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "Hatırla: möchte fiili ilgi cümlesinin sonuna gelir ve die'den önce virgül kullanılır"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "Amacı İfade Etmek: um…zu ve damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "Amaç Cümleleri (Finalsätze): um…zu ile damit Karşılaştırması",
+        "content": "Almancada **Finalsätze** (amaç cümleleri), bir eylemin **amacını** veya **gerekçesini** ifade etmek için kullanılır; yani şu soruları yanıtlar: \"Bunu neden yapıyorsun?\" veya \"Amacın ne?\"\n\nİki temel yöntem vardır:\n\n**1. um … zu + Infinitiv**\nAna cümlenin öznesi ile amaç cümlesinin öznesi **aynı kişi** olduğunda kullanılır.\nYapı: Ana cümle + **um** + … + **zu** + cümle sonunda mastar (Infinitiv).\nÖrnek: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(Almanca öğreniyorum — amaç: Almanya'da çalışmak ← aynı özne: ich)\n\n**2. damit + Nebensatz**\nAmaç cümlesinin öznesi, ana cümlenin öznesinden **farklı bir kişi** olduğunda kullanılır.\nYapı: Ana cümle + **damit** + yan cümle (fiil sonda).\nÖrnek: *Ich spreche langsam, damit du mich verstehst.*\n(Yavaş konuşuyorum — amaç: sen beni anlayasın ← farklı özneler: ich / du)\n\n**Önemli Not:** **um…zu**'dan sonra açık bir özne belirtilmez; **damit**'ten sonra ise özne ve çekimli fiil mutlaka yer almalıdır.",
+        "tables": [
+          {
+            "title": "um…zu Ne Zaman, damit Ne Zaman Kullanılır?",
+            "headers": [
+              "Bağlaç",
+              "Özneler",
+              "Cümle Yapısı",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "Aynı özne ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "Farklı özne ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "Altın kural: Özne değişiyorsa → damit. Aynı kalıyorsa → um…zu.",
+            "theme": "default"
+          },
+          {
+            "title": "Yan Cümlede Fiilin Yeri",
+            "headers": [
+              "Tür",
+              "Bağlaç",
+              "Fiilin Yeri",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "Sonda zu + Infinitiv",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "Sonda çekimli fiil",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "Her iki durumda da fiil yan cümlenin sonuna gelir.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Her iki cümlenin öznesi aynı olduğunda um…zu kullanılır; mastar (Infinitiv), cümle sonunda zu'dan hemen sonra gelir.",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "Bir kitap okumak için kütüphaneye gidiyor."
+          },
+          {
+            "rule": "Amaç cümlesinin öznesi ana cümlenin öznesinden farklı olduğunda damit kullanılır; çekimli fiil yan cümlenin sonuna gelir.",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "Anne, çocuklar yiyebilsin diye yemek pişiriyor."
+          },
+          {
+            "rule": "um…zu'dan sonra özne tekrar belirtilmez; çünkü ana cümleden zaten anlaşılmaktadır.",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "Araba almak için para biriktiriyorum."
+          },
+          {
+            "rule": "damit bir Konjunktion olup sonda çekimli fiiliyle tam bir yan cümle başlatır; özne ve çekimli fiil zorunludur.",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "Herkes onu duysun diye yüksek sesle konuşuyor."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — Almanya'da okumak için Almanca öğreniyorum.",
+          "Sie spart Geld, um eine Reise zu machen. — Seyahat etmek için para biriktiriyor.",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — Otobüsü kaçırmamak için erken kalkıyor.",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — Çocuklar bizi anlasın diye yavaş konuşuyoruz.",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — Öğrenciler kelimeleri görsün diye öğretmen tahtaya yazıyor.",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — Temiz hava almak için pencereyi açıyor.",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — Hiçbir şeyi unutmamak için liste yazıyorum.",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — Formda kalmak için her gün antrenman yapıyor."
+        ],
+        "tip": "💡 Kolay ipucu: um…zu ile damit arasında seçim yapmadan önce kendinize şunu sorun: \"Amaç eylemini kim gerçekleştiriyor?\" — Birinci cümledeki kişinin kendisiyse → um…zu. Başka biri ise → damit. Bu basit soru hataların %99'unu çözer!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "Hedef",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "Hedefim Almanca öğrenmek.",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "Sebep / Neden",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "Bunun sebebi ne?",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "Öğrenmek / Çalışmak",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "Çalışmak için Almanca öğreniyor.",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "Biriktirmek (para)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "Bisiklet almak için para biriktiriyor.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "Anlamak",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "Seni anlayayım diye yavaş konuş.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "Yardım etmek",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "O yardım edebilsin diye açıklıyor.",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "Sınav",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "Sınavı geçmek için çok çalışıyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "Yolculuk / Seyahat",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "Seyahat etmek için para biriktiriyor.",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "Sağlıklı / Sağlıklı olmak",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "Sağlıklı kalmak için meyve yiyor.",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "Erken",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "Koşmak için erken kalkıyor.",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "Açıklamak",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "Öğrenciler anlasın diye öğretmen açıklıyor.",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "İş / Çalışma",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "Para kazanmak için iş arıyor.",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "Satın almak",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "Kitap almak için para biriktiriyorum.",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "Yavaş / Yavaşça",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "Anlayayım diye yavaş konuş.",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "Doğru bağlacı seçin: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (Her iki cümlenin öznesi aynıdır: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "Her iki cümlenin öznesi aynı (ich) → um…zu kullanılır"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "Doğru bağlacı seçin: Die Mutter liest vor, ___ das Kind schlafen kann. (Anne okuyor — çocuk uyuyor)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "Özne değişti: die Mutter ← → das Kind → damit kullanılır"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "Cümleyi um…zu kullanarak tamamlayın: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "um'u başa, zu'yu cümle sonundaki fiilin hemen önüne koyun."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "Kelimeleri damit ile doğru bir cümle oluşturacak şekilde sıralayın:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "Yan cümledeki çekimli fiil en sona gelir."
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "Her cümleyi doğru çevirisiyle eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "Cümleyi dinleyin ve boşluğu doldurun: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "Özne değişti mi? Hayır → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "Aşağıdaki cümleyi net bir şekilde sesli okuyun: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "Dikkat: zu, cümle sonundaki fiilin hemen önüne gelir."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "Hangisi dilbilgisel olarak doğrudur?",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "Özne değişti (sie ← ihr Sohn) → damit + sonda fiilli tam yan cümle."
+          }
+        ]
+      }
     }
   }
 }

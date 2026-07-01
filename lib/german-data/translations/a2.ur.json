@@ -10650,6 +10650,1046 @@
           }
         ]
       }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "ملکیت کی حالت — الجینیتیف (Genitiv) — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "ملکیت کی حالت کی بنیادی باتیں — اعلام کے نام (Peters Auto) اور تعریفی ادوات des / der",
+        "content": "جرمن زبان میں ہم **ملکیت کی حالت (Genitiv)** کا استعمال دو چیزوں کے درمیان تعلق یا انتساب ظاہر کرنے کے لیے کرتے ہیں، یعنی اس سوال کا جواب دینے کے لیے: **یہ کس کا ہے؟**\n\nA2 سطح پر اس حالت کو بنانے کے دو بنیادی طریقے ہیں:\n\n**① اعلام کے نام (Eigennamen):**\nجب ہم یہ کہنا چاہیں کہ کوئی چیز کسی مخصوص نام والے شخص کی ہے، تو ہم بس نام کے آخر میں **-s** لگا دیتے ہیں، بغیر کسی apostrophe کے۔\nمثال: **Peter → Peters Auto** (پیٹر کی گاڑی)\nمثال: **Anna → Annas Buch** (آنا کی کتاب)\n\n**② عام ناموں کے ساتھ تعریفی ادوات:**\nجب ہم کوئی عام اسم استعمال کریں (جو علَم نہ ہو)، تو تعریفی ادات اسم کی جنس کے مطابق بدل جاتی ہے:\n- مذکر (Maskulinum) اور غیر جانبدار (Neutrum) اسماء: ادات **des** ہو جاتی ہے اور اسم کے آخر میں **-s** یا **-es** لگایا جاتا ہے۔\n- مؤنث (Femininum) اور جمع (Plural) اسماء: ادات **der** ہو جاتی ہے اور اسم میں کوئی تبدیلی نہیں آتی۔\n\nمثال: **das Auto des Mannes** (مرد کی گاڑی)\nمثال: **das Buch der Frau** (عورت کی کتاب)\n\n**اہم نوٹ:** روزمرہ بول چال میں بہت سے جرمن لوگ Genitiv کی جگہ حرفِ جر **von + Dativ** استعمال کرتے ہیں، جیسے: **das Auto von Peter**۔ لیکن رسمی تحریر اور امتحانات میں درست Genitiv کا استعمال ہی بہتر سمجھا جاتا ہے۔",
+        "tables": [
+          {
+            "title": "ملکیت کی حالت (Genitiv) میں تعریفی ادات کی تبدیلی",
+            "headers": [
+              "جنس",
+              "Nominativ (فاعل)",
+              "Genitiv (ملکیت)",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "غیر جانبدار (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 مذکر اور غیر جانبدار: des + اسم + s/es | 🔴 مؤنث اور جمع: der + اسم بغیر کسی تبدیلی کے",
+            "theme": "default"
+          },
+          {
+            "title": "ملکیت کی حالت میں اعلام کے نام (Eigennamen + -s)",
+            "headers": [
+              "اصل نام",
+              "Genitiv",
+              "مکمل جملہ",
+              "ترجمہ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "پیٹر کی گاڑی نئی ہے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "آنا کا بیگ خوبصورت ہے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "ٹامس کا کتا بڑا ہے۔"
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "ماریا کا فلیٹ چھوٹا ہے۔"
+                ]
+              }
+            ],
+            "note": "⚠️ اگر نام -s، -z یا -x پر ختم ہو تو صرف اوپری کوما (Apostroph) لگائیں: Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "اعلام کے نام: ملکیت ظاہر کرنے کے لیے نام کے فوراً بعد -s لگائیں، بغیر کوما کے۔",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "یہ لاورا کی سائیکل ہے۔"
+          },
+          {
+            "rule": "مذکر اور غیر جانبدار اسماء: des استعمال کریں اور اسم کے آخر میں -s یا -es لگائیں۔",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "گاڑی کا رنگ نیلا ہے۔"
+          },
+          {
+            "rule": "مؤنث اور جمع اسماء: صرف der استعمال کریں، اسم میں کوئی تبدیلی نہیں آتی۔",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "استانی کا نام مولر ہے۔"
+          },
+          {
+            "rule": "اگر علَم کا نام -s، -z یا -x پر ختم ہو تو -s لگانے کی بجائے صرف اوپری کوما (') لگائیں۔",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "یہ ٹامس کی کتاب ہے۔"
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — یہ پیٹر کی گاڑی ہے۔",
+          "Annas Tasche ist sehr schön. — آنا کا بیگ بہت خوبصورت ہے۔",
+          "Der Hund des Mannes ist groß. — مرد کا کتا بڑا ہے۔",
+          "Das Zimmer des Kindes ist klein. — بچے کا کمرہ چھوٹا ہے۔",
+          "Die Wohnung der Frau ist modern. — عورت کا فلیٹ جدید ہے۔",
+          "Die Spielzeuge der Kinder sind neu. — بچوں کے کھلونے نئے ہیں۔",
+          "Ich nehme das Fahrrad meines Bruders. — میں اپنے بھائی کی سائیکل لے رہا ہوں۔",
+          "Der Name des Lehrers ist Schmidt. — استاد کا نام شمٹ ہے۔"
+        ],
+        "tip": "💡 سنہری اصول یاد رکھیں: مذکر اور غیر جانبدار کے لیے **des** (اسم میں -s لگا کر)، اور مؤنث اور جمع کے لیے **der** (اسم میں کوئی تبدیلی نہیں)۔ اور اگر علَم کا نام ہو تو بس آخر میں سیدھا -s لگا دیں!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "گاڑی",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "یہ پیٹر کی گاڑی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "بیگ / تھیلا",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "آنا کا بیگ نیا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "کتا",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "مرد کا کتا بڑا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "کمرہ",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "بچے کا کمرہ چھوٹا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "فلیٹ / اپارٹمنٹ",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "عورت کا فلیٹ جدید ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "نام",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "استاد کا نام شمٹ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "سائیکل",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "بچے کی سائیکل سرخ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "کتاب",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "یہ آنا کی کتاب ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "استاد",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "استاد کا نام مولر ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "استانی",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "استانی کی کتاب پرانی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "رنگ",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "گاڑی کا رنگ نیلا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "تعلق رکھنا / کسی کا ہونا",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "گاڑی پیٹر کے والد کی ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "نیا",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "پیٹر کی گاڑی نئی ہے۔",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "کھلونا",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "بچوں کے کھلونے رنگ برنگے ہیں۔",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "ملکیت کی حالت میں درست تعریفی ادات چنیں: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "لفظ Mann مذکر ہے ← ہم des استعمال کریں گے"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "علَم کے نام کی درست شکل سے جملہ مکمل کریں: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "علَم کے نام Anna کے فوراً بعد -s لگائیں"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "ملکیت کی حالت کی درست شکل چنیں: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "لفظ Lehrerin مؤنث ہے ← ہم der استعمال کریں گے"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "الفاظ کو ترتیب دے کر درست جملہ بنائیں:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "ترتیب: فاعل + فعل + جملے کا بقیہ حصہ"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "ہر جملے کو اس کے درست ترجمے سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto غیر جانبدار ہے ← ہم des استعمال کریں گے",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "ٹامس کا نام -s پر ختم ہوتا ہے۔ ملکیت کو درست طریقے سے کیسے لکھیں گے؟",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "اگر نام s پر ختم ہو تو صرف اوپری کوما (') لگائیں"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "درج ذیل جملہ بلند آواز سے صحیح طریقے سے بولیں: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "تلفظ پر دھیان دیں: Annas (آناس) اور der Frau (دیر فراو)"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "مقصد کا اظہار: um…zu اور damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "مقصدی جملے (Finalsätze): um…zu بمقابلہ damit",
+        "content": "جرمن زبان میں **Finalsätze** (مقصدی جملے) کسی کام کے **ہدف** یا **مقصد** کو ظاہر کرنے کے لیے استعمال ہوتے ہیں، یعنی اس سوال کا جواب دینے کے لیے: \"تم یہ کیوں کر رہے ہو؟\" یا \"تمہارا مقصد کیا ہے؟\"\n\nدو بنیادی طریقے ہیں:\n\n**1. um … zu + Infinitiv**\nاسے اس وقت استعمال کیا جاتا ہے جب **مرکزی جملے کا فاعل اور مقصدی جملے کا فاعل ایک ہی شخص ہو**۔\nساخت: مرکزی جملہ + **um** + … + **zu** + جملے کے آخر میں Infinitiv۔\nمثال: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(میں جرمن سیکھتا ہوں — مقصد: میں جرمنی میں کام کروں ← ایک ہی فاعل: ich)\n\n**2. damit + Nebensatz**\nاسے اس وقت استعمال کیا جاتا ہے جب **مقصدی جملے کا فاعل مرکزی جملے کے فاعل سے مختلف ہو**۔\nساخت: مرکزی جملہ + **damit** + ضمنی جملہ (فعل آخر میں)۔\nمثال: *Ich spreche langsam, damit du mich verstehst.*\n(میں آہستہ بولتا ہوں — مقصد: تم مجھے سمجھو ← دو مختلف فاعل: ich / du)\n\n**اہم نوٹ:** **um…zu** کے بعد فاعل دوبارہ ذکر نہیں ہوتا، جبکہ **damit** کے بعد فاعل اور مصرَّف فعل دونوں کا ذکر ضروری ہے۔",
+        "tables": [
+          {
+            "title": "um…zu اور damit کب استعمال کریں؟",
+            "headers": [
+              "ادات",
+              "فاعل",
+              "جملے کی ساخت",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "ایک ہی فاعل ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "مختلف فاعل ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "سنہری اصول: اگر فاعل بدل جائے → damit۔ اگر وہی رہے → um…zu۔",
+            "theme": "default"
+          },
+          {
+            "title": "ضمنی جملے میں فعل کی جگہ",
+            "headers": [
+              "قسم",
+              "ادات",
+              "فعل کی جگہ",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv آخر میں",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "مصرَّف فعل آخر میں",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "دونوں صورتوں میں فعل ضمنی جملے کے آخر میں آتا ہے۔",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "um…zu اس وقت استعمال کریں جب دونوں جملوں کا فاعل ایک ہو، اور Infinitiv فعل zu کے بعد جملے کے آخر میں آئے۔",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "وہ کتاب پڑھنے کے لیے لائبریری جاتی ہے۔"
+          },
+          {
+            "rule": "damit اس وقت استعمال کریں جب مقصدی جملے کا فاعل مرکزی جملے کے فاعل سے مختلف ہو، اور مصرَّف فعل ضمنی جملے کے آخر میں آئے۔",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "ماں کھانا پکاتی ہے تاکہ بچے کھا سکیں۔"
+          },
+          {
+            "rule": "um…zu کے بعد فاعل دوبارہ ذکر نہیں کیا جاتا، کیونکہ وہ مرکزی جملے سے سمجھ میں آتا ہے۔",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "میں گاڑی خریدنے کے لیے پیسے بچاتا ہوں۔"
+          },
+          {
+            "rule": "damit ایک Konjunktion ہے جو مکمل ضمنی جملہ متعارف کراتی ہے جس میں فاعل اور آخر میں مصرَّف فعل ہوتا ہے۔",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "وہ اونچی آواز میں بولتا ہے تاکہ سب اسے سنیں۔"
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — میں جرمنی میں پڑھنے کے لیے جرمن سیکھتا ہوں۔",
+          "Sie spart Geld, um eine Reise zu machen. — وہ سفر کرنے کے لیے پیسے بچاتی ہے۔",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — وہ بس چھوٹنے سے بچنے کے لیے جلدی اٹھتا ہے۔",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — ہم آہستہ بولتے ہیں تاکہ بچے ہمیں سمجھیں۔",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — استانی بورڈ پر لکھتی ہے تاکہ طلبہ الفاظ دیکھ سکیں۔",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — وہ تازہ ہوا لینے کے لیے کھڑکی کھولتا ہے۔",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — میں فہرست لکھتا ہوں تاکہ کچھ بھول نہ جاؤں۔",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — وہ صحت مند رہنے کے لیے ہر روز ورزش کرتی ہے۔"
+        ],
+        "tip": "💡 آسان ترکیب: um…zu اور damit میں سے انتخاب کرنے سے پہلے خود سے پوچھیں: \"مقصد والا کام کون کرے گا؟\" — اگر پہلے جملے والا ہی شخص ہو → um…zu۔ اگر کوئی اور شخص ہو → damit۔ یہ سادہ سوال 99% غلطیاں دور کر دیتا ہے!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "ہدف / مقصد",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "میرا مقصد جرمن سیکھنا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "وجہ / سبب",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "اس کی وجہ کیا ہے؟",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "سیکھنا / پڑھنا",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "وہ کام کرنے کے لیے جرمن سیکھتی ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "پیسے بچانا",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "وہ سائیکل خریدنے کے لیے پیسے بچاتا ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "سمجھنا",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "آہستہ بولو تاکہ میں تمہیں سمجھ سکوں۔",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "مدد کرنا",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "وہ سمجھاتی ہے تاکہ وہ مدد کر سکے۔",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "امتحان",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "وہ امتحان پاس کرنے کے لیے بہت پڑھتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "سفر",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "وہ سفر کرنے کے لیے پیسے بچاتی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "صحت مند / تندرست",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "وہ صحت مند رہنے کے لیے پھل کھاتا ہے۔",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "جلدی / سویرے",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "وہ دوڑنے کے لیے جلدی اٹھتی ہے۔",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "سمجھانا / وضاحت کرنا",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "استانی سمجھاتی ہے تاکہ طلبہ سمجھ سکیں۔",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "کام / ملازمت",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "وہ پیسے کمانے کے لیے کام ڈھونڈتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "خریدنا",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "میں کتاب خریدنے کے لیے پیسے بچاتا ہوں۔",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "آہستہ / سست",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "آہستہ بولو تاکہ میں سمجھ سکوں۔",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "درست ادات چنیں: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (دونوں جملوں کا فاعل ایک ہی ہے: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "دونوں جملوں کا فاعل ایک ہی ہے (ich) → um…zu استعمال کریں"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "درست ادات چنیں: Die Mutter liest vor, ___ das Kind schlafen kann. (ماں پڑھتی ہے — بچہ سوتا ہے)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "فاعل بدل گیا: die Mutter ← → das Kind → damit استعمال کریں"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "um…zu استعمال کرتے ہوئے جملہ مکمل کریں: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "um شروع میں اور zu فعل سے بالکل پہلے جملے کے آخر میں رکھیں۔"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "الفاظ کو ترتیب دے کر damit کے ساتھ درست جملہ بنائیں:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "ضمنی جملے میں مصرَّف فعل آخر میں آتا ہے۔"
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "ہر جملے کو اس کے درست ترجمے سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "کیا فاعل بدلا؟ نہیں → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "یہ جملہ واضح آواز میں بولیں: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "یاد رہے: zu فعل سے بالکل پہلے جملے کے آخر میں آتا ہے۔"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "گرامر کے لحاظ سے کون سا جملہ درست ہے؟",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "فاعل بدل گیا (sie ← ihr Sohn) → damit + آخر میں فعل کے ساتھ مکمل ضمنی جملہ۔"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "موصولی جملے — Nominativ و Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "سادہ موصولی جملے — Relativsätze im Nominativ und Akkusativ",
+        "content": "**موصولی جملہ کیا ہوتا ہے؟**\nموصولی جملہ (Relativsatz) ایک ضمنی جملہ ہوتا ہے جو کسی پہلے سے مذکور اسم کے ساتھ جوڑا جاتا ہے تاکہ اسے واضح یا بیان کیا جا سکے۔ یہ ہمیشہ ایک **موصولی ضمیر** (Relativpronomen) سے شروع ہوتا ہے، جیسے: **der، die، das**۔\n\n**موصولی ضمیر کا انتخاب کیسے کریں؟**\nضمیر کا انتخاب دو چیزوں پر منحصر ہوتا ہے:\n1. **اسم کی جنس** جسے ہم بیان کر رہے ہیں (مذکر، مؤنث، یا غیر جانبدار) — یہ ضمیر کی بنیادی شکل طے کرتی ہے۔\n2. **موصولی جملے کے اندر ضمیر کا کردار** — کیا یہ فاعل (Nominativ) ہے یا مفعول (Akkusativ)؟\n\n**Nominativ:** موصولی ضمیر موصولی جملے کا **فاعل** ہوتا ہے۔\nمثال: Das ist der Mann, **der** hier arbeitet. ← (der Mann وہ ہے جو کام کرتا ہے → فاعل)\n\n**Akkusativ:** موصولی ضمیر موصولی جملے میں **مفعول** ہوتا ہے۔\nمثال: Das ist der Mann, **den** ich kenne. ← (میں اس آدمی کو جانتا ہوں → مفعول)\n\n**ایک بہت اہم قاعدہ:** موصولی جملے میں فعل ہمیشہ **جملے کے آخر میں** آتا ہے۔\n\n**کوما (Komma):** موصولی جملہ ہمیشہ مرکزی جملے سے کوما کے ذریعے الگ کیا جاتا ہے۔",
+        "tables": [
+          {
+            "title": "موصولی ضمائر — Relativpronomen (Nominativ و Akkusativ)",
+            "headers": [
+              "جنس / قسم",
+              "مثال (اسم)",
+              "Nominativ (فاعل)",
+              "Akkusativ (مفعول)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "غیر جانبدار — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "غور کریں: Akkusativ میں مذکر کا موصولی ضمیر der سے den میں بدل جاتا ہے — اور یہی واحد فرق ہے!",
+            "theme": "default"
+          },
+          {
+            "title": "موازنہ: معرفہ آرٹیکل (Artikel) اور موصولی ضمیر (Relativpronomen)",
+            "headers": [
+              "جنس",
+              "معرفہ آرٹیکل",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "غیر جانبدار",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "موصولی ضمائر معرفہ آرٹیکلز سے بہت ملتے جلتے ہیں — جس سے انہیں یاد کرنا آسان ہو جاتا ہے!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "موصولی ضمیر مرکزی جملے میں جس اسم کو بیان کرتا ہے اس کی **جنس** سے مطابقت رکھتا ہے۔",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "وہ عورت جو وہاں کھڑی ہے میری استانی ہے۔"
+          },
+          {
+            "rule": "اگر موصولی ضمیر موصولی جملے میں **فاعل** ہو تو **Nominativ** استعمال کریں: der / die / das / die۔",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "یہ وہ بچہ ہے جو فٹ بال کھیلتا ہے۔"
+          },
+          {
+            "rule": "اگر موصولی ضمیر موصولی جملے میں **مفعول** ہو تو **Akkusativ** استعمال کریں: den / die / das / die۔",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "وہ فلم جو میں نے دیکھی بہت شاندار تھی۔"
+          },
+          {
+            "rule": "موصولی جملے میں فعل ہمیشہ **آخر میں** آتا ہے، اور جملہ **کوما** سے الگ کیا جاتا ہے۔",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "میرا ایک دوست ہے جو گٹار اچھا بجاتا ہے۔"
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — یہ وہ آدمی ہے جو ہر روز جاگنگ کرتا ہے۔",
+          "Die Frau, die ich kenne, wohnt in Berlin. — وہ عورت جسے میں جانتا ہوں برلن میں رہتی ہے۔",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — وہ کتاب جو میز پر رکھی ہے میری ہے۔",
+          "Ich suche einen Job, den ich liebe. — میں ایسی نوکری ڈھونڈ رہا ہوں جسے میں پسند کروں۔",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — وہ کتا جو ہمیں ملا بہت پیارا ہے۔",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — وہ بچے جو پارک میں کھیل رہے ہیں میرے پڑوسی ہیں۔",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — وہ ریستوران جو ہم نے دیکھا بہت اچھا تھا۔",
+          "Er hat eine Schwester, die in Marokko lebt. — اس کی ایک بہن ہے جو مراکش میں رہتی ہے۔"
+        ],
+        "tip": "💡 یاد رکھیں: Nominativ اور Akkusativ کے موصولی ضمائر میں فرق صرف مذکر میں ہے! **der** Akkusativ میں **den** بن جاتا ہے۔ مؤنث، غیر جانبدار اور جمع میں کوئی تبدیلی نہیں آتی۔ صرف اس ایک فرق پر توجہ دیں اور آپ یہ قاعدہ آسانی سے سیکھ لیں گے!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "آدمی / مرد",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "وہ آدمی جو وہاں کھڑا ہے میرا باپ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "عورت / خاتون",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "وہ عورت جسے میں دیکھ رہا ہوں مسکرا رہی ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "بچہ",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "وہ بچہ جو رو رہا ہے تھکا ہوا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "کتاب",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "وہ کتاب جو میں پڑھ رہا ہوں دلچسپ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "فلم",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "وہ فلم جو ہم دیکھ رہے ہیں مزاحیہ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "دوست",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "میرا ایک دوست ہے جو اچھا کھانا پکاتا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "فلیٹ / اپارٹمنٹ",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "وہ فلیٹ جو میں ڈھونڈ رہا ہوں بڑا ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "کتا",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "میرے کتے کا نام میکس ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "جاننا (کسی شخص یا جگہ کو)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "وہ عورت جسے میں جانتا ہوں بہت اچھی ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "ڈھونڈنا / تلاش کرنا",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "وہ ایسی نوکری ڈھونڈ رہا ہے جو اسے پسند ہو۔",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "خریدنا",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "وہ گاڑی جو میں خرید رہا ہوں سرخ ہے۔",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "دلچسپ",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "وہ کتاب جو وہ پڑھ رہا ہے بہت دلچسپ ہے۔",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "پڑوسی",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "وہ پڑوسی جسے میں جانتا ہوں دوستانہ ہے۔",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "ریستوران",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "وہ ریستوران جو ہم جا رہے ہیں نیا ہے۔",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "صحیح موصولی ضمیر چنیں: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "اسم مذکر ہے (der Mann) اور ضمیر موصولی جملے کا فاعل ہے → Nominativ مذکر"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "صحیح موصولی ضمیر چنیں: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "اسم مذکر ہے (der Film) لیکن ضمیر مفعول ہے (ich habe ihn gesehen) → Akkusativ مذکر"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "مناسب موصولی ضمیر سے جملہ مکمل کریں: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "اسم مؤنث ہے (die Frau) اور ضمیر فاعل ہے → Nominativ مؤنث = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "جملہ سنیں اور خالی جگہ پُر کریں: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "اسم غیر جانبدار ہے (das Kind) اور ضمیر مفعول ہے → Akkusativ غیر جانبدار = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "الفاظ کو ترتیب دے کر صحیح جملہ بنائیں: (میں ایک بڑا فلیٹ ڈھونڈ رہا ہوں)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "موصولی جملے میں فعل آخر میں آتا ہے!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "الفاظ کو ترتیب دے کر صحیح جملہ بنائیں: (وہ کتاب جو میں پڑھ رہا ہوں دلچسپ ہے)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Das Buch سے شروع کریں، پھر موصولی جملہ، پھر مرکزی جملہ"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "ہر جملے کو اس کے صحیح ترجمے سے ملائیں:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "درج ذیل جملے کو بلند آواز سے صحیح طریقے سے بولیں: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "یاد رکھیں: فعل möchte موصولی جملے کے آخر میں آتا ہے، اور die سے پہلے کوما لگتا ہے"
+          }
+        ]
+      }
     }
   }
 }

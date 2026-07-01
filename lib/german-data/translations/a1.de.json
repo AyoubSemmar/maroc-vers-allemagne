@@ -8362,49 +8362,207 @@
         "tables": [
           {
             "title": "Konjugation der sechs Modalverben im Präsens",
-            "headers": ["Pronomen", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"],
+            "headers": [
+              "Pronomen",
+              "können",
+              "müssen",
+              "wollen",
+              "mögen",
+              "dürfen",
+              "sollen"
+            ],
             "rows": [
-              { "cells": ["ich", "kann", "muss", "will", "mag", "darf", "soll"] },
-              { "cells": ["du", "kannst", "musst", "willst", "magst", "darfst", "sollst"] },
-              { "cells": ["er / sie / es", "kann", "muss", "will", "mag", "darf", "soll"], "highlight": true },
-              { "cells": ["wir", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] },
-              { "cells": ["ihr", "könnt", "müsst", "wollt", "mögt", "dürft", "sollt"] },
-              { "cells": ["sie / Sie", "können", "müssen", "wollen", "mögen", "dürfen", "sollen"] }
+              {
+                "cells": [
+                  "ich",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "kannst",
+                  "musst",
+                  "willst",
+                  "magst",
+                  "darfst",
+                  "sollst"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "kann",
+                  "muss",
+                  "will",
+                  "mag",
+                  "darf",
+                  "soll"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "wir",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "könnt",
+                  "müsst",
+                  "wollt",
+                  "mögt",
+                  "dürft",
+                  "sollt"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "können",
+                  "müssen",
+                  "wollen",
+                  "mögen",
+                  "dürfen",
+                  "sollen"
+                ]
+              }
             ],
             "theme": "conjugation",
             "note": "Die hervorgehobene Zeile (er/sie/es) entspricht ich — die wichtigste Eigenschaft der Modalverben."
           },
           {
             "title": "Bedeutungen der Modalverben",
-            "headers": ["Verb", "Bedeutung", "Beispiel"],
+            "headers": [
+              "Verb",
+              "Bedeutung",
+              "Beispiel"
+            ],
             "rows": [
-              { "cells": ["können", "Fähigkeit", "Ich kann schwimmen."] },
-              { "cells": ["müssen", "starke Pflicht", "Du musst lernen."] },
-              { "cells": ["wollen", "Wunsch / Wille", "Ich will nach Berlin."] },
-              { "cells": ["mögen", "mögen / möchte (höflich)", "Ich mag Kaffee."] },
-              { "cells": ["dürfen", "Erlaubnis", "Hier darf man rauchen."] },
-              { "cells": ["sollen", "Rat / Auftrag", "Du sollst zum Arzt gehen."] }
+              {
+                "cells": [
+                  "können",
+                  "Fähigkeit",
+                  "Ich kann schwimmen."
+                ]
+              },
+              {
+                "cells": [
+                  "müssen",
+                  "starke Pflicht",
+                  "Du musst lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "Wunsch / Wille",
+                  "Ich will nach Berlin."
+                ]
+              },
+              {
+                "cells": [
+                  "mögen",
+                  "mögen / möchte (höflich)",
+                  "Ich mag Kaffee."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "Erlaubnis",
+                  "Hier darf man rauchen."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "Rat / Auftrag",
+                  "Du sollst zum Arzt gehen."
+                ]
+              }
             ],
             "theme": "default"
           },
           {
             "title": "Satzbau mit Modalverb",
-            "headers": ["Position 1", "Position 2 (Modal)", "Mitte", "Ende (Infinitiv)"],
+            "headers": [
+              "Position 1",
+              "Position 2 (Modal)",
+              "Mitte",
+              "Ende (Infinitiv)"
+            ],
             "rows": [
-              { "cells": ["Ich", "kann", "gut Deutsch", "sprechen."] },
-              { "cells": ["Heute", "müssen", "wir früh", "aufstehen."] },
-              { "cells": ["Wo", "darf", "ich", "parken?"] },
-              { "cells": ["Mein Bruder", "will", "in Marokko", "studieren."] }
+              {
+                "cells": [
+                  "Ich",
+                  "kann",
+                  "gut Deutsch",
+                  "sprechen."
+                ]
+              },
+              {
+                "cells": [
+                  "Heute",
+                  "müssen",
+                  "wir früh",
+                  "aufstehen."
+                ]
+              },
+              {
+                "cells": [
+                  "Wo",
+                  "darf",
+                  "ich",
+                  "parken?"
+                ]
+              },
+              {
+                "cells": [
+                  "Mein Bruder",
+                  "will",
+                  "in Marokko",
+                  "studieren."
+                ]
+              }
             ],
             "theme": "default",
             "note": "Modalverb immer Position 2, Hauptverb am Ende."
           }
         ],
         "rules": [
-          { "rule": "Nicht vergessen: ich und er/sie/es haben bei Modalverben **dieselbe** Form, ohne -t am Ende.", "example": "Er kann Deutsch. — Ich kann Deutsch. (nicht „er kannt“)", "translation": "Er beherrscht Deutsch. — Ich beherrsche Deutsch." },
-          { "rule": "In Ja/Nein-Fragen steht das Modalverb am Anfang.", "example": "Kannst du Arabisch sprechen?", "translation": "Beherrschst du Arabisch?" },
-          { "rule": "Die höfliche Form „möchte“ kommt von mögen — verwende sie statt will in Restaurants und Geschäften.", "example": "Ich möchte einen Kaffee, bitte.", "translation": "Höflicher als Ich will..." },
-          { "rule": "Bei einem Modalverb wird das Hauptverb manchmal weggelassen, wenn es aus dem Kontext klar ist.", "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)", "translation": "Ich beherrsche Deutsch." }
+          {
+            "rule": "Nicht vergessen: ich und er/sie/es haben bei Modalverben **dieselbe** Form, ohne -t am Ende.",
+            "example": "Er kann Deutsch. — Ich kann Deutsch. (nicht „er kannt“)",
+            "translation": "Er beherrscht Deutsch. — Ich beherrsche Deutsch."
+          },
+          {
+            "rule": "In Ja/Nein-Fragen steht das Modalverb am Anfang.",
+            "example": "Kannst du Arabisch sprechen?",
+            "translation": "Beherrschst du Arabisch?"
+          },
+          {
+            "rule": "Die höfliche Form „möchte“ kommt von mögen — verwende sie statt will in Restaurants und Geschäften.",
+            "example": "Ich möchte einen Kaffee, bitte.",
+            "translation": "Höflicher als Ich will..."
+          },
+          {
+            "rule": "Bei einem Modalverb wird das Hauptverb manchmal weggelassen, wenn es aus dem Kontext klar ist.",
+            "example": "Ich kann Deutsch. (= Ich kann Deutsch sprechen.)",
+            "translation": "Ich beherrsche Deutsch."
+          }
         ],
         "examples": [
           "Ich kann ein bisschen Deutsch sprechen.",
@@ -8421,76 +8579,491 @@
         "tip": "Lerne die große Tabelle auswendig. Modalverb + Hauptverb am Ende = ein Muster, das du in fast jedem A1-Satz brauchst. Übe täglich 5 Minuten auf der Drill-Seite."
       },
       "vocabulary": [
-        { "german": "können", "arabic": "Fähigkeit haben", "example": "Ich kann gut schwimmen.", "exampleArabic": "Fähigkeit", "type": "verb" },
-        { "german": "müssen", "arabic": "Pflicht", "example": "Wir müssen lernen.", "exampleArabic": "starke Pflicht", "type": "verb" },
-        { "german": "wollen", "arabic": "Wunsch / Wille", "example": "Ich will Wasser.", "exampleArabic": "starker Wille", "type": "verb" },
-        { "german": "mögen", "arabic": "gernhaben", "example": "Magst du Tee?", "exampleArabic": "Vorliebe", "type": "verb" },
-        { "german": "möchten", "arabic": "höfliche Form von wollen", "example": "Ich möchte einen Kaffee.", "exampleArabic": "höflicher Wunsch", "type": "verb" },
-        { "german": "dürfen", "arabic": "Erlaubnis haben", "example": "Hier darf man parken.", "exampleArabic": "Erlaubnis", "type": "verb" },
-        { "german": "sollen", "arabic": "Aufforderung / Rat", "example": "Du sollst zum Arzt gehen.", "exampleArabic": "Empfehlung", "type": "verb" },
-        { "german": "der Infinitiv", "arabic": "Grundform des Verbs", "example": "sprechen ist ein Infinitiv.", "exampleArabic": "Verbgrundform", "type": "noun", "gender": "der" },
-        { "german": "rauchen", "arabic": "Tabak konsumieren", "example": "Hier darf man nicht rauchen.", "exampleArabic": "Verbot", "type": "verb" },
-        { "german": "parken", "arabic": "Auto abstellen", "example": "Wo kann ich parken?", "exampleArabic": "Frage nach Parkplatz", "type": "verb" },
-        { "german": "helfen", "arabic": "Hilfe leisten", "example": "Können Sie mir helfen?", "exampleArabic": "höfliche Bitte", "type": "verb" },
-        { "german": "reisen", "arabic": "eine Reise machen", "example": "Wir wollen nach Berlin reisen.", "exampleArabic": "Reisewunsch", "type": "verb" },
-        { "german": "studieren", "arabic": "an einer Hochschule lernen", "example": "Ich will in Deutschland studieren.", "exampleArabic": "Hochschulstudium", "type": "verb" },
-        { "german": "arbeiten", "arabic": "Beruf ausüben", "example": "Mein Vater muss arbeiten.", "exampleArabic": "Berufstätigkeit", "type": "verb" },
-        { "german": "lernen", "arabic": "Wissen erwerben", "example": "Du musst Deutsch lernen.", "exampleArabic": "Lernen einer Sprache", "type": "verb" },
-        { "german": "schlafen", "arabic": "ruhen", "example": "Ich will jetzt schlafen.", "exampleArabic": "Schlafwunsch", "type": "verb" },
-        { "german": "kaufen", "arabic": "etwas erwerben", "example": "Ich möchte Brot kaufen.", "exampleArabic": "Einkauf", "type": "verb" },
-        { "german": "sprechen", "arabic": "reden", "example": "Kannst du Englisch sprechen?", "exampleArabic": "Sprachfähigkeit", "type": "verb" },
-        { "german": "verstehen", "arabic": "begreifen", "example": "Ich kann das nicht verstehen.", "exampleArabic": "Verständnisproblem", "type": "verb" },
-        { "german": "gehen", "arabic": "sich bewegen / zu Fuß gehen", "example": "Wir wollen ins Kino gehen.", "exampleArabic": "Bewegung zum Ort", "type": "verb" },
-        { "german": "das Wasser", "arabic": "Trinkflüssigkeit", "example": "Ich möchte Wasser, bitte.", "exampleArabic": "Getränk", "type": "noun", "gender": "das" },
-        { "german": "die Hilfe", "arabic": "Unterstützung", "example": "Ich brauche Hilfe.", "exampleArabic": "Hilfegesuch", "type": "noun", "gender": "die" },
-        { "german": "der Arzt", "arabic": "Mediziner", "example": "Du musst zum Arzt gehen.", "exampleArabic": "medizinische Person", "type": "noun", "gender": "der", "plural": "die Ärzte" },
-        { "german": "die Schule", "arabic": "Bildungseinrichtung", "example": "Mein Sohn muss in die Schule.", "exampleArabic": "Lernort", "type": "noun", "gender": "die", "plural": "die Schulen" },
-        { "german": "die Arbeit", "arabic": "Beruf / Tätigkeit", "example": "Ich muss zur Arbeit.", "exampleArabic": "Erwerbstätigkeit", "type": "noun", "gender": "die" },
-        { "german": "das Auto", "arabic": "Fahrzeug", "example": "Wo kann ich das Auto parken?", "exampleArabic": "Personenwagen", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "der Bus", "arabic": "öffentliches Verkehrsmittel", "example": "Wir können den Bus nehmen.", "exampleArabic": "Großraumfahrzeug", "type": "noun", "gender": "der", "plural": "die Busse" },
-        { "german": "die Apotheke", "arabic": "Geschäft für Medikamente", "example": "Ich muss zur Apotheke gehen.", "exampleArabic": "Medikamentengeschäft", "type": "noun", "gender": "die", "plural": "die Apotheken" },
-        { "german": "gern", "arabic": "mit Freude", "example": "Ich möchte gern einen Tee.", "exampleArabic": "Vorliebe ausdrücken", "type": "adverb" },
-        { "german": "lieber", "arabic": "bevorzugt", "example": "Ich möchte lieber Wasser.", "exampleArabic": "Präferenz", "type": "adverb" },
-        { "german": "vielleicht", "arabic": "möglicherweise", "example": "Vielleicht kann ich morgen kommen.", "exampleArabic": "Möglichkeit", "type": "adverb" },
-        { "german": "unbedingt", "arabic": "auf jeden Fall", "example": "Du musst unbedingt das Brandenburger Tor sehen!", "exampleArabic": "Nachdruck", "type": "adverb" },
-        { "german": "leider", "arabic": "bedauerlicherweise", "example": "Ich kann leider nicht kommen.", "exampleArabic": "Bedauern", "type": "adverb" },
-        { "german": "Entschuldigung", "arabic": "höfliche Anrede / Verzeihung", "example": "Entschuldigung, kann ich Sie etwas fragen?", "exampleArabic": "höflicher Auftakt", "type": "phrase" },
-        { "german": "kein Problem", "arabic": "alles in Ordnung", "example": "Du kannst kommen — kein Problem.", "exampleArabic": "Zustimmung", "type": "phrase" }
+        {
+          "german": "können",
+          "arabic": "Fähigkeit haben",
+          "example": "Ich kann gut schwimmen.",
+          "exampleArabic": "Fähigkeit",
+          "type": "verb"
+        },
+        {
+          "german": "müssen",
+          "arabic": "Pflicht",
+          "example": "Wir müssen lernen.",
+          "exampleArabic": "starke Pflicht",
+          "type": "verb"
+        },
+        {
+          "german": "wollen",
+          "arabic": "Wunsch / Wille",
+          "example": "Ich will Wasser.",
+          "exampleArabic": "starker Wille",
+          "type": "verb"
+        },
+        {
+          "german": "mögen",
+          "arabic": "gernhaben",
+          "example": "Magst du Tee?",
+          "exampleArabic": "Vorliebe",
+          "type": "verb"
+        },
+        {
+          "german": "möchten",
+          "arabic": "höfliche Form von wollen",
+          "example": "Ich möchte einen Kaffee.",
+          "exampleArabic": "höflicher Wunsch",
+          "type": "verb"
+        },
+        {
+          "german": "dürfen",
+          "arabic": "Erlaubnis haben",
+          "example": "Hier darf man parken.",
+          "exampleArabic": "Erlaubnis",
+          "type": "verb"
+        },
+        {
+          "german": "sollen",
+          "arabic": "Aufforderung / Rat",
+          "example": "Du sollst zum Arzt gehen.",
+          "exampleArabic": "Empfehlung",
+          "type": "verb"
+        },
+        {
+          "german": "der Infinitiv",
+          "arabic": "Grundform des Verbs",
+          "example": "sprechen ist ein Infinitiv.",
+          "exampleArabic": "Verbgrundform",
+          "type": "noun",
+          "gender": "der"
+        },
+        {
+          "german": "rauchen",
+          "arabic": "Tabak konsumieren",
+          "example": "Hier darf man nicht rauchen.",
+          "exampleArabic": "Verbot",
+          "type": "verb"
+        },
+        {
+          "german": "parken",
+          "arabic": "Auto abstellen",
+          "example": "Wo kann ich parken?",
+          "exampleArabic": "Frage nach Parkplatz",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "Hilfe leisten",
+          "example": "Können Sie mir helfen?",
+          "exampleArabic": "höfliche Bitte",
+          "type": "verb"
+        },
+        {
+          "german": "reisen",
+          "arabic": "eine Reise machen",
+          "example": "Wir wollen nach Berlin reisen.",
+          "exampleArabic": "Reisewunsch",
+          "type": "verb"
+        },
+        {
+          "german": "studieren",
+          "arabic": "an einer Hochschule lernen",
+          "example": "Ich will in Deutschland studieren.",
+          "exampleArabic": "Hochschulstudium",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "Beruf ausüben",
+          "example": "Mein Vater muss arbeiten.",
+          "exampleArabic": "Berufstätigkeit",
+          "type": "verb"
+        },
+        {
+          "german": "lernen",
+          "arabic": "Wissen erwerben",
+          "example": "Du musst Deutsch lernen.",
+          "exampleArabic": "Lernen einer Sprache",
+          "type": "verb"
+        },
+        {
+          "german": "schlafen",
+          "arabic": "ruhen",
+          "example": "Ich will jetzt schlafen.",
+          "exampleArabic": "Schlafwunsch",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "etwas erwerben",
+          "example": "Ich möchte Brot kaufen.",
+          "exampleArabic": "Einkauf",
+          "type": "verb"
+        },
+        {
+          "german": "sprechen",
+          "arabic": "reden",
+          "example": "Kannst du Englisch sprechen?",
+          "exampleArabic": "Sprachfähigkeit",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "begreifen",
+          "example": "Ich kann das nicht verstehen.",
+          "exampleArabic": "Verständnisproblem",
+          "type": "verb"
+        },
+        {
+          "german": "gehen",
+          "arabic": "sich bewegen / zu Fuß gehen",
+          "example": "Wir wollen ins Kino gehen.",
+          "exampleArabic": "Bewegung zum Ort",
+          "type": "verb"
+        },
+        {
+          "german": "das Wasser",
+          "arabic": "Trinkflüssigkeit",
+          "example": "Ich möchte Wasser, bitte.",
+          "exampleArabic": "Getränk",
+          "type": "noun",
+          "gender": "das"
+        },
+        {
+          "german": "die Hilfe",
+          "arabic": "Unterstützung",
+          "example": "Ich brauche Hilfe.",
+          "exampleArabic": "Hilfegesuch",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "der Arzt",
+          "arabic": "Mediziner",
+          "example": "Du musst zum Arzt gehen.",
+          "exampleArabic": "medizinische Person",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Ärzte"
+        },
+        {
+          "german": "die Schule",
+          "arabic": "Bildungseinrichtung",
+          "example": "Mein Sohn muss in die Schule.",
+          "exampleArabic": "Lernort",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schulen"
+        },
+        {
+          "german": "die Arbeit",
+          "arabic": "Beruf / Tätigkeit",
+          "example": "Ich muss zur Arbeit.",
+          "exampleArabic": "Erwerbstätigkeit",
+          "type": "noun",
+          "gender": "die"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "Fahrzeug",
+          "example": "Wo kann ich das Auto parken?",
+          "exampleArabic": "Personenwagen",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "der Bus",
+          "arabic": "öffentliches Verkehrsmittel",
+          "example": "Wir können den Bus nehmen.",
+          "exampleArabic": "Großraumfahrzeug",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Busse"
+        },
+        {
+          "german": "die Apotheke",
+          "arabic": "Geschäft für Medikamente",
+          "example": "Ich muss zur Apotheke gehen.",
+          "exampleArabic": "Medikamentengeschäft",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Apotheken"
+        },
+        {
+          "german": "gern",
+          "arabic": "mit Freude",
+          "example": "Ich möchte gern einen Tee.",
+          "exampleArabic": "Vorliebe ausdrücken",
+          "type": "adverb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "bevorzugt",
+          "example": "Ich möchte lieber Wasser.",
+          "exampleArabic": "Präferenz",
+          "type": "adverb"
+        },
+        {
+          "german": "vielleicht",
+          "arabic": "möglicherweise",
+          "example": "Vielleicht kann ich morgen kommen.",
+          "exampleArabic": "Möglichkeit",
+          "type": "adverb"
+        },
+        {
+          "german": "unbedingt",
+          "arabic": "auf jeden Fall",
+          "example": "Du musst unbedingt das Brandenburger Tor sehen!",
+          "exampleArabic": "Nachdruck",
+          "type": "adverb"
+        },
+        {
+          "german": "leider",
+          "arabic": "bedauerlicherweise",
+          "example": "Ich kann leider nicht kommen.",
+          "exampleArabic": "Bedauern",
+          "type": "adverb"
+        },
+        {
+          "german": "Entschuldigung",
+          "arabic": "höfliche Anrede / Verzeihung",
+          "example": "Entschuldigung, kann ich Sie etwas fragen?",
+          "exampleArabic": "höflicher Auftakt",
+          "type": "phrase"
+        },
+        {
+          "german": "kein Problem",
+          "arabic": "alles in Ordnung",
+          "example": "Du kannst kommen — kein Problem.",
+          "exampleArabic": "Zustimmung",
+          "type": "phrase"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-13-q1", "question": "Ergänze: „Ich ___ gut Deutsch sprechen.“ (Fähigkeit)", "answer": "kann", "hint": "können — ich kann (kein -e)" },
-          { "type": "multiple-choice", "id": "a1-13-q2", "question": "Wie lautet die Form von er mit müssen?", "options": ["er müsst", "er muss", "er musst", "er müssen"], "answer": "er muss" },
-          { "type": "fill-blank", "id": "a1-13-q3", "question": "Ergänze: „Du ___ mehr Wasser trinken.“ (Empfehlung)", "answer": "sollst", "hint": "sollen — du-Form" },
-          { "type": "multiple-choice", "id": "a1-13-q4", "question": "Welcher Satz ist korrekt?", "options": ["Ich kann sprechen Deutsch gut.", "Ich Deutsch gut sprechen kann.", "Ich kann gut Deutsch sprechen.", "Sprechen ich kann gut Deutsch."], "answer": "Ich kann gut Deutsch sprechen." },
-          { "type": "fill-blank", "id": "a1-13-q5", "question": "Ergänze: „___ ich hier parken?“ (Erlaubnis)", "answer": "Darf", "hint": "dürfen — ich-Form in der Frage" },
-          { "type": "matching", "id": "a1-13-q6", "question": "Verbinde das Modalverb mit seiner Bedeutung:", "pairs": [
-            { "left": "können", "right": "Fähigkeit" },
-            { "left": "müssen", "right": "Pflicht" },
-            { "left": "wollen", "right": "Wunsch" },
-            { "left": "mögen", "right": "Vorliebe" },
-            { "left": "dürfen", "right": "Erlaubnis" },
-            { "left": "sollen", "right": "Empfehlung" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-13-q7", "question": "Ordne: „Ich will nach Deutschland reisen“", "words": ["Ich", "will", "nach", "Deutschland", "reisen"], "answer": "Ich will nach Deutschland reisen" },
-          { "type": "speaking", "id": "a1-13-q8", "question": "Sage: „Ich möchte einen Kaffee bitte“ (höflich)", "answer": "Ich möchte einen Kaffee bitte" },
-          { "type": "fill-blank", "id": "a1-13-q9", "question": "Hör zu: „Hier ___ man nicht rauchen.“ (Verbot)", "audioPrompt": "Hier darf man nicht rauchen.", "answer": "darf", "hint": "dürfen + man (allgemeine Erlaubnis)" },
-          { "type": "multiple-choice", "id": "a1-13-q10", "question": "Wie bittet man höflich um Hilfe?", "options": ["Hilf mir!", "Du musst mir helfen!", "Können Sie mir helfen, bitte?", "Ich helfe dir."], "answer": "Können Sie mir helfen, bitte?" },
-          { "type": "fill-blank", "id": "a1-13-q11", "question": "Ergänze: „Wir ___ heute viel arbeiten.“ (Pflicht)", "answer": "müssen", "hint": "müssen mit wir" },
-          { "type": "multiple-choice", "id": "a1-13-q12", "question": "Form von wollen mit ihr?", "options": ["will", "willst", "wollen", "wollt"], "answer": "wollt" },
-          { "type": "fill-blank", "id": "a1-13-q13", "question": "„Magst ___ Tee oder Kaffee?“ (du)", "answer": "du", "hint": "Ja/Nein-Frage" },
-          { "type": "drag-drop", "id": "a1-13-q14", "question": "Ordne: „Kannst du Englisch sprechen?“", "words": ["Kannst", "du", "Englisch", "sprechen"], "answer": "Kannst du Englisch sprechen" },
-          { "type": "matching", "id": "a1-13-q15", "question": "Verbinde Satz mit Bedeutung:", "pairs": [
-            { "left": "Ich kann.", "right": "Fähigkeit" },
-            { "left": "Ich darf.", "right": "Erlaubnis" },
-            { "left": "Ich möchte.", "right": "höflicher Wunsch" },
-            { "left": "Ich soll.", "right": "Empfehlung" }
-          ], "answer": "matched" },
-          { "type": "fill-blank", "id": "a1-13-q16", "question": "Hör zu: „Du ___ jetzt schlafen!“ (Pflicht)", "audioPrompt": "Du musst jetzt schlafen!", "answer": "musst", "hint": "müssen + du" },
-          { "type": "multiple-choice", "id": "a1-13-q17", "question": "„Möchtest du Wasser?“ — kommt von:", "options": ["möchten", "mögen", "wollen", "müssen"], "answer": "mögen" },
-          { "type": "speaking", "id": "a1-13-q18", "question": "Sage: „Wir wollen nach Deutschland reisen“", "answer": "Wir wollen nach Deutschland reisen" },
-          { "type": "fill-blank", "id": "a1-13-q19", "question": "„Hier ___ man rauchen?“ (Erlaubnis)", "answer": "darf", "hint": "dürfen in der Frage" },
-          { "type": "multiple-choice", "id": "a1-13-q20", "question": "Welcher Satz ist im Restaurant höflich?", "options": ["Ich will Wasser!", "Wasser, jetzt!", "Ich möchte ein Wasser, bitte.", "Du gibst mir Wasser."], "answer": "Ich möchte ein Wasser, bitte." }
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q1",
+            "question": "Ergänze: „Ich ___ gut Deutsch sprechen.“ (Fähigkeit)",
+            "answer": "kann",
+            "hint": "können — ich kann (kein -e)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q2",
+            "question": "Wie lautet die Form von er mit müssen?",
+            "options": [
+              "er müsst",
+              "er muss",
+              "er musst",
+              "er müssen"
+            ],
+            "answer": "er muss"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q3",
+            "question": "Ergänze: „Du ___ mehr Wasser trinken.“ (Empfehlung)",
+            "answer": "sollst",
+            "hint": "sollen — du-Form"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q4",
+            "question": "Welcher Satz ist korrekt?",
+            "options": [
+              "Ich kann sprechen Deutsch gut.",
+              "Ich Deutsch gut sprechen kann.",
+              "Ich kann gut Deutsch sprechen.",
+              "Sprechen ich kann gut Deutsch."
+            ],
+            "answer": "Ich kann gut Deutsch sprechen."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q5",
+            "question": "Ergänze: „___ ich hier parken?“ (Erlaubnis)",
+            "answer": "Darf",
+            "hint": "dürfen — ich-Form in der Frage"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q6",
+            "question": "Verbinde das Modalverb mit seiner Bedeutung:",
+            "pairs": [
+              {
+                "left": "können",
+                "right": "Fähigkeit"
+              },
+              {
+                "left": "müssen",
+                "right": "Pflicht"
+              },
+              {
+                "left": "wollen",
+                "right": "Wunsch"
+              },
+              {
+                "left": "mögen",
+                "right": "Vorliebe"
+              },
+              {
+                "left": "dürfen",
+                "right": "Erlaubnis"
+              },
+              {
+                "left": "sollen",
+                "right": "Empfehlung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q7",
+            "question": "Ordne: „Ich will nach Deutschland reisen“",
+            "words": [
+              "Ich",
+              "will",
+              "nach",
+              "Deutschland",
+              "reisen"
+            ],
+            "answer": "Ich will nach Deutschland reisen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q8",
+            "question": "Sage: „Ich möchte einen Kaffee bitte“ (höflich)",
+            "answer": "Ich möchte einen Kaffee bitte"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q9",
+            "question": "Hör zu: „Hier ___ man nicht rauchen.“ (Verbot)",
+            "audioPrompt": "Hier darf man nicht rauchen.",
+            "answer": "darf",
+            "hint": "dürfen + man (allgemeine Erlaubnis)"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q10",
+            "question": "Wie bittet man höflich um Hilfe?",
+            "options": [
+              "Hilf mir!",
+              "Du musst mir helfen!",
+              "Können Sie mir helfen, bitte?",
+              "Ich helfe dir."
+            ],
+            "answer": "Können Sie mir helfen, bitte?"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q11",
+            "question": "Ergänze: „Wir ___ heute viel arbeiten.“ (Pflicht)",
+            "answer": "müssen",
+            "hint": "müssen mit wir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q12",
+            "question": "Form von wollen mit ihr?",
+            "options": [
+              "will",
+              "willst",
+              "wollen",
+              "wollt"
+            ],
+            "answer": "wollt"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q13",
+            "question": "„Magst ___ Tee oder Kaffee?“ (du)",
+            "answer": "du",
+            "hint": "Ja/Nein-Frage"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-13-q14",
+            "question": "Ordne: „Kannst du Englisch sprechen?“",
+            "words": [
+              "Kannst",
+              "du",
+              "Englisch",
+              "sprechen"
+            ],
+            "answer": "Kannst du Englisch sprechen"
+          },
+          {
+            "type": "matching",
+            "id": "a1-13-q15",
+            "question": "Verbinde Satz mit Bedeutung:",
+            "pairs": [
+              {
+                "left": "Ich kann.",
+                "right": "Fähigkeit"
+              },
+              {
+                "left": "Ich darf.",
+                "right": "Erlaubnis"
+              },
+              {
+                "left": "Ich möchte.",
+                "right": "höflicher Wunsch"
+              },
+              {
+                "left": "Ich soll.",
+                "right": "Empfehlung"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q16",
+            "question": "Hör zu: „Du ___ jetzt schlafen!“ (Pflicht)",
+            "audioPrompt": "Du musst jetzt schlafen!",
+            "answer": "musst",
+            "hint": "müssen + du"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q17",
+            "question": "„Möchtest du Wasser?“ — kommt von:",
+            "options": [
+              "möchten",
+              "mögen",
+              "wollen",
+              "müssen"
+            ],
+            "answer": "mögen"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-13-q18",
+            "question": "Sage: „Wir wollen nach Deutschland reisen“",
+            "answer": "Wir wollen nach Deutschland reisen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-13-q19",
+            "question": "„Hier ___ man rauchen?“ (Erlaubnis)",
+            "answer": "darf",
+            "hint": "dürfen in der Frage"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-13-q20",
+            "question": "Welcher Satz ist im Restaurant höflich?",
+            "options": [
+              "Ich will Wasser!",
+              "Wasser, jetzt!",
+              "Ich möchte ein Wasser, bitte.",
+              "Du gibst mir Wasser."
+            ],
+            "answer": "Ich möchte ein Wasser, bitte."
+          }
         ]
       }
     },
@@ -9814,39 +10387,154 @@
         "tables": [
           {
             "title": "Die fünf Muster mit Beispielen",
-            "headers": ["Muster", "Singular", "Plural", "Hinweis"],
+            "headers": [
+              "Muster",
+              "Singular",
+              "Plural",
+              "Hinweis"
+            ],
             "rows": [
-              { "cells": ["+ -e", "der Tag", "die Tage", "häufigstes Maskulinum-Muster"] },
-              { "cells": ["+ -(e)n", "die Frau", "die Frauen", "fast alle Feminina auf -e/-in"] },
-              { "cells": ["+ -er + Umlaut", "das Buch", "die Bücher", "a/o/u → ä/ö/ü"], "highlight": true },
-              { "cells": ["+ -s", "das Auto", "die Autos", "Fremdwörter und Abkürzungen"] },
-              { "cells": ["ohne / Umlaut", "der Vater", "die Väter", "Nomen auf -er, -el, -en"] }
+              {
+                "cells": [
+                  "+ -e",
+                  "der Tag",
+                  "die Tage",
+                  "häufigstes Maskulinum-Muster"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -(e)n",
+                  "die Frau",
+                  "die Frauen",
+                  "fast alle Feminina auf -e/-in"
+                ]
+              },
+              {
+                "cells": [
+                  "+ -er + Umlaut",
+                  "das Buch",
+                  "die Bücher",
+                  "a/o/u → ä/ö/ü"
+                ],
+                "highlight": true
+              },
+              {
+                "cells": [
+                  "+ -s",
+                  "das Auto",
+                  "die Autos",
+                  "Fremdwörter und Abkürzungen"
+                ]
+              },
+              {
+                "cells": [
+                  "ohne / Umlaut",
+                  "der Vater",
+                  "die Väter",
+                  "Nomen auf -er, -el, -en"
+                ]
+              }
             ],
             "theme": "default",
             "note": "Versuche, den Plural vorherzusagen, aber prüfe ihn im Wörterbuch — es gibt Ausnahmen."
           },
           {
             "title": "Praktische Beispiele zu den fünf Mustern",
-            "headers": ["Genus", "Singular", "Plural"],
+            "headers": [
+              "Genus",
+              "Singular",
+              "Plural"
+            ],
             "rows": [
-              { "cells": ["der", "der Tisch", "die Tische"] },
-              { "cells": ["der", "der Stuhl", "die Stühle"] },
-              { "cells": ["die", "die Lampe", "die Lampen"] },
-              { "cells": ["die", "die Schwester", "die Schwestern"] },
-              { "cells": ["das", "das Haus", "die Häuser"] },
-              { "cells": ["das", "das Kind", "die Kinder"] },
-              { "cells": ["das", "das Hotel", "die Hotels"] },
-              { "cells": ["der", "der Lehrer", "die Lehrer"] },
-              { "cells": ["die", "die Mutter", "die Mütter"] }
+              {
+                "cells": [
+                  "der",
+                  "der Tisch",
+                  "die Tische"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Stuhl",
+                  "die Stühle"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Lampe",
+                  "die Lampen"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Schwester",
+                  "die Schwestern"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Haus",
+                  "die Häuser"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Kind",
+                  "die Kinder"
+                ]
+              },
+              {
+                "cells": [
+                  "das",
+                  "das Hotel",
+                  "die Hotels"
+                ]
+              },
+              {
+                "cells": [
+                  "der",
+                  "der Lehrer",
+                  "die Lehrer"
+                ]
+              },
+              {
+                "cells": [
+                  "die",
+                  "die Mutter",
+                  "die Mütter"
+                ]
+              }
             ],
             "theme": "default"
           }
         ],
         "rules": [
-          { "rule": "Alle Nomen im Plural nehmen die — kein Unterschied zwischen der/die/das.", "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder", "translation": "Plural-Artikel ist immer die." },
-          { "rule": "Feminina auf -in verdoppeln das n: die Lehrerin → die Lehrerinnen.", "example": "die Studentin → die Studentinnen", "translation": "Doppel-n bei -in" },
-          { "rule": "Fremdwörter (auto, hotel, café, taxi) nehmen -s.", "example": "das Auto → die Autos / das Café → die Cafés", "translation": "Fremdwortmuster" },
-          { "rule": "Manche Nomen werden nur im Plural gebraucht: die Eltern, die Leute, die Ferien.", "example": "Meine Eltern wohnen in Casablanca.", "translation": "Pluraliatantum" }
+          {
+            "rule": "Alle Nomen im Plural nehmen die — kein Unterschied zwischen der/die/das.",
+            "example": "der Mann → die Männer / die Frau → die Frauen / das Kind → die Kinder",
+            "translation": "Plural-Artikel ist immer die."
+          },
+          {
+            "rule": "Feminina auf -in verdoppeln das n: die Lehrerin → die Lehrerinnen.",
+            "example": "die Studentin → die Studentinnen",
+            "translation": "Doppel-n bei -in"
+          },
+          {
+            "rule": "Fremdwörter (auto, hotel, café, taxi) nehmen -s.",
+            "example": "das Auto → die Autos / das Café → die Cafés",
+            "translation": "Fremdwortmuster"
+          },
+          {
+            "rule": "Manche Nomen werden nur im Plural gebraucht: die Eltern, die Leute, die Ferien.",
+            "example": "Meine Eltern wohnen in Casablanca.",
+            "translation": "Pluraliatantum"
+          }
         ],
         "examples": [
           "Ich habe zwei Brüder.",
@@ -9861,75 +10549,886 @@
         "tip": "Im Alltag brauchst du höchstens 50 Pluralformen — lerne sie. Den Rest erwirbst du mit der Zeit. Die Drill-Seite hilft beim Auffrischen."
       },
       "vocabulary": [
-        { "german": "der Tag", "arabic": "Zeitspanne von 24 Stunden", "example": "Es gibt sieben Tage in der Woche.", "exampleArabic": "Wocheneinteilung", "type": "noun", "gender": "der", "plural": "die Tage" },
-        { "german": "der Tisch", "arabic": "Möbelstück mit Platte", "example": "Die Tische sind groß.", "exampleArabic": "Möbel", "type": "noun", "gender": "der", "plural": "die Tische" },
-        { "german": "der Stuhl", "arabic": "Sitzmöbel", "example": "Wir brauchen vier Stühle.", "exampleArabic": "Sitzgelegenheit", "type": "noun", "gender": "der", "plural": "die Stühle" },
-        { "german": "die Lampe", "arabic": "Lichtquelle", "example": "Die Lampen sind neu.", "exampleArabic": "Beleuchtung", "type": "noun", "gender": "die", "plural": "die Lampen" },
-        { "german": "das Buch", "arabic": "gebundenes Druckwerk", "example": "Ich lese drei Bücher.", "exampleArabic": "Lesemedium", "type": "noun", "gender": "das", "plural": "die Bücher" },
-        { "german": "das Kind", "arabic": "junger Mensch", "example": "Die Kinder sind im Park.", "exampleArabic": "Minderjähriger", "type": "noun", "gender": "das", "plural": "die Kinder" },
-        { "german": "das Haus", "arabic": "Wohngebäude", "example": "Die Häuser sind alt.", "exampleArabic": "Gebäude", "type": "noun", "gender": "das", "plural": "die Häuser" },
-        { "german": "das Auto", "arabic": "Kraftfahrzeug", "example": "Wir kaufen zwei Autos.", "exampleArabic": "Fahrzeug", "type": "noun", "gender": "das", "plural": "die Autos" },
-        { "german": "das Hotel", "arabic": "Unterkunft", "example": "Es gibt viele Hotels.", "exampleArabic": "Beherbergungsbetrieb", "type": "noun", "gender": "das", "plural": "die Hotels" },
-        { "german": "der Vater", "arabic": "männlicher Elternteil", "example": "Die Väter arbeiten.", "exampleArabic": "Elternteil", "type": "noun", "gender": "der", "plural": "die Väter" },
-        { "german": "die Mutter", "arabic": "weiblicher Elternteil", "example": "Die Mütter sind hier.", "exampleArabic": "Elternteil", "type": "noun", "gender": "die", "plural": "die Mütter" },
-        { "german": "der Bruder", "arabic": "männliches Geschwister", "example": "Ich habe zwei Brüder.", "exampleArabic": "Familienangehöriger", "type": "noun", "gender": "der", "plural": "die Brüder" },
-        { "german": "die Schwester", "arabic": "weibliches Geschwister", "example": "Sie hat drei Schwestern.", "exampleArabic": "Familienangehörige", "type": "noun", "gender": "die", "plural": "die Schwestern" },
-        { "german": "der Mann", "arabic": "erwachsene männliche Person", "example": "Die Männer sprechen.", "exampleArabic": "männliche Person", "type": "noun", "gender": "der", "plural": "die Männer" },
-        { "german": "die Frau", "arabic": "erwachsene weibliche Person", "example": "Die Frauen lernen Deutsch.", "exampleArabic": "weibliche Person", "type": "noun", "gender": "die", "plural": "die Frauen" },
-        { "german": "der Freund", "arabic": "männlicher Vertrauter", "example": "Meine Freunde wohnen in Berlin.", "exampleArabic": "Bekannter", "type": "noun", "gender": "der", "plural": "die Freunde" },
-        { "german": "die Freundin", "arabic": "weibliche Vertraute", "example": "Meine Freundinnen sind hier.", "exampleArabic": "Bekannte", "type": "noun", "gender": "die", "plural": "die Freundinnen" },
-        { "german": "der Lehrer", "arabic": "männliche Lehrkraft", "example": "Die Lehrer sind nett.", "exampleArabic": "Bildungsperson", "type": "noun", "gender": "der", "plural": "die Lehrer" },
-        { "german": "die Lehrerin", "arabic": "weibliche Lehrkraft", "example": "Die Lehrerinnen helfen.", "exampleArabic": "Bildungsperson", "type": "noun", "gender": "die", "plural": "die Lehrerinnen" },
-        { "german": "der Student", "arabic": "männlicher Hochschulbesucher", "example": "Die Studenten lernen viel.", "exampleArabic": "Hochschüler", "type": "noun", "gender": "der", "plural": "die Studenten" },
-        { "german": "die Studentin", "arabic": "weibliche Hochschulbesucherin", "example": "Die Studentinnen kommen.", "exampleArabic": "Hochschülerin", "type": "noun", "gender": "die", "plural": "die Studentinnen" },
-        { "german": "der Apfel", "arabic": "Obstsorte", "example": "Ich kaufe drei Äpfel.", "exampleArabic": "Obst", "type": "noun", "gender": "der", "plural": "die Äpfel" },
-        { "german": "das Brot", "arabic": "Backware aus Mehl", "example": "Die Brote sind frisch.", "exampleArabic": "Grundnahrungsmittel", "type": "noun", "gender": "das", "plural": "die Brote" },
-        { "german": "der Schlüssel", "arabic": "Werkzeug zum Öffnen", "example": "Wo sind die Schlüssel?", "exampleArabic": "Türöffner", "type": "noun", "gender": "der", "plural": "die Schlüssel" },
-        { "german": "das Zimmer", "arabic": "Raum in einer Wohnung", "example": "Die Zimmer sind klein.", "exampleArabic": "Wohnraum", "type": "noun", "gender": "das", "plural": "die Zimmer" },
-        { "german": "die Stadt", "arabic": "größere Siedlung", "example": "Diese Städte sind schön.", "exampleArabic": "Ortschaft", "type": "noun", "gender": "die", "plural": "die Städte" },
-        { "german": "das Land", "arabic": "Staat / Region", "example": "Diese Länder sind in Europa.", "exampleArabic": "Staat", "type": "noun", "gender": "das", "plural": "die Länder" },
-        { "german": "die Sprache", "arabic": "Kommunikationssystem", "example": "Sie spricht drei Sprachen.", "exampleArabic": "Verständigungssystem", "type": "noun", "gender": "die", "plural": "die Sprachen" },
-        { "german": "die Eltern", "arabic": "Vater und Mutter", "example": "Meine Eltern arbeiten.", "exampleArabic": "Elternteil-Paar", "type": "noun", "gender": "pl" },
-        { "german": "die Leute", "arabic": "Personen / Menschen", "example": "Die Leute sind freundlich.", "exampleArabic": "Personengruppe", "type": "noun", "gender": "pl" },
-        { "german": "die Ferien", "arabic": "schulfreie Zeit", "example": "In den Ferien fahren wir nach Spanien.", "exampleArabic": "Urlaubszeit", "type": "noun", "gender": "pl" },
-        { "german": "die Geschwister", "arabic": "Brüder und Schwestern", "example": "Hast du Geschwister?", "exampleArabic": "Familienkreis", "type": "noun", "gender": "pl" },
-        { "german": "viele", "arabic": "große Anzahl", "example": "Es gibt viele Bücher.", "exampleArabic": "Mengenangabe groß", "type": "adjective" },
-        { "german": "wenige", "arabic": "geringe Anzahl", "example": "Wenige Studenten lernen Arabisch.", "exampleArabic": "Mengenangabe klein", "type": "adjective" },
-        { "german": "einige", "arabic": "ein paar", "example": "Einige Kinder spielen draußen.", "exampleArabic": "unbestimmte Menge", "type": "adjective" }
+        {
+          "german": "der Tag",
+          "arabic": "Zeitspanne von 24 Stunden",
+          "example": "Es gibt sieben Tage in der Woche.",
+          "exampleArabic": "Wocheneinteilung",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tage"
+        },
+        {
+          "german": "der Tisch",
+          "arabic": "Möbelstück mit Platte",
+          "example": "Die Tische sind groß.",
+          "exampleArabic": "Möbel",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Tische"
+        },
+        {
+          "german": "der Stuhl",
+          "arabic": "Sitzmöbel",
+          "example": "Wir brauchen vier Stühle.",
+          "exampleArabic": "Sitzgelegenheit",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Stühle"
+        },
+        {
+          "german": "die Lampe",
+          "arabic": "Lichtquelle",
+          "example": "Die Lampen sind neu.",
+          "exampleArabic": "Beleuchtung",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lampen"
+        },
+        {
+          "german": "das Buch",
+          "arabic": "gebundenes Druckwerk",
+          "example": "Ich lese drei Bücher.",
+          "exampleArabic": "Lesemedium",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Bücher"
+        },
+        {
+          "german": "das Kind",
+          "arabic": "junger Mensch",
+          "example": "Die Kinder sind im Park.",
+          "exampleArabic": "Minderjähriger",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Kinder"
+        },
+        {
+          "german": "das Haus",
+          "arabic": "Wohngebäude",
+          "example": "Die Häuser sind alt.",
+          "exampleArabic": "Gebäude",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Häuser"
+        },
+        {
+          "german": "das Auto",
+          "arabic": "Kraftfahrzeug",
+          "example": "Wir kaufen zwei Autos.",
+          "exampleArabic": "Fahrzeug",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Autos"
+        },
+        {
+          "german": "das Hotel",
+          "arabic": "Unterkunft",
+          "example": "Es gibt viele Hotels.",
+          "exampleArabic": "Beherbergungsbetrieb",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Hotels"
+        },
+        {
+          "german": "der Vater",
+          "arabic": "männlicher Elternteil",
+          "example": "Die Väter arbeiten.",
+          "exampleArabic": "Elternteil",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Väter"
+        },
+        {
+          "german": "die Mutter",
+          "arabic": "weiblicher Elternteil",
+          "example": "Die Mütter sind hier.",
+          "exampleArabic": "Elternteil",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Mütter"
+        },
+        {
+          "german": "der Bruder",
+          "arabic": "männliches Geschwister",
+          "example": "Ich habe zwei Brüder.",
+          "exampleArabic": "Familienangehöriger",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Brüder"
+        },
+        {
+          "german": "die Schwester",
+          "arabic": "weibliches Geschwister",
+          "example": "Sie hat drei Schwestern.",
+          "exampleArabic": "Familienangehörige",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Schwestern"
+        },
+        {
+          "german": "der Mann",
+          "arabic": "erwachsene männliche Person",
+          "example": "Die Männer sprechen.",
+          "exampleArabic": "männliche Person",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Männer"
+        },
+        {
+          "german": "die Frau",
+          "arabic": "erwachsene weibliche Person",
+          "example": "Die Frauen lernen Deutsch.",
+          "exampleArabic": "weibliche Person",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Frauen"
+        },
+        {
+          "german": "der Freund",
+          "arabic": "männlicher Vertrauter",
+          "example": "Meine Freunde wohnen in Berlin.",
+          "exampleArabic": "Bekannter",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Freunde"
+        },
+        {
+          "german": "die Freundin",
+          "arabic": "weibliche Vertraute",
+          "example": "Meine Freundinnen sind hier.",
+          "exampleArabic": "Bekannte",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Freundinnen"
+        },
+        {
+          "german": "der Lehrer",
+          "arabic": "männliche Lehrkraft",
+          "example": "Die Lehrer sind nett.",
+          "exampleArabic": "Bildungsperson",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Lehrer"
+        },
+        {
+          "german": "die Lehrerin",
+          "arabic": "weibliche Lehrkraft",
+          "example": "Die Lehrerinnen helfen.",
+          "exampleArabic": "Bildungsperson",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Lehrerinnen"
+        },
+        {
+          "german": "der Student",
+          "arabic": "männlicher Hochschulbesucher",
+          "example": "Die Studenten lernen viel.",
+          "exampleArabic": "Hochschüler",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Studenten"
+        },
+        {
+          "german": "die Studentin",
+          "arabic": "weibliche Hochschulbesucherin",
+          "example": "Die Studentinnen kommen.",
+          "exampleArabic": "Hochschülerin",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Studentinnen"
+        },
+        {
+          "german": "der Apfel",
+          "arabic": "Obstsorte",
+          "example": "Ich kaufe drei Äpfel.",
+          "exampleArabic": "Obst",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Äpfel"
+        },
+        {
+          "german": "das Brot",
+          "arabic": "Backware aus Mehl",
+          "example": "Die Brote sind frisch.",
+          "exampleArabic": "Grundnahrungsmittel",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Brote"
+        },
+        {
+          "german": "der Schlüssel",
+          "arabic": "Werkzeug zum Öffnen",
+          "example": "Wo sind die Schlüssel?",
+          "exampleArabic": "Türöffner",
+          "type": "noun",
+          "gender": "der",
+          "plural": "die Schlüssel"
+        },
+        {
+          "german": "das Zimmer",
+          "arabic": "Raum in einer Wohnung",
+          "example": "Die Zimmer sind klein.",
+          "exampleArabic": "Wohnraum",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Zimmer"
+        },
+        {
+          "german": "die Stadt",
+          "arabic": "größere Siedlung",
+          "example": "Diese Städte sind schön.",
+          "exampleArabic": "Ortschaft",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Städte"
+        },
+        {
+          "german": "das Land",
+          "arabic": "Staat / Region",
+          "example": "Diese Länder sind in Europa.",
+          "exampleArabic": "Staat",
+          "type": "noun",
+          "gender": "das",
+          "plural": "die Länder"
+        },
+        {
+          "german": "die Sprache",
+          "arabic": "Kommunikationssystem",
+          "example": "Sie spricht drei Sprachen.",
+          "exampleArabic": "Verständigungssystem",
+          "type": "noun",
+          "gender": "die",
+          "plural": "die Sprachen"
+        },
+        {
+          "german": "die Eltern",
+          "arabic": "Vater und Mutter",
+          "example": "Meine Eltern arbeiten.",
+          "exampleArabic": "Elternteil-Paar",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Leute",
+          "arabic": "Personen / Menschen",
+          "example": "Die Leute sind freundlich.",
+          "exampleArabic": "Personengruppe",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Ferien",
+          "arabic": "schulfreie Zeit",
+          "example": "In den Ferien fahren wir nach Spanien.",
+          "exampleArabic": "Urlaubszeit",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "die Geschwister",
+          "arabic": "Brüder und Schwestern",
+          "example": "Hast du Geschwister?",
+          "exampleArabic": "Familienkreis",
+          "type": "noun",
+          "gender": "pl"
+        },
+        {
+          "german": "viele",
+          "arabic": "große Anzahl",
+          "example": "Es gibt viele Bücher.",
+          "exampleArabic": "Mengenangabe groß",
+          "type": "adjective"
+        },
+        {
+          "german": "wenige",
+          "arabic": "geringe Anzahl",
+          "example": "Wenige Studenten lernen Arabisch.",
+          "exampleArabic": "Mengenangabe klein",
+          "type": "adjective"
+        },
+        {
+          "german": "einige",
+          "arabic": "ein paar",
+          "example": "Einige Kinder spielen draußen.",
+          "exampleArabic": "unbestimmte Menge",
+          "type": "adjective"
+        }
       ],
       "exercise": {
         "questions": [
-          { "type": "fill-blank", "id": "a1-16-q1", "question": "Plural von der Tag? „die ___“", "answer": "Tage", "hint": "-e Muster" },
-          { "type": "multiple-choice", "id": "a1-16-q2", "question": "Plural von das Buch?", "options": ["die Buchen", "die Bücher", "die Buchs", "die Buches"], "answer": "die Bücher" },
-          { "type": "fill-blank", "id": "a1-16-q3", "question": "Plural von die Frau? „die ___“", "answer": "Frauen", "hint": "-en Muster" },
-          { "type": "multiple-choice", "id": "a1-16-q4", "question": "Welcher Artikel ist beim Plural von der Mann richtig?", "options": ["der", "die", "das", "den"], "answer": "die" },
-          { "type": "fill-blank", "id": "a1-16-q5", "question": "Plural von das Auto? „die ___“", "answer": "Autos", "hint": "Fremdwort → -s" },
-          { "type": "matching", "id": "a1-16-q6", "question": "Verbinde Singular mit Plural:", "pairs": [
-            { "left": "der Vater", "right": "die Väter" },
-            { "left": "das Kind", "right": "die Kinder" },
-            { "left": "die Lampe", "right": "die Lampen" },
-            { "left": "das Hotel", "right": "die Hotels" },
-            { "left": "der Apfel", "right": "die Äpfel" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q7", "question": "Ordne: „Die Kinder spielen im Park“", "words": ["Die", "Kinder", "spielen", "im", "Park"], "answer": "Die Kinder spielen im Park" },
-          { "type": "speaking", "id": "a1-16-q8", "question": "Sage: „Ich habe zwei Brüder und eine Schwester“", "answer": "Ich habe zwei Brüder und eine Schwester" },
-          { "type": "fill-blank", "id": "a1-16-q9", "question": "Hör zu: „Die ___ sind alt.“ (Häuser)", "audioPrompt": "Die Häuser sind alt.", "answer": "Häuser", "hint": "das Haus → die Häuser" },
-          { "type": "multiple-choice", "id": "a1-16-q10", "question": "Welches Wort gibt es nur im Plural?", "options": ["der Tag", "die Eltern", "das Auto", "der Lehrer"], "answer": "die Eltern" },
-          { "type": "fill-blank", "id": "a1-16-q11", "question": "Plural von der Stuhl? „die ___“", "answer": "Stühle", "hint": "-e + Umlaut" },
-          { "type": "multiple-choice", "id": "a1-16-q12", "question": "Plural von die Lehrerin?", "options": ["die Lehrerinen", "die Lehrerinnen", "die Lehrerins", "die Lehrerin"], "answer": "die Lehrerinnen" },
-          { "type": "fill-blank", "id": "a1-16-q13", "question": "Plural von der Vater? „die ___“", "answer": "Väter", "hint": "ohne Endung + Umlaut" },
-          { "type": "matching", "id": "a1-16-q14", "question": "Verbinde Singular mit Plural:", "pairs": [
-            { "left": "das Buch", "right": "die Bücher" },
-            { "left": "der Mann", "right": "die Männer" },
-            { "left": "die Stadt", "right": "die Städte" },
-            { "left": "das Auto", "right": "die Autos" }
-          ], "answer": "matched" },
-          { "type": "drag-drop", "id": "a1-16-q15", "question": "Ordne: „Es gibt viele Kinder im Park“", "words": ["Es", "gibt", "viele", "Kinder", "im", "Park"], "answer": "Es gibt viele Kinder im Park" },
-          { "type": "fill-blank", "id": "a1-16-q16", "question": "Hör zu: „Die ___ sind in der Schule.“ (Kinder)", "audioPrompt": "Die Kinder sind in der Schule.", "answer": "Kinder", "hint": "das Kind → die Kinder" },
-          { "type": "multiple-choice", "id": "a1-16-q17", "question": "Fremdwörter folgen welchem Muster?", "options": ["-er", "-en", "-s", "-e"], "answer": "-s" },
-          { "type": "speaking", "id": "a1-16-q18", "question": "Sage: „Ich brauche zwei Bücher und einen Stift“", "answer": "Ich brauche zwei Bücher und einen Stift" },
-          { "type": "fill-blank", "id": "a1-16-q19", "question": "Plural von die Mutter? „die ___“", "answer": "Mütter", "hint": "ohne Endung + Umlaut" },
-          { "type": "multiple-choice", "id": "a1-16-q20", "question": "Alle Nomen im Plural nehmen den Artikel:", "options": ["der", "die", "das", "ein"], "answer": "die" }
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q1",
+            "question": "Plural von der Tag? „die ___“",
+            "answer": "Tage",
+            "hint": "-e Muster"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q2",
+            "question": "Plural von das Buch?",
+            "options": [
+              "die Buchen",
+              "die Bücher",
+              "die Buchs",
+              "die Buches"
+            ],
+            "answer": "die Bücher"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q3",
+            "question": "Plural von die Frau? „die ___“",
+            "answer": "Frauen",
+            "hint": "-en Muster"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q4",
+            "question": "Welcher Artikel ist beim Plural von der Mann richtig?",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "den"
+            ],
+            "answer": "die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q5",
+            "question": "Plural von das Auto? „die ___“",
+            "answer": "Autos",
+            "hint": "Fremdwort → -s"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q6",
+            "question": "Verbinde Singular mit Plural:",
+            "pairs": [
+              {
+                "left": "der Vater",
+                "right": "die Väter"
+              },
+              {
+                "left": "das Kind",
+                "right": "die Kinder"
+              },
+              {
+                "left": "die Lampe",
+                "right": "die Lampen"
+              },
+              {
+                "left": "das Hotel",
+                "right": "die Hotels"
+              },
+              {
+                "left": "der Apfel",
+                "right": "die Äpfel"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q7",
+            "question": "Ordne: „Die Kinder spielen im Park“",
+            "words": [
+              "Die",
+              "Kinder",
+              "spielen",
+              "im",
+              "Park"
+            ],
+            "answer": "Die Kinder spielen im Park"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q8",
+            "question": "Sage: „Ich habe zwei Brüder und eine Schwester“",
+            "answer": "Ich habe zwei Brüder und eine Schwester"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q9",
+            "question": "Hör zu: „Die ___ sind alt.“ (Häuser)",
+            "audioPrompt": "Die Häuser sind alt.",
+            "answer": "Häuser",
+            "hint": "das Haus → die Häuser"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q10",
+            "question": "Welches Wort gibt es nur im Plural?",
+            "options": [
+              "der Tag",
+              "die Eltern",
+              "das Auto",
+              "der Lehrer"
+            ],
+            "answer": "die Eltern"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q11",
+            "question": "Plural von der Stuhl? „die ___“",
+            "answer": "Stühle",
+            "hint": "-e + Umlaut"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q12",
+            "question": "Plural von die Lehrerin?",
+            "options": [
+              "die Lehrerinen",
+              "die Lehrerinnen",
+              "die Lehrerins",
+              "die Lehrerin"
+            ],
+            "answer": "die Lehrerinnen"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q13",
+            "question": "Plural von der Vater? „die ___“",
+            "answer": "Väter",
+            "hint": "ohne Endung + Umlaut"
+          },
+          {
+            "type": "matching",
+            "id": "a1-16-q14",
+            "question": "Verbinde Singular mit Plural:",
+            "pairs": [
+              {
+                "left": "das Buch",
+                "right": "die Bücher"
+              },
+              {
+                "left": "der Mann",
+                "right": "die Männer"
+              },
+              {
+                "left": "die Stadt",
+                "right": "die Städte"
+              },
+              {
+                "left": "das Auto",
+                "right": "die Autos"
+              }
+            ],
+            "answer": "matched"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-16-q15",
+            "question": "Ordne: „Es gibt viele Kinder im Park“",
+            "words": [
+              "Es",
+              "gibt",
+              "viele",
+              "Kinder",
+              "im",
+              "Park"
+            ],
+            "answer": "Es gibt viele Kinder im Park"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q16",
+            "question": "Hör zu: „Die ___ sind in der Schule.“ (Kinder)",
+            "audioPrompt": "Die Kinder sind in der Schule.",
+            "answer": "Kinder",
+            "hint": "das Kind → die Kinder"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q17",
+            "question": "Fremdwörter folgen welchem Muster?",
+            "options": [
+              "-er",
+              "-en",
+              "-s",
+              "-e"
+            ],
+            "answer": "-s"
+          },
+          {
+            "type": "speaking",
+            "id": "a1-16-q18",
+            "question": "Sage: „Ich brauche zwei Bücher und einen Stift“",
+            "answer": "Ich brauche zwei Bücher und einen Stift"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-16-q19",
+            "question": "Plural von die Mutter? „die ___“",
+            "answer": "Mütter",
+            "hint": "ohne Endung + Umlaut"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-16-q20",
+            "question": "Alle Nomen im Plural nehmen den Artikel:",
+            "options": [
+              "der",
+              "die",
+              "das",
+              "ein"
+            ],
+            "answer": "die"
+          }
+        ]
+      }
+    },
+    "a1-17": {
+      "id": "a1-17",
+      "title": "Konjunktionen: und, oder, aber, denn, sondern",
+      "grammar": {
+        "title": "Grundlegende Konjunktionen — Konjunktionen",
+        "content": "**Konjunktionen** sind Wörter, die zwei Sätze oder zwei Gedanken miteinander verbinden.\n\nDas wichtigste Merkmal dieser Konjunktionen auf dem Niveau A1 ist, dass sie **die Wortstellung des Verbs** im folgenden Satz **nicht verändern** — das Verb bleibt wie gewohnt an **zweiter Stelle**.\n\n📌 Die fünf Konjunktionen und ihre Bedeutungen:\n\n• **und** = und (zum Verbinden und Hinzufügen)\n• **oder** = oder (zur Auswahl zwischen zwei Dingen)\n• **aber** = aber (für Gegensatz oder Einschränkung)\n• **denn** = denn (zur Angabe eines Grundes)\n• **sondern** = sondern (zur Berichtigung nach einer Verneinung)\n\n⚠️ **Wichtiger Unterschied:** **aber** wird für einen allgemeinen Gegensatz verwendet, während **sondern** nur nach einem **verneinten** Satz steht, um eine Information zu berichtigen.\n\nBeispiel:\n- Ich bin nicht müde, **aber** ich schlafe. (Ich bin nicht müde, aber ich schlafe.)\n- Ich bin nicht müde, **sondern** fit. (Ich bin nicht müde, sondern fit.)\n\n✅ **Wortstellung im Satz:**\nErster Satz + **Konjunktion** + zweiter Satz (Verb an zweiter Stelle)",
+        "tables": [
+          {
+            "title": "Konjunktionen und ihre Funktion",
+            "headers": [
+              "Konjunktion",
+              "Bedeutung auf Deutsch",
+              "Funktion",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "und",
+                  "und",
+                  "Hinzufügung / Verbindung",
+                  "Ich lerne und du arbeitest."
+                ]
+              },
+              {
+                "cells": [
+                  "oder",
+                  "oder",
+                  "Auswahl zwischen zwei Alternativen",
+                  "Trinkst du Tee oder Kaffee?"
+                ]
+              },
+              {
+                "cells": [
+                  "aber",
+                  "aber",
+                  "Gegensatz / Einschränkung",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "denn",
+                  "Angabe des Grundes",
+                  "Ich lerne, denn ich habe eine Prüfung."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "sondern",
+                  "Berichtigung nach einer Verneinung",
+                  "Er ist nicht alt, sondern jung."
+                ]
+              }
+            ],
+            "note": "Alle diese Konjunktionen verändern die Wortstellung des Verbs im folgenden Satz nicht.",
+            "theme": "default"
+          },
+          {
+            "title": "Vergleich: aber gegenüber sondern",
+            "headers": [
+              "Konjunktion",
+              "Bedingung",
+              "Beispiel",
+              "Übersetzung"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "aber",
+                  "Steht nach einem bejahten oder verneinten Satz",
+                  "Ich bin müde, aber ich lerne.",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "Steht nur nach einem verneinten Satz zur Berichtigung der Information",
+                  "Ich bin nicht müde, sondern fit.",
+                  "Ich bin nicht müde, sondern fit."
+                ]
+              }
+            ],
+            "note": "💡 sondern = Verneinung + Berichtigung. aber = allgemeiner Gegensatz.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "und bedeutet 'und' und wird verwendet, um zwei zusammengehörige oder aufeinanderfolgende Gedanken zu verbinden. Das Verb bleibt an seiner gewohnten Stelle.",
+            "example": "Ich wohne in Berlin und ich lerne Deutsch.",
+            "translation": "Ich wohne in Berlin und ich lerne Deutsch."
+          },
+          {
+            "rule": "oder bedeutet 'oder' und wird verwendet, um eine Auswahl zwischen zwei Alternativen auszudrücken.",
+            "example": "Kommst du heute oder kommst du morgen?",
+            "translation": "Kommst du heute oder kommst du morgen?"
+          },
+          {
+            "rule": "aber bedeutet 'aber' und drückt einen Gegensatz oder eine Einschränkung zwischen zwei Sätzen aus.",
+            "example": "Das Essen ist gut, aber es ist teuer.",
+            "translation": "Das Essen ist gut, aber es ist teuer."
+          },
+          {
+            "rule": "denn bedeutet 'denn' und gibt einen Grund an. sondern bedeutet 'sondern' und steht nur nach einem verneinten Satz, um eine Information zu berichtigen.",
+            "example": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein.",
+            "translation": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein."
+          }
+        ],
+        "examples": [
+          "Ich bin müde, aber ich lerne Deutsch. — Ich bin müde, aber ich lerne Deutsch.",
+          "Trinkst du Kaffee oder Tee? — Trinkst du Kaffee oder Tee?",
+          "Sie wohnt in Rabat und sie arbeitet dort. — Sie wohnt in Rabat und sie arbeitet dort.",
+          "Ich esse nicht viel, denn ich bin nicht hungrig. — Ich esse nicht viel, denn ich bin nicht hungrig.",
+          "Das ist nicht mein Buch, sondern sein Buch. — Das ist nicht mein Buch, sondern sein Buch.",
+          "Er spricht Arabisch und Deutsch. — Er spricht Arabisch und Deutsch.",
+          "Ich gehe nicht ins Kino, sondern ich bleibe zu Hause. — Ich gehe nicht ins Kino, sondern ich bleibe zu Hause.",
+          "Bist du Student oder arbeitest du? — Bist du Student oder arbeitest du?"
+        ],
+        "tip": "💡 Denk immer daran: Diese fünf Konjunktionen (und, oder, aber, denn, sondern) sind sogenannte 'neutrale' Konjunktionen — sie verschieben das Verb nicht von seiner Stelle! Das Verb bleibt im folgenden Satz an zweiter Stelle, genauso als wäre keine Konjunktion vorhanden. Das unterscheidet sie von anderen Konjunktionen auf höheren Niveaus."
+      },
+      "vocabulary": [
+        {
+          "german": "lernen",
+          "arabic": "lernen (ein Verb)",
+          "example": "Ich lerne Deutsch.",
+          "exampleArabic": "Ich lerne Deutsch.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "arbeiten (ein Verb)",
+          "example": "Sie arbeitet in Berlin.",
+          "exampleArabic": "Sie arbeitet in Berlin.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "wohnen (ein Verb)",
+          "example": "Er wohnt in Rabat.",
+          "exampleArabic": "Er wohnt in Rabat.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "müde (ein Adjektiv)",
+          "example": "Ich bin müde, aber ich lerne.",
+          "exampleArabic": "Ich bin müde, aber ich lerne.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "hungrig (ein Adjektiv)",
+          "example": "Ich bin hungrig, denn ich esse nicht.",
+          "exampleArabic": "Ich bin hungrig, denn ich esse nicht.",
+          "type": "adjective"
+        },
+        {
+          "german": "durstig",
+          "arabic": "durstig (ein Adjektiv)",
+          "example": "Er ist durstig und trinkt Wasser.",
+          "exampleArabic": "Er ist durstig und trinkt Wasser.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kaffee",
+          "arabic": "Kaffee (ein Substantiv)",
+          "gender": "der",
+          "plural": "-",
+          "example": "Trinkst du Kaffee oder Tee?",
+          "exampleArabic": "Trinkst du Kaffee oder Tee?",
+          "type": "noun"
+        },
+        {
+          "german": "Tee",
+          "arabic": "Tee (ein Substantiv)",
+          "gender": "der",
+          "plural": "-",
+          "example": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "exampleArabic": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "Buch (ein Substantiv)",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist nicht mein Buch, sondern sein Buch.",
+          "exampleArabic": "Das ist nicht mein Buch, sondern sein Buch.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "Prüfung (ein Substantiv)",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich lerne, denn ich habe eine Prüfung.",
+          "exampleArabic": "Ich lerne, denn ich habe eine Prüfung.",
+          "type": "noun"
+        },
+        {
+          "german": "heute",
+          "arabic": "heute (ein Adverb)",
+          "example": "Kommst du heute oder morgen?",
+          "exampleArabic": "Kommst du heute oder morgen?",
+          "type": "adverb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "morgen (ein Adverb)",
+          "example": "Ich lerne heute und morgen.",
+          "exampleArabic": "Ich lerne heute und morgen.",
+          "type": "adverb"
+        },
+        {
+          "german": "klein",
+          "arabic": "klein (ein Adjektiv)",
+          "example": "Er ist nicht groß, sondern klein.",
+          "exampleArabic": "Er ist nicht groß, sondern klein.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "teuer (ein Adjektiv)",
+          "example": "Das Essen ist gut, aber teuer.",
+          "exampleArabic": "Das Essen ist gut, aber teuer.",
+          "type": "adjective"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "bleiben (ein Verb)",
+          "example": "Ich bleibe zu Hause, denn es regnet.",
+          "exampleArabic": "Ich bleibe zu Hause, denn es regnet.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q1",
+            "question": "Wähle die richtige Konjunktion: Ich bin müde, ___ ich lerne.",
+            "answer": "aber",
+            "options": [
+              "denn",
+              "aber",
+              "sondern",
+              "oder"
+            ],
+            "hint": "Der Satz drückt einen Gegensatz zwischen Müdigkeit und Lernen aus."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q2",
+            "question": "Ergänze den Satz mit der passenden Konjunktion: Ich trinke Wasser, ___ ich bin durstig.",
+            "answer": "denn",
+            "hint": "Wir brauchen eine Konjunktion, die einen Grund ausdrückt."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q3",
+            "question": "Welcher Satz ist grammatikalisch richtig?",
+            "answer": "Er ist nicht groß, sondern klein.",
+            "options": [
+              "Er ist nicht groß, aber klein.",
+              "Er ist nicht groß, sondern klein.",
+              "Er ist nicht groß, denn klein.",
+              "Er ist nicht groß, oder klein."
+            ],
+            "hint": "Nach einer Verneinung und zur Berichtigung der Information verwendet man sondern."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-17-q4",
+            "question": "Ordne die Wörter zu einem richtigen Satz:",
+            "answer": "ich lerne Deutsch , denn ich habe eine Prüfung",
+            "words": [
+              "ich",
+              "lerne",
+              "Deutsch",
+              "denn",
+              "habe",
+              "eine",
+              "Prüfung",
+              "ich",
+              ","
+            ],
+            "hint": "Die Konjunktion denn steht in der Mitte, und das Verb bleibt an zweiter Stelle."
+          },
+          {
+            "type": "matching",
+            "id": "a1-17-q5",
+            "question": "Ordne jede Konjunktion ihrer richtigen deutschen Bedeutung zu:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "und",
+                "right": "و"
+              },
+              {
+                "left": "oder",
+                "right": "أو"
+              },
+              {
+                "left": "aber",
+                "right": "لكن"
+              },
+              {
+                "left": "denn",
+                "right": "لأن"
+              },
+              {
+                "left": "sondern",
+                "right": "بل / وإنما"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q6",
+            "question": "🎧 Höre den Satz und ergänze die Lücke: Das ist nicht mein Buch, ___ sein Buch.",
+            "answer": "sondern",
+            "hint": "Der Satz ist verneint und wir brauchen eine Berichtigung der Information.",
+            "audioPrompt": "Das ist nicht mein Buch, sondern sein Buch."
+          },
+          {
+            "type": "speaking",
+            "id": "a1-17-q7",
+            "question": "Sprich den folgenden Satz deutlich aus: Ich bin müde, aber ich lerne Deutsch.",
+            "answer": "Ich bin müde, aber ich lerne Deutsch.",
+            "hint": "Achte auf die Aussprache: aber = [ˈaːbɐ], müde = [ˈmyːdə]."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q8",
+            "question": "Wähle den Satz, der 'oder' richtig verwendet:",
+            "answer": "Trinkst du Kaffee oder Tee?",
+            "options": [
+              "Ich lerne oder ich bin müde.",
+              "Trinkst du Kaffee oder Tee?",
+              "Er ist nicht groß oder klein.",
+              "Ich wohne oder ich arbeite."
+            ],
+            "hint": "oder wird zur Auswahl zwischen zwei sinnvollen Alternativen verwendet."
+          }
         ]
       }
     }

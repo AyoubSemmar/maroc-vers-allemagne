@@ -8078,6 +8078,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "कमज़ोर संज्ञाएँ (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "कमज़ोर संज्ञाएँ — n-Deklination (schwache Nomen)",
+        "content": "जर्मन भाषा में पुल्लिंग संज्ञाओं का एक विशेष समूह होता है जिसे **schwache Nomen** (कमज़ोर संज्ञाएँ) कहते हैं। ये संज्ञाएँ बाकी संज्ञाओं से इसलिए अलग हैं क्योंकि ये **Nominativ (कर्ता कारक) को छोड़कर सभी कारकों में -(e)n प्रत्यय लेती हैं**।\n\n**ये संज्ञाएँ कौन-सी हैं?**\nइनमें से अधिकांश पुल्लिंग संज्ञाएँ निम्नलिखित श्रेणियों में से किसी एक से संबंधित हैं:\n- **व्यक्तियों, व्यवसायों या राष्ट्रीयताओं** को दर्शाने वाली संज्ञाएँ, जैसे: *der Student, der Journalist, der Kollege*\n- **-e** पर समाप्त होने वाली संज्ञाएँ, जैसे: *der Junge, der Kunde, der Zeuge*\n- **-ist, -ent, -ant, -at** पर समाप्त होने वाली संज्ञाएँ, जैसे: *der Tourist, der Patient, der Praktikant*\n- एक विशेष अपवाद: **der Herr** एकवचन में *-n* और बहुवचन में *-en* लेता है\n\n**सुनहरा नियम:**\nGenitiv, Dativ और Akkusativ कारकों में — संज्ञा में हमेशा **-(e)n** जोड़ें।\n\n**महत्वपूर्ण टिप्पणी:** इनमें से कुछ संज्ञाएँ एकवचन Genitiv में **-s** भी लेती हैं, जैसे: *des Studenten* — ध्यान दें कि प्रत्यय **-en** है, न कि सामान्य संज्ञाओं की तरह **-s**।",
+        "tables": [
+          {
+            "title": "कमज़ोर संज्ञाओं का रूपांतरण — उदाहरण: der Student / der Junge / der Herr",
+            "headers": [
+              "कारक",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (कर्ता)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (कर्म)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (संप्रदान)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (संबंध)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "-(e)n प्रत्यय Nominativ को छोड़कर सभी कारकों में जोड़ा जाता है। der Herr केवल एकवचन में -n लेता है।",
+            "theme": "default"
+          },
+          {
+            "title": "सामान्य कमज़ोर संज्ञाओं की श्रेणियों के उदाहरण",
+            "headers": [
+              "प्रकार",
+              "उदाहरण",
+              "प्रत्यय"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-e पर समाप्त",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "-ent / -ant पर समाप्त",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-ist पर समाप्त",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-at / -ot पर समाप्त",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "अपवाद",
+                  "der Herr",
+                  "-n (एकवचन) / -en (बहुवचन)"
+                ]
+              }
+            ],
+            "note": "ये सभी संज्ञाएँ पुल्लिंग हैं। यदि आप निश्चित न हों तो हमेशा शब्दकोश देखें।",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "कमज़ोर संज्ञाएँ Akkusativ, Dativ और Genitiv कारकों में -(e)n लेती हैं — केवल Nominativ में कोई प्रत्यय नहीं लगता।",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "छात्र सीखता है। — मैं उस छात्र को जानता हूँ।"
+          },
+          {
+            "rule": "-e पर समाप्त होने वाली संज्ञाएँ (जैसे der Junge, der Kunde) केवल -n लेती हैं (कोई अतिरिक्त e नहीं)।",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "मैं उस लड़के की मदद करता हूँ।"
+          },
+          {
+            "rule": "-ent, -ist, -ant, -at, -ot पर समाप्त होने वाली संज्ञाएँ Nominativ को छोड़कर सभी कारकों में -en लेती हैं।",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "यह उस छात्र का कमरा है।"
+          },
+          {
+            "rule": "der Herr एक अपवाद है: एकवचन में -n (Herrn) और बहुवचन में -en (Herren) लेता है।",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "मैं उस सज्जन से बात करता हूँ।"
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — पत्रकार एक लेख लिखता है।",
+          "Ich kenne den Journalisten gut. — मैं उस पत्रकार को अच्छी तरह जानता हूँ।",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — हम उस छात्र की होमवर्क में मदद करते हैं।",
+          "Das ist das Buch des Kollegen. — यह उस सहकर्मी की किताब है।",
+          "Der Kunde möchte ein Zimmer reservieren. — वह ग्राहक एक कमरा बुक करना चाहता है।",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — शिक्षिका उस लड़के को काम समझाती है।",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — मैंने Herrn Müller को एक ई-मेल भेजी।",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — प्रशिक्षु एक महीने से कंपनी में काम कर रहा है।"
+        ],
+        "tip": "💡 जब भी आप कोई पुल्लिंग संज्ञा देखें जो -e, -ent, -ist या -ant पर समाप्त होती हो, तो याद रखें कि वह संभवतः एक कमज़ोर संज्ञा है! खुद से पूछें: क्या यह Nominativ में है? अगर नहीं, तो सीधे -(e)n जोड़ें। यह नियम B1 स्तर पर 90% से अधिक मामलों को कवर करता है।"
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "छात्र (विश्वविद्यालय का)",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "छात्र हर दिन जर्मन सीखता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "पत्रकार",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "पत्रकार एक अखबार के लिए काम करता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "सहकर्मी",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "मैं सहकर्मी के साथ दोपहर का खाना खाता हूँ।",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "लड़का / बालक",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "माँ उस लड़के को बुलाती है।",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "ग्राहक / उपभोक्ता",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "विक्रेता ग्राहक की मदद करता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "श्रीमान / सज्जन",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "सुप्रभात, Herr Schmidt!",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "पर्यटक",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "पर्यटक रास्ता पूछता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "प्रशिक्षु / इंटर्न",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "हम नए प्रशिक्षु का स्वागत करते हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "गवाह",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "पुलिस गवाह से पूछताछ करती है।",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "सैनिक",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "लोग सैनिक को उसकी सेवा के लिए धन्यवाद देते हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "पायलट / विमान चालक",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "यात्री पायलट पर भरोसा करते हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "इंसान / व्यक्ति",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "मैं उस व्यक्ति की मदद करता हूँ जिसे सहायता की ज़रूरत है।",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "मरीज़ / रोगी",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "डॉक्टर मरीज़ की जाँच करता है।",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Akkusativ वाले वाक्य में कमज़ोर संज्ञा का सही रूप चुनें:\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "Akkusativ में कमज़ोर संज्ञाएँ -(e)n लेती हैं और Article den हो जाता है।"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "कमज़ोर संज्ञा के सही रूप से वाक्य पूरा करें:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "dem के बाद हम Dativ में हैं — कमज़ोर संज्ञा में -en जोड़ें।"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 सुनें और लुप्त शब्द से वाक्य पूरा करें:",
+            "answer": "Kollegen",
+            "hint": "des के बाद हम Genitiv में हैं — कमज़ोर संज्ञा -en लेती है।",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "शब्दों को सही क्रम में लगाकर एक सही वाक्य बनाएँ:",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "क्रिया erklärt को Dativ की ज़रूरत है उस व्यक्ति के लिए जिसे समझाया जा रहा है — dem + Jungen का उपयोग करें।"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "इनमें से कौन-सा वाक्य कमज़ोर संज्ञा के उपयोग में गलत है?",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde एक कमज़ोर संज्ञा है — Dativ में यह dem Kunden होना चाहिए।"
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "Nominativ में दी गई प्रत्येक संज्ञा को उसके सही Akkusativ रूप से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "सही रूप से वाक्य पूरा करें:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den Akkusativ को दर्शाता है — कमज़ोर संज्ञा -en लेती है।"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "निम्नलिखित वाक्य को -en प्रत्यय के उच्चारण पर ध्यान देते हुए ज़ोर से बोलें:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "याद रखें: Herrn = der Herr Dativ में। -en का उच्चारण शब्द के अंत में हल्का होता है।"
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "अज्ञात कर्तृक वाच्य और अपूर्ण क्रियाएँ — Passiv mit Modalverben",
+      "grammar": {
+        "title": "अज्ञात कर्तृक वाच्य और अपूर्ण क्रियाएँ — Passiv mit Modalverben",
+        "content": "## Passiv mit Modalverben क्या होता है?\n\nजर्मन भाषा में हम **अज्ञात कर्तृक वाच्य (Passiv)** को **अपूर्ण क्रियाओं (Modalverben)** जैसे *müssen, können, dürfen, sollen, wollen* के साथ मिला सकते हैं — ताकि यह बताया जा सके कि कोई काम करना ज़रूरी है या संभव है, बिना यह बताए कि वह काम कौन करता है।\n\n---\n\n### 🔧 यह संरचना कैसे बनाते हैं?\n\nमूल संरचना इस प्रकार है:\n\n**Modalverb (क्रियान्वित) + Partizip II + werden**\n\n> उदाहरण: Das Zimmer **muss** sauber gemacht **werden**.\n> (कमरे की सफाई करनी होगी।)\n\n---\n\n### 📌 त्वरित तुलना\n\n| कर्तृवाच्य वाक्य (Aktiv) | अज्ञात कर्तृक वाच्य वाक्य (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 महत्वपूर्ण बातें\n\n- **अपूर्ण क्रिया (Modalverb)** वाक्य में अपनी स्वाभाविक जगह लेती है (मुख्य वाक्यों में दूसरे स्थान पर)।\n- **werden** हमेशा मुख्य वाक्य के अंत में Infinitiv रूप में रहता है।\n- **Partizip II** वाक्य के अंत में *werden* से ठीक पहले आता है।\n- **उपवाक्यों (Nebensatz)** में अपूर्ण क्रिया *Partizip II + werden* के बाद सबसे अंत में आती है:\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "अपूर्ण क्रियाओं का अज्ञात कर्तृक वाच्य में रूपांतरण — Präsens",
+            "headers": [
+              "अपूर्ण क्रिया",
+              "अर्थ",
+              "अज्ञात कर्तृक वाच्य में उदाहरण",
+              "अनुवाद"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "करना होगा / ज़रूरी है",
+                  "Das muss gemacht werden.",
+                  "यह करना होगा।"
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "हो सकता है / संभव है",
+                  "Das kann geändert werden.",
+                  "इसे बदला जा सकता है।"
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "अनुमति है / इजाज़त है",
+                  "Hier darf nicht geraucht werden.",
+                  "यहाँ धूम्रपान की अनुमति नहीं है।"
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "माना जाता है / अपेक्षित है",
+                  "Das soll sofort erledigt werden.",
+                  "यह तुरंत पूरा किया जाना चाहिए।"
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "इरादा है / उद्देश्य है",
+                  "Das will gut geplant werden.",
+                  "इसकी अच्छी तरह योजना बनाई जानी चाहिए।"
+                ]
+              }
+            ],
+            "note": "संरचना हमेशा: Modalverb (क्रियान्वित) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "वाक्य में क्रियाओं का स्थान — Satzstellung",
+            "headers": [
+              "वाक्य का प्रकार",
+              "स्थान 1",
+              "स्थान 2 (Verb)",
+              "मध्य",
+              "अंत"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (मुख्य वाक्य)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (मुख्य वाक्य)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (उपवाक्य)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (उपवाक्य)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "उपवाक्य में: अपूर्ण क्रिया Partizip II + werden के बाद सबसे अंत में आती है",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "मूल संरचना: क्रियान्वित अपूर्ण क्रिया + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "पार्सल भेजना होगा।"
+          },
+          {
+            "rule": "मुख्य वाक्य में अपूर्ण क्रिया दूसरे स्थान पर आती है, और वाक्य का अंत होता है: Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "गृहकार्य आज जमा करना होगा।"
+          },
+          {
+            "rule": "उपवाक्य में अपूर्ण क्रिया Partizip II + werden के बाद सबसे अंत में आती है",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "वह कहता है कि दरवाज़ा बंद करना होगा।"
+          },
+          {
+            "rule": "अज्ञात कर्तृक वाच्य में कर्ता का उल्लेख नहीं होता; ध्यान क्रिया पर होता है, न कि उसे करने वाले पर",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "बत्ती बुझानी होगी। (यह मायने नहीं रखता कि कौन बुझाता है)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — फॉर्म भरना होगा।",
+          "Die Wohnung kann sofort gemietet werden. — अपार्टमेंट तुरंत किराए पर लिया जा सकता है।",
+          "Hier darf nicht fotografiert werden. — यहाँ फोटो खींचने की अनुमति नहीं है।",
+          "Die Rechnung soll bis Freitag bezahlt werden. — बिल शुक्रवार तक चुकाया जाना चाहिए।",
+          "Das kaputte Fahrrad muss repariert werden. — टूटी हुई साइकिल की मरम्मत करनी होगी।",
+          "Ich glaube, dass das Problem gelöst werden kann. — मुझे लगता है कि समस्या हल की जा सकती है।",
+          "Die Medikamente dürfen nicht vergessen werden. — दवाइयाँ भूली नहीं जानी चाहिए।",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — वह जानता है कि काम समय पर पूरा करना होगा।"
+        ],
+        "tip": "💡 मुख्य वाक्य के अंत का सुनहरा क्रम याद रखें: **पहले Partizip II, फिर werden**। और उपवाक्य में: **Partizip II + werden + Modalverb**। जितना अधिक आप इस क्रम को याद रखेंगे, यह संरचना उतनी ही स्वाभाविक लगेगी!"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "फॉर्म / प्रपत्र",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "फॉर्म भरना होगा।",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "बिल / चालान",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "बिल चुकाना होगा।",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "नियुक्ति / समय",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "अपॉइंटमेंट टालनी होगी।",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "पार्सल / पैकेज",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "पार्सल उठाया जा सकता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "नियम",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "नियमों का पालन करना होगा।",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "मरम्मत करना",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "कार की मरम्मत करनी होगी।",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "भरना (फॉर्म)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "आवेदन पत्र भरना होगा।",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "पूरा करना / निपटाना",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "कार्य पूरा किया जाना चाहिए।",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "टालना / स्थगित करना",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "बैठक स्थगित की जा सकती है।",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "ध्यान देना / पालन करना",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "नियमों का पालन करना होगा।",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "तुरंत / फौरन",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "यह तुरंत पूरा करना होगा।",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "समय पर",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "काम समय पर जमा करना होगा।",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "आवेदन / अनुरोध",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "आवेदन जमा करना होगा।",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "विनियम / निर्देश",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "विनियमों की अनदेखी नहीं की जानी चाहिए।",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "अज्ञात कर्तृक वाच्य और अपूर्ण क्रिया के साथ सही वाक्य चुनें:",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "क्रम याद रखें: Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "सही रूप चुनकर वाक्य पूरा करें: Das Problem _____ gelöst werden. (समस्या हल की जा सकती है।)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "अपूर्ण क्रिया कर्ता के अनुसार क्रियान्वित होती है — Das (एकवचन, तटस्थ) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "अज्ञात कर्तृक वाच्य में सही वाक्य बनाने के लिए शब्दों को क्रमबद्ध करें:",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "अपूर्ण क्रिया दूसरे स्थान पर, और वाक्य का अंत: Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "क्रिया है rauchen — इसका Partizip II क्या होगा?",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "जर्मन में कैसे कहेंगे: 'आवेदन कल जमा किया जाना चाहिए'?",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — मुख्य वाक्य में सही क्रम"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "प्रत्येक अज्ञात कर्तृक वाच्य वाक्य को उसके सही अनुवाद से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "सही उपवाक्य (Nebensatz) बनाने के लिए शब्दों को क्रमबद्ध करें:",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "उपवाक्य में: अपूर्ण क्रिया Partizip II + werden के बाद सबसे अंत में आती है"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "निम्नलिखित वाक्य को स्पष्ट आवाज़ में बोलें: 'Das Paket muss sofort verschickt werden.' — पार्सल तुरंत भेजना होगा।",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "उच्चारण पर ध्यान दें: verschickt — फ़र-शिक्ट"
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "भूतकाल में Konjunktiv II — Konjunktiv II der Vergangenheit",
+      "grammar": {
+        "title": "भूतकाल में Konjunktiv II — hätte/wäre + Partizip II",
+        "content": "## Konjunktiv II der Vergangenheit क्या है?\n\n**Konjunktiv II der Vergangenheit** का उपयोग उन बातों को व्यक्त करने के लिए किया जाता है जो **भूतकाल में नहीं हुईं**, जैसे:\n- किसी बीती हुई बात पर **अफ़सोस** व्यक्त करना: *काश मैंने ऐसा किया होता...*\n- भूतकाल में कोई **अनुमान** या **शर्त** व्यक्त करना: *अगर मैंने ऐसा किया होता, तो...*\n\n---\n\n## यह काल कैसे बनाते हैं?\n\nइस काल की संरचना दो भागों से मिलकर बनती है:\n\n**hätte / wäre** (Konjunktiv II रूप में) **+ Partizip II** मुख्य क्रिया का\n\n- **hätte** का उपयोग अधिकांश क्रियाओं के साथ किया जाता है (सकर्मक क्रियाएँ और अवस्था-क्रियाएँ)।\n- **wäre** का उपयोग गति और परिवर्तन की क्रियाओं के साथ किया जाता है (जैसे: *gehen, kommen, fahren, werden, sein*)।\n\n---\n\n## त्वरित तुलना:\n\n| काल | अर्थ | उदाहरण |\n|---|---|---|\n| Konjunktiv II der Gegenwart | वर्तमान में अनुमान | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | भूतकाल में अनुमान/अफ़सोस | Ich **hätte** gelernt. |\n\n---\n\n**याद रखें:** इस संरचना में **Partizip II** कभी नहीं बदलता — सारा रूपांतरण **hätte** या **wäre** में होता है।",
+        "tables": [
+          {
+            "title": "Partizip II के साथ hätte का रूपांतरण — haben क्रियाएँ",
+            "headers": [
+              "सर्वनाम",
+              "Konjunktiv II",
+              "पूरा उदाहरण",
+              "अर्थ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "मैंने सीखा होता / काश मैंने सीखा होता"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "तुमने सीखा होता"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "उसने सीखा होता"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "हमने सीखा होता"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "तुम सबने सीखा होता"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "उन्होंने सीखा होता"
+                ]
+              }
+            ],
+            "note": "hätte का उपयोग उन क्रियाओं के साथ किया जाता है जो Perfekt में haben के साथ बनती हैं",
+            "theme": "default"
+          },
+          {
+            "title": "Partizip II के साथ wäre का रूपांतरण — sein क्रियाएँ",
+            "headers": [
+              "सर्वनाम",
+              "Konjunktiv II",
+              "पूरा उदाहरण",
+              "अर्थ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "मैं गया होता / काश मैं गया होता"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "तुम गए होते"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "वह गया होता"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "हम गए होते"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "तुम सब गए होते"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "वे गए होते"
+                ]
+              }
+            ],
+            "note": "wäre का उपयोग गति और परिवर्तन की उन क्रियाओं के साथ किया जाता है जो Perfekt में sein के साथ बनती हैं",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "hätte के साथ मूल संरचना: उन क्रियाओं के लिए जो Perfekt में haben का उपयोग करती हैं",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "काश मैंने अधिक सोया होता।"
+          },
+          {
+            "rule": "wäre के साथ मूल संरचना: उन क्रियाओं के लिए जो Perfekt में sein का उपयोग करती हैं (गति और परिवर्तन)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "वह पहले आई होती।"
+          },
+          {
+            "rule": "शर्त वाले वाक्य (Wenn-Satz) में hätte/wäre उपवाक्य के अंत में आता है",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "अगर मेरे पास अधिक समय होता, तो मैंने मदद की होती।"
+          },
+          {
+            "rule": "Partizip II सर्वनाम बदलने पर भी नहीं बदलता — केवल hätte/wäre का रूपांतरण होता है",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "मैंने खरीदा होता। / हमने खरीदा होता।"
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — मैंने वह किताब पढ़ी होती (लेकिन मैंने नहीं पढ़ी)।",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — अगर उसने अधिक पढ़ाई की होती तो वह परीक्षा में पास हो गया होता।",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — हम पहले पहुँच गए होते, लेकिन ट्रेन को देरी हो गई।",
+          "Sie hätte mir helfen können. — वह मेरी मदद कर सकती थी।",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — अगर तुम हमारे साथ आए होते, तो हम सबने मज़ा किया होता।",
+          "Ich wäre lieber zu Hause geblieben. — मैं घर पर ही रहना पसंद करता।",
+          "Er hätte das Geld nicht ausgegeben. — उसे वह पैसे खर्च नहीं करने चाहिए थे।",
+          "Hättest du früher angerufen, hätte ich gewartet. — अगर तुमने पहले फ़ोन किया होता, तो मैं इंतज़ार करता।"
+        ],
+        "tip": "💡 hätte और wäre के बीच का अंतर इस तरह याद रखें: अगर क्रिया गति या परिवर्तन की है (gehen, kommen, fahren, werden, sein) तो **wäre** का उपयोग करें, और बाकी सभी मामलों में **hätte** का — बिल्कुल वैसे ही जैसे आप सामान्य Perfekt काल में करते हैं!"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "गलती",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "मैं यह गलती टाल सकता था।",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "अवसर",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "उसे यह अवसर भुनाना चाहिए था।",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "निर्णय",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "उसने कोई अलग निर्णय लिया होता।",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "देरी",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "अगर कोई देरी न होती तो हम समय पर होते।",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "परीक्षा",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "मैं परीक्षा में पास हो गया होता।",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "पछताना",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "वह अपने निर्णय पर पछताया होता।",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "चूकना / खोना",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "वह ट्रेन चूक गई होती।",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "रहना",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "मैं घर पर ही रहना पसंद करता।",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "पहुँचना",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "हम पहले पहुँच गए होते।",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "खर्च करना (पैसे)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "उसे वह पैसे खर्च नहीं करने चाहिए थे।",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "बल्कि / प्राथमिकता से",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "मैं घर पर ही रहना पसंद करता।",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "पहले / पूर्व में",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "तुम्हें पहले आना चाहिए था।",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "मौका / भाग्य",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "हम यह मौका नहीं चूके होते।",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "सलाह",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "उसने मेरी सलाह मानी होती।",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "सही रूप चुनें: अगर उसने अधिक पढ़ाई की होती, तो वह परीक्षा में पास हो गया होता।",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "भूतकाल में अनुमान व्यक्त करने के लिए hätte + Partizip II का उपयोग करें, जब क्रिया haben के साथ बनती हो"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "वाक्य को सही रूप से पूरा करें: Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "क्रिया losfahren Perfekt में sein के साथ बनती है, इसलिए Konjunktiv II में wären का उपयोग करें"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "क्रिया bleiben Perfekt में sein के साथ बनती है",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "शब्दों को सही क्रम में लगाकर वाक्य बनाएँ: काश उसने मुझे पहले फ़ोन किया होता।",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte दूसरे स्थान पर आता है, और Partizip II वाक्य के अंत में"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "कौन-सा वाक्य भूतकाल में न हुई किसी बात पर अफ़सोस व्यक्त करता है?",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "hätte + Partizip II की संरचना भूतकाल में अफ़सोस दर्शाती है"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "प्रत्येक जर्मन वाक्य को उसके सही हिंदी अनुवाद से मिलाएँ।",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "शब्दों को सही क्रम में लगाकर शर्त वाला वाक्य बनाएँ: अगर उसके पास समय होता, तो उसने हमारी मदद की होती।",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "Wenn वाले उपवाक्य में hätte अंत में आता है; मुख्य वाक्य में hätte पहले स्थान पर आता है"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "निम्नलिखित वाक्य को स्पष्ट आवाज़ में बोलें: 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "इसका अर्थ है: मुझे यह अवसर भुनाना चाहिए था।"
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "समय-संबंधी और양보 उपवाक्य — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "समय-संबंधी और양보 उपवाक्य — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "जर्मन भाषा में, हम **उपवाक्यों** (Nebensätze) का उपयोग दो विचारों को जोड़ने के लिए करते हैं। इस पाठ में ये मुख्यतः दो प्रकार के होते हैं:\n\n**पहला: समय-संबंधी उपवाक्य (Temporale Nebensätze)**\nये दो घटनाओं के बीच समय-संबंध व्यक्त करते हैं। ये एक समय-संयोजक से शुरू होते हैं और उपवाक्य के अंत में क्रिया आती है।\n\n- **nachdem** (इसके बाद कि): तब उपयोग होता है जब एक घटना किसी *दूसरी घटना के बाद* होती है। उपवाक्य की घटना मुख्य वाक्य की घटना से समय में पहले होती है। प्रायः **Perfekt** या **Plusquamperfekt** के साथ उपयोग होता है।\n- **bevor** (इससे पहले कि): तब उपयोग होता है जब एक घटना किसी *दूसरी घटना से पहले* होती है।\n- **während** (जबकि / के दौरान): तब उपयोग होता है जब दो घटनाएँ *एक ही समय* पर होती हैं।\n- **seit / seitdem** (जब से): तब उपयोग होता है जब कोई घटना अतीत में शुरू हुई हो और अभी भी जारी हो।\n\n**दूसरा:양보 उपवाक्य (Konzessive Nebensätze)**\nये दो विचारों के बीच **विरोधाभास** या **अपवाद** व्यक्त करते हैं। मुख्य संयोजक है:\n\n- **obwohl** (इसके बावजूद कि / हालाँकि): तब उपयोग होता है जब कोई परिणाम हमारी अपेक्षाओं के विपरीत हो।\n\n**उपवाक्यों का सुनहरा नियम:**\nइन सभी वाक्यों में, **क्रिया हमेशा उपवाक्य के अंत में जाती है।**\nयदि मुख्य वाक्य उपवाक्य से शुरू होता है, तो **मुख्य वाक्य की क्रिया अल्पविराम के ठीक बाद आती है** (Verb-Zweitstellung)।",
+        "tables": [
+          {
+            "title": "समय-संबंधी और양보 संयोजक — एक सामान्य दृष्टि",
+            "headers": [
+              "संयोजक",
+              "हिंदी अर्थ",
+              "समय / तार्किक संबंध",
+              "उदाहरण"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "इसके बाद कि",
+                  "उपवाक्य की घटना मुख्य वाक्य से पहले होती है",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "इससे पहले कि",
+                  "उपवाक्य की घटना मुख्य वाक्य के बाद होती है",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "जबकि / के दौरान",
+                  "दो घटनाएँ एक साथ होती हैं",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "जब से",
+                  "अतीत से जारी घटना",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "हालाँकि",
+                  "विरोधाभास /양보",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "इन सभी वाक्यों में क्रिया उपवाक्य के अंत में आती है।",
+            "theme": "default"
+          },
+          {
+            "title": "उपवाक्य में शब्द-क्रम (Wortstellung)",
+            "headers": [
+              "प्रकार",
+              "पहले मुख्य वाक्य",
+              "पहले उपवाक्य"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "संरचना",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "nachdem के साथ उदाहरण",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl के साथ उदाहरण",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "während के साथ उदाहरण",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ जब वाक्य उपवाक्य से शुरू होता है, तो मुख्य वाक्य की क्रिया अल्पविराम के ठीक बाद (दूसरे स्थान पर) आती है।",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "उपवाक्य में क्रिया हमेशा अंत में: संयोजकों (nachdem, bevor, während, seitdem, obwohl) के बाद क्रिया उपवाक्य के अंत में जाती है।",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "मैं तुम्हें फ़ोन करूँगा, इससे पहले कि मैं घर वापस आऊँ।"
+          },
+          {
+            "rule": "nachdem के साथ: यदि मुख्य वाक्य Präsens या Perfekt में है तो उपवाक्य में Perfekt का उपयोग करें, और यदि मुख्य वाक्य Präteritum में है तो Plusquamperfekt का उपयोग करें।",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "किताब पढ़ने के बाद वह सोने चला गया।"
+          },
+          {
+            "rule": "obwohl विरोधाभास व्यक्त करता है: उपवाक्य में एक ऐसा कारण होता है जिससे घटना रुकने की उम्मीद थी, लेकिन वह नहीं रुकी।",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "हालाँकि वह बीमार है, फिर भी काम पर जाता है।"
+          },
+          {
+            "rule": "यदि वाक्य उपवाक्य से शुरू होता है, तो मुख्य वाक्य की क्रिया अल्पविराम के ठीक बाद दूसरे स्थान पर आती है।",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "जबकि वह सो रही है, मैं जर्मन सीख रहा हूँ।"
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — नाश्ता करने के बाद मैं काम पर जाता हूँ।",
+          "Bevor du schläfst, musst du die Zähne putzen. — सोने से पहले तुम्हें दाँत साफ़ करने होंगे।",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — जबकि मेरी माँ खाना बनाती है, मैं अपना गृहकार्य करता हूँ।",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — जब से वह जर्मनी में रहता है, वह बहुत अच्छी जर्मन बोलता है।",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — हालाँकि मौसम खराब है, हम एक भ्रमण पर जाते हैं।",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — परीक्षा देने से पहले वह हर दिन पढ़ती है।",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — फ़िल्म खत्म होने के बाद हम घर चले गए।",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — हालाँकि वह थका हुआ था, फिर भी उसने पूरी किताब पढ़ ली।"
+        ],
+        "tip": "💡 हमेशा याद रखें: ये संयोजक 'क्रिया के हत्यारे' हैं — ये क्रिया को उपवाक्य के अंत में भेज देते हैं! और यदि आपका वाक्य obwohl, nachdem या किसी अन्य संयोजक से शुरू होता है, तो मुख्य वाक्य की क्रिया अल्पविराम के ठीक बाद आती है। इस पैटर्न को ज़ोर से बोलकर तब तक अभ्यास करें जब तक यह आपके लिए स्वाभाविक न हो जाए।"
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "परीक्षा",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "परीक्षा देने से पहले वह बहुत पढ़ती है।",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "भ्रमण / सैर",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "हालाँकि बारिश हो रही है, हम एक भ्रमण पर जाते हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "गृहकार्य",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "जबकि मेरा भाई खेलता है, मैं अपना गृहकार्य करता हूँ।",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "नाश्ता करना",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "नाश्ता करने के बाद मैं स्कूल जाता हूँ।",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "नींद आना / सो जाना",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "सोने से पहले वह एक किताब पढ़ता है।",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "व्यवस्थित करना / साफ़ करना",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "खाना खाने के बाद उसने रसोई व्यवस्थित की।",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "थका हुआ / थकी हुई",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "हालाँकि वह थकी हुई है, फिर भी काम जारी रखती है।",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "फिर भी / इसके बावजूद",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "बारिश हो रही है, फिर भी हम टहलने जाते हैं।",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "तब से / जब से",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "जब से वह यहाँ रहती है, उसके बहुत सारे दोस्त हैं।",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "हालाँकि / इसके बावजूद कि",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "हालाँकि वह बीमार है, फिर भी काम पर आता है।",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "जबकि / के दौरान",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "जबकि मैं पढ़ता हूँ, मेरा भाई संगीत सुनता है।",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "मौसम",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "हालाँकि मौसम खराब है, हम बाहर जाते हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "पहुँचना",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "पहुँचने के बाद उसने अपने परिवार को फ़ोन किया।",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "दाँत साफ़ करना",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "सोने से पहले तुम्हें दाँत साफ़ करने होंगे।",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "सही संयोजक चुनें: ___ er gegessen hat, geht er schlafen. (खाने के बाद वह सोने गया)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "हम एक ऐसे संयोजक की तलाश कर रहे हैं जिसका अर्थ 'इसके बाद कि' हो और जो यह दर्शाए कि उपवाक्य की घटना पहले हुई।"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "उचित संयोजक का उपयोग करके वाक्य पूरा करें: ___ es kalt ist, trägt er keine Jacke. (हालाँकि मौसम ठंडा है, वह जैकेट नहीं पहनता)",
+            "answer": "Obwohl",
+            "hint": "हम एक ऐसे संयोजक की तलाश कर रहे हैं जो विरोधाभास और양보 व्यक्त करे।"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "während के साथ उपवाक्य में क्रिया अंत में आती है।",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "सही वाक्य बनाने के लिए शब्दों को क्रमबद्ध करें: (स्कूल जाने से पहले वह नाश्ता करती है)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "याद रखें: उपवाक्य में क्रिया अंत में, और मुख्य वाक्य की क्रिया अल्पविराम के ठीक बाद।"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "व्याकरण की दृष्टि से कौन-सा वाक्य सही है?",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "उपवाक्य में क्रिया अंत में आती है, और मुख्य वाक्य में क्रिया अल्पविराम के बाद दूसरे स्थान पर।"
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "प्रत्येक संयोजक को उसके सही हिंदी अर्थ से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "निम्नलिखित वाक्य को ज़ोर से और सही तरीके से बोलें: 'Seitdem er in Marokko wohnt, vermisst er Deutschland.'",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "क्रिया के स्थान पर ध्यान दें: 'wohnt' उपवाक्य के अंत में, और 'vermisst' मुख्य वाक्य के दूसरे स्थान पर।"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "क्रिया के सही रूप से वाक्य पूरा करें: Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "nachdem के साथ उपवाक्य में Perfekt का उपयोग होता है: Partizip II + hat/haben अंत में।"
+          }
+        ]
+      }
     }
   }
 }

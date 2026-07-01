@@ -10605,6 +10605,1046 @@
           }
         ]
       }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "El caso posesivo — Genitiv — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "Fundamentos del caso posesivo — nombres propios (Peters Auto) y artículos des / der",
+        "content": "En alemán, usamos el **caso posesivo (Genitiv)** para expresar pertenencia o la relación entre dos cosas, es decir, para responder a la pregunta: **¿de quién es esto?**\n\nExisten dos formas principales de construir este caso en el nivel A2:\n\n**① Nombres propios (Eigennamen):**\nCuando queremos decir que algo pertenece a una persona identificada por su nombre, simplemente añadimos la letra **-s** al final del nombre, sin apóstrofo.\nEjemplo: **Peter → Peters Auto** (el coche de Peter)\nEjemplo: **Anna → Annas Buch** (el libro de Anna)\n\n**② Artículos con sustantivos comunes:**\nCuando usamos un sustantivo común (no un nombre propio), el artículo cambia según el género del sustantivo:\n- Sustantivos masculinos (Maskulinum) y neutros (Neutrum): el artículo se convierte en **des** y se añade **-s** o **-es** al final del sustantivo.\n- Sustantivos femeninos (Femininum) y plurales (Plural): el artículo se convierte en **der** y el sustantivo no cambia.\n\nEjemplo: **das Auto des Mannes** (el coche del hombre)\nEjemplo: **das Buch der Frau** (el libro de la mujer)\n\n**Nota importante:** En el alemán hablado cotidiano, muchos alemanes sustituyen el Genitiv por la preposición **von + Dativ**, por ejemplo: **das Auto von Peter**. Sin embargo, en la escritura formal y en los exámenes se prefiere el uso correcto del Genitiv.",
+        "tables": [
+          {
+            "title": "Cambio del artículo en el caso posesivo (Genitiv)",
+            "headers": [
+              "Género",
+              "Nominativ (sujeto)",
+              "Genitiv (posesivo)",
+              "Ejemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculino (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutro (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "Femenino (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 Masculino y neutro: des + sustantivo + s/es | 🔴 Femenino y plural: der + sustantivo sin cambio",
+            "theme": "default"
+          },
+          {
+            "title": "Nombres propios en el caso posesivo (Eigennamen + -s)",
+            "headers": [
+              "Nombre original",
+              "Genitiv",
+              "Oración completa",
+              "Traducción"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "El coche de Peter es nuevo."
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "El bolso de Anna es bonito."
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "El perro de Thomas es grande."
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "El apartamento de Maria es pequeño."
+                ]
+              }
+            ],
+            "note": "⚠️ Si el nombre termina en -s, -z o -x, se coloca solo un apóstrofo (Apostroph): Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Nombres propios: añade -s directamente después del nombre para indicar posesión, sin apóstrofo.",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "Esta es la bicicleta de Laura."
+          },
+          {
+            "rule": "Sustantivos masculinos y neutros: usa des y añade -s o -es al final del sustantivo.",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "El color del coche es azul."
+          },
+          {
+            "rule": "Sustantivos femeninos y plurales: usa solo der, el sustantivo no cambia.",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "El nombre de la profesora es Müller."
+          },
+          {
+            "rule": "Si el nombre propio termina en -s, -z o -x, coloca un apóstrofo (') en lugar de añadir -s.",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "Este es el libro de Thomas."
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — Este es el coche de Peter.",
+          "Annas Tasche ist sehr schön. — El bolso de Anna es muy bonito.",
+          "Der Hund des Mannes ist groß. — El perro del hombre es grande.",
+          "Das Zimmer des Kindes ist klein. — La habitación del niño es pequeña.",
+          "Die Wohnung der Frau ist modern. — El apartamento de la mujer es moderno.",
+          "Die Spielzeuge der Kinder sind neu. — Los juguetes de los niños son nuevos.",
+          "Ich nehme das Fahrrad meines Bruders. — Tomo la bicicleta de mi hermano.",
+          "Der Name des Lehrers ist Schmidt. — El nombre del profesor es Schmidt."
+        ],
+        "tip": "💡 Recuerda la regla de oro: **des** para masculino y neutro (añadiendo -s al sustantivo), y **der** para femenino y plural (sin cambiar el sustantivo). ¡Y si es un nombre propio, simplemente añade -s al final directamente!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "coche",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "Este es el coche de Peter.",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "bolso / bolsa",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "El bolso de Anna es nuevo.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "perro",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "El perro del hombre es grande.",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "habitación",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "La habitación del niño es pequeña.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "apartamento / piso",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "El apartamento de la mujer es moderno.",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "nombre",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "El nombre del profesor es Schmidt.",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "bicicleta",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "La bicicleta del niño es roja.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "libro",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "Este es el libro de Anna.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "profesor",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "El nombre del profesor es Müller.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "profesora",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "El libro de la profesora es antiguo.",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "color",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "El color del coche es azul.",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "pertenecer a / ser de",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "El coche pertenece al padre de Peter.",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "nuevo",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "El coche de Peter es nuevo.",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "juguete",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "Los juguetes de los niños son coloridos.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "Elige el artículo correcto en el caso posesivo: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "La palabra Mann es masculina → usamos des"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "Completa la oración con la forma correcta del nombre propio: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "Añade -s directamente después del nombre propio Anna"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "Elige la forma correcta del caso posesivo: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "La palabra Lehrerin es femenina → usamos der"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "Ordena las palabras para formar una oración correcta:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "Orden: sujeto + verbo + resto de la oración"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "Une cada oración con su traducción correcta:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "Escucha la oración y completa el espacio en blanco: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto es neutro → usamos des",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "El nombre Thomas termina en -s. ¿Cómo se escribe correctamente la posesión?",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "Si el nombre termina en -s, se coloca solo un apóstrofo (')"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "Pronuncia la siguiente oración en voz alta correctamente: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "Presta atención a la pronunciación de: Annas (anas) y der Frau (der frau)"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "Las oraciones de relativo — Nominativ y Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "Las oraciones de relativo simples — Relativsätze im Nominativ und Akkusativ",
+        "content": "**¿Qué es una oración de relativo?**\nLa oración de relativo (Relativsatz) es una oración subordinada que se añade a un sustantivo mencionado anteriormente para aclararlo o describirlo. Siempre comienza con un **pronombre relativo** (Relativpronomen) como: **der, die, das**.\n\n**¿Cómo elegimos el pronombre relativo?**\nLa elección del pronombre depende de dos factores:\n1. **El género del sustantivo** que describimos (masculino, femenino o neutro) — esto determina la forma básica del pronombre.\n2. **La función del pronombre dentro de la oración de relativo** — ¿es sujeto (Nominativ) o complemento directo (Akkusativ)?\n\n**Nominativ:** el pronombre relativo es el **sujeto** de la oración de relativo.\nEjemplo: Das ist der Mann, **der** hier arbeitet. ← (der Mann es quien trabaja → sujeto)\n\n**Akkusativ:** el pronombre relativo es el **complemento directo** en la oración de relativo.\nEjemplo: Das ist der Mann, **den** ich kenne. ← (yo conozco al hombre → complemento directo)\n\n**Regla muy importante:** el verbo en la oración de relativo siempre va **al final de la oración**.\n\n**La coma (Komma):** la oración de relativo siempre se separa de la oración principal con una coma.",
+        "tables": [
+          {
+            "title": "Pronombres relativos — Relativpronomen (Nominativ y Akkusativ)",
+            "headers": [
+              "Género / Tipo",
+              "Ejemplo (sustantivo)",
+              "Nominativ (sujeto)",
+              "Akkusativ (complemento directo)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculino — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Femenino — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutro — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Atención: el pronombre relativo en Akkusativ para el masculino cambia de der a den — ¡es la única diferencia!",
+            "theme": "default"
+          },
+          {
+            "title": "Comparación: el artículo determinado (Artikel) y el pronombre relativo (Relativpronomen)",
+            "headers": [
+              "Género",
+              "Artículo determinado",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculino",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "Femenino",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutro",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "Los pronombres relativos se parecen mucho a los artículos determinados — ¡lo que hace que memorizarlos sea más fácil!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "El pronombre relativo concuerda con el **género del sustantivo** que describe en la oración principal.",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "La mujer que está parada allí es mi profesora."
+          },
+          {
+            "rule": "Si el pronombre relativo es el **sujeto** de la oración de relativo, usamos **Nominativ**: der / die / das / die.",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "Este es el niño que juega al fútbol."
+          },
+          {
+            "rule": "Si el pronombre relativo es el **complemento directo** en la oración de relativo, usamos **Akkusativ**: den / die / das / die.",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "La película que vi fue genial."
+          },
+          {
+            "rule": "El verbo en la oración de relativo siempre va **al final**, y la oración se separa con una **coma**.",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "Tengo un amigo que toca la guitarra muy bien."
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — Este es el hombre que corre todos los días.",
+          "Die Frau, die ich kenne, wohnt in Berlin. — La mujer que conozco vive en Berlín.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — El libro que está sobre la mesa es mío.",
+          "Ich suche einen Job, den ich liebe. — Busco un trabajo que me encante.",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — El perro que encontramos es muy tierno.",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — Los niños que juegan en el parque son mis vecinos.",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — El restaurante que visitamos era muy bueno.",
+          "Er hat eine Schwester, die in Marokko lebt. — Tiene una hermana que vive en Marruecos."
+        ],
+        "tip": "💡 Recuerda: ¡la única diferencia entre Nominativ y Akkusativ en los pronombres relativos es el masculino! **der** se convierte en **den** en Akkusativ. El femenino, el neutro y el plural no cambian. ¡Concéntrate en esta única diferencia y dominarás la regla fácilmente!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "hombre",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "El hombre que está parado allí es mi padre.",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "mujer / señora",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "La mujer que veo está sonriendo.",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "niño",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "El niño que llora está cansado.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "libro",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "El libro que estoy leyendo es interesante.",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "película",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "La película que estamos viendo es divertida.",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "amigo",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "Tengo un amigo que cocina bien.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "apartamento",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "El apartamento que busco es grande.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "perro",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "El perro que tengo se llama Max.",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "conocer (a una persona o un lugar)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "La mujer que conozco es muy simpática.",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "buscar",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "Busca un trabajo que le guste.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "comprar",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "El coche que estoy comprando es rojo.",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "interesante",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "El libro que él lee es muy interesante.",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "vecino",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "El vecino que conozco es amable.",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "restaurante",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "El restaurante que visitamos es nuevo.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "Elige el pronombre relativo correcto: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "El sustantivo es masculino (der Mann) y el pronombre es el sujeto de la oración de relativo → Nominativ masculino"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "Elige el pronombre relativo correcto: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "El sustantivo es masculino (der Film) pero el pronombre es complemento directo (ich habe ihn gesehen) → Akkusativ masculino"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "Completa la oración con el pronombre relativo adecuado: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "El sustantivo es femenino (die Frau) y el pronombre es sujeto → Nominativ femenino = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "Escucha la oración y completa el espacio en blanco: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "El sustantivo es neutro (das Kind) y el pronombre es complemento directo → Akkusativ neutro = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "Ordena las palabras para formar una oración correcta: (Busco un apartamento que sea grande)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "¡El verbo en la oración de relativo va al final!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "Ordena las palabras para formar una oración correcta: (El libro que estoy leyendo es interesante)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Empieza con Das Buch, luego la oración de relativo, luego la oración principal"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "Une cada oración con su traducción correcta:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "Pronuncia la siguiente oración en voz alta correctamente: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "Recuerda: el verbo möchte va al final de la oración de relativo, y la coma va antes de die"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "Expresar el objetivo: um…zu y damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "Las oraciones finales (Finalsätze): um…zu frente a damit",
+        "content": "En alemán, usamos los **Finalsätze** (oraciones finales) para expresar el **objetivo** o el **propósito** de una acción, es decir, para responder a la pregunta: \"¿Por qué haces esto?\" o \"¿Cuál es tu objetivo?\"\n\nExisten dos formas principales:\n\n**1. um … zu + Infinitiv**\nLa usamos cuando el **sujeto de la oración principal y el sujeto de la oración de objetivo son la misma persona**.\nEstructura: oración principal + **um** + … + **zu** + verbo en infinitivo (Infinitiv) al final de la oración.\nEjemplo: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(Yo aprendo alemán — objetivo: yo trabajo en Alemania ← mismo sujeto: ich)\n\n**2. damit + Nebensatz**\nLa usamos cuando el **sujeto de la oración de objetivo es una persona diferente** al sujeto de la oración principal.\nEstructura: oración principal + **damit** + oración subordinada (el verbo al final).\nEjemplo: *Ich spreche langsam, damit du mich verstehst.*\n(Yo hablo despacio — objetivo: tú me entiendes ← sujetos diferentes: ich / du)\n\n**Nota importante:** Después de **um…zu** no se menciona un sujeto explícito, mientras que después de **damit** es obligatorio indicar el sujeto y el verbo conjugado.",
+        "tables": [
+          {
+            "title": "¿Cuándo usamos um…zu y cuándo damit?",
+            "headers": [
+              "Conector",
+              "Sujetos",
+              "Estructura de la oración",
+              "Ejemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "Mismo sujeto ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "Sujeto diferente ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "La regla de oro: si el sujeto cambia → damit. Si sigue siendo el mismo → um…zu.",
+            "theme": "default"
+          },
+          {
+            "title": "Posición del verbo en la oración subordinada",
+            "headers": [
+              "Tipo",
+              "Conector",
+              "Posición del verbo",
+              "Ejemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv al final",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "Verbo conjugado al final",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "En ambos casos, el verbo va al final de la oración subordinada.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Usa um…zu cuando el sujeto de ambas oraciones es el mismo; el verbo en infinitivo (Infinitiv) va después de zu al final de la oración.",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "Va a la biblioteca para leer un libro."
+          },
+          {
+            "rule": "Usa damit cuando el sujeto de la oración de objetivo es diferente al de la oración principal; el verbo conjugado va al final de la oración subordinada.",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "La madre cocina para que los niños puedan comer."
+          },
+          {
+            "rule": "Después de um…zu no se vuelve a mencionar el sujeto, ya que se sobreentiende a partir de la oración principal.",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "Ahorro dinero para comprarme un coche."
+          },
+          {
+            "rule": "damit es una Konjunktion que introduce una oración subordinada completa con sujeto y verbo conjugado al final.",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "Habla en voz alta para que todos le escuchen."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — Aprendo alemán para estudiar en Alemania.",
+          "Sie spart Geld, um eine Reise zu machen. — Ahorra dinero para hacer un viaje.",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — Se levanta temprano para no perder el autobús.",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — Hablamos despacio para que los niños nos entiendan.",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — La profesora escribe en la pizarra para que los alumnos vean las palabras.",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — Abre la ventana para obtener aire fresco.",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — Escribo una lista para no olvidar nada.",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — Entrena cada día para mantenerse en forma."
+        ],
+        "tip": "💡 El truco fácil: antes de elegir entre um…zu y damit, pregúntate: \"¿Quién realiza la acción objetivo?\" — Si es la misma persona que en la primera oración → um…zu. Si es otra persona → damit. ¡Esta sencilla pregunta resuelve el 99 % de los errores!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "el objetivo",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "Mi objetivo es aprender alemán.",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "la razón / el motivo",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "¿Cuál es el motivo de eso?",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "aprender / estudiar",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "Aprende alemán para trabajar.",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "ahorrar (dinero)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "Ahorra dinero para comprarse una bicicleta.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "entender / comprender",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "Habla despacio para que te entienda.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "ayudar",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "Ella lo explica para que él pueda ayudar.",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "el examen",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "Estudia mucho para aprobar el examen.",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "el viaje",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "Ahorra para hacer un viaje.",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "sano / saludable",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "Come fruta para mantenerse sano.",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "temprano",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "Se levanta temprano para salir a correr.",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "explicar",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "La profesora explica para que los alumnos entiendan.",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "el trabajo",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "Busca un trabajo para ganar dinero.",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "comprar",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "Ahorro para comprarme un libro.",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "despacio / lento",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "Habla despacio para que entienda.",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "Elige el conector correcto: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (El sujeto en ambas oraciones es el mismo: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "El sujeto en ambas oraciones es el mismo (ich) → se usa um…zu"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "Elige el conector correcto: Die Mutter liest vor, ___ das Kind schlafen kann. (La madre lee — el niño duerme)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "El sujeto cambia: die Mutter ← → das Kind → se usa damit"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "Completa la oración usando um…zu: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "Coloca um al principio y zu justo antes del verbo al final de la oración."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "Ordena las palabras para formar una oración correcta con damit:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "El verbo conjugado en la oración subordinada va al final."
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "Une cada oración con su traducción correcta:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "Escucha la oración y completa el espacio en blanco: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "¿Cambia el sujeto? No → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "Pronuncia la siguiente oración en voz clara: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "Atención: zu va justo antes del verbo al final de la oración."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "¿Cuál de las dos oraciones es gramaticalmente correcta?",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "El sujeto cambia (sie ← ihr Sohn) → damit + oración subordinada completa con el verbo al final."
+          }
+        ]
+      }
     }
   }
 }

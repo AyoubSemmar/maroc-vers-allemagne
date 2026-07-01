@@ -8076,6 +8076,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "Слабые существительные (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "Слабые существительные — n-Deklination (schwache Nomen)",
+        "content": "В немецком языке существует особая группа существительных мужского рода, называемых **schwache Nomen** (слабые существительные). Они отличаются от остальных тем, что **принимают окончание -(e)n во всех падежах, кроме Nominativ** (именительного падежа).\n\n**Какие существительные относятся к этой группе?**\nБольшинство из них — существительные мужского рода, принадлежащие к одной из следующих категорий:\n- Существительные, обозначающие **людей, профессии или национальности**, например: *der Student, der Journalist, der Kollege*\n- Существительные, оканчивающиеся на **-e**, например: *der Junge, der Kunde, der Zeuge*\n- Существительные, оканчивающиеся на **-ist, -ent, -ant, -at**, например: *der Tourist, der Patient, der Praktikant*\n- Особое исключение: **der Herr** принимает *-n* в единственном числе и *-en* во множественном числе\n\n**Золотое правило:**\nВ падежах Genitiv, Dativ и Akkusativ — всегда добавляйте **-(e)n** к существительному.\n\n**Важное замечание:** Некоторые из этих существительных также принимают **-s** в Genitiv единственного числа, например: *des Studenten* — обратите внимание, что окончание здесь **-en**, а не **-s**, как у обычных существительных.",
+        "tables": [
+          {
+            "title": "Склонение слабых существительных — пример: der Student / der Junge / der Herr",
+            "headers": [
+              "Падеж",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (именительный)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (винительный)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (дательный)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (родительный)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "Окончание -(e)n добавляется во всех падежах, кроме Nominativ. der Herr принимает -n только в единственном числе.",
+            "theme": "default"
+          },
+          {
+            "title": "Примеры распространённых категорий слабых существительных",
+            "headers": [
+              "Тип",
+              "Примеры",
+              "Окончание"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Оканчиваются на -e",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "Оканчиваются на -ent / -ant",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Оканчиваются на -ist",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Оканчиваются на -at / -ot",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Исключение",
+                  "der Herr",
+                  "-n (ед. ч.) / -en (мн. ч.)"
+                ]
+              }
+            ],
+            "note": "Все эти существительные мужского рода. Всегда проверяйте по словарю, если не уверены.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Слабые существительные принимают -(e)n в падежах Akkusativ, Dativ и Genitiv — и остаются без окончания только в Nominativ.",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "Студент учится. — Я знаю студента."
+          },
+          {
+            "rule": "Существительные, оканчивающиеся на -e (например, der Junge, der Kunde), принимают только -n (без дополнительного e).",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "Я помогаю мальчику."
+          },
+          {
+            "rule": "Существительные, оканчивающиеся на -ent, -ist, -ant, -at, -ot, принимают -en во всех падежах, кроме Nominativ.",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "Это комната студента."
+          },
+          {
+            "rule": "der Herr — исключение: принимает -n в единственном числе (Herrn) и -en во множественном числе (Herren).",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "Я разговариваю с господином."
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — Журналист пишет статью.",
+          "Ich kenne den Journalisten gut. — Я хорошо знаю журналиста.",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — Мы помогаем студенту с домашним заданием.",
+          "Das ist das Buch des Kollegen. — Это книга коллеги.",
+          "Der Kunde möchte ein Zimmer reservieren. — Клиент хочет забронировать номер.",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — Учительница объясняет мальчику задание.",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — Я отправил электронное письмо господину Мюллеру.",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — Стажёр работает в компании уже месяц."
+        ],
+        "tip": "💡 Каждый раз, когда вы видите существительное мужского рода, оканчивающееся на -e, -ent, -ist или -ant, помните: скорее всего, это слабое существительное! Спросите себя: стоит ли оно в Nominativ? Если нет — сразу добавляйте -(e)n. Это правило охватывает более 90% случаев на уровне B1."
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "студент (университетский)",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "Студент учит немецкий каждый день.",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "журналист",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "Журналист работает в газете.",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "коллега",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "Я обедаю вместе с коллегой.",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "мальчик / парень",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "Мать зовёт мальчика.",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "покупатель / клиент",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "Продавец помогает клиенту.",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "господин",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "Доброе утро, господин Шмидт!",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "турист",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "Турист спрашивает дорогу.",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "стажёр",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "Мы приветствуем нового стажёра.",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "свидетель",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "Полиция допрашивает свидетеля.",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "солдат",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "Солдата благодарят за его службу.",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "пилот",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "Пассажиры доверяют пилоту.",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "человек / личность",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "Я помогаю человеку, которому нужна помощь.",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "пациент",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "Врач осматривает пациента.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Выберите правильную форму слабого существительного в предложении с Akkusativ:\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "В Akkusativ слабые существительные принимают -(e)n, а артикль становится den."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "Вставьте правильную форму слабого существительного:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "После dem мы находимся в Dativ — добавьте -en к слабому существительному."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 Прослушайте и вставьте пропущенное слово:",
+            "answer": "Kollegen",
+            "hint": "После des мы находимся в Genitiv — слабое существительное принимает -en.",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "Составьте правильное предложение из данных слов:",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "Глагол erklärt требует Dativ для того, кому объясняют — используйте dem + Jungen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "Какое из этих предложений содержит ошибку в употреблении слабого существительного?",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde — слабое существительное: в Dativ оно должно принять форму dem Kunden."
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "Соотнесите каждое существительное в Nominativ с его правильной формой в Akkusativ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "Вставьте правильную форму:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den указывает на Akkusativ — слабое существительное принимает -en."
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "Произнесите следующее предложение вслух, обращая внимание на произношение окончания -en:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "Помните: Herrn = der Herr в Dativ. Окончание -en произносится легко, почти редуцированно в конце слова."
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "Конъюнктив II в прошедшем времени — Konjunktiv II der Vergangenheit",
+      "grammar": {
+        "title": "Конъюнктив II в прошедшем времени — hätte/wäre + Partizip II",
+        "content": "## Что такое Konjunktiv II der Vergangenheit?\n\n**Konjunktiv II der Vergangenheit** используется для выражения вещей, **которые не произошли в прошлом**, например:\n- Выражение **сожаления** о том, что упущено: *Если бы я только сделал это...*\n- Выражение **предположения** или **условия** в прошлом: *Если бы я сделал это, то было бы...*\n\n---\n\n## Как строится это время?\n\nФорма состоит из двух частей:\n\n**hätte / wäre** (в форме Konjunktiv II) **+ Partizip II** основного глагола\n\n- Используем **hätte** с большинством глаголов (переходными глаголами и глаголами состояния).\n- Используем **wäre** с глаголами движения и изменения (например: *gehen, kommen, fahren, werden, sein*).\n\n---\n\n## Краткое сравнение:\n\n| Время | Значение | Пример |\n|---|---|---|\n| Konjunktiv II der Gegenwart | Предположение в настоящем | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | Предположение/сожаление в прошлом | Ich **hätte** gelernt. |\n\n---\n\n**Запомните:** **Partizip II** никогда не изменяется в этой форме — всё спряжение приходится на **hätte** или **wäre**.",
+        "tables": [
+          {
+            "title": "Спряжение hätte с Partizip II — глаголы с haben",
+            "headers": [
+              "Местоимение",
+              "Konjunktiv II",
+              "Полный пример",
+              "Значение"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "Я бы выучил / Жаль, что я не выучил"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "Ты бы выучил"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "Он бы выучил"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "Мы бы выучили"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "Вы бы выучили"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "Они бы выучили"
+                ]
+              }
+            ],
+            "note": "hätte используется с глаголами, которые образуют Perfekt с haben",
+            "theme": "default"
+          },
+          {
+            "title": "Спряжение wäre с Partizip II — глаголы с sein",
+            "headers": [
+              "Местоимение",
+              "Konjunktiv II",
+              "Полный пример",
+              "Значение"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "Я бы пошёл / Жаль, что я не пошёл"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "Ты бы пошёл"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "Он бы пошёл"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "Мы бы пошли"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "Вы бы пошли"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "Они бы пошли"
+                ]
+              }
+            ],
+            "note": "wäre используется с глаголами движения и изменения, которые образуют Perfekt с sein",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Основная форма с hätte: для глаголов, которые используют haben в Perfekt",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "Жаль, что я не поспал больше."
+          },
+          {
+            "rule": "Основная форма с wäre: для глаголов, которые используют sein в Perfekt (движение и изменение)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "Она бы пришла раньше."
+          },
+          {
+            "rule": "В придаточном условия (Wenn-Satz) hätte/wäre стоит в конце придаточного предложения",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "Если бы у меня было больше времени, я бы помог."
+          },
+          {
+            "rule": "Partizip II не изменяется независимо от местоимения — спрягается только hätte/wäre",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "Я бы купил. / Мы бы купили."
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — Я бы прочитал эту книгу (но не прочитал).",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — Он бы сдал экзамен, если бы больше учился.",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — Мы бы приехали раньше, но поезд опоздал.",
+          "Sie hätte mir helfen können. — Она могла бы мне помочь.",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — Если бы ты пришёл с нами, нам было бы весело.",
+          "Ich wäre lieber zu Hause geblieben. — Я бы лучше остался дома.",
+          "Er hätte das Geld nicht ausgegeben. — Ему не следовало тратить эти деньги.",
+          "Hättest du früher angerufen, hätte ich gewartet. — Если бы ты позвонил раньше, я бы подождал."
+        ],
+        "tip": "💡 Запомните разницу между hätte и wäre так: если глагол обозначает движение или изменение (gehen, kommen, fahren, werden, sein) — используйте **wäre**, во всех остальных случаях — **hätte**. Точно так же, как в обычном Perfekt!"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "ошибка",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "Я мог бы избежать этой ошибки.",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "возможность",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "Ему следовало воспользоваться этой возможностью.",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "решение",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "Она бы приняла другое решение.",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "опоздание / задержка",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "Мы бы приехали вовремя, если бы не было задержки.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "экзамен",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "Я бы сдал экзамен.",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "сожалеть о чём-либо",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "Он бы пожалел о своём решении.",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "пропустить / упустить",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "Она бы опоздала на поезд.",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "оставаться",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "Я бы лучше остался дома.",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "прибывать / приезжать",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "Мы бы приехали раньше.",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "тратить (деньги)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "Ему не следовало тратить эти деньги.",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "лучше / предпочтительнее",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "Я бы лучше остался дома.",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "раньше / в более раннее время",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "Тебе следовало прийти раньше.",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "шанс / удача",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "Мы бы не упустили этот шанс.",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "совет",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "Она бы последовала моему совету.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "Выберите правильную форму: Если бы он больше учился, он бы сдал экзамен.",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "Используем hätte + Partizip II для выражения предположения в прошлом с глаголом, требующим haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "Дополните предложение правильной формой: Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "Глагол losfahren образует Perfekt с sein, поэтому в Konjunktiv II используем wären"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "Прослушайте предложение и заполните пропуск: Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "Глагол bleiben образует Perfekt с sein",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "Расставьте слова в правильном порядке, чтобы получилось предложение: Жаль, что она не позвонила мне раньше.",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte стоит на второй позиции, Partizip II — в конце предложения"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "Какое предложение выражает сожаление о том, что не произошло в прошлом?",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "Форма hätte + Partizip II указывает на сожаление в прошлом"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "Сопоставьте каждое немецкое предложение с его правильным русским переводом.",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "Расставьте слова в правильном порядке, чтобы получилось условное предложение: Если бы у него было время, он бы нам помог.",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "В предложении с Wenn hätte стоит в конце; в главном предложении hätte стоит на первой позиции"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "Произнесите следующее предложение чётко вслух: 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "Значение: Мне следовало воспользоваться этой возможностью."
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "Пассивный залог с модальными глаголами — Passiv mit Modalverben",
+      "grammar": {
+        "title": "Пассивный залог с модальными глаголами — Passiv mit Modalverben",
+        "content": "## Что такое Passiv mit Modalverben?\n\nВ немецком языке мы можем сочетать **пассивный залог (Passiv)** с **модальными глаголами (Modalverben)**, такими как *müssen, können, dürfen, sollen, wollen*, чтобы выразить необходимость или возможность совершения действия без указания на того, кто его выполняет.\n\n---\n\n### 🔧 Как строится эта конструкция?\n\nОсновная формула:\n\n**Modalverb (спрягается) + Partizip II + werden**\n\n> Пример: Das Zimmer **muss** sauber gemacht **werden**.\n> (Комнату необходимо убрать.)\n\n---\n\n### 📌 Быстрое сравнение\n\n| Активная конструкция (Aktiv) | Пассивная конструкция (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 Важные замечания\n\n- **Модальный глагол** занимает своё обычное место в предложении (вторая позиция в главных предложениях).\n- **werden** всегда остаётся в конце главного предложения в форме инфинитива (Infinitiv).\n- **Partizip II** стоит непосредственно перед *werden* в конце предложения.\n- В **придаточных предложениях (Nebensatz)** модальный глагол стоит в самом конце — после *Partizip II + werden*:\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "Спряжение модальных глаголов в пассивном залоге — Präsens",
+            "headers": [
+              "Модальный глагол",
+              "Значение",
+              "Пример в пассивном залоге",
+              "Перевод"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "нужно / необходимо",
+                  "Das muss gemacht werden.",
+                  "Это необходимо сделать."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "можно / возможно",
+                  "Das kann geändert werden.",
+                  "Это можно изменить."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "разрешено / позволено",
+                  "Hier darf nicht geraucht werden.",
+                  "Здесь курить запрещено."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "предполагается / требуется",
+                  "Das soll sofort erledigt werden.",
+                  "Это должно быть выполнено немедленно."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "планируется / намечается",
+                  "Das will gut geplant werden.",
+                  "Это нужно хорошо спланировать."
+                ]
+              }
+            ],
+            "note": "Формула всегда: Modalverb (спрягается) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "Порядок слов в предложении — Satzstellung",
+            "headers": [
+              "Тип предложения",
+              "Позиция 1",
+              "Позиция 2 (Verb)",
+              "Середина",
+              "Конец"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (главное предложение)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (главное предложение)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (придаточное предложение)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (придаточное предложение)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "В придаточном предложении: модальный глагол стоит последним — после Partizip II + werden",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Основная формула: спрягаемый модальный глагол + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "Посылку необходимо отправить."
+          },
+          {
+            "rule": "В главном предложении модальный глагол стоит на второй позиции, а конец предложения выглядит так: Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "Домашнее задание нужно сдать сегодня."
+          },
+          {
+            "rule": "В придаточном предложении модальный глагол стоит в самом конце — после Partizip II + werden",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "Он говорит, что дверь необходимо закрыть."
+          },
+          {
+            "rule": "В пассивном залоге субъект действия не называется; акцент делается на самом действии, а не на том, кто его выполняет",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "Свет необходимо выключить. (неважно, кто именно его выключит)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — Бланк необходимо заполнить.",
+          "Die Wohnung kann sofort gemietet werden. — Квартиру можно снять немедленно.",
+          "Hier darf nicht fotografiert werden. — Здесь фотографировать запрещено.",
+          "Die Rechnung soll bis Freitag bezahlt werden. — Счёт должен быть оплачен до пятницы.",
+          "Das kaputte Fahrrad muss repariert werden. — Сломанный велосипед необходимо починить.",
+          "Ich glaube, dass das Problem gelöst werden kann. — Я думаю, что проблему можно решить.",
+          "Die Medikamente dürfen nicht vergessen werden. — Лекарства нельзя забывать.",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — Он знает, что работу необходимо выполнить вовремя."
+        ],
+        "tip": "💡 Запомни золотой порядок в конце главного предложения: **сначала Partizip II, затем werden**. А в придаточном предложении: **Partizip II + werden + Modalverb**. Чем лучше ты запомнишь этот порядок, тем более автоматически будет строиться конструкция!"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "бланк / форма",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "Бланк необходимо заполнить.",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "счёт",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "Счёт необходимо оплатить.",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "встреча / назначенное время",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "Встречу необходимо перенести.",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "посылка / пакет",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "Посылку можно забрать.",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "правило",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "Правила необходимо соблюдать.",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "ремонтировать / чинить",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "Машину необходимо починить.",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "заполнять (бланк)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "Заявление необходимо заполнить.",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "выполнять / завершать",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "Задание должно быть выполнено.",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "откладывать / переносить",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "Совещание можно перенести.",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "соблюдать / придерживаться",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "Предписания необходимо соблюдать.",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "немедленно / сразу же",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "Это необходимо сделать немедленно.",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "вовремя / в установленный срок",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "Работу необходимо сдать вовремя.",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "заявление / заявка",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "Заявление необходимо подать.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "предписание / инструкция",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "Предписания нельзя игнорировать.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "Выберите правильное предложение в пассивном залоге с модальным глаголом:",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "Запомни порядок: Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "Дополните предложение, выбрав правильную форму: Das Problem _____ gelöst werden. (Проблему можно решить.)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "Модальный глагол спрягается в соответствии с подлежащим — Das (единственное число, средний род) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "Расставьте слова в правильном порядке, чтобы составить корректное предложение в пассивном залоге:",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "Модальный глагол стоит на второй позиции, конец предложения: Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "Прослушайте предложение и заполните пропуск: Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "Глагол — rauchen. Каков его Partizip II?",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "Как сказать по-немецки: «Заявление должно быть подано завтра»?",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — правильный порядок в главном предложении"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "Соотнесите каждое предложение в пассивном залоге с его правильным переводом:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "Расставьте слова в правильном порядке, чтобы составить корректное придаточное предложение (Nebensatz):",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "В придаточном предложении: модальный глагол стоит последним — после Partizip II + werden"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "Произнесите следующее предложение чётко и внятно: 'Das Paket muss sofort verschickt werden.' — Посылку необходимо отправить немедленно.",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "Обратите внимание на произношение: verschickt — фэр-шикт"
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "Придаточные предложения времени и уступки — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "Придаточные предложения времени и уступки — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "В немецком языке мы используем **придаточные предложения** (Nebensätze), чтобы связать две мысли. В этом уроке они делятся на два основных типа:\n\n**Первый: Придаточные предложения времени (Temporale Nebensätze)**\nВыражают временну́ю связь между двумя событиями. Начинаются с временного союза, а глагол стоит в конце придаточного предложения.\n\n- **nachdem** (после того как): используется, когда одно событие происходит *после* другого. Событие в придаточном предложении предшествует событию в главном. Как правило, используется с **Perfekt** или **Plusquamperfekt**.\n- **bevor** (прежде чем / до того как): используется, когда одно событие происходит *до* другого.\n- **während** (пока / в то время как): используется для выражения двух событий, происходящих *одновременно*.\n- **seit / seitdem** (с тех пор как): используется для выражения события, начавшегося в прошлом и продолжающегося до сих пор.\n\n**Второй: Придаточные предложения уступки (Konzessive Nebensätze)**\nВыражают **противоречие** или **уступку** между двумя мыслями. Основной союз:\n\n- **obwohl** (хотя / несмотря на то что): используется, когда результат противоречит нашим ожиданиям.\n\n**Золотое правило придаточных предложений:**\nВо всех этих предложениях **глагол всегда стоит в конце придаточного предложения**.\nЕсли главное предложение начинается с придаточного, **глагол главного предложения стоит сразу после запятой** (Verb-Zweitstellung).",
+        "tables": [
+          {
+            "title": "Союзы времени и уступки — общий обзор",
+            "headers": [
+              "Союз",
+              "Значение по-русски",
+              "Временна́я / логическая связь",
+              "Пример"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "после того как",
+                  "Событие в придаточном предшествует главному",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "прежде чем / до того как",
+                  "Событие в придаточном следует после главного",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "пока / в то время как",
+                  "Два одновременных события",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "с тех пор как",
+                  "Событие продолжается с прошлого",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "хотя / несмотря на то что",
+                  "Противоречие / уступка",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "Во всех этих предложениях глагол стоит в конце придаточного предложения.",
+            "theme": "default"
+          },
+          {
+            "title": "Порядок слов в придаточном предложении (Wortstellung)",
+            "headers": [
+              "Тип",
+              "Главное предложение первым",
+              "Придаточное предложение первым"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Структура",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "Пример с nachdem",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "Пример с obwohl",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "Пример с während",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ Когда предложение начинается с придаточного, глагол главного предложения стоит сразу после запятой (вторая позиция).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Глагол всегда стоит в конце придаточного предложения: после союзов (nachdem, bevor, während, seitdem, obwohl) глагол уходит в конец придаточного предложения.",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "Я позвоню тебе, прежде чем вернусь домой."
+          },
+          {
+            "rule": "С nachdem: используй Perfekt в придаточном предложении, если главное предложение стоит в Präsens или Perfekt, и Plusquamperfekt — если главное предложение стоит в Präteritum.",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "После того как он прочитал книгу, он пошёл спать."
+          },
+          {
+            "rule": "obwohl выражает противоречие: придаточное предложение содержит причину, которая, как ожидалось, должна была помешать событию, но не помешала.",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "Хотя он болен, он идёт на работу."
+          },
+          {
+            "rule": "Если предложение начинается с придаточного, глагол главного предложения стоит на второй позиции — сразу после запятой.",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "Пока она спит, я учу немецкий."
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — После того как я позавтракал, я еду на работу.",
+          "Bevor du schläfst, musst du die Zähne putzen. — Прежде чем ты ляжешь спать, ты должен почистить зубы.",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — Пока моя мама готовит, я делаю домашнее задание.",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — С тех пор как он живёт в Германии, он очень хорошо говорит по-немецки.",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — Хотя погода плохая, мы отправляемся на прогулку.",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — Прежде чем сдавать экзамен, она учится каждый день.",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — После того как фильм закончился, мы пошли домой.",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — Хотя он был уставшим, он прочитал всю книгу."
+        ],
+        "tip": "💡 Всегда помни: эти союзы — «убийцы глагола» — они отправляют глагол в конец придаточного предложения! А если твоё предложение начинается с obwohl, nachdem или любого другого союза, глагол главного предложения стоит сразу после запятой. Тренируй этот шаблон вслух, пока он не станет для тебя естественным."
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "экзамен",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "Прежде чем сдавать экзамен, она много учится.",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "поездка / прогулка",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "Хотя идёт дождь, мы отправляемся на прогулку.",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "домашнее задание",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "Пока мой брат играет, я делаю домашнее задание.",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "завтракать",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "После того как я позавтракал, я иду в школу.",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "засыпать / заснуть",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "Прежде чем заснуть, он читает книгу.",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "убирать / наводить порядок",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "После того как она поела, она убрала на кухне.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "уставший / уставшая",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "Хотя она устала, она продолжает работать.",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "тем не менее / несмотря на это",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "Идёт дождь, тем не менее мы идём гулять.",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "с тех пор / с тех пор как",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "С тех пор как она живёт здесь, у неё много друзей.",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "хотя / несмотря на то что",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "Хотя он болен, он приходит на работу.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "пока / в то время как",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "Пока я учусь, мой брат слушает музыку.",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "погода",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "Хотя погода плохая, мы выходим на улицу.",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "приезжать / прибывать",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "После того как он приехал, он позвонил своей семье.",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "чистить зубы",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "Прежде чем лечь спать, ты должен почистить зубы.",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "Выбери правильный союз: ___ er gegessen hat, geht er schlafen. (После того как он поел, он пошёл спать)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "Ищем союз со значением «после того как», указывающий на то, что событие в придаточном произошло первым."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "Заполни пропуск подходящим союзом: ___ es kalt ist, trägt er keine Jacke. (Хотя холодно, он не надевает куртку)",
+            "answer": "Obwohl",
+            "hint": "Ищем союз, выражающий противоречие и уступку."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "Прослушай предложение и заполни пропуск: Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "Глагол в придаточном предложении с während стоит в конце.",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "Расставь слова в правильном порядке, чтобы получилось верное предложение: (Прежде чем она идёт в школу, она завтракает)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "Помни: глагол в конце придаточного предложения, а глагол главного предложения — сразу после запятой."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "Какое предложение грамматически правильное?",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "В придаточном предложении глагол стоит в конце, а в главном предложении — на второй позиции после запятой."
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "Сопоставь каждый союз с его правильным значением по-русски:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "Произнеси следующее предложение вслух и правильно: «Seitdem er in Marokko wohnt, vermisst er Deutschland.»",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "Обрати внимание на позицию глагола: «wohnt» — в конце придаточного предложения, «vermisst» — на второй позиции главного предложения."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "Заполни пропуск правильной формой глагола: Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "С nachdem используем Perfekt в придаточном предложении: Partizip II + hat/haben в конце."
+          }
+        ]
+      }
     }
   }
 }

@@ -10650,6 +10650,1046 @@
           }
         ]
       }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "स्वामित्व कारक — Genitiv — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "स्वामित्व कारक की मूल बातें — व्यक्तिवाचक संज्ञाएँ (Peters Auto) और परिभाषित आर्टिकल des / der",
+        "content": "जर्मन भाषा में, हम **स्वामित्व कारक (Genitiv)** का उपयोग दो चीज़ों के बीच संबंध या अपनेपन को व्यक्त करने के लिए करते हैं, यानी इस सवाल का जवाब देने के लिए: **यह किसका है?**\n\nA2 स्तर पर इस कारक को बनाने के दो मुख्य तरीके हैं:\n\n**① व्यक्तिवाचक संज्ञाएँ (Eigennamen):**\nजब हम यह कहना चाहते हैं कि कोई चीज़ किसी व्यक्ति की है, तो हम उसके नाम के अंत में सीधे **-s** जोड़ देते हैं, बिना किसी Apostroph के।\nउदाहरण: **Peter → Peters Auto** (Peter की कार)\nउदाहरण: **Anna → Annas Buch** (Anna की किताब)\n\n**② साधारण संज्ञाओं के साथ परिभाषित आर्टिकल:**\nजब हम कोई साधारण संज्ञा (व्यक्तिवाचक नहीं) उपयोग करते हैं, तो संज्ञा के लिंग के अनुसार आर्टिकल बदल जाता है:\n- पुल्लिंग (Maskulinum) और नपुंसकलिंग (Neutrum): आर्टिकल **des** हो जाता है और संज्ञा के अंत में **-s** या **-es** जुड़ता है।\n- स्त्रीलिंग (Femininum) और बहुवचन (Plural): आर्टिकल **der** हो जाता है और संज्ञा में कोई बदलाव नहीं होता।\n\nउदाहरण: **das Auto des Mannes** (उस आदमी की कार)\nउदाहरण: **das Buch der Frau** (उस महिला की किताब)\n\n**महत्वपूर्ण नोट:** रोज़मर्रा की बोलचाल में, बहुत से जर्मन लोग Genitiv की जगह **von + Dativ** का उपयोग करते हैं, जैसे: **das Auto von Peter**। लेकिन औपचारिक लेखन और परीक्षाओं में सही Genitiv का उपयोग करना बेहतर माना जाता है।",
+        "tables": [
+          {
+            "title": "स्वामित्व कारक (Genitiv) में परिभाषित आर्टिकल का बदलाव",
+            "headers": [
+              "लिंग",
+              "Nominativ (कर्ता कारक)",
+              "Genitiv (स्वामित्व कारक)",
+              "उदाहरण"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "पुल्लिंग (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "नपुंसकलिंग (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "स्त्रीलिंग (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "बहुवचन (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 पुल्लिंग और नपुंसकलिंग: des + संज्ञा + s/es | 🔴 स्त्रीलिंग और बहुवचन: der + संज्ञा (बिना बदलाव के)",
+            "theme": "default"
+          },
+          {
+            "title": "स्वामित्व कारक में व्यक्तिवाचक संज्ञाएँ (Eigennamen + -s)",
+            "headers": [
+              "मूल नाम",
+              "Genitiv",
+              "पूरा वाक्य",
+              "अनुवाद"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "Peter की कार नई है।"
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "Anna का बैग सुंदर है।"
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "Thomas का कुत्ता बड़ा है।"
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "Maria का अपार्टमेंट छोटा है।"
+                ]
+              }
+            ],
+            "note": "⚠️ यदि नाम -s, -z या -x से समाप्त होता है, तो केवल Apostroph (') लगाएँ: Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "व्यक्तिवाचक संज्ञाएँ: स्वामित्व दर्शाने के लिए नाम के अंत में सीधे -s जोड़ें, बिना Apostroph के।",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "यह Laura की साइकिल है।"
+          },
+          {
+            "rule": "पुल्लिंग और नपुंसकलिंग संज्ञाएँ: des का उपयोग करें और संज्ञा के अंत में -s या -es जोड़ें।",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "कार का रंग नीला है।"
+          },
+          {
+            "rule": "स्त्रीलिंग और बहुवचन संज्ञाएँ: केवल der का उपयोग करें, संज्ञा में कोई बदलाव नहीं होता।",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "शिक्षिका का नाम Müller है।"
+          },
+          {
+            "rule": "यदि व्यक्तिवाचक संज्ञा -s, -z या -x से समाप्त होती है, तो -s जोड़ने की बजाय केवल Apostroph (') लगाएँ।",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "यह Thomas की किताब है।"
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — यह Peter की कार है।",
+          "Annas Tasche ist sehr schön. — Anna का बैग बहुत सुंदर है।",
+          "Der Hund des Mannes ist groß. — उस आदमी का कुत्ता बड़ा है।",
+          "Das Zimmer des Kindes ist klein. — बच्चे का कमरा छोटा है।",
+          "Die Wohnung der Frau ist modern. — उस महिला का अपार्टमेंट आधुनिक है।",
+          "Die Spielzeuge der Kinder sind neu. — बच्चों के खिलौने नए हैं।",
+          "Ich nehme das Fahrrad meines Bruders. — मैं अपने भाई की साइकिल ले रहा हूँ।",
+          "Der Name des Lehrers ist Schmidt. — शिक्षक का नाम Schmidt है।"
+        ],
+        "tip": "💡 सुनहरा नियम याद रखें: पुल्लिंग और नपुंसकलिंग के लिए **des** (संज्ञा में -s जोड़ें), और स्त्रीलिंग व बहुवचन के लिए **der** (संज्ञा में कोई बदलाव नहीं)। और यदि व्यक्तिवाचक संज्ञा हो, तो बस अंत में सीधे -s जोड़ दें!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "कार",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "यह Peter की कार है।",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "बैग / थैला",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "Anna का बैग नया है।",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "कुत्ता",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "उस आदमी का कुत्ता बड़ा है।",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "कमरा",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "बच्चे का कमरा छोटा है।",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "अपार्टमेंट / फ्लैट",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "उस महिला का अपार्टमेंट आधुनिक है।",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "नाम",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "शिक्षक का नाम Schmidt है।",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "साइकिल",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "बच्चे की साइकिल लाल है।",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "किताब",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "यह Anna की किताब है।",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "शिक्षक",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "शिक्षक का नाम Müller है।",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "शिक्षिका",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "शिक्षिका की किताब पुरानी है।",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "रंग",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "कार का रंग नीला है।",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "किसी का होना / संबंधित होना",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "कार Peter के पिता की है।",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "नया",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "Peter की कार नई है।",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "खिलौना",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "बच्चों के खिलौने रंग-बिरंगे हैं।",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "Genitiv में सही आर्टिकल चुनें: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "Mann शब्द पुल्लिंग है → des का उपयोग करें"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "व्यक्तिवाचक संज्ञा के सही रूप से वाक्य पूरा करें: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "व्यक्तिवाचक संज्ञा Anna के बाद सीधे -s जोड़ें"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "Genitiv का सही रूप चुनें: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "Lehrerin शब्द स्त्रीलिंग है → der का उपयोग करें"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "सही वाक्य बनाने के लिए शब्दों को क्रम में लगाएँ:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "क्रम: कर्ता + क्रिया + वाक्य का शेष भाग"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "प्रत्येक वाक्य को उसके सही अनुवाद से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto नपुंसकलिंग है → des का उपयोग करें",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "Thomas नाम -s से समाप्त होता है। स्वामित्व सही तरीके से कैसे लिखें?",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "यदि नाम s से समाप्त हो, तो केवल Apostroph (') लगाएँ"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "निम्नलिखित वाक्य को ज़ोर से सही उच्चारण के साथ बोलें: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "उच्चारण पर ध्यान दें: Annas (आनास) और der Frau (देर फ्राउ)"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "लक्ष्य व्यक्त करना: um…zu और damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "लक्ष्य वाक्य (Finalsätze): um…zu बनाम damit",
+        "content": "जर्मन भाषा में, हम **Finalsätze** (लक्ष्य वाक्य) का उपयोग किसी कार्य के **उद्देश्य** या **लक्ष्य** को व्यक्त करने के लिए करते हैं — यानी इस सवाल का जवाब देने के लिए: \"तुम यह क्यों कर रहे हो?\" या \"तुम्हारा लक्ष्य क्या है?\"\n\nइसके दो मुख्य तरीके हैं:\n\n**1. um … zu + Infinitiv**\nइसका उपयोग तब किया जाता है जब **मुख्य वाक्य और लक्ष्य वाक्य का कर्ता एक ही व्यक्ति हो**।\nसंरचना: मुख्य वाक्य + **um** + … + **zu** + Infinitiv (वाक्य के अंत में)।\nउदाहरण: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(मैं जर्मन सीखता हूँ — लक्ष्य: मैं जर्मनी में काम करूँगा ← एक ही कर्ता: ich)\n\n**2. damit + Nebensatz**\nइसका उपयोग तब किया जाता है जब **लक्ष्य वाक्य का कर्ता मुख्य वाक्य के कर्ता से अलग हो**।\nसंरचना: मुख्य वाक्य + **damit** + उपवाक्य (क्रिया अंत में)।\nउदाहरण: *Ich spreche langsam, damit du mich verstehst.*\n(मैं धीरे बोलता हूँ — लक्ष्य: तुम मुझे समझते हो ← दो अलग कर्ता: ich / du)\n\n**महत्वपूर्ण नोट:** **um…zu** के बाद कोई स्पष्ट कर्ता नहीं आता, जबकि **damit** के बाद कर्ता और संयुग्मित क्रिया दोनों का उल्लेख अनिवार्य है।",
+        "tables": [
+          {
+            "title": "um…zu और damit का उपयोग कब करें?",
+            "headers": [
+              "साधन",
+              "कर्ता",
+              "वाक्य संरचना",
+              "उदाहरण"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "एक ही कर्ता ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "अलग कर्ता ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "सुनहरा नियम: यदि कर्ता बदल जाए → damit। यदि वही रहे → um…zu।",
+            "theme": "default"
+          },
+          {
+            "title": "उपवाक्य में क्रिया का स्थान",
+            "headers": [
+              "प्रकार",
+              "साधन",
+              "क्रिया का स्थान",
+              "उदाहरण"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv अंत में",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "संयुग्मित क्रिया अंत में",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "दोनों ही स्थितियों में, क्रिया उपवाक्य के अंत में आती है।",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "um…zu का उपयोग तब करें जब दोनों वाक्यों का कर्ता एक ही हो, और Infinitiv क्रिया zu के बाद वाक्य के अंत में आती है।",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "वह एक किताब पढ़ने के लिए पुस्तकालय जाती है।"
+          },
+          {
+            "rule": "damit का उपयोग तब करें जब लक्ष्य वाक्य का कर्ता मुख्य वाक्य के कर्ता से अलग हो, और संयुग्मित क्रिया उपवाक्य के अंत में आती है।",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "माँ खाना बनाती है ताकि बच्चे खा सकें।"
+          },
+          {
+            "rule": "um…zu के बाद कर्ता को दोबारा नहीं लिखते, क्योंकि वह मुख्य वाक्य से स्पष्ट होता है।",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "मैं गाड़ी खरीदने के लिए पैसे बचाता हूँ।"
+          },
+          {
+            "rule": "damit एक Konjunktion है जो पूरे उपवाक्य को प्रस्तुत करती है — जिसमें कर्ता और अंत में संयुग्मित क्रिया होती है।",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "वह ज़ोर से बोलता है ताकि सभी उसे सुन सकें।"
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — मैं जर्मनी में पढ़ने के लिए जर्मन सीखता हूँ।",
+          "Sie spart Geld, um eine Reise zu machen. — वह यात्रा करने के लिए पैसे बचाती है।",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — वह बस छूटने से बचने के लिए जल्दी उठता है।",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — हम धीरे बोलते हैं ताकि बच्चे हमें समझ सकें।",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — शिक्षिका बोर्ड पर लिखती है ताकि छात्र शब्द देख सकें।",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — वह ताज़ी हवा पाने के लिए खिड़की खोलता है।",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — मैं एक सूची लिखता हूँ ताकि कुछ भूल न जाऊँ।",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — वह फिट रहने के लिए हर दिन व्यायाम करती है।"
+        ],
+        "tip": "💡 आसान तरकीब: um…zu और damit के बीच चुनाव करने से पहले खुद से पूछें: \"लक्ष्य वाला काम कौन करता है?\" — यदि वही व्यक्ति जो पहले वाक्य में है → um…zu। यदि कोई और व्यक्ति है → damit। यह एक सरल सवाल 99% गलतियाँ सुधार देता है!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "लक्ष्य",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "मेरा लक्ष्य जर्मन सीखना है।",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "कारण",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "इसका कारण क्या है?",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "सीखना / पढ़ना",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "वह काम करने के लिए जर्मन सीखती है।",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "बचाना (पैसे)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "वह साइकिल खरीदने के लिए पैसे बचाता है।",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "समझना",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "धीरे बोलो ताकि मैं तुम्हें समझ सकूँ।",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "मदद करना",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "वह समझाती है ताकि वह मदद कर सके।",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "परीक्षा",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "वह परीक्षा पास करने के लिए बहुत पढ़ता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "यात्रा / सफ़र",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "वह यात्रा करने के लिए बचत करती है।",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "स्वस्थ / तंदुरुस्त",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "वह स्वस्थ रहने के लिए फल खाता है।",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "जल्दी / सुबह-सवेरे",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "वह दौड़ने के लिए जल्दी उठती है।",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "समझाना",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "शिक्षिका समझाती है ताकि छात्र समझ सकें।",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "काम / नौकरी",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "वह पैसे कमाने के लिए नौकरी ढूँढता है।",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "खरीदना",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "मैं एक किताब खरीदने के लिए बचत करता हूँ।",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "धीरे / धीमा",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "धीरे बोलो ताकि मैं समझ सकूँ।",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "सही साधन चुनें: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (दोनों वाक्यों का कर्ता एक ही है: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "दोनों वाक्यों का कर्ता एक ही है (ich) → um…zu का उपयोग करें"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "सही साधन चुनें: Die Mutter liest vor, ___ das Kind schlafen kann. (माँ पढ़ती है — बच्चा सोता है)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "कर्ता बदल गया: die Mutter ← → das Kind → damit का उपयोग करें"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "um…zu का उपयोग करके वाक्य पूरा करें: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "um को शुरुआत में और zu को वाक्य के अंत में क्रिया से ठीक पहले रखें।"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "damit के साथ सही वाक्य बनाने के लिए शब्दों को क्रम में लगाएँ:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "उपवाक्य में संयुग्मित क्रिया अंत में आती है।"
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "प्रत्येक वाक्य को उसके सही अनुवाद से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "क्या कर्ता बदला? नहीं → um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "निम्नलिखित वाक्य को स्पष्ट आवाज़ में बोलें: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "ध्यान दें: zu वाक्य के अंत में क्रिया से ठीक पहले आता है।"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "व्याकरण की दृष्टि से कौन-सा वाक्य सही है?",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "कर्ता बदल गया (sie ← ihr Sohn) → damit + अंत में क्रिया के साथ पूरा उपवाक्य।"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "संबंधवाचक वाक्य — Nominativ और Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "सरल संबंधवाचक वाक्य — Relativsätze im Nominativ und Akkusativ",
+        "content": "**संबंधवाचक वाक्य क्या होता है?**\nसंबंधवाचक वाक्य (Relativsatz) एक उपवाक्य होता है जो किसी पहले से उल्लिखित संज्ञा को स्पष्ट करने या उसका वर्णन करने के लिए जोड़ा जाता है। यह हमेशा एक **संबंधवाचक सर्वनाम** (Relativpronomen) से शुरू होता है, जैसे: **der, die, das**।\n\n**संबंधवाचक सर्वनाम कैसे चुनें?**\nसर्वनाम का चुनाव दो बातों पर निर्भर करता है:\n1. **जिस संज्ञा का वर्णन किया जा रहा है उसका लिंग** (पुल्लिंग, स्त्रीलिंग, या नपुंसकलिंग) — यह सर्वनाम का मूल रूप निर्धारित करता है।\n2. **उपवाक्य में सर्वनाम का कार्य** — क्या वह कर्ता (Nominativ) है या कर्म (Akkusativ)?\n\n**Nominativ:** संबंधवाचक सर्वनाम संबंधवाचक उपवाक्य का **कर्ता** होता है।\nउदाहरण: Das ist der Mann, **der** hier arbeitet. ← (der Mann वह है जो काम करता है → कर्ता)\n\n**Akkusativ:** संबंधवाचक सर्वनाम संबंधवाचक उपवाक्य में **कर्म** होता है।\nउदाहरण: Das ist der Mann, **den** ich kenne. ← (मैं उस आदमी को जानता हूँ → कर्म)\n\n**बहुत महत्वपूर्ण नियम:** संबंधवाचक उपवाक्य में क्रिया हमेशा **वाक्य के अंत में** आती है।\n\n**अल्पविराम (Komma):** संबंधवाचक उपवाक्य को मुख्य वाक्य से हमेशा अल्पविराम द्वारा अलग किया जाता है।",
+        "tables": [
+          {
+            "title": "संबंधवाचक सर्वनाम — Relativpronomen (Nominativ और Akkusativ)",
+            "headers": [
+              "लिंग / प्रकार",
+              "उदाहरण (संज्ञा)",
+              "Nominativ (कर्ता)",
+              "Akkusativ (कर्म)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "पुल्लिंग — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "स्त्रीलिंग — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "नपुंसकलिंग — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "बहुवचन — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "ध्यान दें: पुल्लिंग में Akkusativ का संबंधवाचक सर्वनाम der से बदलकर den हो जाता है — यही एकमात्र अंतर है!",
+            "theme": "default"
+          },
+          {
+            "title": "तुलना: परिभाषित उपसर्ग (Artikel) और संबंधवाचक सर्वनाम (Relativpronomen)",
+            "headers": [
+              "लिंग",
+              "परिभाषित उपसर्ग",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "पुल्लिंग",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "स्त्रीलिंग",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "नपुंसकलिंग",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "बहुवचन",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "संबंधवाचक सर्वनाम परिभाषित उपसर्गों से बहुत मिलते-जुलते हैं — जिससे उन्हें याद करना आसान हो जाता है!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "संबंधवाचक सर्वनाम मुख्य वाक्य में जिस संज्ञा का वर्णन करता है, उसके **लिंग** से मेल खाता है।",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "वह महिला जो वहाँ खड़ी है, मेरी शिक्षिका है।"
+          },
+          {
+            "rule": "यदि संबंधवाचक सर्वनाम उपवाक्य में **कर्ता** है, तो हम **Nominativ** का उपयोग करते हैं: der / die / das / die।",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "यह वह बच्चा है जो फुटबॉल खेलता है।"
+          },
+          {
+            "rule": "यदि संबंधवाचक सर्वनाम उपवाक्य में **कर्म** है, तो हम **Akkusativ** का उपयोग करते हैं: den / die / das / die।",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "जो फिल्म मैंने देखी वह शानदार थी।"
+          },
+          {
+            "rule": "संबंधवाचक उपवाक्य में क्रिया हमेशा **अंत में** आती है, और उपवाक्य को **अल्पविराम** से अलग किया जाता है।",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "मेरा एक दोस्त है जो गिटार अच्छा बजाता है।"
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — यह वह आदमी है जो हर दिन जॉगिंग करता है।",
+          "Die Frau, die ich kenne, wohnt in Berlin. — जिस महिला को मैं जानता हूँ वह Berlin में रहती है।",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — जो किताब मेज पर रखी है वह मेरी है।",
+          "Ich suche einen Job, den ich liebe. — मैं एक ऐसी नौकरी ढूंढ रहा हूँ जिसे मैं पसंद करूँ।",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — जो कुत्ता हमें मिला वह बहुत प्यारा है।",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — जो बच्चे पार्क में खेल रहे हैं वे मेरे पड़ोसी हैं।",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — जो रेस्तराँ हमने देखा वह बहुत अच्छा था।",
+          "Er hat eine Schwester, die in Marokko lebt. — उसकी एक बहन है जो मोरक्को में रहती है।"
+        ],
+        "tip": "💡 याद रखें: संबंधवाचक सर्वनामों में Nominativ और Akkusativ के बीच एकमात्र अंतर पुल्लिंग में है! **der** Akkusativ में **den** बन जाता है। जबकि स्त्रीलिंग, नपुंसकलिंग और बहुवचन में कोई बदलाव नहीं होता। बस इसी एक अंतर पर ध्यान दें और आप इस नियम को आसानी से सीख लेंगे!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "आदमी / पुरुष",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "जो आदमी वहाँ खड़ा है वह मेरे पिता हैं।",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "महिला / स्त्री",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "जो महिला मुझे दिख रही है वह मुस्कुरा रही है।",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "बच्चा",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "जो बच्चा रो रहा है वह थका हुआ है।",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "किताब",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "जो किताब मैं पढ़ रहा हूँ वह रोचक है।",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "फिल्म",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "जो फिल्म हम देख रहे हैं वह मज़ेदार है।",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "दोस्त",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "मेरा एक दोस्त है जो अच्छा खाना बनाता है।",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "अपार्टमेंट / फ्लैट",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "जो अपार्टमेंट मैं ढूंढ रहा हूँ वह बड़ा है।",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "कुत्ता",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "जो कुत्ता मेरे पास है उसका नाम Max है।",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "जानना (किसी व्यक्ति या स्थान को)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "जिस महिला को मैं जानता हूँ वह बहुत अच्छी है।",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "ढूंढना",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "वह एक ऐसी नौकरी ढूंढ रहा है जो उसे पसंद हो।",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "खरीदना",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "जो कार मैं खरीद रहा हूँ वह लाल है।",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "रोचक / दिलचस्प",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "जो किताब वह पढ़ रहा है वह बहुत रोचक है।",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "पड़ोसी",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "जो पड़ोसी मैं जानता हूँ वह मिलनसार है।",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "रेस्तराँ",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "जो रेस्तराँ हम जा रहे हैं वह नया है।",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "सही संबंधवाचक सर्वनाम चुनें: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "संज्ञा पुल्लिंग है (der Mann) और सर्वनाम उपवाक्य का कर्ता है → Nominativ पुल्लिंग"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "सही संबंधवाचक सर्वनाम चुनें: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "संज्ञा पुल्लिंग है (der Film) लेकिन सर्वनाम कर्म है (ich habe ihn gesehen) → Akkusativ पुल्लिंग"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "उचित संबंधवाचक सर्वनाम से वाक्य पूरा करें: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "संज्ञा स्त्रीलिंग है (die Frau) और सर्वनाम कर्ता है → Nominativ स्त्रीलिंग = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "वाक्य सुनें और रिक्त स्थान भरें: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "संज्ञा नपुंसकलिंग है (das Kind) और सर्वनाम कर्म है → Akkusativ नपुंसकलिंग = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "शब्दों को सही क्रम में लगाकर सही वाक्य बनाएँ: (मैं एक बड़ा अपार्टमेंट ढूंढ रहा हूँ)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "संबंधवाचक उपवाक्य में क्रिया अंत में आती है!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "शब्दों को सही क्रम में लगाकर सही वाक्य बनाएँ: (जो किताब मैं पढ़ रहा हूँ वह रोचक है)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "Das Buch से शुरू करें, फिर संबंधवाचक उपवाक्य, फिर मुख्य वाक्य"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "प्रत्येक वाक्य को उसके सही अनुवाद से मिलाएँ:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "निम्नलिखित वाक्य को ज़ोर से और सही उच्चारण के साथ बोलें: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "याद रखें: क्रिया möchte संबंधवाचक उपवाक्य के अंत में आती है, और die से पहले अल्पविराम लगता है"
+          }
+        ]
+      }
     }
   }
 }

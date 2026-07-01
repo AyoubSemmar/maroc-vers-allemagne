@@ -8114,6 +8114,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "Les noms faibles (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "Les noms faibles — n-Deklination (schwache Nomen)",
+        "content": "En allemand, il existe un groupe particulier de noms masculins appelés **schwache Nomen** (les noms faibles). Ces noms se distinguent des autres car ils **prennent le suffixe -(e)n dans tous les cas grammaticaux sauf au Nominativ** (le cas du sujet).\n\n**Quels sont ces noms ?**\nLa plupart sont des noms masculins appartenant à l'une des catégories suivantes :\n- Des noms désignant **des personnes, des professions ou des nationalités**, par exemple : *der Student, der Journalist, der Kollege*\n- Des noms se terminant par **-e**, par exemple : *der Junge, der Kunde, der Zeuge*\n- Des noms se terminant par **-ist, -ent, -ant, -at**, par exemple : *der Tourist, der Patient, der Praktikant*\n- Exception particulière : **der Herr** prend *-n* au singulier et *-en* au pluriel\n\n**La règle d'or :**\nAux cas Genitiv, Dativ et Akkusativ — ajoutez **-(e)n** toujours au nom.\n\n**Remarque importante :** Certains de ces noms prennent également **-s** au Genitiv singulier, par exemple : *des Studenten* — notez que le suffixe est **-en** et non **-s** comme pour les noms ordinaires.",
+        "tables": [
+          {
+            "title": "Déclinaison des noms faibles — exemple : der Student / der Junge / der Herr",
+            "headers": [
+              "Cas grammatical",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (sujet)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (complément d'objet direct)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (complément d'objet indirect)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (complément du nom)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "Le suffixe -(e)n s'ajoute dans tous les cas sauf au Nominativ. der Herr prend -n uniquement au singulier.",
+            "theme": "default"
+          },
+          {
+            "title": "Exemples de catégories courantes de noms faibles",
+            "headers": [
+              "Type",
+              "Exemples",
+              "Suffixe"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Se terminent par -e",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "Se terminent par -ent / -ant",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Se terminent par -ist",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Se terminent par -at / -ot",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "Exception",
+                  "der Herr",
+                  "-n (singulier) / -en (pluriel)"
+                ]
+              }
+            ],
+            "note": "Tous ces noms sont masculins. Consultez toujours le dictionnaire si vous n'êtes pas sûr.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Les noms faibles prennent -(e)n aux cas Akkusativ, Dativ et Genitiv — et restent sans suffixe uniquement au Nominativ.",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "L'étudiant apprend. — Je connais l'étudiant."
+          },
+          {
+            "rule": "Les noms se terminant par -e (comme der Junge, der Kunde) prennent uniquement -n (sans -e supplémentaire).",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "J'aide le garçon."
+          },
+          {
+            "rule": "Les noms se terminant par -ent, -ist, -ant, -at, -ot prennent -en dans tous les cas sauf au Nominativ.",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "C'est la chambre de l'étudiant."
+          },
+          {
+            "rule": "der Herr est une exception : il prend -n au singulier (Herrn) et -en au pluriel (Herren).",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "Je parle avec le monsieur."
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — Le journaliste écrit un article.",
+          "Ich kenne den Journalisten gut. — Je connais bien le journaliste.",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — Nous aidons l'étudiant avec ses devoirs.",
+          "Das ist das Buch des Kollegen. — C'est le livre du collègue.",
+          "Der Kunde möchte ein Zimmer reservieren. — Le client souhaite réserver une chambre.",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — La professeure explique l'exercice au garçon.",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — J'ai envoyé un e-mail à Monsieur Müller.",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — Le stagiaire travaille dans l'entreprise depuis un mois."
+        ],
+        "tip": "💡 Chaque fois que vous voyez un nom masculin se terminant par -e, -ent, -ist ou -ant, rappelez-vous qu'il s'agit très probablement d'un nom faible ! Demandez-vous : est-il au Nominativ ? Si non, ajoutez directement -(e)n. Cette règle couvre plus de 90 % des cas au niveau B1."
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "l'étudiant (universitaire)",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "L'étudiant apprend l'allemand tous les jours.",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "le journaliste",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "Le journaliste travaille pour un journal.",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "le collègue",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "Je déjeune avec le collègue.",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "le garçon / le gamin",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "La mère appelle le garçon.",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "le client",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "Le vendeur aide le client.",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "le monsieur / M.",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "Bonjour, Monsieur Schmidt !",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "le touriste",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "Le touriste demande son chemin.",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "le stagiaire",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "Nous accueillons le nouveau stagiaire.",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "le témoin",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "La police interroge le témoin.",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "le soldat",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "On remercie le soldat pour son service.",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "le pilote",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "Les passagers font confiance au pilote.",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "l'être humain / la personne",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "J'aide la personne qui a besoin d'aide.",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "le patient",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "Le médecin examine le patient.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Choisissez la forme correcte du nom faible dans une phrase à l'Akkusativ :\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "À l'Akkusativ, les noms faibles prennent -(e)n et l'article devient den."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "Complétez la phrase avec la forme correcte du nom faible :\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "Après dem, nous sommes au Dativ — ajoutez -en au nom faible."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 Écoutez et complétez la phrase avec le mot manquant :",
+            "answer": "Kollegen",
+            "hint": "Après des, nous sommes au Genitiv — le nom faible prend -en.",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "Remettez les mots dans l'ordre pour former une phrase correcte :",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "Le verbe erklärt nécessite le Dativ pour la personne à qui l'on explique — utilisez dem + Jungen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "Laquelle de ces phrases contient une erreur dans l'utilisation du nom faible ?",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde est un nom faible — au Dativ, il doit devenir dem Kunden."
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "Associez chaque nom au Nominativ à sa forme correcte à l'Akkusativ :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "Complétez la phrase avec la forme correcte :\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den indique l'Akkusativ — le nom faible prend -en."
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "Prononcez la phrase suivante à voix haute en faisant attention à la prononciation du suffixe -en :\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "Rappel : Herrn = der Herr au Dativ. La prononciation de -en est légère en fin de mot."
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "Le Konjunktiv II du passé — Konjunktiv II der Vergangenheit",
+      "grammar": {
+        "title": "Le Konjunktiv II du passé — hätte/wäre + Partizip II",
+        "content": "## Qu'est-ce que le Konjunktiv II der Vergangenheit ?\n\nLe **Konjunktiv II der Vergangenheit** s'utilise pour exprimer des choses **qui ne se sont pas produites dans le passé**, par exemple :\n- Exprimer un **regret** pour quelque chose de manqué : *Si seulement j'avais fait cela...*\n- Exprimer une **hypothèse** ou une **condition** dans le passé : *Si j'avais fait cela, il y aurait eu...*\n\n---\n\n## Comment construire ce temps ?\n\nLa forme est composée de deux parties :\n\n**hätte / wäre** (au Konjunktiv II) **+ Partizip II** du verbe principal\n\n- On utilise **hätte** avec la plupart des verbes (verbes transitifs et verbes d'état).\n- On utilise **wäre** avec les verbes de mouvement et de transformation (par exemple : *gehen, kommen, fahren, werden, sein*).\n\n---\n\n## Comparaison rapide :\n\n| Temps | Sens | Exemple |\n|---|---|---|\n| Konjunktiv II der Gegenwart | Hypothèse au présent | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | Hypothèse/regret dans le passé | Ich **hätte** gelernt. |\n\n---\n\n**Rappel :** Le **Partizip II** ne change **jamais** dans cette forme — toute la conjugaison se fait dans **hätte** ou **wäre**.",
+        "tables": [
+          {
+            "title": "Conjugaison de hätte avec Partizip II — verbes avec haben",
+            "headers": [
+              "Pronom",
+              "Konjunktiv II",
+              "Exemple complet",
+              "Sens"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "J'aurais appris / Si seulement j'avais appris"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "Tu aurais appris"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "Il aurait appris"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "Nous aurions appris"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "Vous auriez appris"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "Ils/Elles auraient appris"
+                ]
+              }
+            ],
+            "note": "On utilise hätte avec les verbes qui forment le Perfekt avec haben",
+            "theme": "default"
+          },
+          {
+            "title": "Conjugaison de wäre avec Partizip II — verbes avec sein",
+            "headers": [
+              "Pronom",
+              "Konjunktiv II",
+              "Exemple complet",
+              "Sens"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "Je serais allé(e) / Si seulement j'étais allé(e)"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "Tu serais allé(e)"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "Il serait allé"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "Nous serions allé(e)s"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "Vous seriez allé(e)s"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "Ils/Elles seraient allé(e)s"
+                ]
+              }
+            ],
+            "note": "On utilise wäre avec les verbes de mouvement et de transformation qui forment le Perfekt avec sein",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Forme de base avec hätte : pour les verbes qui utilisent haben au Perfekt",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "Si seulement j'avais dormi davantage."
+          },
+          {
+            "rule": "Forme de base avec wäre : pour les verbes qui utilisent sein au Perfekt (mouvement et transformation)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "Elle serait venue plus tôt."
+          },
+          {
+            "rule": "Dans une proposition conditionnelle (Wenn-Satz), hätte/wäre se place en fin de proposition subordonnée",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "Si j'avais eu plus de temps, j'aurais aidé."
+          },
+          {
+            "rule": "Le Partizip II ne change pas quel que soit le pronom — seul hätte/wäre se conjugue",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "J'aurais acheté. / Nous aurions acheté."
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — J'aurais lu le livre (mais je ne l'ai pas fait).",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — Il aurait réussi l'examen s'il avait davantage étudié.",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — Nous serions arrivés plus tôt, mais le train avait du retard.",
+          "Sie hätte mir helfen können. — Elle aurait pu m'aider.",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — Si tu étais venu(e) avec nous, nous nous serions bien amusés.",
+          "Ich wäre lieber zu Hause geblieben. — J'aurais préféré rester à la maison.",
+          "Er hätte das Geld nicht ausgegeben. — Il n'aurait pas dû dépenser l'argent.",
+          "Hättest du früher angerufen, hätte ich gewartet. — Si tu avais appelé plus tôt, j'aurais attendu."
+        ],
+        "tip": "💡 Pour retenir la différence entre hätte et wäre : si le verbe est un verbe de mouvement ou de transformation (gehen, kommen, fahren, werden, sein), utilisez **wäre** ; dans tous les autres cas, utilisez **hätte** — exactement comme vous le faites au Perfekt ordinaire !"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "erreur",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "J'aurais pu éviter cette erreur.",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "occasion",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "Il aurait dû saisir l'occasion.",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "décision",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "Elle aurait pris une décision différente.",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "retard",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "Nous aurions été à l'heure s'il n'y avait pas eu de retard.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "examen",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "J'aurais réussi l'examen.",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "regretter",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "Il aurait regretté sa décision.",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "rater / manquer",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "Elle aurait raté le train.",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "rester",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "J'aurais préféré rester à la maison.",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "arriver",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "Nous serions arrivés plus tôt.",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "dépenser (de l'argent)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "Il n'aurait pas dû dépenser l'argent.",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "de préférence / plutôt",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "J'aurais préféré rester à la maison.",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "plus tôt / auparavant",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "Tu aurais dû venir plus tôt.",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "chance / opportunité",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "Nous n'aurions pas manqué cette chance.",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "conseil",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "Elle aurait suivi mon conseil.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "Choisissez la forme correcte : S'il avait davantage étudié, il aurait réussi l'examen.",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "On utilise hätte + Partizip II pour exprimer une hypothèse dans le passé avec un verbe qui utilise haben"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "Complétez la phrase correctement : Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "Le verbe losfahren utilise sein au Perfekt, on utilise donc wären au Konjunktiv II"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "Écoutez la phrase et complétez le blanc : Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "Le verbe bleiben utilise sein au Perfekt",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "Remettez les mots dans l'ordre pour former une phrase correcte : Si seulement elle m'avait appelé plus tôt.",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte se place en deuxième position, et le Partizip II se place en fin de phrase"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "Quelle phrase exprime un regret pour quelque chose qui ne s'est pas produit dans le passé ?",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "La forme hätte + Partizip II indique un regret dans le passé"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "Associez chaque phrase allemande à sa traduction française correcte.",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "Remettez les mots dans l'ordre pour former une phrase conditionnelle correcte : S'il avait eu le temps, il nous aurait aidés.",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "Dans la proposition avec Wenn, hätte se place à la fin ; dans la proposition principale, hätte se place en première position"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "Prononcez la phrase suivante à voix haute : 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "Cela signifie : J'aurais dû saisir l'occasion."
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "Le passif avec les verbes modaux — Passiv mit Modalverben",
+      "grammar": {
+        "title": "Le passif avec les verbes modaux — Passiv mit Modalverben",
+        "content": "## Qu'est-ce que le Passiv mit Modalverben ?\n\nEn allemand, nous pouvons combiner le **passif (Passiv)** avec les **verbes modaux (Modalverben)** tels que *müssen, können, dürfen, sollen, wollen* pour exprimer la nécessité ou la possibilité de faire quelque chose sans mentionner le sujet.\n\n---\n\n### 🔧 Comment construire cette structure ?\n\nLa formule de base est :\n\n**Modalverb (conjugué) + Partizip II + werden**\n\n> Exemple : Das Zimmer **muss** sauber gemacht **werden**.\n> (La chambre doit être nettoyée.)\n\n---\n\n### 📌 Comparaison rapide\n\n| Phrase active (Aktiv) | Phrase passive (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 Remarques importantes\n\n- **Le verbe modal** occupe sa place naturelle dans la phrase (la deuxième position dans les propositions principales).\n- **werden** reste toujours à la fin de la proposition principale à l'infinitif (Infinitiv).\n- **Partizip II** précède immédiatement *werden* en fin de phrase.\n- Dans les **propositions subordonnées (Nebensatz)**, le verbe modal vient en dernier, après *Partizip II + werden* :\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "Conjugaison des verbes modaux au passif — Präsens",
+            "headers": [
+              "Verbe modal",
+              "Sens",
+              "Exemple au passif",
+              "Traduction"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "devoir / il faut",
+                  "Das muss gemacht werden.",
+                  "Cela doit être fait."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "pouvoir / être possible",
+                  "Das kann geändert werden.",
+                  "Cela peut être modifié."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "avoir le droit / être autorisé",
+                  "Hier darf nicht geraucht werden.",
+                  "Il est interdit de fumer ici."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "être censé / être demandé",
+                  "Das soll sofort erledigt werden.",
+                  "Cela est censé être accompli immédiatement."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "vouloir / être prévu",
+                  "Das will gut geplant werden.",
+                  "Cela doit être bien planifié."
+                ]
+              }
+            ],
+            "note": "La formule est toujours : Modalverb (conjugué) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "Position des verbes dans la phrase — Satzstellung",
+            "headers": [
+              "Type de phrase",
+              "Position 1",
+              "Position 2 (Verb)",
+              "Milieu",
+              "Fin"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (proposition principale)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (proposition principale)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (proposition subordonnée)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (proposition subordonnée)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "Dans la proposition subordonnée : le verbe modal vient en dernier, après Partizip II + werden",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Formule de base : verbe modal conjugué + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "Le colis doit être envoyé."
+          },
+          {
+            "rule": "Dans la proposition principale, le verbe modal est en deuxième position, et la fin de la phrase est : Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "Les devoirs doivent être rendus aujourd'hui."
+          },
+          {
+            "rule": "Dans la proposition subordonnée, le verbe modal vient en dernier, après Partizip II + werden",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "Il dit que la porte doit être fermée."
+          },
+          {
+            "rule": "Le sujet n'est pas mentionné au passif ; l'accent est mis sur l'action elle-même, non sur celui qui l'accomplit",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "La lumière doit être éteinte. (peu importe qui l'éteint)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — Le formulaire doit être rempli.",
+          "Die Wohnung kann sofort gemietet werden. — L'appartement peut être loué immédiatement.",
+          "Hier darf nicht fotografiert werden. — Il est interdit de photographier ici.",
+          "Die Rechnung soll bis Freitag bezahlt werden. — La facture est censée être payée avant vendredi.",
+          "Das kaputte Fahrrad muss repariert werden. — Le vélo cassé doit être réparé.",
+          "Ich glaube, dass das Problem gelöst werden kann. — Je crois que le problème peut être résolu.",
+          "Die Medikamente dürfen nicht vergessen werden. — Les médicaments ne doivent pas être oubliés.",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — Il sait que le travail doit être accompli dans les délais."
+        ],
+        "tip": "💡 Rappelle-toi l'ordre d'or en fin de proposition principale : **Partizip II en premier, puis werden**. Et dans la proposition subordonnée : **Partizip II + werden + Modalverb**. Plus tu mémorises cet ordre, plus la structure deviendra automatique !"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "formulaire / imprimé",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "Le formulaire doit être rempli.",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "facture",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "La facture doit être payée.",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "rendez-vous",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "Le rendez-vous doit être reporté.",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "colis / paquet",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "Le colis peut être récupéré.",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "règle",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "Les règles doivent être respectées.",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "réparer",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "La voiture doit être réparée.",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "remplir (un formulaire)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "La demande doit être remplie.",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "accomplir / effectuer",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "La tâche est censée être accomplie.",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "reporter / décaler",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "La réunion peut être reportée.",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "respecter / tenir compte de",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "Les règlements doivent être respectés.",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "immédiatement / tout de suite",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "Cela doit être accompli immédiatement.",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "dans les délais / à temps",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "Le travail doit être rendu dans les délais.",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "demande / dossier",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "La demande doit être déposée.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "règlement / consigne",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "Les règlements ne doivent pas être ignorés.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "Choisissez la phrase correcte au passif avec le verbe modal :",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "Rappelle-toi l'ordre : Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "Complétez la phrase en choisissant la forme correcte : Das Problem _____ gelöst werden. (Le problème peut être résolu.)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "Le verbe modal se conjugue selon le sujet — Das (singulier neutre) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "Remettez les mots dans l'ordre pour former une phrase correcte au passif :",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "Le verbe modal est en deuxième position, et la fin de la phrase est : Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "Écoutez la phrase et complétez le blanc : Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "Le verbe est rauchen — quel est son Partizip II ?",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "Comment dit-on en allemand : « La demande est censée être déposée demain » ?",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — l'ordre correct dans la proposition principale"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "Associez chaque phrase au passif à sa traduction correcte :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "Remettez les mots dans l'ordre pour former une proposition subordonnée correcte (Nebensatz) :",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "Dans la proposition subordonnée : le verbe modal vient en dernier, après Partizip II + werden"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "Prononcez la phrase suivante à voix haute : « Das Paket muss sofort verschickt werden. » — Le colis doit être envoyé immédiatement.",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "Faites attention à la prononciation de : verschickt — fer-chikt"
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "Les propositions subordonnées temporelles et concessives — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "Les propositions subordonnées temporelles et concessives — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "En allemand, on utilise les **propositions subordonnées** (Nebensätze) pour relier deux idées. Dans cette leçon, elles se divisent en deux types principaux :\n\n**Premièrement : les propositions subordonnées temporelles (Temporale Nebensätze)**\nElles expriment la relation temporelle entre deux événements. Elles commencent par un connecteur temporel et se terminent par le verbe en fin de proposition subordonnée.\n\n- **nachdem** (après que) : s'utilise quand un événement se produit *après* un autre. L'événement de la proposition subordonnée précède temporellement celui de la proposition principale. On l'utilise généralement avec le **Perfekt** ou le **Plusquamperfekt**.\n- **bevor** (avant que) : s'utilise quand un événement se produit *avant* un autre.\n- **während** (pendant que / tandis que) : s'utilise pour exprimer deux événements qui se déroulent *en même temps*.\n- **seit / seitdem** (depuis que) : s'utilise pour exprimer un événement qui a commencé dans le passé et qui se poursuit jusqu'à maintenant.\n\n**Deuxièmement : les propositions subordonnées concessives (Konzessive Nebensätze)**\nElles expriment une **contradiction** ou une **opposition** entre deux idées. Le connecteur principal est :\n\n- **obwohl** (bien que / même si) : s'utilise quand un résultat contredit nos attentes.\n\n**La règle d'or des propositions subordonnées :**\nDans toutes ces propositions, **le verbe va toujours en fin de proposition subordonnée**.\nSi la phrase principale commence par la proposition subordonnée, le **verbe de la proposition principale vient immédiatement après la virgule** (Verb-Zweitstellung).",
+        "tables": [
+          {
+            "title": "Les connecteurs temporels et concessifs — Vue d'ensemble",
+            "headers": [
+              "Connecteur",
+              "Sens en français",
+              "Relation temporelle / logique",
+              "Exemple"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "après que",
+                  "L'événement subordonné précède le principal",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "avant que",
+                  "L'événement subordonné suit le principal",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "pendant que / tandis que",
+                  "Deux événements simultanés",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "depuis que",
+                  "Événement continu depuis le passé",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "bien que",
+                  "Contradiction / concession",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "Dans toutes ces propositions, le verbe se place en fin de proposition subordonnée.",
+            "theme": "default"
+          },
+          {
+            "title": "L'ordre des mots dans la proposition subordonnée (Wortstellung)",
+            "headers": [
+              "Type",
+              "Proposition principale en premier",
+              "Proposition subordonnée en premier"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Structure",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "Exemple avec nachdem",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "Exemple avec obwohl",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "Exemple avec während",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ Quand la phrase commence par la proposition subordonnée, le verbe de la proposition principale vient immédiatement après la virgule (deuxième position).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Le verbe toujours en fin de proposition subordonnée : après les connecteurs (nachdem, bevor, während, seitdem, obwohl), le verbe va en fin de proposition subordonnée.",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "Je t'appellerai avant de rentrer à la maison."
+          },
+          {
+            "rule": "Avec nachdem : utilise le Perfekt dans la proposition subordonnée si la proposition principale est au Präsens ou au Perfekt, et le Plusquamperfekt si la proposition principale est au Präteritum.",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "Après avoir lu le livre, il est allé dormir."
+          },
+          {
+            "rule": "obwohl exprime une contradiction : la proposition subordonnée contient une raison qui aurait dû empêcher l'événement, mais ne l'a pas empêché.",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "Bien qu'il soit malade, il va au travail."
+          },
+          {
+            "rule": "Si la phrase commence par la proposition subordonnée, le verbe de la proposition principale se place en deuxième position, immédiatement après la virgule.",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "Pendant qu'elle dort, j'apprends l'allemand."
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — Après avoir pris mon petit-déjeuner, je vais au travail.",
+          "Bevor du schläfst, musst du die Zähne putzen. — Avant de dormir, tu dois te brosser les dents.",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — Pendant que ma mère cuisine, je fais mes devoirs.",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — Depuis qu'il habite en Allemagne, il parle très bien allemand.",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — Bien que le temps soit mauvais, nous faisons une excursion.",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — Avant de passer l'examen, elle étudie tous les jours.",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — Après la fin du film, nous sommes rentrés à la maison.",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — Bien qu'il fût fatigué, il a lu tout le livre."
+        ],
+        "tip": "💡 Rappelle-toi toujours : ces connecteurs sont des « tueurs de verbe » — ils envoient le verbe en fin de proposition subordonnée ! Et si ta phrase commence par obwohl, nachdem ou tout autre connecteur, le verbe de la proposition principale vient immédiatement après la virgule. Entraîne-toi à répéter ce schéma à voix haute jusqu'à ce qu'il te devienne naturel."
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "l'examen",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "Avant de passer l'examen, elle étudie beaucoup.",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "l'excursion / la promenade",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "Bien qu'il pleuve, nous faisons une excursion.",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "le devoir scolaire",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "Pendant que mon frère joue, je fais mes devoirs.",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "prendre le petit-déjeuner",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "Après avoir pris mon petit-déjeuner, je vais à l'école.",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "s'endormir",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "Avant de s'endormir, il lit un livre.",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "ranger / nettoyer",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "Après avoir mangé, elle a rangé la cuisine.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "fatigué / fatiguée",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "Bien qu'elle soit fatiguée, elle continue à travailler.",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "quand même / malgré tout",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "Il pleut, et pourtant nous nous promenons.",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "depuis lors / depuis que",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "Depuis qu'elle habite ici, elle a beaucoup d'amis.",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "bien que / même si",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "Bien qu'il soit malade, il vient au travail.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "pendant que / tandis que",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "Pendant que j'étudie, mon frère écoute de la musique.",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "la météo / le temps",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "Bien que le temps soit mauvais, nous sortons.",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "arriver",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "Après être arrivé, il a appelé sa famille.",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "se brosser les dents",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "Avant de dormir, tu dois te brosser les dents.",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "Choisis le bon connecteur : ___ er gegessen hat, geht er schlafen. (Après avoir mangé, il est allé dormir.)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "On cherche un connecteur qui signifie « après que » et indique que l'événement subordonné s'est produit en premier."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "Complète la phrase avec le connecteur approprié : ___ es kalt ist, trägt er keine Jacke. (Bien qu'il fasse froid, il ne porte pas de veste.)",
+            "answer": "Obwohl",
+            "hint": "On cherche un connecteur qui exprime la contradiction et la concession."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "Écoute la phrase et complète le blanc : Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "Le verbe dans la proposition subordonnée avec während se place en fin de proposition.",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "Remets les mots dans le bon ordre pour former une phrase correcte : (Avant d'aller à l'école, elle prend son petit-déjeuner.)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "Rappelle-toi : le verbe en fin de proposition subordonnée, et le verbe de la proposition principale immédiatement après la virgule."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "Quelle phrase est grammaticalement correcte ?",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "Dans la proposition subordonnée, le verbe est en fin de proposition ; dans la proposition principale, le verbe est en deuxième position après la virgule."
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "Associe chaque connecteur à sa traduction française correcte :",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "Prononce la phrase suivante à voix haute et correctement : 'Seitdem er in Marokko wohnt, vermisst er Deutschland.'",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "Fais attention à la position du verbe : « wohnt » en fin de proposition subordonnée, et « vermisst » en deuxième position dans la proposition principale."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "Complète la phrase avec la forme correcte du verbe : Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "Avec nachdem, on utilise le Perfekt dans la proposition subordonnée : Partizip II + hat/haben en fin de proposition."
+          }
+        ]
+      }
     }
   },
   "title": "Niveau Trois",

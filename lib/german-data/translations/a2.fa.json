@@ -10650,6 +10650,1046 @@
           }
         ]
       }
+    },
+    "a2-19": {
+      "id": "a2-19",
+      "title": "مالکیت در زبان آلمانی — Genitiv — Genitiv — Grundlagen",
+      "grammar": {
+        "title": "اصول حالت مالکیت — اسم‌های خاص (Peters Auto) و حروف تعریف des / der",
+        "content": "در زبان آلمانی، از **حالت مالکیت (Genitiv)** برای بیان تعلق یا رابطه بین دو چیز استفاده می‌کنیم؛ یعنی برای پاسخ به این سؤال: **این متعلق به کیست؟**\n\nدو روش اصلی برای ساختن این حالت در سطح A2 وجود دارد:\n\n**① اسم‌های خاص (Eigennamen):**\nوقتی می‌خواهیم بگوییم چیزی متعلق به شخصی با نام خاص است، کافی است پسوند **-s** را مستقیماً به انتهای نام اضافه کنیم، بدون آپاستروف.\nمثال: **Peter → Peters Auto** (ماشین پیتر)\nمثال: **Anna → Annas Buch** (کتاب آنا)\n\n**② حروف تعریف با اسم‌های عادی:**\nوقتی از یک اسم عادی (نه اسم خاص) استفاده می‌کنیم، حرف تعریف بر اساس جنس اسم تغییر می‌کند:\n- اسم‌های مذکر (Maskulinum) و خنثی (Neutrum): حرف تعریف به **des** تبدیل می‌شود و **-s** یا **-es** به انتهای اسم اضافه می‌شود.\n- اسم‌های مؤنث (Femininum) و جمع (Plural): حرف تعریف به **der** تبدیل می‌شود و اسم تغییری نمی‌کند.\n\nمثال: **das Auto des Mannes** (ماشین مرد)\nمثال: **das Buch der Frau** (کتاب زن)\n\n**نکته مهم:** در زبان محاوره‌ای روزمره، بسیاری از آلمانی‌زبانان Genitiv را با حرف اضافه **von + Dativ** جایگزین می‌کنند، مثلاً: **das Auto von Peter**. اما در نوشتار رسمی و آزمون‌ها استفاده از Genitiv صحیح ترجیح داده می‌شود.",
+        "tables": [
+          {
+            "title": "تغییر حرف تعریف در حالت مالکیت (Genitiv)",
+            "headers": [
+              "جنس",
+              "Nominativ (فاعل)",
+              "Genitiv (مالکیت)",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر (Maskulinum)",
+                  "der Mann",
+                  "des Mannes",
+                  "das Auto des Mannes"
+                ]
+              },
+              {
+                "cells": [
+                  "خنثی (Neutrum)",
+                  "das Kind",
+                  "des Kindes",
+                  "der Name des Kindes"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث (Femininum)",
+                  "die Frau",
+                  "der Frau",
+                  "das Buch der Frau"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع (Plural)",
+                  "die Kinder",
+                  "der Kinder",
+                  "die Spielzeuge der Kinder"
+                ]
+              }
+            ],
+            "note": "🔵 مذکر و خنثی: des + اسم + s/es | 🔴 مؤنث و جمع: der + اسم بدون تغییر",
+            "theme": "default"
+          },
+          {
+            "title": "اسم‌های خاص در حالت مالکیت (Eigennamen + -s)",
+            "headers": [
+              "نام اصلی",
+              "Genitiv",
+              "جمله کامل",
+              "ترجمه"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Peter",
+                  "Peters",
+                  "Peters Auto ist neu.",
+                  "ماشین پیتر نو است."
+                ]
+              },
+              {
+                "cells": [
+                  "Anna",
+                  "Annas",
+                  "Annas Tasche ist schön.",
+                  "کیف آنا زیباست."
+                ]
+              },
+              {
+                "cells": [
+                  "Thomas",
+                  "Thomas'",
+                  "Thomas' Hund ist groß.",
+                  "سگ توماس بزرگ است."
+                ]
+              },
+              {
+                "cells": [
+                  "Maria",
+                  "Marias",
+                  "Marias Wohnung ist klein.",
+                  "آپارتمان ماریا کوچک است."
+                ]
+              }
+            ],
+            "note": "⚠️ اگر نام به حرف -s یا -z یا -x ختم شود، فقط آپاستروف (Apostroph) می‌گذاریم: Thomas' Hund",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "اسم‌های خاص: پسوند -s را مستقیماً به انتهای نام اضافه کنید تا مالکیت را نشان دهید، بدون آپاستروف.",
+            "example": "Das ist Lauras Fahrrad.",
+            "translation": "این دوچرخه لائورا است."
+          },
+          {
+            "rule": "اسم‌های مذکر و خنثی: از des استفاده کنید و -s یا -es به انتهای اسم اضافه کنید.",
+            "example": "Die Farbe des Autos ist blau.",
+            "translation": "رنگ ماشین آبی است."
+          },
+          {
+            "rule": "اسم‌های مؤنث و جمع: فقط از der استفاده کنید و اسم تغییری نمی‌کند.",
+            "example": "Der Name der Lehrerin ist Müller.",
+            "translation": "نام معلم (خانم) مولر است."
+          },
+          {
+            "rule": "اگر اسم خاص به -s یا -z یا -x ختم شود، به جای اضافه کردن -s، فقط آپاستروف (') می‌گذارید.",
+            "example": "Das ist Thomas' Buch.",
+            "translation": "این کتاب توماس است."
+          }
+        ],
+        "examples": [
+          "Das ist Peters Auto. — این ماشین پیتر است.",
+          "Annas Tasche ist sehr schön. — کیف آنا خیلی زیباست.",
+          "Der Hund des Mannes ist groß. — سگ مرد بزرگ است.",
+          "Das Zimmer des Kindes ist klein. — اتاق بچه کوچک است.",
+          "Die Wohnung der Frau ist modern. — آپارتمان زن مدرن است.",
+          "Die Spielzeuge der Kinder sind neu. — اسباب‌بازی‌های بچه‌ها نو هستند.",
+          "Ich nehme das Fahrrad meines Bruders. — من دوچرخه برادرم را برمی‌دارم.",
+          "Der Name des Lehrers ist Schmidt. — نام معلم اشمیت است."
+        ],
+        "tip": "💡 قانون طلایی را به خاطر بسپار: **des** برای مذکر و خنثی (با اضافه کردن -s به اسم)، و **der** برای مؤنث و جمع (بدون تغییر اسم). و اگر اسم خاص باشد، فقط -s را مستقیماً به انتها اضافه کن!"
+      },
+      "vocabulary": [
+        {
+          "german": "Auto",
+          "arabic": "ماشین",
+          "gender": "das",
+          "plural": "Autos",
+          "example": "Das ist Peters Auto.",
+          "exampleArabic": "این ماشین پیتر است.",
+          "type": "noun"
+        },
+        {
+          "german": "Tasche",
+          "arabic": "کیف",
+          "gender": "die",
+          "plural": "Taschen",
+          "example": "Annas Tasche ist neu.",
+          "exampleArabic": "کیف آنا نو است.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "سگ",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund des Mannes ist groß.",
+          "exampleArabic": "سگ مرد بزرگ است.",
+          "type": "noun"
+        },
+        {
+          "german": "Zimmer",
+          "arabic": "اتاق",
+          "gender": "das",
+          "plural": "Zimmer",
+          "example": "Das Zimmer des Kindes ist klein.",
+          "exampleArabic": "اتاق بچه کوچک است.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "آپارتمان",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung der Frau ist modern.",
+          "exampleArabic": "آپارتمان زن مدرن است.",
+          "type": "noun"
+        },
+        {
+          "german": "Name",
+          "arabic": "نام",
+          "gender": "der",
+          "plural": "Namen",
+          "example": "Der Name des Lehrers ist Schmidt.",
+          "exampleArabic": "نام معلم اشمیت است.",
+          "type": "noun"
+        },
+        {
+          "german": "Fahrrad",
+          "arabic": "دوچرخه",
+          "gender": "das",
+          "plural": "Fahrräder",
+          "example": "Das Fahrrad des Kindes ist rot.",
+          "exampleArabic": "دوچرخه بچه قرمز است.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "کتاب",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist Annas Buch.",
+          "exampleArabic": "این کتاب آنا است.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrer",
+          "arabic": "معلم (آقا)",
+          "gender": "der",
+          "plural": "Lehrer",
+          "example": "Der Name des Lehrers ist Müller.",
+          "exampleArabic": "نام معلم مولر است.",
+          "type": "noun"
+        },
+        {
+          "german": "Lehrerin",
+          "arabic": "معلم (خانم)",
+          "gender": "die",
+          "plural": "Lehrerinnen",
+          "example": "Das Buch der Lehrerin ist alt.",
+          "exampleArabic": "کتاب معلم (خانم) قدیمی است.",
+          "type": "noun"
+        },
+        {
+          "german": "Farbe",
+          "arabic": "رنگ",
+          "gender": "die",
+          "plural": "Farben",
+          "example": "Die Farbe des Autos ist blau.",
+          "exampleArabic": "رنگ ماشین آبی است.",
+          "type": "noun"
+        },
+        {
+          "german": "gehören",
+          "arabic": "متعلق بودن به / مال کسی بودن",
+          "example": "Das Auto gehört Peters Vater.",
+          "exampleArabic": "ماشین متعلق به پدر پیتر است.",
+          "type": "verb"
+        },
+        {
+          "german": "neu",
+          "arabic": "نو / جدید",
+          "example": "Peters Auto ist neu.",
+          "exampleArabic": "ماشین پیتر نو است.",
+          "type": "adjective"
+        },
+        {
+          "german": "Spielzeug",
+          "arabic": "اسباب‌بازی",
+          "gender": "das",
+          "plural": "Spielzeuge",
+          "example": "Die Spielzeuge der Kinder sind bunt.",
+          "exampleArabic": "اسباب‌بازی‌های بچه‌ها رنگارنگ هستند.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q1",
+            "question": "حرف تعریف صحیح را در حالت مالکیت انتخاب کنید: Das Auto ___ Mannes ist rot.",
+            "answer": "des",
+            "options": [
+              "der",
+              "des",
+              "dem",
+              "den"
+            ],
+            "hint": "کلمه Mann مذکر است ← از des استفاده می‌کنیم"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q2",
+            "question": "جمله را با شکل صحیح اسم خاص کامل کنید: ___ Tasche ist sehr schön. (Anna)",
+            "answer": "Annas",
+            "hint": "پسوند -s را مستقیماً به اسم خاص Anna اضافه کنید"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q3",
+            "question": "شکل صحیح حالت مالکیت را انتخاب کنید: Das Zimmer ___ Lehrerin ist groß.",
+            "answer": "der",
+            "options": [
+              "des",
+              "dem",
+              "der",
+              "die"
+            ],
+            "hint": "کلمه Lehrerin مؤنث است ← از der استفاده می‌کنیم"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-19-q4",
+            "question": "کلمات را مرتب کنید تا یک جمله درست بسازید:",
+            "answer": "Das Fahrrad des Kindes ist neu.",
+            "words": [
+              "ist",
+              "des",
+              "Kindes",
+              "Das",
+              "Fahrrad",
+              "neu"
+            ],
+            "hint": "ترتیب: فاعل + فعل + بقیه جمله"
+          },
+          {
+            "type": "matching",
+            "id": "a2-19-q5",
+            "question": "هر جمله را با ترجمه درست آن وصل کنید:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Peters Auto ist neu.",
+                "right": "سيارة بيتر جديدة."
+              },
+              {
+                "left": "Die Wohnung der Frau ist modern.",
+                "right": "شقة المرأة عصرية."
+              },
+              {
+                "left": "Der Name des Lehrers ist Schmidt.",
+                "right": "اسم المعلم هو شميدت."
+              },
+              {
+                "left": "Annas Buch ist interessant.",
+                "right": "كتاب آنا مثير للاهتمام."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-19-q6",
+            "question": "به جمله گوش دهید و جای خالی را پر کنید: Die Farbe ___ Autos ist blau.",
+            "answer": "des",
+            "hint": "Auto خنثی است ← از des استفاده می‌کنیم",
+            "audioPrompt": "Die Farbe des Autos ist blau."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-19-q7",
+            "question": "نام توماس به -s ختم می‌شود. مالکیت را چگونه به درستی می‌نویسیم؟",
+            "answer": "Thomas' Hund",
+            "options": [
+              "Thomas's Hund",
+              "Thomass Hund",
+              "Thomas' Hund",
+              "Thomasen Hund"
+            ],
+            "hint": "اگر نام به s ختم شود، فقط آپاستروف (') می‌گذاریم"
+          },
+          {
+            "type": "speaking",
+            "id": "a2-19-q8",
+            "question": "جمله زیر را با صدای بلند و به درستی بخوانید: 'Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.'",
+            "answer": "Das ist Annas Wohnung. Die Wohnung der Frau ist sehr schön.",
+            "hint": "به تلفظ توجه کنید: Annas (آناس) و der Frau (دِر فراو)"
+          }
+        ]
+      }
+    },
+    "a2-18": {
+      "id": "a2-18",
+      "title": "جملات موصولی — Nominativ و Akkusativ — Relativsätze im Nominativ und Akkusativ",
+      "grammar": {
+        "title": "جملات موصولی ساده — Relativsätze im Nominativ und Akkusativ",
+        "content": "**جملهٔ موصولی چیست؟**\nجملهٔ موصولی (Relativsatz) یک جملهٔ فرعی است که به اسمی که پیش‌تر ذکر شده افزوده می‌شود تا آن را توضیح دهد یا توصیف کند. همیشه با یک **ضمیر موصولی** (Relativpronomen) مانند **der، die، das** آغاز می‌شود.\n\n**چگونه ضمیر موصولی را انتخاب کنیم؟**\nانتخاب ضمیر به دو چیز بستگی دارد:\n1. **جنس اسمی** که توصیف می‌کنیم (مذکر، مؤنث یا خنثی) — این شکل پایهٔ ضمیر را تعیین می‌کند.\n2. **نقش ضمیر در درون جملهٔ موصولی** — آیا فاعل است (Nominativ) یا مفعول (Akkusativ)؟\n\n**Nominativ:** ضمیر موصولی **فاعل** جملهٔ موصولی است.\nمثال: Das ist der Mann, **der** hier arbeitet. ← (der Mann کسی است که کار می‌کند → فاعل)\n\n**Akkusativ:** ضمیر موصولی **مفعول** در جملهٔ موصولی است.\nمثال: Das ist der Mann, **den** ich kenne. ← (من آن مرد را می‌شناسم → مفعول)\n\n**قانون بسیار مهم:** فعل در جملهٔ موصولی همیشه **در انتهای جمله** می‌آید.\n\n**ویرگول (Komma):** جملهٔ موصولی همیشه با ویرگول از جملهٔ اصلی جدا می‌شود.",
+        "tables": [
+          {
+            "title": "ضمایر موصولی — Relativpronomen (Nominativ و Akkusativ)",
+            "headers": [
+              "جنس / نوع",
+              "مثال (اسم)",
+              "Nominativ (فاعل)",
+              "Akkusativ (مفعول)"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر — Maskulinum",
+                  "der Mann",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث — Femininum",
+                  "die Frau",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "خنثی — Neutrum",
+                  "das Kind",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع — Plural",
+                  "die Leute",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "توجه: ضمیر موصولی در Akkusativ برای مذکر از der به den تغییر می‌کند — و این تنها تفاوت است!",
+            "theme": "default"
+          },
+          {
+            "title": "مقایسه: حرف تعریف (Artikel) و ضمیر موصولی (Relativpronomen)",
+            "headers": [
+              "جنس",
+              "حرف تعریف",
+              "Relativpronomen — Nominativ",
+              "Relativpronomen — Akkusativ"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر",
+                  "der",
+                  "der",
+                  "den"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              },
+              {
+                "cells": [
+                  "خنثی",
+                  "das",
+                  "das",
+                  "das"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع",
+                  "die",
+                  "die",
+                  "die"
+                ]
+              }
+            ],
+            "note": "ضمایر موصولی بسیار شبیه حروف تعریف هستند — این حفظ کردن آن‌ها را آسان‌تر می‌کند!",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ضمیر موصولی از نظر **جنس** با اسمی که در جملهٔ اصلی توصیف می‌کند مطابقت دارد.",
+            "example": "Die Frau, die dort steht, ist meine Lehrerin.",
+            "translation": "زنی که آنجا ایستاده معلم من است."
+          },
+          {
+            "rule": "اگر ضمیر موصولی **فاعل** جملهٔ موصولی باشد، از **Nominativ** استفاده می‌کنیم: der / die / das / die.",
+            "example": "Das ist das Kind, das Fußball spielt.",
+            "translation": "این همان بچه‌ای است که فوتبال بازی می‌کند."
+          },
+          {
+            "rule": "اگر ضمیر موصولی **مفعول** در جملهٔ موصولی باشد، از **Akkusativ** استفاده می‌کنیم: den / die / das / die.",
+            "example": "Der Film, den ich gesehen habe, war toll.",
+            "translation": "فیلمی که دیدم عالی بود."
+          },
+          {
+            "rule": "فعل در جملهٔ موصولی همیشه **در انتها** می‌آید و جمله با **ویرگول** جدا می‌شود.",
+            "example": "Ich habe einen Freund, der gut Gitarre spielt.",
+            "translation": "من دوستی دارم که گیتار را خوب می‌نوازد."
+          }
+        ],
+        "examples": [
+          "Das ist der Mann, der jeden Tag joggt. — این همان مردی است که هر روز می‌دود.",
+          "Die Frau, die ich kenne, wohnt in Berlin. — زنی که می‌شناسم در برلین زندگی می‌کند.",
+          "Das Buch, das auf dem Tisch liegt, gehört mir. — کتابی که روی میز است مال من است.",
+          "Ich suche einen Job, den ich liebe. — دنبال کاری می‌گردم که دوستش داشته باشم.",
+          "Der Hund, den wir gefunden haben, ist sehr süß. — سگی که پیدا کردیم خیلی بامزه است.",
+          "Die Kinder, die im Park spielen, sind meine Nachbarn. — بچه‌هایی که در پارک بازی می‌کنند همسایه‌های من هستند.",
+          "Das Restaurant, das wir besucht haben, war sehr gut. — رستورانی که رفتیم خیلی خوب بود.",
+          "Er hat eine Schwester, die in Marokko lebt. — او خواهری دارد که در مراکش زندگی می‌کند."
+        ],
+        "tip": "💡 به یاد داشته باش: تنها تفاوت بین Nominativ و Akkusativ در ضمایر موصولی فقط در مذکر است! **der** در Akkusativ به **den** تبدیل می‌شود. اما مؤنث، خنثی و جمع تغییر نمی‌کنند. روی همین یک تفاوت تمرکز کن و قانون را به‌راحتی یاد می‌گیری!"
+      },
+      "vocabulary": [
+        {
+          "german": "Mann",
+          "arabic": "مرد",
+          "gender": "der",
+          "plural": "Männer",
+          "example": "Der Mann, der dort steht, ist mein Vater.",
+          "exampleArabic": "مردی که آنجا ایستاده پدر من است.",
+          "type": "noun"
+        },
+        {
+          "german": "Frau",
+          "arabic": "زن / خانم",
+          "gender": "die",
+          "plural": "Frauen",
+          "example": "Die Frau, die ich sehe, lächelt.",
+          "exampleArabic": "زنی که می‌بینم لبخند می‌زند.",
+          "type": "noun"
+        },
+        {
+          "german": "Kind",
+          "arabic": "بچه / کودک",
+          "gender": "das",
+          "plural": "Kinder",
+          "example": "Das Kind, das weint, ist müde.",
+          "exampleArabic": "بچه‌ای که گریه می‌کند خسته است.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "کتاب",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das Buch, das ich lese, ist interessant.",
+          "exampleArabic": "کتابی که می‌خوانم جالب است.",
+          "type": "noun"
+        },
+        {
+          "german": "Film",
+          "arabic": "فیلم",
+          "gender": "der",
+          "plural": "Filme",
+          "example": "Der Film, den wir sehen, ist lustig.",
+          "exampleArabic": "فیلمی که می‌بینیم خنده‌دار است.",
+          "type": "noun"
+        },
+        {
+          "german": "Freund",
+          "arabic": "دوست",
+          "gender": "der",
+          "plural": "Freunde",
+          "example": "Ich habe einen Freund, der gut kocht.",
+          "exampleArabic": "من دوستی دارم که خوب آشپزی می‌کند.",
+          "type": "noun"
+        },
+        {
+          "german": "Wohnung",
+          "arabic": "آپارتمان / خانه",
+          "gender": "die",
+          "plural": "Wohnungen",
+          "example": "Die Wohnung, die ich suche, ist groß.",
+          "exampleArabic": "آپارتمانی که دنبالش می‌گردم بزرگ است.",
+          "type": "noun"
+        },
+        {
+          "german": "Hund",
+          "arabic": "سگ",
+          "gender": "der",
+          "plural": "Hunde",
+          "example": "Der Hund, den ich habe, heißt Max.",
+          "exampleArabic": "سگی که دارم اسمش ماکس است.",
+          "type": "noun"
+        },
+        {
+          "german": "kennen",
+          "arabic": "شناختن (شخص یا مکان)",
+          "example": "Die Frau, die ich kenne, ist sehr nett.",
+          "exampleArabic": "زنی که می‌شناسم خیلی مهربان است.",
+          "type": "verb"
+        },
+        {
+          "german": "suchen",
+          "arabic": "جستجو کردن / دنبال چیزی گشتن",
+          "example": "Er sucht einen Job, den er mag.",
+          "exampleArabic": "دنبال کاری می‌گردد که دوستش دارد.",
+          "type": "verb"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "خریدن",
+          "example": "Das Auto, das ich kaufe, ist rot.",
+          "exampleArabic": "ماشینی که می‌خرم قرمز است.",
+          "type": "verb"
+        },
+        {
+          "german": "interessant",
+          "arabic": "جالب / جذاب",
+          "example": "Das Buch, das er liest, ist sehr interessant.",
+          "exampleArabic": "کتابی که می‌خواند خیلی جالب است.",
+          "type": "adjective"
+        },
+        {
+          "german": "Nachbar",
+          "arabic": "همسایه",
+          "gender": "der",
+          "plural": "Nachbarn",
+          "example": "Der Nachbar, den ich kenne, ist freundlich.",
+          "exampleArabic": "همسایه‌ای که می‌شناسم دوستانه است.",
+          "type": "noun"
+        },
+        {
+          "german": "Restaurant",
+          "arabic": "رستوران",
+          "gender": "das",
+          "plural": "Restaurants",
+          "example": "Das Restaurant, das wir besuchen, ist neu.",
+          "exampleArabic": "رستورانی که می‌رویم جدید است.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q1",
+            "question": "ضمیر موصولی درست را انتخاب کن: Das ist der Mann, ___ jeden Tag hier arbeitet.",
+            "answer": "der",
+            "options": [
+              "den",
+              "der",
+              "die",
+              "das"
+            ],
+            "hint": "اسم مذکر است (der Mann) و ضمیر فاعل جملهٔ موصولی است → Nominativ مذکر"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-18-q2",
+            "question": "ضمیر موصولی درست را انتخاب کن: Der Film, ___ ich gesehen habe, war sehr gut.",
+            "answer": "den",
+            "options": [
+              "der",
+              "die",
+              "den",
+              "das"
+            ],
+            "hint": "اسم مذکر است (der Film) اما ضمیر مفعول است (ich habe ihn gesehen) → Akkusativ مذکر"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q3",
+            "question": "جمله را با ضمیر موصولی مناسب کامل کن: Die Frau, ___ dort sitzt, ist meine Lehrerin.",
+            "answer": "die",
+            "hint": "اسم مؤنث است (die Frau) و ضمیر فاعل است → Nominativ مؤنث = die"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-18-q4",
+            "question": "به جمله گوش بده و جای خالی را پر کن: Das Kind, ___ wir sehen, spielt im Park.",
+            "answer": "das",
+            "hint": "اسم خنثی است (das Kind) و ضمیر مفعول است → Akkusativ خنثی = das",
+            "audioPrompt": "Das Kind, das wir sehen, spielt im Park."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q5",
+            "question": "کلمات را مرتب کن تا جملهٔ درستی بسازی: (من دنبال آپارتمانی می‌گردم که بزرگ باشد)",
+            "answer": "Ich suche eine Wohnung , die groß ist .",
+            "words": [
+              "groß",
+              "suche",
+              "ist",
+              "Ich",
+              "eine",
+              "Wohnung",
+              ",",
+              "die"
+            ],
+            "hint": "فعل در جملهٔ موصولی در انتها می‌آید!"
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-18-q6",
+            "question": "کلمات را مرتب کن تا جملهٔ درستی بسازی: (کتابی که می‌خوانم جالب است)",
+            "answer": "Das Buch , das ich lese , ist interessant .",
+            "words": [
+              "Das",
+              "interessant",
+              "lese",
+              "ist",
+              "ich",
+              "Buch",
+              ",",
+              "das"
+            ],
+            "hint": "با Das Buch شروع کن، سپس جملهٔ موصولی، سپس جملهٔ اصلی"
+          },
+          {
+            "type": "matching",
+            "id": "a2-18-q7",
+            "question": "هر جمله را با ترجمهٔ درستش وصل کن:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Der Hund, den ich habe, ist klein.",
+                "right": "الكلب الذي لديّ صغير."
+              },
+              {
+                "left": "Die Frau, die hier wohnt, ist nett.",
+                "right": "المرأة التي تسكن هنا لطيفة."
+              },
+              {
+                "left": "Das Restaurant, das wir kennen, ist gut.",
+                "right": "المطعم الذي نعرفه جيد."
+              },
+              {
+                "left": "Ich habe einen Freund, der gut singt.",
+                "right": "لديّ صديق يغني جيدًا."
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "a2-18-q8",
+            "question": "جملهٔ زیر را با صدای بلند و درست بخوان: 'Das ist die Wohnung, die ich kaufen möchte.'",
+            "answer": "Das ist die Wohnung, die ich kaufen möchte.",
+            "hint": "به یاد داشته باش: فعل möchte در انتهای جملهٔ موصولی می‌آید و قبل از die ویرگول می‌گذاریم"
+          }
+        ]
+      }
+    },
+    "a2-17": {
+      "id": "a2-17",
+      "title": "بیان هدف: um…zu و damit — Finalsätze: um … zu / damit",
+      "grammar": {
+        "title": "جملات هدف (Finalsätze): um…zu در برابر damit",
+        "content": "در زبان آلمانی، از **Finalsätze** (جملات هدف) برای بیان **هدف** یا **غرض** از انجام کاری استفاده می‌کنیم؛ یعنی برای پاسخ به این سؤال: «چرا این کار را می‌کنی؟» یا «هدفت چیست؟»\n\nدو روش اصلی وجود دارد:\n\n**1. um … zu + Infinitiv**\nاز این ساختار استفاده می‌کنیم وقتی **فاعل جمله‌ی اصلی و فاعل جمله‌ی هدف یک نفر باشند**.\nساختار: جمله‌ی اصلی + **um** + … + **zu** + فعل به صورت مصدر (Infinitiv) در انتهای جمله.\nمثال: *Ich lerne Deutsch, um in Deutschland zu arbeiten.*\n(من آلمانی یاد می‌گیرم — هدف: در آلمانیا کار کنم ← فاعل یکسان: ich)\n\n**2. damit + Nebensatz**\nاز این ساختار استفاده می‌کنیم وقتی **فاعل جمله‌ی هدف با فاعل جمله‌ی اصلی متفاوت باشد**.\nساختار: جمله‌ی اصلی + **damit** + جمله‌ی فرعی (فعل در انتها).\nمثال: *Ich spreche langsam, damit du mich verstehst.*\n(من آهسته صحبت می‌کنم — هدف: تو مرا بفهمی ← دو فاعل متفاوت: ich / du)\n\n**نکته‌ی مهم:** بعد از **um…zu** فاعل صریحی ذکر نمی‌شود، اما بعد از **damit** باید فاعل و فعل صرف‌شده آورده شوند.",
+        "tables": [
+          {
+            "title": "چه وقت از um…zu و چه وقت از damit استفاده کنیم؟",
+            "headers": [
+              "ادات",
+              "فاعل‌ها",
+              "ساختار جمله",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um … zu",
+                  "فاعل یکسان ✅",
+                  "um + … + zu + Infinitiv",
+                  "Er lernt, um die Prüfung zu bestehen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "فاعل متفاوت ✅",
+                  "damit + Subjekt + … + Verb",
+                  "Er lernt, damit seine Eltern stolz sind."
+                ]
+              }
+            ],
+            "note": "قانون طلایی: اگر فاعل عوض شد ← damit. اگر همان ماند ← um…zu.",
+            "theme": "default"
+          },
+          {
+            "title": "جایگاه فعل در جمله‌ی فرعی",
+            "headers": [
+              "نوع",
+              "ادات",
+              "جایگاه فعل",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "um…zu",
+                  "um",
+                  "zu + Infinitiv در انتها",
+                  "…um Deutsch zu lernen."
+                ]
+              },
+              {
+                "cells": [
+                  "damit",
+                  "damit (Konjunktion)",
+                  "فعل صرف‌شده در انتها",
+                  "…damit er Deutsch lernt."
+                ]
+              }
+            ],
+            "note": "در هر دو حالت، فعل در انتهای جمله‌ی فرعی می‌آید.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "از um…zu استفاده کن وقتی فاعل هر دو جمله یکی است؛ فعل به صورت مصدر (Infinitiv) بعد از zu در انتهای جمله می‌آید.",
+            "example": "Sie geht in die Bibliothek, um ein Buch zu lesen.",
+            "translation": "به کتابخانه می‌رود تا کتابی بخواند."
+          },
+          {
+            "rule": "از damit استفاده کن وقتی فاعل جمله‌ی هدف با فاعل جمله‌ی اصلی متفاوت است؛ فعل صرف‌شده در انتهای جمله‌ی فرعی می‌آید.",
+            "example": "Die Mutter kocht, damit die Kinder essen können.",
+            "translation": "مادر آشپزی می‌کند تا بچه‌ها بتوانند غذا بخورند."
+          },
+          {
+            "rule": "بعد از um…zu فاعل را دوباره ذکر نمی‌کنیم، چون از جمله‌ی اصلی مشخص است.",
+            "example": "Ich spare Geld, um ein Auto zu kaufen.",
+            "translation": "پول پس‌انداز می‌کنم تا ماشین بخرم."
+          },
+          {
+            "rule": "damit یک接続词 (Konjunktion) است که یک جمله‌ی فرعی کامل با فاعل و فعل صرف‌شده در انتها را وارد می‌کند.",
+            "example": "Er spricht laut, damit alle ihn hören.",
+            "translation": "بلند صحبت می‌کند تا همه او را بشنوند."
+          }
+        ],
+        "examples": [
+          "Ich lerne Deutsch, um in Deutschland zu studieren. — آلمانی یاد می‌گیرم تا در آلمانیا تحصیل کنم.",
+          "Sie spart Geld, um eine Reise zu machen. — پول پس‌انداز می‌کند تا به سفر برود.",
+          "Er steht früh auf, um den Bus nicht zu verpassen. — زود بیدار می‌شود تا اتوبوس را از دست ندهد.",
+          "Wir sprechen langsam, damit die Kinder uns verstehen. — آهسته صحبت می‌کنیم تا بچه‌ها ما را بفهمند.",
+          "Die Lehrerin schreibt an die Tafel, damit die Schüler die Wörter sehen. — معلم روی تخته می‌نویسد تا دانش‌آموزان کلمات را ببینند.",
+          "Er macht das Fenster auf, um frische Luft zu bekommen. — پنجره را باز می‌کند تا هوای تازه بگیرد.",
+          "Ich schreibe eine Liste, damit ich nichts vergesse. — فهرستی می‌نویسم تا چیزی را فراموش نکنم.",
+          "Sie trainiert jeden Tag, um fit zu bleiben. — هر روز تمرین می‌کند تا سالم و فعال بماند."
+        ],
+        "tip": "💡 ترفند ساده: قبل از اینکه بین um…zu و damit یکی را انتخاب کنی، از خودت بپرس: «چه کسی کار هدف را انجام می‌دهد؟» — اگر همان شخص جمله‌ی اول است ← um…zu. اگر شخص دیگری است ← damit. این سؤال ساده ۹۹٪ از اشتباهات را حل می‌کند!"
+      },
+      "vocabulary": [
+        {
+          "german": "Ziel",
+          "arabic": "هدف",
+          "gender": "das",
+          "plural": "Ziele",
+          "example": "Mein Ziel ist es, Deutsch zu lernen.",
+          "exampleArabic": "هدف من یادگیری زبان آلمانی است.",
+          "type": "noun"
+        },
+        {
+          "german": "Grund",
+          "arabic": "دلیل / سبب",
+          "gender": "der",
+          "plural": "Gründe",
+          "example": "Was ist der Grund dafür?",
+          "exampleArabic": "دلیل آن چیست؟",
+          "type": "noun"
+        },
+        {
+          "german": "lernen",
+          "arabic": "یاد گرفتن / درس خواندن",
+          "example": "Sie lernt Deutsch, um zu arbeiten.",
+          "exampleArabic": "آلمانی یاد می‌گیرد تا کار کند.",
+          "type": "verb"
+        },
+        {
+          "german": "sparen",
+          "arabic": "پس‌انداز کردن (پول)",
+          "example": "Er spart Geld, um ein Fahrrad zu kaufen.",
+          "exampleArabic": "پول پس‌انداز می‌کند تا دوچرخه بخرد.",
+          "type": "verb"
+        },
+        {
+          "german": "verstehen",
+          "arabic": "فهمیدن",
+          "example": "Sprich langsam, damit ich dich verstehe.",
+          "exampleArabic": "آهسته صحبت کن تا بفهمت.",
+          "type": "verb"
+        },
+        {
+          "german": "helfen",
+          "arabic": "کمک کردن",
+          "example": "Sie erklärt es, damit er helfen kann.",
+          "exampleArabic": "توضیح می‌دهد تا او بتواند کمک کند.",
+          "type": "verb"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "امتحان",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Er lernt viel, um die Prüfung zu bestehen.",
+          "exampleArabic": "زیاد درس می‌خواند تا در امتحان قبول شود.",
+          "type": "noun"
+        },
+        {
+          "german": "Reise",
+          "arabic": "سفر / مسافرت",
+          "gender": "die",
+          "plural": "Reisen",
+          "example": "Sie spart, um eine Reise zu machen.",
+          "exampleArabic": "پس‌انداز می‌کند تا به سفر برود.",
+          "type": "noun"
+        },
+        {
+          "german": "gesund",
+          "arabic": "سالم / سلامت",
+          "example": "Er isst Obst, um gesund zu bleiben.",
+          "exampleArabic": "میوه می‌خورد تا سالم بماند.",
+          "type": "adjective"
+        },
+        {
+          "german": "früh",
+          "arabic": "زود / صبح زود",
+          "example": "Sie steht früh auf, um zu joggen.",
+          "exampleArabic": "زود بیدار می‌شود تا بدود.",
+          "type": "adverb"
+        },
+        {
+          "german": "erklären",
+          "arabic": "توضیح دادن",
+          "example": "Die Lehrerin erklärt, damit die Schüler verstehen.",
+          "exampleArabic": "معلم توضیح می‌دهد تا دانش‌آموزان بفهمند.",
+          "type": "verb"
+        },
+        {
+          "german": "Arbeit",
+          "arabic": "کار / شغل",
+          "gender": "die",
+          "plural": "Arbeiten",
+          "example": "Er sucht eine Arbeit, um Geld zu verdienen.",
+          "exampleArabic": "دنبال کار می‌گردد تا پول در بیاورد.",
+          "type": "noun"
+        },
+        {
+          "german": "kaufen",
+          "arabic": "خریدن",
+          "example": "Ich spare, um ein Buch zu kaufen.",
+          "exampleArabic": "پس‌انداز می‌کنم تا کتابی بخرم.",
+          "type": "verb"
+        },
+        {
+          "german": "langsam",
+          "arabic": "آهسته / کُند",
+          "example": "Sprich langsam, damit ich verstehe.",
+          "exampleArabic": "آهسته صحبت کن تا بفهمم.",
+          "type": "adverb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q1",
+            "question": "ادات درست را انتخاب کن: Ich gehe ins Fitnessstudio, ___ fit zu bleiben. (فاعل در هر دو جمله یکسان است: ich)",
+            "answer": "um",
+            "options": [
+              "damit",
+              "um",
+              "weil",
+              "dass"
+            ],
+            "hint": "فاعل در هر دو جمله یکسان است (ich) ← از um…zu استفاده می‌کنیم"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q2",
+            "question": "ادات درست را انتخاب کن: Die Mutter liest vor, ___ das Kind schlafen kann. (مادر می‌خواند — بچه می‌خوابد)",
+            "answer": "damit",
+            "options": [
+              "um … zu",
+              "damit",
+              "weil",
+              "aber"
+            ],
+            "hint": "فاعل عوض شده: die Mutter ← → das Kind ← از damit استفاده می‌کنیم"
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q3",
+            "question": "جمله را با um…zu کامل کن: Er lernt jeden Tag, ___ die Prüfung ___ bestehen.",
+            "answer": "um … zu",
+            "hint": "um را در ابتدا و zu را بلافاصله قبل از فعل در انتهای جمله بگذار."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a2-17-q4",
+            "question": "کلمات را مرتب کن تا یک جمله‌ی درست با damit بسازی:",
+            "answer": "Sie spricht laut, damit alle sie hören.",
+            "words": [
+              "damit",
+              "Sie",
+              "spricht",
+              "laut,",
+              "alle",
+              "sie",
+              "hören."
+            ],
+            "hint": "فعل صرف‌شده در جمله‌ی فرعی در انتها می‌آید."
+          },
+          {
+            "type": "matching",
+            "id": "a2-17-q5",
+            "question": "هر جمله را به ترجمه‌ی درستش وصل کن:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Ich spare, um ein Auto zu kaufen.",
+                "right": "أوفّر لأشتري سيارة."
+              },
+              {
+                "left": "Er spricht langsam, damit sie versteht.",
+                "right": "يتكلم ببطء حتى تفهم."
+              },
+              {
+                "left": "Sie steht früh auf, um den Bus zu nehmen.",
+                "right": "تستيقظ مبكرًا لتأخذ الحافلة."
+              },
+              {
+                "left": "Wir lernen, damit unsere Eltern stolz sind.",
+                "right": "ندرس حتى يفخر بنا والدانا."
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a2-17-q6",
+            "question": "به جمله گوش بده و جای خالی را پر کن: Ich kaufe ein Wörterbuch, ___ neue Wörter ___ lernen.",
+            "answer": "um … zu",
+            "hint": "آیا فاعل عوض شده؟ نه ← um…zu",
+            "audioPrompt": "Ich kaufe ein Wörterbuch, um neue Wörter zu lernen."
+          },
+          {
+            "type": "speaking",
+            "id": "a2-17-q7",
+            "question": "جمله‌ی زیر را با صدای واضح بخوان: 'Er macht das Fenster auf, um frische Luft zu bekommen.'",
+            "answer": "Er macht das Fenster auf, um frische Luft zu bekommen.",
+            "hint": "توجه کن: zu بلافاصله قبل از فعل در انتهای جمله می‌آید."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a2-17-q8",
+            "question": "کدام جمله از نظر دستوری درست است؟",
+            "answer": "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+            "options": [
+              "Sie lernt, damit Deutsch zu sprechen.",
+              "Sie lernt Deutsch, damit ihr Sohn es auch versteht.",
+              "Sie lernt Deutsch, um ihr Sohn es versteht.",
+              "Sie lernt, um ihr Sohn Deutsch zu sprechen."
+            ],
+            "hint": "فاعل عوض شده (sie ← ihr Sohn) ← damit + جمله‌ی فرعی کامل با فعل در انتها."
+          }
+        ]
+      }
     }
   }
 }

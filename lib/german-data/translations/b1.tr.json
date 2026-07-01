@@ -8083,6 +8083,1465 @@
           }
         ]
       }
+    },
+    "b1-15": {
+      "id": "b1-15",
+      "title": "Zayıf İsimler (n-Deklination) — n-Deklination (schwache Nomen)",
+      "grammar": {
+        "title": "Zayıf İsimler — n-Deklination (schwache Nomen)",
+        "content": "Almancada, **schwache Nomen** (zayıf isimler) olarak adlandırılan özel bir eril isimler grubu bulunmaktadır. Bu isimler diğerlerinden farklıdır; çünkü **Nominativ (özne hâli) dışındaki tüm hâllerde -(e)n ekini alırlar**.\n\n**Bu isimler hangileridir?**\nBunların büyük çoğunluğu, aşağıdaki kategorilerden birine ait eril isimlerdir:\n- **Kişi, meslek veya milliyet** bildiren isimler, örneğin: *der Student, der Journalist, der Kollege*\n- **-e** ile biten isimler, örneğin: *der Junge, der Kunde, der Zeuge*\n- **-ist, -ent, -ant, -at** ile biten isimler, örneğin: *der Tourist, der Patient, der Praktikant*\n- Özel istisna: **der Herr** tekilde *-n*, çoğulda *-en* alır\n\n**Altın Kural:**\nGenitiv, Dativ ve Akkusativ hâllerinde — isme her zaman **-(e)n** ekleyin.\n\n**Önemli Not:** Bu isimlerin bir kısmı tekil Genitiv hâlinde ayrıca **-s** alır; örneğin: *des Studenten* — ekin **-en** olduğuna dikkat edin, sıradan isimlerdeki gibi **-s** değil.",
+        "tables": [
+          {
+            "title": "Zayıf İsimlerin Çekimi — Örnek: der Student / der Junge / der Herr",
+            "headers": [
+              "Hâl",
+              "der Student",
+              "der Junge",
+              "der Herr"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Nominativ (Özne)",
+                  "der Student",
+                  "der Junge",
+                  "der Herr"
+                ]
+              },
+              {
+                "cells": [
+                  "Akkusativ (Nesne)",
+                  "den Studenten",
+                  "den Jungen",
+                  "den Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Dativ (Dolaylı Nesne)",
+                  "dem Studenten",
+                  "dem Jungen",
+                  "dem Herrn"
+                ]
+              },
+              {
+                "cells": [
+                  "Genitiv (İyelik)",
+                  "des Studenten",
+                  "des Jungen",
+                  "des Herrn"
+                ]
+              }
+            ],
+            "note": "-(e)n eki Nominativ dışındaki tüm hâllerde eklenir. der Herr yalnızca tekilde -n alır.",
+            "theme": "default"
+          },
+          {
+            "title": "Yaygın Zayıf İsim Kategorilerinden Örnekler",
+            "headers": [
+              "Tür",
+              "Örnekler",
+              "Ek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "-e ile bitenler",
+                  "der Junge, der Kunde, der Kollege",
+                  "-n"
+                ]
+              },
+              {
+                "cells": [
+                  "-ent / -ant ile bitenler",
+                  "der Student, der Praktikant",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-ist ile bitenler",
+                  "der Journalist, der Tourist",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "-at / -ot ile bitenler",
+                  "der Soldat, der Pilot",
+                  "-en"
+                ]
+              },
+              {
+                "cells": [
+                  "İstisna",
+                  "der Herr",
+                  "-n (tekil) / -en (çoğul)"
+                ]
+              }
+            ],
+            "note": "Bu isimlerin tamamı erildir. Emin değilseniz her zaman sözlüğe başvurun.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Zayıf isimler Akkusativ, Dativ ve Genitiv hâllerinde -(e)n alır — yalnızca Nominativ'de ek almadan kalır.",
+            "example": "Der Student lernt. — Ich kenne den Studenten.",
+            "translation": "Öğrenci öğreniyor. — Ben öğrenciyi tanıyorum."
+          },
+          {
+            "rule": "-e ile biten isimler (der Junge, der Kunde gibi) yalnızca -n alır (ekstra e olmadan).",
+            "example": "Ich helfe dem Jungen.",
+            "translation": "Ben çocuğa yardım ediyorum."
+          },
+          {
+            "rule": "-ent, -ist, -ant, -at, -ot ile biten isimler Nominativ dışındaki tüm hâllerde -en alır.",
+            "example": "Das ist das Zimmer des Studenten.",
+            "translation": "Bu öğrencinin odasıdır."
+          },
+          {
+            "rule": "der Herr bir istisnadır: tekilde -n (Herrn), çoğulda -en (Herren) alır.",
+            "example": "Ich spreche mit dem Herrn.",
+            "translation": "Ben beyefendiyle konuşuyorum."
+          }
+        ],
+        "examples": [
+          "Der Journalist schreibt einen Artikel. — Gazeteci bir makale yazıyor.",
+          "Ich kenne den Journalisten gut. — Ben gazeteciyi iyi tanıyorum.",
+          "Wir helfen dem Studenten bei den Hausaufgaben. — Biz öğrenciye ödevlerinde yardım ediyoruz.",
+          "Das ist das Buch des Kollegen. — Bu meslektaşın kitabıdır.",
+          "Der Kunde möchte ein Zimmer reservieren. — Müşteri bir oda rezervasyonu yapmak istiyor.",
+          "Die Lehrerin erklärt dem Jungen die Aufgabe. — Öğretmen çocuğa görevi açıklıyor.",
+          "Ich habe dem Herrn Müller eine E-Mail geschickt. — Bay Müller'e bir e-posta gönderdim.",
+          "Der Praktikant arbeitet seit einem Monat in der Firma. — Stajyer şirkette bir aydır çalışıyor."
+        ],
+        "tip": "💡 -e, -ent, -ist veya -ant ile biten eril bir isim gördüğünüzde, büyük ihtimalle zayıf bir isimle karşı karşıyasınız! Kendinize şunu sorun: Nominativ'de mi? Değilse, hemen -(e)n ekleyin. Bu kural B1 düzeyindeki durumların %90'ından fazlasını kapsar."
+      },
+      "vocabulary": [
+        {
+          "german": "Student",
+          "arabic": "Üniversite öğrencisi",
+          "gender": "der",
+          "plural": "Studenten",
+          "example": "Der Student lernt jeden Tag Deutsch.",
+          "exampleArabic": "Öğrenci her gün Almanca öğreniyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Journalist",
+          "arabic": "Gazeteci",
+          "gender": "der",
+          "plural": "Journalisten",
+          "example": "Der Journalist arbeitet für eine Zeitung.",
+          "exampleArabic": "Gazeteci bir gazete için çalışıyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Kollege",
+          "arabic": "Meslektaş",
+          "gender": "der",
+          "plural": "Kollegen",
+          "example": "Ich esse mit dem Kollegen zu Mittag.",
+          "exampleArabic": "Meslektaşımla öğle yemeği yiyorum.",
+          "type": "noun"
+        },
+        {
+          "german": "Junge",
+          "arabic": "Erkek çocuk / Oğlan",
+          "gender": "der",
+          "plural": "Jungen",
+          "example": "Die Mutter ruft den Jungen.",
+          "exampleArabic": "Anne çocuğu çağırıyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Kunde",
+          "arabic": "Müşteri / Alıcı",
+          "gender": "der",
+          "plural": "Kunden",
+          "example": "Der Verkäufer hilft dem Kunden.",
+          "exampleArabic": "Satıcı müşteriye yardım ediyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Herr",
+          "arabic": "Beyefendi / Bay",
+          "gender": "der",
+          "plural": "Herren",
+          "example": "Guten Morgen, Herr Schmidt!",
+          "exampleArabic": "Günaydın, Bay Schmidt!",
+          "type": "noun"
+        },
+        {
+          "german": "Tourist",
+          "arabic": "Turist",
+          "gender": "der",
+          "plural": "Touristen",
+          "example": "Der Tourist fragt nach dem Weg.",
+          "exampleArabic": "Turist yolu soruyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Praktikant",
+          "arabic": "Stajyer",
+          "gender": "der",
+          "plural": "Praktikanten",
+          "example": "Wir begrüßen den neuen Praktikanten.",
+          "exampleArabic": "Yeni stajyeri karşılıyoruz.",
+          "type": "noun"
+        },
+        {
+          "german": "Zeuge",
+          "arabic": "Tanık",
+          "gender": "der",
+          "plural": "Zeugen",
+          "example": "Die Polizei befragt den Zeugen.",
+          "exampleArabic": "Polis tanığı sorguluyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Soldat",
+          "arabic": "Asker",
+          "gender": "der",
+          "plural": "Soldaten",
+          "example": "Man dankt dem Soldaten für seinen Dienst.",
+          "exampleArabic": "Askere hizmetinden dolayı teşekkür ediliyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Pilot",
+          "arabic": "Pilot",
+          "gender": "der",
+          "plural": "Piloten",
+          "example": "Die Passagiere vertrauen dem Piloten.",
+          "exampleArabic": "Yolcular pilota güveniyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Mensch",
+          "arabic": "İnsan / Kişi",
+          "gender": "der",
+          "plural": "Menschen",
+          "example": "Ich helfe dem Menschen, der Hilfe braucht.",
+          "exampleArabic": "Yardıma ihtiyacı olan kişiye yardım ediyorum.",
+          "type": "noun"
+        },
+        {
+          "german": "Patient",
+          "arabic": "Hasta",
+          "gender": "der",
+          "plural": "Patienten",
+          "example": "Der Arzt untersucht den Patienten.",
+          "exampleArabic": "Doktor hastayı muayene ediyor.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q1",
+            "question": "Akkusativ cümlesinde zayıf ismin doğru biçimini seçin:\nIch sehe ___ Studenten.",
+            "answer": "den",
+            "options": [
+              "der",
+              "den",
+              "dem",
+              "des"
+            ],
+            "hint": "Akkusativ hâlinde zayıf isimler -(e)n alır ve artikel den olur."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q2",
+            "question": "Cümleyi zayıf ismin doğru biçimiyle tamamlayın:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+            "answer": "Journalisten",
+            "hint": "dem'den sonra Dativ hâlindeyiz — zayıf isme -en ekleyin."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q3",
+            "question": "🎧 Dinleyin ve cümleyi eksik kelimeyle tamamlayın:",
+            "answer": "Kollegen",
+            "hint": "des'ten sonra Genitiv hâlindeyiz — zayıf isim -en alır.",
+            "audioPrompt": "Das ist das Büro des Kollegen."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-15-q4",
+            "question": "Kelimeleri doğru bir cümle oluşturacak şekilde sıralayın:",
+            "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
+            "words": [
+              "dem",
+              "Die",
+              "Aufgabe",
+              "Lehrerin",
+              "erklärt",
+              "Jungen",
+              "die"
+            ],
+            "hint": "erklärt fiili, kendisine açıklama yapılan kişi için Dativ gerektirir — dem + Jungen kullanın."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-15-q5",
+            "question": "Aşağıdaki cümlelerden hangisinde zayıf isim kullanımında hata vardır?",
+            "answer": "Er hilft dem Kunde.",
+            "options": [
+              "Ich kenne den Studenten.",
+              "Er hilft dem Kunde.",
+              "Das ist das Zimmer des Touristen.",
+              "Wir sehen den Jungen."
+            ],
+            "hint": "der Kunde zayıf bir isimdir — Dativ hâlinde dem Kunden olmalıdır."
+          },
+          {
+            "type": "matching",
+            "id": "b1-15-q6",
+            "question": "Nominativ'deki her ismi Akkusativ'deki doğru biçimiyle eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "der Journalist",
+                "right": "den Journalisten"
+              },
+              {
+                "left": "der Junge",
+                "right": "den Jungen"
+              },
+              {
+                "left": "der Herr",
+                "right": "den Herrn"
+              },
+              {
+                "left": "der Praktikant",
+                "right": "den Praktikanten"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-15-q7",
+            "question": "Cümleyi doğru biçimle tamamlayın:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+            "answer": "Patienten",
+            "hint": "den, Akkusativ hâline işaret eder — zayıf isim -en alır."
+          },
+          {
+            "type": "speaking",
+            "id": "b1-15-q8",
+            "question": "Aşağıdaki cümleyi -en ekinin telaffuzuna dikkat ederek yüksek sesle okuyun:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+            "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
+            "hint": "Unutmayın: Herrn = Dativ hâlinde der Herr. -en'in telaffuzu kelime sonunda hafiftir."
+          }
+        ]
+      }
+    },
+    "b1-16": {
+      "id": "b1-16",
+      "title": "Edilgen Çatı ile Kiplik Fiilleri — Passiv mit Modalverben",
+      "grammar": {
+        "title": "Edilgen Çatı ile Kiplik Fiilleri — Passiv mit Modalverben",
+        "content": "## Passiv mit Modalverben Nedir?\n\nAlmancada **edilgen çatıyı (Passiv)** *müssen, können, dürfen, sollen, wollen* gibi **kiplik fiilleriyle (Modalverben)** birleştirerek, özneyi belirtmeksizin bir şeyin yapılmasının zorunluluğunu veya olasılığını ifade edebiliriz.\n\n---\n\n### 🔧 Bu Yapı Nasıl Kurulur?\n\nTemel kalıp şudur:\n\n**Modalverb (çekimli) + Partizip II + werden**\n\n> Örnek: Das Zimmer **muss** sauber gemacht **werden**.\n> (Oda temizlenmelidir.)\n\n---\n\n### 📌 Hızlı Karşılaştırma\n\n| Etken Cümle (Aktiv) | Edilgen Cümle (Passiv) |\n|---|---|\n| Man muss das Formular ausfüllen. | Das Formular muss ausgefüllt werden. |\n| Man kann das Problem lösen. | Das Problem kann gelöst werden. |\n\n---\n\n### 🔑 Önemli Notlar\n\n- **Kiplik fiili**, cümledeki doğal konumunu alır (temel cümlelerde ikinci konum).\n- **werden** her zaman cümlenin sonunda mastar (Infinitiv) biçiminde kalır.\n- **Partizip II**, cümlenin sonunda *werden*'den hemen önce gelir.\n- **Yan cümlelerde (Nebensatz)**, kiplik fiili *Partizip II + werden*'den sonra en sona gelir:\n  > Ich weiß, dass das Formular ausgefüllt werden **muss**.",
+        "tables": [
+          {
+            "title": "Kiplik Fiillerinin Edilgen Çatıdaki Çekimi — Präsens",
+            "headers": [
+              "Kiplik Fiili",
+              "Anlamı",
+              "Edilgen Çatıyla Örnek",
+              "Çeviri"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "müssen",
+                  "gerekli / zorunlu",
+                  "Das muss gemacht werden.",
+                  "Bu yapılmalıdır."
+                ]
+              },
+              {
+                "cells": [
+                  "können",
+                  "mümkün / yapabilmek",
+                  "Das kann geändert werden.",
+                  "Bu değiştirilebilir."
+                ]
+              },
+              {
+                "cells": [
+                  "dürfen",
+                  "izin verilmek / serbest",
+                  "Hier darf nicht geraucht werden.",
+                  "Burada sigara içilmesine izin verilmez."
+                ]
+              },
+              {
+                "cells": [
+                  "sollen",
+                  "beklenmek / istenmek",
+                  "Das soll sofort erledigt werden.",
+                  "Bunun hemen tamamlanması bekleniyor."
+                ]
+              },
+              {
+                "cells": [
+                  "wollen",
+                  "istenilmek / amaçlanmak",
+                  "Das will gut geplant werden.",
+                  "Bunun iyi planlanması amaçlanıyor."
+                ]
+              }
+            ],
+            "note": "Kalıp her zaman şöyledir: Modalverb (çekimli) + Partizip II + werden",
+            "theme": "default"
+          },
+          {
+            "title": "Cümledeki Fiil Konumları — Satzstellung",
+            "headers": [
+              "Cümle Türü",
+              "1. Konum",
+              "2. Konum (Verb)",
+              "Orta",
+              "Son"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Hauptsatz (temel cümle)",
+                  "Das Formular",
+                  "muss",
+                  "—",
+                  "ausgefüllt werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Hauptsatz (temel cümle)",
+                  "Das Problem",
+                  "kann",
+                  "hier",
+                  "gelöst werden."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (yan cümle)",
+                  "..., dass das Formular",
+                  "—",
+                  "—",
+                  "ausgefüllt werden muss."
+                ]
+              },
+              {
+                "cells": [
+                  "Nebensatz (yan cümle)",
+                  "..., weil das Problem",
+                  "—",
+                  "—",
+                  "gelöst werden kann."
+                ]
+              }
+            ],
+            "note": "Yan cümlede: kiplik fiili Partizip II + werden'den sonra en sona gelir",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Temel kalıp: çekimli kiplik fiili + Partizip II + werden",
+            "example": "Das Paket muss verschickt werden.",
+            "translation": "Paketin gönderilmesi gerekiyor."
+          },
+          {
+            "rule": "Temel cümlede kiplik fiili ikinci konuma gelir; cümlenin sonu şöyle olur: Partizip II + werden",
+            "example": "Die Hausaufgaben müssen heute abgegeben werden.",
+            "translation": "Ödevlerin bugün teslim edilmesi gerekiyor."
+          },
+          {
+            "rule": "Yan cümlede kiplik fiili, Partizip II + werden'den sonra en sona gelir",
+            "example": "Er sagt, dass die Tür geschlossen werden muss.",
+            "translation": "Kapının kapatılması gerektiğini söylüyor."
+          },
+          {
+            "rule": "Edilgen çatıda özne belirtilmez; odak, eylemi kimin yaptığından çok eylemin kendisine yönelir",
+            "example": "Das Licht muss ausgemacht werden.",
+            "translation": "Işığın söndürülmesi gerekiyor. (Kimin söndüreceği önemli değil)"
+          }
+        ],
+        "examples": [
+          "Das Formular muss ausgefüllt werden. — Formun doldurulması gerekiyor.",
+          "Die Wohnung kann sofort gemietet werden. — Daire hemen kiralanabilir.",
+          "Hier darf nicht fotografiert werden. — Burada fotoğraf çekilmesine izin verilmez.",
+          "Die Rechnung soll bis Freitag bezahlt werden. — Faturanın Cuma gününe kadar ödenmesi bekleniyor.",
+          "Das kaputte Fahrrad muss repariert werden. — Bozuk bisikletin tamir edilmesi gerekiyor.",
+          "Ich glaube, dass das Problem gelöst werden kann. — Sorunun çözülebileceğine inanıyorum.",
+          "Die Medikamente dürfen nicht vergessen werden. — İlaçların unutulmasına izin verilmez.",
+          "Er weiß, dass die Arbeit rechtzeitig erledigt werden muss. — İşin zamanında tamamlanması gerektiğini biliyor."
+        ],
+        "tip": "💡 Temel cümlenin sonundaki altın sırayı unutma: **önce Partizip II, sonra werden**. Yan cümlede ise: **Partizip II + werden + Modalverb**. Bu sırayı ne kadar iyi öğrenirsen, yapı o kadar otomatik hale gelir!"
+      },
+      "vocabulary": [
+        {
+          "german": "Formular",
+          "arabic": "form / başvuru formu",
+          "gender": "das",
+          "plural": "Formulare",
+          "example": "Das Formular muss ausgefüllt werden.",
+          "exampleArabic": "Formun doldurulması gerekiyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Rechnung",
+          "arabic": "fatura",
+          "gender": "die",
+          "plural": "Rechnungen",
+          "example": "Die Rechnung muss bezahlt werden.",
+          "exampleArabic": "Faturanın ödenmesi gerekiyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Termin",
+          "arabic": "randevu",
+          "gender": "der",
+          "plural": "Termine",
+          "example": "Der Termin muss verschoben werden.",
+          "exampleArabic": "Randevunun ertelenmesi gerekiyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Paket",
+          "arabic": "paket / koli",
+          "gender": "das",
+          "plural": "Pakete",
+          "example": "Das Paket kann abgeholt werden.",
+          "exampleArabic": "Paket teslim alınabilir.",
+          "type": "noun"
+        },
+        {
+          "german": "Regel",
+          "arabic": "kural",
+          "gender": "die",
+          "plural": "Regeln",
+          "example": "Die Regeln müssen beachtet werden.",
+          "exampleArabic": "Kurallara uyulması gerekiyor.",
+          "type": "noun"
+        },
+        {
+          "german": "reparieren",
+          "arabic": "tamir etmek / onarmak",
+          "example": "Das Auto muss repariert werden.",
+          "exampleArabic": "Arabanın tamir edilmesi gerekiyor.",
+          "type": "verb"
+        },
+        {
+          "german": "ausfüllen",
+          "arabic": "doldurmak (form)",
+          "example": "Der Antrag muss ausgefüllt werden.",
+          "exampleArabic": "Başvurunun doldurulması gerekiyor.",
+          "type": "verb"
+        },
+        {
+          "german": "erledigen",
+          "arabic": "tamamlamak / halletmek",
+          "example": "Die Aufgabe soll erledigt werden.",
+          "exampleArabic": "Görevin tamamlanması bekleniyor.",
+          "type": "verb"
+        },
+        {
+          "german": "verschieben",
+          "arabic": "ertelemek",
+          "example": "Das Meeting kann verschoben werden.",
+          "exampleArabic": "Toplantı ertelenebilir.",
+          "type": "verb"
+        },
+        {
+          "german": "beachten",
+          "arabic": "uymak / dikkate almak",
+          "example": "Die Vorschriften müssen beachtet werden.",
+          "exampleArabic": "Yönetmeliklere uyulması gerekiyor.",
+          "type": "verb"
+        },
+        {
+          "german": "sofort",
+          "arabic": "hemen / derhal",
+          "example": "Das muss sofort erledigt werden.",
+          "exampleArabic": "Bunun hemen tamamlanması gerekiyor.",
+          "type": "adverb"
+        },
+        {
+          "german": "rechtzeitig",
+          "arabic": "zamanında",
+          "example": "Die Arbeit muss rechtzeitig abgegeben werden.",
+          "exampleArabic": "İşin zamanında teslim edilmesi gerekiyor.",
+          "type": "adverb"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "başvuru / dilekçe",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Der Antrag muss eingereicht werden.",
+          "exampleArabic": "Başvurunun sunulması gerekiyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "yönetmelik / talimat",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Die Vorschriften dürfen nicht ignoriert werden.",
+          "exampleArabic": "Yönetmelikler görmezden gelinemez.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q1",
+            "question": "Kiplik fiiliyle doğru edilgen çatı cümlesini seçin:",
+            "answer": "Das Formular muss ausgefüllt werden.",
+            "options": [
+              "Das Formular muss ausgefüllt werden.",
+              "Das Formular muss werden ausgefüllt.",
+              "Das Formular wird ausgefüllt müssen.",
+              "Das Formular ausgefüllt werden muss."
+            ],
+            "hint": "Sırayı unutma: Modalverb + Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q2",
+            "question": "Cümleyi doğru biçimi seçerek tamamlayın: Das Problem _____ gelöst werden. (Sorun çözülebilir.)",
+            "answer": "kann",
+            "options": [
+              "kann",
+              "kannst",
+              "können",
+              "konnte"
+            ],
+            "hint": "Kiplik fiili özneye göre çekimlenir — Das (tekil nötr) → kann"
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q3",
+            "question": "Kelimeleri doğru edilgen çatı cümlesi oluşturacak şekilde sıralayın:",
+            "answer": "Die Waschmaschine muss repariert werden.",
+            "words": [
+              "werden",
+              "muss",
+              "Die",
+              "repariert",
+              "Waschmaschine"
+            ],
+            "hint": "Kiplik fiili ikinci konuma gelir; cümlenin sonu: Partizip II + werden"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-16-q4",
+            "question": "Cümleyi dinleyin ve boşluğu doldurun: Hier darf nicht _____ werden.",
+            "answer": "geraucht",
+            "hint": "Fiil rauchen — Partizip II'si nedir?",
+            "audioPrompt": "Hier darf nicht geraucht werden."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-16-q5",
+            "question": "Almancada 'Başvurunun yarın teslim edilmesi bekleniyor' nasıl denir?",
+            "answer": "Der Antrag soll morgen eingereicht werden.",
+            "options": [
+              "Der Antrag soll morgen eingereicht werden.",
+              "Der Antrag wird morgen eingereicht sollen.",
+              "Der Antrag soll morgen werden eingereicht.",
+              "Der Antrag morgen eingereicht werden soll."
+            ],
+            "hint": "sollen + Partizip II + werden — temel cümlede doğru sıra"
+          },
+          {
+            "type": "matching",
+            "id": "b1-16-q6",
+            "question": "Her edilgen çatı cümlesini doğru çevirisiyle eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Das Licht muss ausgemacht werden.",
+                "right": "يجب إطفاء الضوء."
+              },
+              {
+                "left": "Die Rechnung kann online bezahlt werden.",
+                "right": "يمكن دفع الفاتورة عبر الإنترنت."
+              },
+              {
+                "left": "Hier darf nicht geparkt werden.",
+                "right": "لا يُسمح بالوقوف هنا."
+              },
+              {
+                "left": "Die Aufgabe soll rechtzeitig erledigt werden.",
+                "right": "يُفترض إنجاز المهمة في الوقت المحدد."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-16-q7",
+            "question": "Kelimeleri doğru bir yan cümle (Nebensatz) oluşturacak şekilde sıralayın:",
+            "answer": "Ich weiß, dass die Regel beachtet werden muss.",
+            "words": [
+              "dass",
+              "werden",
+              "Ich",
+              "muss",
+              "weiß",
+              "die",
+              "Regel",
+              "beachtet"
+            ],
+            "hint": "Yan cümlede: kiplik fiili Partizip II + werden'den sonra en sona gelir"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-16-q8",
+            "question": "Aşağıdaki cümleyi net bir sesle söyleyin: 'Das Paket muss sofort verschickt werden.' — Paketin hemen gönderilmesi gerekiyor.",
+            "answer": "Das Paket muss sofort verschickt werden.",
+            "hint": "verschickt kelimesinin telaffuzuna dikkat edin — fer-şikt"
+          }
+        ]
+      }
+    },
+    "b1-17": {
+      "id": "b1-17",
+      "title": "Geçmiş Zamanda Konjunktiv II — Konjunktiv II der Vergangenheit",
+      "grammar": {
+        "title": "Geçmiş Zamanda Konjunktiv II — hätte/wäre + Partizip II",
+        "content": "## Konjunktiv II der Vergangenheit Nedir?\n\n**Konjunktiv II der Vergangenheit**, **geçmişte gerçekleşmemiş** şeyleri ifade etmek için kullanılır, örneğin:\n- Kaçırılan bir şey için **pişmanlık** ifade etmek: *Keşke şunu yapsaydım...*\n- Geçmişe yönelik bir **varsayım** veya **koşul** ifade etmek: *Eğer şunu yapsaydım, olurdu...*\n\n---\n\n## Bu Zaman Nasıl Kurulur?\n\nYapı iki bölümden oluşur:\n\n**hätte / wäre** (Konjunktiv II biçiminde) **+ Partizip II** (ana fiil)\n\n- Çoğu fiille (geçişli fiiller ve durum fiilleri) **hätte** kullanılır.\n- Hareket ve dönüşüm fiilleriyle (örn. *gehen, kommen, fahren, werden, sein*) **wäre** kullanılır.\n\n---\n\n## Hızlı Karşılaştırma:\n\n| Zaman | Anlam | Örnek |\n|---|---|---|\n| Konjunktiv II der Gegenwart | Şimdiki zamanda varsayım | Ich würde lernen. |\n| **Konjunktiv II der Vergangenheit** | Geçmişte varsayım/pişmanlık | Ich **hätte** gelernt. |\n\n---\n\n**Unutma:** Bu yapıda **Partizip II** hiçbir zaman değişmez — tüm çekim **hätte** veya **wäre** üzerinde yapılır.",
+        "tables": [
+          {
+            "title": "hätte ile Partizip II Çekimi — haben Fiilleri",
+            "headers": [
+              "Zamir",
+              "Konjunktiv II",
+              "Tam Örnek",
+              "Anlam"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "hätte",
+                  "Ich hätte gelernt.",
+                  "Öğrenmiş olurdum / Keşke öğrenseydim"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "hättest",
+                  "Du hättest gelernt.",
+                  "Öğrenmiş olurdun"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "hätte",
+                  "Er hätte gelernt.",
+                  "Öğrenmiş olurdu"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "hätten",
+                  "Wir hätten gelernt.",
+                  "Öğrenmiş olurduk"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "hättet",
+                  "Ihr hättet gelernt.",
+                  "Öğrenmiş olurdunuz"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "hätten",
+                  "Sie hätten gelernt.",
+                  "Öğrenmiş olurlardı"
+                ]
+              }
+            ],
+            "note": "hätte, Perfekt'i haben ile kuran fiillerle kullanılır",
+            "theme": "default"
+          },
+          {
+            "title": "wäre ile Partizip II Çekimi — sein Fiilleri",
+            "headers": [
+              "Zamir",
+              "Konjunktiv II",
+              "Tam Örnek",
+              "Anlam"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ich",
+                  "wäre",
+                  "Ich wäre gegangen.",
+                  "Gitmiş olurdum / Keşke gitseydim"
+                ]
+              },
+              {
+                "cells": [
+                  "du",
+                  "wärst",
+                  "Du wärst gegangen.",
+                  "Gitmiş olurdun"
+                ]
+              },
+              {
+                "cells": [
+                  "er / sie / es",
+                  "wäre",
+                  "Er wäre gegangen.",
+                  "Gitmiş olurdu"
+                ]
+              },
+              {
+                "cells": [
+                  "wir",
+                  "wären",
+                  "Wir wären gegangen.",
+                  "Gitmiş olurduk"
+                ]
+              },
+              {
+                "cells": [
+                  "ihr",
+                  "wärt",
+                  "Ihr wärt gegangen.",
+                  "Gitmiş olurdunuz"
+                ]
+              },
+              {
+                "cells": [
+                  "sie / Sie",
+                  "wären",
+                  "Sie wären gegangen.",
+                  "Gitmiş olurlardı"
+                ]
+              }
+            ],
+            "note": "wäre, Perfekt'i sein ile kuran hareket ve dönüşüm fiilleriyle kullanılır",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "hätte ile temel yapı: Perfekt'te haben kullanan fiiller için",
+            "example": "Ich hätte mehr geschlafen.",
+            "translation": "Keşke daha fazla uyusaydım."
+          },
+          {
+            "rule": "wäre ile temel yapı: Perfekt'te sein kullanan fiiller için (hareket ve dönüşüm)",
+            "example": "Sie wäre früher gekommen.",
+            "translation": "Daha erken gelmiş olurdu."
+          },
+          {
+            "rule": "Koşul cümlesinde (Wenn-Satz), hätte/wäre yan cümlenin sonuna gelir",
+            "example": "Wenn ich mehr Zeit gehabt hätte, hätte ich geholfen.",
+            "translation": "Daha fazla vaktim olsaydı, yardım etmiş olurdum."
+          },
+          {
+            "rule": "Partizip II, zamir ne olursa olsun değişmez — yalnızca hätte/wäre çekilir",
+            "example": "Ich hätte gekauft. / Wir hätten gekauft.",
+            "translation": "Satın almış olurdum. / Satın almış olurduk."
+          }
+        ],
+        "examples": [
+          "Ich hätte das Buch gelesen. — Kitabı okumuş olurdum (ama okumadım).",
+          "Er hätte die Prüfung bestanden, wenn er mehr gelernt hätte. — Daha fazla çalışsaydı sınavı geçmiş olurdu.",
+          "Wir wären früher angekommen, aber der Zug hatte Verspätung. — Daha erken varmış olurduk, ama tren geç kaldı.",
+          "Sie hätte mir helfen können. — Bana yardım edebilirdi.",
+          "Wenn du mitgekommen wärst, hätten wir Spaß gehabt. — Bizimle gelseydin, eğlenmiş olurduk.",
+          "Ich wäre lieber zu Hause geblieben. — Evde kalmayı tercih ederdim.",
+          "Er hätte das Geld nicht ausgegeben. — O parayı harcamamış olurdu.",
+          "Hättest du früher angerufen, hätte ich gewartet. — Daha erken arasaydın, beklemiş olurdum."
+        ],
+        "tip": "💡 hätte ile wäre arasındaki farkı şöyle hatırla: Eğer fiil bir hareket veya dönüşüm fiiliyse (gehen, kommen, fahren, werden, sein) **wäre** kullan, diğer tüm durumlarda **hätte** kullan — tıpkı normal Perfekt'te yaptığın gibi!"
+      },
+      "vocabulary": [
+        {
+          "german": "Fehler",
+          "arabic": "hata",
+          "gender": "der",
+          "plural": "Fehler",
+          "example": "Ich hätte diesen Fehler vermeiden können.",
+          "exampleArabic": "Bu hatadan kaçınabilirdim.",
+          "type": "noun"
+        },
+        {
+          "german": "Gelegenheit",
+          "arabic": "fırsat",
+          "gender": "die",
+          "plural": "Gelegenheiten",
+          "example": "Er hätte die Gelegenheit nutzen sollen.",
+          "exampleArabic": "Bu fırsatı değerlendirmeliydi.",
+          "type": "noun"
+        },
+        {
+          "german": "Entscheidung",
+          "arabic": "karar",
+          "gender": "die",
+          "plural": "Entscheidungen",
+          "example": "Sie hätte eine andere Entscheidung getroffen.",
+          "exampleArabic": "Farklı bir karar vermiş olurdu.",
+          "type": "noun"
+        },
+        {
+          "german": "Verspätung",
+          "arabic": "gecikme",
+          "gender": "die",
+          "plural": "Verspätungen",
+          "example": "Wir wären pünktlich gewesen, wenn es keine Verspätung gegeben hätte.",
+          "exampleArabic": "Gecikme olmasaydı zamanında olurduk.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "sınav",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich hätte die Prüfung bestanden.",
+          "exampleArabic": "Sınavı geçmiş olurdum.",
+          "type": "noun"
+        },
+        {
+          "german": "bereuen",
+          "arabic": "pişman olmak",
+          "example": "Er hätte seine Entscheidung bereut.",
+          "exampleArabic": "Kararına pişman olurdu.",
+          "type": "verb"
+        },
+        {
+          "german": "verpassen",
+          "arabic": "kaçırmak / yitirmek",
+          "example": "Sie hätte den Zug verpasst.",
+          "exampleArabic": "Treni kaçırmış olurdu.",
+          "type": "verb"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "kalmak",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "Evde kalmayı tercih ederdim.",
+          "type": "verb"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "varmak / ulaşmak",
+          "example": "Wir wären früher angekommen.",
+          "exampleArabic": "Daha erken varmış olurduk.",
+          "type": "verb"
+        },
+        {
+          "german": "ausgeben",
+          "arabic": "harcamak (para)",
+          "example": "Er hätte das Geld nicht ausgegeben.",
+          "exampleArabic": "O parayı harcamamış olurdu.",
+          "type": "verb"
+        },
+        {
+          "german": "lieber",
+          "arabic": "daha çok / tercihan",
+          "example": "Ich wäre lieber zu Hause geblieben.",
+          "exampleArabic": "Evde kalmayı tercih ederdim.",
+          "type": "adverb"
+        },
+        {
+          "german": "früher",
+          "arabic": "daha erken / daha önce",
+          "example": "Du hättest früher kommen sollen.",
+          "exampleArabic": "Daha erken gelmeliydin.",
+          "type": "adverb"
+        },
+        {
+          "german": "Chance",
+          "arabic": "fırsat / şans",
+          "gender": "die",
+          "plural": "Chancen",
+          "example": "Wir hätten die Chance nicht verpasst.",
+          "exampleArabic": "Bu fırsatı kaçırmamış olurduk.",
+          "type": "noun"
+        },
+        {
+          "german": "Rat",
+          "arabic": "tavsiye",
+          "gender": "der",
+          "plural": "Ratschläge",
+          "example": "Sie hätte meinen Rat befolgt.",
+          "exampleArabic": "Tavsiyeme uymuş olurdu.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q1",
+            "question": "Doğru biçimi seçin: Daha fazla çalışsaydı sınavı geçerdi.",
+            "answer": "Er hätte die Prüfung bestanden.",
+            "options": [
+              "Er würde die Prüfung bestehen.",
+              "Er hätte die Prüfung bestanden.",
+              "Er wäre die Prüfung bestanden.",
+              "Er hat die Prüfung bestanden."
+            ],
+            "hint": "haben kullanan bir fiille geçmişteki varsayımı ifade etmek için hätte + Partizip II kullanılır"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q2",
+            "question": "Cümleyi doğru biçimde tamamlayın: Wenn wir früher losgefahren _______, wären wir pünktlich angekommen.",
+            "answer": "wären",
+            "hint": "losfahren fiili Perfekt'te sein kullandığından Konjunktiv II'de wären kullanılır"
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-17-q3",
+            "question": "Cümleyi dinleyin ve boşluğu doldurun: Ich _______ lieber zu Hause geblieben.",
+            "answer": "wäre",
+            "hint": "bleiben fiili Perfekt'te sein kullanır",
+            "audioPrompt": "Ich wäre lieber zu Hause geblieben."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q4",
+            "question": "Keşke beni daha erken arasaydı anlamına gelen doğru cümleyi oluşturmak için kelimeleri sıralayın.",
+            "answer": "Sie hätte mich früher angerufen.",
+            "words": [
+              "angerufen",
+              "Sie",
+              "früher",
+              "hätte",
+              "mich"
+            ],
+            "hint": "hätte ikinci konuma gelir, Partizip II cümlenin sonuna gelir"
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-17-q5",
+            "question": "Geçmişte gerçekleşmemiş bir şeye duyulan pişmanlığı hangi cümle ifade eder?",
+            "answer": "Ich hätte mehr Deutsch gelernt.",
+            "options": [
+              "Ich lerne jeden Tag Deutsch.",
+              "Ich würde gern Deutsch lernen.",
+              "Ich hätte mehr Deutsch gelernt.",
+              "Ich werde Deutsch lernen."
+            ],
+            "hint": "hätte + Partizip II yapısı geçmişteki pişmanlığı ifade eder"
+          },
+          {
+            "type": "matching",
+            "id": "b1-17-q6",
+            "question": "Her Almanca cümleyi doğru Türkçe çevirisiyle eşleştirin.",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "Er wäre früher gekommen.",
+                "right": "كان سيأتي مبكّرًا."
+              },
+              {
+                "left": "Wir hätten das Buch gekauft.",
+                "right": "كنّا سنشتري الكتاب."
+              },
+              {
+                "left": "Du hättest schlafen sollen.",
+                "right": "كان ينبغي لك أن تنام."
+              },
+              {
+                "left": "Sie wäre in Berlin geblieben.",
+                "right": "كانت ستبقى في برلين."
+              }
+            ]
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-17-q7",
+            "question": "Doğru bir koşul cümlesi oluşturmak için kelimeleri sıralayın: Vakti olsaydı bize yardım ederdi.",
+            "answer": "Wenn er Zeit gehabt hätte, hätte er uns geholfen.",
+            "words": [
+              "hätte",
+              "er",
+              "geholfen",
+              "Zeit",
+              "gehabt",
+              "hätte",
+              "er",
+              "uns",
+              "Wenn"
+            ],
+            "hint": "Wenn cümlesinde hätte sona gelir; ana cümlede hätte birinci konuma gelir"
+          },
+          {
+            "type": "speaking",
+            "id": "b1-17-q8",
+            "question": "Aşağıdaki cümleyi yüksek sesle ve net bir şekilde söyleyin: 'Ich hätte die Gelegenheit nutzen sollen.'",
+            "answer": "Ich hätte die Gelegenheit nutzen sollen.",
+            "hint": "Anlamı: Bu fırsatı değerlendirmeliydim."
+          }
+        ]
+      }
+    },
+    "b1-18": {
+      "id": "b1-18",
+      "title": "Zaman ve Karşıtlık Yan Cümleleri — Temporale und konzessive Nebensätze",
+      "grammar": {
+        "title": "Zaman ve Karşıtlık Yan Cümleleri — nachdem, bevor, während, seit(dem), obwohl",
+        "content": "Almancada iki fikri birbirine bağlamak için **yan cümleler** (Nebensätze) kullanırız. Bu derste iki ana türe ayrılırlar:\n\n**Birinci Tür: Zaman Yan Cümleleri (Temporale Nebensätze)**\nİki olay arasındaki zaman ilişkisini ifade eder. Bir zaman bağlacıyla başlar ve fiil yan cümlenin sonuna gider.\n\n- **nachdem** (sonra / -dikten sonra): Bir olay *başka bir olaydan sonra* gerçekleştiğinde kullanılır. Yan cümledeki olay, ana cümledeki olaydan zaman olarak önce gerçekleşir. Genellikle **Perfekt** veya **Plusquamperfekt** ile kullanılır.\n- **bevor** (-den önce): Bir olay *başka bir olaydan önce* gerçekleştiğinde kullanılır.\n- **während** (-iken / sırasında): İki olayın *aynı anda* gerçekleştiğini ifade etmek için kullanılır.\n- **seit / seitdem** (-den beri / -dığından beri): Geçmişte başlayan ve hâlâ devam eden bir olayı ifade etmek için kullanılır.\n\n**İkinci Tür: Karşıtlık Yan Cümleleri (Konzessive Nebensätze)**\nİki fikir arasındaki **çelişkiyi** veya **zıtlığı** ifade eder. Temel bağlaç şudur:\n\n- **obwohl** (-e rağmen / -masına rağmen): Bir sonuç beklentilerimizle çeliştiğinde kullanılır.\n\n**Yan Cümleler İçin Altın Kural:**\nTüm bu cümlelerde **fiil her zaman yan cümlenin sonuna gider**.\nAna cümle yan cümleyle başlıyorsa, **ana cümlenin fiili virgülden hemen sonra gelir** (Verb-Zweitstellung).",
+        "tables": [
+          {
+            "title": "Zaman ve Karşıtlık Bağlaçları — Genel Bakış",
+            "headers": [
+              "Bağlaç",
+              "Türkçe Anlamı",
+              "Zaman / Mantıksal İlişki",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "nachdem",
+                  "-dikten sonra",
+                  "Yan cümledeki olay ana cümleden önce gerçekleşir",
+                  "Nachdem er gegessen hat, geht er schlafen."
+                ]
+              },
+              {
+                "cells": [
+                  "bevor",
+                  "-den önce",
+                  "Yan cümledeki olay ana cümleden sonra gerçekleşir",
+                  "Bevor sie schläft, liest sie ein Buch."
+                ]
+              },
+              {
+                "cells": [
+                  "während",
+                  "-iken / sırasında",
+                  "İki eş zamanlı olay",
+                  "Während ich koche, hört er Musik."
+                ]
+              },
+              {
+                "cells": [
+                  "seit / seitdem",
+                  "-den beri / -dığından beri",
+                  "Geçmişten beri devam eden olay",
+                  "Seitdem er hier wohnt, ist er glücklich."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl",
+                  "-e rağmen",
+                  "Çelişki / karşıtlık",
+                  "Obwohl es regnet, geht sie spazieren."
+                ]
+              }
+            ],
+            "note": "Tüm bu cümlelerde fiil yan cümlenin sonuna gelir.",
+            "theme": "default"
+          },
+          {
+            "title": "Yan Cümlelerde Sözcük Dizimi (Wortstellung)",
+            "headers": [
+              "Tür",
+              "Önce Ana Cümle",
+              "Önce Yan Cümle"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Yapı",
+                  "Hauptsatz + Konnektor + Nebensatz (Verb am Ende)",
+                  "Nebensatz (Verb am Ende) + , + Verb + Subjekt + ..."
+                ]
+              },
+              {
+                "cells": [
+                  "nachdem ile örnek",
+                  "Er schläft, nachdem er gegessen hat.",
+                  "Nachdem er gegessen hat, schläft er."
+                ]
+              },
+              {
+                "cells": [
+                  "obwohl ile örnek",
+                  "Sie geht aus, obwohl sie müde ist.",
+                  "Obwohl sie müde ist, geht sie aus."
+                ]
+              },
+              {
+                "cells": [
+                  "während ile örnek",
+                  "Ich lerne, während sie fernsieht.",
+                  "Während sie fernsieht, lerne ich."
+                ]
+              }
+            ],
+            "note": "⚠️ Cümle yan cümleyle başladığında, ana cümlenin fiili virgülden hemen sonra gelir (ikinci konum).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Fiil her zaman yan cümlenin sonuna gider: Bağlaçlardan (nachdem, bevor, während, seitdem, obwohl) sonra fiil yan cümlenin en sonuna gider.",
+            "example": "Ich rufe dich an, bevor ich nach Hause komme.",
+            "translation": "Eve gelmeden önce seni arayacağım."
+          },
+          {
+            "rule": "nachdem ile: Ana cümle Präsens veya Perfekt zamanındaysa yan cümlede Perfekt, ana cümle Präteritum zamanındaysa Plusquamperfekt kullanılır.",
+            "example": "Nachdem er das Buch gelesen hat, geht er schlafen.",
+            "translation": "Kitabı okuduktan sonra uyumaya gitti."
+          },
+          {
+            "rule": "obwohl bir çelişkiyi ifade eder: Yan cümle, olayı engellemesi beklenen ama engellemeyen bir neden içerir.",
+            "example": "Obwohl er krank ist, geht er zur Arbeit.",
+            "translation": "Hasta olmasına rağmen işe gidiyor."
+          },
+          {
+            "rule": "Cümle yan cümleyle başlıyorsa, ana cümlenin fiili virgülden hemen sonra ikinci konuma gelir.",
+            "example": "Während sie schläft, lerne ich Deutsch.",
+            "translation": "O uyurken ben Almanca öğreniyorum."
+          }
+        ],
+        "examples": [
+          "Nachdem ich gefrühstückt habe, fahre ich zur Arbeit. — Kahvaltı yaptıktan sonra işe gidiyorum.",
+          "Bevor du schläfst, musst du die Zähne putzen. — Uyumadan önce dişlerini fırçalamak zorundasın.",
+          "Während meine Mutter kocht, mache ich meine Hausaufgaben. — Annem yemek pişirirken ben ödevlerimi yapıyorum.",
+          "Seitdem er in Deutschland wohnt, spricht er sehr gut Deutsch. — Almanya'da yaşadığından beri Almancayı çok iyi konuşuyor.",
+          "Obwohl das Wetter schlecht ist, machen wir einen Ausflug. — Hava kötü olmasına rağmen geziye çıkıyoruz.",
+          "Bevor sie die Prüfung macht, lernt sie jeden Tag. — Sınava girmeden önce her gün çalışıyor.",
+          "Nachdem der Film geendet hatte, gingen wir nach Hause. — Film bittikten sonra eve gittik.",
+          "Obwohl er müde war, hat er das ganze Buch gelesen. — Yorgun olmasına rağmen kitabın tamamını okudu."
+        ],
+        "tip": "💡 Her zaman unutma: Bu bağlaçlar birer 'fiil katili'dir — fiili yan cümlenin sonuna gönderirler! Cümlen obwohl, nachdem veya başka bir bağlaçla başlıyorsa, ana cümlenin fiili virgülden hemen sonra gelir. Bu kalıbı doğal hâle gelene kadar yüksek sesle pratik yap."
+      },
+      "vocabulary": [
+        {
+          "german": "Prüfung",
+          "arabic": "Sınav",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Bevor sie die Prüfung macht, lernt sie viel.",
+          "exampleArabic": "Sınava girmeden önce çok çalışıyor.",
+          "type": "noun"
+        },
+        {
+          "german": "Ausflug",
+          "arabic": "Gezi / Gezinti",
+          "gender": "der",
+          "plural": "Ausflüge",
+          "example": "Obwohl es regnet, machen wir einen Ausflug.",
+          "exampleArabic": "Yağmur yağmasına rağmen geziye çıkıyoruz.",
+          "type": "noun"
+        },
+        {
+          "german": "Hausaufgabe",
+          "arabic": "Ev ödevi",
+          "gender": "die",
+          "plural": "Hausaufgaben",
+          "example": "Während mein Bruder spielt, mache ich Hausaufgaben.",
+          "exampleArabic": "Kardeşim oynarken ben ödevlerimi yapıyorum.",
+          "type": "noun"
+        },
+        {
+          "german": "frühstücken",
+          "arabic": "Kahvaltı yapmak",
+          "example": "Nachdem ich gefrühstückt habe, gehe ich zur Schule.",
+          "exampleArabic": "Kahvaltı yaptıktan sonra okula gidiyorum.",
+          "type": "verb"
+        },
+        {
+          "german": "einschlafen",
+          "arabic": "Uykuya dalmak",
+          "example": "Bevor er einschläft, liest er ein Buch.",
+          "exampleArabic": "Uykuya dalmadan önce bir kitap okuyor.",
+          "type": "verb"
+        },
+        {
+          "german": "aufräumen",
+          "arabic": "Toplamak / Düzenlemek",
+          "example": "Nachdem sie gegessen hat, räumt sie die Küche auf.",
+          "exampleArabic": "Yedikten sonra mutfağı topladı.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "Yorgun",
+          "example": "Obwohl sie müde ist, arbeitet sie weiter.",
+          "exampleArabic": "Yorgun olmasına rağmen çalışmaya devam ediyor.",
+          "type": "adjective"
+        },
+        {
+          "german": "trotzdem",
+          "arabic": "Yine de / Buna rağmen",
+          "example": "Es regnet, trotzdem gehen wir spazieren.",
+          "exampleArabic": "Yağmur yağıyor, yine de yürüyüşe çıkıyoruz.",
+          "type": "adverb"
+        },
+        {
+          "german": "seitdem",
+          "arabic": "O zamandan beri / -dığından beri",
+          "example": "Seitdem sie hier wohnt, hat sie viele Freunde.",
+          "exampleArabic": "Burada yaşadığından beri çok arkadaşı var.",
+          "type": "conjunction"
+        },
+        {
+          "german": "obwohl",
+          "arabic": "-e rağmen / -masına rağmen",
+          "example": "Obwohl er krank ist, kommt er zur Arbeit.",
+          "exampleArabic": "Hasta olmasına rağmen işe geliyor.",
+          "type": "conjunction"
+        },
+        {
+          "german": "während",
+          "arabic": "-iken / sırasında",
+          "example": "Während ich lerne, hört mein Bruder Musik.",
+          "exampleArabic": "Ben çalışırken kardeşim müzik dinliyor.",
+          "type": "conjunction"
+        },
+        {
+          "german": "Wetter",
+          "arabic": "Hava durumu",
+          "gender": "das",
+          "example": "Obwohl das Wetter schlecht ist, gehen wir raus.",
+          "exampleArabic": "Hava kötü olmasına rağmen dışarı çıkıyoruz.",
+          "type": "noun"
+        },
+        {
+          "german": "ankommen",
+          "arabic": "Varmak / Ulaşmak",
+          "example": "Nachdem er angekommen ist, ruft er seine Familie an.",
+          "exampleArabic": "Vardıktan sonra ailesini aradı.",
+          "type": "verb"
+        },
+        {
+          "german": "Zähne putzen",
+          "arabic": "Diş fırçalamak",
+          "example": "Bevor du schläfst, musst du die Zähne putzen.",
+          "exampleArabic": "Uyumadan önce dişlerini fırçalamak zorundasın.",
+          "type": "phrase"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q1",
+            "question": "Doğru bağlacı seç: ___ er gegessen hat, geht er schlafen. (Yedikten sonra uyumaya gitti)",
+            "answer": "Nachdem",
+            "options": [
+              "Bevor",
+              "Nachdem",
+              "Obwohl",
+              "Während"
+            ],
+            "hint": "Yan cümledeki olayın önce gerçekleştiğini ve 'sonra / -dikten sonra' anlamını veren bağlacı arıyoruz."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q2",
+            "question": "Uygun bağlacı kullanarak cümleyi tamamla: ___ es kalt ist, trägt er keine Jacke. (Hava soğuk olmasına rağmen ceket giymez)",
+            "answer": "Obwohl",
+            "hint": "Çelişki ve karşıtlık ifade eden bağlacı arıyoruz."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q3",
+            "question": "Cümleyi dinle ve boşluğu doldur: Während ich _______, hört meine Schwester Musik.",
+            "answer": "lerne",
+            "hint": "während ile yan cümledeki fiil sona gelir.",
+            "audioPrompt": "Während ich lerne, hört meine Schwester Musik."
+          },
+          {
+            "type": "drag-drop",
+            "id": "b1-18-q4",
+            "question": "Doğru bir cümle oluşturmak için kelimeleri sırala: (Okula gitmeden önce o kahvaltı yapar)",
+            "answer": "Bevor sie zur Schule geht, frühstückt sie.",
+            "words": [
+              "sie",
+              "Bevor",
+              "frühstückt",
+              "geht",
+              "zur Schule",
+              ",",
+              "sie"
+            ],
+            "hint": "Unutma: Fiil yan cümlenin sonuna, ana cümlenin fiili ise virgülden hemen sonraya gelir."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "b1-18-q5",
+            "question": "Hangi cümle dilbilgisi açısından doğrudur?",
+            "answer": "Obwohl er müde ist, geht er zur Arbeit.",
+            "options": [
+              "Obwohl er ist müde, geht er zur Arbeit.",
+              "Obwohl er müde ist, geht er zur Arbeit.",
+              "Obwohl er müde ist, er geht zur Arbeit.",
+              "Obwohl ist er müde, geht er zur Arbeit."
+            ],
+            "hint": "Yan cümlede fiil sona gelir, ana cümlede ise virgülden sonra fiil ikinci konuma gelir."
+          },
+          {
+            "type": "matching",
+            "id": "b1-18-q6",
+            "question": "Her bağlacı Türkçe anlamıyla eşleştir:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "nachdem",
+                "right": "بعدما"
+              },
+              {
+                "left": "bevor",
+                "right": "قبل أن"
+              },
+              {
+                "left": "während",
+                "right": "بينما / أثناء"
+              },
+              {
+                "left": "seitdem",
+                "right": "منذ أن"
+              },
+              {
+                "left": "obwohl",
+                "right": "رغم أن"
+              }
+            ]
+          },
+          {
+            "type": "speaking",
+            "id": "b1-18-q7",
+            "question": "Aşağıdaki cümleyi yüksek sesle ve doğru biçimde söyle: 'Seitdem er in Marokko wohnt, vermisst er Deutschland.'",
+            "answer": "Seitdem er in Marokko wohnt, vermisst er Deutschland.",
+            "hint": "Fiilin konumuna dikkat et: 'wohnt' yan cümlenin sonuna, 'vermisst' ise ana cümlenin ikinci konumuna gelir."
+          },
+          {
+            "type": "fill-blank",
+            "id": "b1-18-q8",
+            "question": "Cümleyi fiilin doğru biçimiyle tamamla: Nachdem sie die Prüfung _______ (bestehen), hat sie gefeiert.",
+            "answer": "bestanden hat",
+            "hint": "nachdem ile yan cümlede Perfekt kullanılır: Partizip II + hat/haben sona gelir."
+          }
+        ]
+      }
     }
   }
 }

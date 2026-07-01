@@ -11050,6 +11050,357 @@
           }
         ]
       }
+    },
+    "a1-17": {
+      "id": "a1-17",
+      "title": "Bağlaçlar: und, oder, aber, denn, sondern — Konjunktionen: und, oder, aber, denn, sondern",
+      "grammar": {
+        "title": "Cümleler Arası Temel Bağlaçlar — Konjunktionen",
+        "content": "**Bağlaçlar (Konjunktionen)**, iki cümleyi veya iki fikri birbirine bağlayan kelimelerdir.\n\nBu bağlaçların A1 seviyesindeki temel özelliği, kendilerinden sonra gelen cümlede **fiil sırasını değiştirmemeleridir** — fiil, olduğu gibi **ikinci konumda** kalır.\n\n📌 Beş bağlaç ve anlamları:\n\n• **und** = ve (ekleme ve birleştirme için)\n• **oder** = veya (iki şey arasında seçim için)\n• **aber** = ama / fakat (zıtlık veya çelişki için)\n• **denn** = çünkü (neden belirtmek için)\n• **sondern** = aksine / bilakis (olumsuzlamadan sonra düzeltme için)\n\n⚠️ **Önemli fark:** Basit bir zıtlık için **aber** kullanırız; **sondern** ise yalnızca **olumsuz** bir cümleden sonra bilgiyi düzeltmek amacıyla gelir.\n\nÖrnek:\n- Ich bin nicht müde, **aber** ich schlafe. (Ben yorgun değilim, ama uyuyorum.)\n- Ich bin nicht müde, **sondern** fit. (Ben yorgun değilim, aksine formdayım.)\n\n✅ **Cümle sırası:**\nBirinci cümle + **bağlaç** + ikinci cümle (fiil ikinci konumda)",
+        "tables": [
+          {
+            "title": "Bağlaçlar ve İşlevleri",
+            "headers": [
+              "Bağlaç",
+              "Türkçe Anlamı",
+              "İşlevi",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "und",
+                  "ve",
+                  "Ekleme / Birleştirme",
+                  "Ich lerne und du arbeitest."
+                ]
+              },
+              {
+                "cells": [
+                  "oder",
+                  "veya",
+                  "İki seçenek arasında tercih",
+                  "Trinkst du Tee oder Kaffee?"
+                ]
+              },
+              {
+                "cells": [
+                  "aber",
+                  "ama",
+                  "Zıtlık / Çelişki",
+                  "Ich bin müde, aber ich lerne."
+                ]
+              },
+              {
+                "cells": [
+                  "denn",
+                  "çünkü",
+                  "Neden belirtme",
+                  "Ich lerne, denn ich habe eine Prüfung."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "aksine / bilakis",
+                  "Olumsuzlamadan sonra düzeltme",
+                  "Er ist nicht alt, sondern jung."
+                ]
+              }
+            ],
+            "note": "Bu bağlaçların hiçbiri, kendisinden sonra gelen cümlede fiil sırasını değiştirmez.",
+            "theme": "default"
+          },
+          {
+            "title": "Karşılaştırma: aber ile sondern",
+            "headers": [
+              "Bağlaç",
+              "Koşul",
+              "Örnek",
+              "Çeviri"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "aber",
+                  "Olumlu veya olumsuz bir cümleden sonra gelir",
+                  "Ich bin müde, aber ich lerne.",
+                  "Ben yorgunum, ama öğreniyorum."
+                ]
+              },
+              {
+                "cells": [
+                  "sondern",
+                  "Yalnızca olumsuz bir cümleden sonra bilgiyi düzeltmek için gelir",
+                  "Ich bin nicht müde, sondern fit.",
+                  "Ben yorgun değilim, aksine formdayım."
+                ]
+              }
+            ],
+            "note": "💡 sondern = olumsuzlama + düzeltme. aber = genel zıtlık.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "und 've' anlamına gelir ve birbiriyle tamamlanan ya da birbirini izleyen iki fikri bağlamak için kullanılır. Fiil doğal konumunda kalır.",
+            "example": "Ich wohne in Berlin und ich lerne Deutsch.",
+            "translation": "Ben Berlin'de yaşıyorum ve Almanca öğreniyorum."
+          },
+          {
+            "rule": "oder 'veya' anlamına gelir ve iki seçenek arasındaki tercihi ifade etmek için kullanılır.",
+            "example": "Kommst du heute oder kommst du morgen?",
+            "translation": "Bugün mü geliyorsun yoksa yarın mı?"
+          },
+          {
+            "rule": "aber 'ama' anlamına gelir ve iki cümle arasındaki zıtlığı veya çelişkiyi ifade eder.",
+            "example": "Das Essen ist gut, aber es ist teuer.",
+            "translation": "Yemek güzel, ama pahalı."
+          },
+          {
+            "rule": "denn 'çünkü' anlamına gelir ve ardından neden belirtilir. sondern ise 'aksine' anlamına gelir ve yalnızca olumsuz bir cümleden sonra bilgiyi düzeltmek için kullanılır.",
+            "example": "Ich trinke Wasser, denn ich bin durstig. — Er ist nicht groß, sondern klein.",
+            "translation": "Susadığım için su içiyorum. — O uzun değil, aksine kısa."
+          }
+        ],
+        "examples": [
+          "Ich bin müde, aber ich lerne Deutsch. — Ben yorgunum, ama Almanca öğreniyorum.",
+          "Trinkst du Kaffee oder Tee? — Kahve mi içiyorsun yoksa çay mı?",
+          "Sie wohnt in Rabat und sie arbeitet dort. — O, Rabat'ta yaşıyor ve orada çalışıyor.",
+          "Ich esse nicht viel, denn ich bin nicht hungrig. — Çok yemiyorum çünkü aç değilim.",
+          "Das ist nicht mein Buch, sondern sein Buch. — Bu benim kitabım değil, aksine onun kitabı.",
+          "Er spricht Arabisch und Deutsch. — O, Arapça ve Almanca konuşuyor.",
+          "Ich gehe nicht ins Kino, sondern ich bleibe zu Hause. — Sinemaya gitmiyorum, aksine evde kalıyorum.",
+          "Bist du Student oder arbeitest du? — Öğrenci misin yoksa çalışıyor musun?"
+        ],
+        "tip": "💡 Her zaman unutma: Bu beş bağlaç (und, oder, aber, denn, sondern) 'nötr' bağlaçlardır — fiili yerinden oynatmazlar! Fiil, kendilerinden sonra gelen cümlede, sanki hiç bağlaç yokmuş gibi ikinci konumda kalmaya devam eder. Bu özellik, onları üst seviyelerdeki diğer bağlaçlardan ayırt eder."
+      },
+      "vocabulary": [
+        {
+          "german": "lernen",
+          "arabic": "öğrenmek",
+          "example": "Ich lerne Deutsch.",
+          "exampleArabic": "Ben Almanca öğreniyorum.",
+          "type": "verb"
+        },
+        {
+          "german": "arbeiten",
+          "arabic": "çalışmak",
+          "example": "Sie arbeitet in Berlin.",
+          "exampleArabic": "O, Berlin'de çalışıyor.",
+          "type": "verb"
+        },
+        {
+          "german": "wohnen",
+          "arabic": "yaşamak / oturmak",
+          "example": "Er wohnt in Rabat.",
+          "exampleArabic": "O, Rabat'ta yaşıyor.",
+          "type": "verb"
+        },
+        {
+          "german": "müde",
+          "arabic": "yorgun",
+          "example": "Ich bin müde, aber ich lerne.",
+          "exampleArabic": "Ben yorgunum, ama öğreniyorum.",
+          "type": "adjective"
+        },
+        {
+          "german": "hungrig",
+          "arabic": "aç",
+          "example": "Ich bin hungrig, denn ich esse nicht.",
+          "exampleArabic": "Ben açım çünkü yemiyorum.",
+          "type": "adjective"
+        },
+        {
+          "german": "durstig",
+          "arabic": "susuz / susamış",
+          "example": "Er ist durstig und trinkt Wasser.",
+          "exampleArabic": "O susamış ve su içiyor.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kaffee",
+          "arabic": "kahve",
+          "gender": "der",
+          "plural": "-",
+          "example": "Trinkst du Kaffee oder Tee?",
+          "exampleArabic": "Kahve mi içiyorsun yoksa çay mı?",
+          "type": "noun"
+        },
+        {
+          "german": "Tee",
+          "arabic": "çay",
+          "gender": "der",
+          "plural": "-",
+          "example": "Ich trinke Tee, denn ich mag Kaffee nicht.",
+          "exampleArabic": "Çay içiyorum çünkü kahveyi sevmiyorum.",
+          "type": "noun"
+        },
+        {
+          "german": "Buch",
+          "arabic": "kitap",
+          "gender": "das",
+          "plural": "Bücher",
+          "example": "Das ist nicht mein Buch, sondern sein Buch.",
+          "exampleArabic": "Bu benim kitabım değil, aksine onun kitabı.",
+          "type": "noun"
+        },
+        {
+          "german": "Prüfung",
+          "arabic": "sınav",
+          "gender": "die",
+          "plural": "Prüfungen",
+          "example": "Ich lerne, denn ich habe eine Prüfung.",
+          "exampleArabic": "Öğreniyorum çünkü bir sınavım var.",
+          "type": "noun"
+        },
+        {
+          "german": "heute",
+          "arabic": "bugün",
+          "example": "Kommst du heute oder morgen?",
+          "exampleArabic": "Bugün mü geliyorsun yoksa yarın mı?",
+          "type": "adverb"
+        },
+        {
+          "german": "morgen",
+          "arabic": "yarın",
+          "example": "Ich lerne heute und morgen.",
+          "exampleArabic": "Bugün ve yarın öğreniyorum.",
+          "type": "adverb"
+        },
+        {
+          "german": "klein",
+          "arabic": "küçük / kısa",
+          "example": "Er ist nicht groß, sondern klein.",
+          "exampleArabic": "O uzun değil, aksine kısa.",
+          "type": "adjective"
+        },
+        {
+          "german": "teuer",
+          "arabic": "pahalı",
+          "example": "Das Essen ist gut, aber teuer.",
+          "exampleArabic": "Yemek güzel, ama pahalı.",
+          "type": "adjective"
+        },
+        {
+          "german": "bleiben",
+          "arabic": "kalmak",
+          "example": "Ich bleibe zu Hause, denn es regnet.",
+          "exampleArabic": "Evde kalıyorum çünkü yağmur yağıyor.",
+          "type": "verb"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q1",
+            "question": "Doğru bağlacı seçin: Ich bin müde, ___ ich lerne.",
+            "answer": "aber",
+            "options": [
+              "denn",
+              "aber",
+              "sondern",
+              "oder"
+            ],
+            "hint": "Cümle, yorgunluk ile öğrenme arasındaki zıtlığı ifade ediyor."
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q2",
+            "question": "Uygun bağlacı kullanarak cümleyi tamamlayın: Ich trinke Wasser, ___ ich bin durstig.",
+            "answer": "denn",
+            "hint": "Neden belirten bir bağlaca ihtiyacımız var."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q3",
+            "question": "Hangi cümle dilbilgisi açısından doğrudur?",
+            "answer": "Er ist nicht groß, sondern klein.",
+            "options": [
+              "Er ist nicht groß, aber klein.",
+              "Er ist nicht groß, sondern klein.",
+              "Er ist nicht groß, denn klein.",
+              "Er ist nicht groß, oder klein."
+            ],
+            "hint": "Olumsuzlamadan sonra bilgiyi düzeltmek için sondern kullanılır."
+          },
+          {
+            "type": "drag-drop",
+            "id": "a1-17-q4",
+            "question": "Doğru bir cümle oluşturmak için kelimeleri sıraya koyun:",
+            "answer": "ich lerne Deutsch , denn ich habe eine Prüfung",
+            "words": [
+              "ich",
+              "lerne",
+              "Deutsch",
+              "denn",
+              "habe",
+              "eine",
+              "Prüfung",
+              "ich",
+              ","
+            ],
+            "hint": "denn bağlacı ortada gelir ve fiil ikinci konumda kalır."
+          },
+          {
+            "type": "matching",
+            "id": "a1-17-q5",
+            "question": "Her bağlacı Türkçe anlamıyla eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "und",
+                "right": "و"
+              },
+              {
+                "left": "oder",
+                "right": "أو"
+              },
+              {
+                "left": "aber",
+                "right": "لكن"
+              },
+              {
+                "left": "denn",
+                "right": "لأن"
+              },
+              {
+                "left": "sondern",
+                "right": "بل / وإنما"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "a1-17-q6",
+            "question": "🎧 Cümleyi dinleyin ve boşluğu doldurun: Das ist nicht mein Buch, ___ sein Buch.",
+            "answer": "sondern",
+            "hint": "Cümle olumsuz ve bilginin düzeltilmesi gerekiyor.",
+            "audioPrompt": "Das ist nicht mein Buch, sondern sein Buch."
+          },
+          {
+            "type": "speaking",
+            "id": "a1-17-q7",
+            "question": "Aşağıdaki cümleyi net bir sesle söyleyin: Ich bin müde, aber ich lerne Deutsch.",
+            "answer": "Ich bin müde, aber ich lerne Deutsch.",
+            "hint": "aber = 'aaber', müde = 'müüde' telaffuzuna dikkat edin."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "a1-17-q8",
+            "question": "'oder' bağlacının doğru kullanıldığı cümleyi seçin:",
+            "answer": "Trinkst du Kaffee oder Tee?",
+            "options": [
+              "Ich lerne oder ich bin müde.",
+              "Trinkst du Kaffee oder Tee?",
+              "Er ist nicht groß oder klein.",
+              "Ich wohne oder ich arbeite."
+            ],
+            "hint": "oder, mantıklı iki seçenek arasında tercih yapmak için kullanılır."
+          }
+        ]
+      }
     }
   }
 }
