@@ -5,6 +5,7 @@ import { B1 } from './b1'
 import { B2 } from './b2'
 import { C1 } from './c1'
 import extraLessons from './extra-lessons.json'
+import { extraVocabFor } from './extra-vocab'
 
 // Goethe gap-fill lessons added after review. Each is placed right after an
 // existing lesson (insertAfter = that lesson's original order), then the whole
@@ -24,7 +25,20 @@ function withExtras(level: Level): Level {
   return { ...level, lessons }
 }
 
-export const levels = [A1, A2, B1, B2, C1].map(withExtras)
+// Append the Goethe vocab top-up (Arabic base) so the dashboard meter and the
+// Arabic lesson view see the extra words. Non-Arabic locales get the localized
+// versions appended in localize.ts (they wouldn't survive the overlay replace).
+function withExtraVocab(level: Level): Level {
+  return {
+    ...level,
+    lessons: level.lessons.map(l => {
+      const ex = extraVocabFor(l.id, 'ar')
+      return ex.length ? { ...l, vocabulary: [...l.vocabulary, ...ex] } : l
+    }),
+  }
+}
+
+export const levels = [A1, A2, B1, B2, C1].map(l => withExtraVocab(withExtras(l)))
 
 export function getLevel(id: string): Level | undefined {
   return levels.find((l) => l.id.toLowerCase() === id.toLowerCase())

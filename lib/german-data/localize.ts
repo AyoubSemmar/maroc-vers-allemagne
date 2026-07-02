@@ -1,5 +1,6 @@
 import type { Level, Lesson } from './types'
 import type { AppLocale } from '@/i18n/routing'
+import { extraVocabFor } from './extra-vocab'
 
 import a1_fr from './translations/a1.fr.json'
 import a1_en from './translations/a1.en.json'
@@ -82,16 +83,22 @@ function getOverlay(levelId: string, locale: AppLocale): LevelOverlay | undefine
 }
 
 export function localizeLesson(lesson: Lesson, levelId: string, locale: AppLocale): Lesson {
+  // ar already carries the top-up (appended to the base in index.ts).
   if (locale === 'ar') return lesson
   const ov = getOverlay(levelId, locale)?.lessons?.[lesson.id]
-  if (!ov) return lesson
-  return {
-    ...lesson,
-    ...ov,
-    grammar: { ...lesson.grammar, ...(ov.grammar ?? {}) },
-    vocabulary: ov.vocabulary ?? lesson.vocabulary,
-    exercise: ov.exercise ?? lesson.exercise,
-  }
+  const base = ov
+    ? {
+        ...lesson,
+        ...ov,
+        grammar: { ...lesson.grammar, ...(ov.grammar ?? {}) },
+        vocabulary: ov.vocabulary ?? lesson.vocabulary,
+        exercise: ov.exercise ?? lesson.exercise,
+      }
+    : lesson
+  // The overlay replaces `vocabulary`, dropping the base top-up — re-append the
+  // localized top-up words here.
+  const extra = extraVocabFor(lesson.id, locale)
+  return extra.length ? { ...base, vocabulary: [...base.vocabulary, ...extra] } : base
 }
 
 export function localizeLevel(level: Level, locale: AppLocale): Level {
