@@ -18,15 +18,13 @@ const ai = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY! })
 const MODEL = process.env.GOETHE_MODEL || 'claude-sonnet-4-6'
 
 // The new lessons to add. insertAfter = order of the existing lesson to place it after.
+// This batch fills the remaining Goethe grammar gaps at B2 and C1.
 const NEW_LESSONS = [
-  { level: 'A1', id: 'a1-17', insertAfter: 3,  de: 'Konjunktionen: und, oder, aber, denn, sondern', focus: 'أدوات الربط الأساسية بين الجمل — und, oder, aber, denn, sondern (بدون تغيير ترتيب الفعل)' },
-  { level: 'A2', id: 'a2-17', insertAfter: 6,  de: 'Finalsätze: um … zu / damit', focus: 'التعبير عن الهدف — um…zu (نفس الفاعل) مقابل damit (فاعل مختلف)' },
-  { level: 'A2', id: 'a2-18', insertAfter: 6,  de: 'Relativsätze im Nominativ und Akkusativ', focus: 'الجمل الموصولة البسيطة — der/die/das الموصولة في Nominativ و Akkusativ' },
-  { level: 'A2', id: 'a2-19', insertAfter: 3,  de: 'Genitiv — Grundlagen', focus: 'أساسيات حالة الملكية — أسماء العلم (Peters Auto) و des/der مع أدوات التعريف' },
-  { level: 'B1', id: 'b1-15', insertAfter: 3,  de: 'n-Deklination (schwache Nomen)', focus: 'الأسماء الضعيفة التي تأخذ -n/-en في كل الحالات عدا Nominativ — der Student, der Herr, der Junge' },
-  { level: 'B1', id: 'b1-16', insertAfter: 2,  de: 'Passiv mit Modalverben', focus: 'المبني للمجهول مع الأفعال الناقصة — etwas muss gemacht werden' },
-  { level: 'B1', id: 'b1-17', insertAfter: 1,  de: 'Konjunktiv II der Vergangenheit', focus: 'الكونيونكتيف الثاني في الماضي — hätte/wäre + Partizip II للتعبير عن الأسف والافتراض في الماضي' },
-  { level: 'B1', id: 'b1-18', insertAfter: 8,  de: 'Temporale und konzessive Nebensätze', focus: 'الجمل الظرفية الزمنية والتنازلية — nachdem, bevor, während, seit(dem), obwohl' },
+  { level: 'B2', id: 'b2-18', insertAfter: 16, de: 'Vergleichssätze: als ob / als wenn', focus: 'الجمل المقارنة غير الواقعية — als ob / als wenn + Konjunktiv II للتعبير عن شبه أو انطباع غير حقيقي (Er tut, als ob er krank wäre)' },
+  { level: 'B2', id: 'b2-19', insertAfter: 7,  de: 'Präpositionen mit Genitiv', focus: 'حروف الجر التي تأخذ حالة الملكية Genitiv — trotz, während, wegen, aufgrund, (an)statt, innerhalb, außerhalb' },
+  { level: 'B2', id: 'b2-20', insertAfter: 8,  de: 'Zweiteilige Konnektoren', focus: 'أدوات الربط الثنائية — sowohl…als auch, weder…noch, entweder…oder, nicht nur…sondern auch, zwar…aber' },
+  { level: 'C1', id: 'c1-17', insertAfter: 4,  de: 'Konzessive Strukturen der gehobenen Sprache', focus: 'التراكيب التنازلية في اللغة الراقية — ungeachtet (+Genitiv), so … auch, wenngleich, obschon, obgleich, dessen ungeachtet' },
+  { level: 'C1', id: 'c1-18', insertAfter: 5,  de: 'Gehobene Präpositionen mit Genitiv', focus: 'حروف الجر الرسمية الراقية مع Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens' },
 ]
 
 const LESSON_TOOL = {

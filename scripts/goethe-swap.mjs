@@ -51,6 +51,11 @@ const out = draft.map(({ level, id, insertAfter, de, lesson: L }) => {
 })
 
 const dest = path.resolve('lib/german-data/extra-lessons.json')
-fs.writeFileSync(dest, JSON.stringify(out, null, 2))
-console.log(`Wrote ${dest}: ${out.length} lessons`)
+// Merge, don't overwrite: keep already-shipped lessons, add/replace by id.
+const existing = fs.existsSync(dest) ? JSON.parse(fs.readFileSync(dest, 'utf8')) : []
+const byId = new Map(existing.map(e => [e.lesson.id, e]))
+for (const e of out) byId.set(e.lesson.id, e)
+const merged = [...byId.values()]
+fs.writeFileSync(dest, JSON.stringify(merged, null, 2))
+console.log(`Wrote ${dest}: ${merged.length} lessons total (+${out.length} this run)`)
 for (const e of out) console.log(`  ${e.level} ${e.lesson.id} after ${e.insertAfter}: ${e.lesson.vocabulary.length} vocab, ${e.lesson.exercise.questions.length} ex`)

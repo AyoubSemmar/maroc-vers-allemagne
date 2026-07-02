@@ -9708,6 +9708,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "Concessieve structuren in de verheven taal — Konzessive Strukturen der gehobenen Sprache",
+      "grammar": {
+        "title": "Concessieve structuren in de verheven taal — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**Concessieve structuren (Konzessive Strukturen)** zijn taalkundige hulpmiddelen die worden gebruikt om uit te drukken dat een bepaald resultaat plaatsvindt **ondanks** het bestaan van een belemmering of tegengestelde omstandigheid. Dit zijn enkele van de meest opvallende kenmerken van **verheven en academische taal** in het Duits.\\n\\n---\\n\\n**1. ungeachtet + Genitiv**\\n Betekent \"ongeacht / ondanks\", en vereist altijd **Genitiv** (genitief geval). Wordt gebruikt in formeel en academisch schrijven.\\n Voorbeeld: *Ungeachtet der Risiken setzte er das Projekt fort.*\\n\\n**2. wenngleich / obgleich / obschon**\\n Deze drie hulpmiddelen zijn vrijwel synoniem en betekenen \"hoewel / alhoewel / ondanks dat\". Ze introduceren een **bijzin (Nebensatz)** waarin het werkwoord naar het einde wordt verplaatst. **obschon** en **obgleich** worden als formeler beschouwd dan **wenngleich**.\\n Voorbeeld: *Wenngleich er müde war, arbeitete er weiter.*\\n\\n**3. so … auch**\\n Betekent \"hoe ook / hoe zeer ook\". Komt aan het begin van de bijzin en geeft aan dat men afziet van een eigenschap of omstandigheid, hoe groot die ook mag zijn.\\n Structuur: **so + bijvoeglijk naamwoord/bijwoord + onderwerp + auch + werkwoord**\\n Voorbeeld: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\\n\\n**4. dessen ungeachtet**\\n Betekent \"ondanks dat / ongeacht dat\". Wordt gebruikt aan het begin van de hoofdzin om naar het eerder genoemde te verwijzen, en veroorzaakt **Inversion** (het werkwoord gaat voor het onderwerp).\\n Voorbeeld: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\\n\\n---\\n\\n**Belangrijke opmerking:** Wanneer de hoofdzin begint met **dessen ungeachtet** of een ander bijwoord, volgt het hulpwerkwoord of hoofdwerkwoord onmiddellijk daarna, gevolgd door het onderwerp — dit wordt **Inversion** genoemd.",
+        "tables": [
+          {
+            "title": "Vergelijking van verheven concessieve hulpmiddelen",
+            "headers": [
+              "Hulpmiddel",
+              "Betekenis in het Nederlands",
+              "Type structuur",
+              "Formaliteitsniveau"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "ongeacht / ondanks",
+                  "voorzetselfrase (Genitiv)",
+                  "zeer formeel ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "hoewel / alhoewel",
+                  "Nebensatz (werkwoord aan het einde)",
+                  "formeel ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "hoewel / alhoewel",
+                  "Nebensatz (werkwoord aan het einde)",
+                  "zeer formeel ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "hoewel / alhoewel",
+                  "Nebensatz (werkwoord aan het einde)",
+                  "zeer formeel ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "hoe ook / hoe zeer ook",
+                  "Nebensatz (Inversion)",
+                  "zeer formeel ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "ondanks dat / ongeacht dat",
+                  "Hauptsatz (Inversion)",
+                  "zeer formeel ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = Formaliteitsniveau: hoe meer sterren, hoe meer het hulpmiddel wordt gebruikt in academische en formele teksten.",
+            "theme": "default"
+          },
+          {
+            "title": "Structuur van ungeachtet met Genitiv",
+            "headers": [
+              "Artikel",
+              "Nominativ",
+              "Genitiv (met ungeachtet)",
+              "Voorbeeld"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (mannelijk)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (vrouwelijk)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (onzijdig)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (meervoud)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "Onthoud: ungeachtet vereist altijd Genitiv — mannelijk en onzijdig nemen (des + s/es) en vrouwelijk en meervoud nemen (der).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet vereist altijd Genitiv. Mannelijk en onzijdig: des + zelfstandig naamwoord + (e)s. Vrouwelijk en meervoud: der + zelfstandig naamwoord.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "Ondanks het slechte weer vond het evenement plaats."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon introduceren een bijzin waarin het werkwoord helemaal aan het einde staat, net als bij obwohl.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "Hoewel de onderhandelingen waren mislukt, gaf men de hoop niet op."
+          },
+          {
+            "rule": "so … auch komt aan het begin van de bijzin: so + bijvoeglijk naamwoord/bijwoord + onderwerp + auch + werkwoord. De hoofdzin volgt onmiddellijk.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "Hoe groot de uitdagingen ook mogen zijn, we blijven standvastig."
+          },
+          {
+            "rule": "dessen ungeachtet begint de hoofdzin en veroorzaakt Inversion: het werkwoord komt onmiddellijk voor het onderwerp.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "De kosten waren enorm. Ondanks dat keurde het parlement de wet goed."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — Ondanks de aanzienlijke bezwaren van de experts werd de wet aangenomen.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — Hoewel de economische situatie gespannen is, toont de bevolking opmerkelijke veerkracht.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — Hoewel hij jarenlange ervaring had, werd zijn aanvraag afgewezen.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — Ondanks dat de onderzoeksresultaten duidelijk waren, twijfelden sommige wetenschappers eraan.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — Hoe complex het onderwerp ook mag lijken, het kan met geduld worden begrepen.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — Er waren ernstige bezwaren. Ondanks dat hield de regering vast aan haar koers.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — Ongeacht zijn persoonlijke belangen koos hij voor het welzijn van de gemeenschap.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — Hoe beslist de critici ook afwezen, het werk vond groot bijval bij het publiek."
+        ],
+        "tip": "💡 Om deze hulpmiddelen gemakkelijk te onderscheiden: **ungeachtet** en **dessen ungeachtet** werken als een \"brug\" tussen twee afzonderlijke zinnen en wijzen direct op de belemmering, terwijl **wenngleich / obgleich / obschon** precies zoals **obwohl** werken maar formeler zijn — gebruik ze in academische artikelen en formele rapporten om je verheven taalgebruik in het Goethe C1-examen te tonen."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "bezwaren / twijfels",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "Ondanks de bezwaren van de experts werd het project goedgekeurd.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "verzet / tegenstand",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "Hoewel het verzet groot was, werd de hervorming doorgevoerd.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "bezwaar / tegenwerping",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "Ondanks dat wees hij alle bezwaren af.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "veerkracht / weerbaarheid",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "Hoewel de crisis aanhield, bewees de samenleving haar veerkracht.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "uitdaging",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "Hoe groot de uitdagingen ook mogen zijn, we geven niet op.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "aannemen / goedkeuren (een wet)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "Het parlement keurde de wet goed ondanks de kritiek.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "standvastig / onwrikbaar",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "Hoewel de situatie hopeloos leek, bleven zij standvastig.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "aanzienlijk / opmerkelijk / groot",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "Ondanks de aanzienlijke kosten werd het plan uitgevoerd.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "bijval / instemming",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "Het werk vond groot bijval, hoewel de critici het afwezen.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "mislukking / falen",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "Hoewel het falen duidelijk was, gaf niemand het toe.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "vasthouden / zich vastklampen aan",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "Ondanks dat hield de partij vast aan haar positie.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "duidelijk / ondubbelzinnig",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "Hoewel de bewijzen duidelijk waren, bleef men twijfelen.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "algemeen belang",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "Ongeacht persoonlijke belangen handelde zij in het belang van het algemeen welzijn.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "gespannen / gespannen",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "Hoewel de situatie gespannen was, heerste er uiterlijke rust.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "compromis / schikking",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "Hoe moeilijk een compromis ook mag lijken, het is vaak de beste oplossing.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "Kies het juiste hulpmiddel om de zin af te maken: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "هذه الأداة تتطلب Genitiv وتأتي قبل اسم مباشرةً."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "Vul de zin in met het juiste hulpmiddel: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (gebruik obgleich, wenngleich of obschon)",
+            "answer": "Wenngleich",
+            "hint": "أي من الأدوات الثلاث المترادفة تصلح هنا — تذكّر أنها تُدخل Nebensatz."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "Rangschik de woorden om een correcte zin te vormen met de structuur 'so … auch':",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "البنية: so + صفة + الفاعل + auch + فعل، ثم الجملة الرئيسية."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "Match elk concessief hulpmiddel met de juiste beschrijving:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "Luister naar de zin en vul deze in: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "هذه الأداة تُشير إلى ما ذُكر سابقًا في الجملة السابقة.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "Welke van de volgende zinnen is grammaticaal correct?",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "Spreek de volgende zin duidelijk uit met aandacht voor de juiste klemtoon: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "ركّز على النبر في كلمة 'schwierig' وعلى الفاصل المنطقي بعد الفاصلة."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "Vul de zin in met de juiste Genitiv-vorm: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand اسم مذكر (der Widerstand) — في Genitiv يصبح: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "Formele voorzetsels met Genitiv — Gehobene Präpositionen mit Genitiv",
+      "grammar": {
+        "title": "Formele voorzetsels met Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "In het formele en academische Duits wordt een groep **formele voorzetsels** gebruikt die altijd **Genitiv** (genitief geval) vereisen. Deze voorzetsels verschijnen veel in journalistieke, juridische, administratieve en academische teksten en zijn essentieel voor het bereiken van niveau **C1**.\n\n**Wat is Genitiv?**\nHet is het grammaticale geval dat eigendom of toebehoren uitdrukt, waarbij de uiteinden van bepalers (Artikel) als volgt veranderen:\n- **der/ein** → **des/eines** (mannelijk en onzijdig) + **-(e)s** op het zelfstandig naamwoord\n- **die/eine** → **der/einer** (vrouwelijk en meervoud)\n\n**De acht voorzetsels en hun belangrijkste betekenissen:**\n\n**1. angesichts** — gezien / in het licht van (in het aangezicht van een bepaalde werkelijkheid)\n**2. mangels** — wegens gebrek aan / vanwege het ontbreken van (afwezigheid van iets noodzakelijks)\n**3. hinsichtlich** — met betrekking tot / in het geval van\n**4. bezüglich** — aangaande / betreffende (veel gebruikt in formele correspondentie)\n**5. gemäß** — overeenkomstig / volgens (kan ook na het zelfstandig naamwoord komen)\n**6. laut** — volgens / overeenkomstig (in citaten en bronnen, vaak zonder Artikel)\n**7. zufolge** — volgens / overeenkomstig (komt altijd **na** het zelfstandig naamwoord + Dativ)\n**8. seitens** — van de zijde van / namens (wijst op de handelende partij)\n\n⚠️ **Belangrijke opmerking:** **laut** en **zufolge** worden meestal zonder Artikel of met Dativ gebruikt, maar worden in deze formele groep ingedeeld. **zufolge** komt altijd na het zelfstandig naamwoord (postpositioneel).",
+        "tables": [
+          {
+            "title": "Formele voorzetsels + Genitiv — Overzicht",
+            "headers": [
+              "Voorzetsel",
+              "Betekenis in het Nederlands",
+              "Positie",
+              "Voorbeeld"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "gezien / in het licht van",
+                  "voor het zelfstandig naamwoord",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "wegens gebrek aan / vanwege het ontbreken van",
+                  "voor het zelfstandig naamwoord",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "met betrekking tot / in het geval van",
+                  "voor het zelfstandig naamwoord",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "aangaande / betreffende",
+                  "voor het zelfstandig naamwoord",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "overeenkomstig / volgens",
+                  "voor of na het zelfstandig naamwoord",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "volgens / overeenkomstig",
+                  "voor het zelfstandig naamwoord (meestal zonder Artikel)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "volgens / overeenkomstig",
+                  "na het zelfstandig naamwoord + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "van de zijde van / namens",
+                  "voor het zelfstandig naamwoord",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß kan voor het zelfstandig naamwoord (+ Genitiv/Dativ) of erna (postpositioneel) komen. zufolge komt altijd na het zelfstandig naamwoord met Dativ.",
+            "theme": "default"
+          },
+          {
+            "title": "Verbuiging van Genitiv met deze voorzetsels",
+            "headers": [
+              "Geslacht",
+              "Bepaalde Artikel",
+              "Onbepaalde Artikel",
+              "Volledig voorbeeld"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "mannelijk (Maskulinum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "vrouwelijk (Femininum)",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "onzijdig (Neutrum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "meervoud (Plural)",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "Het mannelijke en onzijdige zelfstandig naamwoord krijgen het achtervoegsel -(e)s in Genitiv. Het vrouwelijke zelfstandig naamwoord en meervoud veranderen niet.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "De zes formele voorzetsels (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) komen voor het zelfstandig naamwoord en vereisen Genitiv.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "Gezien de toenemende druk besloot de regering in te grijpen."
+          },
+          {
+            "rule": "zufolge komt altijd na het zelfstandig naamwoord (postpositioneel) en gebruikt Dativ, niet Genitiv.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "Volgens het rapport is de werkloosheid gedaald."
+          },
+          {
+            "rule": "laut wordt meestal zonder Artikel gebruikt in journalistieke teksten, maar met Artikel neemt het Dativ of Genitiv.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "Volgens deskundigen is een oplossing in zicht. / Volgens het deskundigenrapport was hij onschuldig."
+          },
+          {
+            "rule": "gemäß kan voor het zelfstandig naamwoord (met Dativ of Genitiv) of erna (postpositioneel met Dativ) komen, beide zijn correct.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "Volgens de voorschriften is roken verboden."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — Gezien de economische situatie moeten we zuiniger zijn.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — Wegens gebrek aan voldoende bewijzen werd de verdachte vrijgesproken.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — Met betrekking tot het nieuwe contract zijn er nog openstaande vragen.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — Aangaande uw aanvraag zullen wij u binnenkort contacteren.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — Volgens de wettelijke voorschriften is een vergunning vereist.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — Volgens het meest recente rapport is de situatie aanzienlijk verbeterd.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — Volgens het deskundigenrapport was het ongeluk het gevolg van menselijke fout.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — Vanuit de autoriteiten werd geen officiële verklaring afgegeven."
+        ],
+        "tip": "💡 Om het verschil gemakkelijk te onthouden: **bezüglich** en **hinsichtlich** worden gebruikt in formele correspondentie en administratieve rapporten, terwijl **angesichts** een moeilijke werkelijkheid of uitdaging uitdrukt. En **zufolge** is de enige die altijd **na** het zelfstandig naamwoord komt — onthoud: \"zufolge = volgt het zelfstandig naamwoord altijd!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "bewijs / bewijsstuk",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "Wegens gebrek aan bewijs werd hij vrijgesproken.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "voorschrift / regel",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "Volgens de voorschriften is registratie verplicht.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "deskundigenrapport / expertise",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "Volgens het deskundigenrapport was de oorzaak een technische fout.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "verklaring / officieel standpunt",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "De regering publiceerde een officiële verklaring.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "aanvraag / verzoek",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "Aangaande uw aanvraag hebben we aanvullende documenten nodig.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "crisis",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "Gezien de crisis werden noodmaatregelen getroffen.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "rapport / verslag",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "Volgens het rapport zijn de cijfers gestegen.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "vergunning / toestemming",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "Wegens gebrek aan vergunning moest het project worden stopgezet.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "contract / overeenkomst",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "Met betrekking tot het contract moeten nog details worden verduidelijkt.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "autoriteit / overheidsinstantie",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "Vanuit de autoriteiten zijn er geen bezwaren.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "vrijgesproken",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "De verdachte werd wegens gebrek aan bewijzen vrijgesproken.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "vereist / noodzakelijk",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "Volgens de regel is een handtekening vereist.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "verdachte / beklaagde",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "Wegens gebrek aan bewijzen werd de verdachte vrijgelaten.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "steun / ondersteuning",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "Wegens gebrek aan financiële steun mislukte het project.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "overeenkomstig / volgens",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "Volgens de wet is dat verboden.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "Kies het juiste voorzetsel: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "Dit voorzetsel drukt het aangezicht van een moeilijke werkelijkheid of uitdaging uit."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "Vul de zin in met de juiste vorm: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels vereist Genitiv, en het zelfstandig naamwoord Beweis is mannelijk."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "Rangschik de woorden om een juiste zin te vormen:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "Onthoud: zufolge komt altijd na het zelfstandig naamwoord."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "Verbind elk voorzetsel met zijn juiste betekenis:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "Luister naar de zin en vul het gat in: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "Dit voorzetsel betekent 'overeenkomstig' en komt voor het zelfstandig naamwoord.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "Welke zin gebruikt zufolge correct?",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge is een voorzetsel dat altijd na het zelfstandig naamwoord komt (postpositioneel)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "Spreek de volgende zin hardop uit met correct uitspraak: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "Vul de zin in: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens vereist Genitiv, en het zelfstandig naamwoord Regierung is vrouwelijk, dus wordt het der Regierung."
+          }
+        ]
+      }
     }
   }
 }

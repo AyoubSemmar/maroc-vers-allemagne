@@ -108,17 +108,23 @@ async function pool(items, n, fn) {
   await Promise.all(workers)
 }
 
+// Levels present in the extra-lessons set (a1..c1), so B2/C1 overlays load too.
+const LEVELS = [...new Set(extra.map(e => e.level.toLowerCase()))]
+const FORCE = process.argv.includes('--force') // re-translate even if present
+
 async function main() {
   for (const loc of targets) {
     const files = {}
-    for (const lv of ['a1', 'a2', 'b1']) {
+    for (const lv of LEVELS) {
       const p = path.resolve(`lib/german-data/translations/${lv}.${loc}.json`)
       files[lv] = { p, data: JSON.parse(fs.readFileSync(p, 'utf8')) }
       files[lv].data.lessons = files[lv].data.lessons || {}
     }
-    let ok = 0, fail = 0
+    let ok = 0, skip = 0, fail = 0
     await pool(extra, 4, async (e) => {
       const lv = e.level.toLowerCase()
+      // Idempotent: skip lessons already translated for this locale.
+      if (!FORCE && files[lv].data.lessons[e.lesson.id]) { skip++; return }
       const src = overlaySource(e)
       for (let a = 1; a <= 3; a++) {
         try {
@@ -128,8 +134,8 @@ async function main() {
         } catch (err) { if (a === 3) { fail++; console.log(`  ${loc} ${e.lesson.id} FAIL: ${err.message}`) } }
       }
     })
-    for (const lv of ['a1', 'a2', 'b1']) fs.writeFileSync(files[lv].p, JSON.stringify(files[lv].data, null, 2))
-    console.log(`${loc}: +${ok} lessons${fail ? `, ${fail} failed` : ''}`)
+    for (const lv of LEVELS) fs.writeFileSync(files[lv].p, JSON.stringify(files[lv].data, null, 2))
+    console.log(`${loc}: +${ok} lessons${skip ? `, ${skip} skipped` : ''}${fail ? `, ${fail} failed` : ''}`)
   }
 }
 main().catch(e => { console.error(e); process.exit(1) })

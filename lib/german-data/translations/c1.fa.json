@@ -9708,6 +9708,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "ساختارهای امتیازی در زبان رسمی — Konzessive Strukturen der gehobenen Sprache",
+      "grammar": {
+        "title": "ساختارهای امتیازی در زبان رسمی — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**ساختارهای امتیازی (Konzessive Strukturen)** ابزارهای زبانی هستند که برای بیان این ایده استفاده می‌شوند که نتیجه‌ای **علیرغم** وجود مانع یا شرایط متضاد رخ می‌دهد. این ابزارها از **برجسته‌ترین ویژگی‌های زبان رسمی و دانشگاهی** در آلمانی به شمار می‌روند.\n\n---\n\n**1. ungeachtet + Genitiv**\n به معنی \"صرف‌نظر از / علیرغم\" است و همیشه **Genitiv** (حالت اضافه) را می‌طلبد. در نوشتار رسمی و دانشگاهی استفاده می‌شود.\n مثال: *Ungeachtet der Risiken setzte er das Projekt fort.*\n\n**2. wenngleich / obgleich / obschon**\n این سه ابزار تقریباً مترادف هستند و به معنی \"اگرچه / هرچند\" می‌باشند. **جملهٔ فرعی (Nebensatz)** را معرفی می‌کنند که فعل در آن به انتهای جملهٔ منتقل می‌شود. **obschon** و **obgleich** رسمی‌تر از **wenngleich** هستند.\n مثال: *Wenngleich er müde war, arbeitete er weiter.*\n\n**3. so … auch**\n به معنی \"هرچند / هر قدر\" است. در ابتدای جملهٔ فرعی آمده و بیان می‌کند که صفت یا شرایط هرچند درجه‌ای داشته باشند، تأثیری ندارند.\n ساختار: **so + صفت/قید + فاعل + auch + فعل**\n مثال: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\n\n**4. dessen ungeachtet**\n به معنی \"علیرغم آن / صرف‌نظر از آن\" است. در ابتدای جملهٔ اصلی استفاده می‌شود تا به آنچه قبلاً ذکر شده اشاره کند و باعث **Inversion** (جابه‌جایی فعل و فاعل) می‌شود.\n مثال: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\n\n---\n\n**نکتهٔ مهم:** هنگام شروع جملهٔ اصلی با **dessen ungeachtet** یا هر قید دیگری، فعل کمکی یا فعل اصلی بلافاصله بعد از آن می‌آید، سپس فاعل — این را **Inversion** می‌نامند.",
+        "tables": [
+          {
+            "title": "مقایسهٔ ابزارهای امتیازی رسمی",
+            "headers": [
+              "ابزار",
+              "معنی فارسی",
+              "نوع ساختار",
+              "سطح رسمیت"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "صرف‌نظر از",
+                  "شبه جملهٔ (Genitiv)",
+                  "بسیار رسمی ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "اگرچه / هرچند",
+                  "Nebensatz (فعل در انتها)",
+                  "رسمی ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "اگرچه / هرچند",
+                  "Nebensatz (فعل در انتها)",
+                  "بسیار رسمی ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "اگرچه / هرچند",
+                  "Nebensatz (فعل در انتها)",
+                  "بسیار رسمی ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "هرچند / هر قدر",
+                  "Nebensatz (Inversion)",
+                  "بسیار رسمی ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "علیرغم آن",
+                  "Hauptsatz (Inversion)",
+                  "بسیار رسمی ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = سطح رسمیت: هرچه تعداد ستاره‌ها بیشتر باشد، ابزار در متون دانشگاهی و رسمی بیشتر استفاده می‌شود.",
+            "theme": "default"
+          },
+          {
+            "title": "ساختار ungeachtet با حالت Genitiv",
+            "headers": [
+              "حرف تعریف",
+              "Nominativ",
+              "Genitiv (با ungeachtet)",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (مذکر)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (مؤنث)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (بی‌جنس)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (جمع)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "یادآوری: ungeachtet همیشه Genitiv را می‌طلبد — مذکر و بی‌جنس (des + اسم + (e)s) و مؤنث و جمع (der + اسم) را می‌گیرند.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet همیشه Genitiv را می‌طلبد. مذکر و بی‌جنس: des + اسم + (e)s. مؤنث و جمع: der + اسم.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "علیرغم آب‌وهوای بد، مراسم برگزار شد."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon جملهٔ فرعی را معرفی می‌کنند که فعل در انتهای آن قرار می‌گیرد، درست مثل obwohl.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "اگرچه مذاکرات ناکام شده بود، امید را رها نکردند."
+          },
+          {
+            "rule": "so … auch در ابتدای جملهٔ فرعی می‌آید: so + صفت/قید + فاعل + auch + فعل. جملهٔ اصلی بلافاصله بعد از آن می‌آید.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "هرچند چالش‌ها بزرگ باشند، ما صامد می‌مانیم."
+          },
+          {
+            "rule": "dessen ungeachtet جملهٔ اصلی را شروع می‌کند و باعث Inversion می‌شود: فعل قبل از فاعل می‌آید.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "هزینه‌ها بسیار زیاد بود. علیرغم آن، پارلمان قانون را تصویب کرد."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — علیرغم نگرانی‌های جدی متخصصان، قانون تصویب شد.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — اگرچه وضعیت اقتصادی متشنج است، جمعیت صمود قابل‌توجهی نشان می‌دهد.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — اگرچه سال‌های تجربه داشت، درخواست او رد شد.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — هرچند نتایج تحقیق قاطع بود، بخشی از دانشمندان در آن تردید داشتند.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — هرچند موضوع پیچیده به نظر برسد، با صبر می‌توان آن را درک کرد.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — اعتراضات جدی وجود داشت. علیرغم آن، دولت به مسیر خود پایبند ماند.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — صرف‌نظر از منافع شخصی‌اش، برای منفعت جمهور تصمیم گرفت.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — هرچند منتقدان قاطعانه رد کردند، اثر در میان مردم پذیرش گسترده‌ای یافت."
+        ],
+        "tip": "💡 برای تمایز آسان این ابزارها: **ungeachtet** و **dessen ungeachtet** مثل \"پل\" بین دو جملهٔ جداگانه عمل می‌کنند و مانع را مستقیماً نشان می‌دهند، اما **wenngleich / obgleich / obschon** دقیقاً مثل **obwohl** کار می‌کنند اما رسمی‌تر هستند — از آن‌ها در مقالات دانشگاهی و گزارش‌های رسمی استفاده کنید تا سطح زبانی رسمی خود را در امتحان Goethe C1 نشان دهید."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "نگرانی‌ها / تحفظات",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "علیرغم تحفظات متخصصان، پروژه تصویب شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "مقاومت / مخالفت",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "اگرچه مخالفت بزرگ بود، اصلاح‌ات اجرا شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "اعتراض",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "علیرغم آن، تمام اعتراضات را رد کرد.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "صمود / انعطاف‌پذیری",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "اگرچه بحران ادامه داشت، جامعه صمود خود را اثبات کرد.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "چالش",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "هرچند چالش‌ها بزرگ باشند، تسلیم نمی‌شویم.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "تصویب کردن (قانون)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "پارلمان قانون را صرف‌نظر از انتقادات تصویب کرد.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "صامد / ثابت",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "هرچند وضعیت ناامیدکننده به نظر می‌رسید، صامد ماندند.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "قابل‌توجه / جدی / بزرگ",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "علیرغم هزینه‌های قابل‌توجه، طرح اجرا شد.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "پذیرش / استقبال",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "اثر استقبال گسترده‌ای یافت، اگرچه منتقدان آن را رد کردند.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "شکست / ناکامی",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "اگرچه شکست واضح بود، کسی آن را اعتراف نکرد.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "پایبند ماندن / تمسک کردن",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "علیرغم آن، حزب به موضع خود پایبند ماند.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "قاطع / بدون ابهام",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "هرچند شواهد قاطع بود، تردید ادامه داشت.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "منفعت عمومی",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "صرف‌نظر از منافع شخصی، برای منفعت عمومی عمل کرد.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "متشنج / تنش‌زا",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "اگرچه وضعیت متشنج بود، آرامش ظاهری حاکم بود.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "سازش / حل میانه",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "هرچند سازش دشوار به نظر برسد، اغلب بهترین راه‌حل است.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "ابزار صحیح را انتخاب کنید تا جملهٔ زیر کامل شود: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "این ابزار Genitiv را می‌طلبد و مستقیماً قبل از اسم می‌آید."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "جملهٔ زیر را با ابزار مناسب کامل کنید: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (از obgleich یا wenngleich یا obschon استفاده کنید)",
+            "answer": "Wenngleich",
+            "hint": "هر یک از این سه ابزار مترادف می‌تواند کار کند — یادآوری: آن‌ها Nebensatz را معرفی می‌کنند."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "کلمات را مرتب کنید تا جملهٔ صحیح با ساختار 'so … auch' تشکیل شود:",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "ساختار: so + صفت + فاعل + auch + فعل، سپس جملهٔ اصلی."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "هر ابزار امتیازی را با توضیح صحیح آن مطابقت دهید:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "جملهٔ زیر را گوش کنید و کامل کنید: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "این ابزار به آنچه در جملهٔ قبلی ذکر شده اشاره می‌کند.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "کدام یک از جملات زیر نحوی‌اً صحیح است؟",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "جملهٔ زیر را با تلفظ صحیح و تاکید مناسب بخوانید: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "بر روی تاکید در کلمهٔ 'schwierig' و شکاف منطقی بعد از کاما تمرکز کنید."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "جملهٔ زیر را با صیغهٔ صحیح Genitiv کامل کنید: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand اسم مذکر است (der Widerstand) — در Genitiv می‌شود: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "حروف الجر الرسمية مع Genitiv — Gehobene Präpositionen mit Genitiv",
+      "grammar": {
+        "title": "حروف الجر الرسمية الراقية مع Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "در زبان آلمانی رسمی و دانشگاهی، مجموعه‌ای از **حروف جر راقی** استفاده می‌شود که همیشه **Genitiv** (حالت اضافه) را می‌طلبند. این حروف در متون خبری، حقوقی، اداری و دانشگاهی بسیار رایج هستند و برای گذراندن سطح **C1** ضروری هستند.\n\n**Genitiv چیست؟**\nحالتی است که مالکیت یا تعلق را بیان می‌کند و نهایات تعریف‌کننده‌ها (Artikel) به صورت زیر تغییر می‌کنند:\n- **der/ein** → **des/eines** (مذکر و بی‌جنس) + **-(e)s** بر روی اسم\n- **die/eine** → **der/einer** (مؤنث و جمع)\n\n**هشت حرف جر و معانی مهم آن‌ها:**\n\n**1. angesichts** — با توجه به / در روشنایی (در مواجهه با واقعیتی)\n**2. mangels** — به دلیل فقدان / عدم وجود (غیاب چیزی ضروری)\n**3. hinsichtlich** — در مورد / از نظر\n**4. bezüglich** — درباره / در خصوص (بسیار در مکاتبات رسمی استفاده می‌شود)\n**5. gemäß** — مطابق با / طبق (می‌تواند بعد از اسم نیز بیاید)\n**6. laut** — مطابق با / بر اساس (در نقل‌قول‌ها و منابع، اغلب بدون Artikel)\n**7. zufolge** — مطابق با / بر اساس (همیشه **بعد** از اسم + Dativ می‌آید)\n**8. seitens** — از سوی / از طرف (به طرف فاعل اشاره می‌کند)\n\n⚠️ **نکته مهم:** **laut** و **zufolge** اغلب بدون Artikel یا با Dativ استفاده می‌شوند، اما در این گروه رسمی طبقه‌بندی می‌شوند. **zufolge** همیشه بعد از اسم می‌آید (postpositional).",
+        "tables": [
+          {
+            "title": "حروف جر رسمی + Genitiv — نمای کلی",
+            "headers": [
+              "حرف جر",
+              "معنی فارسی",
+              "موضع",
+              "مثال"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "با توجه به / در روشنایی",
+                  "قبل از اسم",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "به دلیل فقدان / عدم وجود",
+                  "قبل از اسم",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "در مورد / از نظر",
+                  "قبل از اسم",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "درباره / در خصوص",
+                  "قبل از اسم",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "مطابق با / طبق",
+                  "قبل یا بعد از اسم",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "بر اساس / مطابق با",
+                  "قبل از اسم (اغلب بدون Artikel)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "بر اساس / مطابق با",
+                  "بعد از اسم + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "از سوی / از طرف",
+                  "قبل از اسم",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß می‌تواند قبل از اسم (+ Genitiv/Dativ) یا بعد از آن (postpositional) بیاید. zufolge همیشه بعد از اسم با Dativ می‌آید.",
+            "theme": "default"
+          },
+          {
+            "title": "تصریف Genitiv با این حروف",
+            "headers": [
+              "جنس",
+              "Artikel معین",
+              "Artikel نامعین",
+              "مثال کامل"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "مذکر (Maskulinum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "مؤنث (Femininum)",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "بی‌جنس (Neutrum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "جمع (Plural)",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "اسم مذکر و بی‌جنس پسوند -(e)s را در Genitiv می‌گیرند. اسم مؤنث و جمع تغییر نمی‌کنند.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "شش حرف جر رسمی (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) قبل از اسم می‌آیند و Genitiv را می‌طلبند.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "با توجه به فشار افزایشی، دولت تصمیم به اقدام گرفت."
+          },
+          {
+            "rule": "zufolge همیشه بعد از اسم (postpositional) می‌آید و با Dativ استفاده می‌شود، نه Genitiv.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "بر اساس گزارش، نرخ بیکاری کاهش یافته است."
+          },
+          {
+            "rule": "laut اغلب بدون Artikel در متون خبری استفاده می‌شود، اما با Artikel می‌تواند Dativ یا Genitiv بگیرد.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "بر اساس متخصصان، راه‌حلی در دید است. / بر اساس گزارش کارشناسی، او بی‌گناه بود."
+          },
+          {
+            "rule": "gemäß می‌تواند قبل از اسم (با Dativ یا Genitiv) یا بعد از آن (postpositional با Dativ) بیاید و هر دو صحیح است.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "مطابق با مقررات، سیگار کشیدن ممنوع است."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — با توجه به وضعیت اقتصادی، باید صرفه‌جویی بیشتری کنیم.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — به دلیل فقدان شواهد کافی، متهم تبرئه شد.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — در مورد قرارداد جدید، هنوز سؤالات باز وجود دارد.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — درباره درخواست شما، به زودی با شما تماس خواهیم گرفت.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — مطابق با مقررات قانونی، اخذ مجوز ضروری است.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — بر اساس آخرین گزارش، وضعیت به طور قابل‌توجهی بهتر شده است.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — بر اساس گزارش کارشناسی، حادثه ناشی از خطای انسانی بود.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — از سوی مقامات، هیچ بیانیه رسمی صادر نشد."
+        ],
+        "tip": "💡 برای یادآوری آسان: **bezüglich** و **hinsichtlich** در مکاتبات رسمی و گزارش‌های اداری استفاده می‌شوند، در حالی که **angesichts** در مواجهه با واقعیت دشوار یا چالش بیان می‌شود. و **zufolge** تنها حرفی است که همیشه **بعد** از اسم می‌آید — به یاد داشته باشید: \"zufolge = همیشه بعد از اسم می‌آید!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "شاهد / دلیل",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "به دلیل فقدان شاهد، او تبرئه شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "مقررات / قاعده",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "مطابق با مقررات، ثبت‌نام الزامی است.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "گزارش کارشناسی / نظر کارشناس",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "بر اساس گزارش کارشناسی، علت خطای فنی بود.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "بیانیه / موضع رسمی",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "از سوی دولت، بیانیه‌ای منتشر شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "درخواست / عریضه",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "درباره درخواست شما، به مستندات بیشتری نیاز داریم.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "بحران",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "با توجه به بحران، اقدامات اضطراری انجام شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "گزارش",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "بر اساس گزارش، اعداد افزایش یافته‌اند.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "مجوز / اجازه",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "به دلیل فقدان مجوز، پروژه باید متوقف می‌شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "قرارداد / توافق",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "در مورد قرارداد، هنوز جزئیاتی برای روشن‌سازی وجود دارد.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "مقام / اداره",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "از سوی مقامات، اعتراضی وجود ندارد.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "تبرئه شده / بی‌گناه اعلام شده",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "متهم به دلیل فقدان شواهد تبرئه شد.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "مورد نیاز / ضروری",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "مطابق با قاعده، امضا ضروری است.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "متهم",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "به دلیل فقدان شواهد، متهم آزاد شد.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "حمایت / پشتیبانی",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "به دلیل فقدان حمایت مالی، پروژه ناکام شد.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "مطابق با / طبق",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "مطابق با قانون، این ممنوع است.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "حرف جر صحیح را انتخاب کنید: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "این حرف در مواجهه با واقعیت دشوار یا چالش استفاده می‌شود."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "جملה را با صیغه صحیح کامل کنید: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels نیاز به Genitiv دارد و اسم Beweis مذکر است."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "کلمات را برای تشکیل جملهٔ صحیح مرتب کنید:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "به یاد داشته باشید: zufolge همیشه بعد از اسم می‌آید."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "هر حرف جر را با معنی صحیح آن متصل کنید:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "جملهٔ را گوش کنید و فراغ را کامل کنید: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "این حرف به معنی 'مطابق با' است و قبل از اسم می‌آید.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "کدام جملهٔ zufolge را به صورت صحیح استفاده می‌کند؟",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge هو حرف جر يأتي دائمًا بعد الاسم (postpositional)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "جملهٔ زیر را با تلفظ صحیح بلند بخوانید: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "جملهٔ را کامل کنید: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens نیاز به Genitiv دارد و اسم Regierung مؤنث است، بنابراین der Regierung می‌شود."
+          }
+        ]
+      }
     }
   }
 }

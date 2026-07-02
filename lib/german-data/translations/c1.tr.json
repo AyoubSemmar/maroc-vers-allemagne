@@ -9708,6 +9708,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "Tavizkar Yapılar Yüksek Dilde — Konzessive Strukturen der gehobenen Sprache",
+      "grammar": {
+        "title": "Tavizkar Yapılar Yüksek Dilde — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**Tavizkar Yapılar (Konzessive Strukturen)** belirli bir sonucun meydana gelmesine rağmen bir engel veya karşıt durumun varlığını ifade etmek için kullanılan dilbilimsel araçlardır. Bunlar **Almancada yüksek ve akademik dil**in en belirgin özelliklerinden biridir.\n\n---\n\n**1. ungeachtet + Genitiv**\n \"Bağımsız olarak / Rağmen\" anlamına gelir ve her zaman **Genitiv** (ilişki hali) gerektirir. Resmi ve akademik yazıda kullanılır.\n Örnek: *Ungeachtet der Risiken setzte er das Projekt fort.*\n\n**2. wenngleich / obgleich / obschon**\n Bu üç araç neredeyse eş anlamlıdır ve \"olsa da / rağmen\" anlamına gelir. Fiili cümlenin sonuna yerleştirilen **Nebensatz (yan cümle)** girer. **obschon** ve **obgleich**, **wenngleich**'ten daha resmidir.\n Örnek: *Wenngleich er müde war, arbeitete er weiter.*\n\n**3. so … auch**\n \"Ne kadar olursa olsun / Her ne kadar\" anlamına gelir. Yan cümlenin başında gelir ve derecesi ne olursa olsun bir nitelik veya durumu taviz vermek anlamını taşır.\n Yapı: **so + Sıfat/Zarf + Özne + auch + Fiil**\n Örnek: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\n\n**4. dessen ungeachtet**\n \"Buna rağmen / Bundan bağımsız olarak\" anlamına gelir. Ana cümlenin başında kullanılır ve önceden bahsedilenlere işaret eder, **Inversion** (fiili öznenin önüne yerleştirme) meydana getirir.\n Örnek: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\n\n---\n\n**Önemli Not:** Ana cümle **dessen ungeachtet** veya herhangi bir zarf ile başladığında, yardımcı fiil veya ana fiil hemen sonra gelir, ardından özne gelir — buna **Inversion** denir.",
+        "tables": [
+          {
+            "title": "Yüksek Tavizkar Araçların Karşılaştırması",
+            "headers": [
+              "Araç",
+              "Türkçe Anlamı",
+              "Yapı Türü",
+              "Resmilik Düzeyi"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "Bağımsız olarak / Rağmen",
+                  "Ön söz (Genitiv)",
+                  "Çok Resmi ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "Olsa da / Rağmen",
+                  "Nebensatz (Fiil sonda)",
+                  "Resmi ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "Olsa da / Rağmen",
+                  "Nebensatz (Fiil sonda)",
+                  "Çok Resmi ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "Olsa da / Rağmen",
+                  "Nebensatz (Fiil sonda)",
+                  "Çok Resmi ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "Ne kadar olursa olsun / Her ne kadar",
+                  "Nebensatz (Inversion)",
+                  "Çok Resmi ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "Buna rağmen",
+                  "Hauptsatz (Inversion)",
+                  "Çok Resmi ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = Resmilik Düzeyi: Yıldız sayısı arttıkça, araç akademik ve resmi metinlerde daha sık kullanılır.",
+            "theme": "default"
+          },
+          {
+            "title": "ungeachtet'in Genitiv Hali ile Yapısı",
+            "headers": [
+              "Artikel",
+              "Nominativ",
+              "Genitiv (ungeachtet ile)",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (eril)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (dişil)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (nötr)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (çoğul)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "Hatırla: ungeachtet her zaman Genitiv gerektirir — eril ve nötr (des + s/es) alır, dişil ve çoğul (der) alır.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet her zaman Genitiv gerektirir. Eril ve nötr: des + isim + (e)s. Dişil ve çoğul: der + isim.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "Kötü havaya rağmen etkinlik yapıldı."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon, fiili cümlenin sonuna yerleştirilen yan cümle girer, tıpkı obwohl gibi.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "Müzakereler başarısız olsa da, umut terk edilmedi."
+          },
+          {
+            "rule": "so … auch yan cümlenin başında gelir: so + sıfat/zarf + özne + auch + fiil. Ana cümle hemen sonra gelir.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "Zorluklar ne kadar büyük olursa olsun, biz sabit kalırız."
+          },
+          {
+            "rule": "dessen ungeachtet ana cümleyi başlatır ve Inversion meydana getirir: fiil hemen öznenin önüne gelir.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "Maliyetler muazzamdı. Buna rağmen Parlamento yasayı onayladı."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — Uzmanların önemli endişelerine rağmen yasa kabul edildi.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — Ekonomik durum gergin olsa da, nüfus dikkat çekici bir dayanıklılık göstermektedir.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — Yılların deneyimini taşısa da, başvurusu reddedildi.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — Araştırma sonuçları açık olsa da, bazı bilim insanları buna şüphe ile baktı.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — Konu ne kadar karmaşık görünürse görünsün, sabırla anlaşılabilir.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — Ciddi itirazlar vardı. Buna rağmen hükümet kursuna sadık kaldı.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — Kişisel çıkarlarından bağımsız olarak, toplumun iyiliği için karar verdi.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — Eleştirmenler ne kadar kararlı bir şekilde reddetseler de, eser halk tarafından büyük ilgi gördü."
+        ],
+        "tip": "💡 Bu araçları kolayca ayırt etmek için: **ungeachtet** ve **dessen ungeachtet** iki ayrı cümle arasında \"köprü\" gibi çalışır ve engeli doğrudan gösterir, oysa **wenngleich / obgleich / obschon** tıpkı **obwohl** gibi çalışır ancak daha resmidir — akademik makaleler ve resmi raporlarda kullanın, Goethe C1 sınavında yüksek dil seviyenizi göstermek için."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "endişeler / çekinceler",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "Uzmanların endişelerine rağmen proje onaylandı.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "direniş / muhalefet",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "Direniş büyük olsa da, reform uygulandı.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "itiraz",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "Buna rağmen tüm itirazları reddetti.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "dayanıklılık / esneklik",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "Kriz devam etse de, toplum dayanıklılığını kanıtladı.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "zorluk",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "Zorluklar ne kadar büyük olursa olsun, pes etmeyiz.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "kabul etmek / onaylamak (yasa)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "Parlamento eleştiriye rağmen yasayı kabul etti.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "sabit / kararlı",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "Durum umutsuz görünse de, sabit kaldılar.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "önemli / belirgin / büyük",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "Önemli maliyetlere rağmen proje uygulandı.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "yankı / beğeni",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "Eser geniş beğeni gördü, eleştirmenler onu reddetseler de.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "başarısızlık / başarısız olmak",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "Başarısızlık açık olsa da, kimse bunu kabul etmedi.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "tutunmak / bağlı kalmak",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "Buna rağmen parti konumuna bağlı kaldı.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "açık / net / kuşkusuz",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "Kanıtlar açık olsa da, şüphe devam etti.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "kamu yararı",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "Kişisel çıkarlardan bağımsız olarak, kamu yararı için hareket etti.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "gergin / gerilim içinde",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "Durum gergin olsa da, dış görünüş itibariyle sakinlik vardı.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "uzlaşma / taviz",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "Uzlaşma ne kadar zor görünürse görünsün, genellikle en iyi çözümdür.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "Cümleyi tamamlamak için doğru aracı seçin: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "هذه الأداة تتطلب Genitiv وتأتي قبل اسم مباشرةً."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "Cümleyi uygun araçla tamamlayın: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (obgleich, wenngleich veya obschon kullanın)",
+            "answer": "Wenngleich",
+            "hint": "أي من الأدوات الثلاث المترادفة تصلح هنا — تذكّر أنها تُدخل Nebensatz."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "'so … auch' yapısını kullanarak doğru bir cümle oluşturmak için kelimeleri sıralayın:",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "البنية: so + صفة + الفاعل + auch + فعل، ثم الجملة الرئيسية."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "Her tavizkar aracı doğru açıklaması ile eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "Cümleyi dinleyin ve tamamlayın: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "هذه الأداة تُشير إلى ما ذُكر سابقًا في الجملة السابقة.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "Aşağıdaki cümlelerden hangisi dilbilgisi açısından doğrudur?",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "Aşağıdaki cümleyi doğru vurguyla açık sesle söyleyin: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "ركّز على النبر في كلمة 'schwierig' وعلى الفاصل المنطقي بعد الفاصلة."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "Cümleyi Genitiv'in doğru biçimiyle tamamlayın: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand اسم مذكر (der Widerstand) — في Genitiv يصبح: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "Resmi Edatlar Genitiv ile — Gehobene Präpositionen mit Genitiv",
+      "grammar": {
+        "title": "Resmi Yüksek Edatlar Genitiv ile — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "Almanca resmi ve akademik dilinde, her zaman **Genitiv** (ilişki hali) gerektiren bir grup **yüksek edatlar** kullanılır. Bu edatlar haber, hukuk, idari ve akademik metinlerde sık görülür ve **C1** seviyesini geçmek için gereklidir.\n\n**Genitiv nedir?**\nMülkiyet veya aidiyeti ifade eden dilbilgisi halidir ve belirleyicilerin (Artikel) sonları aşağıdaki gibi değişir:\n- **der/ein** → **des/eines** (erkek ve nötr) + **-(e)s** isimde\n- **die/eine** → **der/einer** (dişil ve çoğul)\n\n**Sekiz edat ve ana anlamları:**\n\n**1. angesichts** — göz önüne alındığında / ışığında (bir gerçekle karşı karşıya)\n**2. mangels** — eksikliği nedeniyle / olmaması nedeniyle (gerekli bir şeyin yokluğu)\n**3. hinsichtlich** — ile ilgili olarak / açısından\n**4. bezüglich** — hakkında / konusunda (resmi yazışmalarda sık kullanılır)\n**5. gemäß** — uyarınca / göre (isimden sonra da gelebilir)\n**6. laut** — uyarınca / göre (alıntılarda ve kaynaklarda, genellikle Artikel olmadan)\n**7. zufolge** — uyarınca / göre (her zaman **isimden sonra** + Dativ)\n**8. seitens** — tarafından / yanından (eylem yapan tarafı gösterir)\n\n⚠️ **Önemli not:** **laut** ve **zufolge** genellikle Artikel olmadan veya Dativ ile kullanılır, ancak bu resmi grup içinde sınıflandırılırlar. **zufolge** her zaman isimden sonra gelir (postpositional).",
+        "tables": [
+          {
+            "title": "Resmi Edatlar + Genitiv — Genel Bakış",
+            "headers": [
+              "Edat",
+              "Türkçe Anlamı",
+              "Konum",
+              "Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "göz önüne alındığında / ışığında",
+                  "isimden önce",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "eksikliği nedeniyle / olmaması nedeniyle",
+                  "isimden önce",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "ile ilgili olarak / açısından",
+                  "isimden önce",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "hakkında / konusunda",
+                  "isimden önce",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "uyarınca / göre",
+                  "isimden önce veya sonra",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "göre / uyarınca",
+                  "isimden önce (genellikle Artikel olmadan)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "göre / uyarınca",
+                  "isimden sonra + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "tarafından / yanından",
+                  "isimden önce",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß isimden önce (+ Genitiv/Dativ) veya sonra (postpositional) gelebilir. zufolge her zaman isimden sonra Dativ ile gelir.",
+            "theme": "default"
+          },
+          {
+            "title": "Genitiv Çekimi Bu Edatlarla",
+            "headers": [
+              "Cinsiyet",
+              "Belirli Artikel",
+              "Belirsiz Artikel",
+              "Tam Örnek"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Erkek (Maskulinum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "Dişil (Femininum)",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "Nötr (Neutrum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "Çoğul (Plural)",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "Erkek ve nötr isimler Genitiv'de -(e)s eki alırlar. Dişil ve çoğul isimler değişmez.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Altı resmi edat (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) isimden önce gelir ve Genitiv gerektirir.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "Artan baskı göz önüne alındığında, hükümet harekete geçmeye karar verdi."
+          },
+          {
+            "rule": "zufolge her zaman isimden sonra gelir (postpositional) ve Dativ ile kullanılır, Genitiv değil.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "Rapora göre, işsizlik oranı düşmüştür."
+          },
+          {
+            "rule": "laut genellikle haber metinlerinde Artikel olmadan kullanılır, ancak Artikel ile Dativ veya Genitiv alır.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "Uzmanların söylemesine göre, bir çözüm görünüyor. / Uzman raporuna göre, o masumdur."
+          },
+          {
+            "rule": "gemäß isimden önce (Dativ veya Genitiv ile) veya sonra (postpositional Dativ ile) gelebilir ve her ikisi de doğrudur.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "Yönetmeliklere göre, sigara içmek yasaktır."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — Ekonomik durum göz önüne alındığında, daha tasarruflu olmalıyız.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — Yeterli delil eksikliği nedeniyle, sanık beraat etti.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — Yeni sözleşme ile ilgili olarak, hala açık sorular vardır.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — Başvurunuz hakkında, kısa süre içinde sizinle iletişime geçeceğiz.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — Yasal yönetmeliklere göre, izin gereklidir.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — En son rapora göre, durum belirgin şekilde iyileşmiştir.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — Uzman raporuna göre, kaza insan hatasından kaynaklanmıştır.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — Makamlar tarafından resmi bir açıklama yapılmamıştır."
+        ],
+        "tip": "💡 Farkı kolayca hatırlamak için: **bezüglich** ve **hinsichtlich** resmi yazışmalarda ve idari raporlarda kullanılır, **angesichts** ise zor bir durumla veya zorlukla karşı karşıya olmayı ifade eder. Ve **zufolge** isimden sonra gelen tek edattır — unutmayın: \"zufolge = her zaman isimden sonra gelir!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "Delil / Kanıt",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "Delil eksikliği nedeniyle, o beraat etti.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "Yönetmelik / Kural",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "Yönetmeliklere göre, kayıt zorunludur.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "Uzman Raporu / Bilirkişi Raporu",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "Uzman raporuna göre, sebep teknik bir hatadır.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "Açıklama / Resmi Pozisyon",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "Hükümet tarafından bir açıklama yayınlandı.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "Başvuru / Dilekçe",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "Başvurunuz hakkında, ek belgeler gereklidir.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "Kriz",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "Kriz göz önüne alındığında, acil önlemler alındı.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "Rapor",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "Rapora göre, rakamlar yükselmiştir.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "İzin / Lisans",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "İzin eksikliği nedeniyle, proje durdurulması gerekti.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "Sözleşme / Anlaşma",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "Sözleşme ile ilgili olarak, hala ayrıntılar açıklığa kavuşturulmalıdır.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "Makam / İdari Kurum",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "Makamlar tarafından itiraz yoktur.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "Beraat Etti / Suçsuz Bulundu",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "Sanık delil eksikliği nedeniyle beraat etti.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "Gerekli / Zorunlu",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "Kurala göre, imza gereklidir.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "Sanık",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "Delil eksikliği nedeniyle, sanık serbest bırakıldı.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "Destek / Yardım",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "Mali destek eksikliği nedeniyle, proje başarısız oldu.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "Uyarınca / Göre",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "Kanuna göre, bu yasaktır.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "Doğru edatı seçin: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "Bu edat zor bir durumla veya zorlukla karşı karşıya olmayı ifade eder."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "Cümleyi doğru şekilde tamamlayın: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels Genitiv gerektirir ve Beweis ismi erkektir."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "Doğru bir cümle oluşturmak için kelimeleri sıralayın:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "zufolge her zaman isimden sonra gelir."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "Her edatı doğru anlamıyla eşleştirin:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "Cümleyi dinleyin ve boşluğu tamamlayın: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "Bu edat 'uyarınca' anlamına gelir ve isimden önce gelir.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "zufolge hangi cümlede doğru kullanılmıştır?",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge her zaman isimden sonra gelen bir edattır (postpositional)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "Aşağıdaki cümleyi yüksek sesle doğru telaffuzla söyleyin: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "Cümleyi tamamlayın: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens Genitiv gerektirir ve Regierung ismi dişildir, bu nedenle der Regierung olur."
+          }
+        ]
+      }
     }
   }
 }

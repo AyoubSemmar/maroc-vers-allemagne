@@ -9708,6 +9708,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "Концессивные структуры в возвышенном языке — Konzessive Strukturen der gehobenen Sprache",
+      "grammar": {
+        "title": "Концессивные структуры в возвышенном языке — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**Концессивные структуры (Konzessive Strukturen)** — это языковые средства, используемые для выражения идеи о том, что какой-то результат происходит **несмотря на** наличие препятствия или противоположного обстоятельства. Это одна из наиболее ярких черт **возвышенного и академического языка** в немецком.\n\n---\n\n**1. ungeachtet + Genitiv**\n Означает \"независимо от / несмотря на\", всегда требует **Genitiv** (родительный падеж). Используется в официальном и академическом письме.\n Пример: *Ungeachtet der Risiken setzte er das Projekt fort.*\n\n**2. wenngleich / obgleich / obschon**\n Эти три инструмента почти синонимичны и означают \"хотя / несмотря на то, что\". Вводят **придаточное предложение (Nebensatz)**, в котором глагол переносится в конец. **obschon** и **obgleich** считаются более формальными, чем **wenngleich**.\n Пример: *Wenngleich er müde war, arbeitete er weiter.*\n\n**3. so … auch**\n Означает \"как бы ни / независимо от того, насколько\". Стоит в начале придаточного предложения и выражает отказ от какого-либо признака или обстоятельства, независимо от его степени.\n Структура: **so + прилагательное/наречие + подлежащее + auch + глагол**\n Пример: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\n\n**4. dessen ungeachtet**\n Означает \"несмотря на это / независимо от этого\". Используется в начале главного предложения для ссылки на ранее упомянутое и вызывает **Inversion** (перестановка глагола и подлежащего).\n Пример: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\n\n---\n\n**Важное замечание:** Когда главное предложение начинается с **dessen ungeachtet** или любого наречия, вспомогательный или основной глагол идёт сразу после него, затем подлежащее — это называется **Inversion**.",
+        "tables": [
+          {
+            "title": "Сравнение возвышенных концессивных инструментов",
+            "headers": [
+              "Инструмент",
+              "Значение на русском",
+              "Тип структуры",
+              "Уровень формальности"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "независимо от",
+                  "предложная фраза (Genitiv)",
+                  "очень формальный ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "хотя / несмотря на то, что",
+                  "Nebensatz (глагол в конце)",
+                  "формальный ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "хотя / несмотря на то, что",
+                  "Nebensatz (глагол в конце)",
+                  "очень формальный ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "хотя / несмотря на то, что",
+                  "Nebensatz (глагол в конце)",
+                  "очень формальный ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "как бы ни / независимо от того, насколько",
+                  "Nebensatz (Inversion)",
+                  "очень формальный ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "несмотря на это",
+                  "Hauptsatz (Inversion)",
+                  "очень формальный ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = уровень формальности: чем больше звёзд, тем чаще инструмент используется в академических и официальных текстах.",
+            "theme": "default"
+          },
+          {
+            "title": "Структура ungeachtet с падежом Genitiv",
+            "headers": [
+              "Артикль",
+              "Nominativ",
+              "Genitiv (с ungeachtet)",
+              "Пример"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (мужской род)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (женский род)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (средний род)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (множественное число)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "Помните: ungeachtet всегда требует Genitiv — мужской и средний род принимают (des + s/es), женский род и множественное число принимают (der).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet всегда требует Genitiv. Мужской и средний род: des + существительное + (e)s. Женский род и множественное число: der + существительное.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "Несмотря на плохую погоду, мероприятие состоялось."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon вводят придаточное предложение, в котором глагол переносится в конец, как в obwohl.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "Хотя переговоры потерпели неудачу, надежда не была потеряна."
+          },
+          {
+            "rule": "so … auch стоит в начале придаточного предложения: so + прилагательное/наречие + подлежащее + auch + глагол. Главное предложение следует сразу после.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "Как бы велики ни были вызовы, мы остаёмся стойкими."
+          },
+          {
+            "rule": "dessen ungeachtet начинает главное предложение и вызывает Inversion: глагол идёт перед подлежащим сразу после.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "Затраты были огромными. Несмотря на это, парламент одобрил закон."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — Несмотря на серьёзные опасения экспертов, закон был принят.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — Хотя экономическая ситуация напряжённая, население проявляет замечательную устойчивость.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — Хотя он имел многолетний опыт, его заявление было отклонено.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — Несмотря на то, что результаты исследования были однозначными, часть учёных в них сомневалась.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — Как бы сложным ни казался предмет, его можно понять с терпением.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — Были серьёзные возражения. Несмотря на это, правительство придерживалось своего курса.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — Независимо от своих личных интересов, он выбрал благо сообщества.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — Как бы решительно ни отвергали критики, произведение нашло широкий отклик у публики."
+        ],
+        "tip": "💡 Чтобы легко различать эти инструменты: **ungeachtet** и **dessen ungeachtet** работают как \"мост\" между двумя отдельными предложениями и указывают на препятствие напрямую, тогда как **wenngleich / obgleich / obschon** работают точно как **obwohl**, но более формальны — используйте их в академических статьях и официальных отчётах, чтобы продемонстрировать ваш высокий уровень немецкого на экзамене Goethe C1."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "опасения / сомнения",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "Несмотря на опасения экспертов, проект был одобрен.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "сопротивление / противодействие",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "Хотя сопротивление было велико, реформа была проведена.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "возражение",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "Несмотря на это, он отклонил все возражения.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "устойчивость / стойкость",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "Хотя кризис продолжался, общество доказало свою устойчивость.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "вызов / испытание",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "Как бы велики ни были вызовы, мы не сдаёмся.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "принимать / одобрять (закон)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "Парламент принял закон независимо от критики.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "стойкий / твёрдый",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "Хотя ситуация казалась безнадёжной, они остались стойкими.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "значительный / существенный / заметный",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "Несмотря на значительные затраты, проект был реализован.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "отклик / одобрение",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "Произведение нашло широкий отклик, хотя критики его отвергли.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "неудача / провал",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "Хотя неудача была очевидна, никто в ней не признался.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "держаться / придерживаться",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "Несмотря на это, партия придерживалась своей позиции.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "однозначный / ясный / определённый",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "Хотя доказательства были однозначными, сомнения продолжались.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "общественное благо / общее благо",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "Независимо от личных интересов, она действовала в интересах общего блага.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "напряжённый / натянутый",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "Хотя ситуация была напряжённой, царила внешняя спокойствие.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "компромисс / соглашение",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "Как бы сложным ни казался компромисс, он часто лучшее решение.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "Выберите правильный инструмент для завершения предложения: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "هذه الأداة تتطلب Genitiv وتأتي قبل اسم مباشرةً."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "Дополните предложение подходящим инструментом: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (используйте obgleich, wenngleich или obschon)",
+            "answer": "Wenngleich",
+            "hint": "Любой из трёх синонимичных инструментов подходит здесь — помните, что они вводят Nebensatz."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "Расставьте слова в правильном порядке, чтобы составить предложение, используя структуру 'so … auch':",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "Структура: so + прилагательное + подлежащее + auch + глагол, затем главное предложение."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "Сопоставьте каждый концессивный инструмент с его правильным описанием:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "Прослушайте предложение и дополните его: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "Этот инструмент ссылается на ранее упомянутое в предыдущем предложении.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "Какое из следующих предложений грамматически правильно?",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "Произнесите следующее предложение чётко с правильным ударением: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "ركّز على النبر في كلمة 'schwierig' وعلى الفاصل المنطقي بعد الفاصلة."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "Дополните предложение правильной формой Genitiv: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand — существительное мужского рода (der Widerstand) — в Genitiv становится: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "Официальные предлоги с Genitiv — Gehobene Präpositionen mit Genitiv",
+      "grammar": {
+        "title": "Официальные возвышенные предлоги с Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "В официальном и академическом немецком языке используется группа **возвышенных предлогов**, которые всегда требуют **Genitiv** (родительный падеж). Эти предлоги часто встречаются в журналистских, юридических, административных и академических текстах и необходимы для достижения уровня **C1**.\n\n**Что такое Genitiv?**\nЭто падеж, который выражает принадлежность или отношение, и при этом изменяются окончания артиклей (Artikel) следующим образом:\n- **der/ein** → **des/eines** (мужской и средний род) + **-(e)s** на существительном\n- **die/eine** → **der/einer** (женский род и множественное число)\n\n**Восемь предлогов и их основные значения:**\n\n**1. angesichts** — в свете / учитывая (в условиях какого-либо факта)\n**2. mangels** — из-за отсутствия / за неимением (отсутствие чего-либо необходимого)\n**3. hinsichtlich** — в отношении / с точки зрения\n**4. bezüglich** — относительно / по поводу (часто используется в официальной переписке)\n**5. gemäß** — согласно / в соответствии с (может также стоять после существительного)\n**6. laut** — согласно / по (в цитатах и источниках, часто без артикля)\n**7. zufolge** — согласно / по (всегда стоит **после** существительного + Dativ)\n**8. seitens** — со стороны / от (указывает на действующую сторону)\n\n⚠️ **Важное замечание:** **laut** и **zufolge** обычно используются без артикля или с Dativ, но классифицируются в этой официальной группе. **zufolge** всегда стоит после существительного (постпозиционный).",
+        "tables": [
+          {
+            "title": "Официальные предлоги + Genitiv — обзор",
+            "headers": [
+              "Предлог",
+              "Значение на русском",
+              "Позиция",
+              "Пример"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "в свете / учитывая",
+                  "перед существительным",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "из-за отсутствия / за неимением",
+                  "перед существительным",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "в отношении / с точки зрения",
+                  "перед существительным",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "относительно / по поводу",
+                  "перед существительным",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "согласно / в соответствии с",
+                  "перед или после существительного",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "согласно / по",
+                  "перед существительным (часто без артикля)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "согласно / по",
+                  "после существительного + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "со стороны / от",
+                  "перед существительным",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß может стоять перед существительным (+ Genitiv/Dativ) или после него (постпозиционный). zufolge всегда стоит после существительного с Dativ.",
+            "theme": "default"
+          },
+          {
+            "title": "Склонение Genitiv с этими предлогами",
+            "headers": [
+              "Род",
+              "Определённый артикль",
+              "Неопределённый артикль",
+              "Полный пример"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "мужской (Maskulinum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "женский (Femininum)",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "средний (Neutrum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "множественное число (Plural)",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "Существительные мужского и среднего рода получают окончание -(e)s в Genitiv. Существительные женского рода и множественного числа не изменяются.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Шесть официальных предлогов (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) стоят перед существительным и требуют Genitiv.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "В свете растущего давления правительство решило действовать."
+          },
+          {
+            "rule": "zufolge всегда стоит после существительного (постпозиционный) и используется с Dativ, а не с Genitiv.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "Согласно отчёту, безработица снизилась."
+          },
+          {
+            "rule": "laut обычно используется без артикля в журналистских текстах, но с артиклем принимает Dativ или Genitiv.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "По словам экспертов, решение видится. / Согласно экспертному заключению, он был невиновен."
+          },
+          {
+            "rule": "gemäß может стоять перед существительным (с Dativ или Genitiv) или после него (постпозиционный с Dativ), оба варианта верны.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "Согласно правилам, курение запрещено."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — В свете экономической ситуации мы должны быть более экономными.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — Из-за отсутствия достаточных доказательств подсудимый был оправдан.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — В отношении нового контракта остаются открытые вопросы.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — По поводу вашего заявления мы свяжемся с вами в ближайшее время.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — Согласно законодательным нормам требуется разрешение.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — Согласно последнему отчёту, ситуация значительно улучшилась.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — Согласно экспертному заключению, авария была вызвана человеческой ошибкой.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — Со стороны органов власти официального заявления не было сделано."
+        ],
+        "tip": "💡 Чтобы легче запомнить различия: **bezüglich** и **hinsichtlich** используются в официальной переписке и административных отчётах, а **angesichts** выражает столкновение с трудной реальностью или вызовом. **zufolge** — единственный, который всегда стоит **после** существительного — запомните: \"zufolge = всегда следует за существительным!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "доказательство / улика",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "Из-за отсутствия доказательства он был оправдан.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "правило / положение",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "Согласно правилам, регистрация обязательна.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "экспертное заключение / отчёт эксперта",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "Согласно экспертному заключению, причиной была техническая ошибка.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "заявление / официальная позиция",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "Со стороны правительства было опубликовано заявление.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "заявление / ходатайство",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "По поводу вашего заявления нам нужны дополнительные документы.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "кризис",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "В свете кризиса были приняты чрезвычайные меры.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "отчёт / доклад",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "Согласно отчёту, цифры выросли.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "разрешение / лицензия",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "Из-за отсутствия разрешения проект пришлось остановить.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "контракт / соглашение",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "В отношении контракта остаются детали для уточнения.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "орган власти / администрация",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "Со стороны органов власти нет возражений.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "оправданный / освобождённый от обвинения",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "Подсудимый был оправдан из-за отсутствия доказательств.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "требуемый / необходимый",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "Согласно правилу, подпись требуется.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "подсудимый / обвиняемый",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "Из-за отсутствия доказательств подсудимый был освобожден.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "поддержка / помощь",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "Из-за отсутствия финансовой поддержки проект провалился.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "согласно / в соответствии с",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "Согласно закону, это запрещено.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "Выберите правильный предлог: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "Этот предлог выражает столкновение с трудной реальностью или вызовом."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "Дополните предложение правильной формой: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels требует Genitiv, а существительное Beweis мужского рода."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "Расставьте слова в правильном порядке, чтобы составить предложение:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "Помните: zufolge всегда стоит после существительного."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "Сопоставьте каждый предлог с его правильным значением:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "Прослушайте предложение и дополните пропуск: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "Этот предлог означает 'согласно' и стоит перед существительным.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "Какое предложение использует zufolge правильно?",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge — это предлог, который всегда стоит после существительного (постпозиционный)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "Произнесите следующее предложение вслух с правильным произношением: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "Дополните предложение: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens требует Genitiv, а существительное Regierung женского рода, поэтому становится der Regierung."
+          }
+        ]
+      }
     }
   }
 }

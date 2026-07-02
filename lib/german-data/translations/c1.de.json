@@ -9762,6 +9762,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "Konzessive Strukturen der gehobenen Sprache — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+      "grammar": {
+        "title": "Konzessive Strukturen der gehobenen Sprache — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**Konzessive Strukturen** sind sprachliche Werkzeuge, die verwendet werden, um auszudrücken, dass ein Ergebnis eintritt, **obwohl** es ein Hindernis oder einen widersprechenden Umstand gibt. Sie sind eines der hervorstechendsten Merkmale der **gehobenen und akademischen Sprache** im Deutschen.\n\n---\n\n**1. ungeachtet + Genitiv**\n Bedeutet \"unabhängig von / trotz\", erfordert immer **Genitiv** (Genitivfall). Wird in formaler und akademischer Schrift verwendet.\n Beispiel: *Ungeachtet der Risiken setzte er das Projekt fort.*\n\n**2. wenngleich / obgleich / obschon**\n Diese drei Werkzeuge sind nahezu synonym und bedeuten \"obwohl / wenn auch / obgleich\". Sie leiten einen **Nebensatz (Nebensatz)** ein, in dem das Verb ans Ende gestellt wird. **obschon** und **obgleich** gelten als formaler als **wenngleich**.\n Beispiel: *Wenngleich er müde war, arbeitete er weiter.*\n\n**3. so … auch**\n Bedeutet \"egal wie / so sehr auch\". Kommt am Anfang des Nebensatzes vor und drückt aus, dass eine Eigenschaft oder ein Umstand zugestanden wird, egal wie sehr er zutrifft.\n Struktur: **so + Adjektiv/Adverb + Subjekt + auch + Verb**\n Beispiel: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\n\n**4. dessen ungeachtet**\n Bedeutet \"trotzdem / ungeachtet dessen\". Wird am Anfang des Hauptsatzes verwendet, um auf das zuvor Gesagte hinzuweisen, und verursacht **Inversion** (Voranstellung des Verbs vor dem Subjekt).\n Beispiel: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\n\n---\n\n**Wichtiger Hinweis:** Wenn der Hauptsatz mit **dessen ungeachtet** oder einem anderen Adverb beginnt, folgt das Hilfsverb oder Hauptverb unmittelbar danach, dann das Subjekt — dies wird **Inversion** genannt.",
+        "tables": [
+          {
+            "title": "Vergleich der gehobenen konzessiven Werkzeuge",
+            "headers": [
+              "Werkzeug",
+              "Bedeutung auf Deutsch",
+              "Strukturtyp",
+              "Formalitätsgrad"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "unabhängig von",
+                  "Präpositionalphrase (Genitiv)",
+                  "sehr formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "obwohl / wenn auch",
+                  "Nebensatz (Verb am Ende)",
+                  "formal ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "obwohl / wenn auch",
+                  "Nebensatz (Verb am Ende)",
+                  "sehr formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "obwohl / wenn auch",
+                  "Nebensatz (Verb am Ende)",
+                  "sehr formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "egal wie / so sehr auch",
+                  "Nebensatz (Inversion)",
+                  "sehr formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "trotzdem / ungeachtet dessen",
+                  "Hauptsatz (Inversion)",
+                  "sehr formal ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = Formalitätsgrad: Je mehr Sterne, desto häufiger wird das Werkzeug in akademischen und formalen Texten verwendet.",
+            "theme": "default"
+          },
+          {
+            "title": "Struktur von ungeachtet mit Genitiv",
+            "headers": [
+              "Artikel",
+              "Nominativ",
+              "Genitiv (mit ungeachtet)",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (Maskulinum)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (Femininum)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (Neutrum)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (Plural)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "Merke: ungeachtet erfordert immer Genitiv — Maskulinum und Neutrum nehmen (des + s/es) und Femininum und Plural nehmen (der).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet erfordert immer Genitiv. Maskulinum und Neutrum: des + Nomen + (e)s. Femininum und Plural: der + Nomen.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "Trotz des schlechten Wetters fand die Veranstaltung statt."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon leiten einen Nebensatz ein, in dem das Verb ganz ans Ende gestellt wird, genau wie bei obwohl.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "Obwohl die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf."
+          },
+          {
+            "rule": "so … auch kommt am Anfang des Nebensatzes vor: so + Adjektiv/Adverb + Subjekt + auch + Verb. Der Hauptsatz folgt unmittelbar danach.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "Egal wie groß die Herausforderungen sind, wir bleiben standhaft."
+          },
+          {
+            "rule": "dessen ungeachtet leitet den Hauptsatz ein und verursacht Inversion: Das Verb kommt unmittelbar vor dem Subjekt.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "Die Kosten waren enorm. Trotzdem billigte das Parlament das Gesetz."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — Trotz der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — Obwohl die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Widerstandskraft.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — Obwohl er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — Obwohl die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — Egal wie komplex die Materie erscheint, lässt sie sich mit Geduld verstehen.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — Es lagen schwerwiegende Einwände vor. Trotzdem hielt die Regierung an ihrem Kurs fest.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — Unabhängig von seinen persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — Egal wie entschieden die Kritiker ablehnten, fand das Werk beim Publikum großen Anklang."
+        ],
+        "tip": "💡 Um diese Werkzeuge leicht zu unterscheiden: **ungeachtet** und **dessen ungeachtet** fungieren als \"Brücke\" zwischen zwei separaten Sätzen und verweisen direkt auf das Hindernis, während **wenngleich / obgleich / obschon** genau wie **obwohl** funktionieren, aber formaler sind — verwende sie in akademischen Aufsätzen und formalen Berichten, um dein gehobenes Sprachniveau in der Goethe-C1-Prüfung zu zeigen."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "Bedenken / Bedenken",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "Unabhängig von den Bedenken der Experten wurde das Projekt genehmigt.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "Widerstand / Widerstand",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "Obwohl der Widerstand groß war, setzte man die Reform durch.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "Einwand",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "Trotzdem wies er alle Einwände zurück.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "Widerstandskraft / Elastizität",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "Obwohl die Krise anhielt, bewies die Gesellschaft ihre Widerstandskraft.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "Herausforderung",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "Egal wie groß die Herausforderungen sind, geben wir nicht auf.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "verabschieden / annehmen (ein Gesetz)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "Das Parlament verabschiedete das Gesetz unabhängig von der Kritik.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "standhaft / beständig",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "Obwohl die Lage hoffnungslos schien, blieben sie standhaft.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "erheblich / beträchtlich / bedeutsam",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "Unabhängig von den beträchtlichen Kosten wurde das Vorhaben umgesetzt.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "Anklang / Resonanz",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "Das Werk fand großen Anklang, obwohl die Kritiker es ablehnten.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "Scheitern / Fehlschlag",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "Obwohl das Scheitern offensichtlich war, gab niemand es zu.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "festhalten an / beharren auf",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "Trotzdem hielt die Partei an ihrer Position fest.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "eindeutig / klar / unmissverständlich",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "Obwohl die Beweise klar waren, zweifelte man weiterhin.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "Gemeinwohl / Allgemeinwohl",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "Unabhängig von persönlichen Interessen handelte sie zum Wohl des Allgemeinwohls.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "angespannt / angespannt / gespannt",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "Obwohl die Lage angespannt war, herrschte äußere Ruhe.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "Kompromiss / Einigung",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "Egal wie schwierig ein Kompromiss erscheint, er ist oft die beste Lösung.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "Wähle das richtige Werkzeug, um den Satz zu vervollständigen: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "Dieses Werkzeug erfordert Genitiv und kommt direkt vor einem Nomen."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "Vervollständige den Satz mit dem passenden Werkzeug: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (Verwende obgleich oder wenngleich oder obschon)",
+            "answer": "Wenngleich",
+            "hint": "Eines der drei synonymen Werkzeuge passt hier — denke daran, dass sie einen Nebensatz einleiten."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "Ordne die Wörter, um einen korrekten Satz mit der Struktur 'so … auch' zu bilden:",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "Struktur: so + Adjektiv + Subjekt + auch + Verb, dann der Hauptsatz."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "Ordne jedes konzessive Werkzeug der richtigen Beschreibung zu:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "Höre den Satz und vervollständige ihn: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "Dieses Werkzeug verweist auf das zuvor Gesagte im vorherigen Satz.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "Welcher der folgenden Sätze ist grammatikalisch korrekt?",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "Sprich den folgenden Satz deutlich mit korrekter Betonung: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "Konzentriere dich auf die Betonung des Wortes 'schwierig' und auf die logische Pause nach dem Komma."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "Vervollständige den Satz mit der korrekten Genitiv-Form: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand ist ein maskulines Nomen (der Widerstand) — im Genitiv wird es: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "Gehobene Präpositionen mit Genitiv — Gehobene Präpositionen mit Genitiv",
+      "grammar": {
+        "title": "Gehobene Präpositionen mit Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "In der formalen und akademischen deutschen Sprache wird eine Gruppe von **gehobenen Präpositionen** verwendet, die immer **Genitiv** (Genitivfall) erfordern. Diese Präpositionen erscheinen häufig in journalistischen, rechtlichen, administrativen und akademischen Texten und sind notwendig, um das Niveau **C1** zu bestehen.\n\n**Was ist Genitiv?**\nEs ist der Kasus, der Besitz oder Zugehörigkeit ausdrückt, und die Endungen der Artikel (Artikel) ändern sich wie folgt:\n- **der/ein** → **des/eines** (Maskulinum und Neutrum) + **-(e)s** auf dem Substantiv\n- **die/eine** → **der/einer** (Femininum und Plural)\n\n**Die acht Präpositionen und ihre wichtigsten Bedeutungen:**\n\n**1. angesichts** — angesichts / im Hinblick auf (angesichts einer Realität)\n**2. mangels** — mangels / aufgrund fehlender (Abwesenheit von etwas Notwendigem)\n**3. hinsichtlich** — bezüglich / in Bezug auf\n**4. bezüglich** — bezüglich / hinsichtlich (häufig in formaler Korrespondenz verwendet)\n**5. gemäß** — gemäß / entsprechend (kann auch nach dem Substantiv stehen)\n**6. laut** — gemäß / laut (in Zitaten und Quellen, oft ohne Artikel)\n**7. zufolge** — gemäß / laut (steht immer **nach** dem Substantiv + Dativ)\n**8. seitens** — von Seiten / von (bezieht sich auf die handelnde Partei)\n\n⚠️ **Wichtiger Hinweis:** **laut** und **zufolge** werden meist ohne Artikel oder mit Dativ verwendet, werden aber in dieser formalen Gruppe klassifiziert. **zufolge** steht immer nach dem Substantiv (postpositional).",
+        "tables": [
+          {
+            "title": "Gehobene Präpositionen + Genitiv — Übersicht",
+            "headers": [
+              "Präposition",
+              "Bedeutung auf Deutsch",
+              "Position",
+              "Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "angesichts / im Hinblick auf",
+                  "vor dem Substantiv",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "mangels / aufgrund fehlender",
+                  "vor dem Substantiv",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "bezüglich / in Bezug auf",
+                  "vor dem Substantiv",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "bezüglich / hinsichtlich",
+                  "vor dem Substantiv",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "gemäß / entsprechend",
+                  "vor oder nach dem Substantiv",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "laut / gemäß",
+                  "vor dem Substantiv (oft ohne Artikel)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "laut / gemäß",
+                  "nach dem Substantiv + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "von Seiten / von",
+                  "vor dem Substantiv",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß kann vor dem Substantiv (+ Genitiv/Dativ) oder danach (postpositional) stehen. zufolge steht immer nach dem Substantiv mit Dativ.",
+            "theme": "default"
+          },
+          {
+            "title": "Genitiv-Deklination mit diesen Präpositionen",
+            "headers": [
+              "Genus",
+              "Bestimmter Artikel",
+              "Unbestimmter Artikel",
+              "Vollständiges Beispiel"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Maskulinum",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "Femininum",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutrum",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "Das maskuline und neutrale Substantiv erhalten die Endung -(e)s im Genitiv. Das feminine Substantiv und der Plural ändern sich nicht.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Die sechs gehobenen Präpositionen (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) stehen vor dem Substantiv und erfordern Genitiv.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln."
+          },
+          {
+            "rule": "zufolge steht immer nach dem Substantiv (postpositional) und wird mit Dativ verwendet, nicht mit Genitiv.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken."
+          },
+          {
+            "rule": "laut wird in journalistischen Texten meist ohne Artikel verwendet, aber mit Artikel nimmt es Dativ oder Genitiv an.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig."
+          },
+          {
+            "rule": "gemäß kann vor dem Substantiv (mit Dativ oder Genitiv) oder danach (postpositional mit Dativ) stehen, beides ist korrekt.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — Mangels ausreichender Beweise wurde der Angeklagte freigesprochen.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — Hinsichtlich des neuen Vertrages gibt es noch offene Fragen.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — Laut dem neuesten Bericht hat sich die Lage deutlich verbessert.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben."
+        ],
+        "tip": "💡 Um den Unterschied leicht zu merken: **bezüglich** und **hinsichtlich** werden in formaler Korrespondenz und Verwaltungsberichten verwendet, während **angesichts** eine schwierige Realität oder Herausforderung ausdrückt. Und **zufolge** ist die einzige Präposition, die immer **nach** dem Substantiv steht — merken Sie sich: \"zufolge = folgt dem Substantiv immer!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "Beweis / Nachweis",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "Mangels eines Beweises wurde er freigesprochen.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "Vorschrift / Regelung",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "Gutachten / Sachverständigenbericht",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "Stellungnahme / offizielle Erklärung",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "Antrag / Gesuch",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "Krise",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "Bericht",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "Genehmigung / Erlaubnis",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "Vertrag / Vereinbarung",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "Behörde / Behörde",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "Seitens der Behörden gibt es keine Einwände.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "freigesprochen / entlastet",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "erforderlich / notwendig",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "Angeklagter / Beschuldigter",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "Unterstützung / Hilfe",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "gemäß / entsprechend",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "Gemäß dem Gesetz ist das verboten.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "Wählen Sie die richtige Präposition: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "Diese Präposition drückt aus, dass man einer schwierigen Realität oder Herausforderung gegenübersteht."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "Ergänzen Sie den Satz mit der richtigen Form: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels erfordert Genitiv, und das Substantiv Beweis ist maskulin."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "Ordnen Sie die Wörter, um einen korrekten Satz zu bilden:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "Denken Sie daran: zufolge steht immer nach dem Substantiv."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "Verbinden Sie jede Präposition mit ihrer richtigen Bedeutung:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "Hören Sie den Satz und ergänzen Sie die Lücke: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "Diese Präposition bedeutet 'gemäß' und steht vor dem Substantiv.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "Welcher Satz verwendet zufolge korrekt?",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge ist eine Präposition, die immer nach dem Substantiv steht (postpositional)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "Sprechen Sie den folgenden Satz laut und deutlich: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "Ergänzen Sie den Satz: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens erfordert Genitiv, und das Substantiv Regierung ist feminin, daher wird es zu der Regierung."
+          }
+        ]
+      }
     }
   },
   "title": "Stufe Fünf",

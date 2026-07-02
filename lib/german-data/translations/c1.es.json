@@ -9708,6 +9708,780 @@
           }
         ]
       }
+    },
+    "c1-17": {
+      "id": "c1-17",
+      "title": "Las estructuras concesivas en el idioma elevado — Konzessive Strukturen der gehobenen Sprache",
+      "grammar": {
+        "title": "Las estructuras concesivas en el idioma elevado — ungeachtet, so … auch, wenngleich, obschon, obgleich, dessen ungeachtet",
+        "content": "**Las estructuras concesivas (Konzessive Strukturen)** son herramientas lingüísticas que se utilizan para expresar la idea de que un resultado ocurre **a pesar de** la existencia de un obstáculo o una circunstancia contraria. Son una de las características más destacadas del **idioma elevado y académico** en alemán.\\n\\n---\\n\\n**1. ungeachtet + Genitiv**\\n Significa \"independientemente de / a pesar de\", y siempre requiere **Genitiv** (caso genitivo). Se utiliza en la escritura formal y académica.\\n Ejemplo: *Ungeachtet der Risiken setzte er das Projekt fort.*\\n\\n**2. wenngleich / obgleich / obschon**\\n Estas tres herramientas son casi sinónimas y significan \"aunque / si bien / a pesar de que\". Introducen una **oración subordinada (Nebensatz)** en la que el verbo se pospone al final. **obschon** y **obgleich** se consideran más formales que **wenngleich**.\\n Ejemplo: *Wenngleich er müde war, arbeitete er weiter.*\\n\\n**3. so … auch**\\n Significa \"por mucho que / sin importar cuán\". Aparece al principio de la oración subordinada e indica la concesión de una cualidad o circunstancia sin importar su grado.\\n Estructura: **so + adjetivo/adverbio + sujeto + auch + verbo**\\n Ejemplo: *So schwierig die Aufgabe auch sein mag, wir werden sie lösen.*\\n\\n**4. dessen ungeachtet**\\n Significa \"a pesar de eso / independientemente de eso\". Se utiliza al principio de la oración principal para referirse a lo mencionado anteriormente, y causa **Inversion** (anteposición del verbo al sujeto).\\n Ejemplo: *Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform verabschiedet.*\\n\\n---\\n\\n**Nota importante:** Cuando la oración principal comienza con **dessen ungeachtet** o cualquier adverbio, el verbo auxiliar o el verbo principal viene inmediatamente después, seguido del sujeto — esto se llama **Inversion**.",
+        "tables": [
+          {
+            "title": "Comparación de las herramientas concesivas elevadas",
+            "headers": [
+              "Herramienta",
+              "Significado en español",
+              "Tipo de estructura",
+              "Nivel de formalidad"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "ungeachtet + Gen.",
+                  "independientemente de",
+                  "sintagma preposicional (Genitiv)",
+                  "muy formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "wenngleich",
+                  "aunque / si bien",
+                  "Nebensatz (verbo al final)",
+                  "formal ✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obgleich",
+                  "aunque / si bien",
+                  "Nebensatz (verbo al final)",
+                  "muy formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "obschon",
+                  "aunque / si bien",
+                  "Nebensatz (verbo al final)",
+                  "muy formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "so … auch",
+                  "por mucho que / sin importar cuán",
+                  "Nebensatz (Inversion)",
+                  "muy formal ✦✦✦"
+                ]
+              },
+              {
+                "cells": [
+                  "dessen ungeachtet",
+                  "a pesar de eso",
+                  "Hauptsatz (Inversion)",
+                  "muy formal ✦✦✦"
+                ]
+              }
+            ],
+            "note": "✦ = Nivel de formalidad: cuantas más estrellas, más se utiliza la herramienta en textos académicos y formales.",
+            "theme": "default"
+          },
+          {
+            "title": "Estructura de ungeachtet con el caso Genitiv",
+            "headers": [
+              "Artículo",
+              "Nominativ",
+              "Genitiv (con ungeachtet)",
+              "Ejemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "der (masculino)",
+                  "der Widerstand",
+                  "des Widerstands",
+                  "ungeachtet des Widerstands"
+                ]
+              },
+              {
+                "cells": [
+                  "die (femenino)",
+                  "die Kritik",
+                  "der Kritik",
+                  "ungeachtet der Kritik"
+                ]
+              },
+              {
+                "cells": [
+                  "das (neutro)",
+                  "das Risiko",
+                  "des Risikos",
+                  "ungeachtet des Risikos"
+                ]
+              },
+              {
+                "cells": [
+                  "pl. (plural)",
+                  "die Bedenken",
+                  "der Bedenken",
+                  "ungeachtet der Bedenken"
+                ]
+              }
+            ],
+            "note": "Recuerda: ungeachtet siempre requiere Genitiv — el masculino y neutro toman (des + s/es) y el femenino y plural toman (der).",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "ungeachtet siempre requiere Genitiv. Masculino y neutro: des + nombre + (e)s. Femenino y plural: der + nombre.",
+            "example": "Ungeachtet des schlechten Wetters fand die Veranstaltung statt.",
+            "translation": "A pesar del mal tiempo, el evento se llevó a cabo."
+          },
+          {
+            "rule": "wenngleich / obgleich / obschon introducen una oración subordinada en la que el verbo se pospone al final, exactamente como con obwohl.",
+            "example": "Obschon die Verhandlungen gescheitert waren, gab man die Hoffnung nicht auf.",
+            "translation": "Aunque las negociaciones habían fracasado, no se perdió la esperanza."
+          },
+          {
+            "rule": "so … auch aparece al principio de la oración subordinada: so + adjetivo/adverbio + sujeto + auch + verbo. La oración principal la sigue inmediatamente.",
+            "example": "So groß die Herausforderungen auch sein mögen, wir bleiben standhaft.",
+            "translation": "Por mucho que sean grandes los desafíos, permanecemos firmes."
+          },
+          {
+            "rule": "dessen ungeachtet inicia la oración principal y causa Inversion: el verbo viene antes del sujeto inmediatamente.",
+            "example": "Die Kosten waren enorm. Dessen ungeachtet billigte das Parlament das Gesetz.",
+            "translation": "Los costos eran enormes. A pesar de eso, el parlamento aprobó la ley."
+          }
+        ],
+        "examples": [
+          "Ungeachtet der erheblichen Bedenken der Experten wurde das Gesetz verabschiedet. — A pesar de las preocupaciones sustanciales de los expertos, se aprobó la ley.",
+          "Wenngleich die wirtschaftliche Lage angespannt ist, zeigt die Bevölkerung bemerkenswerte Resilienz. — Aunque la situación económica es tensa, la población muestra una resiliencia notable.",
+          "Obgleich er jahrelange Erfahrung mitbrachte, wurde seine Bewerbung abgelehnt. — Aunque tenía años de experiencia, su solicitud fue rechazada.",
+          "Obschon die Forschungsergebnisse eindeutig waren, zweifelte ein Teil der Wissenschaftler daran. — A pesar de que los resultados de la investigación eran concluyentes, algunos científicos dudaban de ellos.",
+          "So komplex die Materie auch erscheinen mag, lässt sie sich mit Geduld erschließen. — Por mucho que el tema parezca complejo, puede comprenderse con paciencia.",
+          "Es lagen schwerwiegende Einwände vor. Dessen ungeachtet hielt die Regierung an ihrem Kurs fest. — Había objeciones graves. A pesar de eso, el gobierno se mantuvo en su curso.",
+          "Ungeachtet seiner persönlichen Interessen entschied er sich für das Wohl der Gemeinschaft. — Independientemente de sus intereses personales, eligió el bienestar de la comunidad.",
+          "So entschieden die Kritiker auch ablehnten, fand das Werk beim Publikum großen Anklang. — Por mucho que los críticos rechazaran la obra, tuvo una gran acogida entre el público."
+        ],
+        "tip": "💡 Para distinguir estas herramientas fácilmente: **ungeachtet** y **dessen ungeachtet** actúan como un \"puente\" entre dos oraciones separadas e indican el obstáculo de forma directa, mientras que **wenngleich / obgleich / obschon** funcionan exactamente como **obwohl** pero son más formales — úsalas en artículos académicos e informes oficiales para demostrar tu nivel lingüístico elevado en el examen Goethe C1."
+      },
+      "vocabulary": [
+        {
+          "german": "Bedenken",
+          "arabic": "preocupaciones / reservas",
+          "gender": "pl",
+          "plural": "Bedenken",
+          "example": "Ungeachtet der Bedenken der Experten wurde das Projekt genehmigt.",
+          "exampleArabic": "Independientemente de las reservas de los expertos, se aprobó el proyecto.",
+          "type": "noun"
+        },
+        {
+          "german": "Widerstand",
+          "arabic": "resistencia / oposición",
+          "gender": "der",
+          "plural": "Widerstände",
+          "example": "Obgleich der Widerstand groß war, setzte man die Reform durch.",
+          "exampleArabic": "Aunque la oposición era grande, se implementó la reforma.",
+          "type": "noun"
+        },
+        {
+          "german": "Einwand",
+          "arabic": "objeción",
+          "gender": "der",
+          "plural": "Einwände",
+          "example": "Dessen ungeachtet wies er alle Einwände zurück.",
+          "exampleArabic": "A pesar de eso, rechazó todas las objeciones.",
+          "type": "noun"
+        },
+        {
+          "german": "Resilienz",
+          "arabic": "resiliencia / resistencia",
+          "gender": "die",
+          "example": "Wenngleich die Krise anhielt, bewies die Gesellschaft ihre Resilienz.",
+          "exampleArabic": "Aunque la crisis continuó, la sociedad demostró su resiliencia.",
+          "type": "noun"
+        },
+        {
+          "german": "Herausforderung",
+          "arabic": "desafío",
+          "gender": "die",
+          "plural": "Herausforderungen",
+          "example": "So groß die Herausforderungen auch sein mögen, geben wir nicht auf.",
+          "exampleArabic": "Por mucho que sean grandes los desafíos, no nos rendimos.",
+          "type": "noun"
+        },
+        {
+          "german": "verabschieden",
+          "arabic": "aprobar / promulgar (una ley)",
+          "example": "Das Parlament verabschiedete das Gesetz ungeachtet der Kritik.",
+          "exampleArabic": "El parlamento aprobó la ley independientemente de las críticas.",
+          "type": "verb"
+        },
+        {
+          "german": "standhaft",
+          "arabic": "firme / constante",
+          "example": "Obschon die Lage hoffnungslos schien, blieben sie standhaft.",
+          "exampleArabic": "Aunque la situación parecía desesperada, permanecieron firmes.",
+          "type": "adjective"
+        },
+        {
+          "german": "erheblich",
+          "arabic": "sustancial / notable / considerable",
+          "example": "Ungeachtet der erheblichen Kosten wurde das Vorhaben umgesetzt.",
+          "exampleArabic": "A pesar de los costos sustanciales, se implementó el proyecto.",
+          "type": "adjective"
+        },
+        {
+          "german": "Anklang",
+          "arabic": "acogida / aprobación",
+          "gender": "der",
+          "example": "Das Werk fand großen Anklang, wenngleich die Kritiker es ablehnten.",
+          "exampleArabic": "La obra tuvo una gran acogida, aunque los críticos la rechazaron.",
+          "type": "noun"
+        },
+        {
+          "german": "Scheitern",
+          "arabic": "fracaso",
+          "gender": "das",
+          "example": "Obgleich das Scheitern offensichtlich war, gab niemand es zu.",
+          "exampleArabic": "Aunque el fracaso era evidente, nadie lo admitió.",
+          "type": "noun"
+        },
+        {
+          "german": "festhalten",
+          "arabic": "aferrarse a / mantenerse en",
+          "example": "Dessen ungeachtet hielt die Partei an ihrer Position fest.",
+          "exampleArabic": "A pesar de eso, el partido se mantuvo en su posición.",
+          "type": "verb"
+        },
+        {
+          "german": "eindeutig",
+          "arabic": "concluyente / inequívoco",
+          "example": "Obschon die Beweise eindeutig waren, zweifelte man weiterhin.",
+          "exampleArabic": "Aunque las pruebas eran concluyentes, se continuó dudando.",
+          "type": "adjective"
+        },
+        {
+          "german": "Gemeinwohl",
+          "arabic": "bien común",
+          "gender": "das",
+          "example": "Ungeachtet persönlicher Interessen handelte sie zum Wohl des Gemeinwohls.",
+          "exampleArabic": "Independientemente de los intereses personales, actuó por el bien común.",
+          "type": "noun"
+        },
+        {
+          "german": "angespannt",
+          "arabic": "tenso / tirante",
+          "example": "Wenngleich die Lage angespannt war, herrschte äußere Ruhe.",
+          "exampleArabic": "Aunque la situación era tensa, reinaba una calma aparente.",
+          "type": "adjective"
+        },
+        {
+          "german": "Kompromiss",
+          "arabic": "compromiso / acuerdo",
+          "gender": "der",
+          "plural": "Kompromisse",
+          "example": "So schwierig ein Kompromiss auch erscheint, er ist oft die beste Lösung.",
+          "exampleArabic": "Por mucho que un compromiso parezca difícil, a menudo es la mejor solución.",
+          "type": "noun"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q1",
+            "question": "Elige la herramienta correcta para completar la oración: '_______ der massiven Kritik hielt die Regierung an ihrem Plan fest.'",
+            "answer": "Ungeachtet",
+            "options": [
+              "Obschon",
+              "Ungeachtet",
+              "Wenngleich",
+              "So … auch"
+            ],
+            "hint": "هذه الأداة تتطلب Genitiv وتأتي قبل اسم مباشرةً."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q2",
+            "question": "Completa la oración con la herramienta adecuada: '_______ die Verhandlungen langwierig waren, führten sie schließlich zu einem Ergebnis.' (usa obgleich, wenngleich u obschon)",
+            "answer": "Wenngleich",
+            "hint": "أي من الأدوات الثلاث المترادفة تصلح هنا — تذكّر أنها تُدخل Nebensatz."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-17-q3",
+            "question": "Ordena las palabras para formar una oración correcta usando la estructura 'so … auch':",
+            "answer": "So komplex die Lage auch sein mag, wir finden einen Ausweg.",
+            "words": [
+              "auch",
+              "sein",
+              "mag",
+              "So",
+              "komplex",
+              "die",
+              "Lage",
+              "wir",
+              "finden",
+              "einen",
+              "Ausweg",
+              ","
+            ],
+            "hint": "البنية: so + صفة + الفاعل + auch + فعل، ثم الجملة الرئيسية."
+          },
+          {
+            "type": "matching",
+            "id": "c1-17-q4",
+            "question": "Empareja cada herramienta concesiva con su descripción correcta:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "ungeachtet",
+                "right": "تتطلب Genitiv وتأتي قبل اسم مباشرةً"
+              },
+              {
+                "left": "dessen ungeachtet",
+                "right": "تبدأ الجملة الرئيسية وتُسبّب Inversion"
+              },
+              {
+                "left": "obschon / obgleich",
+                "right": "تُدخل Nebensatz والفعل يأتي في النهاية"
+              },
+              {
+                "left": "so … auch",
+                "right": "تُفيد التنازل عن صفة مهما بلغت درجتها"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q5",
+            "question": "Escucha la oración y complétala: 'Es gab erhebliche Widerstände. _______ ungeachtet wurde die Reform dennoch verabschiedet.'",
+            "answer": "Dessen",
+            "hint": "هذه الأداة تُشير إلى ما ذُكر سابقًا في الجملة السابقة.",
+            "audioPrompt": "Es gab erhebliche Widerstände. Dessen ungeachtet wurde die Reform dennoch verabschiedet."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-17-q6",
+            "question": "¿Cuál de las siguientes oraciones es gramaticalmente correcta?",
+            "answer": "Ungeachtet der Kritik fuhr er fort.",
+            "options": [
+              "Ungeachtet die Kritik fuhr er fort.",
+              "Ungeachtet der Kritik fuhr er fort.",
+              "Ungeachtet von der Kritik fuhr er fort.",
+              "Ungeachtet die Kritik er fuhr fort."
+            ],
+            "hint": "ungeachtet تتطلب Genitiv — المؤنث يأخذ (der) في حالة Genitiv."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-17-q7",
+            "question": "Pronuncia la siguiente oración con claridad prestando atención al acento correcto: 'So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.'",
+            "answer": "So schwierig die Aufgabe auch sein mag, wir werden sie gemeinsam lösen.",
+            "hint": "ركّز على النبر في كلمة 'schwierig' وعلى الفاصل المنطقي بعد الفاصلة."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-17-q8",
+            "question": "Completa la oración eligiendo la forma correcta de Genitiv: 'Ungeachtet _______ enormen Widerstands setzte das Unternehmen seine Strategie um.' (des / der / dem)",
+            "answer": "des",
+            "hint": "Widerstand اسم مذكر (der Widerstand) — في Genitiv يصبح: des Widerstands."
+          }
+        ]
+      }
+    },
+    "c1-18": {
+      "id": "c1-18",
+      "title": "Gehobene Präpositionen mit Genitiv — Preposiciones formales con Genitiv",
+      "grammar": {
+        "title": "Preposiciones formales elevadas con Genitiv — angesichts, mangels, hinsichtlich, bezüglich, gemäß, laut, zufolge, seitens",
+        "content": "En el alemán formal y académico, se utiliza un conjunto de **preposiciones elevadas** que siempre requieren **Genitiv** (caso genitivo). Estas preposiciones aparecen frecuentemente en textos periodísticos, legales, administrativos y académicos, y son necesarias para aprobar el nivel **C1**.\n\n**¿Qué es Genitiv?**\nEs el caso gramatical que expresa posesión o pertenencia, y en él cambian las terminaciones de los artículos (Artikel) de la siguiente manera:\n- **der/ein** → **des/eines** (masculino y neutro) + **-(e)s** en el sustantivo\n- **die/eine** → **der/einer** (femenino y plural)\n\n**Las ocho preposiciones y sus significados principales:**\n\n**1. angesichts** — ante / en vista de (frente a una realidad)\n**2. mangels** — por falta de / por ausencia de (falta de algo necesario)\n**3. hinsichtlich** — respecto a / en cuanto a\n**4. bezüglich** — respecto a / acerca de (se usa mucho en correspondencia formal)\n**5. gemäß** — según / conforme a (también puede venir después del sustantivo)\n**6. laut** — según / conforme a (en citas y fuentes, a menudo sin Artikel)\n**7. zufolge** — según / conforme a (siempre viene **después** del sustantivo + Dativ)\n**8. seitens** — por parte de / de parte de (indica el agente)\n\n⚠️ **Nota importante:** **laut** y **zufolge** se usan generalmente sin Artikel o con Dativ, pero se clasifican en este grupo formal. **zufolge** siempre viene después del sustantivo (postpositional).",
+        "tables": [
+          {
+            "title": "Preposiciones formales + Genitiv — vista general",
+            "headers": [
+              "Preposición",
+              "Significado en español",
+              "Posición",
+              "Ejemplo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "angesichts",
+                  "ante / en vista de",
+                  "antes del sustantivo",
+                  "angesichts der Krise"
+                ]
+              },
+              {
+                "cells": [
+                  "mangels",
+                  "por falta de / por ausencia de",
+                  "antes del sustantivo",
+                  "mangels eines Beweises"
+                ]
+              },
+              {
+                "cells": [
+                  "hinsichtlich",
+                  "respecto a / en cuanto a",
+                  "antes del sustantivo",
+                  "hinsichtlich des Vertrages"
+                ]
+              },
+              {
+                "cells": [
+                  "bezüglich",
+                  "respecto a / acerca de",
+                  "antes del sustantivo",
+                  "bezüglich Ihrer Anfrage"
+                ]
+              },
+              {
+                "cells": [
+                  "gemäß",
+                  "según / conforme a",
+                  "antes o después del sustantivo",
+                  "gemäß dem Gesetz / dem Gesetz gemäß"
+                ]
+              },
+              {
+                "cells": [
+                  "laut",
+                  "según / conforme a",
+                  "antes del sustantivo (a menudo sin Artikel)",
+                  "laut Bericht / laut dem Bericht"
+                ]
+              },
+              {
+                "cells": [
+                  "zufolge",
+                  "según / conforme a",
+                  "después del sustantivo + Dativ",
+                  "dem Bericht zufolge"
+                ]
+              },
+              {
+                "cells": [
+                  "seitens",
+                  "por parte de / de parte de",
+                  "antes del sustantivo",
+                  "seitens der Regierung"
+                ]
+              }
+            ],
+            "note": "⚠️ gemäß puede venir antes del sustantivo (+ Genitiv/Dativ) o después (postpositional). zufolge siempre viene después del sustantivo con Dativ.",
+            "theme": "default"
+          },
+          {
+            "title": "Declinación de Genitiv con estas preposiciones",
+            "headers": [
+              "Género",
+              "Artículo definido",
+              "Artículo indefinido",
+              "Ejemplo completo"
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Masculino (Maskulinum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "angesichts des Konflikts / eines Konflikts"
+                ]
+              },
+              {
+                "cells": [
+                  "Femenino (Femininum)",
+                  "der",
+                  "einer",
+                  "mangels der Unterstützung / einer Unterstützung"
+                ]
+              },
+              {
+                "cells": [
+                  "Neutro (Neutrum)",
+                  "des + -(e)s",
+                  "eines + -(e)s",
+                  "hinsichtlich des Ergebnisses / eines Ergebnisses"
+                ]
+              },
+              {
+                "cells": [
+                  "Plural (Plural)",
+                  "der",
+                  "—",
+                  "seitens der Behörden"
+                ]
+              }
+            ],
+            "note": "El sustantivo masculino y neutro reciben la terminación -(e)s en Genitiv. El sustantivo femenino y plural no cambian.",
+            "theme": "default"
+          }
+        ],
+        "rules": [
+          {
+            "rule": "Las seis preposiciones formales (angesichts, mangels, hinsichtlich, bezüglich, seitens, gemäß) vienen antes del sustantivo y requieren Genitiv.",
+            "example": "Angesichts des steigenden Drucks entschied sich die Regierung zum Handeln.",
+            "translation": "Ante la presión creciente, el gobierno decidió actuar."
+          },
+          {
+            "rule": "zufolge siempre viene después del sustantivo (postpositional) y se usa con Dativ, no con Genitiv.",
+            "example": "Dem Bericht zufolge ist die Arbeitslosigkeit gesunken.",
+            "translation": "Según el informe, el desempleo ha disminuido."
+          },
+          {
+            "rule": "laut se usa generalmente sin Artikel en textos periodísticos, pero con Artikel toma Dativ o Genitiv.",
+            "example": "Laut Experten ist eine Lösung in Sicht. / Laut dem Gutachten war er unschuldig.",
+            "translation": "Según los expertos, una solución está a la vista. / Según el dictamen pericial, era inocente."
+          },
+          {
+            "rule": "gemäß puede venir antes del sustantivo (con Dativ o Genitiv) o después (postpositional con Dativ), ambas formas son correctas.",
+            "example": "Gemäß den Vorschriften ist Rauchen verboten. / Den Vorschriften gemäß ist Rauchen verboten.",
+            "translation": "Según las normas, está prohibido fumar."
+          }
+        ],
+        "examples": [
+          "Angesichts der wirtschaftlichen Lage müssen wir sparsamer werden. — Ante la situación económica, debemos ser más ahorrativos.",
+          "Mangels ausreichender Beweise wurde der Angeklagte freigesprochen. — Por falta de pruebas suficientes, el acusado fue absuelto.",
+          "Hinsichtlich des neuen Vertrages gibt es noch offene Fragen. — Respecto al nuevo contrato, aún hay preguntas abiertas.",
+          "Bezüglich Ihrer Bewerbung werden wir uns in Kürze bei Ihnen melden. — Acerca de su solicitud, nos pondremos en contacto con usted pronto.",
+          "Gemäß den gesetzlichen Vorschriften ist eine Genehmigung erforderlich. — Según las disposiciones legales, se requiere un permiso.",
+          "Laut dem neuesten Bericht hat sich die Lage deutlich verbessert. — Según el informe más reciente, la situación ha mejorado considerablemente.",
+          "Dem Gutachten zufolge war der Unfall auf menschliches Versagen zurückzuführen. — Según el dictamen pericial, el accidente fue causado por error humano.",
+          "Seitens der Behörden wurde keine offizielle Stellungnahme abgegeben. — Por parte de las autoridades, no se emitió ninguna declaración oficial."
+        ],
+        "tip": "💡 Para recordar la diferencia fácilmente: **bezüglich** e **hinsichtlich** se usan en correspondencia formal e informes administrativos, mientras que **angesichts** expresa enfrentarse a una realidad difícil o un desafío. Y **zufolge** es el único que siempre viene **después** del sustantivo — ¡recuerda: \"zufolge = siempre sigue al sustantivo!\""
+      },
+      "vocabulary": [
+        {
+          "german": "Beweis",
+          "arabic": "Prueba / Evidencia",
+          "gender": "der",
+          "plural": "Beweise",
+          "example": "Mangels eines Beweises wurde er freigesprochen.",
+          "exampleArabic": "Por falta de prueba, fue absuelto.",
+          "type": "noun"
+        },
+        {
+          "german": "Vorschrift",
+          "arabic": "Norma / Regulación",
+          "gender": "die",
+          "plural": "Vorschriften",
+          "example": "Gemäß den Vorschriften ist eine Anmeldung Pflicht.",
+          "exampleArabic": "Según las normas, el registro es obligatorio.",
+          "type": "noun"
+        },
+        {
+          "german": "Gutachten",
+          "arabic": "Dictamen pericial / Peritaje",
+          "gender": "das",
+          "plural": "Gutachten",
+          "example": "Dem Gutachten zufolge war die Ursache ein technischer Fehler.",
+          "exampleArabic": "Según el dictamen pericial, la causa fue un error técnico.",
+          "type": "noun"
+        },
+        {
+          "german": "Stellungnahme",
+          "arabic": "Declaración / Posición oficial",
+          "gender": "die",
+          "plural": "Stellungnahmen",
+          "example": "Seitens der Regierung wurde eine Stellungnahme veröffentlicht.",
+          "exampleArabic": "Por parte del gobierno, se publicó una declaración oficial.",
+          "type": "noun"
+        },
+        {
+          "german": "Antrag",
+          "arabic": "Solicitud / Petición",
+          "gender": "der",
+          "plural": "Anträge",
+          "example": "Bezüglich Ihres Antrags benötigen wir weitere Unterlagen.",
+          "exampleArabic": "Acerca de su solicitud, necesitamos documentación adicional.",
+          "type": "noun"
+        },
+        {
+          "german": "Krise",
+          "arabic": "Crisis",
+          "gender": "die",
+          "plural": "Krisen",
+          "example": "Angesichts der Krise wurden Notmaßnahmen ergriffen.",
+          "exampleArabic": "Ante la crisis, se tomaron medidas de emergencia.",
+          "type": "noun"
+        },
+        {
+          "german": "Bericht",
+          "arabic": "Informe / Reporte",
+          "gender": "der",
+          "plural": "Berichte",
+          "example": "Laut dem Bericht sind die Zahlen gestiegen.",
+          "exampleArabic": "Según el informe, las cifras han aumentado.",
+          "type": "noun"
+        },
+        {
+          "german": "Genehmigung",
+          "arabic": "Permiso / Autorización",
+          "gender": "die",
+          "plural": "Genehmigungen",
+          "example": "Mangels einer Genehmigung musste das Projekt gestoppt werden.",
+          "exampleArabic": "Por falta de permiso, el proyecto tuvo que detenerse.",
+          "type": "noun"
+        },
+        {
+          "german": "Vertrag",
+          "arabic": "Contrato / Acuerdo",
+          "gender": "der",
+          "plural": "Verträge",
+          "example": "Hinsichtlich des Vertrages sind noch Details zu klären.",
+          "exampleArabic": "Respecto al contrato, aún hay detalles por aclarar.",
+          "type": "noun"
+        },
+        {
+          "german": "Behörde",
+          "arabic": "Autoridad / Institución oficial",
+          "gender": "die",
+          "plural": "Behörden",
+          "example": "Seitens der Behörden gibt es keine Einwände.",
+          "exampleArabic": "Por parte de las autoridades, no hay objeciones.",
+          "type": "noun"
+        },
+        {
+          "german": "freigesprochen",
+          "arabic": "Absuelto / Declarado inocente",
+          "example": "Der Angeklagte wurde mangels Beweisen freigesprochen.",
+          "exampleArabic": "El acusado fue absuelto por falta de pruebas.",
+          "type": "adjective"
+        },
+        {
+          "german": "erforderlich",
+          "arabic": "Requerido / Necesario",
+          "example": "Gemäß der Regelung ist eine Unterschrift erforderlich.",
+          "exampleArabic": "Según la norma, se requiere una firma.",
+          "type": "adjective"
+        },
+        {
+          "german": "Angeklagte",
+          "arabic": "Acusado / Demandado",
+          "gender": "der",
+          "plural": "Angeklagten",
+          "example": "Mangels Beweisen wurde der Angeklagte entlassen.",
+          "exampleArabic": "Por falta de pruebas, el acusado fue liberado.",
+          "type": "noun"
+        },
+        {
+          "german": "Unterstützung",
+          "arabic": "Apoyo / Asistencia",
+          "gender": "die",
+          "plural": "Unterstützungen",
+          "example": "Mangels finanzieller Unterstützung scheiterte das Projekt.",
+          "exampleArabic": "Por falta de apoyo financiero, el proyecto fracasó.",
+          "type": "noun"
+        },
+        {
+          "german": "gemäß",
+          "arabic": "Según / Conforme a",
+          "example": "Gemäß dem Gesetz ist das verboten.",
+          "exampleArabic": "Según la ley, eso está prohibido.",
+          "type": "preposition"
+        }
+      ],
+      "exercise": {
+        "questions": [
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q1",
+            "question": "Elige la preposición correcta: «___ der steigenden Kosten musste das Unternehmen Stellen abbauen.»",
+            "answer": "Angesichts",
+            "options": [
+              "Mangels",
+              "Angesichts",
+              "Seitens",
+              "Zufolge"
+            ],
+            "hint": "Esta preposición expresa enfrentarse a una realidad difícil o un desafío."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q2",
+            "question": "Completa la oración con la forma correcta: «___ (mangels / Beweis / der) wurde der Verdächtige freigelassen.»",
+            "answer": "Mangels eines Beweises",
+            "hint": "mangels requiere Genitiv, y el sustantivo Beweis es masculino."
+          },
+          {
+            "type": "drag-drop",
+            "id": "c1-18-q3",
+            "question": "Ordena las palabras para formar una oración correcta:",
+            "answer": "Dem Gutachten zufolge hat der Fahrer einen Fehler gemacht.",
+            "words": [
+              "zufolge",
+              "Dem",
+              "hat",
+              "Gutachten",
+              "der",
+              "Fahrer",
+              "Fehler",
+              "einen",
+              "gemacht"
+            ],
+            "hint": "Recuerda: zufolge siempre viene después del sustantivo."
+          },
+          {
+            "type": "matching",
+            "id": "c1-18-q4",
+            "question": "Empareja cada preposición con su significado correcto:",
+            "answer": "matched",
+            "pairs": [
+              {
+                "left": "angesichts",
+                "right": "بالنظر إلى / في ضوء"
+              },
+              {
+                "left": "mangels",
+                "right": "بسبب انعدام"
+              },
+              {
+                "left": "seitens",
+                "right": "من جانب / من طرف"
+              },
+              {
+                "left": "hinsichtlich",
+                "right": "فيما يتعلق بـ / من حيث"
+              },
+              {
+                "left": "bezüglich",
+                "right": "بخصوص / بشأن"
+              }
+            ]
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q5",
+            "question": "Escucha la oración y completa el espacio en blanco: «___ der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen.»",
+            "answer": "Gemäß",
+            "hint": "Esta preposición significa 'según' y viene antes del sustantivo.",
+            "audioPrompt": "Gemäß der neuen Regelung sind alle Mitarbeiter verpflichtet, einen Ausweis zu tragen."
+          },
+          {
+            "type": "multiple-choice",
+            "id": "c1-18-q6",
+            "question": "¿Cuál oración usa zufolge correctamente?",
+            "answer": "Dem Bericht zufolge sind die Preise gestiegen.",
+            "options": [
+              "Zufolge dem Bericht sind die Preise gestiegen.",
+              "Dem Bericht zufolge sind die Preise gestiegen.",
+              "Dem Bericht nach zufolge sind die Preise gestiegen.",
+              "Zufolge des Berichtes sind die Preise gestiegen."
+            ],
+            "hint": "zufolge es una preposición que siempre viene después del sustantivo (postpositional)."
+          },
+          {
+            "type": "speaking",
+            "id": "c1-18-q7",
+            "question": "Pronuncia la siguiente oración en voz alta con pronunciación correcta: «Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden.»",
+            "answer": "Bezüglich Ihrer Anfrage werden wir uns so schnell wie möglich bei Ihnen melden."
+          },
+          {
+            "type": "fill-blank",
+            "id": "c1-18-q8",
+            "question": "Completa la oración: «___ (seitens / Regierung / die) wurden keine Maßnahmen ergriffen.»",
+            "answer": "Seitens der Regierung",
+            "hint": "seitens requiere Genitiv, y el sustantivo Regierung es femenino, por lo que se convierte en der Regierung."
+          }
+        ]
+      }
     }
   }
 }
