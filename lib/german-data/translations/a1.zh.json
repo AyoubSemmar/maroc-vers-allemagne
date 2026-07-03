@@ -4752,180 +4752,180 @@
   },
   "a1-08": {
    "id": "a1-08",
-   "title": "Time and Date — Uhrzeit und Datum",
+   "title": "时间与日期 — Uhrzeit und Datum",
    "order": 8,
    "grammar": {
-    "title": "Telling Time + Days of the Week + Months",
-    "content": "There are two ways to express time:\n- **Formal:** Es ist 14:30 Uhr. (digital)\n- **Everyday:** Es ist halb drei. (conversational)\n\n⚠️ The confusing German rule: **halb + the next hour** (halb drei = 2:30, not 3:30!)",
+    "title": "报时 + 星期 + 月份",
+    "content": "表达时间有两种方式：\n- **正式：**Es ist 14:30 Uhr.（数字式）\n- **日常：**Es ist halb drei.（口语式）\n\n⚠️ 让人迷惑的德语规则：**halb + 下一个小时**（halb drei = 2:30，不是 3:30！）",
     "tables": [
      {
-      "title": "Telling Time — Everyday Speech",
+      "title": "报时——日常口语",
       "headers": [
-       "Time",
-       "In German",
-       "Meaning"
+       "时间",
+       "德语",
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "3:00",
          "Es ist drei Uhr.",
-         "Exactly 3 o'clock"
+         "三点整"
         ]
        },
        {
         "cells": [
          "3:15",
          "Viertel nach drei",
-         "Quarter past 3"
+         "三点一刻"
         ]
        },
        {
         "cells": [
          "3:30",
          "halb vier ⚠️",
-         "Half past 3 (literally: half to four)"
+         "三点半（字面：差半小时到四点）"
         ]
        },
        {
         "cells": [
          "3:45",
          "Viertel vor vier",
-         "Quarter to 4"
+         "差一刻四点"
         ]
        },
        {
         "cells": [
          "3:10",
          "zehn nach drei",
-         "Ten past 3"
+         "三点十分"
         ]
        },
        {
         "cells": [
          "3:50",
          "zehn vor vier",
-         "Ten to 4"
+         "差十分四点"
         ]
        }
       ],
       "theme": "default"
      },
      {
-      "title": "Days of the Week (am + Tag)",
+      "title": "星期（am + 星期几）",
       "headers": [
        "Tag",
        "Kurz",
-       "Meaning"
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "Montag",
          "Mo.",
-         "Monday"
+         "星期一"
         ]
        },
        {
         "cells": [
          "Dienstag",
          "Di.",
-         "Tuesday"
+         "星期二"
         ]
        },
        {
         "cells": [
          "Mittwoch",
          "Mi.",
-         "Wednesday"
+         "星期三"
         ]
        },
        {
         "cells": [
          "Donnerstag",
          "Do.",
-         "Thursday"
+         "星期四"
         ]
        },
        {
         "cells": [
          "Freitag",
          "Fr.",
-         "Friday"
+         "星期五"
         ]
        },
        {
         "cells": [
          "Samstag",
          "Sa.",
-         "Saturday"
+         "星期六"
         ]
        },
        {
         "cells": [
          "Sonntag",
          "So.",
-         "Sunday"
+         "星期日"
         ]
        }
       ],
       "theme": "default"
      },
      {
-      "title": "Months (im + Monat)",
+      "title": "月份（im + 月份）",
       "headers": [
        "Deutsch",
-       "Meaning",
+       "含义",
        "Deutsch",
-       "Meaning"
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "Januar",
-         "January",
+         "一月",
          "Juli",
-         "July"
+         "七月"
         ]
        },
        {
         "cells": [
          "Februar",
-         "February",
+         "二月",
          "August",
-         "August"
+         "八月"
         ]
        },
        {
         "cells": [
          "März",
-         "March",
+         "三月",
          "September",
-         "September"
+         "九月"
         ]
        },
        {
         "cells": [
          "April",
-         "April",
+         "四月",
          "Oktober",
-         "October"
+         "十月"
         ]
        },
        {
         "cells": [
          "Mai",
-         "May",
+         "五月",
          "November",
-         "November"
+         "十一月"
         ]
        },
        {
         "cells": [
          "Juni",
-         "June",
+         "六月",
          "Dezember",
-         "December"
+         "十二月"
         ]
        }
       ],
@@ -4934,338 +4934,338 @@
     ],
     "rules": [
      {
-      "rule": "With days of the week, use am: am Montag, am Freitag.",
+      "rule": "星期前用 am：am Montag、am Freitag。",
       "example": "**Am** Montag habe ich Deutschkurs.",
-      "translation": "On Monday I have German class."
+      "translation": "星期一我有德语课。"
      },
      {
-      "rule": "With months and seasons, use im: im Januar, im Sommer.",
+      "rule": "月份和季节前用 im：im Januar、im Sommer。",
       "example": "**Im** Sommer fahre ich nach Marokko.",
-      "translation": "In summer I'm going to Morocco."
+      "translation": "夏天我去摩洛哥。"
      },
      {
-      "rule": "With clock times, use um: um 7 Uhr, um halb zehn.",
+      "rule": "钟点前用 um：um 7 Uhr、um halb zehn。",
       "example": "Der Kurs beginnt **um** 9 Uhr.",
-      "translation": "The class starts at 9 o'clock."
+      "translation": "课程九点开始。"
      }
     ],
     "examples": [
-     "Es ist halb acht. — It's half past seven.",
-     "Der Kurs beginnt um neun Uhr. — The class starts at nine o'clock.",
-     "Am Freitag habe ich frei. — I'm off on Friday.",
-     "Im Sommer fahre ich nach Marokko. — In summer I'm going to Morocco.",
-     "Mein Geburtstag ist am zwanzigsten Mai. — My birthday is on May 20th.",
-     "Wann kommst du? — Um sieben Uhr abends. — When are you coming? — At seven p.m.",
-     "Heute ist Montag, der 15. März. — Today is Monday, March 15th.",
-     "Der Zug fährt um Viertel nach acht. — The train leaves at quarter past eight."
+     "Es ist halb acht. — 现在七点半。",
+     "Der Kurs beginnt um neun Uhr. — 课程九点开始。",
+     "Am Freitag habe ich frei. — 星期五我休息。",
+     "Im Sommer fahre ich nach Marokko. — 夏天我去摩洛哥。",
+     "Mein Geburtstag ist am zwanzigsten Mai. — 我的生日是 5 月 20 日。",
+     "Wann kommst du? — Um sieben Uhr abends. — 你什么时候来？——晚上七点。",
+     "Heute ist Montag, der 15. März. — 今天是 3 月 15 日星期一。",
+     "Der Zug fährt um Viertel nach acht. — 火车八点一刻发车。"
     ],
-    "tip": "💡 Trick for remembering halb: Think of it as \"halfway to the next hour.\" halb drei = \"halfway to 3\" = 2:30. With time, focus on the hour you're approaching, not the one that's passed."
+    "tip": "💡 记 halb 的诀窍：把它想成「到下一个小时的一半」。halb drei = 「到三点的一半」= 2:30。报时要盯着即将到来的小时，而不是已经过去的。"
    },
    "vocabulary": [
     {
      "german": "Uhr",
-     "arabic": "Clock / o'clock",
+     "arabic": "钟；点钟",
      "gender": "die",
      "plural": "Uhren",
      "example": "Wie viel Uhr ist es?",
-     "exampleArabic": "What time is it?",
+     "exampleArabic": "现在几点了？",
      "type": "noun"
     },
     {
      "german": "Zeit",
-     "arabic": "Time",
+     "arabic": "时间",
      "gender": "die",
      "plural": "Zeiten",
      "example": "Ich habe keine Zeit.",
-     "exampleArabic": "I don't have time.",
+     "exampleArabic": "我没时间。",
      "type": "noun"
     },
     {
      "german": "Tag",
-     "arabic": "Day",
+     "arabic": "天；日",
      "gender": "der",
      "plural": "Tage",
      "example": "Guten Tag!",
-     "exampleArabic": "Good day!",
+     "exampleArabic": "您好！",
      "type": "noun"
     },
     {
      "german": "Woche",
-     "arabic": "Week",
+     "arabic": "星期",
      "gender": "die",
      "plural": "Wochen",
      "example": "Diese Woche arbeite ich viel.",
-     "exampleArabic": "This week I'm working a lot.",
+     "exampleArabic": "这周我工作很忙。",
      "type": "noun"
     },
     {
      "german": "Monat",
-     "arabic": "Month",
+     "arabic": "月",
      "gender": "der",
      "plural": "Monate",
      "example": "Der Monat hat 30 Tage.",
-     "exampleArabic": "The month has 30 days.",
+     "exampleArabic": "这个月有 30 天。",
      "type": "noun"
     },
     {
      "german": "Jahr",
-     "arabic": "Year",
+     "arabic": "年",
      "gender": "das",
      "plural": "Jahre",
      "example": "Das Jahr 2024.",
-     "exampleArabic": "The year 2024.",
+     "exampleArabic": "2024 年。",
      "type": "noun"
     },
     {
      "german": "Montag",
-     "arabic": "Monday",
+     "arabic": "星期一",
      "gender": "der",
      "example": "Am Montag arbeite ich.",
-     "exampleArabic": "I work on Monday.",
+     "exampleArabic": "星期一我上班。",
      "type": "noun"
     },
     {
      "german": "Mittwoch",
-     "arabic": "Wednesday",
+     "arabic": "星期三",
      "gender": "der",
      "example": "Am Mittwoch habe ich Kurs.",
-     "exampleArabic": "I have class on Wednesday.",
+     "exampleArabic": "星期三我有课。",
      "type": "noun"
     },
     {
      "german": "Freitag",
-     "arabic": "Friday",
+     "arabic": "星期五",
      "gender": "der",
      "example": "Am Freitag ist Wochenende.",
-     "exampleArabic": "Friday is the weekend.",
+     "exampleArabic": "星期五就是周末了。",
      "type": "noun"
     },
     {
      "german": "Samstag",
-     "arabic": "Saturday",
+     "arabic": "星期六",
      "gender": "der",
      "example": "Am Samstag schlafe ich lange.",
-     "exampleArabic": "I sleep in on Saturday.",
+     "exampleArabic": "星期六我睡懒觉。",
      "type": "noun"
     },
     {
      "german": "Sonntag",
-     "arabic": "Sunday",
+     "arabic": "星期日",
      "gender": "der",
      "example": "Am Sonntag besuche ich Freunde.",
-     "exampleArabic": "I visit friends on Sunday.",
+     "exampleArabic": "星期日我去看朋友。",
      "type": "noun"
     },
     {
      "german": "Januar",
-     "arabic": "January",
+     "arabic": "一月",
      "gender": "der",
      "example": "Im Januar ist es kalt.",
-     "exampleArabic": "It's cold in January.",
+     "exampleArabic": "一月很冷。",
      "type": "noun"
     },
     {
      "german": "Sommer",
-     "arabic": "Summer",
+     "arabic": "夏天",
      "gender": "der",
      "example": "Im Sommer ist es heiß.",
-     "exampleArabic": "It's hot in summer.",
+     "exampleArabic": "夏天很热。",
      "type": "noun"
     },
     {
      "german": "Winter",
-     "arabic": "Winter",
+     "arabic": "冬天",
      "gender": "der",
      "example": "Der Winter ist lang.",
-     "exampleArabic": "Winter is long.",
+     "exampleArabic": "冬天很漫长。",
      "type": "noun"
     },
     {
      "german": "Frühling",
-     "arabic": "Spring",
+     "arabic": "春天",
      "gender": "der",
      "example": "Im Frühling blühen die Blumen.",
-     "exampleArabic": "The flowers bloom in spring.",
+     "exampleArabic": "春天花儿盛开。",
      "type": "noun"
     },
     {
      "german": "Herbst",
-     "arabic": "Autumn / Fall",
+     "arabic": "秋天",
      "gender": "der",
      "example": "Der Herbst ist bunt.",
-     "exampleArabic": "Autumn is colorful.",
+     "exampleArabic": "秋天色彩缤纷。",
      "type": "noun"
     },
     {
      "german": "heute",
-     "arabic": "Today",
+     "arabic": "今天",
      "example": "Heute lerne ich Deutsch.",
-     "exampleArabic": "Today I'm learning German.",
+     "exampleArabic": "今天我学德语。",
      "type": "adverb"
     },
     {
      "german": "morgen",
-     "arabic": "Tomorrow",
+     "arabic": "明天",
      "example": "Morgen habe ich frei.",
-     "exampleArabic": "I'm off tomorrow.",
+     "exampleArabic": "明天我休息。",
      "type": "adverb"
     },
     {
      "german": "gestern",
-     "arabic": "Yesterday",
+     "arabic": "昨天",
      "example": "Gestern war ich krank.",
-     "exampleArabic": "I was sick yesterday.",
+     "exampleArabic": "昨天我生病了。",
      "type": "adverb"
     },
     {
      "german": "pünktlich",
-     "arabic": "Punctual / on time",
+     "arabic": "准时的",
      "example": "Bitte sei pünktlich!",
-     "exampleArabic": "Please be on time!",
+     "exampleArabic": "请准时！",
      "type": "adjective"
     },
     {
      "german": "Geburtstag",
-     "arabic": "Birthday",
+     "arabic": "生日",
      "gender": "der",
      "plural": "Geburtstage",
      "example": "Wann ist dein Geburtstag?",
-     "exampleArabic": "When is your birthday?",
+     "exampleArabic": "你的生日是什么时候？",
      "type": "noun"
     },
     {
      "german": "Termin",
-     "arabic": "Appointment",
+     "arabic": "预约",
      "gender": "der",
      "plural": "Termine",
      "example": "Ich habe einen Termin.",
-     "exampleArabic": "I have an appointment.",
+     "exampleArabic": "我有个预约。",
      "type": "noun"
     },
     {
      "german": "beginnen",
-     "arabic": "To begin / start",
+     "arabic": "开始",
      "example": "Der Kurs beginnt um 9.",
-     "exampleArabic": "The class starts at 9.",
+     "exampleArabic": "课程九点开始。",
      "type": "verb"
     },
     {
      "german": "enden",
-     "arabic": "To end / finish",
+     "arabic": "结束",
      "example": "Die Arbeit endet um 17 Uhr.",
-     "exampleArabic": "Work finishes at 5 p.m.",
+     "exampleArabic": "工作五点结束。",
      "type": "verb"
     },
     {
      "german": "die Sekunde",
-     "arabic": "second",
+     "arabic": "秒",
      "gender": "die",
      "plural": "Sekunden",
      "example": "In drei Sekunden!",
-     "exampleArabic": "In three seconds!",
+     "exampleArabic": "三秒之内！",
      "type": "noun"
     },
     {
      "german": "das Datum",
-     "arabic": "date",
+     "arabic": "日期",
      "gender": "das",
      "plural": "Daten",
      "example": "Welches Datum haben wir?",
-     "exampleArabic": "What's today's date?",
+     "exampleArabic": "今天几号？",
      "type": "noun"
     },
     {
      "german": "der Wochentag",
-     "arabic": "day of the week",
+     "arabic": "星期几",
      "gender": "der",
      "plural": "Wochentage",
      "example": "Welcher Wochentag ist heute?",
-     "exampleArabic": "What day is today?",
+     "exampleArabic": "今天星期几？",
      "type": "noun"
     },
     {
      "german": "der Feiertag",
-     "arabic": "public holiday",
+     "arabic": "法定假日",
      "gender": "der",
      "plural": "Feiertage",
      "example": "Heute ist ein Feiertag.",
-     "exampleArabic": "Today is a holiday.",
+     "exampleArabic": "今天是假日。",
      "type": "noun"
     },
     {
      "german": "der Urlaub",
-     "arabic": "vacation",
+     "arabic": "休假",
      "gender": "der",
      "plural": "Urlaube",
      "example": "Ich gehe in Urlaub.",
-     "exampleArabic": "I'm going on vacation.",
+     "exampleArabic": "我要去度假。",
      "type": "noun"
     },
     {
      "german": "die Ferien",
-     "arabic": "school holidays",
+     "arabic": "假期（学校）",
      "gender": "pl",
      "example": "In den Ferien fahren wir weg.",
-     "exampleArabic": "We go away during the holidays.",
+     "exampleArabic": "假期我们出门旅行。",
      "type": "noun"
     },
     {
      "german": "der Wecker",
-     "arabic": "alarm clock",
+     "arabic": "闹钟",
      "gender": "der",
      "plural": "Wecker",
      "example": "Der Wecker klingelt um 6.",
-     "exampleArabic": "The alarm rings at 6.",
+     "exampleArabic": "闹钟六点响。",
      "type": "noun"
     },
     {
      "german": "früh / spät",
-     "arabic": "early / late",
+     "arabic": "早 / 晚",
      "example": "Er kommt zu spät.",
-     "exampleArabic": "He's late.",
+     "exampleArabic": "他迟到了。",
      "type": "adverb"
     },
     {
      "german": "jetzt",
-     "arabic": "now",
+     "arabic": "现在",
      "example": "Jetzt ist es 14 Uhr.",
-     "exampleArabic": "It's 2pm now.",
+     "exampleArabic": "现在是下午两点。",
      "type": "adverb"
     },
     {
      "german": "gleich",
-     "arabic": "right away",
+     "arabic": "马上",
      "example": "Ich komme gleich.",
-     "exampleArabic": "I'm coming right away.",
+     "exampleArabic": "我马上来。",
      "type": "adverb"
     },
     {
      "german": "dauern",
-     "arabic": "to last",
+     "arabic": "持续",
      "example": "Wie lange dauert das?",
-     "exampleArabic": "How long does it last?",
+     "exampleArabic": "这要多久？",
      "type": "verb"
     },
     {
      "german": "ein Termin haben",
-     "arabic": "to have an appointment",
+     "arabic": "有预约",
      "example": "Ich habe um 10 einen Termin.",
-     "exampleArabic": "I have an appointment at 10.",
+     "exampleArabic": "我十点有个预约。",
      "type": "phrase"
     },
     {
      "german": "Viertel",
-     "arabic": "quarter",
+     "arabic": "一刻钟",
      "gender": "das",
      "example": "Viertel nach drei.",
-     "exampleArabic": "Quarter past three.",
+     "exampleArabic": "三点一刻。",
      "type": "noun"
     },
     {
      "german": "Halb",
-     "arabic": "half",
+     "arabic": "半（点）",
      "example": "Es ist halb acht.",
-     "exampleArabic": "It's 7:30.",
+     "exampleArabic": "现在七点半。",
      "type": "phrase"
     }
    ],
@@ -5274,7 +5274,7 @@
      {
       "type": "multiple-choice",
       "id": "a1-08-q1",
-      "question": "What does \"Es ist halb acht\" mean?",
+      "question": "「Es ist halb acht」是什么意思？",
       "options": [
        "8:30",
        "7:30",
@@ -5286,14 +5286,14 @@
      {
       "type": "fill-blank",
       "id": "a1-08-q2",
-      "question": "Complete: \"___ Montag habe ich Deutschkurs.\" (on Monday)",
+      "question": "补全：「___ Montag habe ich Deutschkurs.」（星期一）",
       "answer": "Am",
-      "hint": "The preposition with days of the week is am"
+      "hint": "星期前的介词是 am"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q3",
-      "question": "How do you say \"quarter past three\"?",
+      "question": "「三点一刻」怎么说？",
       "options": [
        "Es ist halb drei.",
        "Es ist Viertel vor drei.",
@@ -5305,46 +5305,46 @@
      {
       "type": "fill-blank",
       "id": "a1-08-q4",
-      "question": "Complete: \"___ Januar ist es sehr kalt.\" (in January)",
+      "question": "补全：「___ Januar ist es sehr kalt.」（在一月）",
       "answer": "Im",
-      "hint": "The preposition with months is im"
+      "hint": "月份前的介词是 im"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q5",
-      "question": "What does \"Mein Geburtstag ist im August\" mean?",
+      "question": "「Mein Geburtstag ist im August」是什么意思？",
       "options": [
-       "My birthday is in August.",
-       "My birthday is in June.",
-       "I was born on Monday.",
-       "I have a party in August."
+       "我的生日在八月。",
+       "我的生日在六月。",
+       "我出生在星期一。",
+       "我八月有个聚会。"
       ],
-      "answer": "My birthday is in August."
+      "answer": "我的生日在八月。"
      },
      {
       "type": "matching",
       "id": "a1-08-q6",
-      "question": "Match the day with its meaning:",
+      "question": "把星期和含义配对：",
       "pairs": [
        {
         "left": "Montag",
-        "right": "Monday"
+        "right": "星期一"
        },
        {
         "left": "Mittwoch",
-        "right": "Wednesday"
+        "right": "星期三"
        },
        {
         "left": "Freitag",
-        "right": "Friday"
+        "right": "星期五"
        },
        {
         "left": "Sonntag",
-        "right": "Sunday"
+        "right": "星期日"
        },
        {
         "left": "Samstag",
-        "right": "Saturday"
+        "right": "星期六"
        }
       ],
       "answer": "matched"
@@ -5352,7 +5352,7 @@
      {
       "type": "drag-drop",
       "id": "a1-08-q7",
-      "question": "Put in order: \"The class starts at 9\"",
+      "question": "排序：「课程九点开始」",
       "words": [
        "Der",
        "Kurs",
@@ -5366,22 +5366,22 @@
      {
       "type": "speaking",
       "id": "a1-08-q8",
-      "question": "Say in German: \"I'm off on Saturday\"",
+      "question": "用德语说：「星期六我休息」",
       "answer": "Am Samstag habe ich frei",
-      "hint": "am + the day"
+      "hint": "am + 星期几"
      },
      {
       "type": "fill-blank",
       "id": "a1-08-q9",
-      "question": "Listen and write the time: \"Es ist ___.\" (2:30)",
+      "question": "听并写出时间：「Es ist ___.」（2:30）",
       "audioPrompt": "Es ist halb drei.",
       "answer": "halb drei",
-      "hint": "halb + the next hour"
+      "hint": "halb + 下一个小时"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q10",
-      "question": "What does \"Viertel vor neun\" mean?",
+      "question": "「Viertel vor neun」是什么意思？",
       "options": [
        "9:15",
        "8:45",
@@ -5393,14 +5393,14 @@
      {
       "type": "fill-blank",
       "id": "a1-08-q11",
-      "question": "\"Welches ___ haben wir?\" (date)",
+      "question": "「Welches ___ haben wir?」（日期）",
       "answer": "Datum",
       "hint": "das Datum"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q12",
-      "question": "Public holiday in German:",
+      "question": "法定假日用德语怎么说：",
       "options": [
        "der Urlaub",
        "der Feiertag",
@@ -5412,34 +5412,34 @@
      {
       "type": "fill-blank",
       "id": "a1-08-q13",
-      "question": "\"Der ___ klingelt um 6.\" (alarm clock)",
+      "question": "「Der ___ klingelt um 6.」（闹钟）",
       "answer": "Wecker",
       "hint": "der Wecker"
      },
      {
       "type": "matching",
       "id": "a1-08-q14",
-      "question": "Match the word to its meaning:",
+      "question": "把单词和含义配对：",
       "pairs": [
        {
         "left": "Datum",
-        "right": "date"
+        "right": "日期"
        },
        {
         "left": "Feiertag",
-        "right": "public holiday"
+        "right": "法定假日"
        },
        {
         "left": "Urlaub",
-        "right": "vacation"
+        "right": "休假"
        },
        {
         "left": "Ferien",
-        "right": "school holidays"
+        "right": "学校假期"
        },
        {
         "left": "Wecker",
-        "right": "alarm clock"
+        "right": "闹钟"
        }
       ],
       "answer": "matched"
@@ -5447,7 +5447,7 @@
      {
       "type": "drag-drop",
       "id": "a1-08-q15",
-      "question": "Order: \"I have an appointment tomorrow\"",
+      "question": "排序：「我明天有个预约」",
       "words": [
        "Morgen",
        "habe",
@@ -5460,40 +5460,40 @@
      {
       "type": "speaking",
       "id": "a1-08-q16",
-      "question": "Say: \"The course lasts two hours\"",
+      "question": "说：「课程持续两个小时」",
       "answer": "Der Kurs dauert zwei Stunden"
      },
      {
       "type": "fill-blank",
       "id": "a1-08-q17",
-      "question": "Listen: \"Ich komme ___\" (right away)",
+      "question": "听：「Ich komme ___」（马上）",
       "audioPrompt": "Ich komme gleich.",
       "answer": "gleich",
-      "hint": "gleich = right away"
+      "hint": "gleich = 马上"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q18",
-      "question": "The verb \"dauern\" means:",
+      "question": "动词「dauern」的意思是：",
       "options": [
-       "to start",
-       "to end",
-       "to last",
-       "to prepare"
+       "开始",
+       "结束",
+       "持续",
+       "准备"
       ],
-      "answer": "to last"
+      "answer": "持续"
      },
      {
       "type": "fill-blank",
       "id": "a1-08-q19",
-      "question": "\"Er kommt zu ___\" (late)",
+      "question": "「Er kommt zu ___」（晚）",
       "answer": "spät",
       "hint": "spät / früh"
      },
      {
       "type": "multiple-choice",
       "id": "a1-08-q20",
-      "question": "How many seconds in a minute?",
+      "question": "一分钟有多少秒？",
       "options": [
        "30",
        "60",
