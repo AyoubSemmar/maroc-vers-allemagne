@@ -4597,14 +4597,14 @@
   },
   "b1-09": {
    "id": "b1-09",
-   "title": "Adjektivdeklination — Adjective Declension",
+   "title": "Adjektivdeklination — 形容词变格",
    "order": 9,
    "grammar": {
-    "title": "Adjective before noun: der große Mann",
-    "content": "**Adjektivdeklination** = Adjective declension according to:\n- Gender (m/f/n/pl)\n- Case (Nom/Akk/Dat/Gen)\n- Article type (definite der / indefinite ein / no article)\n\n**3 groups:**\n\n**1. After definite article (der, die, das, diese...)**: weak endings **-e / -en**\n\n**2. After indefinite article (ein, kein, mein...)**: mixed endings\n\n**3. Without article**: strong endings (resemble the definite article)\n\n⚠️ Don't memorize tables — focus on the rule: If the article shows the gender/case, the adjective takes **-e/-en** only.",
+    "title": "名词前的形容词：der große Mann",
+    "content": "**Adjektivdeklination** = 形容词根据以下因素变格：\n- 词性（阳/阴/中/复数）\n- 格（第一/第四/第三/第二格）\n- 冠词类型（定冠词 der / 不定冠词 ein / 无冠词）\n\n**三种情况：**\n\n**1. 定冠词之后（der、die、das、diese……）**：弱变化词尾 **-e / -en**\n\n**2. 不定冠词之后（ein、kein、mein……）**：混合变化词尾\n\n**3. 无冠词**：强变化词尾（形似定冠词）\n\n⚠️ 不要死记表格——记住规律：如果冠词已经显示了词性/格，形容词只加 **-e/-en**。",
     "tables": [
      {
-      "title": "With der/die/das (Nominativ + Akkusativ)",
+      "title": "配 der/die/das（第一格 + 第四格）",
       "theme": "cases",
       "headers": [
        "Kasus",
@@ -4654,7 +4654,7 @@
       ]
      },
      {
-      "title": "With ein/kein/mein (Nominativ + Akkusativ)",
+      "title": "配 ein/kein/mein（第一格 + 第四格）",
       "theme": "cases",
       "headers": [
        "Kasus",
@@ -4696,207 +4696,207 @@
     ],
     "rules": [
      {
-      "rule": "After der/die/das → -e or -en",
+      "rule": "der/die/das 之后 → -e 或 -en",
       "example": "der große Mann",
-      "translation": "the tall man"
+      "translation": "那个高个子男人"
      },
      {
-      "rule": "After ein/kein/mein → -er/-e/-es",
+      "rule": "ein/kein/mein 之后 → -er/-e/-es",
       "example": "ein großer Mann",
-      "translation": "a tall man"
+      "translation": "一个高个子男人"
      },
      {
-      "rule": "Without article → strong endings",
+      "rule": "无冠词 → 强变化词尾",
       "example": "großer Mann (Nom)",
-      "translation": "tall man"
+      "translation": "高个子男人"
      }
     ],
     "examples": [
-     "Der große Mann spielt Fußball. — The tall man plays football.",
-     "Ich sehe einen großen Mann. — I see a tall man.",
-     "Das kleine Kind schläft. — The small child is sleeping.",
-     "Mit dem roten Auto fahre ich zur Arbeit. — I drive to work in the red car.",
-     "Eine schöne Frau kommt. — A beautiful woman is coming.",
-     "Die freundlichen Nachbarn wohnen nebenan. — The friendly neighbors live next door.",
-     "Ich trinke kalten Tee. — I drink cold tea. (without article)",
-     "Guter Kaffee kostet viel. — Good coffee costs a lot."
+     "Der große Mann spielt Fußball. — 那个高个子男人在踢足球。",
+     "Ich sehe einen großen Mann. — 我看见一个高个子男人。",
+     "Das kleine Kind schläft. — 那个小孩在睡觉。",
+     "Mit dem roten Auto fahre ich zur Arbeit. — 我开那辆红车去上班。",
+     "Eine schöne Frau kommt. — 一位美丽的女士走来。",
+     "Die freundlichen Nachbarn wohnen nebenan. — 友好的邻居们住在隔壁。",
+     "Ich trinke kalten Tee. — 我喝凉茶。（无冠词）",
+     "Guter Kaffee kostet viel. — 好咖啡价格不菲。"
     ],
-    "tip": "Golden rule: If the article is clear (der/die/das) → adjective -e/-en. If unclear (ein) → the adjective takes the missing article ending (-er/-es)."
+    "tip": "黄金法则：冠词清楚地显示词性（der/die/das）→ 形容词加 -e/-en；不清楚（ein）→ 形容词补上缺失的冠词词尾（-er/-es）。"
    },
    "vocabulary": [
     {
      "german": "groß",
-     "arabic": "tall / big",
+     "arabic": "高的；大的",
      "type": "adjective"
     },
     {
      "german": "klein",
-     "arabic": "small / short",
+     "arabic": "小的；矮的",
      "type": "adjective"
     },
     {
      "german": "schön",
-     "arabic": "beautiful",
+     "arabic": "美丽的",
      "type": "adjective"
     },
     {
      "german": "hässlich",
-     "arabic": "ugly",
+     "arabic": "丑陋的",
      "type": "adjective"
     },
     {
      "german": "freundlich",
-     "arabic": "friendly",
+     "arabic": "友好的",
      "type": "adjective"
     },
     {
      "german": "unfreundlich",
-     "arabic": "unfriendly",
+     "arabic": "不友好的",
      "type": "adjective"
     },
     {
      "german": "interessant",
-     "arabic": "interesting",
+     "arabic": "有趣的",
      "type": "adjective"
     },
     {
      "german": "langweilig",
-     "arabic": "boring",
+     "arabic": "无聊的",
      "type": "adjective"
     },
     {
      "german": "teuer",
-     "arabic": "expensive",
+     "arabic": "昂贵的",
      "type": "adjective"
     },
     {
      "german": "billig",
-     "arabic": "cheap",
+     "arabic": "便宜的",
      "type": "adjective"
     },
     {
      "german": "alt",
-     "arabic": "old",
+     "arabic": "老的；旧的",
      "type": "adjective"
     },
     {
      "german": "neu",
-     "arabic": "new",
+     "arabic": "新的",
      "type": "adjective"
     },
     {
      "german": "jung",
-     "arabic": "young",
+     "arabic": "年轻的",
      "type": "adjective"
     },
     {
      "german": "rot",
-     "arabic": "red",
+     "arabic": "红色的",
      "type": "adjective"
     },
     {
      "german": "blau",
-     "arabic": "blue",
+     "arabic": "蓝色的",
      "type": "adjective"
     },
     {
      "german": "grün",
-     "arabic": "green",
+     "arabic": "绿色的",
      "type": "adjective"
     },
     {
      "german": "weiß",
-     "arabic": "white",
+     "arabic": "白色的",
      "type": "adjective"
     },
     {
      "german": "schwarz",
-     "arabic": "black",
+     "arabic": "黑色的",
      "type": "adjective"
     },
     {
      "german": "gelb",
-     "arabic": "yellow",
+     "arabic": "黄色的",
      "type": "adjective"
     },
     {
      "german": "fleißig",
-     "arabic": "hardworking",
+     "arabic": "勤奋的",
      "type": "adjective"
     },
     {
      "german": "faul",
-     "arabic": "lazy",
+     "arabic": "懒惰的",
      "type": "adjective"
     },
     {
      "german": "klug",
-     "arabic": "smart",
+     "arabic": "聪明的",
      "type": "adjective"
     },
     {
      "german": "dumm",
-     "arabic": "stupid",
+     "arabic": "愚蠢的",
      "type": "adjective"
     },
     {
      "german": "lustig",
-     "arabic": "funny",
+     "arabic": "有趣的；滑稽的",
      "type": "adjective"
     },
     {
      "german": "traurig",
-     "arabic": "sad",
+     "arabic": "难过的",
      "type": "adjective"
     },
     {
      "german": "glücklich",
-     "arabic": "happy",
+     "arabic": "幸福的",
      "type": "adjective"
     },
     {
      "german": "müde",
-     "arabic": "tired",
+     "arabic": "疲惫的",
      "type": "adjective"
     },
     {
      "german": "reich",
-     "arabic": "rich",
+     "arabic": "富有的",
      "type": "adjective"
     },
     {
      "german": "arm",
-     "arabic": "poor",
+     "arabic": "贫穷的",
      "type": "adjective"
     },
     {
      "german": "hoch",
-     "arabic": "high",
+     "arabic": "高的",
      "type": "adjective"
     },
     {
      "german": "tief",
-     "arabic": "deep",
+     "arabic": "深的",
      "type": "adjective"
     },
     {
      "german": "breit",
-     "arabic": "wide",
+     "arabic": "宽的",
      "type": "adjective"
     },
     {
      "german": "schmal",
-     "arabic": "narrow",
+     "arabic": "窄的",
      "type": "adjective"
     },
     {
      "german": "hell",
-     "arabic": "bright, light",
+     "arabic": "明亮的",
      "type": "adjective"
     },
     {
      "german": "dunkel",
-     "arabic": "dark",
+     "arabic": "黑暗的",
      "type": "adjective"
     }
    ],
@@ -4929,19 +4929,19 @@
      {
       "id": "b1-09-q3",
       "type": "fill-blank",
-      "question": "Ich sehe einen ___ Mann. (großen)",
+      "question": "Ich sehe einen ___ Mann.（großen）",
       "answer": "großen"
      },
      {
       "id": "b1-09-q4",
       "type": "fill-blank",
-      "question": "Das ___ Kind schläft. (kleine)",
+      "question": "Das ___ Kind schläft.（kleine）",
       "answer": "kleine"
      },
      {
       "id": "b1-09-q5",
       "type": "drag-drop",
-      "question": "Arrange: [rotes / Ein / Auto / kommt]",
+      "question": "排序：[rotes / Ein / Auto / kommt]",
       "words": [
        "Ein",
        "rotes",
@@ -4953,7 +4953,7 @@
      {
       "id": "b1-09-q6",
       "type": "drag-drop",
-      "question": "Arrange: [kalten / Ich / Tee / trinke]",
+      "question": "排序：[kalten / Ich / Tee / trinke]",
       "words": [
        "Ich",
        "trinke",
@@ -4965,7 +4965,7 @@
      {
       "id": "b1-09-q7",
       "type": "matching",
-      "question": "Match the adjective ending with its case (with der):",
+      "question": "把形容词词尾和它的格配对（配 der）：",
       "pairs": [
        {
         "left": "der ___ Mann (Nom)",
@@ -5001,33 +5001,33 @@
      {
       "id": "b1-09-q9",
       "type": "speaking",
-      "question": "Say: \"a tall man\" (with ein)",
+      "question": "说：「一个高个子男人」（用 ein）",
       "answer": "Ein großer Mann"
      },
      {
       "id": "b1-09-q10",
       "type": "multiple-choice",
-      "question": "Listen and choose:",
+      "question": "听录音并选择：",
       "audioPrompt": "Die freundlichen Nachbarn wohnen nebenan.",
       "options": [
-       "My neighbors live far away",
-       "The friendly neighbors live next door",
-       "I don't know my neighbors",
-       "My neighbors are unfriendly"
+       "我的邻居住得很远",
+       "友好的邻居们住在隔壁",
+       "我不认识我的邻居",
+       "我的邻居不友好"
       ],
-      "answer": "The friendly neighbors live next door"
+      "answer": "友好的邻居们住在隔壁"
      },
      {
       "id": "b1-09-q11",
       "type": "fill-blank",
-      "question": "Mit einer ___ Frau. (young — junge → fem)",
+      "question": "Mit einer ___ Frau.（年轻的 — junge → 阴性）",
       "answer": "jungen",
-      "hint": "einer + jungen in Dativ"
+      "hint": "einer + 第三格中 jungen"
      },
      {
       "id": "b1-09-q12",
       "type": "multiple-choice",
-      "question": "No article, Nominativ masc:",
+      "question": "无冠词，第一格阳性：",
       "options": [
        "guter Kaffee",
        "gute Kaffee",
@@ -5039,26 +5039,26 @@
      {
       "id": "b1-09-q13",
       "type": "fill-blank",
-      "question": "After der/die/das + Akkusativ masc: \"den ___ Mann\"",
+      "question": "der/die/das 之后 + 第四格阳性：「den ___ Mann」",
       "answer": "großen",
-      "hint": "der shows gender → -en"
+      "hint": "冠词已显示词性 → -en"
      },
      {
       "id": "b1-09-q14",
       "type": "multiple-choice",
-      "question": "The golden rule:",
+      "question": "黄金法则是：",
       "options": [
-       "always -e",
-       "if article is clear: -e/-en",
-       "always -er",
-       "always -es"
+       "永远加 -e",
+       "冠词清楚时：-e/-en",
+       "永远加 -er",
+       "永远加 -es"
       ],
-      "answer": "if article is clear: -e/-en"
+      "answer": "冠词清楚时：-e/-en"
      },
      {
       "id": "b1-09-q15",
       "type": "matching",
-      "question": "Match the phrase to the ending:",
+      "question": "把短语和词尾配对：",
       "pairs": [
        {
         "left": "ein ___ Mann (Nom)",
@@ -5082,7 +5082,7 @@
      {
       "id": "b1-09-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"I'm buying a new car\"",
+      "question": "排序：「我买一辆新车」",
       "words": [
        "Ich",
        "kaufe",
@@ -5095,33 +5095,33 @@
      {
       "id": "b1-09-q17",
       "type": "speaking",
-      "question": "Say: \"The friendly neighbors help me\"",
+      "question": "说：「友好的邻居们帮助我」",
       "answer": "Die freundlichen Nachbarn helfen mir"
      },
      {
       "id": "b1-09-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Ich trinke ___ Kaffee.\" (no article, masc)",
+      "question": "听：「Ich trinke ___ Kaffee.」（无冠词，阳性）",
       "audioPrompt": "Ich trinke heißen Kaffee.",
       "answer": "heißen",
-      "hint": "no article + Akkusativ masc → -en"
+      "hint": "无冠词 + 第四格阳性 → -en"
      },
      {
       "id": "b1-09-q19",
       "type": "multiple-choice",
-      "question": "In \"ein kleines Kind\", why -es?",
+      "question": "「ein kleines Kind」中为什么用 -es？",
       "options": [
-       "word in Akkusativ",
-       "das Kind is neuter, ein doesn't show gender → adjective takes -es",
-       "always -es",
-       "plural"
+       "词在第四格",
+       "das Kind 是中性，ein 不显示词性 → 形容词加 -es",
+       "永远加 -es",
+       "复数"
       ],
-      "answer": "das Kind is neuter, ein doesn't show gender → adjective takes -es"
+      "answer": "das Kind 是中性，ein 不显示词性 → 形容词加 -es"
      },
      {
       "id": "b1-09-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"I live in an old house\"",
+      "question": "排序：「我住在一栋老房子里」",
       "words": [
        "Ich",
        "wohne",
