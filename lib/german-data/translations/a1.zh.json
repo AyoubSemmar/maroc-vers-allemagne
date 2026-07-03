@@ -2037,18 +2037,18 @@
   },
   "a1-04": {
    "id": "a1-04",
-   "title": "At the Restaurant and Store — Im Restaurant",
+   "title": "在餐厅和商店 — Im Restaurant",
    "order": 4,
    "grammar": {
-    "title": "Articles der/die/das + Accusative Case Akkusativ",
-    "content": "Every noun in German has a gender (masculine, feminine, neuter). **There is no 100% rule to determine gender** — you must always memorize the noun with its article.\n\n**The three genders:**\n🔵 der (masculine) — der Tisch (the table)\n🌸 die (feminine) — die Suppe (the soup)\n🟢 das (neuter) — das Wasser (the water)",
+    "title": "冠词 der/die/das + 第四格 Akkusativ",
+    "content": "德语的每个名词都有词性（阳性、阴性、中性）。**没有 100% 判断词性的规则**——必须始终把名词和冠词一起背。\n\n**三种词性：**\n🔵 der（阳性）— der Tisch（桌子）\n🌸 die（阴性）— die Suppe（汤）\n🟢 das（中性）— das Wasser（水）",
     "tables": [
      {
-      "title": "Definite and Indefinite Articles — Comparison",
+      "title": "定冠词与不定冠词——对照",
       "headers": [
        "Genus",
-       "Definite",
-       "Indefinite",
+       "定冠词",
+       "不定冠词",
        "Beispiel"
       ],
       "rows": [
@@ -2080,7 +2080,7 @@
         "cells": [
          "Plural",
          "die",
-         "— (none)",
+         "—（无）",
          "die Getränke"
         ]
        }
@@ -2088,7 +2088,7 @@
       "theme": "cases"
      },
      {
-      "title": "Nominativ ↔ Akkusativ — Only masculine changes!",
+      "title": "Nominativ ↔ Akkusativ——只有阳性变化！",
       "headers": [
        "Genus",
        "Nominativ",
@@ -2126,348 +2126,348 @@
        }
       ],
       "theme": "cases",
-      "note": "This is the most important rule in A1 — only der → den and ein → einen."
+      "note": "这是 A1 最重要的规则——只有 der → den、ein → einen。"
      }
     ],
     "rules": [
      {
-      "rule": "Nominativ (subject) = the noun performs the action.",
+      "rule": "第一格（主语）= 名词执行动作。",
       "example": "**Der Kaffee** ist heiß.",
-      "translation": "The coffee is hot. (Coffee = subject)"
+      "translation": "咖啡是热的。（咖啡 = 主语）"
      },
      {
-      "rule": "Akkusativ (direct object) = the noun receives the action.",
+      "rule": "第四格（直接宾语）= 名词承受动作。",
       "example": "Ich trinke **den Kaffee**.",
-      "translation": "I drink the coffee. (Coffee = direct object)"
+      "translation": "我喝咖啡。（咖啡 = 直接宾语）"
      },
      {
-      "rule": "When ordering at a restaurant, use möchten or hätte gern.",
+      "rule": "在餐厅点单用 möchten 或 hätte gern。",
       "example": "Ich möchte **einen** Kaffee, bitte.",
-      "translation": "I would like a coffee, please. (Kaffee is masculine in accusative → einen)"
+      "translation": "我想要一杯咖啡，谢谢。（Kaffee 是阳性，第四格 → einen）"
      }
     ],
     "examples": [
-     "Ich möchte einen Kaffee und ein Wasser, bitte. — I would like a coffee and water, please.",
-     "Was kostet die Suppe? — How much does the soup cost?",
-     "Ich nehme den Salat als Vorspeise. — I'll take the salad as an appetizer.",
-     "Die Rechnung, bitte! — The bill, please!",
-     "Haben Sie einen Tisch für zwei Personen? — Do you have a table for two people?",
-     "Das schmeckt sehr gut! — This tastes very good!",
-     "Wir hätten gern die Speisekarte. — We would like the menu.",
-     "Zum Trinken nehme ich eine Cola. — I'll have a coke to drink."
+     "Ich möchte einen Kaffee und ein Wasser, bitte. — 我要一杯咖啡和一杯水，谢谢。",
+     "Was kostet die Suppe? — 这个汤多少钱？",
+     "Ich nehme den Salat als Vorspeise. — 前菜我要沙拉。",
+     "Die Rechnung, bitte! — 请结账！",
+     "Haben Sie einen Tisch für zwei Personen? — 有两个人的桌子吗？",
+     "Das schmeckt sehr gut! — 这个真好吃！",
+     "Wir hätten gern die Speisekarte. — 请给我们菜单。",
+     "Zum Trinken nehme ich eine Cola. — 喝的我要一杯可乐。"
     ],
-    "tip": "💡 When you learn a new word, always memorize it with its article visually: der (blue), die (pink), das (green). This makes the gender stick in your memory visually."
+    "tip": "💡 学新单词时，永远把它和冠词一起可视化记忆：der（蓝色）、die（粉色）、das（绿色）。这样词性会以视觉方式刻进记忆。"
    },
    "vocabulary": [
     {
      "german": "Kaffee",
-     "arabic": "coffee",
+     "arabic": "咖啡",
      "gender": "der",
      "example": "Einen Kaffee, bitte.",
-     "exampleArabic": "A coffee, please.",
+     "exampleArabic": "一杯咖啡，谢谢。",
      "type": "noun"
     },
     {
      "german": "Tee",
-     "arabic": "tea",
+     "arabic": "茶",
      "gender": "der",
      "plural": "Tees",
      "example": "Ich trinke gern Tee.",
-     "exampleArabic": "I like drinking tea.",
+     "exampleArabic": "我喜欢喝茶。",
      "type": "noun"
     },
     {
      "german": "Wasser",
-     "arabic": "water",
+     "arabic": "水",
      "gender": "das",
      "example": "Ein Wasser, bitte.",
-     "exampleArabic": "A water, please.",
+     "exampleArabic": "一杯水，谢谢。",
      "type": "noun"
     },
     {
      "german": "Saft",
-     "arabic": "juice",
+     "arabic": "果汁",
      "gender": "der",
      "plural": "Säfte",
      "example": "Ich möchte einen Saft.",
-     "exampleArabic": "I would like a juice.",
+     "exampleArabic": "我想要一杯果汁。",
      "type": "noun"
     },
     {
      "german": "Suppe",
-     "arabic": "soup",
+     "arabic": "汤",
      "gender": "die",
      "plural": "Suppen",
      "example": "Die Suppe ist heiß.",
-     "exampleArabic": "The soup is hot.",
+     "exampleArabic": "汤是热的。",
      "type": "noun"
     },
     {
      "german": "Brot",
-     "arabic": "bread",
+     "arabic": "面包",
      "gender": "das",
      "plural": "Brote",
      "example": "Ich esse Brot zum Frühstück.",
-     "exampleArabic": "I eat bread for breakfast.",
+     "exampleArabic": "我早餐吃面包。",
      "type": "noun"
     },
     {
      "german": "Salat",
-     "arabic": "salad",
+     "arabic": "沙拉",
      "gender": "der",
      "plural": "Salate",
      "example": "Ich nehme den Salat.",
-     "exampleArabic": "I'll take the salad.",
+     "exampleArabic": "我要沙拉。",
      "type": "noun"
     },
     {
      "german": "Fleisch",
-     "arabic": "meat",
+     "arabic": "肉",
      "gender": "das",
      "example": "Ich esse kein Fleisch.",
-     "exampleArabic": "I don't eat meat.",
+     "exampleArabic": "我不吃肉。",
      "type": "noun"
     },
     {
      "german": "Fisch",
-     "arabic": "fish",
+     "arabic": "鱼",
      "gender": "der",
      "plural": "Fische",
      "example": "Der Fisch schmeckt gut.",
-     "exampleArabic": "The fish tastes good.",
+     "exampleArabic": "这鱼很好吃。",
      "type": "noun"
     },
     {
      "german": "Kartoffel",
-     "arabic": "potato",
+     "arabic": "土豆",
      "gender": "die",
      "plural": "Kartoffeln",
      "example": "Kartoffeln mit Fleisch.",
-     "exampleArabic": "Potatoes with meat.",
+     "exampleArabic": "土豆配肉。",
      "type": "noun"
     },
     {
      "german": "Reis",
-     "arabic": "rice",
+     "arabic": "米饭",
      "gender": "der",
      "example": "Ich esse Reis.",
-     "exampleArabic": "I eat rice.",
+     "exampleArabic": "我吃米饭。",
      "type": "noun"
     },
     {
      "german": "Apfel",
-     "arabic": "apple",
+     "arabic": "苹果",
      "gender": "der",
      "plural": "Äpfel",
      "example": "Ein Apfel pro Tag!",
-     "exampleArabic": "An apple a day!",
+     "exampleArabic": "每天一个苹果！",
      "type": "noun"
     },
     {
      "german": "Speisekarte",
-     "arabic": "menu",
+     "arabic": "菜单",
      "gender": "die",
      "plural": "Speisekarten",
      "example": "Die Speisekarte, bitte!",
-     "exampleArabic": "The menu, please!",
+     "exampleArabic": "请给我菜单！",
      "type": "noun"
     },
     {
      "german": "Rechnung",
-     "arabic": "bill / check",
+     "arabic": "账单",
      "gender": "die",
      "plural": "Rechnungen",
      "example": "Die Rechnung, bitte!",
-     "exampleArabic": "The bill, please!",
+     "exampleArabic": "请结账！",
      "type": "noun"
     },
     {
      "german": "Tisch",
-     "arabic": "table",
+     "arabic": "桌子",
      "gender": "der",
      "plural": "Tische",
      "example": "Ein Tisch für zwei.",
-     "exampleArabic": "A table for two.",
+     "exampleArabic": "两个人的桌子。",
      "type": "noun"
     },
     {
      "german": "Restaurant",
-     "arabic": "restaurant",
+     "arabic": "餐厅",
      "gender": "das",
      "plural": "Restaurants",
      "example": "Das Restaurant ist gut.",
-     "exampleArabic": "The restaurant is good.",
+     "exampleArabic": "这家餐厅不错。",
      "type": "noun"
     },
     {
      "german": "möchten",
-     "arabic": "would like",
+     "arabic": "想要",
      "example": "Ich möchte bestellen.",
-     "exampleArabic": "I would like to order.",
+     "exampleArabic": "我想点单。",
      "type": "verb"
     },
     {
      "german": "nehmen",
-     "arabic": "to take / to have (food)",
+     "arabic": "拿；要（点餐）",
      "example": "Ich nehme die Suppe.",
-     "exampleArabic": "I'll have the soup.",
+     "exampleArabic": "我要这个汤。",
      "type": "verb"
     },
     {
      "german": "bestellen",
-     "arabic": "to order",
+     "arabic": "点（菜）；订购",
      "example": "Wir bestellen jetzt.",
-     "exampleArabic": "We're ordering now.",
+     "exampleArabic": "我们现在点单。",
      "type": "verb"
     },
     {
      "german": "bezahlen",
-     "arabic": "to pay",
+     "arabic": "支付",
      "example": "Ich möchte bezahlen.",
-     "exampleArabic": "I would like to pay.",
+     "exampleArabic": "我想买单。",
      "type": "verb"
     },
     {
      "german": "schmecken",
-     "arabic": "to taste",
+     "arabic": "尝起来（味道）",
      "example": "Das schmeckt gut!",
-     "exampleArabic": "This tastes good!",
+     "exampleArabic": "这个很好吃！",
      "type": "verb"
     },
     {
      "german": "lecker",
-     "arabic": "delicious / tasty",
+     "arabic": "美味的",
      "example": "Sehr lecker!",
-     "exampleArabic": "Very delicious!",
+     "exampleArabic": "太好吃了！",
      "type": "adjective"
     },
     {
      "german": "bitte / danke",
-     "arabic": "please / thank you",
+     "arabic": "请 / 谢谢",
      "example": "Einen Tisch, bitte.",
-     "exampleArabic": "A table, please.",
+     "exampleArabic": "请给一张桌子。",
      "type": "phrase"
     },
     {
      "german": "das Frühstück",
-     "arabic": "breakfast",
+     "arabic": "早餐",
      "gender": "das",
      "example": "Das Frühstück ist um 8 Uhr.",
-     "exampleArabic": "Breakfast is at 8.",
+     "exampleArabic": "早餐八点开始。",
      "type": "noun"
     },
     {
      "german": "das Mittagessen",
-     "arabic": "lunch",
+     "arabic": "午餐",
      "gender": "das",
      "example": "Was gibt es zum Mittagessen?",
-     "exampleArabic": "What's for lunch?",
+     "exampleArabic": "午餐吃什么？",
      "type": "noun"
     },
     {
      "german": "das Abendessen",
-     "arabic": "dinner",
+     "arabic": "晚餐",
      "gender": "das",
      "example": "Wir essen Abendessen um 19 Uhr.",
-     "exampleArabic": "We have dinner at 7pm.",
+     "exampleArabic": "我们晚上七点吃晚饭。",
      "type": "noun"
     },
     {
      "german": "die Milch",
-     "arabic": "milk",
+     "arabic": "牛奶",
      "gender": "die",
      "example": "Kaffee mit Milch.",
-     "exampleArabic": "Coffee with milk.",
+     "exampleArabic": "加奶咖啡。",
      "type": "noun"
     },
     {
      "german": "der Zucker",
-     "arabic": "sugar",
+     "arabic": "糖",
      "gender": "der",
      "example": "Tee ohne Zucker.",
-     "exampleArabic": "Tea without sugar.",
+     "exampleArabic": "不加糖的茶。",
      "type": "noun"
     },
     {
      "german": "das Salz",
-     "arabic": "salt",
+     "arabic": "盐",
      "gender": "das",
      "example": "Das Salz, bitte.",
-     "exampleArabic": "Salt, please.",
+     "exampleArabic": "请把盐递给我。",
      "type": "noun"
     },
     {
      "german": "die Butter",
-     "arabic": "butter",
+     "arabic": "黄油",
      "gender": "die",
      "example": "Brot mit Butter.",
-     "exampleArabic": "Bread with butter.",
+     "exampleArabic": "面包抹黄油。",
      "type": "noun"
     },
     {
      "german": "der Käse",
-     "arabic": "cheese",
+     "arabic": "奶酪",
      "gender": "der",
      "example": "Käsebrot, bitte.",
-     "exampleArabic": "Cheese sandwich, please.",
+     "exampleArabic": "一份奶酪面包，谢谢。",
      "type": "noun"
     },
     {
      "german": "das Ei",
-     "arabic": "egg",
+     "arabic": "鸡蛋",
      "gender": "das",
      "plural": "Eier",
      "example": "Zwei Eier, bitte.",
-     "exampleArabic": "Two eggs, please.",
+     "exampleArabic": "两个鸡蛋，谢谢。",
      "type": "noun"
     },
     {
      "german": "die Vorspeise",
-     "arabic": "starter",
+     "arabic": "前菜",
      "gender": "die",
      "plural": "Vorspeisen",
      "example": "Eine Vorspeise, bitte.",
-     "exampleArabic": "A starter, please.",
+     "exampleArabic": "来一份前菜，谢谢。",
      "type": "noun"
     },
     {
      "german": "das Hauptgericht",
-     "arabic": "main course",
+     "arabic": "主菜",
      "gender": "das",
      "plural": "Hauptgerichte",
      "example": "Das Hauptgericht ist Fisch.",
-     "exampleArabic": "The main course is fish.",
+     "exampleArabic": "主菜是鱼。",
      "type": "noun"
     },
     {
      "german": "der Nachtisch",
-     "arabic": "dessert",
+     "arabic": "甜点",
      "gender": "der",
      "example": "Was gibt es zum Nachtisch?",
-     "exampleArabic": "What's for dessert?",
+     "exampleArabic": "甜点是什么？",
      "type": "noun"
     },
     {
      "german": "der Kellner",
-     "arabic": "waiter",
+     "arabic": "服务员",
      "gender": "der",
      "plural": "Kellner",
      "example": "Der Kellner kommt gleich.",
-     "exampleArabic": "The waiter is coming.",
+     "exampleArabic": "服务员马上来。",
      "type": "noun"
     },
     {
      "german": "durstig / hungrig",
-     "arabic": "thirsty / hungry",
+     "arabic": "口渴的 / 饥饿的",
      "example": "Ich bin hungrig.",
-     "exampleArabic": "I'm hungry.",
+     "exampleArabic": "我饿了。",
      "type": "adjective"
     },
     {
      "german": "kalt / heiß / warm",
-     "arabic": "cold / hot / warm",
+     "arabic": "冷的 / 烫的 / 温热的",
      "example": "Der Kaffee ist heiß.",
-     "exampleArabic": "The coffee is hot.",
+     "exampleArabic": "咖啡很烫。",
      "type": "adjective"
     }
    ],
@@ -2476,14 +2476,14 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q1",
-      "question": "Complete: \"Ich möchte ___ Kaffee, bitte.\" (coffee — masculine, accusative)",
+      "question": "补全：「Ich möchte ___ Kaffee, bitte.」（咖啡——阳性，第四格）",
       "answer": "einen",
-      "hint": "Indefinite article for masculine in Akkusativ: einen"
+      "hint": "阳性第四格的不定冠词：einen"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q2",
-      "question": "What is the definite article for \"Milch\" (feminine)?",
+      "question": "「Milch」（阴性）的定冠词是？",
       "options": [
        "der",
        "das",
@@ -2495,14 +2495,14 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q3",
-      "question": "Complete: \"___ Wasser kostet zwei Euro.\" (water — neuter)",
+      "question": "补全：「___ Wasser kostet zwei Euro.」（水——中性）",
       "answer": "Das",
-      "hint": "The definite article for neuter is das"
+      "hint": "中性的定冠词是 das"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q4",
-      "question": "How do you ask for the bill in German?",
+      "question": "德语里怎么要账单？",
       "options": [
        "Die Speisekarte, bitte!",
        "Die Rechnung, bitte!",
@@ -2514,7 +2514,7 @@
      {
       "type": "matching",
       "id": "a1-04-q5",
-      "question": "Match each word with its correct article:",
+      "question": "把单词和正确的冠词配对：",
       "pairs": [
        {
         "left": "Kaffee",
@@ -2542,14 +2542,14 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q6",
-      "question": "Complete: \"Das ___ sehr gut!\" (This tastes very good)",
+      "question": "补全：「Das ___ sehr gut!」（这个真好吃）",
       "answer": "schmeckt",
-      "hint": "Verb schmecken with das: stem schmeck + ending -t"
+      "hint": "schmecken 与 das：词干 schmeck + 词尾 -t"
      },
      {
       "type": "drag-drop",
       "id": "a1-04-q7",
-      "question": "Put the sentence in order:",
+      "question": "把句子排好顺序：",
       "words": [
        "Ich",
        "möchte",
@@ -2562,22 +2562,22 @@
      {
       "type": "speaking",
       "id": "a1-04-q8",
-      "question": "Say in German: \"A table for two people, please\"",
+      "question": "用德语说：「请给一张两人桌」",
       "answer": "Einen Tisch für zwei Personen bitte",
-      "hint": "Tisch is masculine → einen"
+      "hint": "Tisch 是阳性 → einen"
      },
      {
       "type": "fill-blank",
       "id": "a1-04-q9",
-      "question": "Listen and complete: \"Ich nehme ___ Salat.\"",
+      "question": "听后补全：「Ich nehme ___ Salat.」",
       "audioPrompt": "Ich nehme den Salat.",
       "answer": "den",
-      "hint": "Salat is masculine in Akkusativ: der → den"
+      "hint": "Salat 阳性第四格：der → den"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q10",
-      "question": "Which sentence is correct?",
+      "question": "哪个句子是正确的？",
       "options": [
        "Ich möchte ein Suppe.",
        "Ich möchte eine Suppe.",
@@ -2589,14 +2589,14 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q11",
-      "question": "\"___ Speisekarte, bitte!\" (feminine)",
+      "question": "「___ Speisekarte, bitte!」（阴性）",
       "answer": "Die",
       "hint": "die Speisekarte"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q12",
-      "question": "Article of \"Ei\" (egg, neuter)?",
+      "question": "「Ei」（鸡蛋，中性）的冠词是？",
       "options": [
        "der",
        "die",
@@ -2608,34 +2608,34 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q13",
-      "question": "\"Ich nehme ___ Fisch.\" (fish, masc., Akk)",
+      "question": "「Ich nehme ___ Fisch.」（鱼，阳性，第四格）",
       "answer": "den",
       "hint": "der → den"
      },
      {
       "type": "matching",
       "id": "a1-04-q14",
-      "question": "Match the word to its meaning:",
+      "question": "把单词和含义配对：",
       "pairs": [
        {
         "left": "Frühstück",
-        "right": "breakfast"
+        "right": "早餐"
        },
        {
         "left": "Mittagessen",
-        "right": "lunch"
+        "right": "午餐"
        },
        {
         "left": "Abendessen",
-        "right": "dinner"
+        "right": "晚餐"
        },
        {
         "left": "Nachtisch",
-        "right": "dessert"
+        "right": "甜点"
        },
        {
         "left": "Vorspeise",
-        "right": "starter"
+        "right": "前菜"
        }
       ],
       "answer": "matched"
@@ -2643,7 +2643,7 @@
      {
       "type": "drag-drop",
       "id": "a1-04-q15",
-      "question": "Order: \"I'm very hungry\"",
+      "question": "排序：「我很饿」",
       "words": [
        "Ich",
        "bin",
@@ -2655,21 +2655,21 @@
      {
       "type": "speaking",
       "id": "a1-04-q16",
-      "question": "Say: \"Coffee with milk and no sugar, please\"",
+      "question": "说：「加奶不加糖的咖啡，谢谢」",
       "answer": "Kaffee mit Milch und ohne Zucker bitte"
      },
      {
       "type": "fill-blank",
       "id": "a1-04-q17",
-      "question": "Listen: \"Der Kaffee ist ___\" (hot)",
+      "question": "听：「Der Kaffee ist ___」（烫）",
       "audioPrompt": "Der Kaffee ist heiß.",
       "answer": "heiß",
-      "hint": "temperature adj."
+      "hint": "表示温度的形容词"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q18",
-      "question": "Cheese in German:",
+      "question": "奶酪用德语怎么说：",
       "options": [
        "die Butter",
        "der Käse",
@@ -2681,14 +2681,14 @@
      {
       "type": "fill-blank",
       "id": "a1-04-q19",
-      "question": "\"Der ___ kommt gleich.\" (waiter)",
+      "question": "「Der ___ kommt gleich.」（服务员）",
       "answer": "Kellner",
       "hint": "der Kellner"
      },
      {
       "type": "multiple-choice",
       "id": "a1-04-q20",
-      "question": "How to say \"I'm thirsty\"?",
+      "question": "「我渴了」怎么说？",
       "options": [
        "Ich bin hungrig.",
        "Ich bin durstig.",
