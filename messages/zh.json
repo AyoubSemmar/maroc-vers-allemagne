@@ -2338,333 +2338,333 @@
  },
  "cvBuilder": {
   "seoSection": {
-   "title": "How a German Lebenslauf differs from a typical international CV",
-   "intro": "The German Lebenslauf is structured very differently from a typical international CV. This builder formats your information directly into the German standard layout: reverse-chronological work and study, with start–end dates as months not years, your photo top-right (still expected by 80% of German employers despite the AGG anti-discrimination guidelines), and a formal Tabellarischer Lebenslauf structure that Ausbildung recruiters expect to see. The output is a clean PDF you can attach to any Ausbildung or job application.\n\nBeyond layout, the tool translates job titles into German equivalents (Stagiaire → Praktikant, Vendeur → Verkäufer, Développeur → Software-Entwickler), suggests action verbs in German, and flags missing sections German recruiters look for: Sprachkenntnisse with CEFR levels (A1 to C2), Hobbies und Interessen, and Referenzen auf Anfrage. It does not replace a manual review of your application materials by a German-speaking specialist — for an Ausbildung application that you really need to land, book a 30-minute review.",
-   "faqTitle": "Common questions about the German Lebenslauf",
+   "title": "德式简历（Lebenslauf）与普通国际简历有何不同",
+   "intro": "德式简历（Lebenslauf）的结构与典型国际简历大不相同。这个生成器直接把您的信息排成德国标准版式：工作和学习经历按时间倒序排列，起止日期精确到月而非年，照片放在右上角（尽管有 AGG 反歧视法，80% 的德国雇主仍期望看到照片），并采用 Ausbildung 招聘者期待的正式表格式简历（Tabellarischer Lebenslauf）结构。输出是一份干净的 PDF，可直接附在任何 Ausbildung 或工作申请中。\n\n除版式外，工具还会把职位名称翻译成德语对应词（实习生 → Praktikant，售货员 → Verkäufer，开发工程师 → Software-Entwickler），推荐德语行为动词，并提示德国招聘者关注的缺失板块：带 CEFR 等级（A1 到 C2）的语言能力（Sprachkenntnisse）、兴趣爱好（Hobbys und Interessen）和「Referenzen auf Anfrage」。它不能替代德语专家对申请材料的人工审核——对于志在必得的 Ausbildung 申请，建议预约 30 分钟审核。",
+   "faqTitle": "关于德式简历的常见问题",
    "faqs": [
     {
-     "q": "Should I include a photo on my Lebenslauf?",
-     "a": "Officially no — the AGG anti-discrimination law removed the requirement. In practice, around 80% of Ausbildung CVs in Germany still have one. Include a professional photo for traditional sectors (healthcare, hospitality, retail, banking); skip it for tech and start-ups."
+     "q": "简历上要放照片吗？",
+     "a": "官方说不需要——AGG 反歧视法已取消这一要求。但实际上，德国约 80% 的 Ausbildung 简历仍附照片。传统行业（医疗、酒店、零售、银行）建议放专业照片；科技公司和初创企业可以不放。"
     },
     {
-     "q": "How many pages should my Lebenslauf be?",
-     "a": "One page if you have under 5 years of experience; two pages maximum. Three-page CVs are routinely filtered out by both human recruiters and ATS software."
+     "q": "简历应该几页？",
+     "a": "经验不足 5 年一页即可；最多两页。三页的简历通常会被招聘者和 ATS 系统直接过滤掉。"
     },
     {
-     "q": "What date format do German employers expect?",
-     "a": "German format: 10/2023–06/2024 or 10.2023–06.2024 (slash or dot, not dash, between month and year). Spell out months only if you have a single role per year."
+     "q": "德国雇主期望什么日期格式？",
+     "a": "德式格式：10/2023–06/2024 或 10.2023–06.2024（月和年之间用斜杠或点，不用横线）。只有每年只有一段经历时才写出月份名称。"
     }
    ]
   },
-  "eyebrow": "📄 CV Builder",
-  "subtitle": "Build your German CV step by step — instant preview and free PDF download.",
-  "completion": "{n}% complete",
-  "next": "Next →",
-  "prev": "← Back",
+  "eyebrow": "📄 简历生成器",
+  "subtitle": "一步步创建您的德式简历——实时预览，免费下载 PDF。",
+  "completion": "已完成 {n}%",
+  "next": "下一步 →",
+  "prev": "← 返回",
   "warn": "⚠ {msg}",
   "stepLabel": {
-   "personal": "Personal Info",
-   "education": "Education",
-   "experience": "Work Experience",
-   "skills": "Skills",
-   "languages": "Languages",
-   "documents": "Documents",
-   "preview": "Preview & Download"
+   "personal": "个人信息",
+   "education": "教育经历",
+   "experience": "工作经历",
+   "skills": "技能",
+   "languages": "语言",
+   "documents": "文件",
+   "preview": "预览与下载"
   },
   "validation": {
-   "firstName": "First name is required",
-   "lastName": "Last name is required",
-   "emailReq": "Email is required",
-   "emailInvalid": "Invalid email format"
+   "firstName": "名字为必填项",
+   "lastName": "姓氏为必填项",
+   "emailReq": "邮箱为必填项",
+   "emailInvalid": "邮箱格式无效"
   },
   "personal": {
-   "title": "Personal Information",
-   "hint": "Start with the basics — these appear at the top of your CV.",
-   "changePhoto": "Change photo",
-   "uploadPhoto": "Upload photo",
-   "delete": "Remove",
-   "photoHint": "JPG / PNG — max 5MB. Recommended for German applications.",
-   "photoTooLarge": "⚠ Photo is too large (max 5MB)",
-   "firstName": "First name *",
-   "lastName": "Last name *",
-   "jobTitle": "Target position",
-   "nationality": "Nationality",
-   "dob": "Date of birth",
-   "pob": "Place of birth",
-   "email": "Email *",
-   "phone": "Phone *",
-   "address": "Address",
-   "postal": "Postal code",
-   "city": "City",
-   "careerGoal": "Career objective",
-   "careerGoalPh": "e.g. Motivierter Softwareentwickler mit Fokus auf Full-Stack-Entwicklung, suche eine Position, in der ich moderne Webtechnologien einsetzen und wachsen kann.",
-   "careerGoalHint": "Leave empty to auto-generate with AI from the \"Correct & translate to German\" button in the last step.",
-   "jobTitlePh": "e.g. Softwareentwickler"
+   "title": "个人信息",
+   "hint": "从基本信息开始——它们会显示在简历顶部。",
+   "changePhoto": "更换照片",
+   "uploadPhoto": "上传照片",
+   "delete": "移除",
+   "photoHint": "JPG / PNG——最大 5MB。德国求职建议附照片。",
+   "photoTooLarge": "⚠ 照片太大（最大 5MB）",
+   "firstName": "名 *",
+   "lastName": "姓 *",
+   "jobTitle": "目标职位",
+   "nationality": "国籍",
+   "dob": "出生日期",
+   "pob": "出生地",
+   "email": "邮箱 *",
+   "phone": "电话 *",
+   "address": "地址",
+   "postal": "邮编",
+   "city": "城市",
+   "careerGoal": "职业目标",
+   "careerGoalPh": "例如：Motivierter Softwareentwickler mit Fokus auf Full-Stack-Entwicklung, suche eine Position, in der ich moderne Webtechnologien einsetzen und wachsen kann.",
+   "careerGoalHint": "留空则可在最后一步用「纠正并翻译成德语」按钮由 AI 自动生成。",
+   "jobTitlePh": "例如：Softwareentwickler"
   },
   "education": {
-   "title": "Education & Training",
-   "hint": "Add all your academic qualifications — most recent first.",
-   "empty": "No qualifications added yet.",
-   "entry": "Qualification #{n}",
-   "remove": "Remove",
-   "add": "+ Add qualification",
-   "institution": "Institution",
-   "degree": "Degree",
-   "field": "Field of study",
-   "start": "Start date",
-   "endLabel": "End date",
-   "endHint": "Leave empty for \"present\"",
-   "desc": "Additional details",
-   "descPh": "Final grade, research topics, projects..."
+   "title": "教育与培训",
+   "hint": "添加您的全部学历——最近的排最前。",
+   "empty": "还没有添加学历。",
+   "entry": "学历 #{n}",
+   "remove": "删除",
+   "add": "+ 添加学历",
+   "institution": "学校/机构",
+   "degree": "学位",
+   "field": "专业",
+   "start": "开始日期",
+   "endLabel": "结束日期",
+   "endHint": "留空表示「至今」",
+   "desc": "补充信息",
+   "descPh": "毕业成绩、研究方向、项目……"
   },
   "experience": {
-   "title": "Work Experience",
-   "hint": "Add your previous roles — focus on achievements, not just duties.",
-   "empty": "No experience added yet.",
-   "entry": "Experience #{n}",
-   "remove": "Remove",
-   "add": "+ Add experience",
-   "jobTitle": "Job title",
-   "company": "Company",
-   "location": "Location",
-   "start": "Start date",
-   "endLabel": "End date",
-   "endHint": "Leave empty for \"present\"",
-   "tasks": "Tasks & achievements",
-   "tasksHint": "One line per bullet",
-   "tasksPh": "Developed REST APIs\nImproved performance by 40%\nLed a team of 4 developers",
-   "preview": "Preview:"
+   "title": "工作经历",
+   "hint": "添加您以往的职位——突出成果，而不只是职责。",
+   "empty": "还没有添加经历。",
+   "entry": "经历 #{n}",
+   "remove": "删除",
+   "add": "+ 添加经历",
+   "jobTitle": "职位名称",
+   "company": "公司",
+   "location": "地点",
+   "start": "开始日期",
+   "endLabel": "结束日期",
+   "endHint": "留空表示「至今」",
+   "tasks": "工作内容与成果",
+   "tasksHint": "每行一条",
+   "tasksPh": "开发 REST API\n性能提升 40%\n带领 4 人开发团队",
+   "preview": "预览："
   },
   "skills": {
-   "title": "Skills",
-   "hint": "Add technical and soft skills — press Enter or comma to add each one.",
-   "technical": "Technical skills",
-   "technicalPh": "JavaScript, Python, SAP, Excel...",
-   "soft": "Soft skills",
-   "softPh": "Teamarbeit, Zuverlässigkeit, Kommunikation...",
-   "inputHint": "Press Enter or , to add a skill · Backspace to remove the last one"
+   "title": "技能",
+   "hint": "添加硬技能和软技能——按回车或逗号逐个添加。",
+   "technical": "专业技能",
+   "technicalPh": "JavaScript、Python、SAP、Excel……",
+   "soft": "软技能",
+   "softPh": "Teamarbeit、Zuverlässigkeit、Kommunikation……",
+   "inputHint": "按回车或逗号添加技能 · 退格删除最后一个"
   },
   "languages": {
-   "title": "Languages",
-   "hint": "Levels follow the European framework (CEFR): A1 beginner — C2 full mastery.",
-   "empty": "No languages added yet.",
-   "add": "+ Add language",
-   "placeholder": "Deutsch / English / العربية...",
+   "title": "语言",
+   "hint": "等级采用欧洲共同语言参考框架（CEFR）：A1 入门——C2 完全精通。",
+   "empty": "还没有添加语言。",
+   "add": "+ 添加语言",
+   "placeholder": "Deutsch / English / 中文……",
    "level": {
-    "A1": "Beginner",
-    "A2": "Elementary",
-    "B1": "Intermediate",
-    "B2": "Upper-Intermediate",
-    "C1": "Advanced",
-    "C2": "Mastery",
-    "Native": "Native"
+    "A1": "入门",
+    "A2": "初级",
+    "B1": "中级",
+    "B2": "中高级",
+    "C1": "高级",
+    "C2": "精通",
+    "Native": "母语"
    }
   },
   "documents": {
-   "title": "Attached Documents",
-   "hint": "Upload scanned copies of your certificates — they'll be saved to your account automatically and used to enrich your CV via AI.",
-   "tooLarge": "⚠ {name} is larger than 4MB — skipped",
-   "choose": "📎 Choose files (PDF / images)",
-   "limit": "Max 4MB per file · saved automatically to your account",
-   "saving": "⏳ Saving...",
-   "saved": "✓ Saved to your account",
-   "saveFailed": "⚠ Not saved",
-   "saveError": "Could not save",
-   "remove": "Remove",
-   "confirmDelete": "Permanently delete \"{name}\"?",
+   "title": "附加文件",
+   "hint": "上传证书扫描件——它们会自动保存到您的账户，并用于通过 AI 丰富您的简历。",
+   "tooLarge": "⚠ {name} 超过 4MB——已跳过",
+   "choose": "📎 选择文件（PDF / 图片）",
+   "limit": "每个文件最大 4MB · 自动保存到您的账户",
+   "saving": "⏳ 保存中……",
+   "saved": "✓ 已保存到您的账户",
+   "saveFailed": "⚠ 未保存",
+   "saveError": "无法保存",
+   "remove": "删除",
+   "confirmDelete": "永久删除「{name}」？",
    "cat": {
-    "certificates": "General certificates",
-    "diploma": "Diplomas",
-    "languageCertificates": "Language certificates",
-    "optionalCoverLetter": "Cover letter (optional)"
+    "certificates": "普通证书",
+    "diploma": "文凭",
+    "languageCertificates": "语言证书",
+    "optionalCoverLetter": "求职信（选填）"
    }
   },
   "preview": {
-   "title": "Preview & Download",
-   "hint": "Pick the template that suits you, then download your CV as a PDF.",
-   "chooseTemplate": "Choose a template",
-   "currentTemplate": "Current template:",
-   "premiumBadge": "🔒 Premium",
-   "aiTitle": "✨ Correct, translate & enhance into German",
-   "aiHint": "Write in any language (Arabic, French, English, German). The AI corrects mistakes, translates into professional German, generates a career objective and realistically enriches descriptions and soft skills without exaggeration.",
-   "aiCta": "✨ Correct & enhance",
-   "aiProcessing": "⏳ Processing...",
-   "aiRemaining": "left today",
-   "aiConfirm": "Your data will be sent to the AI service to be corrected and translated into German. Continue?",
-   "aiSuccess": "✅ Successfully corrected and translated to German.",
-   "aiFail": "❌ Translation failed: {msg}",
-   "unknownErr": "Unknown error",
-   "clear": "Clear data",
-   "confirmClear": "Really clear all data?",
-   "save": "💾 Save to my account",
-   "saveBusy": "⏳...",
-   "saveOk": "✅ Saved to your account",
+   "title": "预览与下载",
+   "hint": "选择适合您的模板，然后下载 PDF 简历。",
+   "chooseTemplate": "选择模板",
+   "currentTemplate": "当前模板：",
+   "premiumBadge": "🔒 高级版",
+   "aiTitle": "✨ 纠正、翻译并润色成德语",
+   "aiHint": "用任何语言书写（中文、英语、法语、德语）。AI 会纠正错误、翻译成专业德语、生成职业目标，并在不夸大的前提下适度丰富描述和软技能。",
+   "aiCta": "✨ 纠正并润色",
+   "aiProcessing": "⏳ 处理中……",
+   "aiRemaining": "今日剩余",
+   "aiConfirm": "您的数据将被发送到 AI 服务进行纠正并翻译成德语。继续？",
+   "aiSuccess": "✅ 已成功纠正并翻译成德语。",
+   "aiFail": "❌ 翻译失败：{msg}",
+   "unknownErr": "未知错误",
+   "clear": "清空数据",
+   "confirmClear": "确定清空所有数据？",
+   "save": "💾 保存到我的账户",
+   "saveBusy": "⏳……",
+   "saveOk": "✅ 已保存到您的账户",
    "saveErr": "❌ {msg}",
-   "saveErrDefault": "Save error",
-   "loginPrompt": "You must sign in to save the document. Go to the sign-in page?",
-   "defaultName": "CV",
-   "download": "📥 Download PDF",
-   "downloadBusy": "⏳ Generating...",
-   "downloadLocked": "🔒 Upgrade to download",
-   "downloadErr": "An error occurred while generating the file. Try again.",
-   "upgradeDone": "✅ Premium templates unlocked (demo mode). In production this links to the payment gateway."
+   "saveErrDefault": "保存出错",
+   "loginPrompt": "保存文档需要登录。前往登录页面？",
+   "defaultName": "简历",
+   "download": "📥 下载 PDF",
+   "downloadBusy": "⏳ 生成中……",
+   "downloadLocked": "🔒 升级后下载",
+   "downloadErr": "生成文件时出错，请重试。",
+   "upgradeDone": "✅ 高级模板已解锁（演示模式）。正式环境中此处会跳转到支付网关。"
   },
   "templates": {
    "classic": {
-    "name": "German Classic",
-    "desc": "Traditional German layout — fits every field"
+    "name": "德式经典",
+    "desc": "传统德式版式——适合所有行业"
    },
    "modern": {
-    "name": "Modern Blue",
-    "desc": "Modern design with an elegant blue tone"
+    "name": "现代蓝",
+    "desc": "现代设计，优雅蓝色调"
    },
    "minimal": {
-    "name": "Minimal Clean",
-    "desc": "Simple and clean — content-focused"
+    "name": "极简清爽",
+    "desc": "简洁干净——以内容为中心"
    },
    "dark": {
-    "name": "Professional Dark",
-    "desc": "Dark template for creative and tech careers"
+    "name": "专业深色",
+    "desc": "深色模板，适合创意和科技行业"
    },
    "compact": {
-    "name": "Compact One-Page",
-    "desc": "Compact design that fits on a single page"
+    "name": "紧凑单页",
+    "desc": "紧凑设计，一页装下"
    }
   },
   "upgrade": {
-   "closeAria": "Close",
-   "title": "Premium template",
-   "body": "The <strong>{name}</strong> template is only available with the upgrade. You can preview it now, but PDF download requires a subscription.",
-   "f1": "✓ Access to all five templates",
-   "f2": "✓ Unlimited high-quality PDF downloads",
-   "f3": "✓ Future updates and new templates",
-   "f4": "✓ Priority support",
-   "cta": "Upgrade now — 4.99€",
-   "later": "Maybe later"
+   "closeAria": "关闭",
+   "title": "高级模板",
+   "body": "<strong>{name}</strong> 模板仅在升级后可用。您现在可以预览，但下载 PDF 需要订阅。",
+   "f1": "✓ 使用全部五个模板",
+   "f2": "✓ 无限次高质量 PDF 下载",
+   "f3": "✓ 未来更新和新模板",
+   "f4": "✓ 优先支持",
+   "cta": "立即升级——4.99€",
+   "later": "以后再说"
   },
   "photo": {
-   "title": "📸 Turn your photo into a professional CV photo",
-   "hint": "Realistic background, clothing appropriate for your field, features preserved.",
-   "remaining": "Remaining today: {rem}/{lim}",
-   "kind": "🎯 Photo type:",
-   "hijabLabel": "🧕 Hijab:",
-   "hijabNone": "I don't wear a hijab",
-   "hijabKeep": "Keep the hijab",
-   "hijabRemove": "Remove the hijab",
+   "title": "📸 把您的照片变成专业简历照",
+   "hint": "逼真背景、符合行业的着装，保留原有相貌特征。",
+   "remaining": "今日剩余：{rem}/{lim}",
+   "kind": "🎯 照片类型：",
+   "hijabLabel": "🧕 头巾：",
+   "hijabNone": "我不戴头巾",
+   "hijabKeep": "保留头巾",
+   "hijabRemove": "去掉头巾",
    "pro": {
-    "office": "Office / corporate",
-    "health": "Healthcare / nursing",
-    "lkw": "Truck driver (LKW)",
-    "handwerk": "Skilled trades (electrics, mechanics)",
-    "gastronomie": "Restaurant / hospitality"
+    "office": "办公室 / 企业",
+    "health": "医疗 / 护理",
+    "lkw": "卡车司机（LKW）",
+    "handwerk": "技术工种（电工、机械）",
+    "gastronomie": "餐饮 / 酒店"
    },
-   "gallery": "🖼️ Your generated photos ({n}):",
-   "showDetails": "Show details →",
-   "useSelected": "✓ Use the selected one in the CV",
-   "generateFirst": "✨ Generate a professional photo",
-   "generateAnother": "✨ Generate another",
-   "processing": "⏳ Processing...",
-   "noPhoto": "Upload a photo first",
-   "dailyLimit": "You've hit the daily limit ({lim} attempts). Try again tomorrow.",
-   "loginRequired": "You must sign in to use this feature.",
-   "enhanceFail": "Could not enhance the photo. Try again.",
-   "modalTitle": "Your generated photos — pick the best one",
-   "before": "Before (original)",
-   "after": "After ✨",
-   "allImages": "All photos ({n}) — click to select:",
-   "close": "✕ Close",
-   "regenerate": "↻ Generate another",
-   "regenShort": "⏳...",
-   "downloadAria": "Download",
-   "shareAria": "Share",
-   "shareTitle": "Professional CV photo",
-   "shareText": "Created on \"Your Guide to Germany\" 🇩🇪",
-   "clipboardOk": "✅ Photo copied to clipboard — paste it into any app (WhatsApp, Instagram, ...).",
-   "downloadedFallback": "📥 Photo downloaded. Share it manually in any app.",
-   "shareFailed": "❌ Share failed: {msg}",
-   "shareTitleFile": "CV photo"
+   "gallery": "🖼️ 您生成的照片（{n}）：",
+   "showDetails": "查看详情 →",
+   "useSelected": "✓ 在简历中使用所选照片",
+   "generateFirst": "✨ 生成专业照片",
+   "generateAnother": "✨ 再生成一张",
+   "processing": "⏳ 处理中……",
+   "noPhoto": "请先上传照片",
+   "dailyLimit": "已达今日上限（{lim} 次）。明天再试。",
+   "loginRequired": "使用此功能需要登录。",
+   "enhanceFail": "无法处理照片，请重试。",
+   "modalTitle": "您生成的照片——选出最好的一张",
+   "before": "处理前（原图）",
+   "after": "处理后 ✨",
+   "allImages": "全部照片（{n}）——点击选择：",
+   "close": "✕ 关闭",
+   "regenerate": "↻ 再生成一张",
+   "regenShort": "⏳……",
+   "downloadAria": "下载",
+   "shareAria": "分享",
+   "shareTitle": "专业简历照片",
+   "shareText": "在 GoGermany 制作 🇩🇪",
+   "clipboardOk": "✅ 照片已复制到剪贴板——可粘贴到任何应用（WhatsApp、微信……）。",
+   "downloadedFallback": "📥 照片已下载。可手动分享到任何应用。",
+   "shareFailed": "❌ 分享失败：{msg}",
+   "shareTitleFile": "简历照片"
   },
-  "metaTitle": "CV Builder — Move to Germany",
-  "metaDesc": "Easily build a professional German CV (Lebenslauf) — multiple templates and free PDF export."
+  "metaTitle": "简历生成器 — 移居德国",
+  "metaDesc": "轻松制作专业德式简历（Lebenslauf）——多种模板，免费导出 PDF。"
  },
  "anschreiben": {
   "seoSection": {
-   "title": "Why the Anschreiben decides whether your Lebenslauf gets read",
-   "intro": "The Anschreiben (cover letter) is the most-skipped piece of a German job application — and the one that decides whether your CV gets read at all. This generator produces a German Anschreiben tailored to a specific Ausbildung position or university application: company name, position, your motivation, why you (specifically) for them. It uses the standard German letter format: your address top-left, recipient address below, date right-aligned, \"Sehr geehrte Damen und Herren\" or named recipient, body in 3 to 4 short paragraphs, and \"Mit freundlichen Grüßen\" to close.\n\nThe output is a working draft you should personalise — paste in 2 to 3 specific sentences from the job posting, mention something concrete about the employer (their training programme, location, products), and remove the AI-style padding. German recruiters spot generic letters instantly. Use the generator to remove the blank-page problem, then make it yours. For high-stakes applications, book a 30-minute review with a German-speaking specialist before you send.",
-   "faqTitle": "Common questions about the German Anschreiben",
+   "title": "为什么求职信决定您的简历是否被阅读",
+   "intro": "求职信（Anschreiben）是德国求职申请中最常被忽略的部分——却决定着您的简历是否会被阅读。这个生成器为特定的 Ausbildung 岗位或大学申请生成德语求职信：公司名称、职位、您的动机、为什么是您（具体地）适合他们。它使用标准德式书信格式：您的地址在左上，收件人地址在下方，日期右对齐，「Sehr geehrte Damen und Herren」或具名称呼，正文 3 到 4 个短段落，以「Mit freundlichen Grüßen」结尾。\n\n生成的是一份需要您个性化的可用草稿——粘贴招聘启事中的 2 到 3 个具体句子，提到雇主的具体信息（培训项目、地点、产品），并删除 AI 式的空话。德国招聘者一眼就能识别模板信。用生成器解决「空白页难题」，然后把它变成您自己的。重要申请发送前，建议预约 30 分钟德语专家审核。",
+   "faqTitle": "关于德语求职信的常见问题",
    "faqs": [
     {
-     "q": "How long should the Anschreiben be?",
-     "a": "One page exactly. German recruiters expect to see your motivation in 250 to 350 words. Shorter feels lazy, longer does not get read."
+     "q": "求职信应该多长？",
+     "a": "正好一页。德国招聘者期望在 250 到 350 词内看到您的动机。更短显得敷衍，更长没人读。"
     },
     {
-     "q": "Should I write it in German if my German is not yet strong?",
-     "a": "Yes. A B1-level Anschreiben in German beats a perfect French one. The recruiter will see the gap between your written German and the polished generated text — that is expected; they are hiring an Auszubildender, not a writer. But never lie about your level."
+     "q": "我德语还不够好，也要用德语写吗？",
+     "a": "要。一封 B1 水平的德语求职信胜过一封完美的法语信。招聘者会看出您的书面德语与润色后文本之间的差距——这是意料之中的；他们招的是学徒，不是作家。但绝不要谎报水平。"
     },
     {
-     "q": "Should I repeat what is on my CV in the Anschreiben?",
-     "a": "No. The CV has the facts. The Anschreiben should explain why YOU and why THEM — concrete examples of your interest in this particular employer and what you bring beyond the bullet points."
+     "q": "求职信要重复简历上的内容吗？",
+     "a": "不要。简历负责事实。求职信要解释为什么是您、为什么是他们——用具体例子说明您对这家雇主的兴趣，以及您在简历要点之外能带来什么。"
     }
    ]
   },
-  "eyebrow": "✍️ Cover letter generator",
-  "subtitle": "Enter your details in the language of your choice — the AI writes a professional German cover letter tailored for an Ausbildung application.",
-  "emptyHint": "Your letter will appear here after you click the Generate button.",
-  "loadingTitle": "The AI is writing your letter...",
-  "loadingHint": "This usually takes 5–15 seconds",
-  "unknownErr": "An unknown error occurred. Please try again.",
+  "eyebrow": "✍️ 求职信生成器",
+  "subtitle": "用您选择的语言输入信息——AI 为 Ausbildung 申请撰写专业的德语求职信。",
+  "emptyHint": "点击生成按钮后，您的信会显示在这里。",
+  "loadingTitle": "AI 正在撰写您的信……",
+  "loadingHint": "通常需要 5–15 秒",
+  "unknownErr": "发生未知错误，请重试。",
   "banner": {
-   "premiumUnlimited": "✨ Premium plan — unlimited generation",
-   "premiumRemaining": "✨ Premium plan — remaining today: {rem}/{lim}",
-   "freeTryTitle": "🎁 You have one free trial!",
-   "freeTryBody": " Try the cover letter generator for free once — after that you'll need credits.",
-   "dailyAvailable": "🎁 {rem}/{lim} motivation letters available today",
-   "creditsTitleOne": "Your balance: {n} letter",
-   "creditsTitleMany": "Your balance: {n} letters",
-   "creditsBody": " One credit will be deducted for each successful generation.",
-   "emptyTitle": "❌ No credits",
-   "emptyBody": " You've used your free trial. Buy credits or upgrade to the premium plan to continue.",
-   "buyCreditsSoon": "💳 Buy credits (coming soon)"
+   "premiumUnlimited": "✨ 高级套餐——无限生成",
+   "premiumRemaining": "✨ 高级套餐——今日剩余：{rem}/{lim}",
+   "freeTryTitle": "🎁 您有一次免费试用！",
+   "freeTryBody": "免费试用一次求职信生成器——之后需要积分。",
+   "dailyAvailable": "🎁 今日可用 {rem}/{lim} 封动机信",
+   "creditsTitleOne": "您的余额：{n} 封信",
+   "creditsTitleMany": "您的余额：{n} 封信",
+   "creditsBody": "每次成功生成扣除一个积分。",
+   "emptyTitle": "❌ 没有积分",
+   "emptyBody": "您已用完免费试用。购买积分或升级到高级套餐以继续。",
+   "buyCreditsSoon": "💳 购买积分（即将推出）"
   },
   "form": {
-   "section": "Your personal details",
-   "fullName": "Full name",
-   "fullNamePh": "e.g. Ahmed El Mansouri",
-   "gender": "Gender",
-   "male": "👨 Male",
-   "female": "👩 Female",
-   "position": "Target Ausbildung position",
-   "positionPh": "e.g. Pflegefachmann · Mechatroniker · Kaufmann im Einzelhandel",
-   "background": "Describe your background, experience and goals",
-   "backgroundPh": "Write about your experience, interests and goals. You can write in Arabic, French or English — the AI will understand and translate automatically.",
-   "cvLabel": "CV (PDF)",
-   "cvDrop": "Drop a PDF here or",
-   "cvClick": "click to choose",
-   "cvHint": "PDF only · 5MB max · optional but improves the result",
-   "pdfOnly": "⚠ PDF files only.",
-   "tooLarge": "⚠ Max size 5MB.",
-   "generating": "Generating...",
-   "needCredit": "🔒 Credits or premium plan required",
-   "generate": "✨ Generate cover letter"
+   "section": "您的个人信息",
+   "fullName": "姓名",
+   "fullNamePh": "例如：李伟",
+   "gender": "性别",
+   "male": "👨 男",
+   "female": "👩 女",
+   "position": "目标 Ausbildung 职位",
+   "positionPh": "例如：Pflegefachmann · Mechatroniker · Kaufmann im Einzelhandel",
+   "background": "描述您的背景、经历和目标",
+   "backgroundPh": "写下您的经历、兴趣和目标。可以用中文或英文——AI 会自动理解并翻译。",
+   "cvLabel": "简历（PDF）",
+   "cvDrop": "将 PDF 拖到此处，或",
+   "cvClick": "点击选择",
+   "cvHint": "仅限 PDF · 最大 5MB · 选填但可改善结果",
+   "pdfOnly": "⚠ 仅限 PDF 文件。",
+   "tooLarge": "⚠ 最大 5MB。",
+   "generating": "生成中……",
+   "needCredit": "🔒 需要积分或高级套餐",
+   "generate": "✨ 生成求职信"
   },
   "preview": {
-   "title": "Cover letter",
+   "title": "求职信",
    "subtitle": "Bewerbungsanschreiben · {pos}",
-   "copy": "📋 Copy",
-   "copied": "✅ Copied",
-   "save": "💾 Save",
-   "saveBusy": "⏳...",
-   "saveOk": "✅ Saved!",
+   "copy": "📋 复制",
+   "copied": "✅ 已复制",
+   "save": "💾 保存",
+   "saveBusy": "⏳……",
+   "saveOk": "✅ 已保存！",
    "saveErr": "❌ {msg}",
-   "saveErrDefault": "Error",
-   "loginPrompt": "You must sign in to save the document. Go to the sign-in page?",
+   "saveErrDefault": "错误",
+   "loginPrompt": "保存文档需要登录。前往登录页面？",
    "defaultName": "Anschreiben",
-   "downloadBusy": "⏳ ...",
+   "downloadBusy": "⏳ ……",
    "download": "📥 PDF",
-   "downloadErr": "An error occurred during download. Please try again."
+   "downloadErr": "下载时出错，请重试。"
   },
-  "metaTitle": "Cover Letter Generator — Move to Germany",
-  "metaDesc": "Write a professional German cover letter for an Ausbildung with AI help — free and fast."
+  "metaTitle": "求职信生成器 — 移居德国",
+  "metaDesc": "用 AI 为 Ausbildung 撰写专业的德语求职信——免费又快捷。"
  },
  "articles": {
   "metaTitle": "文章 — 移居德国",
@@ -3056,29 +3056,29 @@
   "badgeFree": "100% 免费"
  },
  "admin": {
-  "dashboard": "Dashboard",
-  "login": "Log in",
-  "password": "Password",
-  "site": "Site",
-  "logout": "Log out",
-  "addArticleHeading": "Add new article",
-  "titlePh": "Title",
-  "summaryPh": "Summary",
-  "contentPh": "Full content",
-  "selectCategory": "Select category",
-  "imageLabel": "Article image (optional)",
-  "imageEditLabel": "Article image (leave empty to keep current image)",
-  "featured": "⭐ Featured article (shows at top of homepage)",
-  "publishArticle": "Publish article",
-  "articlesHeading": "Articles ({n})",
-  "edit": "Edit",
-  "del": "Delete",
-  "listingsHeading": "Listings ({n})",
-  "listingsEmpty": "No listings.",
-  "view": "View",
-  "editArticleTitle": "Edit article",
-  "backToDashboard": "Back to dashboard",
-  "save": "Save changes"
+  "dashboard": "控制台",
+  "login": "登录",
+  "password": "密码",
+  "site": "网站",
+  "logout": "退出登录",
+  "addArticleHeading": "添加新文章",
+  "titlePh": "标题",
+  "summaryPh": "摘要",
+  "contentPh": "全文内容",
+  "selectCategory": "选择分类",
+  "imageLabel": "文章图片（选填）",
+  "imageEditLabel": "文章图片（留空保留当前图片）",
+  "featured": "⭐ 精选文章（显示在首页顶部）",
+  "publishArticle": "发布文章",
+  "articlesHeading": "文章（{n}）",
+  "edit": "编辑",
+  "del": "删除",
+  "listingsHeading": "房源（{n}）",
+  "listingsEmpty": "没有房源。",
+  "view": "查看",
+  "editArticleTitle": "编辑文章",
+  "backToDashboard": "返回控制台",
+  "save": "保存修改"
  },
  "ausbJobs": {
   "metaTitle": "Ausbildung 职位 — 职业培训岗位 | 您的德国指南",
@@ -3136,202 +3136,202 @@
   }
  },
  "dashboard": {
-  "title": "Dashboard",
+  "title": "控制台",
   "guestBanner": {
-   "text": "You're browsing as a guest — sign in to save your offers, track your progress, and unlock all features.",
-   "action": "Sign in"
+   "text": "您正在以访客身份浏览——登录后可保存职位、跟踪进度并解锁全部功能。",
+   "action": "登录"
   },
-  "welcomeBack": "Welcome back",
-  "greeting": "Hello, {name}",
-  "subtitle": "Here are your next steps on the road to Germany",
+  "welcomeBack": "欢迎回来",
+  "greeting": "您好，{name}",
+  "subtitle": "这是您赴德之路的下一步",
   "path": {
-   "label": "Your path",
-   "ausbildung": "Ausbildung path",
-   "studium": "Studium path",
-   "unset": "Choose your path",
-   "chooseAus": "Choose Ausbildung",
-   "chooseStud": "Choose Studium"
+   "label": "您的路线",
+   "ausbildung": "Ausbildung 路线",
+   "studium": "留学路线",
+   "unset": "选择您的路线",
+   "chooseAus": "选择 Ausbildung",
+   "chooseStud": "选择留学"
   },
   "profile": {
-   "title": "Profile completion",
-   "percent": "{p}% complete",
-   "complete": "Great! Your profile is complete 🎉",
-   "nextStep": "Next step",
+   "title": "资料完成度",
+   "percent": "已完成 {p}%",
+   "complete": "太好了！您的资料已完善 🎉",
+   "nextStep": "下一步",
    "items": {
-    "avatar": "Add a profile picture",
-    "whatsapp": "Add your WhatsApp number",
-    "status": "Set your current status",
-    "cv": "Build your CV",
-    "letter": "Generate a motivation letter"
+    "avatar": "添加头像",
+    "whatsapp": "添加 WhatsApp 号码",
+    "status": "设置当前状态",
+    "cv": "创建简历",
+    "letter": "生成动机信"
    },
-   "fix": "Fix"
+   "fix": "补充"
   },
   "journey": {
-   "title": "Your journey in 3 steps",
+   "title": "您的三步旅程",
    "status": {
-    "todo": "Not started",
-    "doing": "In progress",
-    "done": "Done",
-    "soon": "Coming soon"
+    "todo": "未开始",
+    "doing": "进行中",
+    "done": "已完成",
+    "soon": "即将推出"
    },
-   "continue": "Continue",
-   "start": "Start"
+   "continue": "继续",
+   "start": "开始"
   },
   "docs": {
-   "title": "My documents",
-   "count": "{n} document(s)",
-   "countZero": "No documents yet",
-   "empty": "Start by creating your CV or motivation letter",
-   "viewAll": "View all"
+   "title": "我的文件",
+   "count": "{n} 份文件",
+   "countZero": "暂无文件",
+   "empty": "先创建您的简历或动机信",
+   "viewAll": "查看全部"
   },
   "tools": {
-   "title": "Quick tools",
-   "cv": "CV Builder",
-   "cvDesc": "A professional German CV in minutes",
-   "letter": "Motivation Letter Generator",
-   "letterDesc": "Persuasive motivation letters with AI"
+   "title": "快捷工具",
+   "cv": "简历生成器",
+   "cvDesc": "几分钟做出专业德式简历",
+   "letter": "动机信生成器",
+   "letterDesc": "用 AI 写出有说服力的动机信"
   },
   "cta": {
-   "profile": "Manage profile",
-   "consult": "Book a consultation"
+   "profile": "管理资料",
+   "consult": "预约咨询"
   },
   "sidebar": {
-   "myProfile": "My Profile",
-   "tapToComplete": "Tap to complete",
-   "sectionMarketplace": "Marketplace",
-   "sectionPreparation": "Preparation",
-   "sectionTools": "Tools",
-   "browse": "Browse Opportunities",
-   "saved": "Saved Opportunities",
-   "applyForMe": "Apply For Me",
-   "newBadge": "New",
-   "dashboard": "Dashboard",
-   "germanLearning": "German Learning",
-   "interviewPrep": "Interview Prep",
-   "videoStudio": "Video Studio",
-   "culture": "Culture",
-   "eligibility": "Eligibility",
-   "timeline": "Timeline",
-   "cvBuilder": "CV Builder",
-   "coverLetter": "Cover Letter",
-   "whatsappSupport": "WhatsApp Support",
-   "services": "Services",
-   "help": "Help & Docs",
-   "complete": "Complete",
-   "livingCost": "Living costs",
-   "housing": "Housing",
-   "migrationTimeline": "Migration timeline",
-   "documentChecklist": "Document checklist",
-   "eligibilityChecker": "Eligibility"
+   "myProfile": "我的资料",
+   "tapToComplete": "点击完善",
+   "sectionMarketplace": "机会市场",
+   "sectionPreparation": "准备",
+   "sectionTools": "工具",
+   "browse": "浏览机会",
+   "saved": "已收藏的机会",
+   "applyForMe": "申请代办",
+   "newBadge": "新",
+   "dashboard": "控制台",
+   "germanLearning": "德语学习",
+   "interviewPrep": "面试准备",
+   "videoStudio": "视频课堂",
+   "culture": "文化",
+   "eligibility": "资格评估",
+   "timeline": "时间规划",
+   "cvBuilder": "简历生成器",
+   "coverLetter": "求职信",
+   "whatsappSupport": "WhatsApp 客服",
+   "services": "服务",
+   "help": "帮助与文档",
+   "complete": "完成",
+   "livingCost": "生活成本",
+   "housing": "住房",
+   "migrationTimeline": "移居时间表",
+   "documentChecklist": "材料清单",
+   "eligibilityChecker": "资格评估"
   },
   "topbar": {
-   "help": "Help",
+   "help": "帮助",
    "whatsapp": "WhatsApp",
-   "notifications": "Notifications",
-   "account": "Account",
-   "themeLight": "Light mode",
-   "themeDark": "Dark mode",
-   "logout": "Log out"
+   "notifications": "通知",
+   "account": "账户",
+   "themeLight": "浅色模式",
+   "themeDark": "深色模式",
+   "logout": "退出登录"
   },
   "profilePage": {
-   "heroBannerTitle": "Your profile is {pct}% complete",
-   "heroBannerSub": "Fill the missing fields below to increase your completion.",
-   "unlockNext": "{pct}% more to unlock:",
-   "unlockTargetGerman": "German Learning",
-   "quickUpdate": "Quick Update via CV",
-   "updateManually": "Update Manually",
-   "goalPct": "Goal: 100%",
-   "completionLabel": "Profile Completion: {pct}%",
-   "completeness": "Profile Completeness",
-   "completenessCompleteSuffix": "complete",
-   "strength": "Profile Strength",
-   "strengthPoints": "points",
-   "strengthComparison": "Stronger than 50% of candidates",
-   "tier": "Tier",
-   "incomplete": "Incomplete",
-   "weak": "Weak",
-   "good": "Good",
-   "strong": "Strong",
-   "mostFieldsEmpty": "Most fields empty",
-   "gettingThere": "25% — Getting there",
-   "nextGoal": "Next Goal",
-   "tierWeak": "Weak Profile",
-   "tierFair": "Fair Profile",
-   "tierStrong": "Strong Profile",
+   "heroBannerTitle": "您的资料已完成 {pct}%",
+   "heroBannerSub": "填写下面缺失的字段以提高完成度。",
+   "unlockNext": "再完成 {pct}% 即可解锁：",
+   "unlockTargetGerman": "德语学习",
+   "quickUpdate": "通过简历快速更新",
+   "updateManually": "手动更新",
+   "goalPct": "目标：100%",
+   "completionLabel": "资料完成度：{pct}%",
+   "completeness": "资料完整度",
+   "completenessCompleteSuffix": "已完成",
+   "strength": "资料强度",
+   "strengthPoints": "分",
+   "strengthComparison": "强于 50% 的候选人",
+   "tier": "等级",
+   "incomplete": "未完成",
+   "weak": "较弱",
+   "good": "良好",
+   "strong": "很强",
+   "mostFieldsEmpty": "大部分字段为空",
+   "gettingThere": "25%——正在完善",
+   "nextGoal": "下一个目标",
+   "tierWeak": "较弱的资料",
+   "tierFair": "一般的资料",
+   "tierStrong": "很强的资料",
    "missing": {
-    "photo": "Upload a profile photo",
-    "phone": "Add your phone number",
-    "dob": "Add date of birth",
-    "status": "Set your current status",
-    "cv": "Build your CV",
-    "letter": "Generate a motivation letter",
-    "firstName": "Add your first name",
-    "lastName": "Add your last name",
-    "email": "Add your email"
+    "photo": "上传头像",
+    "phone": "添加电话号码",
+    "dob": "添加出生日期",
+    "status": "设置当前状态",
+    "cv": "创建简历",
+    "letter": "生成动机信",
+    "firstName": "添加名字",
+    "lastName": "添加姓氏",
+    "email": "添加邮箱"
    },
    "sections": {
-    "education": "Education",
-    "experience": "Experience",
-    "languages": "Languages",
-    "skills": "Skills",
-    "personal": "Personal Information",
-    "contact": "Contact Information",
-    "add": "Add",
-    "comingSoon": "Coming soon"
+    "education": "教育经历",
+    "experience": "工作经历",
+    "languages": "语言能力",
+    "skills": "技能",
+    "personal": "个人信息",
+    "contact": "联系方式",
+    "add": "添加",
+    "comingSoon": "即将推出"
    },
    "promo": {
-    "title": "Let our team apply for you",
-    "body": "Our Apply-For-Me service sends applications to dozens of matching opportunities automatically.",
-    "cta": "Discover the service"
+    "title": "让我们的团队替您申请",
+    "body": "申请代办服务会自动向数十个匹配的机会发送申请。",
+    "cta": "了解该服务"
    }
   },
   "stubs": {
-   "savedTitle": "Saved Opportunities",
-   "savedEmpty": "You haven’t saved any opportunities yet. Browse the marketplace and click the bookmark icon to collect them here.",
-   "applyTitle": "Apply For Me",
-   "applyBody": "We’ll send applications to opportunities matching your profile. Launching soon.",
-   "lockedTitle": "{feature} — Coming soon",
-   "lockedBody": "This feature is under development. We’ll let you know when it’s available.",
-   "browseCta": "Browse Opportunities"
+   "savedTitle": "已收藏的机会",
+   "savedEmpty": "您还没有收藏任何机会。浏览机会市场并点击书签图标，收藏的内容会显示在这里。",
+   "applyTitle": "申请代办",
+   "applyBody": "我们将向匹配您资料的机会发送申请。即将上线。",
+   "lockedTitle": "{feature}——即将推出",
+   "lockedBody": "该功能正在开发中，上线后我们会通知您。",
+   "browseCta": "浏览机会"
   },
   "applyForMe": {
-   "comingSoonPill": "🚀 Coming soon",
-   "title": "Apply For Me — done for you",
-   "subtitle": "We will handle your entire application end-to-end — Ausbildung or Studium. Send us your CV once and we apply to matching positions or universities on your behalf.",
-   "feat1Title": "You upload once",
-   "feat1Body": "Your CV, certificates, and a short profile go in once. We translate, format, and store them securely — works for both Ausbildung and Studium tracks.",
-   "feat2Title": "AI tailors each application",
-   "feat2Body": "Custom Anschreiben for each Ausbildung employer or motivation letter for each university — written in German, tuned to the role, reviewed by our team.",
-   "feat3Title": "You get the responses",
-   "feat3Body": "Employers and admission offices reply directly to you. We track every application and let you know when interviews or admissions are scheduled.",
-   "etaHint": "Launching mid-2026 · join the early-access list from your dashboard profile.",
-   "buyTitle": "Skip the wait — book a paid consultation now",
-   "buySub": "Want to start the process today? Book a 1-hour paid consultation (€20) with our specialist. We map your exact next steps for Ausbildung or Studium and get you moving immediately."
+   "comingSoonPill": "🚀 即将推出",
+   "title": "申请代办——全程为您搞定",
+   "subtitle": "我们端到端处理您的整个申请——Ausbildung 或留学。您只需提交一次简历，我们就替您申请匹配的岗位或大学。",
+   "feat1Title": "只需上传一次",
+   "feat1Body": "简历、证书和简短的个人资料只需提交一次。我们负责翻译、排版并安全存储——适用于 Ausbildung 和留学两条路线。",
+   "feat2Title": "AI 定制每份申请",
+   "feat2Body": "为每个 Ausbildung 雇主定制求职信，或为每所大学定制动机信——用德语撰写、贴合岗位、经我们团队审核。",
+   "feat3Title": "回复直达您手中",
+   "feat3Body": "雇主和招生办直接回复您。我们跟踪每份申请，并在面试或录取安排时通知您。",
+   "etaHint": "2026 年年中上线 · 在控制台资料页加入优先体验名单。",
+   "buyTitle": "不想等？现在就预约付费咨询",
+   "buySub": "想今天就开始？预约 1 小时付费咨询（€20），我们的专家为您梳理 Ausbildung 或留学的具体下一步，立即行动。"
   },
   "savedOpps": {
-   "title": "Saved opportunities",
-   "countLabel": "{n} item(s) saved",
-   "emptyHint": "Bookmark Ausbildung positions and universities to come back to them later.",
-   "emptyTitle": "Nothing saved yet",
-   "emptyBody": "When you find an Ausbildung or a university you like, click the bookmark icon — it will show up here.",
-   "browseJobs": "Browse Ausbildung",
-   "browseUnis": "Browse universities",
-   "jobsHeading": "Ausbildung positions",
-   "unisHeading": "Universities",
-   "apply": "Apply",
-   "website": "Website"
+   "title": "已收藏的机会",
+   "countLabel": "已收藏 {n} 项",
+   "emptyHint": "收藏 Ausbildung 岗位和大学，方便以后查看。",
+   "emptyTitle": "还没有收藏",
+   "emptyBody": "看到喜欢的 Ausbildung 或大学时，点击书签图标——它就会出现在这里。",
+   "browseJobs": "浏览 Ausbildung",
+   "browseUnis": "浏览大学",
+   "jobsHeading": "Ausbildung 岗位",
+   "unisHeading": "大学",
+   "apply": "申请",
+   "website": "官网"
   },
   "videoStudioPage": {
-   "comingSoonPill": "🎥 Coming soon",
-   "title": "Video Sessions — Learn German A1 to B2",
-   "subtitle": "Live, instructor-led video classes from A1 to B2 — small groups, structured curriculum, native-speaker teachers, designed for international learners.",
-   "feat1Title": "Live group classes",
-   "feat1Body": "Twice-weekly live sessions in small groups (max 8 students). Real practice with a teacher, not pre-recorded videos.",
-   "feat2Title": "A1 → B2 curriculum",
-   "feat2Body": "Full structured CEFR pathway: A1, A2, B1, B2. Each level 12 weeks. Materials, homework, and progress tracking included.",
-   "feat3Title": "Flexible schedule",
-   "feat3Body": "Evening and weekend slots that work around your job or studies. Recordings available if you miss a session.",
-   "etaHint": "Launching summer 2026 · early-bird waitlist opens soon."
+   "comingSoonPill": "🎥 即将推出",
+   "title": "视频课堂——从 A1 学到 B2",
+   "subtitle": "教师直播授课，从 A1 到 B2——小班教学、系统课程、母语教师，专为国际学习者设计。",
+   "feat1Title": "直播小组课",
+   "feat1Body": "每周两次小组直播课（最多 8 名学生）。与老师真实互动练习，而不是看录播视频。",
+   "feat2Title": "A1 → B2 课程体系",
+   "feat2Body": "完整的 CEFR 学习路径：A1、A2、B1、B2。每级 12 周，包含教材、作业和进度跟踪。",
+   "feat3Title": "灵活的时间安排",
+   "feat3Body": "晚间和周末时段，兼顾您的工作或学业。错过课程可看回放。",
+   "etaHint": "2026 年夏季上线 · 早鸟候补名单即将开放。"
   }
  },
  "opportunitiesPicker": {
@@ -3397,184 +3397,184 @@
  },
  "livingCost": {
   "seoSection": {
-   "title": "Realistic monthly cost of living in Germany — by city",
-   "intro": "A realistic monthly budget for living in Germany as a international student, apprentice, or worker — broken down by city. The calculator factors in housing (WG, studio, dorm), insurance (TK, AOK, Mawista), food, transport (Deutschlandticket €58/month), phone plan, and discretionary spending. Numbers are calibrated to actual 2026 prices in 30 German cities, from Munich (most expensive) to Chemnitz (cheapest), so you can compare cities before choosing where to study or train.\n\nUse it to set a Sperrkonto target (the 2026 minimum is €11,904/year, but many cities cost more), to negotiate Ausbildung salary expectations (most Ausbildung pays €900 to €1,300 a month — fine in Leipzig, tight in Frankfurt), and to plan whether you need a side job. The calculator also estimates one-time setup costs (deposit, first month rent, household items) that newcomers usually forget — typically €2,500 to €4,500 over and above the Sperrkonto deposit.",
-   "faqTitle": "Common questions about living costs in Germany",
+   "title": "德国各城市真实的每月生活成本",
+   "intro": "作为国际学生、学徒或职场人士在德国生活的现实月度预算——按城市细分。计算器考虑住房（合租、单间公寓、宿舍）、保险（TK、AOK、Mawista）、饮食、交通（Deutschlandticket 每月 €58）、话费和日常开销。数据按 2026 年 30 个德国城市的实际价格校准，从最贵的慕尼黑到最便宜的开姆尼茨，方便您在选择留学或培训城市前进行比较。\n\n用它来设定保证金账户目标（2026 年最低标准为每年 €11,904，但许多城市实际开销更高）、评估 Ausbildung 工资预期（大多数 Ausbildung 月薪 €900 到 €1,300——在莱比锡够用，在法兰克福则紧张），并判断是否需要兼职。计算器还会估算新人常忽略的一次性安置费用（押金、首月房租、家居用品）——通常在保证金之外还需 €2,500 到 €4,500。",
+   "faqTitle": "关于德国生活成本的常见问题",
    "faqs": [
     {
-     "q": "Is the Sperrkonto enough to live on?",
-     "a": "In cheaper cities like Leipzig or Dresden, yes — €11,904 a year ÷ 12 = €992 a month, enough for student-level living. In Munich or Frankfurt you will need a side job. Minijobs up to €538/month are tax-free and visa-compliant for both Ausbildung trainees and students."
+     "q": "保证金账户的钱够生活吗？",
+     "a": "在莱比锡或德累斯顿等较便宜的城市够——每年 €11,904 ÷ 12 = 每月 €992，足以支撑学生水平的生活。在慕尼黑或法兰克福则需要兼职。每月 €538 以内的 Minijob 免税，且学徒和学生签证都允许。"
     },
     {
-     "q": "How accurate are the rent numbers?",
-     "a": "They reflect 2026 medians on ImmoScout24 and WG-Gesucht for each city. Actual rent varies by ±20% depending on neighborhood, apartment age, and whether you find a private landlord versus a property-management company."
+     "q": "房租数据有多准确？",
+     "a": "它们反映 2026 年各城市在 ImmoScout24 和 WG-Gesucht 上的中位数。实际房租因街区、房龄以及房东是私人还是物业公司而有 ±20% 的浮动。"
     },
     {
-     "q": "Does the budget include health insurance?",
-     "a": "Yes. Public insurance (TK, AOK) for students is around €120/month; for Ausbildung trainees it is deducted from salary. Private travel insurance (Mawista, Care Concept) for the visa application stage is €30 to €60/month."
+     "q": "预算包含医疗保险吗？",
+     "a": "包含。学生公立保险（TK、AOK）约每月 €120；学徒的保险从工资中扣除。签证申请阶段的私人旅行保险（Mawista、Care Concept）为每月 €30 到 €60。"
     }
    ]
   },
-  "metaTitle": "Living Cost Calculator — Estimate monthly costs in Germany",
-  "metaDesc": "Estimate your monthly living costs as an Ausbildung trainee across 15 German cities — rent, food, transport, insurance, and more.",
-  "eyebrow": "Financial planning",
-  "title": "Living Cost Calculator",
-  "subtitle": "Estimate your monthly living expenses across 15 German cities. Compare rent, food, transport, and insurance against your Ausbildung stipend.",
-  "badgeOfficial": "2026 figures",
+  "metaTitle": "生活成本计算器 — 估算在德国的每月开销",
+  "metaDesc": "估算 Ausbildung 学徒在 15 个德国城市的每月生活费——房租、饮食、交通、保险等。",
+  "eyebrow": "财务规划",
+  "title": "生活成本计算器",
+  "subtitle": "估算您在 15 个德国城市的每月生活开销。将房租、饮食、交通和保险与您的 Ausbildung 津贴进行对比。",
+  "badgeOfficial": "2026 年数据",
   "badgeDestatis": "DAAD + Destatis",
-  "badgeFree": "Free",
-  "formTitle": "Tell us about you",
-  "cityLabel": "German city",
-  "accommodationLabel": "Accommodation type",
-  "lifestyleLabel": "Lifestyle",
-  "sectorLabel": "Ausbildung sector",
-  "stipendLabel": "Monthly stipend",
-  "stipendHint": "Your expected monthly Ausbildung salary. Auto-filled from your sector — feel free to adjust.",
-  "perMonth": "month",
-  "partnerLabel": "Partner or dependent",
-  "partnerHint": "Includes a partner sharing accommodation. Adds about {pct}% to total monthly cost.",
-  "resultEyebrow": "Estimated monthly cost",
-  "resultSubtitle": "For a typical Ausbildung trainee living in {city}",
-  "stipendShort": "Stipend",
-  "costsShort": "Living costs",
-  "surplus": "Surplus",
-  "deficit": "Deficit",
-  "surplusHint": "Your stipend covers your monthly costs with money left over for savings or extras.",
-  "deficitHint": "You may need a part-time job (up to 20h/week is allowed during Ausbildung) or family support to close this gap.",
-  "breakdownTitle": "Where the money goes",
-  "infoTitle": "Good to know",
-  "infoSetup": "First-month setup costs (security deposit, registration, basics) typically add €2,500–4,500 on top of the monthly figures here.",
-  "infoEstimate": "These are 2026 estimates from public DAAD and Destatis data. Actual costs vary by neighborhood and personal habits.",
+  "badgeFree": "免费",
+  "formTitle": "告诉我们您的情况",
+  "cityLabel": "德国城市",
+  "accommodationLabel": "住宿类型",
+  "lifestyleLabel": "生活方式",
+  "sectorLabel": "Ausbildung 行业",
+  "stipendLabel": "每月津贴",
+  "stipendHint": "您预期的 Ausbildung 月薪。已按行业自动填写——可自行调整。",
+  "perMonth": "月",
+  "partnerLabel": "伴侣或家属",
+  "partnerHint": "包含同住伴侣。总月度开销约增加 {pct}%。",
+  "resultEyebrow": "预计每月开销",
+  "resultSubtitle": "在{city}生活的普通 Ausbildung 学徒",
+  "stipendShort": "津贴",
+  "costsShort": "生活开销",
+  "surplus": "盈余",
+  "deficit": "缺口",
+  "surplusHint": "您的津贴足以覆盖每月开销，还有结余可储蓄或自由支配。",
+  "deficitHint": "您可能需要兼职（Ausbildung 期间允许每周最多 20 小时）或家庭支持来填补缺口。",
+  "breakdownTitle": "钱花在哪里",
+  "infoTitle": "值得了解",
+  "infoSetup": "首月安置费用（押金、登记、基本用品）通常在此处月度数字之外增加 €2,500–4,500。",
+  "infoEstimate": "这些是基于 DAAD 和 Destatis 公开数据的 2026 年估算。实际开销因街区和个人习惯而异。",
   "tier": {
-   "1": "Tier 1 · most expensive",
-   "2": "Tier 2 · high",
-   "3": "Tier 3 · moderate",
-   "4": "Tier 4 · most affordable"
+   "1": "第一档 · 最贵",
+   "2": "第二档 · 较高",
+   "3": "第三档 · 中等",
+   "4": "第四档 · 最实惠"
   },
   "city": {
-   "munich": "Munich",
-   "frankfurt": "Frankfurt",
-   "hamburg": "Hamburg",
-   "stuttgart": "Stuttgart",
-   "dusseldorf": "Düsseldorf",
-   "cologne": "Cologne",
-   "berlin": "Berlin",
-   "hannover": "Hannover",
-   "bremen": "Bremen",
-   "nuremberg": "Nuremberg",
-   "dortmund": "Dortmund",
-   "leipzig": "Leipzig",
-   "dresden": "Dresden",
-   "bochum": "Bochum",
-   "chemnitz": "Chemnitz"
+   "munich": "慕尼黑",
+   "frankfurt": "法兰克福",
+   "hamburg": "汉堡",
+   "stuttgart": "斯图加特",
+   "dusseldorf": "杜塞尔多夫",
+   "cologne": "科隆",
+   "berlin": "柏林",
+   "hannover": "汉诺威",
+   "bremen": "不来梅",
+   "nuremberg": "纽伦堡",
+   "dortmund": "多特蒙德",
+   "leipzig": "莱比锡",
+   "dresden": "德累斯顿",
+   "bochum": "波鸿",
+   "chemnitz": "开姆尼茨"
   },
   "accommodation": {
    "dormitory": {
-    "name": "Student dorm",
-    "hint": "Cheapest option, but waiting lists in popular cities can be 6–12 months."
+    "name": "学生宿舍",
+    "hint": "最便宜的选择，但热门城市的等候名单可能长达 6–12 个月。"
    },
    "shared": {
-    "name": "Shared (WG)",
-    "hint": "Most popular among trainees — affordable, social, flexible."
+    "name": "合租（WG）",
+    "hint": "学徒中最流行——经济、社交、灵活。"
    },
    "studio": {
-    "name": "Studio",
-    "hint": "Private space; expect a higher rent and a 1–3 month deposit."
+    "name": "单间公寓",
+    "hint": "独立空间；房租更高，押金为 1–3 个月租金。"
    },
    "apartment": {
-    "name": "1-bed apartment",
-    "hint": "Most space and privacy — also the highest monthly rent."
+    "name": "一室公寓",
+    "hint": "空间和隐私最大——月租也最高。"
    }
   },
   "lifestyle": {
    "budget": {
-    "name": "Budget",
-    "sub": "~€{food}/mo food"
+    "name": "节俭",
+    "sub": "餐饮约 €{food}/月"
    },
    "moderate": {
-    "name": "Moderate",
-    "sub": "~€{food}/mo food"
+    "name": "适中",
+    "sub": "餐饮约 €{food}/月"
    },
    "comfortable": {
-    "name": "Comfortable",
-    "sub": "~€{food}/mo food"
+    "name": "舒适",
+    "sub": "餐饮约 €{food}/月"
    }
   },
   "sector": {
-   "healthcare": "Healthcare",
-   "it": "IT",
-   "engineering": "Engineering",
-   "automotive": "Automotive",
-   "handwerk": "Construction & trades",
-   "hospitality": "Hospitality",
-   "retail": "Retail",
-   "education": "Education",
-   "media": "Media",
-   "public_service": "Public service",
-   "finance": "Finance",
-   "logistics": "Logistics"
+   "healthcare": "医疗护理",
+   "it": "信息技术",
+   "engineering": "工程",
+   "automotive": "汽车",
+   "handwerk": "建筑与手工业",
+   "hospitality": "酒店餐饮",
+   "retail": "零售",
+   "education": "教育",
+   "media": "媒体",
+   "public_service": "公共服务",
+   "finance": "金融",
+   "logistics": "物流"
   },
   "category": {
-   "rent": "Rent",
-   "food": "Food & groceries",
-   "transport": "Transport",
-   "utilities": "Utilities & internet",
-   "insurance": "Health insurance",
-   "entertainment": "Entertainment & misc"
+   "rent": "房租",
+   "food": "饮食与日用品",
+   "transport": "交通",
+   "utilities": "水电与网络",
+   "insurance": "医疗保险",
+   "entertainment": "娱乐与其他"
   },
-  "faqTitle": "Frequently Asked Questions",
+  "faqTitle": "常见问题",
   "faqs": [
    {
-    "q": "How much does it cost to live in Germany as an Ausbildung trainee in 2026?",
-    "a": "Living costs for Ausbildung trainees in Germany in 2026 typically range from €800 to €2,200 per month, depending on the city and lifestyle. In affordable cities like Leipzig, Dresden, or Chemnitz you can live comfortably on €900–1,300/month. In expensive cities like Munich, Frankfurt, and Hamburg expect €1,600–2,200/month. Most trainees earn €900–1,300/month, which covers basic costs in moderate cities and most cheaper ones outright."
+    "q": "2026 年 Ausbildung 学徒在德国生活要花多少钱？",
+    "a": "2026 年 Ausbildung 学徒在德国的生活费通常为每月 €800 到 €2,200，取决于城市和生活方式。在莱比锡、德累斯顿或开姆尼茨等实惠城市，每月 €900–1,300 就能过得舒适。在慕尼黑、法兰克福和汉堡等昂贵城市，则需 €1,600–2,200。大多数学徒月薪 €900–1,300，在中等城市可覆盖基本开销，在便宜城市则绰绰有余。"
    },
    {
-    "q": "Which German cities are most affordable for Ausbildung trainees?",
-    "a": "The most affordable German cities for Ausbildung are Chemnitz (€780–1,180/month), Bochum (€800–1,200), Dresden (€850–1,250), Leipzig (€900–1,300), and Erfurt (€850–1,280). Tier-4 cities have shared-apartment rents around €290–520 vs €500–800 in Munich, plus cheaper food and transport. Despite lower costs they have strong Ausbildung pipelines in healthcare, IT, manufacturing, and engineering — affordability doesn’t mean fewer opportunities."
+    "q": "哪些德国城市对 Ausbildung 学徒最实惠？",
+    "a": "对 Ausbildung 最实惠的德国城市是开姆尼茨（每月 €780–1,180）、波鸿（€800–1,200）、德累斯顿（€850–1,250）、莱比锡（€900–1,300）和爱尔福特（€850–1,280）。第四档城市的合租房租约为 €290–520，而慕尼黑为 €500–800，饮食和交通也更便宜。尽管开销低，这些城市在医疗、IT、制造和工程领域拥有强大的 Ausbildung 岗位储备——实惠并不意味着机会少。"
    },
    {
-    "q": "Can I survive on my Ausbildung stipend alone without additional income?",
-    "a": "It depends on the city and lifestyle. In affordable cities (Leipzig, Dresden, Chemnitz, Bochum) a stipend of €1,000–1,200/month covers basic costs comfortably. In moderate cities (Berlin, Hannover) careful budgeting works. In expensive cities (Munich, Frankfurt, Hamburg) the stipend alone may leave a €200–400 monthly deficit. Many trainees take a part-time job — up to 20 hours per week is allowed during Ausbildung at €12–15/hour, adding €400–600/month."
+    "q": "只靠 Ausbildung 津贴能生活吗？",
+    "a": "取决于城市和生活方式。在实惠城市（莱比锡、德累斯顿、开姆尼茨、波鸿），€1,000–1,200 的月津贴可以轻松覆盖基本开销。在中等城市（柏林、汉诺威）需要精打细算。在昂贵城市（慕尼黑、法兰克福、汉堡），仅靠津贴每月可能有 €200–400 的缺口。许多学徒会兼职——Ausbildung 期间允许每周最多 20 小时，时薪 €12–15，每月可增加 €400–600。"
    },
    {
-    "q": "How do living costs vary between Munich and Leipzig?",
-    "a": "Munich is roughly 50–80% more expensive than Leipzig. Munich shared apartments cost €500–800 vs €330–520 in Leipzig. Total monthly costs range from €1,600–2,200 in Munich vs €900–1,300 in Leipzig. Rent is €300–400 higher in Munich, food costs 15–20% more, and miscellaneous spending is 30–40% higher. Munich does pay higher Ausbildung stipends (€1,200–1,500 vs €900–1,100), partly offsetting the gap."
+    "q": "慕尼黑和莱比锡的生活成本差多少？",
+    "a": "慕尼黑比莱比锡贵约 50–80%。慕尼黑合租房 €500–800，莱比锡 €330–520。总月度开销：慕尼黑 €1,600–2,200，莱比锡 €900–1,300。慕尼黑房租高 €300–400，饮食贵 15–20%，其他开销高 30–40%。不过慕尼黑的 Ausbildung 津贴也更高（€1,200–1,500 对 €900–1,100），部分抵消了差距。"
    },
    {
-    "q": "Is student accommodation (dormitory) cheaper than private apartments in Germany?",
-    "a": "Yes — dormitories cost €180–500/month versus €500–1,500 for private studios or €300–800 for shared apartments. Dorms typically include utilities, internet, and sometimes furniture. The catch: waitlists are 6–12 months in popular cities. Shared apartments (WG — Wohngemeinschaft) are the popular middle ground at €300–600/month, balancing affordability with privacy and social interaction."
+    "q": "学生宿舍比私人公寓便宜吗？",
+    "a": "是的——宿舍每月 €180–500，而私人单间公寓为 €500–1,500，合租为 €300–800。宿舍通常包水电、网络，有时还带家具。缺点是热门城市要排队 6–12 个月。合租（WG——Wohngemeinschaft）是广受欢迎的折中方案，每月 €300–600，兼顾经济性、隐私和社交。"
    },
    {
-    "q": "What are typical food costs for Ausbildung trainees in Germany in 2026?",
-    "a": "Food costs range from €125 to €450/month based on lifestyle. Budget (cooking at home, Aldi/Lidl): €125–220. Moderate (mix of cooking and occasional dining out): €175–320. Comfortable (regular dining out, premium groceries): €255–450. Save by eating at student Mensas (€2.50–5/meal), shopping at discount supermarkets, using Too Good To Go for discounted leftovers, and cooking in batches."
+    "q": "2026 年学徒在德国的伙食费一般是多少？",
+    "a": "伙食费按生活方式为每月 €125 到 €450。节俭型（在家做饭、Aldi/Lidl 采购）：€125–220。适中型（做饭为主、偶尔外食）：€175–320。舒适型（经常外食、优质食材）：€255–450。省钱技巧：在学生食堂就餐（每餐 €2.50–5）、去折扣超市采购、用 Too Good To Go 买折扣余量食品、批量做饭。"
    },
    {
-    "q": "Can I work part-time during Ausbildung to cover additional living costs?",
-    "a": "Yes — Ausbildung trainees can work up to 20 hours per week (or 120 full days/year) without affecting visa status. Typical wages are €12–15/hour (minimum wage is €12.82 in 2026), generating €400–600/month extra. Popular options: weekend shifts in care homes (€15–18/hour), retail or hospitality (€12–14/hour), tutoring (€15–25/hour), delivery (€13–16/hour). Always check your Ausbildung contract — some employers restrict outside work during training."
+    "q": "Ausbildung 期间可以兼职补贴生活吗？",
+    "a": "可以——学徒每周最多可工作 20 小时（或每年 120 个全天）而不影响签证。典型时薪 €12–15（2026 年最低工资 €12.82），每月可多赚 €400–600。热门选择：养老院周末班（时薪 €15–18）、零售或餐饮（€12–14）、家教（€15–25）、配送（€13–16）。务必查看您的 Ausbildung 合同——有些雇主限制培训期间的外部工作。"
    },
    {
-    "q": "What initial costs should I budget for my first month in Germany?",
-    "a": "Plan for €2,500–4,500 of one-off setup costs on top of your monthly budget. Breakdown: security deposit (3 months’ rent: €900–2,400), first month rent (€300–800), Anmeldung (€30–50), health-insurance activation (€120), residence permit (€100), bedding & kitchenware (€200–400), winter clothing (€150–300), German SIM (€10–30), bike or transport pass (€30–100), plus a €300–500 emergency buffer."
+    "q": "第一个月在德国要预留哪些初始费用？",
+    "a": "在月度预算之外，请准备 €2,500–4,500 的一次性安置费。明细：押金（3 个月房租：€900–2,400）、首月房租（€300–800）、住址登记（€30–50）、医保激活（€120）、居留许可（€100）、床品和厨具（€200–400）、冬装（€150–300）、德国电话卡（€10–30）、自行车或交通卡（€30–100），外加 €300–500 应急资金。"
    },
    {
-    "q": "How much should I save before arriving in Germany for Ausbildung?",
-    "a": "Aim for €3,000–5,500 in savings before arrival: €2,500–4,500 for first-month setup costs (deposit, registration, health-insurance activation, basic furnishings, winter clothing) plus a €500–1,000 emergency buffer. This carries you through your first 2–3 months while you settle, find permanent accommodation, and wait for your first Ausbildung stipend (paid at month-end). If possible, save another €1,000–2,000 for adjustment-period flexibility."
+    "q": "来德国读 Ausbildung 前应该存多少钱？",
+    "a": "抵达前争取存下 €3,000–5,500：€2,500–4,500 用于首月安置（押金、登记、医保激活、基本家居、冬装），外加 €500–1,000 应急资金。这能支撑您头 2–3 个月安顿下来、找到长期住处并等到第一笔月底发放的 Ausbildung 津贴。如有可能，再存 €1,000–2,000 以应对适应期的意外开销。"
    }
   ],
-  "relatedTitle": "Related tools you might need",
-  "relatedSub": "Continue planning your Ausbildung journey with these helpful tools.",
+  "relatedTitle": "您可能需要的相关工具",
+  "relatedSub": "用这些实用工具继续规划您的 Ausbildung 之旅。",
   "related": {
    "cv": {
-    "name": "CV Builder",
-    "desc": "Build a German Lebenslauf with AI assistance."
+    "name": "简历生成器",
+    "desc": "在 AI 帮助下制作德式简历。"
    },
    "anschreiben": {
-    "name": "Anschreiben Generator",
-    "desc": "Write a tailored cover letter in minutes."
+    "name": "求职信生成器",
+    "desc": "几分钟写出量身定制的求职信。"
    },
    "jobs": {
-    "name": "Ausbildung Jobs",
-    "desc": "Browse 1,000+ open Ausbildung positions across 12 sectors."
+    "name": "Ausbildung 职位",
+    "desc": "浏览 12 个行业的 1,000+ 个在招 Ausbildung 岗位。"
    }
   }
  },
@@ -3585,100 +3585,100 @@
  },
  "migrationTimeline": {
   "seoSection": {
-   "title": "How long does it really take to move to Germany?",
-   "intro": "A realistic month-by-month migration timeline to Germany, calibrated to your starting point: current German level, target route (Ausbildung or Studium), and how many hours per week you can study. Most candidates underestimate the language phase by 6 to 12 months — this tool shows you what is actually achievable. German missions currently issue Ausbildung visas in roughly 6 to 12 weeks; the rest of the timeline is mostly language study and document collection.\n\nThe output shows a personalised week-by-week plan: when to start the language course, when to take your B1 or B2 exam, when to begin Ausbildung applications or university applications, when to open a Sperrkonto, and when to book the consulate appointment. It surfaces the most common bottlenecks (Goethe exam slots that fill up 2 months ahead, ZAB processing time of 8 weeks, Anmeldung waiting lists in big cities) so you can plan around them. Use it 6 to 18 months before your target departure date to set realistic milestones — and to know when each piece of paperwork actually needs to start.",
-   "faqTitle": "Common questions about the timeline",
+   "title": "移居德国到底需要多长时间？",
+   "intro": "一份按月细化的现实移德时间表，根据您的起点校准：当前德语水平、目标路线（Ausbildung 或留学）以及每周可学习的小时数。大多数申请人把语言阶段低估了 6 到 12 个月——这个工具告诉您什么才是真正可行的。德国使领馆目前签发 Ausbildung 签证大约需要 6 到 12 周；时间表的其余部分主要是语言学习和材料准备。\n\n结果会显示个性化的逐周计划：何时开始语言课程、何时考 B1 或 B2、何时开始申请 Ausbildung 或大学、何时开设保证金账户（Sperrkonto）、何时预约领事馆。它会提示最常见的瓶颈（歌德考位提前 2 个月约满、ZAB 认证需 8 周、大城市 Anmeldung 排队），方便您提前规划。建议在目标出发日期前 6 到 18 个月使用，设定现实的里程碑——并了解每项手续实际需要何时启动。",
+   "faqTitle": "关于时间表的常见问题",
    "faqs": [
     {
-     "q": "What is a realistic timeline if I am starting from zero German?",
-     "a": "12 to 18 months for Ausbildung (you need B1), 18 to 24 months for Studium (you need B2 or C1). Faster is only possible if you can study 20+ hours per week with a structured course."
+     "q": "德语零基础的话，现实的时间表是多久？",
+     "a": "Ausbildung 需要 12 到 18 个月（要达到 B1），留学需要 18 到 24 个月（要达到 B2 或 C1）。只有每周系统学习 20 小时以上才可能更快。"
     },
     {
-     "q": "Can I do an Ausbildung in English?",
-     "a": "Almost never. Over 95% of Ausbildung programmes are taught in German. The exceptions are some IT and hospitality programmes in Berlin and Hamburg, and they rarely accept candidates without at least B1 German."
+     "q": "可以用英语读 Ausbildung 吗？",
+     "a": "几乎不可能。超过 95% 的 Ausbildung 项目用德语授课。例外是柏林和汉堡的一些 IT 和酒店项目，而且它们也很少接受德语不到 B1 的申请人。"
     },
     {
-     "q": "When should I open the Sperrkonto?",
-     "a": "About 2 to 3 months before your consulate appointment. Earlier ties up money for no reason; later risks missing the visa application deadline."
+     "q": "什么时候开设保证金账户（Sperrkonto）？",
+     "a": "领事馆预约前 2 到 3 个月左右。太早会白白占用资金；太晚可能赶不上签证申请。"
     }
    ]
   },
-  "metaTitle": "Germany Migration Timeline Calculator",
-  "metaDesc": "Estimate how long it takes to move to Germany for Ausbildung or Studium — phase-by-phase, based on real BAMF and DAAD timelines.",
-  "eyebrow": "Planning · timeline",
-  "title": "Germany Migration Timeline Calculator",
-  "subtitle": "Estimate your full timeline to Germany — German learning, application, visa, and relocation — based on real 2026 BAMF / DAAD figures.",
-  "formTitle": "Your migration profile",
-  "pathLabel": "Path",
-  "levelLabel": "Current German level",
-  "levelHint": "Target for this path: {target}.",
-  "intensityLabel": "Learning intensity",
-  "educationLabel": "Education level",
-  "vorabLabel": "I have Vorab approval (Pre-approval)",
-  "vorabHint": "Cuts visa processing from ~8 months to ~2 months.",
-  "months": "months",
-  "mo": "mo",
-  "fast": "Fast",
-  "average": "Average",
-  "slow": "Slow",
-  "resultEyebrow": "Estimated total timeline",
-  "avgScenario": "Average scenario: {n} months",
-  "phasesTitle": "Phase breakdown",
-  "insightsTitle": "What slows you down",
-  "tipsTitle": "How to reduce your timeline",
-  "ctaTitle": "Want a faster path?",
-  "ctaSub": "Book a 30-minute consultation with a German immigration specialist. We map your exact next steps and remove the bottlenecks slowing your timeline.",
-  "ctaButton": "Book a 30-min consultation",
+  "metaTitle": "德国移居时间计算器",
+  "metaDesc": "估算通过 Ausbildung 或留学移居德国需要多久——按阶段细分，基于真实的 BAMF 和 DAAD 数据。",
+  "eyebrow": "规划 · 时间表",
+  "title": "德国移居时间计算器",
+  "subtitle": "估算您的完整赴德时间表——德语学习、申请、签证和搬迁——基于 2026 年真实的 BAMF / DAAD 数据。",
+  "formTitle": "您的移居档案",
+  "pathLabel": "路线",
+  "levelLabel": "当前德语水平",
+  "levelHint": "该路线的目标水平：{target}。",
+  "intensityLabel": "学习强度",
+  "educationLabel": "学历",
+  "vorabLabel": "我有 Vorab 预先批准",
+  "vorabHint": "可将签证处理时间从约 8 个月缩短到约 2 个月。",
+  "months": "个月",
+  "mo": "个月",
+  "fast": "快",
+  "average": "平均",
+  "slow": "慢",
+  "resultEyebrow": "预计总时长",
+  "avgScenario": "平均情况：{n} 个月",
+  "phasesTitle": "阶段细分",
+  "insightsTitle": "什么在拖慢您",
+  "tipsTitle": "如何缩短时间",
+  "ctaTitle": "想走得更快？",
+  "ctaSub": "预约 30 分钟德国移民专家咨询。我们为您梳理具体的下一步，扫清拖慢进度的瓶颈。",
+  "ctaButton": "预约 30 分钟咨询",
   "path": {
    "ausbildung": {
     "name": "Ausbildung",
-    "sub": "Vocational training",
+    "sub": "职业培训",
     "target": "B1"
    },
    "studium": {
-    "name": "Studium",
-    "sub": "University studies",
+    "name": "留学",
+    "sub": "大学学习",
     "target": "B2"
    }
   },
   "intensity": {
    "slow": {
-    "name": "Slow",
-    "sub": "4–6 h/week"
+    "name": "慢速",
+    "sub": "每周 4–6 小时"
    },
    "normal": {
-    "name": "Normal",
-    "sub": "8–12 h/week"
+    "name": "正常",
+    "sub": "每周 8–12 小时"
    },
    "intensive": {
-    "name": "Intensive",
-    "sub": "20+ h/week"
+    "name": "强化",
+    "sub": "每周 20+ 小时"
    }
   },
   "education": {
-   "bac": "Baccalaureate",
-   "university": "University degree",
-   "other": "Other"
+   "bac": "高中毕业",
+   "university": "大学学位",
+   "other": "其他"
   },
   "phase": {
-   "german": "German learning",
-   "application": "Application",
-   "visa": "Visa processing",
-   "relocation": "Relocation"
+   "german": "德语学习",
+   "application": "申请",
+   "visa": "签证办理",
+   "relocation": "搬迁"
   },
   "insights": {
-   "lowGerman": "Low German level — language is the longest single phase.",
-   "noVorab": "Without Vorab approval, visa processing takes 6–10 months instead of 2–3.",
-   "slowPace": "A slow learning pace adds 30% to the German phase.",
-   "studyDocs": "Studium needs APS, Uni-Assist, and APS docs validated — paperwork is denser than Ausbildung."
+   "lowGerman": "德语水平较低——语言是耗时最长的单一阶段。",
+   "noVorab": "没有 Vorab 预先批准，签证处理需要 6–10 个月，而不是 2–3 个月。",
+   "slowPace": "慢速学习会让德语阶段延长 30%。",
+   "studyDocs": "留学需要 APS、Uni-Assist 及材料认证——手续比 Ausbildung 更繁琐。"
   },
   "tips": {
-   "intensiveCourse": "Take an intensive German course (Goethe / DSH-Kurs / online) — 4 hours a day cuts months off Phase 1.",
-   "getVorab": "Ask your future employer for Vorab approval at the contract stage. Skip 6 months of visa wait.",
-   "switchPace": "Move to at least normal intensity (8–12 h/week) — biggest single lever on total timeline.",
-   "uniAssistEarly": "Submit to Uni-Assist 6+ months before the semester. Avoid the spring-deadline crunch.",
-   "startDocs": "Start gathering documents (apostilled diploma, passport, bank statement) NOW — they expire and re-issuance is slow.",
-   "bookConsult": "Book a consultation with a specialist (€20): a personalised checklist removes ambiguity and cuts wasted weeks."
+   "intensiveCourse": "参加强化德语课程（歌德学院 / DSH 课程 / 在线）——每天 4 小时可让第一阶段缩短数月。",
+   "getVorab": "在签合同阶段就请未来雇主申请 Vorab 预先批准，省去 6 个月签证等待。",
+   "switchPace": "至少提到正常强度（每周 8–12 小时）——这是缩短总时长的最大杠杆。",
+   "uniAssistEarly": "开学前 6 个月以上就提交 Uni-Assist，避开春季截止高峰。",
+   "startDocs": "现在就开始收集材料（认证过的文凭、护照、银行流水）——它们会过期，补办很慢。",
+   "bookConsult": "预约专家咨询（€20）：一份个性化清单消除不确定性，避免浪费数周时间。"
   }
  },
  "bookConsult": {
@@ -4499,108 +4499,108 @@
   }
  },
  "dashboardServices": {
-  "metaTitle": "Services — GoGermany",
-  "metaDesc": "All paid consultation services to help you move to Germany.",
-  "eyebrow": "Services",
-  "title": "Pick the help that fits your case",
-  "subtitle": "Every consultation is a paid 60-minute video call (€20), whatever your question. You leave with concrete answers, not generic advice.",
-  "badgePrice": "€20 · 1 hour",
-  "badgeFormat": "Google Meet · 60 min",
-  "badgeLanguages": "Arabic, French, German",
-  "faqTitle": "Frequently asked",
-  "faq1Q": "How is the consultation paid?",
-  "faq1A": "Bank transfer. After you book on Calendly, you receive a confirmation email with the bank details (FR + AR) and the price (€20). The session is confirmed once payment arrives.",
-  "faq2Q": "What if I need help across several services?",
-  "faq2A": "Book one session — we cover what fits in the slot, then tell you whether a second session makes sense or whether you can handle the rest yourself.",
-  "faq3Q": "In which language is the call?",
-  "faq3A": "Your choice: Arabic, French, or German. Mention it when booking; it's the second question on Calendly.",
-  "faq4Q": "Can I get a refund if it's not useful?",
-  "faq4A": "If after 5 minutes the session genuinely doesn't apply to you, we end the call and refund. Honesty before money.",
+  "metaTitle": "服务 — GoGermany",
+  "metaDesc": "帮助您移居德国的全部付费咨询服务。",
+  "eyebrow": "服务",
+  "title": "选择适合您情况的帮助",
+  "subtitle": "每次咨询都是 60 分钟付费视频通话（€20），不限问题。您得到的是具体答案，而不是泛泛建议。",
+  "badgePrice": "€20 · 1 小时",
+  "badgeFormat": "Google Meet · 60 分钟",
+  "badgeLanguages": "阿拉伯语、法语、德语",
+  "faqTitle": "常见问题",
+  "faq1Q": "咨询如何付款？",
+  "faq1A": "银行转账。在 Calendly 预约后，您会收到一封确认邮件，包含银行信息和价格（€20）。付款到账后咨询即确认。",
+  "faq2Q": "如果我需要多项服务的帮助怎么办？",
+  "faq2A": "先预约一次——我们在时间内覆盖能解决的部分，然后告诉您是否值得再约一次，或剩下的您可以自己处理。",
+  "faq3Q": "通话用什么语言？",
+  "faq3A": "由您选择：阿拉伯语、法语或德语。预约时注明即可，这是 Calendly 上的第二个问题。",
+  "faq4Q": "如果没有帮助，可以退款吗？",
+  "faq4A": "如果开始 5 分钟后发现咨询确实不适用于您的情况，我们会结束通话并退款。诚信先于金钱。",
   "services": {
    "apply-for-me": {
-    "name": "Apply For Me",
-    "blurb": "We handle your full Ausbildung application from start to invitation.",
-    "bullet1": "CV + Anschreiben rewritten in German for each employer",
-    "bullet2": "Direct outreach to 30+ pre-vetted Ausbildung employers",
-    "bullet3": "Interview coaching once you get callbacks",
-    "ribbon": "Most booked"
+    "name": "申请代办",
+    "blurb": "我们处理您的完整 Ausbildung 申请，从开始直到收到面试邀请。",
+    "bullet1": "为每个雇主用德语重写简历和求职信",
+    "bullet2": "直接联系 30+ 家预先筛选的 Ausbildung 雇主",
+    "bullet3": "收到回复后提供面试辅导",
+    "ribbon": "最多人预约"
    },
    "interview-prep": {
-    "name": "Mock Vorstellungsgespräch",
-    "blurb": "Run a realistic German interview, get scored, fix what costs you the offer.",
-    "bullet1": "30 min real-time German interview with a native-trained coach",
-    "bullet2": "Live scoring on language, structure, content, body language",
-    "bullet3": "Concrete fixes for your top 3 weak answers — written summary after"
+    "name": "模拟德语面试",
+    "blurb": "进行一场逼真的德语面试，获得评分，改掉让您丢掉 offer 的问题。",
+    "bullet1": "30 分钟德语实时面试，教练受过母语级训练",
+    "bullet2": "语言、结构、内容、肢体语言实时评分",
+    "bullet3": "针对您最薄弱的 3 个回答给出具体改进——会后附书面总结"
    },
    "cv-anschreiben": {
-    "name": "CV & Anschreiben review",
-    "blurb": "Get your CV and motivation letter audited by someone who reads German recruiter inboxes daily.",
-    "bullet1": "Line-by-line rewrite of CV (Lebenslauf) in German format",
-    "bullet2": "Anschreiben rewritten for one specific job ad you bring",
-    "bullet3": "Format check (PDF, photo, page count, file naming)"
+    "name": "简历与求职信审核",
+    "blurb": "由每天阅读德国招聘邮箱的专家审核您的简历和动机信。",
+    "bullet1": "逐行修改德式简历（Lebenslauf）",
+    "bullet2": "针对您提供的一个具体职位重写求职信",
+    "bullet3": "格式检查（PDF、照片、页数、文件命名）"
    },
    "eligibility": {
-    "name": "Eligibility deep-dive",
-    "blurb": "A specialist runs your profile against the real visa rules — no guesswork.",
-    "bullet1": "Reviews your Bac, German level, finances, criminal record requirements",
-    "bullet2": "Tells you exactly what blocks you and how long the fix takes",
-    "bullet3": "Personalised pathway: Studium, Studienkolleg, Ausbildung, or wait"
+    "name": "资格深度评估",
+    "blurb": "专家按真实签证规则评估您的情况——不靠猜测。",
+    "bullet1": "审核您的高中文凭、德语水平、资金和无犯罪记录要求",
+    "bullet2": "明确告诉您卡在哪里、解决需要多久",
+    "bullet3": "个性化路径：直接读大学、预科、Ausbildung，或再等等"
    },
    "migration-timeline": {
-    "name": "Migration timeline review",
-    "blurb": "Map your next 12 months month-by-month — German, application, visa, arrival.",
-    "bullet1": "Stress-tests your goal date against current Goethe slots & TLS waits",
-    "bullet2": "Identifies bottlenecks (B1 exam date, APS, visa appointment)",
-    "bullet3": "Hands you a printable monthly action plan"
+    "name": "移居时间规划审核",
+    "blurb": "逐月规划您接下来的 12 个月——德语、申请、签证、抵达。",
+    "bullet1": "用当前歌德考位和签证中心等待时间检验您的目标日期",
+    "bullet2": "找出瓶颈（B1 考试日期、APS 认证、签证预约）",
+    "bullet3": "给您一份可打印的逐月行动计划"
    },
    "document-checklist": {
-    "name": "Document checklist help",
-    "blurb": "A specialist goes through every document with you — what you have, what's missing, what's wrong.",
-    "bullet1": "Reviews each piece (apostille, sworn translation, validity dates)",
-    "bullet2": "Tells you the cheapest legal way to get the missing ones in your country",
-    "bullet3": "Spots common rejection reasons before TLS does"
+    "name": "材料清单辅导",
+    "blurb": "专家和您一起过每份材料——有什么、缺什么、哪里有问题。",
+    "bullet1": "逐项审核（海牙认证、宣誓翻译、有效期）",
+    "bullet2": "告诉您在本国补齐缺失材料的最省钱合法途径",
+    "bullet3": "在签证中心发现之前排除常见拒签原因"
    },
    "studium": {
-    "name": "Studium guidance",
-    "blurb": "Pick the right university and program — public, English-taught, Studienkolleg or direct Bachelor.",
-    "bullet1": "Match Bac average + budget + city preference to 5–10 real programs",
-    "bullet2": "Explains uni-assist, APS, and how to send the application correctly",
-    "bullet3": "Checklist of deadlines per uni so you don't miss admissions"
+    "name": "留学指导",
+    "blurb": "选对大学和专业——公立、英语授课、预科或直接本科。",
+    "bullet1": "根据成绩、预算和城市偏好匹配 5–10 个真实专业",
+    "bullet2": "讲解 uni-assist、APS 以及如何正确递交申请",
+    "bullet3": "各校截止日期清单，不错过任何申请季"
    },
    "ausbildung": {
-    "name": "Ausbildung guidance",
-    "blurb": "Choose the right Beruf, the right region, and the right channel to get hired.",
-    "bullet1": "Match your background + German level to high-acceptance Berufe",
-    "bullet2": "Tells you which states & cities have the best take-rate for internationals",
-    "bullet3": "Application playbook: Make-it-in-Germany, Hwk, BIBB, recruiters"
+    "name": "Ausbildung 指导",
+    "blurb": "选对职业、选对地区、用对渠道拿到录用。",
+    "bullet1": "根据您的背景和德语水平匹配录取率高的职业",
+    "bullet2": "告诉您哪些联邦州和城市对国际申请者接受度最高",
+    "bullet3": "申请攻略：Make-it-in-Germany、Hwk、BIBB、猎头"
    },
    "visa": {
-    "name": "Visa appointment help",
-    "blurb": "Walk into the consulate with the right file, the right answers, and the right mindset.",
-    "bullet1": "Pre-appointment dossier review (every page, in order)",
-    "bullet2": "Mock interview for the consulate questions",
-    "bullet3": "Action plan if your appointment is far away (or already missed)"
+    "name": "签证预约辅导",
+    "blurb": "带着正确的材料、正确的回答和正确的心态走进领事馆。",
+    "bullet1": "预约前逐页按顺序审核您的申请材料",
+    "bullet2": "针对领事馆问题进行模拟面谈",
+    "bullet3": "如果预约排期太远（或已错过），给您行动方案"
    },
    "german-tutoring": {
-    "name": "German tutoring (A1–B2)",
-    "blurb": "One-on-one focused sessions to push you from where you are to the next CEFR level.",
-    "bullet1": "Diagnostic in session 1 — exact gaps in grammar, vocab, speaking",
-    "bullet2": "Custom lesson plan to your target exam (Goethe, telc, ÖSD)",
-    "bullet3": "Speaking + listening drills using real Vorstellungsgespräch material"
+    "name": "德语辅导（A1–B2）",
+    "blurb": "一对一专项辅导，把您从当前水平推向下一个 CEFR 等级。",
+    "bullet1": "第一课诊断——找出语法、词汇、口语的确切差距",
+    "bullet2": "按您的目标考试（Goethe、telc、ÖSD）定制课程计划",
+    "bullet3": "用真实面试材料进行口语和听力训练"
    },
    "general": {
-    "name": "General consultation",
-    "blurb": "Not sure which service you need? Book a 30-min open call — we'll figure it out together.",
-    "bullet1": "Tell us where you are, where you want to go",
-    "bullet2": "We tell you which of the above services actually fits",
-    "bullet3": "No pressure — if none fit, we say so honestly"
+    "name": "通用咨询",
+    "blurb": "不确定需要哪项服务？预约 30 分钟开放通话——我们一起弄清楚。",
+    "bullet1": "告诉我们您现在的情况和目标",
+    "bullet2": "我们告诉您上述哪项服务真正适合",
+    "bullet3": "没有压力——如果都不适合，我们会诚实告知"
    },
    "german-exam-prep": {
-    "name": "Goethe / telc Exam Prep",
-    "blurb": "Pass your A1, B1 or B2 with confidence — strategy, mock speaking, exam-day playbook.",
-    "bullet1": "Module-by-module strategy: lesen, hören, schreiben, sprechen",
-    "bullet2": "Mock speaking part recorded in the real Goethe format",
-    "bullet3": "Exam-day plan: where your test centre is, what to bring, time per task"
+    "name": "歌德 / telc 考试辅导",
+    "blurb": "自信通过 A1、B1 或 B2——策略、模拟口语、考试日攻略。",
+    "bullet1": "各模块逐一攻略：阅读、听力、写作、口语",
+    "bullet2": "按真实歌德考试形式录制的模拟口语",
+    "bullet3": "考试日计划：考点在哪、带什么、每题多少时间"
    }
   }
  },
