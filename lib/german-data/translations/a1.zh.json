@@ -2702,79 +2702,79 @@
   },
   "a1-05": {
    "id": "a1-05",
-   "title": "Family and Possession — Familie und Possessivpronomen",
+   "title": "家庭与物主代词 — Familie und Possessivpronomen",
    "order": 5,
    "grammar": {
-    "title": "Possessive Pronouns — mein, dein, sein, ihr",
-    "content": "Possessive pronouns show who owns something. The **stem** is determined by the owner, and the **ending** by the owned object.\n\n**Basic stems:**\n- mein (my) / dein (your) / sein (his) / ihr (her) / unser (our) / euer (your pl.)",
+    "title": "物主代词 — mein、dein、sein、ihr",
+    "content": "物主代词表示某物属于谁。**词干**由所有者决定，**词尾**由被拥有的事物决定。\n\n**基本词干：**\n- mein（我的）/ dein（你的）/ sein（他的）/ ihr（她的）/ unser（我们的）/ euer（你们的）",
     "tables": [
      {
-      "title": "Possessive Pronouns — Stem by Owner",
+      "title": "物主代词——按所有者的词干",
       "headers": [
        "Pronomen",
        "Possessiv",
-       "Meaning"
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "ich",
          "mein-",
-         "my"
+         "我的"
         ]
        },
        {
         "cells": [
          "du",
          "dein-",
-         "your"
+         "你的"
         ]
        },
        {
         "cells": [
          "er / es",
          "sein-",
-         "his / its"
+         "他的 / 它的"
         ]
        },
        {
         "cells": [
          "sie",
          "ihr-",
-         "her"
+         "她的"
         ]
        },
        {
         "cells": [
          "wir",
          "unser-",
-         "our"
+         "我们的"
         ]
        },
        {
         "cells": [
          "ihr",
          "euer-",
-         "your (pl.)"
+         "你们的"
         ]
        },
        {
         "cells": [
          "sie / Sie",
          "ihr- / Ihr-",
-         "their / your (formal)"
+         "他们的 / 您的（正式）"
         ]
        }
       ],
       "theme": "conjugation"
      },
      {
-      "title": "Possessive Endings by Noun Gender",
+      "title": "物主代词词尾——按名词词性",
       "headers": [
        "Genus",
        "Nominativ",
        "Akkusativ",
-       "Example"
+       "示例"
       ],
       "rows": [
        {
@@ -2811,339 +2811,339 @@
        }
       ],
       "theme": "cases",
-      "note": "Same endings as ein/eine/ein — only masculine changes in Akkusativ."
+      "note": "词尾与 ein/eine/ein 相同——只有阳性在第四格变化。"
      }
     ],
     "rules": [
      {
-      "rule": "With masculine and neuter nouns in Nominativ: no ending.",
+      "rule": "阳性和中性名词在第一格：不加词尾。",
       "example": "Das ist **mein** Vater. Das ist **mein** Kind.",
-      "translation": "This is my father. This is my child."
+      "translation": "这是我父亲。这是我的孩子。"
      },
      {
-      "rule": "With feminine and plural nouns: add -e.",
+      "rule": "阴性和复数名词：加 -e。",
       "example": "Das ist **meine** Mutter. Das sind **meine** Eltern.",
-      "translation": "This is my mother. These are my parents."
+      "translation": "这是我母亲。这是我的父母。"
      },
      {
-      "rule": "In accusative case (Akkusativ) for masculine only: add -en.",
+      "rule": "第四格中只有阳性：加 -en。",
       "example": "Ich liebe **meinen** Bruder.",
-      "translation": "I love my brother. (Bruder masculine + Akkusativ → meinen)"
+      "translation": "我爱我的兄弟。（Bruder 阳性 + 第四格 → meinen）"
      }
     ],
     "examples": [
-     "Mein Vater heißt Hassan. Er ist 55 Jahre alt. — My father's name is Hassan. He is 55 years old.",
-     "Meine Mutter kommt aus Fes. — My mother is from Fes.",
-     "Ich habe zwei Geschwister — einen Bruder und eine Schwester. — I have two siblings — a brother and a sister.",
-     "Sein Name ist Youssef. — His name is Youssef.",
-     "Wie heißt deine Schwester? — What's your sister's name?",
-     "Unsere Familie wohnt in Casablanca. — Our family lives in Casablanca.",
-     "Ihre Kinder gehen schon zur Schule. — Her children already go to school.",
-     "Meine Großmutter kocht das beste Couscous! — My grandmother cooks the best couscous!"
+     "Mein Vater heißt Hassan. Er ist 55 Jahre alt. — 我父亲叫 Hassan，55 岁。",
+     "Meine Mutter kommt aus Fes. — 我母亲来自非斯。",
+     "Ich habe zwei Geschwister — einen Bruder und eine Schwester. — 我有两个兄弟姐妹——一个哥哥和一个姐姐。",
+     "Sein Name ist Youssef. — 他的名字是 Youssef。",
+     "Wie heißt deine Schwester? — 你姐姐叫什么名字？",
+     "Unsere Familie wohnt in Casablanca. — 我们家住在卡萨布兰卡。",
+     "Ihre Kinder gehen schon zur Schule. — 她的孩子们已经上学了。",
+     "Meine Großmutter kocht das beste Couscous! — 我祖母做的古斯米最好吃！"
     ],
-    "tip": "💡 Note that \"ihr\" can mean \"her\" or \"their\" or \"your (pl.)\" — context clarifies the meaning. When \"Ihr\" is capitalized mid-sentence, it means \"your\" (formal)."
+    "tip": "💡 注意「ihr」可以表示「她的」「他们的」或「你们的」——语境决定含义。句中大写的「Ihr」表示「您的」（正式）。"
    },
    "vocabulary": [
     {
      "german": "Vater",
-     "arabic": "father",
+     "arabic": "父亲",
      "gender": "der",
      "plural": "Väter",
      "example": "Mein Vater arbeitet als Arzt.",
-     "exampleArabic": "My father works as a doctor.",
+     "exampleArabic": "我父亲是医生。",
      "type": "noun"
     },
     {
      "german": "Mutter",
-     "arabic": "mother",
+     "arabic": "母亲",
      "gender": "die",
      "plural": "Mütter",
      "example": "Meine Mutter kocht gut.",
-     "exampleArabic": "My mother cooks well.",
+     "exampleArabic": "我母亲做饭很好吃。",
      "type": "noun"
     },
     {
      "german": "Bruder",
-     "arabic": "brother",
+     "arabic": "兄弟",
      "gender": "der",
      "plural": "Brüder",
      "example": "Ich habe einen Bruder.",
-     "exampleArabic": "I have a brother.",
+     "exampleArabic": "我有一个兄弟。",
      "type": "noun"
     },
     {
      "german": "Schwester",
-     "arabic": "sister",
+     "arabic": "姐妹",
      "gender": "die",
      "plural": "Schwestern",
      "example": "Meine Schwester studiert.",
-     "exampleArabic": "My sister is studying.",
+     "exampleArabic": "我姐姐在上大学。",
      "type": "noun"
     },
     {
      "german": "Eltern",
-     "arabic": "parents",
+     "arabic": "父母",
      "gender": "pl",
      "example": "Meine Eltern wohnen in Marokko.",
-     "exampleArabic": "My parents live in Morocco.",
+     "exampleArabic": "我父母住在摩洛哥。",
      "type": "noun"
     },
     {
      "german": "Geschwister",
-     "arabic": "siblings",
+     "arabic": "兄弟姐妹",
      "gender": "pl",
      "example": "Ich habe drei Geschwister.",
-     "exampleArabic": "I have three siblings.",
+     "exampleArabic": "我有三个兄弟姐妹。",
      "type": "noun"
     },
     {
      "german": "Sohn",
-     "arabic": "son",
+     "arabic": "儿子",
      "gender": "der",
      "plural": "Söhne",
      "example": "Mein Sohn ist 5.",
-     "exampleArabic": "My son is 5.",
+     "exampleArabic": "我儿子五岁。",
      "type": "noun"
     },
     {
      "german": "Tochter",
-     "arabic": "daughter",
+     "arabic": "女儿",
      "gender": "die",
      "plural": "Töchter",
      "example": "Meine Tochter heißt Lina.",
-     "exampleArabic": "My daughter's name is Lina.",
+     "exampleArabic": "我女儿叫 Lina。",
      "type": "noun"
     },
     {
      "german": "Kind",
-     "arabic": "child",
+     "arabic": "孩子",
      "gender": "das",
      "plural": "Kinder",
      "example": "Wir haben zwei Kinder.",
-     "exampleArabic": "We have two children.",
+     "exampleArabic": "我们有两个孩子。",
      "type": "noun"
     },
     {
      "german": "Baby",
-     "arabic": "baby",
+     "arabic": "婴儿",
      "gender": "das",
      "plural": "Babys",
      "example": "Das Baby schläft.",
-     "exampleArabic": "The baby is sleeping.",
+     "exampleArabic": "宝宝在睡觉。",
      "type": "noun"
     },
     {
      "german": "Großvater / Opa",
-     "arabic": "grandfather / grandpa",
+     "arabic": "祖父 / 爷爷",
      "gender": "der",
      "plural": "Großväter",
      "example": "Mein Opa ist 80.",
-     "exampleArabic": "My grandpa is 80.",
+     "exampleArabic": "我爷爷 80 岁。",
      "type": "noun"
     },
     {
      "german": "Großmutter / Oma",
-     "arabic": "grandmother / grandma",
+     "arabic": "祖母 / 奶奶",
      "gender": "die",
      "plural": "Großmütter",
      "example": "Meine Oma lebt noch.",
-     "exampleArabic": "My grandma is still alive.",
+     "exampleArabic": "我奶奶还健在。",
      "type": "noun"
     },
     {
      "german": "Onkel",
-     "arabic": "uncle",
+     "arabic": "叔叔；舅舅",
      "gender": "der",
      "plural": "Onkel",
      "example": "Mein Onkel wohnt in Rabat.",
-     "exampleArabic": "My uncle lives in Rabat.",
+     "exampleArabic": "我叔叔住在拉巴特。",
      "type": "noun"
     },
     {
      "german": "Tante",
-     "arabic": "aunt",
+     "arabic": "姑姑；阿姨",
      "gender": "die",
      "plural": "Tanten",
      "example": "Meine Tante ist sehr nett.",
-     "exampleArabic": "My aunt is very nice.",
+     "exampleArabic": "我阿姨人很好。",
      "type": "noun"
     },
     {
      "german": "Cousin",
-     "arabic": "cousin (male)",
+     "arabic": "（男）表/堂兄弟",
      "gender": "der",
      "plural": "Cousins",
      "example": "Mein Cousin spielt Fußball.",
-     "exampleArabic": "My cousin plays soccer.",
+     "exampleArabic": "我表哥踢足球。",
      "type": "noun"
     },
     {
      "german": "Familie",
-     "arabic": "family",
+     "arabic": "家庭",
      "gender": "die",
      "plural": "Familien",
      "example": "Meine Familie ist groß.",
-     "exampleArabic": "My family is big.",
+     "exampleArabic": "我的家庭很大。",
      "type": "noun"
     },
     {
      "german": "Mann / Ehemann",
-     "arabic": "husband",
+     "arabic": "丈夫",
      "gender": "der",
      "plural": "Männer",
      "example": "Mein Mann heißt Karim.",
-     "exampleArabic": "My husband's name is Karim.",
+     "exampleArabic": "我丈夫叫 Karim。",
      "type": "noun"
     },
     {
      "german": "Frau / Ehefrau",
-     "arabic": "wife",
+     "arabic": "妻子",
      "gender": "die",
      "plural": "Frauen",
      "example": "Meine Frau ist Lehrerin.",
-     "exampleArabic": "My wife is a teacher.",
+     "exampleArabic": "我妻子是教师。",
      "type": "noun"
     },
     {
      "german": "verheiratet / ledig",
-     "arabic": "married / single",
+     "arabic": "已婚 / 单身",
      "example": "Ich bin verheiratet.",
-     "exampleArabic": "I am married.",
+     "exampleArabic": "我已婚。",
      "type": "adjective"
     },
     {
      "german": "groß / klein",
-     "arabic": "big / small",
+     "arabic": "大的 / 小的",
      "example": "Meine Familie ist groß.",
-     "exampleArabic": "My family is big.",
+     "exampleArabic": "我的家庭很大。",
      "type": "adjective"
     },
     {
      "german": "jung / alt",
-     "arabic": "young / old",
+     "arabic": "年轻的 / 年长的",
      "example": "Er ist jung.",
-     "exampleArabic": "He is young.",
+     "exampleArabic": "他很年轻。",
      "type": "adjective"
     },
     {
      "german": "lieben",
-     "arabic": "to love",
+     "arabic": "爱",
      "example": "Ich liebe meine Familie.",
-     "exampleArabic": "I love my family.",
+     "exampleArabic": "我爱我的家人。",
      "type": "verb"
     },
     {
      "german": "die Schwiegermutter",
-     "arabic": "mother-in-law",
+     "arabic": "婆婆；岳母",
      "gender": "die",
      "plural": "Schwiegermütter",
      "example": "Meine Schwiegermutter wohnt nah.",
-     "exampleArabic": "My mother-in-law lives nearby.",
+     "exampleArabic": "我婆婆住得很近。",
      "type": "noun"
     },
     {
      "german": "der Schwiegervater",
-     "arabic": "father-in-law",
+     "arabic": "公公；岳父",
      "gender": "der",
      "plural": "Schwiegerväter",
      "example": "Mein Schwiegervater ist Arzt.",
-     "exampleArabic": "My father-in-law is a doctor.",
+     "exampleArabic": "我岳父是医生。",
      "type": "noun"
     },
     {
      "german": "der Enkel",
-     "arabic": "grandson",
+     "arabic": "孙子",
      "gender": "der",
      "plural": "Enkel",
      "example": "Mein Enkel ist 3 Jahre alt.",
-     "exampleArabic": "My grandson is 3.",
+     "exampleArabic": "我孙子三岁。",
      "type": "noun"
     },
     {
      "german": "die Enkelin",
-     "arabic": "granddaughter",
+     "arabic": "孙女",
      "gender": "die",
      "plural": "Enkelinnen",
      "example": "Meine Enkelin spielt gern.",
-     "exampleArabic": "My granddaughter loves to play.",
+     "exampleArabic": "我孙女爱玩。",
      "type": "noun"
     },
     {
      "german": "der Neffe",
-     "arabic": "nephew",
+     "arabic": "侄子；外甥",
      "gender": "der",
      "plural": "Neffen",
      "example": "Mein Neffe ist nett.",
-     "exampleArabic": "My nephew is nice.",
+     "exampleArabic": "我侄子很乖。",
      "type": "noun"
     },
     {
      "german": "die Nichte",
-     "arabic": "niece",
+     "arabic": "侄女；外甥女",
      "gender": "die",
      "plural": "Nichten",
      "example": "Meine Nichte studiert.",
-     "exampleArabic": "My niece studies.",
+     "exampleArabic": "我侄女在上大学。",
      "type": "noun"
     },
     {
      "german": "der Verwandte",
-     "arabic": "relative",
+     "arabic": "亲戚",
      "gender": "der",
      "plural": "Verwandte",
      "example": "Wir besuchen Verwandte.",
-     "exampleArabic": "We visit relatives.",
+     "exampleArabic": "我们去看亲戚。",
      "type": "noun"
     },
     {
      "german": "der Nachbar",
-     "arabic": "neighbor",
+     "arabic": "邻居",
      "gender": "der",
      "plural": "Nachbarn",
      "example": "Mein Nachbar ist freundlich.",
-     "exampleArabic": "My neighbor is friendly.",
+     "exampleArabic": "我的邻居很友好。",
      "type": "noun"
     },
     {
      "german": "verlobt",
-     "arabic": "engaged",
+     "arabic": "订婚的",
      "example": "Wir sind verlobt.",
-     "exampleArabic": "We're engaged.",
+     "exampleArabic": "我们订婚了。",
      "type": "adjective"
     },
     {
      "german": "geschieden",
-     "arabic": "divorced",
+     "arabic": "离异的",
      "example": "Sie ist geschieden.",
-     "exampleArabic": "She's divorced.",
+     "exampleArabic": "她离婚了。",
      "type": "adjective"
     },
     {
      "german": "freundlich / nett",
-     "arabic": "friendly / nice",
+     "arabic": "友好的 / 亲切的",
      "example": "Meine Tante ist sehr nett.",
-     "exampleArabic": "My aunt is very nice.",
+     "exampleArabic": "我阿姨人很好。",
      "type": "adjective"
     },
     {
      "german": "stolz auf",
-     "arabic": "proud of",
+     "arabic": "为……骄傲",
      "example": "Ich bin stolz auf meine Familie.",
-     "exampleArabic": "I'm proud of my family.",
+     "exampleArabic": "我为我的家人骄傲。",
      "type": "phrase"
     },
     {
      "german": "helfen",
-     "arabic": "to help",
+     "arabic": "帮助",
      "example": "Ich helfe meiner Mutter.",
-     "exampleArabic": "I help my mother.",
+     "exampleArabic": "我帮我母亲。",
      "type": "verb"
     },
     {
      "german": "besuchen",
-     "arabic": "to visit",
+     "arabic": "拜访",
      "example": "Wir besuchen die Großeltern.",
-     "exampleArabic": "We visit our grandparents.",
+     "exampleArabic": "我们去看望祖父母。",
      "type": "verb"
     }
    ],
@@ -3152,14 +3152,14 @@
      {
       "type": "fill-blank",
       "id": "a1-05-q1",
-      "question": "Complete: \"___ Vater heißt Hassan.\" (my father — masculine)",
+      "question": "补全：「___ Vater heißt Hassan.」（我的父亲——阳性）",
       "answer": "Mein",
-      "hint": "Possessive pronoun for masculine with ich: Mein"
+      "hint": "ich 对应阳性的物主代词：Mein"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q2",
-      "question": "How do you say \"my mother\" in German?",
+      "question": "「我的母亲」用德语怎么说？",
       "options": [
        "mein Mutter",
        "meine Mutter",
@@ -3171,33 +3171,33 @@
      {
       "type": "fill-blank",
       "id": "a1-05-q3",
-      "question": "Complete: \"Ich habe ___ Bruder.\" (a brother — Akkusativ masculine)",
+      "question": "补全：「Ich habe ___ Bruder.」（一个兄弟——第四格阳性）",
       "answer": "einen",
-      "hint": "Indefinite article for masculine in Akkusativ: einen"
+      "hint": "阳性第四格的不定冠词：einen"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q4",
-      "question": "What does \"Meine Geschwister wohnen in Berlin\" mean?",
+      "question": "「Meine Geschwister wohnen in Berlin」是什么意思？",
       "options": [
-       "My brother lives in Berlin.",
-       "My sister lives in Berlin.",
-       "My siblings live in Berlin.",
-       "My family lives in Berlin."
+       "我哥哥住在柏林。",
+       "我姐姐住在柏林。",
+       "我的兄弟姐妹住在柏林。",
+       "我的家人住在柏林。"
       ],
-      "answer": "My siblings live in Berlin."
+      "answer": "我的兄弟姐妹住在柏林。"
      },
      {
       "type": "fill-blank",
       "id": "a1-05-q5",
-      "question": "Complete: \"___ Name ist Youssef.\" (his name — for masculine third person)",
+      "question": "补全：「___ Name ist Youssef.」（他的名字——第三人称阳性）",
       "answer": "Sein",
-      "hint": "Possessive pronoun for masculine third person: Sein"
+      "hint": "第三人称阳性的物主代词：Sein"
      },
      {
       "type": "matching",
       "id": "a1-05-q6",
-      "question": "Match the pronoun with its possessive form:",
+      "question": "把代词和它的物主形式配对：",
       "pairs": [
        {
         "left": "ich",
@@ -3225,7 +3225,7 @@
      {
       "type": "drag-drop",
       "id": "a1-05-q7",
-      "question": "Put in order: \"These are my parents in Morocco\"",
+      "question": "排序：「这是我在摩洛哥的父母」",
       "words": [
        "Das",
        "sind",
@@ -3239,22 +3239,22 @@
      {
       "type": "speaking",
       "id": "a1-05-q8",
-      "question": "Say in German: \"My sister's name is Fatima\"",
+      "question": "用德语说：「我姐姐叫 Fatima」",
       "answer": "Meine Schwester heißt Fatima",
-      "hint": "Schwester is feminine → meine"
+      "hint": "Schwester 是阴性 → meine"
      },
      {
       "type": "fill-blank",
       "id": "a1-05-q9",
-      "question": "Listen and complete: \"Ich liebe ___ Bruder.\" (direct object masculine)",
+      "question": "听后补全：「Ich liebe ___ Bruder.」（阳性直接宾语）",
       "audioPrompt": "Ich liebe meinen Bruder.",
       "answer": "meinen",
-      "hint": "Bruder masculine + Akkusativ → meinen"
+      "hint": "Bruder 阳性 + 第四格 → meinen"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q10",
-      "question": "What is the correct pronoun: \"___ Kinder sind nett.\" (their children are nice)",
+      "question": "正确的代词是：「___ Kinder sind nett.」（他们的孩子很乖）",
       "options": [
        "sein",
        "ihre",
@@ -3266,14 +3266,14 @@
      {
       "type": "fill-blank",
       "id": "a1-05-q11",
-      "question": "\"Mein ___ ist 3 Jahre alt.\" (grandson)",
+      "question": "「Mein ___ ist 3 Jahre alt.」（孙子）",
       "answer": "Enkel",
       "hint": "der Enkel"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q12",
-      "question": "Nephew in German:",
+      "question": "侄子用德语怎么说：",
       "options": [
        "der Cousin",
        "der Neffe",
@@ -3285,34 +3285,34 @@
      {
       "type": "fill-blank",
       "id": "a1-05-q13",
-      "question": "\"Sie ist ___\" (divorced)",
+      "question": "「Sie ist ___」（离异）",
       "answer": "geschieden",
-      "hint": "marital status"
+      "hint": "婚姻状况"
      },
      {
       "type": "matching",
       "id": "a1-05-q14",
-      "question": "Match the word to its meaning:",
+      "question": "把单词和含义配对：",
       "pairs": [
        {
         "left": "Schwiegermutter",
-        "right": "mother-in-law"
+        "right": "婆婆/岳母"
        },
        {
         "left": "Enkel",
-        "right": "grandson"
+        "right": "孙子"
        },
        {
         "left": "Neffe",
-        "right": "nephew"
+        "right": "侄子"
        },
        {
         "left": "Nichte",
-        "right": "niece"
+        "right": "侄女"
        },
        {
         "left": "Nachbar",
-        "right": "neighbor"
+        "right": "邻居"
        }
       ],
       "answer": "matched"
@@ -3320,7 +3320,7 @@
      {
       "type": "drag-drop",
       "id": "a1-05-q15",
-      "question": "Order: \"I'm proud of my family\"",
+      "question": "排序：「我为我的家人骄傲」",
       "words": [
        "Ich",
        "bin",
@@ -3334,21 +3334,21 @@
      {
       "type": "speaking",
       "id": "a1-05-q16",
-      "question": "Say: \"I visit my grandparents on Saturdays\"",
+      "question": "说：「我周六看望祖父母」",
       "answer": "Ich besuche meine Großeltern am Samstag"
      },
      {
       "type": "fill-blank",
       "id": "a1-05-q17",
-      "question": "Listen: \"Ich helfe ___ Mutter.\" (Dat — my mother)",
+      "question": "听：「Ich helfe ___ Mutter.」（第三格——我的母亲）",
       "audioPrompt": "Ich helfe meiner Mutter.",
       "answer": "meiner",
-      "hint": "helfen + Dativ; Mutter fem."
+      "hint": "helfen + 第三格；Mutter 阴性"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q18",
-      "question": "Neighbor in German:",
+      "question": "邻居用德语怎么说：",
       "options": [
        "der Nachbar",
        "der Nachfolger",
@@ -3360,14 +3360,14 @@
      {
       "type": "fill-blank",
       "id": "a1-05-q19",
-      "question": "\"Wir sind ___\" (engaged)",
+      "question": "「Wir sind ___」（订婚）",
       "answer": "verlobt",
-      "hint": "engagement"
+      "hint": "订婚状态"
      },
      {
       "type": "multiple-choice",
       "id": "a1-05-q20",
-      "question": "Plural of Onkel:",
+      "question": "Onkel 的复数是：",
       "options": [
        "Onkels",
        "Onkeln",
