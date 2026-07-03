@@ -664,14 +664,14 @@
   },
   "a1-02": {
    "id": "a1-02",
-   "title": "Numbers and Prices — Zahlen und Preise",
+   "title": "数字与价格 — Zahlen und Preise",
    "order": 2,
    "grammar": {
-    "title": "Numbers from 1 to 100 — Rules and Patterns",
-    "content": "German numbers have a distinctive pattern: **the tens come after the ones** (not before like in Arabic and English).\n\n**Example:** 21 = einundzwanzig = one + and + twenty",
+    "title": "1 到 100 的数字——规则与模式",
+    "content": "德语数字有一个独特的模式：**十位在个位之后**（与中文和英语相反）。\n\n**例：**21 = einundzwanzig = 一 + 和 + 二十",
     "tables": [
      {
-      "title": "Numbers from 0 to 12 (memorize as is)",
+      "title": "0 到 12 的数字（直接背下来）",
       "headers": [
        "Zahl",
        "Deutsch",
@@ -739,11 +739,11 @@
       "theme": "default"
      },
      {
-      "title": "Numbers from 13 to 19 — Rule: number + zehn",
+      "title": "13 到 19——规则：数字 + zehn",
       "headers": [
        "Zahl",
        "Deutsch",
-       "Note"
+       "说明"
       ],
       "rows": [
        {
@@ -799,7 +799,7 @@
       "theme": "default"
      },
      {
-      "title": "Tens from 20 to 100",
+      "title": "20 到 100 的整十数",
       "headers": [
        "Zahl",
        "Deutsch",
@@ -849,317 +849,317 @@
        }
       ],
       "theme": "default",
-      "note": "⚠️ 30 is written dreißig with ß (not z)"
+      "note": "⚠️ 30 写作 dreißig，用 ß（不是 z）"
      }
     ],
     "rules": [
      {
-      "rule": "Compound numbers (21-99): ones + und + tens — one word!",
+      "rule": "组合数字（21-99）：个位 + und + 十位——写成一个词！",
       "example": "einundzwanzig (21), fünfunddreißig (35), neunundneunzig (99)",
-      "translation": "twenty-one, thirty-five, ninety-nine"
+      "translation": "二十一、三十五、九十九"
      },
      {
-      "rule": "Price in euros: number + Euro (no s in plural)",
+      "rule": "欧元价格：数字 + Euro（复数不加 s）",
       "example": "Das kostet fünfzehn Euro und zwanzig Cent.",
-      "translation": "That costs 15 euros and 20 cents."
+      "translation": "这个卖 15 欧 20 分。"
      },
      {
-      "rule": "When asking about price, use \"Wie viel kostet...?\"",
+      "rule": "问价格用「Wie viel kostet...?」",
       "example": "Wie viel kostet das Brot? — Zwei Euro fünfzig.",
-      "translation": "How much does the bread cost? — 2.50 euros."
+      "translation": "面包多少钱？——2.50 欧元。"
      }
     ],
     "examples": [
-     "Ich bin dreiundzwanzig Jahre alt. — I am 23 years old.",
-     "Das kostet fünfzehn Euro, bitte. — That costs 15 euros, please.",
-     "Meine Handynummer ist null-eins-sieben-sechs... — My cell phone number is 0176...",
-     "Wir haben zwei Kinder. — We have two children.",
-     "Der Bus kommt in zehn Minuten. — The bus comes in 10 minutes.",
-     "Das Hotel hat fünfzig Zimmer. — The hotel has 50 rooms.",
-     "Ein Kilo Äpfel kostet drei Euro. — A kilo of apples costs three euros."
+     "Ich bin dreiundzwanzig Jahre alt. — 我 23 岁。",
+     "Das kostet fünfzehn Euro, bitte. — 这个 15 欧元，谢谢。",
+     "Meine Handynummer ist null-eins-sieben-sechs... — 我的手机号是 0176……",
+     "Wir haben zwei Kinder. — 我们有两个孩子。",
+     "Der Bus kommt in zehn Minuten. — 公交车 10 分钟后到。",
+     "Das Hotel hat fünfzig Zimmer. — 这家酒店有 50 个房间。",
+     "Ein Kilo Äpfel kostet drei Euro. — 一公斤苹果三欧元。"
     ],
-    "tip": "💡 When saying a German phone number, it's pronounced digit by digit (null-eins-sieben...) not as a complete number. The German country code is +49."
+    "tip": "💡 说德国电话号码时要一位一位念（null-eins-sieben……），不是念整数。德国的国家区号是 +49。"
    },
    "vocabulary": [
     {
      "german": "eins",
-     "arabic": "1 (one)",
+     "arabic": "1（一）",
      "example": "Ein Kaffee, bitte.",
-     "exampleArabic": "A coffee, please.",
+     "exampleArabic": "一杯咖啡，谢谢。",
      "type": "number"
     },
     {
      "german": "zwei",
-     "arabic": "2 (two)",
+     "arabic": "2（二）",
      "example": "Ich habe zwei Brüder.",
-     "exampleArabic": "I have two brothers.",
+     "exampleArabic": "我有两个兄弟。",
      "type": "number"
     },
     {
      "german": "drei",
-     "arabic": "3 (three)",
+     "arabic": "3（三）",
      "example": "drei Euro",
-     "exampleArabic": "3 euros",
+     "exampleArabic": "3 欧元",
      "type": "number"
     },
     {
      "german": "vier",
-     "arabic": "4 (four)",
+     "arabic": "4（四）",
      "example": "vier Kinder",
-     "exampleArabic": "4 children",
+     "exampleArabic": "4 个孩子",
      "type": "number"
     },
     {
      "german": "fünf",
-     "arabic": "5 (five)",
+     "arabic": "5（五）",
      "example": "fünf Minuten",
-     "exampleArabic": "5 minutes",
+     "exampleArabic": "5 分钟",
      "type": "number"
     },
     {
      "german": "zehn",
-     "arabic": "10 (ten)",
+     "arabic": "10（十）",
      "example": "zehn Euro",
-     "exampleArabic": "10 euros",
+     "exampleArabic": "10 欧元",
      "type": "number"
     },
     {
      "german": "zwölf",
-     "arabic": "12 (twelve)",
+     "arabic": "12（十二）",
      "example": "zwölf Monate",
-     "exampleArabic": "12 months",
+     "exampleArabic": "12 个月",
      "type": "number"
     },
     {
      "german": "zwanzig",
-     "arabic": "20 (twenty)",
+     "arabic": "20（二十）",
      "example": "zwanzig Euro",
-     "exampleArabic": "20 euros",
+     "exampleArabic": "20 欧元",
      "type": "number"
     },
     {
      "german": "dreißig",
-     "arabic": "30 (thirty)",
+     "arabic": "30（三十）",
      "example": "dreißig Grad",
-     "exampleArabic": "30 degrees",
+     "exampleArabic": "30 度",
      "type": "number"
     },
     {
      "german": "hundert",
-     "arabic": "100 (one hundred)",
+     "arabic": "100（一百）",
      "example": "hundert Prozent",
-     "exampleArabic": "100%",
+     "exampleArabic": "百分之百",
      "type": "number"
     },
     {
      "german": "tausend",
-     "arabic": "1000 (one thousand)",
+     "arabic": "1000（一千）",
      "example": "tausend Euro",
-     "exampleArabic": "1000 euros",
+     "exampleArabic": "1000 欧元",
      "type": "number"
     },
     {
      "german": "kosten",
-     "arabic": "to cost",
+     "arabic": "值多少钱；花费",
      "example": "Wie viel kostet das?",
-     "exampleArabic": "How much does that cost?",
+     "exampleArabic": "这个多少钱？",
      "type": "verb"
     },
     {
      "german": "Nummer",
-     "arabic": "number",
+     "arabic": "号码",
      "gender": "die",
      "plural": "Nummern",
      "example": "Wie ist deine Nummer?",
-     "exampleArabic": "What is your number?",
+     "exampleArabic": "你的号码是多少？",
      "type": "noun"
     },
     {
      "german": "Euro",
-     "arabic": "euro",
+     "arabic": "欧元",
      "gender": "der",
      "example": "Das sind zehn Euro.",
-     "exampleArabic": "That's ten euros.",
+     "exampleArabic": "这是十欧元。",
      "type": "noun"
     },
     {
      "german": "Preis",
-     "arabic": "price",
+     "arabic": "价格",
      "gender": "der",
      "plural": "Preise",
      "example": "Der Preis ist gut.",
-     "exampleArabic": "The price is good.",
+     "exampleArabic": "价格不错。",
      "type": "noun"
     },
     {
      "german": "Telefonnummer",
-     "arabic": "phone number",
+     "arabic": "电话号码",
      "gender": "die",
      "plural": "Telefonnummern",
      "example": "Meine Telefonnummer ist...",
-     "exampleArabic": "My phone number is...",
+     "exampleArabic": "我的电话号码是……",
      "type": "noun"
     },
     {
      "german": "Jahr",
-     "arabic": "year",
+     "arabic": "年",
      "gender": "das",
      "plural": "Jahre",
      "example": "Ich bin 25 Jahre alt.",
-     "exampleArabic": "I am 25 years old.",
+     "exampleArabic": "我 25 岁。",
      "type": "noun"
     },
     {
      "german": "Minute",
-     "arabic": "minute",
+     "arabic": "分钟",
      "gender": "die",
      "plural": "Minuten",
      "example": "in fünf Minuten",
-     "exampleArabic": "in 5 minutes",
+     "exampleArabic": "5 分钟后",
      "type": "noun"
     },
     {
      "german": "Stunde",
-     "arabic": "hour",
+     "arabic": "小时",
      "gender": "die",
      "plural": "Stunden",
      "example": "zwei Stunden",
-     "exampleArabic": "two hours",
+     "exampleArabic": "两个小时",
      "type": "noun"
     },
     {
      "german": "viel / wenig",
-     "arabic": "much, many / little, few",
+     "arabic": "多 / 少",
      "example": "Das ist viel!",
-     "exampleArabic": "That's a lot!",
+     "exampleArabic": "好多啊！",
      "type": "adverb"
     },
     {
      "german": "die Zahl",
-     "arabic": "number",
+     "arabic": "数字",
      "gender": "die",
      "plural": "die Zahlen",
      "example": "Welche Zahl ist das?",
-     "exampleArabic": "What number is that?",
+     "exampleArabic": "这是哪个数字？",
      "type": "noun"
     },
     {
      "german": "das Geld",
-     "arabic": "money",
+     "arabic": "钱",
      "gender": "das",
      "example": "Ich habe kein Geld.",
-     "exampleArabic": "I don't have money.",
+     "exampleArabic": "我没有钱。",
      "type": "noun"
     },
     {
      "german": "das Bargeld",
-     "arabic": "cash",
+     "arabic": "现金",
      "gender": "das",
      "example": "Ich zahle in bar.",
-     "exampleArabic": "I pay in cash.",
+     "exampleArabic": "我付现金。",
      "type": "noun"
     },
     {
      "german": "die Karte",
-     "arabic": "card",
+     "arabic": "卡",
      "gender": "die",
      "plural": "die Karten",
      "example": "Eine Karte, bitte.",
-     "exampleArabic": "A card, please.",
+     "exampleArabic": "请刷卡。",
      "type": "noun"
     },
     {
      "german": "die Kreditkarte",
-     "arabic": "credit card",
+     "arabic": "信用卡",
      "gender": "die",
      "plural": "die Kreditkarten",
      "example": "Mit Kreditkarte, bitte.",
-     "exampleArabic": "By credit card, please.",
+     "exampleArabic": "用信用卡，谢谢。",
      "type": "noun"
     },
     {
      "german": "günstig",
-     "arabic": "reasonably priced",
+     "arabic": "实惠的",
      "example": "Das ist günstig.",
-     "exampleArabic": "That's a good price.",
+     "exampleArabic": "这个价格实惠。",
      "type": "adjective"
     },
     {
      "german": "teuer",
-     "arabic": "expensive",
+     "arabic": "贵的",
      "example": "Das ist teuer!",
-     "exampleArabic": "That's expensive!",
+     "exampleArabic": "太贵了！",
      "type": "adjective"
     },
     {
      "german": "billig",
-     "arabic": "cheap",
+     "arabic": "便宜的",
      "example": "Das ist billig.",
-     "exampleArabic": "That's cheap.",
+     "exampleArabic": "这个很便宜。",
      "type": "adjective"
     },
     {
      "german": "das Geschäft",
-     "arabic": "shop / store",
+     "arabic": "商店",
      "gender": "das",
      "plural": "die Geschäfte",
      "example": "Das Geschäft ist offen.",
-     "exampleArabic": "The shop is open.",
+     "exampleArabic": "商店开着。",
      "type": "noun"
     },
     {
      "german": "bezahlen",
-     "arabic": "to pay",
+     "arabic": "支付",
      "example": "Ich bezahle die Rechnung.",
-     "exampleArabic": "I'm paying the bill.",
+     "exampleArabic": "我来付账。",
      "type": "verb"
     },
     {
      "german": "zählen",
-     "arabic": "to count",
+     "arabic": "数数",
      "example": "Kannst du auf Deutsch zählen?",
-     "exampleArabic": "Can you count in German?",
+     "exampleArabic": "你会用德语数数吗？",
      "type": "verb"
     },
     {
      "german": "der Cent",
-     "arabic": "cent",
+     "arabic": "分（欧分）",
      "gender": "der",
      "example": "fünfzig Cent",
-     "exampleArabic": "50 cents",
+     "exampleArabic": "50 欧分",
      "type": "noun"
     },
     {
      "german": "die Rechnung",
-     "arabic": "bill / invoice",
+     "arabic": "账单；发票",
      "gender": "die",
      "plural": "die Rechnungen",
      "example": "Die Rechnung, bitte!",
-     "exampleArabic": "The bill, please!",
+     "exampleArabic": "请结账！",
      "type": "noun"
     },
     {
      "german": "das Wechselgeld",
-     "arabic": "change (money back)",
+     "arabic": "找零",
      "gender": "das",
      "example": "Hier ist Ihr Wechselgeld.",
-     "exampleArabic": "Here's your change.",
+     "exampleArabic": "这是找您的零钱。",
      "type": "noun"
     },
     {
      "german": "die Hälfte",
-     "arabic": "half",
+     "arabic": "一半",
      "gender": "die",
      "example": "die Hälfte vom Preis",
-     "exampleArabic": "half the price",
+     "exampleArabic": "半价",
      "type": "noun"
     },
     {
      "german": "das Doppelte",
-     "arabic": "double",
+     "arabic": "两倍",
      "gender": "das",
      "example": "das Doppelte zahlen",
-     "exampleArabic": "pay double",
+     "exampleArabic": "付双倍",
      "type": "noun"
     }
    ],
@@ -1168,7 +1168,7 @@
      {
       "type": "multiple-choice",
       "id": "a1-02-q1",
-      "question": "What is the number \"siebzehn\"?",
+      "question": "「siebzehn」是哪个数字？",
       "options": [
        "7",
        "17",
@@ -1180,26 +1180,26 @@
      {
       "type": "fill-blank",
       "id": "a1-02-q2",
-      "question": "How do you write the number 35 in German?",
+      "question": "数字 35 用德语怎么写？",
       "answer": "fünfunddreißig",
-      "hint": "ones + und + tens"
+      "hint": "个位 + und + 十位"
      },
      {
       "type": "multiple-choice",
       "id": "a1-02-q3",
-      "question": "What does \"Das kostet zwölf Euro\" mean?",
+      "question": "「Das kostet zwölf Euro」是什么意思？",
       "options": [
-       "It costs twenty euros.",
-       "It costs twelve euros.",
-       "It costs twelve dollars.",
-       "It costs ten euros."
+       "这个卖二十欧元。",
+       "这个卖十二欧元。",
+       "这个卖十二美元。",
+       "这个卖十欧元。"
       ],
-      "answer": "It costs twelve euros."
+      "answer": "这个卖十二欧元。"
      },
      {
       "type": "matching",
       "id": "a1-02-q4",
-      "question": "Match the number with its German word:",
+      "question": "把数字和德语单词配对：",
       "pairs": [
        {
         "left": "13",
@@ -1227,14 +1227,14 @@
      {
       "type": "fill-blank",
       "id": "a1-02-q5",
-      "question": "Complete: \"Ich bin ___ Jahre alt.\" (I am 25 years old)",
+      "question": "补全：「Ich bin ___ Jahre alt.」（我 25 岁）",
       "answer": "fünfundzwanzig",
-      "hint": "twenty-five in German"
+      "hint": "德语的二十五"
      },
      {
       "type": "multiple-choice",
       "id": "a1-02-q6",
-      "question": "How do you say \"one hundred\" in German?",
+      "question": "「一百」用德语怎么说？",
       "options": [
        "tausend",
        "hundert",
@@ -1246,7 +1246,7 @@
      {
       "type": "fill-blank",
       "id": "a1-02-q7",
-      "question": "Listen then write the number as a digit (not a word):",
+      "question": "听后用数字（不是单词）写出：",
       "audioPrompt": "einundvierzig",
       "answer": "41",
       "hint": "ein + und + vierzig"
@@ -1254,7 +1254,7 @@
      {
       "type": "drag-drop",
       "id": "a1-02-q8",
-      "question": "Arrange the sentence:",
+      "question": "排列句子：",
       "words": [
        "Das",
        "kostet",
@@ -1266,14 +1266,14 @@
      {
       "type": "speaking",
       "id": "a1-02-q9",
-      "question": "Say in German: \"My phone number is 0176...\"",
+      "question": "用德语说：「我的电话号码是 0176……」",
       "answer": "Meine Telefonnummer ist null eins sieben sechs",
-      "hint": "read the digits one by one"
+      "hint": "一位一位地读数字"
      },
      {
       "type": "multiple-choice",
       "id": "a1-02-q10",
-      "question": "What does \"achtundneunzig\" equal?",
+      "question": "「achtundneunzig」等于多少？",
       "options": [
        "89",
        "98",
@@ -1285,14 +1285,14 @@
      {
       "type": "fill-blank",
       "id": "a1-02-q11",
-      "question": "Complete: \"Das ___ 50 Euro.\" (costs)",
+      "question": "补全：「Das ___ 50 Euro.」（值/卖）",
       "answer": "kostet",
-      "hint": "verb kosten with es/das"
+      "hint": "动词 kosten 与 es/das 搭配"
      },
      {
       "type": "multiple-choice",
       "id": "a1-02-q12",
-      "question": "How do you say \"76\" in German?",
+      "question": "「76」用德语怎么说？",
       "options": [
        "siebenundsechzig",
        "sechsundsiebzig",
@@ -1304,34 +1304,34 @@
      {
       "type": "fill-blank",
       "id": "a1-02-q13",
-      "question": "Complete: \"Wie ___ kostet das?\" (how much?)",
+      "question": "补全：「Wie ___ kostet das?」（多少？）",
       "answer": "viel",
-      "hint": "wie + viel = how much"
+      "hint": "wie + viel = 多少"
      },
      {
       "type": "matching",
       "id": "a1-02-q14",
-      "question": "Match the word to its meaning:",
+      "question": "把单词和含义配对：",
       "pairs": [
        {
         "left": "teuer",
-        "right": "expensive"
+        "right": "贵的"
        },
        {
         "left": "billig",
-        "right": "cheap"
+        "right": "便宜的"
        },
        {
         "left": "günstig",
-        "right": "reasonable price"
+        "right": "实惠的"
        },
        {
         "left": "kosten",
-        "right": "to cost"
+        "right": "值多少钱"
        },
        {
         "left": "bezahlen",
-        "right": "to pay"
+        "right": "支付"
        }
       ],
       "answer": "matched"
@@ -1339,7 +1339,7 @@
      {
       "type": "drag-drop",
       "id": "a1-02-q15",
-      "question": "Order: \"I pay by card\"",
+      "question": "排序：「我用卡支付」",
       "words": [
        "Ich",
        "bezahle",
@@ -1352,13 +1352,13 @@
      {
       "type": "speaking",
       "id": "a1-02-q16",
-      "question": "Say: \"It costs 25 euros and 50 cents\"",
+      "question": "说：「这个卖 25 欧 50 分」",
       "answer": "Das kostet fünfundzwanzig Euro und fünfzig Cent"
      },
      {
       "type": "fill-blank",
       "id": "a1-02-q17",
-      "question": "Listen and write the number: ___",
+      "question": "听并写出数字：___",
       "audioPrompt": "vierundsechzig",
       "answer": "64",
       "hint": "vier + und + sechzig"
@@ -1366,26 +1366,26 @@
      {
       "type": "multiple-choice",
       "id": "a1-02-q18",
-      "question": "What does \"billig\" mean?",
+      "question": "「billig」是什么意思？",
       "options": [
-       "expensive",
-       "cheap",
-       "new",
-       "big"
+       "贵的",
+       "便宜的",
+       "新的",
+       "大的"
       ],
-      "answer": "cheap"
+      "answer": "便宜的"
      },
      {
       "type": "fill-blank",
       "id": "a1-02-q19",
-      "question": "\"Ich bezahle mit ___ Kreditkarte.\" (fem. Dat article)",
+      "question": "「Ich bezahle mit ___ Kreditkarte.」（阴性第三格冠词）",
       "answer": "der",
-      "hint": "mit + Dativ"
+      "hint": "mit + 第三格"
      },
      {
       "type": "multiple-choice",
       "id": "a1-02-q20",
-      "question": "How do you pay in cash?",
+      "question": "用现金支付怎么说？",
       "options": [
        "mit Karte",
        "mit Bargeld",
