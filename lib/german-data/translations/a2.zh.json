@@ -2,25 +2,25 @@
  "lessons": {
   "a2-01": {
    "id": "a2-01",
-   "title": "The Past with haben — Perfekt mit haben",
+   "title": "用 haben 构成的过去时 — Perfekt mit haben",
    "order": 1,
    "grammar": {
-    "title": "Perfekt tense with the auxiliary verb haben",
-    "content": "The **Perfekt** is the main tense for expressing the past in spoken German.\n\n**Structure:** haben (conjugated) + ... + Partizip II (at the end of the sentence)\n\n→ Ich **habe** gestern viel **gearbeitet**.\n\nMost verbs (about 80%) use haben — all transitive verbs (those with a direct object) and all reflexive verbs.",
+    "title": "以助动词 haben 构成的现在完成时（Perfekt）",
+    "content": "**Perfekt（现在完成时）**是德语口语中表达过去最主要的时态。\n\n**结构：**haben（变位）+ …… + Partizip II（第二分词，放在句尾）\n\n→ Ich **habe** gestern viel **gearbeitet**.\n\n大多数动词（约 80%）用 haben——所有及物动词（带直接宾语的动词）和所有反身动词都用它。",
     "tables": [
      {
-      "title": "Forming Partizip II — Regular verbs",
+      "title": "Partizip II 的构成 — 规则动词",
       "headers": [
        "Infinitiv",
        "Partizip II",
-       "Rule"
+       "规则"
       ],
       "rows": [
        {
         "cells": [
          "machen",
          "gemacht",
-         "ge + stem + t"
+         "ge + 词干 + t"
         ]
        },
        {
@@ -60,103 +60,103 @@
        }
       ],
       "theme": "conjugation",
-      "note": "⚠️ Verbs ending in -ten/-den take -et instead of -t."
+      "note": "⚠️ 以 -ten/-den 结尾的动词加 -et 而不是 -t。"
      },
      {
-      "title": "Partizip II — Irregular verbs (most commonly used)",
+      "title": "Partizip II — 不规则动词（最常用的）",
       "headers": [
        "Infinitiv",
        "Partizip II",
-       "Meaning"
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "essen",
          "gegessen",
-         "ate"
+         "吃了"
         ]
        },
        {
         "cells": [
          "trinken",
          "getrunken",
-         "drank"
+         "喝了"
         ]
        },
        {
         "cells": [
          "lesen",
          "gelesen",
-         "read"
+         "读了"
         ]
        },
        {
         "cells": [
          "schreiben",
          "geschrieben",
-         "wrote"
+         "写了"
         ]
        },
        {
         "cells": [
          "sprechen",
          "gesprochen",
-         "spoke"
+         "说了"
         ]
        },
        {
         "cells": [
          "sehen",
          "gesehen",
-         "saw"
+         "看到了"
         ]
        },
        {
         "cells": [
          "nehmen",
          "genommen",
-         "took"
+         "拿了；乘了"
         ]
        },
        {
         "cells": [
          "finden",
          "gefunden",
-         "found"
+         "找到了"
         ]
        },
        {
         "cells": [
          "helfen",
          "geholfen",
-         "helped"
+         "帮助了"
         ]
        },
        {
         "cells": [
          "schlafen",
          "geschlafen",
-         "slept"
+         "睡了"
         ]
        }
       ],
       "theme": "conjugation",
-      "note": "Must be memorized — there is no rule for them."
+      "note": "必须背下来——它们没有规律可循。"
      },
      {
-      "title": "Special cases: without ge-",
+      "title": "特殊情况：不加 ge-",
       "headers": [
        "Infinitiv",
        "Partizip II",
-       "Reason"
+       "原因"
       ],
       "rows": [
        {
         "cells": [
          "besuchen",
          "besucht",
-         "Inseparable prefixes (be-)"
+         "不可分前缀（be-）"
         ]
        },
        {
@@ -177,7 +177,7 @@
         "cells": [
          "studieren",
          "studiert",
-         "Verbs ending in -ieren"
+         "以 -ieren 结尾的动词"
         ]
        },
        {
@@ -189,283 +189,283 @@
        }
       ],
       "theme": "conjugation",
-      "note": "Verbs with the prefixes be-, ge-, er-, ver-, zer-, ent-, emp- and verbs ending in -ieren do not take ge-."
+      "note": "带前缀 be-、ge-、er-、ver-、zer-、ent-、emp- 的动词以及以 -ieren 结尾的动词不加 ge-。"
      }
     ],
     "rules": [
      {
-      "rule": "Sentence structure: subject + haben (second position) + ... + Partizip II (at the end).",
+      "rule": "句子结构：主语 + haben（第二位）+ …… + Partizip II（句尾）。",
       "example": "Ich **habe** gestern einen Film **gesehen**.",
-      "translation": "I watched a movie yesterday."
+      "translation": "我昨天看了一部电影。"
      },
      {
-      "rule": "In questions: haben at the beginning, Partizip II at the end.",
+      "rule": "疑问句中：haben 放句首，Partizip II 放句尾。",
       "example": "**Hast** du die Hausaufgaben **gemacht**?",
-      "translation": "Did you do your homework?"
+      "translation": "你做作业了吗？"
      },
      {
-      "rule": "Separable verbs: ge- comes **between** the prefix and the stem.",
+      "rule": "可分动词：ge- 放在**前缀和词干之间**。",
       "example": "aufräumen → **auf**ge**räumt** / einkaufen → **ein**ge**kauft**",
-      "translation": "cleaned up / went shopping"
+      "translation": "收拾了 / 购物了"
      }
     ],
     "examples": [
-     "Ich habe gestern viel gearbeitet. — I worked a lot yesterday.",
-     "Er hat einen Kaffee getrunken. — He drank a coffee.",
-     "Wir haben zusammen Pizza gegessen. — We ate pizza together.",
-     "Hast du das Buch gelesen? — Did you read the book?",
-     "Sie hat ihre Mutter angerufen. — She called her mother.",
-     "Ich habe das noch nicht gemacht. — I haven't done that yet.",
-     "Wir haben einen Film im Kino gesehen. — We watched a movie at the cinema.",
-     "Ich habe heute eingekauft. — I went shopping today."
+     "Ich habe gestern viel gearbeitet. — 我昨天工作了很久。",
+     "Er hat einen Kaffee getrunken. — 他喝了一杯咖啡。",
+     "Wir haben zusammen Pizza gegessen. — 我们一起吃了披萨。",
+     "Hast du das Buch gelesen? — 你读了这本书吗？",
+     "Sie hat ihre Mutter angerufen. — 她给她妈妈打了电话。",
+     "Ich habe das noch nicht gemacht. — 我还没有做那件事。",
+     "Wir haben einen Film im Kino gesehen. — 我们在电影院看了一部电影。",
+     "Ich habe heute eingekauft. — 我今天去购物了。"
     ],
-    "tip": "💡 Trick for memorizing Partizip II of irregular verbs: divide them into groups by vowel change (e→o: gesprochen/geholfen, i→u: gefunden/getrunken). This pattern makes memorization easier."
+    "tip": "💡 记忆不规则动词 Partizip II 的窍门：按元音变化分组（e→o：gesprochen/geholfen，i→u：gefunden/getrunken）。这种规律能让记忆更轻松。"
    },
    "vocabulary": [
     {
      "german": "gestern",
-     "arabic": "yesterday",
+     "arabic": "昨天",
      "example": "Gestern habe ich gearbeitet.",
-     "exampleArabic": "Yesterday I worked.",
+     "exampleArabic": "昨天我工作了。",
      "type": "adverb"
     },
     {
      "german": "vorgestern",
-     "arabic": "the day before yesterday",
+     "arabic": "前天",
      "example": "Vorgestern war ich krank.",
-     "exampleArabic": "The day before yesterday I was sick.",
+     "exampleArabic": "前天我生病了。",
      "type": "adverb"
     },
     {
      "german": "letzte Woche",
-     "arabic": "last week",
+     "arabic": "上周",
      "example": "Letzte Woche war es schön.",
-     "exampleArabic": "Last week the weather was nice.",
+     "exampleArabic": "上周天气很好。",
      "type": "phrase"
     },
     {
      "german": "letztes Jahr",
-     "arabic": "last year",
+     "arabic": "去年",
      "example": "Letztes Jahr war ich in Marokko.",
-     "exampleArabic": "Last year I was in Morocco.",
+     "exampleArabic": "去年我在摩洛哥。",
      "type": "phrase"
     },
     {
      "german": "vor zwei Tagen",
-     "arabic": "two days ago",
+     "arabic": "两天前",
      "example": "Vor zwei Tagen hat es geregnet.",
-     "exampleArabic": "Two days ago it rained.",
+     "exampleArabic": "两天前下雨了。",
      "type": "phrase"
     },
     {
      "german": "schon",
-     "arabic": "already",
+     "arabic": "已经",
      "example": "Ich habe schon gegessen.",
-     "exampleArabic": "I already ate.",
+     "exampleArabic": "我已经吃过了。",
      "type": "adverb"
     },
     {
      "german": "noch nicht",
-     "arabic": "not yet",
+     "arabic": "还没有",
      "example": "Ich habe das noch nicht gemacht.",
-     "exampleArabic": "I haven't done that yet.",
+     "exampleArabic": "我还没有做那件事。",
      "type": "phrase"
     },
     {
      "german": "nie",
-     "arabic": "never",
+     "arabic": "从不",
      "example": "Ich habe das nie gesehen.",
-     "exampleArabic": "I've never seen that.",
+     "exampleArabic": "我从没见过那个。",
      "type": "adverb"
     },
     {
      "german": "immer",
-     "arabic": "always",
+     "arabic": "总是",
      "example": "Er hat immer gelernt.",
-     "exampleArabic": "He always studied.",
+     "exampleArabic": "他总是在学习。",
      "type": "adverb"
     },
     {
      "german": "Perfekt",
-     "arabic": "present perfect / conversational past",
+     "arabic": "现在完成时（口语过去时）",
      "gender": "das",
      "example": "Im Perfekt spricht man.",
-     "exampleArabic": "People speak in the Perfekt.",
+     "exampleArabic": "口语中人们用现在完成时。",
      "type": "noun"
     },
     {
      "german": "gemacht",
-     "arabic": "did / made (past)",
+     "arabic": "做了（过去分词）",
      "example": "Was hast du gemacht?",
-     "exampleArabic": "What did you do?",
+     "exampleArabic": "你做了什么？",
      "type": "verb"
     },
     {
      "german": "gegessen",
-     "arabic": "ate (past)",
+     "arabic": "吃了（过去分词）",
      "example": "Ich habe gegessen.",
-     "exampleArabic": "I ate.",
+     "exampleArabic": "我吃过了。",
      "type": "verb"
     },
     {
      "german": "getrunken",
-     "arabic": "drank (past)",
+     "arabic": "喝了（过去分词）",
      "example": "Ich habe Tee getrunken.",
-     "exampleArabic": "I drank tea.",
+     "exampleArabic": "我喝了茶。",
      "type": "verb"
     },
     {
      "german": "gelernt",
-     "arabic": "learned / studied (past)",
+     "arabic": "学了（过去分词）",
      "example": "Ich habe Deutsch gelernt.",
-     "exampleArabic": "I learned German.",
+     "exampleArabic": "我学了德语。",
      "type": "verb"
     },
     {
      "german": "gearbeitet",
-     "arabic": "worked (past)",
+     "arabic": "工作了（过去分词）",
      "example": "Sie hat gearbeitet.",
-     "exampleArabic": "She worked.",
+     "exampleArabic": "她工作了。",
      "type": "verb"
     },
     {
      "german": "gelesen",
-     "arabic": "read (past)",
+     "arabic": "读了（过去分词）",
      "example": "Ich habe ein Buch gelesen.",
-     "exampleArabic": "I read a book.",
+     "exampleArabic": "我读了一本书。",
      "type": "verb"
     },
     {
      "german": "geschrieben",
-     "arabic": "wrote (past)",
+     "arabic": "写了（过去分词）",
      "example": "Ich habe eine E-Mail geschrieben.",
-     "exampleArabic": "I wrote an email.",
+     "exampleArabic": "我写了一封电子邮件。",
      "type": "verb"
     },
     {
      "german": "gesprochen",
-     "arabic": "spoke (past)",
+     "arabic": "说了（过去分词）",
      "example": "Wir haben Deutsch gesprochen.",
-     "exampleArabic": "We spoke German.",
+     "exampleArabic": "我们说了德语。",
      "type": "verb"
     },
     {
      "german": "gesehen",
-     "arabic": "saw (past)",
+     "arabic": "看了（过去分词）",
      "example": "Ich habe einen Film gesehen.",
-     "exampleArabic": "I watched a movie.",
+     "exampleArabic": "我看了一部电影。",
      "type": "verb"
     },
     {
      "german": "gekauft",
-     "arabic": "bought (past)",
+     "arabic": "买了（过去分词）",
      "example": "Ich habe Brot gekauft.",
-     "exampleArabic": "I bought bread.",
+     "exampleArabic": "我买了面包。",
      "type": "verb"
     },
     {
      "german": "bezahlt",
-     "arabic": "paid (past)",
+     "arabic": "付了钱（过去分词）",
      "example": "Ich habe bar bezahlt.",
-     "exampleArabic": "I paid in cash.",
+     "exampleArabic": "我付了现金。",
      "type": "verb"
     },
     {
      "german": "besucht",
-     "arabic": "visited (past)",
+     "arabic": "拜访了（过去分词）",
      "example": "Ich habe meine Oma besucht.",
-     "exampleArabic": "I visited my grandma.",
+     "exampleArabic": "我去看了我奶奶。",
      "type": "verb"
     },
     {
      "german": "gespielt",
-     "arabic": "played (past)",
+     "arabic": "玩了；踢了（过去分词）",
      "example": "Wir haben Fußball gespielt.",
-     "exampleArabic": "We played football.",
+     "exampleArabic": "我们踢了足球。",
      "type": "verb"
     },
     {
      "german": "gehört",
-     "arabic": "listened / heard (past)",
+     "arabic": "听了（过去分词）",
      "example": "Ich habe Musik gehört.",
-     "exampleArabic": "I listened to music.",
+     "exampleArabic": "我听了音乐。",
      "type": "verb"
     },
     {
      "german": "getanzt",
-     "arabic": "danced (past)",
+     "arabic": "跳了舞（过去分词）",
      "example": "Sie hat getanzt.",
-     "exampleArabic": "She danced.",
+     "exampleArabic": "她跳了舞。",
      "type": "verb"
     },
     {
      "german": "gefragt",
-     "arabic": "asked (past)",
+     "arabic": "问了（过去分词）",
      "example": "Er hat den Lehrer gefragt.",
-     "exampleArabic": "He asked the teacher.",
+     "exampleArabic": "他问了老师。",
      "type": "verb"
     },
     {
      "german": "geantwortet",
-     "arabic": "answered (past)",
+     "arabic": "回答了（过去分词）",
      "example": "Sie hat schnell geantwortet.",
-     "exampleArabic": "She answered quickly.",
+     "exampleArabic": "她很快就回答了。",
      "type": "verb"
     },
     {
      "german": "geholfen",
-     "arabic": "helped (past)",
+     "arabic": "帮助了（过去分词）",
      "example": "Ich habe ihm geholfen.",
-     "exampleArabic": "I helped him.",
+     "exampleArabic": "我帮了他。",
      "type": "verb"
     },
     {
      "german": "genommen",
-     "arabic": "took (past)",
+     "arabic": "拿了；乘了（过去分词）",
      "example": "Ich habe den Bus genommen.",
-     "exampleArabic": "I took the bus.",
+     "exampleArabic": "我坐了公交车。",
      "type": "verb"
     },
     {
      "german": "gefunden",
-     "arabic": "found (past)",
+     "arabic": "找到了（过去分词）",
      "example": "Ich habe den Schlüssel gefunden.",
-     "exampleArabic": "I found the key.",
+     "exampleArabic": "我找到了钥匙。",
      "type": "verb"
     },
     {
      "german": "verstanden",
-     "arabic": "understood (past)",
+     "arabic": "理解了（过去分词）",
      "example": "Ich habe alles verstanden.",
-     "exampleArabic": "I understood everything.",
+     "exampleArabic": "我全都听懂了。",
      "type": "verb"
     },
     {
      "german": "telefoniert",
-     "arabic": "called (on phone, past)",
+     "arabic": "打了电话（过去分词）",
      "example": "Wir haben lange telefoniert.",
-     "exampleArabic": "We talked on the phone for a long time.",
+     "exampleArabic": "我们打了很久的电话。",
      "type": "verb"
     },
     {
      "german": "gekocht",
-     "arabic": "cooked (past)",
+     "arabic": "做了饭（过去分词）",
      "example": "Mama hat gekocht.",
-     "exampleArabic": "Mom cooked.",
+     "exampleArabic": "妈妈做了饭。",
      "type": "verb"
     },
     {
      "german": "heute Morgen",
-     "arabic": "this morning",
+     "arabic": "今天早上",
      "example": "Heute Morgen habe ich Brot gekauft.",
-     "exampleArabic": "This morning I bought bread.",
+     "exampleArabic": "今天早上我买了面包。",
      "type": "phrase"
     },
     {
      "german": "am Wochenende",
-     "arabic": "on the weekend",
+     "arabic": "在周末",
      "example": "Am Wochenende habe ich gelesen.",
-     "exampleArabic": "I read over the weekend.",
+     "exampleArabic": "周末我读了书。",
      "type": "phrase"
     }
    ],
@@ -474,7 +474,7 @@
      {
       "type": "multiple-choice",
       "id": "a2-01-q1",
-      "question": "Which is the correct form for \"I ate pizza\"?",
+      "question": "「我吃了披萨」的正确形式是？",
       "options": [
        "Ich bin Pizza gegessen.",
        "Ich habe Pizza gegessen.",
@@ -486,33 +486,33 @@
      {
       "type": "fill-blank",
       "id": "a2-01-q2",
-      "question": "Complete: \"Ich ___ gestern Deutsch ___.\" (I learned German)",
+      "question": "补全：「Ich ___ gestern Deutsch ___.」（我学了德语）",
       "answer": "habe",
-      "hint": "haben with ich: habe — Partizip II: gelernt"
+      "hint": "haben 配 ich：habe — Partizip II：gelernt"
      },
      {
       "type": "multiple-choice",
       "id": "a2-01-q3",
-      "question": "What does \"Ich habe gestern viel gelernt\" mean?",
+      "question": "「Ich habe gestern viel gelernt」是什么意思？",
       "options": [
-       "I will learn a lot tomorrow.",
-       "I'm learning a lot now.",
-       "I learned a lot yesterday.",
-       "I love learning a lot."
+       "我明天会学很多。",
+       "我现在在学很多东西。",
+       "我昨天学了很多。",
+       "我喜欢学很多东西。"
       ],
-      "answer": "I learned a lot yesterday."
+      "answer": "我昨天学了很多。"
      },
      {
       "type": "fill-blank",
       "id": "a2-01-q4",
-      "question": "Complete: \"Er hat das Buch ___.\" (read — lesen → gelesen)",
+      "question": "补全：「Er hat das Buch ___.」（读了 — lesen → gelesen）",
       "answer": "gelesen",
-      "hint": "Partizip II of lesen is gelesen"
+      "hint": "lesen 的 Partizip II 是 gelesen"
      },
      {
       "type": "matching",
       "id": "a2-01-q5",
-      "question": "Match the infinitive with its Partizip II:",
+      "question": "把动词原形和它的 Partizip II 配对：",
       "pairs": [
        {
         "left": "machen",
@@ -544,7 +544,7 @@
      {
       "type": "drag-drop",
       "id": "a2-01-q6",
-      "question": "Arrange: \"I watched a movie yesterday\"",
+      "question": "排序：「我昨天看了一部电影」",
       "words": [
        "Ich",
        "habe",
@@ -554,26 +554,26 @@
        "gesehen"
       ],
       "answer": "Ich habe gestern einen Film gesehen",
-      "hint": "Partizip II at the end"
+      "hint": "Partizip II 放在句尾"
      },
      {
       "type": "speaking",
       "id": "a2-01-q7",
-      "question": "Say in German: \"I bought bread and drank coffee today\"",
+      "question": "用德语说：「我今天买了面包并喝了咖啡」",
       "answer": "Ich habe heute Brot gekauft und Kaffee getrunken"
      },
      {
       "type": "fill-blank",
       "id": "a2-01-q8",
-      "question": "Listen and complete: \"Sie hat ein Buch ___.\" (wrote)",
+      "question": "听后补全：「Sie hat ein Buch ___.」（写了）",
       "audioPrompt": "Sie hat ein Buch geschrieben.",
       "answer": "geschrieben",
-      "hint": "Partizip II of schreiben"
+      "hint": "schreiben 的 Partizip II"
      },
      {
       "type": "multiple-choice",
       "id": "a2-01-q9",
-      "question": "What is the Partizip II of \"studieren\"?",
+      "question": "studieren 的 Partizip II 是？",
       "options": [
        "gestudiert",
        "studiert",
@@ -585,7 +585,7 @@
      {
       "type": "drag-drop",
       "id": "a2-01-q10",
-      "question": "Arrange: \"Did you call your mother?\" (question)",
+      "question": "排序：「你给你妈妈打电话了吗？」（疑问句）",
       "words": [
        "Hast",
        "du",
@@ -598,14 +598,14 @@
      {
       "type": "fill-blank",
       "id": "a2-01-q11",
-      "question": "Fill in: \"Wir ___ Fußball gespielt.\" (haben with wir)",
+      "question": "填空：「Wir ___ Fußball gespielt.」（haben 配 wir）",
       "answer": "haben",
       "hint": "haben + wir = haben"
      },
      {
       "type": "multiple-choice",
       "id": "a2-01-q12",
-      "question": "What is the Partizip II of helfen?",
+      "question": "helfen 的 Partizip II 是？",
       "options": [
        "gehilft",
        "geholfen",
@@ -617,14 +617,14 @@
      {
       "type": "fill-blank",
       "id": "a2-01-q13",
-      "question": "Fill in: \"Sie hat den Bus ___.\" (took → nehmen)",
+      "question": "填空：「Sie hat den Bus ___.」（乘了 → nehmen）",
       "answer": "genommen",
       "hint": "nehmen → genommen"
      },
      {
       "type": "multiple-choice",
       "id": "a2-01-q14",
-      "question": "Which form is correct for \"I phoned\"?",
+      "question": "「我打了电话」的正确形式是？",
       "options": [
        "Ich habe getelefoniert.",
        "Ich habe telefoniert.",
@@ -636,7 +636,7 @@
      {
       "type": "matching",
       "id": "a2-01-q15",
-      "question": "Match infinitive to Partizip II:",
+      "question": "把动词原形和 Partizip II 配对：",
       "pairs": [
        {
         "left": "finden",
@@ -664,7 +664,7 @@
      {
       "type": "drag-drop",
       "id": "a2-01-q16",
-      "question": "Order the words: \"I helped my mother yesterday\"",
+      "question": "排序：「我昨天帮了我妈妈」",
       "words": [
        "Ich",
        "habe",
@@ -678,13 +678,13 @@
      {
       "type": "speaking",
       "id": "a2-01-q17",
-      "question": "Say in German: \"Did you find the key?\"",
+      "question": "用德语说：「你找到钥匙了吗？」",
       "answer": "Hast du den Schlüssel gefunden"
      },
      {
       "type": "fill-blank",
       "id": "a2-01-q18",
-      "question": "Listen and fill in: \"Wir haben am Wochenende viel ___.\" (read)",
+      "question": "听后填空：「Wir haben am Wochenende viel ___.」（读了）",
       "audioPrompt": "Wir haben am Wochenende viel gelesen.",
       "answer": "gelesen",
       "hint": "lesen → gelesen"
@@ -692,7 +692,7 @@
      {
       "type": "multiple-choice",
       "id": "a2-01-q19",
-      "question": "What is the Partizip II of besuchen?",
+      "question": "besuchen 的 Partizip II 是？",
       "options": [
        "gebesucht",
        "besucht",
@@ -704,7 +704,7 @@
      {
       "type": "drag-drop",
       "id": "a2-01-q20",
-      "question": "Order the words: \"Yesterday I understood everything\"",
+      "question": "排序：「昨天我全都听懂了」",
       "words": [
        "Gestern",
        "habe",
