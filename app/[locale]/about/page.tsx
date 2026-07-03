@@ -54,9 +54,9 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'GoGermany کے بارے میں — جرمنی کا آپ کا پُل',
     desc: 'GoGermany کی ٹیم اور مشن سے ملیں: دنیا بھر کے لوگوں کو جرمنی میں تعلیم، Ausbildung اور کام کے لیے جانے میں مدد۔',
   },
-  nl: {
-    title: 'Over GoGermany — uw brug naar Duitsland',
-    desc: 'Maak kennis met het GoGermany-team en onze missie: mensen van over de hele wereld helpen naar Duitsland te verhuizen voor studie, Ausbildung en werk.',
+  zh: {
+    title: '关于 GoGermany — 您通往德国的桥梁',
+    desc: '认识 GoGermany 团队和我们的使命：帮助世界各地的人们赴德国留学、参加 Ausbildung 职业培训和工作。',
   },
 }
 

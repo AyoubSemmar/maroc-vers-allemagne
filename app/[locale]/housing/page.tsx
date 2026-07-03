@@ -51,9 +51,9 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'جرمنی میں رہائش — عملی رہنما',
     desc: 'جرمنی میں رہائش تلاش کرنے کا طریقہ: تلاش سائٹس، ضروری دستاویزات، WG بمقابلہ اسٹوڈیو، شہر کے لحاظ سے کرایے اور عام غلطیاں۔',
   },
-  nl: {
-    title: 'Wonen in Duitsland — praktische gids',
-    desc: 'Hoe u woonruimte vindt in Duitsland: zoeksites, benodigde documenten, WG versus studio, realistische huurprijzen per stad en valkuilen.',
+  zh: {
+    title: '在德国租房 — 实用指南',
+    desc: '如何在德国找到住房：找房网站、所需材料、合租（WG）与单间公寓的对比、各城市真实房租水平以及常见陷阱。',
   },
 }
 

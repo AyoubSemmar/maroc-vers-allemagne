@@ -26,10 +26,10 @@ const args = process.argv.slice(2)
 const ONLY = args.find(a => a.startsWith('--level='))?.split('=')[1]?.toUpperCase()
 const PER = 8 // words to add per lesson
 
-const LOCALES = ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl']
+const LOCALES = ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'zh']
 const LOCALE_NAMES: Record<string, string> = {
   ar: 'Arabic', fr: 'French', en: 'English', de: 'German (a short synonym/definition)', es: 'Spanish',
-  tr: 'Turkish', fa: 'Persian', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch',
+  tr: 'Turkish', fa: 'Persian', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese',
 }
 
 const localeProps = (desc: string) => Object.fromEntries(LOCALES.map(l => [l, { type: 'string', description: `${desc} in ${LOCALE_NAMES[l]}` }]))

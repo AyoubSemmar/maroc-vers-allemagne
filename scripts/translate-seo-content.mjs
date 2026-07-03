@@ -29,7 +29,7 @@ const LOCALES = [
   { code: 'ru', full: 'Russian (ru-RU)', dir: 'ltr' },
   { code: 'hi', full: 'Hindi (India, hi-IN)', dir: 'ltr' },
   { code: 'ur', full: 'Urdu (Pakistan, ur-PK)', dir: 'rtl' },
-  { code: 'nl', full: 'Dutch (Netherlands, nl-NL)', dir: 'ltr' },
+  { code: 'zh', full: 'Simplified Chinese (China, zh-CN)', dir: 'ltr' },
 ]
 
 const en = JSON.parse(fs.readFileSync('messages/en.json', 'utf8')).documentChecklist

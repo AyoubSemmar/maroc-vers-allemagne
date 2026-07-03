@@ -33,7 +33,7 @@ const LANG_FULL = {
   ru: 'Russian (Russia, ru-RU)',
   hi: 'Hindi (India, hi-IN)',
   ur: 'Urdu (Pakistan, ur-PK)',
-  nl: 'Dutch (Netherlands, nl-NL)',
+  zh: 'Simplified Chinese (China, zh-CN)',
 }
 
 const args = process.argv.slice(2)

@@ -33,7 +33,7 @@ const LANG_FULL = {
   fr: 'French (France, fr-FR)', en: 'English (en-GB)', de: 'German (Germany, de-DE)',
   es: 'Spanish (Spain, es-ES)', tr: 'Turkish (Turkey, tr-TR)', fa: 'Persian/Farsi (Iran, fa-IR)',
   pt: 'Portuguese (Brazil, pt-BR)', ru: 'Russian (Russia, ru-RU)', hi: 'Hindi (India, hi-IN)',
-  ur: 'Urdu (Pakistan, ur-PK)', nl: 'Dutch (Netherlands, nl-NL)',
+  ur: 'Urdu (Pakistan, ur-PK)', zh: 'Simplified Chinese (China, zh-CN)',
 }
 const ALL_NON_AR = Object.keys(LANG_FULL)
 const MOROCCO_SET = ['fr', 'en', 'de']

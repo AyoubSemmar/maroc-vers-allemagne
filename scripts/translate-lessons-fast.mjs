@@ -26,7 +26,7 @@ const LANG_FULL = {
   fr: 'French (France, fr-FR)', de: 'German (Germany, de-DE)', es: 'Spanish (Spain, es-ES)',
   tr: 'Turkish (Turkey, tr-TR)', fa: 'Persian/Farsi (Iran, fa-IR)', pt: 'Portuguese (Brazil, pt-BR)',
   ru: 'Russian (Russia, ru-RU)', hi: 'Hindi (India, hi-IN)', ur: 'Urdu (Pakistan, ur-PK)',
-  nl: 'Dutch (Netherlands, nl-NL)',
+  zh: 'Simplified Chinese (China, zh-CN)',
 }
 const LEVELS = ['a1', 'a2', 'b1', 'b2', 'c1']
 

@@ -44,19 +44,19 @@ import c1_pt from './translations/c1.pt.json'
 import c1_ru from './translations/c1.ru.json'
 import a1_hi from './translations/a1.hi.json'
 import a1_ur from './translations/a1.ur.json'
-import a1_nl from './translations/a1.nl.json'
+import a1_zh from './translations/a1.zh.json'
 import a2_hi from './translations/a2.hi.json'
 import a2_ur from './translations/a2.ur.json'
-import a2_nl from './translations/a2.nl.json'
+import a2_zh from './translations/a2.zh.json'
 import b1_hi from './translations/b1.hi.json'
 import b1_ur from './translations/b1.ur.json'
-import b1_nl from './translations/b1.nl.json'
+import b1_zh from './translations/b1.zh.json'
 import b2_hi from './translations/b2.hi.json'
 import b2_ur from './translations/b2.ur.json'
-import b2_nl from './translations/b2.nl.json'
+import b2_zh from './translations/b2.zh.json'
 import c1_hi from './translations/c1.hi.json'
 import c1_ur from './translations/c1.ur.json'
-import c1_nl from './translations/c1.nl.json'
+import c1_zh from './translations/c1.zh.json'
 
 /**
  * Overlay shape: per level, per locale, an object of form
@@ -71,11 +71,11 @@ type LevelOverlay = {
 }
 
 const OVERLAYS: Record<string, Partial<Record<AppLocale, LevelOverlay>>> = {
-  a1: { fr: a1_fr as LevelOverlay, en: a1_en as LevelOverlay, de: a1_de as LevelOverlay, es: a1_es as LevelOverlay, tr: a1_tr as LevelOverlay, fa: a1_fa as LevelOverlay, pt: a1_pt as LevelOverlay, ru: a1_ru as LevelOverlay, hi: a1_hi as LevelOverlay, ur: a1_ur as LevelOverlay, nl: a1_nl as LevelOverlay },
-  a2: { fr: a2_fr as LevelOverlay, en: a2_en as LevelOverlay, de: a2_de as LevelOverlay, es: a2_es as LevelOverlay, tr: a2_tr as LevelOverlay, fa: a2_fa as LevelOverlay, pt: a2_pt as LevelOverlay, ru: a2_ru as LevelOverlay, hi: a2_hi as LevelOverlay, ur: a2_ur as LevelOverlay, nl: a2_nl as LevelOverlay },
-  b1: { fr: b1_fr as LevelOverlay, en: b1_en as LevelOverlay, de: b1_de as LevelOverlay, es: b1_es as LevelOverlay, tr: b1_tr as LevelOverlay, fa: b1_fa as LevelOverlay, pt: b1_pt as LevelOverlay, ru: b1_ru as LevelOverlay, hi: b1_hi as LevelOverlay, ur: b1_ur as LevelOverlay, nl: b1_nl as LevelOverlay },
-  b2: { fr: b2_fr as LevelOverlay, en: b2_en as LevelOverlay, de: b2_de as LevelOverlay, es: b2_es as LevelOverlay, tr: b2_tr as LevelOverlay, fa: b2_fa as LevelOverlay, pt: b2_pt as LevelOverlay, ru: b2_ru as LevelOverlay, hi: b2_hi as LevelOverlay, ur: b2_ur as LevelOverlay, nl: b2_nl as LevelOverlay },
-  c1: { fr: c1_fr as LevelOverlay, en: c1_en as LevelOverlay, de: c1_de as LevelOverlay, es: c1_es as LevelOverlay, tr: c1_tr as LevelOverlay, fa: c1_fa as LevelOverlay, pt: c1_pt as LevelOverlay, ru: c1_ru as LevelOverlay, hi: c1_hi as LevelOverlay, ur: c1_ur as LevelOverlay, nl: c1_nl as LevelOverlay },
+  a1: { fr: a1_fr as LevelOverlay, en: a1_en as LevelOverlay, de: a1_de as LevelOverlay, es: a1_es as LevelOverlay, tr: a1_tr as LevelOverlay, fa: a1_fa as LevelOverlay, pt: a1_pt as LevelOverlay, ru: a1_ru as LevelOverlay, hi: a1_hi as LevelOverlay, ur: a1_ur as LevelOverlay, zh: a1_zh as LevelOverlay },
+  a2: { fr: a2_fr as LevelOverlay, en: a2_en as LevelOverlay, de: a2_de as LevelOverlay, es: a2_es as LevelOverlay, tr: a2_tr as LevelOverlay, fa: a2_fa as LevelOverlay, pt: a2_pt as LevelOverlay, ru: a2_ru as LevelOverlay, hi: a2_hi as LevelOverlay, ur: a2_ur as LevelOverlay, zh: a2_zh as LevelOverlay },
+  b1: { fr: b1_fr as LevelOverlay, en: b1_en as LevelOverlay, de: b1_de as LevelOverlay, es: b1_es as LevelOverlay, tr: b1_tr as LevelOverlay, fa: b1_fa as LevelOverlay, pt: b1_pt as LevelOverlay, ru: b1_ru as LevelOverlay, hi: b1_hi as LevelOverlay, ur: b1_ur as LevelOverlay, zh: b1_zh as LevelOverlay },
+  b2: { fr: b2_fr as LevelOverlay, en: b2_en as LevelOverlay, de: b2_de as LevelOverlay, es: b2_es as LevelOverlay, tr: b2_tr as LevelOverlay, fa: b2_fa as LevelOverlay, pt: b2_pt as LevelOverlay, ru: b2_ru as LevelOverlay, hi: b2_hi as LevelOverlay, ur: b2_ur as LevelOverlay, zh: b2_zh as LevelOverlay },
+  c1: { fr: c1_fr as LevelOverlay, en: c1_en as LevelOverlay, de: c1_de as LevelOverlay, es: c1_es as LevelOverlay, tr: c1_tr as LevelOverlay, fa: c1_fa as LevelOverlay, pt: c1_pt as LevelOverlay, ru: c1_ru as LevelOverlay, hi: c1_hi as LevelOverlay, ur: c1_ur as LevelOverlay, zh: c1_zh as LevelOverlay },
 }
 
 function getOverlay(levelId: string, locale: AppLocale): LevelOverlay | undefined {

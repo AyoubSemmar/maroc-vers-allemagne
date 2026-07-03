@@ -24,7 +24,7 @@ const args = process.argv.slice(2)
 const GLOBAL_PER_THEME = parseInt(args.find(a => a.startsWith('--global='))?.split('=')[1] || '18', 10)
 const PER_COUNTRY = parseInt(args.find(a => a.startsWith('--per-country='))?.split('=')[1] || '13', 10)
 
-const ALL_LOCALES = ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl']
+const ALL_LOCALES = ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'zh']
 
 // Country group → target locales (always include en + de). See memory
 // article-locale-policy.
@@ -37,7 +37,7 @@ const COUNTRY_GROUPS = [
   { id: 'spain-latam',      label: 'Spanish speakers (Spain & Latin America)', locales: ['es', 'en', 'de'] },
   { id: 'portugal-brazil',  label: 'Portuguese speakers (Portugal & Brazil)', locales: ['pt', 'en', 'de'] },
   { id: 'east-europe',      label: 'Russian-speaking Eastern Europeans', locales: ['ru', 'en', 'de'] },
-  { id: 'netherlands',      label: 'Dutch speakers (Netherlands/Belgium)', locales: ['nl', 'en', 'de'] },
+  { id: 'china',            label: 'Chinese speakers (China)', locales: ['zh', 'en', 'de'] },
 ]
 
 const GLOBAL_THEMES = [

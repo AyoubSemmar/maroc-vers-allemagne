@@ -22,7 +22,7 @@ const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 const LANG_FULL = {
   ar: 'Arabic (ar)', fr: 'French (fr-FR)', de: 'German (de-DE)', es: 'Spanish (es-ES)',
   tr: 'Turkish (tr-TR)', fa: 'Persian/Farsi (fa-IR)', pt: 'Portuguese (pt-BR)', ru: 'Russian (ru-RU)',
-  hi: 'Hindi (India, hi-IN)', ur: 'Urdu (Pakistan, ur-PK)', nl: 'Dutch (Netherlands, nl-NL)',
+  hi: 'Hindi (India, hi-IN)', ur: 'Urdu (Pakistan, ur-PK)', zh: 'Simplified Chinese (China, zh-CN)',
 }
 
 const args = process.argv.slice(2)

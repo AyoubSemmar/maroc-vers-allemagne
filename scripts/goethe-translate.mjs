@@ -21,7 +21,7 @@ for (const line of fs.readFileSync(path.resolve('.env.local'), 'utf8').split('\n
 const ai = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
 const MODEL = process.env.GOETHE_TR_MODEL || 'claude-sonnet-4-6'
 
-const LOCALES = { fr: 'French', en: 'English', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian (Farsi)', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch' }
+const LOCALES = { fr: 'French', en: 'English', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian (Farsi)', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese' }
 const want = process.argv.slice(2).filter(a => LOCALES[a])
 const targets = want.length ? want : Object.keys(LOCALES)
 

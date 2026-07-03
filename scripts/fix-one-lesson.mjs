@@ -14,7 +14,7 @@ if (fs.existsSync(envPath)) for (const line of fs.readFileSync(envPath, 'utf8').
 }
 const ai = new Anthropic({ apiKey: process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY })
 
-const LANG = { fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch' }
+const LANG = { fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese' }
 const [level, locale, lessonId] = process.argv.slice(2)
 const langName = LANG[locale]
 

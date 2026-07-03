@@ -55,9 +55,9 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'جرمن مفت سیکھیں — A1 سے C1 | GoGermany',
     desc: 'A1 سے C1 تک مفت انٹرایکٹو جرمن اسباق، جرمنی جانے والوں کے لیے۔ AI سے چلنے والی پڑھنے اور لکھنے کی مشقیں۔',
   },
-  nl: {
-    title: 'Gratis Duits leren — A1 tot C1 | GoGermany',
-    desc: 'Gratis interactieve Duits lessen van A1 tot C1, speciaal voor mensen die naar Duitsland gaan. AI-aangedreven lees- en schrijfoefeningen.',
+  zh: {
+    title: '免费学德语 — A1 到 C1 | GoGermany',
+    desc: '面向准备赴德人士的免费互动德语课程，涵盖 A1 到 C1，配有 AI 驱动的阅读和写作练习。',
   },
 }
 

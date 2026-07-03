@@ -27,7 +27,7 @@ export type TranslatableRow = {
  * Fallback chain: requested locale → English → Arabic source. English is
  * preferred over the Arabic base for missing locales because it's far more
  * widely readable (and LTR), which matters for e.g. a Morocco-only article
- * opened via a direct link under a global locale like hi/ur/nl.
+ * opened via a direct link under a global locale like hi/ur/zh.
  */
 export function localizeRow<T extends TranslatableRow>(row: T, locale: AppLocale): T {
   if (!row) return row

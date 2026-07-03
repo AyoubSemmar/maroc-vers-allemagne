@@ -75,7 +75,7 @@ const DRAFT_EFFORT = process.env.DRAFT_EFFORT || 'medium'
 
 const LANG_NAME = {
   ar: 'Arabic', fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish',
-  fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch',
+  fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese',
 }
 const DENSE = new Set(['ar', 'fa', 'hi', 'ur'])
 
@@ -163,7 +163,7 @@ const PEOPLE = {
   'north-africa': 'North African (Moroccan/Algerian) people', turkey: 'Turkish people',
   'iran-afghanistan': 'Iranian or Afghan people', 'spain-latam': 'Latin American or Spanish people',
   'portugal-brazil': 'Brazilian or Portuguese people', 'east-europe': 'Eastern European people',
-  netherlands: 'Dutch or European people',
+  china: 'Chinese people',
 }
 
 async function scenePromptFor(topic) {

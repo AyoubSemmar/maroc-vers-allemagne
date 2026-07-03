@@ -14,13 +14,13 @@ export const AUDIENCES = [
   { id: 'east-europe', label: '🇷🇺 East Europe — ru · de · en' },
   { id: 'india', label: '🇮🇳 India — hi · de · en' },
   { id: 'pakistan', label: '🇵🇰 Pakistan — ur · de · en' },
-  { id: 'netherlands', label: '🇳🇱 Netherlands — nl · de · en' },
+  { id: 'china', label: '🇨🇳 China — zh · de · en' },
 ] as const
 
 export type Audience = (typeof AUDIENCES)[number]['id']
 
 const POLICY: Record<Audience, string[]> = {
-  global: ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl'],
+  global: ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'zh'],
   'north-africa': ['ar', 'fr', 'en', 'de'],
   turkey: ['tr', 'en', 'de'],
   'iran-afghanistan': ['fa', 'en', 'de'],
@@ -29,21 +29,25 @@ const POLICY: Record<Audience, string[]> = {
   'east-europe': ['ru', 'en', 'de'],
   india: ['hi', 'en', 'de'],
   pakistan: ['ur', 'en', 'de'],
-  netherlands: ['nl', 'en', 'de'],
+  china: ['zh', 'en', 'de'],
 }
 
 export function localesFor(audience: string): string[] {
+  // 'netherlands' was retired when the nl locale was replaced by zh; any
+  // legacy rows with that audience resolve to the china policy's shape
+  // minus the language they no longer have — treat them as en+de only.
+  if (audience === 'netherlands') return ['en', 'de']
   return POLICY[audience as Audience] ?? POLICY.global
 }
 
 export const LANG_NAME: Record<string, string> = {
   ar: 'Arabic', fr: 'French', en: 'English', de: 'German', es: 'Spanish',
   tr: 'Turkish', fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian',
-  hi: 'Hindi', ur: 'Urdu', nl: 'Dutch',
+  hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese',
 }
 
 export const LANG_LABEL: Record<string, string> = {
   ar: '🇸🇦 العربية', fr: '🇫🇷 Français', en: '🇬🇧 English', de: '🇩🇪 Deutsch',
   es: '🇪🇸 Español', tr: '🇹🇷 Türkçe', fa: '🇮🇷 فارسی', pt: '🇧🇷 Português',
-  ru: '🇷🇺 Русский', hi: '🇮🇳 हिन्दी', ur: '🇵🇰 اردو', nl: '🇳🇱 Nederlands',
+  ru: '🇷🇺 Русский', hi: '🇮🇳 हिन्दी', ur: '🇵🇰 اردو', zh: '🇨🇳 简体中文',
 }

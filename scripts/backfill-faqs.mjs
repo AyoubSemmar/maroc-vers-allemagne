@@ -20,7 +20,7 @@ if (fs.existsSync(envPath)) for (const line of fs.readFileSync(envPath, 'utf8').
 const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, { auth: { persistSession: false } })
 const ai = new Anthropic({ apiKey: process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY })
 
-const LANG = { ar: 'Arabic', fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', nl: 'Dutch' }
+const LANG = { ar: 'Arabic', fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish', fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese' }
 const args = process.argv.slice(2)
 const ALLMODE = args.includes('--all')
 let ids = args.filter(a => /^\d+$/.test(a)).map(Number)
@@ -56,7 +56,7 @@ async function main() {
     process.stdout.write(`  id ${r.id}: `)
     try {
       const tr = r.translations || {}
-      const locales = tr._meta?.locales || ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl']
+      const locales = tr._meta?.locales || ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'zh']
       const baseLang = locales.includes('ar') ? 'ar' : 'en'
       const enTitle = tr.en?.title || r.title
       const enContent = tr.en?.content || (baseLang === 'en' ? r.content : tr.de?.content || r.content)

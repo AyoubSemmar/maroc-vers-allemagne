@@ -25,7 +25,7 @@ export const LOCALE_OPTIONS: LocaleOption[] = [
   { code: 'ru', label: 'Русский',  countryCode: 'ru' },
   { code: 'hi', label: 'हिन्दी',     countryCode: 'in' },
   { code: 'ur', label: 'اردو',      countryCode: 'pk' },
-  { code: 'nl', label: 'Nederlands',countryCode: 'nl' },
+  { code: 'zh', label: '简体中文',  countryCode: 'cn' },
 ]
 
 function flagSrc(countryCode: string) {

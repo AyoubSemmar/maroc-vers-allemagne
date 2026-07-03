@@ -51,9 +51,9 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'GoGermany سے رابطہ کریں — سوالات اور مشاورت',
     desc: 'GoGermany ٹیم سے رابطہ کریں۔ 1-on-1 مشاورت بک کریں، جرمنی جانے کے بارے میں سوالات پوچھیں، یا ہمیں ای میل کریں۔',
   },
-  nl: {
-    title: 'Contact GoGermany — vragen en consultaties',
-    desc: 'Neem contact op met het GoGermany-team. Boek een 1-op-1 consult, stel vragen over verhuizen naar Duitsland of stuur ons een e-mail.',
+  zh: {
+    title: '联系 GoGermany — 咨询与问题解答',
+    desc: '联系 GoGermany 团队：预约一对一咨询、提出有关移居德国的问题，或给我们发送电子邮件。',
   },
 }
 

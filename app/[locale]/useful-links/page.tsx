@@ -51,9 +51,9 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
     title: 'مفید لنکس — سرکاری جرمن ویب سائٹس',
     desc: 'جرمنی جانے کے لیے ضروری سرکاری جرمن ویب سائٹس کی فہرست: یونیورسٹیاں، Ausbildung، ویزا، رہائش، بینک، زبان سیکھنا۔',
   },
-  nl: {
-    title: 'Nuttige links — officiële Duitse sites',
-    desc: 'Samengestelde lijst van essentiële officiële Duitse sites voor verhuizen naar Duitsland: universiteiten, Ausbildung, visum, wonen, banken, taalonderwijs.',
+  zh: {
+    title: '实用链接 — 德国官方网站汇总',
+    desc: '精选移居德国必备的官方网站：大学、Ausbildung 职业培训、签证、住房、银行开户和语言学习资源。',
   },
 }
 

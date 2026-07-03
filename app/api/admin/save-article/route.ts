@@ -53,7 +53,7 @@ export async function POST(req: NextRequest) {
     // failed / was skipped). The localizer (lib/i18n-content.ts) uses
     // `??` so empty strings would override the Arabic source — better
     // to omit the slot entirely and let the fallback handle it.
-    const ALL_LOCALES = ['fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'nl'] as const
+    const ALL_LOCALES = ['fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru', 'hi', 'ur', 'zh'] as const
     const cleanTranslations: Record<string, any> = {}
     if (d.translations && typeof d.translations === 'object') {
       for (const lang of ALL_LOCALES) {
