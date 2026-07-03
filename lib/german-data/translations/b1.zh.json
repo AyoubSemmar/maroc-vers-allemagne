@@ -1160,14 +1160,14 @@
   },
   "b1-03": {
    "id": "b1-03",
-   "title": "Genitiv — Possessive Case",
+   "title": "Genitiv — 第二格（所有格）",
    "order": 3,
    "grammar": {
-    "title": "Genitiv: das Auto des Mannes",
-    "content": "**Genitiv** is the possessive case — it shows who owns what.\n\n**The Rule:**\n- Masculine/Neuter: **des** + noun + **-s/-es**\n- Feminine/Plural: **der**\n\n**In everyday language**, Genitiv is often replaced by **von + Dativ**:\n- das Auto **des Mannes** (formal) = das Auto **von dem Mann** (common)\n\n**Prepositions + Genitiv:**\n- **wegen** (because of), **trotz** (despite), **während** (during), **statt** (instead of), **außerhalb** (outside), **innerhalb** (inside)\n\n⚠️ Masculine and neuter singular nouns take **-s** or **-es** in Genitiv.",
+    "title": "第二格：das Auto des Mannes",
+    "content": "**Genitiv（第二格）**是所有格——表示某物属于谁。\n\n**规则：**\n- 阳性/中性：**des** + 名词 + **-s/-es**\n- 阴性/复数：**der**\n\n**日常口语中**，第二格常被 **von + 第三格**代替：\n- das Auto **des Mannes**（正式）= das Auto **von dem Mann**（常用）\n\n**支配第二格的介词：**\n- **wegen**（因为）、**trotz**（尽管）、**während**（在……期间）、**statt**（代替）、**außerhalb**（在……之外）、**innerhalb**（在……之内）\n\n⚠️ 阳性和中性单数名词在第二格中加 **-s** 或 **-es**。",
     "tables": [
      {
-      "title": "Definite Articles in the Four Cases",
+      "title": "四个格中的定冠词",
       "theme": "cases",
       "headers": [
        "Kasus",
@@ -1217,18 +1217,18 @@
       ]
      },
      {
-      "title": "Indefinite and Possessive Articles in Genitiv",
+      "title": "第二格中的不定冠词和物主冠词",
       "theme": "cases",
       "headers": [
-       "Gender",
+       "词性",
        "ein/kein",
        "mein",
-       "Noun ending"
+       "名词词尾"
       ],
       "rows": [
        {
         "cells": [
-         "Masculine",
+         "阳性",
          "eines / keines",
          "meines",
          "-s / -es"
@@ -1236,7 +1236,7 @@
        },
        {
         "cells": [
-         "Feminine",
+         "阴性",
          "einer / keiner",
          "meiner",
          "—"
@@ -1244,7 +1244,7 @@
        },
        {
         "cells": [
-         "Neuter",
+         "中性",
          "eines / keines",
          "meines",
          "-s / -es"
@@ -1252,7 +1252,7 @@
        },
        {
         "cells": [
-         "Plural",
+         "复数",
          "— / keiner",
          "meiner",
          "—"
@@ -1263,244 +1263,244 @@
     ],
     "rules": [
      {
-      "rule": "Genitiv for possession",
+      "rule": "表示所属用第二格",
       "example": "das Haus meines Vaters",
-      "translation": "my father's house"
+      "translation": "我父亲的房子"
      },
      {
-      "rule": "wegen + Genitiv",
+      "rule": "wegen + 第二格",
       "example": "wegen des Regens",
-      "translation": "because of the rain"
+      "translation": "因为下雨"
      },
      {
-      "rule": "von + Dativ (common alternative)",
+      "rule": "von + 第三格（常用替代）",
       "example": "das Auto von meinem Bruder",
-      "translation": "my brother's car"
+      "translation": "我哥哥的车"
      }
     ],
     "examples": [
-     "Das Buch des Lehrers ist interessant. — The teacher's book is interesting.",
-     "Die Farbe der Tür ist blau. — The color of the door is blue.",
-     "Trotz des Regens gehen wir spazieren. — Despite the rain, we go for a walk.",
-     "Während der Ferien reisen wir. — During the holidays, we travel.",
-     "Das Ende des Films war traurig. — The end of the film was sad.",
-     "Wegen des Wetters bleiben wir zu Hause. — Because of the weather, we stay home.",
-     "Die Tasche meiner Schwester ist neu. — My sister's bag is new.",
-     "Außerhalb der Stadt gibt es Wälder. — Outside the city, there are forests."
+     "Das Buch des Lehrers ist interessant. — 这位老师的书很有意思。",
+     "Die Farbe der Tür ist blau. — 门的颜色是蓝色的。",
+     "Trotz des Regens gehen wir spazieren. — 尽管下雨，我们还是去散步。",
+     "Während der Ferien reisen wir. — 假期期间我们去旅行。",
+     "Das Ende des Films war traurig. — 电影的结局很悲伤。",
+     "Wegen des Wetters bleiben wir zu Hause. — 因为天气原因我们待在家里。",
+     "Die Tasche meiner Schwester ist neu. — 我姐姐的包是新的。",
+     "Außerhalb der Stadt gibt es Wälder. — 城外有森林。"
     ],
-    "tip": "In everyday conversation, use \"von + Dativ\" instead of Genitiv — it's easier and more common!"
+    "tip": "日常对话中用「von + 第三格」代替第二格——更简单也更常见！"
    },
    "vocabulary": [
     {
      "german": "wegen",
-     "arabic": "because of",
+     "arabic": "因为",
      "type": "preposition"
     },
     {
      "german": "trotz",
-     "arabic": "despite",
+     "arabic": "尽管",
      "type": "preposition"
     },
     {
      "german": "während",
-     "arabic": "during",
+     "arabic": "在……期间",
      "type": "preposition"
     },
     {
      "german": "statt",
-     "arabic": "instead of",
+     "arabic": "代替",
      "type": "preposition"
     },
     {
      "german": "außerhalb",
-     "arabic": "outside",
+     "arabic": "在……之外",
      "type": "preposition"
     },
     {
      "german": "innerhalb",
-     "arabic": "inside",
+     "arabic": "在……之内",
      "type": "preposition"
     },
     {
      "german": "der Besitzer",
-     "arabic": "the owner",
+     "arabic": "所有者",
      "plural": "die Besitzer",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Eigentum",
-     "arabic": "the property",
+     "arabic": "财产",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "der Vertrag",
-     "arabic": "the contract",
+     "arabic": "合同",
      "plural": "die Verträge",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Unterschrift",
-     "arabic": "the signature",
+     "arabic": "签名",
      "plural": "die Unterschriften",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Ende",
-     "arabic": "the end",
+     "arabic": "结尾",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "der Anfang",
-     "arabic": "the beginning",
+     "arabic": "开始",
      "plural": "die Anfänge",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Mitte",
-     "arabic": "the middle",
+     "arabic": "中间",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Grund",
-     "arabic": "the reason",
+     "arabic": "原因",
      "plural": "die Gründe",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Bedeutung",
-     "arabic": "the meaning / importance",
+     "arabic": "含义；重要性",
      "plural": "die Bedeutungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Titel",
-     "arabic": "the title",
+     "arabic": "标题",
      "plural": "die Titel",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Sprache",
-     "arabic": "the language",
+     "arabic": "语言",
      "plural": "die Sprachen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Regen",
-     "arabic": "the rain",
+     "arabic": "雨",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Wetter",
-     "arabic": "the weather",
+     "arabic": "天气",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Ferien",
-     "arabic": "the vacation / holidays",
+     "arabic": "假期",
      "type": "noun",
      "gender": "pl"
     },
     {
      "german": "gehören",
-     "arabic": "to belong to",
+     "arabic": "属于",
      "example": "Das gehört mir.",
      "type": "verb"
     },
     {
      "german": "besitzen",
-     "arabic": "to own",
+     "arabic": "拥有",
      "type": "verb"
     },
     {
      "german": "der Eigentümer",
-     "arabic": "the owner",
+     "arabic": "业主",
      "plural": "die Eigentümer",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Mieter",
-     "arabic": "the tenant",
+     "arabic": "租户",
      "plural": "die Mieter",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Miete",
-     "arabic": "the rent",
+     "arabic": "房租",
      "plural": "die Mieten",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Adresse",
-     "arabic": "the address",
+     "arabic": "地址",
      "plural": "die Adressen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Gegenwart",
-     "arabic": "the present",
+     "arabic": "现在",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Vergangenheit",
-     "arabic": "the past",
+     "arabic": "过去",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "angesichts",
-     "arabic": "in view of",
+     "arabic": "鉴于",
      "type": "preposition"
     },
     {
      "german": "aufgrund",
-     "arabic": "due to",
+     "arabic": "由于",
      "type": "preposition"
     },
     {
      "german": "mithilfe",
-     "arabic": "with the help of",
+     "arabic": "借助",
      "type": "preposition"
     },
     {
      "german": "gemäß",
-     "arabic": "according to",
+     "arabic": "根据",
      "type": "preposition"
     },
     {
      "german": "der Inhalt",
-     "arabic": "the content",
+     "arabic": "内容",
      "plural": "die Inhalte",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Ursprung",
-     "arabic": "the origin",
+     "arabic": "起源",
      "plural": "die Ursprünge",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Ziel",
-     "arabic": "the goal, target",
+     "arabic": "目标",
      "plural": "die Ziele",
      "type": "noun",
      "gender": "das"
@@ -1511,7 +1511,7 @@
      {
       "id": "b1-03-q1",
       "type": "multiple-choice",
-      "question": "My father's house (Genitiv):",
+      "question": "「我父亲的房子」（第二格）：",
       "options": [
        "das Haus mein Vater",
        "das Haus meines Vaters",
@@ -1523,7 +1523,7 @@
      {
       "id": "b1-03-q2",
       "type": "multiple-choice",
-      "question": "Because of the rain:",
+      "question": "「因为下雨」：",
       "options": [
        "wegen dem Regen",
        "wegen der Regen",
@@ -1535,19 +1535,19 @@
      {
       "id": "b1-03-q3",
       "type": "fill-blank",
-      "question": "Das Buch ___ Lehrers ist neu. (des)",
+      "question": "Das Buch ___ Lehrers ist neu.（des）",
       "answer": "des"
      },
      {
       "id": "b1-03-q4",
       "type": "fill-blank",
-      "question": "Die Tasche ___ Schwester. (meiner)",
+      "question": "Die Tasche ___ Schwester.（meiner）",
       "answer": "meiner"
      },
      {
       "id": "b1-03-q5",
       "type": "drag-drop",
-      "question": "Arrange: [der / Die / ist / Farbe / Tür / blau]",
+      "question": "排序：[der / Die / ist / Farbe / Tür / blau]",
       "words": [
        "Die",
        "Farbe",
@@ -1561,7 +1561,7 @@
      {
       "id": "b1-03-q6",
       "type": "drag-drop",
-      "question": "Arrange: [des / Trotz / Wetters / gehen / wir / spazieren]",
+      "question": "排序：[des / Trotz / Wetters / gehen / wir / spazieren]",
       "words": [
        "Trotz",
        "des",
@@ -1575,23 +1575,23 @@
      {
       "id": "b1-03-q7",
       "type": "matching",
-      "question": "Match the preposition with its meaning:",
+      "question": "把介词和它的含义配对：",
       "pairs": [
        {
         "left": "wegen",
-        "right": "because of"
+        "right": "因为"
        },
        {
         "left": "trotz",
-        "right": "despite"
+        "right": "尽管"
        },
        {
         "left": "während",
-        "right": "during"
+        "right": "在……期间"
        },
        {
         "left": "statt",
-        "right": "instead of"
+        "right": "代替"
        }
       ],
       "answer": "match"
@@ -1599,7 +1599,7 @@
      {
       "id": "b1-03-q8",
       "type": "multiple-choice",
-      "question": "Which is the informal form of \"das Auto des Mannes\"?",
+      "question": "「das Auto des Mannes」的口语形式是？",
       "options": [
        "das Auto mit dem Mann",
        "das Auto von dem Mann",
@@ -1611,34 +1611,34 @@
      {
       "id": "b1-03-q9",
       "type": "speaking",
-      "question": "Say: \"My sister's book is new.\"",
+      "question": "说：「我姐姐的书是新的。」",
       "answer": "Das Buch meiner Schwester ist neu",
       "hint": "meiner Schwester"
      },
      {
       "id": "b1-03-q10",
       "type": "multiple-choice",
-      "question": "Listen and choose:",
+      "question": "听录音并选择：",
       "audioPrompt": "Während der Ferien fahre ich nach Italien.",
       "options": [
-       "Before the holidays I go to Italy",
-       "During the holidays I go to Italy",
-       "After the holidays",
-       "I don't go to Italy"
+       "假期之前我去意大利",
+       "假期期间我去意大利",
+       "假期之后",
+       "我不去意大利"
       ],
-      "answer": "During the holidays I go to Italy"
+      "answer": "假期期间我去意大利"
      },
      {
       "id": "b1-03-q11",
       "type": "fill-blank",
-      "question": "Genitiv: \"das Ende ___ Films\" (masc)",
+      "question": "第二格：「das Ende ___ Films」（阳性）",
       "answer": "des",
       "hint": "der → des"
      },
      {
       "id": "b1-03-q12",
       "type": "multiple-choice",
-      "question": "Which preposition takes the Genitiv?",
+      "question": "哪个介词支配第二格？",
       "options": [
        "mit",
        "bei",
@@ -1650,26 +1650,26 @@
      {
       "id": "b1-03-q13",
       "type": "fill-blank",
-      "question": "\"Die Tür ___ Hauses ist offen.\" (das Haus → Genitiv)",
+      "question": "「Die Tür ___ Hauses ist offen.」（das Haus → 第二格）",
       "answer": "des",
       "hint": "das → des + s/es"
      },
      {
       "id": "b1-03-q14",
       "type": "multiple-choice",
-      "question": "What ending does masc/neut noun take in Genitiv?",
+      "question": "阳性/中性名词在第二格中加什么词尾？",
       "options": [
        "+e",
        "+er",
        "+(e)s",
-       "none"
+       "不加"
       ],
       "answer": "+(e)s"
      },
      {
       "id": "b1-03-q15",
       "type": "matching",
-      "question": "Match the case to its article (masc):",
+      "question": "把格和它的冠词配对（阳性）：",
       "pairs": [
        {
         "left": "Nominativ",
@@ -1693,7 +1693,7 @@
      {
       "id": "b1-03-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"During summer vacation we travel to Germany\"",
+      "question": "排序：「暑假期间我们去德国旅行」",
       "words": [
        "Während",
        "der",
@@ -1708,21 +1708,21 @@
      {
       "id": "b1-03-q17",
       "type": "speaking",
-      "question": "Say in German: \"Because of the cold weather, we stayed home\"",
+      "question": "用德语说：「因为天气寒冷，我们待在了家里」",
       "answer": "Wegen des kalten Wetters blieben wir zu Hause"
      },
      {
       "id": "b1-03-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Die Farbe ___ Augen ist blau.\" (Genitiv plural)",
+      "question": "听：「Die Farbe ___ Augen ist blau.」（第二格复数）",
       "audioPrompt": "Die Farbe der Augen ist blau.",
       "answer": "der",
-      "hint": "die (pl) → der"
+      "hint": "die（复数）→ der"
      },
      {
       "id": "b1-03-q19",
       "type": "multiple-choice",
-      "question": "What's the alternative to Genitiv in spoken language?",
+      "question": "口语中第二格的替代形式是？",
       "options": [
        "für + Akk",
        "mit + Dativ",
@@ -1734,7 +1734,7 @@
      {
       "id": "b1-03-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"This is my friend's book\"",
+      "question": "排序：「这是我朋友的书」",
       "words": [
        "Das",
        "ist",
