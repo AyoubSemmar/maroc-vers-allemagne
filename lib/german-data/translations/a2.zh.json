@@ -8140,20 +8140,20 @@
   },
   "a2-13": {
    "id": "a2-13",
-   "title": "Adjective Declension (Basics) — Adjektivdeklination",
+   "title": "形容词变格（基础）— Adjektivdeklination",
    "order": 13,
    "grammar": {
-    "title": "Adjective endings after der/die/das + ein/eine — in Nominativ and Akkusativ",
-    "content": "In German, an adjective's ending changes depending on **(1) gender, (2) case, and (3) the type of article in front of it**. The moment your nerves start fraying, relax: at A2 we only learn the two most common patterns — **after der/die/das** and **after ein/eine** — in the two most-used cases (Nominativ and Akkusativ).\n\n**The simplest golden rule:**\n- After **der/die/das** (definite article): the adjective takes **-e** or **-en**.\n- After **ein/eine** (indefinite article): the adjective takes the ending the article is missing.",
+    "title": "der/die/das + ein/eine 之后的形容词词尾——第一格和第四格",
+    "content": "在德语中，形容词的词尾会根据**（1）词性、（2）格、（3）前面冠词的类型**而变化。别紧张：在 A2 阶段我们只学两种最常见的模式——**der/die/das 之后**和 **ein/eine 之后**——以及两个最常用的格（第一格和第四格）。\n\n**最简单的黄金法则：**\n- 在 **der/die/das**（定冠词）之后：形容词加 **-e** 或 **-en**。\n- 在 **ein/eine**（不定冠词）之后：形容词补上冠词缺失的词尾。",
     "tables": [
      {
-      "title": "After der/die/das (weak declension)",
+      "title": "der/die/das 之后（弱变化）",
       "headers": [
        "",
-       "der (masc.)",
-       "die (fem.)",
-       "das (neut.)",
-       "die (plural)"
+       "der（阳性）",
+       "die（阴性）",
+       "das（中性）",
+       "die（复数）"
       ],
       "rows": [
        {
@@ -8176,15 +8176,15 @@
        }
       ],
       "theme": "cases",
-      "note": "Only Akkusativ-der changes to schönen. The rest take -e."
+      "note": "只有第四格的 der 变成 schönen，其余都加 -e。"
      },
      {
-      "title": "After ein/eine (mixed declension)",
+      "title": "ein/eine 之后（混合变化）",
       "headers": [
        "",
-       "ein (masc.)",
-       "eine (fem.)",
-       "ein (neut.)"
+       "ein（阳性）",
+       "eine（阴性）",
+       "ein（中性）"
       ],
       "rows": [
        {
@@ -8205,289 +8205,289 @@
        }
       ],
       "theme": "cases",
-      "note": "After indefinite ein, the adjective carries the ending: -er (masc.), -e (fem.), -es (neut.)."
+      "note": "在不定冠词 ein 之后，形容词承担词尾：-er（阳性）、-e（阴性）、-es（中性）。"
      }
     ],
     "rules": [
      {
-      "rule": "With no article, the adjective always carries the gender ending: kalter Tee (cold tea), warme Milch (warm milk).",
+      "rule": "没有冠词时，形容词始终承担表示词性的词尾：kalter Tee（凉茶）、warme Milch（温牛奶）。",
       "example": "Ich trinke kalten Tee.",
-      "translation": "I'm drinking cold tea."
+      "translation": "我在喝凉茶。"
      },
      {
-      "rule": "In Akkusativ, only masculine der forces the adjective to -en. The rest stay the same.",
+      "rule": "第四格中，只有阳性 der 迫使形容词变成 -en，其余保持不变。",
       "example": "Ich kaufe den neuen Tisch / die neue Lampe / das neue Auto.",
-      "translation": "I'm buying the new table / the new lamp / the new car."
+      "translation": "我买这张新桌子 / 这盏新灯 / 这辆新车。"
      },
      {
-      "rule": "kein behaves like ein. So do mein, dein, sein, ihr, unser, euer, Ihr.",
+      "rule": "kein 的变化和 ein 一样。mein、dein、sein、ihr、unser、euer、Ihr 也是如此。",
       "example": "mein neuer Bruder / keine alte Frau",
-      "translation": "my new brother / no old woman."
+      "translation": "我的新兄弟 / 没有老妇人。"
      }
     ],
     "examples": [
-     "Der nette Lehrer kommt aus Berlin. — The nice teacher is from Berlin.",
-     "Ich habe einen guten Freund. — I have a good friend.",
-     "Sie kauft ein schönes Kleid. — She's buying a beautiful dress.",
-     "Die jungen Studenten lernen viel. — The young students study a lot.",
-     "Mein neues Auto ist schnell. — My new car is fast.",
-     "Wir essen frisches Brot. — We're eating fresh bread.",
-     "Er liest die deutschen Zeitungen. — He reads the German newspapers.",
-     "Trinkst du kalten Kaffee? — Do you drink cold coffee?"
+     "Der nette Lehrer kommt aus Berlin. — 那位友好的老师来自柏林。",
+     "Ich habe einen guten Freund. — 我有一个好朋友。",
+     "Sie kauft ein schönes Kleid. — 她买了一条漂亮的裙子。",
+     "Die jungen Studenten lernen viel. — 年轻的大学生们学习很努力。",
+     "Mein neues Auto ist schnell. — 我的新车很快。",
+     "Wir essen frisches Brot. — 我们吃新鲜的面包。",
+     "Er liest die deutschen Zeitungen. — 他读德国报纸。",
+     "Trinkst du kalten Kaffee? — 你喝凉咖啡吗？"
     ],
-    "tip": "Don't try to memorize the whole big table at once. Start with \"der + adjective + e\" and \"ein + adjective + er/e/es\", and try them in ten sentences a day. Within a week they become automatic."
+    "tip": "别想着一次背下整个大表格。先从「der + 形容词 + e」和「ein + 形容词 + er/e/es」开始，每天造十个句子练习。一周之内就会形成条件反射。"
    },
    "vocabulary": [
     {
      "german": "schön",
-     "arabic": "beautiful",
+     "arabic": "美丽的",
      "example": "eine schöne Stadt",
-     "exampleArabic": "a beautiful city",
+     "exampleArabic": "一座美丽的城市",
      "type": "adjective"
     },
     {
      "german": "gut",
-     "arabic": "good",
+     "arabic": "好的",
      "example": "ein guter Tag",
-     "exampleArabic": "a good day",
+     "exampleArabic": "美好的一天",
      "type": "adjective"
     },
     {
      "german": "neu",
-     "arabic": "new",
+     "arabic": "新的",
      "example": "mein neues Auto",
-     "exampleArabic": "my new car",
+     "exampleArabic": "我的新车",
      "type": "adjective"
     },
     {
      "german": "alt",
-     "arabic": "old",
+     "arabic": "旧的；老的",
      "example": "das alte Haus",
-     "exampleArabic": "the old house",
+     "exampleArabic": "那栋老房子",
      "type": "adjective"
     },
     {
      "german": "jung",
-     "arabic": "young",
+     "arabic": "年轻的",
      "example": "eine junge Frau",
-     "exampleArabic": "a young woman",
+     "exampleArabic": "一位年轻女士",
      "type": "adjective"
     },
     {
      "german": "groß",
-     "arabic": "big",
+     "arabic": "大的",
      "example": "ein großes Zimmer",
-     "exampleArabic": "a big room",
+     "exampleArabic": "一个大房间",
      "type": "adjective"
     },
     {
      "german": "klein",
-     "arabic": "small",
+     "arabic": "小的",
      "example": "die kleine Katze",
-     "exampleArabic": "the small cat",
+     "exampleArabic": "那只小猫",
      "type": "adjective"
     },
     {
      "german": "kalt",
-     "arabic": "cold",
+     "arabic": "冷的",
      "example": "kalter Kaffee",
-     "exampleArabic": "cold coffee",
+     "exampleArabic": "凉咖啡",
      "type": "adjective"
     },
     {
      "german": "warm",
-     "arabic": "warm",
+     "arabic": "温暖的",
      "example": "warme Milch",
-     "exampleArabic": "warm milk",
+     "exampleArabic": "温牛奶",
      "type": "adjective"
     },
     {
      "german": "heiß",
-     "arabic": "hot",
+     "arabic": "热的",
      "example": "heißer Tee",
-     "exampleArabic": "hot tea",
+     "exampleArabic": "热茶",
      "type": "adjective"
     },
     {
      "german": "frisch",
-     "arabic": "fresh",
+     "arabic": "新鲜的",
      "example": "frisches Brot",
-     "exampleArabic": "fresh bread",
+     "exampleArabic": "新鲜的面包",
      "type": "adjective"
     },
     {
      "german": "lecker",
-     "arabic": "tasty",
+     "arabic": "美味的",
      "example": "ein leckeres Essen",
-     "exampleArabic": "a tasty meal",
+     "exampleArabic": "一顿美味的饭",
      "type": "adjective"
     },
     {
      "german": "schnell",
-     "arabic": "fast",
+     "arabic": "快的",
      "example": "ein schnelles Auto",
-     "exampleArabic": "a fast car",
+     "exampleArabic": "一辆快车",
      "type": "adjective"
     },
     {
      "german": "langsam",
-     "arabic": "slow",
+     "arabic": "慢的",
      "example": "ein langsamer Bus",
-     "exampleArabic": "a slow bus",
+     "exampleArabic": "一辆慢吞吞的公交车",
      "type": "adjective"
     },
     {
      "german": "einfach",
-     "arabic": "easy",
+     "arabic": "简单的",
      "example": "eine einfache Frage",
-     "exampleArabic": "an easy question",
+     "exampleArabic": "一个简单的问题",
      "type": "adjective"
     },
     {
      "german": "schwer",
-     "arabic": "difficult / heavy",
+     "arabic": "难的；重的",
      "example": "eine schwere Prüfung",
-     "exampleArabic": "a hard exam",
+     "exampleArabic": "一场很难的考试",
      "type": "adjective"
     },
     {
      "german": "leicht",
-     "arabic": "light / easy",
+     "arabic": "轻的；容易的",
      "example": "ein leichter Koffer",
-     "exampleArabic": "a light suitcase",
+     "exampleArabic": "一个很轻的行李箱",
      "type": "adjective"
     },
     {
      "german": "teuer",
-     "arabic": "expensive",
+     "arabic": "昂贵的",
      "example": "ein teures Hotel",
-     "exampleArabic": "an expensive hotel",
+     "exampleArabic": "一家昂贵的酒店",
      "type": "adjective"
     },
     {
      "german": "billig",
-     "arabic": "cheap",
+     "arabic": "便宜的",
      "example": "ein billiger Tisch",
-     "exampleArabic": "a cheap table",
+     "exampleArabic": "一张便宜的桌子",
      "type": "adjective"
     },
     {
      "german": "nett",
-     "arabic": "nice",
+     "arabic": "友好的",
      "example": "eine nette Lehrerin",
-     "exampleArabic": "a nice teacher (f.)",
+     "exampleArabic": "一位友好的女老师",
      "type": "adjective"
     },
     {
      "german": "freundlich",
-     "arabic": "friendly",
+     "arabic": "和善的",
      "example": "ein freundlicher Mann",
-     "exampleArabic": "a friendly man",
+     "exampleArabic": "一位和善的男士",
      "type": "adjective"
     },
     {
      "german": "müde",
-     "arabic": "tired",
+     "arabic": "疲惫的",
      "example": "Ich bin sehr müde.",
-     "exampleArabic": "I'm very tired.",
+     "exampleArabic": "我非常累。",
      "type": "adjective"
     },
     {
      "german": "hungrig",
-     "arabic": "hungry",
+     "arabic": "饥饿的",
      "example": "ein hungriges Kind",
-     "exampleArabic": "a hungry child",
+     "exampleArabic": "一个饥饿的孩子",
      "type": "adjective"
     },
     {
      "german": "fleißig",
-     "arabic": "hard-working",
+     "arabic": "勤奋的",
      "example": "eine fleißige Studentin",
-     "exampleArabic": "a hard-working student (f.)",
+     "exampleArabic": "一位勤奋的女大学生",
      "type": "adjective"
     },
     {
      "german": "intelligent",
-     "arabic": "intelligent",
+     "arabic": "聪明的",
      "example": "ein intelligenter Schüler",
-     "exampleArabic": "an intelligent pupil",
+     "exampleArabic": "一个聪明的学生",
      "type": "adjective"
     },
     {
      "german": "das Kleid",
-     "arabic": "the dress",
+     "arabic": "连衣裙",
      "example": "Sie trägt ein rotes Kleid.",
-     "exampleArabic": "She's wearing a red dress.",
+     "exampleArabic": "她穿着一条红裙子。",
      "type": "noun",
      "gender": "das",
      "plural": "die Kleider"
     },
     {
      "german": "das Hemd",
-     "arabic": "the shirt",
+     "arabic": "衬衫",
      "example": "ein weißes Hemd",
-     "exampleArabic": "a white shirt",
+     "exampleArabic": "一件白衬衫",
      "type": "noun",
      "gender": "das",
      "plural": "die Hemden"
     },
     {
      "german": "die Hose",
-     "arabic": "the trousers",
+     "arabic": "裤子",
      "example": "eine neue Hose",
-     "exampleArabic": "new trousers",
+     "exampleArabic": "一条新裤子",
      "type": "noun",
      "gender": "die",
      "plural": "die Hosen"
     },
     {
      "german": "die Schuhe",
-     "arabic": "the shoes",
+     "arabic": "鞋子",
      "example": "schwarze Schuhe",
-     "exampleArabic": "black shoes",
+     "exampleArabic": "黑色的鞋子",
      "type": "noun",
      "gender": "pl"
     },
     {
      "german": "rot",
-     "arabic": "red",
+     "arabic": "红色的",
      "example": "das rote Auto",
-     "exampleArabic": "the red car",
+     "exampleArabic": "那辆红车",
      "type": "adjective"
     },
     {
      "german": "blau",
-     "arabic": "blue",
+     "arabic": "蓝色的",
      "example": "der blaue Himmel",
-     "exampleArabic": "the blue sky",
+     "exampleArabic": "蓝色的天空",
      "type": "adjective"
     },
     {
      "german": "grün",
-     "arabic": "green",
+     "arabic": "绿色的",
      "example": "grüner Tee",
-     "exampleArabic": "green tea",
+     "exampleArabic": "绿茶",
      "type": "adjective"
     },
     {
      "german": "schwarz",
-     "arabic": "black",
+     "arabic": "黑色的",
      "example": "eine schwarze Tasche",
-     "exampleArabic": "a black bag",
+     "exampleArabic": "一个黑色的包",
      "type": "adjective"
     },
     {
      "german": "weiß",
-     "arabic": "white",
+     "arabic": "白色的",
      "example": "ein weißes Hemd",
-     "exampleArabic": "a white shirt",
+     "exampleArabic": "一件白衬衫",
      "type": "adjective"
     },
     {
      "german": "sehr",
-     "arabic": "very",
+     "arabic": "非常",
      "example": "sehr gut",
-     "exampleArabic": "very good",
+     "exampleArabic": "非常好",
      "type": "adverb"
     }
    ],
@@ -8496,14 +8496,14 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q1",
-      "question": "Complete: \"der schön__ Mann\" (Nominativ)",
+      "question": "补全：「der schön__ Mann」（第一格）",
       "answer": "e",
-      "hint": "der + adjective + e"
+      "hint": "der + 形容词 + e"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q2",
-      "question": "Correct: \"Ich kaufe ein ___ Auto.\"",
+      "question": "正确的是：「Ich kaufe ein ___ Auto.」",
       "options": [
        "neu",
        "neue",
@@ -8515,14 +8515,14 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q3",
-      "question": "Complete: \"Ich habe einen gut___ Freund.\"",
+      "question": "补全：「Ich habe einen gut___ Freund.」",
       "answer": "en",
-      "hint": "einen + Akk-masc → -en"
+      "hint": "einen + 第四格阳性 → -en"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q4",
-      "question": "Which sentence is correct?",
+      "question": "哪个句子是正确的？",
       "options": [
        "Sie trägt eine rotes Kleid.",
        "Sie trägt ein rotes Kleid.",
@@ -8534,34 +8534,34 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q5",
-      "question": "Complete: \"die jung__ Studenten\" (plural, Nominativ)",
+      "question": "补全：「die jung__ Studenten」（复数，第一格）",
       "answer": "en",
-      "hint": "after die plural → -en"
+      "hint": "复数 die 之后 → -en"
      },
      {
       "type": "matching",
       "id": "a2-13-q6",
-      "question": "Match the adjective with its meaning:",
+      "question": "把形容词和它的含义配对：",
       "pairs": [
        {
         "left": "schön",
-        "right": "beautiful"
+        "right": "美丽的"
        },
        {
         "left": "alt",
-        "right": "old"
+        "right": "旧的"
        },
        {
         "left": "klein",
-        "right": "small"
+        "right": "小的"
        },
        {
         "left": "teuer",
-        "right": "expensive"
+        "right": "昂贵的"
        },
        {
         "left": "lecker",
-        "right": "tasty"
+        "right": "美味的"
        }
       ],
       "answer": "matched"
@@ -8569,7 +8569,7 @@
      {
       "type": "drag-drop",
       "id": "a2-13-q7",
-      "question": "Put in order: \"I'm buying a white shirt\"",
+      "question": "排序：「我买一件白衬衫」",
       "words": [
        "Ich",
        "kaufe",
@@ -8582,21 +8582,21 @@
      {
       "type": "speaking",
       "id": "a2-13-q8",
-      "question": "Say in German: \"The new house is big\"",
+      "question": "用德语说：「这栋新房子很大」",
       "answer": "Das neue Haus ist groß"
      },
      {
       "type": "fill-blank",
       "id": "a2-13-q9",
-      "question": "Listen: \"Wir trinken heiß___ Tee.\" (no article)",
+      "question": "听：「Wir trinken heiß___ Tee.」（无冠词）",
       "audioPrompt": "Wir trinken heißen Tee.",
       "answer": "en",
-      "hint": "Akk-masc with no article → -en"
+      "hint": "无冠词第四格阳性 → -en"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q10",
-      "question": "The word kein declines like:",
+      "question": "kein 的变格方式和哪个词一样：",
       "options": [
        "der",
        "die",
@@ -8608,14 +8608,14 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q11",
-      "question": "Complete: \"Die alt___ Häuser sind schön.\" (plural, Nom)",
+      "question": "补全：「Die alt___ Häuser sind schön.」（复数，第一格）",
       "answer": "en",
-      "hint": "after die plural → -en"
+      "hint": "复数 die 之后 → -en"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q12",
-      "question": "Which adjective is correct with no article in Akk-masc?",
+      "question": "无冠词的第四格阳性中哪个形容词形式正确？",
       "options": [
        "kalt Tee",
        "kalter Tee",
@@ -8627,14 +8627,14 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q13",
-      "question": "\"Mein neu___ Auto ist schnell.\" (masc/neut, Nom)",
+      "question": "「Mein neu___ Auto ist schnell.」（中性，第一格）",
       "answer": "es",
-      "hint": "mein/dein/sein... + neuter → -es"
+      "hint": "mein/dein/sein… + 中性 → -es"
      },
      {
       "type": "matching",
       "id": "a2-13-q14",
-      "question": "Match the ending to the case:",
+      "question": "把词尾和用法配对：",
       "pairs": [
        {
         "left": "der schöne...",
@@ -8658,7 +8658,7 @@
      {
       "type": "drag-drop",
       "id": "a2-13-q15",
-      "question": "Put in order: \"I'm buying a beautiful car\"",
+      "question": "排序：「我买一辆漂亮的车」",
       "words": [
        "Ich",
        "kaufe",
@@ -8671,15 +8671,15 @@
      {
       "type": "fill-blank",
       "id": "a2-13-q16",
-      "question": "Listen: \"Sie hat eine ___ Tasche.\" (black)",
+      "question": "听：「Sie hat eine ___ Tasche.」（黑色的）",
       "audioPrompt": "Sie hat eine schwarze Tasche.",
       "answer": "schwarze",
-      "hint": "eine + adj + -e (fem. Akk)"
+      "hint": "eine + 形容词 + -e（阴性第四格）"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q17",
-      "question": "The adjective after kein follows the pattern of:",
+      "question": "kein 之后的形容词遵循哪个词的模式：",
       "options": [
        "der",
        "die",
@@ -8691,20 +8691,20 @@
      {
       "type": "speaking",
       "id": "a2-13-q18",
-      "question": "Say: \"I like hot coffee\"",
+      "question": "说：「我喜欢热咖啡」",
       "answer": "Ich mag heißen Kaffee"
      },
      {
       "type": "fill-blank",
       "id": "a2-13-q19",
-      "question": "\"Wir essen frisch___ Brot.\" (no article, neuter Akk)",
+      "question": "「Wir essen frisch___ Brot.」（无冠词，中性第四格）",
       "answer": "es",
-      "hint": "no article, Akk-neut → -es"
+      "hint": "无冠词，中性第四格 → -es"
      },
      {
       "type": "multiple-choice",
       "id": "a2-13-q20",
-      "question": "Which sentence has correct adjective declension?",
+      "question": "哪个句子的形容词变格正确？",
       "options": [
        "Der grüner Tee.",
        "Der grüne Tee.",
