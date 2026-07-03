@@ -597,17 +597,17 @@
   },
   "b1-02": {
    "id": "b1-02",
-   "title": "Passiv — The Passive Voice",
+   "title": "Passiv — 被动语态",
    "order": 2,
    "grammar": {
-    "title": "Passiv with werden",
-    "content": "**Passiv** is used when the subject is unimportant or unknown.\n\n**Formation:**\n- **Passiv Präsens:** werden + Partizip II\n  Example: Der Brief wird geschrieben. (The letter is being written)\n- **Passiv Präteritum:** wurde + Partizip II\n  Example: Das Haus wurde gebaut. (The house was built)\n- **Passiv Perfekt:** ist + Partizip II + worden\n  Example: Das Buch ist gelesen worden.\n\n**Who's doing it?** We use **von + Dativ** for the person or **durch + Akkusativ** for the means/instrument.\n\n⚠️ In Passiv, the direct object in the active sentence becomes the subject in the passive voice.",
+    "title": "用 werden 构成的被动语态",
+    "content": "**Passiv（被动语态）**用于主语不重要或未知的情况。\n\n**构成：**\n- **现在时被动：**werden + Partizip II\n  例：Der Brief wird geschrieben.（信正在被写）\n- **过去时被动：**wurde + Partizip II\n  例：Das Haus wurde gebaut.（房子被建了）\n- **现在完成时被动：**ist + Partizip II + worden\n  例：Das Buch ist gelesen worden.\n\n**是谁做的？**表示人用 **von + 第三格**，表示手段/工具用 **durch + 第四格**。\n\n⚠️ 在被动语态中，主动句的直接宾语变成被动句的主语。",
     "tables": [
      {
-      "title": "werden in Präsens and Präteritum",
+      "title": "werden 的现在时和过去时",
       "theme": "conjugation",
       "headers": [
-       "Pronoun",
+       "代词",
        "Präsens (werden)",
        "Präteritum (wurde)"
       ],
@@ -657,11 +657,11 @@
       ]
      },
      {
-      "title": "Aktiv ↔ Passiv",
+      "title": "Aktiv ↔ Passiv 对照",
       "theme": "default",
       "headers": [
-       "Form",
-       "Example"
+       "形式",
+       "例句"
       ],
       "rows": [
        {
@@ -694,232 +694,232 @@
     ],
     "rules": [
      {
-      "rule": "Passiv Präsens: werden + PII",
+      "rule": "现在时被动：werden + PII",
       "example": "Der Kuchen wird gebacken.",
-      "translation": "The cake is being baked."
+      "translation": "蛋糕正在被烤。"
      },
      {
-      "rule": "von + Dativ (the person)",
+      "rule": "von + 第三格（人）",
       "example": "Das Buch wird von dem Autor geschrieben.",
-      "translation": "The book is written by the author."
+      "translation": "这本书由那位作者撰写。"
      },
      {
-      "rule": "durch + Akkusativ (the means/instrument)",
+      "rule": "durch + 第四格（手段/原因）",
       "example": "Die Stadt wurde durch ein Feuer zerstört.",
-      "translation": "The city was destroyed by a fire."
+      "translation": "这座城市被一场大火摧毁了。"
      }
     ],
     "examples": [
-     "Die Tür wird geöffnet. — The door is being opened.",
-     "Das Auto wurde gestohlen. — The car was stolen.",
-     "Hier wird Deutsch gesprochen. — German is spoken here.",
-     "Der Brief wurde gestern geschickt. — The letter was sent yesterday.",
-     "Das Essen wird von meiner Mutter gekocht. — The food is cooked by my mother.",
-     "Das Problem ist gelöst worden. — The problem has been solved.",
-     "Die Fenster werden geputzt. — The windows are being cleaned.",
-     "Das Paket wurde geliefert. — The package was delivered."
+     "Die Tür wird geöffnet. — 门正在被打开。",
+     "Das Auto wurde gestohlen. — 车被偷了。",
+     "Hier wird Deutsch gesprochen. — 这里说德语。",
+     "Der Brief wurde gestern geschickt. — 信昨天寄出了。",
+     "Das Essen wird von meiner Mutter gekocht. — 饭是我妈妈做的。",
+     "Das Problem ist gelöst worden. — 问题已经解决了。",
+     "Die Fenster werden geputzt. — 窗户正在被擦。",
+     "Das Paket wurde geliefert. — 包裹已送达。"
     ],
-    "tip": "In formal German (news, regulations, instructions), Passiv is used a lot — learn it well!"
+    "tip": "在正式德语（新闻、规章、说明书）中被动语态用得非常多——好好掌握它！"
    },
    "vocabulary": [
     {
      "german": "bauen",
-     "arabic": "to build",
+     "arabic": "建造",
      "type": "verb"
     },
     {
      "german": "zerstören",
-     "arabic": "to destroy",
+     "arabic": "摧毁",
      "type": "verb"
     },
     {
      "german": "öffnen",
-     "arabic": "to open",
+     "arabic": "打开",
      "type": "verb"
     },
     {
      "german": "schließen",
-     "arabic": "to close",
+     "arabic": "关闭",
      "type": "verb"
     },
     {
      "german": "liefern",
-     "arabic": "to deliver",
+     "arabic": "配送",
      "type": "verb"
     },
     {
      "german": "reparieren",
-     "arabic": "to repair",
+     "arabic": "修理",
      "type": "verb"
     },
     {
      "german": "stehlen",
-     "arabic": "to steal",
+     "arabic": "偷",
      "type": "verb"
     },
     {
      "german": "veröffentlichen",
-     "arabic": "to publish",
+     "arabic": "发表；出版",
      "type": "verb"
     },
     {
      "german": "produzieren",
-     "arabic": "to produce",
+     "arabic": "生产",
      "type": "verb"
     },
     {
      "german": "der Prozess",
-     "arabic": "the process",
+     "arabic": "过程",
      "plural": "die Prozesse",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Produktion",
-     "arabic": "the production",
+     "arabic": "生产",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Reparatur",
-     "arabic": "the repair",
+     "arabic": "修理",
      "plural": "die Reparaturen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Autor",
-     "arabic": "the author",
+     "arabic": "作者",
      "plural": "die Autoren",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Paket",
-     "arabic": "the package",
+     "arabic": "包裹",
      "plural": "die Pakete",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Regel",
-     "arabic": "the rule",
+     "arabic": "规则",
      "plural": "die Regeln",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Gesetz",
-     "arabic": "the law",
+     "arabic": "法律",
      "plural": "die Gesetze",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Entscheidung",
-     "arabic": "the decision",
+     "arabic": "决定",
      "plural": "die Entscheidungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Nachricht",
-     "arabic": "the news/message",
+     "arabic": "新闻；消息",
      "plural": "die Nachrichten",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "durch",
-     "arabic": "by means of / through",
+     "arabic": "通过；由于",
      "type": "preposition"
     },
     {
      "german": "von",
-     "arabic": "by (agent)",
+     "arabic": "由（施动者）",
      "type": "preposition"
     },
     {
      "german": "worden",
-     "arabic": "become (in Passiv Perfekt)",
+     "arabic": "（完成时被动中的）worden",
      "type": "verb"
     },
     {
      "german": "bekannt",
-     "arabic": "known / famous",
+     "arabic": "知名的",
      "type": "adjective"
     },
     {
      "german": "die Polizei",
-     "arabic": "the police",
+     "arabic": "警察",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Verbrechen",
-     "arabic": "the crime",
+     "arabic": "犯罪",
      "plural": "die Verbrechen",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Untersuchung",
-     "arabic": "the investigation",
+     "arabic": "调查",
      "plural": "die Untersuchungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Lösung",
-     "arabic": "the solution",
+     "arabic": "解决办法",
      "plural": "die Lösungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Sicherheit",
-     "arabic": "the security",
+     "arabic": "安全",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "verlangen",
-     "arabic": "to demand, require",
+     "arabic": "要求",
      "type": "verb"
     },
     {
      "german": "untersuchen",
-     "arabic": "to examine, investigate",
+     "arabic": "检查；调查",
      "type": "verb"
     },
     {
      "german": "überprüfen",
-     "arabic": "to check, verify",
+     "arabic": "核查",
      "type": "verb"
     },
     {
      "german": "verkaufen",
-     "arabic": "to sell",
+     "arabic": "出售",
      "type": "verb"
     },
     {
      "german": "erfunden",
-     "arabic": "invented (PII)",
+     "arabic": "被发明的（PII）",
      "type": "verb"
     },
     {
      "german": "wurden",
-     "arabic": "were (Passiv plural)",
+     "arabic": "被（复数过去时被动）",
      "type": "verb"
     },
     {
      "german": "normalerweise",
-     "arabic": "normally",
+     "arabic": "通常",
      "type": "adverb"
     },
     {
      "german": "offiziell",
-     "arabic": "official",
+     "arabic": "官方的",
      "type": "adjective"
     }
    ],
@@ -928,7 +928,7 @@
      {
       "id": "b1-02-q1",
       "type": "multiple-choice",
-      "question": "The houses are being built:",
+      "question": "「这些房子正在被建造」：",
       "options": [
        "Die Häuser bauen",
        "Die Häuser werden gebaut",
@@ -940,7 +940,7 @@
      {
       "id": "b1-02-q2",
       "type": "multiple-choice",
-      "question": "The car was stolen (Präteritum Passiv):",
+      "question": "「车被偷了」（过去时被动）：",
       "options": [
        "Das Auto wird gestohlen",
        "Das Auto wurde gestohlen",
@@ -952,19 +952,19 @@
      {
       "id": "b1-02-q3",
       "type": "fill-blank",
-      "question": "Hier ___ Deutsch gesprochen. (Passiv Präsens)",
+      "question": "Hier ___ Deutsch gesprochen.（现在时被动）",
       "answer": "wird"
      },
      {
       "id": "b1-02-q4",
       "type": "fill-blank",
-      "question": "Der Brief ___ gestern geschrieben. (Präteritum Passiv - wurde)",
+      "question": "Der Brief ___ gestern geschrieben.（过去时被动 — wurde）",
       "answer": "wurde"
      },
      {
       "id": "b1-02-q5",
       "type": "drag-drop",
-      "question": "Put in order: [wird / Der Kuchen / gebacken]",
+      "question": "排序：[wird / Der Kuchen / gebacken]",
       "words": [
        "Der",
        "Kuchen",
@@ -976,7 +976,7 @@
      {
       "id": "b1-02-q6",
       "type": "drag-drop",
-      "question": "Put in order: [Mutter / Das Essen / von / der / wird / gekocht]",
+      "question": "排序：[Mutter / Das Essen / von / der / wird / gekocht]",
       "words": [
        "Das",
        "Essen",
@@ -991,7 +991,7 @@
      {
       "id": "b1-02-q7",
       "type": "matching",
-      "question": "Match the Aktiv sentence with its Passiv form:",
+      "question": "把主动句和它的被动形式配对：",
       "pairs": [
        {
         "left": "Er schreibt den Brief",
@@ -1011,7 +1011,7 @@
      {
       "id": "b1-02-q8",
       "type": "multiple-choice",
-      "question": "Which preposition is used for a human agent?",
+      "question": "表示人作施动者用哪个介词？",
       "options": [
        "durch",
        "von",
@@ -1023,34 +1023,34 @@
      {
       "id": "b1-02-q9",
       "type": "speaking",
-      "question": "Say: \"The windows are being opened.\"",
+      "question": "说：「窗户正在被打开。」",
       "answer": "Die Fenster werden geöffnet",
       "hint": "werden + Partizip II"
      },
      {
       "id": "b1-02-q10",
       "type": "multiple-choice",
-      "question": "Listen and choose:",
+      "question": "听录音并选择：",
       "audioPrompt": "Das Paket wurde gestern geliefert.",
       "options": [
-       "The package is being delivered",
-       "The package was delivered yesterday",
-       "The package will be delivered tomorrow",
-       "The package is lost"
+       "包裹正在配送",
+       "包裹昨天送达了",
+       "包裹明天送达",
+       "包裹丢了"
       ],
-      "answer": "The package was delivered yesterday"
+      "answer": "包裹昨天送达了"
      },
      {
       "id": "b1-02-q11",
       "type": "fill-blank",
-      "question": "Passiv Perfekt: \"Das Problem ist gelöst ___.\" (worden)",
+      "question": "现在完成时被动：「Das Problem ist gelöst ___.」（worden）",
       "answer": "worden",
-      "hint": "Passiv Perfekt: sein + PII + worden"
+      "hint": "完成时被动：sein + PII + worden"
      },
      {
       "id": "b1-02-q12",
       "type": "multiple-choice",
-      "question": "\"von\" or \"durch\"? \"Das Auto wird ___ einem Mechaniker repariert.\" (person)",
+      "question": "「von」还是「durch」？「Das Auto wird ___ einem Mechaniker repariert.」（人）",
       "options": [
        "von",
        "durch",
@@ -1062,14 +1062,14 @@
      {
       "id": "b1-02-q13",
       "type": "fill-blank",
-      "question": "Fill in: \"Die Fenster ___ jeden Monat geputzt.\" (Passiv Präsens)",
+      "question": "填空：「Die Fenster ___ jeden Monat geputzt.」（现在时被动）",
       "answer": "werden",
-      "hint": "plural"
+      "hint": "复数"
      },
      {
       "id": "b1-02-q14",
       "type": "multiple-choice",
-      "question": "Passiv Präteritum of \"machen\" with das Buch?",
+      "question": "machen 配 das Buch 的过去时被动是？",
       "options": [
        "wird gemacht",
        "wurde gemacht",
@@ -1081,7 +1081,7 @@
      {
       "id": "b1-02-q15",
       "type": "matching",
-      "question": "Match the Passiv tense to its example:",
+      "question": "把被动时态和它的例子配对：",
       "pairs": [
        {
         "left": "Passiv Präsens",
@@ -1105,7 +1105,7 @@
      {
       "id": "b1-02-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"Cars are produced in Germany\"",
+      "question": "排序：「汽车在德国被生产」",
       "words": [
        "Autos",
        "werden",
@@ -1118,33 +1118,33 @@
      {
       "id": "b1-02-q17",
       "type": "speaking",
-      "question": "Say in German: \"The house was built last year\"",
+      "question": "用德语说：「这栋房子是去年建的」",
       "answer": "Das Haus wurde letztes Jahr gebaut"
      },
      {
       "id": "b1-02-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Der Brief ___ ___ einem Kollegen geschickt.\" (von)",
+      "question": "听：「Der Brief ___ ___ einem Kollegen geschickt.」（von）",
       "audioPrompt": "Der Brief wurde von einem Kollegen geschickt.",
       "answer": "wurde, von",
-      "hint": "Passiv Präteritum + von"
+      "hint": "过去时被动 + von"
      },
      {
       "id": "b1-02-q19",
       "type": "multiple-choice",
-      "question": "When do we use \"durch\" in Passiv?",
+      "question": "被动语态中什么时候用「durch」？",
       "options": [
-       "with a person",
-       "with a means/cause",
-       "with time",
-       "with a place"
+       "表示人",
+       "表示手段/原因",
+       "表示时间",
+       "表示地点"
       ],
-      "answer": "with a means/cause"
+      "answer": "表示手段/原因"
      },
      {
       "id": "b1-02-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"The solution was found last year\"",
+      "question": "排序：「解决方案是去年找到的」",
       "words": [
        "Die",
        "Lösung",
