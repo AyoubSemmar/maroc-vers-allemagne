@@ -1750,14 +1750,14 @@
   },
   "b1-04": {
    "id": "b1-04",
-   "title": "Relativsätze — Relative Clauses",
+   "title": "Relativsätze — 关系从句",
    "order": 4,
    "grammar": {
-    "title": "Relative der, die, das",
-    "content": "A **Relativsatz** is a clause that describes a preceding noun. It begins with a relative pronoun that matches the noun in:\n- **Gender** (der/die/das)\n- **Number** (singular/plural)\n- **Case** (according to its role in the relative clause)\n\n**The relative pronoun = the definite article** with exceptions in Dativ Plural (denen) and Genitiv.\n\n⚠️ **The verb in the relative clause always goes at the end!**\n\n**Examples:**\n- Der Mann, **der** dort steht, ist mein Vater. (The man who is standing there is my father)\n- Die Frau, **die** ich kenne, kommt aus Berlin. (The woman whom I know comes from Berlin)\n- Das Kind, **dem** ich helfe, ist klein. (The child whom I help is small)",
+    "title": "关系代词 der、die、das",
+    "content": "**Relativsatz（关系从句）**是用来描述前面名词的从句。它以关系代词开头，关系代词要与名词在以下方面保持一致：\n- **词性**（der/die/das）\n- **单复数**\n- **格**（取决于它在关系从句中的角色）\n\n**关系代词 = 定冠词**，例外是第三格复数（denen）和第二格。\n\n⚠️ **关系从句中的动词永远放句尾！**\n\n**例子：**\n- Der Mann, **der** dort steht, ist mein Vater.（站在那里的男人是我父亲）\n- Die Frau, **die** ich kenne, kommt aus Berlin.（我认识的那位女士来自柏林）\n- Das Kind, **dem** ich helfe, ist klein.（我帮助的那个孩子很小）",
     "tables": [
      {
-      "title": "Relative Pronouns",
+      "title": "关系代词",
       "theme": "cases",
       "headers": [
        "Kasus",
@@ -1805,253 +1805,253 @@
         ]
        }
       ],
-      "note": "Note denen in Dativ Plural and dessen/deren in Genitiv — important exceptions."
+      "note": "注意第三格复数的 denen 和第二格的 dessen/deren——这是重要的例外。"
      }
     ],
     "rules": [
      {
-      "rule": "Verb at the end of Relativsatz",
+      "rule": "关系从句中动词放句尾",
       "example": "Das Buch, das ich lese, ist spannend.",
-      "translation": "The book that I'm reading is exciting."
+      "translation": "我在读的这本书很精彩。"
      },
      {
-      "rule": "Gender and number agreement",
+      "rule": "词性和单复数保持一致",
       "example": "Die Leute, die hier wohnen, sind nett.",
-      "translation": "The people who live here are nice."
+      "translation": "住在这里的人们很友好。"
      },
      {
-      "rule": "Preposition before the pronoun",
+      "rule": "介词放在关系代词之前",
       "example": "Der Stift, mit dem ich schreibe, ist blau.",
-      "translation": "The pen that I'm writing with is blue."
+      "translation": "我用来写字的这支笔是蓝色的。"
      }
     ],
     "examples": [
-     "Der Film, den ich gesehen habe, war gut. — The film that I watched was good.",
-     "Die Stadt, in der ich wohne, ist groß. — The city where I live is big.",
-     "Das Auto, das rot ist, gehört mir. — The car that is red belongs to me.",
-     "Die Freunde, mit denen ich spiele, sind nett. — The friends I play with are nice.",
-     "Der Lehrer, dessen Buch ich lese, ist bekannt. — The teacher whose book I'm reading is well-known.",
-     "Die Frau, deren Sohn Arzt ist, wohnt nebenan. — The woman whose son is a doctor lives next door.",
-     "Das Kind, dem ich helfe, ist krank. — The child whom I'm helping is sick.",
-     "Die Schule, in die ich gehe, ist neu. — The school I go to is new."
+     "Der Film, den ich gesehen habe, war gut. — 我看的那部电影很好。",
+     "Die Stadt, in der ich wohne, ist groß. — 我住的这座城市很大。",
+     "Das Auto, das rot ist, gehört mir. — 那辆红色的车是我的。",
+     "Die Freunde, mit denen ich spiele, sind nett. — 和我一起玩的朋友们很友好。",
+     "Der Lehrer, dessen Buch ich lese, ist bekannt. — 我在读其著作的那位老师很有名。",
+     "Die Frau, deren Sohn Arzt ist, wohnt nebenan. — 儿子是医生的那位女士住在隔壁。",
+     "Das Kind, dem ich helfe, ist krank. — 我帮助的那个孩子生病了。",
+     "Die Schule, in die ich gehe, ist neu. — 我上的这所学校是新的。"
     ],
-    "tip": "To determine the case of the relative pronoun: ask what its role is inside the relative clause (subject? object? after a preposition?)."
+    "tip": "确定关系代词的格：问问它在关系从句内部扮演什么角色（主语？宾语？介词之后？）。"
    },
    "vocabulary": [
     {
      "german": "der Mann",
-     "arabic": "the man",
+     "arabic": "男人",
      "plural": "die Männer",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Frau",
-     "arabic": "the woman",
+     "arabic": "女人",
      "plural": "die Frauen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Kind",
-     "arabic": "the child",
+     "arabic": "孩子",
      "plural": "die Kinder",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "der Freund",
-     "arabic": "the friend",
+     "arabic": "朋友",
      "plural": "die Freunde",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Schule",
-     "arabic": "the school",
+     "arabic": "学校",
      "plural": "die Schulen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Universität",
-     "arabic": "the university",
+     "arabic": "大学",
      "plural": "die Universitäten",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Stadt",
-     "arabic": "the city",
+     "arabic": "城市",
      "plural": "die Städte",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Land",
-     "arabic": "the country",
+     "arabic": "国家",
      "plural": "die Länder",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "der Nachbar",
-     "arabic": "the neighbor",
+     "arabic": "邻居",
      "plural": "die Nachbarn",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Kollege",
-     "arabic": "the colleague",
+     "arabic": "同事",
      "plural": "die Kollegen",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "kennen",
-     "arabic": "to know",
+     "arabic": "认识",
      "type": "verb"
     },
     {
      "german": "treffen",
-     "arabic": "to meet",
+     "arabic": "见面",
      "type": "verb"
     },
     {
      "german": "wohnen",
-     "arabic": "to live",
+     "arabic": "居住",
      "type": "verb"
     },
     {
      "german": "besuchen",
-     "arabic": "to visit",
+     "arabic": "拜访",
      "type": "verb"
     },
     {
      "german": "arbeiten",
-     "arabic": "to work",
+     "arabic": "工作",
      "type": "verb"
     },
     {
      "german": "spannend",
-     "arabic": "exciting",
+     "arabic": "精彩的",
      "type": "adjective"
     },
     {
      "german": "interessant",
-     "arabic": "interesting",
+     "arabic": "有趣的",
      "type": "adjective"
     },
     {
      "german": "langweilig",
-     "arabic": "boring",
+     "arabic": "无聊的",
      "type": "adjective"
     },
     {
      "german": "bekannt",
-     "arabic": "well-known",
+     "arabic": "知名的",
      "type": "adjective"
     },
     {
      "german": "berühmt",
-     "arabic": "famous",
+     "arabic": "著名的",
      "type": "adjective"
     },
     {
      "german": "nebenan",
-     "arabic": "next door",
+     "arabic": "在隔壁",
      "type": "adverb"
     },
     {
      "german": "gegenüber",
-     "arabic": "across from",
+     "arabic": "在对面",
      "type": "adverb"
     },
     {
      "german": "der Lehrer",
-     "arabic": "the teacher",
+     "arabic": "老师",
      "plural": "die Lehrer",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Schüler",
-     "arabic": "the pupil",
+     "arabic": "学生",
      "plural": "die Schüler",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Student",
-     "arabic": "the (university) student",
+     "arabic": "大学生",
      "plural": "die Studenten",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Geschäft",
-     "arabic": "the shop",
+     "arabic": "商店",
      "plural": "die Geschäfte",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Wohnung",
-     "arabic": "the apartment",
+     "arabic": "公寓",
      "plural": "die Wohnungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Kuchen",
-     "arabic": "the cake",
+     "arabic": "蛋糕",
      "plural": "die Kuchen",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Geschenk",
-     "arabic": "the gift",
+     "arabic": "礼物",
      "plural": "die Geschenke",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "der Stift",
-     "arabic": "the pen",
+     "arabic": "笔",
      "plural": "die Stifte",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "sehen",
-     "arabic": "to see",
+     "arabic": "看见",
      "type": "verb"
     },
     {
      "german": "beschreiben",
-     "arabic": "to describe",
+     "arabic": "描述",
      "type": "verb"
     },
     {
      "german": "empfehlen",
-     "arabic": "to recommend",
+     "arabic": "推荐",
      "type": "verb"
     },
     {
      "german": "vorstellen",
-     "arabic": "to introduce",
+     "arabic": "介绍",
      "type": "verb"
     },
     {
      "german": "klug",
-     "arabic": "smart, clever",
+     "arabic": "聪明的",
      "type": "adjective"
     },
     {
      "german": "freundlich",
-     "arabic": "friendly",
+     "arabic": "友好的",
      "type": "adjective"
     }
    ],
@@ -2084,19 +2084,19 @@
      {
       "id": "b1-04-q3",
       "type": "fill-blank",
-      "question": "Das Buch, ___ ich lese, ist gut. (das)",
+      "question": "Das Buch, ___ ich lese, ist gut.（das）",
       "answer": "das"
      },
      {
       "id": "b1-04-q4",
       "type": "fill-blank",
-      "question": "Der Freund, ___ ich helfe, ist krank. (Dativ)",
+      "question": "Der Freund, ___ ich helfe, ist krank.（第三格）",
       "answer": "dem"
      },
      {
       "id": "b1-04-q5",
       "type": "drag-drop",
-      "question": "Arrange: [, / Das / spannend / lese / das / Buch / ist / , / ich]",
+      "question": "排序：[, / Das / spannend / lese / das / Buch / ist / , / ich]",
       "words": [
        "Das",
        "Buch",
@@ -2113,7 +2113,7 @@
      {
       "id": "b1-04-q6",
       "type": "drag-drop",
-      "question": "Arrange: [, / Die / wohne / Stadt / ich / ist / groß / in / der / ,]",
+      "question": "排序：[, / Die / wohne / Stadt / ich / ist / groß / in / der / ,]",
       "words": [
        "Die",
        "Stadt",
@@ -2131,23 +2131,23 @@
      {
       "id": "b1-04-q7",
       "type": "matching",
-      "question": "Match the relative pronoun to its case:",
+      "question": "把关系代词和它的用法配对：",
       "pairs": [
        {
-        "left": "der (masculine Nom)",
-        "right": "who does (subject)"
+        "left": "der（阳性第一格）",
+        "right": "做某事的人（主语）"
        },
        {
-        "left": "den (masculine Akk)",
-        "right": "whom/that (direct object)"
+        "left": "den（阳性第四格）",
+        "right": "被……的（直接宾语）"
        },
        {
-        "left": "dem (masculine Dat)",
-        "right": "to/for whom"
+        "left": "dem（阳性第三格）",
+        "right": "给/为某人"
        },
        {
-        "left": "denen (plural Dat)",
-        "right": "to/for whom (plural)"
+        "left": "denen（复数第三格）",
+        "right": "给/为某些人（复数）"
        }
       ],
       "answer": "match"
@@ -2167,34 +2167,34 @@
      {
       "id": "b1-04-q9",
       "type": "speaking",
-      "question": "Say: \"The film that I watched was good.\"",
+      "question": "说：「我看的那部电影很好。」",
       "answer": "Der Film, den ich gesehen habe, war gut",
-      "hint": "den = Akkusativ"
+      "hint": "den = 第四格"
      },
      {
       "id": "b1-04-q10",
       "type": "multiple-choice",
-      "question": "Listen and choose the translation:",
+      "question": "听录音并选择正确的翻译：",
       "audioPrompt": "Der Kollege, der neben mir arbeitet, ist sehr nett.",
       "options": [
-       "My colleague who works far away is boring",
-       "The colleague who works next to me is very nice",
-       "The colleagues are nice",
-       "I work with a colleague"
+       "在远处工作的同事很无聊",
+       "在我旁边工作的同事非常友好",
+       "同事们很友好",
+       "我和一位同事一起工作"
       ],
-      "answer": "The colleague who works next to me is very nice"
+      "answer": "在我旁边工作的同事非常友好"
      },
      {
       "id": "b1-04-q11",
       "type": "fill-blank",
-      "question": "Die Freunde, mit ___ ich spiele, sind nett. (Dativ plural)",
+      "question": "Die Freunde, mit ___ ich spiele, sind nett.（第三格复数）",
       "answer": "denen",
-      "hint": "die (pl) → denen in Dativ"
+      "hint": "die（复数）→ 第三格变 denen"
      },
      {
       "id": "b1-04-q12",
       "type": "multiple-choice",
-      "question": "Genitiv relative pronoun feminine?",
+      "question": "阴性的第二格关系代词是？",
       "options": [
        "des",
        "der",
@@ -2206,26 +2206,26 @@
      {
       "id": "b1-04-q13",
       "type": "fill-blank",
-      "question": "Der Lehrer, ___ Buch ich lese, ist bekannt. (Genitiv masc)",
+      "question": "Der Lehrer, ___ Buch ich lese, ist bekannt.（第二格阳性）",
       "answer": "dessen",
-      "hint": "masc → dessen"
+      "hint": "阳性 → dessen"
      },
      {
       "id": "b1-04-q14",
       "type": "multiple-choice",
-      "question": "In a Relativsatz, the verb goes:",
+      "question": "关系从句中，动词放在：",
       "options": [
-       "at the beginning",
-       "in second position",
-       "at the end",
-       "depends on meaning"
+       "句首",
+       "第二位",
+       "句尾",
+       "视含义而定"
       ],
-      "answer": "at the end"
+      "answer": "句尾"
      },
      {
       "id": "b1-04-q15",
       "type": "matching",
-      "question": "Match case to relative pronoun (masc):",
+      "question": "把格和关系代词配对（阳性）：",
       "pairs": [
        {
         "left": "Nominativ",
@@ -2249,7 +2249,7 @@
      {
       "id": "b1-04-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"The city I live in is big\"",
+      "question": "排序：「我住的这座城市很大」",
       "words": [
        "Die",
        "Stadt,",
@@ -2265,21 +2265,21 @@
      {
       "id": "b1-04-q17",
       "type": "speaking",
-      "question": "Say in German: \"The book I'm reading is interesting\"",
+      "question": "用德语说：「我在读的这本书很有意思」",
       "answer": "Das Buch, das ich lese, ist interessant"
      },
      {
       "id": "b1-04-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Die Frau, ___ Sohn Arzt ist, wohnt nebenan.\" (Genitiv fem)",
+      "question": "听：「Die Frau, ___ Sohn Arzt ist, wohnt nebenan.」（第二格阴性）",
       "audioPrompt": "Die Frau, deren Sohn Arzt ist, wohnt nebenan.",
       "answer": "deren",
-      "hint": "die → deren in Genitiv"
+      "hint": "die → 第二格变 deren"
      },
      {
       "id": "b1-04-q19",
       "type": "multiple-choice",
-      "question": "Akkusativ relative pronoun masculine?",
+      "question": "阳性的第四格关系代词是？",
       "options": [
        "der",
        "den",
@@ -2291,7 +2291,7 @@
      {
       "id": "b1-04-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"That's the colleague I work with\"",
+      "question": "排序：「这就是和我一起工作的那位同事」",
       "words": [
        "Das",
        "ist",
