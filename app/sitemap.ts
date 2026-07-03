@@ -5,7 +5,9 @@ import { COUNTRY_ORDER } from '@/lib/documentChecklistData'
 
 const VISA_SLUGS = ['ausbildung', 'studium', 'tourist', 'family-reunification']
 
-const SITE = 'https://gogermany.ma'
+// www is the canonical host — the bare domain 307-redirects to it, and a
+// sitemap full of redirecting URLs makes Google distrust the whole file.
+const SITE = 'https://www.gogermany.ma'
 
 // Static routes that exist in every locale. Auth pages intentionally
 // excluded — they're noindex (see app/[locale]/login + signup metadata).
@@ -19,6 +21,11 @@ const STATIC_PATHS = [
   '/studium',
   '/universities',
   '/learn-german',
+  '/learn-german/a1',
+  '/learn-german/a2',
+  '/learn-german/b1',
+  '/learn-german/b2',
+  '/learn-german/c1',
   '/jobs',
   '/housing',
   '/banking',
@@ -33,8 +40,9 @@ const STATIC_PATHS = [
   '/cv-builder',
   '/anschreiben-generator',
   '/useful-links',
-  '/documents',
-  '/categories',
+  // '/documents' redirects to /profile and '/categories' has no index
+  // page (only /categories/[name]) — listing them fed Google a redirect
+  // and a 404 straight from the sitemap.
 ]
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

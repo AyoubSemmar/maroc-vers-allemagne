@@ -235,7 +235,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
             {safeT(
               t,
               'insecure',
-              'Speaking exercises require HTTPS. Open the site via https://gogermany.ma to use the microphone.',
+              'Speaking exercises require HTTPS. Open the site via https://www.gogermany.ma to use the microphone.',
             )}
           </p>
         )}

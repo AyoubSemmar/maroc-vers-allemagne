@@ -4,8 +4,30 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import type { Metadata } from 'next'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 export const revalidate = 600
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ name: string; locale: AppLocale }>
+}): Promise<Metadata> {
+  const { name, locale } = await params
+  const t = await getTranslations({ locale, namespace: 'articles' })
+  const categoryName = decodeURIComponent(name)
+  let catLabel = categoryName
+  try { catLabel = t(`cat.${categoryName}` as any) } catch {}
+  return buildLocaleMetadata({
+    locale,
+    // Re-encode so the canonical matches the crawled URL for the Arabic
+    // category slugs (e.g. /categories/%D8%A7%D9%84%D8%A8%D9%86%D9%88%D9%83).
+    path: `/categories/${encodeURIComponent(categoryName)}`,
+    title: `${catLabel} — GoGermany`,
+    description: t('subtitle'),
+  })
+}
 
 export default async function CategoryPage({ params }: { params: Promise<{ name: string; locale: AppLocale }> }) {
   const { name, locale } = await params

@@ -28,7 +28,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow,
       },
     ],
-    sitemap: 'https://gogermany.ma/sitemap.xml',
-    host: 'https://gogermany.ma',
+    sitemap: 'https://www.gogermany.ma/sitemap.xml',
+    host: 'https://www.gogermany.ma',
   }
 }

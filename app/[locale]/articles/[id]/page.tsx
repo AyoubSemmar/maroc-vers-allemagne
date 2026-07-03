@@ -16,7 +16,7 @@ import ShareButtons from '@/components/ShareButtons'
 // Supabase egress on the most-deep-linked routes.
 export const revalidate = 3600
 
-const SITE_URL = 'https://gogermany.ma'
+const SITE_URL = 'https://www.gogermany.ma'
 
 /** Per-article metadata pulls the localised title/summary/image straight
  *  from the DB row so each article × locale gets a unique <title>,
@@ -138,7 +138,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   }
 
   // ── JSON-LD: Article + FAQPage rich-result schema ────────────
-  const SITE = 'https://gogermany.ma'
+  const SITE = 'https://www.gogermany.ma'
   const articleLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',

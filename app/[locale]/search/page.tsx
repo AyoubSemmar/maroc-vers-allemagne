@@ -5,6 +5,14 @@ import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import TrackSearch from '@/components/analytics/TrackSearch'
+import type { Metadata } from 'next'
+
+// Search result pages are infinite query-string permutations of content
+// that already lives at canonical URLs — never index them.
+export const metadata: Metadata = {
+  title: 'Search — GoGermany',
+  robots: { index: false, follow: true },
+}
 
 type Props = {
   params: Promise<{ locale: string }>

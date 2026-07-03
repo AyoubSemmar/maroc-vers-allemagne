@@ -17,7 +17,11 @@
 import type { Metadata } from 'next'
 import { routing, type AppLocale } from '@/i18n/routing'
 
-const SITE = 'https://gogermany.ma'
+// www is the canonical host — gogermany.ma 307-redirects to it, so a
+// canonical/hreflang pointing at the bare domain is a canonical-to-a-
+// redirect, which Google discards ("duplicate without user-selected
+// canonical" in GSC).
+const SITE = 'https://www.gogermany.ma'
 
 export type LocaleMetaInput = {
   locale: AppLocale

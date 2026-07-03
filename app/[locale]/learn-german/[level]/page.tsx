@@ -1,12 +1,37 @@
 import { getTranslations } from 'next-intl/server'
 import { getLevel } from '@/lib/german-data'
 import { notFound } from 'next/navigation'
+import type { Metadata } from 'next'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import LessonsList from '@/components/learn-german/LessonsList'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import Icon from '@/components/ui/Icon'
 import '../learn-german.css'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ level: string; locale: AppLocale }>
+}): Promise<Metadata> {
+  const { level: levelParam, locale } = await params
+  const level = getLevel(levelParam)
+  if (!level || level.lessons.length === 0) return {}
+
+  const tData = await getTranslations({ locale, namespace: 'learnGerman.data' })
+  let title = level.title
+  let description = level.description
+  try { title = tData(`levels.${level.id}.title` as any) } catch {}
+  try { description = tData(`levels.${level.id}.description` as any) } catch {}
+
+  return buildLocaleMetadata({
+    locale,
+    path: `/learn-german/${level.id.toLowerCase()}`,
+    title: `${title} · ${level.id} — GoGermany`,
+    description,
+  })
+}
 
 export default async function LevelPage({ params }: { params: Promise<{ level: string; locale: AppLocale }> }) {
   const { level: levelParam, locale } = await params

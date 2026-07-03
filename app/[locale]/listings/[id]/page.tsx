@@ -8,6 +8,37 @@ import ImageGallery from './ImageGallery'
 import ShareButtons from '@/components/ShareButtons'
 import WhatsappLink from '@/components/WhatsappLink'
 import { cityLabel } from '@/lib/germanCities'
+import type { Metadata } from 'next'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+
+// Listings are user-generated Arabic-first ads shown identically in all
+// 12 locale URLs — the locale only changes the chrome. Canonicalise every
+// locale variant to the Arabic URL so Google indexes one copy instead of
+// clustering 12 duplicates with no canonical.
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string; locale: AppLocale }>
+}): Promise<Metadata> {
+  const { id, locale } = await params
+  const { data: listing } = await supabase
+    .from('listings')
+    .select('title, description, city')
+    .eq('id', id)
+    .single()
+  if (!listing) return { title: 'GoGermany' }
+
+  const title = `${listing.title} — GoGermany`
+  const description = (listing.description ?? listing.title ?? '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .slice(0, 158)
+  const base = buildLocaleMetadata({ locale, path: `/listings/${id}`, title, description })
+  return {
+    ...base,
+    alternates: { canonical: `https://www.gogermany.ma/ar/listings/${id}` },
+  }
+}
 
 export default async function ListingPage({ params }: { params: Promise<{ id: string; locale: AppLocale }> }) {
   const { id, locale } = await params

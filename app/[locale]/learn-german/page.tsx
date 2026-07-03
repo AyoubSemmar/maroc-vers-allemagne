@@ -85,11 +85,11 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
           name: m.title.split('|')[0].trim(),
           description: m.desc,
           inLanguage: locale,
-          url: `https://gogermany.ma/${locale}/learn-german`,
+          url: `https://www.gogermany.ma/${locale}/learn-german`,
           provider: {
             '@type': 'Organization',
             name: 'GoGermany',
-            sameAs: 'https://gogermany.ma',
+            sameAs: 'https://www.gogermany.ma',
           },
           isAccessibleForFree: true,
           educationalLevel: ['A1', 'A2', 'B1', 'B2', 'C1'],
@@ -100,7 +100,7 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
             name: `Deutsch ${lvl}`,
             courseMode: 'online',
             inLanguage: locale,
-            url: `https://gogermany.ma/${locale}/learn-german/${lvl.toLowerCase()}`,
+            url: `https://www.gogermany.ma/${locale}/learn-german/${lvl.toLowerCase()}`,
           })),
           offers: {
             '@type': 'Offer',

@@ -54,7 +54,7 @@ export async function generateMetadata({
   // social-share preview said "GoGermany / Votre guide..." regardless
   // of the actual page.
   return {
-    metadataBase: new URL("https://gogermany.ma"),
+    metadataBase: new URL("https://www.gogermany.ma"),
     title,
     description,
     verification: {
@@ -129,8 +129,8 @@ export default async function LocaleLayout({
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'GoGermany',
-              url: 'https://gogermany.ma',
-              logo: 'https://gogermany.ma/icon.svg',
+              url: 'https://www.gogermany.ma',
+              logo: 'https://www.gogermany.ma/icon.svg',
               sameAs: [
                 'https://www.facebook.com/gogermanyma',
                 'https://www.instagram.com/gogermany.ma',

@@ -4,6 +4,23 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import ListingsFilters from './ListingsFilters'
 import { CITIES_AR, cityLabel } from '@/lib/germanCities'
+import type { Metadata } from 'next'
+import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: AppLocale }>
+}): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'listings' })
+  return buildLocaleMetadata({
+    locale,
+    path: '/listings',
+    title: `${t('pageTitle')} — GoGermany`,
+    description: t('pageTitle'),
+  })
+}
 
 const cities = CITIES_AR
 
