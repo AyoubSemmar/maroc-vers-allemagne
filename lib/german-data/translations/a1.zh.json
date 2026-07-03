@@ -9069,23 +9069,23 @@
   },
   "a1-14": {
    "id": "a1-14",
-   "title": "The accusative case — Akkusativ",
+   "title": "第四格 — Akkusativ",
    "order": 14,
    "grammar": {
-    "title": "Akkusativ + articles + direct-object pronouns",
-    "content": "**Akkusativ** is the case of the direct object — the person or thing that the subject's action falls on. *(I see **the book**, I love **the girl**)*.\n\n**The golden rule:** only the **masculine der** changes to **den**. Everything else (die, das, indefinite, plural) stays the same.\n\n→ Ich sehe **den** Mann. (masculine, changes) / Ich sehe **die** Frau. (unchanged) / Ich sehe **das** Kind. (unchanged)",
+    "title": "第四格 + 冠词 + 直接宾语代词",
+    "content": "**Akkusativ（第四格）**是直接宾语的格——主语的动作所指向的人或物。*(我看见**这本书**，我爱**这个女孩**)*。\n\n**黄金规则：**只有**阳性的 der** 变成 **den**，其余一切（die、das、不定冠词的阴性/中性、复数）保持不变。\n\n→ Ich sehe **den** Mann.（阳性，变化）/ Ich sehe **die** Frau.（不变）/ Ich sehe **das** Kind.（不变）",
     "tables": [
      {
-      "title": "Articles in Nominativ vs Akkusativ",
+      "title": "第一格与第四格的冠词对比",
       "headers": [
-       "Gender",
-       "Nominativ (subject)",
-       "Akkusativ (object)"
+       "词性",
+       "Nominativ（主语）",
+       "Akkusativ（宾语）"
       ],
       "rows": [
        {
         "cells": [
-         "der (masc.)",
+         "der（阳性）",
          "der Mann",
          "den Mann"
         ],
@@ -9093,28 +9093,28 @@
        },
        {
         "cells": [
-         "die (fem.)",
+         "die（阴性）",
          "die Frau",
          "die Frau"
         ]
        },
        {
         "cells": [
-         "das (neuter)",
+         "das（中性）",
          "das Kind",
          "das Kind"
         ]
        },
        {
         "cells": [
-         "die (plural)",
+         "die（复数）",
          "die Kinder",
          "die Kinder"
         ]
        },
        {
         "cells": [
-         "ein (masc.)",
+         "ein（阳性）",
          "ein Mann",
          "einen Mann"
         ],
@@ -9122,21 +9122,21 @@
        },
        {
         "cells": [
-         "eine (fem.)",
+         "eine（阴性）",
          "eine Frau",
          "eine Frau"
         ]
        },
        {
         "cells": [
-         "ein (neuter)",
+         "ein（中性）",
          "ein Kind",
          "ein Kind"
         ]
        },
        {
         "cells": [
-         "kein (masc.)",
+         "kein（阳性）",
          "kein Tisch",
          "keinen Tisch"
         ],
@@ -9144,383 +9144,383 @@
        }
       ],
       "theme": "cases",
-      "note": "The highlighted rows are the only ones that change — masculine only."
+      "note": "高亮的行是唯一会变化的——只有阳性。"
      },
      {
-      "title": "Personal pronouns in both cases",
+      "title": "人称代词的两个格",
       "headers": [
        "Nominativ",
        "Akkusativ",
-       "Meaning"
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "ich",
          "mich",
-         "I / me"
+         "我"
         ]
        },
        {
         "cells": [
          "du",
          "dich",
-         "you / you (obj.)"
+         "你"
         ]
        },
        {
         "cells": [
          "er",
          "ihn",
-         "he / him"
+         "他"
         ]
        },
        {
         "cells": [
          "sie",
          "sie",
-         "she / her"
+         "她"
         ]
        },
        {
         "cells": [
          "es",
          "es",
-         "it (neuter)"
+         "它（中性）"
         ]
        },
        {
         "cells": [
          "wir",
          "uns",
-         "we / us"
+         "我们"
         ]
        },
        {
         "cells": [
          "ihr",
          "euch",
-         "you (pl.) / you all"
+         "你们"
         ]
        },
        {
         "cells": [
          "sie/Sie",
          "sie/Sie",
-         "they/them / you (formal)"
+         "他们 / 您"
         ]
        }
       ],
       "theme": "conjugation",
-      "note": "mich, dich, ihn — memorize them. You'll use them every day."
+      "note": "mich、dich、ihn——背下来，天天都会用到。"
      }
     ],
     "rules": [
      {
-      "rule": "All transitive verbs (taking a direct object) require Akkusativ: sehen, haben, kaufen, lieben, brauchen, lesen.",
+      "rule": "所有及物动词（带直接宾语）都要求第四格：sehen、haben、kaufen、lieben、brauchen、lesen。",
       "example": "Ich liebe dich. / Ich habe einen Bruder.",
-      "translation": "I love you. / I have a brother."
+      "translation": "我爱你。/ 我有一个兄弟。"
      },
      {
-      "rule": "With prepositions: durch, für, gegen, ohne, um, bis — always Akkusativ.",
+      "rule": "介词 durch、für、gegen、ohne、um、bis——永远接第四格。",
       "example": "Das ist für dich. / Ich gehe ohne ihn.",
-      "translation": "This is for you. / I'm going without him."
+      "translation": "这是给你的。/ 我不带他去。"
      },
      {
-      "rule": "Don't forget den / einen / keinen — these are the three masculine articles in Akkusativ.",
+      "rule": "记住 den / einen / keinen——阳性第四格的三个冠词。",
       "example": "Ich kaufe einen Apfel und keinen Kuchen.",
-      "translation": "I'm buying an apple and no cake."
+      "translation": "我买一个苹果，不买蛋糕。"
      }
     ],
     "examples": [
-     "Ich sehe den Hund. — I see the dog.",
-     "Hast du einen Bruder? — Do you have a brother?",
-     "Wir lieben dich. — We love you.",
-     "Sie kauft das Buch für ihn. — She's buying the book for him.",
-     "Ich habe keinen Hunger. — I'm not hungry.",
-     "Er trinkt einen Kaffee ohne Milch. — He's drinking a coffee without milk.",
-     "Wo ist der Schlüssel? — Ich habe ihn! — Where's the key? — I've got it!",
-     "Verstehst du mich? — Do you understand me?"
+     "Ich sehe den Hund. — 我看见那只狗。",
+     "Hast du einen Bruder? — 你有兄弟吗？",
+     "Wir lieben dich. — 我们爱你。",
+     "Sie kauft das Buch für ihn. — 她给他买这本书。",
+     "Ich habe keinen Hunger. — 我不饿。",
+     "Er trinkt einen Kaffee ohne Milch. — 他喝一杯不加奶的咖啡。",
+     "Wo ist der Schlüssel? — Ich habe ihn! — 钥匙在哪里？——在我这儿！",
+     "Verstehst du mich? — 你明白我的意思吗？"
     ],
-    "tip": "Smart trick: if the question is \"Wen?\" or \"Was?\" (whom? what?), the answer is in Akkusativ. Example: \"Wen siehst du?\" — \"Ich sehe **den Mann**.\""
+    "tip": "巧记法：如果问题是「Wen?」或「Was?」（谁？什么？），答案就是第四格。例：「Wen siehst du?」——「Ich sehe **den Mann**.」"
    },
    "vocabulary": [
     {
      "german": "sehen",
-     "arabic": "see",
+     "arabic": "看见",
      "example": "Ich sehe einen Vogel.",
-     "exampleArabic": "I see a bird.",
+     "exampleArabic": "我看见一只鸟。",
      "type": "verb"
     },
     {
      "german": "haben",
-     "arabic": "have",
+     "arabic": "有",
      "example": "Ich habe einen Hund.",
-     "exampleArabic": "I have a dog.",
+     "exampleArabic": "我有一只狗。",
      "type": "verb"
     },
     {
      "german": "kaufen",
-     "arabic": "buy",
+     "arabic": "买",
      "example": "Sie kauft den Apfel.",
-     "exampleArabic": "She's buying the apple.",
+     "exampleArabic": "她买这个苹果。",
      "type": "verb"
     },
     {
      "german": "lieben",
-     "arabic": "love",
+     "arabic": "爱",
      "example": "Ich liebe dich.",
-     "exampleArabic": "I love you.",
+     "exampleArabic": "我爱你。",
      "type": "verb"
     },
     {
      "german": "brauchen",
-     "arabic": "need",
+     "arabic": "需要",
      "example": "Wir brauchen den Schlüssel.",
-     "exampleArabic": "We need the key.",
+     "exampleArabic": "我们需要这把钥匙。",
      "type": "verb"
     },
     {
      "german": "lesen",
-     "arabic": "read",
+     "arabic": "读",
      "example": "Er liest die Zeitung.",
-     "exampleArabic": "He's reading the newspaper.",
+     "exampleArabic": "他在看报纸。",
      "type": "verb"
     },
     {
      "german": "finden",
-     "arabic": "find",
+     "arabic": "觉得；找到",
      "example": "Ich finde das Buch gut.",
-     "exampleArabic": "I find the book good.",
+     "exampleArabic": "我觉得这本书不错。",
      "type": "verb"
     },
     {
      "german": "kennen",
-     "arabic": "know (someone)",
+     "arabic": "认识",
      "example": "Kennst du ihn?",
-     "exampleArabic": "Do you know him?",
+     "exampleArabic": "你认识他吗？",
      "type": "verb"
     },
     {
      "german": "verstehen",
-     "arabic": "understand",
+     "arabic": "理解",
      "example": "Verstehst du mich?",
-     "exampleArabic": "Do you understand me?",
+     "exampleArabic": "你明白我的意思吗？",
      "type": "verb"
     },
     {
      "german": "der Mann",
-     "arabic": "the man",
+     "arabic": "男人",
      "example": "Ich sehe den Mann.",
-     "exampleArabic": "I see the man.",
+     "exampleArabic": "我看见那个男人。",
      "type": "noun",
      "gender": "der",
      "plural": "die Männer"
     },
     {
      "german": "die Frau",
-     "arabic": "the woman",
+     "arabic": "女人",
      "example": "Er kennt die Frau.",
-     "exampleArabic": "He knows the woman.",
+     "exampleArabic": "他认识那个女人。",
      "type": "noun",
      "gender": "die",
      "plural": "die Frauen"
     },
     {
      "german": "das Kind",
-     "arabic": "the child",
+     "arabic": "孩子",
      "example": "Wir lieben das Kind.",
-     "exampleArabic": "We love the child.",
+     "exampleArabic": "我们爱这个孩子。",
      "type": "noun",
      "gender": "das",
      "plural": "die Kinder"
     },
     {
      "german": "der Hund",
-     "arabic": "the dog",
+     "arabic": "狗",
      "example": "Hast du einen Hund?",
-     "exampleArabic": "Do you have a dog?",
+     "exampleArabic": "你有狗吗？",
      "type": "noun",
      "gender": "der",
      "plural": "die Hunde"
     },
     {
      "german": "die Katze",
-     "arabic": "the cat",
+     "arabic": "猫",
      "example": "Sie hat eine Katze.",
-     "exampleArabic": "She has a cat.",
+     "exampleArabic": "她有一只猫。",
      "type": "noun",
      "gender": "die",
      "plural": "die Katzen"
     },
     {
      "german": "der Apfel",
-     "arabic": "the apple",
+     "arabic": "苹果",
      "example": "Ich kaufe einen Apfel.",
-     "exampleArabic": "I'm buying an apple.",
+     "exampleArabic": "我买一个苹果。",
      "type": "noun",
      "gender": "der",
      "plural": "die Äpfel"
     },
     {
      "german": "das Buch",
-     "arabic": "the book",
+     "arabic": "书",
      "example": "Ich lese das Buch.",
-     "exampleArabic": "I'm reading the book.",
+     "exampleArabic": "我在读这本书。",
      "type": "noun",
      "gender": "das",
      "plural": "die Bücher"
     },
     {
      "german": "der Schlüssel",
-     "arabic": "the key",
+     "arabic": "钥匙",
      "example": "Wo ist der Schlüssel?",
-     "exampleArabic": "Where is the key?",
+     "exampleArabic": "钥匙在哪里？",
      "type": "noun",
      "gender": "der",
      "plural": "die Schlüssel"
     },
     {
      "german": "die Zeitung",
-     "arabic": "the newspaper",
+     "arabic": "报纸",
      "example": "Er liest eine Zeitung.",
-     "exampleArabic": "He's reading a newspaper.",
+     "exampleArabic": "他在看报纸。",
      "type": "noun",
      "gender": "die",
      "plural": "die Zeitungen"
     },
     {
      "german": "der Kaffee",
-     "arabic": "coffee",
+     "arabic": "咖啡",
      "example": "Ich trinke einen Kaffee.",
-     "exampleArabic": "I'm drinking a coffee.",
+     "exampleArabic": "我在喝咖啡。",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Tee",
-     "arabic": "tea",
+     "arabic": "茶",
      "example": "Möchtest du einen Tee?",
-     "exampleArabic": "Would you like a tea?",
+     "exampleArabic": "你想来杯茶吗？",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Milch",
-     "arabic": "milk",
+     "arabic": "牛奶",
      "example": "Ohne Milch, bitte.",
-     "exampleArabic": "Without milk, please.",
+     "exampleArabic": "请不加奶。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "durch",
-     "arabic": "through",
+     "arabic": "穿过",
      "example": "Wir gehen durch den Park.",
-     "exampleArabic": "We go through the park.",
+     "exampleArabic": "我们穿过公园。",
      "type": "preposition"
     },
     {
      "german": "für",
-     "arabic": "for",
+     "arabic": "为了；给",
      "example": "Das ist für dich.",
-     "exampleArabic": "This is for you.",
+     "exampleArabic": "这是给你的。",
      "type": "preposition"
     },
     {
      "german": "gegen",
-     "arabic": "against",
+     "arabic": "反对",
      "example": "Ich bin gegen den Plan.",
-     "exampleArabic": "I'm against the plan.",
+     "exampleArabic": "我反对这个计划。",
      "type": "preposition"
     },
     {
      "german": "ohne",
-     "arabic": "without",
+     "arabic": "没有；不带",
      "example": "Tee ohne Zucker.",
-     "exampleArabic": "Tea without sugar.",
+     "exampleArabic": "不加糖的茶。",
      "type": "preposition"
     },
     {
      "german": "um",
-     "arabic": "around / at (time)",
+     "arabic": "围绕；在（点钟）",
      "example": "Wir treffen uns um 8.",
-     "exampleArabic": "We meet at 8.",
+     "exampleArabic": "我们八点见。",
      "type": "preposition"
     },
     {
      "german": "bis",
-     "arabic": "until",
+     "arabic": "直到",
      "example": "Bis morgen!",
-     "exampleArabic": "See you tomorrow!",
+     "exampleArabic": "明天见！",
      "type": "preposition"
     },
     {
      "german": "der Bruder",
-     "arabic": "the brother",
+     "arabic": "兄弟",
      "example": "Ich habe einen Bruder.",
-     "exampleArabic": "I have a brother.",
+     "exampleArabic": "我有一个兄弟。",
      "type": "noun",
      "gender": "der",
      "plural": "die Brüder"
     },
     {
      "german": "die Schwester",
-     "arabic": "the sister",
+     "arabic": "姐妹",
      "example": "Sie hat eine Schwester.",
-     "exampleArabic": "She has a sister.",
+     "exampleArabic": "她有一个姐妹。",
      "type": "noun",
      "gender": "die",
      "plural": "die Schwestern"
     },
     {
      "german": "die Mutter",
-     "arabic": "the mother",
+     "arabic": "母亲",
      "example": "Ich rufe die Mutter an.",
-     "exampleArabic": "I'm calling Mum.",
+     "exampleArabic": "我给妈妈打电话。",
      "type": "noun",
      "gender": "die",
      "plural": "die Mütter"
     },
     {
      "german": "der Vater",
-     "arabic": "the father",
+     "arabic": "父亲",
      "example": "Ich frage den Vater.",
-     "exampleArabic": "I'm asking Dad.",
+     "exampleArabic": "我去问爸爸。",
      "type": "noun",
      "gender": "der",
      "plural": "die Väter"
     },
     {
      "german": "der Hunger",
-     "arabic": "hunger",
+     "arabic": "饥饿",
      "example": "Ich habe Hunger.",
-     "exampleArabic": "I'm hungry.",
+     "exampleArabic": "我饿了。",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Durst",
-     "arabic": "thirst",
+     "arabic": "口渴",
      "example": "Hast du Durst?",
-     "exampleArabic": "Are you thirsty?",
+     "exampleArabic": "你渴吗？",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Tisch",
-     "arabic": "the table",
+     "arabic": "桌子",
      "example": "Ich suche einen Tisch.",
-     "exampleArabic": "I'm looking for a table.",
+     "exampleArabic": "我在找一张桌子。",
      "type": "noun",
      "gender": "der",
      "plural": "die Tische"
     },
     {
      "german": "das Brot",
-     "arabic": "the bread",
+     "arabic": "面包",
      "example": "Wir kaufen das Brot.",
-     "exampleArabic": "We're buying the bread.",
+     "exampleArabic": "我们买这个面包。",
      "type": "noun",
      "gender": "das",
      "plural": "die Brote"
@@ -9531,14 +9531,14 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q1",
-      "question": "Complete: \"Ich sehe ___ Mann.\" (der → ?)",
+      "question": "补全：「Ich sehe ___ Mann.」（der → ?）",
       "answer": "den",
-      "hint": "der masculine becomes den in Akkusativ"
+      "hint": "阳性 der 在第四格变成 den"
      },
      {
       "type": "multiple-choice",
       "id": "a1-14-q2",
-      "question": "Which pronoun is correct? \"Ich liebe ___.\"",
+      "question": "哪个代词正确？「Ich liebe ___.」",
       "options": [
        "du",
        "dich",
@@ -9550,14 +9550,14 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q3",
-      "question": "Complete: \"Hast du ___ Bruder?\" (masculine indefinite)",
+      "question": "补全：「Hast du ___ Bruder?」（阳性不定冠词）",
       "answer": "einen",
       "hint": "ein → einen"
      },
      {
       "type": "multiple-choice",
       "id": "a1-14-q4",
-      "question": "Which sentence is correct?",
+      "question": "哪个句子是正确的？",
       "options": [
        "Ich kaufe der Apfel.",
        "Ich kaufe den Apfel.",
@@ -9569,14 +9569,14 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q5",
-      "question": "Complete: \"Das ist ___ dich.\" (for you)",
+      "question": "补全：「Das ist ___ dich.」（给你）",
       "answer": "für",
-      "hint": "für + Akkusativ"
+      "hint": "für + 第四格"
      },
      {
       "type": "matching",
       "id": "a1-14-q6",
-      "question": "Match the Nominativ pronoun to the Akkusativ:",
+      "question": "把第一格代词和第四格配对：",
       "pairs": [
        {
         "left": "ich",
@@ -9604,7 +9604,7 @@
      {
       "type": "drag-drop",
       "id": "a1-14-q7",
-      "question": "Order: \"I need the key\"",
+      "question": "排序：「我需要这把钥匙」",
       "words": [
        "Ich",
        "brauche",
@@ -9616,13 +9616,13 @@
      {
       "type": "speaking",
       "id": "a1-14-q8",
-      "question": "Say in German: \"Do you know him?\"",
+      "question": "用德语说：「你认识他吗？」",
       "answer": "Kennst du ihn"
      },
      {
       "type": "fill-blank",
       "id": "a1-14-q9",
-      "question": "Listen and complete: \"Wir trinken ___ Kaffee.\" (masculine indefinite)",
+      "question": "听后补全：「Wir trinken ___ Kaffee.」（阳性不定冠词）",
       "audioPrompt": "Wir trinken einen Kaffee.",
       "answer": "einen",
       "hint": "der Kaffee → einen Kaffee"
@@ -9630,7 +9630,7 @@
      {
       "type": "multiple-choice",
       "id": "a1-14-q10",
-      "question": "After ohne, what is the correct case?",
+      "question": "ohne 之后用哪个格？",
       "options": [
        "Ohne den Mann.",
        "Ohne der Mann.",
@@ -9642,14 +9642,14 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q11",
-      "question": "\"Ich habe ___ Hund.\" (masculine, negation)",
+      "question": "「Ich habe ___ Hund.」（阳性，否定）",
       "answer": "keinen",
       "hint": "kein → keinen"
      },
      {
       "type": "multiple-choice",
       "id": "a1-14-q12",
-      "question": "Correct pronoun: \"Wir lieben ___.\"",
+      "question": "正确的代词：「Wir lieben ___.」",
       "options": [
        "ihr",
        "euch",
@@ -9661,30 +9661,30 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q13",
-      "question": "\"Ich brauche ___ Hilfe.\" (feminine, indefinite)",
+      "question": "「Ich brauche ___ Hilfe.」（阴性，不定冠词）",
       "answer": "eine",
-      "hint": "eine — feminine doesn't change in Akk"
+      "hint": "eine——阴性在第四格不变"
      },
      {
       "type": "matching",
       "id": "a1-14-q14",
-      "question": "Match the sentence to its translation:",
+      "question": "把句子和译文配对：",
       "pairs": [
        {
         "left": "Ich liebe dich.",
-        "right": "I love you."
+        "right": "我爱你。"
        },
        {
         "left": "Wir lieben uns.",
-        "right": "We love each other."
+        "right": "我们彼此相爱。"
        },
        {
         "left": "Sie kennt ihn.",
-        "right": "She knows him."
+        "right": "她认识他。"
        },
        {
         "left": "Verstehst du mich?",
-        "right": "Do you understand me?"
+        "right": "你明白我的意思吗？"
        }
       ],
       "answer": "matched"
@@ -9692,7 +9692,7 @@
      {
       "type": "drag-drop",
       "id": "a1-14-q15",
-      "question": "Order: \"I'm looking for a table for two\"",
+      "question": "排序：「我在找一张两人桌」",
       "words": [
        "Ich",
        "suche",
@@ -9706,7 +9706,7 @@
      {
       "type": "fill-blank",
       "id": "a1-14-q16",
-      "question": "Listen: \"Hast du ___ Apfel?\" (masculine, indefinite)",
+      "question": "听：「Hast du ___ Apfel?」（阳性，不定冠词）",
       "audioPrompt": "Hast du einen Apfel?",
       "answer": "einen",
       "hint": "der Apfel → einen Apfel"
@@ -9714,7 +9714,7 @@
      {
       "type": "multiple-choice",
       "id": "a1-14-q17",
-      "question": "With gegen, the case is:",
+      "question": "gegen 之后的格是：",
       "options": [
        "Nominativ",
        "Akkusativ",
@@ -9726,20 +9726,20 @@
      {
       "type": "speaking",
       "id": "a1-14-q18",
-      "question": "Say in German: \"I see the dog and the cat\"",
+      "question": "用德语说：「我看见那只狗和那只猫」",
       "answer": "Ich sehe den Hund und die Katze"
      },
      {
       "type": "fill-blank",
       "id": "a1-14-q19",
-      "question": "\"Sie kauft das Buch ___ ihren Vater.\" (for)",
+      "question": "「Sie kauft das Buch ___ ihren Vater.」（给）",
       "answer": "für",
-      "hint": "für + Akk"
+      "hint": "für + 第四格"
      },
      {
       "type": "multiple-choice",
       "id": "a1-14-q20",
-      "question": "Which sentence has a correct Akk?",
+      "question": "哪个句子的第四格正确？",
       "options": [
        "Ich liebe der Mann.",
        "Ich liebe den Mann.",
