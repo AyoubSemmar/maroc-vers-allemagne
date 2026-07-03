@@ -3335,13 +3335,13 @@
   }
  },
  "opportunitiesPicker": {
-  "title": "What are you looking for?",
-  "subtitle": "Pick the kind of opportunity you want to browse.",
-  "ausbildung": "Ausbildung offers",
-  "ausbildungDesc": "Paid training positions with an official contract in Germany.",
-  "universities": "Universities",
-  "universitiesDesc": "Degree programs and study fields across Germany.",
-  "close": "Close"
+  "title": "您在找什么？",
+  "subtitle": "选择您想浏览的机会类型。",
+  "ausbildung": "Ausbildung 职位",
+  "ausbildungDesc": "在德国带正式合同的带薪培训岗位。",
+  "universities": "大学",
+  "universitiesDesc": "德国各地的学位项目和专业方向。",
+  "close": "关闭"
  },
  "universities": {
   "eyebrow": "大学目录",
@@ -4171,330 +4171,330 @@
  },
  "eligibilityChecker": {
   "seoSection": {
-   "title": "Why a 60-second eligibility check matters before you book a consulate appointment",
-   "intro": "This Ausbildung & Studium eligibility checker tells you in 60 seconds whether your current profile qualifies for a German visa — and exactly what you need to fix if not. It works for both apprenticeship (Ausbildung) and university (Studium) routes, applying the actual 2026 German consulate rules: minimum German level (B1 for Ausbildung, B2/C1 for Studium), recognised diploma, signed contract or admission letter, financial proof (Sperrkonto, salary, or sponsor), and proof of housing.\n\nMost rejected visa applications fail on a single missable detail — language proof not accepted, contract not yet signed, Sperrkonto below the 2026 threshold of €11,904. The checker catches these before you spend money on a consulate appointment. The result page shows a clear green/orange/red verdict, the specific blockers in your profile, and the next concrete step for each one. It does not replace a real assessment by a specialist; for borderline cases or unusual profiles (gap year, prior visa refusal, dual citizenship), book a 30-minute consultation.",
-   "faqTitle": "Common questions about the eligibility check",
+   "title": "为什么在预约领事馆之前要先做 60 秒资格测试",
+   "intro": "这个 Ausbildung 与留学资格测试在 60 秒内告诉您，您当前的条件是否符合德国签证要求——如果不符合，具体要补什么。它同时适用于职业培训（Ausbildung）和大学（Studium）两条路线，采用 2026 年德国领事馆的真实标准：最低德语水平（Ausbildung 需 B1，留学需 B2/C1）、被认可的文凭、已签署的合同或录取通知、资金证明（保证金账户、工资或担保人）以及住房证明。\n\n大多数被拒的签证申请都栽在一个容易忽略的细节上——语言证明不被认可、合同尚未签署、保证金低于 2026 年 €11,904 的标准。这个测试能在您花钱预约领事馆之前发现这些问题。结果页给出清晰的绿/橙/红判定、您档案中的具体障碍，以及每一项的下一步行动。它不能替代专家的真实评估；边缘情况或特殊档案（间隔年、曾被拒签、双重国籍）建议预约 30 分钟咨询。",
+   "faqTitle": "关于资格测试的常见问题",
    "faqs": [
     {
-     "q": "How accurate is the result?",
-     "a": "It applies the published German consulate criteria for international applicants in 2026. It catches the common rejection patterns (around 85% of cases) but cannot factor in subjective consular judgment. For complex profiles, book a consultation."
+     "q": "结果有多准确？",
+     "a": "它采用 2026 年公布的德国领事馆对国际申请者的标准，能发现常见的拒签模式（约 85% 的情况），但无法预测领事的主观判断。复杂档案请预约咨询。"
     },
     {
-     "q": "Which visa types does this cover?",
-     "a": "Both the Ausbildung visa (§16a AufenthG) and the Studium visa (§16b AufenthG). The Jobseeker visa and Skilled Worker visa use different rules — those are not covered by this tool yet."
+     "q": "覆盖哪些签证类型？",
+     "a": "Ausbildung 签证（《居留法》第 16a 条）和留学签证（第 16b 条）。求职签证和技术工人签证适用不同规则——本工具暂不覆盖。"
     },
     {
-     "q": "Is my data saved?",
-     "a": "No. The check runs entirely in your browser. We do not see what you enter, and nothing is sent to our servers."
+     "q": "我的数据会被保存吗？",
+     "a": "不会。测试完全在您的浏览器中运行。我们看不到您输入的内容，也不会向服务器发送任何数据。"
     }
    ]
   },
-  "metaTitle": "Visa Eligibility Checker — Move to Germany",
-  "metaDesc": "Check your eligibility for a German Ausbildung or Studium visa — readiness score, blockers and personalised next steps, for applicants from any country.",
-  "eyebrow": "Visa eligibility",
-  "title": "Visa Eligibility Checker",
-  "subtitle": "Find out exactly where you stand for the German Ausbildung or Studium visa as a international applicant — what blocks you today and what unlocks the visa.",
-  "formTitle": "Your profile",
-  "pathLabel": "Path",
-  "studiumGoalLabel": "Studium goal",
-  "ageLabel": "Age",
-  "educationLabel": "Highest education",
-  "germanLabel": "Current German level",
-  "bacAverageLabel": "Bac average (Moyenne du Bac)",
-  "bacAverageHint": "German universities expect ≥ 14/20 for direct Bachelor admission. 12–13.99 usually requires Studienkolleg. Below 12 typically does not qualify.",
-  "hasContractTitle": "I have a signed Ausbildungsvertrag",
-  "hasContractHint": "A signed contract from a German employer registered with IHK or HWK.",
-  "hasAdmissionTitle": "I have a Zulassung from a German university",
-  "hasAdmissionHint": "Final or conditional admission letter (Zulassung / Bedingungszulassung).",
-  "hasApsTitle": "I have my APS certificate",
-  "hasApsHint": "Required only for some countries (China, India, Vietnam, Pakistan…). Issued by the APS office for your country.",
-  "englishProgramTitle": "My target program is taught in English",
-  "englishProgramHint": "Some Master programs are 100% English. Relaxes the German level requirement.",
-  "financialLabel": "Financial proof",
-  "passportTitle": "My passport is valid for 12+ months",
-  "passportHint": "Required at the time of visa interview.",
-  "cleanRecordTitle": "My police record is clean",
-  "cleanRecordHint": "No serious criminal convictions.",
+  "metaTitle": "签证资格测试 — 移居德国",
+  "metaDesc": "测试您申请德国 Ausbildung 或留学签证的资格——就绪评分、障碍和个性化下一步，适用于任何国家的申请者。",
+  "eyebrow": "签证资格",
+  "title": "签证资格测试",
+  "subtitle": "作为国际申请者，准确了解您申请德国 Ausbildung 或留学签证的现状——今天什么在阻碍您、补齐什么就能拿到签证。",
+  "formTitle": "您的档案",
+  "pathLabel": "路线",
+  "studiumGoalLabel": "留学目标",
+  "ageLabel": "年龄",
+  "educationLabel": "最高学历",
+  "germanLabel": "当前德语水平",
+  "bacAverageLabel": "高中毕业成绩（均分）",
+  "bacAverageHint": "德国大学直接本科录取通常要求 ≥ 14/20。12–13.99 一般需要读预科（Studienkolleg）。低于 12 通常不符合条件。",
+  "hasContractTitle": "我有已签署的培训合同（Ausbildungsvertrag）",
+  "hasContractHint": "由在 IHK 或 HWK 注册的德国雇主签署的合同。",
+  "hasAdmissionTitle": "我有德国大学的录取通知（Zulassung）",
+  "hasAdmissionHint": "正式或有条件录取通知书（Zulassung / Bedingungszulassung）。",
+  "hasApsTitle": "我有 APS 证书",
+  "hasApsHint": "仅部分国家需要（中国、印度、越南、巴基斯坦等）。由您所在国家的 APS 审核部签发。",
+  "englishProgramTitle": "我的目标专业是英语授课",
+  "englishProgramHint": "一些硕士项目 100% 英语授课，可放宽德语水平要求。",
+  "financialLabel": "资金证明",
+  "passportTitle": "我的护照有效期超过 12 个月",
+  "passportHint": "签证面谈时必须满足。",
+  "cleanRecordTitle": "我没有犯罪记录",
+  "cleanRecordHint": "无严重刑事定罪。",
   "overall": {
-   "eligible": "You're eligible ✅",
-   "eligibleSub": "No critical blockers. You can proceed with your visa application.",
-   "conditional": "Almost there ⚠️",
-   "conditionalSub": "No visa-blockers, but a few things to address before applying.",
-   "notYet": "Not eligible yet ❌",
-   "notYetSub": "There are critical blockers preventing your application. See the list below."
+   "eligible": "您符合条件 ✅",
+   "eligibleSub": "没有关键障碍。您可以着手申请签证了。",
+   "conditional": "就差一点 ⚠️",
+   "conditionalSub": "没有签证障碍，但申请前还有几件事要处理。",
+   "notYet": "暂不符合条件 ❌",
+   "notYetSub": "存在阻碍您申请的关键障碍，见下方列表。"
   },
-  "readinessLabel": "Readiness score",
-  "countPass": "Strong points",
-  "countWarn": "Warnings",
-  "countBlocker": "Blockers",
-  "blockersTitle": "What blocks your visa today",
-  "blockersSub": "These items must be resolved before you can submit a visa application.",
-  "warningsTitle": "Things to watch",
-  "warningsSub": "Not blockers, but they will slow you down or risk rejection if not addressed.",
-  "passesTitle": "What you already have",
-  "ctaTitle": "Want a personalised plan?",
-  "ctaSub": "Book a 30-minute consultation with our German immigration specialist. We map your exact gaps, give a step-by-step roadmap, and tell you the realistic timeline.",
+  "readinessLabel": "就绪评分",
+  "countPass": "优势项",
+  "countWarn": "注意项",
+  "countBlocker": "障碍项",
+  "blockersTitle": "今天什么在阻碍您的签证",
+  "blockersSub": "这些事项必须在递交签证申请前解决。",
+  "warningsTitle": "需要注意的事项",
+  "warningsSub": "不是硬性障碍，但不处理会拖慢进度或增加拒签风险。",
+  "passesTitle": "您已具备的条件",
+  "ctaTitle": "想要个性化方案？",
+  "ctaSub": "预约 30 分钟德国移民专家咨询。我们找出您的具体差距，给出分步路线图，并告诉您现实的时间表。",
   "path": {
    "ausbildung": "Ausbildung",
-   "studium": "Studium"
+   "studium": "留学"
   },
   "studiumGoal": {
-   "bachelor": "Bachelor",
-   "master": "Master"
+   "bachelor": "本科",
+   "master": "硕士"
   },
   "education": {
-   "no_bac": "No Bac yet",
-   "bac": "Bac",
-   "bac_plus_2": "Bac+2",
-   "bac_plus_3": "Licence (Bac+3)",
-   "bac_plus_5": "Master (Bac+5)"
+   "no_bac": "尚未高中毕业",
+   "bac": "高中毕业",
+   "bac_plus_2": "大专（Bac+2）",
+   "bac_plus_3": "本科（Bac+3）",
+   "bac_plus_5": "硕士（Bac+5）"
   },
   "financial": {
-   "sperrkonto": "Sperrkonto (€11,904 ready)",
-   "sponsor": "Sponsor in Germany (Verpflichtungserklärung)",
-   "salary_covers": "My Ausbildung salary covers my costs",
-   "family_support": "Family will support me from my home country",
-   "need_help": "I don't have a financial plan yet"
+   "sperrkonto": "保证金账户（€11,904 已备好）",
+   "sponsor": "德国担保人（Verpflichtungserklärung）",
+   "salary_covers": "我的 Ausbildung 工资足以覆盖开销",
+   "family_support": "家人从国内支持我",
+   "need_help": "我还没有资金方案"
   },
   "rules": {
    "german_level_ausbildung": {
-    "title": "German B1 minimum (Ausbildung)"
+    "title": "德语至少 B1（Ausbildung）"
    },
    "german_level_studium": {
-    "title": "German B2 minimum (Studium)"
+    "title": "德语至少 B2（留学）"
    },
    "education_ausbildung": {
-    "title": "Education level"
+    "title": "学历水平"
    },
    "education_studium_bachelor": {
-    "title": "Bac required for Bachelor"
+    "title": "本科申请需高中文凭"
    },
    "education_studium_master": {
-    "title": "Bac+3 required for Master"
+    "title": "硕士申请需本科文凭"
    },
    "bac_grade_studium": {
-    "title": "Bac average ≥ 14/20"
+    "title": "高中均分 ≥ 14/20"
    },
    "contract_ausbildung": {
-    "title": "Ausbildungsvertrag signed"
+    "title": "培训合同已签署"
    },
    "admission_studium": {
-    "title": "University admission (Zulassung)"
+    "title": "大学录取（Zulassung）"
    },
    "aps_studium": {
-    "title": "APS certificate"
+    "title": "APS 证书"
    },
    "financial_proof": {
-    "title": "Financial proof"
+    "title": "资金证明"
    },
    "passport": {
-    "title": "Valid passport"
+    "title": "有效护照"
    },
    "clean_record": {
-    "title": "Clean police record"
+    "title": "无犯罪记录"
    },
    "age_ausbildung": {
-    "title": "Age (Ausbildung)"
+    "title": "年龄（Ausbildung）"
    }
   },
   "explain": {
    "german_level_ausbildung": {
-    "b2_strong": "B2 is well above the legal B1 minimum. You'll have a clear advantage in interviews and the visa officer's first read. No further German action needed for the visa step.",
-    "b1_min": "B1 is the legal minimum for the Ausbildung visa — you're cleared. To stand out in interviews, working toward B2 in your free time pays off; most employers prefer it.",
-    "a2_close": "A2 is one CEFR level below the B1 minimum. Plan 4–6 months of intensive German (4h/day at a Goethe-Institut or telc-licensed school) to reach B1 and become visa-eligible.",
-    "below": "B1 is the legal minimum for the Ausbildung visa. Realistic plan: 4–6 months of intensive study per CEFR level (a Goethe-Institut, telc-licensed school, or online), so 8–14 months from A0/A1 to B1. Intensive courses (4 hours/day) get you there fastest."
+    "b2_strong": "B2 远高于法定的 B1 最低要求。您在面试和签证官的第一印象中都有明显优势。签证环节无需再提升德语。",
+    "b1_min": "B1 是 Ausbildung 签证的法定最低要求——您已达标。想在面试中脱颖而出，业余时间冲刺 B2 很值得，多数雇主更青睐 B2。",
+    "a2_close": "A2 距 B1 最低要求还差一级。计划 4–6 个月强化德语（每天 4 小时，在歌德学院或 telc 授权学校），达到 B1 后即可满足签证条件。",
+    "below": "B1 是 Ausbildung 签证的法定最低要求。现实规划：每级 CEFR 需要 4–6 个月强化学习（歌德学院、telc 授权学校或在线课程），从 A0/A1 到 B1 约 8–14 个月。强化课程（每天 4 小时）最快。"
    },
    "german_level_studium": {
-    "c1_strong": "C1 covers every German university requirement, including TestDaF and DSH-2. You are fully set on the language front.",
-    "b2_min": "B2 is the standard university requirement, accepted by most programs. A few selective tracks (medicine, top-tier humanities) ask for C1 / TestDaF 4 / DSH-2 — verify on your target university's page.",
-    "b1_close": "About 30% of German universities accept B1 with conditional admission — you commit to reaching C1 during your studies. The other 70% require B2 or higher upfront. Apply to several universities to maximise your chances.",
-    "below": "Most Studium programs require B2 minimum. Realistic plan: 8–14 months of intensive German (Goethe Institut, telc, or DSH-Vorbereitungskurs) to reach B2 from A0/A1. Alternative: target English-taught Master programs and tick the \"English program\" toggle above.",
-    "english_program": "For an English-taught program, A1 German is often enough — some programs accept any level. You'll still want to pick up German for daily life, but it doesn't block the visa.",
-    "english_program_a1": "Even for a fully English program, A1 German makes Anmeldung, banking, and daily life much smoother in your first months."
+    "c1_strong": "C1 满足德国大学的一切语言要求，包括 TestDaF 和 DSH-2。语言方面您已完全就绪。",
+    "b2_min": "B2 是大学的标准要求，多数专业认可。少数热门方向（医学、顶尖文科）要求 C1 / TestDaF 4 / DSH-2——请在目标大学页面核实。",
+    "b1_close": "约 30% 的德国大学接受 B1 附条件录取——您承诺在学习期间达到 C1。其余 70% 要求入学时就有 B2 或以上。多申请几所大学以提高机会。",
+    "below": "大多数专业至少要求 B2。现实规划：8–14 个月强化德语（歌德学院、telc 或 DSH 预备课程）从 A0/A1 到 B2。替代方案：瞄准英语授课的硕士项目，并勾选上方「英语授课」选项。",
+    "english_program": "英语授课项目通常 A1 德语就够——有些项目不限德语水平。为了日常生活您仍应学德语，但它不阻碍签证。",
+    "english_program_a1": "即使是全英语项目，A1 德语也能让头几个月的住址登记、银行开户和日常生活顺畅得多。"
    },
    "education_ausbildung": {
-    "no_bac": "A few Ausbildungen accept candidates without a Bac (Pflegehelfer in healthcare, some retail and gastronomy positions), but your options narrow significantly. Completing the Bac first is strongly recommended — opens roughly 5× more positions.",
-    "bac_ok": "Your Bac qualifies you for any of the 1,100+ Ausbildung positions on our platform — IT, healthcare, engineering, hospitality, automotive, and more."
+    "no_bac": "少数 Ausbildung 接受没有高中文凭的申请人（医疗护理助理、部分零售和餐饮岗位），但选择面会大幅收窄。强烈建议先完成高中学业——可选岗位大约多 5 倍。",
+    "bac_ok": "您的高中文凭可以申请我们平台上 1,100+ 个 Ausbildung 岗位中的任何一个——IT、医疗、工程、酒店、汽车等。"
    },
    "education_studium_bachelor": {
-    "no_bac": "A Bac (or a recognised equivalent) is non-negotiable for Bachelor admission in Germany. If you have a Bac+2 or vocational diploma instead, check the Anabin database to see how it maps to the German system.",
-    "bac_ok": "Your Bac qualifies you for Bachelor admission in Germany — provided your average meets the threshold (see Bac average rule)."
+    "no_bac": "高中文凭（或被认可的同等学历）是德国本科录取的硬性条件。如果您持有大专或职业文凭，请在 Anabin 数据库中查询它如何对应德国体系。",
+    "bac_ok": "您的高中文凭符合德国本科申请条件——前提是均分达标（见「高中均分」一项）。"
    },
    "education_studium_master": {
-    "licence_ok": "Your Licence (Bac+3) or Master (Bac+5) is the right starting level for a German Master program. Check Anabin to confirm your home university is listed as H+ (recognised).",
-    "bac_plus_2": "Bac+2 is below the German Master standard (180 ECTS / 3-year Licence). Either complete a 3rd year of your degree in your home country, or apply for Bachelor entry in Germany with credit recognition for what you have already done.",
-    "below": "A 3-year Licence (Bac+3, 180 ECTS) is the minimum for German Master admission. Path forward: complete your degree in your home country, or do a Bachelor in Germany first."
+    "licence_ok": "您的本科（Bac+3）或硕士（Bac+5）正是德国硕士项目的起点学历。请在 Anabin 确认您的母校被列为 H+（受认可）。",
+    "bac_plus_2": "大专（Bac+2）低于德国硕士标准（180 学分 / 3 年本科）。要么在本国读完第三年，要么申请德国本科并转换已修学分。",
+    "below": "3 年制本科（Bac+3，180 ECTS）是德国硕士录取的最低要求。可行路径：在本国完成学位，或先在德国读本科。"
    },
    "bac_grade_studium": {
-    "tres_bien": "Bac average ≥ 14/20 (mention 'Bien' or 'Très Bien') qualifies you for direct Bachelor admission in Germany. Strongest asset for your application file.",
-    "assez_bien": "Bac average 12–13.99 (mention 'Assez Bien') usually requires a Studienkolleg before direct Bachelor admission. Studienkolleg is a 1-year preparatory program in Germany — apply via your target university, B1 German minimum.",
-    "passable": "Bac average 10–11.99 typically does not qualify for German universities, even via Studienkolleg. Strongly consider the Ausbildung path instead — same outcome (career in Germany) without the academic threshold.",
-    "failing": "A Bac average below 10 doesn't qualify for German universities. The Ausbildung path is the better route for you — German employers value motivation and concrete skills more than Bac grades."
+    "tres_bien": "高中均分 ≥ 14/20（良好或优秀）可直接申请德国本科，是您申请材料中最有力的资产。",
+    "assez_bien": "均分 12–13.99 通常需要先读一年预科（Studienkolleg）再进入本科。预科通过目标大学申请，德语至少 B1。",
+    "passable": "均分 10–11.99 通常无法进入德国大学，连预科也难。强烈建议考虑 Ausbildung 路线——同样能在德国立足，且没有学术门槛。",
+    "failing": "均分低于 10 无法申请德国大学。Ausbildung 是更适合您的路线——德国雇主更看重动力和实际技能，而不是成绩。"
    },
    "contract_ausbildung": {
-    "have": "You hold the visa-blocker. Make sure your contract specifies start date, monthly salary (≥ €934 ideally), 3-year training duration, and the IHK or HWK registration number.",
-    "missing": "You need a signed Ausbildungsvertrag from a German employer registered with IHK or HWK before you can apply for the visa. Start with our 1,100+ open Ausbildung positions, then apply with a German CV (Lebenslauf) and motivation letter (Anschreiben). Asking the employer for a Vorab-Zustimmung cuts visa wait by 6 months."
+    "have": "签证的关键条件已在手。确认合同注明开始日期、月薪（最好 ≥ €934）、3 年培训期以及 IHK 或 HWK 注册号。",
+    "missing": "申请签证前，您需要一份由 IHK 或 HWK 注册的德国雇主签署的培训合同。从我们平台 1,100+ 个在招岗位开始，用德语简历（Lebenslauf）和求职信（Anschreiben）申请。请雇主申请 Vorab-Zustimmung（预先批准）可将签证等待缩短 6 个月。"
    },
    "admission_studium": {
-    "have": "Zulassung in hand — the visa-blocker is resolved. Carry the original plus 2 photocopies in your visa application file.",
-    "missing": "Apply via Uni-Assist (uni-assist.de) for most universities, or directly for the rest. Deadlines: 15 July for the Winter semester, 15 January for Summer. Apply at least 4 months before each deadline — Uni-Assist's processing alone takes 4–6 weeks."
+    "have": "录取通知已到手——签证的关键障碍已解决。签证材料中请携带原件加 2 份复印件。",
+    "missing": "大多数大学通过 Uni-Assist（uni-assist.de）申请，其余直接向学校申请。截止日期：冬季学期 7 月 15 日，夏季学期 1 月 15 日。请至少提前 4 个月递交——仅 Uni-Assist 的审核就需要 4–6 周。"
    },
    "aps_studium": {
-    "have": "APS certificate is in hand — the most time-consuming Studium step is done.",
-    "missing": "APS is required for applicants from some countries (China, India, Vietnam, Pakistan…). Apply at the APS office for your country — processing takes 6–20 weeks and blocks every other Studium step. Bring all your transcripts since secondary school."
+    "have": "APS 证书已在手——留学流程中最耗时的一步已完成。",
+    "missing": "部分国家的申请者需要 APS（中国、印度、越南、巴基斯坦等）。请向您所在国家的 APS 审核部申请——审核需 6–20 周，并且卡住其他所有留学步骤。请备齐中学以来的全部成绩单。"
    },
    "financial_proof": {
-    "sperrkonto": "Sperrkonto is the gold standard. Most international applicants use Fintiba, Expatrio, or Coracle (€89 setup + €11,904 deposit). The deposit is returned to you in 12 monthly instalments after arrival — it is not a fee.",
-    "sponsor": "Verpflichtungserklärung accepted. Your sponsor must show ≥ €1,200 net monthly income (after tax), be willing to take legal liability, and sign at their local Ausländerbehörde. ~€29 fee paid by the sponsor.",
-    "salary_ausbildung": "Your Ausbildung salary covers the visa minimum if it is ≥ €934/month after typical deductions. If your contract shows less, add a small Sperrkonto to bridge the gap.",
-    "family": "Family support letters alone are weak evidence — they almost always trigger a request for additional proof. Strongly recommend pairing with a Sperrkonto (€11,904 from family savings, returned to you on arrival).",
-    "need_help": "You need one of three: Sperrkonto (€11,904 from any source), Verpflichtungserklärung from a German sponsor, or an Ausbildung salary ≥ €934/month. Without one, the visa is rejected automatically. Book a consultation to find the best route for your situation.",
-    "studium_no_salary": "For Studium you cannot rely on a future part-time student job as financial proof — you do not have it yet. Required: Sperrkonto €11,904 OR Verpflichtungserklärung from a German sponsor.",
-    "unclear": "Lock in your financial proof before applying. Standard route: Sperrkonto via Fintiba / Expatrio / Coracle (~€89 setup + €11,904 deposit, returned to you in monthly instalments after arrival)."
+    "sperrkonto": "保证金账户是黄金标准。多数国际申请者使用 Fintiba、Expatrio 或 Coracle（€89 开户费 + €11,904 存款）。存款在您抵达后分 12 个月返还——它不是费用。",
+    "sponsor": "担保声明（Verpflichtungserklärung）被认可。担保人须有 ≥ €1,200 的税后月收入、愿意承担法律责任，并在其所在地外国人管理局签署。约 €29 费用由担保人支付。",
+    "salary_ausbildung": "如果扣除常规项后您的 Ausbildung 月薪 ≥ €934，即可满足签证最低要求。若合同金额更低，可用小额保证金账户补足差额。",
+    "family": "仅有家庭支持信是薄弱的证明——几乎必然被要求补充材料。强烈建议搭配保证金账户（家人存入 €11,904，抵达后返还给您）。",
+    "need_help": "您需要三者之一：保证金账户（€11,904，资金来源不限）、德国担保人的担保声明，或 ≥ €934/月的 Ausbildung 工资。没有任何一项，签证会被自动拒绝。预约咨询，找出最适合您的方案。",
+    "studium_no_salary": "留学申请不能用「将来打工」作为资金证明——您还没有这份工作。要求：€11,904 保证金账户，或德国担保人的担保声明。",
+    "unclear": "申请前先落实资金证明。标准做法：通过 Fintiba / Expatrio / Coracle 开设保证金账户（约 €89 开户费 + €11,904 存款，抵达后按月返还）。"
    },
    "passport": {
-    "valid": "Your passport meets the validity requirement. Make sure it stays valid for at least 6 months past your visa expiry — most embassies require this.",
-    "expiring": "Your passport must be valid for at least 12 months at the time of your visa appointment. Renew with your country's passport authority — plan ahead, it can take weeks."
+    "valid": "您的护照满足有效期要求。请确保它在签证到期后仍有至少 6 个月有效期——多数使馆有此要求。",
+    "expiring": "签证预约时护照有效期须至少 12 个月。请向本国护照机构续办——提前规划，可能需要数周。"
    },
    "clean_record": {
-    "clean": "A clean police-clearance certificate is fine. It usually takes a few days to a few weeks to obtain and must be issued within 3 months of your visa appointment.",
-    "case_by_case": "Each case is reviewed individually. Minor traffic offenses or old fines are usually fine. Serious convictions (violence, drugs, fraud) can block the visa — book a confidential consultation before applying."
+    "clean": "无犯罪记录证明没有问题。通常几天到几周可取得，且须在签证预约前 3 个月内开具。",
+    "case_by_case": "个案单独审查。轻微交通违章或旧罚单通常无碍。严重定罪（暴力、毒品、诈骗）可能阻碍签证——申请前请预约保密咨询。"
    },
    "age_ausbildung": {
-    "young": "Ideal age range. Most Ausbildung employers prefer candidates under 30 for the 3-year commitment. You will have the widest choice of positions.",
-    "mid": "31–35 is well within range — no legal issue, just slightly less common. Healthcare, hospitality, and IT are particularly age-flexible sectors.",
-    "older": "36–40 is possible but more selective. Target sectors that value experience: healthcare (Pflegefachmann/frau), retail management, hospitality, and skilled trades. Your professional experience matters more than your age here.",
-    "much_older": "Possible but rare. Best sectors at 40+: healthcare (Pflegefachmann/frau especially welcomed), gastronomy, and skilled trades where employers value mature, reliable workers. Position your CV around your professional experience, not the academic angle."
+    "young": "理想年龄段。多数雇主偏好 30 岁以下的候选人承诺 3 年培训。您的岗位选择面最广。",
+    "mid": "31–35 岁完全在范围内——法律上没有问题，只是稍少见。医疗、酒店和 IT 是对年龄特别宽容的行业。",
+    "older": "36–40 岁可行但更挑剔。瞄准重视经验的行业：医疗护理、零售管理、酒店和技术工种。在这里您的职业经验比年龄更重要。",
+    "much_older": "可行但少见。40+ 最合适的行业：医疗护理（护理专业尤其欢迎）、餐饮和技术工种——雇主看重成熟可靠的员工。简历应围绕职业经验展开，而不是学术路线。"
    }
   },
-  "countryLabel": "Your country"
+  "countryLabel": "您的国家"
  },
  "interviewPrep": {
-  "eyebrow": "Interview prep",
-  "title": "Master your German Ausbildung interview",
-  "subtitle": "15 of the most-asked questions, with sample answers in German plus the \"why this is asked\" and what to say (and avoid).",
-  "badgeQuestions": "{n} questions",
-  "badgeAnswers": "Sample answers in German",
-  "badgeGerman": "B1–B2 level",
-  "badgeFreePreview": "{n} free, rest after login",
-  "allFilter": "All",
-  "showWhy": "Why is this asked?",
-  "hideWhy": "Hide explanation",
-  "revealAnswer": "Click to reveal the answer",
-  "hideAnswer": "Hide",
-  "sampleAnswerLabel": "Sample answer",
-  "doSayLabel": "Do say",
-  "dontSayLabel": "Don't say",
-  "lockedTitle": "Log in to unlock the rest",
-  "lockedBody": "The first 3 questions are free. Create a free account to access all 15 questions, sample answers, and tips.",
-  "lockedCta": "Log in / Sign up",
-  "ctaTitle": "Want a personal mock interview?",
-  "ctaSub": "Book a 1-hour consultation. We run a real Vorstellungsgespräch in German, score you, and give you concrete fixes — €20.",
+  "eyebrow": "面试准备",
+  "title": "拿下您的德国 Ausbildung 面试",
+  "subtitle": "15 个最常被问到的问题，附德语示范回答，以及「为什么问这个」和该说什么（不该说什么）。",
+  "badgeQuestions": "{n} 个问题",
+  "badgeAnswers": "德语示范回答",
+  "badgeGerman": "B1–B2 水平",
+  "badgeFreePreview": "{n} 个免费，其余登录后可看",
+  "allFilter": "全部",
+  "showWhy": "为什么问这个？",
+  "hideWhy": "隐藏解释",
+  "revealAnswer": "点击查看回答",
+  "hideAnswer": "隐藏",
+  "sampleAnswerLabel": "示范回答",
+  "doSayLabel": "该这样说",
+  "dontSayLabel": "不要这样说",
+  "lockedTitle": "登录解锁其余内容",
+  "lockedBody": "前 3 个问题免费。创建免费账户即可查看全部 15 个问题、示范回答和技巧。",
+  "lockedCta": "登录 / 注册",
+  "ctaTitle": "想来一场一对一模拟面试？",
+  "ctaSub": "预约 1 小时咨询。我们用德语进行真实的模拟面试，为您评分并给出具体改进建议——€20。",
   "category": {
-   "intro": "Intro",
-   "motivation": "Motivation",
-   "strengths": "Strengths",
-   "experience": "Experience",
-   "workplace": "Workplace",
-   "goals": "Goals",
-   "logistics": "Logistics",
-   "closing": "Closing"
+   "intro": "开场",
+   "motivation": "动机",
+   "strengths": "优势",
+   "experience": "经历",
+   "workplace": "职场",
+   "goals": "目标",
+   "logistics": "实际安排",
+   "closing": "收尾"
   },
   "difficulty": {
-   "1": "Easy",
-   "2": "Medium",
-   "3": "Tricky"
+   "1": "简单",
+   "2": "中等",
+   "3": "有陷阱"
   },
   "questions": {
    "tell_about_yourself": {
-    "translation": "Tell me about yourself.",
-    "why": "The opener. Recruiters use it to gauge your German fluency, your structure, and whether you can present yourself confidently in 60–90 seconds.",
-    "doSay": "Stick to a 3-part structure: who you are (name, age, where from) → what you bring (Bac, German level, motivation) → why this Ausbildung. Stay under 90 seconds.",
-    "dontSay": "Don't recite your whole CV. Don't talk about hobbies for more than one sentence. Don't mention salary, holidays, or family problems."
+    "translation": "请介绍一下您自己。",
+    "why": "开场题。招聘者用它评估您的德语流利度、表达结构，以及能否在 60–90 秒内自信地展示自己。",
+    "doSay": "遵循三段结构：我是谁（姓名、年龄、来自哪里）→ 我能带来什么（学历、德语水平、动机）→ 为什么选这个 Ausbildung。控制在 90 秒内。",
+    "dontSay": "不要背诵整份简历。谈爱好不要超过一句话。不要提工资、假期或家庭问题。"
    },
    "why_us": {
-    "translation": "Why did you apply to us?",
-    "why": "Tests whether you researched the company. The wrong answer (\"you have a good reputation\") signals a copy-paste application.",
-    "doSay": "Cite 2 specific things from their website / press / LinkedIn — a product line, training program, location, recent project. Connect them to your goals.",
-    "dontSay": "Don't say \"I just need any Ausbildung\". Don't bash competitors. Don't pretend you know things you don't — research before the call."
+    "translation": "您为什么申请我们公司？",
+    "why": "考察您是否研究过这家公司。错误回答（「你们口碑很好」）暴露这是复制粘贴的申请。",
+    "doSay": "引用他们官网/新闻/LinkedIn 上的 2 个具体信息——产品线、培训项目、地点、近期项目，并与您的目标联系起来。",
+    "dontSay": "不要说「我只是需要一个 Ausbildung」。不要贬低竞争对手。不要不懂装懂——面试前做好功课。"
    },
    "why_germany": {
-    "translation": "Why do you want to come to Germany?",
-    "why": "Tests whether your motivation is real and project-based — or whether Germany is just an \"exit\" from your home country. Recruiters reject candidates who sound like they'll leave once they have the visa.",
-    "doSay": "Give 3 reasons: dual training system, sector demand & job stability, the work culture (precision, punctuality). Frame it as a career project, not an escape.",
-    "dontSay": "Don't mention money, weather, or \"Europe is better\". Don't criticise your home country. Don't make it sound like a temporary plan."
+    "translation": "您为什么想来德国？",
+    "why": "考察您的动机是否真实、是否有职业规划——还是德国只是您「离开」本国的出口。听起来「拿到签证就走」的候选人会被拒。",
+    "doSay": "给出 3 个理由：双元制培训体系、行业需求与就业稳定、职场文化（严谨、守时）。把它表述为职业规划，而不是逃离。",
+    "dontSay": "不要提钱、天气或「欧洲更好」。不要批评自己的国家。不要让它听起来像临时计划。"
    },
    "strengths_weaknesses": {
-    "translation": "What are your strengths and weaknesses?",
-    "why": "Classic trap. Strengths must be relevant, weaknesses must be real but improvable — fake humility (\"I work too hard\") gets seen instantly.",
-    "doSay": "Pick 1–2 strengths tied to the job (reliability, learning speed, languages). For weakness: pick a real one, then explain how you actively manage it.",
-    "dontSay": "Don't say you have no weaknesses. Don't claim \"perfectionism\" — it's the most overused fake answer. Don't reveal a deal-breaker (e.g. bad with deadlines)."
+    "translation": "您的优点和缺点是什么？",
+    "why": "经典陷阱。优点必须与岗位相关，缺点必须真实但可改进——假谦虚（「我工作太拼」）一眼就会被识破。",
+    "doSay": "挑 1–2 个与岗位相关的优点（可靠、学习快、语言能力）。缺点：挑一个真实的，并说明您如何积极改进。",
+    "dontSay": "不要说自己没有缺点。不要说「完美主义」——这是被用烂的假答案。不要暴露致命伤（比如不守期限）。"
    },
    "mistake": {
-    "translation": "Tell me about a mistake you made.",
-    "why": "Tests honesty, self-awareness, and ability to learn. The wrong answer (\"I never make mistakes\") is an instant disqualifier.",
-    "doSay": "Pick a real, low-stakes mistake. Use the structure: what happened → what I did to fix it → what I learned and now do differently.",
-    "dontSay": "Don't say you've never made a mistake. Don't blame others. Don't pick something catastrophic (lost a major client) or something trivial (forgot to refill the printer)."
+    "translation": "讲讲您犯过的一个错误。",
+    "why": "考察诚实、自我认知和学习能力。错误回答（「我从不犯错」）会被直接淘汰。",
+    "doSay": "挑一个真实、影响不大的错误。按结构讲：发生了什么 → 我如何补救 → 我学到了什么、现在怎么做。",
+    "dontSay": "不要说从没犯过错。不要甩锅给别人。不要挑灾难性的（丢了大客户）或鸡毛蒜皮的（忘了给打印机加纸）。"
    },
    "what_sets_you_apart": {
-    "translation": "What sets you apart from other applicants?",
-    "why": "Your sales pitch. Other international candidates have similar profiles — what's your edge?",
-    "doSay": "Pick 3 concrete differentiators: languages (AR/FR/DE), independence (organised your own migration), conscious career choice. Be specific, not generic.",
-    "dontSay": "Don't say \"I'm motivated and hard-working\" — every candidate says that. Don't criticise other candidates. Don't list 10 qualities — pick 3."
+    "translation": "您与其他申请者相比有什么不同？",
+    "why": "您的自我推销时刻。其他国际候选人背景相似——您的优势是什么？",
+    "doSay": "挑 3 个具体的差异点：语言能力、独立性（自己规划了整个移居过程）、有意识的职业选择。要具体，不要空泛。",
+    "dontSay": "不要说「我有动力、我勤奋」——每个人都这么说。不要贬低其他候选人。不要罗列 10 个优点——挑 3 个。"
    },
    "stress": {
-    "translation": "How do you handle stress?",
-    "why": "Tests your work style under pressure. They want to know whether you'll cope when an Ausbildung deadline collides with the Berufsschule exam.",
-    "doSay": "Describe a method: prioritise → tackle one task at a time → communicate early if a deadline slips. Frame stress as a signal, not a problem.",
-    "dontSay": "Don't say \"I don't get stressed\" — unrealistic. Don't describe panicking, working all night, or skipping breaks. Don't blame the workload."
+    "translation": "您如何应对压力？",
+    "why": "考察您在压力下的工作方式。他们想知道当 Ausbildung 任务和职业学校考试撞车时您能否应付。",
+    "doSay": "描述一套方法：先排优先级 → 一次专注一件事 → 期限可能延误时尽早沟通。把压力当作信号，而不是问题。",
+    "dontSay": "不要说「我不会有压力」——不现实。不要描述慌乱、通宵或不休息。不要抱怨工作量。"
    },
    "criticism": {
-    "translation": "How do you react to criticism?",
-    "why": "Tests teachability — the single most important quality in an Auszubildender. They want a learner, not someone who argues.",
-    "doSay": "Describe a process: listen → ask clarifying questions → identify concrete next actions. Show that you separate the message from the messenger.",
-    "dontSay": "Don't say \"criticism doesn't affect me\" — sounds defensive. Don't describe arguing back. Don't complain about a previous boss."
+    "translation": "您如何对待批评？",
+    "why": "考察可塑性——学徒最重要的品质。他们要的是学习者，不是抬杠的人。",
+    "doSay": "描述一个过程：倾听 → 提出澄清性问题 → 确定具体的改进行动。表明您对事不对人。",
+    "dontSay": "不要说「批评影响不了我」——听起来很防御。不要描述顶嘴。不要抱怨以前的上司。"
    },
    "team_or_alone": {
-    "translation": "Do you prefer working alone or in a team?",
-    "why": "Tests fit. Most Ausbildung roles are team-heavy, but Berufsschule and exam prep are solo. They want someone who can do both.",
-    "doSay": "Say \"both, depending on the task\". Give one example each: team for collaborative learning, solo for focused execution. Show self-awareness.",
-    "dontSay": "Don't pick only one. Don't say \"I'm a lone wolf\". Don't say \"I love working in teams\" without explaining when solo work matters too."
+    "translation": "您喜欢独立工作还是团队合作？",
+    "why": "考察匹配度。大多数 Ausbildung 岗位以团队为主，但职业学校和备考是独自完成的。他们要的是两者都行的人。",
+    "doSay": "回答「视任务而定，两者都行」。各举一例：协作学习靠团队，专注执行靠自己。展现自我认知。",
+    "dontSay": "不要只选一个。不要说「我是独行侠」。不要只说「我热爱团队合作」而不解释什么时候需要独立工作。"
    },
    "overtime": {
-    "translation": "Would you be willing to work weekends or more than 40 hours?",
-    "why": "A loyalty test, but also a legal trap. German Ausbildung law caps your hours — saying \"yes always\" sounds naive, \"no never\" sounds lazy.",
-    "doSay": "Yes when there's a peak load or the team needs it. But also note: chronic overtime usually signals an organisation problem worth fixing together.",
-    "dontSay": "Don't say \"absolutely whenever\". Don't cite legal limits aggressively (the §17 BBiG). Don't complain about pay."
+    "translation": "您愿意周末加班或每周工作超过 40 小时吗？",
+    "why": "忠诚度测试，也是法律陷阱。德国培训法规定了学徒的工时上限——「随时都行」显得幼稚，「绝不加班」显得懒惰。",
+    "doSay": "高峰期或团队需要时愿意。但也可以指出：长期加班通常说明组织安排有问题，值得共同改进。",
+    "dontSay": "不要说「随叫随到」。不要拿法律条文（《职业教育法》第 17 条）当武器。不要抱怨工资。"
    },
    "five_years": {
-    "translation": "Where do you see yourself in five years?",
-    "why": "Tests planning ability and loyalty. They want to know if you'll stay after the Ausbildung — replacing an Azubi is expensive.",
-    "doSay": "Finished Ausbildung, 1–2 years of practice ideally with them, specialised in [concrete area], possibly Meister/Techniker/Fachwirt. Anchor your future at the company.",
-    "dontSay": "Don't mention going back home. Don't mention switching companies. Don't say \"I don't know\" or \"self-employed\" — both signal flight risk."
+    "translation": "五年后您希望自己在哪里？",
+    "why": "考察规划能力和忠诚度。他们想知道 Ausbildung 结束后您会不会留下——重新培养一名学徒成本很高。",
+    "doSay": "完成 Ausbildung，最好在这家公司积累 1–2 年实践经验，专精于某个具体方向，可能再考 Meister/Techniker/Fachwirt。把未来锚定在这家公司。",
+    "dontSay": "不要提回国。不要提跳槽。不要说「不知道」或「自己创业」——两者都是流失风险信号。"
    },
    "why_this_field": {
-    "translation": "Why did you choose this field?",
-    "why": "Tests authenticity. Random Ausbildung choices (\"it was available\") get rejected — they want a story showing you understand the profession.",
-    "doSay": "Three layers: a personal story or experience → research you did (LinkedIn, YouTube, blogs) → the sector's future stability. Show genuine interest.",
-    "dontSay": "Don't say \"for the visa\". Don't say \"I had no other choice\". Don't list random reasons — tell a coherent story."
+    "translation": "您为什么选择这个行业？",
+    "why": "考察真实性。随便选的 Ausbildung（「刚好有空位」）会被拒——他们想听到一个表明您了解这个职业的故事。",
+    "doSay": "三个层次：一段个人经历或故事 → 您做过的调研（LinkedIn、YouTube、博客）→ 行业的未来稳定性。展现真正的兴趣。",
+    "dontSay": "不要说「为了签证」。不要说「没有别的选择」。不要罗列零散的理由——讲一个连贯的故事。"
    },
    "salary": {
-    "translation": "What are your salary expectations?",
-    "why": "A trap — naming a number too high gets you rejected, too low signals lack of self-worth. For Ausbildung, the answer is mostly fixed by tariff.",
-    "doSay": "For Ausbildung: accept the tariff salary. State that you've seen typical year-1 ranges (€800–1200 brutto depending on sector) and prioritise quality of training.",
-    "dontSay": "Don't name a high number. Don't pretend money doesn't matter. Don't ask about salary in the first 30 minutes of the interview."
+    "translation": "您的期望薪资是多少？",
+    "why": "陷阱题——报得太高被拒，报得太低显得不自信。对 Ausbildung 来说，答案基本由行业协议工资决定。",
+    "doSay": "对 Ausbildung：接受协议工资。表明您了解第一年的典型区间（视行业税前 €800–1200），并且更看重培训质量。",
+    "dontSay": "不要报高价。不要假装不在乎钱。不要在面试前 30 分钟主动问工资。"
    },
    "relocate": {
-    "translation": "Are you willing to relocate?",
-    "why": "Easy question, but tests practical readiness. They want to hear that you've already thought through housing, transport, and cost of living.",
-    "doSay": "Yes — relocation is part of the plan. Mention you've already researched the city (neighbourhoods, transport, costs). Show flexibility.",
-    "dontSay": "Don't say \"only if I can stay near my family\". Don't hesitate. Don't ask whether the company helps with housing in the same answer."
+    "translation": "您愿意搬迁吗？",
+    "why": "简单的问题，但考察实际准备程度。他们想听到您已经考虑过住房、交通和生活成本。",
+    "doSay": "愿意——搬迁本来就在计划中。提到您已研究过这座城市（街区、交通、开销）。展现灵活性。",
+    "dontSay": "不要说「除非能离家人近」。不要犹豫。不要在同一个回答里问公司是否提供住房帮助。"
    },
    "questions_for_us": {
-    "translation": "Do you have any questions for us?",
-    "why": "The most underestimated question. \"No, none\" signals lack of preparation and interest. Use this to demonstrate research and fit.",
-    "doSay": "Have 3 questions ready: about a typical first month, the qualities of successful past Auszubildende, the post-Ausbildung retention rate. Show you're thinking long-term.",
-    "dontSay": "Don't say \"no questions\". Don't ask only about salary, holidays, or perks. Don't ask things you could find on the website."
+    "translation": "您有什么问题想问我们吗？",
+    "why": "最被低估的问题。「没有」暴露缺乏准备和兴趣。用它来展示您的调研和匹配度。",
+    "doSay": "准备好 3 个问题：入职第一个月的典型安排、以往优秀学徒的特质、Ausbildung 结束后的留任率。表明您在做长远打算。",
+    "dontSay": "不要说「没有问题」。不要只问工资、假期或福利。不要问官网上就能查到的东西。"
    }
   }
  },
