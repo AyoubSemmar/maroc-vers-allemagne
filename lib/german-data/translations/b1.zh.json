@@ -2309,87 +2309,87 @@
   },
   "b1-05": {
    "id": "b1-05",
-   "title": "Konnektoren — Advanced Connectors",
+   "title": "Konnektoren — 高级连接词",
    "order": 5,
    "grammar": {
-    "title": "deshalb, trotzdem, nämlich, zwar...aber",
-    "content": "**Konnektoren** connect sentences and show the relationship between them. There are three categories:\n\n**1. Coordinating Connectors (Position 0)** — do not change word order:\n- **und** (and), **aber** (but), **oder** (or), **denn** (because), **sondern** (but rather)\n\n**2. Adverbial Connectors (Position 1)** — occupy first position, the verb comes after:\n- **deshalb / darum / deswegen** (therefore)\n- **trotzdem** (nevertheless)\n- **außerdem** (moreover)\n- **dann / danach** (then / after that)\n\n**3. Subordinating Connectors (Nebensatz)** — verb goes to the end:\n- **weil** (because), **obwohl** (although), **damit** (so that), **bevor** (before), **nachdem** (after)\n\n⚠️ **zwar ... aber** = \"it's true ... but\"",
+    "title": "deshalb、trotzdem、nämlich、zwar...aber",
+    "content": "**Konnektoren（连接词）**连接句子并表明它们之间的关系。分三类：\n\n**1. 并列连词（占位 0）**——不改变语序：\n- **und**（和）、**aber**（但是）、**oder**（或者）、**denn**（因为）、**sondern**（而是）\n\n**2. 副词性连接词（占位 1）**——占据第一位，动词紧随其后：\n- **deshalb / darum / deswegen**（因此）\n- **trotzdem**（尽管如此）\n- **außerdem**（此外）\n- **dann / danach**（然后 / 之后）\n\n**3. 从属连词（引导从句）**——动词放句尾：\n- **weil**（因为）、**obwohl**（尽管）、**damit**（以便）、**bevor**（在……之前）、**nachdem**（在……之后）\n\n⚠️ **zwar ... aber** = 「虽然……但是」",
     "tables": [
      {
-      "title": "The Difference Between denn and weil",
+      "title": "denn 和 weil 的区别",
       "theme": "default",
       "headers": [
-       "Connector",
-       "Type",
-       "Verb Position"
+       "连接词",
+       "类型",
+       "动词位置"
       ],
       "rows": [
        {
         "cells": [
          "denn",
-         "Position 0",
-         "Normal (Position 2)"
+         "占位 0",
+         "正常（第二位）"
         ]
        },
        {
         "cells": [
          "weil",
          "Subjunktion",
-         "End of clause"
+         "从句句尾"
         ],
         "highlight": true
        },
        {
         "cells": [
          "deshalb",
-         "Position 1",
-         "Inversion (verb immediately after)"
+         "占位 1",
+         "倒装（动词紧随其后）"
         ]
        },
        {
         "cells": [
          "trotzdem",
-         "Position 1",
-         "Inversion"
+         "占位 1",
+         "倒装"
         ]
        }
       ]
      },
      {
-      "title": "Konnektoren by Meaning",
+      "title": "按含义分类的连接词",
       "theme": "default",
       "headers": [
-       "Meaning",
+       "含义",
        "Konnektor"
       ],
       "rows": [
        {
         "cells": [
-         "Reason",
+         "原因",
          "weil, denn, da"
         ]
        },
        {
         "cells": [
-         "Result",
+         "结果",
          "deshalb, deswegen, also"
         ]
        },
        {
         "cells": [
-         "Contrast",
+         "转折",
          "aber, obwohl, trotzdem"
         ]
        },
        {
         "cells": [
-         "Purpose",
+         "目的",
          "damit, um ... zu"
         ]
        },
        {
         "cells": [
-         "Time",
+         "时间",
          "wenn, als, bevor, nachdem"
         ]
        }
@@ -2398,223 +2398,223 @@
     ],
     "rules": [
      {
-      "rule": "deshalb → Inversion",
+      "rule": "deshalb → 倒装",
       "example": "Es regnet, deshalb bleibe ich zu Hause.",
-      "translation": "It's raining, so I'm staying home."
+      "translation": "下雨了，所以我待在家里。"
      },
      {
-      "rule": "weil → verb at the end",
+      "rule": "weil → 动词放句尾",
       "example": "Ich bleibe zu Hause, weil es regnet.",
-      "translation": "I'm staying home because it's raining."
+      "translation": "我待在家里，因为下雨了。"
      },
      {
       "rule": "zwar ... aber",
       "example": "Zwar ist es kalt, aber ich gehe spazieren.",
-      "translation": "It's true that it's cold, but I'm going for a walk."
+      "translation": "虽然天冷，但我还是去散步。"
      }
     ],
     "examples": [
-     "Ich lerne Deutsch, weil ich in Deutschland arbeiten will. — I'm learning German because I want to work in Germany.",
-     "Es regnet, trotzdem gehen wir spazieren. — It's raining, nevertheless we're going for a walk.",
-     "Ich bin müde, deshalb gehe ich ins Bett. — I'm tired, so I'm going to bed.",
-     "Zwar ist Berlin groß, aber München ist schöner. — It's true that Berlin is big, but Munich is more beautiful.",
-     "Er lernt viel, damit er die Prüfung besteht. — He studies a lot so that he passes the exam.",
-     "Bevor ich esse, wasche ich mir die Hände. — Before I eat, I wash my hands.",
-     "Nachdem er gegessen hatte, ging er schlafen. — After he had eaten, he went to sleep.",
-     "Sowohl Deutsch als auch Englisch sind wichtig. — Both German and English are important."
+     "Ich lerne Deutsch, weil ich in Deutschland arbeiten will. — 我学德语，因为我想在德国工作。",
+     "Es regnet, trotzdem gehen wir spazieren. — 下着雨，尽管如此我们还是去散步。",
+     "Ich bin müde, deshalb gehe ich ins Bett. — 我累了，所以我去睡觉。",
+     "Zwar ist Berlin groß, aber München ist schöner. — 柏林虽然大，但慕尼黑更美。",
+     "Er lernt viel, damit er die Prüfung besteht. — 他努力学习，以便通过考试。",
+     "Bevor ich esse, wasche ich mir die Hände. — 吃饭前我先洗手。",
+     "Nachdem er gegessen hatte, ging er schlafen. — 他吃完饭后就去睡觉了。",
+     "Sowohl Deutsch als auch Englisch sind wichtig. — 德语和英语都很重要。"
     ],
-    "tip": "Remember: after **weil** the verb goes to the end, after **deshalb** Inversion (verb immediately after it)."
+    "tip": "记住：**weil** 之后动词放句尾，**deshalb** 之后倒装（动词紧随其后）。"
    },
    "vocabulary": [
     {
      "german": "deshalb",
-     "arabic": "therefore",
+     "arabic": "因此",
      "type": "conjunction"
     },
     {
      "german": "darum",
-     "arabic": "therefore",
+     "arabic": "因此",
      "type": "conjunction"
     },
     {
      "german": "deswegen",
-     "arabic": "therefore",
+     "arabic": "因此",
      "type": "conjunction"
     },
     {
      "german": "trotzdem",
-     "arabic": "nevertheless",
+     "arabic": "尽管如此",
      "type": "conjunction"
     },
     {
      "german": "außerdem",
-     "arabic": "moreover",
+     "arabic": "此外",
      "type": "conjunction"
     },
     {
      "german": "nämlich",
-     "arabic": "namely / that is (because)",
+     "arabic": "即；因为",
      "type": "conjunction"
     },
     {
      "german": "zwar ... aber",
-     "arabic": "it's true that ... but",
+     "arabic": "虽然……但是",
      "type": "conjunction"
     },
     {
      "german": "sowohl ... als auch",
-     "arabic": "both ... and",
+     "arabic": "既……又",
      "type": "conjunction"
     },
     {
      "german": "entweder ... oder",
-     "arabic": "either ... or",
+     "arabic": "要么……要么",
      "type": "conjunction"
     },
     {
      "german": "weder ... noch",
-     "arabic": "neither ... nor",
+     "arabic": "既不……也不",
      "type": "conjunction"
     },
     {
      "german": "nicht nur ... sondern auch",
-     "arabic": "not only ... but also",
+     "arabic": "不仅……而且",
      "type": "conjunction"
     },
     {
      "german": "da",
-     "arabic": "since / as",
+     "arabic": "由于",
      "type": "conjunction"
     },
     {
      "german": "falls",
-     "arabic": "in case",
+     "arabic": "万一；如果",
      "type": "conjunction"
     },
     {
      "german": "solange",
-     "arabic": "as long as",
+     "arabic": "只要",
      "type": "conjunction"
     },
     {
      "german": "sobald",
-     "arabic": "as soon as",
+     "arabic": "一……就",
      "type": "conjunction"
     },
     {
      "german": "der Grund",
-     "arabic": "the reason",
+     "arabic": "原因",
      "plural": "die Gründe",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Folge",
-     "arabic": "the consequence",
+     "arabic": "后果",
      "plural": "die Folgen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Zweck",
-     "arabic": "the purpose",
+     "arabic": "目的",
      "plural": "die Zwecke",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Unterschied",
-     "arabic": "the difference",
+     "arabic": "区别",
      "plural": "die Unterschiede",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "verbinden",
-     "arabic": "to connect",
+     "arabic": "连接",
      "type": "verb"
     },
     {
      "german": "erklären",
-     "arabic": "to explain",
+     "arabic": "解释",
      "type": "verb"
     },
     {
      "german": "jedoch",
-     "arabic": "however (formal)",
+     "arabic": "然而（正式）",
      "type": "conjunction"
     },
     {
      "german": "allerdings",
-     "arabic": "however, though",
+     "arabic": "不过",
      "type": "adverb"
     },
     {
      "german": "dagegen",
-     "arabic": "in contrast",
+     "arabic": "相反",
      "type": "adverb"
     },
     {
      "german": "einerseits ... andererseits",
-     "arabic": "on the one hand ... on the other",
+     "arabic": "一方面……另一方面",
      "type": "conjunction"
     },
     {
      "german": "somit",
-     "arabic": "thus, therefore",
+     "arabic": "因而",
      "type": "conjunction"
     },
     {
      "german": "folglich",
-     "arabic": "consequently",
+     "arabic": "从而",
      "type": "conjunction"
     },
     {
      "german": "zudem",
-     "arabic": "in addition",
+     "arabic": "此外",
      "type": "conjunction"
     },
     {
      "german": "obendrein",
-     "arabic": "on top of that",
+     "arabic": "更有甚者",
      "type": "adverb"
     },
     {
      "german": "die Bedingung",
-     "arabic": "the condition",
+     "arabic": "条件",
      "plural": "die Bedingungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Ursache",
-     "arabic": "the cause",
+     "arabic": "起因",
      "plural": "die Ursachen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Wirkung",
-     "arabic": "the effect",
+     "arabic": "效果",
      "plural": "die Wirkungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Beziehung",
-     "arabic": "the relationship",
+     "arabic": "关系",
      "plural": "die Beziehungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "logisch",
-     "arabic": "logical",
+     "arabic": "合乎逻辑的",
      "type": "adjective"
     },
     {
      "german": "unlogisch",
-     "arabic": "illogical",
+     "arabic": "不合逻辑的",
      "type": "adjective"
     }
    ],
@@ -2647,19 +2647,19 @@
      {
       "id": "b1-05-q3",
       "type": "fill-blank",
-      "question": "Es regnet, ___ gehen wir spazieren. (nevertheless)",
+      "question": "Es regnet, ___ gehen wir spazieren.（尽管如此）",
       "answer": "trotzdem"
      },
      {
       "id": "b1-05-q4",
       "type": "fill-blank",
-      "question": "Ich lerne, ___ ich die Prüfung bestehe. (so that - damit)",
+      "question": "Ich lerne, ___ ich die Prüfung bestehe.（以便 — damit）",
       "answer": "damit"
      },
      {
       "id": "b1-05-q5",
       "type": "drag-drop",
-      "question": "Arrange: [, / zu / es / deshalb / spät / ist / Hause / Ich / gehe]",
+      "question": "排序：[, / zu / es / deshalb / spät / ist / Hause / Ich / gehe]",
       "words": [
        "Es",
        "ist",
@@ -2676,7 +2676,7 @@
      {
       "id": "b1-05-q6",
       "type": "drag-drop",
-      "question": "Arrange with weil: [regnet / , / zu / Hause / Ich / weil / bleibe / es]",
+      "question": "用 weil 排序：[regnet / , / zu / Hause / Ich / weil / bleibe / es]",
       "words": [
        "Ich",
        "bleibe",
@@ -2692,23 +2692,23 @@
      {
       "id": "b1-05-q7",
       "type": "matching",
-      "question": "Match the connector to its meaning:",
+      "question": "把连接词和它的含义配对：",
       "pairs": [
        {
         "left": "deshalb",
-        "right": "therefore"
+        "right": "因此"
        },
        {
         "left": "trotzdem",
-        "right": "nevertheless"
+        "right": "尽管如此"
        },
        {
         "left": "außerdem",
-        "right": "moreover"
+        "right": "此外"
        },
        {
         "left": "damit",
-        "right": "so that"
+        "right": "以便"
        }
       ],
       "answer": "match"
@@ -2716,7 +2716,7 @@
      {
       "id": "b1-05-q8",
       "type": "multiple-choice",
-      "question": "\"zwar kalt, ___ schön\"",
+      "question": "「zwar kalt, ___ schön」",
       "options": [
        "und",
        "aber",
@@ -2728,81 +2728,81 @@
      {
       "id": "b1-05-q9",
       "type": "speaking",
-      "question": "Say: \"I'm learning German so that I work in Germany.\"",
+      "question": "说：「我学德语，以便在德国工作。」",
       "answer": "Ich lerne Deutsch, damit ich in Deutschland arbeite",
-      "hint": "damit + verb at the end"
+      "hint": "damit + 动词放句尾"
      },
      {
       "id": "b1-05-q10",
       "type": "multiple-choice",
-      "question": "Listen and choose:",
+      "question": "听录音并选择：",
       "audioPrompt": "Obwohl es regnet, gehen wir in den Park.",
       "options": [
-       "Because of the rain we're going to the park",
-       "Although it's raining we're going to the park",
-       "We're not going to the park",
-       "We'll go to the park tomorrow"
+       "因为下雨我们去公园",
+       "尽管下雨我们还是去公园",
+       "我们不去公园",
+       "我们明天去公园"
       ],
-      "answer": "Although it's raining we're going to the park"
+      "answer": "尽管下雨我们还是去公园"
      },
      {
       "id": "b1-05-q11",
       "type": "fill-blank",
-      "question": "Fill in (consequence): \"Es ist kalt, ___ ich bleibe zu Hause.\"",
+      "question": "填空（表结果）：「Es ist kalt, ___ ich bleibe zu Hause.」",
       "answer": "deshalb",
-      "hint": "consequence → deshalb (Inversion)"
+      "hint": "结果 → deshalb（倒装）"
      },
      {
       "id": "b1-05-q12",
       "type": "multiple-choice",
-      "question": "After deshalb comes:",
+      "question": "deshalb 之后紧跟着：",
       "options": [
-       "the verb first",
-       "the verb at the end",
-       "the subject first",
-       "nothing changes"
+       "动词在前",
+       "动词放句尾",
+       "主语在前",
+       "语序不变"
       ],
-      "answer": "the verb first"
+      "answer": "动词在前"
      },
      {
       "id": "b1-05-q13",
       "type": "fill-blank",
-      "question": "\"Ich lerne viel, ___ ich die Prüfung bestehe.\" (so that)",
+      "question": "「Ich lerne viel, ___ ich die Prüfung bestehe.」（以便）",
       "answer": "damit",
-      "hint": "purpose = damit"
+      "hint": "目的 = damit"
      },
      {
       "id": "b1-05-q14",
       "type": "multiple-choice",
-      "question": "Difference between denn and weil?",
+      "question": "denn 和 weil 的区别是？",
       "options": [
-       "same meaning and order",
-       "denn keeps normal order, weil sends verb to end",
-       "denn sends to end",
-       "no difference"
+       "含义和语序都相同",
+       "denn 保持正常语序，weil 把动词送到句尾",
+       "denn 把动词送到句尾",
+       "没有区别"
       ],
-      "answer": "denn keeps normal order, weil sends verb to end"
+      "answer": "denn 保持正常语序，weil 把动词送到句尾"
      },
      {
       "id": "b1-05-q15",
       "type": "matching",
-      "question": "Match the Konnektor to its type:",
+      "question": "把连接词和它的类型配对：",
       "pairs": [
        {
         "left": "weil",
-        "right": "Subjunktion (verb at end)"
+        "right": "Subjunktion（动词放句尾）"
        },
        {
         "left": "denn",
-        "right": "Position 0 (normal order)"
+        "right": "占位 0（正常语序）"
        },
        {
         "left": "deshalb",
-        "right": "Position 1 (Inversion)"
+        "right": "占位 1（倒装）"
        },
        {
         "left": "trotzdem",
-        "right": "Position 1 (Inversion)"
+        "right": "占位 1（倒装）"
        }
       ],
       "answer": "matched"
@@ -2810,7 +2810,7 @@
      {
       "id": "b1-05-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"As soon as I arrive, I'll call you\"",
+      "question": "排序：「我一到就给你打电话」",
       "words": [
        "Sobald",
        "ich",
@@ -2825,21 +2825,21 @@
      {
       "id": "b1-05-q17",
       "type": "speaking",
-      "question": "Say: \"It's true the work is hard, but it's interesting\"",
+      "question": "说：「工作虽然辛苦，但很有意思」",
       "answer": "Zwar ist die Arbeit schwer aber sie ist interessant"
      },
      {
       "id": "b1-05-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Ich gehe nicht ins Kino, ___ ich kein Geld habe.\" (because)",
+      "question": "听：「Ich gehe nicht ins Kino, ___ ich kein Geld habe.」（因为）",
       "audioPrompt": "Ich gehe nicht ins Kino, weil ich kein Geld habe.",
       "answer": "weil",
-      "hint": "formal cause = weil"
+      "hint": "正式的原因表达 = weil"
      },
      {
       "id": "b1-05-q19",
       "type": "multiple-choice",
-      "question": "Which Konnektor means \"as soon as\"?",
+      "question": "哪个连接词表示「一……就」？",
       "options": [
        "solange",
        "sobald",
@@ -2851,7 +2851,7 @@
      {
       "id": "b1-05-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"Besides, I'm tired\"",
+      "question": "排序：「此外，我累了」",
       "words": [
        "Außerdem",
        "bin",
