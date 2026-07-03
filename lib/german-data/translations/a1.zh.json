@@ -3381,14 +3381,14 @@
   },
   "a1-06": {
    "id": "a1-06",
-   "title": "Home and Housing — Wohnen und Wohnung",
+   "title": "居住与住房 — Wohnen und Wohnung",
    "order": 6,
    "grammar": {
-    "title": "es gibt + Prepositions of Place — Präpositionen",
-    "content": "**es gibt** = \"there is / there are\". Always takes Akkusativ.\n\n**The difference between Wo? (where) and Wohin? (to where):**\n- Wo? → Dativ (static location)\n- Wohin? → Akkusativ (movement)",
+    "title": "es gibt + 地点介词 — Präpositionen",
+    "content": "**es gibt** = 「有；存在」。永远接第四格。\n\n**Wo?（在哪里）和 Wohin?（到哪里去）的区别：**\n- Wo? → 第三格（静态位置）\n- Wohin? → 第四格（移动方向）",
     "tables": [
      {
-      "title": "Definite Articles in All Cases",
+      "title": "定冠词的各格形式",
       "headers": [
        "Kasus",
        "Maskulin",
@@ -3429,66 +3429,66 @@
       "theme": "cases"
      },
      {
-      "title": "Prepositions of Place (with Dativ — Wo?)",
+      "title": "地点介词（接第三格——Wo?）",
       "headers": [
        "Präposition",
-       "Meaning",
-       "Example"
+       "含义",
+       "示例"
       ],
       "rows": [
        {
         "cells": [
          "in",
-         "in",
+         "在……里",
          "Das Buch ist in der Tasche."
         ]
        },
        {
         "cells": [
          "auf",
-         "on (horizontal surface)",
+         "在……上（水平面）",
          "Die Tasse ist auf dem Tisch."
         ]
        },
        {
         "cells": [
          "unter",
-         "under",
+         "在……下",
          "Die Schuhe sind unter dem Bett."
         ]
        },
        {
         "cells": [
          "neben",
-         "next to",
+         "在……旁边",
          "Der Stuhl ist neben dem Schrank."
         ]
        },
        {
         "cells": [
          "an",
-         "on (vertical surface)",
+         "在……上（垂直面）",
          "Das Bild ist an der Wand."
         ]
        },
        {
         "cells": [
          "zwischen",
-         "between",
+         "在……之间",
          "Der Tisch ist zwischen den Stühlen."
         ]
        },
        {
         "cells": [
          "hinter",
-         "behind",
+         "在……后面",
          "Der Garten ist hinter dem Haus."
         ]
        },
        {
         "cells": [
          "vor",
-         "in front of",
+         "在……前面",
          "Das Auto steht vor dem Haus."
         ]
        }
@@ -3498,338 +3498,338 @@
     ],
     "rules": [
      {
-      "rule": "With Dativ: der → dem, die → der, das → dem, die (plural) → den + n on the noun.",
+      "rule": "第三格：der → dem，die → der，das → dem，复数 die → den 且名词加 n。",
       "example": "in dem Zimmer = **im** Zimmer / in der Küche",
-      "translation": "in the room / in the kitchen"
+      "translation": "在房间里 / 在厨房里"
      },
      {
-      "rule": "Common contractions: in dem = im / an dem = am / in das = ins / an das = ans.",
+      "rule": "常见缩合：in dem = im / an dem = am / in das = ins / an das = ans。",
       "example": "Ich bin **im** Wohnzimmer. / Ich gehe **ins** Bad.",
-      "translation": "I'm in the living room. / I'm going to the bathroom."
+      "translation": "我在客厅。/ 我去浴室。"
      },
      {
-      "rule": "es gibt + Akkusativ (always), with negation kein.",
+      "rule": "es gibt + 第四格（永远），否定用 kein。",
       "example": "Es gibt **einen** Supermarkt, aber **keine** Apotheke.",
-      "translation": "There is a supermarket but no pharmacy."
+      "translation": "有一家超市，但没有药店。"
      }
     ],
     "examples": [
-     "Ich wohne in einer Wohnung im dritten Stock. — I live in an apartment on the third floor.",
-     "Es gibt zwei Zimmer, eine Küche und ein Badezimmer. — There are two rooms, a kitchen, and a bathroom.",
-     "Die Küche ist neben dem Wohnzimmer. — The kitchen is next to the living room.",
-     "Das Bett ist unter dem Fenster. — The bed is under the window.",
-     "Wie viel kostet die Miete? — How much is the rent?",
-     "Ich suche eine Wohnung in München. — I'm looking for an apartment in Munich.",
-     "Meine Wohnung ist hell und groß. — My apartment is bright and large.",
-     "Das Bild hängt an der Wand. — The picture is hanging on the wall."
+     "Ich wohne in einer Wohnung im dritten Stock. — 我住在四楼的一套公寓里。",
+     "Es gibt zwei Zimmer, eine Küche und ein Badezimmer. — 有两个房间、一个厨房和一个浴室。",
+     "Die Küche ist neben dem Wohnzimmer. — 厨房在客厅旁边。",
+     "Das Bett ist unter dem Fenster. — 床在窗户下面。",
+     "Wie viel kostet die Miete? — 房租多少钱？",
+     "Ich suche eine Wohnung in München. — 我在慕尼黑找公寓。",
+     "Meine Wohnung ist hell und groß. — 我的公寓明亮又宽敞。",
+     "Das Bild hängt an der Wand. — 画挂在墙上。"
     ],
-    "tip": "💡 In Germany, the ground floor = Erdgeschoss (EG), the first floor = 1. Stock, etc. So the German \"first floor\" is the American second floor!"
+    "tip": "💡 在德国，地面层 = Erdgeschoss（EG），往上一层 = 1. Stock，以此类推。所以德国的「一楼」相当于中国的二楼！"
    },
    "vocabulary": [
     {
      "german": "Wohnung",
-     "arabic": "apartment",
+     "arabic": "公寓",
      "gender": "die",
      "plural": "Wohnungen",
      "example": "Ich suche eine Wohnung.",
-     "exampleArabic": "I'm looking for an apartment.",
+     "exampleArabic": "我在找公寓。",
      "type": "noun"
     },
     {
      "german": "Haus",
-     "arabic": "house",
+     "arabic": "房子",
      "gender": "das",
      "plural": "Häuser",
      "example": "Das Haus ist groß.",
-     "exampleArabic": "The house is big.",
+     "exampleArabic": "这房子很大。",
      "type": "noun"
     },
     {
      "german": "Zimmer",
-     "arabic": "room",
+     "arabic": "房间",
      "gender": "das",
      "plural": "Zimmer",
      "example": "Die Wohnung hat drei Zimmer.",
-     "exampleArabic": "The apartment has 3 rooms.",
+     "exampleArabic": "这套公寓有三个房间。",
      "type": "noun"
     },
     {
      "german": "Küche",
-     "arabic": "kitchen",
+     "arabic": "厨房",
      "gender": "die",
      "plural": "Küchen",
      "example": "Die Küche ist modern.",
-     "exampleArabic": "The kitchen is modern.",
+     "exampleArabic": "厨房很现代。",
      "type": "noun"
     },
     {
      "german": "Badezimmer / Bad",
-     "arabic": "bathroom",
+     "arabic": "浴室",
      "gender": "das",
      "plural": "Badezimmer",
      "example": "Das Bad ist klein.",
-     "exampleArabic": "The bathroom is small.",
+     "exampleArabic": "浴室比较小。",
      "type": "noun"
     },
     {
      "german": "Wohnzimmer",
-     "arabic": "living room",
+     "arabic": "客厅",
      "gender": "das",
      "plural": "Wohnzimmer",
      "example": "Wir sitzen im Wohnzimmer.",
-     "exampleArabic": "We're sitting in the living room.",
+     "exampleArabic": "我们坐在客厅里。",
      "type": "noun"
     },
     {
      "german": "Schlafzimmer",
-     "arabic": "bedroom",
+     "arabic": "卧室",
      "gender": "das",
      "plural": "Schlafzimmer",
      "example": "Mein Schlafzimmer ist ruhig.",
-     "exampleArabic": "My bedroom is quiet.",
+     "exampleArabic": "我的卧室很安静。",
      "type": "noun"
     },
     {
      "german": "Balkon",
-     "arabic": "balcony",
+     "arabic": "阳台",
      "gender": "der",
      "plural": "Balkone",
      "example": "Die Wohnung hat einen Balkon.",
-     "exampleArabic": "The apartment has a balcony.",
+     "exampleArabic": "这套公寓有阳台。",
      "type": "noun"
     },
     {
      "german": "Tisch",
-     "arabic": "table",
+     "arabic": "桌子",
      "gender": "der",
      "plural": "Tische",
      "example": "Der Tisch ist aus Holz.",
-     "exampleArabic": "The table is made of wood.",
+     "exampleArabic": "桌子是木头的。",
      "type": "noun"
     },
     {
      "german": "Stuhl",
-     "arabic": "chair",
+     "arabic": "椅子",
      "gender": "der",
      "plural": "Stühle",
      "example": "Der Stuhl ist bequem.",
-     "exampleArabic": "The chair is comfortable.",
+     "exampleArabic": "椅子很舒服。",
      "type": "noun"
     },
     {
      "german": "Bett",
-     "arabic": "bed",
+     "arabic": "床",
      "gender": "das",
      "plural": "Betten",
      "example": "Das Bett ist sehr bequem.",
-     "exampleArabic": "The bed is very comfortable.",
+     "exampleArabic": "床非常舒服。",
      "type": "noun"
     },
     {
      "german": "Schrank",
-     "arabic": "wardrobe / closet",
+     "arabic": "柜子；衣柜",
      "gender": "der",
      "plural": "Schränke",
      "example": "Meine Kleider sind im Schrank.",
-     "exampleArabic": "My clothes are in the closet.",
+     "exampleArabic": "我的衣服在衣柜里。",
      "type": "noun"
     },
     {
      "german": "Sofa",
-     "arabic": "sofa",
+     "arabic": "沙发",
      "gender": "das",
      "plural": "Sofas",
      "example": "Das Sofa ist neu.",
-     "exampleArabic": "The sofa is new.",
+     "exampleArabic": "沙发是新的。",
      "type": "noun"
     },
     {
      "german": "Lampe",
-     "arabic": "lamp",
+     "arabic": "灯",
      "gender": "die",
      "plural": "Lampen",
      "example": "Die Lampe ist hell.",
-     "exampleArabic": "The lamp is bright.",
+     "exampleArabic": "灯很亮。",
      "type": "noun"
     },
     {
      "german": "Fenster",
-     "arabic": "window",
+     "arabic": "窗户",
      "gender": "das",
      "plural": "Fenster",
      "example": "Das Fenster ist offen.",
-     "exampleArabic": "The window is open.",
+     "exampleArabic": "窗户开着。",
      "type": "noun"
     },
     {
      "german": "Tür",
-     "arabic": "door",
+     "arabic": "门",
      "gender": "die",
      "plural": "Türen",
      "example": "Die Tür ist zu.",
-     "exampleArabic": "The door is closed.",
+     "exampleArabic": "门关着。",
      "type": "noun"
     },
     {
      "german": "Miete",
-     "arabic": "rent",
+     "arabic": "房租",
      "gender": "die",
      "plural": "Mieten",
      "example": "Die Miete beträgt 800 Euro.",
-     "exampleArabic": "The rent is 800 euros.",
+     "exampleArabic": "房租是 800 欧元。",
      "type": "noun"
     },
     {
      "german": "Stock / Etage",
-     "arabic": "floor / story",
+     "arabic": "楼层",
      "gender": "der",
      "plural": "Stockwerke",
      "example": "Ich wohne im 2. Stock.",
-     "exampleArabic": "I live on the 2nd floor.",
+     "exampleArabic": "我住在三楼（德式二层）。",
      "type": "noun"
     },
     {
      "german": "suchen",
-     "arabic": "to look for / search",
+     "arabic": "寻找",
      "example": "Ich suche eine WG.",
-     "exampleArabic": "I'm looking for a shared apartment.",
+     "exampleArabic": "我在找合租房。",
      "type": "verb"
     },
     {
      "german": "mieten",
-     "arabic": "to rent",
+     "arabic": "租",
      "example": "Ich miete eine Wohnung.",
-     "exampleArabic": "I'm renting an apartment.",
+     "exampleArabic": "我租了一套公寓。",
      "type": "verb"
     },
     {
      "german": "groß / klein",
-     "arabic": "big / small",
+     "arabic": "大的 / 小的",
      "example": "Die Wohnung ist groß.",
-     "exampleArabic": "The apartment is big.",
+     "exampleArabic": "公寓很大。",
      "type": "adjective"
     },
     {
      "german": "hell / dunkel",
-     "arabic": "bright / dark",
+     "arabic": "明亮的 / 昏暗的",
      "example": "Das Zimmer ist hell.",
-     "exampleArabic": "The room is bright.",
+     "exampleArabic": "房间很亮。",
      "type": "adjective"
     },
     {
      "german": "möbliert",
-     "arabic": "furnished",
+     "arabic": "带家具的",
      "example": "Die Wohnung ist möbliert.",
-     "exampleArabic": "The apartment is furnished.",
+     "exampleArabic": "公寓带家具。",
      "type": "adjective"
     },
     {
      "german": "der Garten",
-     "arabic": "garden",
+     "arabic": "花园",
      "gender": "der",
      "plural": "Gärten",
      "example": "Der Garten ist groß.",
-     "exampleArabic": "The garden is big.",
+     "exampleArabic": "花园很大。",
      "type": "noun"
     },
     {
      "german": "der Keller",
-     "arabic": "basement / cellar",
+     "arabic": "地下室",
      "gender": "der",
      "plural": "Keller",
      "example": "Im Keller ist es kühl.",
-     "exampleArabic": "It's cool in the basement.",
+     "exampleArabic": "地下室很凉快。",
      "type": "noun"
     },
     {
      "german": "die Garage",
-     "arabic": "garage",
+     "arabic": "车库",
      "gender": "die",
      "plural": "Garagen",
      "example": "Das Auto steht in der Garage.",
-     "exampleArabic": "The car is in the garage.",
+     "exampleArabic": "车停在车库里。",
      "type": "noun"
     },
     {
      "german": "die WG (Wohngemeinschaft)",
-     "arabic": "shared flat",
+     "arabic": "合租房",
      "gender": "die",
      "example": "Ich wohne in einer WG.",
-     "exampleArabic": "I live in a shared flat.",
+     "exampleArabic": "我住在合租房里。",
      "type": "noun"
     },
     {
      "german": "der Mitbewohner",
-     "arabic": "flatmate / roommate",
+     "arabic": "室友",
      "gender": "der",
      "plural": "Mitbewohner",
      "example": "Mein Mitbewohner ist nett.",
-     "exampleArabic": "My flatmate is nice.",
+     "exampleArabic": "我的室友人不错。",
      "type": "noun"
     },
     {
      "german": "die Nebenkosten",
-     "arabic": "utilities (extra costs)",
+     "arabic": "附加费用（水电暖等）",
      "gender": "pl",
      "example": "Die Nebenkosten sind hoch.",
-     "exampleArabic": "The utilities are high.",
+     "exampleArabic": "附加费用很高。",
      "type": "noun"
     },
     {
      "german": "die Heizung",
-     "arabic": "heating",
+     "arabic": "暖气",
      "gender": "die",
      "plural": "Heizungen",
      "example": "Die Heizung funktioniert nicht.",
-     "exampleArabic": "The heating doesn't work.",
+     "exampleArabic": "暖气坏了。",
      "type": "noun"
     },
     {
      "german": "der Aufzug",
-     "arabic": "elevator / lift",
+     "arabic": "电梯",
      "gender": "der",
      "plural": "Aufzüge",
      "example": "Der Aufzug ist kaputt.",
-     "exampleArabic": "The lift is broken.",
+     "exampleArabic": "电梯坏了。",
      "type": "noun"
     },
     {
      "german": "die Wand",
-     "arabic": "wall",
+     "arabic": "墙",
      "gender": "die",
      "plural": "Wände",
      "example": "Die Wand ist weiß.",
-     "exampleArabic": "The wall is white.",
+     "exampleArabic": "墙是白色的。",
      "type": "noun"
     },
     {
      "german": "der Boden",
-     "arabic": "floor",
+     "arabic": "地板",
      "gender": "der",
      "plural": "Böden",
      "example": "Der Boden ist aus Holz.",
-     "exampleArabic": "The floor is wooden.",
+     "exampleArabic": "地板是木质的。",
      "type": "noun"
     },
     {
      "german": "umziehen",
-     "arabic": "to move (house)",
+     "arabic": "搬家",
      "example": "Wir ziehen nächste Woche um.",
-     "exampleArabic": "We're moving next week.",
+     "exampleArabic": "我们下周搬家。",
      "type": "verb"
     },
     {
      "german": "einziehen / ausziehen",
-     "arabic": "to move in / out",
+     "arabic": "搬入 / 搬出",
      "example": "Ich ziehe morgen ein.",
-     "exampleArabic": "I move in tomorrow.",
+     "exampleArabic": "我明天搬进来。",
      "type": "verb"
     },
     {
      "german": "zentral / ruhig",
-     "arabic": "central / quiet",
+     "arabic": "位置居中的 / 安静的",
      "example": "Die Wohnung ist zentral.",
-     "exampleArabic": "The flat is central.",
+     "exampleArabic": "公寓位置很中心。",
      "type": "adjective"
     }
    ],
@@ -3838,14 +3838,14 @@
      {
       "type": "fill-blank",
       "id": "a1-06-q1",
-      "question": "Complete: \"Es ___ zwei Zimmer und eine Küche.\" (there is/are)",
+      "question": "补全：「Es ___ zwei Zimmer und eine Küche.」（有）",
       "answer": "gibt",
-      "hint": "es gibt = there is/are"
+      "hint": "es gibt = 有"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q2",
-      "question": "Where is the book? \"Das Buch ist ___ dem Tisch.\" (on)",
+      "question": "书在哪里？「Das Buch ist ___ dem Tisch.」（上面）",
       "options": [
        "in",
        "unter",
@@ -3857,57 +3857,57 @@
      {
       "type": "fill-blank",
       "id": "a1-06-q3",
-      "question": "Complete: \"Ich suche eine ___ in Berlin.\" (apartment)",
+      "question": "补全：「Ich suche eine ___ in Berlin.」（公寓）",
       "answer": "Wohnung",
-      "hint": "apartment in German"
+      "hint": "公寓的德语"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q4",
-      "question": "What does \"Die Küche ist neben dem Wohnzimmer\" mean?",
+      "question": "「Die Küche ist neben dem Wohnzimmer」是什么意思？",
       "options": [
-       "The kitchen is in front of the living room.",
-       "The kitchen is next to the living room.",
-       "The kitchen is under the living room.",
-       "The kitchen is in the living room."
+       "厨房在客厅前面。",
+       "厨房在客厅旁边。",
+       "厨房在客厅下面。",
+       "厨房在客厅里面。"
       ],
-      "answer": "The kitchen is next to the living room."
+      "answer": "厨房在客厅旁边。"
      },
      {
       "type": "fill-blank",
       "id": "a1-06-q5",
-      "question": "Complete: \"Die Schuhe sind ___ dem Bett.\" (under)",
+      "question": "补全：「Die Schuhe sind ___ dem Bett.」（下面）",
       "answer": "unter",
-      "hint": "preposition meaning under"
+      "hint": "表示「在……下面」的介词"
      },
      {
       "type": "matching",
       "id": "a1-06-q6",
-      "question": "Match the preposition with its meaning:",
+      "question": "把介词和含义配对：",
       "pairs": [
        {
         "left": "in",
-        "right": "in"
+        "right": "在……里"
        },
        {
         "left": "auf",
-        "right": "on"
+        "right": "在……上"
        },
        {
         "left": "unter",
-        "right": "under"
+        "right": "在……下"
        },
        {
         "left": "neben",
-        "right": "next to"
+        "right": "在……旁边"
        },
        {
         "left": "vor",
-        "right": "in front of"
+        "right": "在……前面"
        },
        {
         "left": "hinter",
-        "right": "behind"
+        "right": "在……后面"
        }
       ],
       "answer": "matched"
@@ -3915,7 +3915,7 @@
      {
       "type": "drag-drop",
       "id": "a1-06-q7",
-      "question": "Put the sentence in order:",
+      "question": "把句子排好顺序：",
       "words": [
        "Das",
        "Bett",
@@ -3929,21 +3929,21 @@
      {
       "type": "speaking",
       "id": "a1-06-q8",
-      "question": "Say in German: \"I live in a small apartment in Berlin\"",
+      "question": "用德语说：「我住在柏林的一套小公寓里」",
       "answer": "Ich wohne in einer kleinen Wohnung in Berlin",
-      "hint": "wohnen in + Dativ"
+      "hint": "wohnen in + 第三格"
      },
      {
       "type": "fill-blank",
       "id": "a1-06-q9",
-      "question": "Listen and complete: \"Die Lampe steht ___ dem Tisch.\" (next to)",
+      "question": "听后补全：「Die Lampe steht ___ dem Tisch.」（旁边）",
       "audioPrompt": "Die Lampe steht neben dem Tisch.",
       "answer": "neben"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q10",
-      "question": "Which sentence is correct for \"there is no garden\"?",
+      "question": "「没有花园」哪句是对的？",
       "options": [
        "Es gibt nicht einen Garten.",
        "Es gibt keinen Garten.",
@@ -3955,14 +3955,14 @@
      {
       "type": "fill-blank",
       "id": "a1-06-q11",
-      "question": "\"Mein Auto steht in der ___\" (garage)",
+      "question": "「Mein Auto steht in der ___」（车库）",
       "answer": "Garage",
       "hint": "die Garage"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q12",
-      "question": "Basement in German:",
+      "question": "地下室用德语怎么说：",
       "options": [
        "der Boden",
        "der Keller",
@@ -3974,34 +3974,34 @@
      {
       "type": "fill-blank",
       "id": "a1-06-q13",
-      "question": "\"Die ___ sind hoch.\" (utilities)",
+      "question": "「Die ___ sind hoch.」（附加费用）",
       "answer": "Nebenkosten",
-      "hint": "with the rent"
+      "hint": "和房租一起交的"
      },
      {
       "type": "matching",
       "id": "a1-06-q14",
-      "question": "Match the word to its meaning:",
+      "question": "把单词和含义配对：",
       "pairs": [
        {
         "left": "Garten",
-        "right": "garden"
+        "right": "花园"
        },
        {
         "left": "Keller",
-        "right": "basement"
+        "right": "地下室"
        },
        {
         "left": "Aufzug",
-        "right": "elevator"
+        "right": "电梯"
        },
        {
         "left": "Heizung",
-        "right": "heating"
+        "right": "暖气"
        },
        {
         "left": "Wand",
-        "right": "wall"
+        "right": "墙"
        }
       ],
       "answer": "matched"
@@ -4009,7 +4009,7 @@
      {
       "type": "drag-drop",
       "id": "a1-06-q15",
-      "question": "Order: \"I live in a shared flat\"",
+      "question": "排序：「我住在合租房里」",
       "words": [
        "Ich",
        "wohne",
@@ -4022,21 +4022,21 @@
      {
       "type": "speaking",
       "id": "a1-06-q16",
-      "question": "Say: \"My apartment is quiet and on the second floor\"",
+      "question": "说：「我的公寓很安静，在三楼（德式二层）」",
       "answer": "Meine Wohnung ist ruhig und im zweiten Stock"
      },
      {
       "type": "fill-blank",
       "id": "a1-06-q17",
-      "question": "Listen: \"Wir ___ nächste Woche um.\" (move)",
+      "question": "听：「Wir ___ nächste Woche um.」（搬家）",
       "audioPrompt": "Wir ziehen nächste Woche um.",
       "answer": "ziehen",
-      "hint": "umziehen + wir"
+      "hint": "umziehen 与 wir 搭配"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q18",
-      "question": "\"Central location\" in German:",
+      "question": "「位置居中」用德语怎么说：",
       "options": [
        "ruhig",
        "zentral",
@@ -4048,14 +4048,14 @@
      {
       "type": "fill-blank",
       "id": "a1-06-q19",
-      "question": "\"Der ___ ist kaputt.\" (elevator)",
+      "question": "「Der ___ ist kaputt.」（电梯）",
       "answer": "Aufzug",
       "hint": "der Aufzug"
      },
      {
       "type": "multiple-choice",
       "id": "a1-06-q20",
-      "question": "Flatmate in German:",
+      "question": "室友用德语怎么说：",
       "options": [
        "der Nachbar",
        "der Mitbewohner",
