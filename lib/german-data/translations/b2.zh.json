@@ -1693,25 +1693,25 @@
   },
   "b2-04": {
    "id": "b2-04",
-   "title": "Modalverben subjektiv — Subjective Modality",
+   "title": "Modalverben subjektiv — 情态动词的主观用法",
    "order": 4,
    "grammar": {
-    "title": "Modalverben for Speculation and Probability",
-    "content": "At B2 level, Modalverben are used in a **subjective/hypothetical** sense to express:\n- **Speculation** (probability)\n- **Doubt** (doubt)\n- **Claims** (claim)\n\n**Degrees of Certainty:**\n| Degree | Modalverb | Example |\n|---|---|---|\n| 100% | muss | Er muss krank sein. (He must be sick) |\n| 90% | dürfte | Er dürfte krank sein. (He's probably sick) |\n| 60% | könnte | Er könnte krank sein. (He might be sick) |\n| Claim | soll | Er soll krank sein. (He's said to be sick) |\n| Self-claim | will | Er will krank sein. (He claims to be sick) |\n\n**In the past:** Modalverb + Infinitiv II (Partizip II + haben/sein)\n- Er **muss** krank **gewesen sein**. (He must have been sick)",
+    "title": "用情态动词表达推测和可能性",
+    "content": "在 B2 阶段，情态动词有**主观/推测**用法，用来表达：\n- **推测**（可能性）\n- **怀疑**\n- **转述的说法**\n\n**确定程度：**\n| 程度 | 情态动词 | 例句 |\n|---|---|---|\n| 100% | muss | Er muss krank sein.（他一定是病了）|\n| 90% | dürfte | Er dürfte krank sein.（他很可能病了）|\n| 60% | könnte | Er könnte krank sein.（他可能病了）|\n| 传闻 | soll | Er soll krank sein.（据说他病了）|\n| 自称 | will | Er will krank sein.（他自称病了）|\n\n**过去时：**情态动词 + 第二不定式（Partizip II + haben/sein）\n- Er **muss** krank **gewesen sein**.（他当时一定是病了）",
     "tables": [
      {
-      "title": "Modalverben subjektiv",
+      "title": "情态动词的主观用法",
       "theme": "conjugation",
       "headers": [
-       "Modalverb",
-       "Subjective Meaning",
-       "Example"
+       "情态动词",
+       "主观含义",
+       "例句"
       ],
       "rows": [
        {
         "cells": [
          "müssen",
-         "strong certainty",
+         "高度确定",
          "Er muss zu Hause sein."
         ],
         "highlight": true
@@ -1719,35 +1719,35 @@
        {
         "cells": [
          "dürfen (Konj II)",
-         "strong probability",
+         "很大可能",
          "Es dürfte regnen."
         ]
        },
        {
         "cells": [
          "können (Konj II)",
-         "possibility",
+         "可能性",
          "Er könnte kommen."
         ]
        },
        {
         "cells": [
          "mögen",
-         "estimation",
+         "估计",
          "Er mag etwa 30 sein."
         ]
        },
        {
         "cells": [
          "sollen",
-         "reportedly / rumor",
+         "据说 / 传闻",
          "Er soll reich sein."
         ]
        },
        {
         "cells": [
          "wollen",
-         "self-claim",
+         "自称",
          "Er will es gesehen haben."
         ]
        }
@@ -1756,225 +1756,225 @@
     ],
     "rules": [
      {
-      "rule": "muss = 99% certainty",
+      "rule": "muss = 99% 确定",
       "example": "Er muss krank sein.",
-      "translation": "He must be sick."
+      "translation": "他一定是病了。"
      },
      {
-      "rule": "soll = others' claim",
+      "rule": "soll = 别人的说法",
       "example": "Sie soll reich sein.",
-      "translation": "She's said to be rich."
+      "translation": "据说她很有钱。"
      },
      {
-      "rule": "Infinitiv II for past",
+      "rule": "过去的推测用第二不定式",
       "example": "Er muss es vergessen haben.",
-      "translation": "He must have forgotten."
+      "translation": "他一定是忘了。"
      }
     ],
     "examples": [
-     "Er muss sehr müde sein. — He must be very tired.",
-     "Das könnte stimmen. — That might be true.",
-     "Sie dürfte bald kommen. — She's likely to come soon.",
-     "Er soll ein guter Arzt sein. — He's said to be a good doctor.",
-     "Sie will alles gewusst haben. — She claims to have known everything.",
-     "Das mag wahr sein. — That may be true.",
-     "Er muss es vergessen haben. — He must have forgotten.",
-     "Das kann nicht wahr sein. — That can't be true."
+     "Er muss sehr müde sein. — 他一定非常累。",
+     "Das könnte stimmen. — 这可能是真的。",
+     "Sie dürfte bald kommen. — 她很可能马上就来。",
+     "Er soll ein guter Arzt sein. — 据说他是位好医生。",
+     "Sie will alles gewusst haben. — 她自称什么都知道。",
+     "Das mag wahr sein. — 这也许是真的。",
+     "Er muss es vergessen haben. — 他一定是忘了。",
+     "Das kann nicht wahr sein. — 这不可能是真的。"
     ],
-    "tip": "In German news, **soll** is very common (for rumors). In scientific discussions **dürfte** (scientific probability)."
+    "tip": "德国新闻中 **soll** 非常常见（表示传闻）。学术讨论中常用 **dürfte**（科学的可能性判断）。"
    },
    "vocabulary": [
     {
      "german": "die Vermutung",
-     "arabic": "assumption",
+     "arabic": "推测",
      "plural": "die Vermutungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Wahrscheinlichkeit",
-     "arabic": "probability",
+     "arabic": "可能性；概率",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Zweifel",
-     "arabic": "doubt",
+     "arabic": "怀疑",
      "plural": "die Zweifel",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Sicherheit",
-     "arabic": "certainty",
+     "arabic": "确定性",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Gerüchteküche",
-     "arabic": "rumor mill",
+     "arabic": "谣言工厂",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Gerücht",
-     "arabic": "rumor",
+     "arabic": "谣言",
      "plural": "die Gerüchte",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Behauptung",
-     "arabic": "claim",
+     "arabic": "断言",
      "plural": "die Behauptungen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "offensichtlich",
-     "arabic": "obvious",
+     "arabic": "显而易见的",
      "type": "adjective"
     },
     {
      "german": "wahrscheinlich",
-     "arabic": "probable",
+     "arabic": "很可能的",
      "type": "adjective"
     },
     {
      "german": "vermutlich",
-     "arabic": "presumably",
+     "arabic": "大概",
      "type": "adverb"
     },
     {
      "german": "angeblich",
-     "arabic": "allegedly",
+     "arabic": "据称",
      "type": "adverb"
     },
     {
      "german": "sicher",
-     "arabic": "certain",
+     "arabic": "确定的",
      "type": "adjective"
     },
     {
      "german": "unsicher",
-     "arabic": "uncertain",
+     "arabic": "不确定的",
      "type": "adjective"
     },
     {
      "german": "möglich",
-     "arabic": "possible",
+     "arabic": "可能的",
      "type": "adjective"
     },
     {
      "german": "unmöglich",
-     "arabic": "impossible",
+     "arabic": "不可能的",
      "type": "adjective"
     },
     {
      "german": "vermuten",
-     "arabic": "to assume",
+     "arabic": "推测",
      "type": "verb"
     },
     {
      "german": "bezweifeln",
-     "arabic": "to doubt",
+     "arabic": "怀疑",
      "type": "verb"
     },
     {
      "german": "behaupten",
-     "arabic": "to claim",
+     "arabic": "声称",
      "type": "verb"
     },
     {
      "german": "glauben",
-     "arabic": "to believe",
+     "arabic": "相信",
      "type": "verb"
     },
     {
      "german": "scheinen",
-     "arabic": "to seem",
+     "arabic": "似乎",
      "type": "verb"
     },
     {
      "german": "wirken",
-     "arabic": "to appear/seem",
+     "arabic": "显得",
      "type": "verb"
     },
     {
      "german": "etwa",
-     "arabic": "approximately",
+     "arabic": "大约",
      "type": "adverb"
     },
     {
      "german": "die Annahme",
-     "arabic": "the assumption",
+     "arabic": "假设",
      "plural": "die Annahmen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Verdacht",
-     "arabic": "the suspicion",
+     "arabic": "怀疑；嫌疑",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Tatsache",
-     "arabic": "the fact",
+     "arabic": "事实",
      "plural": "die Tatsachen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Information",
-     "arabic": "the information",
+     "arabic": "信息",
      "plural": "die Informationen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "feststellen",
-     "arabic": "to ascertain, note",
+     "arabic": "确定；发现",
      "type": "verb"
     },
     {
      "german": "einschätzen",
-     "arabic": "to assess, estimate",
+     "arabic": "评估",
      "type": "verb"
     },
     {
      "german": "schließen auf",
-     "arabic": "to infer from",
+     "arabic": "由……推断",
      "type": "verb"
     },
     {
      "german": "sich vorstellen",
-     "arabic": "to imagine",
+     "arabic": "想象",
      "type": "verb"
     },
     {
      "german": "beweisen",
-     "arabic": "to prove",
+     "arabic": "证明",
      "type": "verb"
     },
     {
      "german": "glaubhaft",
-     "arabic": "credible",
+     "arabic": "可信的",
      "type": "adjective"
     },
     {
      "german": "zweifelhaft",
-     "arabic": "doubtful",
+     "arabic": "可疑的",
      "type": "adjective"
     },
     {
      "german": "eindeutig",
-     "arabic": "unambiguous",
+     "arabic": "明确的",
      "type": "adjective"
     },
     {
      "german": "fraglich",
-     "arabic": "questionable",
+     "arabic": "存疑的",
      "type": "adjective"
     }
    ],
@@ -1983,7 +1983,7 @@
      {
       "id": "b2-04-q1",
       "type": "multiple-choice",
-      "question": "\"He must be sick\" (certainty):",
+      "question": "「他一定是病了」（高度确定）：",
       "options": [
        "Er soll krank sein",
        "Er muss krank sein",
@@ -1995,7 +1995,7 @@
      {
       "id": "b2-04-q2",
       "type": "multiple-choice",
-      "question": "\"He's said to be rich\":",
+      "question": "「据说他很有钱」：",
       "options": [
        "Er muss reich sein",
        "Er soll reich sein",
@@ -2007,19 +2007,19 @@
      {
       "id": "b2-04-q3",
       "type": "fill-blank",
-      "question": "Das ___ stimmen. (might be - könnte)",
+      "question": "Das ___ stimmen.（可能是 — könnte）",
       "answer": "könnte"
      },
      {
       "id": "b2-04-q4",
       "type": "fill-blank",
-      "question": "Er ___ alles gewusst haben. (claims - will)",
+      "question": "Er ___ alles gewusst haben.（自称 — will）",
       "answer": "will"
      },
      {
       "id": "b2-04-q5",
       "type": "drag-drop",
-      "question": "Arrange: [sein / sehr / muss / Er / müde]",
+      "question": "排序：[sein / sehr / muss / Er / müde]",
       "words": [
        "Er",
        "muss",
@@ -2032,7 +2032,7 @@
      {
       "id": "b2-04-q6",
       "type": "drag-drop",
-      "question": "Arrange: [Arzt / guter / soll / ein / Er / sein]",
+      "question": "排序：[Arzt / guter / soll / ein / Er / sein]",
       "words": [
        "Er",
        "soll",
@@ -2046,23 +2046,23 @@
      {
       "id": "b2-04-q7",
       "type": "matching",
-      "question": "Match:",
+      "question": "配对：",
       "pairs": [
        {
         "left": "muss",
-        "right": "99% certainty"
+        "right": "99% 确定"
        },
        {
         "left": "könnte",
-        "right": "possibility"
+        "right": "可能性"
        },
        {
         "left": "soll",
-        "right": "rumor"
+        "right": "传闻"
        },
        {
         "left": "will",
-        "right": "self-claim"
+        "right": "自称"
        }
       ],
       "answer": "match"
@@ -2070,7 +2070,7 @@
      {
       "id": "b2-04-q8",
       "type": "multiple-choice",
-      "question": "\"Er muss es vergessen ___.\" (in the past)",
+      "question": "「Er muss es vergessen ___.」（过去的推测）",
       "options": [
        "haben",
        "hat",
@@ -2082,33 +2082,33 @@
      {
       "id": "b2-04-q9",
       "type": "speaking",
-      "question": "Say: \"That might be true.\"",
+      "question": "说：「这可能是真的。」",
       "answer": "Das könnte stimmen"
      },
      {
       "id": "b2-04-q10",
       "type": "multiple-choice",
-      "question": "Listen:",
+      "question": "听录音：",
       "audioPrompt": "Er soll in Berlin wohnen.",
       "options": [
-       "He lives in Berlin (certain)",
-       "He's said to live in Berlin",
-       "He doesn't live in Berlin",
-       "He was in Berlin"
+       "他住在柏林（确定）",
+       "据说他住在柏林",
+       "他不住在柏林",
+       "他去过柏林"
       ],
-      "answer": "He's said to live in Berlin"
+      "answer": "据说他住在柏林"
      },
      {
       "id": "b2-04-q11",
       "type": "fill-blank",
-      "question": "99% certainty: \"Er ___ krank sein.\"",
+      "question": "99% 确定：「Er ___ krank sein.」",
       "answer": "muss",
-      "hint": "muss = certainty"
+      "hint": "muss = 确定"
      },
      {
       "id": "b2-04-q12",
       "type": "multiple-choice",
-      "question": "For rumor: \"Er ___ reich sein.\"",
+      "question": "表示传闻：「Er ___ reich sein.」",
       "options": [
        "muss",
        "soll",
@@ -2120,14 +2120,14 @@
      {
       "id": "b2-04-q13",
       "type": "fill-blank",
-      "question": "Self-claim: \"Er ___ es gesehen haben.\"",
+      "question": "自称：「Er ___ es gesehen haben.」",
       "answer": "will",
-      "hint": "will = he claims"
+      "hint": "will = 他自称"
      },
      {
       "id": "b2-04-q14",
       "type": "multiple-choice",
-      "question": "60% probability:",
+      "question": "60% 的可能性用：",
       "options": [
        "muss",
        "könnte",
@@ -2139,27 +2139,27 @@
      {
       "id": "b2-04-q15",
       "type": "matching",
-      "question": "Match Modalverb to its subjective meaning:",
+      "question": "把情态动词和它的主观含义配对：",
       "pairs": [
        {
         "left": "muss",
-        "right": "strong certainty"
+        "right": "高度确定"
        },
        {
         "left": "könnte",
-        "right": "possibility"
+        "right": "可能性"
        },
        {
         "left": "soll",
-        "right": "rumor"
+        "right": "传闻"
        },
        {
         "left": "will",
-        "right": "self-claim"
+        "right": "自称"
        },
        {
         "left": "dürfte",
-        "right": "strong probability"
+        "right": "很大可能"
        }
       ],
       "answer": "matched"
@@ -2167,7 +2167,7 @@
      {
       "id": "b2-04-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"He must have forgotten the appointment\"",
+      "question": "排序：「他一定是忘了这个预约」",
       "words": [
        "Er",
        "muss",
@@ -2181,21 +2181,21 @@
      {
       "id": "b2-04-q17",
       "type": "speaking",
-      "question": "Say: \"He seems to be sick\"",
+      "question": "说：「他似乎病了」",
       "answer": "Er scheint krank zu sein"
      },
      {
       "id": "b2-04-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Es ___ heute regnen.\" (probability — dürfte)",
+      "question": "听：「Es ___ heute regnen.」（很大可能 — dürfte）",
       "audioPrompt": "Es dürfte heute regnen.",
       "answer": "dürfte",
-      "hint": "dürfte = strong probability"
+      "hint": "dürfte = 很大可能"
      },
      {
       "id": "b2-04-q19",
       "type": "multiple-choice",
-      "question": "In news for rumor:",
+      "question": "新闻中表示传闻用：",
       "options": [
        "muss",
        "soll",
@@ -2207,7 +2207,7 @@
      {
       "id": "b2-04-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"He could come tomorrow\"",
+      "question": "排序：「他明天可能会来」",
       "words": [
        "Er",
        "könnte",
