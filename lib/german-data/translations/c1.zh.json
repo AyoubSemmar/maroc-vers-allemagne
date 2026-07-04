@@ -577,18 +577,18 @@
   },
   "c1-02": {
    "id": "c1-02",
-   "title": "n-Deklination — Weak Noun Declension",
+   "title": "n-Deklination — 弱变化名词",
    "order": 2,
    "grammar": {
-    "title": "Nouns that take -n / -en in all cases except Nominativ",
-    "content": "Some masculine nouns take the ending **-n** or **-en** in all cases except Nominativ singular.\n\n**Common n-Deklination nouns:**\n- Masculine person nouns: der Herr, der Student, der Nachbar, der Kollege, der Junge, der Mensch\n- Animals: der Löwe, der Bär, der Elefant, der Affe, der Hase\n- Nationalities: der Türke, der Franzose, der Grieche, der Russe\n- Latin/Greek nouns: der Präsident, der Polizist, der Journalist, der Philosoph, der Demokrat\n\n**The rule:** All cases except Nominativ Singular take -n or -en.\n\n**Common mistake:** \"Ich sehe den Student\" ❌ → \"Ich sehe den Studenten\" ✅",
+    "title": "除第一格外所有格都加 -n / -en 的名词",
+    "content": "有些阳性名词在除第一格单数以外的所有格中都加词尾 **-n** 或 **-en**。\n\n**常见的弱变化名词：**\n- 指人的阳性名词：der Herr、der Student、der Nachbar、der Kollege、der Junge、der Mensch\n- 动物：der Löwe、der Bär、der Elefant、der Affe、der Hase\n- 国籍：der Türke、der Franzose、der Grieche、der Russe\n- 拉丁/希腊语源名词：der Präsident、der Polizist、der Journalist、der Philosoph、der Demokrat\n\n**规则：**除第一格单数外，所有格都加 -n 或 -en。\n\n**常见错误：**\"Ich sehe den Student\" ❌ → \"Ich sehe den Studenten\" ✅",
     "tables": [
      {
-      "title": "der Student (n-Deklination)",
+      "title": "der Student（弱变化）",
       "headers": [
-       "Case",
-       "Singular",
-       "Plural"
+       "格",
+       "单数",
+       "复数"
       ],
       "rows": [
        {
@@ -624,11 +624,11 @@
       "theme": "cases"
      },
      {
-      "title": "der Herr (special case)",
+      "title": "der Herr（特殊情况）",
       "headers": [
-       "Case",
-       "Singular",
-       "Plural"
+       "格",
+       "单数",
+       "复数"
       ],
       "rows": [
        {
@@ -664,53 +664,53 @@
       "theme": "cases"
      },
      {
-      "title": "Common nouns in n-Deklination",
+      "title": "常见的弱变化名词",
       "headers": [
-       "Noun",
-       "Akkusativ",
-       "Meaning"
+       "名词",
+       "第四格",
+       "含义"
       ],
       "rows": [
        {
         "cells": [
          "der Mensch",
          "den Menschen",
-         "human being / person"
+         "人"
         ]
        },
        {
         "cells": [
          "der Kollege",
          "den Kollegen",
-         "colleague"
+         "同事"
         ]
        },
        {
         "cells": [
          "der Nachbar",
          "den Nachbarn",
-         "neighbor"
+         "邻居"
         ]
        },
        {
         "cells": [
          "der Präsident",
          "den Präsidenten",
-         "president"
+         "总统"
         ]
        },
        {
         "cells": [
          "der Journalist",
          "den Journalisten",
-         "journalist"
+         "记者"
         ]
        },
        {
         "cells": [
          "der Name",
          "den Namen",
-         "name (+ Genitiv -ns)"
+         "名字（第二格加 -ns）"
         ]
        }
       ],
@@ -719,275 +719,275 @@
     ],
     "rules": [
      {
-      "rule": "Masculine nouns in n-Deklination take -n in all cases except Nominativ",
+      "rule": "弱变化的阳性名词除第一格外所有格都加 -n",
       "example": "Ich helfe dem Nachbarn.",
-      "translation": "I'm helping the neighbor."
+      "translation": "我在帮邻居。"
      },
      {
-      "rule": "Herr takes -n in singular and -en in plural",
+      "rule": "Herr 单数加 -n，复数加 -en",
       "example": "Guten Tag, Herr Müller!",
-      "translation": "Good day, Mr. Müller!"
+      "translation": "您好，米勒先生！"
      },
      {
-      "rule": "Name takes -n + -s in Genitiv (irregular)",
+      "rule": "Name 在第二格加 -n + -s（不规则）",
       "example": "Der Name des Buches",
-      "translation": "The name of the book (des Namens)"
+      "translation": "这本书的名字（des Namens）"
      }
     ],
     "examples": [
-     "Ich kenne den Studenten aus Berlin. — I know the student from Berlin.",
-     "Er sprach mit dem Präsidenten. — He spoke with the president.",
-     "Das ist das Auto meines Kollegen. — That's my colleague's car.",
-     "Guten Tag, Herr Schmidt! — Good day, Mr. Schmidt!",
-     "Wir haben den Nachbarn eingeladen. — We invited the neighbor.",
-     "Die Rede des Präsidenten war lang. — The president's speech was long.",
-     "Ich glaube dem Journalisten nicht. — I don't believe the journalist.",
-     "Sie hilft dem Jungen. — She's helping the boy."
+     "Ich kenne den Studenten aus Berlin. — 我认识那个来自柏林的学生。",
+     "Er sprach mit dem Präsidenten. — 他和总统谈过话。",
+     "Das ist das Auto meines Kollegen. — 那是我同事的车。",
+     "Guten Tag, Herr Schmidt! — 您好，施密特先生！",
+     "Wir haben den Nachbarn eingeladen. — 我们邀请了邻居。",
+     "Die Rede des Präsidenten war lang. — 总统的演讲很长。",
+     "Ich glaube dem Journalisten nicht. — 我不相信那个记者。",
+     "Sie hilft dem Jungen. — 她在帮那个男孩。"
     ],
-    "tip": "💡 Remember: Most masculine nouns ending in -e (Junge, Kollege, Löwe) follow n-Deklination, as well as Latin nouns ending in -ist, -ent, -ant (Polizist, Student, Praktikant)."
+    "tip": "💡 记住：大多数以 -e 结尾的阳性名词（Junge、Kollege、Löwe）都是弱变化，以 -ist、-ent、-ant 结尾的拉丁语源名词（Polizist、Student、Praktikant）也是。"
    },
    "vocabulary": [
     {
      "german": "der Herr",
-     "arabic": "gentleman / Mr.",
+     "arabic": "先生",
      "gender": "der",
      "plural": "Herren",
      "type": "noun"
     },
     {
      "german": "der Student",
-     "arabic": "student",
+     "arabic": "大学生",
      "gender": "der",
      "plural": "Studenten",
      "type": "noun"
     },
     {
      "german": "der Kollege",
-     "arabic": "colleague",
+     "arabic": "同事",
      "gender": "der",
      "plural": "Kollegen",
      "type": "noun"
     },
     {
      "german": "der Nachbar",
-     "arabic": "neighbor",
+     "arabic": "邻居",
      "gender": "der",
      "plural": "Nachbarn",
      "type": "noun"
     },
     {
      "german": "der Mensch",
-     "arabic": "human being / person",
+     "arabic": "人",
      "gender": "der",
      "plural": "Menschen",
      "type": "noun"
     },
     {
      "german": "der Präsident",
-     "arabic": "president",
+     "arabic": "总统",
      "gender": "der",
      "plural": "Präsidenten",
      "type": "noun"
     },
     {
      "german": "der Journalist",
-     "arabic": "journalist",
+     "arabic": "记者",
      "gender": "der",
      "plural": "Journalisten",
      "type": "noun"
     },
     {
      "german": "der Polizist",
-     "arabic": "police officer",
+     "arabic": "警察",
      "gender": "der",
      "plural": "Polizisten",
      "type": "noun"
     },
     {
      "german": "der Junge",
-     "arabic": "boy",
+     "arabic": "男孩",
      "gender": "der",
      "plural": "Jungen",
      "type": "noun"
     },
     {
      "german": "der Name",
-     "arabic": "name",
+     "arabic": "名字",
      "gender": "der",
      "plural": "Namen",
      "type": "noun"
     },
     {
      "german": "der Philosoph",
-     "arabic": "philosopher",
+     "arabic": "哲学家",
      "gender": "der",
      "plural": "Philosophen",
      "type": "noun"
     },
     {
      "german": "der Demokrat",
-     "arabic": "democrat",
+     "arabic": "民主主义者",
      "gender": "der",
      "plural": "Demokraten",
      "type": "noun"
     },
     {
      "german": "der Türke",
-     "arabic": "Turk / Turkish person",
+     "arabic": "土耳其人",
      "gender": "der",
      "plural": "Türken",
      "type": "noun"
     },
     {
      "german": "der Franzose",
-     "arabic": "Frenchman / French person",
+     "arabic": "法国人",
      "gender": "der",
      "plural": "Franzosen",
      "type": "noun"
     },
     {
      "german": "der Praktikant",
-     "arabic": "intern / trainee",
+     "arabic": "实习生",
      "gender": "der",
      "plural": "Praktikanten",
      "type": "noun"
     },
     {
      "german": "der Experte",
-     "arabic": "expert",
+     "arabic": "专家",
      "gender": "der",
      "plural": "Experten",
      "type": "noun"
     },
     {
      "german": "der Affe",
-     "arabic": "monkey",
+     "arabic": "猴子",
      "gender": "der",
      "plural": "Affen",
      "type": "noun"
     },
     {
      "german": "der Bär",
-     "arabic": "bear",
+     "arabic": "熊",
      "gender": "der",
      "plural": "Bären",
      "type": "noun"
     },
     {
      "german": "der Löwe",
-     "arabic": "lion",
+     "arabic": "狮子",
      "gender": "der",
      "plural": "Löwen",
      "type": "noun"
     },
     {
      "german": "der Zeuge",
-     "arabic": "witness",
+     "arabic": "证人",
      "gender": "der",
      "plural": "Zeugen",
      "type": "noun"
     },
     {
      "german": "der Patient",
-     "arabic": "the patient",
+     "arabic": "病人",
      "gender": "der",
      "plural": "Patienten",
      "type": "noun"
     },
     {
      "german": "der Kunde",
-     "arabic": "the customer",
+     "arabic": "顾客",
      "gender": "der",
      "plural": "Kunden",
      "type": "noun"
     },
     {
      "german": "der Architekt",
-     "arabic": "the architect",
+     "arabic": "建筑师",
      "gender": "der",
      "plural": "Architekten",
      "type": "noun"
     },
     {
      "german": "der Pilot",
-     "arabic": "the pilot",
+     "arabic": "飞行员",
      "gender": "der",
      "plural": "Piloten",
      "type": "noun"
     },
     {
      "german": "der Bauer",
-     "arabic": "the farmer",
+     "arabic": "农民",
      "gender": "der",
      "plural": "Bauern",
      "type": "noun"
     },
     {
      "german": "der Heilige",
-     "arabic": "the saint",
+     "arabic": "圣人",
      "gender": "der",
      "plural": "Heilige",
      "type": "noun"
     },
     {
      "german": "der Held",
-     "arabic": "the hero",
+     "arabic": "英雄",
      "gender": "der",
      "plural": "Helden",
      "type": "noun"
     },
     {
      "german": "der Idiot",
-     "arabic": "the idiot",
+     "arabic": "傻瓜",
      "gender": "der",
      "plural": "Idioten",
      "type": "noun"
     },
     {
      "german": "der Kandidat",
-     "arabic": "the candidate",
+     "arabic": "候选人",
      "gender": "der",
      "plural": "Kandidaten",
      "type": "noun"
     },
     {
      "german": "der Tourist",
-     "arabic": "the tourist",
+     "arabic": "游客",
      "gender": "der",
      "plural": "Touristen",
      "type": "noun"
     },
     {
      "german": "der Kapitalist",
-     "arabic": "the capitalist",
+     "arabic": "资本家",
      "gender": "der",
      "plural": "Kapitalisten",
      "type": "noun"
     },
     {
      "german": "der Soldat",
-     "arabic": "the soldier",
+     "arabic": "士兵",
      "gender": "der",
      "plural": "Soldaten",
      "type": "noun"
     },
     {
      "german": "der Mediziner",
-     "arabic": "the medical scientist",
+     "arabic": "医学专家",
      "gender": "der",
      "plural": "Mediziner",
      "type": "noun"
     },
     {
      "german": "der Junggeselle",
-     "arabic": "the bachelor",
+     "arabic": "单身汉",
      "gender": "der",
      "plural": "Junggesellen",
      "type": "noun"
     },
     {
      "german": "der Sklave",
-     "arabic": "the slave",
+     "arabic": "奴隶",
      "gender": "der",
      "plural": "Sklaven",
      "type": "noun"
@@ -998,7 +998,7 @@
      {
       "id": "c1-02-q1",
       "type": "multiple-choice",
-      "question": "Choose: \"Ich habe ___ gesehen.\" (the student)",
+      "question": "选择：「Ich habe ___ gesehen.」（那个学生）",
       "options": [
        "der Student",
        "den Student",
@@ -1010,14 +1010,14 @@
      {
       "id": "c1-02-q2",
       "type": "fill-blank",
-      "question": "Complete: \"Ich helfe meinem ___.\" (neighbor)",
+      "question": "补全：「Ich helfe meinem ___.」（邻居）",
       "answer": "Nachbarn",
-      "hint": "Dativ + n-Deklination"
+      "hint": "第三格 + 弱变化"
      },
      {
       "id": "c1-02-q3",
       "type": "multiple-choice",
-      "question": "\"Guten Tag, ___ Müller!\"",
+      "question": "「Guten Tag, ___ Müller!」",
       "options": [
        "Herr",
        "Herrn",
@@ -1029,14 +1029,14 @@
      {
       "id": "c1-02-q4",
       "type": "fill-blank",
-      "question": "Complete: \"Das Auto des ___.\" (colleague)",
+      "question": "补全：「Das Auto des ___.」（同事）",
       "answer": "Kollegen",
-      "hint": "Genitiv + n-Deklination"
+      "hint": "第二格 + 弱变化"
      },
      {
       "id": "c1-02-q5",
       "type": "drag-drop",
-      "question": "Put in order:",
+      "question": "排序：",
       "words": [
        "Ich",
        "kenne",
@@ -1050,7 +1050,7 @@
      {
       "id": "c1-02-q6",
       "type": "multiple-choice",
-      "question": "Which sentence is correct?",
+      "question": "哪个句子是正确的？",
       "options": [
        "Ich sehe der Herr.",
        "Ich sehe den Herr.",
@@ -1062,7 +1062,7 @@
      {
       "id": "c1-02-q7",
       "type": "matching",
-      "question": "Match the Akkusativ forms:",
+      "question": "把第四格形式配对：",
       "pairs": [
        {
         "left": "der Mensch",
@@ -1086,21 +1086,21 @@
      {
       "id": "c1-02-q8",
       "type": "fill-blank",
-      "question": "Complete: \"Er sprach mit dem ___.\" (president)",
+      "question": "补全：「Er sprach mit dem ___.」（总统）",
       "answer": "Präsidenten",
-      "hint": "Dativ"
+      "hint": "第三格"
      },
      {
       "id": "c1-02-q9",
       "type": "speaking",
-      "question": "Say: \"Ich glaube dem Journalisten nicht.\"",
+      "question": "说：「Ich glaube dem Journalisten nicht.」",
       "audioPrompt": "Ich glaube dem Journalisten nicht.",
       "answer": "Ich glaube dem Journalisten nicht"
      },
      {
       "id": "c1-02-q10",
       "type": "drag-drop",
-      "question": "Put in order:",
+      "question": "排序：",
       "words": [
        "Das",
        "Haus",
@@ -1114,14 +1114,14 @@
      {
       "id": "c1-02-q11",
       "type": "fill-blank",
-      "question": "Fill: \"Ich rufe den ___.\" (customer)",
+      "question": "填空：「Ich rufe den ___.」（顾客）",
       "answer": "Kunden",
-      "hint": "Akkusativ + n-Dekl."
+      "hint": "第四格 + 弱变化"
      },
      {
       "id": "c1-02-q12",
       "type": "multiple-choice",
-      "question": "Which noun is NOT n-Deklination?",
+      "question": "哪个名词**不是**弱变化？",
       "options": [
        "der Junge",
        "der Kollege",
@@ -1133,26 +1133,26 @@
      {
       "id": "c1-02-q13",
       "type": "fill-blank",
-      "question": "Genitive of der Name?",
+      "question": "der Name 的第二格？",
       "answer": "des Namens",
-      "hint": "irregular: -ns"
+      "hint": "不规则：-ns"
      },
      {
       "id": "c1-02-q14",
       "type": "multiple-choice",
-      "question": "Nouns ending in -ist follow:",
+      "question": "以 -ist 结尾的名词遵循：",
       "options": [
-       "Nominativ only",
-       "n-Deklination",
-       "Genitiv only",
-       "no rule"
+       "只有第一格",
+       "弱变化（n-Deklination）",
+       "只有第二格",
+       "没有规律"
       ],
-      "answer": "n-Deklination"
+      "answer": "弱变化（n-Deklination）"
      },
      {
       "id": "c1-02-q15",
       "type": "matching",
-      "question": "Match Akkusativ:",
+      "question": "配对第四格：",
       "pairs": [
        {
         "left": "der Mensch",
@@ -1180,7 +1180,7 @@
      {
       "id": "c1-02-q16",
       "type": "drag-drop",
-      "question": "Order: \"I spoke with the patient\"",
+      "question": "排序：「我和病人谈过了」",
       "words": [
        "Ich",
        "habe",
@@ -1194,13 +1194,13 @@
      {
       "id": "c1-02-q17",
       "type": "speaking",
-      "question": "Say: \"I know this tourist from Turkey\"",
+      "question": "说：「我认识这位来自土耳其的游客」",
       "answer": "Ich kenne diesen Touristen aus der Türkei"
      },
      {
       "id": "c1-02-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Wir haben den ___ getroffen.\" (philosopher)",
+      "question": "听：「Wir haben den ___ getroffen.」（哲学家）",
       "audioPrompt": "Wir haben den Philosophen getroffen.",
       "answer": "Philosophen",
       "hint": "Philosoph → Philosophen"
@@ -1208,7 +1208,7 @@
      {
       "id": "c1-02-q19",
       "type": "multiple-choice",
-      "question": "Genitive of \"der Name\":",
+      "question": "「der Name」的第二格：",
       "options": [
        "des Names",
        "des Namens",
@@ -1220,7 +1220,7 @@
      {
       "id": "c1-02-q20",
       "type": "drag-drop",
-      "question": "Order: \"The interview was conducted with the candidate\"",
+      "question": "排序：「面试是和这位候选人进行的」",
       "words": [
        "Das",
        "Interview",
