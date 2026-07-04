@@ -8385,72 +8385,72 @@
   },
   "c1-15": {
    "id": "c1-15",
-   "title": "Punctuation — Kommasetzung",
+   "title": "标点符号 — Kommasetzung",
    "order": 15,
    "grammar": {
-    "title": "When to place a comma in German — rules for subordinate clauses, lists, and asides",
-    "content": "Kommasetzung (comma placement) in German is **systematic and strict** — not \"as you feel\". On the C1 written exam, every wrong comma costs 0.5–1 point. Learn the rules well.\n\n**The six golden rules:**\n1. **Between Hauptsatz and Nebensatz** — always.\n2. **Between elements of a list** — no comma before the final \"und\".\n3. **Before aber/sondern** — always.\n4. **Around appositions** — before and after.\n5. **Around Infinitivkonstruktion with zu** — in extended cases.\n6. **Between Hauptsatz + Hauptsatz** without a connector — optional.",
+    "title": "德语逗号的使用时机——从句、列举和插入语的规则",
+    "content": "德语的逗号规则（Kommasetzung）是**系统且严格的**——不是\"凭感觉\"。在 C1 写作考试中，每个错误的逗号扣 0.5–1 分。要牢牢掌握这些规则。\n\n**六条黄金规则：**\n1. **主句和从句之间**——必须加。\n2. **列举各项之间**——最后的 \"und\" 前不加逗号。\n3. **aber/sondern 之前**——必须加。\n4. **同位语前后**——前后各一个。\n5. **带 zu 的不定式结构前后**——在扩展形式中加。\n6. **无连词的主句 + 主句之间**——可加可不加。",
     "tables": [
      {
-      "title": "Mandatory comma rules",
+      "title": "必须加逗号的规则",
       "headers": [
-       "Case",
-       "Example",
-       "Rule"
+       "情况",
+       "例句",
+       "规则"
       ],
       "rows": [
        {
         "cells": [
          "Nebensatz",
          "Ich weiß, dass du kommst.",
-         "always before dass/weil/wenn/..."
+         "dass/weil/wenn/... 前必须加"
         ]
        },
        {
         "cells": [
-         "List",
+         "列举",
          "Ich kaufe Brot, Milch und Käse.",
-         "no comma before the last und"
+         "最后的 und 前不加逗号"
         ]
        },
        {
         "cells": [
          "aber/sondern",
          "Er kommt, aber spät.",
-         "always before aber/sondern"
+         "aber/sondern 前必须加"
         ]
        },
        {
         "cells": [
          "Apposition",
          "Mein Bruder, der Arzt, kommt.",
-         "frame the explanatory apposition"
+         "用逗号框住解释性同位语"
         ]
        },
        {
         "cells": [
          "Infinitiv mit zu",
          "Ich versuche, das zu lernen.",
-         "after a verb + extended zu-Inf"
+         "动词 + 扩展 zu 不定式后加"
         ]
        },
        {
         "cells": [
          "Anrede",
          "Hallo, Maria, wie geht's?",
-         "frame the addressee"
+         "用逗号框住称呼"
         ]
        }
       ],
       "theme": "default",
-      "note": "These rules are mandatory in formal writing and C1 exams."
+      "note": "这些规则在正式写作和 C1 考试中是强制性的。"
      },
      {
-      "title": "Optional cases",
+      "title": "可选情况",
       "headers": [
-       "Case",
-       "No comma",
-       "With comma"
+       "情况",
+       "不加逗号",
+       "加逗号"
       ],
       "rows": [
        {
@@ -8462,388 +8462,388 @@
        },
        {
         "cells": [
-         "Simple Infinitiv",
+         "简单不定式",
          "Er versucht zu lernen.",
          "Er versucht, zu lernen."
         ]
        },
        {
         "cells": [
-         "Adverb at the start",
+         "句首状语",
          "Heute komme ich nicht.",
-         "(usually no comma)"
+         "（通常不加逗号）"
         ]
        }
       ],
       "theme": "default",
-      "note": "In optional cases, choose the comma to clarify meaning."
+      "note": "在可选情况下，以是否有助于明确句意来决定加不加逗号。"
      },
      {
-      "title": "Common mistakes to avoid",
+      "title": "需要避免的常见错误",
       "headers": [
-       "Wrong",
-       "Correct",
-       "Reason"
+       "错误",
+       "正确",
+       "原因"
       ],
       "rows": [
        {
         "cells": [
          "Ich denke, dass, er kommt.",
          "Ich denke, dass er kommt.",
-         "no comma between dass and the subject"
+         "dass 和主语之间不加逗号"
         ]
        },
        {
         "cells": [
          "Brot, und Milch.",
          "Brot und Milch.",
-         "no comma before und in a list"
+         "列举中 und 前不加逗号"
         ]
        },
        {
         "cells": [
          "Er ist krank, aber, kommt.",
          "Er ist krank, aber kommt.",
-         "no comma after aber"
+         "aber 之后不加逗号"
         ]
        },
        {
         "cells": [
          "Nach dem Essen, gehen wir.",
          "Nach dem Essen gehen wir.",
-         "no comma after a time complement"
+         "时间状语后不加逗号"
         ]
        }
       ],
       "theme": "default",
-      "note": "Rule: commas separate clauses, not pieces inside a single clause."
+      "note": "规则：逗号用来分隔分句，而不是分隔同一分句内部的成分。"
      }
     ],
     "rules": [
      {
-      "rule": "Between Hauptsatz and Nebensatz: always a comma.",
+      "rule": "主句和从句之间：必须加逗号。",
       "example": "Ich weiß, dass es schwer ist.",
-      "translation": "I know that it's hard."
+      "translation": "我知道这很难。"
      },
      {
-      "rule": "In a list, no comma before the last und/oder.",
+      "rule": "在列举中，最后的 und/oder 前不加逗号。",
       "example": "Brot, Milch und Käse.",
-      "translation": "Bread, milk and cheese."
+      "translation": "面包、牛奶和奶酪。"
      },
      {
-      "rule": "Before aber/sondern: always a comma.",
+      "rule": "aber/sondern 之前：必须加逗号。",
       "example": "Er ist klug, aber faul.",
-      "translation": "He's smart, but lazy."
+      "translation": "他很聪明，但是懒惰。"
      },
      {
-      "rule": "Around an explanatory apposition: two commas.",
+      "rule": "解释性同位语前后：两个逗号。",
       "example": "Mein Vater, ein Lehrer, lebt in Casablanca.",
-      "translation": "My father, a teacher, lives in Casablanca."
+      "translation": "我父亲，一位教师，住在卡萨布兰卡。"
      }
     ],
     "examples": [
-     "Ich glaube, dass du recht hast. — I believe you're right.",
-     "Wir kaufen Brot, Milch, Käse und Butter. — We're buying bread, milk, cheese and butter.",
-     "Er ist freundlich, aber sehr beschäftigt. — He's friendly but very busy.",
-     "Mein Onkel, der in Berlin wohnt, kommt morgen. — My uncle, who lives in Berlin, is coming tomorrow.",
-     "Ich versuche, das Problem zu lösen. — I'm trying to solve the problem.",
-     "Hallo, Maria, wie geht's? — Hi, Maria, how are you?",
-     "Obwohl es regnet, gehen wir spazieren. — Even though it's raining, we go for a walk.",
-     "Wenn du Zeit hast, ruf mich an. — When you have time, call me."
+     "Ich glaube, dass du recht hast. — 我相信你是对的。",
+     "Wir kaufen Brot, Milch, Käse und Butter. — 我们买面包、牛奶、奶酪和黄油。",
+     "Er ist freundlich, aber sehr beschäftigt. — 他很友好，但非常忙。",
+     "Mein Onkel, der in Berlin wohnt, kommt morgen. — 我住在柏林的叔叔明天来。",
+     "Ich versuche, das Problem zu lösen. — 我在设法解决这个问题。",
+     "Hallo, Maria, wie geht's? — 你好，玛丽亚，最近怎么样？",
+     "Obwohl es regnet, gehen wir spazieren. — 尽管下雨，我们还是去散步。",
+     "Wenn du Zeit hast, ruf mich an. — 你有时间的话给我打电话。"
     ],
-    "tip": "Write 5 sentences a day and identify the mandatory commas. With practice, the rules become automatic. At the exam, reread your text twice to catch missed commas."
+    "tip": "每天写 5 个句子并标出必须加的逗号。多加练习，规则就会变成本能。考试时把文章重读两遍，检查漏掉的逗号。"
    },
    "vocabulary": [
     {
      "german": "das Komma",
-     "arabic": "comma",
+     "arabic": "逗号",
      "example": "Das Komma fehlt.",
-     "exampleArabic": "The comma is missing.",
+     "exampleArabic": "缺了逗号。",
      "type": "noun",
      "gender": "das",
      "plural": "die Kommas"
     },
     {
      "german": "der Punkt",
-     "arabic": "period",
+     "arabic": "句号",
      "example": "Setze einen Punkt.",
-     "exampleArabic": "Put a period.",
+     "exampleArabic": "加一个句号。",
      "type": "noun",
      "gender": "der",
      "plural": "die Punkte"
     },
     {
      "german": "der Strichpunkt",
-     "arabic": "semicolon",
+     "arabic": "分号",
      "example": "Hier brauchen wir einen Strichpunkt.",
-     "exampleArabic": "Here we need a semicolon.",
+     "exampleArabic": "这里需要一个分号。",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "der Doppelpunkt",
-     "arabic": "colon",
+     "arabic": "冒号",
      "example": "Nach dem Doppelpunkt.",
-     "exampleArabic": "After the colon.",
+     "exampleArabic": "在冒号之后。",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "das Anführungszeichen",
-     "arabic": "quotation mark",
+     "arabic": "引号",
      "example": "Anführungszeichen oben und unten.",
-     "exampleArabic": "Quotation marks top and bottom.",
+     "exampleArabic": "上下引号。",
      "type": "noun",
      "gender": "das",
      "plural": "die Anführungszeichen"
     },
     {
      "german": "der Bindestrich",
-     "arabic": "hyphen",
+     "arabic": "连字符",
      "example": "Wir benutzen einen Bindestrich.",
-     "exampleArabic": "We use a hyphen.",
+     "exampleArabic": "我们使用连字符。",
      "type": "noun",
      "gender": "der",
      "plural": "die Bindestriche"
     },
     {
      "german": "das Ausrufezeichen",
-     "arabic": "exclamation mark",
+     "arabic": "感叹号",
      "example": "Mit Ausrufezeichen!",
-     "exampleArabic": "With an exclamation mark!",
+     "exampleArabic": "带感叹号！",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "das Fragezeichen",
-     "arabic": "question mark",
+     "arabic": "问号",
      "example": "Vergiss das Fragezeichen nicht.",
-     "exampleArabic": "Don't forget the question mark.",
+     "exampleArabic": "别忘了问号。",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Klammer",
-     "arabic": "parenthesis",
+     "arabic": "括号",
      "example": "In Klammern stehen Erklärungen.",
-     "exampleArabic": "Explanations in parentheses.",
+     "exampleArabic": "括号里是解释。",
      "type": "noun",
      "gender": "die",
      "plural": "die Klammern"
     },
     {
      "german": "der Hauptsatz",
-     "arabic": "main clause",
+     "arabic": "主句",
      "example": "Ein Hauptsatz hat Subjekt und Verb.",
-     "exampleArabic": "A main clause has a subject and verb.",
+     "exampleArabic": "主句有主语和动词。",
      "type": "noun",
      "gender": "der",
      "plural": "die Hauptsätze"
     },
     {
      "german": "der Nebensatz",
-     "arabic": "subordinate clause",
+     "arabic": "从句",
      "example": "Nebensätze beginnen mit dass, weil, wenn.",
-     "exampleArabic": "Subordinate clauses start with dass, weil, wenn.",
+     "exampleArabic": "从句以 dass、weil、wenn 开头。",
      "type": "noun",
      "gender": "der",
      "plural": "die Nebensätze"
     },
     {
      "german": "die Apposition",
-     "arabic": "apposition",
+     "arabic": "同位语",
      "example": "Mein Bruder, der Arzt — Apposition.",
-     "exampleArabic": "My brother, the doctor — apposition.",
+     "exampleArabic": "我哥哥，那位医生——同位语。",
      "type": "noun",
      "gender": "die",
      "plural": "die Appositionen"
     },
     {
      "german": "die Aufzählung",
-     "arabic": "enumeration",
+     "arabic": "列举",
      "example": "In einer Aufzählung trennen Kommas.",
-     "exampleArabic": "In a list, commas separate.",
+     "exampleArabic": "列举中用逗号分隔。",
      "type": "noun",
      "gender": "die",
      "plural": "die Aufzählungen"
     },
     {
      "german": "die Anrede",
-     "arabic": "address / form of address",
+     "arabic": "称呼",
      "example": "Hallo, Maria — Anrede.",
-     "exampleArabic": "Hi, Maria — address.",
+     "exampleArabic": "你好，玛丽亚——称呼。",
      "type": "noun",
      "gender": "die",
      "plural": "die Anreden"
     },
     {
      "german": "der Einschub",
-     "arabic": "insertion / aside",
+     "arabic": "插入语",
      "example": "Ein Einschub wird mit Kommas getrennt.",
-     "exampleArabic": "An aside is set off with commas.",
+     "exampleArabic": "插入语用逗号隔开。",
      "type": "noun",
      "gender": "der",
      "plural": "die Einschübe"
     },
     {
      "german": "die Konjunktion",
-     "arabic": "conjunction",
+     "arabic": "连词",
      "example": "aber ist eine Konjunktion.",
-     "exampleArabic": "aber is a conjunction.",
+     "exampleArabic": "aber 是一个连词。",
      "type": "noun",
      "gender": "die",
      "plural": "die Konjunktionen"
     },
     {
      "german": "die Zeichensetzung",
-     "arabic": "punctuation",
+     "arabic": "标点符号规则",
      "example": "Die Zeichensetzung ist wichtig.",
-     "exampleArabic": "Punctuation is important.",
+     "exampleArabic": "标点符号很重要。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Rechtschreibung",
-     "arabic": "spelling",
+     "arabic": "正字法；拼写",
      "example": "Achten Sie auf die Rechtschreibung.",
-     "exampleArabic": "Watch your spelling.",
+     "exampleArabic": "注意拼写。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Grammatik",
-     "arabic": "grammar",
+     "arabic": "语法",
      "example": "Deutsche Grammatik ist logisch.",
-     "exampleArabic": "German grammar is logical.",
+     "exampleArabic": "德语语法很有逻辑。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Satzbau",
-     "arabic": "sentence construction",
+     "arabic": "句子结构",
      "example": "Der Satzbau ist klar.",
-     "exampleArabic": "The sentence structure is clear.",
+     "exampleArabic": "句子结构很清晰。",
      "type": "noun",
      "gender": "der"
     },
     {
      "german": "die Regel",
-     "arabic": "rule",
+     "arabic": "规则",
      "example": "Eine wichtige Regel.",
-     "exampleArabic": "An important rule.",
+     "exampleArabic": "一条重要规则。",
      "type": "noun",
      "gender": "die",
      "plural": "die Regeln"
     },
     {
      "german": "die Ausnahme",
-     "arabic": "exception",
+     "arabic": "例外",
      "example": "Eine Ausnahme von der Regel.",
-     "exampleArabic": "An exception to the rule.",
+     "exampleArabic": "规则的一个例外。",
      "type": "noun",
      "gender": "die",
      "plural": "die Ausnahmen"
     },
     {
      "german": "der Fehler",
-     "arabic": "mistake",
+     "arabic": "错误",
      "example": "Ein häufiger Fehler.",
-     "exampleArabic": "A common mistake.",
+     "exampleArabic": "一个常见错误。",
      "type": "noun",
      "gender": "der",
      "plural": "die Fehler"
     },
     {
      "german": "die Korrektur",
-     "arabic": "correction",
+     "arabic": "更正",
      "example": "Eine wichtige Korrektur.",
-     "exampleArabic": "An important correction.",
+     "exampleArabic": "一个重要的更正。",
      "type": "noun",
      "gender": "die",
      "plural": "die Korrekturen"
     },
     {
      "german": "trennen",
-     "arabic": "to separate",
+     "arabic": "分隔",
      "example": "Kommas trennen Satzteile.",
-     "exampleArabic": "Commas separate sentence parts.",
+     "exampleArabic": "逗号分隔句子成分。",
      "type": "verb"
     },
     {
      "german": "verbinden",
-     "arabic": "to connect",
+     "arabic": "连接",
      "example": "und verbindet zwei Sätze.",
-     "exampleArabic": "und connects two sentences.",
+     "exampleArabic": "und 连接两个句子。",
      "type": "verb"
     },
     {
      "german": "beginnen",
-     "arabic": "to begin",
+     "arabic": "开始",
      "example": "Der Satz beginnt mit einem Großbuchstaben.",
-     "exampleArabic": "The sentence begins with a capital.",
+     "exampleArabic": "句子以大写字母开头。",
      "type": "verb"
     },
     {
      "german": "beenden",
-     "arabic": "to end",
+     "arabic": "结束",
      "example": "Beende den Satz mit einem Punkt.",
-     "exampleArabic": "End the sentence with a period.",
+     "exampleArabic": "用句号结束句子。",
      "type": "verb"
     },
     {
      "german": "verbessern",
-     "arabic": "to improve / correct",
+     "arabic": "改进；改正",
      "example": "Verbessere deinen Text.",
-     "exampleArabic": "Correct your text.",
+     "exampleArabic": "改正你的文章。",
      "type": "verb"
     },
     {
      "german": "überprüfen",
-     "arabic": "to check",
+     "arabic": "检查",
      "example": "Überprüfe die Zeichensetzung.",
-     "exampleArabic": "Check the punctuation.",
+     "exampleArabic": "检查标点符号。",
      "type": "verb"
     },
     {
      "german": "die Lektüre",
-     "arabic": "the reading",
+     "arabic": "阅读；读物",
      "plural": "die Lektüren",
      "example": "Eine angenehme Lektüre.",
-     "exampleArabic": "A pleasant read.",
+     "exampleArabic": "一次愉快的阅读。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Schreibweise",
-     "arabic": "the spelling/style",
+     "arabic": "写法；拼写方式",
      "plural": "die Schreibweisen",
      "example": "Neue Schreibweise.",
-     "exampleArabic": "New spelling.",
+     "exampleArabic": "新的写法。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Rechtschreibreform",
-     "arabic": "spelling reform",
+     "arabic": "正字法改革",
      "example": "Die Rechtschreibreform 1996.",
-     "exampleArabic": "The 1996 spelling reform.",
+     "exampleArabic": "1996 年的正字法改革。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Klarheit",
-     "arabic": "clarity",
+     "arabic": "清晰",
      "example": "Die Klarheit eines Textes.",
-     "exampleArabic": "The clarity of a text.",
+     "exampleArabic": "文章的清晰度。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "der Leserkreis",
-     "arabic": "the readership",
+     "arabic": "读者群",
      "plural": "die Leserkreise",
      "example": "Ein breiter Leserkreis.",
-     "exampleArabic": "A wide readership.",
+     "exampleArabic": "广泛的读者群。",
      "type": "noun",
      "gender": "der"
     }
@@ -8853,14 +8853,14 @@
      {
       "type": "fill-blank",
       "id": "c1-15-q1",
-      "question": "Comma before dass? \"Ich weiß ___ er kommt.\"",
+      "question": "dass 前要加逗号吗？「Ich weiß ___ er kommt.」",
       "answer": ",",
-      "hint": "always before Nebensatz"
+      "hint": "从句前必须加"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q2",
-      "question": "The correct list:",
+      "question": "正确的列举方式：",
       "options": [
        "Brot, Milch, und Käse",
        "Brot Milch und Käse",
@@ -8872,14 +8872,14 @@
      {
       "type": "fill-blank",
       "id": "c1-15-q3",
-      "question": "Comma before aber? \"Er ist klug ___ faul.\"",
+      "question": "aber 前要加逗号吗？「Er ist klug ___ faul.」",
       "answer": ", aber",
-      "hint": "aber always with comma"
+      "hint": "aber 前必须加逗号"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q4",
-      "question": "Correct apposition:",
+      "question": "正确的同位语写法：",
       "options": [
        "Mein Bruder der Arzt kommt.",
        "Mein Bruder, der Arzt, kommt.",
@@ -8891,34 +8891,34 @@
      {
       "type": "fill-blank",
       "id": "c1-15-q5",
-      "question": "Address: \"Hallo ___ Maria ___ wie geht's?\"",
+      "question": "称呼：「Hallo ___ Maria ___ wie geht's?」",
       "answer": ", ,",
-      "hint": "two commas around the name"
+      "hint": "名字前后各一个逗号"
      },
      {
       "type": "matching",
       "id": "c1-15-q6",
-      "question": "Match the rule to its example:",
+      "question": "把规则和用法配对：",
       "pairs": [
        {
         "left": "Nebensatz",
-        "right": "comma always"
+        "right": "必须加逗号"
        },
        {
         "left": "Aufzählung",
-        "right": "no comma before the last und"
+        "right": "最后的 und 前不加逗号"
        },
        {
         "left": "aber/sondern",
-        "right": "comma always"
+        "right": "必须加逗号"
        },
        {
         "left": "Apposition",
-        "right": "two commas around"
+        "right": "前后各一个逗号"
        },
        {
         "left": "Anrede",
-        "right": "two commas around"
+        "right": "前后各一个逗号"
        }
       ],
       "answer": "matched"
@@ -8926,7 +8926,7 @@
      {
       "type": "drag-drop",
       "id": "c1-15-q7",
-      "question": "Order properly punctuated: \"I think you're right\"",
+      "question": "按正确标点排序：「我认为你是对的」",
       "words": [
        "Ich",
        "glaube,",
@@ -8940,75 +8940,75 @@
      {
       "type": "speaking",
       "id": "c1-15-q8",
-      "question": "Say with commas: \"My father, a teacher, lives in Casablanca\"",
+      "question": "带逗号说出：「我父亲，一位教师，住在卡萨布兰卡」",
       "answer": "Mein Vater, ein Lehrer, lebt in Casablanca"
      },
      {
       "type": "fill-blank",
       "id": "c1-15-q9",
-      "question": "Listen: \"Wir kaufen Brot ___ Milch ___ Käse.\" (with punctuation)",
+      "question": "听：「Wir kaufen Brot ___ Milch ___ Käse.」（带标点）",
       "audioPrompt": "Wir kaufen Brot, Milch und Käse.",
       "answer": ", ,",
-      "hint": "comma after the first two, then und"
+      "hint": "前两项后加逗号，然后是 und"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q10",
-      "question": "The common mistake:",
+      "question": "常见错误是：",
       "options": [
-       "comma between dass and the subject",
-       "comma before aber",
-       "comma before dass",
-       "commas around the apposition"
+       "在 dass 和主语之间加逗号",
+       "在 aber 前加逗号",
+       "在 dass 前加逗号",
+       "在同位语前后加逗号"
       ],
-      "answer": "comma between dass and the subject"
+      "answer": "在 dass 和主语之间加逗号"
      },
      {
       "type": "fill-blank",
       "id": "c1-15-q11",
-      "question": "Comma before sondern? \"Er ist nicht traurig ___ glücklich.\"",
+      "question": "sondern 前要加逗号吗？「Er ist nicht traurig ___ glücklich.」",
       "answer": ", sondern",
-      "hint": "sondern like aber"
+      "hint": "sondern 和 aber 一样"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q12",
-      "question": "Comma after a leading time complement?",
+      "question": "句首时间状语后要加逗号吗？",
       "options": [
-       "always",
-       "no, usually not",
-       "only with heute",
-       "required in journalism"
+       "总是加",
+       "不，通常不加",
+       "只有 heute 时加",
+       "新闻写作中必须加"
       ],
-      "answer": "no, usually not"
+      "answer": "不，通常不加"
      },
      {
       "type": "fill-blank",
       "id": "c1-15-q13",
-      "question": "Apposition: \"Mein Bruder ___ der Lehrer ___ kommt morgen.\"",
+      "question": "同位语：「Mein Bruder ___ der Lehrer ___ kommt morgen.」",
       "answer": ", ,",
-      "hint": "two commas around the apposition"
+      "hint": "同位语前后各一个逗号"
      },
      {
       "type": "matching",
       "id": "c1-15-q14",
-      "question": "Match the rule to the example:",
+      "question": "把规则和情况配对：",
       "pairs": [
        {
-        "left": "before aber/sondern",
-        "right": "comma always"
+        "left": "aber/sondern 之前",
+        "right": "必须加逗号"
        },
        {
-        "left": "in list, before und",
-        "right": "no comma"
+        "left": "列举中 und 之前",
+        "right": "不加逗号"
        },
        {
-        "left": "around an Anrede",
-        "right": "two commas"
+        "left": "称呼前后",
+        "right": "两个逗号"
        },
        {
-        "left": "after a time complement",
-        "right": "no comma"
+        "left": "时间状语之后",
+        "right": "不加逗号"
        }
       ],
       "answer": "matched"
@@ -9016,7 +9016,7 @@
      {
       "type": "drag-drop",
       "id": "c1-15-q15",
-      "question": "Correct (with proper commas): \"Ich glaube dass du recht hast\"",
+      "question": "改正（加上正确的逗号）：「Ich glaube dass du recht hast」",
       "words": [
        "Ich",
        "glaube,",
@@ -9030,47 +9030,47 @@
      {
       "type": "fill-blank",
       "id": "c1-15-q16",
-      "question": "Listen: \"Er ist klug ___ sehr beschäftigt.\"",
+      "question": "听：「Er ist klug ___ sehr beschäftigt.」",
       "audioPrompt": "Er ist klug, aber sehr beschäftigt.",
       "answer": ", aber",
-      "hint": "aber always with comma"
+      "hint": "aber 前必须加逗号"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q17",
-      "question": "On the C1 exam, a comma mistake costs:",
+      "question": "在 C1 考试中，一个逗号错误会扣：",
       "options": [
-       "nothing",
-       "0.5–1 point",
-       "the entire essay",
-       "nothing if the reader gets it"
+       "不扣分",
+       "0.5–1 分",
+       "整篇作文",
+       "读者能看懂就不扣"
       ],
-      "answer": "0.5–1 point"
+      "answer": "0.5–1 分"
      },
      {
       "type": "speaking",
       "id": "c1-15-q18",
-      "question": "Say with commas: \"We're buying bread, milk, cheese and butter\"",
+      "question": "带逗号说出：「我们买面包、牛奶、奶酪和黄油」",
       "answer": "Wir kaufen Brot, Milch, Käse und Butter"
      },
      {
       "type": "fill-blank",
       "id": "c1-15-q19",
-      "question": "\"Ich versuche ___ das zu lernen.\" (extended Inf with zu)",
+      "question": "「Ich versuche ___ das zu lernen.」（扩展的 zu 不定式）",
       "answer": ",",
-      "hint": "comma before extended zu-Inf"
+      "hint": "扩展 zu 不定式前加逗号"
      },
      {
       "type": "multiple-choice",
       "id": "c1-15-q20",
-      "question": "In the list \"Brot, Milch und Käse\" we note:",
+      "question": "在列举「Brot, Milch und Käse」中我们注意到：",
       "options": [
-       "comma before und",
-       "no comma before und",
-       "two commas before und",
-       "commas between every element"
+       "und 前有逗号",
+       "und 前没有逗号",
+       "und 前有两个逗号",
+       "每个成分之间都有逗号"
       ],
-      "answer": "no comma before und"
+      "answer": "und 前没有逗号"
      }
     ]
    }
