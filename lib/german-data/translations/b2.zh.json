@@ -8694,24 +8694,24 @@
   },
   "b2-16": {
    "id": "b2-16",
-   "title": "Conditional sentences — Konditionalsätze",
+   "title": "条件句 — Konditionalsätze",
    "order": 16,
    "grammar": {
-    "title": "wenn (conditional) + real vs unreal condition + Konjunktiv II for wishes",
-    "content": "Conditional sentences express cause and consequence. German distinguishes:\n\n**Real (Realer Bedingung):** something that can happen.\n→ **Wenn** ich Zeit **habe**, **komme** ich. (If I have time, I'll come)\n\n**Unreal (Irrealer Bedingung):** hypothesis, wish, something that didn't happen.\n→ **Wenn** ich Zeit **hätte**, **würde** ich kommen. (If I had time, I would come)\n\n**Past unreal:** regret about the past.\n→ **Wenn** ich Zeit **gehabt hätte**, **wäre** ich gekommen. (If I had had time yesterday, I would have come)",
+    "title": "wenn（条件）+ 真实条件与非真实条件 + 表愿望的第二虚拟式",
+    "content": "条件句表达前提和结果。德语区分：\n\n**真实条件（Realer Bedingung）：**可能发生的事。\n→ **Wenn** ich Zeit **habe**, **komme** ich.（如果我有时间，我就来）\n\n**非真实条件（Irrealer Bedingung）：**假设、愿望、没有发生的事。\n→ **Wenn** ich Zeit **hätte**, **würde** ich kommen.（假如我有时间，我就会来）\n\n**过去的非真实条件：**对过去的遗憾。\n→ **Wenn** ich Zeit **gehabt hätte**, **wäre** ich gekommen.（昨天要是有时间，我就来了）",
     "tables": [
      {
-      "title": "The three types of conditional sentences",
+      "title": "三种条件句",
       "headers": [
-       "Type",
-       "Condition",
-       "Consequence",
-       "Example"
+       "类型",
+       "条件",
+       "结果",
+       "例句"
       ],
       "rows": [
        {
         "cells": [
-         "real (present/future)",
+         "真实（现在/将来）",
          "Indikativ",
          "Indikativ",
          "Wenn es regnet, bleibe ich zu Hause."
@@ -8719,7 +8719,7 @@
        },
        {
         "cells": [
-         "unreal (present/future)",
+         "非真实（现在/将来）",
          "Konj. II",
          "würde + Inf",
          "Wenn ich reich wäre, würde ich reisen."
@@ -8727,7 +8727,7 @@
        },
        {
         "cells": [
-         "unreal (past)",
+         "非真实（过去）",
          "hätte/wäre + Partizip",
          "hätte/wäre + Partizip",
          "Wenn ich Zeit gehabt hätte, wäre ich gekommen."
@@ -8735,54 +8735,54 @@
        }
       ],
       "theme": "default",
-      "note": "Comma always after wenn-clause: \"Wenn..., (verb)...\""
+      "note": "wenn 从句后永远有逗号：\"Wenn..., (动词)...\""
      },
      {
-      "title": "Alternatives to wenn",
+      "title": "wenn 的替代形式",
       "headers": [
-       "Word",
-       "Meaning",
-       "Example"
+       "词",
+       "含义",
+       "例句"
       ],
       "rows": [
        {
         "cells": [
          "falls",
-         "in case",
+         "万一",
          "Falls es regnet, nehmen wir Schirme."
         ]
        },
        {
         "cells": [
          "sofern",
-         "as long as / insofar as",
+         "只要",
          "Sofern du Zeit hast, komm vorbei."
         ]
        },
        {
         "cells": [
          "unter der Bedingung, dass",
-         "on the condition that",
+         "在……条件下",
          "Ich helfe dir unter der Bedingung, dass du auch hilfst."
         ]
        },
        {
         "cells": [
-         "without wenn (verb inversion)",
-         "omitting wenn",
+         "不用 wenn（动词倒装）",
+         "省略 wenn",
          "Hätte ich Zeit, würde ich kommen."
         ]
        }
       ],
       "theme": "default",
-      "note": "Without wenn, the verb comes first: \"Hätte ich..., würde ich...\""
+      "note": "不用 wenn 时，动词放句首：\"Hätte ich..., würde ich...\""
      },
      {
-      "title": "Konjunktiv II — examples for common verbs",
+      "title": "第二虚拟式——常用动词举例",
       "headers": [
        "Infinitiv",
        "Konj. II",
-       "Example"
+       "例句"
       ],
       "rows": [
        {
@@ -8829,310 +8829,310 @@
        }
       ],
       "theme": "conjugation",
-      "note": "Regular verbs in Konj. II = Präteritum + ä/ö/ü. Otherwise: würde + Inf."
+      "note": "第二虚拟式的规则动词 = 过去时 + ä/ö/ü。其他情况：würde + 动词原形。"
      }
     ],
     "rules": [
      {
-      "rule": "In real conditionals, the verb in wenn-clause is in 2nd position; in the main clause it's first (after the wenn-clause).",
+      "rule": "真实条件句中，wenn 从句里动词放句尾；主句动词紧跟其后（从句在前时）。",
       "example": "Wenn es regnet, bleibe ich zu Hause.",
-      "translation": "If it rains, I stay at home."
+      "translation": "如果下雨，我就待在家里。"
      },
      {
-      "rule": "Present unreal = Konj. II (matches \"would\" in English).",
+      "rule": "现在的非真实条件 = 第二虚拟式（相当于中文的「假如……就会」）。",
       "example": "Wenn ich reich wäre, würde ich helfen.",
-      "translation": "If I were rich, I would help."
+      "translation": "假如我有钱，我就会帮忙。"
      },
      {
-      "rule": "Past unreal = hätte/wäre + Partizip — \"would have...\"",
+      "rule": "过去的非真实条件 = hätte/wäre + Partizip——「本来会……」",
       "example": "Wenn du gekommen wärst, hätten wir gespielt.",
-      "translation": "If you had come, we would have played."
+      "translation": "你要是来了，我们就一起玩了。"
      },
      {
-      "rule": "Without wenn = verb first: \"Hätte ich Zeit, würde ich...\"",
+      "rule": "省略 wenn = 动词放句首：\"Hätte ich Zeit, würde ich...\"",
       "example": "Wäre ich du, würde ich es tun.",
-      "translation": "If I were you, I'd do it."
+      "translation": "我要是你，就会这么做。"
      }
     ],
     "examples": [
-     "Wenn ich Zeit habe, lerne ich Deutsch. — When I have time, I learn German.",
-     "Falls es regnet, bleiben wir zu Hause. — In case it rains, we stay home.",
-     "Wenn ich reich wäre, würde ich nach Japan reisen. — If I were rich, I'd travel to Japan.",
-     "Wenn ich du wäre, würde ich das machen. — If I were you, I'd do that.",
-     "Hätten wir mehr Zeit, könnten wir mehr lernen. — If we had more time, we could learn more.",
-     "Wenn du gekommen wärst, hätten wir gefeiert. — If you had come, we would have celebrated.",
-     "Sofern du einverstanden bist, fangen wir an. — As long as you agree, we'll start.",
-     "Ich würde dir helfen, wenn ich könnte. — I would help you if I could."
+     "Wenn ich Zeit habe, lerne ich Deutsch. — 有时间的时候，我就学德语。",
+     "Falls es regnet, bleiben wir zu Hause. — 万一下雨，我们就待在家里。",
+     "Wenn ich reich wäre, würde ich nach Japan reisen. — 假如我有钱，我就去日本旅行。",
+     "Wenn ich du wäre, würde ich das machen. — 我要是你，就会这么做。",
+     "Hätten wir mehr Zeit, könnten wir mehr lernen. — 我们要是有更多时间，就能学更多。",
+     "Wenn du gekommen wärst, hätten wir gefeiert. — 你要是来了，我们就一起庆祝了。",
+     "Sofern du einverstanden bist, fangen wir an. — 只要你同意，我们就开始。",
+     "Ich würde dir helfen, wenn ich könnte. — 我要是能帮你，肯定帮。"
     ],
-    "tip": "Practice: \"Wenn ich + Konj. II, würde ich + Inf\". This pattern covers 80% of conditional sentences in B2. Add the past unreal (hätte gehabt) later."
+    "tip": "多练：「Wenn ich + 第二虚拟式，würde ich + 动词原形」。这个句型覆盖了 B2 阶段 80% 的条件句。过去的非真实条件（hätte gehabt）之后再补。"
    },
    "vocabulary": [
     {
      "german": "wenn",
-     "arabic": "if / when",
+     "arabic": "如果；当……时",
      "example": "Wenn ich Zeit habe...",
-     "exampleArabic": "When I have time...",
+     "exampleArabic": "当我有时间的时候……",
      "type": "conjunction"
     },
     {
      "german": "falls",
-     "arabic": "in case",
+     "arabic": "万一",
      "example": "Falls es regnet...",
-     "exampleArabic": "In case it rains...",
+     "exampleArabic": "万一下雨……",
      "type": "conjunction"
     },
     {
      "german": "sofern",
-     "arabic": "as long as / insofar as",
+     "arabic": "只要",
      "example": "Sofern du willst...",
-     "exampleArabic": "As long as you want...",
+     "exampleArabic": "只要你愿意……",
      "type": "conjunction"
     },
     {
      "german": "unter der Bedingung",
-     "arabic": "on the condition that",
+     "arabic": "在……条件下",
      "example": "Unter der Bedingung, dass du hilfst.",
-     "exampleArabic": "On the condition you help.",
+     "exampleArabic": "条件是你也帮忙。",
      "type": "phrase"
     },
     {
      "german": "wäre",
-     "arabic": "would be (Konj. II of sein)",
+     "arabic": "会是（sein 的第二虚拟式）",
      "example": "Wenn ich reich wäre...",
-     "exampleArabic": "If I were rich...",
+     "exampleArabic": "假如我有钱……",
      "type": "verb"
     },
     {
      "german": "hätte",
-     "arabic": "would have",
+     "arabic": "会有",
      "example": "Wenn ich Zeit hätte...",
-     "exampleArabic": "If I had time...",
+     "exampleArabic": "假如我有时间……",
      "type": "verb"
     },
     {
      "german": "würde",
-     "arabic": "would + verb",
+     "arabic": "就会 + 动词",
      "example": "Ich würde gerne kommen.",
-     "exampleArabic": "I'd love to come.",
+     "exampleArabic": "我很乐意来。",
      "type": "verb"
     },
     {
      "german": "könnte",
-     "arabic": "could",
+     "arabic": "就能",
      "example": "Ich könnte helfen.",
-     "exampleArabic": "I could help.",
+     "exampleArabic": "我可以帮忙。",
      "type": "verb"
     },
     {
      "german": "müsste",
-     "arabic": "would have to",
+     "arabic": "就得",
      "example": "Du müsstest jetzt gehen.",
-     "exampleArabic": "You'd have to leave now.",
+     "exampleArabic": "你现在该走了。",
      "type": "verb"
     },
     {
      "german": "sollte",
-     "arabic": "should",
+     "arabic": "应该",
      "example": "Du solltest mehr lernen.",
-     "exampleArabic": "You should study more.",
+     "exampleArabic": "你应该多学习。",
      "type": "verb"
     },
     {
      "german": "wüsste",
-     "arabic": "would know",
+     "arabic": "就知道",
      "example": "Wenn ich es wüsste!",
-     "exampleArabic": "If only I knew!",
+     "exampleArabic": "我要是知道就好了！",
      "type": "verb"
     },
     {
      "german": "die Bedingung",
-     "arabic": "condition",
+     "arabic": "条件",
      "example": "Eine wichtige Bedingung.",
-     "exampleArabic": "An important condition.",
+     "exampleArabic": "一个重要的条件。",
      "type": "noun",
      "gender": "die",
      "plural": "die Bedingungen"
     },
     {
      "german": "die Voraussetzung",
-     "arabic": "requirement / prerequisite",
+     "arabic": "前提",
      "example": "Was sind die Voraussetzungen?",
-     "exampleArabic": "What are the requirements?",
+     "exampleArabic": "前提条件是什么？",
      "type": "noun",
      "gender": "die",
      "plural": "die Voraussetzungen"
     },
     {
      "german": "die Möglichkeit",
-     "arabic": "possibility",
+     "arabic": "可能性",
      "example": "Es gibt eine Möglichkeit.",
-     "exampleArabic": "There's a possibility.",
+     "exampleArabic": "有一种可能。",
      "type": "noun",
      "gender": "die",
      "plural": "die Möglichkeiten"
     },
     {
      "german": "der Fall",
-     "arabic": "case",
+     "arabic": "情况",
      "example": "In diesem Fall...",
-     "exampleArabic": "In this case...",
+     "exampleArabic": "在这种情况下……",
      "type": "noun",
      "gender": "der",
      "plural": "die Fälle"
     },
     {
      "german": "der Wunsch",
-     "arabic": "wish",
+     "arabic": "愿望",
      "example": "Mein Wunsch ist...",
-     "exampleArabic": "My wish is...",
+     "exampleArabic": "我的愿望是……",
      "type": "noun",
      "gender": "der",
      "plural": "die Wünsche"
     },
     {
      "german": "die Konsequenz",
-     "arabic": "consequence",
+     "arabic": "后果",
      "example": "Die Konsequenzen sind klar.",
-     "exampleArabic": "The consequences are clear.",
+     "exampleArabic": "后果很明确。",
      "type": "noun",
      "gender": "die",
      "plural": "die Konsequenzen"
     },
     {
      "german": "die Entscheidung",
-     "arabic": "decision",
+     "arabic": "决定",
      "example": "Die Entscheidung war richtig.",
-     "exampleArabic": "The decision was right.",
+     "exampleArabic": "这个决定是对的。",
      "type": "noun",
      "gender": "die",
      "plural": "die Entscheidungen"
     },
     {
      "german": "das Risiko",
-     "arabic": "risk",
+     "arabic": "风险",
      "example": "Das Risiko ist groß.",
-     "exampleArabic": "The risk is high.",
+     "exampleArabic": "风险很大。",
      "type": "noun",
      "gender": "das",
      "plural": "die Risiken"
     },
     {
      "german": "die Gelegenheit",
-     "arabic": "opportunity",
+     "arabic": "机会",
      "example": "Eine gute Gelegenheit.",
-     "exampleArabic": "A good opportunity.",
+     "exampleArabic": "一个好机会。",
      "type": "noun",
      "gender": "die",
      "plural": "die Gelegenheiten"
     },
     {
      "german": "reich",
-     "arabic": "rich",
+     "arabic": "富有的",
      "example": "Wenn ich reich wäre...",
-     "exampleArabic": "If I were rich...",
+     "exampleArabic": "假如我有钱……",
      "type": "adjective"
     },
     {
      "german": "arm",
-     "arabic": "poor",
+     "arabic": "贫穷的",
      "example": "Niemand will arm sein.",
-     "exampleArabic": "Nobody wants to be poor.",
+     "exampleArabic": "没人想穷。",
      "type": "adjective"
     },
     {
      "german": "frei",
-     "arabic": "free",
+     "arabic": "自由的",
      "example": "Wenn ich frei wäre...",
-     "exampleArabic": "If I were free...",
+     "exampleArabic": "假如我自由……",
      "type": "adjective"
     },
     {
      "german": "glücklich",
-     "arabic": "happy",
+     "arabic": "幸福的",
      "example": "Ich wäre glücklich.",
-     "exampleArabic": "I'd be happy.",
+     "exampleArabic": "我会很幸福。",
      "type": "adjective"
     },
     {
      "german": "zufrieden",
-     "arabic": "satisfied",
+     "arabic": "满意的",
      "example": "Wir wären zufrieden.",
-     "exampleArabic": "We'd be satisfied.",
+     "exampleArabic": "我们会很满意。",
      "type": "adjective"
     },
     {
      "german": "theoretisch",
-     "arabic": "theoretically",
+     "arabic": "理论上",
      "example": "Theoretisch ist es möglich.",
-     "exampleArabic": "Theoretically it's possible.",
+     "exampleArabic": "理论上是可能的。",
      "type": "adverb"
     },
     {
      "german": "praktisch",
-     "arabic": "practically",
+     "arabic": "实际上",
      "example": "Praktisch geht das nicht.",
-     "exampleArabic": "In practice it doesn't work.",
+     "exampleArabic": "实际上行不通。",
      "type": "adverb"
     },
     {
      "german": "angenommen",
-     "arabic": "suppose that",
+     "arabic": "假设",
      "example": "Angenommen, du gewinnst.",
-     "exampleArabic": "Suppose you win.",
+     "exampleArabic": "假设你赢了。",
      "type": "phrase"
     },
     {
      "german": "realisieren",
-     "arabic": "to realize / make happen",
+     "arabic": "实现",
      "example": "Träume realisieren.",
-     "exampleArabic": "Realize dreams.",
+     "exampleArabic": "实现梦想。",
      "type": "verb"
     },
     {
      "german": "verwirklichen",
-     "arabic": "to make real",
+     "arabic": "使成真",
      "example": "Pläne verwirklichen.",
-     "exampleArabic": "Make plans real.",
+     "exampleArabic": "把计划变为现实。",
      "type": "verb"
     },
     {
      "german": "feiern",
-     "arabic": "to celebrate",
+     "arabic": "庆祝",
      "example": "Wir feiern den Erfolg.",
-     "exampleArabic": "We celebrate the success.",
+     "exampleArabic": "我们庆祝成功。",
      "type": "verb"
     },
     {
      "german": "die Hypothese",
-     "arabic": "the hypothesis",
+     "arabic": "假设",
      "plural": "die Hypothesen",
      "example": "Eine Hypothese aufstellen.",
-     "exampleArabic": "To formulate a hypothesis.",
+     "exampleArabic": "提出一个假设。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Vermutung",
-     "arabic": "the assumption",
+     "arabic": "推测",
      "plural": "die Vermutungen",
      "example": "Eine reine Vermutung.",
-     "exampleArabic": "Pure assumption.",
+     "exampleArabic": "纯属推测。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "die Wirklichkeit",
-     "arabic": "reality",
+     "arabic": "现实",
      "example": "Die Wirklichkeit ist anders.",
-     "exampleArabic": "Reality is different.",
+     "exampleArabic": "现实并非如此。",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Schicksal",
-     "arabic": "fate",
+     "arabic": "命运",
      "example": "Das ist mein Schicksal.",
-     "exampleArabic": "That's my fate.",
+     "exampleArabic": "这就是我的命运。",
      "type": "noun",
      "gender": "das"
     }
@@ -9142,14 +9142,14 @@
      {
       "type": "fill-blank",
       "id": "b2-16-q1",
-      "question": "Real conditional: \"Wenn ich Zeit ___, komme ich.\" (haben)",
+      "question": "真实条件句：「Wenn ich Zeit ___, komme ich.」（haben）",
       "answer": "habe",
-      "hint": "present — Indikativ"
+      "hint": "现在时 — 直陈式"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q2",
-      "question": "Unreal: \"Wenn ich reich ___, würde ich reisen.\" (sein)",
+      "question": "非真实：「Wenn ich reich ___, würde ich reisen.」（sein）",
       "options": [
        "bin",
        "war",
@@ -9161,33 +9161,33 @@
      {
       "type": "fill-blank",
       "id": "b2-16-q3",
-      "question": "Without wenn: \"___ ich Zeit, würde ich kommen.\" (haben Konj. II)",
+      "question": "省略 wenn：「___ ich Zeit, würde ich kommen.」（haben 的第二虚拟式）",
       "answer": "Hätte",
-      "hint": "verb first"
+      "hint": "动词放句首"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q4",
-      "question": "Past unreal uses?",
+      "question": "过去的非真实条件用？",
       "options": [
        "hätte/wäre + Partizip",
        "würde + Inf",
-       "simple Konj. II",
-       "Indikativ Perfekt"
+       "简单的第二虚拟式",
+       "直陈式现在完成时"
       ],
       "answer": "hätte/wäre + Partizip"
      },
      {
       "type": "fill-blank",
       "id": "b2-16-q5",
-      "question": "Alternative to wenn: \"___ es regnet, bleiben wir zu Hause.\" (in case)",
+      "question": "wenn 的替代形式：「___ es regnet, bleiben wir zu Hause.」（万一）",
       "answer": "Falls",
-      "hint": "falls = formal wenn"
+      "hint": "falls = 正式的 wenn"
      },
      {
       "type": "matching",
       "id": "b2-16-q6",
-      "question": "Match the verb to its Konj. II:",
+      "question": "把动词和它的第二虚拟式配对：",
       "pairs": [
        {
         "left": "sein",
@@ -9215,7 +9215,7 @@
      {
       "type": "drag-drop",
       "id": "b2-16-q7",
-      "question": "Order: \"If I had had time, I would have come\" (past unreal)",
+      "question": "排序：「我要是当时有时间，就来了」（过去的非真实条件）",
       "words": [
        "Wenn",
        "ich",
@@ -9231,21 +9231,21 @@
      {
       "type": "speaking",
       "id": "b2-16-q8",
-      "question": "Say: \"If I were you, I'd do that\"",
+      "question": "说：「我要是你，就会这么做」",
       "answer": "Wenn ich du wäre, würde ich das machen"
      },
      {
       "type": "fill-blank",
       "id": "b2-16-q9",
-      "question": "Listen: \"Wenn du gekommen ___, hätten wir gefeiert.\" (sein Konj. II past)",
+      "question": "听：「Wenn du gekommen ___, hätten wir gefeiert.」（sein 的第二虚拟式过去）",
       "audioPrompt": "Wenn du gekommen wärst, hätten wir gefeiert.",
       "answer": "wärst",
-      "hint": "wärst = sein Konj. II with du"
+      "hint": "wärst = sein 的第二虚拟式配 du"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q10",
-      "question": "Most common structure for present unreal:",
+      "question": "现在的非真实条件最常见的结构是：",
       "options": [
        "hätte gehabt",
        "Wenn + Konj. II + würde + Inf",
@@ -9257,14 +9257,14 @@
      {
       "type": "fill-blank",
       "id": "b2-16-q11",
-      "question": "Konj. II of können?",
+      "question": "können 的第二虚拟式？",
       "answer": "könnte",
       "hint": "können → könnte"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q12",
-      "question": "Most natural in speech for \"if I did\":",
+      "question": "口语中表达「假如我做」最自然的是：",
       "options": [
        "ich täte",
        "ich würde tun",
@@ -9276,30 +9276,30 @@
      {
       "type": "fill-blank",
       "id": "b2-16-q13",
-      "question": "\"Wenn ich es ___, würde ich antworten.\" (wissen Konj. II)",
+      "question": "「Wenn ich es ___, würde ich antworten.」（wissen 的第二虚拟式）",
       "answer": "wüsste",
       "hint": "wissen → wüsste"
      },
      {
       "type": "matching",
       "id": "b2-16-q14",
-      "question": "Match the type to the structure:",
+      "question": "把类型和结构配对：",
       "pairs": [
        {
-        "left": "real present",
+        "left": "现在的真实条件",
         "right": "wenn + Indikativ"
        },
        {
-        "left": "unreal present",
+        "left": "现在的非真实条件",
         "right": "wenn + Konj. II + würde"
        },
        {
-        "left": "unreal past",
+        "left": "过去的非真实条件",
         "right": "wenn + hätte/wäre + Partizip"
        },
        {
-        "left": "without wenn",
-        "right": "verb first"
+        "left": "省略 wenn",
+        "right": "动词放句首"
        }
       ],
       "answer": "matched"
@@ -9307,7 +9307,7 @@
      {
       "type": "drag-drop",
       "id": "b2-16-q15",
-      "question": "Order: \"If I knew, I'd tell you\"",
+      "question": "排序：「我要是知道，就告诉你了」",
       "words": [
        "Wenn",
        "ich",
@@ -9324,47 +9324,47 @@
      {
       "type": "fill-blank",
       "id": "b2-16-q16",
-      "question": "Listen: \"___ ich Geld, würde ich reisen.\" (without wenn)",
+      "question": "听：「___ ich Geld, würde ich reisen.」（省略 wenn）",
       "audioPrompt": "Hätte ich Geld, würde ich reisen.",
       "answer": "Hätte",
-      "hint": "verb first"
+      "hint": "动词放句首"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q17",
-      "question": "Which is an alternative to wenn?",
+      "question": "哪个是 wenn 的替代形式？",
       "options": [
        "falls",
        "sofern",
        "unter der Bedingung dass",
-       "all of the above"
+       "以上全部"
       ],
-      "answer": "all of the above"
+      "answer": "以上全部"
      },
      {
       "type": "speaking",
       "id": "b2-16-q18",
-      "question": "Say: \"If you had come, we would have celebrated\"",
+      "question": "说：「你要是来了，我们就一起庆祝了」",
       "answer": "Wenn du gekommen wärst, hätten wir gefeiert"
      },
      {
       "type": "fill-blank",
       "id": "b2-16-q19",
-      "question": "\"Wenn ich Zeit ___ ___, wäre ich gekommen.\" (haben — Konj. II past)",
+      "question": "「Wenn ich Zeit ___ ___, wäre ich gekommen.」（haben — 第二虚拟式过去）",
       "answer": "gehabt hätte",
       "hint": "gehabt + hätte"
      },
      {
       "type": "multiple-choice",
       "id": "b2-16-q20",
-      "question": "The phrase \"Hätte ich Geld\" means:",
+      "question": "「Hätte ich Geld」的意思是：",
       "options": [
-       "I have money",
-       "If I had money",
-       "I'll have money",
-       "I had money"
+       "我有钱",
+       "假如我有钱",
+       "我将会有钱",
+       "我曾有钱"
       ],
-      "answer": "If I had money"
+      "answer": "假如我有钱"
      }
     ]
    }
