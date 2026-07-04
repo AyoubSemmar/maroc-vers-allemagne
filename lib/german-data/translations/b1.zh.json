@@ -8117,15 +8117,15 @@
   },
   "b1-15": {
    "id": "b1-15",
-   "title": "Weak Nouns (n-Deklination) — n-Deklination (schwache Nomen)",
+   "title": "弱变化名词（n-变格）— n-Deklination (schwache Nomen)",
    "grammar": {
-    "title": "Weak Nouns — n-Deklination (schwache Nomen)",
-    "content": "In German, there is a special group of masculine nouns called **schwache Nomen** (weak nouns). These nouns differ from others because they **take the suffix -(e)n in all grammatical cases except Nominativ** (the subject case).\n\n**Which nouns belong to this group?**\nMost of them are masculine nouns that fall into one of the following categories:\n- Nouns referring to **people, professions, or nationalities**, such as: *der Student, der Journalist, der Kollege*\n- Nouns ending in **-e**, such as: *der Junge, der Kunde, der Zeuge*\n- Nouns ending in **-ist, -ent, -ant, -at**, such as: *der Tourist, der Patient, der Praktikant*\n- A special exception: **der Herr** takes *-n* in the singular and *-en* in the plural\n\n**The golden rule:**\nIn the Genitiv, Dativ, and Akkusativ cases — always add **-(e)n** to the noun.\n\n**Important note:** Some of these nouns also take **-s** in the Genitiv singular, such as: *des Studenten* — note that the suffix is **-en** and not **-s** as with regular nouns.",
+    "title": "弱变化名词 — n-Deklination (schwache Nomen)",
+    "content": "德语中有一组特殊的阳性名词，叫做 **schwache Nomen**（弱变化名词）。这类名词的特点是：**除了第一格（主格）之外，在所有格中都加词尾 -(e)n**。\n\n**哪些名词属于这一组？**\n大多数是符合以下类别的阳性名词：\n- 指**人、职业或国籍**的名词，如：*der Student、der Journalist、der Kollege*\n- 以 **-e** 结尾的名词，如：*der Junge、der Kunde、der Zeuge*\n- 以 **-ist、-ent、-ant、-at** 结尾的名词，如：*der Tourist、der Patient、der Praktikant*\n- 特殊例外：**der Herr** 单数加 *-n*，复数加 *-en*\n\n**黄金法则：**\n在第二格、第三格和第四格中——始终给名词加 **-(e)n**。\n\n**重要提示：**这些名词在第二格单数中加的是 **-en** 而不是普通名词的 **-s**，如：*des Studenten*。",
     "tables": [
      {
-      "title": "Declension of weak nouns — example: der Student / der Junge / der Herr",
+      "title": "弱变化名词的变格——例：der Student / der Junge / der Herr",
       "headers": [
-       "Case",
+       "格",
        "der Student",
        "der Junge",
        "der Herr"
@@ -8133,7 +8133,7 @@
       "rows": [
        {
         "cells": [
-         "Nominativ (subject)",
+         "Nominativ（主语）",
          "der Student",
          "der Junge",
          "der Herr"
@@ -8141,7 +8141,7 @@
        },
        {
         "cells": [
-         "Akkusativ (direct object)",
+         "Akkusativ（直接宾语）",
          "den Studenten",
          "den Jungen",
          "den Herrn"
@@ -8149,7 +8149,7 @@
        },
        {
         "cells": [
-         "Dativ (indirect object)",
+         "Dativ（间接宾语）",
          "dem Studenten",
          "dem Jungen",
          "dem Herrn"
@@ -8157,214 +8157,214 @@
        },
        {
         "cells": [
-         "Genitiv (possessive)",
+         "Genitiv（所有格）",
          "des Studenten",
          "des Jungen",
          "des Herrn"
         ]
        }
       ],
-      "note": "The suffix -(e)n is added in all cases except Nominativ. der Herr takes -n in the singular only.",
+      "note": "除第一格外，所有格都加 -(e)n。der Herr 只在单数中加 -n。",
       "theme": "default"
      },
      {
-      "title": "Examples of common weak noun categories",
+      "title": "常见弱变化名词类别举例",
       "headers": [
-       "Type",
-       "Examples",
-       "Suffix"
+       "类型",
+       "例词",
+       "词尾"
       ],
       "rows": [
        {
         "cells": [
-         "Ending in -e",
+         "以 -e 结尾",
          "der Junge, der Kunde, der Kollege",
          "-n"
         ]
        },
        {
         "cells": [
-         "Ending in -ent / -ant",
+         "以 -ent / -ant 结尾",
          "der Student, der Praktikant",
          "-en"
         ]
        },
        {
         "cells": [
-         "Ending in -ist",
+         "以 -ist 结尾",
          "der Journalist, der Tourist",
          "-en"
         ]
        },
        {
         "cells": [
-         "Ending in -at / -ot",
+         "以 -at / -ot 结尾",
          "der Soldat, der Pilot",
          "-en"
         ]
        },
        {
         "cells": [
-         "Exception",
+         "例外",
          "der Herr",
-         "-n (singular) / -en (plural)"
+         "-n（单数）/ -en（复数）"
         ]
        }
       ],
-      "note": "All of these nouns are masculine. Always check the dictionary if you are not sure.",
+      "note": "这些名词全部是阳性。不确定时一定要查词典。",
       "theme": "default"
      }
     ],
     "rules": [
      {
-      "rule": "Weak nouns take -(e)n in the Akkusativ, Dativ, and Genitiv cases — and remain without a suffix only in the Nominativ.",
+      "rule": "弱变化名词在第四格、第三格和第二格中加 -(e)n——只有在第一格中不加词尾。",
       "example": "Der Student lernt. — Ich kenne den Studenten.",
-      "translation": "The student is learning. — I know the student."
+      "translation": "这个学生在学习。—— 我认识这个学生。"
      },
      {
-      "rule": "Nouns ending in -e (such as der Junge, der Kunde) take only -n (without an extra e).",
+      "rule": "以 -e 结尾的名词（如 der Junge、der Kunde）只加 -n（不再加 e）。",
       "example": "Ich helfe dem Jungen.",
-      "translation": "I am helping the boy."
+      "translation": "我在帮这个男孩。"
      },
      {
-      "rule": "Nouns ending in -ent, -ist, -ant, -at, -ot take -en in all cases except Nominativ.",
+      "rule": "以 -ent、-ist、-ant、-at、-ot 结尾的名词，除第一格外都加 -en。",
       "example": "Das ist das Zimmer des Studenten.",
-      "translation": "This is the student's room."
+      "translation": "这是那个学生的房间。"
      },
      {
-      "rule": "der Herr is an exception: it takes -n in the singular (Herrn) and -en in the plural (Herren).",
+      "rule": "der Herr 是例外：单数加 -n（Herrn），复数加 -en（Herren）。",
       "example": "Ich spreche mit dem Herrn.",
-      "translation": "I am speaking with the gentleman."
+      "translation": "我在和那位先生谈话。"
      }
     ],
     "examples": [
-     "Der Journalist schreibt einen Artikel. — The journalist is writing an article.",
-     "Ich kenne den Journalisten gut. — I know the journalist well.",
-     "Wir helfen dem Studenten bei den Hausaufgaben. — We are helping the student with the homework.",
-     "Das ist das Buch des Kollegen. — This is the colleague's book.",
-     "Der Kunde möchte ein Zimmer reservieren. — The customer would like to reserve a room.",
-     "Die Lehrerin erklärt dem Jungen die Aufgabe. — The teacher explains the exercise to the boy.",
-     "Ich habe dem Herrn Müller eine E-Mail geschickt. — I sent Mr. Müller an email.",
-     "Der Praktikant arbeitet seit einem Monat in der Firma. — The intern has been working at the company for a month."
+     "Der Journalist schreibt einen Artikel. — 那位记者在写一篇文章。",
+     "Ich kenne den Journalisten gut. — 我很了解那位记者。",
+     "Wir helfen dem Studenten bei den Hausaufgaben. — 我们帮那个学生做作业。",
+     "Das ist das Buch des Kollegen. — 这是那位同事的书。",
+     "Der Kunde möchte ein Zimmer reservieren. — 这位顾客想订一个房间。",
+     "Die Lehrerin erklärt dem Jungen die Aufgabe. — 老师给那个男孩讲解题目。",
+     "Ich habe dem Herrn Müller eine E-Mail geschickt. — 我给米勒先生发了一封电子邮件。",
+     "Der Praktikant arbeitet seit einem Monat in der Firma. — 那位实习生在公司工作一个月了。"
     ],
-    "tip": "💡 Whenever you see a masculine noun ending in -e, -ent, -ist, or -ant, remember that it is most likely a weak noun! Ask yourself: is it in the Nominativ? If not, add -(e)n right away. This rule covers more than 90% of cases at the B1 level."
+    "tip": "💡 每当看到以 -e、-ent、-ist 或 -ant 结尾的阳性名词，就要想到它很可能是弱变化名词！问问自己：它在第一格吗？如果不是，立刻加上 -(e)n。这条规则涵盖了 B1 阶段 90% 以上的情况。"
    },
    "vocabulary": [
     {
      "german": "Student",
-     "arabic": "The (university) student",
+     "arabic": "大学生",
      "gender": "der",
      "plural": "Studenten",
      "example": "Der Student lernt jeden Tag Deutsch.",
-     "exampleArabic": "The student learns German every day.",
+     "exampleArabic": "这个大学生每天学德语。",
      "type": "noun"
     },
     {
      "german": "Journalist",
-     "arabic": "The journalist",
+     "arabic": "记者",
      "gender": "der",
      "plural": "Journalisten",
      "example": "Der Journalist arbeitet für eine Zeitung.",
-     "exampleArabic": "The journalist works for a newspaper.",
+     "exampleArabic": "这位记者在一家报社工作。",
      "type": "noun"
     },
     {
      "german": "Kollege",
-     "arabic": "The colleague",
+     "arabic": "同事",
      "gender": "der",
      "plural": "Kollegen",
      "example": "Ich esse mit dem Kollegen zu Mittag.",
-     "exampleArabic": "I eat lunch with the colleague.",
+     "exampleArabic": "我和同事一起吃午饭。",
      "type": "noun"
     },
     {
      "german": "Junge",
-     "arabic": "The boy",
+     "arabic": "男孩",
      "gender": "der",
      "plural": "Jungen",
      "example": "Die Mutter ruft den Jungen.",
-     "exampleArabic": "The mother calls the boy.",
+     "exampleArabic": "妈妈在叫那个男孩。",
      "type": "noun"
     },
     {
      "german": "Kunde",
-     "arabic": "The customer / client",
+     "arabic": "顾客",
      "gender": "der",
      "plural": "Kunden",
      "example": "Der Verkäufer hilft dem Kunden.",
-     "exampleArabic": "The salesperson helps the customer.",
+     "exampleArabic": "售货员在帮助顾客。",
      "type": "noun"
     },
     {
      "german": "Herr",
-     "arabic": "The gentleman / Mr.",
+     "arabic": "先生",
      "gender": "der",
      "plural": "Herren",
      "example": "Guten Morgen, Herr Schmidt!",
-     "exampleArabic": "Good morning, Mr. Schmidt!",
+     "exampleArabic": "早上好，施密特先生！",
      "type": "noun"
     },
     {
      "german": "Tourist",
-     "arabic": "The tourist",
+     "arabic": "游客",
      "gender": "der",
      "plural": "Touristen",
      "example": "Der Tourist fragt nach dem Weg.",
-     "exampleArabic": "The tourist asks for directions.",
+     "exampleArabic": "那位游客在问路。",
      "type": "noun"
     },
     {
      "german": "Praktikant",
-     "arabic": "The intern / trainee",
+     "arabic": "实习生",
      "gender": "der",
      "plural": "Praktikanten",
      "example": "Wir begrüßen den neuen Praktikanten.",
-     "exampleArabic": "We welcome the new intern.",
+     "exampleArabic": "我们欢迎新来的实习生。",
      "type": "noun"
     },
     {
      "german": "Zeuge",
-     "arabic": "The witness",
+     "arabic": "证人",
      "gender": "der",
      "plural": "Zeugen",
      "example": "Die Polizei befragt den Zeugen.",
-     "exampleArabic": "The police question the witness.",
+     "exampleArabic": "警察在询问证人。",
      "type": "noun"
     },
     {
      "german": "Soldat",
-     "arabic": "The soldier",
+     "arabic": "士兵",
      "gender": "der",
      "plural": "Soldaten",
      "example": "Man dankt dem Soldaten für seinen Dienst.",
-     "exampleArabic": "They thank the soldier for his service.",
+     "exampleArabic": "人们感谢这位士兵的付出。",
      "type": "noun"
     },
     {
      "german": "Pilot",
-     "arabic": "The pilot",
+     "arabic": "飞行员",
      "gender": "der",
      "plural": "Piloten",
      "example": "Die Passagiere vertrauen dem Piloten.",
-     "exampleArabic": "The passengers trust the pilot.",
+     "exampleArabic": "乘客们信任飞行员。",
      "type": "noun"
     },
     {
      "german": "Mensch",
-     "arabic": "The human being / person",
+     "arabic": "人",
      "gender": "der",
      "plural": "Menschen",
      "example": "Ich helfe dem Menschen, der Hilfe braucht.",
-     "exampleArabic": "I help the person who needs help.",
+     "exampleArabic": "我帮助需要帮助的人。",
      "type": "noun"
     },
     {
      "german": "Patient",
-     "arabic": "The patient",
+     "arabic": "病人",
      "gender": "der",
      "plural": "Patienten",
      "example": "Der Arzt untersucht den Patienten.",
-     "exampleArabic": "The doctor examines the patient.",
+     "exampleArabic": "医生在给病人做检查。",
      "type": "noun"
     }
    ],
@@ -8373,7 +8373,7 @@
      {
       "type": "multiple-choice",
       "id": "b1-15-q1",
-      "question": "Choose the correct form of the weak noun in an Akkusativ sentence:\nIch sehe ___ Studenten.",
+      "question": "选择弱变化名词在第四格句子中的正确形式：\nIch sehe ___ Studenten.",
       "answer": "den",
       "options": [
        "der",
@@ -8381,27 +8381,27 @@
        "dem",
        "des"
       ],
-      "hint": "In the Akkusativ case, weak nouns take -(e)n and the article becomes den."
+      "hint": "第四格中弱变化名词加 -(e)n，冠词变为 den。"
      },
      {
       "type": "fill-blank",
       "id": "b1-15-q2",
-      "question": "Complete the sentence with the correct form of the weak noun:\nWir danken dem ___________ (Journalist) für seinen Bericht.",
+      "question": "用弱变化名词的正确形式补全句子：\nWir danken dem ___________ (Journalist) für seinen Bericht.",
       "answer": "Journalisten",
-      "hint": "After dem we are in the Dativ case — add -en to the weak noun."
+      "hint": "dem 之后是第三格——弱变化名词加 -en。"
      },
      {
       "type": "fill-blank",
       "id": "b1-15-q3",
-      "question": "🎧 Listen and complete the sentence with the missing word:",
+      "question": "🎧 听录音并补全缺失的单词：",
       "answer": "Kollegen",
-      "hint": "After des we are in the Genitiv case — the weak noun takes -en.",
+      "hint": "des 之后是第二格——弱变化名词加 -en。",
       "audioPrompt": "Das ist das Büro des Kollegen."
      },
      {
       "type": "drag-drop",
       "id": "b1-15-q4",
-      "question": "Arrange the words to form a correct sentence:",
+      "question": "把单词排成正确的句子：",
       "answer": "Die Lehrerin erklärt dem Jungen die Aufgabe.",
       "words": [
        "dem",
@@ -8412,12 +8412,12 @@
        "Jungen",
        "die"
       ],
-      "hint": "The verb erklärt requires Dativ for the person being explained to — use dem + Jungen."
+      "hint": "动词 erklärt 中被讲解的人用第三格——用 dem + Jungen。"
      },
      {
       "type": "multiple-choice",
       "id": "b1-15-q5",
-      "question": "Which of these sentences contains an error in the use of a weak noun?",
+      "question": "下面哪个句子在弱变化名词的使用上有错误？",
       "answer": "Er hilft dem Kunde.",
       "options": [
        "Ich kenne den Studenten.",
@@ -8425,12 +8425,12 @@
        "Das ist das Zimmer des Touristen.",
        "Wir sehen den Jungen."
       ],
-      "hint": "der Kunde is a weak noun — in the Dativ case it must become dem Kunden."
+      "hint": "der Kunde 是弱变化名词——第三格中必须变成 dem Kunden。"
      },
      {
       "type": "matching",
       "id": "b1-15-q6",
-      "question": "Match each noun in the Nominativ to its correct form in the Akkusativ:",
+      "question": "把第一格的名词和它在第四格中的正确形式配对：",
       "answer": "matched",
       "pairs": [
        {
@@ -8454,16 +8454,16 @@
      {
       "type": "fill-blank",
       "id": "b1-15-q7",
-      "question": "Complete the sentence with the correct form:\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
+      "question": "用正确形式补全句子：\nDer Arzt untersucht den ___________ (Patient) sorgfältig.",
       "answer": "Patienten",
-      "hint": "den indicates the Akkusativ case — the weak noun takes -en."
+      "hint": "den 表明是第四格——弱变化名词加 -en。"
      },
      {
       "type": "speaking",
       "id": "b1-15-q8",
-      "question": "Say the following sentence out loud, paying attention to the pronunciation of the suffix -en:\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
+      "question": "大声朗读下面的句子，注意词尾 -en 的发音：\n«Ich habe dem Herrn Müller eine Nachricht geschickt.»",
       "answer": "Ich habe dem Herrn Müller eine Nachricht geschickt.",
-      "hint": "Remember: Herrn = der Herr in the Dativ case. The -en suffix is pronounced lightly at the end of the word."
+      "hint": "记住：Herrn = der Herr 的第三格。词尾 -en 在词末发音要轻。"
      }
     ]
    }
