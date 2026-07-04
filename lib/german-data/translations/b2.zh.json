@@ -624,27 +624,27 @@
   },
   "b2-02": {
    "id": "b2-02",
-   "title": "Partizip I & II als Attribute — Participial Attributes",
+   "title": "Partizip I & II als Attribute — 分词作定语",
    "order": 2,
    "grammar": {
     "title": "der lesende Mann / das gelesene Buch",
-    "content": "In German, both **Partizip I** and **Partizip II** can be used as adjectives before nouns.\n\n**Partizip I** = verb + **-end** → indicates an **ongoing** action (active, ongoing)\n- lesen → lesend → der **lesende** Mann (the reading man)\n- schlafen → schlafend → das **schlafende** Kind (the sleeping child)\n\n**Partizip II** = past participle → indicates a **completed** action or **passive** state\n- lesen → gelesen → das **gelesene** Buch (the read book)\n- öffnen → geöffnet → die **geöffnete** Tür (the opened door)\n\n⚠️ Both types follow **Adjektivdeklination** rules (-e/-en depending on case).",
+    "content": "在德语中，**第一分词（Partizip I）**和**第二分词（Partizip II）**都可以用作名词前的形容词。\n\n**Partizip I** = 动词 + **-end** → 表示**正在进行**的动作（主动、进行中）\n- lesen → lesend → der **lesende** Mann（正在阅读的男人）\n- schlafen → schlafend → das **schlafende** Kind（睡着的孩子）\n\n**Partizip II** = 过去分词 → 表示**已完成**的动作或**被动**状态\n- lesen → gelesen → das **gelesene** Buch（被读过的书）\n- öffnen → geöffnet → die **geöffnete** Tür（打开的门）\n\n⚠️ 两种分词都遵循**形容词变格**规则（根据格加 -e/-en）。",
     "tables": [
      {
-      "title": "Partizip I vs Partizip II",
+      "title": "Partizip I 与 Partizip II 对比",
       "theme": "default",
       "headers": [
-       "Type",
-       "Formation",
-       "Meaning",
-       "Example"
+       "类型",
+       "构成",
+       "含义",
+       "例子"
       ],
       "rows": [
        {
         "cells": [
          "Partizip I",
-         "verb + end",
-         "ongoing action (active)",
+         "动词 + end",
+         "进行中的动作（主动）",
          "der singende Mann"
         ],
         "highlight": true
@@ -652,18 +652,18 @@
        {
         "cells": [
          "Partizip II",
-         "past participle",
-         "completed/passive",
+         "过去分词",
+         "已完成/被动",
          "das gebackene Brot"
         ]
        }
       ]
      },
      {
-      "title": "Examples with Adjektivdeklination",
+      "title": "带形容词变格的例子",
       "theme": "cases",
       "headers": [
-       "Case",
+       "格",
        "Partizip I",
        "Partizip II"
       ],
@@ -694,216 +694,216 @@
     ],
     "rules": [
      {
-      "rule": "Partizip I = active subject",
+      "rule": "Partizip I = 主动的执行者",
       "example": "die singende Frau",
-      "translation": "the singing woman (who is singing)"
+      "translation": "正在唱歌的女人"
      },
      {
-      "rule": "Partizip II = object/completed",
+      "rule": "Partizip II = 承受者/已完成",
       "example": "das gekochte Essen",
-      "translation": "the cooked food"
+      "translation": "做好的饭菜"
      },
      {
-      "rule": "follows adjective declension rules",
+      "rule": "遵循形容词变格规则",
       "example": "mit dem laufenden Kind",
-      "translation": "with the running child"
+      "translation": "和跑着的孩子一起"
      }
     ],
     "examples": [
-     "Der schreiende Mann stört alle. — The screaming man is disturbing everyone.",
-     "Das weinende Kind braucht Hilfe. — The crying child needs help.",
-     "Die geöffneten Fenster lassen Luft herein. — The opened windows let air in.",
-     "Ein lachendes Gesicht ist schön. — A laughing face is beautiful.",
-     "Das gebackene Brot duftet. — The baked bread smells good.",
-     "Die gut informierte Bevölkerung wählt klug. — The well-informed population votes wisely.",
-     "Ein schlafender Hund wurde aufgeweckt. — A sleeping dog was woken up.",
-     "Der verlorene Schlüssel wurde gefunden. — The lost key was found."
+     "Der schreiende Mann stört alle. — 那个大喊大叫的男人打扰了所有人。",
+     "Das weinende Kind braucht Hilfe. — 哭泣的孩子需要帮助。",
+     "Die geöffneten Fenster lassen Luft herein. — 打开的窗户让空气进来。",
+     "Ein lachendes Gesicht ist schön. — 一张笑脸是美丽的。",
+     "Das gebackene Brot duftet. — 烤好的面包香气扑鼻。",
+     "Die gut informierte Bevölkerung wählt klug. — 消息灵通的民众投票很明智。",
+     "Ein schlafender Hund wurde aufgeweckt. — 一只睡着的狗被叫醒了。",
+     "Der verlorene Schlüssel wurde gefunden. — 丢失的钥匙找到了。"
     ],
-    "tip": "Partizip I is rare in everyday speech but common in literary and formal texts. Partizip II is common everywhere."
+    "tip": "第一分词在日常口语中少见，但在文学和正式文本中很常见。第二分词则随处可见。"
    },
    "vocabulary": [
     {
      "german": "singen",
-     "arabic": "to sing",
+     "arabic": "唱歌",
      "type": "verb"
     },
     {
      "german": "laufen",
-     "arabic": "to run",
+     "arabic": "跑",
      "type": "verb"
     },
     {
      "german": "schreien",
-     "arabic": "to scream",
+     "arabic": "喊叫",
      "type": "verb"
     },
     {
      "german": "weinen",
-     "arabic": "to cry",
+     "arabic": "哭",
      "type": "verb"
     },
     {
      "german": "lachen",
-     "arabic": "to laugh",
+     "arabic": "笑",
      "type": "verb"
     },
     {
      "german": "schlafen",
-     "arabic": "to sleep",
+     "arabic": "睡觉",
      "type": "verb"
     },
     {
      "german": "wachen",
-     "arabic": "to wake / to guard",
+     "arabic": "醒着；守卫",
      "type": "verb"
     },
     {
      "german": "wachsen",
-     "arabic": "to grow",
+     "arabic": "生长",
      "type": "verb"
     },
     {
      "german": "fließen",
-     "arabic": "to flow",
+     "arabic": "流动",
      "type": "verb"
     },
     {
      "german": "brennen",
-     "arabic": "to burn",
+     "arabic": "燃烧",
      "type": "verb"
     },
     {
      "german": "verlieren",
-     "arabic": "to lose",
+     "arabic": "丢失",
      "type": "verb"
     },
     {
      "german": "finden",
-     "arabic": "to find",
+     "arabic": "找到",
      "type": "verb"
     },
     {
      "german": "backen",
-     "arabic": "to bake",
+     "arabic": "烘焙",
      "type": "verb"
     },
     {
      "german": "kochen",
-     "arabic": "to cook",
+     "arabic": "做饭",
      "type": "verb"
     },
     {
      "german": "informieren",
-     "arabic": "to inform",
+     "arabic": "告知",
      "type": "verb"
     },
     {
      "german": "begeistert",
-     "arabic": "enthusiastic (Part. II)",
+     "arabic": "热情的（第二分词）",
      "type": "adjective"
     },
     {
      "german": "erschöpft",
-     "arabic": "exhausted",
+     "arabic": "精疲力竭的",
      "type": "adjective"
     },
     {
      "german": "verletzt",
-     "arabic": "injured",
+     "arabic": "受伤的",
      "type": "adjective"
     },
     {
      "german": "überrascht",
-     "arabic": "surprised",
+     "arabic": "惊讶的",
      "type": "adjective"
     },
     {
      "german": "gebraucht",
-     "arabic": "used",
+     "arabic": "用过的；二手的",
      "type": "adjective"
     },
     {
      "german": "erwartet",
-     "arabic": "expected",
+     "arabic": "预期的",
      "type": "adjective"
     },
     {
      "german": "bekannt",
-     "arabic": "known",
+     "arabic": "知名的",
      "type": "adjective"
     },
     {
      "german": "die Bevölkerung",
-     "arabic": "the population",
+     "arabic": "民众；人口",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Gesicht",
-     "arabic": "the face",
+     "arabic": "脸",
      "plural": "die Gesichter",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "die Tür",
-     "arabic": "the door",
+     "arabic": "门",
      "plural": "die Türen",
      "type": "noun",
      "gender": "die"
     },
     {
      "german": "das Fenster",
-     "arabic": "the window",
+     "arabic": "窗户",
      "plural": "die Fenster",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "das Brot",
-     "arabic": "the bread",
+     "arabic": "面包",
      "plural": "die Brote",
      "type": "noun",
      "gender": "das"
     },
     {
      "german": "aufgeweckt",
-     "arabic": "awake / bright",
+     "arabic": "被叫醒的；机灵的",
      "type": "adjective"
     },
     {
      "german": "wachsend",
-     "arabic": "growing",
+     "arabic": "增长中的",
      "type": "adjective"
     },
     {
      "german": "fließend",
-     "arabic": "flowing / fluent",
+     "arabic": "流动的；流利的",
      "type": "adjective"
     },
     {
      "german": "brennend",
-     "arabic": "burning",
+     "arabic": "燃烧着的",
      "type": "adjective"
     },
     {
      "german": "duftend",
-     "arabic": "fragrant",
+     "arabic": "芬芳的",
      "type": "adjective"
     },
     {
      "german": "spielend",
-     "arabic": "playing",
+     "arabic": "玩耍着的",
      "type": "adjective"
     },
     {
      "german": "verbessert",
-     "arabic": "improved",
+     "arabic": "改进过的",
      "type": "adjective"
     },
     {
      "german": "gestoppt",
-     "arabic": "stopped",
+     "arabic": "被停下的",
      "type": "adjective"
     }
    ],
@@ -912,7 +912,7 @@
      {
       "id": "b2-02-q1",
       "type": "multiple-choice",
-      "question": "The reading man:",
+      "question": "「正在阅读的男人」：",
       "options": [
        "der lesen Mann",
        "der lesende Mann",
@@ -924,7 +924,7 @@
      {
       "id": "b2-02-q2",
       "type": "multiple-choice",
-      "question": "The read book:",
+      "question": "「被读过的书」：",
       "options": [
        "das lesende Buch",
        "das gelesene Buch",
@@ -936,19 +936,19 @@
      {
       "id": "b2-02-q3",
       "type": "fill-blank",
-      "question": "Das ___ Kind. (the sleeping child - schlafende)",
+      "question": "Das ___ Kind.（睡着的孩子 — schlafende）",
       "answer": "schlafende"
      },
      {
       "id": "b2-02-q4",
       "type": "fill-blank",
-      "question": "Die ___ Tür. (the opened door - geöffnete)",
+      "question": "Die ___ Tür.（打开的门 — geöffnete）",
       "answer": "geöffnete"
      },
      {
       "id": "b2-02-q5",
       "type": "drag-drop",
-      "question": "Arrange: [stört / schreiende / alle / Der / Mann]",
+      "question": "排序：[stört / schreiende / alle / Der / Mann]",
       "words": [
        "Der",
        "schreiende",
@@ -961,7 +961,7 @@
      {
       "id": "b2-02-q6",
       "type": "drag-drop",
-      "question": "Arrange: [duftet / gebackene / Das / Brot]",
+      "question": "排序：[duftet / gebackene / Das / Brot]",
       "words": [
        "Das",
        "gebackene",
@@ -973,7 +973,7 @@
      {
       "id": "b2-02-q7",
       "type": "matching",
-      "question": "Match the verb with its Partizip I:",
+      "question": "把动词和它的第一分词配对：",
       "pairs": [
        {
         "left": "singen",
@@ -997,7 +997,7 @@
      {
       "id": "b2-02-q8",
       "type": "multiple-choice",
-      "question": "Partizip II of \"finden\":",
+      "question": "「finden」的第二分词：",
       "options": [
        "findend",
        "gefunden",
@@ -1009,33 +1009,33 @@
      {
       "id": "b2-02-q9",
       "type": "speaking",
-      "question": "Say: \"The laughing child is beautiful.\"",
+      "question": "说：「笑着的孩子很可爱。」",
       "answer": "Das lachende Kind ist schön"
      },
      {
       "id": "b2-02-q10",
       "type": "multiple-choice",
-      "question": "Listen:",
+      "question": "听录音：",
       "audioPrompt": "Der verlorene Schlüssel wurde gestern gefunden.",
       "options": [
-       "The lost key was found yesterday",
-       "I lost my key",
-       "I'm looking for the key",
-       "The key is new"
+       "丢失的钥匙昨天找到了",
+       "我丢了钥匙",
+       "我在找钥匙",
+       "钥匙是新的"
       ],
-      "answer": "The lost key was found yesterday"
+      "answer": "丢失的钥匙昨天找到了"
      },
      {
       "id": "b2-02-q11",
       "type": "fill-blank",
-      "question": "Fill with Partizip I: \"der ___ Hund\" (singen)",
+      "question": "用第一分词填空：「der ___ Hund」（singen）",
       "answer": "singende",
       "hint": "singen → singend → singende"
      },
      {
       "id": "b2-02-q12",
       "type": "multiple-choice",
-      "question": "Partizip II of \"öffnen\" as adjective:",
+      "question": "「öffnen」用作形容词的第二分词：",
       "options": [
        "öffnend",
        "geöffnet",
@@ -1047,26 +1047,26 @@
      {
       "id": "b2-02-q13",
       "type": "fill-blank",
-      "question": "\"Das ___ Brot duftet.\" (baked)",
+      "question": "「Das ___ Brot duftet.」（烤好的）",
       "answer": "gebackene",
       "hint": "backen → gebacken → gebackene"
      },
      {
       "id": "b2-02-q14",
       "type": "multiple-choice",
-      "question": "Partizip I expresses:",
+      "question": "第一分词表达：",
       "options": [
-       "completed action",
-       "ongoing / active action",
-       "passive",
-       "future"
+       "已完成的动作",
+       "进行中的/主动的动作",
+       "被动",
+       "将来"
       ],
-      "answer": "ongoing / active action"
+      "answer": "进行中的/主动的动作"
      },
      {
       "id": "b2-02-q15",
       "type": "matching",
-      "question": "Match verb to Partizip I:",
+      "question": "把动词和第一分词配对：",
       "pairs": [
        {
         "left": "lesen",
@@ -1094,7 +1094,7 @@
      {
       "id": "b2-02-q16",
       "type": "drag-drop",
-      "question": "Order the words: \"The opened windows let air in\"",
+      "question": "排序：「打开的窗户让空气进来」",
       "words": [
        "Die",
        "geöffneten",
@@ -1108,33 +1108,33 @@
      {
       "id": "b2-02-q17",
       "type": "speaking",
-      "question": "Say: \"You shouldn't wake the sleeping child\"",
+      "question": "说：「不应该叫醒睡着的孩子」",
       "answer": "Das schlafende Kind soll man nicht wecken"
      },
      {
       "id": "b2-02-q18",
       "type": "fill-blank",
-      "question": "Listen: \"Ein ___ Gesicht ist schön.\" (Partizip I of lachen)",
+      "question": "听：「Ein ___ Gesicht ist schön.」（lachen 的第一分词）",
       "audioPrompt": "Ein lachendes Gesicht ist schön.",
       "answer": "lachendes",
-      "hint": "lachen → lachend → lachendes (das)"
+      "hint": "lachen → lachend → lachendes（das）"
      },
      {
       "id": "b2-02-q19",
       "type": "multiple-choice",
-      "question": "In everyday speech, which Partizip is more common?",
+      "question": "日常口语中哪种分词更常见？",
       "options": [
        "Partizip I",
        "Partizip II",
-       "both",
-       "neither"
+       "两者一样",
+       "都不常见"
       ],
       "answer": "Partizip II"
      },
      {
       "id": "b2-02-q20",
       "type": "drag-drop",
-      "question": "Order the words: \"The well-informed population votes wisely\"",
+      "question": "排序：「消息灵通的民众投票很明智」",
       "words": [
        "Die",
        "gut",
