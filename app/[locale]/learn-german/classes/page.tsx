@@ -8,6 +8,7 @@ import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import { classesStrings } from '@/components/classes/strings'
+import { isAccessActive } from '@/lib/courseAccess'
 import ClassesClient, { type ClassGroup } from './ClassesClient'
 
 // Booking counts are live — never cache this page.
@@ -56,12 +57,14 @@ export default async function ClassesPage({
   // whether the admin has granted them access (paid) yet.
   let myGroupId: string | null = null
   let myAccessGranted = false
+  let myAccessUntil: string | null = null
   if (user) {
     const { data: booking } = await sb
-      .from('class_bookings').select('group_id, access_granted')
+      .from('class_bookings').select('group_id, access_until')
       .eq('user_id', user.id).eq('status', 'reserved').maybeSingle()
     myGroupId = booking?.group_id ?? null
-    myAccessGranted = booking?.access_granted === true
+    myAccessUntil = (booking?.access_until as string | null) ?? null
+    myAccessGranted = isAccessActive(myAccessUntil)
   }
 
   return (
@@ -77,6 +80,7 @@ export default async function ClassesPage({
             groups={(groups ?? []) as ClassGroup[]}
             myGroupId={myGroupId}
             myAccessGranted={myAccessGranted}
+            myAccessUntil={myAccessUntil}
             isAuthed={!!user}
           />
         </div>

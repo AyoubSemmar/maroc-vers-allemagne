@@ -7,6 +7,7 @@ import { getLevel } from '@/lib/german-data'
 import { collectLevelVocab } from '@/lib/learn-german/vocab'
 import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
 import { callWindowState, type ClassWindow } from '@/lib/classSchedule'
+import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
 import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
@@ -50,6 +51,7 @@ export default function MyCourseClient({
   isTeacher,
   callUrl,
   classWindow,
+  accessUntil,
 }: {
   locale: string
   levelId: string
@@ -59,6 +61,7 @@ export default function MyCourseClient({
   isTeacher: boolean
   callUrl: string | null
   classWindow: ClassWindow | null
+  accessUntil: string | null
 }) {
   const level = getLevel(levelId)
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
@@ -206,6 +209,15 @@ export default function MyCourseClient({
             {displayName} · <span className="text-green-700">{level.id}</span>
           </h1>
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
+          {accessUntil && !isTeacher && (() => {
+            const d = accessDaysLeft(accessUntil)
+            const soon = d != null && d <= 7
+            return (
+              <p className={`text-xs mt-1 ${soon ? 'text-amber-600 font-medium' : 'text-gray-400'}`}>
+                🗓️ Accès jusqu&rsquo;au {formatAccessDate(accessUntil)}{soon && d != null ? ` · ${d} j restants` : ''}
+              </p>
+            )
+          })()}
         </div>
         {callUrl && (
           callOpen ? (

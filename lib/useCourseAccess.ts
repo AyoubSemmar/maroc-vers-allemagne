@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { createClient } from '@/lib/supabase-browser'
+import { isAccessActive } from '@/lib/courseAccess'
 
 export type CourseAccess = {
   loading: boolean
@@ -25,12 +26,12 @@ export function useCourseAccess(): CourseAccess {
       // Admins (the owner/teacher) always have access. The bookings select is
       // separate so a missing-column error doesn't sink the admin check.
       const [{ data: b }, { data: prof }] = await Promise.all([
-        sb.from('class_bookings').select('access_granted')
+        sb.from('class_bookings').select('access_until')
           .eq('user_id', data.user.id).eq('status', 'reserved').maybeSingle(),
         sb.from('profiles').select('is_admin').eq('user_id', data.user.id).maybeSingle(),
       ])
       const isAdmin = prof?.is_admin === true
-      if (active) setState({ loading: false, hasBooking: !!b, hasAccess: isAdmin || b?.access_granted === true })
+      if (active) setState({ loading: false, hasBooking: !!b, hasAccess: isAdmin || isAccessActive(b?.access_until as string | null) })
     })
     return () => { active = false }
   }, [])

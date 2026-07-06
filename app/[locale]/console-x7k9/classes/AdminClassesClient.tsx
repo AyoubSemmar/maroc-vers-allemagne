@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { formatAccessDate } from '@/lib/courseAccess'
 
 export type AdminGroup = {
   id: string
@@ -9,7 +10,7 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
-  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessGranted: boolean }[]
+  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean }[]
 }
 
 function waLink(num: string, label: string): string {
@@ -22,13 +23,13 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
 
-  async function setAccess(bookingId: string, granted: boolean) {
+  async function setAccess(bookingId: string, action: 'grant' | 'revoke') {
     setBusy(bookingId)
     try {
       const res = await fetch('/api/admin/classes/grant', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ bookingId, granted }),
+        body: JSON.stringify({ bookingId, action }),
       })
       if (!res.ok) {
         const { error } = await res.json().catch(() => ({ error: 'Failed' }))
@@ -89,8 +90,12 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
                   <tr key={s.bookingId} style={{ borderTop: '1px solid #eef0f4' }}>
                     <td style={{ padding: '6px 4px' }}>
                       {s.email}
-                      {s.accessGranted && (
-                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#16a34a', background: '#dcfce7', borderRadius: 6, padding: '1px 6px' }}>✓ accès</span>
+                      {s.accessActive ? (
+                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#16a34a', background: '#dcfce7', borderRadius: 6, padding: '1px 6px' }}>✓ jusqu&rsquo;au {formatAccessDate(s.accessUntil!)}</span>
+                      ) : s.accessUntil ? (
+                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#b91c1c', background: '#fee2e2', borderRadius: 6, padding: '1px 6px' }}>⚠ expiré {formatAccessDate(s.accessUntil)}</span>
+                      ) : (
+                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#9aa0b0', background: '#f1f2f5', borderRadius: 6, padding: '1px 6px' }}>non payé</span>
                       )}
                     </td>
                     <td style={{ padding: '6px 4px', width: 170 }}>
@@ -102,20 +107,34 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
                       ) : <span style={{ color: '#c0c4ce' }}>no WhatsApp</span>}
                     </td>
                     <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 80 }}>{s.bookedAt}</td>
-                    <td style={{ padding: '6px 4px', width: 120 }}>
-                      <button
-                        onClick={() => setAccess(s.bookingId, !s.accessGranted)}
-                        disabled={busy === s.bookingId}
-                        style={{
-                          fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
-                          opacity: busy === s.bookingId ? 0.5 : 1,
-                          ...(s.accessGranted
-                            ? { color: '#7d8398', background: 'none', border: '1px solid #e2e5ea' }
-                            : { color: 'white', background: '#16a34a', border: '1px solid #16a34a' }),
-                        }}
-                      >
-                        {s.accessGranted ? 'Révoquer' : '✓ Donner accès'}
-                      </button>
+                    <td style={{ padding: '6px 4px', width: 150 }}>
+                      <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                        <button
+                          onClick={() => setAccess(s.bookingId, 'grant')}
+                          disabled={busy === s.bookingId}
+                          title="Prolonger l'accès d'un mois"
+                          style={{
+                            fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
+                            color: 'white', background: '#16a34a', border: '1px solid #16a34a',
+                            opacity: busy === s.bookingId ? 0.5 : 1,
+                          }}
+                        >
+                          {s.accessUntil ? '↻ +1 mois' : '✓ Donner accès'}
+                        </button>
+                        {s.accessUntil && (
+                          <button
+                            onClick={() => setAccess(s.bookingId, 'revoke')}
+                            disabled={busy === s.bookingId}
+                            style={{
+                              fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
+                              color: '#7d8398', background: 'none', border: '1px solid #e2e5ea',
+                              opacity: busy === s.bookingId ? 0.5 : 1,
+                            }}
+                          >
+                            Révoquer
+                          </button>
+                        )}
+                      </div>
                     </td>
                     <td style={{ padding: '6px 4px', width: 80, textAlign: 'right' }}>
                       <button

@@ -4,6 +4,7 @@
 // separately gated by profiles.is_admin in /api/admin/classes/remove.
 import { createClient } from '@supabase/supabase-js'
 import type { AppLocale } from '@/i18n/routing'
+import { isAccessActive } from '@/lib/courseAccess'
 import AdminClassesClient, { type AdminGroup } from './AdminClassesClient'
 
 export const dynamic = 'force-dynamic'
@@ -19,7 +20,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
 
   const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
     sbAdmin.from('class_groups').select('id,label,schedule,capacity,booked_count').order('sort_order'),
-    sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at,access_granted').eq('status', 'reserved').order('created_at'),
+    sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at,access_until').eq('status', 'reserved').order('created_at'),
     sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
     sbAdmin.from('profiles').select('user_id,whatsapp'),
   ])
@@ -42,13 +43,17 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         email: emailById.get(b.user_id) ?? b.user_id,
         whatsapp: waById.get(b.user_id) ?? '',
         bookedAt: (b.created_at as string)?.slice(0, 10) ?? '',
-        accessGranted: (b as any).access_granted === true,
+        accessUntil: ((b as any).access_until as string | null) ?? null,
+        accessActive: isAccessActive((b as any).access_until as string | null),
       })),
   }))
 
   const reserved = model.reduce((s, g) => s + g.booked_count, 0)
   const seats = model.reduce((s, g) => s + g.capacity, 0)
-  const revenue = (groups ?? []).reduce((s: number, g: any) => s + (g.booked_count || 0) * (g.price_mad || 300), 0)
+  // Real monthly revenue counts only students with active (paid, unexpired)
+  // access — not every reserved-but-unpaid seat.
+  const activeCount = model.reduce((s, g) => s + g.students.filter((st) => st.accessActive).length, 0)
+  const revenue = activeCount * 300
   const fullGroups = model.filter((g) => g.booked_count >= g.capacity).length
 
   return (
@@ -62,9 +67,9 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
 
       <div className="adm-kpi-grid" style={{ marginBottom: 16 }}>
         <div className="adm-kpi adm-kpi--green">
-          <div className="adm-kpi-label">Monthly revenue (reserved)</div>
+          <div className="adm-kpi-label">Monthly revenue (paid)</div>
           <div className="adm-kpi-value">{revenue.toLocaleString()} DH</div>
-          <div className="adm-kpi-sub">{reserved} seats × 300 DH</div>
+          <div className="adm-kpi-sub">{activeCount} paid · {reserved} reserved</div>
         </div>
         <div className="adm-kpi adm-kpi--brand">
           <div className="adm-kpi-label">Seats filled</div>

@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 import { classesStrings } from '@/components/classes/strings'
+import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
 
 export type ClassGroup = {
   id: string
@@ -26,12 +27,14 @@ export default function ClassesClient({
   groups,
   myGroupId,
   myAccessGranted,
+  myAccessUntil,
   isAuthed,
 }: {
   locale: string
   groups: ClassGroup[]
   myGroupId: string | null
   myAccessGranted: boolean
+  myAccessUntil: string | null
   isAuthed: boolean
 }) {
   const t = classesStrings(locale)
@@ -84,13 +87,25 @@ export default function ClassesClient({
         </div>
       )}
 
-      {/* Reserved seat. Until the admin grants access (after payment) the
-          banner explains the WhatsApp payment step; once granted it links to
-          the course. */}
-      {myGroupId && (
-        <div className="rounded-xl bg-green-600 border border-green-500 shadow-sm px-4 py-3 text-sm text-white flex items-center justify-between gap-3 flex-wrap">
+      {/* Reserved seat. The banner reflects access state: active (with the
+          renewal date, nudging when it's within a week), expired (renew), or
+          reserved-but-unpaid (WhatsApp payment step). */}
+      {myGroupId && (() => {
+        const daysLeft = myAccessUntil ? accessDaysLeft(myAccessUntil) : null
+        const expired = !myAccessGranted && !!myAccessUntil
+        const renewSoon = myAccessGranted && daysLeft != null && daysLeft <= 7
+        return (
+        <div className={`rounded-xl border shadow-sm px-4 py-3 text-sm text-white flex items-center justify-between gap-3 flex-wrap ${
+          myAccessGranted ? 'bg-green-600 border-green-500' : 'bg-amber-500 border-amber-400'
+        }`}>
           <span className="font-medium">
-            {myAccessGranted ? '✅ Votre accès au cours est activé.' : `✅ ${t.enrolledNote}`}
+            {myAccessGranted
+              ? (myAccessUntil
+                  ? `✅ Accès actif jusqu'au ${formatAccessDate(myAccessUntil)}${renewSoon ? ` · à renouveler (${daysLeft} j)` : ''}`
+                  : '✅ Votre accès au cours est activé.')
+              : expired
+                ? `⏳ Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (300 DH/mois).`
+                : `✅ ${t.enrolledNote}`}
           </span>
           <div className="flex items-center gap-2 shrink-0">
             {myAccessGranted ? (
@@ -104,14 +119,15 @@ export default function ClassesClient({
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
                 target="_blank" rel="noreferrer"
-                className="rounded-lg bg-green-800 hover:bg-green-900 text-white text-xs font-semibold px-4 py-2"
+                className="rounded-lg bg-white/90 text-amber-800 hover:bg-white text-xs font-semibold px-4 py-2"
               >
-                💬 {t.payWhatsapp}
+                💬 {expired ? 'Renouveler' : t.payWhatsapp}
               </a>
             ) : null}
           </div>
         </div>
-      )}
+        )
+      })()}
 
 
       {LEVELS.map((level) => {
