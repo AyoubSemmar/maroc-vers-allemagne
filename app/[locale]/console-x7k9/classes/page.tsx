@@ -4,7 +4,7 @@
 // separately gated by profiles.is_admin in /api/admin/classes/remove.
 import { createClient } from '@supabase/supabase-js'
 import type { AppLocale } from '@/i18n/routing'
-import { isAccessActive } from '@/lib/courseAccess'
+import { isAccessActive, accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
 import AdminClassesClient, { type AdminGroup } from './AdminClassesClient'
 
 export const dynamic = 'force-dynamic'
@@ -48,6 +48,26 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
       })),
   }))
 
+  // Renewal chase list: paying students whose access lapses within 7 days (or
+  // already lapsed). One-click prefilled WhatsApp per student — churn dies in
+  // this window, so this list IS the renewal workflow.
+  const renewals = model
+    .flatMap((g) =>
+      g.students
+        .filter((s) => s.accessUntil)
+        .map((s) => ({ ...s, group: g.label, days: accessDaysLeft(s.accessUntil)! })),
+    )
+    .filter((s) => s.days <= 7)
+    .sort((a, b) => a.days - b.days)
+
+  const renewWa = (num: string, group: string) => {
+    const digits = (num || '').replace(/\D/g, '')
+    const msg = encodeURIComponent(
+      `Bonjour ! Votre accès au cours d'allemand GoGermany (${group}) arrive à échéance. Pour continuer sans interruption, merci de renouveler votre abonnement (300 DH/mois). 🙏`,
+    )
+    return `https://wa.me/${digits}?text=${msg}`
+  }
+
   const reserved = model.reduce((s, g) => s + g.booked_count, 0)
   const seats = model.reduce((s, g) => s + g.capacity, 0)
   // Real monthly revenue counts only students with active (paid, unexpired)
@@ -82,6 +102,42 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
           <div className="adm-kpi-sub">Cohorts ready to start</div>
         </div>
       </div>
+
+      {renewals.length > 0 && (
+        <div className="adm-card" style={{ padding: 16, marginBottom: 16, borderInlineStart: '4px solid #f59e0b' }}>
+          <strong style={{ display: 'block', marginBottom: 8 }}>
+            ⏰ Renouvellements — {renewals.length} à relancer
+          </strong>
+          <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+            <tbody>
+              {renewals.map((s) => (
+                <tr key={s.bookingId} style={{ borderTop: '1px solid #eef0f4' }}>
+                  <td style={{ padding: '6px 4px' }}>{s.email}</td>
+                  <td style={{ padding: '6px 4px', color: '#7d8398' }}>{s.group}</td>
+                  <td style={{ padding: '6px 4px', fontWeight: 700, color: s.days < 0 ? '#b91c1c' : '#b45309' }}>
+                    {s.days < 0
+                      ? `expiré le ${formatAccessDate(s.accessUntil!)}`
+                      : s.days === 0 ? 'expire aujourd’hui' : `${s.days} j restants`}
+                  </td>
+                  <td style={{ padding: '6px 4px', textAlign: 'end' }}>
+                    {s.whatsapp ? (
+                      <a
+                        href={renewWa(s.whatsapp, s.group)}
+                        target="_blank" rel="noreferrer"
+                        style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 6, padding: '4px 10px', textDecoration: 'none' }}
+                      >
+                        💬 Relancer
+                      </a>
+                    ) : (
+                      <span style={{ color: '#c0c4ce', fontSize: 12 }}>no WhatsApp</span>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
 
       <AdminClassesClient groups={model} locale={locale} />
     </>

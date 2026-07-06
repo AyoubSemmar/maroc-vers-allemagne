@@ -240,6 +240,39 @@ export default function MyCourseClient({
         )}
       </div>
 
+      {/* Continue card — one obvious next action keeps the weekly loop going:
+          the first unpassed lesson, plus how many devoirs are waiting. */}
+      {(() => {
+        const nextUp = lessons.find(l => !completed.has(l.id))
+        const devoirsTodo = assignments.filter(a => subScores[a.id] == null).length
+        if (!nextUp && devoirsTodo === 0) return null
+        return (
+          <div className="bg-green-700 rounded-2xl p-4 mb-6 flex items-center justify-between gap-3 flex-wrap">
+            <div className="text-white min-w-0">
+              <p className="text-[11px] uppercase tracking-wide text-green-200 font-semibold">Reprendre</p>
+              {nextUp ? (
+                <p className="font-bold truncate">Leçon {nextUp.order} · {nextUp.title}</p>
+              ) : (
+                <p className="font-bold">Toutes les leçons sont validées 🎉</p>
+              )}
+              {devoirsTodo > 0 && (
+                <a href="#devoirs" className="text-xs text-green-100 underline underline-offset-2">
+                  📝 {devoirsTodo} devoir{devoirsTodo > 1 ? 's' : ''} à faire
+                </a>
+              )}
+            </div>
+            {nextUp && (
+              <Link
+                href={`/learn-german/${level.id.toLowerCase()}/${nextUp.id}`}
+                className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
+              >
+                Continuer →
+              </Link>
+            )}
+          </div>
+        )
+      })()}
+
       {/* Report card — Note (quality on work rendered) + separate progression */}
       <div className="bg-white rounded-2xl border border-gray-200 p-5 mb-8">
         <div className="flex flex-col md:flex-row gap-6">
@@ -303,7 +336,7 @@ export default function MyCourseClient({
 
       {/* Devoirs — grouped per lesson (Lesen + Hören + Schreiben) */}
       {assignments.length > 0 && (
-        <div className="mb-8">
+        <div className="mb-8" id="devoirs">
           <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Devoirs</h2>
 
           <div className="flex flex-col gap-3">

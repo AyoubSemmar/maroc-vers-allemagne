@@ -11,6 +11,7 @@ import DragDropExercise from '@/components/learn-german/DragDropExercise'
 import MatchingExercise from '@/components/learn-german/MatchingExercise'
 import SpeakingExercise from '@/components/learn-german/SpeakingExercise'
 import LessonVideo from '@/components/learn-german/LessonVideo'
+import LiveClassesCta from '@/components/classes/LiveClassesCta'
 import { getLessonVideo, EASY_GERMAN_CHANNEL } from '@/lib/german-data/videos'
 
 type Tab = 'grammar' | 'vocab' | 'exercise' | 'watch'
@@ -721,6 +722,13 @@ export default function LessonClient({
             )}
           </div>
         )}
+
+        {/* Live-classes CTA — the lessons are the site's top-of-funnel, so
+            every one of them advertises the paid course. Self-gates: shows
+            only in Morocco after launch (admins preview anywhere). */}
+        <div className="mt-10">
+          <LiveClassesCta locale={locale} />
+        </div>
       </div>
     </div>
   )

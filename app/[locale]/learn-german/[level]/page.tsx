@@ -7,6 +7,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import LessonsList from '@/components/learn-german/LessonsList'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
+import LiveClassesCta from '@/components/classes/LiveClassesCta'
 import Icon from '@/components/ui/Icon'
 import '../learn-german.css'
 
@@ -65,6 +66,9 @@ export default async function LevelPage({ params }: { params: Promise<{ level: s
       </header>
 
       <div className="lg-body wrap">
+        {/* Live-classes CTA — level pages are high-traffic entry points.
+            Self-gates: Morocco + launched only (admins preview anywhere). */}
+        <LiveClassesCta locale={locale} />
         <ExamPrepCTA compact />
         <h2 className="lg-section-title">{t('lessonsHeading')}</h2>
         <LessonsList level={level} />
