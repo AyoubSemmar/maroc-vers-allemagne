@@ -703,13 +703,22 @@ export default function LessonClient({
                 {tw('watchCard.tip', 'Listen for the words and grammar from this lesson. Turn on German subtitles, then watch again without them.')}
               </p>
             </div>
-            <button
-              onClick={() => setTab('exercise')}
-              className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
-            >
-              {tw('watchCard.nextEx', 'Practice with exercises')}
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/></svg>
-            </button>
+            {nextLesson ? (
+              <Link
+                href={`/learn-german/${level.id.toLowerCase()}/${nextLesson.id}`}
+                className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
+              >
+                {t('exerciseCard.nextLesson', { title: nextLessonTitle })}
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5"><path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"/></svg>
+              </Link>
+            ) : (
+              <Link
+                href={`/learn-german/${level.id.toLowerCase()}`}
+                className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors flex items-center justify-center gap-2"
+              >
+                {t('exerciseCard.levelDone')}
+              </Link>
+            )}
           </div>
         )}
       </div>
