@@ -6,11 +6,15 @@
 // AdSense client. Per-environment env vars override when present.
 export type AdFormat = 'vertical' | 'in-article'
 
+// Adsterra is OFF — its ad quality was too low, so we're running no third-party
+// ads until AdSense is approved (a clean site also reviews better). To turn
+// Adsterra back on, set the env vars below (or restore the baked keys):
+//   NEXT_PUBLIC_ADSTERRA_KEY_SIDEBAR   = 261a948493ee0ae0b60c348930008a51 (160x600)
+//   NEXT_PUBLIC_ADSTERRA_KEY_INARTICLE = 3ccbf217012e9d02089e5d238ddda3cd (300x250)
+//   NEXT_PUBLIC_ADSTERRA_NATIVE_*      = pl30234783.effectivecpmnetwork.com/cb5e…/invoke.js
 export const ADSTERRA_KEY: Record<AdFormat, string | undefined> = {
-  // 160x600 skyscraper — desktop sidebar rail.
-  vertical: process.env.NEXT_PUBLIC_ADSTERRA_KEY_SIDEBAR || '261a948493ee0ae0b60c348930008a51',
-  // 300x250 medium rectangle — in-content + mobile.
-  'in-article': process.env.NEXT_PUBLIC_ADSTERRA_KEY_INARTICLE || '3ccbf217012e9d02089e5d238ddda3cd',
+  vertical: process.env.NEXT_PUBLIC_ADSTERRA_KEY_SIDEBAR,
+  'in-article': process.env.NEXT_PUBLIC_ADSTERRA_KEY_INARTICLE,
 }
 
 // AdSense per-placement slot ids (used once the account is approved). No
@@ -32,10 +36,8 @@ export const ADSTERRA_SIZE: Record<AdFormat, { w: number; h: number }> = {
 // an iframe) so it inherits the site's fonts/colours. `src` + `containerId`
 // come straight from the unit's "Get code". Env-overridable; public values.
 export const ADSTERRA_NATIVE = {
-  src: process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_SRC ||
-    'https://pl30234783.effectivecpmnetwork.com/cb5e783f9256ced8b3349602302f93e7/invoke.js',
-  containerId: process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER ||
-    'container-cb5e783f9256ced8b3349602302f93e7',
+  src: process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_SRC || '',
+  containerId: process.env.NEXT_PUBLIC_ADSTERRA_NATIVE_CONTAINER || '',
 }
 
 /** The rail has something to show when any placement has an ad unit configured. */
