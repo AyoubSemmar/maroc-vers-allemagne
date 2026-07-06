@@ -33,6 +33,16 @@ export type LocaleMetaInput = {
   description: string
   /** Optional override for og:image. Defaults to the site-wide OG image (app/opengraph-image.tsx). */
   ogImage?: string
+  /**
+   * Locales this page should actually be INDEXED in. When set, a locale
+   * outside the list still renders (UX) but is marked noindex,follow with its
+   * canonical pointing at the primary indexable locale, and hreflang lists
+   * only the indexable locales. Same pattern as article pages: indexing all
+   * 12 locale variants of programmatic/near-identical pages fills GSC with
+   * "duplicate without user-selected canonical" and burns crawl budget.
+   * Omit for genuinely-translated pages (default: all locales indexable).
+   */
+  indexLocales?: AppLocale[]
 }
 
 export function buildLocaleMetadata({
@@ -41,16 +51,29 @@ export function buildLocaleMetadata({
   title,
   description,
   ogImage,
+  indexLocales,
 }: LocaleMetaInput): Metadata {
   const cleanPath = path.startsWith('/') || path === '' ? path : `/${path}`
-  const canonical = `${SITE}/${locale}${cleanPath}`
+  const indexable = indexLocales?.length
+    ? routing.locales.filter((l) => indexLocales.includes(l))
+    : [...routing.locales]
+  const isIndexable = indexable.includes(locale)
+  // Non-indexable locales canonicalise to the primary indexable one
+  // (fr first — main audience — then en, then whatever is available).
+  const primary = isIndexable
+    ? locale
+    : indexable.includes('fr' as AppLocale) ? ('fr' as AppLocale)
+    : indexable.includes('en' as AppLocale) ? ('en' as AppLocale)
+    : indexable[0] ?? locale
+  const canonical = `${SITE}/${primary}${cleanPath}`
   const languages = Object.fromEntries(
-    routing.locales.map((l) => [l, `${SITE}/${l}${cleanPath}`]),
+    indexable.map((l) => [l, `${SITE}/${l}${cleanPath}`]),
   )
 
   return {
     title,
     description,
+    ...(isIndexable ? {} : { robots: { index: false, follow: true } }),
     alternates: {
       canonical,
       languages,

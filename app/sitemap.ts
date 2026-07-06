@@ -1,9 +1,22 @@
 import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
 import { supabase } from '@/lib/supabase'
-import { COUNTRY_ORDER } from '@/lib/documentChecklistData'
+import { COUNTRIES, COUNTRY_ORDER, type CountryKey } from '@/lib/documentChecklistData'
 
-const VISA_SLUGS = ['ausbildung', 'studium', 'tourist', 'family-reunification']
+const VISA_SLUGS = ['ausbildung', 'studium', 'tourist', 'family-reunification'] as const
+
+// Checklist pages are indexed only in the locales their long-tail queries come
+// in, and only for combos where a visa is actually required — the rest are
+// noindex (see the [country]/[visa-type] page). Keep the sitemap in lockstep:
+// listing noindexed URLs makes Google distrust the file. This cut ~5k
+// near-duplicate URLs that were drowning the site's crawl budget.
+const CHECKLIST_LOCALES = routing.locales.filter((l) => ['en', 'fr', 'ar'].includes(l))
+function checklistIndexable(country: CountryKey, visaSlug: (typeof VISA_SLUGS)[number]): boolean {
+  if (country === 'other') return false
+  const rule = COUNTRIES[country]
+  if (!rule) return false
+  return visaSlug === 'tourist' ? rule.touristVisaRequired : rule.nationalDVisaRequired
+}
 
 // www is the canonical host — the bare domain 307-redirects to it, and a
 // sitemap full of redirecting URLs makes Google distrust the whole file.
@@ -106,19 +119,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // If Supabase is unreachable at build time, just emit the static entries.
   }
 
-  // One entry per locale for every country × visa-type combination.
-  // Groups all locale variants under alternates so Google treats them as
-  // translations of each other, not duplicate content.
+  // Checklist entries: only indexable combos (visa actually required, not the
+  // 'other' fallback) and only the indexed locales — mirrors the page-level
+  // noindex rules exactly.
   const checklistEntries: MetadataRoute.Sitemap = COUNTRY_ORDER.flatMap((country) =>
-    VISA_SLUGS.flatMap((visaSlug) =>
-      routing.locales.map((loc) => ({
+    VISA_SLUGS.filter((visaSlug) => checklistIndexable(country, visaSlug)).flatMap((visaSlug) =>
+      CHECKLIST_LOCALES.map((loc) => ({
         url: `${SITE}/${loc}/tools/document-checklist/${country}/${visaSlug}`,
         lastModified: yesterday,
         changeFrequency: 'monthly' as const,
         priority: 0.65,
         alternates: {
           languages: Object.fromEntries(
-            routing.locales.map((l) => [
+            CHECKLIST_LOCALES.map((l) => [
               l,
               `${SITE}/${l}/tools/document-checklist/${country}/${visaSlug}`,
             ]),

@@ -39,6 +39,20 @@ export async function generateStaticParams() {
   return params
 }
 
+// The long-tail queries these pages target ("documents visa allemagne depuis
+// le Sénégal", "Germany student visa documents from Nigeria") come in these
+// languages. Indexing all 12 locales multiplied ~5k near-duplicate URLs and
+// drowned the site's crawl budget (GSC: 7.8k not indexed).
+const CHECKLIST_INDEX_LOCALES = ['en', 'fr', 'ar'] as AppLocale[]
+
+/** Is a visa actually required for this country × path? EU/visa-free combos
+ *  render only a "no visa needed" paragraph — thin pages, not worth indexing. */
+function visaRequired(countryKey: CountryKey, pathKey: PathKey): boolean {
+  const rule = COUNTRIES[countryKey]
+  if (!rule) return false
+  return pathKey === 'tourist' ? rule.touristVisaRequired : rule.nationalDVisaRequired
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale, country: countrySlug, 'visa-type': visaSlug } = await params
   const country = COUNTRIES[countrySlug as CountryKey]
@@ -47,12 +61,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'documentChecklist' })
   const countryName = country.name[locale] ?? country.name.en
   const pathName = t(`path.${pathKey}`)
-  return buildLocaleMetadata({
+  const meta = buildLocaleMetadata({
     locale,
     path: `/tools/document-checklist/${countrySlug}/${visaSlug}`,
     title: t('seoCountryPageTitle', { country: countryName, path: pathName }),
     description: t('seoCountryPageDesc', { country: countryName, path: pathName }),
+    indexLocales: CHECKLIST_INDEX_LOCALES,
   })
+  // Thin combos (no visa required) and the generic 'other' fallback are
+  // noindex in every locale — they carry no doc list worth ranking.
+  if (countrySlug === 'other' || !visaRequired(countrySlug as CountryKey, pathKey)) {
+    return { ...meta, robots: { index: false, follow: true } }
+  }
+  return meta
 }
 
 export default async function CountryVisaPage({ params }: Props) {
