@@ -6,6 +6,7 @@ import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import AdRail from '@/components/ads/AdRail'
+import AdSlot from '@/components/ads/AdSlot'
 import ArticleContent from '@/components/ArticleContent'
 import ArticleComments from '@/components/ArticleComments'
 import HelpfulButton from '@/components/HelpfulButton'
@@ -137,6 +138,17 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     try { return t(`cat.${cat}` as any) } catch { return cat }
   }
 
+  // Split the body once at the first section break (H2) past the intro so an
+  // in-content ad sits between the intro and the body — the best-viewability,
+  // least-intrusive position. Short articles are left uninterrupted.
+  function splitForAd(md: string): [string, string] | null {
+    if (!md || md.length < 900) return null
+    const idx = md.indexOf('\n## ', 400)
+    if (idx < 0) return null
+    return [md.slice(0, idx), md.slice(idx)]
+  }
+  const contentParts = splitForAd(article.content)
+
   // ── JSON-LD: Article + FAQPage rich-result schema ────────────
   const SITE = 'https://www.gogermany.ma'
   const articleLd = {
@@ -222,7 +234,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {article.summary}
         </p>
 
-        <ArticleContent content={article.content} />
+        {contentParts ? (
+          <>
+            <ArticleContent content={contentParts[0]} />
+            <AdSlot format="in-article" className="my-8" />
+            <ArticleContent content={contentParts[1]} />
+          </>
+        ) : (
+          <ArticleContent content={article.content} />
+        )}
 
         <FAQAccordion faqs={article.faqs || []} />
 

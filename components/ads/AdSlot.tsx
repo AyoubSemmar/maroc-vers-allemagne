@@ -1,19 +1,12 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { type AdFormat, ADSTERRA_KEY, ADSTERRA_SIZE, ADSENSE_SLOT } from './config'
 
-// Publisher + per-placement slot IDs come from public env vars so ads can be
-// switched on with zero code changes once AdSense approves the site:
-//   NEXT_PUBLIC_ADSENSE_CLIENT          = ca-pub-XXXXXXXXXXXXXXXX
-//   NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR    = <ad unit id for the desktop rail>
-//   NEXT_PUBLIC_ADSENSE_SLOT_INARTICLE  = <ad unit id for the in-content unit>
+// Two providers share one slot component so placements never change when the
+// ad network does — only which units are configured (see ./config). Adsterra
+// wins per format when its key is set; AdSense drives the slot otherwise.
 const CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || 'ca-pub-4265650830157827'
-const SLOT_BY_FORMAT: Record<AdFormat, string | undefined> = {
-  vertical: process.env.NEXT_PUBLIC_ADSENSE_SLOT_SIDEBAR,
-  'in-article': process.env.NEXT_PUBLIC_ADSENSE_SLOT_INARTICLE,
-}
-
-type AdFormat = 'vertical' | 'in-article'
 
 type Props = {
   /** AdSense ad-unit id. Falls back to the env var for this format. */
@@ -22,13 +15,43 @@ type Props = {
   className?: string
 }
 
+/**
+ * Adsterra banner sandboxed in its own iframe. Their invoke.js relies on a
+ * global `atOptions` and writes an iframe at the script's location — both of
+ * which fight React's SPA DOM (blank ads, cross-unit collisions). Isolating
+ * each unit in a `srcDoc` iframe makes it reliable and safe to mount several.
+ */
+function AdsterraUnit({ adKey, w, h, className }: { adKey: string; w: number; h: number; className: string }) {
+  const html =
+    '<!doctype html><html><head><meta charset="utf-8">' +
+    '<style>html,body{margin:0;padding:0;overflow:hidden;background:transparent}</style></head><body>' +
+    `<script type="text/javascript">atOptions={'key':'${adKey}','format':'iframe','height':${h},'width':${w},'params':{}};</script>` +
+    `<script type="text/javascript" src="//www.highperformanceformat.com/${adKey}/invoke.js"></script>` +
+    '</body></html>'
+  return (
+    <iframe
+      title="Sponsored"
+      srcDoc={html}
+      width={w}
+      height={h}
+      scrolling="no"
+      loading="lazy"
+      className={className}
+      style={{ border: 0, display: 'block', margin: '0 auto', maxWidth: '100%' }}
+    />
+  )
+}
+
 export default function AdSlot({ slot, format = 'in-article', className = '' }: Props) {
-  const slotId = slot || SLOT_BY_FORMAT[format]
-  const configured = Boolean(CLIENT && slotId)
+  const adsterraKey = ADSTERRA_KEY[format]
+  const slotId = slot || ADSENSE_SLOT[format]
+  // Adsterra wins when its key is set; AdSense only drives this slot otherwise.
+  const adsenseConfigured = Boolean(CLIENT && slotId) && !adsterraKey
+  const configured = Boolean(adsterraKey) || adsenseConfigured
   const pushed = useRef(false)
 
   useEffect(() => {
-    if (!configured || pushed.current) return
+    if (!adsenseConfigured || pushed.current) return
     try {
       // The loader script (in the locale layout) defines window.adsbygoogle.
       ;((window as unknown as { adsbygoogle: unknown[] }).adsbygoogle ||= []).push({})
@@ -36,7 +59,13 @@ export default function AdSlot({ slot, format = 'in-article', className = '' }: 
     } catch {
       /* AdSense not loaded (blocked / offline) — fail silently. */
     }
-  }, [configured])
+  }, [adsenseConfigured])
+
+  // Adsterra path — the iframe self-loads its own invoke.js, no global loader.
+  if (adsterraKey) {
+    const { w, h } = ADSTERRA_SIZE[format]
+    return <AdsterraUnit adKey={adsterraKey} w={w} h={h} className={className} />
+  }
 
   // Not configured yet (no publisher id or slot): show a labelled placeholder
   // while developing so the slot is visible, but render nothing in production
