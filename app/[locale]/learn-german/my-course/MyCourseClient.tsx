@@ -26,13 +26,13 @@ function gradeInfo(g: number): { note: string; text: string; color: string; bar:
   return { note: '—', text: 'Pas encore commencé', color: 'text-gray-400', bar: 'bg-gray-300' }
 }
 
-function Bar({ label, value, weight, emoji }: { label: string; value: number; weight: number; emoji: string }) {
-  const v = Math.round(value)
+function Bar({ label, value, sub, emoji }: { label: string; value: number | null; sub?: string; emoji: string }) {
+  const v = value == null ? 0 : Math.round(value)
   return (
     <div>
       <div className="flex items-center justify-between text-xs mb-1">
-        <span className="text-gray-600">{emoji} {label} <span className="text-gray-300">· {weight}%</span></span>
-        <span className="font-semibold text-gray-700">{v}%</span>
+        <span className="text-gray-600">{emoji} {label}{sub ? <span className="text-gray-300"> · {sub}</span> : null}</span>
+        <span className="font-semibold text-gray-700">{value == null ? '—' : `${v}%`}</span>
       </div>
       <div className="w-full bg-gray-100 rounded-full h-2">
         <div className="bg-green-500 h-2 rounded-full transition-all duration-500" style={{ width: `${v}%` }} />
@@ -131,24 +131,44 @@ export default function MyCourseClient({
   const lessons = [...level.lessons].sort((a, b) => a.order - b.order)
   const completed = new Set(progress.completedLessons)
 
-  // ── Running grade ── lessons (best score, unattempted = 0) + vocab mastery %
-  // + assignments (final score, not-done = 0). Assignments only weigh in once
-  // the teacher has posted some — otherwise lessons/vocab carry the grade.
-  const lessonComponent = lessons.length
-    ? lessons.reduce((sum, l) => sum + (scores[l.id]?.best ?? 0), 0) / lessons.length
-    : 0
-  const vocabComponent = vocabTotal ? (vocab.learnedCount / vocabTotal) * 100 : 0
-  const assignmentComponent = assignments.length
-    ? assignments.reduce((sum, a) => sum + (subScores[a.id] ?? 0), 0) / assignments.length
-    : 0
-  const grade = assignments.length
-    ? Math.round(0.4 * lessonComponent + 0.3 * vocabComponent + 0.3 * assignmentComponent)
-    : Math.round(0.6 * lessonComponent + 0.4 * vocabComponent)
+  // ── Note (quality) ── graded ONLY on work the student has actually done:
+  // attempted lessons (best score) + submitted devoirs. Syllabus coverage is
+  // tracked separately as "progression" below, so a student early in the course
+  // isn't scored as if they'd failed everything they simply haven't reached yet.
+  const attemptedLessons = lessons.filter(l => scores[l.id]?.best != null)
+  const lessonQuality = attemptedLessons.length
+    ? attemptedLessons.reduce((sum, l) => sum + (scores[l.id]?.best ?? 0), 0) / attemptedLessons.length
+    : null
+  const doneDevoirs = assignments.filter(a => subScores[a.id] != null)
+  const devoirQuality = doneDevoirs.length
+    ? doneDevoirs.reduce((sum, a) => sum + (subScores[a.id] ?? 0), 0) / doneDevoirs.length
+    : null
 
-  const info = gradeInfo(grade)
-  const weights = assignments.length
-    ? { lesson: 40, vocab: 30, assign: 30 }
-    : { lesson: 60, vocab: 40, assign: 0 }
+  // Blend whichever quality components have data (lessons 60 / devoirs 40 when both).
+  const qualityParts = [
+    lessonQuality != null ? { value: lessonQuality, weight: 60 } : null,
+    devoirQuality != null ? { value: devoirQuality, weight: 40 } : null,
+  ].filter((p): p is { value: number; weight: number } => p != null)
+  const grade = qualityParts.length
+    ? Math.round(
+        qualityParts.reduce((s, p) => s + p.value * p.weight, 0) /
+        qualityParts.reduce((s, p) => s + p.weight, 0),
+      )
+    : null
+
+  // ── Progression (coverage) ── how far through the level, shown apart from the
+  // Note. Averages the tracks that exist: lessons completed, vocab learned, and
+  // devoirs submitted (devoirs only count once the teacher has posted any).
+  const coverageParts = [
+    lessons.length ? completed.size / lessons.length : null,
+    vocabTotal ? vocab.learnedCount / vocabTotal : null,
+    assignments.length ? Object.keys(subScores).length / assignments.length : null,
+  ].filter((p): p is number => p != null)
+  const progression = coverageParts.length
+    ? Math.round((coverageParts.reduce((s, p) => s + p, 0) / coverageParts.length) * 100)
+    : 0
+
+  const info = gradeInfo(grade ?? 0)
 
   // Per-skill devoir averages (done items only).
   const skillAvgs = SKILLS_ORDER.map(sk => {
@@ -208,37 +228,44 @@ export default function MyCourseClient({
         )}
       </div>
 
-      {/* Report card — overall grade + transparent breakdown */}
+      {/* Report card — Note (quality on work rendered) + separate progression */}
       <div className="bg-white rounded-2xl border border-gray-200 p-5 mb-8">
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Overall */}
+          {/* Overall Note */}
           <div className="flex items-center gap-4 md:w-56 md:flex-col md:text-center md:justify-center md:border-r md:border-gray-100 md:pr-6">
             <div className="relative shrink-0">
               <svg viewBox="0 0 36 36" className="w-20 h-20 -rotate-90">
                 <circle cx="18" cy="18" r="15.9" fill="none" stroke="#f1f5f9" strokeWidth="3" />
                 <circle cx="18" cy="18" r="15.9" fill="none" stroke="currentColor" strokeWidth="3"
-                  className={info.color} strokeDasharray={`${grade} ${100 - grade}`} strokeLinecap="round" />
+                  className={info.color} strokeDasharray={`${grade ?? 0} ${100 - (grade ?? 0)}`} strokeLinecap="round" />
               </svg>
-              <span className={`absolute inset-0 flex items-center justify-center text-2xl font-black ${info.color}`}>{grade}</span>
+              <span className={`absolute inset-0 flex items-center justify-center text-2xl font-black ${info.color}`}>{grade == null ? '—' : grade}</span>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Note globale</p>
+              <p className="text-xs text-gray-400">Note</p>
               <p className={`font-bold ${info.color}`}>{info.text}</p>
-              <p className="text-[11px] text-gray-400">Note allemande : {info.note}</p>
+              {grade != null && <p className="text-[11px] text-gray-400">Note allemande : {info.note}</p>}
             </div>
           </div>
 
-          {/* Breakdown */}
+          {/* Quality breakdown + progression */}
           <div className="flex-1 flex flex-col gap-3 justify-center">
-            <Bar emoji="📚" label="Leçons" value={lessonComponent} weight={weights.lesson} />
-            <Bar emoji="🧠" label="Vocabulaire" value={vocabComponent} weight={weights.vocab} />
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Qualité · sur le travail rendu</p>
+            <Bar emoji="📚" label="Leçons" value={lessonQuality} sub={`${attemptedLessons.length}/${lessons.length} faites`} />
             {assignments.length > 0 && (
-              <Bar emoji="📝" label="Devoirs" value={assignmentComponent} weight={weights.assign} />
+              <Bar emoji="📝" label="Devoirs" value={devoirQuality} sub={`${doneDevoirs.length}/${assignments.length} rendus`} />
             )}
-            <div className="flex gap-4 text-xs text-gray-400 pt-1 flex-wrap">
-              <span>✓ {completed.size}/{lessons.length} leçons</span>
-              <span>🧠 {vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
-              {assignments.length > 0 && <span>📝 {Object.keys(subScores).length}/{assignments.length} devoirs</span>}
+            {grade == null && (
+              <p className="text-xs text-gray-400">Termine une leçon pour débloquer ta note.</p>
+            )}
+
+            <div className="pt-3 mt-1 border-t border-gray-100">
+              <Bar emoji="📈" label="Progression" value={progression} sub="parcours du niveau" />
+              <div className="flex gap-4 text-xs text-gray-400 pt-2 flex-wrap">
+                <span>✓ {completed.size}/{lessons.length} leçons</span>
+                <span>🧠 {vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
+                {assignments.length > 0 && <span>📝 {Object.keys(subScores).length}/{assignments.length} devoirs</span>}
+              </div>
             </div>
           </div>
         </div>
