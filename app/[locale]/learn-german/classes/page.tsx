@@ -71,7 +71,7 @@ export default async function ClassesPage({
   // Sales content is French-first — the course is Morocco-gated and every
   // in-course surface (dashboard, devoirs, console) is already French.
   const FEATURES = [
-    { icon: '🎥', title: 'Cours en direct 3×/semaine', desc: 'Trois séances de 1h30 (lundi, mercredi, vendredi) avec un prof, en petit groupe (10 max) — pas des vidéos enregistrées.' },
+    { icon: '🎥', title: 'Cours en direct chaque semaine', desc: 'En semaine : 3 séances de 1h30 (lun/mer/ven) — ou la formule Intensif week-end : 2 séances de 3h (sam/dim). Petit groupe (10 max), avec un prof.' },
     { icon: '📋', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
     { icon: '📝', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
     { icon: '🇩🇪', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
@@ -79,7 +79,7 @@ export default async function ClassesPage({
   const STEPS = [
     { n: '1', title: 'Réservez votre place', desc: 'Choisissez le niveau et l’horaire qui vous conviennent ci-dessous.' },
     { n: '2', title: 'Confirmez par WhatsApp', desc: 'Vous recevez les instructions de paiement (450 DH/mois, sans engagement).' },
-    { n: '3', title: 'Commencez à apprendre', desc: 'Accès immédiat au cours, au tableau de bord et aux séances en direct (lun/mer/ven).' },
+    { n: '3', title: 'Commencez à apprendre', desc: 'Accès immédiat au cours, au tableau de bord et aux séances en direct de votre groupe.' },
   ]
   const FAQ = [
     { q: 'Je ne connais pas mon niveau — comment choisir ?', a: 'Faites notre test de niveau gratuit (12 questions, 5 minutes) : il vous recommande directement le bon groupe A1, A2 ou B1.' },

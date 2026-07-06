@@ -1,8 +1,10 @@
 // One-off DML (2026-07-06): reprice live classes to 450 DH/month and move to
-// the new rhythm — two 1h30 slots, three times a week (Mon/Wed/Fri):
-//   {lvl}-1600 → Lun/Mer/Ven 16:00-17:30   (kept, updated)
-//   {lvl}-1800 → Lun/Mer/Ven 18:00-19:30   (kept, updated)
-//   {lvl}-1700 / {lvl}-1900 / {lvl}-weekend → deactivated (bookings preserved)
+// the new rhythm — two 1h30 slots three times a week (Mon/Wed/Fri), plus the
+// weekend intensif kept as-is:
+//   {lvl}-1600    → Lun/Mer/Ven 16:00-17:30   (kept, updated)
+//   {lvl}-1800    → Lun/Mer/Ven 18:00-19:30   (kept, updated)
+//   {lvl}-weekend → Sam-Dim 16:00-19:00       (kept unchanged, 2×3h)
+//   {lvl}-1700 / {lvl}-1900 → deactivated (bookings preserved)
 // price_mad = 450 on every group, active or not.
 // Usage: node scripts/update-class-slots.mjs
 import { createClient } from '@supabase/supabase-js'
@@ -23,7 +25,7 @@ const SLOTS = [
   { idSuffix: '1600', time: '16:00-17:30', labelTime: '16h00-17h30' },
   { idSuffix: '1800', time: '18:00-19:30', labelTime: '18h00-19h30' },
 ]
-const DEACTIVATE_SUFFIXES = ['1700', '1900', 'weekend']
+const DEACTIVATE_SUFFIXES = ['1700', '1900']
 
 const { data: before, error: readErr } = await sb
   .from('class_groups').select('id,label,schedule,price_mad,is_active,booked_count').order('sort_order')
@@ -57,6 +59,13 @@ for (const lvl of LEVELS) {
     const { error } = await sb.from('class_groups').update({ is_active: false }).eq('id', id)
     if (error) console.error(`deactivate ${id} failed:`, error.message)
   }
+}
+
+// 4) Keep the weekend intensif (Sam-Dim 16:00-19:00, 2×3h) active.
+for (const lvl of LEVELS) {
+  const id = `${lvl}-weekend`
+  const { error } = await sb.from('class_groups').update({ is_active: true }).eq('id', id)
+  if (error) console.error(`reactivate ${id} failed:`, error.message)
 }
 
 const { data: after } = await sb
