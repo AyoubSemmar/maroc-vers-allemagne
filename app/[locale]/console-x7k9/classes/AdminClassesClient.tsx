@@ -65,7 +65,7 @@ function GroupStartDate({ groupId, value }: { groupId: string; value: string | n
 
 function waLink(num: string, label: string): string {
   const digits = (num || '').replace(/\D/g, '')
-  const msg = encodeURIComponent(`Bonjour, voici les instructions de paiement pour votre place (${label}) au cours d'allemand GoGermany — 300 DH/mois.`)
+  const msg = encodeURIComponent(`Bonjour, voici les instructions de paiement pour votre place (${label}) au cours d'allemand GoGermany — 450 DH/mois.`)
   return `https://wa.me/${digits}?text=${msg}`
 }
 

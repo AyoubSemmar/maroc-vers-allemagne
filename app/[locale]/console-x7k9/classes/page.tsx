@@ -81,7 +81,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
   const renewWa = (num: string, group: string) => {
     const digits = (num || '').replace(/\D/g, '')
     const msg = encodeURIComponent(
-      `Bonjour ! Votre accès au cours d'allemand GoGermany (${group}) arrive à échéance. Pour continuer sans interruption, merci de renouveler votre abonnement (300 DH/mois). 🙏`,
+      `Bonjour ! Votre accès au cours d'allemand GoGermany (${group}) arrive à échéance. Pour continuer sans interruption, merci de renouveler votre abonnement (450 DH/mois). 🙏`,
     )
     return `https://wa.me/${digits}?text=${msg}`
   }
@@ -91,7 +91,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
   // Real monthly revenue counts only students with active (paid, unexpired)
   // access — not every reserved-but-unpaid seat.
   const activeCount = model.reduce((s, g) => s + g.students.filter((st) => st.accessActive).length, 0)
-  const revenue = activeCount * 300
+  const revenue = activeCount * 450
   const fullGroups = model.filter((g) => g.booked_count >= g.capacity).length
 
   return (
@@ -99,7 +99,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
       <header className="adm-page-head">
         <div>
           <h1 className="adm-page-title">Live classes</h1>
-          <p className="adm-page-sub">A1/A2/B1 group bookings. Match emails against offline payments (300 MAD/month); remove anyone who didn&rsquo;t pay to free their seat. Removal requires a Supabase admin session.</p>
+          <p className="adm-page-sub">A1/A2/B1 group bookings. Match emails against offline payments (450 MAD/month); remove anyone who didn&rsquo;t pay to free their seat. Removal requires a Supabase admin session.</p>
         </div>
       </header>
 

@@ -62,8 +62,8 @@ export async function POST(req: NextRequest) {
         const { data: g } = await sbAdmin
           .from('class_groups').select('label,schedule').eq('id', groupId).maybeSingle()
         const waLine = BUSINESS_WA
-          ? `Pour le paiement (300 DH/mois), écrivez-nous sur WhatsApp : <a href="https://wa.me/${BUSINESS_WA}">wa.me/${BUSINESS_WA}</a>. Nous vous contacterons également avec les instructions.`
-          : `Nous vous contacterons sur WhatsApp avec les instructions de paiement (300 DH/mois).`
+          ? `Pour le paiement (450 DH/mois), écrivez-nous sur WhatsApp : <a href="https://wa.me/${BUSINESS_WA}">wa.me/${BUSINESS_WA}</a>. Nous vous contacterons également avec les instructions.`
+          : `Nous vous contacterons sur WhatsApp avec les instructions de paiement (450 DH/mois).`
         await sendEmail({
           to: user.email,
           subject: 'Réservation confirmée — Cours d’allemand GoGermany',

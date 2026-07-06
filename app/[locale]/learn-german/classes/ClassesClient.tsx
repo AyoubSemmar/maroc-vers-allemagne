@@ -41,7 +41,7 @@ export default function ClassesClient({
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
   const myGroupLabel = groups.find((g) => g.id === myGroupId)?.label ?? ''
-  const payMsg = `Bonjour, j'ai réservé une place (${myGroupLabel}) pour les cours d'allemand en ligne. Je souhaite régler les 300 DH/mois.`
+  const payMsg = `Bonjour, j'ai réservé une place (${myGroupLabel}) pour les cours d'allemand en ligne. Je souhaite régler les 450 DH/mois.`
   const [msg, setMsg] = useState<string | null>(null)
 
   async function book(groupId: string) {
@@ -104,7 +104,7 @@ export default function ClassesClient({
                   ? `✅ Accès actif jusqu'au ${formatAccessDate(myAccessUntil)}${renewSoon ? ` · à renouveler (${daysLeft} j)` : ''}`
                   : '✅ Votre accès au cours est activé.')
               : expired
-                ? `⏳ Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (300 DH/mois).`
+                ? `⏳ Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (450 DH/mois).`
                 : `✅ ${t.enrolledNote}`}
           </span>
           <div className="flex items-center gap-2 shrink-0">

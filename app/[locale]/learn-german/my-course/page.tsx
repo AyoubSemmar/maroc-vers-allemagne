@@ -45,8 +45,8 @@ export default async function MyCoursePage({
           </h1>
           <p className="text-sm text-gray-600 mt-2">
             {expired
-              ? `Votre accès a expiré le ${formatAccessDate(accessUntil!)}. Renouvelez votre abonnement (300 DH/mois) par WhatsApp pour reprendre le cours.`
-              : 'Vous recevrez les instructions de paiement (300 DH/mois) par WhatsApp. Dès la confirmation du paiement, votre cours sera débloqué ici.'}
+              ? `Votre accès a expiré le ${formatAccessDate(accessUntil!)}. Renouvelez votre abonnement (450 DH/mois) par WhatsApp pour reprendre le cours.`
+              : 'Vous recevrez les instructions de paiement (450 DH/mois) par WhatsApp. Dès la confirmation du paiement, votre cours sera débloqué ici.'}
           </p>
           <Link
             href="/learn-german/classes"
