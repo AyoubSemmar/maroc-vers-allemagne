@@ -68,6 +68,23 @@ for (const lvl of LEVELS) {
   if (error) console.error(`reactivate ${id} failed:`, error.message)
 }
 
+// 5) New weekday intensif: Mar/Jeu 17:00-20:00 (2×3h), one per level.
+//    Upsert keeps this rerunnable without duplicating rows.
+for (const [i, lvl] of LEVELS.entries()) {
+  const { error } = await sb.from('class_groups').upsert({
+    id: `${lvl}-marjeu`,
+    label: `${lvl.toUpperCase()} Intensif — Mar·Jeu 17h-20h`,
+    schedule: 'Mar/Jeu 17:00-20:00',
+    level: lvl,
+    price_mad: 450,
+    capacity: 10,
+    room_slug: `GoGermany${lvl.toUpperCase()}-MJ`,
+    sort_order: 4 + i * 10, // between the 18h slot and the weekend intensif
+    is_active: true,
+  }, { onConflict: 'id' })
+  if (error) console.error(`upsert ${lvl}-marjeu failed:`, error.message)
+}
+
 const { data: after } = await sb
   .from('class_groups').select('id,label,schedule,price_mad,is_active,booked_count').order('sort_order')
 console.log('\nAFTER:')

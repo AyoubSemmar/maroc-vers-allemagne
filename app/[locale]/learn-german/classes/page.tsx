@@ -71,7 +71,7 @@ export default async function ClassesPage({
   // Sales content is French-first — the course is Morocco-gated and every
   // in-course surface (dashboard, devoirs, console) is already French.
   const FEATURES = [
-    { icon: '🎥', title: 'Cours en direct chaque semaine', desc: 'En semaine : 3 séances de 1h30 (lun/mer/ven) — ou la formule Intensif week-end : 2 séances de 3h (sam/dim). Petit groupe (10 max), avec un prof.' },
+    { icon: '🎥', title: 'Cours en direct chaque semaine', desc: 'Classique : 3 séances de 1h30 (lun/mer/ven) — ou Intensif : 2 séances de 3h (mar/jeu ou sam/dim). Petit groupe (10 max), avec un prof.' },
     { icon: '📋', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
     { icon: '📝', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
     { icon: '🇩🇪', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
