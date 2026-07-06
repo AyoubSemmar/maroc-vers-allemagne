@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { type AdFormat, ADSTERRA_KEY, ADSTERRA_SIZE, ADSENSE_SLOT } from './config'
+import { type AdFormat, ADSTERRA_KEY, ADSTERRA_SIZE, ADSTERRA_NATIVE, ADSENSE_SLOT } from './config'
+import AdsterraNative from './AdsterraNative'
 
 // Two providers share one slot component so placements never change when the
 // ad network does — only which units are configured (see ./config). Adsterra
@@ -61,7 +62,13 @@ export default function AdSlot({ slot, format = 'in-article', className = '' }: 
     }
   }, [adsenseConfigured])
 
-  // Adsterra path — the iframe self-loads its own invoke.js, no global loader.
+  // In-content prefers the Native Banner — injected into the page DOM so it
+  // inherits the article's fonts and reads as part of the content.
+  if (format === 'in-article' && ADSTERRA_NATIVE.src) {
+    return <AdsterraNative className={className} />
+  }
+
+  // Fixed Adsterra banner — the iframe self-loads its own invoke.js.
   if (adsterraKey) {
     const { w, h } = ADSTERRA_SIZE[format]
     return <AdsterraUnit adKey={adsterraKey} w={w} h={h} className={className} />
