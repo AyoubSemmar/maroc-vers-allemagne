@@ -10,7 +10,7 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
-  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean }[]
+  students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean; attendance30: number }[]
 }
 
 function waLink(num: string, label: string): string {
@@ -107,6 +107,11 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
                       ) : <span style={{ color: '#c0c4ce' }}>no WhatsApp</span>}
                     </td>
                     <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 80 }}>{s.bookedAt}</td>
+                    <td style={{ padding: '6px 4px', width: 78, whiteSpace: 'nowrap' }} title="Présences aux appels vidéo sur 30 jours">
+                      <span style={{ fontSize: 12, fontWeight: 700, color: s.attendance30 === 0 ? '#c0c4ce' : s.attendance30 >= 12 ? '#16a34a' : '#b45309' }}>
+                        🎥 {s.attendance30}/30j
+                      </span>
+                    </td>
                     <td style={{ padding: '6px 4px', width: 150 }}>
                       <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                         <button

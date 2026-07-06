@@ -30,6 +30,20 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
   const waById = new Map<string, string>()
   for (const p of profiles ?? []) if (p.whatsapp) waById.set(p.user_id, p.whatsapp)
 
+  // Attendance over the last 30 days (call-join clicks). Best-effort: before
+  // the class_attendance migration exists this select just errors and every
+  // count stays 0 — the console must not break on a missing table.
+  const attByUser = new Map<string, number>()
+  try {
+    const since = new Date()
+    since.setDate(since.getDate() - 30)
+    const { data: att } = await sbAdmin
+      .from('class_attendance')
+      .select('user_id')
+      .gte('day', since.toISOString().slice(0, 10))
+    for (const a of att ?? []) attByUser.set(a.user_id, (attByUser.get(a.user_id) ?? 0) + 1)
+  } catch {}
+
   const model: AdminGroup[] = (groups ?? []).map((g) => ({
     id: g.id,
     label: g.label,
@@ -45,6 +59,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         bookedAt: (b.created_at as string)?.slice(0, 10) ?? '',
         accessUntil: ((b as any).access_until as string | null) ?? null,
         accessActive: isAccessActive((b as any).access_until as string | null),
+        attendance30: attByUser.get(b.user_id) ?? 0,
       })),
   }))
 

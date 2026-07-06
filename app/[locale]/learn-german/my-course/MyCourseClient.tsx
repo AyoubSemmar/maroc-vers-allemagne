@@ -225,6 +225,8 @@ export default function MyCourseClient({
               href={callUrl}
               target="_blank"
               rel="noreferrer"
+              // Fire-and-forget attendance log — must never delay joining.
+              onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
               className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
             >
               🎥 Rejoindre l’appel vidéo ↗

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
+import { Link } from '@/i18n/navigation'
 import { supabase } from '@/lib/supabase'
 import { isMorocco } from '@/lib/geo'
 import { isAdmin } from '@/lib/entitlements'
@@ -67,6 +68,27 @@ export default async function ClassesPage({
     myAccessGranted = isAccessActive(myAccessUntil)
   }
 
+  // Sales content is French-first — the course is Morocco-gated and every
+  // in-course surface (dashboard, devoirs, console) is already French.
+  const FEATURES = [
+    { icon: '🎥', title: 'Cours en direct 5j/7', desc: 'Une heure par jour avec un prof, en petit groupe (10 max) — pas des vidéos enregistrées.' },
+    { icon: '📋', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
+    { icon: '📝', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
+    { icon: '🇩🇪', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
+  ]
+  const STEPS = [
+    { n: '1', title: 'Réservez votre place', desc: 'Choisissez le niveau et l’horaire qui vous conviennent ci-dessous.' },
+    { n: '2', title: 'Confirmez par WhatsApp', desc: 'Vous recevez les instructions de paiement (300 DH/mois, sans engagement).' },
+    { n: '3', title: 'Commencez à apprendre', desc: 'Accès immédiat au cours, au tableau de bord et à l’appel vidéo quotidien.' },
+  ]
+  const FAQ = [
+    { q: 'Je ne connais pas mon niveau — comment choisir ?', a: 'Faites notre test de niveau gratuit (12 questions, 5 minutes) : il vous recommande directement le bon groupe A1, A2 ou B1.' },
+    { q: 'Comment se passe le paiement ?', a: 'Après la réservation, vous recevez les instructions par WhatsApp. L’abonnement est mensuel (300 DH), sans engagement — vous arrêtez quand vous voulez.' },
+    { q: 'Et si je rate un cours ?', a: 'Le programme, le vocabulaire et les devoirs de chaque leçon restent disponibles 24h/24 sur votre tableau de bord — vous rattrapez à votre rythme.' },
+    { q: 'De quoi ai-je besoin ?', a: 'Un téléphone ou un ordinateur avec un navigateur et un micro. L’appel vidéo s’ouvre en un clic, sans installation.' },
+    { q: 'Les cours préparent-ils au Goethe-Zertifikat ?', a: 'Oui — le programme suit les niveaux CECR (A1→B1) et la plateforme inclut la préparation aux épreuves Lesen, Hören et Schreiben.' },
+  ]
+
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       <div className="max-w-4xl mx-auto px-4 py-12">
@@ -74,15 +96,61 @@ export default async function ClassesPage({
         <p className="mt-2 text-gray-600">{t.subtitle}</p>
         <p className="mt-1 text-sm text-gray-400">{t.payNote}</p>
 
-        <div className="mt-8">
-          <ClassesClient
-            locale={locale}
-            groups={(groups ?? []) as ClassGroup[]}
-            myGroupId={myGroupId}
-            myAccessGranted={myAccessGranted}
-            myAccessUntil={myAccessUntil}
-            isAuthed={!!user}
-          />
+        {/* What's included */}
+        <div className="grid sm:grid-cols-2 gap-3 mt-8">
+          {FEATURES.map((f) => (
+            <div key={f.title} className="bg-white rounded-xl border border-gray-200 p-4 flex gap-3">
+              <span className="text-2xl shrink-0">{f.icon}</span>
+              <div>
+                <p className="font-semibold text-gray-900 text-sm">{f.title}</p>
+                <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{f.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Placement quiz CTA */}
+        <Link
+          href="/learn-german/placement"
+          className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-green-300 bg-green-50 hover:bg-green-100 transition-colors px-4 py-3"
+        >
+          <span className="text-sm text-green-900 font-medium">🎯 Pas sûr de votre niveau ? Faites le test gratuit (5 min)</span>
+          <span className="text-sm font-bold text-green-700 shrink-0">Tester →</span>
+        </Link>
+
+        {/* How it works */}
+        <div className="grid sm:grid-cols-3 gap-3 mt-8">
+          {STEPS.map((s) => (
+            <div key={s.n} className="bg-white rounded-xl border border-gray-200 p-4">
+              <span className="inline-flex w-7 h-7 rounded-full bg-green-600 text-white text-sm font-bold items-center justify-center">{s.n}</span>
+              <p className="font-semibold text-gray-900 text-sm mt-2">{s.title}</p>
+              <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-lg font-bold text-gray-900 mt-10 mb-4">Choisissez votre groupe</h2>
+        <ClassesClient
+          locale={locale}
+          groups={(groups ?? []) as ClassGroup[]}
+          myGroupId={myGroupId}
+          myAccessGranted={myAccessGranted}
+          myAccessUntil={myAccessUntil}
+          isAuthed={!!user}
+        />
+
+        {/* FAQ */}
+        <h2 className="text-lg font-bold text-gray-900 mt-12 mb-4">Questions fréquentes</h2>
+        <div className="flex flex-col gap-2">
+          {FAQ.map((f) => (
+            <details key={f.q} className="bg-white rounded-xl border border-gray-200 px-4 py-3 group">
+              <summary className="text-sm font-semibold text-gray-800 cursor-pointer list-none flex items-center justify-between gap-2">
+                {f.q}
+                <span className="text-gray-300 group-open:rotate-45 transition-transform text-lg shrink-0">+</span>
+              </summary>
+              <p className="text-sm text-gray-600 mt-2 leading-relaxed">{f.a}</p>
+            </details>
+          ))}
         </div>
       </div>
     </div>
