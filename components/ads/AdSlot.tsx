@@ -14,6 +14,12 @@ type Props = {
   slot?: string
   format?: AdFormat
   className?: string
+  /**
+   * Force the fixed iframe banner instead of the Native Banner for in-article.
+   * The native unit has a single fixed DOM id, so it can appear only once per
+   * page; extra in-content slots use the duplicable 300×250 banner.
+   */
+  forceBanner?: boolean
 }
 
 /**
@@ -43,7 +49,7 @@ function AdsterraUnit({ adKey, w, h, className }: { adKey: string; w: number; h:
   )
 }
 
-export default function AdSlot({ slot, format = 'in-article', className = '' }: Props) {
+export default function AdSlot({ slot, format = 'in-article', className = '', forceBanner = false }: Props) {
   const adsterraKey = ADSTERRA_KEY[format]
   const slotId = slot || ADSENSE_SLOT[format]
   // Adsterra wins when its key is set; AdSense only drives this slot otherwise.
@@ -63,8 +69,9 @@ export default function AdSlot({ slot, format = 'in-article', className = '' }: 
   }, [adsenseConfigured])
 
   // In-content prefers the Native Banner — injected into the page DOM so it
-  // inherits the article's fonts and reads as part of the content.
-  if (format === 'in-article' && ADSTERRA_NATIVE.src) {
+  // inherits the article's fonts and reads as part of the content. Only once
+  // per page though (fixed DOM id), so extra slots pass forceBanner.
+  if (format === 'in-article' && !forceBanner && ADSTERRA_NATIVE.src) {
     return <AdsterraNative className={className} />
   }
 

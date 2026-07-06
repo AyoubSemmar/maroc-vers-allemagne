@@ -29,13 +29,23 @@ export default function AdRail({
 
   return (
     <div
-      className={`mx-auto max-w-6xl px-4 lg:grid lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-8 ${className}`}
+      className={`mx-auto max-w-7xl px-4 lg:grid lg:grid-cols-[160px_minmax(0,1fr)_160px] lg:gap-8 ${className}`}
     >
+      {/* Left rail (desktop) — sticky skyscraper. */}
+      <aside className="hidden lg:block">
+        <div className="sticky top-24">
+          <AdSlot format="vertical" />
+        </div>
+      </aside>
+
       <div className="min-w-0">
         {children}
-        {/* Mobile / narrow screens: one in-content unit (the rail is hidden). */}
-        <AdSlot format="in-article" className="mt-8 lg:hidden" />
+        {/* Mobile / narrow screens: one in-content unit (rails are hidden).
+            forceBanner so it never duplicates the native's fixed DOM id. */}
+        <AdSlot format="in-article" forceBanner className="mt-8 lg:hidden" />
       </div>
+
+      {/* Right rail (desktop) — sticky skyscraper. */}
       <aside className="hidden lg:block">
         <div className="sticky top-24">
           <AdSlot format="vertical" />

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import type { ReactNode } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
@@ -138,16 +139,36 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     try { return t(`cat.${cat}` as any) } catch { return cat }
   }
 
-  // Split the body once at the first section break (H2) past the intro so an
-  // in-content ad sits between the intro and the body — the best-viewability,
-  // least-intrusive position. Short articles are left uninterrupted.
-  function splitForAd(md: string): [string, string] | null {
-    if (!md || md.length < 900) return null
-    const idx = md.indexOf('\n## ', 400)
-    if (idx < 0) return null
-    return [md.slice(0, idx), md.slice(idx)]
+  // Render the body split at H2 section breaks, dropping an in-content ad after
+  // the intro and then every few sections — so a long article carries several
+  // impressions as the reader scrolls, not just one. The first unit is the
+  // Native Banner (blends best); the rest are duplicable 300×250 banners.
+  function renderBody(md: string) {
+    if (!md || md.length < 900) return <ArticleContent content={md} />
+    const sections = md.split(/(?=\n## )/g) // keep each "## …" with its section
+    if (sections.length < 2) return <ArticleContent content={md} />
+
+    const out: ReactNode[] = []
+    let ads = 0
+    sections.forEach((seg, i) => {
+      out.push(<ArticleContent key={`sec-${i}`} content={seg} />)
+      const isLast = i === sections.length - 1
+      // After the intro (i===0), then every 3rd section; never after the last.
+      const due = i === 0 || i % 3 === 0
+      if (!isLast && due) {
+        out.push(
+          <AdSlot
+            key={`ad-${i}`}
+            format="in-article"
+            forceBanner={ads > 0}
+            className="my-8"
+          />,
+        )
+        ads++
+      }
+    })
+    return <>{out}</>
   }
-  const contentParts = splitForAd(article.content)
 
   // ── JSON-LD: Article + FAQPage rich-result schema ────────────
   const SITE = 'https://www.gogermany.ma'
@@ -202,7 +223,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         />
       )}
       <AdRail className="py-12">
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
         <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
           {t('backToHome')}
         </Link>
@@ -234,15 +255,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
           {article.summary}
         </p>
 
-        {contentParts ? (
-          <>
-            <ArticleContent content={contentParts[0]} />
-            <AdSlot format="in-article" className="my-8" />
-            <ArticleContent content={contentParts[1]} />
-          </>
-        ) : (
-          <ArticleContent content={article.content} />
-        )}
+        {renderBody(article.content)}
 
         <FAQAccordion faqs={article.faqs || []} />
 
