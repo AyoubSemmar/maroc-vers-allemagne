@@ -10,7 +10,57 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
+  start_date: string | null
   students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean; attendance30: number }[]
+}
+
+/** Cohort start-date picker — anchors the weekly pacing on the student
+ *  dashboard ("Semaine N" + this-week highlights). */
+function GroupStartDate({ groupId, value }: { groupId: string; value: string | null }) {
+  const router = useRouter()
+  const [date, setDate] = useState(value ?? '')
+  const [saving, setSaving] = useState(false)
+  const dirty = date !== (value ?? '')
+
+  async function save() {
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/classes/group-start', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ groupId, startDate: date || null }),
+      })
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
+        alert(error || 'Failed to save start date')
+      } else {
+        router.refresh()
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#7d8398' }} title="Date de début de la cohorte — pilote le rythme hebdomadaire côté étudiant">
+      📅
+      <input
+        type="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+        style={{ fontSize: 12, border: '1px solid #e2e5ea', borderRadius: 6, padding: '2px 6px', color: '#444' }}
+      />
+      {dirty && (
+        <button
+          onClick={save}
+          disabled={saving}
+          style={{ fontSize: 11, fontWeight: 700, background: '#16a34a', color: 'white', border: 'none', borderRadius: 6, padding: '3px 8px', cursor: 'pointer', opacity: saving ? 0.5 : 1 }}
+        >
+          OK
+        </button>
+      )}
+    </span>
+  )
 }
 
 function waLink(num: string, label: string): string {
@@ -67,11 +117,12 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
       {groups.map((g) => (
         <div key={g.id} className="adm-card" style={{ padding: 16 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, gap: 10, flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0 }}>
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flexWrap: 'wrap' }}>
               <strong>{g.label}</strong>
               <span style={{ fontSize: 13, color: g.booked_count >= g.capacity ? '#d9534f' : '#7d8398' }}>
                 {g.booked_count}/{g.capacity} · {g.schedule}
               </span>
+              <GroupStartDate groupId={g.id} value={g.start_date} />
             </div>
             <a
               href={`/${locale}/learn-german/classes/${g.id}/room`}

@@ -69,16 +69,20 @@ export default async function MyCoursePage({
   let groupLabel: string | null = null
   let callUrl: string | null = null
   let classWindow: ClassWindow | null = null
+  let groupStartDate: string | null = null
   if (booking?.group_id) {
     groupId = booking.group_id
+    // select('*') keeps this fail-soft: start_date (pacing migration) may not
+    // exist yet, and an explicit column list would error the whole select.
     const { data: g } = await supabase
       .from('class_groups')
-      .select('label,level,room_slug,schedule')
+      .select('*')
       .eq('id', booking.group_id)
       .maybeSingle()
     if (g) {
       level = (g.level as string) || 'a1'
       groupLabel = g.label as string
+      groupStartDate = ((g as any).start_date as string | null) ?? null
       if (g.room_slug) {
         callUrl = buildCallUrl(g.room_slug, displayName, isTeacher)
         classWindow = parseClassWindow(g.schedule as string, booking.group_id)
@@ -98,6 +102,7 @@ export default async function MyCoursePage({
         callUrl={callUrl}
         classWindow={classWindow}
         accessUntil={accessUntil}
+        groupStartDate={groupStartDate}
       />
     </div>
   )

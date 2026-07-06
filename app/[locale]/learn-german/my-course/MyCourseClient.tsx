@@ -8,6 +8,7 @@ import { collectLevelVocab } from '@/lib/learn-german/vocab'
 import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
 import { callWindowState, type ClassWindow } from '@/lib/classSchedule'
 import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
+import { courseWeek, weekLessonRange } from '@/lib/coursePacing'
 import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
@@ -52,6 +53,7 @@ export default function MyCourseClient({
   callUrl,
   classWindow,
   accessUntil,
+  groupStartDate,
 }: {
   locale: string
   levelId: string
@@ -62,6 +64,7 @@ export default function MyCourseClient({
   callUrl: string | null
   classWindow: ClassWindow | null
   accessUntil: string | null
+  groupStartDate: string | null
 }) {
   const level = getLevel(levelId)
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
@@ -133,6 +136,13 @@ export default function MyCourseClient({
 
   const lessons = [...level.lessons].sort((a, b) => a.order - b.order)
   const completed = new Set(progress.completedLessons)
+  const allDone = lessons.length > 0 && completed.size === lessons.length
+
+  // Cohort pacing (soft): the group's start_date anchors "Semaine N" and this
+  // week's lesson window. Future lessons are dimmed, never locked.
+  const week = courseWeek(groupStartDate)
+  const paced = week != null && week >= 1
+  const [weekLo, weekHi] = paced ? weekLessonRange(week!) : [0, Number.POSITIVE_INFINITY]
 
   // ── Note (quality) ── graded ONLY on work the student has actually done:
   // attempted lessons (best score) + submitted devoirs. Syllabus coverage is
@@ -209,6 +219,11 @@ export default function MyCourseClient({
             {displayName} · <span className="text-green-700">{level.id}</span>
           </h1>
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
+          {week != null && (
+            <p className="text-xs text-gray-500 mt-0.5">
+              📅 {week === 0 ? `Début le ${formatAccessDate(groupStartDate!)}` : `Semaine ${week}`}
+            </p>
+          )}
           {accessUntil && !isTeacher && (() => {
             const d = accessDaysLeft(accessUntil)
             const soon = d != null && d <= 7
@@ -247,7 +262,7 @@ export default function MyCourseClient({
       {(() => {
         const nextUp = lessons.find(l => !completed.has(l.id))
         const devoirsTodo = assignments.filter(a => subScores[a.id] == null).length
-        if (!nextUp && devoirsTodo === 0) return null
+        if (!nextUp && devoirsTodo === 0 && !allDone) return null
         return (
           <div className="bg-green-700 rounded-2xl p-4 mb-6 flex items-center justify-between gap-3 flex-wrap">
             <div className="text-white min-w-0">
@@ -263,14 +278,21 @@ export default function MyCourseClient({
                 </a>
               )}
             </div>
-            {nextUp && (
+            {nextUp ? (
               <Link
                 href={`/learn-german/${level.id.toLowerCase()}/${nextUp.id}`}
                 className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
               >
                 Continuer →
               </Link>
-            )}
+            ) : allDone ? (
+              <Link
+                href="/learn-german/my-course/certificate"
+                className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
+              >
+                🎓 Mon certificat
+              </Link>
+            ) : null}
           </div>
         )
       })()}
@@ -351,6 +373,9 @@ export default function MyCourseClient({
                   <div className="flex items-center justify-between gap-2 px-4 py-2.5 bg-gray-50 border-b border-gray-100">
                     <span className="text-sm font-bold text-gray-800 truncate">
                       Devoir {g.order}{g.title ? <span className="font-normal text-gray-400"> · {g.title}</span> : null}
+                      {paced && g.order >= weekLo && g.order <= weekHi && (
+                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">📅 Cette semaine</span>
+                      )}
                     </span>
                     <span className="text-xs shrink-0">
                       {avg != null
@@ -418,17 +443,25 @@ export default function MyCourseClient({
         {lessons.map(lesson => {
           const sc = scores[lesson.id]
           const done = completed.has(lesson.id)
+          const thisWeek = paced && lesson.order >= weekLo && lesson.order <= weekHi
+          const future = paced && lesson.order > weekHi
           return (
             <Link
               key={lesson.id}
               href={`/learn-german/${level.id.toLowerCase()}/${lesson.id}`}
-              className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-green-300 transition-colors"
+              className={`flex items-center gap-3 bg-white rounded-xl border px-4 py-3 hover:border-green-300 transition-colors
+                ${thisWeek ? 'border-green-300 ring-1 ring-green-100' : 'border-gray-200'} ${future ? 'opacity-60' : ''}`}
             >
               <span className={`w-7 h-7 rounded-full flex items-center justify-center text-sm font-bold shrink-0
                 ${done ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
                 {done ? '✓' : lesson.order}
               </span>
               <span className="flex-1 text-sm font-medium text-gray-800 truncate">{lesson.title}</span>
+              {thisWeek && (
+                <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5 shrink-0">
+                  📅 Cette semaine
+                </span>
+              )}
               {sc ? (
                 <span className={`text-xs font-bold px-2 py-1 rounded-md shrink-0
                   ${sc.best >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>

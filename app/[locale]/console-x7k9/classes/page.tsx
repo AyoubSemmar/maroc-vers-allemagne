@@ -19,7 +19,9 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
   const { locale } = await params
 
   const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
-    sbAdmin.from('class_groups').select('id,label,schedule,capacity,booked_count').order('sort_order'),
+    // select('*') keeps this fail-soft while the start_date (pacing) migration
+    // may not have been run yet.
+    sbAdmin.from('class_groups').select('*').order('sort_order'),
     sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at,access_until').eq('status', 'reserved').order('created_at'),
     sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
     sbAdmin.from('profiles').select('user_id,whatsapp'),
@@ -50,6 +52,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
     schedule: g.schedule,
     capacity: g.capacity,
     booked_count: g.booked_count,
+    start_date: ((g as any).start_date as string | null) ?? null,
     students: (bookings ?? [])
       .filter((b) => b.group_id === g.id)
       .map((b) => ({
