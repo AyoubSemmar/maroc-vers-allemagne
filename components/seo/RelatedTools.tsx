@@ -1,7 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
-import { pick3, type L3 } from '@/lib/toolStrings'
 
 /**
  * "You might also need…" cross-link block at the bottom of every tool
@@ -11,8 +10,8 @@ import { pick3, type L3 } from '@/lib/toolStrings'
  * keeps the user moving when they finish one tool.
  *
  * Each tool curates 3 sibling tools that make sense as the next step.
- * The original tools take their labels from the message files; the
- * 2026-07 additions carry inline en/fr/ar labels (see lib/toolStrings).
+ * All labels come from the landing.tools.* message keys
+ * (the 2026-07 tools were injected into all 12 files).
  */
 type ToolKey =
   | 'cv'
@@ -55,30 +54,6 @@ const ICON: Record<ToolKey, string> = {
   cityComparator: '⚖️',
 }
 
-// Inline labels for the tools that don't live in the message files.
-const NEW_LABELS: Partial<Record<ToolKey, { name: L3; desc: L3 }>> = {
-  chancenkarte: {
-    name: { en: 'Chancenkarte Calculator', fr: 'Calculateur Chancenkarte', ar: 'حاسبة بطاقة الفرص' },
-    desc: { en: 'Check if you reach the 6 points for the Opportunity Card.', fr: 'Vérifiez si vous atteignez les 6 points de la carte d’opportunité.', ar: 'تحقق هل تصل إلى 6 نقاط لبطاقة الفرص.' },
-  },
-  sperrkonto: {
-    name: { en: 'Sperrkonto Calculator', fr: 'Calculateur compte bloqué', ar: 'حاسبة الحساب المجمّد' },
-    desc: { en: 'The exact blocked-account amount and total visa budget.', fr: 'Le montant exact du compte bloqué et le budget visa total.', ar: 'المبلغ الدقيق للحساب المجمّد وميزانية التأشيرة.' },
-  },
-  bruttoNetto: {
-    name: { en: 'Brutto → Netto Calculator', fr: 'Calculateur Brut → Net', ar: 'حاسبة الراتب الصافي' },
-    desc: { en: 'What is really left of a German salary after taxes.', fr: 'Ce qui reste vraiment d’un salaire allemand après impôts.', ar: 'كم يتبقى فعلاً من الراتب الألماني بعد الضرائب.' },
-  },
-  anerkennung: {
-    name: { en: 'Anerkennung Wizard', fr: 'Assistant Anerkennung', ar: 'مساعد الاعتراف بالشهادات' },
-    desc: { en: 'Which authority recognises your qualification, and how.', fr: 'Quelle autorité reconnaît votre diplôme, et comment.', ar: 'أي جهة تعترف بشهادتك وكيف.' },
-  },
-  cityComparator: {
-    name: { en: 'City Comparator', fr: 'Comparateur de villes', ar: 'مقارنة المدن' },
-    desc: { en: 'Compare two German cities’ living costs side by side.', fr: 'Comparez le coût de la vie de deux villes allemandes.', ar: 'قارن تكلفة المعيشة بين مدينتين ألمانيتين.' },
-  },
-}
-
 // Each tool's three most logical follow-up tools.
 const RELATIONS: Record<ToolKey, [ToolKey, ToolKey, ToolKey]> = {
   cv:                 ['anschreiben', 'eligibilityChecker', 'bruttoNetto'],
@@ -105,11 +80,7 @@ export default async function RelatedTools({
   const headT = await getTranslations({ locale, namespace: 'relatedTools' })
   const others = RELATIONS[current]
 
-  const label = (key: ToolKey): { name: string; desc: string } => {
-    const inline = NEW_LABELS[key]
-    if (inline) return { name: pick3(locale, inline.name), desc: pick3(locale, inline.desc) }
-    return { name: t(`${key}.name`), desc: t(`${key}.desc`) }
-  }
+  const label = (key: ToolKey): { name: string; desc: string } => ({ name: t(`${key}.name`), desc: t(`${key}.desc`) })
 
   return (
     <section className="related-tools">

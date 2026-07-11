@@ -209,6 +209,21 @@ export default function RihlaNav() {
                     <Link href="/tools/living-cost-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('livingCost.name')}
                     </Link>
+                    <Link href="/tools/chancenkarte-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('chancenkarte.name')}
+                    </Link>
+                    <Link href="/tools/sperrkonto-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('sperrkonto.name')}
+                    </Link>
+                    <Link href="/tools/brutto-netto-rechner" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('bruttoNetto.name')}
+                    </Link>
+                    <Link href="/tools/anerkennung-wizard" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('anerkennung.name')}
+                    </Link>
+                    <Link href="/tools/city-comparator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('cityComparator.name')}
+                    </Link>
                     <Link href="/listings" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('housing.name')}
                     </Link>
