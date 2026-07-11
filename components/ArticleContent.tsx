@@ -1,11 +1,26 @@
 'use client'
 
 import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 export default function ArticleContent({ content }: { content: string }) {
   return (
     <ReactMarkdown
+      remarkPlugins={[remarkGfm]}
       components={{
+        // GFM tables — scroll inside their own container on narrow screens so
+        // the page body never scrolls horizontally on mobile.
+        table: ({ children }) => (
+          <div className="overflow-x-auto my-6 rounded-xl border border-gray-200">
+            <table className="w-full text-sm border-collapse">{children}</table>
+          </div>
+        ),
+        th: ({ children }) => (
+          <th className="bg-gray-700 text-white px-4 py-2.5 font-semibold text-start whitespace-nowrap">{children}</th>
+        ),
+        td: ({ children }) => (
+          <td className="px-4 py-2.5 border-b border-gray-100 text-gray-700">{children}</td>
+        ),
         img: ({ src, alt }) => (
           <img
             src={src}

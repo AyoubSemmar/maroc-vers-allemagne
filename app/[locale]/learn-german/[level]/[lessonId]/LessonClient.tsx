@@ -306,13 +306,15 @@ export default function LessonClient({
             <AudioButton text={lessonTitle} size="sm" className="mt-1 shrink-0" />
           </div>
 
-          {/* Tab bar */}
-          <div className="flex gap-2 mt-4">
+          {/* Tab bar — wraps on narrow screens so all four tabs stay visible
+              and tappable on mobile (a nowrap row clipped Exercices/Regarder
+              off-screen at 375px). */}
+          <div className="flex flex-wrap gap-2 mt-4">
             {tabs.map((tb) => (
               <button
                 key={tb.id}
                 onClick={() => setTab(tb.id)}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium transition-all
+                className={`flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap
                   ${tab === tb.id
                     ? 'bg-green-700 text-white shadow-sm'
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
