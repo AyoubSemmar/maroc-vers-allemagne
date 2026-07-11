@@ -58,6 +58,17 @@ const STATIC_PATHS = [
   // and a 404 straight from the sitemap.
 ]
 
+// The 2026-07 tools carry en/fr/ar UI strings and are indexed only in those
+// locales (indexLocales on their pages) — the sitemap mirrors that exactly.
+const TOOLS3_PATHS = [
+  '/tools/chancenkarte-calculator',
+  '/tools/sperrkonto-calculator',
+  '/tools/brutto-netto-rechner',
+  '/tools/anerkennung-wizard',
+  '/tools/city-comparator',
+]
+const TOOLS3_LOCALES = routing.locales.filter((l) => ['en', 'fr', 'ar'].includes(l))
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Static pages don't have a natural lastModified, so use the deploy
   // time. We pin it to midnight UTC of *yesterday* so it doesn't drift
@@ -141,5 +152,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ),
   )
 
-  return [...staticEntries, ...checklistEntries, ...articleEntries]
+  const tools3Entries: MetadataRoute.Sitemap = TOOLS3_PATHS.flatMap((path) =>
+    TOOLS3_LOCALES.map((loc) => ({
+      url: `${SITE}/${loc}${path}`,
+      lastModified: yesterday,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      alternates: {
+        languages: Object.fromEntries(
+          TOOLS3_LOCALES.map((l) => [l, `${SITE}/${l}${path}`]),
+        ),
+      },
+    })),
+  )
+
+  return [...staticEntries, ...tools3Entries, ...checklistEntries, ...articleEntries]
 }
