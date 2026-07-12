@@ -180,16 +180,16 @@ export default function DashSidebar({
     { href: '/dashboard/cover-letter',         label: t('coverLetter'),       icon: I.edit },
     // 2026-07 tools — they live under /tools (no dashboard wrappers); labels
     // come from the shared landing.tools.* keys present in all 12 locales.
-    { href: '/tools/chancenkarte-calculator',  label: tTools('chancenkarte.name'),   icon: I.sparkles },
-    { href: '/tools/sperrkonto-calculator',    label: tTools('sperrkonto.name'),     icon: I.euro },
-    { href: '/tools/brutto-netto-rechner',     label: tTools('bruttoNetto.name'),    icon: I.euro },
-    { href: '/tools/german-grade-calculator',  label: tTools('gradeConverter.name'), icon: I.check },
-    { href: '/tools/anerkennung-wizard',       label: tTools('anerkennung.name'),    icon: I.doc },
-    { href: '/tools/city-comparator',          label: tTools('cityComparator.name'), icon: I.home },
-    { href: '/tools/ausbildung-salary',        label: tTools('ausbSalary.name'),      icon: I.euro },
-    { href: '/tools/driving-license-germany',  label: tTools('license.name'),         icon: I.check },
-    { href: '/tools/health-insurance-germany', label: tTools('healthInsurance.name'), icon: I.doc },
-    { href: '/tools/tax-refund-calculator',    label: tTools('taxRefund.name'),       icon: I.euro },
+    { href: '/dashboard/chancenkarte',      label: tTools('chancenkarte.name'),   icon: I.sparkles },
+    { href: '/dashboard/sperrkonto',        label: tTools('sperrkonto.name'),     icon: I.euro },
+    { href: '/dashboard/brutto-netto',      label: tTools('bruttoNetto.name'),    icon: I.euro },
+    { href: '/dashboard/grade-calculator',  label: tTools('gradeConverter.name'), icon: I.check },
+    { href: '/dashboard/anerkennung',       label: tTools('anerkennung.name'),    icon: I.doc },
+    { href: '/dashboard/city-comparator',   label: tTools('cityComparator.name'), icon: I.home },
+    { href: '/dashboard/ausbildung-salary', label: tTools('ausbSalary.name'),      icon: I.euro },
+    { href: '/dashboard/driving-license',   label: tTools('license.name'),         icon: I.check },
+    { href: '/dashboard/health-insurance',  label: tTools('healthInsurance.name'), icon: I.doc },
+    { href: '/dashboard/tax-refund',        label: tTools('taxRefund.name'),       icon: I.euro },
   ]
 
   return (
