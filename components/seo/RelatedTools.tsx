@@ -26,6 +26,10 @@ type ToolKey =
   | 'anerkennung'
   | 'cityComparator'
   | 'gradeConverter'
+  | 'ausbSalary'
+  | 'license'
+  | 'healthInsurance'
+  | 'taxRefund'
 
 const HREF: Record<ToolKey, string> = {
   cv: '/cv-builder',
@@ -40,6 +44,10 @@ const HREF: Record<ToolKey, string> = {
   anerkennung: '/tools/anerkennung-wizard',
   cityComparator: '/tools/city-comparator',
   gradeConverter: '/tools/german-grade-calculator',
+  ausbSalary: '/tools/ausbildung-salary',
+  license: '/tools/driving-license-germany',
+  healthInsurance: '/tools/health-insurance-germany',
+  taxRefund: '/tools/tax-refund-calculator',
 }
 
 const ICON: Record<ToolKey, string> = {
@@ -55,6 +63,10 @@ const ICON: Record<ToolKey, string> = {
   anerkennung: '📜',
   cityComparator: '⚖️',
   gradeConverter: '🎓',
+  ausbSalary: '💶',
+  license: '🚗',
+  healthInsurance: '🏥',
+  taxRefund: '💰',
 }
 
 // Each tool's three most logical follow-up tools.
@@ -66,11 +78,15 @@ const RELATIONS: Record<ToolKey, [ToolKey, ToolKey, ToolKey]> = {
   migrationTimeline:  ['eligibilityChecker', 'documentChecklist', 'sperrkonto'],
   livingCost:         ['cityComparator', 'bruttoNetto', 'migrationTimeline'],
   chancenkarte:       ['sperrkonto', 'anerkennung', 'bruttoNetto'],
-  sperrkonto:         ['documentChecklist', 'chancenkarte', 'livingCost'],
-  bruttoNetto:        ['cityComparator', 'livingCost', 'chancenkarte'],
+  sperrkonto:         ['healthInsurance', 'documentChecklist', 'chancenkarte'],
+  bruttoNetto:        ['taxRefund', 'cityComparator', 'livingCost'],
   anerkennung:        ['gradeConverter', 'chancenkarte', 'documentChecklist'],
   cityComparator:     ['livingCost', 'bruttoNetto', 'migrationTimeline'],
   gradeConverter:     ['anerkennung', 'documentChecklist', 'eligibilityChecker'],
+  ausbSalary:         ['bruttoNetto', 'healthInsurance', 'eligibilityChecker'],
+  license:            ['ausbSalary', 'livingCost', 'documentChecklist'],
+  healthInsurance:    ['sperrkonto', 'bruttoNetto', 'livingCost'],
+  taxRefund:          ['bruttoNetto', 'healthInsurance', 'ausbSalary'],
 }
 
 export default async function RelatedTools({

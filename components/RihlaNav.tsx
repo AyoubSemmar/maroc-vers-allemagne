@@ -233,6 +233,18 @@ export default function RihlaNav() {
                     <Link href="/tools/german-grade-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('gradeConverter.name')}
                     </Link>
+                    <Link href="/tools/ausbildung-salary" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('ausbSalary.name')}
+                    </Link>
+                    <Link href="/tools/driving-license-germany" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('license.name')}
+                    </Link>
+                    <Link href="/tools/health-insurance-germany" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('healthInsurance.name')}
+                    </Link>
+                    <Link href="/tools/tax-refund-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('taxRefund.name')}
+                    </Link>
                     <Link href="/listings" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('housing.name')}
                     </Link>

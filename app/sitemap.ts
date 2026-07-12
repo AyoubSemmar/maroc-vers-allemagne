@@ -68,6 +68,10 @@ const TOOLS3_PATHS = [
   '/tools/anerkennung-wizard',
   '/tools/city-comparator',
   '/tools/german-grade-calculator',
+  '/tools/ausbildung-salary',
+  '/tools/driving-license-germany',
+  '/tools/health-insurance-germany',
+  '/tools/tax-refund-calculator',
 ]
 const TOOLS3_LOCALES = routing.locales.filter((l) => ['en', 'fr', 'ar'].includes(l))
 

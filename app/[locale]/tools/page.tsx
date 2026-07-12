@@ -23,12 +23,16 @@ const TOOLS: { key: string; href: string; icon: string }[] = [
   { key: 'migrationTimeline', href: '/tools/migration-timeline', icon: '🗺️' },
   { key: 'cv', href: '/cv-builder', icon: '📄' },
   { key: 'anschreiben', href: '/anschreiben-generator', icon: '✍️' },
+  { key: 'ausbSalary', href: '/tools/ausbildung-salary', icon: '💶' },
+  { key: 'license', href: '/tools/driving-license-germany', icon: '🚗' },
+  { key: 'healthInsurance', href: '/tools/health-insurance-germany', icon: '🏥' },
+  { key: 'taxRefund', href: '/tools/tax-refund-calculator', icon: '💰' },
 ]
 
 const META: L3<{ t: string; d: string }> = {
-  en: { t: 'Free Tools for Moving to Germany — Calculators & Checklists | GoGermany', d: '12 free interactive tools: Chancenkarte points, Sperrkonto amount, Brutto-Netto salary, grade conversion, degree recognition, city comparison and more.' },
-  fr: { t: 'Outils gratuits pour partir en Allemagne — Calculateurs & checklists | GoGermany', d: '12 outils interactifs gratuits : points Chancenkarte, montant Sperrkonto, salaire brut-net, conversion de notes, reconnaissance de diplôme, comparaison de villes.' },
-  ar: { t: 'أدوات مجانية للانتقال إلى ألمانيا — حاسبات وقوائم | GoGermany', d: '12 أداة تفاعلية مجانية: نقاط بطاقة الفرص، مبلغ الحساب المجمّد، الراتب الصافي، تحويل المعدل، الاعتراف بالشهادات ومقارنة المدن.' },
+  en: { t: 'Free Tools for Moving to Germany — Calculators & Checklists | GoGermany', d: '16 free interactive tools: Chancenkarte points, Sperrkonto, salary & tax refund, health insurance, driving licence conversion, grade conversion and more.' },
+  fr: { t: 'Outils gratuits pour partir en Allemagne — Calculateurs & checklists | GoGermany', d: '16 outils interactifs gratuits : points Chancenkarte, Sperrkonto, salaire & remboursement d’impôts, assurance santé, échange de permis, conversion de notes…' },
+  ar: { t: 'أدوات مجانية للانتقال إلى ألمانيا — حاسبات وقوائم | GoGermany', d: '16 أداة تفاعلية مجانية: نقاط بطاقة الفرص، الحساب المجمّد، الراتب واسترجاع الضرائب، التأمين الصحي، تبديل رخصة السياقة، تحويل المعدل وغيرها.' },
 }
 
 const HEAD: L3<{ h1: string; sub: string }> = {

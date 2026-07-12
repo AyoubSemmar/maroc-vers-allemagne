@@ -186,6 +186,10 @@ export default function DashSidebar({
     { href: '/tools/german-grade-calculator',  label: tTools('gradeConverter.name'), icon: I.check },
     { href: '/tools/anerkennung-wizard',       label: tTools('anerkennung.name'),    icon: I.doc },
     { href: '/tools/city-comparator',          label: tTools('cityComparator.name'), icon: I.home },
+    { href: '/tools/ausbildung-salary',        label: tTools('ausbSalary.name'),      icon: I.euro },
+    { href: '/tools/driving-license-germany',  label: tTools('license.name'),         icon: I.check },
+    { href: '/tools/health-insurance-germany', label: tTools('healthInsurance.name'), icon: I.doc },
+    { href: '/tools/tax-refund-calculator',    label: tTools('taxRefund.name'),       icon: I.euro },
   ]
 
   return (
