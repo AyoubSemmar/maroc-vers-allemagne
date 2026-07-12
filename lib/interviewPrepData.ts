@@ -26,6 +26,10 @@ export type FieldKey =
   | 'shk'
   | 'kaufmann'
   | 'logistik'
+  | 'fahrer'
+  | 'bau'
+  | 'mfa'
+  | 'baecker'
 
 export type Question = {
   id: string
@@ -612,6 +616,194 @@ export const FIELD_QUESTIONS: Question[] = [
     sampleAnswerDe:
       'Sofort melden — ohne Schuldzuweisung. Der Kunde interessiert sich nicht dafür, wer den Fehler gemacht hat, sondern nur, ob er die richtige Ware bekommt. Also: Vorgesetzten oder die zuständige Kollegin informieren, die Lieferung stoppen, solange es noch geht, und beim Korrigieren helfen. Was ich nicht tun würde: wegschauen, weil es „nicht mein Fehler" ist. Im Lager arbeitet man als Kette — und eine Kette funktioniert nur, wenn jedes Glied auch auf die anderen achtet.',
   },
+
+  // ── Berufskraftfahrer (LKW/Bus) ────────────────────────────
+  {
+    id: 'fahrer_warum',
+    category: 'motivation',
+    field: 'fahrer',
+    difficulty: 1,
+    questionDe: 'Warum möchten Sie Berufskraftfahrer werden?',
+    sampleAnswerDe:
+      'Drei Gründe. Erstens: Ich fahre gern und gut — konzentriert, ruhig, auch auf langen Strecken. Zweitens: Der Beruf trägt echte Verantwortung; ohne LKW- und Busfahrer steht das Land still, und genau deshalb werden überall Fahrer gesucht — die Jobsicherheit ist enorm. Drittens: Mir gefällt die Selbstständigkeit — ich habe meine Tour, mein Fahrzeug und mein Ergebnis, und am Ende des Tages weiß ich genau, was ich geleistet habe. Dass die Ausbildung den [C/CE- bzw. D-]Führerschein enthält, macht sie für mich zum perfekten Einstieg.',
+  },
+  {
+    id: 'fahrer_fuehrerschein',
+    category: 'experience',
+    field: 'fahrer',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon einen Führerschein, und wie sind Ihre Fahrkenntnisse?',
+    sampleAnswerDe:
+      'Ich habe [den Führerschein Klasse B seit X Jahren / in meinem Heimatland den Führerschein gemacht und lasse ihn umschreiben]. Ich fahre regelmäßig und unfallfrei — auch längere Strecken und in dichtem Stadtverkehr. Ich weiß, dass die Klassen C und CE [bzw. D für den Bus] Teil der Ausbildung sind, und genau darauf freue ich mich: das Fahren großer Fahrzeuge von Grund auf professionell zu lernen, mit Ladungssicherung, Fahrphysik und allem, was dazugehört.',
+  },
+  {
+    id: 'fahrer_verantwortung',
+    category: 'workplace',
+    field: 'fahrer',
+    difficulty: 2,
+    questionDe: 'Als Fahrer tragen Sie große Verantwortung. Wie gehen Sie damit um?',
+    sampleAnswerDe:
+      'Verantwortung heißt für mich: Regeln ohne Ausnahme einhalten. Konkret: Lenk- und Ruhezeiten respektieren, auch wenn der Termin drückt — ein müder Fahrer ist eine Gefahr für alle. Vor jeder Fahrt die Abfahrtskontrolle: Reifen, Bremsen, Licht, Ladungssicherung. Kein Handy am Steuer, null Alkohol, angepasste Geschwindigkeit bei Regen oder Schnee. Beim Bus kommt die größte Verantwortung dazu: Menschen. Ich verstehe den Beruf so, dass Sicherheit immer vor Pünktlichkeit geht — und ein guter Betrieb sieht das genauso.',
+  },
+  {
+    id: 'fahrer_alleinsein',
+    category: 'strengths',
+    field: 'fahrer',
+    difficulty: 2,
+    questionDe: 'Unterwegs sind Sie oft viele Stunden allein. Passt das zu Ihnen?',
+    sampleAnswerDe:
+      'Ja, das passt gut zu mir. Ich bin gern selbstständig und kann mich über Stunden konzentrieren, ohne dass mir jemand über die Schulter schaut. Die Zeit auf der Strecke nutze ich sinnvoll — ich höre [Podcasts / Hörbücher] und verbessere nebenbei mein Deutsch. Gleichzeitig bin ich kein Einzelgänger: An der Rampe, beim Kunden oder im Depot kommuniziere ich freundlich und klar — gerade als Fahrer ist man ja auch das Gesicht der Firma. Diese Mischung aus Ruhe allein und kurzem, professionellem Kontakt liegt mir.',
+  },
+  {
+    id: 'fahrer_zeiten',
+    category: 'logistics',
+    field: 'fahrer',
+    difficulty: 2,
+    questionDe: 'Frühe Abfahrten, Staus, Termindruck — wie bleiben Sie zuverlässig und ruhig?',
+    sampleAnswerDe:
+      'Mit Planung und Ruhe. Frühe Abfahrten sind Gewohnheitssache — ich stehe [schon jetzt früh auf / plane meinen Schlaf konsequent nach dem Dienstplan]. Gegen Termindruck hilft Vorbereitung: Route und Zeitpuffer vorher prüfen, tanken und Papiere am Vorabend. Und im Stau gilt: Ich kann den Verkehr nicht ändern, also bleibe ich ruhig, melde die Verspätung sofort an die Dispo und hole nichts durch riskantes Fahren auf. Zuverlässigkeit heißt für mich nicht nur pünktlich sein, sondern auch ehrlich kommunizieren, wenn es einmal nicht geht.',
+  },
+
+  // ── Bau ────────────────────────────────────────────────────
+  {
+    id: 'bau_warum',
+    category: 'motivation',
+    field: 'bau',
+    difficulty: 1,
+    questionDe: 'Warum wollen Sie auf dem Bau arbeiten?',
+    sampleAnswerDe:
+      'Weil ich am Ende des Tages sehen will, was ich geschafft habe. Auf dem Bau entsteht etwas Bleibendes — eine Wand, ein Haus, eine Straße, an der ich in zwanzig Jahren vorbeigehen und sagen kann: Da habe ich mitgebaut. Dazu kommt: Ich arbeite gern draußen und mit den Händen, und die Baubranche sucht überall Leute — mit Ausbildung habe ich einen sicheren Beruf mit klarem Aufstieg: Geselle, Vorarbeiter, Polier, vielleicht Meister. Das ist ein Weg, den man sich erarbeiten kann, und genau das will ich.',
+  },
+  {
+    id: 'bau_koerperlich',
+    category: 'strengths',
+    field: 'bau',
+    difficulty: 2,
+    questionDe: 'Die Arbeit auf der Baustelle ist hart — Wetter, Lärm, schwere Lasten. Sind Sie bereit dafür?',
+    sampleAnswerDe:
+      'Ja, und ich sage das nicht leichtfertig. Ich bin körperlich fit [Sport / bisherige körperliche Arbeit] und weiß aus Erfahrung, wie sich ein voller Arbeitstag im Sommer oder bei Kälte anfühlt. Zwei Dinge sind mir dabei wichtig: Erstens, richtig arbeiten statt nur hart — Hebetechnik, Maschinen und Hilfsmittel nutzen, damit der Körper lange durchhält. Zweitens, gute Ausrüstung und Pausen ernst nehmen. Harte Arbeit schreckt mich nicht — sie ist für mich der Grund, warum man auf dem Bau als Team so zusammenhält.',
+  },
+  {
+    id: 'bau_sicherheit',
+    category: 'workplace',
+    field: 'bau',
+    difficulty: 2,
+    questionDe: 'Was wissen Sie über Sicherheit auf der Baustelle?',
+    sampleAnswerDe:
+      'Das Wichtigste: Die persönliche Schutzausrüstung ist Pflicht, keine Option — Helm, Sicherheitsschuhe, Warnweste, je nach Arbeit Handschuhe, Schutzbrille und Gehörschutz. Dazu kommen die Grundregeln: nie unter schwebende Lasten treten, Absperrungen respektieren, Gerüste nur benutzen, wenn sie freigegeben sind, Leitern richtig anstellen. Und als Azubi die goldene Regel: Wenn ich etwas nicht sicher beherrsche, frage ich, bevor ich es tue. Auf dem Bau gibt es keine dummen Fragen — nur vermeidbare Unfälle.',
+  },
+  {
+    id: 'bau_team',
+    category: 'workplace',
+    field: 'bau',
+    difficulty: 1,
+    questionDe: 'Auf der Baustelle arbeiten viele Gewerke zusammen. Wie arbeiten Sie im Team?',
+    sampleAnswerDe:
+      'Zuverlässig und mit Respekt vor der Erfahrung der anderen. Auf der Baustelle hängt jeder vom anderen ab — wenn ich meinen Teil nicht fertig habe, steht das nächste Gewerk. Also: pünktlich sein, Absprachen einhalten, und wenn es ein Problem gibt, sofort sagen statt verstecken. Vom Polier und den Gesellen will ich lernen — die haben Jahre Erfahrung, und wer als Azubi gut zuhört und mit anpackt, wird auf dem Bau schnell respektiert. Anpacken kann ich, und unterordnen, wo es nötig ist, auch.',
+  },
+  {
+    id: 'bau_plaene',
+    category: 'experience',
+    field: 'bau',
+    difficulty: 2,
+    questionDe: 'Können Sie technische Zeichnungen oder Baupläne lesen?',
+    sampleAnswerDe:
+      'Grundkenntnisse habe ich: Ich verstehe Maßstäbe, Bemaßungen und einfache Grundrisse [aus der Schule / aus eigenem Interesse / vom Praktikum]. Mir ist klar, dass Baupläne viel mehr enthalten — Schnitte, Details, Symbole für Material und Bewehrung — und genau das will ich in der Ausbildung systematisch lernen. Was ich mitbringe, ist die Grundlage dafür: gutes räumliches Vorstellungsvermögen und solide Mathematik. Wenn ich einen Plan sehe, will ich verstehen, was gebaut wird — nicht nur ausführen.',
+  },
+
+  // ── Medizinische Fachangestellte (MFA) ─────────────────────
+  {
+    id: 'mfa_warum',
+    category: 'motivation',
+    field: 'mfa',
+    difficulty: 1,
+    questionDe: 'Warum möchten Sie in einer Arztpraxis arbeiten?',
+    sampleAnswerDe:
+      'Weil der Beruf genau meine zwei Stärken verbindet: den Umgang mit Menschen und Organisation. Als MFA bin ich die erste Person, die der Patient sieht — ich nehme Ängste, organisiere Termine, assistiere bei Behandlungen und halte die Praxis am Laufen. Medizin hat mich schon immer interessiert [konkreter Bezug: Familie, eigenes Erlebnis, Praktikum], und die Mischung aus medizinischer Arbeit, Verwaltung und täglichem Patientenkontakt ist für mich attraktiver als reine Büroarbeit oder reine Pflege. Dazu ist der Bedarf riesig — MFA werden überall gesucht.',
+  },
+  {
+    id: 'mfa_patienten',
+    category: 'workplace',
+    field: 'mfa',
+    difficulty: 2,
+    questionDe: 'Ein Patient ist nervös oder hat Angst. Wie beruhigen Sie ihn?',
+    sampleAnswerDe:
+      'Mit Ruhe, Blickkontakt und einfachen Worten. Ich nehme die Angst ernst, statt sie wegzureden — ein Satz wie „Das kenne ich, vielen geht das so" wirkt oft schon. Dann erkläre ich in verständlicher Sprache, was gleich passiert und wie lange es dauert; das Unbekannte macht die meiste Angst. Bei Kindern helfe ich mit Ablenkung, bei älteren Patienten mit etwas mehr Zeit und Geduld. Und wenn ich merke, dass die Angst sehr groß ist, gebe ich der Ärztin oder dem Arzt vorher kurz Bescheid — auch das gehört zu meiner Rolle.',
+  },
+  {
+    id: 'mfa_hygiene',
+    category: 'experience',
+    field: 'mfa',
+    difficulty: 2,
+    questionDe: 'Welche Rolle spielt Hygiene in der Praxis?',
+    sampleAnswerDe:
+      'Eine zentrale — sie schützt Patienten und das Team. Konkret heißt das: Händedesinfektion vor und nach jedem Patientenkontakt, Handschuhe bei Blutabnahme und Wundversorgung, Flächendesinfektion der Behandlungsräume und die korrekte Aufbereitung und Sterilisation von Instrumenten. Dazu die richtige Entsorgung von Spritzen und Kanülen im Sicherheitsbehälter. Ich weiß, dass es dafür feste Hygienepläne gibt, an die man sich exakt hält — und genau diese klaren Standards finde ich gut: In der Medizin darf Sauberkeit keine Frage der Tagesform sein.',
+  },
+  {
+    id: 'mfa_diskretion',
+    category: 'workplace',
+    field: 'mfa',
+    difficulty: 2,
+    questionDe: 'Was bedeutet die ärztliche Schweigepflicht für Sie?',
+    sampleAnswerDe:
+      'Dass alles, was ich in der Praxis über Patienten erfahre, die Praxis niemals verlässt — Diagnosen, Befunde, sogar die Tatsache, dass jemand überhaupt Patient ist. Das gilt gegenüber jedem: Familie, Freunden, sogar Angehörigen des Patienten, wenn keine Einwilligung vorliegt. Praktisch heißt das auch: am Empfang leise sprechen, wenn andere warten, keine Akten offen liegen lassen, am Telefon erst prüfen, mit wem ich spreche. Ich weiß, dass die Schweigepflicht gesetzlich geregelt ist und ein Verstoß strafbar — für mich ist sie aber vor allem eine Frage des Respekts.',
+  },
+  {
+    id: 'mfa_stress',
+    category: 'workplace',
+    field: 'mfa',
+    difficulty: 3,
+    questionDe: 'Volles Wartezimmer, das Telefon klingelt, ein Notfall kommt herein. Was machen Sie?',
+    sampleAnswerDe:
+      'Priorisieren — und der Notfall geht immer vor. Ich informiere sofort die Ärztin oder den Arzt und kümmere mich um den Notfallpatienten. Das Telefon nimmt in dem Moment eine Kollegin, oder es klingelt kurz durch — ein Anruf ist selten lebenswichtig, ein Notfall vielleicht schon. Danach informiere ich die Wartenden ehrlich und freundlich: „Es kam ein Notfall dazwischen, es dauert etwa X Minuten länger." Die meisten Menschen haben dafür Verständnis, wenn man offen kommuniziert. Wichtig ist, ruhig zu bleiben — Hektik überträgt sich aufs ganze Wartezimmer.',
+  },
+
+  // ── Bäckerei & Konditorei ──────────────────────────────────
+  {
+    id: 'baecker_warum',
+    category: 'motivation',
+    field: 'baecker',
+    difficulty: 1,
+    questionDe: 'Warum wollen Sie Bäcker werden?',
+    sampleAnswerDe:
+      'Weil ich ein Handwerk lernen will, dessen Ergebnis man jeden Morgen riechen, sehen und schmecken kann. Backen ist Präzision plus Gefühl — ein Teig verzeiht keine Nachlässigkeit, und genau diese Mischung aus Handarbeit und Genauigkeit liegt mir [konkreter Bezug: Backen zu Hause / Familie / Praktikum]. Dazu kommt: Das deutsche Bäckerhandwerk hat Weltruf mit über 3.000 Brotsorten, und Betriebe suchen dringend Nachwuchs. Ich will einen Beruf, bei dem ich morgens etwas Echtes herstelle, worauf ich stolz bin — kein Bildschirm, sondern Brot.',
+  },
+  {
+    id: 'baecker_nachtarbeit',
+    category: 'logistics',
+    field: 'baecker',
+    difficulty: 3,
+    questionDe: 'Bäcker fangen nachts um zwei oder drei Uhr an. Schaffen Sie das dauerhaft?',
+    sampleAnswerDe:
+      'Ja — und ich habe mir die Antwort gut überlegt, weil ich weiß, dass daran viele scheitern. Mein Plan: Der Schlaf wird konsequent verschoben, nicht verkürzt — früh ins Bett, dunkles Zimmer, feste Routine auch am Wochenende. Ich bin [von Natur aus Frühaufsteher / diszipliniert genug, meinen Rhythmus umzustellen] und habe keine Verpflichtungen, die dagegen sprechen. Und die Arbeitszeit hat eine schöne Seite: Wenn andere anfangen, habe ich Feierabend — der Nachmittag gehört mir. Wer Bäcker werden will, muss die Nacht akzeptieren; ich habe das bewusst getan.',
+  },
+  {
+    id: 'baecker_hygiene',
+    category: 'experience',
+    field: 'baecker',
+    difficulty: 2,
+    questionDe: 'Warum ist Hygiene in der Backstube so wichtig?',
+    sampleAnswerDe:
+      'Weil wir Lebensmittel herstellen, die Menschen direkt essen — Fehler machen im schlimmsten Fall Kunden krank. Konkret: saubere Hände und Arbeitskleidung, Haare bedeckt, kein Schmuck an den Händen, Arbeitsflächen und Maschinen regelmäßig reinigen, rohe Zutaten wie Eier getrennt behandeln und die Kühlkette bei Sahne und Cremes einhalten. Ich weiß, dass Betriebe nach festen Hygieneregeln arbeiten und kontrolliert werden. Für mich gehört Sauberkeit zum Stolz des Handwerks: Eine saubere Backstube ist das erste Qualitätsmerkmal.',
+  },
+  {
+    id: 'baecker_handwerk',
+    category: 'experience',
+    field: 'baecker',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon einmal gebacken oder in einer Küche gearbeitet?',
+    sampleAnswerDe:
+      'Ja — ich backe [regelmäßig zu Hause: Brot, Msemen, Kuchen / habe in der Küche bzw. Bäckerei der Familie geholfen]. Dabei habe ich zwei Dinge gelernt, die zum Beruf passen: Erstens, Rezepte sind Chemie — wer Mengen, Temperaturen und Ruhezeiten nicht respektiert, bekommt kein gutes Ergebnis. Zweitens, Geduld: Ein Hefeteig lässt sich nicht drängen. Mir ist klar, dass die Backstube ein anderes Tempo und andere Mengen hat als die Küche zu Hause — genau deshalb will ich es richtig lernen, vom Profi.',
+  },
+  {
+    id: 'baecker_praezision',
+    category: 'strengths',
+    field: 'baecker',
+    difficulty: 2,
+    questionDe: 'Beim Backen zählen Mengen und Zeiten genau. Sind Sie ein genauer Mensch?',
+    sampleAnswerDe:
+      'Ja — Genauigkeit ist eine meiner Stärken. Ich arbeite gern nach klaren Vorgaben: abwiegen statt schätzen, Timer stellen statt „nach Gefühl", und wenn ein Schritt schiefgeht, von vorn statt improvisieren. Gleichzeitig weiß ich, dass ein guter Bäcker mit der Zeit auch das Gefühl entwickelt — wie sich ein richtig gekneteter Teig anfasst, wann das Brot fertig klingt. Diese Kombination will ich lernen: erst die Präzision nach Rezept, dann die Erfahrung, die daraus ein Handwerk macht.',
+  },
 ]
 
 export const FIELD_ICON: Record<FieldKey, string> = {
@@ -623,10 +815,15 @@ export const FIELD_ICON: Record<FieldKey, string> = {
   shk:      '🔧',
   kaufmann: '💼',
   logistik: '📦',
+  fahrer:   '🚛',
+  bau:      '🏗️',
+  mfa:      '🩺',
+  baecker:  '🥖',
 }
 
 export const FIELD_ORDER: FieldKey[] = [
   'pflege', 'kfz', 'elektro', 'it', 'gastro', 'shk', 'kaufmann', 'logistik',
+  'fahrer', 'bau', 'mfa', 'baecker',
 ]
 
 /** General + field-specific questions, in display order. */
