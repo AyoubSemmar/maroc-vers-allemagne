@@ -34,6 +34,7 @@ const STATIC_PATHS = [
   '/studium',
   '/universities',
   '/learn-german',
+  '/interview-prep',
   '/learn-german/a1',
   '/learn-german/a2',
   '/learn-german/b1',

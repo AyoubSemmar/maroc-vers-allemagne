@@ -8,6 +8,7 @@ import LiveClassesCta from '@/components/classes/LiveClassesCta'
 import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import JsonLd from '@/components/seo/JsonLd'
+import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import './learn-german.css'
 
 const META: Record<AppLocale, { title: string; desc: string }> = {
@@ -147,6 +148,10 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
 
         <ExamPrepCTA />
       </div>
+
+      {/* Long-form crawlable copy + FAQ rich result — the lesson grid above
+          is almost all client-rendered, so this is what Google reads. */}
+      <ToolSeoSection locale={locale} namespace="learnGerman" />
     </div>
   )
 }

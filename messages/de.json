@@ -52,7 +52,8 @@
     "enableDark": "Dunklen Modus aktivieren",
     "dashboard": "Dashboard",
     "learn": "Lernen",
-    "opportunities": "Möglichkeiten"
+    "opportunities": "Möglichkeiten",
+    "interviewPrep": "Interview-Vorbereitung"
   },
   "footer": {
     "warning": "⚠️ Die hier bereitgestellten Informationen dienen nur zur Orientierung und stellen keine rechtliche oder offizielle Beratung dar. Bitte immer mit offiziellen Quellen abgleichen.",
@@ -3081,7 +3082,30 @@
     "badgeGrammar": "Grammatik",
     "badgeVocab": "Wortschatz",
     "badgeExercises": "Übungen",
-    "badgeFree": "100% kostenlos"
+    "badgeFree": "100% kostenlos",
+    "seoSection": {
+      "title": "Deutsch online kostenlos lernen — kompletter Kurs von A1 bis C1",
+      "intro": "Der Deutschkurs von GoGermany führt dich vom absoluten Anfänger (A1) bis zum fortgeschrittenen Niveau (C1) — mit interaktiven Lektionen, die denselben GER-Stufen folgen wie die Prüfungen von Goethe, telc und ÖSD. Jede Lektion verbindet klare Grammatikerklärungen, praktischen Wortschatz und sofort korrigierte Übungen — inklusive KI-korrigierter Schreibaufgaben, damit du Deutsch wirklich produzierst statt nur zu lesen. Der Kurs ist für Menschen gemacht, die einen echten Umzug nach Deutschland vorbereiten: Ausbildung, Studium, Arbeitsvisum oder Chancenkarte.\n\nStarte mit dem Einstufungstest und lerne dann in deinem Tempo — zwei Lektionen pro Woche reichen für stetigen Fortschritt. Ergänze das tägliche 5-Minuten-Konjugationstraining, und wenn du eine Lehrkraft möchtest, nimm an unseren Live-Onlinekursen in kleinen Gruppen mit benotetem Lehrplan teil. Zum Lernen brauchst du weder Bezahlung noch Anmeldung; ein kostenloses Konto speichert lediglich deinen Fortschritt.",
+      "faqTitle": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Ist der Deutschkurs wirklich kostenlos?",
+          "a": "Ja. Alle Lektionen von A1 bis C1 sind kostenlos, einschließlich der Übungen und der KI-Schreibkorrektur. Ein kostenloses Konto dient nur dem Speichern des Fortschritts. Kostenpflichtig sind nur die Live-Kurse mit Lehrkraft."
+        },
+        {
+          "q": "Welches Deutschniveau brauche ich für Deutschland?",
+          "a": "Für eine Ausbildung erwarten die meisten Betriebe B1–B2. Deutschsprachige Studiengänge verlangen meist C1 (TestDaF oder DSH). Bei der Chancenkarte bringt schon A1 Punkte, A2 und höher noch mehr. Für den Alltag solltest du mindestens B1 anpeilen."
+        },
+        {
+          "q": "Wie lange dauert es bis B1?",
+          "a": "Mit 1–2 Stunden täglich erreichen die meisten Lernenden B1 in etwa 6–9 Monaten. Unser Rhythmus von zwei Lektionen pro Woche plus täglichem Training ist genau darauf ausgelegt."
+        },
+        {
+          "q": "Bereitet der Kurs auf Goethe- oder telc-Prüfungen vor?",
+          "a": "Der Lehrplan folgt den offiziellen GER-Stufen — alles Gelernte entspricht direkt den Prüfungen von Goethe, telc und ÖSD. Die Seite enthält außerdem einen eigenen Prüfungsvorbereitungsbereich mit Modellübungen für jede Stufe."
+        }
+      ]
+    }
   },
   "admin": {
     "dashboard": "Dashboard",
@@ -4071,7 +4095,7 @@
       },
       "studium": {
         "p1": "Deutschland ist eines der Top-Ziele der Welt für internationale Studierende — und für Staatsangehörige aus {country} öffnet ein deutsches Studium-Visum die Tür zu gebührenfreier oder kostengünstiger Ausbildung an weltbekannten Institutionen. Das nationale D-Visum für Hochschulstudium ist geregelt durch §16b AufenthG und ermöglicht Ihnen die Immatrikulation in einem vollständigen Bachelor-, Master- oder PhD-Programm.",
-        "p2": "Alle akademischen Dokumente aus {country} müssen durch {authMethod} beglaubigt werden, bevor sie der deutschen Vertretung eingereicht werden können. Dies gilt für Ihr Baccalauréat-Diplom, Zeugnisse, Hochschuldiplome und alle anderen offiziell ausgestellten Zertifikate. Der {{authMethod}-Schritt dauert {authDaysMin}–{authDaysMax} Tage und kostet €{authFeeMin}–{authFeeMax} pro Dokument — und jedes Dokument benötigt auch eine beglaubigte deutsche Übersetzung (€20–60 pro Seite). Das Gesamtbudget für Beglaubigung und Übersetzung für eine durchschnittliche Studium-Datei aus {country} liegt typischerweise bei €300–800.",
+        "p2": "Alle akademischen Dokumente aus {country} müssen durch {authMethod} beglaubigt werden, bevor sie der deutschen Vertretung eingereicht werden können. Dies gilt für Ihr Baccalauréat-Diplom, Zeugnisse, Hochschuldiplome und alle anderen offiziell ausgestellten Zertifikate. Der {authMethod}-Schritt dauert {authDaysMin}–{authDaysMax} Tage und kostet €{authFeeMin}–{authFeeMax} pro Dokument — und jedes Dokument benötigt auch eine beglaubigte deutsche Übersetzung (€20–60 pro Seite). Das Gesamtbudget für Beglaubigung und Übersetzung für eine durchschnittliche Studium-Datei aus {country} liegt typischerweise bei €300–800.",
         "p3": "Das Studienkolleg ist ein Vorbereitungsjahr, das erforderlich ist, wenn Ihr Sekundarschulabschluss Sie nicht direkt für die Zulassung an einer deutschen Universität qualifiziert. Nutzen Sie die Anabin-Datenbank (anabin.kmk.org), um den Status Ihres Abschlusses vor der Bewerbung zu überprüfen. Antragsteller müssen auch ein Sperrkonto mit €11.904 als Finanznachweis eröffnen — Online-Anbieter wie Fintiba, Expatrio oder Coracle eröffnen eines innerhalb weniger Tage. Ein deutsches B2-Sprachzertifikat (Goethe, telc, ÖSD oder TestDaF) ist für deutschsprachige Programme erforderlich; englischsprachige Programme akzeptieren stattdessen IELTS/TOEFL.",
         "p4": "Die Gesamtzahl der Dokumente für ein Studium-Visum aus {country} beträgt {totalDocs} Positionen, und die geschätzten Gesamtkosten (Dokumente, Beglaubigung, Übersetzungen, Sperrkonto-Eröffnung und Visumgebühr) betragen €{totalCostMin}–{totalCostMax}. Die realistische Vorbereitungsdauer ist {timelineMin}–{timelineMax} Wochen. Beginnen Sie mindestens 6 Monate vor Ihrem geplanten Studienbeginn — deutsche Universitäten versenden Zulassungsschreiben spät, und Apostille- oder Legalisierungswarteschlangen in {country} können mehrere Wochen dauern."
       },
@@ -4083,9 +4107,9 @@
       },
       "family_reunification": {
         "p1": "Familienzusammenführung nach Deutschland — das Mitbringen eines Ehepartners, minderjähriger Kinder oder abhängiger Eltern zu einem in Deutschland ansässigen Familienmitglied — ist durch §§27–36 des AufenthG geregelt. Staatsangehörige aus {country}, die sich einer Familie in Deutschland anschließen möchten, müssen vor der Ankunft ein nationales D-Visum erhalten. Der häufigste Fall ist die Ehegattennachzug, die dem Ehepartner das Recht gibt, in Deutschland sofort nach der Ankunft zu arbeiten.",
-        "p2": "Die charakteristischste Anforderung für Ehepartner, die aus {country} antragen, ist das deutsche A1-Sprachzertifikat. Bevor ein Ehegattennachzug-Visum ausgestellt wird, muss der Antragsteller grundlegende deutsche Sprachkenntnisse auf CEFR-Niveau A1 nachweisen (Goethe-Zertifikat A1, telc Deutsch A1 oder ÖSD Zertifikat A1). Ausnahmen bestehen, wenn der Sponsor einen deutschen Hochschulabschluss hat oder C1-Deutsch spricht, wenn der Antragsteller über 67 Jahre alt ist, oder wenn ein nachgewiesener Härtefall vorliegt. Die Dokumentenbeglaubigung aus {country} erfolgt durch {{authMethod} und kostet €{authFeeMin}–{authFeeMax} pro Dokument, was {authDaysMin}–{authDaysMax} Tage dauert.",
+        "p2": "Die charakteristischste Anforderung für Ehepartner, die aus {country} antragen, ist das deutsche A1-Sprachzertifikat. Bevor ein Ehegattennachzug-Visum ausgestellt wird, muss der Antragsteller grundlegende deutsche Sprachkenntnisse auf CEFR-Niveau A1 nachweisen (Goethe-Zertifikat A1, telc Deutsch A1 oder ÖSD Zertifikat A1). Ausnahmen bestehen, wenn der Sponsor einen deutschen Hochschulabschluss hat oder C1-Deutsch spricht, wenn der Antragsteller über 67 Jahre alt ist, oder wenn ein nachgewiesener Härtefall vorliegt. Die Dokumentenbeglaubigung aus {country} erfolgt durch {authMethod} und kostet €{authFeeMin}–{authFeeMax} pro Dokument, was {authDaysMin}–{authDaysMax} Tage dauert.",
         "p3": "Der Sponsor (die Person, die bereits in Deutschland ist) spielt eine zentrale Rolle: Sie müssen nachweisen, dass ihr Einkommen ausreicht, um die wiedervereintigte Familie ohne Rückgriff auf öffentliche Mittel zu unterstützen. Die erforderliche Einkommensschwelle variiert je nach Bundesland und Haushaltsgröße, entspricht aber typischerweise der Grundsicherung plus 20%. Der Sponsor muss auch angemessenen Wohnraum nachweisen — ein Minimum von 12 m² Wohnfläche pro zusätzliche Person ist der Maßstab, den die meisten Ausländerbehörden verwenden. Diese Dokumente (Einkommensnachweis, Wohnungsbestätigung) müssen Ihnen in {country} vor Ihrem Visumtermin zugesandt werden.",
-        "p4": "Von {country} aus dauert der gesamte Prozess — Sammeln von Dokumenten, Beglaubigung ({{authMethod}), A1-Zertifikat und Visumtermin — {timelineMin}–{timelineMax} Wochen. Die Gebühr für das nationale D-Visum beträgt €{visaFee}. Nach der Ankunft in Deutschland muss sich das gesponserte Familienmitglied innerhalb von zwei Wochen beim örtlichen Einwohnermeldeamt anmelden und einen Aufenthaltstitel bei der Ausländerbehörde beantragen. Ehepartner haben das Recht, sofort eine Beschäftigung aufzunehmen; schulpflichtige Kinder werden ohne zusätzliche Genehmigungsanforderungen in das öffentliche Schulsystem integriert."
+        "p4": "Von {country} aus dauert der gesamte Prozess — Sammeln von Dokumenten, Beglaubigung ({authMethod}), A1-Zertifikat und Visumtermin — {timelineMin}–{timelineMax} Wochen. Die Gebühr für das nationale D-Visum beträgt €{visaFee}. Nach der Ankunft in Deutschland muss sich das gesponserte Familienmitglied innerhalb von zwei Wochen beim örtlichen Einwohnermeldeamt anmelden und einen Aufenthaltstitel bei der Ausländerbehörde beantragen. Ehepartner haben das Recht, sofort eine Beschäftigung aufzunehmen; schulpflichtige Kinder werden ohne zusätzliche Genehmigungsanforderungen in das öffentliche Schulsystem integriert."
       },
       "noVisaEu": "Als Staatsangehöriger aus {country} profitieren Sie von der Freizügigkeit der Europäischen Union — einem der bedeutendsten Rechte in der EU-Rechtsordnung. Sie können in Deutschland für jede Dauer leben, arbeiten, studieren oder in den Ruhestand gehen, ohne ein Visum, eine Aufenthaltserlaubnis oder eine Arbeitserlaubnis zu erhalten. Der einzige erforderliche Verwaltungsschritt ist die Anmeldung Ihrer Adresse beim örtlichen Einwohnermeldeamt (Anmeldung) innerhalb von zwei Wochen nach der Ankunft und die Anmeldung bei einer Krankenversicherung, wenn Sie beschäftigt sind.",
       "touristFree": "Staatsangehörige aus {country} sind von dem Schengen-C-Touristenvisum durch ein bilaterales visumfreies Abkommen oder die EU/EWR-Freizügigkeit befreit. Sie können Deutschland und den Schengen-Raum für Aufenthalte von bis zu 90 Tagen in jedem 180-Tage-Zeitraum ohne Visum betreten. Für Aufenthalte länger als 90 Tage — für Ausbildung, Studium oder Familienzusammenführung — ist ein nationales D-Visum erforderlich. Der D-Visumantrag wird bei der deutschen Botschaft oder dem Honorarkonsulat eingereicht, das für Ihren Wohnort in {country} zuständig ist."
@@ -4524,6 +4548,29 @@
         "doSay": "Drei Fragen parat: typischer erster Monat, Eigenschaften erfolgreicher Azubis bei ihnen, Übernahmequote. Langfristig denken.",
         "dontSay": "Nicht \"keine Fragen\". Nicht nur Gehalt, Urlaub, Benefits. Keine Fragen, die auf der Website stehen."
       }
+    },
+    "seoSection": {
+      "title": "Fragen und Antworten fürs Ausbildungs-Vorstellungsgespräch",
+      "intro": "Das Vorstellungsgespräch entscheidet, ob du deinen Ausbildungsvertrag bekommst — und die meisten Bewerber scheitern nicht am Deutschniveau, sondern daran, dass sie die Standardfragen nie vorbereitet haben. Dieses Tool sammelt die 15 Fragen, die deutsche Arbeitgeber in Ausbildungs- und Jobinterviews am häufigsten stellen — von „Erzählen Sie etwas über sich“ bis zu Visum und Umzugslogistik, geordnet in 8 Kategorien.\n\nZu jeder Frage gibt es eine Musterantwort auf B1–B2-Deutsch zum Anpassen und Einprägen, eine Erklärung, warum die Frage gestellt wird, und konkrete Dos und Don'ts. Die ersten drei Fragen sind frei zugänglich; ein kostenloses Konto schaltet alle 15 frei. Übe sie laut, bis die Antworten natürlich klingen — genau das macht am Tag des Gesprächs den Unterschied.",
+      "faqTitle": "Häufige Fragen",
+      "faqs": [
+        {
+          "q": "Welche Fragen kommen im Ausbildungs-Vorstellungsgespräch?",
+          "a": "Fast jedes Gespräch deckt denselben Kern ab: Selbstvorstellung, warum dieser Betrieb, warum Deutschland, Stärken und Schwächen, Schul- und Berufserfahrung, Teamarbeit, deine Ziele sowie Logistik wie Visum, Wohnung und Starttermin. Das Tool behandelt alle mit Musterantworten."
+        },
+        {
+          "q": "Ist das Gespräch auf Deutsch oder Englisch?",
+          "a": "Fast immer auf Deutsch. Der Betrieb prüft im Gespräch dein echtes Sprechniveau — für eine Ausbildung wird meist B1 erwartet. Selbstbewusste Antworten in einfachem, korrektem Deutsch schlagen komplizierte Sätze voller Fehler."
+        },
+        {
+          "q": "Wie beantworte ich „Erzählen Sie etwas über sich“?",
+          "a": "Nutze eine einfache Ein-Minuten-Struktur: Name, Alter, Herkunft, Abschluss, aktuelles Deutschniveau, warum dieser Beruf, und ein Hobby, das Eigeninitiative zeigt. Unsere Musterantwort liefert dir die Sätze zum Anpassen."
+        },
+        {
+          "q": "Ist das Interview-Tool kostenlos?",
+          "a": "Ja. Drei komplette Fragen mit Musterantworten sind ohne Konto zugänglich, ein kostenloses Konto schaltet alle 15 frei. Es fällt keine Zahlung an."
+        }
+      ]
     }
   },
   "dashboardServices": {

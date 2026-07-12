@@ -174,6 +174,9 @@ export default function RihlaNav() {
                 <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('learnGerman')}
                 </Link>
+                <Link href="/interview-prep" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
+                  🎤 {tNav('interviewPrep')}
+                </Link>
 
                 {/* Tools — click to expand inline list of the 6 tools.
                     Acts as a nested accordion within the same dropdown

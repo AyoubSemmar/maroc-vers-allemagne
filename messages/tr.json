@@ -52,7 +52,8 @@
     "enableDark": "Koyu modu etkinleştir",
     "dashboard": "Kontrol Paneli",
     "learn": "Öğren",
-    "opportunities": "Fırsatlar"
+    "opportunities": "Fırsatlar",
+    "interviewPrep": "Mülakat Hazırlığı"
   },
   "footer": {
     "warning": "⚠️ Burada sağlanan bilgiler yalnızca rehberlik amaçlıdır ve yasal veya resmi tavsiye niteliğinde değildir. Lütfen her zaman resmi kaynaklarla doğrulayınız.",
@@ -3081,7 +3082,30 @@
     "badgeGrammar": "Gramer",
     "badgeVocab": "Kelime Hazinesi",
     "badgeExercises": "Alıştırmalar",
-    "badgeFree": "%100 ücretsiz"
+    "badgeFree": "%100 ücretsiz",
+    "seoSection": {
+      "title": "Ücretsiz online Almanca öğren — A1'den C1'e tam kurs",
+      "intro": "GoGermany'nin Almanca kursu, Goethe, telc ve ÖSD sınavlarında kullanılan CEFR seviyelerini takip eden interaktif derslerle sizi sıfırdan (A1) ileri seviyeye (C1) taşır. Her ders net gramer anlatımı, pratik kelime bilgisi ve anında düzeltilen alıştırmaları birleştirir — yapay zekâ tarafından düzeltilen yazma görevleri dahil; böylece Almancayı sadece okumak yerine gerçekten üretirsiniz. Kurs, Almanya'ya gerçek bir taşınma hazırlayanlar için tasarlandı: Ausbildung, üniversite, çalışma vizesi veya Chancenkarte.\n\nSeviye tespit sınavıyla başlayın, sonra kendi hızınızda ilerleyin — haftada iki ders düzenli ilerleme için yeterli. Günlük 5 dakikalık fiil çekimi antrenmanını ekleyin; bir öğretmen istediğinizde küçük gruplarla, notlandırılan müfredatlı canlı online derslerimize katılın. Öğrenmeye başlamak için ödeme veya kayıt gerekmez; ücretsiz hesap yalnızca ilerlemenizi kaydeder.",
+      "faqTitle": "Sıkça sorulan sorular",
+      "faqs": [
+        {
+          "q": "Almanca kursu gerçekten ücretsiz mi?",
+          "a": "Evet. A1'den C1'e tüm dersler, alıştırmalar ve yapay zekâ yazma düzeltmesi dahil ücretsizdir. Ücretsiz hesap yalnızca ilerleme kaydı ekler. Ücretli tek seçenek öğretmenli canlı derslerdir."
+        },
+        {
+          "q": "Almanya için hangi Almanca seviyesi gerekir?",
+          "a": "Ausbildung için çoğu işveren B1–B2 bekler. Almanca üniversite programları genellikle C1 ister (TestDaF veya DSH). Chancenkarte için A1 bile puan kazandırır, A2 ve üzeri daha fazlasını. Günlük yaşam için en az B1 hedefleyin."
+        },
+        {
+          "q": "B1'e ulaşmak ne kadar sürer?",
+          "a": "Günde 1–2 saatle çoğu öğrenci yaklaşık 6–9 ayda B1 seviyesine ulaşır. Haftada iki ders artı günlük antrenman ritmimiz, tükenmeden oraya varmanız için tasarlandı."
+        },
+        {
+          "q": "Kurs Goethe veya telc sınavlarına hazırlar mı?",
+          "a": "Müfredat resmi CEFR seviyelerini izler; öğrendiğiniz her şey Goethe, telc ve ÖSD sınavlarıyla doğrudan örtüşür. Sitede ayrıca her seviye için örnek alıştırmalar içeren özel bir sınav hazırlık bölümü vardır."
+        }
+      ]
+    }
   },
   "admin": {
     "dashboard": "Kontrol Paneli",
@@ -4524,6 +4548,29 @@
         "doSay": "3 soru hazırla: tipik bir ilk ay hakkında, başarılı geçmiş Auszubildende'lerin nitelikleri, Ausbildung sonrası tutma oranı. Uzun vadeli düşündüğünü göster.",
         "dontSay": "\"Soru yok\" deme. Sadece maaş, tatil veya avantajlar hakkında sorma. Web sitesinde bulabileceğin şeyleri sorma."
       }
+    },
+    "seoSection": {
+      "title": "Almanca Ausbildung mülakat soruları ve cevapları",
+      "intro": "Vorstellungsgespräch, Ausbildung sözleşmenizi alıp almayacağınızı belirleyen adımdır — ve adayların çoğu Almanca seviyesi yüzünden değil, standart soruları hiç hazırlamadıkları için başarısız olur. Bu araç, Alman işverenlerin Ausbildung ve iş mülakatlarında en çok sorduğu 15 soruyu bir araya getirir: “Erzählen Sie etwas über sich”ten vize ve taşınma lojistiğine kadar, 8 kategoride düzenlenmiş.\n\nHer soru; uyarlayıp ezberleyebileceğiniz B1–B2 Almanca yazılmış örnek bir cevap, sorunun neden sorulduğunun açıklaması ve somut yapılması/yapılmaması gerekenlerle gelir. İlk üç soru herkese açıktır; ücretsiz hesap 15 sorunun tamamını açar. Cevaplar doğal gelene kadar yüksek sesle çalışın — mülakat günü farkı yaratan budur.",
+      "faqTitle": "Sıkça sorulan sorular",
+      "faqs": [
+        {
+          "q": "Ausbildung mülakatında hangi sorular sorulur?",
+          "a": "Hemen her mülakat aynı çekirdeği kapsar: kendini tanıt, neden bu şirket, neden Almanya, güçlü ve zayıf yönler, okul ve iş deneyimi, ekip çalışması, hedeflerin ve vize, konaklama, başlangıç tarihi gibi lojistik. Araç hepsini örnek cevaplarla kapsar."
+        },
+        {
+          "q": "Mülakat Almanca mı İngilizce mi yapılır?",
+          "a": "Neredeyse her zaman Almanca. İşveren mülakatta gerçek konuşma seviyenizi ölçer — Ausbildung için genellikle B1 beklenir. Basit ve doğru Almancayla özgüvenli cevaplar, hatalarla dolu karmaşık cümlelerden iyidir."
+        },
+        {
+          "q": "“Erzählen Sie etwas über sich” sorusuna nasıl cevap veririm?",
+          "a": "Yaklaşık bir dakikalık basit bir yapı kullanın: isim, yaş, memleket, diploma, mevcut Almanca seviyesi, bu mesleği neden seçtiğiniz ve inisiyatif gösteren bir hobi. Örnek cevabımız uyarlayacağınız cümleleri verir."
+        },
+        {
+          "q": "Mülakat hazırlık aracı ücretsiz mi?",
+          "a": "Evet. Üç tam soru örnek cevaplarıyla hesapsız erişilebilir; ücretsiz hesap 15 sorunun tamamını açar. Hiçbir ödeme istenmez."
+        }
+      ]
     }
   },
   "dashboardServices": {
