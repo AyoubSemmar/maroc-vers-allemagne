@@ -4,6 +4,7 @@ import AusbildungBoard from './AusbildungBoard'
 import type { AppLocale } from '@/i18n/routing'
 import { dirFor } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
+import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import { buildAaQuery, searchAusbildung, type AaResult } from '@/lib/ausbildungSearch'
 
 // Live Ausbildung board — a search front-end over the Bundesagentur für
@@ -61,6 +62,10 @@ export default async function AusbildungJobsPage({ params }: { params: Promise<{
       <main className="max-w-3xl mx-auto px-4 py-8">
         <AusbildungBoard locale={locale} initial={initial} />
       </main>
+
+      {/* Long-form crawlable copy + FAQ rich result — targets "Ausbildung
+          in Germany for foreigners", salary and visa queries. */}
+      <ToolSeoSection locale={locale} namespace="ausbJobs" />
     </div>
   )
 }
