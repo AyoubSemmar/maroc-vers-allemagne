@@ -6,6 +6,7 @@ import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
 import WritingExercise from './WritingExercise'
 import ReadingExercise from './ReadingExercise'
+import LevelVideos from './LevelVideos'
 import type { WritingLevel } from '@/lib/writingExerciseData'
 import type { ReadingLevel } from '@/lib/readingExerciseData'
 
@@ -108,6 +109,9 @@ export default function LessonsList({ level }: { level: Level }) {
 
       {/* Daily writing exercise — one chance per UTC day per level. */}
       <WritingExercise level={level.id as WritingLevel} />
+
+      {/* Level video playlist — one curated YouTube playlist per level. */}
+      <LevelVideos level={level.id} />
     </div>
   )
 }

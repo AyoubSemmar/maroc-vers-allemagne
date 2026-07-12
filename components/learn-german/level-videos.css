@@ -1,0 +1,71 @@
+/* ─── Level video playlist card ──────────────────────── */
+/* Matches the daily reading/writing challenge cards (re-card / wx-card). */
+.lv-card {
+  margin-top: 22px;
+  background: var(--bg-elev);
+  border: 1.5px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: clamp(20px, 3vw, 30px);
+  position: relative;
+  overflow: hidden;
+}
+.lv-card::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0; top: 0;
+  height: 4px;
+  background: var(--accent, var(--brand));
+}
+.lv-level-a1 { --accent: oklch(0.62 0.16 152); }
+.lv-level-a2 { --accent: oklch(0.62 0.14 195); }
+.lv-level-b1 { --accent: var(--brand); }
+.lv-level-b2 { --accent: oklch(0.72 0.14 80); }
+.lv-level-c1 { --accent: oklch(0.55 0.18 350); }
+
+.lv-head { margin-bottom: 16px; }
+.lv-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--accent);
+}
+.lv-eyebrow-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; }
+.lv-title { margin: 6px 0 4px; font-size: clamp(20px, 2.6vw, 26px); font-weight: 900; letter-spacing: -0.02em; color: var(--ink); }
+.lv-sub { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+
+.lv-player {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: #000;
+  border: 1.5px solid var(--line);
+}
+.lv-iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+.lv-facade { position: absolute; inset: 0; width: 100%; height: 100%; cursor: pointer; }
+.lv-thumb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9; transition: opacity 0.2s; }
+.lv-facade:hover .lv-thumb { opacity: 1; }
+.lv-shade { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.25); transition: background 0.2s; }
+.lv-facade:hover .lv-shade { background: rgba(0, 0, 0, 0.12); }
+.lv-play {
+  position: absolute; inset: 0; margin: auto;
+  width: 64px; height: 64px;
+  display: flex; align-items: center; justify-content: center;
+  background: #dc2626; border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s;
+}
+.lv-facade:hover .lv-play { transform: scale(1.1); }
+.lv-play svg { width: 28px; height: 28px; margin-inline-start: 3px; }
+
+.lv-yt-link {
+  margin-top: 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.lv-yt-link:hover { color: #dc2626; }
+.lv-yt-link svg { width: 18px; height: 18px; color: #dc2626; }
