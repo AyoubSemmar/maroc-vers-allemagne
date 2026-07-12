@@ -1037,14 +1037,19 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   display: grid;
   grid-template-columns: 1.4fr repeat(4, 1fr);
   gap: 40px;
-  padding-top: 64px; padding-bottom: 40px;
 }
+/* `.rihla-footer .wrap` sets `padding: 0 28px` and outranks a bare
+   `.rihla-foot-grid`, so vertical padding declared there is silently
+   dropped — the columns ended up glued to the warning banner. Match
+   its specificity to actually get space below the banner. */
+.rihla-footer .wrap.rihla-foot-grid { padding-top: 72px; padding-bottom: 48px; }
 @media (max-width: 980px) {
   .rihla-foot-grid { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
   .rihla-foot-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 560px) {
   .rihla-foot-grid { grid-template-columns: 1fr 1fr; }
+  .rihla-footer .wrap.rihla-foot-grid { padding-top: 52px; padding-bottom: 36px; }
 }
 .rihla-foot-brand p {
   color: var(--ink-mute);
