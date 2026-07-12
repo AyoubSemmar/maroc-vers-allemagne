@@ -174,9 +174,6 @@ export default function RihlaNav() {
                 <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('learnGerman')}
                 </Link>
-                <Link href="/interview-prep" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
-                  🎤 {tNav('interviewPrep')}
-                </Link>
 
                 {/* Tools — click to expand inline list of the 6 tools.
                     Acts as a nested accordion within the same dropdown
@@ -202,6 +199,9 @@ export default function RihlaNav() {
                     </Link>
                     <Link href="/anschreiben-generator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('anschreiben.name')}
+                    </Link>
+                    <Link href="/interview-prep" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tNav('interviewPrep')}
                     </Link>
                     <Link href="/tools/eligibility-checker" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('eligibilityChecker.name')}
