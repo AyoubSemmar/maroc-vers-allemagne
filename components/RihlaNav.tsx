@@ -224,6 +224,9 @@ export default function RihlaNav() {
                     <Link href="/tools/city-comparator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('cityComparator.name')}
                     </Link>
+                    <Link href="/tools/german-grade-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      {tTools('gradeConverter.name')}
+                    </Link>
                     <Link href="/listings" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('housing.name')}
                     </Link>

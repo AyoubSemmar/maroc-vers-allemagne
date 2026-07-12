@@ -25,6 +25,7 @@ type ToolKey =
   | 'bruttoNetto'
   | 'anerkennung'
   | 'cityComparator'
+  | 'gradeConverter'
 
 const HREF: Record<ToolKey, string> = {
   cv: '/cv-builder',
@@ -38,6 +39,7 @@ const HREF: Record<ToolKey, string> = {
   bruttoNetto: '/tools/brutto-netto-rechner',
   anerkennung: '/tools/anerkennung-wizard',
   cityComparator: '/tools/city-comparator',
+  gradeConverter: '/tools/german-grade-calculator',
 }
 
 const ICON: Record<ToolKey, string> = {
@@ -52,6 +54,7 @@ const ICON: Record<ToolKey, string> = {
   bruttoNetto: '🧮',
   anerkennung: '📜',
   cityComparator: '⚖️',
+  gradeConverter: '🎓',
 }
 
 // Each tool's three most logical follow-up tools.
@@ -65,8 +68,9 @@ const RELATIONS: Record<ToolKey, [ToolKey, ToolKey, ToolKey]> = {
   chancenkarte:       ['sperrkonto', 'anerkennung', 'bruttoNetto'],
   sperrkonto:         ['documentChecklist', 'chancenkarte', 'livingCost'],
   bruttoNetto:        ['cityComparator', 'livingCost', 'chancenkarte'],
-  anerkennung:        ['chancenkarte', 'documentChecklist', 'cv'],
+  anerkennung:        ['gradeConverter', 'chancenkarte', 'documentChecklist'],
   cityComparator:     ['livingCost', 'bruttoNetto', 'migrationTimeline'],
+  gradeConverter:     ['anerkennung', 'documentChecklist', 'eligibilityChecker'],
 }
 
 export default async function RelatedTools({

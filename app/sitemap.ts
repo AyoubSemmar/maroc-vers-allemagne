@@ -66,6 +66,7 @@ const TOOLS3_PATHS = [
   '/tools/brutto-netto-rechner',
   '/tools/anerkennung-wizard',
   '/tools/city-comparator',
+  '/tools/german-grade-calculator',
 ]
 const TOOLS3_LOCALES = routing.locales.filter((l) => ['en', 'fr', 'ar'].includes(l))
 

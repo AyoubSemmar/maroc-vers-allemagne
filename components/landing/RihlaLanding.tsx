@@ -105,6 +105,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     bruttoNetto:         SVG(<><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 10h3M13 10h3M8 14h3M13 14h3M8 18h3M13 18h3"/></>),
     anerkennung:         SVG(<><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>),
     cityComparator:      SVG(<><path d="M3 21h18"/><path d="M5 21V7l6-4v18"/><path d="M13 21V11l6-3v13"/><path d="M8 9h.01M8 13h.01M8 17h.01M17 13h.01M17 17h.01"/></>),
+    gradeConverter:      SVG(<><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1 2.7 3 6 3s6-2 6-3v-4.5"/></>),
   } as const
   const tools = [
     { key: 'cv',                 icon: ICONS.cv,                 href: '/cv-builder',                  c: 'brand' as const },
@@ -115,6 +116,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     { key: 'livingCost',         icon: ICONS.livingCost,         href: '/tools/living-cost-calculator',c: 'gold'  as const },
     { key: 'cityComparator',     icon: ICONS.cityComparator,     href: '/tools/city-comparator',       c: 'teal'  as const },
     { key: 'anerkennung',        icon: ICONS.anerkennung,        href: '/tools/anerkennung-wizard',    c: 'berry' as const },
+    { key: 'gradeConverter',     icon: ICONS.gradeConverter,     href: '/tools/german-grade-calculator', c: 'gold' as const },
     { key: 'migrationTimeline',  icon: ICONS.migrationTimeline,  href: '/tools/migration-timeline',    c: 'teal'  as const },
     { key: 'documentChecklist',  icon: ICONS.documentChecklist,  href: '/tools/document-checklist',    c: 'berry' as const },
     { key: 'eligibilityChecker', icon: ICONS.eligibilityChecker, href: '/tools/eligibility-checker',   c: 'brand' as const },
