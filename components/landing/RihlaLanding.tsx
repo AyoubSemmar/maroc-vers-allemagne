@@ -106,6 +106,10 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     anerkennung:         SVG(<><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 22l5-3 5 3-1.5-9.5"/></>),
     cityComparator:      SVG(<><path d="M3 21h18"/><path d="M5 21V7l6-4v18"/><path d="M13 21V11l6-3v13"/><path d="M8 9h.01M8 13h.01M8 17h.01M17 13h.01M17 17h.01"/></>),
     gradeConverter:      SVG(<><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12.5V17c0 1 2.7 3 6 3s6-2 6-3v-4.5"/></>),
+    ausbSalary:          SVG(<><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M12 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/><path d="M6 7V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2"/></>),
+    license:             SVG(<><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.2"/><path d="M13 10h5M13 14h5"/></>),
+    healthInsurance:     SVG(<><path d="M12 21s-7-4.5-9.5-9A5 5 0 0 1 12 6a5 5 0 0 1 9.5 6c-2.5 4.5-9.5 9-9.5 9z"/><path d="M12 9v4M10 11h4"/></>),
+    taxRefund:           SVG(<><circle cx="12" cy="12" r="9"/><path d="M9.5 15a2.5 2.5 0 0 0 5 0c0-3-5-1.5-5-4.5a2.5 2.5 0 0 1 5 0M12 6v1.5M12 16.5V18"/></>),
   } as const
   const tools = [
     { key: 'cv',                 icon: ICONS.cv,                 href: '/cv-builder',                  c: 'brand' as const },
@@ -120,6 +124,10 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
     { key: 'migrationTimeline',  icon: ICONS.migrationTimeline,  href: '/tools/migration-timeline',    c: 'teal'  as const },
     { key: 'documentChecklist',  icon: ICONS.documentChecklist,  href: '/tools/document-checklist',    c: 'berry' as const },
     { key: 'eligibilityChecker', icon: ICONS.eligibilityChecker, href: '/tools/eligibility-checker',   c: 'brand' as const },
+    { key: 'ausbSalary',         icon: ICONS.ausbSalary,         href: '/tools/ausbildung-salary',     c: 'gold'  as const },
+    { key: 'healthInsurance',    icon: ICONS.healthInsurance,    href: '/tools/health-insurance-germany', c: 'berry' as const },
+    { key: 'taxRefund',          icon: ICONS.taxRefund,          href: '/tools/tax-refund-calculator', c: 'teal'  as const },
+    { key: 'license',            icon: ICONS.license,            href: '/tools/driving-license-germany', c: 'brand' as const },
   ] as const
 
   const levels: Array<{
