@@ -191,6 +191,9 @@ export default function RihlaNav() {
                 </button>
                 {toolsOpen && (
                   <div className="tools-dd-sublist" role="group">
+                    <Link href="/tools" role="menuitem" className="tools-dd-item tools-dd-subitem" style={{ fontWeight: 700 }} onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
+                      🧰 {tTools('allTools.name')} →
+                    </Link>
                     <Link href="/cv-builder" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
                       {tTools('cv.name')}
                     </Link>

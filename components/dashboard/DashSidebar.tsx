@@ -146,6 +146,7 @@ export default function DashSidebar({
 }) {
   const t = useTranslations('dashboard.sidebar')
   const tCommon = useTranslations('common')
+  const tTools = useTranslations('landing.tools')
   const pathname = usePathname()
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
 
@@ -177,6 +178,14 @@ export default function DashSidebar({
     { href: '/dashboard/housing',              label: t('housing'),           icon: I.home },
     { href: '/dashboard/cv-builder',           label: t('cvBuilder'),         icon: I.doc },
     { href: '/dashboard/cover-letter',         label: t('coverLetter'),       icon: I.edit },
+    // 2026-07 tools — they live under /tools (no dashboard wrappers); labels
+    // come from the shared landing.tools.* keys present in all 12 locales.
+    { href: '/tools/chancenkarte-calculator',  label: tTools('chancenkarte.name'),   icon: I.sparkles },
+    { href: '/tools/sperrkonto-calculator',    label: tTools('sperrkonto.name'),     icon: I.euro },
+    { href: '/tools/brutto-netto-rechner',     label: tTools('bruttoNetto.name'),    icon: I.euro },
+    { href: '/tools/german-grade-calculator',  label: tTools('gradeConverter.name'), icon: I.check },
+    { href: '/tools/anerkennung-wizard',       label: tTools('anerkennung.name'),    icon: I.doc },
+    { href: '/tools/city-comparator',          label: tTools('cityComparator.name'), icon: I.home },
   ]
 
   return (
