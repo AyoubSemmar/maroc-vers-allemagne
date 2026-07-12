@@ -16,10 +16,23 @@ export type CategoryKey =
 
 export type Difficulty = 1 | 2 | 3  // 1 = easy, 3 = tricky
 
+/** Professional fields with their own technical question banks (Fachfragen). */
+export type FieldKey =
+  | 'pflege'
+  | 'kfz'
+  | 'elektro'
+  | 'it'
+  | 'gastro'
+  | 'shk'
+  | 'kaufmann'
+  | 'logistik'
+
 export type Question = {
   id: string
   category: CategoryKey
   difficulty: Difficulty
+  /** Set on field-specific technical questions (Fachfragen). */
+  field?: FieldKey
   /** The question as it'll be asked in the interview, in German. */
   questionDe: string
   /** Sample model answer in German — the candidate adapts/memorises this. */
@@ -154,6 +167,40 @@ export const QUESTIONS: Question[] = [
       'Ja, absolut. Ich plane sowieso einen kompletten Umzug nach Deutschland für die Ausbildung, das ist also kein Hindernis, sondern Teil meines Plans. Ich habe mich bereits über [Stadt] informiert — Wohnviertel, öffentliche Verkehrsmittel, Lebenshaltungskosten — und bin flexibel.',
   },
 
+  // ── 5b. International candidates ──────────────────────────
+  {
+    id: 'intl_visum',
+    category: 'logistics',
+    difficulty: 2,
+    questionDe: 'Wie ist Ihr aktueller Aufenthaltsstatus? Brauchen Sie ein Visum?',
+    sampleAnswerDe:
+      'Ich bin aktuell in [Herkunftsland] und brauche das Visum zur Berufsausbildung nach §16a. Ich habe mich bereits genau informiert: Sobald ich einen unterschriebenen Ausbildungsvertrag habe, reiche ich den Antrag bei der deutschen Botschaft ein — mit Sprachnachweis [B1/B2], Finanzierungsnachweis und dem Vertrag. Der Prozess dauert erfahrungsgemäß [6–12] Wochen. Ich kümmere mich vollständig selbst darum; von Ihnen brauche ich nur den Vertrag und eventuell eine kurze Bestätigung für die Botschaft.',
+  },
+  {
+    id: 'intl_umzug',
+    category: 'logistics',
+    difficulty: 2,
+    questionDe: 'Wie stellen Sie sich den Umzug nach Deutschland konkret vor?',
+    sampleAnswerDe:
+      'Ich habe einen konkreten Plan. Nach der Visumserteilung reise ich [2–4] Wochen vor Ausbildungsbeginn ein, damit ich Zeit für Anmeldung, Bankkonto und Krankenkasse habe. Für die erste Zeit suche ich ein möbliertes Zimmer oder ein WG-Zimmer in [Stadt] — ich schaue bereits jetzt auf den üblichen Portalen. Finanziell habe ich Rücklagen für die ersten Monate, zusätzlich zur Ausbildungsvergütung. Mein Ziel ist, am ersten Arbeitstag vollständig angekommen und einsatzbereit zu sein.',
+  },
+  {
+    id: 'intl_familie',
+    category: 'motivation',
+    difficulty: 1,
+    questionDe: 'Was sagt Ihre Familie dazu, dass Sie nach Deutschland gehen?',
+    sampleAnswerDe:
+      'Meine Familie unterstützt meine Entscheidung voll. Wir haben das gemeinsam besprochen — sie wissen, dass die Ausbildung in Deutschland eine echte Perspektive ist, die es so in [Herkunftsland] nicht gibt. Natürlich werden wir uns vermissen, aber wir telefonieren regelmäßig, und mit den heutigen Möglichkeiten ist der Kontakt einfach. Diese Unterstützung gibt mir Stabilität: Ich gehe nicht weg von etwas, sondern hin zu einem klaren Ziel.',
+  },
+  {
+    id: 'intl_heimweh',
+    category: 'motivation',
+    difficulty: 2,
+    questionDe: 'Was machen Sie, wenn Sie Heimweh bekommen?',
+    sampleAnswerDe:
+      'Ich nehme die Frage ernst, denn Heimweh ist normal — besonders in den ersten Monaten. Mein Plan dagegen hat drei Teile: Erstens, eine feste Routine — Arbeit, Sport, Deutsch lernen — die mir Struktur gibt. Zweitens, aktiv Kontakte aufbauen: Kollegen, Vereine, andere Azubis. Drittens, regelmäßiger Kontakt nach Hause, ohne darin zu versinken. Ich habe schon einmal [längere Zeit allein / im Ausland / im Internat] gelebt und weiß, dass ich nach einigen Wochen ankomme.',
+  },
+
   // ── 6. Closing ────────────────────────────────────────────
   {
     id: 'questions_for_us',
@@ -181,3 +228,406 @@ export const CATEGORY_ORDER: CategoryKey[] = [
 ]
 
 export const FREE_LIMIT = 3 // first N questions revealed without login
+
+// ═══════════════════════════════════════════════════════════
+// Field-specific technical questions (Fachfragen) — 5 per field
+// for the 8 professions with the most Ausbildung demand. The
+// interviewer isn't testing expert knowledge at Azubi level; these
+// answers show realistic motivation + basic understanding.
+// ═══════════════════════════════════════════════════════════
+
+export const FIELD_QUESTIONS: Question[] = [
+  // ── Pflege (care / healthcare) ─────────────────────────────
+  {
+    id: 'pflege_gute_pflege',
+    category: 'motivation',
+    field: 'pflege',
+    difficulty: 2,
+    questionDe: 'Was bedeutet für Sie gute Pflege?',
+    sampleAnswerDe:
+      'Gute Pflege bedeutet für mich, den Menschen als Ganzes zu sehen — nicht nur die Krankheit. Konkret: die Würde des Patienten respektieren, auch bei intimen Aufgaben; genau beobachten und Veränderungen ans Team melden; und zuhören, denn viele Patienten brauchen das Gespräch genauso wie die Behandlung. Gute Pflege ist außerdem Teamarbeit — eine gute Übergabe an die nächste Schicht ist genauso wichtig wie die Arbeit am Bett.',
+  },
+  {
+    id: 'pflege_dementer_patient',
+    category: 'workplace',
+    field: 'pflege',
+    difficulty: 3,
+    questionDe: 'Wie würden Sie mit einem verwirrten oder dementen Patienten umgehen?',
+    sampleAnswerDe:
+      'Ruhig, geduldig und auf Augenhöhe. Ich würde langsam und in einfachen Sätzen sprechen, Blickkontakt halten und dem Patienten nicht widersprechen, wenn er in seiner eigenen Realität ist — Widerspruch erzeugt nur Angst. Wichtig ist, Sicherheit zu geben: sich vorstellen, erklären, was ich tue, feste Routinen respektieren. Und wenn eine Situation schwierig wird, hole ich rechtzeitig eine erfahrene Kollegin dazu, statt allein weiterzumachen — als Azubi ist Fragen keine Schwäche.',
+  },
+  {
+    id: 'pflege_hygiene',
+    category: 'experience',
+    field: 'pflege',
+    difficulty: 2,
+    questionDe: 'Warum ist Hygiene in der Pflege so wichtig?',
+    sampleAnswerDe:
+      'Weil Patienten oft ein geschwächtes Immunsystem haben — eine Infektion, die für mich harmlos wäre, kann für sie lebensgefährlich sein. Deshalb ist Händedesinfektion vor und nach jedem Patientenkontakt die wichtigste einzelne Maßnahme. Dazu kommen Handschuhe und Schutzkleidung bei bestimmten Tätigkeiten und die richtige Aufbereitung von Materialien. Ich weiß, dass es dafür feste Standards gibt, und genau das schätze ich: In der Pflege gibt es klare Regeln, die Leben schützen.',
+  },
+  {
+    id: 'pflege_schichtdienst',
+    category: 'logistics',
+    field: 'pflege',
+    difficulty: 2,
+    questionDe: 'Wie stehen Sie zu Schichtdienst, Nachtdiensten und Wochenendarbeit?',
+    sampleAnswerDe:
+      'Ich habe mich bewusst für die Pflege entschieden und weiß, dass Kranke nicht nur werktags von 8 bis 17 Uhr versorgt werden müssen — Schichtdienst gehört zum Beruf. Ich bin [Alter] Jahre alt, gesund und habe keine Verpflichtungen, die dagegen sprechen. Ich plane, mit festen Schlafroutinen und guter Organisation damit umzugehen. Und ehrlich gesagt: freie Tage unter der Woche haben auch Vorteile — Behörden, Arzt, Einkaufen ohne Stress.',
+  },
+  {
+    id: 'pflege_belastung',
+    category: 'strengths',
+    field: 'pflege',
+    difficulty: 3,
+    questionDe: 'Pflege kann emotional sehr belastend sein. Wie gehen Sie damit um?',
+    sampleAnswerDe:
+      'Ich mache mir keine Illusionen — ich werde Leid und auch Sterben erleben. Drei Dinge helfen mir: Erstens, professionelle Distanz lernen — mitfühlend sein, ohne jedes Schicksal mit nach Hause zu nehmen. Zweitens, im Team sprechen: Übergaben und kollegiale Gespräche sind auch emotionale Ventile. Drittens, ein stabiles Privatleben mit Sport und festen Kontakten. Und ich weiß, dass es Supervision und Ansprechpartner gibt, wenn etwas zu schwer wird — die würde ich nutzen.',
+  },
+
+  // ── KFZ-Mechatronik ────────────────────────────────────────
+  {
+    id: 'kfz_erfahrung',
+    category: 'experience',
+    field: 'kfz',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon einmal praktisch an einem Auto gearbeitet?',
+    sampleAnswerDe:
+      'Ja — ich habe [bei meinem Onkel in der Werkstatt geholfen / an meinem eigenen Auto gearbeitet / ein Praktikum gemacht]. Konkret habe ich [Ölwechsel, Bremsbeläge, Reifenwechsel, Batterie] gemacht. Dabei habe ich gelernt, sauber und systematisch zu arbeiten: erst die Ursache verstehen, dann reparieren, am Ende prüfen. Mir ist klar, dass die Ausbildung viel tiefer geht — genau deshalb will ich sie machen: Ich will nicht nur schrauben, sondern verstehen, warum.',
+  },
+  {
+    id: 'kfz_motor',
+    category: 'experience',
+    field: 'kfz',
+    difficulty: 2,
+    questionDe: 'Was ist der Unterschied zwischen einem Benzin- und einem Dieselmotor?',
+    sampleAnswerDe:
+      'Der Hauptunterschied ist die Zündung: Beim Benzinmotor zündet eine Zündkerze das Kraftstoff-Luft-Gemisch. Beim Diesel gibt es keine Zündkerze — die Luft wird so stark verdichtet, dass sie sehr heiß wird, und der eingespritzte Diesel entzündet sich selbst. Deshalb hat der Diesel eine höhere Verdichtung, mehr Drehmoment und verbraucht weniger — dafür ist er schwerer und die Abgasreinigung aufwendiger. Ich habe die Grundlagen aus [YouTube-Kanälen / Büchern] gelernt und freue mich darauf, das in der Praxis zu vertiefen.',
+  },
+  {
+    id: 'kfz_elektro',
+    category: 'goals',
+    field: 'kfz',
+    difficulty: 2,
+    questionDe: 'Was wissen Sie über Elektroautos, und wie verändert das den Beruf?',
+    sampleAnswerDe:
+      'Elektroautos haben statt Verbrennungsmotor eine Batterie, einen oder mehrere Elektromotoren und Leistungselektronik. Für den Beruf bedeutet das: weniger klassische Motorarbeit, dafür Hochvolt-Technik, Diagnose mit Software und Batteriemanagement. Man darf an Hochvolt-Systemen nur mit spezieller Schulung arbeiten. Genau das finde ich spannend — ich fange den Beruf in dem Moment an, in dem er sich neu erfindet, und will beide Welten beherrschen: Verbrenner und Elektro.',
+  },
+  {
+    id: 'kfz_diagnose',
+    category: 'workplace',
+    field: 'kfz',
+    difficulty: 2,
+    questionDe: 'Ein Kunde sagt nur: „Das Auto macht komische Geräusche." Wie gehen Sie vor?',
+    sampleAnswerDe:
+      'Systematisch. Zuerst gezielte Fragen stellen: Wann tritt das Geräusch auf — beim Bremsen, Lenken, bei bestimmter Geschwindigkeit? Seit wann? Dann eine Probefahrt oder Sichtprüfung, um das Geräusch selbst einzugrenzen, und das Diagnosegerät anschließen. Wichtig ist, nicht zu raten und nicht einfach Teile zu tauschen, sondern die Ursache zu finden. Als Azubi würde ich meine Vermutung dem Gesellen vorstellen und gemeinsam prüfen — so lerne ich, und der Kunde bekommt eine saubere Diagnose.',
+  },
+  {
+    id: 'kfz_sicherheit',
+    category: 'workplace',
+    field: 'kfz',
+    difficulty: 1,
+    questionDe: 'Warum ist Arbeitssicherheit in der Werkstatt so wichtig?',
+    sampleAnswerDe:
+      'Weil in der Werkstatt echte Gefahren existieren: Fahrzeuge auf der Hebebühne, heiße Teile, schwere Lasten, Chemikalien und bei modernen Autos Hochvolt-Systeme. Sicherheitsregeln — Sicherheitsschuhe, Schutzbrille, gesicherte Hebebühne, saubere Arbeitsplätze — schützen mich und die Kollegen. Ich nehme das ernst: Ein Unfall kann eine Karriere beenden, bevor sie anfängt. Regeln zu respektieren zeigt außerdem Professionalität — genau das erwarte ich von mir selbst.',
+  },
+
+  // ── Elektronik ─────────────────────────────────────────────
+  {
+    id: 'elektro_gefahren',
+    category: 'workplace',
+    field: 'elektro',
+    difficulty: 2,
+    questionDe: 'Welche Gefahren gibt es bei der Arbeit mit Strom, und wie schützt man sich?',
+    sampleAnswerDe:
+      'Die größte Gefahr ist der Stromschlag — schon kleine Ströme durch den Körper können tödlich sein, dazu kommen Lichtbögen und Brandgefahr. Deshalb gelten die fünf Sicherheitsregeln, die ich kenne: freischalten, gegen Wiedereinschalten sichern, Spannungsfreiheit feststellen, erden und kurzschließen, benachbarte Teile abdecken. Als Azubi arbeite ich nie allein an spannungsführenden Teilen und frage lieber einmal zu viel als einmal zu wenig. Elektrotechnik verzeiht keine Nachlässigkeit — das respektiere ich.',
+  },
+  {
+    id: 'elektro_grundlagen',
+    category: 'experience',
+    field: 'elektro',
+    difficulty: 2,
+    questionDe: 'Können Sie mir den Unterschied zwischen Spannung, Strom und Widerstand erklären?',
+    sampleAnswerDe:
+      'Gerne mit einem Bild: Spannung (Volt) ist wie der Druck im Wasserrohr — sie treibt an. Strom (Ampere) ist die Menge, die tatsächlich fließt. Widerstand (Ohm) ist alles, was den Fluss bremst — wie ein enges Rohr. Das Ohmsche Gesetz verbindet die drei: U = R × I. Wenn ich die Spannung erhöhe und der Widerstand gleich bleibt, fließt mehr Strom. Diese Grundlagen habe ich [in der Schule / im Selbststudium] gelernt und übe regelmäßig mit Aufgaben.',
+  },
+  {
+    id: 'elektro_erfahrung',
+    category: 'experience',
+    field: 'elektro',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon praktische Erfahrung mit Elektrotechnik?',
+    sampleAnswerDe:
+      'Ja, im kleinen Rahmen: Ich habe [Lampen und Steckdosen unter Aufsicht montiert / mit Arduino-Bausätzen experimentiert / in der Schule Schaltungen gelötet]. Dabei habe ich gelernt, einen Schaltplan zu lesen und sauber zu arbeiten — jedes Kabel richtig abisolieren, jede Klemme fest. Mir ist bewusst, dass Hausinstallation in Deutschland nur vom Fachmann gemacht werden darf; genau deshalb will ich es richtig lernen, von der Pike auf.',
+  },
+  {
+    id: 'elektro_mathe',
+    category: 'strengths',
+    field: 'elektro',
+    difficulty: 2,
+    questionDe: 'Wie gut sind Sie in Mathematik und Physik?',
+    sampleAnswerDe:
+      'Solide — in der Schule hatte ich in Mathe [Note], und die Bereiche, die für den Beruf wichtig sind, beherrsche ich sicher: Bruchrechnung, Prozentrechnung, Formeln umstellen, Grundlagen der Elektrizitätslehre. Wo ich Lücken hatte, habe ich gezielt nachgearbeitet, zum Beispiel mit [Online-Kursen / Übungsheften]. Ich weiß, dass die Berufsschule Fachrechnen verlangt, und habe keine Angst davor — Rechnen ist Übungssache, und ich übe.',
+  },
+  {
+    id: 'elektro_zukunft',
+    category: 'motivation',
+    field: 'elektro',
+    difficulty: 1,
+    questionDe: 'Warum hat der Elektroberuf Ihrer Meinung nach Zukunft?',
+    sampleAnswerDe:
+      'Weil fast jede große Veränderung in Deutschland über Elektrotechnik läuft: die Energiewende mit Photovoltaik und Speichern, Wärmepumpen statt Ölheizungen, Ladesäulen für E-Autos, Smart-Home und Gebäudeautomation. Überall fehlen Fachkräfte — die Betriebe haben volle Auftragsbücher. Für mich heißt das: sichere Arbeit, gute Bezahlung und ständig neue Technik. Ich will nicht irgendeinen Beruf, sondern einen, der die nächsten 30 Jahre gebraucht wird.',
+  },
+
+  // ── IT / Fachinformatik ────────────────────────────────────
+  {
+    id: 'it_projekte',
+    category: 'experience',
+    field: 'it',
+    difficulty: 2,
+    questionDe: 'Haben Sie schon eigene IT-Projekte umgesetzt?',
+    sampleAnswerDe:
+      'Ja. Mein größtes Projekt ist [eine kleine Website / ein Python-Skript, das X automatisiert / ein Discord-Bot]. Ich habe es von der Idee bis zum fertigen Ergebnis allein umgesetzt: geplant, gebaut, Fehler gesucht, verbessert. Dabei habe ich gelernt, dass der schwierigste Teil nicht das Schreiben von Code ist, sondern das saubere Eingrenzen von Fehlern. Den Code kann ich gern zeigen — er liegt auf [GitHub]. Ich will in der Ausbildung lernen, wie man solche Projekte professionell und im Team macht.',
+  },
+  {
+    id: 'it_sprachen',
+    category: 'experience',
+    field: 'it',
+    difficulty: 1,
+    questionDe: 'Welche Programmiersprachen oder Technologien kennen Sie?',
+    sampleAnswerDe:
+      'Am sichersten bin ich in [Python / JavaScript] — damit habe ich [konkrete Beispiele] gebaut. Grundkenntnisse habe ich in [HTML/CSS, SQL, Linux-Grundlagen]. Ich lerne gerade [Sprache/Technologie], weil [Grund]. Mir ist wichtig zu sagen: Ich halte mich nicht für einen Experten — ich habe eine solide Basis und vor allem gelernt, wie man Neues selbstständig lernt: Dokumentation lesen, kleine Projekte bauen, Fehler recherchieren. Genau diese Fähigkeit ist in der IT wichtiger als jede einzelne Sprache.',
+  },
+  {
+    id: 'it_problem',
+    category: 'workplace',
+    field: 'it',
+    difficulty: 2,
+    questionDe: 'Ein Rechner startet nicht mehr. Wie gehen Sie systematisch vor?',
+    sampleAnswerDe:
+      'Vom Einfachen zum Komplizierten. Zuerst die Basics: Strom da? Kabel fest? Monitor an? Dann eingrenzen: Piept oder leuchtet etwas — also Hardware-Signal? Startet das BIOS, hängt es beim Betriebssystem? Je nach Symptom prüfe ich RAM, Festplatte oder Netzteil beziehungsweise starte im abgesicherten Modus. Wichtig: nach jedem Schritt nur eine Sache ändern und das Ergebnis notieren, sonst weiß ich nie, was geholfen hat. Und vor jedem Eingriff klären, ob die Daten gesichert sind.',
+  },
+  {
+    id: 'it_lernen',
+    category: 'goals',
+    field: 'it',
+    difficulty: 2,
+    questionDe: 'IT verändert sich ständig. Wie bleiben Sie auf dem Laufenden?',
+    sampleAnswerDe:
+      'Mit einer festen Routine: Ich folge [Tech-Newslettern / YouTube-Kanälen / Blogs] und probiere Neues direkt in kleinen Projekten aus — nur lesen bringt in der IT wenig, man muss es bauen. Aktuell beschäftige ich mich zum Beispiel mit [KI-Tools / Docker / einem Framework]. Gleichzeitig versuche ich, mich nicht von jedem Trend ablenken zu lassen, sondern erst die Grundlagen zu beherrschen: Netzwerke, Datenbanken, ein Betriebssystem richtig verstehen. Trends kommen und gehen, Grundlagen bleiben.',
+  },
+  {
+    id: 'it_teamarbeit',
+    category: 'workplace',
+    field: 'it',
+    difficulty: 1,
+    questionDe: 'Viele denken, Programmierer arbeiten allein. Wie sehen Sie das?',
+    sampleAnswerDe:
+      'Das Klischee stimmt nicht — gute Software entsteht im Team. Code wird von Kollegen gelesen und geprüft, Anforderungen kommen von Menschen, und die schwierigsten Probleme löst man im Gespräch. Ich schreibe zwar gern konzentriert allein Code, aber ich weiß: verständlich kommunizieren, Fragen stellen, Code so schreiben, dass andere ihn verstehen — das macht den Unterschied zwischen einem Hobby-Programmierer und einem Profi. Genau das will ich in der Ausbildung lernen.',
+  },
+
+  // ── Hotel & Gastronomie ────────────────────────────────────
+  {
+    id: 'gastro_stress',
+    category: 'workplace',
+    field: 'gastro',
+    difficulty: 2,
+    questionDe: 'Freitagabend, volles Restaurant, drei Tische rufen gleichzeitig. Was machen Sie?',
+    sampleAnswerDe:
+      'Ruhe bewahren und priorisieren. Kurzer Blickkontakt zu allen drei Tischen mit einem „Ich bin gleich bei Ihnen" — das gewinnt Zeit und zeigt, dass sie gesehen werden. Dann in sinnvoller Reihenfolge: erst das Dringende (Rechnung, Reklamation), dann Bestellungen, und auf dem Weg Dinge kombinieren — nie mit leeren Händen laufen. Wenn es wirklich zu viel wird, kurz das Team informieren statt unterzugehen. Stress gehört zur Gastronomie; entscheidend ist, freundlich und organisiert zu bleiben.',
+  },
+  {
+    id: 'gastro_gast',
+    category: 'workplace',
+    field: 'gastro',
+    difficulty: 3,
+    questionDe: 'Ein Gast beschwert sich, das Essen sei kalt. Wie reagieren Sie?',
+    sampleAnswerDe:
+      'Zuerst ehrlich entschuldigen — ohne Diskussion und ohne Schuldzuweisung an die Küche. Dann sofort eine Lösung anbieten: das Gericht neu und heiß bringen lassen, und die Küche direkt informieren. Danach beim Chef oder der Schichtleitung melden, ob wir dem Gast etwas anbieten — einen Espresso, ein Dessert. Wichtig ist die Haltung: Eine gut gelöste Beschwerde macht Gäste oft loyaler als ein Abend ganz ohne Probleme. Der Gast soll gehen und denken: Die haben das professionell gelöst.',
+  },
+  {
+    id: 'gastro_zeiten',
+    category: 'logistics',
+    field: 'gastro',
+    difficulty: 2,
+    questionDe: 'In der Gastronomie arbeitet man abends, am Wochenende und an Feiertagen. Passt das zu Ihnen?',
+    sampleAnswerDe:
+      'Ja — das war mir bei der Berufswahl völlig klar. Die Gastronomie lebt genau dann, wenn andere frei haben; wer das nicht akzeptiert, hat den falschen Beruf gewählt. Ich bin flexibel, habe keine Verpflichtungen, die dagegen sprechen, und sehe auch die Vorteile: freie Tage unter der Woche und Trinkgeld an starken Abenden. Wichtig ist mir nur ein fairer Dienstplan im Team — und den bespricht man, wenn man zuverlässig ist und selbst aushilft, wenn es brennt.',
+  },
+  {
+    id: 'gastro_erfahrung',
+    category: 'experience',
+    field: 'gastro',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon in der Gastronomie oder im Service gearbeitet?',
+    sampleAnswerDe:
+      'Ja, ich habe [im Café meiner Familie / als Aushilfe im Restaurant / bei Festen und Veranstaltungen] gearbeitet. Dabei habe ich das Wichtigste gelernt: Der Gast merkt sofort, ob man aufmerksam ist. Ich habe Bestellungen aufgenommen, serviert, kassiert und auch stressige Abende erlebt. Was mir dabei am meisten Spaß gemacht hat: der Moment, wenn Gäste zufrieden gehen und sich bedanken. Diese Grunderfahrung will ich jetzt mit einer richtigen Ausbildung professionalisieren.',
+  },
+  {
+    id: 'gastro_service',
+    category: 'motivation',
+    field: 'gastro',
+    difficulty: 2,
+    questionDe: 'Was bedeutet für Sie guter Service?',
+    sampleAnswerDe:
+      'Guter Service ist aufmerksam, ohne aufdringlich zu sein. Konkret: Gäste freundlich empfangen, Wünsche erkennen, bevor sie ausgesprochen werden — ein leeres Glas sehen, bevor der Gast winken muss. Dazu Produktkenntnis: Ich sollte jede Frage zur Karte beantworten können, auch zu Allergenen. Und Konstanz: freundlich auch am Ende einer langen Schicht, auch beim schwierigen Gast. Am Ende geht es um ein Gefühl — der Gast soll sich willkommen fühlen und wiederkommen wollen.',
+  },
+
+  // ── SHK / Anlagenmechanik ──────────────────────────────────
+  {
+    id: 'shk_interesse',
+    category: 'motivation',
+    field: 'shk',
+    difficulty: 1,
+    questionDe: 'Warum interessieren Sie sich ausgerechnet für den SHK-Beruf?',
+    sampleAnswerDe:
+      'Aus drei Gründen. Erstens: Es ist ein Beruf mit sichtbarem Ergebnis — am Ende des Tages funktioniert eine Heizung oder ein Bad, das vorher nicht funktioniert hat. Zweitens: Die Branche steht im Zentrum der Energiewende — Wärmepumpen, Solarthermie, effiziente Systeme; Betriebe suchen händeringend Nachwuchs. Drittens: Ich arbeite gern mit den Händen und mit dem Kopf zusammen — Anlagen verstehen, planen, montieren. Diese Mischung finde ich in kaum einem anderen Beruf.',
+  },
+  {
+    id: 'shk_heizung',
+    category: 'experience',
+    field: 'shk',
+    difficulty: 2,
+    questionDe: 'Was wissen Sie über moderne Heizsysteme, zum Beispiel Wärmepumpen?',
+    sampleAnswerDe:
+      'Eine Wärmepumpe funktioniert wie ein umgekehrter Kühlschrank: Sie entzieht der Außenluft, dem Erdreich oder dem Grundwasser Wärme und bringt sie über einen Kältemittelkreislauf mit Verdichter auf Heiztemperatur. Sie braucht Strom, erzeugt daraus aber ein Mehrfaches an Wärme. Wärmepumpen ersetzen zunehmend Öl- und Gasheizungen, besonders mit Fußbodenheizung sind sie effizient. Ich habe mich über [Videos / Herstellerseiten] eingelesen, weil ich verstehen wollte, womit ich die nächsten Jahrzehnte arbeiten werde.',
+  },
+  {
+    id: 'shk_koerperlich',
+    category: 'strengths',
+    field: 'shk',
+    difficulty: 2,
+    questionDe: 'Die Arbeit ist körperlich anstrengend — Keller, Baustellen, schwere Teile. Sind Sie darauf vorbereitet?',
+    sampleAnswerDe:
+      'Ja. Ich bin körperlich fit — ich [treibe regelmäßig Sport / habe schon körperlich gearbeitet] und weiß, wie sich ein langer Arbeitstag anfühlt. Mir ist klar, dass der Beruf Knien, Heben und enge Räume bedeutet, nicht nur saubere Montage. Wichtig finde ich, von Anfang an richtig zu arbeiten: Hebetechniken, Knieschoner, Werkzeuge benutzen statt Kraft — damit ich den Beruf auch mit 50 noch ausüben kann. Anstrengung schreckt mich nicht ab; sie gehört für mich zu einem echten Handwerk dazu.',
+  },
+  {
+    id: 'shk_kunde',
+    category: 'workplace',
+    field: 'shk',
+    difficulty: 2,
+    questionDe: 'Sie arbeiten beim Kunden zu Hause. Wie verhalten Sie sich dort?',
+    sampleAnswerDe:
+      'Respektvoll und professionell — ich bin Gast im Zuhause eines Menschen. Konkret heißt das: pünktlich kommen, sich vorstellen, Schuhe oder Überzieher benutzen, den Arbeitsbereich mit Vlies abdecken und am Ende sauberer verlassen, als ich ihn vorgefunden habe. Dazu klar kommunizieren: erklären, was ich mache, wie lange es dauert, und keine Versprechen machen, die ich nicht halten kann — bei Fachfragen verweise ich als Azubi auf den Gesellen. Der Eindruck beim Kunden entscheidet über den Ruf des Betriebs.',
+  },
+  {
+    id: 'shk_handwerk',
+    category: 'experience',
+    field: 'shk',
+    difficulty: 1,
+    questionDe: 'Haben Sie schon einmal handwerklich gearbeitet?',
+    sampleAnswerDe:
+      'Ja — ich habe [zu Hause renoviert / bei meinem Vater auf Baustellen geholfen / ein Praktikum gemacht]. Dabei habe ich [Rohre verlegt, Fliesen geschnitten, Möbel montiert, mit Bohrmaschine und Schleifer gearbeitet]. Zwei Dinge habe ich dabei über mich gelernt: Ich habe Geduld für präzise Arbeit, und ich gebe nicht auf, wenn etwas beim ersten Mal nicht passt. Werkzeug liegt mir — aber ich will jetzt lernen, wie man es professionell und nach deutschen Standards macht.',
+  },
+
+  // ── Kaufmännisch / Büro / Verkauf ──────────────────────────
+  {
+    id: 'kauf_organisation',
+    category: 'workplace',
+    field: 'kaufmann',
+    difficulty: 2,
+    questionDe: 'Wie organisieren Sie Ihre Aufgaben, wenn vieles gleichzeitig ansteht?',
+    sampleAnswerDe:
+      'Mit einem einfachen System: Alles wird sofort notiert — nichts bleibt nur im Kopf. Dann priorisiere ich nach Dringlichkeit und Wichtigkeit: Was hat eine Frist? Was blockiert Kollegen, wenn es liegen bleibt? Große Aufgaben teile ich in Schritte auf und erledige das Unangenehmste zuerst. Und wenn absehbar ist, dass etwas nicht rechtzeitig fertig wird, sage ich früh Bescheid, statt zu hoffen. So behalte ich auch an vollen Tagen den Überblick.',
+  },
+  {
+    id: 'kauf_programme',
+    category: 'experience',
+    field: 'kaufmann',
+    difficulty: 1,
+    questionDe: 'Welche Computerprogramme beherrschen Sie?',
+    sampleAnswerDe:
+      'Sicher beherrsche ich Word und Excel — in Excel kann ich Tabellen aufbauen, sortieren, filtern und mit Grundformeln wie SUMME und WENN arbeiten, außerdem einfache Auswertungen und Diagramme. Dazu kommen PowerPoint, E-Mail-Programme wie Outlook und schnelles Zehnfinger-Schreiben. Neue Software lerne ich schnell — ich habe mir zum Beispiel [Programm] selbst beigebracht. Falls Sie mit einem speziellen System wie SAP oder DATEV arbeiten: Genau solche Programme möchte ich in der Ausbildung von Grund auf lernen.',
+  },
+  {
+    id: 'kauf_telefon',
+    category: 'workplace',
+    field: 'kaufmann',
+    difficulty: 2,
+    questionDe: 'Ein verärgerter Kunde ruft an und beschwert sich lautstark. Wie reagieren Sie?',
+    sampleAnswerDe:
+      'Ruhig bleiben und zuerst zuhören, ohne zu unterbrechen — oft sinkt die Wut schon, wenn jemand sich ernst genommen fühlt. Dann Verständnis zeigen und das Problem mit eigenen Worten zusammenfassen, damit klar ist, dass ich es verstanden habe. Danach entweder direkt eine Lösung anbieten oder einen konkreten Rückruf mit Zeitangabe versprechen — und den halte ich dann auch ein. Was ich nie tue: persönlich werden, diskutieren oder Versprechen machen, die ich nicht halten kann. Als Azubi hole ich bei schwierigen Fällen früh die Kollegen dazu.',
+  },
+  {
+    id: 'kauf_zahlen',
+    category: 'strengths',
+    field: 'kaufmann',
+    difficulty: 2,
+    questionDe: 'Wie gut können Sie mit Zahlen umgehen?',
+    sampleAnswerDe:
+      'Gut — und vor allem gewissenhaft. Prozentrechnung, Dreisatz, Rabatte und Mehrwertsteuer berechne ich sicher; in der Schule hatte ich in Mathe [Note]. Wichtiger als Kopfrechnen finde ich im Büro aber Sorgfalt: eine Rechnung zweimal prüfen, Beträge nicht verwechseln, bei Unstimmigkeiten nachhaken statt abzeichnen. Zahlenfehler kosten Geld und Vertrauen. Ich arbeite lieber einmal konzentriert und richtig als zweimal schnell und falsch.',
+  },
+  {
+    id: 'kauf_diskretion',
+    category: 'workplace',
+    field: 'kaufmann',
+    difficulty: 2,
+    questionDe: 'Im Büro arbeiten Sie mit vertraulichen Daten. Was bedeutet das für Sie?',
+    sampleAnswerDe:
+      'Dass ich eine Verantwortung trage, die über meinen Schreibtisch hinausgeht. Konkret: Kundendaten, Gehälter oder interne Zahlen werden mit niemandem besprochen — nicht mit Freunden, nicht mit der Familie, nicht mit Kollegen, die es nichts angeht. Dazu gehört auch der praktische Teil: Bildschirm sperren, Dokumente nicht offen liegen lassen, E-Mails an den richtigen Empfänger. Ich weiß, dass es dafür in Deutschland mit der DSGVO klare Regeln gibt, und nehme das ernst — Diskretion ist im Büro keine Option, sondern Pflicht.',
+  },
+
+  // ── Lagerlogistik ──────────────────────────────────────────
+  {
+    id: 'log_genauigkeit',
+    category: 'workplace',
+    field: 'logistik',
+    difficulty: 1,
+    questionDe: 'Warum ist Genauigkeit im Lager so wichtig?',
+    sampleAnswerDe:
+      'Weil jeder kleine Fehler eine Kette auslöst: Ein falsch gescannter Artikel bedeutet falsche Bestände, ein falsch gepacktes Paket einen verärgerten Kunden und teure Retouren. Das Lager ist das Gedächtnis der Firma — wenn die Zahlen im System nicht mit der Realität übereinstimmen, kann der Verkauf nichts verlässlich zusagen. Deshalb: jeden Scan ernst nehmen, Mengen wirklich zählen statt schätzen, und Unstimmigkeiten sofort melden statt weiterzuarbeiten. Lieber 30 Sekunden prüfen als eine Stunde korrigieren.',
+  },
+  {
+    id: 'log_technik',
+    category: 'experience',
+    field: 'logistik',
+    difficulty: 1,
+    questionDe: 'Haben Sie Erfahrung mit Gabelstaplern, Scannern oder Lagersystemen?',
+    sampleAnswerDe:
+      'Ich habe [in einem Lager ausgeholfen und mit Handscannern gearbeitet / noch keinen Staplerschein, aber ich weiß, dass man ihn in der Ausbildung machen kann]. Mit Technik komme ich generell schnell zurecht — Scanner, Tablets und Lagersoftware sind logisch aufgebaut, wenn man das System dahinter versteht. Der Staplerschein ist eines meiner ersten Ziele in der Ausbildung. Bis dahin gilt für mich: Geräte nur bedienen, wenn ich eingewiesen bin — im Lager ist Sicherheit wichtiger als Tempo.',
+  },
+  {
+    id: 'log_koerper',
+    category: 'strengths',
+    field: 'logistik',
+    difficulty: 1,
+    questionDe: 'Die Arbeit im Lager ist körperlich. Wie halten Sie durch?',
+    sampleAnswerDe:
+      'Ich bin fit und daran gewöhnt, mich zu bewegen — [Sport / bisherige körperliche Arbeit]. Acht Stunden auf den Beinen, Heben und Tragen schrecken mich nicht. Wichtig ist mir, von Anfang an richtig zu arbeiten: aus den Beinen heben statt aus dem Rücken, Hilfsmittel wie Hubwagen nutzen, gute Schuhe tragen. Und ich achte auf Erholung — Schlaf und Ausgleich nach der Schicht. Wer im Lager nur auf Kraft setzt, hält nicht lange; wer klug arbeitet, bleibt gesund.',
+  },
+  {
+    id: 'log_schicht',
+    category: 'logistics',
+    field: 'logistik',
+    difficulty: 2,
+    questionDe: 'Können Sie im Schichtsystem arbeiten, auch früh oder nachts?',
+    sampleAnswerDe:
+      'Ja. Ich weiß, dass Logistik oft im Zwei- oder Dreischichtsystem läuft, weil Ware nicht wartet. Ich habe keine Verpflichtungen, die dagegen sprechen, und komme mit frühen Zeiten gut zurecht — ich bin ohnehin [Frühaufsteher / flexibel]. Mein Plan für Nachtschichten: feste Schlafenszeiten, dunkles Zimmer, Routine. Und ich sehe auch die Vorteile: Schichtzulagen und freie Zeit, wenn andere arbeiten. Zuverlässigkeit gilt für mich in jeder Schicht gleich — auch um 4 Uhr morgens.',
+  },
+  {
+    id: 'log_fehler',
+    category: 'workplace',
+    field: 'logistik',
+    difficulty: 2,
+    questionDe: 'Sie merken, dass eine Lieferung falsch gepackt wurde — aber nicht von Ihnen. Was tun Sie?',
+    sampleAnswerDe:
+      'Sofort melden — ohne Schuldzuweisung. Der Kunde interessiert sich nicht dafür, wer den Fehler gemacht hat, sondern nur, ob er die richtige Ware bekommt. Also: Vorgesetzten oder die zuständige Kollegin informieren, die Lieferung stoppen, solange es noch geht, und beim Korrigieren helfen. Was ich nicht tun würde: wegschauen, weil es „nicht mein Fehler" ist. Im Lager arbeitet man als Kette — und eine Kette funktioniert nur, wenn jedes Glied auch auf die anderen achtet.',
+  },
+]
+
+export const FIELD_ICON: Record<FieldKey, string> = {
+  pflege:   '🏥',
+  kfz:      '🚗',
+  elektro:  '⚡',
+  it:       '💻',
+  gastro:   '🍽️',
+  shk:      '🔧',
+  kaufmann: '💼',
+  logistik: '📦',
+}
+
+export const FIELD_ORDER: FieldKey[] = [
+  'pflege', 'kfz', 'elektro', 'it', 'gastro', 'shk', 'kaufmann', 'logistik',
+]
+
+/** General + field-specific questions, in display order. */
+export const ALL_QUESTIONS: Question[] = [...QUESTIONS, ...FIELD_QUESTIONS]

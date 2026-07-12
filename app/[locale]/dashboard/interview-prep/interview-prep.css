@@ -41,10 +41,17 @@
 .ip-body { padding: 36px 0 0; }
 
 /* Filter */
+.ip-fields-label {
+  margin: 0 0 8px;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-mute);
+}
 .ip-filter {
   display: flex; flex-wrap: wrap; gap: 8px;
   margin-bottom: 28px;
 }
+.ip-filter + .ip-filter { margin-top: -12px; }
 .ip-pill {
   padding: 8px 16px;
   background: var(--bg-elev);

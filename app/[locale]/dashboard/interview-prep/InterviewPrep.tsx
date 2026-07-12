@@ -8,22 +8,29 @@ import { createClient } from '@/lib/supabase-browser'
 import BookConsultationButton from '@/components/BookConsultationButton'
 import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
 import {
+  ALL_QUESTIONS,
   CATEGORY_ICON,
   CATEGORY_ORDER,
+  FIELD_ICON,
+  FIELD_ORDER,
+  FIELD_QUESTIONS,
   FREE_LIMIT,
   QUESTIONS,
   type CategoryKey,
+  type FieldKey,
   type Question,
 } from '@/lib/interviewPrepData'
 import './interview-prep.css'
 
 type Filter = 'all' | CategoryKey
+type FieldTab = 'general' | FieldKey
 
 export default function InterviewPrep({ locale }: { locale: AppLocale }) {
   const t = useTranslations('interviewPrep')
   const dir = dirFor(locale)
 
   const [filter, setFilter] = useState<Filter>('all')
+  const [fieldTab, setFieldTab] = useState<FieldTab>('general')
   const [openId, setOpenId] = useState<string | null>(null)
   const [authed, setAuthed] = useState<boolean | null>(null)
   const [userEmail, setUserEmail] = useState<string>('')
@@ -61,8 +68,9 @@ export default function InterviewPrep({ locale }: { locale: AppLocale }) {
   }, [])
 
   const visibleQuestions = useMemo(() => {
+    if (fieldTab !== 'general') return FIELD_QUESTIONS.filter(q => q.field === fieldTab)
     return filter === 'all' ? QUESTIONS : QUESTIONS.filter(q => q.category === filter)
-  }, [filter])
+  }, [filter, fieldTab])
 
   const counts = useMemo(() => {
     const m: Record<string, number> = { all: QUESTIONS.length }
@@ -78,7 +86,7 @@ export default function InterviewPrep({ locale }: { locale: AppLocale }) {
           <h1 className="ip-title">{t('title')}</h1>
           <p className="ip-subtitle">{t('subtitle')}</p>
           <div className="ip-hero-badges">
-            <span className="ip-hero-badge">📋 {t('badgeQuestions', { n: QUESTIONS.length })}</span>
+            <span className="ip-hero-badge">📋 {t('badgeQuestions', { n: ALL_QUESTIONS.length })}</span>
             <span className="ip-hero-badge">🎯 {t('badgeAnswers')}</span>
             <span className="ip-hero-badge">🇩🇪 {t('badgeGerman')}</span>
             <span className="ip-hero-badge">🆓 {t('badgeFreePreview', { n: FREE_LIMIT })}</span>
@@ -87,31 +95,55 @@ export default function InterviewPrep({ locale }: { locale: AppLocale }) {
       </header>
 
       <div className="ip-body wrap">
-        {/* Category filter */}
+        {/* Field tabs — general questions vs. per-profession Fachfragen */}
+        <p className="ip-fields-label">{t('fieldsTitle')}</p>
         <div className="ip-filter">
           <button
             type="button"
-            className={`ip-pill${filter === 'all' ? ' is-active' : ''}`}
-            onClick={() => setFilter('all')}
+            className={`ip-pill${fieldTab === 'general' ? ' is-active' : ''}`}
+            onClick={() => setFieldTab('general')}
           >
-            {t('allFilter')} ({counts.all})
+            💬 {t('generalTab')} ({QUESTIONS.length})
           </button>
-          {CATEGORY_ORDER.map(cat => (
+          {FIELD_ORDER.map(f => (
             <button
-              key={cat}
+              key={f}
               type="button"
-              className={`ip-pill${filter === cat ? ' is-active' : ''}`}
-              onClick={() => setFilter(cat)}
+              className={`ip-pill${fieldTab === f ? ' is-active' : ''}`}
+              onClick={() => setFieldTab(f)}
             >
-              {CATEGORY_ICON[cat]} {t(`category.${cat}`)} ({counts[cat] ?? 0})
+              {FIELD_ICON[f]} {t(`fields.${f}.name`)} ({FIELD_QUESTIONS.filter(q => q.field === f).length})
             </button>
           ))}
         </div>
 
+        {/* Category filter — only relevant within the general questions */}
+        {fieldTab === 'general' && (
+          <div className="ip-filter">
+            <button
+              type="button"
+              className={`ip-pill${filter === 'all' ? ' is-active' : ''}`}
+              onClick={() => setFilter('all')}
+            >
+              {t('allFilter')} ({counts.all})
+            </button>
+            {CATEGORY_ORDER.map(cat => (
+              <button
+                key={cat}
+                type="button"
+                className={`ip-pill${filter === cat ? ' is-active' : ''}`}
+                onClick={() => setFilter(cat)}
+              >
+                {CATEGORY_ICON[cat]} {t(`category.${cat}`)} ({counts[cat] ?? 0})
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Questions */}
         <div className="ip-list">
           {visibleQuestions.map((q, idx) => {
-            const globalIndex = QUESTIONS.findIndex(qq => qq.id === q.id)
+            const globalIndex = ALL_QUESTIONS.findIndex(qq => qq.id === q.id)
             const isFree = q.isFree || globalIndex < FREE_LIMIT
             const isOpen = openId === q.id
             const isLocked = !isFree && authed === false
@@ -162,7 +194,11 @@ function QuestionCard({
       <header className="ip-card-head">
         <span className="ip-card-num">{String(index).padStart(2, '0')}</span>
         <div className="ip-card-meta">
-          <span className="ip-card-cat">{CATEGORY_ICON[q.category]} {t(`category.${q.category}`)}</span>
+          <span className="ip-card-cat">
+            {q.field
+              ? <>{FIELD_ICON[q.field]} {t(`fields.${q.field}.name` as any)}</>
+              : <>{CATEGORY_ICON[q.category]} {t(`category.${q.category}`)}</>}
+          </span>
           <span className="ip-card-diff" title={t(`difficulty.${q.difficulty}`)}>
             {q.difficulty === 1 && '⭐'}
             {q.difficulty === 2 && '⭐⭐'}
@@ -179,7 +215,9 @@ function QuestionCard({
       </button>
       {showWhy && (
         <div className="ip-why-box">
-          <p>{t(`questions.${q.id}.why` as any)}</p>
+          {/* Field questions share one "what they check" note per field;
+              general questions have a per-question explanation. */}
+          <p>{q.field ? t(`fields.${q.field}.why` as any) : t(`questions.${q.id}.why` as any)}</p>
         </div>
       )}
 
@@ -200,15 +238,19 @@ function QuestionCard({
                 <p className="ip-answer-text" lang="de" dir="ltr">{q.sampleAnswerDe}</p>
               </div>
 
-              <div className="ip-answer-section">
-                <h4 className="ip-answer-label ip-do">✅ {t('doSayLabel')}</h4>
-                <p className="ip-answer-text">{t(`questions.${q.id}.doSay` as any)}</p>
-              </div>
+              {!q.field && (
+                <>
+                  <div className="ip-answer-section">
+                    <h4 className="ip-answer-label ip-do">✅ {t('doSayLabel')}</h4>
+                    <p className="ip-answer-text">{t(`questions.${q.id}.doSay` as any)}</p>
+                  </div>
 
-              <div className="ip-answer-section">
-                <h4 className="ip-answer-label ip-dont">⚠️ {t('dontSayLabel')}</h4>
-                <p className="ip-answer-text">{t(`questions.${q.id}.dontSay` as any)}</p>
-              </div>
+                  <div className="ip-answer-section">
+                    <h4 className="ip-answer-label ip-dont">⚠️ {t('dontSayLabel')}</h4>
+                    <p className="ip-answer-text">{t(`questions.${q.id}.dontSay` as any)}</p>
+                  </div>
+                </>
+              )}
 
               <button type="button" className="ip-collapse-btn" onClick={onToggle}>
                 ✕ {t('hideAnswer')}

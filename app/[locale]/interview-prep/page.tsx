@@ -4,7 +4,16 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
-import { CATEGORY_ICON, CATEGORY_ORDER, FREE_LIMIT, QUESTIONS } from '@/lib/interviewPrepData'
+import {
+  ALL_QUESTIONS,
+  CATEGORY_ICON,
+  CATEGORY_ORDER,
+  FIELD_ICON,
+  FIELD_ORDER,
+  FIELD_QUESTIONS,
+  FREE_LIMIT,
+  QUESTIONS,
+} from '@/lib/interviewPrepData'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
@@ -61,7 +70,7 @@ export default async function InterviewPrepLanding({ params }: Props) {
           <h1 className="text-3xl sm:text-4xl font-bold mt-3">{t('title')}</h1>
           <p className="mt-3 text-slate-300 leading-relaxed max-w-2xl">{t('subtitle')}</p>
           <div className="flex flex-wrap gap-2 mt-5 text-xs">
-            <span className="bg-white/10 rounded-full px-3 py-1.5">🎯 {t('badgeQuestions', { n: QUESTIONS.length })}</span>
+            <span className="bg-white/10 rounded-full px-3 py-1.5">🎯 {t('badgeQuestions', { n: ALL_QUESTIONS.length })}</span>
             <span className="bg-white/10 rounded-full px-3 py-1.5">🇩🇪 {t('badgeAnswers')}</span>
             <span className="bg-white/10 rounded-full px-3 py-1.5">📊 {t('badgeGerman')}</span>
             <span className="bg-white/10 rounded-full px-3 py-1.5">🔓 {t('badgeFreePreview', { n: FREE_LIMIT })}</span>
@@ -106,6 +115,35 @@ export default async function InterviewPrepLanding({ params }: Props) {
                         {cta.free.split('—')[0].trim()} ✓
                       </span>
                     )}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
+
+        {/* Field-specific technical questions — grouped by profession.
+            German question + localized translation, all crawlable. */}
+        <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-2">{t('fieldsTitle')}</h2>
+        {FIELD_ORDER.map((f) => (
+          <section key={f} className="mb-8">
+            <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2 mt-6">
+              <span aria-hidden>{FIELD_ICON[f]}</span>
+              {t(`fields.${f}.name`)}
+            </h3>
+            <ul className="mt-3 space-y-2">
+              {FIELD_QUESTIONS.filter((q) => q.field === f).map((q) => (
+                <li key={q.id}>
+                  <Link
+                    href="/dashboard/interview-prep"
+                    className="block bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-emerald-400 hover:shadow-sm transition-all"
+                  >
+                    <span className="block font-semibold text-gray-900" lang="de">
+                      „{q.questionDe}“
+                    </span>
+                    <span className="block text-sm text-gray-500 mt-0.5">
+                      {t(`questions.${q.id}.translation`)}
+                    </span>
                   </Link>
                 </li>
               ))}
