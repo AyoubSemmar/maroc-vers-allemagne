@@ -24,18 +24,18 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 // into the dashboard tool.
 
 const CTA: Record<AppLocale, { start: string; free: string }> = {
-  en: { start: 'Practise with model answers', free: `${FREE_LIMIT} questions free — no account needed` },
-  fr: { start: 'S’entraîner avec les réponses-types', free: `${FREE_LIMIT} questions gratuites — sans compte` },
-  ar: { start: 'تدرّب مع الأجوبة النموذجية', free: `${FREE_LIMIT} أسئلة مجانية — دون حساب` },
-  de: { start: 'Mit Musterantworten üben', free: `${FREE_LIMIT} Fragen gratis — ohne Konto` },
-  es: { start: 'Practica con respuestas modelo', free: `${FREE_LIMIT} preguntas gratis — sin cuenta` },
-  tr: { start: 'Örnek cevaplarla pratik yap', free: `${FREE_LIMIT} soru ücretsiz — hesap gerekmez` },
-  fa: { start: 'با پاسخ‌های نمونه تمرین کنید', free: `${FREE_LIMIT} سؤال رایگان — بدون حساب` },
-  pt: { start: 'Pratique com respostas-modelo', free: `${FREE_LIMIT} perguntas grátis — sem conta` },
-  ru: { start: 'Тренируйтесь с образцовыми ответами', free: `${FREE_LIMIT} вопроса бесплатно — без аккаунта` },
-  hi: { start: 'मॉडल जवाबों के साथ अभ्यास करें', free: `${FREE_LIMIT} सवाल मुफ्त — बिना खाते के` },
-  ur: { start: 'نمونہ جوابات کے ساتھ مشق کریں', free: `${FREE_LIMIT} سوالات مفت — بغیر اکاؤنٹ` },
-  zh: { start: '用范例回答开始练习', free: `${FREE_LIMIT} 个问题免费——无需账户` },
+  en: { start: 'Practise with model answers', free: '100% free — a free account unlocks every answer' },
+  fr: { start: 'S’entraîner avec les réponses-types', free: '100% gratuit — un compte gratuit débloque toutes les réponses' },
+  ar: { start: 'تدرّب مع الأجوبة النموذجية', free: 'مجاني 100% — حساب مجاني يفتح كل الأجوبة' },
+  de: { start: 'Mit Musterantworten üben', free: '100 % kostenlos — ein kostenloses Konto schaltet alle Antworten frei' },
+  es: { start: 'Practica con respuestas modelo', free: '100% gratis — una cuenta gratuita desbloquea todas las respuestas' },
+  tr: { start: 'Örnek cevaplarla pratik yap', free: '%100 ücretsiz — ücretsiz hesap tüm cevapları açar' },
+  fa: { start: 'با پاسخ‌های نمونه تمرین کنید', free: '۱۰۰٪ رایگان — حساب رایگان همه پاسخ‌ها را باز می‌کند' },
+  pt: { start: 'Pratique com respostas-modelo', free: '100% grátis — uma conta gratuita desbloqueia todas as respostas' },
+  ru: { start: 'Тренируйтесь с образцовыми ответами', free: '100% бесплатно — бесплатный аккаунт открывает все ответы' },
+  hi: { start: 'मॉडल जवाबों के साथ अभ्यास करें', free: '100% मुफ्त — मुफ्त खाता सभी जवाब खोल देता है' },
+  ur: { start: 'نمونہ جوابات کے ساتھ مشق کریں', free: '100% مفت — مفت اکاؤنٹ تمام جوابات کھول دیتا ہے' },
+  zh: { start: '用范例回答开始练习', free: '100% 免费——免费账户解锁全部回答' },
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -110,11 +110,6 @@ export default async function InterviewPrepLanding({ params }: Props) {
                     <span className="block text-sm text-gray-500 mt-0.5">
                       {t(`questions.${q.id}.translation`)}
                     </span>
-                    {q.isFree && (
-                      <span className="inline-block text-[11px] font-bold text-emerald-700 bg-emerald-50 rounded-full px-2 py-0.5 mt-1.5">
-                        {cta.free.split('—')[0].trim()} ✓
-                      </span>
-                    )}
                   </Link>
                 </li>
               ))}
