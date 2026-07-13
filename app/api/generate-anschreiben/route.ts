@@ -11,10 +11,6 @@ export async function GET() {
   const { data: { user } } = await sb.auth.getUser()
   if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
   const status = await getStatus(user.id, 'motivation')
-  // Compact shape with both daily quota AND credits surfaced — the UI's
-  // canGenerate previously read only `credits`, ignoring the free daily
-  // quota and showing "out of credit" to fresh users with no purchases
-  // (even though they had untouched daily allowance).
   const isPremium = status.tier === 'premium'
   const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
   const dailyRemaining = isPremium ? 0 : ((status as any).dailyRemaining ?? 0)
@@ -30,83 +26,48 @@ export async function GET() {
   })
 }
 
-const SYSTEM_PROMPT = `You are a professional German career assistant specialized in writing high-quality "Bewerbungsanschreiben" (motivation letters) for Ausbildung positions in Germany.
+// Simplified flow: the user pastes their existing motivation letter in any
+// language and/or uploads it (PDF/image). We return a corrected, professional
+// German Anschreiben — same content and intent, just fixed and translated.
+type Body = {
+  letterText?: string
+  file?: { dataUrl: string; name?: string }
+}
 
-Your task is to generate a formal, natural, and convincing German motivation letter based on user input.
+const MAX_FILE_BYTES = 8_000_000
+const MAX_TEXT_CHARS = 8_000
 
-# 🎯 INPUT DATA
-You will receive:
-- full_name: (string)
-- ausbildung_position: (string)
-- user_background_text: (string, may be in Arabic, French, or English)
-- extracted_cv_data: (structured or unstructured text extracted from the user's CV)
+function parseDataUrl(dataUrl: string): { mediaType: string; base64: string } | null {
+  const m = /^data:([^;]+);base64,(.+)$/i.exec(dataUrl)
+  if (!m) return null
+  return { mediaType: m[1], base64: m[2] }
+}
 
-# 🧠 INSTRUCTIONS
+const SYSTEM = `You are a professional German career assistant. The user gives you their EXISTING motivation letter (Bewerbungsanschreiben) — pasted text and/or an uploaded PDF/image — usually written in Arabic, French, English, or rough German.
 
-## 1. Language handling
-- The final output MUST be in German (B2–C1 level).
-- If the user_background_text is in Arabic, French, or English: first understand and internally translate it, then use it naturally in the letter.
+Your job: return a corrected, professional German version of THEIR letter. This is a correction + translation task, not invention.
 
-## 2. Structure (VERY IMPORTANT)
-Follow the standard German motivation letter structure:
-1. Opening (Anrede + introduction)
-2. Motivation for the Ausbildung
-3. Relevant experience / skills
-4. Personal strengths and goals
-5. Closing paragraph
+Rules:
+1) Output MUST be in natural, professional German at B2–C1 level.
+2) Preserve the applicant's own content, facts, and intent — do NOT invent new experiences, employers, dates, or qualifications. Fix grammar, spelling, tone, structure, and word choice; translate anything not already in German.
+3) Follow the standard German Anschreiben structure: opening (Anrede + intro), motivation, relevant experience/skills, personal strengths/goals, closing.
+4) Formal but human — no robotic filler, no exaggeration. German-appropriate modesty: reliability, motivation, willingness to learn.
+5) Keep it roughly 180–260 words. Tighten rambling input; gently expand only if the input is extremely thin, without fabricating facts.
+6) Do not mention AI. Do not explain your reasoning. Output ONLY the letter.
 
-## 3. Writing style
-- Formal but human (NOT robotic)
-- Clear and structured
-- Avoid generic phrases
-- Be specific and personalized
-- Use natural German expressions
-
-## 4. Personalization rules
-- Use the applicant's name naturally
-- Adapt the content to the ausbildung_position
-- Extract relevant skills and experiences from user_background_text and extracted_cv_data
-- If experience is limited: emphasize motivation, discipline, learning ability
-
-## 5. Cultural adaptation (Germany-specific)
-- Keep tone professional and modest
-- Avoid exaggeration
-- Be realistic and precise
-- Focus on: reliability, motivation, willingness to learn
-
-## 6. Output format
-Return ONLY the final motivation letter in German.
-Format — follow this EXACTLY:
-
-[Date only — no city — right-aligned, on its own line, format: "22. April 2026"]
+Output format — follow EXACTLY:
+>>DATE>>[today's date in German, e.g. "13. Juli 2026" — no city]
 
 Sehr geehrte Damen und Herren,
 
-...letter content...
+...letter body...
 
 Mit freundlichen Grüßen
-[Full Name]
+[Applicant's full name — use the name from the letter if present; otherwise leave the line as "Mit freundlichen Grüßen" only]
 
-IMPORTANT formatting rules:
-- The date goes on the FIRST line, right-aligned. Output it preceded by the marker ">>DATE>>" so it can be rendered right-aligned. Example: ">>DATE>>22. April 2026"
-- Do NOT include a city before the date.
-- Use the exact date provided to you — do not invent a date.
-
-## 7. Length
-- 180–250 words
-- Not too long, not too short
-
-## 8. Quality check before output
-Ensure: no grammar mistakes, smooth flow, no repetition, feels like written by a human.
-
-# 🚫 DO NOT
-- Do not mention AI
-- Do not explain your reasoning
-- Do not output in any language other than German
-- Do not invent unrealistic experiences
-
-# ✅ GOAL
-Generate a convincing German "Anschreiben" that increases the user's chances of getting an Ausbildung.`
+Rules for the format:
+- The first line is the date, prefixed with the marker ">>DATE>>" so the UI can right-align it. Use the exact date given to you. No city before it.
+- If a specific company/recipient is clearly named in the input, you may use "Sehr geehrte Frau [Name]," / "Sehr geehrter Herr [Name]," instead of "Sehr geehrte Damen und Herren,". Otherwise use "Sehr geehrte Damen und Herren,".`
 
 export async function POST(req: NextRequest) {
   let userIdForRefund: string | null = null
@@ -117,14 +78,19 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured.' }, { status: 500 })
     }
 
-    // Require authenticated user
     const sb = await createServerSupabase()
     const { data: { user } } = await sb.auth.getUser()
     if (!user) {
       return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 })
     }
 
-    // Entitlement gate
+    const body = (await req.json()) as Body
+    const letterText = (body?.letterText || '').trim().slice(0, MAX_TEXT_CHARS)
+    const file = body?.file?.dataUrl ? body.file : null
+    if (!letterText && !file) {
+      return NextResponse.json({ error: 'Provide your letter text or a file.' }, { status: 400 })
+    }
+
     const ent = await checkAndConsume(user.id, 'motivation')
     if (!ent.allowed) {
       const message =
@@ -136,64 +102,48 @@ export async function POST(req: NextRequest) {
     userIdForRefund = user.id
     sourceForRefund = ent.source
 
-    const formData = await req.formData()
-    const fullName = (formData.get('full_name') as string || '').trim()
-    const rawPosition = (formData.get('ausbildung_position') as string || '').trim()
-    const gender = (formData.get('gender') as string || 'male') === 'female' ? 'female' : 'male'
-    const userBackground = (formData.get('user_background_text') as string || '').trim()
-    const cvFile = formData.get('cv_file') as File | null
+    const germanDate = new Date().toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })
 
-    if (!fullName || !rawPosition || !userBackground) {
-      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
-      return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 })
-    }
+    type ContentBlock =
+      | { type: 'text'; text: string }
+      | { type: 'image'; source: { type: 'base64'; media_type: string; data: string } }
+      | { type: 'document'; source: { type: 'base64'; media_type: 'application/pdf'; data: string } }
 
-    // Cap each user-supplied field so a malicious caller can't burn through
-    // Anthropic tokens by submitting megabytes of text. Limits chosen to
-    // be roomy for genuine input and tight enough to bound cost per call.
-    if (fullName.length > 200 || rawPosition.length > 200 || userBackground.length > 5000) {
-      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
-      return NextResponse.json({ error: 'Input too long.' }, { status: 400 })
-    }
+    const contentBlocks: ContentBlock[] = []
 
-    // Format today's date in German
-    const today = new Date()
-    const germanDate = today.toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })
-
-    // Build full formal position — AI will use this exact string
-    // We pass gender context so the AI uses the correct grammatical form
-    const ausbildungPosition = rawPosition
-
-    // Extract CV text if provided
-    let extractedCvData = 'No CV provided.'
-    if (cvFile && cvFile.size > 0) {
-      try {
-        const buffer = Buffer.from(await cvFile.arrayBuffer())
-        const pdfMod = await import('pdf-parse')
-        const pdfParse = (pdfMod as any).default ?? pdfMod
-        const pdfData = await pdfParse(buffer)
-        extractedCvData = pdfData?.text?.trim() || 'Could not extract CV text.'
-      } catch (e) {
-        console.error('PDF parse error:', e)
-        extractedCvData = 'CV was uploaded but could not be parsed — using background description only.'
+    if (file) {
+      const parsed = parseDataUrl(file.dataUrl)
+      if (parsed) {
+        const approxBytes = Math.floor(parsed.base64.length * 0.75)
+        if (approxBytes > MAX_FILE_BYTES) {
+          await refund(user.id, 'motivation', ent.source)
+          return NextResponse.json({ error: 'File too large (max ~6MB).' }, { status: 413 })
+        }
+        contentBlocks.push({ type: 'text', text: `--- Uploaded motivation letter: "${file.name || 'letter'}" ---` })
+        if (parsed.mediaType === 'application/pdf') {
+          contentBlocks.push({ type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: parsed.base64 } })
+        } else if (parsed.mediaType.startsWith('image/')) {
+          contentBlocks.push({ type: 'image', source: { type: 'base64', media_type: parsed.mediaType, data: parsed.base64 } })
+        }
       }
     }
 
-    const userMessage = `Generate a German Anschreiben for the following applicant:
-
-full_name: ${fullName}
-gender: ${gender === 'female' ? 'female (use feminine job title form, e.g. Pflegefachfrau, Kauffrau, Mechatronikerin)' : 'male (use masculine job title form, e.g. Pflegefachmann, Kaufmann, Mechatroniker)'}
-ausbildung_position (raw input, expand to full formal German title based on gender): ${ausbildungPosition}
-today_date (use this exactly, no city): ${germanDate}
-user_background_text: ${userBackground}
-extracted_cv_data: ${extractedCvData.slice(0, 3000)}`
+    contentBlocks.push({
+      type: 'text',
+      text: `today_date (use exactly, no city): ${germanDate}\n\n${
+        letterText
+          ? `Here is the user's existing motivation letter (any language). Correct and translate it into a professional German Anschreiben following the required format:\n\n${letterText}`
+          : `Read the attached motivation letter above and return a corrected, professional German Anschreiben following the required format.`
+      }`,
+    })
 
     const client = new Anthropic({ apiKey })
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-5',
-      max_tokens: 2000,
-      system: SYSTEM_PROMPT,
-      messages: [{ role: 'user', content: userMessage }],
+      model: 'claude-sonnet-5',
+      max_tokens: 2500,
+      thinking: { type: 'disabled' },
+      system: SYSTEM,
+      messages: [{ role: 'user', content: contentBlocks as unknown as Anthropic.MessageParam['content'] }],
     })
 
     const letter = response.content
@@ -202,8 +152,11 @@ extracted_cv_data: ${extractedCvData.slice(0, 3000)}`
       .join('')
       .trim()
 
-    // Extract the expanded position from the first line of the letter if AI included it,
-    // otherwise just return raw. The client shows it in the header.
+    if (!letter) {
+      if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'motivation', sourceForRefund)
+      return NextResponse.json({ error: 'AI returned nothing. Try again.' }, { status: 502 })
+    }
+
     return NextResponse.json({ letter, date: germanDate, source: sourceForRefund })
   } catch (e: any) {
     console.error('generate-anschreiben error:', e)

@@ -6,9 +6,7 @@ import { checkAndConsume, refund, getStatus } from '@/lib/entitlements'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-// GET — UI calls this on mount to show "X/Y CV improvements remaining
-// today". Same compact shape as /api/enhance-photo so the cv-builder
-// UI can mirror the PhotoEnhancer's quota display logic.
+// GET — UI calls this on mount to show "X/Y CV improvements remaining today".
 export async function GET() {
   const sb = await createServerSupabase()
   const { data: { user } } = await sb.auth.getUser()
@@ -29,61 +27,16 @@ export async function GET() {
   })
 }
 
-// Shape expected from client — mirrors CVData but we only send the textual parts
-type Payload = {
-  personalInfo: {
-    firstName: string
-    lastName: string
-    jobTitle: string
-    careerGoal: string
-    nationality: string
-    placeOfBirth: string
-    address: string
-    city: string
-  }
-  education: Array<{
-    institution: string
-    degree: string
-    fieldOfStudy: string
-    description: string
-    startDate?: string
-    endDate?: string
-  }>
-  experience: Array<{
-    jobTitle: string
-    company: string
-    location: string
-    description: string
-    startDate?: string
-    endDate?: string
-  }>
-  skills: { technical: string[]; soft: string[] }
-  languages: Array<{ language: string; level: string }>
-  documents?: {
-    certificates?: DocInput[]
-    diploma?: DocInput[]
-    languageCertificates?: DocInput[]
-    optionalCoverLetter?: DocInput[]
-  }
+// New simplified flow: the user pastes their CV in any language and/or uploads
+// a PDF/image of it. We extract everything and produce a clean, professional
+// German Lebenslauf as structured data the builder preview renders + exports.
+type Body = {
+  rawText?: string
+  file?: { dataUrl: string; name?: string }
 }
 
-type DocInput = {
-  name: string
-  type: string
-  dataUrl: string
-}
-
-// Cap per-file size sent to Claude to stay within API limits (approx 3 MB base64 -> ~2.2MB raw).
-const MAX_DOC_BYTES = 3_000_000
-const DOC_CATEGORIES: Array<{
-  key: 'certificates' | 'diploma' | 'languageCertificates' | 'optionalCoverLetter'
-  label: string
-}> = [
-  { key: 'certificates',         label: 'General Certificate (Zeugnis)' },
-  { key: 'diploma',              label: 'Diploma / Academic Certificate' },
-  { key: 'languageCertificates', label: 'Language Certificate (Sprachzertifikat)' },
-  { key: 'optionalCoverLetter',  label: 'Cover Letter / Motivation (Anschreiben)' },
-]
+const MAX_FILE_BYTES = 8_000_000       // single upload cap (~6MB raw)
+const MAX_TEXT_CHARS = 20_000          // pasted-text cap
 
 function parseDataUrl(dataUrl: string): { mediaType: string; base64: string } | null {
   const m = /^data:([^;]+);base64,(.+)$/i.exec(dataUrl)
@@ -91,49 +44,35 @@ function parseDataUrl(dataUrl: string): { mediaType: string; base64: string } | 
   return { mediaType: m[1], base64: m[2] }
 }
 
-const SYSTEM = `You are an expert German Lebenslauf (CV) translator, editor, and light optimizer.
-The user provides CV data in Arabic, French, English, German, or a mix — often with typos or informal phrasing.
+const SYSTEM = `You are an expert German Lebenslauf (CV) writer. The user gives you their existing CV — pasted text and/or an uploaded PDF/image — usually in Arabic, French, English, or a mix, often informal or with typos.
 
-Your job:
-1) Detect the source language per field.
-2) Correct typos and grammar.
-3) Translate EVERYTHING to proper, professional German as used in a German Lebenslauf.
-4) Keep it concise and formal. Use standard German CV vocabulary (Softwareentwickler, Kundenbetreuung, Teamfähigkeit, etc.).
-5) For job/degree titles, use the idiomatic German equivalent.
-6) For skills, translate each item individually (short noun phrases).
-7) Generate a 2-sentence "careerGoal" (Berufsziel) based on the user's target jobTitle + experience + skills + education. Write it in first-person German, professional tone. If the user already provided a careerGoal, polish/translate it instead.
-8) Keep proper nouns (names, cities, company names, institution names) unchanged unless a widely-used German form exists (e.g. "Casablanca" stays, "المغرب" becomes "Marokko").
+Your job: read EVERYTHING (text + any attached document) and produce a clean, professional German Lebenslauf as JSON.
 
-REFERENCE DOCUMENTS (if provided):
-The user may attach scanned certificates, diplomas, language certificates, and cover letters as images or PDFs before the JSON payload. These are the SOURCE OF TRUTH for verifiable facts. READ EVERY DOCUMENT CAREFULLY — extract dates, names, titles, levels, employers, job roles, and responsibilities. When enriching the CV:
+Rules:
+1) Translate and rewrite everything into correct, professional German as used in a real German Lebenslauf. Use standard German CV vocabulary (e.g. Softwareentwickler, Kundenbetreuung, Teamfähigkeit).
+2) Correct typos and grammar. Keep it concise and formal — no marketing superlatives (avoid "außergewöhnlich", "herausragend").
+3) Keep proper nouns (person names, cities, company names, institutions) unchanged, unless a common German form exists ("المغرب" → "Marokko", country names → German).
+4) For job/degree titles use the idiomatic German equivalent.
+5) Skills: translate each item as a short noun phrase. Keep technical skills the user actually has — do NOT invent new technical skills. If the user lists fewer than 4 soft skills, add 2–4 standard role-appropriate German soft skills (Teamfähigkeit, Kommunikationsstärke, Eigeninitiative, Zuverlässigkeit, Lernbereitschaft, Zeitmanagement). Max 6 soft skills.
+6) careerGoal (Berufsziel): write a polished 1–2 sentence first-person German career goal based on the target role + experience + skills. If the user provided one, translate/polish it.
+7) Descriptions for experience AND education: return as bullet points separated by \\n (newline). Each bullet is one short line (5–15 words). NO leading •, -, *, or numbers — plain text per line. If a description is empty or vague, expand it into 2–4 realistic bullets for that exact role/field. Never invent metrics, percentages, prizes, or specific achievements not present.
+8) Dates: use "YYYY-MM" format. If only a year is known, use "YYYY-01". Empty string if unknown or ongoing.
+9) Never invent certifications, diplomas, prizes, companies, dates, or languages not present in the input. Facts clearly visible in an attached document ARE allowed (extract them).
+10) Language levels: A1–C2 or "Native".
 
-- Cross-check institution names, degree titles, field of study, and dates against what appears in the diploma/certificate documents. If the user's typed value contradicts a clearly legible document, prefer the document's wording (translated to German).
-- Use language certificates to confirm or correct the language level (A1–C2). If the user didn't list a language that a certificate clearly proves, ADD it as a new entry in "languages".
-- If a work certificate (Arbeitsbescheinigung) documents a job that is NOT in the experience array, ADD a new experience entry reconstructed from the certificate: extract jobTitle, company, location, startDate (YYYY-MM), endDate (YYYY-MM or empty if still employed), and description (2–4 bullet points of the duties listed on the certificate). Return it as an additional element in the "experience" array.
-- If a diploma or academic certificate documents studies that are NOT in the education array, ADD a new education entry: extract institution, degree, fieldOfStudy, startDate, endDate, and description.
-- Merge strategy for existing entries: if a user-provided entry clearly refers to the same job/school as a document (same company/institution), ENRICH that existing entry rather than creating a duplicate. Only ADD a new entry when no existing entry matches.
-- If a cover letter is attached, use its tone/themes only as inspiration for the careerGoal (Berufsziel) — never copy sentences verbatim.
-- Dates from documents: if only a year is visible, use "YYYY-01". If the document shows a range like "2019–2022", fill both startDate and endDate.
-- Never fabricate details that are not visible in any document and not in the JSON payload. If a document is unreadable, ignore it.
-- Rule #13 above ("never invent certifications, diplomas, prizes, specific companies, specific dates") does NOT apply to details that are clearly visible in the attached documents — those are treated as verified facts, not inventions.
-
-LIGHT OPTIMIZATION (important — improve the CV, but stay grounded):
-9) For each experience entry's description: if it is empty, very short, or vague, expand it into 2–4 realistic bullet points in German that a person in that exact role would plausibly do. Use a neutral, factual tone (e.g. "Entwicklung und Wartung von Webanwendungen", "Zusammenarbeit mit interdisziplinären Teams"). Never claim specific metrics, percentages, prize wins, or achievements that weren't provided.
-10) For each education entry's description: if missing or weak, add 1–2 short lines about the typical focus of that field (courses, key subjects). No fabricated grades or honors.
-
-BULLET FORMAT (critical):
-- The "description" field for BOTH experience and education MUST be returned as bullet points separated by \\n (newline).
-- Each bullet is one short line (5–15 words ideal).
-- DO NOT prefix bullets with •, -, *, or numbers — the UI renders list markers automatically. Just plain text per line.
-- DO NOT write long paragraphs. If the user provided one, split it into bullet lines.
-- Example of a correct "description" value:
-  "Entwicklung und Wartung von REST-APIs mit Node.js\\nZusammenarbeit mit Produkt- und Design-Teams\\nCode-Reviews und Mentoring junger Entwickler"
-11) Soft skills (skills.soft): If the user has fewer than 4 soft skills, add 2–4 standard, role-appropriate soft skills in German (e.g. Teamfähigkeit, Kommunikationsstärke, Eigeninitiative, Problemlösungskompetenz, Lernbereitschaft, Zuverlässigkeit, Zeitmanagement). Don't exceed 6 total. Don't remove ones the user provided.
-12) Technical skills (skills.technical): Keep exactly what the user listed, just translated/standardized. Do NOT invent new technical skills — those must come from the user.
-13) Never invent: certifications, diplomas, prizes, specific companies, specific dates, specific metrics, languages not listed.
-14) Output should feel like a polished, realistic junior-to-mid professional CV — not a marketing brochure. Avoid superlatives like "außergewöhnlich", "herausragend", "einzigartig".
-
-Return ONLY a JSON object matching the input shape. Arrays ("education", "experience", "languages", "skills.technical", "skills.soft") MAY contain MORE elements than the input when reference documents justify it — append new entries at the end. Do not wrap in markdown code fences. Do not add any commentary.`
+Return ONLY a JSON object with EXACTLY this shape (no markdown, no commentary):
+{
+  "personalInfo": {
+    "firstName": "", "lastName": "", "jobTitle": "", "careerGoal": "",
+    "dateOfBirth": "", "placeOfBirth": "", "nationality": "",
+    "address": "", "postalCode": "", "city": "", "phone": "", "email": ""
+  },
+  "education": [{ "institution": "", "degree": "", "fieldOfStudy": "", "startDate": "", "endDate": "", "description": "" }],
+  "experience": [{ "jobTitle": "", "company": "", "location": "", "startDate": "", "endDate": "", "description": "" }],
+  "skills": { "technical": [], "soft": [] },
+  "languages": [{ "language": "", "level": "" }]
+}
+Use empty strings / empty arrays for anything genuinely absent. Do not wrap in code fences.`
 
 export async function POST(req: NextRequest) {
   let userIdForRefund: string | null = null
@@ -141,20 +80,23 @@ export async function POST(req: NextRequest) {
   try {
     const apiKey = process.env.ANTHROPIC_API_KEY
     if (!apiKey) {
-      return NextResponse.json(
-        { error: 'ANTHROPIC_API_KEY not configured on the server.' },
-        { status: 500 }
-      )
+      return NextResponse.json({ error: 'ANTHROPIC_API_KEY not configured on the server.' }, { status: 500 })
     }
 
-    // Require authenticated user
     const sb = await createServerSupabase()
     const { data: { user } } = await sb.auth.getUser()
     if (!user) {
       return NextResponse.json({ error: 'Not authenticated.' }, { status: 401 })
     }
 
-    // Entitlement gate
+    const body = (await req.json()) as Body
+    const rawText = (body?.rawText || '').trim().slice(0, MAX_TEXT_CHARS)
+    const file = body?.file?.dataUrl ? body.file : null
+    if (!rawText && !file) {
+      return NextResponse.json({ error: 'Provide CV text or a file.' }, { status: 400 })
+    }
+
+    // Entitlement gate — consume only after we know there's real input.
     const ent = await checkAndConsume(user.id, 'cv')
     if (!ent.allowed) {
       const message =
@@ -166,38 +108,6 @@ export async function POST(req: NextRequest) {
     userIdForRefund = user.id
     sourceForRefund = ent.source
 
-    const payload = (await req.json()) as Payload
-    if (!payload || typeof payload !== 'object') {
-      await refund(user.id, 'cv', ent.source)
-      return NextResponse.json({ error: 'Invalid payload' }, { status: 400 })
-    }
-
-    // Aggregate-size guard. Per-document MAX_DOC_BYTES already caps single
-    // files at 3MB and oversized ones are skipped, but without this cap
-    // a malicious caller could submit 30 docs × 2.9MB each = ~90MB and
-    // burn through the Anthropic budget on multimodal-vision tokens.
-    const TOTAL_DOC_CAP_BYTES = 30_000_000
-    if (payload.documents) {
-      let total = 0
-      for (const cat of Object.values(payload.documents) as Array<Array<{ dataUrl?: string }>>) {
-        for (const doc of cat ?? []) {
-          if (!doc?.dataUrl) continue
-          // base64 length * 0.75 ≈ raw bytes
-          total += Math.floor(doc.dataUrl.length * 0.75)
-          if (total > TOTAL_DOC_CAP_BYTES) {
-            await refund(user.id, 'cv', ent.source)
-            return NextResponse.json({ error: 'Documents too large.' }, { status: 413 })
-          }
-        }
-      }
-    }
-
-    const client = new Anthropic({ apiKey })
-
-    // Strip documents off the payload before serializing it into the JSON block,
-    // they go as separate image/document content blocks.
-    const { documents, ...textPayload } = payload
-
     type ContentBlock =
       | { type: 'text'; text: string }
       | { type: 'image'; source: { type: 'base64'; media_type: string; data: string } }
@@ -205,45 +115,35 @@ export async function POST(req: NextRequest) {
 
     const contentBlocks: ContentBlock[] = []
 
-    if (documents) {
-      for (const cat of DOC_CATEGORIES) {
-        const list = documents[cat.key] || []
-        for (const doc of list) {
-          if (!doc?.dataUrl) continue
-          const parsed = parseDataUrl(doc.dataUrl)
-          if (!parsed) continue
-          // Rough size check: base64 length * 0.75 ≈ raw bytes
-          const approxBytes = Math.floor(parsed.base64.length * 0.75)
-          if (approxBytes > MAX_DOC_BYTES) continue
-
-          contentBlocks.push({
-            type: 'text',
-            text: `--- Reference document: "${doc.name}" (category: ${cat.label}) ---`,
-          })
-
-          if (parsed.mediaType === 'application/pdf') {
-            contentBlocks.push({
-              type: 'document',
-              source: { type: 'base64', media_type: 'application/pdf', data: parsed.base64 },
-            })
-          } else if (parsed.mediaType.startsWith('image/')) {
-            contentBlocks.push({
-              type: 'image',
-              source: { type: 'base64', media_type: parsed.mediaType, data: parsed.base64 },
-            })
-          }
+    if (file) {
+      const parsed = parseDataUrl(file.dataUrl)
+      if (parsed) {
+        const approxBytes = Math.floor(parsed.base64.length * 0.75)
+        if (approxBytes > MAX_FILE_BYTES) {
+          await refund(user.id, 'cv', ent.source)
+          return NextResponse.json({ error: 'File too large (max ~6MB).' }, { status: 413 })
+        }
+        contentBlocks.push({ type: 'text', text: `--- Uploaded CV document: "${file.name || 'cv'}" ---` })
+        if (parsed.mediaType === 'application/pdf') {
+          contentBlocks.push({ type: 'document', source: { type: 'base64', media_type: 'application/pdf', data: parsed.base64 } })
+        } else if (parsed.mediaType.startsWith('image/')) {
+          contentBlocks.push({ type: 'image', source: { type: 'base64', media_type: parsed.mediaType, data: parsed.base64 } })
         }
       }
     }
 
     contentBlocks.push({
       type: 'text',
-      text: `Translate, correct, and enrich the following CV data into professional German. Read every reference document above thoroughly and extract ALL verifiable facts — especially any job, study, or language level documented but MISSING from the JSON below. Add those as new entries (appended to the end of the respective array). For each experience you add from a work certificate, reconstruct a realistic 2–4 bullet description from the duties listed on the certificate. Return JSON only, matching the input shape (arrays may be longer).\n\n${JSON.stringify(textPayload, null, 2)}`,
+      text: rawText
+        ? `Here is the user's CV (any language). Read it plus any attached document above, then produce the German Lebenslauf JSON:\n\n${rawText}`
+        : `Read the attached CV document above and produce the German Lebenslauf JSON.`,
     })
 
+    const client = new Anthropic({ apiKey })
     const response = await client.messages.create({
-      model: 'claude-sonnet-4-5',
-      max_tokens: 6000,
+      model: 'claude-sonnet-5',
+      max_tokens: 8000,
+      thinking: { type: 'disabled' },
       system: SYSTEM,
       messages: [{ role: 'user', content: contentBlocks as unknown as Anthropic.MessageParam['content'] }],
     })
@@ -254,26 +154,17 @@ export async function POST(req: NextRequest) {
       .join('')
       .trim()
 
-    // Try to strip code fences if the model wrapped the JSON anyway
-    const cleaned = text
-      .replace(/^```(?:json)?\s*/i, '')
-      .replace(/```\s*$/i, '')
-      .trim()
+    const cleaned = text.replace(/^```(?:json)?\s*/i, '').replace(/```\s*$/i, '').trim()
 
-    let parsed: Payload
+    let parsed: any
     try {
       parsed = JSON.parse(cleaned)
-    } catch (e) {
-      console.error('Failed to parse AI response:', text)
+    } catch {
+      console.error('cv-ai: invalid JSON from model:', text.slice(0, 500))
       if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'cv', sourceForRefund)
-      return NextResponse.json(
-        { error: 'AI returned invalid JSON. Try again.' },
-        { status: 502 }
-      )
+      return NextResponse.json({ error: 'AI returned invalid data. Try again.' }, { status: 502 })
     }
 
-    // Include the post-consume quota snapshot so the UI can refresh the
-    // "X/Y remaining today" badge without a separate GET round-trip.
     const status = await getStatus(user.id, 'cv')
     const isPremium = status.tier === 'premium'
     const dailyLimit     = isPremium ? 0 : ((status as any).dailyLimit ?? 0)
@@ -293,9 +184,6 @@ export async function POST(req: NextRequest) {
   } catch (e: any) {
     console.error('cv-ai error:', e)
     if (userIdForRefund && sourceForRefund) await refund(userIdForRefund, 'cv', sourceForRefund)
-    return NextResponse.json(
-      { error: e?.message || 'Internal error' },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: e?.message || 'Internal error' }, { status: 500 })
   }
 }

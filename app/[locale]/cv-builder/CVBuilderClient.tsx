@@ -1,224 +1,196 @@
 'use client'
 
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
-import { CVData, DocumentFile, EMPTY_CV, STEPS } from '@/components/cv-builder/types'
-import { calculateCompletion, loadFromStorage, saveToStorage, clearStorage } from '@/components/cv-builder/utils'
+import { CVData, EMPTY_CV } from '@/components/cv-builder/types'
 import { createClient as createBrowserClient } from '@/lib/supabase-browser'
-import { fetchDocuments, type DocumentType } from '@/lib/documents'
+import StepPreview from '@/components/cv-builder/StepPreview'
 
-type CategoryKey = keyof CVData['documents']
-const DOC_TYPE_TO_CATEGORY: Partial<Record<DocumentType, CategoryKey>> = {
-  arbeitsbescheinigung:    'certificates',
-  akademisches_zertifikat: 'diploma',
-  sprachzertifikat:        'languageCertificates',
-  motivationsschreiben:    'optionalCoverLetter',
+// Simplified flow: paste your CV in any language (or upload a PDF/image) →
+// the AI produces a German Lebenslauf → land on the same editable, styled,
+// downloadable preview that the old 7-step wizard ended on.
+
+type EntitlementStatus =
+  | { tier: 'premium'; limit: number | null; used: number; remaining: number | null }
+  | { tier: 'free'; credits: number; used: number; dailyLimit: number; dailyRemaining: number }
+
+function canGenerate(ent: EntitlementStatus | null): boolean {
+  if (!ent) return true
+  if (ent.tier === 'premium') return ent.remaining === null || ent.remaining > 0
+  return ent.dailyRemaining > 0 || ent.credits > 0
 }
 
-import StepPersonalInfo from '@/components/cv-builder/StepPersonalInfo'
-import StepEducation    from '@/components/cv-builder/StepEducation'
-import StepExperience   from '@/components/cv-builder/StepExperience'
-import StepSkills       from '@/components/cv-builder/StepSkills'
-import StepLanguages    from '@/components/cv-builder/StepLanguages'
-import StepDocuments    from '@/components/cv-builder/StepDocuments'
-import StepPreview      from '@/components/cv-builder/StepPreview'
+function readFileAsDataUrl(file: File): Promise<string> {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader()
+    r.onload = () => resolve(String(r.result))
+    r.onerror = reject
+    r.readAsDataURL(file)
+  })
+}
+
+function mergeIntoCV(partial: any): CVData {
+  const p = partial?.personalInfo ?? {}
+  return {
+    ...EMPTY_CV,
+    personalInfo: { ...EMPTY_CV.personalInfo, ...p, profileImage: '' },
+    education: Array.isArray(partial?.education) ? partial.education : [],
+    experience: Array.isArray(partial?.experience) ? partial.experience : [],
+    skills: {
+      technical: Array.isArray(partial?.skills?.technical) ? partial.skills.technical : [],
+      soft: Array.isArray(partial?.skills?.soft) ? partial.skills.soft : [],
+    },
+    languages: Array.isArray(partial?.languages) ? partial.languages : [],
+    documents: EMPTY_CV.documents,
+    selectedTemplate: 'classic',
+  }
+}
 
 export default function CVBuilderClient() {
   const t = useTranslations('cvBuilder')
   const locale = useLocale() as AppLocale
-  const [data, setData] = useState<CVData>(EMPTY_CV)
-  const [step, setStep] = useState(1)
-  const [mounted, setMounted] = useState(false)
-  const lastUserIdRef = useRef<string | null | undefined>(undefined)
+  const dir = dirFor(locale)
 
-  // Load from localStorage on mount; also detect if the stored draft belonged
-  // to a *different* user and wipe it if so (handles account switches where
-  // the old user's cookies were replaced before we got the chance to listen).
+  const [authed, setAuthed] = useState<boolean | null>(null)
+  const [ent, setEnt] = useState<EntitlementStatus | null>(null)
+  const [rawText, setRawText] = useState('')
+  const [file, setFile] = useState<File | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [data, setData] = useState<CVData | null>(null)
+  const fileInputRef = useRef<HTMLInputElement | null>(null)
+
+  async function refreshEntitlements() {
+    try {
+      const res = await fetch('/api/cv-ai', { method: 'GET' })
+      if (res.status === 401) { setAuthed(false); return }
+      setAuthed(true)
+      if (res.ok) setEnt(await res.json())
+    } catch {}
+  }
+
   useEffect(() => {
     const supabase = createBrowserClient()
-    ;(async () => {
-      const { data: { user } } = await supabase.auth.getUser()
-      const currentId = user?.id ?? null
-      lastUserIdRef.current = currentId
-
-      // Load any saved draft. The draft belongs to whoever was last logged in
-      // on this device; if that was a different user, don't show it.
-      const saved = loadFromStorage()
-      const savedOwner = (saved as CVData & { __owner?: string }).__owner
-      let base: CVData
-      if (savedOwner && savedOwner !== currentId) {
-        clearStorage()
-        base = EMPTY_CV
-      } else {
-        base = saved
-      }
-
-      // Rehydrate uploaded documents from Supabase so the Documents step still
-      // shows the files after a page reload (base64 dataUrls aren't persisted
-      // locally because they blow the localStorage quota).
-      if (currentId) {
-        try {
-          const remote = await fetchDocuments()
-          const merged = { ...base.documents }
-          for (const key of Object.keys(merged) as CategoryKey[]) {
-            const existingIds = new Set(merged[key].map(d => d.savedId).filter(Boolean))
-            const additions: DocumentFile[] = []
-            for (const doc of remote) {
-              if (doc.source !== 'upload') continue
-              const cat = DOC_TYPE_TO_CATEGORY[doc.doc_type]
-              if (cat !== key) continue
-              if (existingIds.has(doc.id)) continue
-              additions.push({
-                name: doc.title,
-                size: 0,
-                type: doc.file_path?.toLowerCase().endsWith('.pdf') ? 'application/pdf' : 'image/*',
-                dataUrl: '', // fetched on demand when needed (e.g. sending to AI)
-                savedId: doc.id,
-                storagePath: doc.file_path ?? undefined,
-                storageUrl: doc.file_url ?? undefined,
-              })
-            }
-            if (additions.length) merged[key] = [...merged[key], ...additions]
-          }
-          base = { ...base, documents: merged }
-        } catch (e) {
-          console.error('[cv-builder] rehydrate documents failed:', e)
-        }
-      }
-
-      setData(base)
-      setMounted(true)
-    })()
-  }, [])
-
-  // Supabase auth listener: wipe CV state on logout OR account switch
-  useEffect(() => {
-    const supabase = createBrowserClient()
-    const { data: sub } = supabase.auth.onAuthStateChange((event, session) => {
-      const newId = session?.user?.id ?? null
-      const prevId = lastUserIdRef.current
-
-      if (event === 'SIGNED_OUT' || (prevId !== undefined && newId !== prevId)) {
-        clearStorage()
-        setData(EMPTY_CV)
-        setStep(1)
-      }
-      lastUserIdRef.current = newId
+    supabase.auth.getUser().then(({ data: { user } }) => {
+      setAuthed(!!user)
+      if (user) refreshEntitlements()
     })
-    return () => sub.subscription.unsubscribe()
   }, [])
 
-  // Clear everything when the user leaves the CV builder page entirely
-  // (navigation away, tab close). Refresh will also trigger this — data loss
-  // on refresh is an accepted trade-off for shared-device privacy.
-  useEffect(() => {
-    return () => {
-      clearStorage()
+  async function handleGenerate() {
+    setError('')
+    if (!rawText.trim() && !file) { setError(t('simple.needInput')); return }
+    setLoading(true)
+    try {
+      let filePayload: { dataUrl: string; name: string } | undefined
+      if (file) filePayload = { dataUrl: await readFileAsDataUrl(file), name: file.name }
+      const res = await fetch('/api/cv-ai', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ rawText: rawText.trim() || undefined, file: filePayload }),
+      })
+      const json = await res.json()
+      if (!res.ok || json.error) throw new Error(json.error || `HTTP ${res.status}`)
+      setData(mergeIntoCV(json.data))
+      refreshEntitlements()
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 60)
+    } catch (e: any) {
+      setError(e?.message || t('simple.errorGeneric'))
+    } finally {
+      setLoading(false)
     }
-  }, [])
-
-  // Persist on change (skip initial mount so we don't wipe storage).
-  // We tag the saved draft with the current user id so we can detect
-  // if the device has been used by another account since.
-  useEffect(() => {
-    if (!mounted) return
-    const tagged = { ...data, __owner: lastUserIdRef.current ?? null }
-    saveToStorage(tagged as unknown as CVData)
-  }, [data, mounted])
+  }
 
   const update = (patch: Partial<CVData> | ((prev: CVData) => Partial<CVData>)) =>
-    setData(prev => ({ ...prev, ...(typeof patch === 'function' ? patch(prev) : patch) }))
-  const completion = useMemo(() => calculateCompletion(data), [data])
+    setData(prev => prev ? { ...prev, ...(typeof patch === 'function' ? patch(prev) : patch) } : prev)
 
-  const canGoNext = step < STEPS.length
-  const canGoPrev = step > 1
-
-  function validateStep(): string | null {
-    if (step === 1) {
-      const p = data.personalInfo
-      if (!p.firstName.trim()) return t('validation.firstName')
-      if (!p.lastName.trim())  return t('validation.lastName')
-      if (!p.email.trim())     return t('validation.emailReq')
-      if (p.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) return t('validation.emailInvalid')
-    }
-    return null
+  // Result view — reuse the existing styled, editable, downloadable preview.
+  if (data) {
+    return (
+      <div className="rihla-cvb-root" dir={dir}>
+        <div className="rihla-cvb-body wrap" style={{ paddingTop: 24 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, flexWrap: 'wrap', marginBottom: 12 }}>
+            <p className="rihla-cvb-subtitle" style={{ margin: 0, maxWidth: 620 }}>{t('simple.resultHint')}</p>
+            <button type="button" className="rihla-cvb-btn-ghost" onClick={() => { setData(null); setError('') }}>
+              ← {t('simple.startOver')}
+            </button>
+          </div>
+          <div className="rihla-cvb-layout">
+            <div className="rihla-cvb-form-col">
+              <StepPreview data={data} update={update} />
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
-  function onNext() {
-    const err = validateStep()
-    if (err) { alert(t('warn', { msg: err })); return }
-    if (canGoNext) setStep(s => s + 1)
-  }
-
+  // Input view
   return (
-    <div className="rihla-cvb-root" dir={dirFor(locale)}>
+    <div className="rihla-cvb-root" dir={dir}>
       <header className="rihla-cvb-header">
         <div className="wrap">
           <p className="rihla-cvb-eyebrow">{t('eyebrow')}</p>
-          <h1>Lebenslauf Builder</h1>
-          <p className="rihla-cvb-subtitle">
-            {t('subtitle')}
-          </p>
+          <h1>{t('simple.title')}</h1>
+          <p className="rihla-cvb-subtitle">{t('simple.subtitle')}</p>
           <div className="rihla-cvb-badges">
+            <span className="rihla-cvb-badge">🌍 {t('simple.pasteLabel')}</span>
+            <span className="rihla-cvb-badge">🇩🇪 Lebenslauf</span>
             <span className="rihla-cvb-badge">📄 PDF</span>
-            <span className="rihla-cvb-badge">🇩🇪 German format</span>
-            <span className="rihla-cvb-badge">🤖 AI polish</span>
-            <span className="rihla-cvb-badge">🆓 Free</span>
-          </div>
-          <div className="rihla-cvb-progress-wrap">
-            <div className="rihla-cvb-progress-bar">
-              <div className="rihla-cvb-progress-fill" style={{ width: `${completion}%` }} />
-            </div>
-            <span className="rihla-cvb-progress-text">{t('completion', { n: completion })}</span>
           </div>
         </div>
       </header>
 
-      {/* Stepper */}
-      <div className="rihla-cvb-stepper">
-        <div className="rihla-cvb-stepper-inner">
-          {STEPS.map(s => (
-            <button
-              key={s.id}
-              className={`rihla-cvb-step-pill${step === s.id ? ' active' : ''}${step > s.id ? ' done' : ''}`}
-              onClick={() => setStep(s.id)}
-              type="button"
-            >
-              <span className="rihla-cvb-step-num">{step > s.id ? '✓' : s.id}</span>
-              <span className="rihla-cvb-step-label">{t(`stepLabel.${s.labelKey}`)}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
       <div className="rihla-cvb-body wrap">
-        <div className="rihla-cvb-layout">
-          <div className="rihla-cvb-form-col">
-            {step === 1 && <StepPersonalInfo data={data} update={update} />}
-            {step === 2 && <StepEducation    data={data} update={update} />}
-            {step === 3 && <StepExperience   data={data} update={update} />}
-            {step === 4 && <StepSkills       data={data} update={update} />}
-            {step === 5 && <StepLanguages    data={data} update={update} />}
-            {step === 6 && <StepDocuments    data={data} update={update} />}
-            {step === 7 && <StepPreview      data={data} update={update} />}
-
-            {step < 7 && (
-              <div className="rihla-cvb-nav">
-                <button
-                  type="button"
-                  className="rihla-cvb-btn-ghost"
-                  onClick={() => canGoPrev && setStep(s => s - 1)}
-                  disabled={!canGoPrev}
-                >
-                  {t('prev')}
-                </button>
-                <button type="button" className="rihla-cvb-btn-primary" onClick={onNext}>
-                  {t('next')}
-                </button>
-              </div>
-            )}
+        {authed === false && (
+          <div style={{ background: '#fef3c7', border: '1px solid #fcd34d', color: '#78350f', borderRadius: 12, padding: '12px 16px', marginBottom: 16, fontSize: 14 }}>
+            {t('simple.loginRequired')}{' '}
+            <a href={`/${locale}/login`} style={{ fontWeight: 700, textDecoration: 'underline' }}>→</a>
           </div>
+        )}
+
+        <div style={{ maxWidth: 720, margin: '0 auto', display: 'flex', flexDirection: 'column', gap: 16 }}>
+          <label style={{ display: 'block' }}>
+            <span style={{ display: 'block', fontWeight: 700, marginBottom: 8, color: '#111827' }}>{t('simple.pasteLabel')}</span>
+            <textarea
+              value={rawText}
+              onChange={(e) => setRawText(e.target.value)}
+              placeholder={t('simple.pastePlaceholder')}
+              rows={10}
+              className="rihla-cvb-textarea"
+              style={{ width: '100%', border: '1.5px solid #d1d5db', borderRadius: 12, padding: 14, fontSize: 14, lineHeight: 1.6, resize: 'vertical' }}
+            />
+          </label>
+
+          <div>
+            <span style={{ display: 'block', fontWeight: 700, marginBottom: 8, color: '#111827' }}>{t('simple.uploadLabel')}</span>
+            <input
+              ref={fileInputRef}
+              type="file"
+              accept="application/pdf,image/*"
+              onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+              style={{ display: 'none' }}
+            />
+            <div style={{ display: 'flex', gap: 10, alignItems: 'center', flexWrap: 'wrap' }}>
+              <button type="button" className="rihla-cvb-btn-ghost" onClick={() => fileInputRef.current?.click()}>
+                📎 {t('simple.uploadCta')}
+              </button>
+              {file && <span style={{ fontSize: 13, color: '#16a34a', fontWeight: 600 }}>{t('simple.fileReady', { name: file.name })}</span>}
+            </div>
+          </div>
+
+          {error && <div className="ansch-error" style={{ background: '#fee2e2', border: '1px solid #fca5a5', color: '#991b1b', borderRadius: 10, padding: '10px 14px', fontSize: 14 }}>❌ {error}</div>}
+
+          <button
+            type="button"
+            className="rihla-cvb-btn-primary"
+            onClick={handleGenerate}
+            disabled={loading || authed === false || !canGenerate(ent)}
+            style={{ opacity: (loading || authed === false || !canGenerate(ent)) ? 0.6 : 1 }}
+          >
+            {loading ? `⚙️ ${t('simple.generating')}` : `✨ ${t('simple.generate')}`}
+          </button>
         </div>
       </div>
     </div>
