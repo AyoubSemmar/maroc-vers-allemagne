@@ -26,6 +26,16 @@ const PROTECTED_PATHS = [
   '/dashboard/apply-for-me',
 ]
 
+// Paths (without locale prefix) that must carry X-Robots-Tag: noindex — thin
+// auth/account utility pages that shouldn't appear in search results.
+const NOINDEX_PATHS = [
+  '/login',
+  '/signup',
+  '/forgot-password',
+  '/reset-password',
+  '/profile',
+]
+
 function stripLocale(pathname: string): { locale: string | null; rest: string } {
   const segments = pathname.split('/').filter(Boolean)
   const first = segments[0]
@@ -124,6 +134,14 @@ export async function proxy(request: NextRequest) {
       const effLocale = pathLocale ?? routing.defaultLocale
       return NextResponse.redirect(new URL(`/${effLocale}/console-x7k9`, request.url))
     }
+  }
+
+  // Auth / account utility pages are thin and must never be indexed. They're
+  // client components, so they can't export route metadata — set the noindex
+  // header here instead. (Gated pages already bounce crawlers to /login, but
+  // /login, /signup and the password flows return 200 and would be indexed.)
+  if (NOINDEX_PATHS.some((p) => rest === p || rest.startsWith(p + '/'))) {
+    intlResponse.headers.set('X-Robots-Tag', 'noindex, follow')
   }
 
   // If this isn't a protected path, just return the intl response as-is.

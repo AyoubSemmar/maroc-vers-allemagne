@@ -1,6 +1,7 @@
 import type { AppLocale } from '@/i18n/routing'
 import { dirFor } from '@/i18n/routing'
 import { pick3, type L3 } from '@/lib/toolStrings'
+import ToolByline from '@/components/seo/ToolByline'
 
 /**
  * SEO description section for the 2026-07 tools. The original tools render
@@ -26,6 +27,7 @@ export default function Tool3Seo({
             {pick3(locale, p)}
           </p>
         ))}
+        <ToolByline locale={locale} />
       </div>
     </section>
   )

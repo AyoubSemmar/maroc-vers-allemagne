@@ -210,22 +210,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       {/* eslint-disable react/no-danger */}
-      <Breadcrumbs
-        items={[
-          { name: 'GoGermany', path: `/${locale}` },
-          { name: catLabel(article.category), path: `/${locale}/categories/${encodeURIComponent(article.category)}` },
-          { name: article.title, path: `/${locale}/articles/${article.id}` },
-        ]}
-      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
       <AdRail className="py-12">
         <div className="max-w-3xl mx-auto">
-        <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
-          {t('backToHome')}
-        </Link>
+        <div className="mb-6">
+          <Breadcrumbs
+            visible
+            items={[
+              { name: 'GoGermany', path: `/${locale}` },
+              { name: catLabel(article.category), path: `/${locale}/categories/${encodeURIComponent(article.category)}` },
+              { name: article.title, path: `/${locale}/articles/${article.id}` },
+            ]}
+          />
+        </div>
 
         {article.image_url && (
           <img

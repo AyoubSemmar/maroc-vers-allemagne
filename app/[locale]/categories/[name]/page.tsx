@@ -51,16 +51,16 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <Breadcrumbs
-        items={[
-          { name: 'GoGermany', path: `/${locale}` },
-          { name: catLabel, path: `/${locale}/categories/${encodeURIComponent(categoryName)}` },
-        ]}
-      />
       <div className="max-w-5xl mx-auto px-4 py-12">
-        <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
-          {t('backToHome')}
-        </Link>
+        <div className="mb-6">
+          <Breadcrumbs
+            visible
+            items={[
+              { name: 'GoGermany', path: `/${locale}` },
+              { name: catLabel, path: `/${locale}/categories/${encodeURIComponent(categoryName)}` },
+            ]}
+          />
+        </div>
 
         <h1 className="text-2xl font-bold text-gray-900 mb-8">{catLabel}</h1>
 

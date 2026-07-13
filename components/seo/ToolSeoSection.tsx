@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import JsonLd from '@/components/seo/JsonLd'
+import ToolByline from '@/components/seo/ToolByline'
 import type { AppLocale } from '@/i18n/routing'
 
 /**
@@ -55,6 +56,8 @@ export default async function ToolSeoSection({
             <p key={i}>{p}</p>
           ))}
         </div>
+
+        <ToolByline locale={locale} />
 
         {faqs.length > 0 && (
           <div className="tool-seo-faq">
