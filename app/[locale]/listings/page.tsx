@@ -3,6 +3,7 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import ListingsFilters from './ListingsFilters'
+import FurnishedHousing from '../tools/furnished-housing/FurnishedHousing'
 import { CITIES_AR, cityLabel } from '@/lib/germanCities'
 import type { Metadata } from 'next'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -70,14 +71,20 @@ export default async function ListingsPage({
   }
 
   return (
-    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
+    <div dir={dirFor(locale)}>
+      {/* Primary: live furnished rentals from the international platforms */}
+      <FurnishedHousing locale={locale} />
+
+      {/* Secondary: community-posted rooms & flats */}
+      <section className="border-t" style={{ borderColor: 'var(--line)' }}>
       <div className="max-w-5xl mx-auto px-4 py-12">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">{t('pageTitle')}</h1>
-          <Link href="/listings/new" className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">
+        <div className="flex items-center justify-between gap-4 mb-2">
+          <h2 className="text-2xl font-bold" style={{ color: 'var(--ink)' }}>{t('communityHeading')}</h2>
+          <Link href="/listings/new" className="flex-none bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800">
             {t('addListing')}
           </Link>
         </div>
+        <p className="text-sm mb-6" style={{ color: 'var(--ink-soft)' }}>{t('communityIntro')}</p>
 
         <ListingsFilters cities={cities} currentCity={city} currentType={type} />
 
@@ -131,6 +138,7 @@ export default async function ListingsPage({
           ))}
         </div>
       </div>
+      </section>
     </div>
   )
 }

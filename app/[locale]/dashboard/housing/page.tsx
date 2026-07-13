@@ -6,6 +6,7 @@ import { supabase } from '@/lib/supabase'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import ListingsFilters from '../../listings/ListingsFilters'
+import FurnishedHousing from '../../tools/furnished-housing/FurnishedHousing'
 import { CITIES_AR, cityLabel } from '@/lib/germanCities'
 
 const cities = CITIES_AR
@@ -54,15 +55,22 @@ export default async function DashboardHousingPage({ params, searchParams }: Pro
 
   return (
     <div dir={dirFor(locale)}>
-      <div className="flex items-center justify-between mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">{t('pageTitle')}</h1>
+      {/* Primary: live furnished rentals from the international platforms */}
+      <div className="-mx-4 sm:-mx-6 lg:-mx-8 -mt-4 mb-8">
+        <FurnishedHousing locale={locale} />
+      </div>
+
+      {/* Secondary: community-posted rooms & flats */}
+      <div className="flex items-center justify-between gap-4 mb-2">
+        <h2 className="text-2xl font-bold text-gray-900">{t('communityHeading')}</h2>
         <Link
           href="/listings/new"
-          className="bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800"
+          className="flex-none bg-green-700 text-white px-4 py-2 rounded-lg text-sm hover:bg-green-800"
         >
           {t('addListing')}
         </Link>
       </div>
+      <p className="text-sm text-gray-500 mb-6">{t('communityIntro')}</p>
 
       <ListingsFilters cities={cities} currentCity={city} currentType={type} />
 
