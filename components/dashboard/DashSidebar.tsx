@@ -161,7 +161,6 @@ export default function DashSidebar({
 
   const marketplace: NavItem[] = [
     { href: '/dashboard/browse',        label: t('browse'),       icon: I.browse,   onClick: () => setOppPickerOpen(true) },
-    { href: '/dashboard/saved',         label: t('saved'),        icon: I.bookmark },
     { href: '/dashboard/apply-for-me',  label: t('applyForMe'),   icon: I.sparkles, badge: t('newBadge') },
   ]
   const preparation: NavItem[] = [
