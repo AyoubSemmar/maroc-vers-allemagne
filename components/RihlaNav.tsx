@@ -37,11 +37,14 @@ export default function RihlaNav() {
   const [mounted, setMounted] = useState(false)
   const [learnOpen, setLearnOpen] = useState(false)
   const [learnPos, setLearnPos] = useState<{ top: number; left: number } | null>(null)
-  const [toolsOpen, setToolsOpen] = useState(false)
+  const [toolsMenuOpen, setToolsMenuOpen] = useState(false)
+  const [toolsMenuPos, setToolsMenuPos] = useState<{ top: number; left: number } | null>(null)
   const tTools = useTranslations('landing.tools')
   const [oppPickerOpen, setOppPickerOpen] = useState(false)
   const learnRef = useRef<HTMLDivElement | null>(null)
   const learnTriggerRef = useRef<HTMLButtonElement | null>(null)
+  const toolsMenuRef = useRef<HTMLDivElement | null>(null)
+  const toolsMenuTriggerRef = useRef<HTMLButtonElement | null>(null)
   const router = useRouter()
 
   useEffect(() => {
@@ -79,26 +82,29 @@ export default function RihlaNav() {
     }
   }, [])
 
-  // Close Learn dropdown on outside click / Esc.
+  // Close the Learn / Tools dropdowns on outside click / Esc.
   useEffect(() => {
-    if (!learnOpen) return
+    if (!learnOpen && !toolsMenuOpen) return
     function onDocClick(e: MouseEvent) {
       const target = e.target as Node
-      // Trigger lives in learnRef; menu is portaled to body, so also
-      // ignore clicks that land inside any .tools-dd-menu-portal.
-      if (learnRef.current && learnRef.current.contains(target)) return
+      // Triggers live in their refs; menus are portaled to body, so a click
+      // inside any .tools-dd-menu-portal is treated as "inside".
+      const inLearn = !!(learnRef.current && learnRef.current.contains(target))
+      const inTools = !!(toolsMenuRef.current && toolsMenuRef.current.contains(target))
       const portal = (target instanceof Element ? target.closest('.tools-dd-menu-portal') : null)
-      if (portal) return
-      setLearnOpen(false)
+      if (!inLearn && !portal) setLearnOpen(false)
+      if (!inTools && !portal) setToolsMenuOpen(false)
     }
-    function onEsc(e: KeyboardEvent) { if (e.key === 'Escape') setLearnOpen(false) }
+    function onEsc(e: KeyboardEvent) {
+      if (e.key === 'Escape') { setLearnOpen(false); setToolsMenuOpen(false) }
+    }
     document.addEventListener('mousedown', onDocClick)
     document.addEventListener('keydown', onEsc)
     return () => {
       document.removeEventListener('mousedown', onDocClick)
       document.removeEventListener('keydown', onEsc)
     }
-  }, [learnOpen])
+  }, [learnOpen, toolsMenuOpen])
 
   function toggleTheme() {
     const next: Theme = theme === 'dark' ? 'light' : 'dark'
@@ -174,88 +180,103 @@ export default function RihlaNav() {
                 <Link href="/learn-german" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('learnGerman')}
                 </Link>
-
-                {/* Tools — click to expand inline list of the 6 tools.
-                    Acts as a nested accordion within the same dropdown
-                    so users see all options without leaving the panel. */}
-                <button
-                  type="button"
-                  className={`tools-dd-item tools-dd-subtoggle${toolsOpen ? ' is-open' : ''}`}
-                  aria-expanded={toolsOpen}
-                  onClick={() => setToolsOpen(v => !v)}
-                >
-                  {tNav('tools')}
-                  <svg className="tools-dd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <path d="m6 9 6 6 6-6" />
-                  </svg>
-                </button>
-                {toolsOpen && (
-                  <div className="tools-dd-sublist" role="group">
-                    <Link href="/tools" role="menuitem" className="tools-dd-item tools-dd-subitem" style={{ fontWeight: 700 }} onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      🧰 {tTools('allTools.name')} →
-                    </Link>
-                    <Link href="/cv-builder" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('cv.name')}
-                    </Link>
-                    <Link href="/anschreiben-generator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('anschreiben.name')}
-                    </Link>
-                    <Link href="/interview-prep" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tNav('interviewPrep')}
-                    </Link>
-                    <Link href="/tools/eligibility-checker" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('eligibilityChecker.name')}
-                    </Link>
-                    <Link href="/tools/migration-timeline" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('migrationTimeline.name')}
-                    </Link>
-                    <Link href="/tools/document-checklist" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('documentChecklist.name')}
-                    </Link>
-                    <Link href="/tools/living-cost-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('livingCost.name')}
-                    </Link>
-                    <Link href="/tools/chancenkarte-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('chancenkarte.name')}
-                    </Link>
-                    <Link href="/tools/sperrkonto-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('sperrkonto.name')}
-                    </Link>
-                    <Link href="/tools/brutto-netto-rechner" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('bruttoNetto.name')}
-                    </Link>
-                    <Link href="/tools/anerkennung-wizard" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('anerkennung.name')}
-                    </Link>
-                    <Link href="/tools/city-comparator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('cityComparator.name')}
-                    </Link>
-                    <Link href="/tools/german-grade-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('gradeConverter.name')}
-                    </Link>
-                    <Link href="/tools/ausbildung-salary" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('ausbSalary.name')}
-                    </Link>
-                    <Link href="/tools/driving-license-germany" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('license.name')}
-                    </Link>
-                    <Link href="/tools/health-insurance-germany" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('healthInsurance.name')}
-                    </Link>
-                    <Link href="/tools/tax-refund-calculator" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('taxRefund.name')}
-                    </Link>
-                    <Link href="/listings" role="menuitem" className="tools-dd-item tools-dd-subitem" onClick={() => { setLearnOpen(false); setToolsOpen(false) }}>
-                      {tTools('housing.name')}
-                    </Link>
-                  </div>
-                )}
-
                 <Link href="/articles" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('articles')}
                 </Link>
                 <Link href="/#faq" role="menuitem" className="tools-dd-item" onClick={() => setLearnOpen(false)}>
                   {tNav('faq')}
+                </Link>
+              </div>,
+              document.body,
+            )}
+          </div>
+
+          {/* Tools dropdown — its own top-level menu (moved out of Learn). */}
+          <div ref={toolsMenuRef} className={`tools-dd ${toolsMenuOpen ? 'is-open' : ''}`}>
+            <button
+              ref={toolsMenuTriggerRef}
+              type="button"
+              className={`tools-dd-trigger ${toolsMenuOpen ? 'is-open' : ''}`}
+              aria-haspopup="menu"
+              aria-expanded={toolsMenuOpen}
+              onClick={() => {
+                setToolsMenuOpen(v => {
+                  const next = !v
+                  if (next && toolsMenuTriggerRef.current) {
+                    const r = toolsMenuTriggerRef.current.getBoundingClientRect()
+                    setToolsMenuPos({ top: r.bottom + 8, left: r.left })
+                  }
+                  return next
+                })
+              }}
+            >
+              {tNav('tools')}
+              <svg className="tools-dd-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            {toolsMenuOpen && mounted && createPortal(
+              <div
+                className="tools-dd-menu tools-dd-menu-portal"
+                role="menu"
+                style={toolsMenuPos ? { top: toolsMenuPos.top, left: toolsMenuPos.left } : undefined}
+              >
+                <Link href="/tools" role="menuitem" className="tools-dd-item" style={{ fontWeight: 700 }} onClick={() => setToolsMenuOpen(false)}>
+                  🧰 {tTools('allTools.name')} →
+                </Link>
+                <Link href="/cv-builder" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('cv.name')}
+                </Link>
+                <Link href="/anschreiben-generator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('anschreiben.name')}
+                </Link>
+                <Link href="/interview-prep" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tNav('interviewPrep')}
+                </Link>
+                <Link href="/tools/eligibility-checker" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('eligibilityChecker.name')}
+                </Link>
+                <Link href="/tools/migration-timeline" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('migrationTimeline.name')}
+                </Link>
+                <Link href="/tools/document-checklist" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('documentChecklist.name')}
+                </Link>
+                <Link href="/tools/living-cost-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('livingCost.name')}
+                </Link>
+                <Link href="/tools/chancenkarte-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('chancenkarte.name')}
+                </Link>
+                <Link href="/tools/sperrkonto-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('sperrkonto.name')}
+                </Link>
+                <Link href="/tools/brutto-netto-rechner" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('bruttoNetto.name')}
+                </Link>
+                <Link href="/tools/anerkennung-wizard" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('anerkennung.name')}
+                </Link>
+                <Link href="/tools/city-comparator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('cityComparator.name')}
+                </Link>
+                <Link href="/tools/german-grade-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('gradeConverter.name')}
+                </Link>
+                <Link href="/tools/ausbildung-salary" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('ausbSalary.name')}
+                </Link>
+                <Link href="/tools/driving-license-germany" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('license.name')}
+                </Link>
+                <Link href="/tools/health-insurance-germany" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('healthInsurance.name')}
+                </Link>
+                <Link href="/tools/tax-refund-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('taxRefund.name')}
+                </Link>
+                <Link href="/listings" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                  {tTools('housing.name')}
                 </Link>
               </div>,
               document.body,
