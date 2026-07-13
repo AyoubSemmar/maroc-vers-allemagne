@@ -32,12 +32,24 @@ const PILLARS: [PathPillar, PathPillar, PathPillar] = [
 ]
 
 const TOOLS: PathTool[] = [
-  { key: 'cv',                 icon: <Icon name="document"     size={26} />, href: '/cv-builder',                  nameKey: 'cv.name',                 descKey: 'cv.desc' },
-  { key: 'anschreiben',        icon: <Icon name="pen"          size={26} />, href: '/anschreiben-generator',       nameKey: 'anschreiben.name',        descKey: 'anschreiben.desc' },
-  { key: 'eligibilityChecker', icon: <Icon name="check-square" size={26} />, href: '/tools/eligibility-checker',   nameKey: 'eligibilityChecker.name', descKey: 'eligibilityChecker.desc' },
-  { key: 'documentChecklist',  icon: <Icon name="list"         size={26} />, href: '/tools/document-checklist',    nameKey: 'documentChecklist.name',  descKey: 'documentChecklist.desc' },
-  { key: 'migrationTimeline',  icon: <Icon name="map"          size={26} />, href: '/tools/migration-timeline',    nameKey: 'migrationTimeline.name',  descKey: 'migrationTimeline.desc' },
-  { key: 'livingCost',         icon: <Icon name="euro"         size={26} />, href: '/tools/living-cost-calculator', nameKey: 'livingCost.name',        descKey: 'livingCost.desc' },
+  // AI tools first, then the Studium journey (grades/recognition → apply → arrive → settle).
+  { key: 'cv',                 icon: <Icon name="document"     size={26} />, href: '/cv-builder',                    nameKey: 'cv.name',                 descKey: 'cv.desc' },
+  { key: 'anschreiben',        icon: <Icon name="pen"          size={26} />, href: '/anschreiben-generator',         nameKey: 'anschreiben.name',        descKey: 'anschreiben.desc' },
+  { key: 'interviewPrep',      icon: <Icon name="mic"          size={26} />, href: '/interview-prep',                nameKey: 'interviewPrep.name',      descKey: 'interviewPrep.desc' },
+  { key: 'eligibilityChecker', icon: <Icon name="check-square" size={26} />, href: '/tools/eligibility-checker',     nameKey: 'eligibilityChecker.name', descKey: 'eligibilityChecker.desc' },
+  { key: 'gradeConverter',     icon: <Icon name="graduation"   size={26} />, href: '/tools/german-grade-calculator', nameKey: 'gradeConverter.name',     descKey: 'gradeConverter.desc' },
+  { key: 'anerkennung',        icon: <Icon name="star"         size={26} />, href: '/tools/anerkennung-wizard',      nameKey: 'anerkennung.name',        descKey: 'anerkennung.desc' },
+  { key: 'documentChecklist',  icon: <Icon name="list"         size={26} />, href: '/tools/document-checklist',      nameKey: 'documentChecklist.name',  descKey: 'documentChecklist.desc' },
+  { key: 'migrationTimeline',  icon: <Icon name="map"          size={26} />, href: '/tools/migration-timeline',      nameKey: 'migrationTimeline.name',  descKey: 'migrationTimeline.desc' },
+  { key: 'sperrkonto',         icon: <Icon name="lock"         size={26} />, href: '/tools/sperrkonto-calculator',   nameKey: 'sperrkonto.name',         descKey: 'sperrkonto.desc' },
+  { key: 'livingCost',         icon: <Icon name="euro"         size={26} />, href: '/tools/living-cost-calculator',  nameKey: 'livingCost.name',         descKey: 'livingCost.desc' },
+  { key: 'bruttoNetto',        icon: <Icon name="euro"         size={26} />, href: '/tools/brutto-netto-rechner',    nameKey: 'bruttoNetto.name',        descKey: 'bruttoNetto.desc' },
+  { key: 'taxRefund',          icon: <Icon name="euro"         size={26} />, href: '/tools/tax-refund-calculator',   nameKey: 'taxRefund.name',          descKey: 'taxRefund.desc' },
+  { key: 'healthInsurance',    icon: <Icon name="heart"        size={26} />, href: '/tools/health-insurance-germany', nameKey: 'healthInsurance.name',   descKey: 'healthInsurance.desc' },
+  { key: 'furnishedHousing',   icon: <Icon name="home"         size={26} />, href: '/tools/furnished-housing',       nameKey: 'furnishedHousing.name',   descKey: 'furnishedHousing.desc' },
+  { key: 'chancenkarte',       icon: <Icon name="sparkles"     size={26} />, href: '/tools/chancenkarte-calculator', nameKey: 'chancenkarte.name',       descKey: 'chancenkarte.desc' },
+  { key: 'cityComparator',     icon: <Icon name="compass"      size={26} />, href: '/tools/city-comparator',         nameKey: 'cityComparator.name',     descKey: 'cityComparator.desc' },
+  { key: 'license',            icon: <Icon name="shield"       size={26} />, href: '/tools/driving-license-germany', nameKey: 'license.name',            descKey: 'license.desc' },
 ]
 
 export default async function StudiumPage({ params }: Props) {
