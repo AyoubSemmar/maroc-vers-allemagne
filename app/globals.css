@@ -3402,13 +3402,12 @@ html[dir="rtl"] .dashshell-sidebar.is-collapsed { transform: translateX(100%); }
   min-width: 0;
 }
 /* The column stretches to the full page height (surface colour goes all the
-   way down); the inner rail stays pinned so the menu is always visible. */
+   way down). The menu flows at its natural height — at least a full viewport
+   on short pages, and as long as the page needs with no internal scroll. */
 .dashshell-sidebar-inner {
-  position: sticky; top: 0;
-  height: 100vh; height: 100dvh;
+  min-height: 100vh; min-height: 100dvh;
   display: flex; flex-direction: column;
   padding: 18px 14px;
-  overflow: hidden;
 }
 html[data-theme="dark"] .dashshell-sidebar {
   background: var(--surface);
@@ -3521,10 +3520,8 @@ html[data-theme="dark"] .dashshell-sidebar {
 
 /* Scroll area with sections */
 .dashshell-sidebar-scroll {
-  flex: 1; overflow-y: auto;
   margin: 0 -4px;
   padding: 0 4px;
-  scrollbar-width: thin;
 }
 .dashshell-section { margin-bottom: 14px; }
 .dashshell-section-label {
@@ -3766,6 +3763,8 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
     transition: transform .25s ease;
     box-shadow: 0 10px 40px rgba(0,0,0,0.25);
   }
+  /* The drawer is a fixed-height overlay here, so its menu scrolls inside it. */
+  .dashshell-sidebar-inner { min-height: 0; height: 100%; overflow-y: auto; }
   html[dir="rtl"] .dashshell-sidebar { transform: translateX(100%); }
   .dashshell-sidebar.is-open,
   html[dir="rtl"] .dashshell-sidebar.is-open { transform: translateX(0); }
