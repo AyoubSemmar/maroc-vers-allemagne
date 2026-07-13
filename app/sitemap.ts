@@ -22,6 +22,18 @@ function checklistIndexable(country: CountryKey, visaSlug: (typeof VISA_SLUGS)[n
 // sitemap full of redirecting URLs makes Google distrust the whole file.
 const SITE = 'https://www.gogermany.ma'
 
+// Build the hreflang alternates map for a URL, including an x-default that
+// points at the primary locale (fr, else en, else the first available) so
+// Google has a single fallback for unmatched languages.
+function langAlternates(locales: readonly string[], hrefFor: (l: string) => string) {
+  const languages: Record<string, string> = Object.fromEntries(
+    locales.map((l) => [l, hrefFor(l)]),
+  )
+  const def = locales.includes('fr') ? 'fr' : locales.includes('en') ? 'en' : locales[0]
+  if (def) languages['x-default'] = hrefFor(def)
+  return { languages }
+}
+
 // Static routes that exist in every locale. Auth pages intentionally
 // excluded — they're noindex (see app/[locale]/login + signup metadata).
 const STATIC_PATHS = [
@@ -72,6 +84,7 @@ const TOOLS3_PATHS = [
   '/tools/driving-license-germany',
   '/tools/health-insurance-germany',
   '/tools/tax-refund-calculator',
+  '/tools/furnished-housing',
 ]
 const TOOLS3_LOCALES = routing.locales.filter((l) => ['en', 'fr', 'ar'].includes(l))
 
@@ -92,11 +105,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: yesterday,
       changeFrequency: 'weekly' as const,
       priority: path === '' ? 1 : 0.7,
-      alternates: {
-        languages: Object.fromEntries(
-          routing.locales.map((l) => [l, `${SITE}/${l}${path}`]),
-        ),
-      },
+      alternates: langAlternates(routing.locales, (l) => `${SITE}/${l}${path}`),
     })),
   )
 
@@ -126,9 +135,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           lastModified: a.date ? new Date(a.date) : yesterday,
           changeFrequency: 'monthly' as const,
           priority: 0.6,
-          alternates: {
-            languages: Object.fromEntries(locs.map((l) => [l, `${SITE}/${l}/articles/${a.id}`])),
-          },
+          alternates: langAlternates(locs, (l) => `${SITE}/${l}/articles/${a.id}`),
         }))
       })
     }
@@ -146,14 +153,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         lastModified: yesterday,
         changeFrequency: 'monthly' as const,
         priority: 0.65,
-        alternates: {
-          languages: Object.fromEntries(
-            CHECKLIST_LOCALES.map((l) => [
-              l,
-              `${SITE}/${l}/tools/document-checklist/${country}/${visaSlug}`,
-            ]),
-          ),
-        },
+        alternates: langAlternates(
+          CHECKLIST_LOCALES,
+          (l) => `${SITE}/${l}/tools/document-checklist/${country}/${visaSlug}`,
+        ),
       })),
     ),
   )
@@ -164,11 +167,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: yesterday,
       changeFrequency: 'monthly' as const,
       priority: 0.7,
-      alternates: {
-        languages: Object.fromEntries(
-          TOOLS3_LOCALES.map((l) => [l, `${SITE}/${l}${path}`]),
-        ),
-      },
+      alternates: langAlternates(TOOLS3_LOCALES, (l) => `${SITE}/${l}${path}`),
     })),
   )
 

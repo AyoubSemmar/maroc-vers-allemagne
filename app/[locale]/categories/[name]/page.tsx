@@ -5,6 +5,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import { catLabelFrom } from '@/lib/article-cat'
+import Breadcrumbs from '@/components/seo/Breadcrumbs'
 import type { Metadata } from 'next'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
@@ -50,6 +51,12 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
+      <Breadcrumbs
+        items={[
+          { name: 'GoGermany', path: `/${locale}` },
+          { name: catLabel, path: `/${locale}/categories/${encodeURIComponent(categoryName)}` },
+        ]}
+      />
       <div className="max-w-5xl mx-auto px-4 py-12">
         <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
           {t('backToHome')}

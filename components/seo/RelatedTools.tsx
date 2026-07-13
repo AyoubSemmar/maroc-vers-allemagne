@@ -1,6 +1,7 @@
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
+import Breadcrumbs from '@/components/seo/Breadcrumbs'
 
 /**
  * "You might also need…" cross-link block at the bottom of every tool
@@ -107,6 +108,16 @@ export default async function RelatedTools({
   const label = (key: ToolKey): { name: string; desc: string } => ({ name: t(`${key}.name`), desc: t(`${key}.desc`) })
 
   return (
+    <>
+      {/* Breadcrumb trail for this tool — every tool page renders RelatedTools,
+          so this gives them all a BreadcrumbList without per-page edits. */}
+      <Breadcrumbs
+        items={[
+          { name: 'GoGermany', path: `/${locale}` },
+          { name: t('allTools.name'), path: `/${locale}/tools` },
+          { name: t(`${current}.name`), path: `/${locale}${HREF[current]}` },
+        ]}
+      />
     <section className="related-tools">
       <div className="wrap">
         <h2 className="related-tools-title">{headT('title')}</h2>
@@ -128,5 +139,6 @@ export default async function RelatedTools({
         </div>
       </div>
     </section>
+    </>
   )
 }

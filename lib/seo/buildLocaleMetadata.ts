@@ -66,9 +66,16 @@ export function buildLocaleMetadata({
     : indexable.includes('en' as AppLocale) ? ('en' as AppLocale)
     : indexable[0] ?? locale
   const canonical = `${SITE}/${primary}${cleanPath}`
-  const languages = Object.fromEntries(
+  // Page-level default for x-default hreflang: fr (main audience), else en,
+  // else the first indexable locale. Same target for every locale variant of
+  // the page so Google has a single "no language match" fallback.
+  const defaultLoc = indexable.includes('fr' as AppLocale) ? ('fr' as AppLocale)
+    : indexable.includes('en' as AppLocale) ? ('en' as AppLocale)
+    : indexable[0] ?? locale
+  const languages: Record<string, string> = Object.fromEntries(
     indexable.map((l) => [l, `${SITE}/${l}${cleanPath}`]),
   )
+  languages['x-default'] = `${SITE}/${defaultLoc}${cleanPath}`
 
   return {
     title,

@@ -7,6 +7,8 @@ import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
 import { catLabelFrom } from '@/lib/article-cat'
+import Breadcrumbs from '@/components/seo/Breadcrumbs'
+import RelevantToolCta from '@/components/articles/RelevantToolCta'
 import AdRail from '@/components/ads/AdRail'
 import AdSlot from '@/components/ads/AdSlot'
 import ArticleContent from '@/components/ArticleContent'
@@ -72,6 +74,9 @@ export async function generateMetadata({
   // duplicate. Point its canonical at the primary available locale and mark
   // it noindex,follow so Google drops the duplicate while still crawling out.
   const primaryLocale = available.includes('en') ? 'en' : available.includes('ar') ? 'ar' : available[0] ?? locale
+  // x-default → the primary available locale, so Google has a single fallback
+  // for unmatched languages (mirrors buildLocaleMetadata for the rest of the site).
+  languages['x-default'] = `${SITE_URL}/${primaryLocale}/articles/${id}`
   const canonical = isAvailable
     ? `${SITE_URL}/${locale}/articles/${id}`
     : `${SITE_URL}/${primaryLocale}/articles/${id}`
@@ -198,31 +203,24 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE}/${locale}/articles/${article.id}` },
     articleSection: catLabel(article.category),
   }
-  const faqLd = Array.isArray(article.faqs) && article.faqs.length > 0
-    ? {
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: article.faqs.map((f: any) => ({
-          '@type': 'Question',
-          name: f.q ?? f.question,
-          acceptedAnswer: { '@type': 'Answer', text: f.a ?? f.answer },
-        })),
-      }
-    : null
+  // NB: the FAQ JSON-LD is emitted by <FAQAccordion> (co-located with the
+  // visible FAQ). Don't duplicate it here — two FAQPage nodes on one page
+  // make Google discard both.
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
       {/* eslint-disable react/no-danger */}
+      <Breadcrumbs
+        items={[
+          { name: 'GoGermany', path: `/${locale}` },
+          { name: catLabel(article.category), path: `/${locale}/categories/${encodeURIComponent(article.category)}` },
+          { name: article.title, path: `/${locale}/articles/${article.id}` },
+        ]}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
       />
-      {faqLd && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-        />
-      )}
       <AdRail className="py-12">
         <div className="max-w-3xl mx-auto">
         <Link href="/" className="text-sm text-green-700 hover:underline mb-6 block">
@@ -257,6 +255,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
         </p>
 
         {renderBody(article.content)}
+
+        {/* Topic-cluster internal link: send the reader to the tool that
+            matches this article's category (SEO internal links + conversion). */}
+        <RelevantToolCta locale={locale} category={article.category} />
 
         <FAQAccordion faqs={article.faqs || []} />
 

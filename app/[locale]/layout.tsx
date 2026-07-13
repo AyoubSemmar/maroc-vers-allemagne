@@ -120,27 +120,45 @@ export default async function LocaleLayout({
             crossOrigin="anonymous"
           />
         )}
-        {/* Site-wide Organization schema. Skipped entirely on the
+        {/* Site-wide Organization + WebSite schema. Skipped entirely on the
             StudyBuddy host so the internal tool doesn't carry brand
-            schema for gogermany.ma. */}
+            schema for gogermany.ma. The WebSite node's SearchAction makes
+            the site eligible for a Google sitelinks search box. */}
         {!isTrackerHost && (
           <JsonLd
-            data={{
-              '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'GoGermany',
-              url: 'https://www.gogermany.ma',
-              logo: 'https://www.gogermany.ma/icon.svg',
-              sameAs: [
-                'https://www.facebook.com/gogermanyma',
-                'https://www.instagram.com/gogermany.ma',
-                'https://www.tiktok.com/@gogermany.ma',
-              ],
-              inLanguage: ['ar', 'fr', 'en', 'de'],
-              areaServed: 'Worldwide',
-              description:
-                'GoGermany helps people from anywhere move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
-            }}
+            data={[
+              {
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'GoGermany',
+                url: 'https://www.gogermany.ma',
+                logo: 'https://www.gogermany.ma/icon.svg',
+                sameAs: [
+                  'https://www.facebook.com/gogermanyma',
+                  'https://www.instagram.com/gogermany.ma',
+                  'https://www.tiktok.com/@gogermany.ma',
+                ],
+                inLanguage: ['ar', 'fr', 'en', 'de'],
+                areaServed: 'Worldwide',
+                description:
+                  'GoGermany helps people from anywhere move to Germany — Ausbildung apprenticeships, university Studium, work and visa, all in one place.',
+              },
+              {
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'GoGermany',
+                url: `https://www.gogermany.ma/${typedLocale}`,
+                inLanguage: typedLocale,
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: `https://www.gogermany.ma/${typedLocale}/search?q={search_term_string}`,
+                  },
+                  'query-input': 'required name=search_term_string',
+                },
+              },
+            ]}
           />
         )}
       </head>
