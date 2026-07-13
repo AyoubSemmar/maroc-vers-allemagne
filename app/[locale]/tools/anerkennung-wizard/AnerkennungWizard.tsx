@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import ToolHero from '@/components/tools/ToolHero'
 import { pick3, type L3 } from '@/lib/toolStrings'
 
 const S = {
+  eyebrow: { en: 'Recognition', fr: 'Reconnaissance', ar: 'الاعتراف بالشهادات' } as L3,
   title: { en: 'Anerkennung Wizard — Get Your Qualification Recognised', fr: 'Assistant Anerkennung — Faites reconnaître votre diplôme', ar: 'مساعد الاعتراف بالشهادات في ألمانيا' } as L3,
   sub: {
     en: 'Answer two questions and get your exact recognition path: the authority, the procedure, realistic costs and timelines.',
@@ -89,9 +91,8 @@ export default function AnerkennungWizard({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dir}>
-      <div className="max-w-2xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900">📜 {t(S.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(S.sub)}</p>
+      <ToolHero eyebrow={t(S.eyebrow)} title={t(S.title)} subtitle={t(S.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mt-8 mb-3">1 · {t(S.q1)}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">

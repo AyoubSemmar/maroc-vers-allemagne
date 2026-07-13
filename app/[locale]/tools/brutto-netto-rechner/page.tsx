@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'Understanding Brutto vs Netto: German salary deductions explained',
     fr: 'Comprendre Brut vs Net : les prélèvements sur salaire en Allemagne',

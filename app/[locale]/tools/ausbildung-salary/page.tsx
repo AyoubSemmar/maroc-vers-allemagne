@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'How much does an Ausbildung pay in Germany?',
     fr: 'Combien gagne-t-on pendant une Ausbildung en Allemagne ?',

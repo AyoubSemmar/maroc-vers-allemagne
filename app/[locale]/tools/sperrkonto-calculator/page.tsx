@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'Why you need a blocked account (Sperrkonto) for your German visa',
     fr: 'Pourquoi un compte bloqué (Sperrkonto) pour votre visa allemand',

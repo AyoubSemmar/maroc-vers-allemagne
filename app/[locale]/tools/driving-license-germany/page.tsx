@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'Using and converting a foreign driving licence in Germany',
     fr: 'Utiliser et échanger un permis étranger en Allemagne',

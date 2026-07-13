@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'How the Chancenkarte points calculator works',
     fr: 'Comment fonctionne le calculateur de points Chancenkarte',

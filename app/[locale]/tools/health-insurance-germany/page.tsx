@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'How health insurance works in Germany (GKV vs PKV vs incoming)',
     fr: 'Comment fonctionne l’assurance santé en Allemagne (GKV, PKV, incoming)',

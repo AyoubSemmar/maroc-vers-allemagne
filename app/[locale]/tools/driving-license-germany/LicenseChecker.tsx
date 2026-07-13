@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { pick3, type L3 } from '@/lib/toolStrings'
+import ToolHero from '@/components/tools/ToolHero'
 
 // Conversion rules follow §31 FeV: EU/EEA licences stay valid; Anlage 11
 // countries get a full or partial exchange; everyone else may drive 6 months
@@ -90,6 +91,7 @@ const RESULT: Record<Group, { badge: L3; validity: L3; steps: L3<string[]>; cost
 }
 
 const T = {
+  eyebrow: { en: 'Driving licence', fr: 'Permis de conduire', ar: 'رخصة السياقة' } as L3,
   title: { en: 'Driving Licence in Germany — Conversion Checker', fr: 'Permis de conduire en Allemagne — vérificateur d’échange', ar: 'رخصة السياقة في ألمانيا — فاحص التبديل' } as L3,
   sub: { en: 'Select where your licence was issued and see exactly what Germany requires: nothing, a simple exchange, or which exams.', fr: 'Choisissez le pays d’émission de votre permis et voyez ce que l’Allemagne exige : rien, un simple échange, ou quels examens.', ar: 'اختر بلد إصدار رخصتك لترى ما تطلبه ألمانيا بالضبط: لا شيء، أو تبديل بسيط، أو أي امتحانات.' } as L3,
   select: { en: 'Country that issued your licence', fr: 'Pays d’émission du permis', ar: 'البلد الذي أصدر رخصتك' } as L3,
@@ -110,9 +112,8 @@ export default function LicenseChecker({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-gray-900">🚗 {t(T.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(T.sub)}</p>
+      <ToolHero eyebrow={t(T.eyebrow)} title={t(T.title)} subtitle={t(T.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mt-6 mb-2">{t(T.select)}</label>
         <select

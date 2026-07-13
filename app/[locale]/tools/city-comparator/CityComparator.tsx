@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import ToolHero from '@/components/tools/ToolHero'
 import { pick3, type L3 } from '@/lib/toolStrings'
 import { calculate, type AccommodationKey, type CityKey, type LifestyleKey } from '@/lib/livingCostData'
 
@@ -15,6 +16,7 @@ const CITY_LABEL: Record<CityKey, string> = {
 const CITY_KEYS = Object.keys(CITY_LABEL) as CityKey[]
 
 const S = {
+  eyebrow: { en: 'City comparison', fr: 'Comparateur de villes', ar: 'مقارنة المدن' } as L3,
   title: { en: 'German City Comparator', fr: 'Comparateur de villes allemandes', ar: 'مقارنة المدن الألمانية' } as L3,
   sub: {
     en: 'Berlin or Leipzig? Munich or Dortmund? Compare two cities’ real monthly costs side by side and see what you’d save per year.',
@@ -91,9 +93,8 @@ export default function CityComparator({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dir}>
-      <div className="max-w-2xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900">⚖️ {t(S.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(S.sub)}</p>
+      <ToolHero eyebrow={t(S.eyebrow)} title={t(S.title)} subtitle={t(S.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <div className="flex gap-3 mt-8">
           {citySelect(a, setA, t(S.cityA))}

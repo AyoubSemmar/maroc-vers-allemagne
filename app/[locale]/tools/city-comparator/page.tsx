@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'Compare the cost of living between German cities',
     fr: 'Comparer le coût de la vie entre villes allemandes',

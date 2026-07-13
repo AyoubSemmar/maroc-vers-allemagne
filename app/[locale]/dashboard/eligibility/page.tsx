@@ -1,6 +1,7 @@
 // Renders the Eligibility Checker tool inside the dashboard shell.
 // Re-uses the same client component as /tools/eligibility-checker.
 import type { AppLocale } from '@/i18n/routing'
+import ToolSeoSection from "@/components/seo/ToolSeoSection"
 import ProvideNamespaces from '@/components/i18n/ProvideNamespaces'
 import EligibilityChecker from '../../tools/eligibility-checker/EligibilityChecker'
 
@@ -11,8 +12,11 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 export default async function DashboardEligibilityPage({ params }: Props) {
   const { locale } = await params
   return (
-    <ProvideNamespaces only={['eligibilityChecker']}>
-      <EligibilityChecker locale={locale} />
-    </ProvideNamespaces>
+    <>
+      <ProvideNamespaces only={['eligibilityChecker']}>
+        <EligibilityChecker locale={locale} />
+      </ProvideNamespaces>
+      <ToolSeoSection locale={locale} namespace="eligibilityChecker" />
+    </>
   )
 }

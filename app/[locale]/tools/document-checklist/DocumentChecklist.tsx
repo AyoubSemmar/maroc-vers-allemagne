@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ToolHero from '@/components/tools/ToolHero'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton from '@/components/BookConsultationButton'
 import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
@@ -113,13 +114,7 @@ export default function DocumentChecklist({
   return (
     <div className="dcl-root" dir={dir}>
       {/* Hero */}
-      <header className="dcl-hero">
-        <div className="wrap">
-          <span className="dcl-eyebrow"><span className="dcl-eyebrow-dot" />{t('eyebrow')}</span>
-          <h1 className="dcl-title">{t('title')}</h1>
-          <p className="dcl-subtitle">{t('subtitle')}</p>
-        </div>
-      </header>
+      <ToolHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
       <div className="dcl-body wrap">
         <div className="dcl-grid">

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ToolHero from '@/components/tools/ToolHero'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import {
@@ -81,20 +82,16 @@ export default function LivingCostCalculator({ locale }: { locale: AppLocale }) 
   return (
     <div className="lcc-root" dir={dir}>
       {/* Hero */}
-      <header className="lcc-hero">
-        <div className="wrap">
-          <span className="lcc-eyebrow">
-            <span className="lcc-eyebrow-dot" />{t('eyebrow')}
-          </span>
-          <h1 className="lcc-title">{t('title')}</h1>
-          <p className="lcc-subtitle">{t('subtitle')}</p>
-          <div className="lcc-hero-badges">
-            <span className="lcc-hero-badge">📊 {t('badgeOfficial')}</span>
-            <span className="lcc-hero-badge">🏛️ {t('badgeDestatis')}</span>
-            <span className="lcc-hero-badge">🆓 {t('badgeFree')}</span>
-          </div>
-        </div>
-      </header>
+      <ToolHero
+        eyebrow={t('eyebrow')}
+        title={t('title')}
+        subtitle={t('subtitle')}
+        badges={[
+          { icon: '📊', label: t('badgeOfficial') },
+          { icon: '🏛️', label: t('badgeDestatis') },
+          { icon: '🆓', label: t('badgeFree') },
+        ]}
+      />
 
       <div className="lcc-body wrap">
         <div className="lcc-grid">

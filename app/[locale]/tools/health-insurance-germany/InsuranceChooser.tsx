@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { pick3, type L3 } from '@/lib/toolStrings'
+import ToolHero from '@/components/tools/ToolHero'
 
 // Env-swappable partner links (same pattern as SPERRKONTO_PROVIDERS):
 // set NEXT_PUBLIC_AFF_*_URL once affiliate accounts are approved.
@@ -24,6 +25,7 @@ function employeeMonthly(gross: number, childless: boolean): number {
 }
 
 const T = {
+  eyebrow: { en: 'Health insurance', fr: 'Assurance santé', ar: 'التأمين الصحي' } as L3,
   title: { en: 'Health Insurance in Germany — Which One & What It Costs', fr: 'Assurance santé en Allemagne — laquelle et à quel prix', ar: 'التأمين الصحي في ألمانيا — أيّه وبكم' } as L3,
   sub: { en: 'Health insurance is mandatory in Germany. Answer two questions and see what you need and the realistic monthly cost.', fr: 'L’assurance santé est obligatoire en Allemagne. Répondez à deux questions et voyez ce qu’il vous faut et le coût mensuel réaliste.', ar: 'التأمين الصحي إجباري في ألمانيا. أجب عن سؤالين لترى ما تحتاجه والتكلفة الشهرية الواقعية.' } as L3,
   q1: { en: 'Your situation in Germany', fr: 'Votre situation en Allemagne', ar: 'وضعك في ألمانيا' } as L3,
@@ -91,9 +93,8 @@ export default function InsuranceChooser({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-gray-900">🏥 {t(T.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(T.sub)}</p>
+      <ToolHero eyebrow={t(T.eyebrow)} title={t(T.title)} subtitle={t(T.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <label className="block text-xs font-bold uppercase tracking-wider text-gray-400 mt-6 mb-2">{t(T.q1)}</label>
         <div className="flex flex-wrap gap-2">

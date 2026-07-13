@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ToolHero from '@/components/tools/ToolHero'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton from '@/components/BookConsultationButton'
 import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
@@ -71,13 +72,7 @@ export default function EligibilityChecker({ locale }: { locale: AppLocale }) {
   return (
     <div className={`ec-root ec-status--${result.overall}`} dir={dir}>
       {/* Hero */}
-      <header className="ec-hero">
-        <div className="wrap">
-          <span className="ec-eyebrow"><span className="ec-eyebrow-dot" />{t('eyebrow')}</span>
-          <h1 className="ec-title">{t('title')}</h1>
-          <p className="ec-subtitle">{t('subtitle')}</p>
-        </div>
-      </header>
+      <ToolHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
       <div className="ec-body wrap">
         <div className="ec-grid">

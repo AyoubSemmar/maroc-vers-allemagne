@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { pick3, type L3 } from '@/lib/toolStrings'
+import ToolHero from '@/components/tools/ToolHero'
 
 // Partner links — env-swappable once affiliate accounts are approved.
 const APPS = [
@@ -29,6 +30,7 @@ function taxByClass(zvE: number, cls: '1' | '2' | '3' | '4'): number {
 const PAUSCHALE = 1230 // Werbungskosten flat allowance
 
 const T = {
+  eyebrow: { en: 'Tax refund', fr: 'Remboursement d’impôts', ar: 'استرجاع الضرائب' } as L3,
   title: { en: 'German Tax Refund Estimator', fr: 'Estimateur de remboursement d’impôts allemand', ar: 'حاسبة استرجاع الضرائب في ألمانيا' } as L3,
   sub: { en: 'The average German tax return brings back ~€1,100. Enter your numbers and see what a Steuererklärung would likely return to you.', fr: 'La déclaration d’impôts allemande rapporte en moyenne ~1 100 €. Entrez vos chiffres et estimez ce qu’une Steuererklärung vous rendrait.', ar: 'يعيد التصريح الضريبي الألماني في المتوسط نحو 1100 €. أدخل أرقامك وقدّر ما قد تسترجعه من Steuererklärung.' } as L3,
   gross: { en: 'Gross annual salary (€)', fr: 'Salaire brut annuel (€)', ar: 'الراتب الإجمالي السنوي (€)' } as L3,
@@ -78,9 +80,8 @@ export default function TaxRefund({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-gray-900">💰 {t(T.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(T.sub)}</p>
+      <ToolHero eyebrow={t(T.eyebrow)} title={t(T.title)} subtitle={t(T.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 mt-6 grid sm:grid-cols-2 gap-4">
           <label className="block">

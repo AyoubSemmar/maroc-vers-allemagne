@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { pick3, type L3 } from '@/lib/toolStrings'
+import ToolHero from '@/components/tools/ToolHero'
 
 // Gross monthly training pay (2026 tariff averages, rounded) per Lehrjahr +
 // typical gross starting salary after graduation. Sources: BIBB tariff data
@@ -42,6 +43,7 @@ const PROFESSIONS: Prof[] = [
 const SOCIAL = 0.204
 
 const T = {
+  eyebrow: { en: 'Ausbildung salary', fr: 'Salaire Ausbildung', ar: 'راتب الأوسبيلدونغ' } as L3,
   title: { en: 'Ausbildung Salary Explorer', fr: 'Salaires en Ausbildung', ar: 'رواتب الأوسبيلدونغ' } as L3,
   sub: {
     en: 'What each apprenticeship really pays — per training year, net estimate, and the starting salary after you qualify.',
@@ -77,9 +79,8 @@ export default function SalaryExplorer({ locale }: { locale: AppLocale }) {
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
-      <div className="max-w-2xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold text-gray-900">💶 {t(T.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(T.sub)}</p>
+      <ToolHero eyebrow={t(T.eyebrow)} title={t(T.title)} subtitle={t(T.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         <input
           type="text"

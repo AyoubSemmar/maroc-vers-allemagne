@@ -3,9 +3,11 @@
 import { useMemo, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
+import ToolHero from '@/components/tools/ToolHero'
 import { pick3, type L3 } from '@/lib/toolStrings'
 
 const S = {
+  eyebrow: { en: 'Chancenkarte', fr: 'Chancenkarte', ar: 'بطاقة الفرص' } as L3,
   title: { en: 'Chancenkarte Points Calculator', fr: 'Calculateur de points Chancenkarte', ar: 'حاسبة نقاط بطاقة الفرص (Chancenkarte)' } as L3,
   sub: {
     en: 'Germany’s Opportunity Card lets you move to Germany to look for a job — if you score 6 points. Check your score in one minute.',
@@ -110,9 +112,8 @@ export default function ChancenkarteCalculator({ locale }: { locale: AppLocale }
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dir}>
-      <div className="max-w-2xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold text-gray-900">🃏 {t(S.title)}</h1>
-        <p className="mt-2 text-gray-600">{t(S.sub)}</p>
+      <ToolHero eyebrow={t(S.eyebrow)} title={t(S.title)} subtitle={t(S.sub)} />
+      <div className="max-w-2xl mx-auto px-4 py-8">
 
         {/* Sticky score */}
         <div className="sticky top-2 z-10 mt-6 rounded-2xl border-2 border-green-600 bg-white shadow-lg px-5 py-3 flex items-center justify-between gap-3">

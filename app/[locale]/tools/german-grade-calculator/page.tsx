@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   })
 }
 
-const SEO = {
+export const SEO = {
   heading: {
     en: 'How German grade conversion works (Modified Bavarian Formula)',
     fr: 'Comment fonctionne la conversion de notes allemandes (formule bavaroise)',

@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import { useTranslations } from 'next-intl'
+import ToolHero from '@/components/tools/ToolHero'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import BookConsultationButton from '@/components/BookConsultationButton'
 import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
@@ -50,15 +51,7 @@ export default function MigrationTimeline({ locale }: { locale: AppLocale }) {
   return (
     <div className="mtl-root" dir={dir}>
       {/* Hero */}
-      <header className="mtl-hero">
-        <div className="wrap">
-          <span className="mtl-eyebrow">
-            <span className="mtl-eyebrow-dot" />{t('eyebrow')}
-          </span>
-          <h1 className="mtl-title">{t('title')}</h1>
-          <p className="mtl-subtitle">{t('subtitle')}</p>
-        </div>
-      </header>
+      <ToolHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
 
       <div className="mtl-body wrap">
         <div className="mtl-grid">
