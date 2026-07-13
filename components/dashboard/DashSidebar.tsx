@@ -13,6 +13,8 @@ type NavItem = {
   icon: React.ReactNode
   locked?: boolean
   badge?: string
+  /** Renders the badge in the muted "coming soon" style instead of "new". */
+  soon?: boolean
   /** If set, the item renders as a button and runs this instead of navigating. */
   onClick?: () => void
 }
@@ -161,7 +163,7 @@ export default function DashSidebar({
 
   const marketplace: NavItem[] = [
     { href: '/dashboard/browse',        label: t('browse'),       icon: I.browse,   onClick: () => setOppPickerOpen(true) },
-    { href: '/dashboard/apply-for-me',  label: t('applyForMe'),   icon: I.sparkles, badge: t('newBadge') },
+    { href: '/dashboard/apply-for-me',  label: t('applyForMe'),   icon: I.sparkles, badge: t('soon'), soon: true },
   ]
   const preparation: NavItem[] = [
     { href: '/dashboard',                 label: t('dashboard'),       icon: I.grid },
@@ -312,7 +314,7 @@ function Section({
               >
                 <span className="dashshell-nav-icon">{item.icon}</span>
                 <span className="dashshell-nav-label">{item.label}</span>
-                {item.badge && <span className="dashshell-new-badge">{item.badge}</span>}
+                {item.badge && <span className={item.soon ? 'dashshell-soon-badge' : 'dashshell-new-badge'}>{item.badge}</span>}
               </button>
             ) : (
               <Link
@@ -321,7 +323,7 @@ function Section({
               >
                 <span className="dashshell-nav-icon">{item.icon}</span>
                 <span className="dashshell-nav-label">{item.label}</span>
-                {item.badge && <span className="dashshell-new-badge">{item.badge}</span>}
+                {item.badge && <span className={item.soon ? 'dashshell-soon-badge' : 'dashshell-new-badge'}>{item.badge}</span>}
               </Link>
             )}
           </li>

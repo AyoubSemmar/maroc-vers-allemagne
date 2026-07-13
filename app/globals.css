@@ -3582,6 +3582,14 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
   padding: 2px 8px; border-radius: 999px;
   letter-spacing: 0.04em; text-transform: uppercase;
 }
+/* "Coming soon" — muted slate pill, distinct from the amber "New". */
+.dashshell-soon-badge {
+  font-size: 10px; font-weight: 700;
+  color: var(--muted);
+  background: color-mix(in oklch, var(--muted) 16%, transparent);
+  padding: 2px 8px; border-radius: 999px;
+  letter-spacing: 0.02em; white-space: nowrap; flex: none;
+}
 
 /* Footer actions */
 .dashshell-sidebar-foot {
