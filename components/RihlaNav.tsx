@@ -275,7 +275,7 @@ export default function RihlaNav() {
                 <Link href="/tools/tax-refund-calculator" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
                   {tTools('taxRefund.name')}
                 </Link>
-                <Link href="/listings" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
+                <Link href="/tools/furnished-housing" role="menuitem" className="tools-dd-item" onClick={() => setToolsMenuOpen(false)}>
                   {tTools('furnishedHousing.name')}
                 </Link>
               </div>,

@@ -441,7 +441,7 @@ export default function RihlaLanding({ articles }: { articles: Article[] }) {
               <span className="kicker">{t('housing.kicker')}</span>
               <h2>{t('housing.title')}</h2>
               <p>{t('housing.sub')}</p>
-              <Link href="/listings" className="btn btn-primary">
+              <Link href="/tools/furnished-housing" className="btn btn-primary">
                 {t('housing.cta')}
               </Link>
               <div className="ladder-meta">

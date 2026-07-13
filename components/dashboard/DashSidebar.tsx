@@ -176,7 +176,7 @@ export default function DashSidebar({
     { href: '/dashboard/timeline',             label: t('timeline'),          icon: I.calendar },
     { href: '/dashboard/document-checklist',   label: t('documentChecklist'), icon: I.doc },
     { href: '/dashboard/living-cost-calculator', label: t('livingCost'),      icon: I.euro },
-    { href: '/dashboard/housing',              label: tTools('furnishedHousing.name'), icon: I.home, badge: t('newBadge') },
+    { href: '/dashboard/furnished-housing',    label: tTools('furnishedHousing.name'), icon: I.home, badge: t('newBadge') },
     { href: '/dashboard/cv-builder',           label: t('cvBuilder'),         icon: I.doc },
     { href: '/dashboard/cover-letter',         label: t('coverLetter'),       icon: I.edit },
     // 2026-07 tools — they live under /tools (no dashboard wrappers); labels

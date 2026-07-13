@@ -97,18 +97,6 @@ export default function DashProfile() {
     setDocsLoading(false)
   }, [ctx.docs])
 
-  // ── Listings ──────────────────────────────────────────────────
-  const [listings, setListings] = useState<any[]>([])
-  useEffect(() => {
-    if (!ctx.user?.id) return
-    supabase.from('listings')
-      .select('*')
-      .eq('user_id', ctx.user.id)
-      .order('created_at', { ascending: false })
-      .then(({ data }) => setListings(data || []))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ctx.user?.id])
-
   // ── Delete account ────────────────────────────────────────────
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false)
   const [deleting, setDeleting] = useState(false)
@@ -552,50 +540,6 @@ export default function DashProfile() {
                       </button>
                     </div>
                   </div>
-                </li>
-              )
-            })}
-          </ul>
-        )}
-      </section>
-
-      {/* LISTINGS */}
-      <section className="dashprof-card">
-        <header className="dashprof-card-head">
-          <h2>{tProf('listings.heading')}</h2>
-          <Link href="/listings/new" className="dashprof-btn dashprof-btn-ghost">
-            {tProf('listings.add')}
-          </Link>
-        </header>
-
-        {listings.length === 0 ? (
-          <p className="dashprof-mute dashprof-center">{tProf('listings.empty')}</p>
-        ) : (
-          <ul className="dashprof-listing-list">
-            {listings.map(listing => {
-              const expired = listing.expires_at && new Date(listing.expires_at) < new Date()
-              const exp = listing.expires_at
-                ? new Date(listing.expires_at).toLocaleDateString(LOCALE_TO_INTL[locale], { day: 'numeric', month: 'short', year: 'numeric' })
-                : ''
-              return (
-                <li key={listing.id}>
-                  <Link href={`/listings/${listing.id}` as any} className="dashprof-listing">
-                    {listing.image_url ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img src={listing.image_url} alt="" className="dashprof-listing-img" />
-                    ) : (
-                      <div className="dashprof-listing-img dashprof-listing-img-fallback">🏠</div>
-                    )}
-                    <div className="dashprof-listing-body">
-                      <p className="dashprof-listing-title">{listing.title}</p>
-                      <p className="dashprof-listing-meta">{listing.city} · {listing.type}</p>
-                      {expired ? (
-                        <span className="dashprof-tag dashprof-tag-danger">{tProf('listings.expired')}</span>
-                      ) : listing.expires_at ? (
-                        <span className="dashprof-tag">{tProf('listings.expiresOn', { date: exp })}</span>
-                      ) : null}
-                    </div>
-                  </Link>
                 </li>
               )
             })}
