@@ -30,6 +30,7 @@ type ToolKey =
   | 'license'
   | 'healthInsurance'
   | 'taxRefund'
+  | 'furnishedHousing'
 
 const HREF: Record<ToolKey, string> = {
   cv: '/cv-builder',
@@ -48,6 +49,7 @@ const HREF: Record<ToolKey, string> = {
   license: '/tools/driving-license-germany',
   healthInsurance: '/tools/health-insurance-germany',
   taxRefund: '/tools/tax-refund-calculator',
+  furnishedHousing: '/tools/furnished-housing',
 }
 
 const ICON: Record<ToolKey, string> = {
@@ -67,6 +69,7 @@ const ICON: Record<ToolKey, string> = {
   license: '🚗',
   healthInsurance: '🏥',
   taxRefund: '💰',
+  furnishedHousing: '🏠',
 }
 
 // Each tool's three most logical follow-up tools.
@@ -74,9 +77,9 @@ const RELATIONS: Record<ToolKey, [ToolKey, ToolKey, ToolKey]> = {
   cv:                 ['anschreiben', 'eligibilityChecker', 'bruttoNetto'],
   anschreiben:        ['cv', 'eligibilityChecker', 'documentChecklist'],
   eligibilityChecker: ['chancenkarte', 'documentChecklist', 'migrationTimeline'],
-  documentChecklist:  ['sperrkonto', 'eligibilityChecker', 'migrationTimeline'],
-  migrationTimeline:  ['eligibilityChecker', 'documentChecklist', 'sperrkonto'],
-  livingCost:         ['cityComparator', 'bruttoNetto', 'migrationTimeline'],
+  documentChecklist:  ['sperrkonto', 'eligibilityChecker', 'furnishedHousing'],
+  migrationTimeline:  ['eligibilityChecker', 'furnishedHousing', 'sperrkonto'],
+  livingCost:         ['cityComparator', 'furnishedHousing', 'migrationTimeline'],
   chancenkarte:       ['sperrkonto', 'anerkennung', 'bruttoNetto'],
   sperrkonto:         ['healthInsurance', 'documentChecklist', 'chancenkarte'],
   bruttoNetto:        ['taxRefund', 'cityComparator', 'livingCost'],
@@ -87,6 +90,7 @@ const RELATIONS: Record<ToolKey, [ToolKey, ToolKey, ToolKey]> = {
   license:            ['ausbSalary', 'livingCost', 'documentChecklist'],
   healthInsurance:    ['sperrkonto', 'bruttoNetto', 'livingCost'],
   taxRefund:          ['bruttoNetto', 'healthInsurance', 'ausbSalary'],
+  furnishedHousing:   ['cityComparator', 'livingCost', 'migrationTimeline'],
 }
 
 export default async function RelatedTools({
