@@ -194,6 +194,7 @@ export default function DashSidebar({
 
   return (
     <aside className={`dashshell-sidebar ${collapsed ? 'is-collapsed' : ''} ${isMobileOpen ? 'is-open' : ''}`} aria-label="Dashboard navigation">
+      <div className="dashshell-sidebar-inner">
       {/* Logo row */}
       <div className="dashshell-sidebar-head">
         <Link href="/" className="dashshell-logo" aria-label={tCommon('appName')}>
@@ -272,6 +273,7 @@ export default function DashSidebar({
           <span className="dashshell-nav-icon">{I.help}</span>
           <span className="dashshell-nav-label">{t('help')}</span>
         </button>
+      </div>
       </div>
       <OpportunitiesPicker open={oppPickerOpen} onClose={() => setOppPickerOpen(false)} inDashboard />
     </aside>

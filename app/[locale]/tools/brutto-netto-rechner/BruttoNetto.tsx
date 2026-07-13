@@ -125,7 +125,7 @@ export default function BruttoNetto({ locale }: { locale: AppLocale }) {
   ]
 
   return (
-    <div className="min-h-screen bg-gray-50" dir={dir}>
+    <div className="min-h-screen bg-[var(--bg)]" dir={dir}>
       <ToolHero eyebrow={t(S.eyebrow)} title={t(S.title)} subtitle={t(S.sub)} />
       <div className="max-w-2xl mx-auto px-4 py-8">
 

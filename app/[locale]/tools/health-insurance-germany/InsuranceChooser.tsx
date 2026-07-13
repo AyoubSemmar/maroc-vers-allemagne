@@ -92,7 +92,7 @@ export default function InsuranceChooser({ locale }: { locale: AppLocale }) {
   const sits = t(T.situations)
 
   return (
-    <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
+    <div className="min-h-screen bg-[var(--bg)]" dir={dirFor(locale)}>
       <ToolHero eyebrow={t(T.eyebrow)} title={t(T.title)} subtitle={t(T.sub)} />
       <div className="max-w-2xl mx-auto px-4 py-8">
 

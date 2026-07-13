@@ -708,7 +708,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .uni-detail-logo {
   width: 96px; height: 96px;
   display: grid; place-items: center;
-  background: var(--bg-warm);
+  background: transparent;
   border-radius: 16px; border: 1px solid var(--line);
   flex: none; overflow: hidden;
   font-size: 36px; font-weight: 800; color: var(--brand);
@@ -794,7 +794,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .uni-level-icon {
   width: 52px; height: 52px;
   display: grid; place-items: center;
-  background: var(--bg-warm);
+  background: transparent;
   border-radius: 12px;
   font-size: 26px;
   flex: none;
@@ -806,7 +806,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   display: inline-block;
   margin-top: 8px;
   padding: 3px 10px;
-  background: var(--bg-warm);
+  background: transparent;
   border: 1px solid var(--line);
   border-radius: 999px;
   font-size: 11px; font-weight: 700;
@@ -1018,7 +1018,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 
 /* ============ RIHLA FOOTER ============ */
 .rihla-footer {
-  background: var(--bg-warm);
+  background: transparent;
   border-top: 1px solid var(--line);
   color: var(--ink-soft);
   font-family: var(--font-ar);
@@ -1369,7 +1369,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   border-top: 1px solid var(--line-soft);
   border-bottom: 1px solid var(--line-soft);
   overflow: hidden;
-  background: var(--bg-warm);
+  background: transparent;
 }
 .rihla .marquee-track {
   display: flex; gap: 56px;
@@ -1454,7 +1454,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .rihla .step-num::before { content: ""; width: 28px; height: 2px; background: var(--brand); }
 .rihla .step-icon {
   width: 64px; height: 64px; border-radius: 18px;
-  background: var(--bg-warm);
+  background: transparent;
   display: grid; place-items: center;
   margin-bottom: 20px;
 }
@@ -1627,7 +1627,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .rihla details.faq summary::-webkit-details-marker { display: none; }
 .rihla .faq-icon {
   width: 32px; height: 32px; border-radius: 50%;
-  background: var(--bg-warm);
+  background: transparent;
   display: grid; place-items: center;
   transition: transform .3s, background .3s;
   flex-shrink: 0; position: relative;
@@ -1808,7 +1808,7 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
 .rihla-article-tag {
   font-size: 12px;
   color: var(--ink-mute);
-  background: var(--bg-warm);
+  background: transparent;
   border: 1px solid var(--line);
   padding: 3px 10px;
   border-radius: 999px;
@@ -2463,7 +2463,7 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   width: 100%;
   aspect-ratio: 16 / 9;
   overflow: hidden;
-  background: var(--bg-warm);
+  background: transparent;
 }
 .rihla-article-card-link.large .rihla-acard-img { aspect-ratio: 16 / 8; }
 .rihla-acard-img img {
@@ -2477,7 +2477,7 @@ html[data-theme="dark"] .rihla-article-tag { background: var(--bg-warm); }
   display: flex; align-items: center; justify-content: center;
   font-size: 2.5rem;
   color: var(--ink-mute);
-  background: var(--bg-warm);
+  background: transparent;
 }
 /* Featured-article badge: refined gold pill with a clean SVG star.
    Was a circular puck with the ⭐ emoji and a heavy 0.25-alpha
@@ -3063,7 +3063,7 @@ html[dir="rtl"] .tools-dd-menu { left: auto; right: 0; }
 .dash-path-switch {
   display: inline-flex; gap: 6px;
   padding: 6px; border-radius: 999px;
-  background: var(--bg-warm);
+  background: transparent;
   border: 1px solid var(--border);
 }
 .dash-path-pill {
@@ -3179,7 +3179,7 @@ html[data-theme="dark"] .dash-path-pill.is-active[data-c="teal"]  { color: oklch
 .dash-check-list li {
   display: flex; align-items: center; gap: 12px;
   padding: 10px 12px; border-radius: 12px;
-  background: var(--bg-warm);
+  background: transparent;
   font-size: 14px;
 }
 .dash-check-list li.is-done { opacity: 0.55; text-decoration: line-through; }
@@ -3216,7 +3216,7 @@ html[data-theme="dark"] .dash-path-pill.is-active[data-c="teal"]  { color: oklch
   padding: 16px 18px;
   border-radius: 14px;
   border: 1px solid var(--border);
-  background: var(--bg-warm);
+  background: transparent;
   text-decoration: none; color: inherit;
   transition: all .25s ease;
 }
@@ -3316,7 +3316,7 @@ html[dir="rtl"] .dash-step:hover .dash-step-arrow { transform: scaleX(-1) transl
   gap: 16px; align-items: center;
   padding: 14px 16px;
   border: 1px solid var(--border); border-radius: 14px;
-  background: var(--bg-warm);
+  background: transparent;
   text-decoration: none; color: inherit;
   transition: all .25s ease;
 }
@@ -3396,11 +3396,17 @@ html[dir="rtl"] .dashshell-sidebar.is-collapsed { transform: translateX(100%); }
 
 /* Sidebar */
 .dashshell-sidebar {
-  position: sticky; top: 0; align-self: start;
-  height: 100vh;
-  display: flex; flex-direction: column;
+  align-self: stretch;
   background: var(--surface);
   border-inline-end: 1px solid var(--border);
+  min-width: 0;
+}
+/* The column stretches to the full page height (surface colour goes all the
+   way down); the inner rail stays pinned so the menu is always visible. */
+.dashshell-sidebar-inner {
+  position: sticky; top: 0;
+  height: 100vh; height: 100dvh;
+  display: flex; flex-direction: column;
   padding: 18px 14px;
   overflow: hidden;
 }
@@ -3958,7 +3964,7 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
 
 .dashprof-stat-bar {
   height: 8px; border-radius: 999px;
-  background: var(--bg-warm);
+  background: transparent;
   overflow: hidden;
 }
 .dashprof-stat-bar-fill {
@@ -4013,7 +4019,7 @@ html[data-theme="dark"][dir="rtl"] .dashshell-nav-item.is-active {
 .dashprof-section-soon {
   font-size: 11px; font-weight: 700;
   padding: 4px 10px; border-radius: 999px;
-  background: var(--bg-warm);
+  background: transparent;
   color: var(--muted);
 }
 .dashprof-section-empty {
@@ -4156,7 +4162,7 @@ html[data-theme="dark"] .dashprof-alert-err {
   padding: 11px 14px;
   border: 1px dashed var(--border);
   border-radius: 10px;
-  background: var(--bg-warm);
+  background: transparent;
   color: var(--text);
   font-weight: 600;
   font-size: 14px;
@@ -4252,7 +4258,7 @@ html[data-theme="dark"] .dashprof-pill.is-active[data-c="teal"] {
   overflow: hidden;
 }
 .dashprof-btn-ghost:hover:not(:disabled) {
-  background: var(--bg-warm);
+  background: transparent;
   border-color: var(--text);
 }
 .dashprof-btn-ghost input[type="file"] {
@@ -4275,7 +4281,7 @@ html[data-theme="dark"] .dashprof-pill.is-active[data-c="teal"] {
 
 /* Upload drawer */
 .dashprof-upload {
-  background: var(--bg-warm);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 18px 20px;
@@ -4366,7 +4372,7 @@ html[data-theme="dark"] .dashprof-chip-danger:hover { background: oklch(0.3 0.07
 }
 .dashprof-listing-img {
   width: 68px; height: 68px; object-fit: cover; border-radius: 10px; flex: none;
-  background: var(--bg-warm);
+  background: transparent;
 }
 .dashprof-listing-img-fallback { display: grid; place-items: center; font-size: 26px; }
 .dashprof-listing-body { min-width: 0; display: grid; gap: 4px; }
@@ -4882,7 +4888,7 @@ body { line-height: 1.65; }
    warm hero, Fraunces display heading, soft body text via CSS vars
    so both light and dark mode work without per-class overrides. */
 .rihla-static-hero {
-  background: var(--bg-warm);
+  background: transparent;
   border-block-end: 1px solid var(--line);
   padding: 64px 0 52px;
   text-align: center;
@@ -5077,7 +5083,7 @@ body { line-height: 1.65; }
 
 /* ============ TOOL SEO SECTION (intro + FAQ at bottom of tool pages) ============ */
 .tool-seo-section {
-  background: var(--bg-warm);
+  background: transparent;
   padding: 56px 0 72px;
   border-top: 1px solid var(--border);
   margin-top: 32px;

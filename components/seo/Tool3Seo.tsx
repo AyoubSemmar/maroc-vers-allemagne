@@ -18,11 +18,11 @@ export default function Tool3Seo({
   paragraphs: L3[]
 }) {
   return (
-    <section className="bg-white border-t border-gray-100" dir={dirFor(locale)}>
+    <section className="border-t" style={{ borderColor: 'var(--line)' }} dir={dirFor(locale)}>
       <div className="max-w-2xl mx-auto px-4 py-10">
-        <h2 className="text-xl font-bold text-gray-900">{pick3(locale, heading)}</h2>
+        <h2 className="text-xl font-bold" style={{ color: 'var(--ink)' }}>{pick3(locale, heading)}</h2>
         {paragraphs.map((p, i) => (
-          <p key={i} className="text-sm text-gray-600 leading-relaxed mt-3">
+          <p key={i} className="text-sm leading-relaxed mt-3" style={{ color: 'var(--ink-soft)' }}>
             {pick3(locale, p)}
           </p>
         ))}
