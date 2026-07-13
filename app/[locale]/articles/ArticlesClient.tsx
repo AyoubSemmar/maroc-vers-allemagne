@@ -5,6 +5,7 @@ import { useTranslations, useLocale } from 'next-intl'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { Link } from '@/i18n/navigation'
 import Pager, { usePageSize } from '@/components/Pager'
+import { catLabelFrom } from '@/lib/article-cat'
 
 type Article = {
   id: number
@@ -46,8 +47,7 @@ export default function ArticlesClient({ articles }: { articles: Article[] }) {
   const pageRest = rest.slice((page - 1) * pageSize, page * pageSize)
 
   function catLabel(cat: string): string {
-    // t.raw to avoid an error for unknown categories — falls back to raw cat
-    try { return t(`cat.${cat}` as any) } catch { return cat }
+    return catLabelFrom(t as any, cat)
   }
 
   function formatDate(d: string) {

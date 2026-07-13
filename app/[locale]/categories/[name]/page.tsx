@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { catLabelFrom } from '@/lib/article-cat'
 import type { Metadata } from 'next'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
@@ -17,8 +18,7 @@ export async function generateMetadata({
   const { name, locale } = await params
   const t = await getTranslations({ locale, namespace: 'articles' })
   const categoryName = decodeURIComponent(name)
-  let catLabel = categoryName
-  try { catLabel = t(`cat.${categoryName}` as any) } catch {}
+  const catLabel = catLabelFrom(t as any, categoryName)
   return buildLocaleMetadata({
     locale,
     // Re-encode so the canonical matches the crawled URL for the Arabic
@@ -46,8 +46,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ name:
   )
   const articles = localizeRows(rehydrateTranslationsList(rawArticles as any, locale), locale) as any[]
 
-  let catLabel: string = categoryName
-  try { catLabel = t(`cat.${categoryName}` as any) } catch {}
+  const catLabel: string = catLabelFrom(t as any, categoryName)
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>

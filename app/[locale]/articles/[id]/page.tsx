@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRow, localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { catLabelFrom } from '@/lib/article-cat'
 import AdRail from '@/components/ads/AdRail'
 import AdSlot from '@/components/ads/AdSlot'
 import ArticleContent from '@/components/ArticleContent'
@@ -136,7 +137,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
   const related = localizeRows(rehydrateTranslationsList(rawRelated as any, locale), locale)
 
   function catLabel(cat: string): string {
-    try { return t(`cat.${cat}` as any) } catch { return cat }
+    return catLabelFrom(t as any, cat)
   }
 
   // Render the body split at H2 section breaks, dropping an in-content ad after

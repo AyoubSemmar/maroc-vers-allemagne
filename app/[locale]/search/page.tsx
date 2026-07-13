@@ -4,6 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { dirFor, routing, type AppLocale } from '@/i18n/routing'
 import { localizeRows } from '@/lib/i18n-content'
 import { articleListFields, applyLocaleAvailability, rehydrateTranslationsList } from '@/lib/article-list-select'
+import { catLabelFrom } from '@/lib/article-cat'
 import TrackSearch from '@/components/analytics/TrackSearch'
 import type { Metadata } from 'next'
 
@@ -38,13 +39,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
     .slice(0, 80)
   const t = await getTranslations({ locale, namespace: 'search' })
   const tc = await getTranslations({ locale, namespace: 'articles' })
-  const catLabel = (cat: string) => {
-    if (!cat) return ''
-    try {
-      const v = tc(`cat.${cat}` as any)
-      return v && v !== `cat.${cat}` ? v : cat
-    } catch { return cat }
-  }
+  const catLabel = (cat: string) => catLabelFrom(tc as any, cat)
 
   let articles: any[] = []
   let listings: any[] = []

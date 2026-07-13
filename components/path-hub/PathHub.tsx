@@ -3,6 +3,7 @@ import { Link } from '@/i18n/navigation'
 import { getTranslations } from 'next-intl/server'
 import PathConsultCta from './PathConsultCta'
 import { CONSULTATIONS_ENABLED } from '@/lib/featureFlags'
+import { catLabelFrom } from '@/lib/article-cat'
 import PathHubReveal from './PathHubReveal'
 
 export type PathTool = {
@@ -49,13 +50,7 @@ export default async function PathHub({ config }: { config: PathHubConfig }) {
   const tt = await getTranslations({ locale, namespace: 'landing.tools' })
   const ta = await getTranslations({ locale, namespace: 'landing.articles' })
   const tc = await getTranslations({ locale, namespace: 'articles' })
-  const catLabel = (cat: string) => {
-    if (!cat) return ''
-    try {
-      const v = tc(`cat.${cat}` as any)
-      return v && v !== `cat.${cat}` ? v : cat
-    } catch { return cat }
-  }
+  const catLabel = (cat: string) => catLabelFrom(tc as any, cat)
 
   const chips = (t.raw('chips') as string[]) ?? []
 
