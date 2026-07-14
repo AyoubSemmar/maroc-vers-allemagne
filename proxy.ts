@@ -27,13 +27,17 @@ const PROTECTED_PATHS = [
 ]
 
 // Paths (without locale prefix) that must carry X-Robots-Tag: noindex — thin
-// auth/account utility pages that shouldn't appear in search results.
+// auth/account utility pages that shouldn't appear in search results, plus
+// the whole dashboard: its tool wrappers render the SAME content as the
+// public /tools pages, and indexable duplicates of app UI read as
+// "low value content" to Google (it cost us an AdSense review).
 const NOINDEX_PATHS = [
   '/login',
   '/signup',
   '/forgot-password',
   '/reset-password',
   '/profile',
+  '/dashboard',
 ]
 
 function stripLocale(pathname: string): { locale: string | null; rest: string } {

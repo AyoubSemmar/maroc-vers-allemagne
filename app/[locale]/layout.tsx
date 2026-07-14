@@ -7,6 +7,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import "../globals.css";
 import RihlaNav from "@/components/RihlaNav";
 import RihlaFooter from "@/components/RihlaFooter";
+import CookieConsent from "@/components/CookieConsent";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HideOnDashboard from "@/components/HideOnDashboard";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -72,6 +73,29 @@ const themeInitScript = `
 })();
 `;
 
+// Google Consent Mode v2 defaults — MUST run before gtag.js/AdSense load.
+// Storage-based consent starts "denied"; the CookieConsent banner (or a
+// previously stored choice) upgrades it via consent update. Returning
+// visitors who accepted get "granted" restored here synchronously so
+// analytics starts consented from the first event.
+const consentInitScript = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function(){try{
+  var stored = localStorage.getItem('cookie-consent');
+  var v = stored === 'all' ? 'granted' : 'denied';
+  gtag('consent', 'default', {
+    ad_storage: v, ad_user_data: v, ad_personalization: v,
+    analytics_storage: v, wait_for_update: 500
+  });
+}catch(e){
+  gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+}})();
+`;
+
 export default async function LocaleLayout({
   children,
   params,
@@ -108,6 +132,7 @@ export default async function LocaleLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+        {!isTrackerHost && <script dangerouslySetInnerHTML={{ __html: consentInitScript }} />}
         {/* AdSense loader — emitted as a literal <script> in <head> (React 19
             hoists it) so AdSense's verifier finds the exact snippet. next/script
             only renders a preload + JS injector, which the crawler doesn't
@@ -174,6 +199,7 @@ export default async function LocaleLayout({
           {!isTrackerHost && (
             <HideOnDashboard><RihlaFooter /></HideOnDashboard>
           )}
+          {!isTrackerHost && <CookieConsent />}
           <Analytics />
           {!isTrackerHost && <AnalyticsBeacon />}
         </NextIntlClientProvider>
