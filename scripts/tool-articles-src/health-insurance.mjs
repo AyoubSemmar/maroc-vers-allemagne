@@ -1,0 +1,537 @@
+// Companion article for /tools/health-insurance-germany — written in-session, no API.
+export default {
+  slug: 'g-health-insurance-germany-newcomers-public-private',
+  category: 'healthcare',
+  audience: 'global',
+  imagePrompt: 'A friendly doctor hands a health insurance card to a young international patient across a bright reception desk in a modern German clinic; soft daylight, welcoming atmosphere',
+  translations: {
+    en: {
+      title: 'Health Insurance in Germany for Newcomers: Public vs Private Explained (2026)',
+      summary: 'Health insurance is mandatory in Germany. What newcomers pay in 2026, public vs private vs expat plans, what students and Azubis need, and how to choose fast.',
+      content: `In Germany, health insurance is not optional — it is legally required from your first day in the country, and no visa gets approved without proof of coverage. Yet the system splits into public (gesetzlich), private (privat) and special expat plans, and choosing wrong can cost you thousands or even block your residence permit. Here is the whole picture in plain language.
+
+💡 **Shortcut:** answer four quick questions in our free [Health Insurance Chooser](/tools/health-insurance-germany) and see instantly which type of insurance fits your situation — student, Azubi, employee or job-seeker.
+
+## The golden rule: insurance before visa
+
+German embassies and immigration offices (Ausländerbehörde) demand proof of health insurance before issuing or extending any visa or residence permit. Travel insurance only covers the first weeks; real coverage must start the day your work or study contract begins.
+
+## Public insurance (GKV) — the default for most
+
+Roughly 90% of people in Germany are publicly insured with providers like TK, AOK or Barmer. You pay a fixed share of income: about 14.6% plus a provider surcharge, split with your employer — an employee earning 3,000 € gross pays roughly 250 € per month, matched by the employer.
+
+- **Employees** under ~73,800 € annual salary (2026 threshold) must join GKV.
+- **Azubis (apprentices)** are automatically enrolled through their employer — contributions come straight off the payslip; use the [Brutto-Netto Calculator](/tools/brutto-netto-rechner) to see the exact deduction.
+- **Students under 30** get a special student rate of roughly 130–140 € per month, insurance-of-choice.
+- Family members without income (spouse, children) are covered for free — a huge advantage over private plans.
+
+## Private insurance (PKV) — for high earners and some special cases
+
+Private insurance prices by age and health, not income. A healthy 28-year-old professional might pay 350–450 € for premium coverage, while GKV would cost them more at a high salary. But: premiums rise with age, pre-existing conditions raise prices or get excluded, family members each need their own policy, and switching back to public is deliberately difficult. Rule of thumb for newcomers: unless you earn well above the threshold and plan long-term, start public.
+
+## Expat and incoming plans — the arrival bridge
+
+For the gap between landing and your first contract (job-seekers, Chancenkarte holders, language students), incoming insurances like Feather, Ottonova or Mawista cover you from around 70–120 € per month and are accepted for visa applications. They are a bridge, not a destination — switch to GKV as soon as you start working.
+
+## Common mistakes
+
+- **Arriving on travel insurance and staying on it.** It does not satisfy the Ausländerbehörde for a residence permit.
+- **Choosing private at 25 because it is cheaper.** It often is — until you are 45, or want to insure a family.
+- **Students over 30** assuming the student rate still applies — it ends at 30, then costs jump.
+- **Not comparing GKV surcharges.** Providers differ by real money: the extra contribution ranges from about 1% to over 2.5% of income.
+
+Ready to decide? Run your situation through the free [Health Insurance Chooser](/tools/health-insurance-germany) — it takes under a minute and tells you exactly which door to knock on, and check the [Document Checklist](/tools/document-checklist) to see where the insurance certificate fits in your visa file.`,
+      faqs: [
+        { q: 'Is health insurance really mandatory in Germany?', a: 'Yes — by law, everyone living in Germany must be insured, and every visa or residence permit requires proof of coverage. There is no legal way to live in Germany uninsured.' },
+        { q: 'How much does public health insurance cost in 2026?', a: 'About 14.6% of gross income plus a provider surcharge, split with your employer. An employee at 3,000 € gross pays roughly 250 € per month; students under 30 pay a flat ~130–140 €.' },
+        { q: 'Should a newcomer choose public or private insurance?', a: 'For most newcomers, public (GKV) is the safer choice: free family coverage, no health questions, and stable costs. Private only makes sense for high earners committed long-term who understand premiums rise with age.' },
+        { q: 'What insurance do I need for a job-seeker or Chancenkarte visa?', a: 'An incoming/expat policy (e.g. Feather, Ottonova, Mawista) from roughly 70–120 € per month is accepted for the visa. Switch to public insurance as soon as you sign an employment contract.' },
+        { q: 'Are apprentices (Azubis) automatically insured?', a: 'Yes. From day one of your Ausbildung, your employer registers you with a public insurer and contributions are deducted from your salary automatically — you only choose which provider.' },
+      ],
+    },
+    fr: {
+      title: 'Assurance maladie en Allemagne pour nouveaux arrivants : publique ou privée ? (2026)',
+      summary: 'L’assurance maladie est obligatoire en Allemagne. Coûts 2026, publique vs privée vs assurance expat, cas des étudiants et Azubis, et comment choisir vite.',
+      content: `En Allemagne, l’assurance maladie n’est pas une option — elle est légalement obligatoire dès votre premier jour dans le pays, et aucun visa n’est approuvé sans preuve de couverture. Mais le système se divise entre publique (gesetzlich), privée (privat) et assurances expat spéciales, et un mauvais choix peut coûter des milliers d’euros ou bloquer votre titre de séjour. Voici le tableau complet, en langage simple.
+
+💡 **Raccourci :** répondez à quatre questions dans notre [Sélecteur d’assurance santé](/tools/health-insurance-germany) gratuit et voyez immédiatement quel type d’assurance correspond à votre situation — étudiant, Azubi, salarié ou chercheur d’emploi.
+
+## La règle d’or : l’assurance avant le visa
+
+Les ambassades allemandes et l’Ausländerbehörde exigent une preuve d’assurance avant de délivrer ou prolonger tout visa ou titre de séjour. L’assurance voyage ne couvre que les premières semaines ; la vraie couverture doit commencer le jour où votre contrat de travail ou d’études démarre.
+
+## L’assurance publique (GKV) — le choix par défaut
+
+Environ 90 % des habitants sont assurés publiquement chez TK, AOK ou Barmer. Vous payez une part fixe du revenu : environ 14,6 % plus un supplément selon la caisse, partagé avec l’employeur — un salarié à 3 000 € brut paie environ 250 € par mois, l’employeur autant.
+
+- **Les salariés** sous ~73 800 € annuels (seuil 2026) doivent rejoindre la GKV.
+- **Les Azubis (apprentis)** sont inscrits automatiquement par l’employeur — les cotisations partent directement de la fiche de paie ; le [Calculateur Brut-Net](/tools/brutto-netto-rechner) montre la retenue exacte.
+- **Les étudiants de moins de 30 ans** bénéficient d’un tarif étudiant d’environ 130–140 € par mois.
+- Les membres de la famille sans revenus (conjoint, enfants) sont couverts gratuitement — un avantage énorme sur le privé.
+
+## L’assurance privée (PKV) — pour hauts revenus et cas particuliers
+
+Le privé tarifie selon l’âge et la santé, pas le revenu. Un professionnel de 28 ans en bonne santé peut payer 350–450 € pour une couverture premium. Mais : les primes augmentent avec l’âge, les antécédents médicaux font grimper le prix, chaque membre de la famille paie sa propre police, et revenir au public est volontairement difficile. Règle simple pour les nouveaux arrivants : sauf revenu bien au-dessus du seuil et projet long terme, commencez au public.
+
+## Assurances expat — le pont de l’arrivée
+
+Pour la période entre l’atterrissage et le premier contrat (chercheurs d’emploi, titulaires de la Chancenkarte, étudiants en langue), les assurances incoming comme Feather, Ottonova ou Mawista couvrent à partir de 70–120 € par mois et sont acceptées pour le visa. C’est un pont, pas une destination — passez à la GKV dès que vous travaillez.
+
+## Erreurs fréquentes
+
+- **Rester sur l’assurance voyage.** Elle ne satisfait pas l’Ausländerbehörde pour un titre de séjour.
+- **Choisir le privé à 25 ans parce que c’est moins cher.** Ça l’est souvent — jusqu’à 45 ans, ou jusqu’à la famille à assurer.
+- **Étudiants de plus de 30 ans** croyant au tarif étudiant — il s’arrête à 30 ans, puis les coûts bondissent.
+- **Ne pas comparer les suppléments GKV.** Le supplément varie d’environ 1 % à plus de 2,5 % du revenu selon la caisse.
+
+Prêt à décider ? Passez votre situation dans le [Sélecteur d’assurance santé](/tools/health-insurance-germany) gratuit — moins d’une minute pour savoir exactement à quelle porte frapper — et vérifiez avec la [Checklist de documents](/tools/document-checklist) où l’attestation d’assurance s’insère dans votre dossier visa.`,
+      faqs: [
+        { q: 'L’assurance maladie est-elle vraiment obligatoire en Allemagne ?', a: 'Oui — la loi impose une assurance à toute personne vivant en Allemagne, et chaque visa ou titre de séjour exige une preuve de couverture. Vivre non assuré en Allemagne est illégal.' },
+        { q: 'Combien coûte l’assurance publique en 2026 ?', a: 'Environ 14,6 % du revenu brut plus un supplément de caisse, partagé avec l’employeur. Un salarié à 3 000 € brut paie environ 250 € par mois ; les étudiants de moins de 30 ans environ 130–140 €.' },
+        { q: 'Un nouvel arrivant doit-il choisir le public ou le privé ?', a: 'Pour la plupart, le public (GKV) est le choix sûr : famille couverte gratuitement, pas de questionnaire médical, coûts stables. Le privé n’a de sens que pour les hauts revenus installés à long terme.' },
+        { q: 'Quelle assurance pour un visa chercheur d’emploi ou Chancenkarte ?', a: 'Une assurance incoming/expat (Feather, Ottonova, Mawista) à partir d’environ 70–120 € par mois est acceptée pour le visa. Passez au public dès la signature d’un contrat de travail.' },
+        { q: 'Les apprentis (Azubis) sont-ils assurés automatiquement ?', a: 'Oui. Dès le premier jour d’Ausbildung, l’employeur vous inscrit à une caisse publique et les cotisations sont prélevées automatiquement — vous choisissez seulement la caisse.' },
+      ],
+    },
+    ar: {
+      title: 'التأمين الصحي في ألمانيا للقادمين الجدد: العام أم الخاص؟ (2026)',
+      summary: 'التأمين الصحي إلزامي في ألمانيا. ما يدفعه القادمون الجدد في 2026، مقارنة العام والخاص وتأمين الوافدين، ووضع الطلاب والمتدربين، وكيف تختار بسرعة.',
+      content: `في ألمانيا، التأمين الصحي ليس خياراً — إنه إلزامي قانوناً من يومك الأول في البلاد، ولا تُمنح أي تأشيرة دون إثبات تغطية. لكن النظام ينقسم إلى تأمين عام (gesetzlich) وخاص (privat) وخطط خاصة بالوافدين، والاختيار الخاطئ قد يكلفك آلاف اليوروهات أو يعطّل تصريح إقامتك. إليك الصورة الكاملة بلغة بسيطة.
+
+💡 **اختصار:** أجب عن أربعة أسئلة سريعة في [مرشد التأمين الصحي](/tools/health-insurance-germany) المجاني لترى فوراً أي نوع تأمين يناسب وضعك — طالب أو متدرب أو موظف أو باحث عن عمل.
+
+## القاعدة الذهبية: التأمين قبل التأشيرة
+
+تشترط السفارات الألمانية ودائرة الأجانب (Ausländerbehörde) إثبات تأمين صحي قبل إصدار أو تمديد أي تأشيرة أو تصريح إقامة. تأمين السفر يغطي الأسابيع الأولى فقط؛ أما التغطية الحقيقية فيجب أن تبدأ يوم بدء عقد عملك أو دراستك.
+
+## التأمين العام (GKV) — الخيار الافتراضي للأغلبية
+
+نحو 90% من سكان ألمانيا مؤمّنون تأميناً عاماً لدى صناديق مثل TK وAOK وBarmer. تدفع نسبة ثابتة من الدخل: حوالي 14.6% زائد رسم إضافي حسب الصندوق، مناصفةً مع صاحب العمل — موظف براتب 3,000 € إجمالي يدفع نحو 250 € شهرياً ويدفع صاحب العمل مثلها.
+
+- **الموظفون** تحت ~73,800 € سنوياً (عتبة 2026) ملزمون بالتأمين العام.
+- **المتدربون (Azubis)** يسجَّلون تلقائياً عبر صاحب العمل — تُقتطع الاشتراكات مباشرة من الراتب؛ استخدم [حاسبة الراتب الصافي](/tools/brutto-netto-rechner) لرؤية الاقتطاع الدقيق.
+- **الطلاب دون 30 عاماً** لهم تعرفة طلابية نحو 130–140 € شهرياً.
+- أفراد العائلة بلا دخل (الزوج/الزوجة والأطفال) مشمولون مجاناً — ميزة هائلة مقارنة بالخاص.
+
+## التأمين الخاص (PKV) — لأصحاب الدخل العالي وحالات خاصة
+
+يسعّر التأمين الخاص حسب العمر والحالة الصحية لا الدخل. محترف بعمر 28 سنة بصحة جيدة قد يدفع 350–450 € لتغطية ممتازة. لكن: الأقساط ترتفع مع العمر، والحالات المرضية السابقة ترفع السعر أو تُستثنى، وكل فرد من العائلة يحتاج بوليصة خاصة، والعودة إلى العام صعبة عمداً. القاعدة للقادمين الجدد: ما لم يكن دخلك فوق العتبة بوضوح وخطتك طويلة الأمد، ابدأ بالعام.
+
+## تأمين الوافدين — جسر الوصول
+
+لفترة ما بين الوصول وأول عقد (الباحثون عن عمل، حاملو بطاقة الفرص، طلاب اللغة)، تغطيك تأمينات الوافدين مثل Feather وOttonova وMawista من نحو 70–120 € شهرياً وتُقبل لطلبات التأشيرة. إنها جسر لا وجهة — انتقل إلى التأمين العام فور بدء العمل.
+
+## أخطاء شائعة
+
+- **البقاء على تأمين السفر.** لا يقبله مكتب الأجانب لتصريح الإقامة.
+- **اختيار الخاص في سن 25 لأنه أرخص.** غالباً يكون كذلك — حتى تبلغ 45 أو تريد تأمين عائلة.
+- **طلاب فوق 30** يظنون التعرفة الطلابية مستمرة — تنتهي عند 30 ثم تقفز التكاليف.
+- **عدم مقارنة رسوم الصناديق العامة.** الرسم الإضافي يتراوح من نحو 1% إلى أكثر من 2.5% من الدخل.
+
+جاهز للقرار؟ مرّر وضعك عبر [مرشد التأمين الصحي](/tools/health-insurance-germany) المجاني — أقل من دقيقة ليدلّك على الباب الصحيح — وراجع [قائمة الوثائق](/tools/document-checklist) لتعرف موقع شهادة التأمين في ملف تأشيرتك.`,
+      faqs: [
+        { q: 'هل التأمين الصحي إلزامي فعلاً في ألمانيا؟', a: 'نعم — يلزم القانون كل مقيم في ألمانيا بالتأمين، وكل تأشيرة أو تصريح إقامة يتطلب إثبات تغطية. لا توجد طريقة قانونية للعيش في ألمانيا دون تأمين.' },
+        { q: 'كم يكلف التأمين العام في 2026؟', a: 'نحو 14.6% من الدخل الإجمالي زائد رسم الصندوق، مناصفة مع صاحب العمل. موظف براتب 3,000 € يدفع نحو 250 € شهرياً؛ والطلاب دون 30 نحو 130–140 €.' },
+        { q: 'هل يختار القادم الجديد التأمين العام أم الخاص؟', a: 'للأغلبية، العام (GKV) هو الخيار الآمن: تغطية مجانية للعائلة، لا أسئلة طبية، وتكاليف مستقرة. الخاص منطقي فقط لأصحاب الدخل العالي المستقرين طويلاً.' },
+        { q: 'أي تأمين لتأشيرة البحث عن عمل أو بطاقة الفرص؟', a: 'تأمين وافدين (Feather أو Ottonova أو Mawista) من نحو 70–120 € شهرياً يُقبل للتأشيرة. انتقل إلى العام فور توقيع عقد عمل.' },
+        { q: 'هل يؤمَّن المتدربون تلقائياً؟', a: 'نعم. من أول يوم في الأوسبيلدونغ يسجّلك صاحب العمل لدى صندوق عام وتُقتطع الاشتراكات تلقائياً من راتبك — تختار الصندوق فقط.' },
+      ],
+    },
+    de: {
+      title: 'Krankenversicherung in Deutschland für Neuankömmlinge: Gesetzlich oder privat? (2026)',
+      summary: 'Krankenversicherung ist in Deutschland Pflicht. Was Neuankömmlinge 2026 zahlen, GKV vs. PKV vs. Expat-Tarife, was Studierende und Azubis brauchen.',
+      content: `In Deutschland ist die Krankenversicherung keine Option — sie ist vom ersten Tag an gesetzlich vorgeschrieben, und kein Visum wird ohne Versicherungsnachweis erteilt. Das System teilt sich in gesetzlich (GKV), privat (PKV) und spezielle Expat-Tarife — und die falsche Wahl kann Tausende kosten oder die Aufenthaltserlaubnis blockieren. Hier das ganze Bild in einfacher Sprache.
+
+💡 **Abkürzung:** Beantworten Sie vier kurze Fragen im kostenlosen [Krankenversicherungs-Wegweiser](/tools/health-insurance-germany) und sehen Sie sofort, welcher Versicherungstyp zu Ihrer Situation passt — Studium, Ausbildung, Job oder Jobsuche.
+
+## Die goldene Regel: Versicherung vor Visum
+
+Deutsche Botschaften und die Ausländerbehörde verlangen den Versicherungsnachweis, bevor ein Visum oder Aufenthaltstitel erteilt oder verlängert wird. Eine Reiseversicherung deckt nur die ersten Wochen; der echte Schutz muss am Tag des Arbeits- oder Studienbeginns starten.
+
+## Gesetzlich (GKV) — der Standard für die meisten
+
+Rund 90 % der Menschen in Deutschland sind gesetzlich versichert, etwa bei TK, AOK oder Barmer. Sie zahlen einen festen Einkommensanteil: etwa 14,6 % plus Zusatzbeitrag, geteilt mit dem Arbeitgeber — bei 3.000 € brutto sind das rund 250 € im Monat, der Arbeitgeber zahlt dasselbe.
+
+- **Angestellte** unter ~73.800 € Jahresgehalt (Grenze 2026) müssen in die GKV.
+- **Azubis** werden automatisch über den Betrieb angemeldet — die Beiträge gehen direkt vom Gehalt ab; der [Brutto-Netto-Rechner](/tools/brutto-netto-rechner) zeigt den genauen Abzug.
+- **Studierende unter 30** zahlen den Studierendentarif von etwa 130–140 € im Monat.
+- Familienmitglieder ohne Einkommen sind kostenlos mitversichert — ein riesiger Vorteil gegenüber der PKV.
+
+## Privat (PKV) — für Gutverdiener und Sonderfälle
+
+Die PKV kalkuliert nach Alter und Gesundheit, nicht nach Einkommen. Ein gesunder 28-Jähriger zahlt vielleicht 350–450 € für Premium-Schutz. Aber: Beiträge steigen mit dem Alter, Vorerkrankungen verteuern oder werden ausgeschlossen, jedes Familienmitglied braucht einen eigenen Vertrag, und der Weg zurück in die GKV ist bewusst schwer. Faustregel für Neuankömmlinge: Ohne deutlich überdurchschnittliches Einkommen und Langzeitplan — gesetzlich starten.
+
+## Expat-Tarife — die Brücke nach der Ankunft
+
+Für die Zeit zwischen Landung und erstem Vertrag (Jobsuchende, Chancenkarte, Sprachschüler) decken Incoming-Versicherungen wie Feather, Ottonova oder Mawista ab etwa 70–120 € im Monat und werden für Visumanträge akzeptiert. Eine Brücke, kein Ziel — wechseln Sie in die GKV, sobald Sie arbeiten.
+
+## Häufige Fehler
+
+- **Auf der Reiseversicherung bleiben.** Sie genügt der Ausländerbehörde nicht für den Aufenthaltstitel.
+- **Mit 25 privat wählen, weil es billiger ist.** Oft stimmt das — bis 45, oder bis eine Familie versichert werden soll.
+- **Studierende über 30** rechnen mit dem Studierendentarif — er endet mit 30, danach springen die Kosten.
+- **Zusatzbeiträge nicht vergleichen.** Sie reichen von rund 1 % bis über 2,5 % des Einkommens.
+
+Bereit zu entscheiden? Prüfen Sie Ihre Situation im kostenlosen [Krankenversicherungs-Wegweiser](/tools/health-insurance-germany) — unter einer Minute — und sehen Sie in der [Dokumenten-Checkliste](/tools/document-checklist), wo die Versicherungsbescheinigung in Ihre Visumsakte gehört.`,
+      faqs: [
+        { q: 'Ist die Krankenversicherung in Deutschland wirklich Pflicht?', a: 'Ja — jede in Deutschland lebende Person muss versichert sein, und jedes Visum bzw. jeder Aufenthaltstitel verlangt den Nachweis. Unversichert in Deutschland zu leben ist nicht legal.' },
+        { q: 'Was kostet die gesetzliche Versicherung 2026?', a: 'Etwa 14,6 % des Bruttoeinkommens plus Zusatzbeitrag, geteilt mit dem Arbeitgeber. Bei 3.000 € brutto rund 250 € im Monat; Studierende unter 30 zahlen pauschal ca. 130–140 €.' },
+        { q: 'Sollten Neuankömmlinge gesetzlich oder privat wählen?', a: 'Für die meisten ist die GKV die sichere Wahl: kostenlose Familienversicherung, keine Gesundheitsfragen, stabile Kosten. PKV lohnt nur für Gutverdiener mit Langzeitperspektive.' },
+        { q: 'Welche Versicherung für Jobsuche- oder Chancenkarte-Visum?', a: 'Eine Incoming-/Expat-Police (z. B. Feather, Ottonova, Mawista) ab etwa 70–120 € monatlich wird fürs Visum akzeptiert. Mit Arbeitsvertrag sofort in die GKV wechseln.' },
+        { q: 'Sind Azubis automatisch versichert?', a: 'Ja. Ab dem ersten Ausbildungstag meldet der Betrieb Sie bei einer gesetzlichen Kasse an, die Beiträge gehen automatisch vom Gehalt ab — Sie wählen nur die Kasse.' },
+      ],
+    },
+    es: {
+      title: 'Seguro médico en Alemania para recién llegados: ¿público o privado? (2026)',
+      summary: 'El seguro médico es obligatorio en Alemania. Lo que pagan los recién llegados en 2026, público vs privado vs seguros expat, y cómo elegir rápido.',
+      content: `En Alemania el seguro médico no es opcional — es obligatorio por ley desde tu primer día en el país, y ningún visado se aprueba sin prueba de cobertura. Pero el sistema se divide en público (gesetzlich), privado (privat) y planes especiales para expats, y elegir mal puede costarte miles de euros o bloquear tu permiso de residencia. Aquí tienes el panorama completo en lenguaje claro.
+
+💡 **Atajo:** responde cuatro preguntas rápidas en nuestro [Selector de seguro médico](/tools/health-insurance-germany) gratuito y ve al instante qué tipo de seguro encaja con tu situación — estudiante, Azubi, empleado o buscador de empleo.
+
+## La regla de oro: seguro antes que visado
+
+Las embajadas alemanas y la Ausländerbehörde exigen prueba de seguro antes de emitir o prorrogar cualquier visado o permiso. El seguro de viaje solo cubre las primeras semanas; la cobertura real debe empezar el día en que arranca tu contrato de trabajo o estudios.
+
+## Seguro público (GKV) — lo estándar para la mayoría
+
+Cerca del 90 % de la gente en Alemania está asegurada públicamente con cajas como TK, AOK o Barmer. Pagas una parte fija del ingreso: alrededor del 14,6 % más un recargo de la caja, compartido con el empleador — un empleado con 3.000 € brutos paga unos 250 € al mes, y el empleador otro tanto.
+
+- **Empleados** por debajo de ~73.800 € anuales (umbral 2026) deben afiliarse a la GKV.
+- **Azubis (aprendices)** quedan inscritos automáticamente por su empresa — las cotizaciones salen directo de la nómina; usa la [Calculadora Bruto-Neto](/tools/brutto-netto-rechner) para ver el descuento exacto.
+- **Estudiantes menores de 30** tienen tarifa estudiantil de unos 130–140 € al mes.
+- Los familiares sin ingresos (cónyuge, hijos) quedan cubiertos gratis — una ventaja enorme frente al privado.
+
+## Seguro privado (PKV) — para sueldos altos y casos especiales
+
+El privado tarifica por edad y salud, no por ingreso. Un profesional sano de 28 años puede pagar 350–450 € por cobertura premium. Pero: las primas suben con la edad, las condiciones preexistentes encarecen o se excluyen, cada familiar necesita su propia póliza y volver al público es deliberadamente difícil. Regla práctica: salvo ingresos muy por encima del umbral y plan a largo plazo, empieza en el público.
+
+## Seguros expat — el puente de la llegada
+
+Para el periodo entre aterrizar y el primer contrato (buscadores de empleo, Chancenkarte, estudiantes de idioma), seguros incoming como Feather, Ottonova o Mawista cubren desde unos 70–120 € al mes y se aceptan para el visado. Son un puente, no un destino — pásate a la GKV en cuanto trabajes.
+
+## Errores comunes
+
+- **Quedarse con el seguro de viaje.** No satisface a la Ausländerbehörde para el permiso de residencia.
+- **Elegir privado a los 25 porque es más barato.** Suele serlo — hasta que cumples 45 o quieres asegurar a la familia.
+- **Estudiantes mayores de 30** contando con la tarifa estudiantil — termina a los 30 y los costes saltan.
+- **No comparar recargos de la GKV.** Varían de un 1 % a más del 2,5 % del ingreso según la caja.
+
+¿Listo para decidir? Pasa tu situación por el [Selector de seguro médico](/tools/health-insurance-germany) gratuito — menos de un minuto — y revisa en la [Lista de documentos](/tools/document-checklist) dónde encaja el certificado de seguro en tu expediente de visado.`,
+      faqs: [
+        { q: '¿Es realmente obligatorio el seguro médico en Alemania?', a: 'Sí — por ley toda persona residente en Alemania debe estar asegurada, y todo visado o permiso exige prueba de cobertura. No es legal vivir en Alemania sin seguro.' },
+        { q: '¿Cuánto cuesta el seguro público en 2026?', a: 'Alrededor del 14,6 % del ingreso bruto más el recargo de la caja, compartido con el empleador. Con 3.000 € brutos, unos 250 € al mes; estudiantes menores de 30 pagan ~130–140 € fijos.' },
+        { q: '¿Público o privado para un recién llegado?', a: 'Para la mayoría, el público (GKV) es la opción segura: familia cubierta gratis, sin cuestionario médico y costes estables. El privado solo compensa a sueldos altos con plan a largo plazo.' },
+        { q: '¿Qué seguro necesito para un visado de búsqueda de empleo o Chancenkarte?', a: 'Una póliza incoming/expat (Feather, Ottonova, Mawista) desde unos 70–120 € mensuales se acepta para el visado. Cámbiate al público al firmar contrato.' },
+        { q: '¿Los aprendices (Azubis) quedan asegurados automáticamente?', a: 'Sí. Desde el primer día de la Ausbildung tu empresa te inscribe en una caja pública y las cotizaciones se descuentan solas de la nómina — tú solo eliges la caja.' },
+      ],
+    },
+    tr: {
+      title: 'Yeni Gelenler için Almanya’da Sağlık Sigortası: Kamu mu Özel mi? (2026)',
+      summary: 'Almanya’da sağlık sigortası zorunludur. 2026’da yeni gelenler ne öder, kamu vs özel vs expat planları, öğrenci ve Azubi durumu ve hızlı seçim rehberi.',
+      content: `Almanya’da sağlık sigortası bir tercih değil — ülkedeki ilk gününüzden itibaren yasal zorunluluktur ve sigorta kanıtı olmadan hiçbir vize onaylanmaz. Ama sistem kamu (gesetzlich), özel (privat) ve özel expat planlarına ayrılır; yanlış seçim binlerce euroya mal olabilir veya oturum izninizi tıkayabilir. İşte sade dille tüm tablo.
+
+💡 **Kestirme:** ücretsiz [Sağlık Sigortası Seçici](/tools/health-insurance-germany) aracımızda dört kısa soruyu yanıtlayın ve durumunuza — öğrenci, Azubi, çalışan veya iş arayan — hangi sigorta türünün uyduğunu anında görün.
+
+## Altın kural: önce sigorta, sonra vize
+
+Alman büyükelçilikleri ve Ausländerbehörde, herhangi bir vize veya oturum izni vermeden ya da uzatmadan önce sigorta kanıtı ister. Seyahat sigortası yalnızca ilk haftaları kapsar; gerçek teminat, iş veya eğitim sözleşmenizin başladığı gün başlamalıdır.
+
+## Kamu sigortası (GKV) — çoğunluk için standart
+
+Almanya’dakilerin yaklaşık %90’ı TK, AOK veya Barmer gibi kasalarda kamu sigortalıdır. Gelirin sabit bir payını ödersiniz: yaklaşık %14,6 artı kasa ek primi, işverenle yarı yarıya — 3.000 € brüt kazanan bir çalışan ayda kabaca 250 € öder, işveren de aynı kadarını.
+
+- **Çalışanlar** yıllık ~73.800 € altında (2026 eşiği) GKV’ye girmek zorundadır.
+- **Azubiler (çıraklar)** işveren üzerinden otomatik kaydedilir — primler doğrudan maaştan kesilir; tam kesintiyi [Brüt-Net Hesaplayıcı](/tools/brutto-netto-rechner) ile görün.
+- **30 yaş altı öğrenciler** ayda yaklaşık 130–140 €’luk öğrenci tarifesinden yararlanır.
+- Geliri olmayan aile üyeleri (eş, çocuklar) ücretsiz kapsanır — özele karşı dev bir avantaj.
+
+## Özel sigorta (PKV) — yüksek gelirliler ve özel durumlar
+
+Özel sigorta gelire değil, yaşa ve sağlığa göre fiyatlar. Sağlıklı 28 yaşındaki bir profesyonel premium teminat için 350–450 € ödeyebilir. Ama: primler yaşla artar, mevcut hastalıklar fiyatı yükseltir veya kapsam dışı kalır, her aile üyesi ayrı poliçe gerektirir ve kamuya dönüş bilerek zorlaştırılmıştır. Yeni gelenler için pratik kural: geliriniz eşiğin çok üstünde ve planınız uzun vadeli değilse kamuyla başlayın.
+
+## Expat planları — varış köprüsü
+
+İniş ile ilk sözleşme arasındaki dönem için (iş arayanlar, Chancenkarte sahipleri, dil öğrencileri) Feather, Ottonova veya Mawista gibi incoming sigortalar ayda yaklaşık 70–120 €’dan teminat sağlar ve vize başvurularında kabul edilir. Bunlar köprüdür, hedef değil — çalışmaya başlar başlamaz GKV’ye geçin.
+
+## Sık yapılan hatalar
+
+- **Seyahat sigortasında kalmak.** Oturum izni için Ausländerbehörde’ye yetmez.
+- **25 yaşında ucuz diye özeli seçmek.** Çoğu zaman ucuzdur — 45’inize kadar veya aile sigortalatana kadar.
+- **30 yaş üstü öğrencilerin** öğrenci tarifesine güvenmesi — 30’da biter, sonra maliyetler fırlar.
+- **GKV ek primlerini karşılaştırmamak.** Kasaya göre gelirden %1 ile %2,5+ arasında değişir.
+
+Karar vermeye hazır mısınız? Durumunuzu ücretsiz [Sağlık Sigortası Seçici](/tools/health-insurance-germany) aracından geçirin — bir dakikadan kısa sürer — ve sigorta belgesinin vize dosyanızdaki yerini [Belge Kontrol Listesi](/tools/document-checklist) ile doğrulayın.`,
+      faqs: [
+        { q: 'Almanya’da sağlık sigortası gerçekten zorunlu mu?', a: 'Evet — yasa gereği Almanya’da yaşayan herkes sigortalı olmalı ve her vize/oturum izni teminat kanıtı ister. Almanya’da sigortasız yaşamanın yasal yolu yoktur.' },
+        { q: '2026’da kamu sigortası ne kadar?', a: 'Brüt gelirin yaklaşık %14,6’sı artı kasa ek primi, işverenle paylaşılır. 3.000 € brüt kazanan ayda yaklaşık 250 € öder; 30 yaş altı öğrenciler sabit ~130–140 €.' },
+        { q: 'Yeni gelen kamu mu özel mi seçmeli?', a: 'Çoğunluk için kamu (GKV) güvenli seçimdir: aile ücretsiz kapsanır, sağlık sorusu yoktur, maliyetler istikrarlıdır. Özel yalnızca uzun vadeli planı olan yüksek gelirlilere mantıklıdır.' },
+        { q: 'İş arama veya Chancenkarte vizesi için hangi sigorta?', a: 'Ayda yaklaşık 70–120 €’dan başlayan incoming/expat poliçeleri (Feather, Ottonova, Mawista) vize için kabul edilir. İş sözleşmesi imzalar imzalamaz kamuya geçin.' },
+        { q: 'Azubiler otomatik sigortalanır mı?', a: 'Evet. Ausbildung’un ilk gününden itibaren işveren sizi bir kamu kasasına kaydeder ve primler maaştan otomatik kesilir — siz yalnızca kasayı seçersiniz.' },
+      ],
+    },
+    fa: {
+      title: 'بیمه درمانی در آلمان برای تازه‌واردها: دولتی یا خصوصی؟ (2026)',
+      summary: 'بیمه درمانی در آلمان اجباری است. هزینه‌های 2026 برای تازه‌واردها، مقایسه دولتی و خصوصی و بیمه مهاجران، وضعیت دانشجویان و کارآموزان و راه انتخاب سریع.',
+      content: `در آلمان بیمه درمانی اختیاری نیست — از اولین روز حضور در کشور الزام قانونی است و بدون مدرک پوشش بیمه هیچ ویزایی تأیید نمی‌شود. اما سیستم به بیمه دولتی (gesetzlich)، خصوصی (privat) و طرح‌های ویژه مهاجران تقسیم می‌شود و انتخاب اشتباه می‌تواند هزاران یورو هزینه داشته باشد یا اجازه اقامت را مسدود کند. تصویر کامل به زبان ساده اینجاست.
+
+💡 **میان‌بر:** به چهار سؤال کوتاه در ابزار رایگان [انتخاب‌گر بیمه درمانی](/tools/health-insurance-germany) پاسخ دهید و فوراً ببینید کدام نوع بیمه با وضعیت شما — دانشجو، کارآموز، شاغل یا جویای کار — سازگار است.
+
+## قانون طلایی: اول بیمه، بعد ویزا
+
+سفارت‌های آلمان و اداره اتباع خارجی (Ausländerbehörde) پیش از صدور یا تمدید هر ویزا و اجازه اقامتی مدرک بیمه می‌خواهند. بیمه مسافرتی فقط هفته‌های اول را پوشش می‌دهد؛ پوشش واقعی باید از روز شروع قرارداد کار یا تحصیل آغاز شود.
+
+## بیمه دولتی (GKV) — پیش‌فرض برای اکثریت
+
+حدود ۹۰٪ ساکنان آلمان نزد صندوق‌هایی مانند TK، AOK یا Barmer بیمه دولتی‌اند. سهم ثابتی از درآمد می‌پردازید: حدود ۱۴٫۶٪ به‌علاوه هزینه اضافی صندوق، نصف‌نصف با کارفرما — کارمندی با ۳٬۰۰۰ € ناخالص حدود ۲۵۰ € در ماه می‌پردازد و کارفرما همان‌قدر.
+
+- **کارمندان** زیر حدود ۷۳٬۸۰۰ € در سال (آستانه 2026) باید عضو GKV شوند.
+- **کارآموزان (Azubi)** خودکار از طریق کارفرما ثبت می‌شوند — حق بیمه مستقیم از حقوق کم می‌شود؛ با [محاسبه‌گر حقوق خالص](/tools/brutto-netto-rechner) کسر دقیق را ببینید.
+- **دانشجویان زیر ۳۰ سال** تعرفه دانشجویی حدود ۱۳۰–۱۴۰ € در ماه دارند.
+- اعضای خانواده بدون درآمد (همسر، فرزندان) رایگان پوشش می‌گیرند — مزیتی بزرگ نسبت به خصوصی.
+
+## بیمه خصوصی (PKV) — برای پردرآمدها و موارد خاص
+
+بیمه خصوصی بر اساس سن و سلامت قیمت می‌گذارد نه درآمد. یک متخصص سالم ۲۸ ساله شاید ۳۵۰–۴۵۰ € برای پوشش ممتاز بپردازد. اما: حق بیمه با سن بالا می‌رود، بیماری‌های قبلی قیمت را بالا می‌برد یا مستثنا می‌شود، هر عضو خانواده بیمه‌نامه جدا می‌خواهد و بازگشت به دولتی عمداً سخت است. قاعده سرانگشتی تازه‌واردها: مگر درآمدتان بسیار بالاتر از آستانه و برنامه‌تان بلندمدت باشد، با دولتی شروع کنید.
+
+## بیمه‌های مهاجران — پل ورود
+
+برای فاصله بین فرود و اولین قرارداد (جویندگان کار، دارندگان کارت فرصت، دانشجویان زبان)، بیمه‌های incoming مانند Feather، Ottonova یا Mawista از حدود ۷۰–۱۲۰ € در ماه پوشش می‌دهند و برای درخواست ویزا پذیرفته می‌شوند. این‌ها پل‌اند نه مقصد — به‌محض شروع کار به GKV بروید.
+
+## اشتباهات رایج
+
+- **ماندن روی بیمه مسافرتی.** اداره اتباع آن را برای اجازه اقامت نمی‌پذیرد.
+- **انتخاب خصوصی در ۲۵ سالگی چون ارزان‌تر است.** اغلب هست — تا ۴۵ سالگی یا تا وقتی بخواهید خانواده را بیمه کنید.
+- **دانشجویان بالای ۳۰** که به تعرفه دانشجویی دل بسته‌اند — در ۳۰ سالگی تمام می‌شود و هزینه‌ها می‌پرد.
+- **مقایسه نکردن هزینه اضافی صندوق‌ها.** بین حدود ۱٪ تا بیش از ۲٫۵٪ درآمد فرق دارد.
+
+آماده تصمیم؟ وضعیت‌تان را در [انتخاب‌گر بیمه درمانی](/tools/health-insurance-germany) رایگان بررسی کنید — کمتر از یک دقیقه — و در [چک‌لیست مدارک](/tools/document-checklist) ببینید گواهی بیمه کجای پرونده ویزایتان می‌نشیند.`,
+      faqs: [
+        { q: 'آیا بیمه درمانی در آلمان واقعاً اجباری است؟', a: 'بله — طبق قانون هر ساکن آلمان باید بیمه باشد و هر ویزا یا اجازه اقامت مدرک پوشش می‌خواهد. زندگی بدون بیمه در آلمان قانونی نیست.' },
+        { q: 'بیمه دولتی در 2026 چقدر هزینه دارد؟', a: 'حدود ۱۴٫۶٪ درآمد ناخالص به‌علاوه هزینه اضافی صندوق، نصف‌نصف با کارفرما. با ۳٬۰۰۰ € ناخالص حدود ۲۵۰ € در ماه؛ دانشجویان زیر ۳۰ حدود ۱۳۰–۱۴۰ € ثابت.' },
+        { q: 'تازه‌وارد دولتی انتخاب کند یا خصوصی؟', a: 'برای اکثریت، دولتی (GKV) انتخاب امن است: پوشش رایگان خانواده، بدون پرسش پزشکی، هزینه‌های پایدار. خصوصی فقط برای پردرآمدهای با برنامه بلندمدت منطقی است.' },
+        { q: 'برای ویزای جویای کار یا کارت فرصت چه بیمه‌ای لازم است؟', a: 'بیمه incoming/مهاجران (مثل Feather، Ottonova، Mawista) از حدود ۷۰–۱۲۰ € در ماه برای ویزا پذیرفته می‌شود. با امضای قرارداد کار فوراً به دولتی بروید.' },
+        { q: 'آیا کارآموزها خودکار بیمه می‌شوند؟', a: 'بله. از اولین روز آوسبیلدونگ، کارفرما شما را نزد یک صندوق دولتی ثبت می‌کند و حق بیمه خودکار از حقوق کم می‌شود — فقط صندوق را انتخاب می‌کنید.' },
+      ],
+    },
+    pt: {
+      title: 'Seguro de saúde na Alemanha para recém-chegados: público ou privado? (2026)',
+      summary: 'O seguro de saúde é obrigatório na Alemanha. O que os recém-chegados pagam em 2026, público vs privado vs planos expat, e como escolher rápido.',
+      content: `Na Alemanha, o seguro de saúde não é opcional — é exigido por lei desde o seu primeiro dia no país, e nenhum visto é aprovado sem prova de cobertura. Mas o sistema se divide em público (gesetzlich), privado (privat) e planos especiais para expats, e a escolha errada pode custar milhares de euros ou travar sua autorização de residência. Aqui está o quadro completo em linguagem simples.
+
+💡 **Atalho:** responda quatro perguntas rápidas no nosso [Seletor de Seguro de Saúde](/tools/health-insurance-germany) gratuito e veja na hora qual tipo de seguro combina com a sua situação — estudante, Azubi, empregado ou em busca de emprego.
+
+## A regra de ouro: seguro antes do visto
+
+As embaixadas alemãs e a Ausländerbehörde exigem prova de seguro antes de emitir ou prorrogar qualquer visto ou autorização. O seguro-viagem cobre só as primeiras semanas; a cobertura real deve começar no dia em que o contrato de trabalho ou de estudos começa.
+
+## Seguro público (GKV) — o padrão para a maioria
+
+Cerca de 90% das pessoas na Alemanha têm seguro público em caixas como TK, AOK ou Barmer. Você paga uma parte fixa da renda: cerca de 14,6% mais o adicional da caixa, dividido com o empregador — quem ganha 3.000 € brutos paga uns 250 € por mês, e o empregador igual.
+
+- **Empregados** abaixo de ~73.800 € anuais (limite 2026) devem entrar na GKV.
+- **Azubis (aprendizes)** são inscritos automaticamente pela empresa — as contribuições saem direto do contracheque; use a [Calculadora Bruto-Líquido](/tools/brutto-netto-rechner) para ver o desconto exato.
+- **Estudantes com menos de 30** têm tarifa estudantil de uns 130–140 € por mês.
+- Familiares sem renda (cônjuge, filhos) ficam cobertos de graça — vantagem enorme sobre o privado.
+
+## Seguro privado (PKV) — para altos salários e casos especiais
+
+O privado precifica por idade e saúde, não por renda. Um profissional saudável de 28 anos pode pagar 350–450 € por cobertura premium. Mas: os prêmios sobem com a idade, condições preexistentes encarecem ou são excluídas, cada familiar precisa de apólice própria e voltar ao público é propositalmente difícil. Regra prática: a menos que você ganhe bem acima do limite e pense no longo prazo, comece no público.
+
+## Planos expat — a ponte da chegada
+
+Para o intervalo entre o desembarque e o primeiro contrato (busca de emprego, Chancenkarte, estudantes de idioma), seguros incoming como Feather, Ottonova ou Mawista cobrem a partir de uns 70–120 € por mês e são aceitos para o visto. São uma ponte, não um destino — mude para a GKV assim que começar a trabalhar.
+
+## Erros comuns
+
+- **Ficar no seguro-viagem.** Ele não satisfaz a Ausländerbehörde para a autorização de residência.
+- **Escolher o privado aos 25 porque é mais barato.** Costuma ser — até os 45, ou até querer segurar a família.
+- **Estudantes com mais de 30** contando com a tarifa estudantil — ela acaba aos 30 e os custos disparam.
+- **Não comparar os adicionais da GKV.** Variam de ~1% a mais de 2,5% da renda conforme a caixa.
+
+Pronto para decidir? Passe sua situação pelo [Seletor de Seguro de Saúde](/tools/health-insurance-germany) gratuito — menos de um minuto — e confira na [Lista de Documentos](/tools/document-checklist) onde o certificado de seguro entra no seu processo de visto.`,
+      faqs: [
+        { q: 'O seguro de saúde é mesmo obrigatório na Alemanha?', a: 'Sim — por lei, toda pessoa que vive na Alemanha deve estar segurada, e todo visto ou autorização exige prova de cobertura. Não há como viver legalmente na Alemanha sem seguro.' },
+        { q: 'Quanto custa o seguro público em 2026?', a: 'Cerca de 14,6% da renda bruta mais o adicional da caixa, dividido com o empregador. Com 3.000 € brutos, uns 250 € por mês; estudantes com menos de 30 pagam ~130–140 € fixos.' },
+        { q: 'Recém-chegado deve escolher público ou privado?', a: 'Para a maioria, o público (GKV) é a escolha segura: família coberta de graça, sem questionário de saúde e custos estáveis. O privado só compensa para altos salários com plano de longo prazo.' },
+        { q: 'Qual seguro para visto de busca de emprego ou Chancenkarte?', a: 'Uma apólice incoming/expat (Feather, Ottonova, Mawista) a partir de uns 70–120 € mensais é aceita para o visto. Mude para o público ao assinar contrato de trabalho.' },
+        { q: 'Os aprendizes (Azubis) são segurados automaticamente?', a: 'Sim. Desde o primeiro dia da Ausbildung a empresa inscreve você numa caixa pública e as contribuições são descontadas automaticamente — você só escolhe a caixa.' },
+      ],
+    },
+    ru: {
+      title: 'Медицинская страховка в Германии для новичков: государственная или частная? (2026)',
+      summary: 'Медстраховка в Германии обязательна. Сколько платят новички в 2026 году, GKV vs PKV vs экспат-планы, что нужно студентам и Azubi, и как выбрать быстро.',
+      content: `В Германии медицинская страховка — не опция, а требование закона с первого дня в стране, и ни одна виза не одобряется без подтверждения покрытия. При этом система делится на государственную (gesetzlich), частную (privat) и специальные экспат-планы, и неверный выбор может стоить тысячи евро или заблокировать вид на жительство. Вот вся картина простым языком.
+
+💡 **Быстрый путь:** ответьте на четыре коротких вопроса в бесплатном [Помощнике по медстраховке](/tools/health-insurance-germany) и сразу увидите, какой тип страховки подходит вашей ситуации — студент, Azubi, работник или соискатель.
+
+## Золотое правило: страховка раньше визы
+
+Немецкие посольства и ведомство по делам иностранцев (Ausländerbehörde) требуют подтверждение страховки до выдачи или продления любой визы и ВНЖ. Туристическая страховка покрывает лишь первые недели; настоящее покрытие должно начаться в день старта рабочего или учебного контракта.
+
+## Государственная (GKV) — стандарт для большинства
+
+Около 90% жителей Германии застрахованы государственно — в TK, AOK, Barmer и других кассах. Вы платите фиксированную долю дохода: примерно 14,6% плюс надбавка кассы, пополам с работодателем — работник с 3 000 € брутто платит около 250 € в месяц, столько же — работодатель.
+
+- **Наёмные работники** с зарплатой ниже ~73 800 € в год (порог 2026) обязаны быть в GKV.
+- **Azubi (ученики)** регистрируются автоматически через работодателя — взносы удерживаются прямо из зарплаты; точный вычет покажет [Калькулятор брутто-нетто](/tools/brutto-netto-rechner).
+- **Студенты до 30 лет** платят студенческий тариф около 130–140 € в месяц.
+- Члены семьи без дохода (супруг, дети) застрахованы бесплатно — огромное преимущество перед частной.
+
+## Частная (PKV) — для высоких зарплат и особых случаев
+
+Частная страховка считает по возрасту и здоровью, а не по доходу. Здоровый 28-летний специалист может платить 350–450 € за премиум-покрытие. Но: взносы растут с возрастом, хронические болезни удорожают полис или исключаются, каждому члену семьи нужен свой договор, а путь назад в GKV намеренно сложен. Правило для новичков: если доход не сильно выше порога и планы не на десятилетия — начинайте с государственной.
+
+## Экспат-планы — мост после прилёта
+
+На период между прилётом и первым контрактом (соискатели, обладатели Chancenkarte, языковые студенты) действуют incoming-страховки Feather, Ottonova, Mawista — от 70–120 € в месяц, принимаются для визы. Это мост, а не пункт назначения — переходите в GKV, как только начнёте работать.
+
+## Типичные ошибки
+
+- **Оставаться на туристической страховке.** Для ВНЖ она Ausländerbehörde не устраивает.
+- **Выбрать частную в 25, потому что дешевле.** Часто так и есть — до 45 лет или до появления семьи.
+- **Студенты старше 30** рассчитывают на студенческий тариф — он заканчивается в 30, затем расходы прыгают.
+- **Не сравнивать надбавки касс.** Они варьируются примерно от 1% до 2,5%+ дохода.
+
+Готовы решить? Прогоните свою ситуацию через бесплатный [Помощник по медстраховке](/tools/health-insurance-germany) — меньше минуты — и посмотрите в [Чек-листе документов](/tools/document-checklist), куда страховой сертификат ложится в вашем визовом досье.`,
+      faqs: [
+        { q: 'Действительно ли медстраховка в Германии обязательна?', a: 'Да — по закону застрахован должен быть каждый живущий в Германии, и любая виза или ВНЖ требует подтверждения покрытия. Жить в Германии без страховки легально невозможно.' },
+        { q: 'Сколько стоит государственная страховка в 2026 году?', a: 'Около 14,6% брутто-дохода плюс надбавка кассы, пополам с работодателем. При 3 000 € брутто — примерно 250 € в месяц; студенты до 30 платят фиксированно ~130–140 €.' },
+        { q: 'Новичку выбрать государственную или частную?', a: 'Большинству безопаснее государственная (GKV): бесплатное страхование семьи, без вопросов о здоровье, стабильные взносы. Частная оправдана только при высоком доходе и долгосрочных планах.' },
+        { q: 'Какая страховка нужна для визы соискателя или Chancenkarte?', a: 'Incoming/экспат-полис (Feather, Ottonova, Mawista) от примерно 70–120 € в месяц принимается для визы. С подписанием трудового договора сразу переходите в GKV.' },
+        { q: 'Застрахованы ли Azubi автоматически?', a: 'Да. С первого дня Ausbildung работодатель регистрирует вас в государственной кассе, взносы удерживаются из зарплаты автоматически — вы лишь выбираете кассу.' },
+      ],
+    },
+    hi: {
+      title: 'नए लोगों के लिए जर्मनी में स्वास्थ्य बीमा: सरकारी या निजी? (2026)',
+      summary: 'जर्मनी में स्वास्थ्य बीमा अनिवार्य है। 2026 में नए लोग कितना देते हैं, सरकारी बनाम निजी बनाम एक्सपैट प्लान, छात्रों-Azubi की स्थिति और तेज़ चुनाव का तरीका।',
+      content: `जर्मनी में स्वास्थ्य बीमा वैकल्पिक नहीं है — देश में पहले दिन से ही यह कानूनी रूप से अनिवार्य है, और कवरेज के प्रमाण के बिना कोई वीज़ा स्वीकृत नहीं होता। लेकिन प्रणाली सरकारी (gesetzlich), निजी (privat) और विशेष एक्सपैट प्लान में बँटी है, और गलत चुनाव हज़ारों यूरो का पड़ सकता है या आपका निवास परमिट रोक सकता है। यहाँ पूरी तस्वीर सरल भाषा में है।
+
+💡 **शॉर्टकट:** हमारे मुफ़्त [हेल्थ इंश्योरेंस चूज़र](/tools/health-insurance-germany) में चार छोटे सवालों के जवाब दें और तुरंत देखें कि आपकी स्थिति — छात्र, Azubi, कर्मचारी या नौकरी खोजने वाला — के लिए कौन-सा बीमा सही है।
+
+## सुनहरा नियम: वीज़ा से पहले बीमा
+
+जर्मन दूतावास और Ausländerbehörde किसी भी वीज़ा या निवास परमिट को जारी या विस्तारित करने से पहले बीमा प्रमाण माँगते हैं। ट्रैवल इंश्योरेंस सिर्फ़ शुरुआती हफ़्तों के लिए है; असली कवरेज उसी दिन से शुरू होनी चाहिए जिस दिन आपका काम या पढ़ाई का अनुबंध शुरू होता है।
+
+## सरकारी बीमा (GKV) — ज़्यादातर के लिए डिफ़ॉल्ट
+
+जर्मनी में लगभग 90% लोग TK, AOK या Barmer जैसी कैशों में सरकारी बीमित हैं। आप आय का तय हिस्सा देते हैं: लगभग 14.6% प्लस कैश का अधिभार, नियोक्ता के साथ आधा-आधा — 3,000 € सकल कमाने वाला कर्मचारी महीने में लगभग 250 € देता है, उतना ही नियोक्ता।
+
+- **कर्मचारी** ~73,800 € वार्षिक (2026 सीमा) से नीचे GKV में शामिल होने को बाध्य हैं।
+- **Azubi (अप्रेंटिस)** नियोक्ता के ज़रिए अपने आप पंजीकृत होते हैं — योगदान सीधे सैलरी स्लिप से कटता है; सटीक कटौती [ब्रुट्टो-नेट्टो कैलकुलेटर](/tools/brutto-netto-rechner) से देखें।
+- **30 से कम उम्र के छात्रों** के लिए छात्र दर लगभग 130–140 € प्रति माह।
+- बिना आय वाले परिवारजन (जीवनसाथी, बच्चे) मुफ़्त कवर होते हैं — निजी के मुक़ाबले बहुत बड़ा फ़ायदा।
+
+## निजी बीमा (PKV) — ऊँची कमाई और विशेष मामलों के लिए
+
+निजी बीमा उम्र और सेहत से क़ीमत तय करता है, आय से नहीं। 28 साल का स्वस्थ प्रोफ़ेशनल प्रीमियम कवरेज के लिए 350–450 € दे सकता है। लेकिन: प्रीमियम उम्र के साथ बढ़ते हैं, पुरानी बीमारियाँ दाम बढ़ाती हैं या बाहर रखी जाती हैं, हर परिवारजन की अलग पॉलिसी चाहिए, और सरकारी में वापसी जानबूझकर मुश्किल है। नए लोगों के लिए नियम: जब तक आय सीमा से काफ़ी ऊपर न हो और योजना दीर्घकालिक न हो, सरकारी से शुरुआत करें।
+
+## एक्सपैट प्लान — आगमन का पुल
+
+लैंडिंग और पहले अनुबंध के बीच की अवधि (नौकरी खोजने वाले, Chancenkarte धारक, भाषा छात्र) के लिए Feather, Ottonova या Mawista जैसे incoming बीमे लगभग 70–120 € प्रति माह से कवर करते हैं और वीज़ा आवेदन में मान्य हैं। ये पुल हैं, मंज़िल नहीं — काम शुरू होते ही GKV में जाएँ।
+
+## आम गलतियाँ
+
+- **ट्रैवल इंश्योरेंस पर टिके रहना।** निवास परमिट के लिए Ausländerbehörde इसे नहीं मानता।
+- **25 की उम्र में निजी चुनना क्योंकि सस्ता है।** अक्सर होता है — 45 की उम्र तक, या परिवार का बीमा कराने तक।
+- **30 से ऊपर के छात्र** छात्र दर मान बैठते हैं — वह 30 पर ख़त्म होती है, फिर लागत उछलती है।
+- **GKV अधिभारों की तुलना न करना।** कैश के हिसाब से यह आय के ~1% से 2.5%+ तक जाता है।
+
+फ़ैसले के लिए तैयार? अपनी स्थिति मुफ़्त [हेल्थ इंश्योरेंस चूज़र](/tools/health-insurance-germany) से जाँचें — एक मिनट से कम — और [डॉक्यूमेंट चेकलिस्ट](/tools/document-checklist) में देखें कि बीमा प्रमाणपत्र आपकी वीज़ा फ़ाइल में कहाँ लगता है।`,
+      faqs: [
+        { q: 'क्या जर्मनी में स्वास्थ्य बीमा सच में अनिवार्य है?', a: 'हाँ — कानूनन जर्मनी में रहने वाले हर व्यक्ति का बीमित होना ज़रूरी है, और हर वीज़ा या निवास परमिट कवरेज प्रमाण माँगता है। बिना बीमा जर्मनी में रहना कानूनी नहीं है।' },
+        { q: '2026 में सरकारी बीमा कितने का है?', a: 'सकल आय का लगभग 14.6% प्लस कैश अधिभार, नियोक्ता के साथ साझा। 3,000 € सकल पर महीने में क़रीब 250 €; 30 से कम उम्र के छात्र ~130–140 € फ़्लैट देते हैं।' },
+        { q: 'नए व्यक्ति को सरकारी चुनना चाहिए या निजी?', a: 'ज़्यादातर के लिए सरकारी (GKV) सुरक्षित है: परिवार मुफ़्त कवर, कोई मेडिकल सवाल नहीं, स्थिर लागत। निजी सिर्फ़ दीर्घकालिक योजना वाले ऊँची कमाई वालों के लिए समझदारी है।' },
+        { q: 'जॉब-सीकर या Chancenkarte वीज़ा के लिए कौन-सा बीमा?', a: 'लगभग 70–120 € मासिक से शुरू होने वाली incoming/एक्सपैट पॉलिसी (Feather, Ottonova, Mawista) वीज़ा के लिए मान्य है। नौकरी का अनुबंध साइन होते ही सरकारी में चले जाएँ।' },
+        { q: 'क्या Azubi अपने आप बीमित हो जाते हैं?', a: 'हाँ। Ausbildung के पहले दिन से नियोक्ता आपको सरकारी कैश में पंजीकृत करता है और योगदान सैलरी से अपने आप कटता है — आप बस कैश चुनते हैं।' },
+      ],
+    },
+    ur: {
+      title: 'نئے آنے والوں کے لیے جرمنی میں ہیلتھ انشورنس: سرکاری یا نجی؟ (2026)',
+      summary: 'جرمنی میں ہیلتھ انشورنس لازمی ہے۔ 2026 میں نئے آنے والے کتنا دیتے ہیں، سرکاری بمقابلہ نجی بمقابلہ ایکسپیٹ پلان، طلبہ اور Azubi کی صورتحال اور تیز انتخاب کا طریقہ۔',
+      content: `جرمنی میں ہیلتھ انشورنس اختیاری نہیں — ملک میں پہلے دن سے قانوناً لازم ہے اور کوریج کے ثبوت کے بغیر کوئی ویزا منظور نہیں ہوتا۔ مگر نظام سرکاری (gesetzlich)، نجی (privat) اور خصوصی ایکسپیٹ پلانز میں بٹا ہے، اور غلط انتخاب ہزاروں یورو مہنگا پڑ سکتا ہے یا آپ کا رہائشی اجازت نامہ روک سکتا ہے۔ یہاں پوری تصویر آسان زبان میں ہے۔
+
+💡 **شارٹ کٹ:** ہمارے مفت [ہیلتھ انشورنس چُوزر](/tools/health-insurance-germany) میں چار مختصر سوالوں کے جواب دیں اور فوراً دیکھیں کہ آپ کی صورتحال — طالب علم، Azubi، ملازم یا نوکری کے متلاشی — کے لیے کون سی انشورنس درست ہے۔
+
+## سنہری اصول: ویزے سے پہلے انشورنس
+
+جرمن سفارت خانے اور Ausländerbehörde کسی بھی ویزے یا رہائشی اجازت نامے کے اجرا یا توسیع سے پہلے انشورنس کا ثبوت مانگتے ہیں۔ ٹریول انشورنس صرف ابتدائی ہفتے کور کرتی ہے؛ اصل کوریج اسی دن شروع ہونی چاہیے جس دن آپ کا کام یا تعلیم کا معاہدہ شروع ہو۔
+
+## سرکاری انشورنس (GKV) — اکثریت کے لیے ڈیفالٹ
+
+جرمنی میں تقریباً 90% لوگ TK، AOK یا Barmer جیسی کیشوں میں سرکاری بیمہ شدہ ہیں۔ آپ آمدنی کا مقررہ حصہ دیتے ہیں: تقریباً 14.6% مع کیش کا اضافی چارج، آجر کے ساتھ آدھا آدھا — 3,000 € مجموعی کمانے والا ملازم مہینے میں تقریباً 250 € دیتا ہے اور اتنا ہی آجر۔
+
+- **ملازمین** جن کی سالانہ تنخواہ ~73,800 € (2026 کی حد) سے کم ہو، GKV میں شامل ہونے کے پابند ہیں۔
+- **Azubis (اپرنٹس)** آجر کے ذریعے خودکار رجسٹر ہوتے ہیں — کنٹریبیوشن براہِ راست تنخواہ سے کٹتا ہے؛ درست کٹوتی [برٹو-نیٹو کیلکولیٹر](/tools/brutto-netto-rechner) سے دیکھیں۔
+- **30 سال سے کم عمر طلبہ** کے لیے طلبہ ریٹ تقریباً 130–140 € ماہانہ۔
+- بغیر آمدنی والے اہلِ خانہ (شریکِ حیات، بچے) مفت کور ہوتے ہیں — نجی کے مقابلے میں زبردست فائدہ۔
+
+## نجی انشورنس (PKV) — زیادہ آمدنی اور خاص صورتوں کے لیے
+
+نجی انشورنس عمر اور صحت سے قیمت لگاتی ہے، آمدنی سے نہیں۔ 28 سالہ صحت مند پروفیشنل پریمیم کوریج کے لیے 350–450 € دے سکتا ہے۔ مگر: پریمیم عمر کے ساتھ بڑھتے ہیں، پرانی بیماریاں قیمت بڑھاتی یا خارج ہوتی ہیں، ہر فردِ خانہ کی الگ پالیسی چاہیے، اور سرکاری میں واپسی جان بوجھ کر مشکل رکھی گئی ہے۔ نئے آنے والوں کا اصول: جب تک آمدنی حد سے واضح اوپر اور منصوبہ طویل مدتی نہ ہو، سرکاری سے شروع کریں۔
+
+## ایکسپیٹ پلانز — آمد کا پل
+
+لینڈنگ اور پہلے معاہدے کے درمیانی عرصے کے لیے (نوکری کے متلاشی، چانسن کارٹے ہولڈرز، زبان کے طلبہ) Feather، Ottonova یا Mawista جیسی incoming انشورنسز تقریباً 70–120 € ماہانہ سے کور کرتی ہیں اور ویزا درخواستوں کے لیے قابلِ قبول ہیں۔ یہ پل ہیں، منزل نہیں — کام شروع ہوتے ہی GKV میں چلے جائیں۔
+
+## عام غلطیاں
+
+- **ٹریول انشورنس پر رہنا۔** رہائشی اجازت نامے کے لیے Ausländerbehörde اسے نہیں مانتا۔
+- **25 سال کی عمر میں نجی چننا کیونکہ سستی ہے۔** اکثر ہوتی ہے — 45 تک، یا جب خاندان کا بیمہ کرانا ہو۔
+- **30 سے اوپر کے طلبہ** طلبہ ریٹ پر بھروسہ کرتے ہیں — وہ 30 پر ختم ہو جاتا ہے، پھر لاگت اچھل جاتی ہے۔
+- **GKV کے اضافی چارجز کا موازنہ نہ کرنا۔** کیش کے لحاظ سے یہ آمدنی کے ~1% سے 2.5%+ تک ہوتا ہے۔
+
+فیصلے کے لیے تیار؟ اپنی صورتحال مفت [ہیلتھ انشورنس چُوزر](/tools/health-insurance-germany) سے جانچیں — ایک منٹ سے کم — اور [دستاویزات چیک لسٹ](/tools/document-checklist) میں دیکھیں کہ انشورنس سرٹیفکیٹ آپ کی ویزا فائل میں کہاں لگتا ہے۔`,
+      faqs: [
+        { q: 'کیا جرمنی میں ہیلتھ انشورنس واقعی لازمی ہے؟', a: 'جی ہاں — قانوناً جرمنی میں رہنے والے ہر شخص کا بیمہ ہونا ضروری ہے، اور ہر ویزا یا رہائشی اجازت نامہ کوریج کا ثبوت مانگتا ہے۔ بغیر انشورنس جرمنی میں رہنا قانونی نہیں۔' },
+        { q: '2026 میں سرکاری انشورنس کتنے کی ہے؟', a: 'مجموعی آمدنی کا تقریباً 14.6% مع کیش کا اضافی چارج، آجر کے ساتھ آدھا آدھا۔ 3,000 € مجموعی پر مہینے میں تقریباً 250 €؛ 30 سے کم عمر طلبہ ~130–140 € فکسڈ دیتے ہیں۔' },
+        { q: 'نئے آنے والے کو سرکاری چننا چاہیے یا نجی؟', a: 'اکثریت کے لیے سرکاری (GKV) محفوظ انتخاب ہے: خاندان مفت کور، کوئی طبی سوالنامہ نہیں، مستحکم لاگت۔ نجی صرف طویل مدتی منصوبے والے زیادہ کمانے والوں کے لیے معقول ہے۔' },
+        { q: 'جاب سیکر یا چانسن کارٹے ویزے کے لیے کون سی انشورنس؟', a: 'تقریباً 70–120 € ماہانہ سے شروع ہونے والی incoming/ایکسپیٹ پالیسی (Feather، Ottonova، Mawista) ویزے کے لیے قابلِ قبول ہے۔ ملازمت کا معاہدہ سائن ہوتے ہی سرکاری میں منتقل ہو جائیں۔' },
+        { q: 'کیا Azubis خودکار بیمہ ہو جاتے ہیں؟', a: 'جی ہاں۔ آؤسبلڈنگ کے پہلے دن سے آجر آپ کو سرکاری کیش میں رجسٹر کرتا ہے اور کنٹریبیوشن تنخواہ سے خودکار کٹتا ہے — آپ صرف کیش چنتے ہیں۔' },
+      ],
+    },
+    zh: {
+      title: '新移民德国医疗保险指南：公保还是私保？（2026）',
+      summary: '在德国，医保是法定义务。2026 年新移民要交多少钱、公保 vs 私保 vs 外籍人士保险、学生和学徒怎么办，以及如何快速做出选择。',
+      content: `在德国，医疗保险不是可选项——从你入境第一天起就是法律义务，没有保险证明任何签证都不会获批。但这个体系分为公保（gesetzlich）、私保（privat）和专门的外籍人士计划，选错可能损失数千欧元，甚至卡住你的居留许可。下面用大白话讲清全貌。
+
+💡 **捷径：** 在我们免费的[医保选择器](/tools/health-insurance-germany)里回答四个小问题，立即看到哪种保险适合你的情况——学生、学徒、雇员还是求职者。
+
+## 黄金法则：先有保险，再谈签证
+
+德国使馆和外国人管理局（Ausländerbehörde）在签发或延长任何签证、居留许可前都要求保险证明。旅行保险只能覆盖最初几周；真正的保障必须从你的工作或学习合同开始之日生效。
+
+## 公保（GKV）——大多数人的默认选择
+
+德国约 90% 的人在 TK、AOK、Barmer 等公立保险公司投保。你按收入固定比例缴费：约 14.6% 加上保险公司的附加费，与雇主对半分——税前月薪 3,000 € 的雇员每月约缴 250 €，雇主同额缴纳。
+
+- **雇员**年薪低于约 73,800 €（2026 年门槛）必须加入公保。
+- **学徒（Azubi）**由雇主自动注册——保费直接从工资里扣；用[税前税后计算器](/tools/brutto-netto-rechner)可以看到确切扣款。
+- **30 岁以下学生**享受每月约 130–140 € 的学生费率。
+- 无收入的家庭成员（配偶、子女）免费共保——相比私保是巨大优势。
+
+## 私保（PKV）——适合高收入者和特殊情况
+
+私保按年龄和健康状况定价，而不是收入。健康的 28 岁专业人士可能只需 350–450 € 就能获得高端保障。但是：保费随年龄上涨，既往病史会加价或被除外，每位家庭成员都需要单独保单，而且回到公保被刻意设计得很难。新移民的经验法则：除非收入远超门槛且打算长期留下，先从公保开始。
+
+## 外籍人士保险——落地过渡桥
+
+从落地到签下第一份合同之间（求职者、机会卡持有者、语言班学生），Feather、Ottonova、Mawista 等 incoming 保险每月约 70–120 € 起，可用于签证申请。它们是桥梁而非终点——一开始工作就转入公保。
+
+## 常见错误
+
+- **一直用旅行保险。** 外管局办居留时不认。
+- **25 岁因为便宜选私保。** 便宜往往是真的——直到你 45 岁，或想给全家投保。
+- **30 岁以上的学生**以为学生费率还在——它在 30 岁终止，之后费用暴涨。
+- **不比较公保附加费。** 各保险公司差别是真金白银：附加费从约 1% 到 2.5% 以上不等。
+
+准备好决定了吗？把你的情况放进免费的[医保选择器](/tools/health-insurance-germany)——不到一分钟就知道该敲哪扇门——再用[材料清单](/tools/document-checklist)确认保险证明放在签证材料的哪个环节。`,
+      faqs: [
+        { q: '在德国医保真的是强制的吗？', a: '是的——法律规定在德国生活的每个人都必须投保，任何签证或居留许可都要求保险证明。在德国无保险生活没有合法途径。' },
+        { q: '2026 年公保要交多少钱？', a: '约为税前收入的 14.6% 加保险公司附加费，与雇主对半分。税前 3,000 € 的雇员每月约 250 €；30 岁以下学生固定约 130–140 €。' },
+        { q: '新移民该选公保还是私保？', a: '对大多数人来说公保（GKV）更稳妥：家人免费共保、无健康问卷、费用稳定。私保只适合收入远超门槛并打算长期留德的人。' },
+        { q: '求职签证或机会卡需要什么保险？', a: '每月约 70–120 € 起的 incoming/外籍人士保险（如 Feather、Ottonova、Mawista）可用于签证申请。签订劳动合同后立即转公保。' },
+        { q: '学徒会自动获得保险吗？', a: '会。从 Ausbildung 第一天起，雇主就会为你在公立保险公司注册，保费自动从工资中扣除——你只需选择保险公司。' },
+      ],
+    },
+  },
+}

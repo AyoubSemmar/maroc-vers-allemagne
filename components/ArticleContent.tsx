@@ -2,12 +2,41 @@
 
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { useLocale } from 'next-intl'
+import { routing } from '@/i18n/routing'
 
 export default function ArticleContent({ content }: { content: string }) {
+  const locale = useLocale()
+
+  // Internal links in article markdown are written locale-less
+  // ("/tools/sperrkonto-calculator") — prefix the reader's locale so the
+  // click stays in their language instead of bouncing through a redirect.
+  function localizeHref(href?: string): string | undefined {
+    if (!href || !href.startsWith('/')) return href
+    const first = href.split('/')[1]
+    if ((routing.locales as readonly string[]).includes(first)) return href
+    return `/${locale}${href}`
+  }
+
   return (
     <ReactMarkdown
       remarkPlugins={[remarkGfm]}
       components={{
+        // Links must LOOK clickable — Tailwind preflight strips default
+        // anchor styling, so without this a tool link reads as plain text.
+        a: ({ href, children }) => {
+          const url = localizeHref(href)
+          const internal = !!url && url.startsWith('/')
+          return (
+            <a
+              href={url}
+              {...(internal ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+              className="text-green-700 font-semibold underline decoration-green-400 decoration-2 underline-offset-2 hover:text-green-800 hover:decoration-green-600 transition-colors"
+            >
+              {children}
+            </a>
+          )
+        },
         // GFM tables — scroll inside their own container on narrow screens so
         // the page body never scrolls horizontally on mobile.
         table: ({ children }) => (

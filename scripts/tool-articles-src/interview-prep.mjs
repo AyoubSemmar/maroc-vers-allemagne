@@ -1,0 +1,537 @@
+// Companion article for /interview-prep — written in-session, no API.
+export default {
+  slug: 'g-german-job-interview-questions-how-to-prepare',
+  category: 'jobs',
+  audience: 'global',
+  imagePrompt: 'A confident young candidate shakes hands with two interviewers across a table in a bright modern German office, laptop and papers on the table, natural window light',
+  translations: {
+    en: {
+      title: 'The German Job Interview: Questions, Culture and How to Prepare (2026)',
+      summary: 'What German employers really ask in interviews — the classic questions, cultural codes, video-call rules for candidates abroad, and how to practice by field.',
+      content: `You got the invitation — congratulations, your application beat dozens of others. Now comes the part where most international candidates lose the offer: the German interview. Not because their skills are weak, but because they prepare for the wrong questions and miss the cultural codes German employers care about.
+
+💡 **Shortcut:** practice real German interview questions for YOUR profession — nursing, IT, trades, driving, hospitality and more — with model answers in our free [Interview Prep](/interview-prep) tool.
+
+## What German interviewers actually ask
+
+Nearly every German interview — for an Ausbildung, a nursing job or a developer role — is built from the same core:
+
+- **"Erzählen Sie etwas über sich"** (tell us about yourself) — they want a 2-minute professional story, not your biography.
+- **"Warum Deutschland? Warum unser Unternehmen?"** — the most important question for international candidates. A concrete, personal answer beats "Germany has good opportunities" every time.
+- **"Was sind Ihre Stärken und Schwächen?"** — Germans expect an honest weakness plus what you do about it, not "I work too hard."
+- **Situational questions** — "describe a conflict with a colleague and how you solved it." Prepare 3 short real stories you can adapt.
+- **Field questions** — care protocols for nurses, debugging approaches for developers, safety rules for drivers and trades. This is where field-specific practice pays off; the [Interview Prep](/interview-prep) tool covers 12 professional fields.
+
+## The cultural codes that decide
+
+- **Punctuality is the interview.** For video calls, be in the room 5 minutes early. Being late — even 3 minutes, even online — is often disqualifying.
+- **Directness wins.** Answer the question asked, concretely, with numbers where possible. Long diplomatic detours read as evasive.
+- **Honesty about your German level.** Saying "B1, taking a B2 course" and then demonstrating it beats claiming fluency and stumbling.
+- **Questions at the end are mandatory.** "Keine Fragen" signals no interest. Ask about the team, the onboarding, the training plan.
+
+## Interviewing from abroad
+
+Most first interviews for international candidates happen by video. Test your camera, light and internet an hour before; keep your passport and certificates within reach; and expect a follow-up question about your visa path — being able to say "my documents are ready, I used a checklist" (see the [Document Checklist](/tools/document-checklist)) signals seriousness. If the salary question comes, know the realistic range for your field beforehand with the [Brutto-Netto Calculator](/tools/brutto-netto-rechner) so you negotiate in net terms you understand.
+
+## Common mistakes
+
+- Memorizing answers word-for-word — interviewers notice, and one follow-up question breaks the script.
+- Criticizing your current employer or country. Neutral reasons for leaving, positive reasons for Germany.
+- Not preparing the "why us" — it decides more offers than any technical question.
+- Practicing alone in your head. Say the answers OUT LOUD; ideally record them.
+
+Ten questions rehearsed out loud will put you ahead of 90% of candidates. Start now with the free [Interview Prep](/interview-prep) — pick your field and practice the exact questions employers ask.`,
+      faqs: [
+        { q: 'What questions are asked in a German job interview?', a: 'The core set: tell us about yourself, why Germany and why this company, strengths and weaknesses, situational stories (conflicts, mistakes, teamwork) and field-specific technical questions. Prepare concrete 2-minute answers for each.' },
+        { q: 'What German level do I need to pass an interview?', a: 'For Ausbildung roughly B1, for most skilled jobs B1–B2, for care professions B2 is usually formal requirement. Honesty plus a visible learning plan beats overclaiming — interviewers test the level within minutes.' },
+        { q: 'How do video interviews with German employers work?', a: 'Most first rounds are 30–45 minute video calls. Join 5 minutes early, dress as for an office meeting, have documents at hand, and expect questions about your visa timeline and start date.' },
+        { q: 'What should I ask at the end of the interview?', a: 'Always ask 2–3 questions: about the team you would join, the onboarding or training plan, and the next steps in the process. Having no questions reads as no interest in Germany.' },
+        { q: 'How do I discuss salary in a German interview?', a: 'Research the realistic range for your field and region first, then name a gross annual figure. Understand what stays net of taxes and insurance before you negotiate — a brutto-netto calculator shows this in seconds.' },
+      ],
+    },
+    fr: {
+      title: 'L’entretien d’embauche allemand : questions, culture et préparation (2026)',
+      summary: 'Ce que demandent vraiment les employeurs allemands — questions classiques, codes culturels, règles des visios pour candidats à l’étranger, et comment s’entraîner par métier.',
+      content: `Vous avez reçu l’invitation — félicitations, votre candidature a battu des dizaines d’autres. Vient maintenant l’étape où la plupart des candidats internationaux perdent l’offre : l’entretien allemand. Non pas faute de compétences, mais parce qu’ils préparent les mauvaises questions et ratent les codes culturels qui comptent pour les employeurs allemands.
+
+💡 **Raccourci :** entraînez-vous aux vraies questions d’entretien de VOTRE métier — soins, informatique, artisanat, conduite, hôtellerie et plus — avec des réponses modèles dans notre outil gratuit [Préparation à l’entretien](/interview-prep).
+
+## Ce que demandent vraiment les recruteurs allemands
+
+Presque chaque entretien allemand — Ausbildung, poste d’infirmier ou de développeur — repose sur le même noyau :
+
+- **« Erzählen Sie etwas über sich »** (parlez-nous de vous) — ils veulent une histoire professionnelle de 2 minutes, pas votre biographie.
+- **« Warum Deutschland ? Warum unser Unternehmen ? »** — LA question décisive pour les candidats internationaux. Une réponse concrète et personnelle bat toujours « l’Allemagne offre de bonnes opportunités ».
+- **« Vos forces et vos faiblesses ? »** — les Allemands attendent une faiblesse honnête plus ce que vous faites pour y remédier, pas « je travaille trop ».
+- **Questions situationnelles** — « décrivez un conflit avec un collègue et sa résolution ». Préparez 3 histoires vraies et courtes, adaptables.
+- **Questions métier** — protocoles de soins pour les infirmiers, méthodes de débogage pour les développeurs, règles de sécurité pour les conducteurs et artisans. C’est là que l’entraînement par métier paie ; l’outil [Préparation à l’entretien](/interview-prep) couvre 12 domaines professionnels.
+
+## Les codes culturels qui décident
+
+- **La ponctualité EST l’entretien.** En visio, soyez dans la salle 5 minutes avant. Un retard — même 3 minutes, même en ligne — est souvent éliminatoire.
+- **La franchise gagne.** Répondez à la question posée, concrètement, chiffres à l’appui. Les détours diplomatiques passent pour de l’évitement.
+- **Honnêteté sur votre niveau d’allemand.** Dire « B1, en cours de B2 » et le démontrer vaut mieux que prétendre être bilingue et trébucher.
+- **Les questions finales sont obligatoires.** « Keine Fragen » signale un désintérêt. Interrogez sur l’équipe, l’intégration, le plan de formation.
+
+## Passer l’entretien depuis l’étranger
+
+La plupart des premiers entretiens internationaux se font en visio. Testez caméra, lumière et connexion une heure avant ; gardez passeport et certificats à portée ; et attendez-vous à une question sur votre parcours visa — pouvoir dire « mes documents sont prêts, j’ai suivi une checklist » (voir la [Checklist de documents](/tools/document-checklist)) signale du sérieux. Si la question du salaire arrive, connaissez d’avance la fourchette réaliste de votre métier avec le [Calculateur Brut-Net](/tools/brutto-netto-rechner) pour négocier en termes nets que vous comprenez.
+
+## Erreurs fréquentes
+
+- Mémoriser mot à mot — les recruteurs le remarquent, et une question de relance casse le script.
+- Critiquer son employeur ou son pays actuel. Raisons de départ neutres, raisons positives pour l’Allemagne.
+- Ne pas préparer le « pourquoi nous » — il décide plus d’offres que n’importe quelle question technique.
+- S’entraîner dans sa tête. Dites les réponses À VOIX HAUTE ; idéalement, enregistrez-vous.
+
+Dix questions répétées à voix haute vous placent devant 90 % des candidats. Commencez maintenant avec la [Préparation à l’entretien](/interview-prep) gratuite — choisissez votre métier et travaillez les questions exactes que posent les employeurs.`,
+      faqs: [
+        { q: 'Quelles questions pose-t-on en entretien en Allemagne ?', a: 'Le noyau : parlez-nous de vous, pourquoi l’Allemagne et cette entreprise, forces et faiblesses, histoires situationnelles (conflits, erreurs, équipe) et questions techniques du métier. Préparez des réponses concrètes de 2 minutes.' },
+        { q: 'Quel niveau d’allemand pour réussir l’entretien ?', a: 'Ausbildung : environ B1 ; la plupart des postes qualifiés : B1–B2 ; métiers du soin : B2 souvent exigé formellement. L’honnêteté plus un plan d’apprentissage visible bat la surestimation — le niveau se teste en quelques minutes.' },
+        { q: 'Comment se passent les entretiens vidéo avec les employeurs allemands ?', a: 'La plupart des premiers tours durent 30–45 minutes en visio. Connectez-vous 5 minutes avant, habillez-vous comme au bureau, gardez vos documents à portée et attendez des questions sur votre calendrier de visa et votre date de début.' },
+        { q: 'Que demander à la fin de l’entretien ?', a: 'Toujours 2–3 questions : sur l’équipe, l’intégration ou le plan de formation, et les prochaines étapes. Ne rien demander est perçu comme un manque d’intérêt.' },
+        { q: 'Comment parler salaire en entretien allemand ?', a: 'Renseignez-vous d’abord sur la fourchette réaliste de votre métier et région, puis annoncez un brut annuel. Comprenez ce qui reste en net après impôts et assurances avant de négocier — un calculateur brut-net le montre en secondes.' },
+      ],
+    },
+    ar: {
+      title: 'مقابلة العمل الألمانية: الأسئلة والثقافة وكيف تستعد (2026)',
+      summary: 'ما يسأله أصحاب العمل الألمان فعلاً — الأسئلة الكلاسيكية والقواعد الثقافية وقواعد مقابلات الفيديو للمرشحين في الخارج، وكيف تتدرب حسب مجالك.',
+      content: `وصلتك الدعوة — مبروك، لقد تغلب ملفك على عشرات المرشحين. الآن تأتي المرحلة التي يخسر فيها معظم المرشحين الدوليين العرض: المقابلة الألمانية. ليس لضعف مهاراتهم، بل لأنهم يستعدون للأسئلة الخاطئة ويفوّتون القواعد الثقافية التي يهتم بها أصحاب العمل الألمان.
+
+💡 **اختصار:** تدرّب على أسئلة المقابلات الحقيقية في مجالك أنت — التمريض، المعلوميات، الحرف، القيادة، الفندقة وغيرها — مع أجوبة نموذجية في أداتنا المجانية [التحضير للمقابلة](/interview-prep).
+
+## ما يسأله المحاورون الألمان فعلاً
+
+كل مقابلة ألمانية تقريباً — لأوسبيلدونغ أو وظيفة تمريض أو مطوّر — تُبنى من النواة نفسها:
+
+- **«حدّثنا عن نفسك» (Erzählen Sie etwas über sich)** — يريدون قصة مهنية في دقيقتين، لا سيرتك الذاتية كاملة.
+- **«لماذا ألمانيا؟ ولماذا شركتنا؟»** — السؤال الأهم للمرشحين الدوليين. الجواب الملموس الشخصي يتفوق دائماً على «ألمانيا فيها فرص جيدة».
+- **«ما نقاط قوتك وضعفك؟»** — يتوقع الألمان نقطة ضعف صادقة مع ما تفعله لمعالجتها، لا «أعمل أكثر من اللازم».
+- **أسئلة المواقف** — «صف خلافاً مع زميل وكيف حللته». حضّر 3 قصص حقيقية قصيرة قابلة للتكييف.
+- **أسئلة المجال** — بروتوكولات الرعاية للممرضين، وأساليب تصحيح الأخطاء للمطورين، وقواعد السلامة للسائقين والحرفيين. هنا يثمر التدريب المتخصص؛ أداة [التحضير للمقابلة](/interview-prep) تغطي 12 مجالاً مهنياً.
+
+## القواعد الثقافية التي تحسم
+
+- **الالتزام بالوقت هو المقابلة.** في مكالمات الفيديو كن في الغرفة قبل 5 دقائق. التأخر — حتى 3 دقائق، حتى عبر الإنترنت — غالباً إقصائي.
+- **الصراحة تفوز.** أجب عن السؤال المطروح بشكل ملموس وبأرقام حيثما أمكن. اللف الدبلوماسي الطويل يُقرأ تهرّباً.
+- **الصدق في مستواك بالألمانية.** قول «B1 وأتابع دورة B2» ثم إثباته خير من ادعاء الطلاقة ثم التعثر.
+- **الأسئلة في النهاية إلزامية.** «لا أسئلة عندي» تعني لا اهتمام. اسأل عن الفريق والاندماج وخطة التدريب.
+
+## المقابلة من الخارج
+
+معظم المقابلات الأولى للمرشحين الدوليين تجري بالفيديو. اختبر الكاميرا والإضاءة والإنترنت قبل ساعة؛ وأبقِ جواز سفرك وشهاداتك في المتناول؛ وتوقع سؤالاً عن مسار تأشيرتك — أن تقول «وثائقي جاهزة، اتبعت قائمة تحقق» (انظر [قائمة الوثائق](/tools/document-checklist)) يبعث رسالة جدية. وإن جاء سؤال الراتب، اعرف مسبقاً النطاق الواقعي لمجالك عبر [حاسبة الراتب الصافي](/tools/brutto-netto-rechner) لتفاوض بأرقام صافية تفهمها.
+
+## أخطاء شائعة
+
+- حفظ الأجوبة حرفياً — يلاحظها المحاورون، وسؤال متابعة واحد يكسر النص.
+- انتقاد مشغّلك أو بلدك الحالي. أسباب مغادرة محايدة وأسباب إيجابية لألمانيا.
+- عدم تحضير «لماذا نحن» — يحسم عروضاً أكثر من أي سؤال تقني.
+- التدرب في رأسك فقط. قل الأجوبة بصوت مسموع؛ والأفضل أن تسجل نفسك.
+
+عشرة أسئلة متدرَّب عليها بصوت عالٍ تضعك أمام 90% من المرشحين. ابدأ الآن مع [التحضير للمقابلة](/interview-prep) المجاني — اختر مجالك وتدرّب على الأسئلة الفعلية التي يطرحها أصحاب العمل.`,
+      faqs: [
+        { q: 'ما الأسئلة المطروحة في مقابلة عمل ألمانية؟', a: 'النواة: حدّثنا عن نفسك، لماذا ألمانيا وهذه الشركة، نقاط القوة والضعف، قصص مواقف (خلافات، أخطاء، عمل جماعي)، وأسئلة تقنية حسب المجال. حضّر أجوبة ملموسة من دقيقتين لكل منها.' },
+        { q: 'ما مستوى الألمانية اللازم لاجتياز المقابلة؟', a: 'للأوسبيلدونغ نحو B1، ولمعظم الوظائف المؤهلة B1–B2، ولمهن الرعاية B2 شرط رسمي غالباً. الصدق مع خطة تعلم واضحة يتفوق على المبالغة — فالمستوى يُختبر خلال دقائق.' },
+        { q: 'كيف تجري مقابلات الفيديو مع أصحاب العمل الألمان؟', a: 'معظم الجولات الأولى مكالمات فيديو من 30–45 دقيقة. ادخل قبل 5 دقائق، والبس كما لاجتماع مكتبي، وأبقِ الوثائق قريبة، وتوقع أسئلة عن جدول تأشيرتك وتاريخ بدئك.' },
+        { q: 'ماذا أسأل في نهاية المقابلة؟', a: 'اسأل دائماً 2–3 أسئلة: عن الفريق الذي ستنضم إليه، وخطة الاندماج أو التدريب، والخطوات التالية. غياب الأسئلة يُقرأ كغياب اهتمام.' },
+        { q: 'كيف أناقش الراتب في مقابلة ألمانية؟', a: 'ابحث أولاً عن النطاق الواقعي لمجالك ومنطقتك ثم اذكر رقماً إجمالياً سنوياً. وافهم ما يتبقى صافياً بعد الضرائب والتأمينات قبل التفاوض — حاسبة الراتب الصافي تريك ذلك في ثوانٍ.' },
+      ],
+    },
+    de: {
+      title: 'Das deutsche Vorstellungsgespräch: Fragen, Kultur und Vorbereitung (2026)',
+      summary: 'Was deutsche Arbeitgeber wirklich fragen — die Klassiker, kulturelle Codes, Videocall-Regeln für Bewerber im Ausland und Übung nach Berufsfeld.',
+      content: `Die Einladung ist da — Glückwunsch, Ihre Bewerbung hat Dutzende andere geschlagen. Jetzt kommt der Teil, an dem die meisten internationalen Bewerber das Angebot verlieren: das deutsche Vorstellungsgespräch. Nicht wegen schwacher Fähigkeiten, sondern weil sie die falschen Fragen vorbereiten und die kulturellen Codes verpassen, auf die deutsche Arbeitgeber achten.
+
+💡 **Abkürzung:** Üben Sie echte Interviewfragen für IHR Berufsfeld — Pflege, IT, Handwerk, Fahrberufe, Gastronomie und mehr — mit Musterantworten im kostenlosen [Interview-Training](/interview-prep).
+
+## Was deutsche Interviewer wirklich fragen
+
+Fast jedes deutsche Gespräch — für Ausbildung, Pflegejob oder Entwicklerstelle — baut auf demselben Kern auf:
+
+- **„Erzählen Sie etwas über sich"** — gewünscht ist eine 2-Minuten-Berufsgeschichte, nicht die Biografie.
+- **„Warum Deutschland? Warum unser Unternehmen?"** — DIE Frage für internationale Bewerber. Eine konkrete, persönliche Antwort schlägt „Deutschland bietet gute Chancen" jedes Mal.
+- **„Stärken und Schwächen?"** — erwartet wird eine ehrliche Schwäche plus Gegenmaßnahme, nicht „ich arbeite zu viel".
+- **Situative Fragen** — „Beschreiben Sie einen Konflikt mit einem Kollegen und Ihre Lösung." Bereiten Sie 3 kurze echte Geschichten vor.
+- **Fachfragen** — Pflegeprotokolle, Debugging-Ansätze, Sicherheitsregeln für Fahr- und Handwerksberufe. Hier zahlt sich feldspezifisches Üben aus; das [Interview-Training](/interview-prep) deckt 12 Berufsfelder ab.
+
+## Die kulturellen Codes, die entscheiden
+
+- **Pünktlichkeit IST das Interview.** Bei Videocalls 5 Minuten früher im Raum sein. Zuspätkommen — auch 3 Minuten, auch online — ist oft das Aus.
+- **Direktheit gewinnt.** Die gestellte Frage konkret beantworten, mit Zahlen wo möglich. Lange diplomatische Umwege wirken ausweichend.
+- **Ehrlichkeit beim Deutschniveau.** „B1, gerade im B2-Kurs" zu sagen und es zu zeigen schlägt behauptete Perfektion mit Stolpern.
+- **Rückfragen am Ende sind Pflicht.** „Keine Fragen" signalisiert Desinteresse. Fragen Sie nach Team, Einarbeitung, Ausbildungsplan.
+
+## Das Gespräch aus dem Ausland
+
+Die meisten Erstgespräche laufen per Video. Testen Sie Kamera, Licht und Internet eine Stunde vorher; halten Sie Pass und Zeugnisse griffbereit; und rechnen Sie mit einer Frage zu Ihrem Visumsweg — sagen zu können „meine Unterlagen sind fertig, ich habe eine Checkliste benutzt" (siehe [Dokumenten-Checkliste](/tools/document-checklist)) signalisiert Ernsthaftigkeit. Kommt die Gehaltsfrage, kennen Sie vorher die realistische Spanne Ihres Felds und rechnen Sie mit dem [Brutto-Netto-Rechner](/tools/brutto-netto-rechner), was netto bleibt.
+
+## Häufige Fehler
+
+- Antworten wörtlich auswendig lernen — Interviewer merken es, und eine Rückfrage bricht das Skript.
+- Den aktuellen Arbeitgeber oder das Heimatland kritisieren. Neutrale Wechselgründe, positive Deutschland-Gründe.
+- Das „Warum wir" nicht vorbereiten — es entscheidet mehr Angebote als jede Fachfrage.
+- Nur im Kopf üben. Antworten LAUT aussprechen, idealerweise aufnehmen.
+
+Zehn laut geübte Fragen bringen Sie vor 90 % der Bewerber. Starten Sie jetzt mit dem kostenlosen [Interview-Training](/interview-prep) — Berufsfeld wählen und genau die Fragen üben, die Arbeitgeber stellen.`,
+      faqs: [
+        { q: 'Welche Fragen kommen im deutschen Vorstellungsgespräch?', a: 'Der Kern: Erzählen Sie über sich, warum Deutschland und dieses Unternehmen, Stärken/Schwächen, situative Geschichten (Konflikte, Fehler, Teamarbeit) und Fachfragen. Für alles konkrete 2-Minuten-Antworten vorbereiten.' },
+        { q: 'Welches Deutschniveau braucht man fürs Gespräch?', a: 'Ausbildung: etwa B1; die meisten Fachjobs: B1–B2; Pflegeberufe: meist formal B2. Ehrlichkeit plus sichtbarer Lernplan schlägt Übertreibung — das Niveau wird in Minuten getestet.' },
+        { q: 'Wie laufen Videointerviews mit deutschen Arbeitgebern ab?', a: 'Die meisten ersten Runden sind 30–45-minütige Videocalls. 5 Minuten früher einwählen, Bürokleidung, Unterlagen griffbereit — und Fragen zu Visumsplan und Startdatum erwarten.' },
+        { q: 'Was sollte ich am Ende des Gesprächs fragen?', a: 'Immer 2–3 Rückfragen: zum Team, zur Einarbeitung bzw. zum Ausbildungsplan und zu den nächsten Schritten. Keine Fragen zu haben wirkt wie kein Interesse.' },
+        { q: 'Wie spreche ich über das Gehalt?', a: 'Vorher die realistische Spanne für Feld und Region recherchieren, dann ein Brutto-Jahresgehalt nennen. Vor der Verhandlung verstehen, was netto bleibt — ein Brutto-Netto-Rechner zeigt es in Sekunden.' },
+      ],
+    },
+    es: {
+      title: 'La entrevista de trabajo alemana: preguntas, cultura y preparación (2026)',
+      summary: 'Lo que de verdad preguntan los empleadores alemanes — preguntas clásicas, códigos culturales, reglas de videollamada para candidatos en el extranjero y práctica por sector.',
+      content: `Te llegó la invitación — enhorabuena, tu candidatura superó a decenas. Ahora viene la parte donde la mayoría de candidatos internacionales pierde la oferta: la entrevista alemana. No por falta de habilidades, sino porque preparan las preguntas equivocadas y se saltan los códigos culturales que importan a los empleadores alemanes.
+
+💡 **Atajo:** practica preguntas reales de entrevista de TU profesión — enfermería, informática, oficios, conducción, hostelería y más — con respuestas modelo en nuestra herramienta gratuita [Preparación de entrevista](/interview-prep).
+
+## Lo que preguntan de verdad los entrevistadores alemanes
+
+Casi toda entrevista alemana — para una Ausbildung, un puesto de enfermería o de desarrollador — se construye sobre el mismo núcleo:
+
+- **«Erzählen Sie etwas über sich»** (háblenos de usted) — quieren una historia profesional de 2 minutos, no tu biografía.
+- **«¿Por qué Alemania? ¿Por qué nuestra empresa?»** — LA pregunta decisiva para candidatos internacionales. Una respuesta concreta y personal gana siempre a «Alemania tiene buenas oportunidades».
+- **«¿Fortalezas y debilidades?»** — esperan una debilidad honesta más lo que haces al respecto, no «trabajo demasiado».
+- **Preguntas situacionales** — «describe un conflicto con un colega y cómo lo resolviste». Prepara 3 historias reales, cortas y adaptables.
+- **Preguntas del sector** — protocolos de cuidado para enfermería, enfoques de depuración para desarrolladores, normas de seguridad para conductores y oficios. Aquí rinde la práctica específica; la herramienta [Preparación de entrevista](/interview-prep) cubre 12 campos profesionales.
+
+## Los códigos culturales que deciden
+
+- **La puntualidad ES la entrevista.** En videollamadas, entra 5 minutos antes. Llegar tarde — aunque sean 3 minutos, aunque sea online — suele ser eliminatorio.
+- **La franqueza gana.** Responde a lo preguntado, en concreto, con números si es posible. Los rodeos diplomáticos se leen como evasivas.
+- **Honestidad con tu nivel de alemán.** Decir «B1, cursando B2» y demostrarlo vale más que fingir fluidez y tropezar.
+- **Las preguntas finales son obligatorias.** «Keine Fragen» señala desinterés. Pregunta por el equipo, la incorporación, el plan de formación.
+
+## Entrevistarse desde el extranjero
+
+La mayoría de primeras entrevistas internacionales son por vídeo. Prueba cámara, luz e internet una hora antes; ten pasaporte y certificados a mano; y espera una pregunta sobre tu vía de visado — poder decir «mis documentos están listos, seguí una checklist» (mira la [Lista de documentos](/tools/document-checklist)) transmite seriedad. Si llega la pregunta del salario, conoce antes el rango realista de tu sector con la [Calculadora Bruto-Neto](/tools/brutto-netto-rechner) para negociar en términos netos que entiendas.
+
+## Errores comunes
+
+- Memorizar respuestas palabra por palabra — se nota, y una repregunta rompe el guion.
+- Criticar a tu empleador o país actual. Motivos de salida neutros, motivos positivos para Alemania.
+- No preparar el «por qué nosotros» — decide más ofertas que cualquier pregunta técnica.
+- Practicar solo mentalmente. Di las respuestas EN VOZ ALTA; idealmente, grábate.
+
+Diez preguntas ensayadas en voz alta te ponen por delante del 90 % de candidatos. Empieza ya con la [Preparación de entrevista](/interview-prep) gratuita — elige tu campo y practica las preguntas exactas que hacen los empleadores.`,
+      faqs: [
+        { q: '¿Qué preguntas hacen en una entrevista de trabajo alemana?', a: 'El núcleo: háblenos de usted, por qué Alemania y esta empresa, fortalezas y debilidades, historias situacionales (conflictos, errores, trabajo en equipo) y preguntas técnicas del sector. Prepara respuestas concretas de 2 minutos.' },
+        { q: '¿Qué nivel de alemán necesito para pasar la entrevista?', a: 'Ausbildung: aprox. B1; la mayoría de empleos cualificados: B1–B2; profesiones sanitarias: B2 suele ser requisito formal. Honestidad más plan de aprendizaje visible gana a exagerar — el nivel se comprueba en minutos.' },
+        { q: '¿Cómo son las entrevistas por vídeo con empleadores alemanes?', a: 'La mayoría de primeras rondas son videollamadas de 30–45 minutos. Conéctate 5 minutos antes, viste como para la oficina, ten documentos a mano y espera preguntas sobre tu calendario de visado y fecha de inicio.' },
+        { q: '¿Qué debo preguntar al final de la entrevista?', a: 'Siempre 2–3 preguntas: sobre el equipo, la incorporación o el plan de formación, y los siguientes pasos. No preguntar nada se lee como falta de interés.' },
+        { q: '¿Cómo hablo del salario en una entrevista alemana?', a: 'Investiga primero el rango realista de tu sector y región, y nombra una cifra bruta anual. Entiende qué queda neto tras impuestos y seguros antes de negociar — una calculadora bruto-neto lo muestra en segundos.' },
+      ],
+    },
+    tr: {
+      title: 'Alman İş Mülakatı: Sorular, Kültür ve Hazırlık (2026)',
+      summary: 'Alman işverenlerin gerçekten sordukları — klasik sorular, kültürel kodlar, yurt dışındaki adaylar için video görüşme kuralları ve alana göre pratik.',
+      content: `Davet geldi — tebrikler, başvurunuz onlarca rakibi geçti. Şimdi çoğu uluslararası adayın teklifi kaybettiği kısım geliyor: Alman mülakatı. Becerileri zayıf olduğu için değil — yanlış sorulara hazırlandıkları ve Alman işverenlerin önemsediği kültürel kodları kaçırdıkları için.
+
+💡 **Kestirme:** KENDİ mesleğinizin gerçek mülakat sorularını — hemşirelik, BT, zanaat, sürücülük, otelcilik ve daha fazlası — örnek cevaplarla ücretsiz [Mülakat Hazırlığı](/interview-prep) aracında çalışın.
+
+## Alman mülakatçılar gerçekte ne sorar
+
+Neredeyse her Alman görüşmesi — Ausbildung, hemşirelik veya yazılımcı pozisyonu — aynı çekirdek üzerine kurulur:
+
+- **«Erzählen Sie etwas über sich»** (kendinizden bahsedin) — 2 dakikalık profesyonel bir hikâye isterler, biyografinizi değil.
+- **«Neden Almanya? Neden bizim şirketimiz?»** — uluslararası adaylar için EN kritik soru. Somut, kişisel bir cevap «Almanya’da fırsatlar iyi» cümlesini her zaman yener.
+- **«Güçlü ve zayıf yönleriniz?»** — Almanlar dürüst bir zayıflık ve buna karşı ne yaptığınızı bekler, «çok çalışıyorum» değil.
+- **Durumsal sorular** — «bir iş arkadaşıyla yaşadığınız çatışmayı ve çözümünüzü anlatın». Uyarlanabilir 3 kısa gerçek hikâye hazırlayın.
+- **Alan soruları** — hemşireler için bakım protokolleri, yazılımcılar için hata ayıklama, sürücüler ve zanaatkârlar için güvenlik kuralları. Alan pratiği tam burada kazandırır; [Mülakat Hazırlığı](/interview-prep) aracı 12 meslek alanını kapsar.
+
+## Kararı veren kültürel kodlar
+
+- **Dakiklik mülakatın ta kendisidir.** Video görüşmede odada 5 dakika önce olun. Gecikme — 3 dakika bile, online bile — çoğu zaman elenme sebebidir.
+- **Doğrudanlık kazanır.** Sorulan soruyu somut, mümkünse rakamlarla yanıtlayın. Uzun diplomatik dolambaçlar kaçamak okunur.
+- **Almanca seviyenizde dürüstlük.** «B1, B2 kursundayım» deyip bunu göstermek, akıcılık iddia edip tökezlemekten iyidir.
+- **Sondaki sorular zorunludur.** «Sorum yok» ilgisizlik sinyalidir. Ekibi, oryantasyonu, eğitim planını sorun.
+
+## Yurt dışından mülakat
+
+Uluslararası adayların ilk görüşmeleri çoğunlukla video ile olur. Kamerayı, ışığı ve interneti bir saat önce test edin; pasaport ve sertifikaları el altında tutun; vize yolunuzla ilgili soru bekleyin — «belgelerim hazır, bir kontrol listesi kullandım» diyebilmek ([Belge Kontrol Listesi](/tools/document-checklist)) ciddiyet gösterir. Maaş sorusu gelirse, alanınızın gerçekçi aralığını önceden bilin ve [Brüt-Net Hesaplayıcı](/tools/brutto-netto-rechner) ile elinize ne geçeceğini anlayarak pazarlık edin.
+
+## Sık yapılan hatalar
+
+- Cevapları kelimesi kelimesine ezberlemek — mülakatçılar fark eder, tek bir ek soru senaryoyu bozar.
+- Mevcut işvereni veya ülkeyi eleştirmek. Ayrılma nedenleri nötr, Almanya nedenleri pozitif olmalı.
+- «Neden biz»i hazırlamamak — teknik sorulardan daha çok teklif belirler.
+- Kafada çalışmak. Cevapları YÜKSEK SESLE söyleyin; ideali kaydedin.
+
+Yüksek sesle prova edilmiş on soru sizi adayların %90’ının önüne geçirir. Ücretsiz [Mülakat Hazırlığı](/interview-prep) ile hemen başlayın — alanınızı seçin ve işverenlerin sorduğu soruların aynılarını çalışın.`,
+      faqs: [
+        { q: 'Alman iş mülakatında hangi sorular sorulur?', a: 'Çekirdek set: kendinizden bahsedin, neden Almanya ve bu şirket, güçlü/zayıf yönler, durumsal hikâyeler (çatışma, hata, ekip çalışması) ve alana özgü teknik sorular. Her biri için somut 2 dakikalık cevaplar hazırlayın.' },
+        { q: 'Mülakatı geçmek için hangi Almanca seviyesi gerekir?', a: 'Ausbildung için yaklaşık B1, çoğu nitelikli iş için B1–B2, bakım mesleklerinde genelde resmî şart B2. Dürüstlük artı görünür bir öğrenme planı abartmayı yener — seviye dakikalar içinde test edilir.' },
+        { q: 'Alman işverenlerle video mülakatlar nasıl işler?', a: 'İlk turların çoğu 30–45 dakikalık video görüşmedir. 5 dakika erken katılın, ofis kıyafeti giyin, belgeleri el altında tutun ve vize takviminizle başlangıç tarihinize dair sorular bekleyin.' },
+        { q: 'Mülakatın sonunda ne sormalıyım?', a: 'Her zaman 2–3 soru: katılacağınız ekip, oryantasyon veya eğitim planı ve sürecin sonraki adımları. Soru sormamak ilgisizlik olarak okunur.' },
+        { q: 'Alman mülakatında maaşı nasıl konuşurum?', a: 'Önce alanınızın ve bölgenizin gerçekçi aralığını araştırın, sonra yıllık brüt bir rakam söyleyin. Pazarlıktan önce vergi ve sigorta sonrası ne kaldığını anlayın — brüt-net hesaplayıcı bunu saniyeler içinde gösterir.' },
+      ],
+    },
+    fa: {
+      title: 'مصاحبه شغلی آلمانی: سؤالات، فرهنگ و نحوه آمادگی (2026)',
+      summary: 'کارفرمایان آلمانی واقعاً چه می‌پرسند — سؤالات کلاسیک، کدهای فرهنگی، قوانین تماس تصویری برای داوطلبان خارج از کشور و تمرین بر اساس رشته.',
+      content: `دعوت‌نامه رسید — تبریک، درخواست شما ده‌ها رقیب را پشت سر گذاشت. حالا بخشی می‌آید که بیشتر داوطلبان بین‌المللی پیشنهاد را در آن از دست می‌دهند: مصاحبه آلمانی. نه به‌خاطر ضعف مهارت، بلکه چون برای سؤالات اشتباه آماده می‌شوند و کدهای فرهنگی مهم برای کارفرمایان آلمانی را از دست می‌دهند.
+
+💡 **میان‌بر:** سؤالات واقعی مصاحبه رشته خودتان را — پرستاری، فناوری اطلاعات، فنی‌وحرفه‌ای، رانندگی، هتلداری و بیشتر — با پاسخ‌های نمونه در ابزار رایگان [آمادگی مصاحبه](/interview-prep) تمرین کنید.
+
+## مصاحبه‌گران آلمانی واقعاً چه می‌پرسند
+
+تقریباً هر مصاحبه آلمانی — برای آوسبیلدونگ، شغل پرستاری یا برنامه‌نویسی — از یک هسته ساخته می‌شود:
+
+- **«از خودتان بگویید» (Erzählen Sie etwas über sich)** — یک داستان حرفه‌ای دو دقیقه‌ای می‌خواهند، نه زندگی‌نامه شما.
+- **«چرا آلمان؟ چرا شرکت ما؟»** — مهم‌ترین سؤال برای داوطلبان بین‌المللی. پاسخ مشخص و شخصی همیشه «آلمان فرصت‌های خوبی دارد» را شکست می‌دهد.
+- **«نقاط قوت و ضعف شما؟»** — آلمانی‌ها یک ضعف صادقانه به‌علاوه اقدام شما برای رفعش را انتظار دارند، نه «زیادی کار می‌کنم».
+- **سؤالات موقعیتی** — «تعارضی با یک همکار و راه‌حل‌تان را شرح دهید». سه داستان واقعی کوتاه و قابل تطبیق آماده کنید.
+- **سؤالات تخصصی رشته** — پروتکل‌های مراقبت برای پرستارها، روش‌های دیباگ برای برنامه‌نویس‌ها، قوانین ایمنی برای رانندگان و فنی‌ها. تمرین تخصصی همین‌جا جواب می‌دهد؛ ابزار [آمادگی مصاحبه](/interview-prep) دوازده حوزه شغلی را پوشش می‌دهد.
+
+## کدهای فرهنگی تعیین‌کننده
+
+- **وقت‌شناسی خودِ مصاحبه است.** در تماس تصویری ۵ دقیقه زودتر حاضر باشید. تأخیر — حتی ۳ دقیقه، حتی آنلاین — اغلب حذف‌کننده است.
+- **رک بودن برنده است.** به همان سؤال پرسیده‌شده، مشخص و در صورت امکان با عدد جواب دهید. طفره‌های دیپلماتیک طولانی، فرار از پاسخ خوانده می‌شود.
+- **صداقت درباره سطح آلمانی.** گفتن «B1 هستم و دوره B2 می‌روم» و نشان دادنش بهتر از ادعای تسلط و لکنت است.
+- **سؤال آخر مصاحبه اجباری است.** «سؤالی ندارم» یعنی بی‌علاقگی. درباره تیم، جاافتادن و برنامه آموزشی بپرسید.
+
+## مصاحبه از خارج کشور
+
+بیشتر مصاحبه‌های اول داوطلبان بین‌المللی تصویری است. یک ساعت قبل دوربین، نور و اینترنت را تست کنید؛ پاسپورت و مدارک را دم دست بگذارید؛ و منتظر سؤالی درباره مسیر ویزایتان باشید — اینکه بگویید «مدارکم آماده است، از چک‌لیست استفاده کردم» ([چک‌لیست مدارک](/tools/document-checklist)) نشانه جدیت است. اگر بحث حقوق شد، بازه واقع‌بینانه رشته‌تان را از قبل بدانید و با [محاسبه‌گر حقوق خالص](/tools/brutto-netto-rechner) بفهمید چه رقمی خالص می‌ماند.
+
+## اشتباهات رایج
+
+- حفظ کلمه‌به‌کلمه پاسخ‌ها — مصاحبه‌گر می‌فهمد و یک سؤال پیگیری، متن حفظی را می‌شکند.
+- انتقاد از کارفرما یا کشور فعلی. دلایل رفتن خنثی، دلایل آلمان مثبت.
+- آماده نکردن «چرا ما» — بیش از هر سؤال فنی در پیشنهادها تعیین‌کننده است.
+- تمرین فقط در ذهن. پاسخ‌ها را بلند بگویید؛ ایده‌آل این است که ضبط کنید.
+
+ده سؤالِ بلند تمرین‌شده شما را جلوتر از ۹۰٪ داوطلبان می‌گذارد. همین حالا با [آمادگی مصاحبه](/interview-prep) رایگان شروع کنید — رشته‌تان را انتخاب کنید و دقیقاً همان سؤالاتی را تمرین کنید که کارفرماها می‌پرسند.`,
+      faqs: [
+        { q: 'در مصاحبه شغلی آلمانی چه سؤالاتی می‌پرسند؟', a: 'هسته اصلی: از خودتان بگویید، چرا آلمان و این شرکت، نقاط قوت و ضعف، داستان‌های موقعیتی (تعارض، اشتباه، کار تیمی) و سؤالات فنی رشته. برای هر کدام پاسخ مشخص دو دقیقه‌ای آماده کنید.' },
+        { q: 'برای قبولی در مصاحبه چه سطح آلمانی لازم است؟', a: 'برای آوسبیلدونگ حدوداً B1، بیشتر مشاغل تخصصی B1–B2، و حرفه‌های مراقبتی معمولاً شرط رسمی B2. صداقت به‌علاوه برنامه یادگیریِ مشهود از بزرگ‌نمایی بهتر است — سطح در چند دقیقه محک می‌خورد.' },
+        { q: 'مصاحبه‌های تصویری با کارفرمایان آلمانی چطور است؟', a: 'بیشتر دورهای اول تماس‌های تصویری ۳۰–۴۵ دقیقه‌ای‌اند. ۵ دقیقه زودتر وارد شوید، مثل جلسه اداری لباس بپوشید، مدارک را دم دست داشته باشید و منتظر سؤال درباره زمان‌بندی ویزا و تاریخ شروع باشید.' },
+        { q: 'در پایان مصاحبه چه بپرسم؟', a: 'همیشه ۲–۳ سؤال: درباره تیم، برنامه جاافتادن یا آموزش، و مراحل بعدی. سؤال نداشتن یعنی بی‌علاقگی.' },
+        { q: 'در مصاحبه آلمانی درباره حقوق چطور صحبت کنم؟', a: 'اول بازه واقع‌بینانه رشته و منطقه‌تان را تحقیق کنید، بعد یک رقم ناخالص سالانه بگویید. قبل از مذاکره بفهمید بعد از مالیات و بیمه چه می‌ماند — محاسبه‌گر ناخالص-خالص در چند ثانیه نشان می‌دهد.' },
+      ],
+    },
+    pt: {
+      title: 'A entrevista de emprego alemã: perguntas, cultura e como se preparar (2026)',
+      summary: 'O que os empregadores alemães realmente perguntam — perguntas clássicas, códigos culturais, regras de videochamada para candidatos no exterior e prática por área.',
+      content: `O convite chegou — parabéns, sua candidatura venceu dezenas de outras. Agora vem a parte em que a maioria dos candidatos internacionais perde a oferta: a entrevista alemã. Não por falta de habilidade, mas porque preparam as perguntas erradas e ignoram os códigos culturais que importam aos empregadores alemães.
+
+💡 **Atalho:** pratique perguntas reais de entrevista da SUA profissão — enfermagem, TI, ofícios, condução, hotelaria e mais — com respostas-modelo na nossa ferramenta gratuita [Preparação para Entrevista](/interview-prep).
+
+## O que os entrevistadores alemães realmente perguntam
+
+Quase toda entrevista alemã — para Ausbildung, vaga de enfermagem ou de desenvolvedor — é construída sobre o mesmo núcleo:
+
+- **«Erzählen Sie etwas über sich»** (fale sobre você) — querem uma história profissional de 2 minutos, não sua biografia.
+- **«Por que a Alemanha? Por que nossa empresa?»** — A pergunta decisiva para candidatos internacionais. Uma resposta concreta e pessoal vence sempre o «a Alemanha tem boas oportunidades».
+- **«Pontos fortes e fracos?»** — esperam uma fraqueza honesta mais o que você faz a respeito, não «trabalho demais».
+- **Perguntas situacionais** — «descreva um conflito com um colega e como resolveu». Prepare 3 histórias reais, curtas e adaptáveis.
+- **Perguntas da área** — protocolos de cuidado para enfermagem, abordagens de depuração para devs, normas de segurança para motoristas e ofícios. É aqui que a prática específica compensa; a ferramenta [Preparação para Entrevista](/interview-prep) cobre 12 áreas profissionais.
+
+## Os códigos culturais que decidem
+
+- **Pontualidade É a entrevista.** Em videochamadas, entre 5 minutos antes. Atrasar — mesmo 3 minutos, mesmo online — costuma eliminar.
+- **A franqueza vence.** Responda ao que foi perguntado, em concreto, com números quando possível. Rodeios diplomáticos soam evasivos.
+- **Honestidade sobre seu alemão.** Dizer «B1, fazendo curso B2» e demonstrar vale mais do que alegar fluência e tropeçar.
+- **Perguntas no final são obrigatórias.** «Keine Fragen» sinaliza desinteresse. Pergunte sobre a equipe, a integração, o plano de formação.
+
+## Entrevista a partir do exterior
+
+A maioria das primeiras entrevistas internacionais é por vídeo. Teste câmera, luz e internet uma hora antes; mantenha passaporte e certificados à mão; e espere uma pergunta sobre seu caminho de visto — poder dizer «meus documentos estão prontos, segui uma checklist» (veja a [Lista de Documentos](/tools/document-checklist)) transmite seriedade. Se vier a pergunta do salário, conheça antes a faixa realista da sua área com a [Calculadora Bruto-Líquido](/tools/brutto-netto-rechner) para negociar em termos líquidos que você entende.
+
+## Erros comuns
+
+- Decorar respostas palavra por palavra — os entrevistadores percebem, e uma pergunta de acompanhamento quebra o roteiro.
+- Criticar o empregador ou o país atual. Motivos de saída neutros, motivos positivos para a Alemanha.
+- Não preparar o «por que nós» — decide mais ofertas do que qualquer pergunta técnica.
+- Praticar só de cabeça. Diga as respostas EM VOZ ALTA; ideal: grave-se.
+
+Dez perguntas ensaiadas em voz alta colocam você à frente de 90% dos candidatos. Comece agora com a [Preparação para Entrevista](/interview-prep) gratuita — escolha sua área e pratique exatamente as perguntas que os empregadores fazem.`,
+      faqs: [
+        { q: 'Que perguntas fazem numa entrevista de emprego alemã?', a: 'O núcleo: fale sobre você, por que a Alemanha e esta empresa, pontos fortes e fracos, histórias situacionais (conflitos, erros, trabalho em equipe) e perguntas técnicas da área. Prepare respostas concretas de 2 minutos.' },
+        { q: 'Que nível de alemão preciso para passar na entrevista?', a: 'Ausbildung: cerca de B1; a maioria dos empregos qualificados: B1–B2; profissões de cuidado: B2 costuma ser requisito formal. Honestidade mais plano de estudo visível vence o exagero — o nível é testado em minutos.' },
+        { q: 'Como funcionam as entrevistas por vídeo com empregadores alemães?', a: 'A maioria das primeiras rodadas são chamadas de 30–45 minutos. Entre 5 minutos antes, vista-se como para o escritório, tenha documentos à mão e espere perguntas sobre seu cronograma de visto e data de início.' },
+        { q: 'O que devo perguntar no final da entrevista?', a: 'Sempre 2–3 perguntas: sobre a equipe, a integração ou plano de formação, e os próximos passos. Não perguntar nada é lido como falta de interesse.' },
+        { q: 'Como falar de salário numa entrevista alemã?', a: 'Pesquise antes a faixa realista da sua área e região e diga um valor bruto anual. Entenda o que sobra líquido após impostos e seguros antes de negociar — uma calculadora bruto-líquido mostra em segundos.' },
+      ],
+    },
+    ru: {
+      title: 'Собеседование в Германии: вопросы, культура и подготовка (2026)',
+      summary: 'Что на самом деле спрашивают немецкие работодатели — классические вопросы, культурные коды, правила видеозвонков для кандидатов за рубежом и практика по профессиям.',
+      content: `Приглашение пришло — поздравляем, ваша заявка обошла десятки других. Теперь наступает этап, на котором большинство международных кандидатов теряет оффер: немецкое собеседование. Не из-за слабых навыков, а потому что они готовят не те вопросы и не знают культурные коды, важные для немецких работодателей.
+
+💡 **Быстрый путь:** отработайте реальные вопросы собеседований по ВАШЕЙ профессии — уход, IT, рабочие специальности, вождение, гостиничное дело и другое — с образцовыми ответами в бесплатном тренажёре [Подготовка к собеседованию](/interview-prep).
+
+## Что немецкие интервьюеры спрашивают на самом деле
+
+Почти каждое немецкое интервью — на Ausbildung, позицию медбрата или разработчика — строится на одном ядре:
+
+- **«Erzählen Sie etwas über sich»** (расскажите о себе) — ждут 2-минутную профессиональную историю, а не биографию.
+- **«Почему Германия? Почему наша компания?»** — главный вопрос для международных кандидатов. Конкретный личный ответ всегда бьёт «в Германии хорошие возможности».
+- **«Сильные и слабые стороны?»** — немцы ждут честную слабость плюс что вы с ней делаете, а не «слишком много работаю».
+- **Ситуационные вопросы** — «опишите конфликт с коллегой и как вы его решили». Подготовьте 3 короткие реальные истории.
+- **Профессиональные вопросы** — протоколы ухода для медиков, отладка для разработчиков, правила безопасности для водителей и рабочих. Здесь окупается отраслевая практика; тренажёр [Подготовка к собеседованию](/interview-prep) покрывает 12 профессиональных областей.
+
+## Культурные коды, которые решают
+
+- **Пунктуальность — это и есть собеседование.** На видеозвонок заходите за 5 минут. Опоздание — даже на 3 минуты, даже онлайн — часто дисквалифицирует.
+- **Прямота побеждает.** Отвечайте на заданный вопрос конкретно, с цифрами где возможно. Длинные дипломатичные обходы читаются как уклонение.
+- **Честность о уровне немецкого.** Сказать «B1, прохожу курс B2» и показать это лучше, чем заявить о беглости и запнуться.
+- **Вопросы в конце обязательны.** «Keine Fragen» сигнализирует о незаинтересованности. Спросите о команде, адаптации, плане обучения.
+
+## Собеседование из-за рубежа
+
+Большинство первых интервью проходит по видео. Проверьте камеру, свет и интернет за час; держите паспорт и сертификаты под рукой; и ждите вопрос о вашем визовом пути — фраза «мои документы готовы, я шёл по чек-листу» (см. [Чек-лист документов](/tools/document-checklist)) сигнализирует серьёзность. Если зайдёт речь о зарплате, заранее знайте реалистичную вилку по своей профессии и посчитайте в [Калькуляторе брутто-нетто](/tools/brutto-netto-rechner), что останется на руки.
+
+## Типичные ошибки
+
+- Заучивать ответы дословно — интервьюеры замечают, и один уточняющий вопрос ломает сценарий.
+- Критиковать текущего работодателя или страну. Нейтральные причины ухода, позитивные причины выбора Германии.
+- Не готовить «почему мы» — этот вопрос решает больше офферов, чем любой технический.
+- Репетировать только в голове. Проговаривайте ответы ВСЛУХ; в идеале записывайте.
+
+Десять вопросов, отрепетированных вслух, ставят вас впереди 90% кандидатов. Начните сейчас с бесплатной [Подготовки к собеседованию](/interview-prep) — выберите свою область и отработайте именно те вопросы, которые задают работодатели.`,
+      faqs: [
+        { q: 'Какие вопросы задают на немецком собеседовании?', a: 'Ядро: расскажите о себе, почему Германия и эта компания, сильные и слабые стороны, ситуационные истории (конфликты, ошибки, командная работа) и профессиональные вопросы. Подготовьте конкретные 2-минутные ответы.' },
+        { q: 'Какой уровень немецкого нужен для собеседования?', a: 'Для Ausbildung примерно B1, для большинства квалифицированных позиций B1–B2, для профессий ухода формально обычно B2. Честность плюс видимый план обучения бьёт преувеличение — уровень проверяется за минуты.' },
+        { q: 'Как проходят видеособеседования с немецкими работодателями?', a: 'Большинство первых раундов — видеозвонки на 30–45 минут. Подключайтесь за 5 минут, одевайтесь как в офис, держите документы под рукой и ждите вопросов о визовом плане и дате начала.' },
+        { q: 'Что спросить в конце собеседования?', a: 'Всегда 2–3 вопроса: о команде, об адаптации или плане обучения, о следующих шагах. Отсутствие вопросов читается как отсутствие интереса.' },
+        { q: 'Как обсуждать зарплату на немецком собеседовании?', a: 'Сначала изучите реалистичную вилку по профессии и региону, затем называйте годовую сумму брутто. До переговоров поймите, что останется нетто после налогов и страховок — калькулятор брутто-нетто покажет за секунды.' },
+      ],
+    },
+    hi: {
+      title: 'जर्मन जॉब इंटरव्यू: सवाल, संस्कृति और तैयारी (2026)',
+      summary: 'जर्मन नियोक्ता असल में क्या पूछते हैं — क्लासिक सवाल, सांस्कृतिक नियम, विदेश से वीडियो-कॉल के नियम, और अपने क्षेत्र के हिसाब से अभ्यास।',
+      content: `निमंत्रण आ गया — बधाई, आपके आवेदन ने दर्जनों को पीछे छोड़ा। अब वह चरण आता है जहाँ ज़्यादातर अंतरराष्ट्रीय उम्मीदवार ऑफ़र गँवाते हैं: जर्मन इंटरव्यू। कौशल की कमी से नहीं, बल्कि इसलिए कि वे गलत सवालों की तैयारी करते हैं और उन सांस्कृतिक नियमों को चूक जाते हैं जिनकी जर्मन नियोक्ताओं को परवाह है।
+
+💡 **शॉर्टकट:** अपने पेशे के असली इंटरव्यू सवालों का अभ्यास करें — नर्सिंग, IT, ट्रेड, ड्राइविंग, हॉस्पिटैलिटी और बहुत कुछ — मॉडल जवाबों के साथ, हमारे मुफ़्त [इंटरव्यू प्रेप](/interview-prep) टूल में।
+
+## जर्मन इंटरव्यूअर असल में क्या पूछते हैं
+
+लगभग हर जर्मन इंटरव्यू — Ausbildung, नर्सिंग जॉब या डेवलपर रोल — एक ही कोर पर बनता है:
+
+- **«Erzählen Sie etwas über sich»** (अपने बारे में बताइए) — वे 2 मिनट की पेशेवर कहानी चाहते हैं, आपकी जीवनी नहीं।
+- **«जर्मनी क्यों? हमारी कंपनी क्यों?»** — अंतरराष्ट्रीय उम्मीदवारों के लिए सबसे अहम सवाल। ठोस, निजी जवाब हर बार «जर्मनी में अच्छे अवसर हैं» को हरा देता है।
+- **«आपकी ताक़तें और कमज़ोरियाँ?»** — जर्मन एक ईमानदार कमज़ोरी और उस पर आपका काम सुनना चाहते हैं, «मैं बहुत मेहनत करता हूँ» नहीं।
+- **परिस्थिति-आधारित सवाल** — «किसी सहकर्मी से टकराव और उसका समाधान बताइए।» 3 छोटी सच्ची कहानियाँ तैयार रखें।
+- **क्षेत्र के सवाल** — नर्सों के लिए केयर प्रोटोकॉल, डेवलपर्स के लिए डीबगिंग, ड्राइवरों-कारीगरों के लिए सुरक्षा नियम। यहीं क्षेत्र-विशेष अभ्यास काम आता है; [इंटरव्यू प्रेप](/interview-prep) टूल 12 पेशेवर क्षेत्र कवर करता है।
+
+## वे सांस्कृतिक नियम जो फ़ैसला करते हैं
+
+- **समय की पाबंदी ही इंटरव्यू है।** वीडियो कॉल में 5 मिनट पहले मौजूद रहें। देर — 3 मिनट भी, ऑनलाइन भी — अक्सर बाहर कर देती है।
+- **सीधापन जीतता है।** पूछे गए सवाल का ठोस जवाब दें, हो सके तो आँकड़ों के साथ। लंबे कूटनीतिक घुमाव टालमटोल लगते हैं।
+- **अपने जर्मन स्तर पर ईमानदारी।** «B1 हूँ, B2 कोर्स कर रहा हूँ» कहकर दिखाना, धाराप्रवाह होने का दावा कर लड़खड़ाने से बेहतर है।
+- **आख़िर में सवाल पूछना अनिवार्य है।** «Keine Fragen» का मतलब है दिलचस्पी नहीं। टीम, ऑनबोर्डिंग, ट्रेनिंग प्लान पर पूछें।
+
+## विदेश से इंटरव्यू
+
+अंतरराष्ट्रीय उम्मीदवारों के ज़्यादातर पहले इंटरव्यू वीडियो पर होते हैं। एक घंटा पहले कैमरा, रोशनी और इंटरनेट जाँचें; पासपोर्ट और प्रमाणपत्र पास रखें; और अपने वीज़ा रास्ते पर सवाल की उम्मीद रखें — «मेरे दस्तावेज़ तैयार हैं, मैंने चेकलिस्ट फ़ॉलो की» कह पाना ([डॉक्यूमेंट चेकलिस्ट](/tools/document-checklist) देखें) गंभीरता दिखाता है। सैलरी का सवाल आए तो पहले से अपने क्षेत्र की यथार्थवादी रेंज जानें और [ब्रुट्टो-नेट्टो कैलकुलेटर](/tools/brutto-netto-rechner) से समझें कि हाथ में कितना आएगा।
+
+## आम गलतियाँ
+
+- जवाब रटना — इंटरव्यूअर भाँप लेते हैं, और एक फ़ॉलो-अप सवाल स्क्रिप्ट तोड़ देता है।
+- मौजूदा नियोक्ता या देश की आलोचना। जाने के कारण तटस्थ, जर्मनी के कारण सकारात्मक।
+- «हम ही क्यों» तैयार न करना — यह किसी भी तकनीकी सवाल से ज़्यादा ऑफ़र तय करता है।
+- सिर्फ़ मन में अभ्यास। जवाब ज़ोर से बोलें; हो सके तो रिकॉर्ड करें।
+
+ज़ोर से अभ्यास किए दस सवाल आपको 90% उम्मीदवारों से आगे कर देते हैं। अभी मुफ़्त [इंटरव्यू प्रेप](/interview-prep) से शुरू करें — अपना क्षेत्र चुनें और ठीक वही सवाल अभ्यास करें जो नियोक्ता पूछते हैं।`,
+      faqs: [
+        { q: 'जर्मन जॉब इंटरव्यू में क्या सवाल पूछे जाते हैं?', a: 'कोर सेट: अपने बारे में बताइए, जर्मनी और यह कंपनी क्यों, ताक़तें-कमज़ोरियाँ, परिस्थिति की कहानियाँ (टकराव, गलतियाँ, टीमवर्क) और क्षेत्र-विशेष तकनीकी सवाल। हर एक के लिए 2 मिनट के ठोस जवाब तैयार करें।' },
+        { q: 'इंटरव्यू पास करने के लिए कितनी जर्मन चाहिए?', a: 'Ausbildung के लिए लगभग B1, ज़्यादातर कुशल नौकरियों के लिए B1–B2, केयर पेशों में औपचारिक रूप से आमतौर पर B2। ईमानदारी और दिखता हुआ सीखने का प्लान बढ़ा-चढ़ाकर बताने से बेहतर है — स्तर मिनटों में परख लिया जाता है।' },
+        { q: 'जर्मन नियोक्ताओं के साथ वीडियो इंटरव्यू कैसे होते हैं?', a: 'ज़्यादातर पहले राउंड 30–45 मिनट के वीडियो कॉल होते हैं। 5 मिनट पहले जुड़ें, दफ़्तर जैसा पहनें, दस्तावेज़ पास रखें, और वीज़ा टाइमलाइन व शुरुआत की तारीख़ पर सवालों की उम्मीद रखें।' },
+        { q: 'इंटरव्यू के अंत में क्या पूछूँ?', a: 'हमेशा 2–3 सवाल: जिस टीम में जाएँगे उसके बारे में, ऑनबोर्डिंग या ट्रेनिंग प्लान, और अगले क़दम। कुछ न पूछना दिलचस्पी की कमी माना जाता है।' },
+        { q: 'जर्मन इंटरव्यू में सैलरी पर बात कैसे करूँ?', a: 'पहले अपने क्षेत्र और इलाक़े की यथार्थवादी रेंज खोजें, फिर सालाना सकल (brutto) आँकड़ा बताएं। मोलभाव से पहले समझें कि टैक्स-बीमा के बाद नेट कितना बचेगा — ब्रुट्टो-नेट्टो कैलकुलेटर सेकंडों में दिखा देता है।' },
+      ],
+    },
+    ur: {
+      title: 'جرمن جاب انٹرویو: سوالات، ثقافت اور تیاری کا طریقہ (2026)',
+      summary: 'جرمن آجر اصل میں کیا پوچھتے ہیں — کلاسک سوالات، ثقافتی اصول، بیرونِ ملک امیدواروں کے لیے ویڈیو کال کے قواعد اور شعبے کے مطابق مشق۔',
+      content: `دعوت آ گئی — مبارک ہو، آپ کی درخواست نے درجنوں کو پیچھے چھوڑ دیا۔ اب وہ مرحلہ آتا ہے جہاں زیادہ تر بین الاقوامی امیدوار آفر کھو دیتے ہیں: جرمن انٹرویو۔ ہنر کی کمی سے نہیں، بلکہ اس لیے کہ وہ غلط سوالات کی تیاری کرتے ہیں اور ان ثقافتی اصولوں کو نظرانداز کر دیتے ہیں جن کی جرمن آجروں کو پروا ہے۔
+
+💡 **شارٹ کٹ:** اپنے پیشے کے حقیقی انٹرویو سوالات کی مشق کریں — نرسنگ، آئی ٹی، ہنر مندی، ڈرائیونگ، ہوٹلنگ اور مزید — نمونہ جوابات کے ساتھ، ہمارے مفت [انٹرویو کی تیاری](/interview-prep) ٹول میں۔
+
+## جرمن انٹرویو لینے والے اصل میں کیا پوچھتے ہیں
+
+تقریباً ہر جرمن انٹرویو — آؤسبلڈنگ، نرسنگ جاب یا ڈیویلپر رول — ایک ہی بنیاد پر بنتا ہے:
+
+- **«Erzählen Sie etwas über sich» (اپنے بارے میں بتائیں)** — وہ 2 منٹ کی پیشہ ورانہ کہانی چاہتے ہیں، آپ کی سوانح نہیں۔
+- **«جرمنی کیوں؟ ہماری کمپنی کیوں؟»** — بین الاقوامی امیدواروں کے لیے سب سے اہم سوال۔ ٹھوس، ذاتی جواب ہر بار «جرمنی میں اچھے مواقع ہیں» کو ہرا دیتا ہے۔
+- **«آپ کی خوبیاں اور خامیاں؟»** — جرمن ایک ایماندارانہ خامی اور اس پر آپ کا اقدام سننا چاہتے ہیں، «میں بہت زیادہ کام کرتا ہوں» نہیں۔
+- **حالاتی سوالات** — «کسی ساتھی سے اختلاف اور اس کا حل بیان کریں»۔ 3 مختصر سچی کہانیاں تیار رکھیں۔
+- **شعبے کے سوالات** — نرسوں کے لیے نگہداشت کے پروٹوکول، ڈیویلپرز کے لیے ڈیبگنگ، ڈرائیوروں اور ہنرمندوں کے لیے حفاظتی اصول۔ یہیں شعبہ وار مشق کام دیتی ہے؛ [انٹرویو کی تیاری](/interview-prep) ٹول 12 پیشہ ورانہ شعبے کور کرتا ہے۔
+
+## فیصلہ کن ثقافتی اصول
+
+- **وقت کی پابندی ہی انٹرویو ہے۔** ویڈیو کال میں 5 منٹ پہلے موجود ہوں۔ تاخیر — 3 منٹ بھی، آن لائن بھی — اکثر خارج کر دیتی ہے۔
+- **سیدھی بات جیتتی ہے۔** پوچھے گئے سوال کا ٹھوس جواب دیں، ممکن ہو تو اعداد کے ساتھ۔ لمبے سفارتی چکر ٹال مٹول لگتے ہیں۔
+- **اپنی جرمن سطح پر ایمانداری۔** «B1 ہوں، B2 کورس کر رہا ہوں» کہہ کر دکھانا، روانی کا دعویٰ کر کے اٹکنے سے بہتر ہے۔
+- **آخر میں سوالات لازمی ہیں۔** «کوئی سوال نہیں» کا مطلب عدم دلچسپی۔ ٹیم، آن بورڈنگ، تربیتی منصوبے پر پوچھیں۔
+
+## بیرونِ ملک سے انٹرویو
+
+بین الاقوامی امیدواروں کے زیادہ تر پہلے انٹرویو ویڈیو پر ہوتے ہیں۔ ایک گھنٹہ پہلے کیمرہ، روشنی اور انٹرنیٹ جانچیں؛ پاسپورٹ اور اسناد قریب رکھیں؛ اور اپنے ویزا راستے پر سوال کی توقع رکھیں — یہ کہہ پانا کہ «میری دستاویزات تیار ہیں، میں نے چیک لسٹ استعمال کی» ([دستاویزات چیک لسٹ](/tools/document-checklist)) سنجیدگی ظاہر کرتا ہے۔ تنخواہ کا سوال آئے تو پہلے سے اپنے شعبے کی حقیقت پسندانہ حد جانیں اور [برٹو-نیٹو کیلکولیٹر](/tools/brutto-netto-rechner) سے سمجھیں کہ خالص کتنا بچے گا۔
+
+## عام غلطیاں
+
+- جوابات لفظ بہ لفظ رٹنا — انٹرویو لینے والے بھانپ لیتے ہیں، اور ایک اضافی سوال اسکرپٹ توڑ دیتا ہے۔
+- موجودہ آجر یا ملک پر تنقید۔ جانے کی وجوہات غیر جانبدار، جرمنی کی وجوہات مثبت۔
+- «ہم ہی کیوں» تیار نہ کرنا — یہ کسی بھی تکنیکی سوال سے زیادہ آفرز طے کرتا ہے۔
+- صرف ذہن میں مشق کرنا۔ جوابات بلند آواز میں بولیں؛ بہتر ہے ریکارڈ کریں۔
+
+بلند آواز میں مشق کیے دس سوال آپ کو 90% امیدواروں سے آگے کر دیتے ہیں۔ ابھی مفت [انٹرویو کی تیاری](/interview-prep) سے شروع کریں — اپنا شعبہ چنیں اور بالکل وہی سوالات مشق کریں جو آجر پوچھتے ہیں۔`,
+      faqs: [
+        { q: 'جرمن جاب انٹرویو میں کیا سوالات پوچھے جاتے ہیں؟', a: 'بنیادی سیٹ: اپنے بارے میں بتائیں، جرمنی اور یہ کمپنی کیوں، خوبیاں اور خامیاں، حالاتی کہانیاں (اختلاف، غلطیاں، ٹیم ورک) اور شعبہ وار تکنیکی سوالات۔ ہر ایک کے لیے 2 منٹ کے ٹھوس جواب تیار کریں۔' },
+        { q: 'انٹرویو پاس کرنے کے لیے کتنی جرمن چاہیے؟', a: 'آؤسبلڈنگ کے لیے تقریباً B1، زیادہ تر ہنر مند ملازمتوں کے لیے B1–B2، نگہداشت کے پیشوں میں عموماً رسمی شرط B2۔ ایمانداری مع نظر آنے والے سیکھنے کے منصوبے مبالغے سے بہتر ہے — سطح منٹوں میں جانچ لی جاتی ہے۔' },
+        { q: 'جرمن آجروں کے ساتھ ویڈیو انٹرویو کیسے ہوتے ہیں؟', a: 'زیادہ تر پہلے راؤنڈ 30–45 منٹ کی ویڈیو کالز ہوتے ہیں۔ 5 منٹ پہلے شامل ہوں، دفتری لباس پہنیں، دستاویزات قریب رکھیں، اور ویزا ٹائم لائن اور آغاز کی تاریخ پر سوالات کی توقع رکھیں۔' },
+        { q: 'انٹرویو کے آخر میں کیا پوچھوں؟', a: 'ہمیشہ 2–3 سوال: جس ٹیم میں شامل ہوں گے، آن بورڈنگ یا تربیتی منصوبہ، اور اگلے مراحل۔ کچھ نہ پوچھنا عدم دلچسپی سمجھا جاتا ہے۔' },
+        { q: 'جرمن انٹرویو میں تنخواہ پر بات کیسے کروں؟', a: 'پہلے اپنے شعبے اور علاقے کی حقیقت پسندانہ حد معلوم کریں، پھر سالانہ مجموعی (brutto) رقم بتائیں۔ مذاکرات سے پہلے سمجھیں کہ ٹیکس اور انشورنس کے بعد خالص کتنا بچتا ہے — برٹو-نیٹو کیلکولیٹر سیکنڈوں میں دکھا دیتا ہے۔' },
+      ],
+    },
+    zh: {
+      title: '德国求职面试：问题、文化与备战指南（2026）',
+      summary: '德国雇主真正会问什么——经典问题、文化潜规则、海外候选人视频面试守则，以及如何按行业练习。',
+      content: `你收到面试邀请了——恭喜，你的申请击败了几十位竞争者。接下来是大多数国际候选人丢掉 offer 的环节：德国面试。不是因为能力不行，而是因为他们准备了错误的问题，忽视了德国雇主在意的文化密码。
+
+💡 **捷径：** 在我们免费的[面试准备](/interview-prep)工具里，按你的职业——护理、IT、技工、驾驶、酒店等——练习真实面试题并参考示范答案。
+
+## 德国面试官到底问什么
+
+几乎每场德国面试——无论是 Ausbildung、护理岗位还是开发岗——都建立在同一套核心上：
+
+- **「Erzählen Sie etwas über sich」（介绍一下你自己）** ——他们要的是 2 分钟的职业故事，不是完整人生履历。
+- **「为什么选德国？为什么选我们公司？」** ——对国际候选人最关键的问题。具体、个人化的回答永远胜过「德国机会很多」。
+- **「你的优点和缺点？」** ——德国人期待一个诚实的缺点加上你的改进措施，而不是「我工作太拼」。
+- **情境问题** ——「描述一次与同事的冲突及你的解决方式」。准备 3 个可灵活套用的真实小故事。
+- **行业问题** ——护理有护理规程、开发有调试思路、司机和技工有安全规范。分行业练习在这里见效；[面试准备](/interview-prep)工具覆盖 12 个职业领域。
+
+## 决定成败的文化密码
+
+- **守时就是面试本身。** 视频面试提前 5 分钟进入房间。迟到——哪怕 3 分钟、哪怕线上——往往直接出局。
+- **直接才能赢。** 针对所问的问题具体作答，能用数字就用数字。冗长的外交式绕弯会被解读为回避。
+- **对德语水平诚实。** 说「B1，正在上 B2 课程」并当场展示，胜过号称流利然后卡壳。
+- **最后必须提问。**「没有问题」等于没有兴趣。问团队、入职流程、培训计划。
+
+## 人在海外怎么面
+
+国际候选人的首轮面试大多是视频进行。提前一小时测试摄像头、灯光和网络；护照和证书放在手边；并预期会被问到签证路径——能说出「我的材料已备齐，我照着清单准备的」（见[材料清单](/tools/document-checklist)）会传递认真态度。如果谈到薪资，先用[税前税后计算器](/tools/brutto-netto-rechner)了解你所在行业的现实区间和到手金额，再去谈判。
+
+## 常见错误
+
+- 逐字背答案——面试官看得出来，一个追问就让剧本崩塌。
+- 批评现雇主或母国。离开的理由要中性，选择德国的理由要积极。
+- 不准备「为什么是我们」——它比任何技术问题决定更多 offer。
+- 只在脑子里练。把答案大声说出来；最好录下来听。
+
+大声排练过十个问题，你就领先了 90% 的候选人。现在就用免费的[面试准备](/interview-prep)开始——选择你的领域，练习雇主真正会问的那些问题。`,
+      faqs: [
+        { q: '德国求职面试会问哪些问题？', a: '核心套路：自我介绍、为什么选德国和这家公司、优缺点、情境故事（冲突、失误、团队合作）以及行业技术问题。每个都准备 2 分钟的具体回答。' },
+        { q: '通过面试需要什么德语水平？', a: 'Ausbildung 约 B1，大多数技术岗位 B1–B2，护理类职业通常正式要求 B2。诚实加上可见的学习计划胜过夸大——水平几分钟就会被测出来。' },
+        { q: '和德国雇主的视频面试是怎样的？', a: '首轮大多是 30–45 分钟的视频通话。提前 5 分钟进入，着装如同办公室会议，证件放手边，并准备回答签证时间表和入职日期的问题。' },
+        { q: '面试结束时该问什么？', a: '永远准备 2–3 个问题：即将加入的团队、入职或培训计划、下一步流程。什么都不问会被解读为没有兴趣。' },
+        { q: '在德国面试中如何谈薪资？', a: '先调查所在行业和地区的现实区间，然后报一个税前年薪数字。谈判前先弄清税和保险后到手多少——税前税后计算器几秒钟就能算出。' },
+      ],
+    },
+  },
+}

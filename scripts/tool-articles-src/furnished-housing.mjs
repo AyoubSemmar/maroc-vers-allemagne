@@ -1,0 +1,561 @@
+// Companion article for /tools/furnished-housing — written in-session, no API.
+export default {
+  slug: 'g-furnished-apartment-germany-rent-from-abroad',
+  category: 'housing',
+  audience: 'global',
+  imagePrompt: 'A young newcomer with a suitcase stands smiling in the doorway of a bright, fully furnished small apartment, sofa and made bed visible, keys in hand; warm afternoon light',
+  translations: {
+    en: {
+      title: 'Furnished Apartments in Germany: Rent Your First Home From Abroad (2026)',
+      summary: 'How to book a furnished apartment in Germany before you arrive — no Schufa, no viewing. Platforms, real prices, Anmeldung rules and the scams to avoid.',
+      content: `Ask anyone who has moved to Germany: the visa was stressful, but the first apartment was harder. Regular German landlords expect an in-person viewing, a Schufa credit record, a German bank account and payslips — four things you cannot have before you arrive. The good news: there is a whole rental market built exactly for people in your situation, and you can book it entirely from your phone.
+
+💡 **Shortcut:** our free [Furnished Housing Finder](/tools/furnished-housing) shows live, furnished, move-in-ready listings for 20 German cities across the four platforms newcomers trust most — pick your city and compare in one place.
+
+## Why you cannot rent a "normal" apartment from abroad
+
+Unfurnished long-term rentals (Kaltmiete contracts) are a closed loop for newcomers. Landlords shortlist applicants after a physical viewing, then ask for a Schufa report — a German credit history you only start building after you have lived in Germany. They also want proof of income from a German employer and a German bank account for the deposit. None of this is possible from Casablanca, Istanbul or Delhi. Trying to fight this loop from abroad wastes months — and it is where most rental scams happen, because desperate searchers start wiring deposits to strangers.
+
+## What furnished mid-term rentals solve
+
+Furnished apartments rented for 1–12 months are a separate market with different rules:
+
+- **Booked 100% online** — verified listings, photos or video tours, digital contracts, card payment.
+- **No Schufa needed** — platforms verify your identity and payment instead of your German credit history.
+- **Ready on day one** — bed, kitchen, washing machine, Wi-Fi; utilities usually included in one price.
+- **An address for your Anmeldung** — most landlords provide the Wohnungsgeberbestätigung you need to register, which then unlocks your tax ID, bank account and SIM contract.
+
+The strategy nearly every successful newcomer uses: book a furnished place for the first 3–6 months, arrive, register, open a bank account, start your job or studies — then search for a long-term unfurnished flat calmly, on the ground, with a German income.
+
+## Where to actually search
+
+Four platforms dominate this market: HousingAnywhere (largest choice of rooms and studios, payment protection), Wunderflats (whole apartments, Anmeldung usually possible), Spotahome (every home video-checked by the platform) and Nestpick (an aggregator that compares many sites at once). Instead of opening four tabs, use the [Furnished Housing Finder](/tools/furnished-housing) — choose your city and jump straight into each platform's live results.
+
+## What it costs in 2026
+
+Expect roughly these monthly prices for a furnished studio or one-bedroom, utilities included: Berlin 1,100–1,600 €, Munich 1,400–2,000 €, Frankfurt 1,200–1,700 €, Leipzig or Bochum 700–1,000 €. Furnished rents run 20–35% above unfurnished — you pay for flexibility and zero setup costs. Budget your whole first month realistically with the free [Living Cost Calculator](/tools/living-cost-calculator) before you choose a city.
+
+## Common mistakes
+
+- **Paying outside the platform.** Any landlord who asks for a bank transfer before you signed inside the platform's protected checkout is a scammer. No exceptions.
+- **Booking 12 months unseen.** Start with 3–6 months; extend if you like it.
+- **Ignoring Anmeldung.** Always confirm in writing that registration is possible before booking.
+- **Starting too late.** In Berlin and Munich the good listings go 6–8 weeks before the move-in date.
+
+Your first home in Germany is one evening of comparing away — open the [Furnished Housing Finder](/tools/furnished-housing), pick your city, and book from your sofa.`,
+      faqs: [
+        { q: 'Can I really rent an apartment in Germany before arriving?', a: 'Yes. Furnished mid-term rentals on platforms like HousingAnywhere, Wunderflats, Spotahome and Nestpick are designed to be booked fully online from abroad — verified listings, digital contracts and card payment, no viewing required.' },
+        { q: 'Do I need a Schufa for a furnished apartment?', a: 'No. That is the main advantage: platforms verify your identity and payment method instead of a German credit record, which newcomers cannot have yet.' },
+        { q: 'Can I do my Anmeldung at a furnished rental?', a: 'Usually yes — most professional furnished landlords provide the Wohnungsgeberbestätigung needed for registration. Confirm it in writing before booking, because without Anmeldung you cannot get your tax ID or open most bank accounts.' },
+        { q: 'How much does a furnished apartment cost in Germany?', a: 'In 2026, roughly 1,100–1,600 € per month in Berlin, 1,400–2,000 € in Munich and 700–1,000 € in smaller cities like Leipzig — usually with utilities and Wi-Fi included.' },
+        { q: 'How do I avoid rental scams as a newcomer?', a: 'Book only through established platforms and pay only inside their protected checkout. Never wire a deposit directly to a private landlord you have not met, no matter how good the photos look.' },
+      ],
+    },
+    fr: {
+      title: 'Appartements meublés en Allemagne : louez votre premier logement depuis l’étranger (2026)',
+      summary: 'Comment réserver un appartement meublé en Allemagne avant d’arriver — sans Schufa, sans visite. Plateformes, vrais prix, règles d’Anmeldung et arnaques à éviter.',
+      content: `Demandez à n’importe qui ayant déménagé en Allemagne : le visa était stressant, mais le premier appartement était plus dur encore. Les propriétaires allemands classiques exigent une visite sur place, un dossier Schufa, un compte bancaire allemand et des fiches de paie — quatre choses impossibles à avoir avant d’arriver. La bonne nouvelle : il existe un marché locatif entier conçu exactement pour votre situation, et vous pouvez réserver entièrement depuis votre téléphone.
+
+💡 **Raccourci :** notre [Chercheur de logement meublé](/tools/furnished-housing) gratuit affiche des annonces meublées, prêtes à emménager, dans 20 villes allemandes sur les quatre plateformes les plus fiables — choisissez votre ville et comparez au même endroit.
+
+## Pourquoi vous ne pouvez pas louer un appartement « normal » depuis l’étranger
+
+Les locations non meublées de longue durée sont un cercle fermé pour les nouveaux arrivants. Les propriétaires sélectionnent après une visite physique, puis demandent un rapport Schufa — un historique de crédit allemand qui ne commence qu’une fois installé en Allemagne. Ils veulent aussi des revenus allemands et un compte bancaire allemand pour la caution. Rien de tout cela n’est possible depuis Casablanca, Tunis ou Dakar. S’acharner depuis l’étranger fait perdre des mois — et c’est là que se produisent la plupart des arnaques, quand des chercheurs désespérés virent des cautions à des inconnus.
+
+## Ce que résolvent les locations meublées à moyen terme
+
+Les appartements meublés loués 1 à 12 mois forment un marché à part, avec d’autres règles :
+
+- **Réservation 100 % en ligne** — annonces vérifiées, photos ou visites vidéo, contrat numérique, paiement par carte.
+- **Pas de Schufa** — les plateformes vérifient votre identité et votre paiement, pas votre crédit allemand.
+- **Prêt dès le premier jour** — lit, cuisine, machine à laver, Wi-Fi ; charges généralement incluses.
+- **Une adresse pour votre Anmeldung** — la plupart des bailleurs fournissent la Wohnungsgeberbestätigung nécessaire à l’enregistrement, qui débloque ensuite numéro fiscal, compte bancaire et carte SIM.
+
+La stratégie de presque tous les nouveaux arrivants qui réussissent : réserver un meublé pour les 3 à 6 premiers mois, arriver, s’enregistrer, ouvrir un compte, commencer le travail ou les études — puis chercher tranquillement un logement longue durée, sur place, avec un revenu allemand.
+
+## Où chercher concrètement
+
+Quatre plateformes dominent ce marché : HousingAnywhere (le plus grand choix de chambres et studios, paiement protégé), Wunderflats (appartements entiers, Anmeldung souvent possible), Spotahome (chaque logement vérifié en vidéo) et Nestpick (un agrégateur qui compare plusieurs sites). Au lieu d’ouvrir quatre onglets, utilisez le [Chercheur de logement meublé](/tools/furnished-housing) — choisissez votre ville et accédez directement aux résultats en direct de chaque plateforme.
+
+## Combien ça coûte en 2026
+
+Comptez environ, pour un studio ou T2 meublé charges comprises : Berlin 1 100–1 600 €, Munich 1 400–2 000 €, Francfort 1 200–1 700 €, Leipzig ou Bochum 700–1 000 €. Le meublé coûte 20 à 35 % de plus que le non meublé — vous payez la flexibilité et l’absence de frais d’installation. Établissez un budget réaliste de votre premier mois avec le [Calculateur de coût de la vie](/tools/living-cost-calculator) gratuit avant de choisir votre ville.
+
+## Erreurs fréquentes
+
+- **Payer hors plateforme.** Tout propriétaire qui demande un virement avant la signature dans le paiement sécurisé de la plateforme est un escroc. Sans exception.
+- **Réserver 12 mois sans avoir vu.** Commencez par 3 à 6 mois ; prolongez si tout va bien.
+- **Ignorer l’Anmeldung.** Faites toujours confirmer par écrit que l’enregistrement est possible avant de réserver.
+- **S’y prendre trop tard.** À Berlin et Munich, les bonnes annonces partent 6 à 8 semaines avant la date d’emménagement.
+
+Votre premier logement en Allemagne est à une soirée de comparaison — ouvrez le [Chercheur de logement meublé](/tools/furnished-housing), choisissez votre ville et réservez depuis votre canapé.`,
+      faqs: [
+        { q: 'Puis-je vraiment louer un appartement en Allemagne avant d’arriver ?', a: 'Oui. Les locations meublées à moyen terme sur HousingAnywhere, Wunderflats, Spotahome et Nestpick se réservent entièrement en ligne depuis l’étranger — annonces vérifiées, contrats numériques, paiement par carte, sans visite.' },
+        { q: 'Faut-il une Schufa pour un appartement meublé ?', a: 'Non. C’est l’avantage principal : les plateformes vérifient votre identité et votre moyen de paiement, pas un historique de crédit allemand que les nouveaux arrivants ne peuvent pas encore avoir.' },
+        { q: 'Puis-je faire mon Anmeldung dans un meublé ?', a: 'En général oui — la plupart des bailleurs professionnels fournissent la Wohnungsgeberbestätigung nécessaire. Faites-le confirmer par écrit avant de réserver : sans Anmeldung, pas de numéro fiscal ni de compte bancaire.' },
+        { q: 'Combien coûte un appartement meublé en Allemagne ?', a: 'En 2026, environ 1 100–1 600 € par mois à Berlin, 1 400–2 000 € à Munich et 700–1 000 € dans des villes comme Leipzig — généralement charges et Wi-Fi inclus.' },
+        { q: 'Comment éviter les arnaques à la location ?', a: 'Réservez uniquement via des plateformes établies et payez uniquement dans leur système sécurisé. Ne virez jamais de caution directement à un particulier que vous n’avez pas rencontré.' },
+      ],
+    },
+    ar: {
+      title: 'شقق مفروشة في ألمانيا: استأجر أول سكن لك من الخارج (2026)',
+      summary: 'كيف تحجز شقة مفروشة في ألمانيا قبل وصولك — دون Schufa ودون معاينة. المنصات والأسعار الحقيقية وقواعد تسجيل العنوان والاحتيالات الواجب تجنبها.',
+      content: `اسأل أي شخص انتقل إلى ألمانيا: كانت التأشيرة مرهقة، لكن أول شقة كانت أصعب. المؤجرون الألمان التقليديون يشترطون معاينة شخصية وسجلّ Schufa وحساباً بنكياً ألمانياً وكشوف رواتب — أربعة أشياء يستحيل امتلاكها قبل الوصول. الخبر الجيد: هناك سوق إيجار كامل مصمم بالضبط لوضعك، ويمكنك الحجز فيه بالكامل من هاتفك.
+
+💡 **اختصار:** أداتنا المجانية [باحث السكن المفروش](/tools/furnished-housing) تعرض إعلانات مفروشة جاهزة للسكن في 20 مدينة ألمانية عبر المنصات الأربع الأكثر ثقة لدى القادمين الجدد — اختر مدينتك وقارن في مكان واحد.
+
+## لماذا لا يمكنك استئجار شقة «عادية» من الخارج
+
+الإيجارات غير المفروشة طويلة الأمد حلقة مغلقة أمام القادمين الجدد. يختار المؤجرون المرشحين بعد معاينة فعلية، ثم يطلبون تقرير Schufa — وهو سجل ائتماني ألماني لا يبدأ إلا بعد أن تعيش في ألمانيا. كما يطلبون دخلاً من مشغّل ألماني وحساباً بنكياً ألمانياً للضمان. لا شيء من هذا ممكن من الدار البيضاء أو القاهرة أو تونس. محاربة هذه الحلقة من الخارج تضيّع شهوراً — وهنا تقع معظم عمليات الاحتيال، حين يبدأ الباحثون اليائسون بتحويل الضمانات إلى غرباء.
+
+## ما الذي تحلّه الإيجارات المفروشة متوسطة المدة
+
+الشقق المفروشة المؤجرة من شهر إلى 12 شهراً سوق مستقلة بقواعد مختلفة:
+
+- **حجز 100% عبر الإنترنت** — إعلانات موثّقة، صور أو جولات فيديو، عقد رقمي، دفع بالبطاقة.
+- **لا حاجة إلى Schufa** — تتحقق المنصات من هويتك ووسيلة دفعك بدل سجلك الائتماني الألماني.
+- **جاهزة من اليوم الأول** — سرير ومطبخ وغسالة وواي فاي؛ والمرافق عادة ضمن سعر واحد.
+- **عنوان لتسجيل الإقامة (Anmeldung)** — يقدّم معظم المؤجرين شهادة المؤجّر (Wohnungsgeberbestätigung) اللازمة للتسجيل، الذي يفتح لك بعده الرقم الضريبي والحساب البنكي وشريحة الهاتف.
+
+الاستراتيجية التي يتبعها كل قادم ناجح تقريباً: احجز سكناً مفروشاً لأول 3–6 أشهر، صِل وسجّل عنوانك وافتح حساباً وابدأ عملك أو دراستك — ثم ابحث بهدوء عن شقة طويلة الأمد وأنت على الأرض وبدخل ألماني.
+
+## أين تبحث فعلياً
+
+أربع منصات تهيمن على هذه السوق: HousingAnywhere (أوسع اختيار للغرف والاستوديوهات مع حماية الدفع)، وWunderflats (شقق كاملة مع إمكانية تسجيل العنوان غالباً)، وSpotahome (كل سكن موثّق بالفيديو)، وNestpick (مجمّع يقارن عدة مواقع دفعة واحدة). بدل فتح أربع نوافذ، استخدم [باحث السكن المفروش](/tools/furnished-housing) — اختر مدينتك وانتقل مباشرة إلى النتائج المباشرة لكل منصة.
+
+## كم التكلفة في 2026
+
+توقع تقريباً لشقة استوديو أو بغرفة نوم مفروشة شاملة المرافق: برلين 1,100–1,600 €، ميونخ 1,400–2,000 €، فرانكفورت 1,200–1,700 €، لايبزيغ أو بوخوم 700–1,000 €. الإيجار المفروش أعلى بنسبة 20–35% من غير المفروش — تدفع مقابل المرونة وانعدام تكاليف التجهيز. ضع ميزانية واقعية لشهرك الأول عبر [حاسبة تكاليف المعيشة](/tools/living-cost-calculator) المجانية قبل اختيار المدينة.
+
+## أخطاء شائعة
+
+- **الدفع خارج المنصة.** أي مؤجر يطلب تحويلاً بنكياً قبل التوقيع داخل نظام الدفع المحمي للمنصة محتالٌ. بلا استثناء.
+- **حجز 12 شهراً دون رؤية.** ابدأ بـ3–6 أشهر؛ ومدّد إن أعجبك السكن.
+- **تجاهل تسجيل العنوان.** أكّد كتابياً أن التسجيل ممكن قبل الحجز.
+- **التأخر في البحث.** في برلين وميونخ تُحجز الإعلانات الجيدة قبل 6–8 أسابيع من تاريخ الدخول.
+
+أول سكن لك في ألمانيا يبعد أمسية مقارنة واحدة — افتح [باحث السكن المفروش](/tools/furnished-housing)، اختر مدينتك، واحجز من أريكتك.`,
+      faqs: [
+        { q: 'هل يمكنني فعلاً استئجار شقة في ألمانيا قبل الوصول؟', a: 'نعم. الإيجارات المفروشة متوسطة المدة على HousingAnywhere وWunderflats وSpotahome وNestpick مصممة للحجز الكامل عبر الإنترنت من الخارج — إعلانات موثقة وعقود رقمية ودفع بالبطاقة دون معاينة.' },
+        { q: 'هل أحتاج إلى Schufa لشقة مفروشة؟', a: 'لا. هذه هي الميزة الأساسية: تتحقق المنصات من هويتك ووسيلة الدفع بدل سجل ائتماني ألماني لا يمكن للقادم الجديد امتلاكه بعد.' },
+        { q: 'هل يمكنني تسجيل عنواني (Anmeldung) في سكن مفروش؟', a: 'غالباً نعم — يقدّم معظم المؤجرين المحترفين شهادة المؤجّر اللازمة للتسجيل. أكّد ذلك كتابياً قبل الحجز، فدون تسجيل لا رقم ضريبي ولا حساب بنكي.' },
+        { q: 'كم تكلف الشقة المفروشة في ألمانيا؟', a: 'في 2026 تقريباً 1,100–1,600 € شهرياً في برلين، و1,400–2,000 € في ميونخ، و700–1,000 € في مدن مثل لايبزيغ — عادة شاملة المرافق والواي فاي.' },
+        { q: 'كيف أتجنب احتيالات الإيجار؟', a: 'احجز فقط عبر منصات معروفة وادفع فقط داخل نظامها المحمي. لا تحوّل ضماناً مباشرة إلى مالك لم تقابله مهما بدت الصور مغرية.' },
+      ],
+    },
+    de: {
+      title: 'Möblierte Wohnungen in Deutschland: Die erste Wohnung aus dem Ausland mieten (2026)',
+      summary: 'So buchen Sie eine möblierte Wohnung in Deutschland vor der Ankunft — ohne Schufa, ohne Besichtigung. Plattformen, echte Preise, Anmeldung und Betrugsmaschen.',
+      content: `Fragen Sie jeden, der nach Deutschland gezogen ist: Das Visum war stressig, aber die erste Wohnung war schwerer. Klassische Vermieter erwarten eine Besichtigung vor Ort, eine Schufa-Auskunft, ein deutsches Bankkonto und Gehaltsnachweise — vier Dinge, die man vor der Ankunft nicht haben kann. Die gute Nachricht: Es gibt einen ganzen Mietmarkt, der genau für Ihre Situation gebaut wurde — komplett vom Handy aus buchbar.
+
+💡 **Abkürzung:** Unser kostenloser [Möblierte-Wohnung-Finder](/tools/furnished-housing) zeigt bezugsfertige möblierte Angebote in 20 deutschen Städten auf den vier Plattformen, denen Neuankömmlinge am meisten vertrauen — Stadt wählen und an einem Ort vergleichen.
+
+## Warum eine „normale" Wohnung aus dem Ausland unmöglich ist
+
+Unmöblierte Langzeitmieten sind für Neuankömmlinge ein geschlossener Kreis. Vermieter wählen nach einer physischen Besichtigung aus und verlangen dann die Schufa — eine deutsche Kredithistorie, die erst entsteht, wenn man in Deutschland lebt. Dazu kommen deutsches Einkommen und ein deutsches Konto für die Kaution. Nichts davon geht von Casablanca, Istanbul oder Delhi aus. Der Kampf gegen diesen Kreis aus dem Ausland kostet Monate — und genau hier passieren die meisten Mietbetrügereien.
+
+## Was möblierte Zeitmieten lösen
+
+Möblierte Wohnungen für 1–12 Monate sind ein eigener Markt mit anderen Regeln:
+
+- **100 % online buchbar** — verifizierte Inserate, Fotos oder Video-Touren, digitaler Vertrag, Kartenzahlung.
+- **Keine Schufa nötig** — die Plattform prüft Identität und Zahlung statt der Kredithistorie.
+- **Ab Tag eins bezugsfertig** — Bett, Küche, Waschmaschine, WLAN; Nebenkosten meist inklusive.
+- **Eine Adresse für die Anmeldung** — die meisten Vermieter stellen die Wohnungsgeberbestätigung aus, die Steuer-ID, Bankkonto und SIM-Vertrag freischaltet.
+
+Die Strategie fast aller erfolgreichen Neuankömmlinge: möbliert für die ersten 3–6 Monate buchen, ankommen, anmelden, Konto eröffnen, Job oder Studium starten — und dann in Ruhe vor Ort mit deutschem Einkommen eine Langzeitwohnung suchen.
+
+## Wo Sie wirklich suchen sollten
+
+Vier Plattformen dominieren den Markt: HousingAnywhere (größte Auswahl an Zimmern und Studios, Zahlungsschutz), Wunderflats (ganze Wohnungen, Anmeldung meist möglich), Spotahome (jede Wohnung per Video geprüft) und Nestpick (ein Aggregator, der viele Seiten vergleicht). Statt vier Tabs zu öffnen, nutzen Sie den [Möblierte-Wohnung-Finder](/tools/furnished-housing) — Stadt wählen und direkt in die Live-Ergebnisse jeder Plattform springen.
+
+## Was es 2026 kostet
+
+Rechnen Sie für ein möbliertes Studio oder eine 2-Zimmer-Wohnung warm etwa mit: Berlin 1.100–1.600 €, München 1.400–2.000 €, Frankfurt 1.200–1.700 €, Leipzig oder Bochum 700–1.000 €. Möbliert kostet 20–35 % mehr als unmöbliert — dafür entfallen Flexibilität- und Einrichtungskosten. Planen Sie Ihren ersten Monat realistisch mit dem kostenlosen [Lebenskosten-Rechner](/tools/living-cost-calculator), bevor Sie die Stadt wählen.
+
+## Häufige Fehler
+
+- **Außerhalb der Plattform zahlen.** Wer eine Überweisung vor Vertragsabschluss im geschützten Checkout verlangt, ist ein Betrüger. Ohne Ausnahme.
+- **12 Monate ungesehen buchen.** Mit 3–6 Monaten starten, bei Gefallen verlängern.
+- **Anmeldung ignorieren.** Vor der Buchung schriftlich bestätigen lassen, dass die Anmeldung möglich ist.
+- **Zu spät anfangen.** In Berlin und München sind gute Angebote 6–8 Wochen vor Einzug weg.
+
+Ihre erste Wohnung in Deutschland ist einen Vergleichsabend entfernt — öffnen Sie den [Möblierte-Wohnung-Finder](/tools/furnished-housing), wählen Sie Ihre Stadt und buchen Sie vom Sofa aus.`,
+      faqs: [
+        { q: 'Kann ich wirklich vor der Ankunft eine Wohnung in Deutschland mieten?', a: 'Ja. Möblierte Zeitmieten auf HousingAnywhere, Wunderflats, Spotahome und Nestpick sind für die Online-Buchung aus dem Ausland gebaut — verifizierte Inserate, digitale Verträge, Kartenzahlung, keine Besichtigung nötig.' },
+        { q: 'Brauche ich eine Schufa für eine möblierte Wohnung?', a: 'Nein. Das ist der Hauptvorteil: Die Plattformen prüfen Identität und Zahlungsmittel statt einer deutschen Kredithistorie, die Neuankömmlinge noch nicht haben können.' },
+        { q: 'Ist die Anmeldung in einer möblierten Wohnung möglich?', a: 'Meist ja — professionelle Vermieter stellen die Wohnungsgeberbestätigung aus. Lassen Sie es sich vor der Buchung schriftlich bestätigen, denn ohne Anmeldung gibt es keine Steuer-ID und kein Bankkonto.' },
+        { q: 'Was kostet eine möblierte Wohnung in Deutschland?', a: '2026 etwa 1.100–1.600 € pro Monat in Berlin, 1.400–2.000 € in München und 700–1.000 € in Städten wie Leipzig — meist inklusive Nebenkosten und WLAN.' },
+        { q: 'Wie vermeide ich Mietbetrug als Neuankömmling?', a: 'Nur über etablierte Plattformen buchen und ausschließlich im geschützten Checkout zahlen. Nie eine Kaution direkt an einen unbekannten Privatvermieter überweisen.' },
+      ],
+    },
+    es: {
+      title: 'Pisos amueblados en Alemania: alquila tu primera vivienda desde el extranjero (2026)',
+      summary: 'Cómo reservar un piso amueblado en Alemania antes de llegar — sin Schufa, sin visita. Plataformas, precios reales, reglas del Anmeldung y estafas a evitar.',
+      content: `Pregunta a cualquiera que se haya mudado a Alemania: el visado fue estresante, pero el primer piso fue más difícil. Los caseros alemanes tradicionales exigen visita presencial, informe Schufa, cuenta bancaria alemana y nóminas — cuatro cosas imposibles antes de llegar. La buena noticia: existe todo un mercado de alquiler diseñado exactamente para tu situación, y se reserva por completo desde el móvil.
+
+💡 **Atajo:** nuestro [Buscador de vivienda amueblada](/tools/furnished-housing) gratuito muestra anuncios amueblados listos para entrar en 20 ciudades alemanas en las cuatro plataformas más fiables — elige tu ciudad y compara en un solo lugar.
+
+## Por qué no puedes alquilar un piso «normal» desde fuera
+
+Los alquileres sin amueblar de larga duración son un círculo cerrado para recién llegados. Los caseros seleccionan tras una visita física y luego piden la Schufa — un historial crediticio alemán que solo empieza cuando ya vives en Alemania. También quieren ingresos alemanes y una cuenta alemana para la fianza. Nada de eso es posible desde Bogotá, Lima o Ciudad de México. Pelear ese círculo desde fuera cuesta meses — y ahí ocurren la mayoría de las estafas, cuando buscadores desesperados transfieren fianzas a desconocidos.
+
+## Qué resuelven los alquileres amueblados de media estancia
+
+Los pisos amueblados de 1 a 12 meses son un mercado aparte con otras reglas:
+
+- **Reserva 100 % online** — anuncios verificados, fotos o vídeo, contrato digital, pago con tarjeta.
+- **Sin Schufa** — las plataformas verifican tu identidad y tu pago, no tu crédito alemán.
+- **Listo desde el primer día** — cama, cocina, lavadora, Wi-Fi; gastos casi siempre incluidos.
+- **Una dirección para tu Anmeldung** — la mayoría de caseros entrega la Wohnungsgeberbestätigung necesaria para registrarte, lo que desbloquea tu número fiscal, tu banco y tu SIM.
+
+La estrategia de casi todos los que triunfan: reservar un amueblado para los primeros 3–6 meses, llegar, registrarse, abrir cuenta, empezar el trabajo o los estudios — y luego buscar con calma un piso de larga duración ya sobre el terreno y con ingresos alemanes.
+
+## Dónde buscar de verdad
+
+Cuatro plataformas dominan este mercado: HousingAnywhere (mayor oferta de habitaciones y estudios, pago protegido), Wunderflats (pisos completos, Anmeldung casi siempre posible), Spotahome (cada vivienda verificada en vídeo) y Nestpick (un agregador que compara muchos sitios). En vez de abrir cuatro pestañas, usa el [Buscador de vivienda amueblada](/tools/furnished-housing) — elige ciudad y salta directo a los resultados en vivo de cada plataforma.
+
+## Cuánto cuesta en 2026
+
+Para un estudio o piso de un dormitorio amueblado con gastos incluidos calcula: Berlín 1.100–1.600 €, Múnich 1.400–2.000 €, Fráncfort 1.200–1.700 €, Leipzig o Bochum 700–1.000 €. Lo amueblado cuesta un 20–35 % más que lo vacío — pagas flexibilidad y cero costes de instalación. Haz un presupuesto realista de tu primer mes con la [Calculadora de coste de vida](/tools/living-cost-calculator) gratuita antes de elegir ciudad.
+
+## Errores comunes
+
+- **Pagar fuera de la plataforma.** Cualquier casero que pida una transferencia antes de firmar dentro del pago protegido es un estafador. Sin excepciones.
+- **Reservar 12 meses sin ver el piso.** Empieza con 3–6 meses; prorroga si te gusta.
+- **Ignorar el Anmeldung.** Confirma por escrito que el registro es posible antes de reservar.
+- **Empezar tarde.** En Berlín y Múnich los buenos anuncios vuelan 6–8 semanas antes de la fecha de entrada.
+
+Tu primera vivienda en Alemania está a una tarde de comparar — abre el [Buscador de vivienda amueblada](/tools/furnished-housing), elige tu ciudad y reserva desde el sofá.`,
+      faqs: [
+        { q: '¿De verdad puedo alquilar un piso en Alemania antes de llegar?', a: 'Sí. Los alquileres amueblados de media estancia en HousingAnywhere, Wunderflats, Spotahome y Nestpick están diseñados para reservarse online desde el extranjero — anuncios verificados, contratos digitales y pago con tarjeta, sin visita.' },
+        { q: '¿Necesito Schufa para un piso amueblado?', a: 'No. Esa es la gran ventaja: las plataformas verifican tu identidad y tu método de pago en lugar de un historial crediticio alemán que un recién llegado aún no puede tener.' },
+        { q: '¿Puedo hacer el Anmeldung en un piso amueblado?', a: 'Normalmente sí — la mayoría de caseros profesionales entregan la Wohnungsgeberbestätigung necesaria. Confírmalo por escrito antes de reservar: sin Anmeldung no hay número fiscal ni cuenta bancaria.' },
+        { q: '¿Cuánto cuesta un piso amueblado en Alemania?', a: 'En 2026, unos 1.100–1.600 € al mes en Berlín, 1.400–2.000 € en Múnich y 700–1.000 € en ciudades como Leipzig — normalmente con gastos y Wi-Fi incluidos.' },
+        { q: '¿Cómo evito estafas de alquiler?', a: 'Reserva solo en plataformas consolidadas y paga únicamente dentro de su sistema protegido. Nunca transfieras una fianza directamente a un particular que no conoces.' },
+      ],
+    },
+    tr: {
+      title: 'Almanya’da Mobilyalı Daireler: İlk Evinizi Yurt Dışından Kiralayın (2026)',
+      summary: 'Almanya’ya varmadan mobilyalı daire nasıl kiralanır — Schufa’sız, görüşmesiz. Platformlar, gerçek fiyatlar, Anmeldung kuralları ve kaçınılması gereken dolandırıcılıklar.',
+      content: `Almanya’ya taşınan herkese sorun: vize stresliydi ama ilk ev daha zordu. Klasik Alman ev sahipleri yüz yüze görüşme, Schufa kredi kaydı, Alman banka hesabı ve maaş bordrosu ister — varmadan önce sahip olamayacağınız dört şey. İyi haber: tam olarak sizin durumunuz için kurulmuş koca bir kiralama pazarı var ve tamamen telefonunuzdan rezerve edebilirsiniz.
+
+💡 **Kestirme:** ücretsiz [Mobilyalı Konut Bulucu](/tools/furnished-housing) aracımız, yeni gelenlerin en çok güvendiği dört platformdaki 20 Alman şehrine ait taşınmaya hazır mobilyalı ilanları tek ekranda gösterir — şehrinizi seçin ve tek yerden karşılaştırın.
+
+## Neden yurt dışından «normal» bir daire kiralayamazsınız
+
+Mobilyasız uzun dönem kiralamalar yeni gelenler için kapalı bir döngüdür. Ev sahipleri fiziksel görüşme sonrası aday seçer, ardından Schufa raporu ister — bu Alman kredi geçmişi ancak Almanya’da yaşamaya başladıktan sonra oluşur. Ayrıca Alman geliri ve depozito için Alman banka hesabı isterler. Bunların hiçbiri Kazablanka, İstanbul veya Bakü’den mümkün değil. Bu döngüyle yurt dışından savaşmak aylar kaybettirir — ve dolandırıcılıkların çoğu tam burada olur.
+
+## Mobilyalı orta vadeli kiralamalar neyi çözer
+
+1–12 ay kiralanan mobilyalı daireler farklı kuralları olan ayrı bir pazardır:
+
+- **%100 online rezervasyon** — doğrulanmış ilanlar, fotoğraf veya video tur, dijital sözleşme, kartla ödeme.
+- **Schufa gerekmez** — platformlar Alman kredi geçmişiniz yerine kimliğinizi ve ödemenizi doğrular.
+- **İlk günden hazır** — yatak, mutfak, çamaşır makinesi, Wi-Fi; faturalar genellikle tek fiyata dahil.
+- **Anmeldung için adres** — çoğu ev sahibi kayıt için gereken Wohnungsgeberbestätigung belgesini verir; bu da vergi numaranızı, banka hesabınızı ve SIM sözleşmenizi açar.
+
+Başarılı yeni gelenlerin neredeyse tamamının stratejisi: ilk 3–6 ay için mobilyalı bir yer ayırtın, gelin, kaydolun, hesap açın, işe veya okula başlayın — sonra Alman geliriyle, sahada, sakin sakin uzun dönem ev arayın.
+
+## Gerçekte nerede aramalı
+
+Bu pazarda dört platform öne çıkar: HousingAnywhere (en geniş oda ve stüdyo seçimi, ödeme koruması), Wunderflats (bütün daireler, Anmeldung çoğunlukla mümkün), Spotahome (her ev platformca videoyla doğrulanır) ve Nestpick (birçok siteyi aynı anda karşılaştıran toplayıcı). Dört sekme açmak yerine [Mobilyalı Konut Bulucu](/tools/furnished-housing) aracını kullanın — şehri seçin, her platformun canlı sonuçlarına doğrudan geçin.
+
+## 2026’da maliyeti ne kadar
+
+Faturalar dahil mobilyalı stüdyo veya 1+1 için kabaca: Berlin 1.100–1.600 €, Münih 1.400–2.000 €, Frankfurt 1.200–1.700 €, Leipzig veya Bochum 700–1.000 €. Mobilyalı, mobilyasızdan %20–35 pahalıdır — esneklik ve sıfır kurulum masrafı için ödersiniz. Şehri seçmeden önce ilk ayınızı ücretsiz [Yaşam Maliyeti Hesaplayıcı](/tools/living-cost-calculator) ile gerçekçi planlayın.
+
+## Sık yapılan hatalar
+
+- **Platform dışında ödeme.** Korumalı ödeme adımından önce havale isteyen herkes dolandırıcıdır. İstisnasız.
+- **Görmeden 12 ay kiralamak.** 3–6 ayla başlayın; beğenirseniz uzatın.
+- **Anmeldung’u atlamak.** Rezervasyondan önce kaydın mümkün olduğunu yazılı teyit ettirin.
+- **Geç başlamak.** Berlin ve Münih’te iyi ilanlar taşınma tarihinden 6–8 hafta önce kapılır.
+
+Almanya’daki ilk eviniz bir karşılaştırma akşamı uzağınızda — [Mobilyalı Konut Bulucu](/tools/furnished-housing) aracını açın, şehrinizi seçin ve koltuğunuzdan rezerve edin.`,
+      faqs: [
+        { q: 'Almanya’ya varmadan gerçekten daire kiralayabilir miyim?', a: 'Evet. HousingAnywhere, Wunderflats, Spotahome ve Nestpick’teki mobilyalı orta vadeli kiralamalar yurt dışından tamamen online rezervasyon için tasarlanmıştır — doğrulanmış ilanlar, dijital sözleşme, kartla ödeme, görüşme gerekmez.' },
+        { q: 'Mobilyalı daire için Schufa gerekir mi?', a: 'Hayır. Ana avantaj bu: platformlar, yeni gelenlerin henüz sahip olamayacağı Alman kredi kaydı yerine kimliğinizi ve ödeme yönteminizi doğrular.' },
+        { q: 'Mobilyalı dairede Anmeldung yapabilir miyim?', a: 'Genellikle evet — profesyonel ev sahiplerinin çoğu kayıt için gereken Wohnungsgeberbestätigung belgesini verir. Rezervasyondan önce yazılı teyit alın; Anmeldung olmadan vergi numarası ve banka hesabı açılmaz.' },
+        { q: 'Almanya’da mobilyalı daire ne kadar?', a: '2026’da Berlin’de ayda yaklaşık 1.100–1.600 €, Münih’te 1.400–2.000 €, Leipzig gibi şehirlerde 700–1.000 € — genellikle faturalar ve Wi-Fi dahil.' },
+        { q: 'Kiralama dolandırıcılığından nasıl korunurum?', a: 'Yalnızca yerleşik platformlardan rezervasyon yapın ve yalnızca korumalı ödeme sisteminde ödeyin. Tanımadığınız bir ev sahibine asla doğrudan depozito göndermeyin.' },
+      ],
+    },
+    fa: {
+      title: 'آپارتمان‌های مبله در آلمان: اولین خانه‌ات را از خارج اجاره کن (2026)',
+      summary: 'چگونه قبل از رسیدن به آلمان آپارتمان مبله رزرو کنیم — بدون Schufa و بدون بازدید. پلتفرم‌ها، قیمت‌های واقعی، قوانین Anmeldung و کلاهبرداری‌هایی که باید از آن‌ها دوری کرد.',
+      content: `از هر کسی که به آلمان مهاجرت کرده بپرسید: ویزا استرس‌زا بود، اما اولین خانه سخت‌تر بود. صاحب‌خانه‌های سنتی آلمانی بازدید حضوری، سابقه اعتباری Schufa، حساب بانکی آلمانی و فیش حقوق می‌خواهند — چهار چیزی که قبل از رسیدن نمی‌توانید داشته باشید. خبر خوب: یک بازار اجاره کامل دقیقاً برای وضعیت شما ساخته شده و می‌توانید تماماً از گوشی‌تان رزرو کنید.
+
+💡 **میان‌بر:** ابزار رایگان ما [جستجوگر خانه مبله](/tools/furnished-housing) آگهی‌های مبله و آماده سکونت را در ۲۰ شهر آلمان از چهار پلتفرم مورد اعتماد تازه‌واردها نشان می‌دهد — شهرتان را انتخاب کنید و در یک‌جا مقایسه کنید.
+
+## چرا نمی‌توانید از خارج یک آپارتمان «معمولی» اجاره کنید
+
+اجاره‌های بلندمدت بدون مبلمان برای تازه‌واردها یک حلقه بسته است. صاحب‌خانه‌ها بعد از بازدید حضوری انتخاب می‌کنند و سپس گزارش Schufa می‌خواهند — سابقه اعتباری آلمانی که فقط بعد از زندگی در آلمان ساخته می‌شود. درآمد آلمانی و حساب بانکی آلمانی برای ودیعه هم می‌خواهند. هیچ‌کدام از تهران، استانبول یا دهلی ممکن نیست. جنگیدن با این حلقه از خارج ماه‌ها وقت تلف می‌کند — و بیشتر کلاهبرداری‌ها دقیقاً همین‌جا اتفاق می‌افتد.
+
+## اجاره‌های مبله میان‌مدت چه چیزی را حل می‌کنند
+
+آپارتمان‌های مبله با اجاره ۱ تا ۱۲ ماهه بازار جداگانه‌ای با قوانین متفاوت است:
+
+- **رزرو ۱۰۰٪ آنلاین** — آگهی‌های تأییدشده، عکس یا تور ویدیویی، قرارداد دیجیتال، پرداخت با کارت.
+- **بدون نیاز به Schufa** — پلتفرم‌ها به‌جای سابقه اعتباری آلمانی، هویت و پرداخت شما را تأیید می‌کنند.
+- **آماده از روز اول** — تخت، آشپزخانه، ماشین لباسشویی، وای‌فای؛ هزینه‌های جانبی معمولاً در یک قیمت.
+- **آدرسی برای Anmeldung** — بیشتر صاحب‌خانه‌ها گواهی Wohnungsgeberbestätigung لازم برای ثبت آدرس را می‌دهند که بعدش شماره مالیاتی، حساب بانکی و سیم‌کارت را باز می‌کند.
+
+استراتژی تقریباً همه تازه‌واردهای موفق: یک خانه مبله برای ۳ تا ۶ ماه اول رزرو کن، برس، ثبت‌نام کن، حساب باز کن، کار یا تحصیل را شروع کن — بعد با خیال راحت و با درآمد آلمانی دنبال خانه بلندمدت بگرد.
+
+## واقعاً کجا جستجو کنیم
+
+چهار پلتفرم بر این بازار مسلط‌اند: HousingAnywhere (بزرگ‌ترین انتخاب اتاق و استودیو با حفاظت پرداخت)، Wunderflats (آپارتمان کامل، معمولاً با امکان Anmeldung)، Spotahome (هر خانه با ویدیو بررسی شده) و Nestpick (تجمیع‌کننده‌ای که چند سایت را هم‌زمان مقایسه می‌کند). به‌جای باز کردن چهار تب، از [جستجوگر خانه مبله](/tools/furnished-housing) استفاده کنید — شهر را انتخاب کنید و مستقیم به نتایج زنده هر پلتفرم بروید.
+
+## در 2026 چقدر هزینه دارد
+
+برای استودیو یا آپارتمان یک‌خوابه مبله با هزینه‌ها: برلین ۱٬۱۰۰–۱٬۶۰۰ €، مونیخ ۱٬۴۰۰–۲٬۰۰۰ €، فرانکفورت ۱٬۲۰۰–۱٬۷۰۰ €، لایپزیگ یا بوخوم ۷۰۰–۱٬۰۰۰ €. اجاره مبله ۲۰ تا ۳۵٪ گران‌تر از بدون مبلمان است — بهای انعطاف و صفر بودن هزینه راه‌اندازی. قبل از انتخاب شهر، ماه اول را با [محاسبه‌گر هزینه زندگی](/tools/living-cost-calculator) رایگان واقع‌بینانه بودجه‌بندی کنید.
+
+## اشتباهات رایج
+
+- **پرداخت خارج از پلتفرم.** هر صاحب‌خانه‌ای که قبل از امضا در پرداخت محافظت‌شده پلتفرم حواله بخواهد کلاهبردار است. بدون استثنا.
+- **رزرو ۱۲ ماهه ندیده.** با ۳–۶ ماه شروع کنید؛ اگر راضی بودید تمدید کنید.
+- **نادیده گرفتن Anmeldung.** قبل از رزرو کتباً تأیید بگیرید که ثبت آدرس ممکن است.
+- **دیر شروع کردن.** در برلین و مونیخ آگهی‌های خوب ۶–۸ هفته قبل از تاریخ ورود تمام می‌شوند.
+
+اولین خانه شما در آلمان فقط یک شب مقایسه فاصله دارد — [جستجوگر خانه مبله](/tools/furnished-housing) را باز کنید، شهرتان را انتخاب کنید و از روی مبل رزرو کنید.`,
+      faqs: [
+        { q: 'واقعاً می‌توانم قبل از رسیدن به آلمان خانه اجاره کنم؟', a: 'بله. اجاره‌های مبله میان‌مدت در HousingAnywhere، Wunderflats، Spotahome و Nestpick برای رزرو کاملاً آنلاین از خارج طراحی شده‌اند — آگهی تأییدشده، قرارداد دیجیتال، پرداخت با کارت و بدون نیاز به بازدید.' },
+        { q: 'برای خانه مبله به Schufa نیاز دارم؟', a: 'خیر. مزیت اصلی همین است: پلتفرم‌ها به‌جای سابقه اعتباری آلمانی — که تازه‌وارد هنوز نمی‌تواند داشته باشد — هویت و روش پرداخت شما را تأیید می‌کنند.' },
+        { q: 'آیا در خانه مبله می‌توانم Anmeldung انجام دهم؟', a: 'معمولاً بله — بیشتر صاحب‌خانه‌های حرفه‌ای گواهی Wohnungsgeberbestätigung را می‌دهند. قبل از رزرو کتباً تأیید بگیرید؛ بدون ثبت آدرس، شماره مالیاتی و حساب بانکی نخواهید داشت.' },
+        { q: 'خانه مبله در آلمان چند است؟', a: 'در 2026 حدوداً ماهی ۱٬۱۰۰–۱٬۶۰۰ € در برلین، ۱٬۴۰۰–۲٬۰۰۰ € در مونیخ و ۷۰۰–۱٬۰۰۰ € در شهرهایی مثل لایپزیگ — معمولاً با هزینه‌ها و وای‌فای.' },
+        { q: 'چطور از کلاهبرداری اجاره در امان بمانم؟', a: 'فقط از پلتفرم‌های معتبر رزرو کنید و فقط داخل سیستم پرداخت محافظت‌شده آن‌ها پرداخت کنید. هرگز ودیعه را مستقیم به صاحب‌خانه‌ای که ندیده‌اید واریز نکنید.' },
+      ],
+    },
+    pt: {
+      title: 'Apartamentos mobiliados na Alemanha: alugue sua primeira casa do exterior (2026)',
+      summary: 'Como reservar um apartamento mobiliado na Alemanha antes de chegar — sem Schufa, sem visita. Plataformas, preços reais, regras do Anmeldung e golpes a evitar.',
+      content: `Pergunte a qualquer pessoa que se mudou para a Alemanha: o visto foi estressante, mas o primeiro apartamento foi mais difícil. Os proprietários alemães tradicionais exigem visita presencial, registro de crédito Schufa, conta bancária alemã e contracheques — quatro coisas impossíveis antes de chegar. A boa notícia: existe um mercado inteiro de aluguel feito exatamente para a sua situação, e você reserva tudo pelo celular.
+
+💡 **Atalho:** nosso [Buscador de Moradia Mobiliada](/tools/furnished-housing) gratuito mostra anúncios mobiliados prontos para morar em 20 cidades alemãs nas quatro plataformas mais confiáveis — escolha a cidade e compare num só lugar.
+
+## Por que você não consegue alugar um apartamento «normal» do exterior
+
+Aluguéis sem mobília de longo prazo são um círculo fechado para recém-chegados. Os proprietários selecionam candidatos após visita física e depois pedem a Schufa — um histórico de crédito alemão que só começa quando você já mora na Alemanha. Também exigem renda alemã e conta alemã para o depósito. Nada disso é possível de São Paulo, Luanda ou Maputo. Lutar contra esse círculo do exterior desperdiça meses — e é aí que acontecem a maioria dos golpes, quando pessoas desesperadas transferem cauções para desconhecidos.
+
+## O que os aluguéis mobiliados de médio prazo resolvem
+
+Apartamentos mobiliados alugados por 1–12 meses são um mercado à parte, com outras regras:
+
+- **Reserva 100% online** — anúncios verificados, fotos ou tour em vídeo, contrato digital, pagamento com cartão.
+- **Sem Schufa** — as plataformas verificam sua identidade e seu pagamento, não seu crédito alemão.
+- **Pronto desde o primeiro dia** — cama, cozinha, máquina de lavar, Wi-Fi; contas geralmente incluídas.
+- **Um endereço para o Anmeldung** — a maioria dos proprietários fornece a Wohnungsgeberbestätigung necessária para o registro, que destrava número fiscal, banco e SIM.
+
+A estratégia de quase todo recém-chegado bem-sucedido: reservar um mobiliado para os primeiros 3–6 meses, chegar, registrar-se, abrir conta, começar o trabalho ou os estudos — e depois procurar com calma um apartamento de longo prazo, já no local e com renda alemã.
+
+## Onde procurar de verdade
+
+Quatro plataformas dominam este mercado: HousingAnywhere (maior oferta de quartos e estúdios, pagamento protegido), Wunderflats (apartamentos inteiros, Anmeldung quase sempre possível), Spotahome (cada casa verificada em vídeo) e Nestpick (um agregador que compara vários sites). Em vez de abrir quatro abas, use o [Buscador de Moradia Mobiliada](/tools/furnished-housing) — escolha a cidade e vá direto aos resultados ao vivo de cada plataforma.
+
+## Quanto custa em 2026
+
+Para um estúdio ou apartamento de um quarto mobiliado com contas incluídas: Berlim 1.100–1.600 €, Munique 1.400–2.000 €, Frankfurt 1.200–1.700 €, Leipzig ou Bochum 700–1.000 €. O mobiliado custa 20–35% mais que o vazio — você paga pela flexibilidade e por zero custos de instalação. Faça um orçamento realista do primeiro mês com a [Calculadora de Custo de Vida](/tools/living-cost-calculator) gratuita antes de escolher a cidade.
+
+## Erros comuns
+
+- **Pagar fora da plataforma.** Qualquer proprietário que peça transferência antes da assinatura no checkout protegido é golpista. Sem exceção.
+- **Reservar 12 meses sem ver.** Comece com 3–6 meses; prorrogue se gostar.
+- **Ignorar o Anmeldung.** Confirme por escrito que o registro é possível antes de reservar.
+- **Começar tarde demais.** Em Berlim e Munique os bons anúncios acabam 6–8 semanas antes da data de entrada.
+
+Sua primeira casa na Alemanha está a uma noite de comparação — abra o [Buscador de Moradia Mobiliada](/tools/furnished-housing), escolha sua cidade e reserve do sofá.`,
+      faqs: [
+        { q: 'Posso mesmo alugar um apartamento na Alemanha antes de chegar?', a: 'Sim. Os aluguéis mobiliados de médio prazo em HousingAnywhere, Wunderflats, Spotahome e Nestpick foram feitos para reserva totalmente online do exterior — anúncios verificados, contratos digitais e pagamento com cartão, sem visita.' },
+        { q: 'Preciso de Schufa para um apartamento mobiliado?', a: 'Não. Essa é a principal vantagem: as plataformas verificam sua identidade e forma de pagamento em vez de um histórico de crédito alemão que o recém-chegado ainda não pode ter.' },
+        { q: 'Posso fazer o Anmeldung num aluguel mobiliado?', a: 'Geralmente sim — a maioria dos proprietários profissionais fornece a Wohnungsgeberbestätigung necessária. Confirme por escrito antes de reservar: sem Anmeldung não há número fiscal nem conta bancária.' },
+        { q: 'Quanto custa um apartamento mobiliado na Alemanha?', a: 'Em 2026, cerca de 1.100–1.600 € por mês em Berlim, 1.400–2.000 € em Munique e 700–1.000 € em cidades como Leipzig — normalmente com contas e Wi-Fi incluídos.' },
+        { q: 'Como evitar golpes de aluguel?', a: 'Reserve apenas em plataformas estabelecidas e pague somente dentro do checkout protegido. Nunca transfira caução diretamente a um proprietário que você não conhece.' },
+      ],
+    },
+    ru: {
+      title: 'Меблированные квартиры в Германии: снимите первое жильё из-за рубежа (2026)',
+      summary: 'Как забронировать меблированную квартиру в Германии до приезда — без Schufa и без просмотра. Платформы, реальные цены, правила Anmeldung и как не попасться мошенникам.',
+      content: `Спросите любого, кто переехал в Германию: виза была нервной, но первая квартира — сложнее. Классические немецкие арендодатели требуют личный просмотр, кредитную историю Schufa, немецкий банковский счёт и расчётные листки — четыре вещи, которых до приезда быть не может. Хорошая новость: существует целый рынок аренды, созданный именно для вашей ситуации, и бронируется он полностью с телефона.
+
+💡 **Быстрый путь:** наш бесплатный [Поиск меблированного жилья](/tools/furnished-housing) показывает готовые к заселению меблированные объявления в 20 городах Германии на четырёх платформах, которым больше всего доверяют новички — выберите город и сравните в одном месте.
+
+## Почему «обычную» квартиру из-за рубежа снять нельзя
+
+Долгосрочная немеблированная аренда — замкнутый круг для новичков. Арендодатели отбирают кандидатов после очного просмотра, затем просят Schufa — немецкую кредитную историю, которая появляется только после того, как вы уже живёте в Германии. Плюс немецкий доход и немецкий счёт для залога. Ничего из этого невозможно из Москвы, Ташкента или Алматы. Борьба с этим кругом из-за рубежа съедает месяцы — и именно здесь происходит большинство мошенничеств, когда отчаявшиеся люди переводят залоги незнакомцам.
+
+## Что решает меблированная среднесрочная аренда
+
+Меблированные квартиры на 1–12 месяцев — отдельный рынок с другими правилами:
+
+- **Бронирование 100% онлайн** — проверенные объявления, фото или видеотуры, цифровой договор, оплата картой.
+- **Schufa не нужна** — платформа проверяет личность и платёж, а не немецкую кредитную историю.
+- **Готово с первого дня** — кровать, кухня, стиральная машина, Wi-Fi; коммуналка обычно включена.
+- **Адрес для Anmeldung** — большинство арендодателей выдают Wohnungsgeberbestätigung для регистрации, которая открывает налоговый номер, банковский счёт и SIM-контракт.
+
+Стратегия почти всех успешных новичков: забронировать меблированное жильё на первые 3–6 месяцев, приехать, зарегистрироваться, открыть счёт, начать работу или учёбу — а затем спокойно искать долгосрочную квартиру уже на месте, с немецким доходом.
+
+## Где искать на самом деле
+
+На этом рынке доминируют четыре платформы: HousingAnywhere (самый большой выбор комнат и студий, защита платежа), Wunderflats (целые квартиры, Anmeldung обычно возможна), Spotahome (каждое жильё проверено видео) и Nestpick (агрегатор, сравнивающий много сайтов сразу). Вместо четырёх вкладок откройте [Поиск меблированного жилья](/tools/furnished-housing) — выберите город и переходите сразу к живым результатам каждой платформы.
+
+## Сколько это стоит в 2026 году
+
+Ориентируйтесь на такие цены за меблированную студию или однушку со всем включённым: Берлин 1 100–1 600 €, Мюнхен 1 400–2 000 €, Франкфурт 1 200–1 700 €, Лейпциг или Бохум 700–1 000 €. Меблированная аренда на 20–35% дороже пустой — вы платите за гибкость и нулевые затраты на обустройство. Просчитайте первый месяц реалистично в бесплатном [Калькуляторе стоимости жизни](/tools/living-cost-calculator), прежде чем выбирать город.
+
+## Типичные ошибки
+
+- **Оплата вне платформы.** Любой арендодатель, требующий перевод до подписания в защищённом чекауте платформы, — мошенник. Без исключений.
+- **Бронировать 12 месяцев не глядя.** Начните с 3–6 месяцев; понравится — продлите.
+- **Игнорировать Anmeldung.** До бронирования письменно подтвердите, что регистрация возможна.
+- **Начинать поздно.** В Берлине и Мюнхене хорошие варианты разбирают за 6–8 недель до даты заезда.
+
+Ваш первый дом в Германии — в одном вечере сравнения: откройте [Поиск меблированного жилья](/tools/furnished-housing), выберите город и бронируйте с дивана.`,
+      faqs: [
+        { q: 'Реально ли снять квартиру в Германии до приезда?', a: 'Да. Меблированная среднесрочная аренда на HousingAnywhere, Wunderflats, Spotahome и Nestpick создана для полностью онлайн-бронирования из-за рубежа — проверенные объявления, цифровые договоры, оплата картой, без просмотра.' },
+        { q: 'Нужна ли Schufa для меблированной квартиры?', a: 'Нет. В этом главное преимущество: платформы проверяют личность и способ оплаты вместо немецкой кредитной истории, которой у новичка ещё нет.' },
+        { q: 'Можно ли сделать Anmeldung в меблированной квартире?', a: 'Обычно да — большинство профессиональных арендодателей выдают Wohnungsgeberbestätigung. Подтвердите это письменно до бронирования: без регистрации не будет налогового номера и банковского счёта.' },
+        { q: 'Сколько стоит меблированная квартира в Германии?', a: 'В 2026 году примерно 1 100–1 600 € в месяц в Берлине, 1 400–2 000 € в Мюнхене и 700–1 000 € в городах вроде Лейпцига — обычно с коммуналкой и Wi-Fi.' },
+        { q: 'Как не попасться на мошенников?', a: 'Бронируйте только на известных платформах и платите только внутри их защищённой системы. Никогда не переводите залог напрямую незнакомому арендодателю.' },
+      ],
+    },
+    hi: {
+      title: 'जर्मनी में फ़र्निश्ड अपार्टमेंट: विदेश से ही अपना पहला घर किराए पर लें (2026)',
+      summary: 'जर्मनी पहुँचने से पहले फ़र्निश्ड अपार्टमेंट कैसे बुक करें — बिना Schufa, बिना विज़िट। प्लेटफ़ॉर्म, असली कीमतें, Anmeldung के नियम और बचने लायक धोखाधड़ी।',
+      content: `जर्मनी जा चुके किसी से भी पूछिए: वीज़ा तनाव भरा था, लेकिन पहला घर उससे भी मुश्किल। पारंपरिक जर्मन मकान मालिक व्यक्तिगत विज़िट, Schufa क्रेडिट रिकॉर्ड, जर्मन बैंक खाता और सैलरी स्लिप माँगते हैं — चार चीज़ें जो पहुँचने से पहले हो ही नहीं सकतीं। अच्छी खबर: ठीक आपकी स्थिति के लिए बना एक पूरा रेंटल मार्केट मौजूद है, और आप उसे पूरी तरह फ़ोन से बुक कर सकते हैं।
+
+💡 **शॉर्टकट:** हमारा मुफ़्त [फ़र्निश्ड हाउसिंग फ़ाइंडर](/tools/furnished-housing) 20 जर्मन शहरों के लिए, नए लोगों के सबसे भरोसेमंद चार प्लेटफ़ॉर्म पर, रहने-योग्य फ़र्निश्ड लिस्टिंग एक जगह दिखाता है — शहर चुनें और एक ही जगह तुलना करें।
+
+## विदेश से «सामान्य» अपार्टमेंट क्यों नहीं मिलता
+
+बिना फ़र्नीचर की लंबी अवधि की रेंटल नए लोगों के लिए बंद घेरा है। मकान मालिक फिज़िकल विज़िट के बाद उम्मीदवार चुनते हैं, फिर Schufa रिपोर्ट माँगते हैं — जर्मन क्रेडिट हिस्ट्री जो जर्मनी में रहने के बाद ही बननी शुरू होती है। साथ ही जर्मन आय और डिपॉज़िट के लिए जर्मन खाता चाहिए। दिल्ली, मुंबई या काठमांडू से इनमें से कुछ भी संभव नहीं। विदेश से इस घेरे से लड़ने में महीने बर्बाद होते हैं — और ज़्यादातर धोखाधड़ी यहीं होती है, जब हताश लोग अजनबियों को डिपॉज़िट भेजने लगते हैं।
+
+## फ़र्निश्ड मिड-टर्म रेंटल क्या हल करती है
+
+1–12 महीने के लिए किराए पर मिलने वाले फ़र्निश्ड अपार्टमेंट अलग नियमों वाला अलग बाज़ार हैं:
+
+- **100% ऑनलाइन बुकिंग** — सत्यापित लिस्टिंग, फ़ोटो या वीडियो टूर, डिजिटल कॉन्ट्रैक्ट, कार्ड से भुगतान।
+- **Schufa की ज़रूरत नहीं** — प्लेटफ़ॉर्म आपकी पहचान और भुगतान सत्यापित करते हैं, जर्मन क्रेडिट हिस्ट्री नहीं।
+- **पहले दिन से तैयार** — बिस्तर, किचन, वॉशिंग मशीन, Wi-Fi; बिल आमतौर पर एक ही कीमत में शामिल।
+- **Anmeldung के लिए पता** — ज़्यादातर मकान मालिक रजिस्ट्रेशन के लिए ज़रूरी Wohnungsgeberbestätigung देते हैं, जिससे टैक्स ID, बैंक खाता और SIM अनलॉक होते हैं।
+
+लगभग हर सफल नवागंतुक की रणनीति: पहले 3–6 महीनों के लिए फ़र्निश्ड जगह बुक करो, पहुँचो, रजिस्टर करो, खाता खोलो, नौकरी या पढ़ाई शुरू करो — फिर जर्मन आय के साथ आराम से लंबी अवधि का घर ढूँढो।
+
+## असल में कहाँ खोजें
+
+इस बाज़ार पर चार प्लेटफ़ॉर्म का दबदबा है: HousingAnywhere (कमरों और स्टूडियो का सबसे बड़ा चयन, पेमेंट प्रोटेक्शन), Wunderflats (पूरे अपार्टमेंट, Anmeldung अक्सर संभव), Spotahome (हर घर वीडियो से जाँचा हुआ) और Nestpick (कई साइटें एक साथ तुलना करने वाला एग्रीगेटर)। चार टैब खोलने की बजाय [फ़र्निश्ड हाउसिंग फ़ाइंडर](/tools/furnished-housing) इस्तेमाल करें — शहर चुनें और हर प्लेटफ़ॉर्म के लाइव नतीजों पर सीधे जाएँ।
+
+## 2026 में कितना खर्च
+
+बिल समेत फ़र्निश्ड स्टूडियो या 1-बेडरूम के लिए लगभग: बर्लिन 1,100–1,600 €, म्यूनिख 1,400–2,000 €, फ़्रैंकफ़र्ट 1,200–1,700 €, लाइपज़िग या बोखुम 700–1,000 €। फ़र्निश्ड किराया खाली घर से 20–35% ज़्यादा होता है — आप लचीलेपन और शून्य सेटअप लागत की कीमत देते हैं। शहर चुनने से पहले मुफ़्त [लिविंग कॉस्ट कैलकुलेटर](/tools/living-cost-calculator) से पहले महीने का यथार्थवादी बजट बनाएँ।
+
+## आम गलतियाँ
+
+- **प्लेटफ़ॉर्म के बाहर भुगतान।** जो भी मकान मालिक सुरक्षित चेकआउट में साइन करने से पहले बैंक ट्रांसफ़र माँगे, वह ठग है। कोई अपवाद नहीं।
+- **बिना देखे 12 महीने बुक करना।** 3–6 महीने से शुरू करें; पसंद आए तो बढ़ाएँ।
+- **Anmeldung को नज़रअंदाज़ करना।** बुकिंग से पहले लिखित पुष्टि लें कि रजिस्ट्रेशन संभव है।
+- **देर से शुरुआत।** बर्लिन और म्यूनिख में अच्छी लिस्टिंग मूव-इन तारीख़ से 6–8 हफ़्ते पहले ही निकल जाती हैं।
+
+जर्मनी में आपका पहला घर तुलना की एक शाम की दूरी पर है — [फ़र्निश्ड हाउसिंग फ़ाइंडर](/tools/furnished-housing) खोलें, शहर चुनें और सोफ़े से ही बुक करें।`,
+      faqs: [
+        { q: 'क्या मैं सच में जर्मनी पहुँचने से पहले अपार्टमेंट किराए पर ले सकता हूँ?', a: 'हाँ। HousingAnywhere, Wunderflats, Spotahome और Nestpick की फ़र्निश्ड मिड-टर्म रेंटल विदेश से पूरी तरह ऑनलाइन बुकिंग के लिए बनी हैं — सत्यापित लिस्टिंग, डिजिटल कॉन्ट्रैक्ट, कार्ड पेमेंट, विज़िट की ज़रूरत नहीं।' },
+        { q: 'क्या फ़र्निश्ड अपार्टमेंट के लिए Schufa चाहिए?', a: 'नहीं। यही मुख्य फ़ायदा है: प्लेटफ़ॉर्म जर्मन क्रेडिट रिकॉर्ड की जगह आपकी पहचान और भुगतान का तरीका सत्यापित करते हैं, जो नए व्यक्ति के पास हो ही नहीं सकता।' },
+        { q: 'क्या फ़र्निश्ड रेंटल में Anmeldung हो सकता है?', a: 'आमतौर पर हाँ — ज़्यादातर पेशेवर मकान मालिक रजिस्ट्रेशन के लिए ज़रूरी Wohnungsgeberbestätigung देते हैं। बुकिंग से पहले लिखित पुष्टि लें; बिना Anmeldung टैक्स ID और बैंक खाता नहीं मिलता।' },
+        { q: 'जर्मनी में फ़र्निश्ड अपार्टमेंट की कीमत क्या है?', a: '2026 में बर्लिन में लगभग 1,100–1,600 € प्रति माह, म्यूनिख में 1,400–2,000 € और लाइपज़िग जैसे शहरों में 700–1,000 € — आमतौर पर बिल और Wi-Fi शामिल।' },
+        { q: 'किराए की धोखाधड़ी से कैसे बचें?', a: 'सिर्फ़ स्थापित प्लेटफ़ॉर्म से बुक करें और सिर्फ़ उनके सुरक्षित पेमेंट सिस्टम में भुगतान करें। जिस मकान मालिक से कभी मिले नहीं, उसे कभी सीधे डिपॉज़िट न भेजें।' },
+      ],
+    },
+    ur: {
+      title: 'جرمنی میں فرنشڈ اپارٹمنٹس: بیرونِ ملک سے اپنا پہلا گھر کرائے پر لیں (2026)',
+      summary: 'جرمنی پہنچنے سے پہلے فرنشڈ اپارٹمنٹ کیسے بک کریں — بغیر Schufa، بغیر وزٹ۔ پلیٹ فارمز، اصل قیمتیں، Anmeldung کے اصول اور وہ فراڈ جن سے بچنا ضروری ہے۔',
+      content: `جرمنی منتقل ہونے والے کسی بھی شخص سے پوچھیں: ویزا دباؤ والا تھا، مگر پہلا گھر اس سے بھی مشکل۔ روایتی جرمن مالک مکان ذاتی وزٹ، Schufa کریڈٹ ریکارڈ، جرمن بینک اکاؤنٹ اور تنخواہ کی سلپیں مانگتے ہیں — چار چیزیں جو پہنچنے سے پہلے ممکن ہی نہیں۔ خوشخبری: بالکل آپ جیسی صورتحال کے لیے بنا ایک مکمل رینٹل مارکیٹ موجود ہے، اور آپ اسے پوری طرح اپنے فون سے بک کر سکتے ہیں۔
+
+💡 **شارٹ کٹ:** ہمارا مفت [فرنشڈ ہاؤسنگ فائنڈر](/tools/furnished-housing) نئے آنے والوں کے چار سب سے قابلِ اعتماد پلیٹ فارمز پر 20 جرمن شہروں کی تیار فرنشڈ لسٹنگز ایک جگہ دکھاتا ہے — اپنا شہر منتخب کریں اور ایک ہی جگہ موازنہ کریں۔
+
+## بیرونِ ملک سے «عام» اپارٹمنٹ کیوں نہیں ملتا
+
+بغیر فرنیچر کی طویل مدتی رینٹلز نئے آنے والوں کے لیے بند دائرہ ہیں۔ مالک مکان جسمانی وزٹ کے بعد امیدوار چنتے ہیں، پھر Schufa رپورٹ مانگتے ہیں — وہ جرمن کریڈٹ ہسٹری جو جرمنی میں رہنے کے بعد ہی بننا شروع ہوتی ہے۔ ساتھ ہی جرمن آمدنی اور ڈپازٹ کے لیے جرمن اکاؤنٹ بھی چاہیے۔ کراچی، لاہور یا اسلام آباد سے ان میں سے کچھ بھی ممکن نہیں۔ بیرونِ ملک سے اس دائرے سے لڑنے میں مہینے ضائع ہوتے ہیں — اور زیادہ تر فراڈ یہیں ہوتا ہے، جب پریشان لوگ اجنبیوں کو ڈپازٹ بھیجنے لگتے ہیں۔
+
+## فرنشڈ درمیانی مدت کی رینٹلز کیا حل کرتی ہیں
+
+1 تا 12 ماہ کرائے پر ملنے والے فرنشڈ اپارٹمنٹس الگ اصولوں والی الگ مارکیٹ ہیں:
+
+- **100% آن لائن بکنگ** — تصدیق شدہ لسٹنگز، تصاویر یا ویڈیو ٹور، ڈیجیٹل معاہدہ، کارڈ سے ادائیگی۔
+- **Schufa کی ضرورت نہیں** — پلیٹ فارم آپ کی شناخت اور ادائیگی کی تصدیق کرتے ہیں، جرمن کریڈٹ ہسٹری کی نہیں۔
+- **پہلے دن سے تیار** — بستر، کچن، واشنگ مشین، وائی فائی؛ بل عموماً ایک ہی قیمت میں شامل۔
+- **Anmeldung کے لیے پتہ** — زیادہ تر مالک مکان رجسٹریشن کے لیے درکار Wohnungsgeberbestätigung دیتے ہیں، جس کے بعد ٹیکس ID، بینک اکاؤنٹ اور SIM کھلتے ہیں۔
+
+تقریباً ہر کامیاب نئے آنے والے کی حکمتِ عملی: پہلے 3–6 ماہ کے لیے فرنشڈ جگہ بک کریں، پہنچیں، رجسٹر کریں، اکاؤنٹ کھولیں، نوکری یا تعلیم شروع کریں — پھر جرمن آمدنی کے ساتھ سکون سے طویل مدتی گھر تلاش کریں۔
+
+## اصل میں کہاں تلاش کریں
+
+اس مارکیٹ پر چار پلیٹ فارمز کا غلبہ ہے: HousingAnywhere (کمروں اور اسٹوڈیوز کا سب سے بڑا انتخاب، پیمنٹ پروٹیکشن)، Wunderflats (مکمل اپارٹمنٹس، Anmeldung اکثر ممکن)، Spotahome (ہر گھر ویڈیو سے جانچا ہوا) اور Nestpick (کئی سائٹس کا بیک وقت موازنہ کرنے والا ایگریگیٹر)۔ چار ٹیبز کھولنے کی بجائے [فرنشڈ ہاؤسنگ فائنڈر](/tools/furnished-housing) استعمال کریں — شہر منتخب کریں اور ہر پلیٹ فارم کے براہِ راست نتائج پر جائیں۔
+
+## 2026 میں لاگت کتنی ہے
+
+بلوں سمیت فرنشڈ اسٹوڈیو یا ایک بیڈروم کے لیے تقریباً: برلن 1,100–1,600 €، میونخ 1,400–2,000 €، فرینکفرٹ 1,200–1,700 €، لائپزگ یا بوخم 700–1,000 €۔ فرنشڈ کرایہ خالی گھر سے 20–35% زیادہ ہوتا ہے — آپ لچک اور صفر سیٹ اپ لاگت کی قیمت دیتے ہیں۔ شہر چننے سے پہلے مفت [رہائشی اخراجات کیلکولیٹر](/tools/living-cost-calculator) سے پہلے مہینے کا حقیقت پسندانہ بجٹ بنائیں۔
+
+## عام غلطیاں
+
+- **پلیٹ فارم سے باہر ادائیگی۔** جو مالک مکان محفوظ چیک آؤٹ میں دستخط سے پہلے بینک ٹرانسفر مانگے وہ فراڈیا ہے۔ کوئی استثنا نہیں۔
+- **بغیر دیکھے 12 ماہ بک کرنا۔** 3–6 ماہ سے شروع کریں؛ پسند آئے تو بڑھائیں۔
+- **Anmeldung نظرانداز کرنا۔** بکنگ سے پہلے تحریری تصدیق لیں کہ رجسٹریشن ممکن ہے۔
+- **دیر سے آغاز۔** برلن اور میونخ میں اچھی لسٹنگز منتقلی کی تاریخ سے 6–8 ہفتے پہلے ختم ہو جاتی ہیں۔
+
+جرمنی میں آپ کا پہلا گھر موازنے کی ایک شام کی دوری پر ہے — [فرنشڈ ہاؤسنگ فائنڈر](/tools/furnished-housing) کھولیں، شہر منتخب کریں اور صوفے سے ہی بک کریں۔`,
+      faqs: [
+        { q: 'کیا واقعی جرمنی پہنچنے سے پہلے اپارٹمنٹ کرائے پر لے سکتا ہوں؟', a: 'جی ہاں۔ HousingAnywhere، Wunderflats، Spotahome اور Nestpick کی فرنشڈ درمیانی مدت کی رینٹلز بیرونِ ملک سے مکمل آن لائن بکنگ کے لیے بنی ہیں — تصدیق شدہ لسٹنگز، ڈیجیٹل معاہدے، کارڈ ادائیگی، وزٹ کی ضرورت نہیں۔' },
+        { q: 'کیا فرنشڈ اپارٹمنٹ کے لیے Schufa چاہیے؟', a: 'نہیں۔ یہی سب سے بڑا فائدہ ہے: پلیٹ فارمز جرمن کریڈٹ ریکارڈ کی جگہ آپ کی شناخت اور ادائیگی کے طریقے کی تصدیق کرتے ہیں، جو نئے آنے والے کے پاس ابھی ہو ہی نہیں سکتا۔' },
+        { q: 'کیا فرنشڈ رینٹل میں Anmeldung ہو سکتی ہے؟', a: 'عموماً ہاں — زیادہ تر پیشہ ور مالک مکان رجسٹریشن کے لیے درکار Wohnungsgeberbestätigung دیتے ہیں۔ بکنگ سے پہلے تحریری تصدیق لیں؛ Anmeldung کے بغیر ٹیکس ID اور بینک اکاؤنٹ نہیں ملتا۔' },
+        { q: 'جرمنی میں فرنشڈ اپارٹمنٹ کی قیمت کیا ہے؟', a: '2026 میں برلن میں تقریباً 1,100–1,600 € ماہانہ، میونخ میں 1,400–2,000 € اور لائپزگ جیسے شہروں میں 700–1,000 € — عموماً بلوں اور وائی فائی سمیت۔' },
+        { q: 'کرائے کے فراڈ سے کیسے بچیں؟', a: 'صرف معروف پلیٹ فارمز سے بک کریں اور صرف ان کے محفوظ ادائیگی نظام میں ادائیگی کریں۔ جس مالک مکان سے کبھی ملے نہیں اسے کبھی براہِ راست ڈپازٹ نہ بھیجیں۔' },
+      ],
+    },
+    zh: {
+      title: '德国带家具公寓：人还没到，先从国外租好第一个家（2026）',
+      summary: '如何在抵达德国前预订带家具公寓——无需 Schufa、无需看房。平台对比、真实价格、Anmeldung 规则以及要避开的骗局。',
+      content: `问问任何搬到德国的人：签证已经够累，但第一套房更难。传统德国房东要求实地看房、Schufa 信用记录、德国银行账户和工资单——这四样东西在你抵达之前根本不可能有。好消息是：有一个完整的租房市场正是为你这种情况而生，而且完全可以用手机预订。
+
+💡 **捷径：** 我们的免费工具[带家具住房搜索器](/tools/furnished-housing)汇集了新移民最信赖的四大平台在 20 个德国城市的拎包入住房源——选择城市，一处比价。
+
+## 为什么在国外租不到「普通」公寓
+
+不带家具的长租房对新来者是个死循环。房东在实地看房后筛选租客，然后索要 Schufa 报告——这份德国信用记录只有在德国生活后才开始积累。他们还要求德国收入证明和用于押金的德国银行账户。这些在北京、上海或胡志明市都无法办到。在国外硬闯这个循环会浪费几个月——而大多数租房骗局恰恰发生在这里：绝望的找房人开始给陌生人汇押金。
+
+## 中期带家具租房解决了什么
+
+租期 1–12 个月的带家具公寓是一个规则完全不同的独立市场：
+
+- **100% 在线预订** ——房源经过验证、有照片或视频看房、电子合同、银行卡支付。
+- **不需要 Schufa** ——平台核验你的身份和支付方式，而不是德国信用记录。
+- **第一天即可入住** ——床、厨房、洗衣机、Wi-Fi 一应俱全；水电网费通常打包在一个价格里。
+- **可用于 Anmeldung 的地址** ——大多数房东会提供登记所需的 Wohnungsgeberbestätigung（房东证明），有了它才能办税号、银行账户和手机卡。
+
+几乎所有成功新移民的策略都是：先订 3–6 个月的带家具住处，落地、登记、开户、开始工作或学习——然后拿着德国收入，在当地从容寻找长租房。
+
+## 到底该在哪里找
+
+四个平台主导这个市场：HousingAnywhere（房间和单间选择最多，付款有保障）、Wunderflats（整套公寓，通常可办 Anmeldung）、Spotahome（每套房源都经平台视频核验）和 Nestpick（同时比较多个网站的聚合器）。与其开四个标签页，不如用[带家具住房搜索器](/tools/furnished-housing)——选好城市，直接跳转到每个平台的实时房源。
+
+## 2026 年的价格
+
+带家具单间或一居室（含杂费）大致为：柏林 1,100–1,600 €，慕尼黑 1,400–2,000 €，法兰克福 1,200–1,700 €，莱比锡或波鸿 700–1,000 €。带家具租金比空房贵 20–35%——你买的是灵活性和零置家成本。选城市之前，先用免费的[生活成本计算器](/tools/living-cost-calculator)把第一个月的预算算清楚。
+
+## 常见错误
+
+- **在平台外付款。** 任何要求在平台受保护结账流程签约前直接转账的房东都是骗子。没有例外。
+- **没看过房就订 12 个月。** 先订 3–6 个月，满意再续。
+- **忽视 Anmeldung。** 预订前务必书面确认可以登记。
+- **开始得太晚。** 在柏林和慕尼黑，好房源在入住日期前 6–8 周就被订完。
+
+你在德国的第一个家，只差一个比价的晚上——打开[带家具住房搜索器](/tools/furnished-housing)，选好城市，躺在沙发上完成预订。`,
+      faqs: [
+        { q: '真的可以在抵达德国前租到公寓吗？', a: '可以。HousingAnywhere、Wunderflats、Spotahome 和 Nestpick 上的中期带家具租房就是为在国外全程在线预订设计的——房源经验证、电子合同、银行卡支付，无需看房。' },
+        { q: '租带家具公寓需要 Schufa 吗？', a: '不需要。这正是最大优势：平台核验你的身份和支付方式，而不是新移民根本不可能有的德国信用记录。' },
+        { q: '在带家具租房里能办 Anmeldung 吗？', a: '通常可以——大多数专业房东会提供登记所需的 Wohnungsgeberbestätigung。预订前务必书面确认；没有 Anmeldung 就办不了税号和银行账户。' },
+        { q: '德国带家具公寓多少钱？', a: '2026 年，柏林每月约 1,100–1,600 €，慕尼黑 1,400–2,000 €，莱比锡等城市 700–1,000 €——通常含水电网费和 Wi-Fi。' },
+        { q: '新移民如何避免租房骗局？', a: '只通过成熟平台预订，只在其受保护的支付系统内付款。无论照片多诱人，都绝不要直接给素未谋面的私人房东汇押金。' },
+      ],
+    },
+  },
+}
