@@ -66,23 +66,48 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'static.contact' })
+  const sections = (t.raw('sections') as { h: string; b: string }[]) ?? []
   return (
     <StaticPage title={t('title')} subtitle={t('subtitle')}>
-      <Section heading={t('s1_h')}>
-        <SectionText>{t('s1_b')}</SectionText>
-      </Section>
-      <Section heading={t('s2_h')}>
-        <SectionText>{t('s2_b')}</SectionText>
-      </Section>
-      <Section heading={t('s3_h')}>
-        <SectionText>{t('s3_b')}</SectionText>
-      </Section>
-      <Section heading={t('s4_h')}>
-        <SectionText>{t('s4_b')}</SectionText>
-      </Section>
-      <Section heading={t('s5_h')}>
-        <SectionText>{t('s5_b')}</SectionText>
-      </Section>
+      {/* Direct contact methods — real, clickable channels up top. */}
+      <div className="contact-methods">
+        <a href="mailto:contact@gogermany.ma" className="contact-method">
+          <span className="contact-method-icon" aria-hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m2 7 10 6 10-6" />
+            </svg>
+          </span>
+          <span className="contact-method-label">E-mail</span>
+          <span className="contact-method-value">contact@gogermany.ma</span>
+        </a>
+        <a href="https://wa.me/491771903108" target="_blank" rel="noopener noreferrer" className="contact-method">
+          <span className="contact-method-icon" aria-hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.5 14.3c-.3-.2-1.7-.9-2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5.2 4.5 1.8.7 2.5.8 3.4.7.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.3-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2z" />
+            </svg>
+          </span>
+          <span className="contact-method-label">WhatsApp</span>
+          <span className="contact-method-value">+49 177 190 31 08</span>
+        </a>
+        <a href="https://www.instagram.com/gogermany.ma" target="_blank" rel="noopener noreferrer" className="contact-method">
+          <span className="contact-method-icon" aria-hidden>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </span>
+          <span className="contact-method-label">Instagram</span>
+          <span className="contact-method-value">@gogermany.ma</span>
+        </a>
+      </div>
+
+      {sections.map((s, i) => (
+        <Section key={i} heading={s.h}>
+          <SectionText>{s.b}</SectionText>
+        </Section>
+      ))}
     </StaticPage>
   )
 }

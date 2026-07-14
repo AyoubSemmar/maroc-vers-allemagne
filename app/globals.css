@@ -1084,6 +1084,37 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   border-color: var(--brand);
   transform: translateY(-2px);
 }
+
+/* Contact page — direct-channel cards above the text sections. */
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-bottom: 34px;
+}
+.contact-method {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  padding: 18px;
+  border-radius: 16px;
+  background: var(--bg-elev, #fff);
+  border: 1px solid var(--line, #e5e0d8);
+  text-decoration: none;
+  transition: all .2s ease;
+}
+.contact-method:hover {
+  border-color: var(--brand);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+.contact-method-icon { color: var(--brand); }
+.contact-method-label {
+  font-size: 12px; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--ink-mute, #6b7280);
+}
+.contact-method-value { font-weight: 700; color: var(--ink, #1f2937); direction: ltr; }
 .rihla-foot-col h4 {
   font-size: 13px; font-weight: 800;
   margin-bottom: 14px;

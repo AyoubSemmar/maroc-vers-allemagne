@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import StaticPage, { Section, SectionText, SectionList } from '@/components/StaticPage'
+import { Link } from '@/i18n/navigation'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
@@ -66,8 +67,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HousingPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'static.housing' })
+  const tTools = await getTranslations({ locale, namespace: 'landing.tools' })
   return (
     <StaticPage title={t('title')} subtitle={t('subtitle')}>
+      {/* The interactive furnished-housing finder is the actionable answer
+          to this page's question — surface it before the reading. */}
+      <Link href="/tools/furnished-housing" className="contact-method" style={{ marginBottom: 34 }}>
+        <span className="contact-method-icon" aria-hidden style={{ fontSize: 22 }}>🏠</span>
+        <span className="contact-method-label">{tTools('furnishedHousing.name')}</span>
+        <span className="contact-method-value">{tTools('furnishedHousing.desc')} →</span>
+      </Link>
       <Section heading={t('s1_h')}>
         <SectionList items={[t('s1_i1'), t('s1_i2'), t('s1_i3')]} />
       </Section>

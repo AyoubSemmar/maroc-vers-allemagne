@@ -69,25 +69,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function AboutPage({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'static.about' })
+  const sections = (t.raw('sections') as { h: string; b: string }[]) ?? []
+  // Section index 3 is "Our mission" — keep the #mission anchor that
+  // older links point at.
   return (
     <StaticPage title={t('title')} subtitle={t('subtitle')}>
-      <Section heading={t('s1_h')}>
-        <SectionText>{t('s1_b')}</SectionText>
-      </Section>
-      <Section heading={t('s2_h')}>
-        <SectionText>{t('s2_b')}</SectionText>
-      </Section>
-      <Section heading={t('s3_h')}>
-        <SectionText>{t('s3_b')}</SectionText>
-      </Section>
-      <Section heading={t('s4_h')}>
-        <div id="mission">
-          <SectionText>{t('s4_b')}</SectionText>
-        </div>
-      </Section>
-      <Section heading={t('s5_h')}>
-        <SectionText>{t('s5_b')}</SectionText>
-      </Section>
+      {sections.map((s, i) => (
+        <Section key={i} heading={s.h}>
+          {i === 3 ? (
+            <div id="mission">
+              <SectionText>{s.b}</SectionText>
+            </div>
+          ) : (
+            <SectionText>{s.b}</SectionText>
+          )}
+        </Section>
+      ))}
     </StaticPage>
   )
 }
