@@ -1068,6 +1068,22 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   transition: color .2s;
 }
 .rihla-foot-mail:hover { color: var(--brand-ink); }
+.rihla-foot-socials {
+  display: flex; gap: 10px; margin-top: 14px;
+}
+.rihla-foot-socials a {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--ink-mute);
+  transition: all .2s ease;
+}
+.rihla-foot-socials a:hover {
+  color: var(--brand);
+  border-color: var(--brand);
+  transform: translateY(-2px);
+}
 .rihla-foot-col h4 {
   font-size: 13px; font-weight: 800;
   margin-bottom: 14px;

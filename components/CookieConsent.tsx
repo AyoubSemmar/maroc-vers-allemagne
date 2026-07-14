@@ -41,6 +41,12 @@ export default function CookieConsent() {
     if (stored === 'all') updateConsent(true)
     else if (stored === 'essential') updateConsent(false)
     else setVisible(true)
+
+    // The footer's "Cookie preferences" link re-opens the banner so users
+    // can change their mind at any time (GDPR requirement).
+    const reopen = () => setVisible(true)
+    window.addEventListener('gg-cookie-settings', reopen)
+    return () => window.removeEventListener('gg-cookie-settings', reopen)
   }, [])
 
   function choose(all: boolean) {
