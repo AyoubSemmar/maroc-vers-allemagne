@@ -1102,6 +1102,8 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   border: 1px solid var(--line, #e5e0d8);
   text-decoration: none;
   transition: all .2s ease;
+  min-width: 0;
+  overflow: hidden;
 }
 .contact-method:hover {
   border-color: var(--brand);
@@ -1114,7 +1116,16 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
   text-transform: uppercase; letter-spacing: 0.08em;
   color: var(--ink-mute, #6b7280);
 }
-.contact-method-value { font-weight: 700; color: var(--ink, #1f2937); direction: ltr; }
+.contact-method-value {
+  font-weight: 700;
+  color: var(--ink, #1f2937);
+  direction: ltr;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 560px) {
+  .contact-methods { grid-template-columns: 1fr; }
+}
 .rihla-foot-col h4 {
   font-size: 13px; font-weight: 800;
   margin-bottom: 14px;
@@ -4941,6 +4952,30 @@ body { line-height: 1.65; }
    Editorial wrapper used by all static-content pages. Brand-aligned:
    warm hero, Fraunces display heading, soft body text via CSS vars
    so both light and dark mode work without per-class overrides. */
+/* Standalone base for editorial static pages (about, contact, legal,
+   housing, useful-links). Deliberately NOT nested under .rihla — the
+   landing scope's `.rihla section {padding:112px 0}` and `.rihla h2`
+   (58px display headings with margin:0 auto) leaked in and made these
+   pages look broken: huge gaps between sections, headings glued to text. */
+.rihla-static {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.rihla-static[dir="rtl"] { font-family: var(--font-ar); }
+.rihla-static * { box-sizing: border-box; }
+.rihla-static a { color: inherit; text-decoration: none; }
+.rihla-static .wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-inline: 28px;
+}
+@media (max-width: 560px) {
+  .rihla-static .wrap { padding-inline: 18px; }
+}
+
 .rihla-static-hero {
   background: transparent;
   border-block-end: 1px solid var(--line);

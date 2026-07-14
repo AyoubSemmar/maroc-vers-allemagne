@@ -20,7 +20,10 @@ interface StaticPageProps {
 export default function StaticPage({ title, subtitle, children }: StaticPageProps) {
   const locale = useLocale() as AppLocale
   return (
-    <div dir={dirFor(locale)} className="rihla rihla-static">
+    // NOT inside the .rihla scope — the landing's `.rihla section` (112px
+    // padding) and `.rihla h2` (58px, margin:0 auto) rules were leaking in
+    // and wrecking these pages. .rihla-static carries its own base styles.
+    <div dir={dirFor(locale)} className="rihla-static">
       <header className="rihla-static-hero">
         <div className="wrap">
           <h1 className="rihla-static-title">{title}</h1>
