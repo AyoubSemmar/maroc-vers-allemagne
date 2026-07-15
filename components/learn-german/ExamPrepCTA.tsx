@@ -25,19 +25,19 @@ export default function ExamPrepCTA({ compact = false }: { compact?: boolean }) 
         <p className="epc-sub">{t('subtitle')}</p>
         {!compact && (
           <ul className="epc-list">
-            <li>✅ {t('bullet1')}</li>
-            <li>✅ {t('bullet2')}</li>
-            <li>✅ {t('bullet3')}</li>
-            <li>✅ {t('bullet4')}</li>
+            <li>✓ {t('bullet1')}</li>
+            <li>✓ {t('bullet2')}</li>
+            <li>✓ {t('bullet3')}</li>
+            <li>✓ {t('bullet4')}</li>
           </ul>
         )}
         <div className="epc-exams">
-          <span className="epc-pill">🎓 Goethe-Zertifikat A1</span>
-          <span className="epc-pill">🎓 Goethe-Zertifikat A2</span>
-          <span className="epc-pill">🎓 Goethe-Zertifikat B1</span>
-          <span className="epc-pill">🎓 Goethe-Zertifikat B2</span>
-          <span className="epc-pill">📜 telc Deutsch B1 / B2</span>
-          <span className="epc-pill">🌍 Goethe-Institut worldwide</span>
+          <span className="epc-pill">Goethe-Zertifikat A1</span>
+          <span className="epc-pill">Goethe-Zertifikat A2</span>
+          <span className="epc-pill">Goethe-Zertifikat B1</span>
+          <span className="epc-pill">Goethe-Zertifikat B2</span>
+          <span className="epc-pill">telc Deutsch B1 / B2</span>
+          <span className="epc-pill">Goethe-Institut worldwide</span>
         </div>
       </div>
       <div className="epc-cta">

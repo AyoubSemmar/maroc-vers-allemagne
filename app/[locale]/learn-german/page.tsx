@@ -9,6 +9,7 @@ import ExamPrepCTA from '@/components/learn-german/ExamPrepCTA'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import JsonLd from '@/components/seo/JsonLd'
 import ToolSeoSection from '@/components/seo/ToolSeoSection'
+import Icon from '@/components/ui/Icon'
 import './learn-german.css'
 
 const META: Record<AppLocale, { title: string; desc: string }> = {
@@ -113,14 +114,14 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
       />
       <header className="lg-hero">
         <div className="wrap">
-          <span className="lg-eyebrow"><span className="lg-eyebrow-dot" />{t('pageEyebrow') ?? '🇩🇪 Learn German'}</span>
+          <span className="lg-eyebrow"><span className="lg-eyebrow-dot" />{t('pageEyebrow') ?? 'Learn German'}</span>
           <h1 className="lg-title">{t('pageTitle')}</h1>
           <p className="lg-subtitle">{t('pageSubtitle')}</p>
           <div className="lg-hero-badges">
-            <span className="lg-hero-badge">📖 {t('badgeGrammar') ?? 'Grammar'}</span>
-            <span className="lg-hero-badge">💬 {t('badgeVocab') ?? 'Vocabulary'}</span>
-            <span className="lg-hero-badge">✏️ {t('badgeExercises') ?? 'Exercises'}</span>
-            <span className="lg-hero-badge">🎯 {t('badgeFree') ?? '100% free'}</span>
+            <span className="lg-hero-badge"><Icon name="book" size={14} /> {t('badgeGrammar') ?? 'Grammar'}</span>
+            <span className="lg-hero-badge"><Icon name="message" size={14} /> {t('badgeVocab') ?? 'Vocabulary'}</span>
+            <span className="lg-hero-badge"><Icon name="check-square" size={14} /> {t('badgeExercises') ?? 'Exercises'}</span>
+            <span className="lg-hero-badge"><Icon name="check" size={14} /> {t('badgeFree') ?? '100% free'}</span>
           </div>
         </div>
       </header>
@@ -138,7 +139,7 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
 
         {/* Daily conjugation drill — 5 min/day, level-aware, builds streak */}
         <Link href="/learn-german/drill" className="lg-drill-card">
-          <div className="lg-drill-card-icon">⚡</div>
+          <div className="lg-drill-card-icon"><Icon name="zap" size={24} /></div>
           <div className="lg-drill-card-text">
             <strong>{t('drill.title')}</strong>
             <span>{t('drill.intro')}</span>
@@ -149,7 +150,7 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
         {/* Personal results dashboard — overall grade, per-skill averages,
             level progress. Free account required to have anything saved. */}
         <Link href="/learn-german/results" className="lg-drill-card">
-          <div className="lg-drill-card-icon">📊</div>
+          <div className="lg-drill-card-icon"><Icon name="bar-chart" size={24} /></div>
           <div className="lg-drill-card-text">
             <strong>{t('results.title')}</strong>
             <span>{t('results.subtitle')}</span>

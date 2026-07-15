@@ -112,7 +112,7 @@ export default function MatchingExercise({ pairs, submitted, onAnswer }: Props) 
               ${submitted ? 'cursor-default' : 'cursor-pointer'}
             `}
           >
-            {matched[i] !== undefined && <span className="mr-1">✅</span>}
+            {matched[i] !== undefined && <span className="mr-1">✓</span>}
             {pair.left}
           </button>
         ))}

@@ -12,6 +12,7 @@ import MatchingExercise from '@/components/learn-german/MatchingExercise'
 import SpeakingExercise from '@/components/learn-german/SpeakingExercise'
 import LessonSkills, { useLessonDevoirs } from '@/components/learn-german/LessonSkills'
 import LiveClassesCta from '@/components/classes/LiveClassesCta'
+import Icon, { type IconName } from '@/components/ui/Icon'
 
 type Tab = 'grammar' | 'vocab' | 'exercise' | 'skills'
 
@@ -200,12 +201,12 @@ export default function LessonClient({
     try { return t(`types.${key}` as any) } catch { return key }
   }
 
-  const tabs: { id: Tab; labelKey: string; emoji: string }[] = [
-    { id: 'grammar', labelKey: 'grammar', emoji: '📖' },
-    { id: 'vocab', labelKey: 'vocab', emoji: '📝' },
-    { id: 'exercise', labelKey: 'exercise', emoji: '✏️' },
+  const tabs: { id: Tab; labelKey: string; icon: IconName }[] = [
+    { id: 'grammar', labelKey: 'grammar', icon: 'book' },
+    { id: 'vocab', labelKey: 'vocab', icon: 'message' },
+    { id: 'exercise', labelKey: 'exercise', icon: 'check-square' },
     ...(devoirsState.devoirs.length > 0
-      ? [{ id: 'skills' as Tab, labelKey: 'skills', emoji: '🎯' }]
+      ? [{ id: 'skills' as Tab, labelKey: 'skills', icon: 'target' as IconName }]
       : []),
   ]
 
@@ -310,7 +311,7 @@ export default function LessonClient({
                     : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
               >
-                <span>{tb.emoji}</span> {t(`tabs.${tb.labelKey}` as any)}
+                <Icon name={tb.icon} size={15} /> {t(`tabs.${tb.labelKey}` as any)}
                 {tb.id === 'vocab' && <span className="text-xs opacity-70">({lesson.vocabulary.length})</span>}
                 {tb.id === 'exercise' && <span className="text-xs opacity-70">({questions.length})</span>}
                 {tb.id === 'skills' && <span className="text-xs opacity-70">({devoirsState.devoirs.length})</span>}
@@ -348,7 +349,7 @@ export default function LessonClient({
             {lesson.grammar.tables && lesson.grammar.tables.length > 0 && (
               <div className="bg-white rounded-2xl border border-gray-200 p-6">
                 <h3 className="font-bold text-gray-800 mb-1 flex items-center gap-2">
-                  <span className="w-6 h-6 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center text-xs">📊</span>
+                  <span className="w-6 h-6 bg-blue-100 text-blue-700 rounded-lg flex items-center justify-center"><Icon name="list" size={14} /></span>
                   {t('grammarCard.tables')}
                 </h3>
                 {lesson.grammar.tables.map((table, i) => (
@@ -360,7 +361,7 @@ export default function LessonClient({
             {lesson.grammar.rules && lesson.grammar.rules.length > 0 && (
               <div className="flex flex-col gap-3">
                 <h3 className="font-bold text-gray-800 flex items-center gap-2">
-                  <span className="w-6 h-6 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center text-xs">📌</span>
+                  <span className="w-6 h-6 bg-orange-100 text-orange-700 rounded-lg flex items-center justify-center"><Icon name="pin" size={14} /></span>
                   {t('grammarCard.rules')}
                 </h3>
                 {lesson.grammar.rules.map((rule, i) => (
@@ -382,7 +383,7 @@ export default function LessonClient({
 
             {lesson.grammar.tip && (
               <div className="bg-yellow-50 border border-yellow-200 rounded-2xl p-5 flex gap-3">
-                <span className="text-2xl shrink-0">💡</span>
+                <span className="shrink-0 text-yellow-600 mt-0.5"><Icon name="lightbulb" size={22} /></span>
                 <div>
                   <p className="font-bold text-yellow-900 text-sm mb-1">{t('grammarCard.tipTitle')}</p>
                   <p className="text-yellow-800 text-sm leading-relaxed">
@@ -394,7 +395,7 @@ export default function LessonClient({
 
             <div className="bg-white rounded-2xl border border-gray-200 p-6">
               <h3 className="font-bold text-gray-800 mb-4 flex items-center gap-2">
-                <span className="w-6 h-6 bg-green-100 text-green-700 rounded-lg flex items-center justify-center text-xs">✍️</span>
+                <span className="w-6 h-6 bg-green-100 text-green-700 rounded-lg flex items-center justify-center"><Icon name="pen" size={14} /></span>
                 {t('grammarCard.examples')}
               </h3>
               <div className="flex flex-col gap-3">
@@ -523,7 +524,7 @@ export default function LessonClient({
                         <BidiText text={q.question} />
                       </p>
                       {q.hint && !submitted && (
-                        <p className="text-xs text-gray-400 mt-1">💡 <BidiText text={q.hint} /></p>
+                        <p className="text-xs text-gray-400 mt-1"><BidiText text={q.hint} /></p>
                       )}
                     </div>
                   </div>
@@ -543,8 +544,8 @@ export default function LessonClient({
                             onClick={() => handleAnswer(q.id, opt)}
                             className={`w-full text-right border-2 rounded-xl px-4 py-3 text-sm transition-all ${cls}`}
                           >
-                            {submitted && isAns && <span className="ml-2">✅</span>}
-                            {submitted && isSel && !isAns && <span className="ml-2">❌</span>}
+                            {submitted && isAns && <span className="ml-2">✓</span>}
+                            {submitted && isSel && !isAns && <span className="ml-2">✗</span>}
                             <span dir="ltr">{opt}</span>
                           </button>
                         )
@@ -621,11 +622,9 @@ export default function LessonClient({
               </button>
             ) : (
               <div className={`rounded-3xl p-8 text-center border-2 ${score! >= 70 ? 'bg-green-50 border-green-200' : 'bg-orange-50 border-orange-200'}`}>
-                {score! >= 70 ? (
-                  <div className="text-5xl mb-3">🏆</div>
-                ) : (
-                  <div className="text-5xl mb-3">💪</div>
-                )}
+                <div className={`mb-4 flex justify-center ${score! >= 70 ? 'text-green-600' : 'text-orange-500'}`}>
+                  <Icon name={score! >= 70 ? 'trophy' : 'flame'} size={40} />
+                </div>
                 <div className="flex items-center justify-center gap-3 mb-2">
                   <div className={`text-4xl font-black ${score! >= 70 ? 'text-green-700' : 'text-orange-600'}`}>
                     {score}%
@@ -650,17 +649,17 @@ export default function LessonClient({
                   {devoirsState.devoirs.length > 0 && (
                     <button
                       onClick={() => { setTab('skills'); window.scrollTo({ top: 0 }) }}
-                      className="bg-white border-2 border-green-600 text-green-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-50"
+                      className="inline-flex items-center gap-2 bg-white border-2 border-green-600 text-green-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-50"
                     >
-                      🎯 {t('exerciseCard.trySkills')}
+                      <Icon name="target" size={15} /> {t('exerciseCard.trySkills')}
                     </button>
                   )}
                   {isAuthed && (
                     <Link
                       href="/learn-german/results"
-                      className="bg-white border-2 border-gray-200 text-gray-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:border-green-400"
+                      className="inline-flex items-center gap-2 bg-white border-2 border-gray-200 text-gray-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:border-green-400"
                     >
-                      📊 {t('exerciseCard.myResults')}
+                      <Icon name="bar-chart" size={15} /> {t('exerciseCard.myResults')}
                     </Link>
                   )}
                   {nextLesson && score! >= 70 && (

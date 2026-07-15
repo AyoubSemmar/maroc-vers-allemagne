@@ -10,6 +10,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 import { classesStrings } from '@/components/classes/strings'
 import { isAccessActive } from '@/lib/courseAccess'
+import Icon, { type IconName } from '@/components/ui/Icon'
 import ClassesClient, { type ClassGroup } from './ClassesClient'
 
 // Booking counts are live — never cache this page.
@@ -70,11 +71,11 @@ export default async function ClassesPage({
 
   // Sales content is French-first — the course is Morocco-gated and every
   // in-course surface (dashboard, devoirs, console) is already French.
-  const FEATURES = [
-    { icon: '🎥', title: 'Cours en direct chaque semaine', desc: 'Classique : 3 séances de 1h30 (lun/mer/ven) — ou Intensif : 2 séances de 3h (mar/jeu ou sam/dim). Petit groupe (10 max), avec un prof.' },
-    { icon: '📋', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
-    { icon: '📝', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
-    { icon: '🇩🇪', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
+  const FEATURES: { icon: IconName; title: string; desc: string }[] = [
+    { icon: 'play', title: 'Cours en direct chaque semaine', desc: 'Classique : 3 séances de 1h30 (lun/mer/ven) — ou Intensif : 2 séances de 3h (mar/jeu ou sam/dim). Petit groupe (10 max), avec un prof.' },
+    { icon: 'bar-chart', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
+    { icon: 'pen', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
+    { icon: 'flag', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
   ]
   const STEPS = [
     { n: '1', title: 'Réservez votre place', desc: 'Choisissez le niveau et l’horaire qui vous conviennent ci-dessous.' },
@@ -100,7 +101,7 @@ export default async function ClassesPage({
         <div className="grid sm:grid-cols-2 gap-3 mt-8">
           {FEATURES.map((f) => (
             <div key={f.title} className="bg-white rounded-xl border border-gray-200 p-4 flex gap-3">
-              <span className="text-2xl shrink-0">{f.icon}</span>
+              <span className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-xl bg-green-50 text-green-700"><Icon name={f.icon} size={20} /></span>
               <div>
                 <p className="font-semibold text-gray-900 text-sm">{f.title}</p>
                 <p className="text-xs text-gray-500 mt-0.5 leading-relaxed">{f.desc}</p>
@@ -114,7 +115,7 @@ export default async function ClassesPage({
           href="/learn-german/placement"
           className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-green-300 bg-green-50 hover:bg-green-100 transition-colors px-4 py-3"
         >
-          <span className="text-sm text-green-900 font-medium">🎯 Pas sûr de votre niveau ? Faites le test gratuit (5 min)</span>
+          <span className="text-sm text-green-900 font-medium">Pas sûr de votre niveau ? Faites le test gratuit (5 min)</span>
           <span className="text-sm font-bold text-green-700 shrink-0">Tester →</span>
         </Link>
 

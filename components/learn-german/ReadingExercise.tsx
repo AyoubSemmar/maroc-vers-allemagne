@@ -10,6 +10,7 @@ import {
   todayKey,
   type ReadingLevel,
 } from '@/lib/readingExerciseData'
+import Icon from '@/components/ui/Icon'
 import './reading-exercise.css'
 
 type Question = {
@@ -174,7 +175,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
       {/* Auth gate */}
       {authed === false && (
         <div className="re-locked">
-          <span className="re-locked-icon" aria-hidden>🔒</span>
+          <span className="re-locked-icon" aria-hidden><Icon name="lock" size={26} /></span>
           <h4>{t('signInTitle')}</h4>
           <p>{t('signInBody')}</p>
           <Link
@@ -189,7 +190,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
       {/* Done state — only shown if no exercise was generated this session */}
       {authed && lockedOut && !exercise && (
         <div className="re-done" key={tick}>
-          <span className="re-done-icon" aria-hidden>✅</span>
+          <span className="re-done-icon" aria-hidden><Icon name="check" size={22} /></span>
           <h4>{t('doneTitle')}</h4>
           <p>{t('doneBody', { hours: hoursUntil(nextResetUtcMs()) })}</p>
         </div>
@@ -200,9 +201,9 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
         <div className="re-start">
           <p className="re-start-text">{t('startBody')}</p>
           <button type="button" className="re-start-btn" onClick={startExercise} disabled={loading}>
-            {loading ? `⏳ ${t('generating')}` : `📖 ${t('startCta')}`}
+            {loading ? t('generating') : t('startCta')}
           </button>
-          {error && <p className="re-error">⚠️ {error}</p>}
+          {error && <p className="re-error">{error}</p>}
         </div>
       )}
 
@@ -211,7 +212,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
         <div className="re-exercise">
           <div className="re-text-block">
             <div className="re-text-meta">
-              <span className="re-pill re-pill--brand">📚 {t('topicBadge')}</span>
+              <span className="re-pill re-pill--brand">{t('topicBadge')}</span>
               <span className="re-pill">{exercise.topic}</span>
               {exercise.wordCount && (
                 <span className="re-pill">{exercise.wordCount} {t('wordsShort')}</span>
@@ -222,7 +223,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
           </div>
 
           <div className="re-questions">
-            <h4 className="re-questions-title">❓ {t('questionsTitle')}</h4>
+            <h4 className="re-questions-title">{t('questionsTitle')}</h4>
             {exercise.questions.map((q, qi) => {
               const userPick = answers[qi]
               const isCorrect = submitted && userPick === q.correct
@@ -257,7 +258,7 @@ export default function ReadingExercise({ level }: { level: ReadingLevel }) {
                   </ul>
                   {submitted && (
                     <p className={`re-explanation ${isCorrect ? 'is-correct' : 'is-wrong'}`}>
-                      {isCorrect ? '✅' : '❌'} {q.explanation}
+                      {isCorrect ? '✓' : '✗'} {q.explanation}
                     </p>
                   )}
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 
 // 12-question ladder (4×A1, 4×A2, 4×B1). A block is "validated" with ≥3
 // correct; the recommended level is the first non-validated block. French UI —
@@ -43,7 +44,7 @@ export default function PlacementQuiz() {
   if (done) {
     return (
       <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center">
-        <div className="text-5xl mb-3">🎯</div>
+        <div className="mb-4 flex justify-center text-green-700"><Icon name="target" size={40} /></div>
         <p className="text-sm text-gray-500">Niveau recommandé</p>
         <p className="text-3xl font-black text-green-700 mt-1">{LEVEL_LABEL[level]}</p>
         <p className="text-sm text-gray-600 mt-3 max-w-md mx-auto">
@@ -53,15 +54,15 @@ export default function PlacementQuiz() {
         <div className="flex gap-3 justify-center flex-wrap mt-6">
           <Link
             href="/learn-german/classes"
-            className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-6 py-3"
+            className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-6 py-3"
           >
-            🎥 Voir les groupes {level.toUpperCase()}
+            <Icon name="play" size={15} /> Voir les groupes {level.toUpperCase()}
           </Link>
           <Link
             href={`/learn-german/${level}`}
-            className="rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-semibold px-6 py-3"
+            className="inline-flex items-center gap-2 rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-semibold px-6 py-3"
           >
-            📚 Leçons gratuites {level.toUpperCase()}
+            <Icon name="book" size={15} /> Leçons gratuites {level.toUpperCase()}
           </Link>
         </div>
         <button

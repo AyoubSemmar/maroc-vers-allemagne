@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
 import WritingExercise from './WritingExercise'
@@ -42,13 +43,13 @@ export default function LessonsList({ level }: { level: Level }) {
             href={`/learn-german/${level.id.toLowerCase()}/${resumeLesson.id}`}
             className="lg-resume-cta"
           >
-            ▶ {t('resumeHere', { title: lessonTitle(resumeLesson.id, resumeLesson.title) })}
+            <Icon name="play" size={13} /> {t('resumeHere', { title: lessonTitle(resumeLesson.id, resumeLesson.title) })}
           </Link>
         )}
 
         {isAuthed && (
           <Link href="/learn-german/results" className="lg-results-link">
-            📊 {t('resultsCta')}
+            <Icon name="bar-chart" size={15} /> {t('resultsCta')}
           </Link>
         )}
       </div>
@@ -56,7 +57,7 @@ export default function LessonsList({ level }: { level: Level }) {
       {/* Auth nudge — only for unauthed users */}
       {!isAuthed && (
         <div className="lg-auth-nudge">
-          <span aria-hidden>🔓</span>
+          <span aria-hidden><Icon name="lock" size={26} /></span>
           <div>
             <h3>{t('authNudgeTitle') ?? 'Sign in to save your progress'}</h3>
             <p>{t('authNudgeBody') ?? 'All German lessons are 100% free. Create a free account so we can save where you left off and sync across your devices.'}</p>
@@ -85,9 +86,9 @@ export default function LessonsList({ level }: { level: Level }) {
                 <div className="lg-lesson-body">
                   <h4 className="lg-lesson-title">{lessonTitle(lesson.id, lesson.title)}</h4>
                   <div className="lg-lesson-meta">
-                    <span>📖 {t('lessonMeta.grammar')}</span>
-                    <span>💬 {t('lessonMeta.vocab', { n: lesson.vocabulary.length })}</span>
-                    <span>✏️ {t('lessonMeta.exercise', { n: lesson.exercise.questions.length })}</span>
+                    <span>{t('lessonMeta.grammar')}</span>
+                    <span>{t('lessonMeta.vocab', { n: lesson.vocabulary.length })}</span>
+                    <span>{t('lessonMeta.exercise', { n: lesson.exercise.questions.length })}</span>
                   </div>
                 </div>
                 <span className="lg-lesson-arrow">

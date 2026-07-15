@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 import { classesStrings } from '@/components/classes/strings'
 import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
 
@@ -101,27 +102,27 @@ export default function ClassesClient({
           <span className="font-medium">
             {myAccessGranted
               ? (myAccessUntil
-                  ? `✅ Accès actif jusqu'au ${formatAccessDate(myAccessUntil)}${renewSoon ? ` · à renouveler (${daysLeft} j)` : ''}`
-                  : '✅ Votre accès au cours est activé.')
+                  ? `Accès actif jusqu'au ${formatAccessDate(myAccessUntil)}${renewSoon ? ` · à renouveler (${daysLeft} j)` : ''}`
+                  : 'Votre accès au cours est activé.')
               : expired
-                ? `⏳ Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (450 DH/mois).`
-                : `✅ ${t.enrolledNote}`}
+                ? `Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (450 DH/mois).`
+                : t.enrolledNote}
           </span>
           <div className="flex items-center gap-2 shrink-0">
             {myAccessGranted ? (
               <Link
                 href="/learn-german/my-course"
-                className="rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
               >
-                📋 Mon cours
+                <Icon name="bar-chart" size={13} /> Mon cours
               </Link>
             ) : WHATSAPP ? (
               <a
                 href={`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(payMsg)}`}
                 target="_blank" rel="noreferrer"
-                className="rounded-lg bg-white/90 text-amber-800 hover:bg-white text-xs font-semibold px-4 py-2"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 text-amber-800 hover:bg-white text-xs font-semibold px-4 py-2"
               >
-                💬 {expired ? 'Renouveler' : t.payWhatsapp}
+                <Icon name="message" size={13} /> {expired ? 'Renouveler' : t.payWhatsapp}
               </a>
             ) : null}
           </div>
@@ -182,13 +183,13 @@ export default function ClassesClient({
                   {myAccessGranted ? (
                     <Link
                       href="/learn-german/my-course"
-                      className="text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
+                      className="inline-flex items-center justify-center gap-1.5 text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
                     >
-                      📋 Mon cours
+                      <Icon name="bar-chart" size={14} /> Mon cours
                     </Link>
                   ) : (
                     <span className="text-center rounded-lg bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium px-3 py-2">
-                      ⏳ En attente de paiement
+                      En attente de paiement
                     </span>
                   )}
                   <button

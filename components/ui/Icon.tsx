@@ -25,6 +25,8 @@ type IconName =
   | 'plus' | 'minus' | 'check' | 'x' | 'star' | 'heart' | 'lock' | 'play'
   | 'document' | 'image' | 'download' | 'upload' | 'copy' | 'link'
   | 'sun' | 'moon' | 'flag'
+  // Learn-german course (skills, results, drill)
+  | 'headphones' | 'bar-chart' | 'zap' | 'lightbulb' | 'flame'
 
 const PATHS: Record<IconName, React.ReactNode> = {
   // German levels — semantically chosen, not childish
@@ -87,6 +89,13 @@ const PATHS: Record<IconName, React.ReactNode> = {
   'sun':            <><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></>,
   'moon':           <><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></>,
   'flag':           <><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></>,
+
+  // Learn-german course
+  'headphones':     <><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M21 14h-3a2 2 0 0 0-2 2v3a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2z"/><path d="M3 14v-3a9 9 0 0 1 18 0v3"/></>,
+  'bar-chart':      <><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></>,
+  'zap':            <><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></>,
+  'lightbulb':      <><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1.33.47 2.48 1.5 3.5.76.76 1.23 1.52 1.41 2.5"/></>,
+  'flame':          <><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></>,
 }
 
 export type { IconName }

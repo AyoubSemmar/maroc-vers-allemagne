@@ -1,6 +1,7 @@
 'use client'
 
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 import { useCourseAccess } from '@/lib/useCourseAccess'
 
 /**
@@ -18,7 +19,7 @@ export default function MyCourseEntry() {
       href="/learn-german/my-course"
       className="flex items-center gap-4 rounded-2xl border border-green-300 bg-gradient-to-l from-green-50 to-white p-4 hover:shadow-md transition-shadow mb-2"
     >
-      <span className="text-3xl shrink-0">📋</span>
+      <span className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-100 text-green-700"><Icon name="bar-chart" size={22} /></span>
       <span className="flex-1 min-w-0">
         <span className="block font-bold text-green-900">Mon cours</span>
         <span className="block text-sm text-green-700">Ta note, ton programme, tes devoirs et ton vocabulaire — au même endroit.</span>

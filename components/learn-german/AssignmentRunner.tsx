@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import AudioButton from '@/components/learn-german/AudioButton'
+import SkillIcon from '@/components/learn-german/SkillIcon'
 import { SKILL_LABELS, type Skill } from '@/lib/learn-german/assignmentAI'
 
 export type ClientAssignment = {
@@ -43,10 +44,6 @@ type WriteReveal = {
   }
 }
 
-const SKILL_EMOJI: Record<Skill, string> = {
-  grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧',
-}
-
 export default function AssignmentRunner({
   assignment,
   locale,
@@ -62,6 +59,10 @@ export default function AssignmentRunner({
   const pathname = usePathname()
   const isMcq = assignment.skill !== 'schreiben'
   const questions = assignment.content?.questions ?? []
+  // Pre-generated lesson devoirs carry the lesson's base (Arabic) theme in
+  // their stored title — show the localized skill name instead. Ad-hoc
+  // teacher assignments (no lessonId) keep their custom title.
+  const isLessonDevoir = !!assignment.content?.lessonId
 
   const [choices, setChoices] = useState<number[]>([])
   const [text, setText] = useState('')
@@ -118,8 +119,12 @@ export default function AssignmentRunner({
         {/* Header */}
         <div className="flex items-center justify-between gap-3 px-6 py-4 border-b border-gray-100 sticky top-0 bg-white rounded-t-2xl">
           <div className="min-w-0">
-            <p className="text-xs text-gray-400">{SKILL_EMOJI[assignment.skill]} {SKILL_LABELS[assignment.skill]} · {assignment.level_id}</p>
-            <h3 className="font-bold text-gray-900 truncate" dir="ltr">{assignment.title}</h3>
+            <p className="text-xs text-gray-400 flex items-center gap-1.5">
+              <SkillIcon skill={assignment.skill} size={13} /> {SKILL_LABELS[assignment.skill]} · {assignment.level_id}
+            </p>
+            <h3 className="font-bold text-gray-900 truncate" dir={isLessonDevoir ? undefined : 'ltr'}>
+              {isLessonDevoir ? t(`skillDesc.${assignment.skill}`) : assignment.title}
+            </h3>
           </div>
           <button onClick={onClose} className="text-gray-400 hover:text-gray-700 text-xl shrink-0">✕</button>
         </div>
@@ -133,7 +138,7 @@ export default function AssignmentRunner({
           {assignment.skill === 'hoeren' && assignment.content?.text && (
             <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 flex items-center gap-3">
               <AudioButton text={assignment.content.text} size="md" />
-              <span className="text-sm text-indigo-900">🎧 {t('listenHint')}</span>
+              <span className="text-sm text-indigo-900">{t('listenHint')}</span>
             </div>
           )}
 
@@ -172,15 +177,15 @@ export default function AssignmentRunner({
                         className={`text-left border-2 rounded-lg px-3 py-2 text-sm transition-all ${cls}`}
                         dir="ltr"
                       >
-                        {rev && oi === rev.correct && '✅ '}
-                        {rev && oi === rev.picked && oi !== rev.correct && '❌ '}
+                        {rev && oi === rev.correct && '✓ '}
+                        {rev && oi === rev.picked && oi !== rev.correct && '✗ '}
                         {opt}
                       </button>
                     )
                   })}
                 </div>
                 {rev?.explanation && (
-                  <p className="text-xs text-gray-500 mt-2">💡 {rev.explanation}</p>
+                  <p className="text-xs text-gray-500 mt-2">{rev.explanation}</p>
                 )}
               </div>
             )
@@ -208,7 +213,7 @@ export default function AssignmentRunner({
           {writeResult && (
             <div className="flex flex-col gap-3">
               <div className="bg-green-50 border border-green-200 rounded-xl p-4">
-                <p className="text-xs font-semibold text-green-700 mb-1">✅ {t('corrected')}</p>
+                <p className="text-xs font-semibold text-green-700 mb-1">✓ {t('corrected')}</p>
                 <p className="text-sm text-green-900" dir="ltr">{writeResult.ai_feedback.corrected}</p>
               </div>
               {writeResult.ai_feedback.mistakes.length > 0 && (
@@ -224,7 +229,7 @@ export default function AssignmentRunner({
                 </div>
               )}
               {writeResult.ai_feedback.tip && (
-                <p className="text-sm bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-900">💡 {writeResult.ai_feedback.tip}</p>
+                <p className="text-sm bg-amber-50 border border-amber-200 rounded-xl p-3 text-amber-900">{writeResult.ai_feedback.tip}</p>
               )}
             </div>
           )}
@@ -232,7 +237,7 @@ export default function AssignmentRunner({
           {/* Signed-out user hit an AI-graded skill: sell the free account. */}
           {needsLogin && (
             <div className="bg-green-50 border border-green-200 rounded-xl p-4 text-center">
-              <p className="text-sm font-semibold text-green-900 mb-1">🔓 {t('loginTitle')}</p>
+              <p className="text-sm font-semibold text-green-900 mb-1">{t('loginTitle')}</p>
               <p className="text-xs text-green-800 mb-3">{t('loginBody')}</p>
               <Link href={loginHref} className="inline-block bg-green-700 text-white rounded-xl px-5 py-2.5 text-sm font-semibold hover:bg-green-800">
                 {t('loginCta')}

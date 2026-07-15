@@ -19,7 +19,6 @@ export default async function ResultsPage({ params }: Props) {
   // label scores without shipping the multi-MB lesson data files.
   const summaries: LevelSummary[] = levels.map(l => ({
     id: l.id,
-    emoji: l.emoji,
     color: l.color,
     total: l.lessons.length,
     orders: Object.fromEntries(l.lessons.map(ls => [ls.id, ls.order])),

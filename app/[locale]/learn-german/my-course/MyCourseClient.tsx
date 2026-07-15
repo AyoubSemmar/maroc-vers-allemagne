@@ -13,8 +13,10 @@ import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
 import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
+import SkillIcon from '@/components/learn-german/SkillIcon'
+import Icon from '@/components/ui/Icon'
+import type { Skill } from '@/lib/learn-german/assignmentAI'
 
-const SKILL_EMOJI: Record<string, string> = { grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧' }
 const SKILLS_ORDER = ['grammar', 'lesen', 'schreiben', 'hoeren'] as const
 
 // Qualitative label + German school note (1 best … 6) for a 0-100 grade.
@@ -28,12 +30,12 @@ function gradeInfo(g: number): { note: string; text: string; color: string; bar:
   return { note: '—', text: 'Pas encore commencé', color: 'text-gray-400', bar: 'bg-gray-300' }
 }
 
-function Bar({ label, value, sub, emoji }: { label: string; value: number | null; sub?: string; emoji: string }) {
+function Bar({ label, value, sub, icon }: { label: string; value: number | null; sub?: string; icon: React.ReactNode }) {
   const v = value == null ? 0 : Math.round(value)
   return (
     <div>
       <div className="flex items-center justify-between text-xs mb-1">
-        <span className="text-gray-600">{emoji} {label}{sub ? <span className="text-gray-300"> · {sub}</span> : null}</span>
+        <span className="text-gray-600 inline-flex items-center gap-1.5"><span className="text-gray-400">{icon}</span> {label}{sub ? <span className="text-gray-300"> · {sub}</span> : null}</span>
         <span className="font-semibold text-gray-700">{value == null ? '—' : `${v}%`}</span>
       </div>
       <div className="w-full bg-gray-100 rounded-full h-2">
@@ -221,7 +223,7 @@ export default function MyCourseClient({
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
           {week != null && (
             <p className="text-xs text-gray-500 mt-0.5">
-              📅 {week === 0 ? `Début le ${formatAccessDate(groupStartDate!)}` : `Semaine ${week}`}
+              {week === 0 ? `Début le ${formatAccessDate(groupStartDate!)}` : `Semaine ${week}`}
             </p>
           )}
           {accessUntil && !isTeacher && (() => {
@@ -229,7 +231,7 @@ export default function MyCourseClient({
             const soon = d != null && d <= 7
             return (
               <p className={`text-xs mt-1 ${soon ? 'text-amber-600 font-medium' : 'text-gray-400'}`}>
-                🗓️ Accès jusqu&rsquo;au {formatAccessDate(accessUntil)}{soon && d != null ? ` · ${d} j restants` : ''}
+                Accès jusqu&rsquo;au {formatAccessDate(accessUntil)}{soon && d != null ? ` · ${d} j restants` : ''}
               </p>
             )
           })()}
@@ -242,16 +244,16 @@ export default function MyCourseClient({
               rel="noreferrer"
               // Fire-and-forget attendance log — must never delay joining.
               onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
-              className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
             >
-              🎥 Rejoindre l’appel vidéo ↗
+              <Icon name="play" size={15} /> Rejoindre l’appel vidéo ↗
             </a>
           ) : (
             <span
-              className="rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold px-4 py-2 cursor-not-allowed select-none"
+              className="inline-flex items-center gap-2 rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold px-4 py-2 cursor-not-allowed select-none"
               title={windowLabel ? `Ouvert de ${windowLabel.opensAtLabel} à ${windowLabel.closesAtLabel}` : undefined}
             >
-              🎥 Appel vidéo{windowLabel ? ` — dès ${windowLabel.opensAtLabel}` : ''}
+              <Icon name="play" size={15} /> Appel vidéo{windowLabel ? ` — dès ${windowLabel.opensAtLabel}` : ''}
             </span>
           )
         )}
@@ -270,11 +272,11 @@ export default function MyCourseClient({
               {nextUp ? (
                 <p className="font-bold truncate">Leçon {nextUp.order} · {nextUp.title}</p>
               ) : (
-                <p className="font-bold">Toutes les leçons sont validées 🎉</p>
+                <p className="font-bold">Toutes les leçons sont validées</p>
               )}
               {devoirsTodo > 0 && (
                 <a href="#devoirs" className="text-xs text-green-100 underline underline-offset-2">
-                  📝 {devoirsTodo} devoir{devoirsTodo > 1 ? 's' : ''} à faire
+                  {devoirsTodo} devoir{devoirsTodo > 1 ? 's' : ''} à faire
                 </a>
               )}
             </div>
@@ -288,9 +290,9 @@ export default function MyCourseClient({
             ) : allDone ? (
               <Link
                 href="/learn-german/my-course/certificate"
-                className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
+                className="inline-flex items-center gap-2 shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
               >
-                🎓 Mon certificat
+                <Icon name="trophy" size={15} /> Mon certificat
               </Link>
             ) : null}
           </div>
@@ -320,20 +322,20 @@ export default function MyCourseClient({
           {/* Quality breakdown + progression */}
           <div className="flex-1 flex flex-col gap-3 justify-center">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Qualité · sur le travail rendu</p>
-            <Bar emoji="📚" label="Leçons" value={lessonQuality} sub={`${attemptedLessons.length}/${lessons.length} faites`} />
+            <Bar icon={<Icon name="book" size={13} />} label="Leçons" value={lessonQuality} sub={`${attemptedLessons.length}/${lessons.length} faites`} />
             {assignments.length > 0 && (
-              <Bar emoji="📝" label="Devoirs" value={devoirQuality} sub={`${doneDevoirs.length}/${assignments.length} rendus`} />
+              <Bar icon={<Icon name="pen" size={13} />} label="Devoirs" value={devoirQuality} sub={`${doneDevoirs.length}/${assignments.length} rendus`} />
             )}
             {grade == null && (
               <p className="text-xs text-gray-400">Termine une leçon pour débloquer ta note.</p>
             )}
 
             <div className="pt-3 mt-1 border-t border-gray-100">
-              <Bar emoji="📈" label="Progression" value={progression} sub="parcours du niveau" />
+              <Bar icon={<Icon name="bar-chart" size={13} />} label="Progression" value={progression} sub="parcours du niveau" />
               <div className="flex gap-4 text-xs text-gray-400 pt-2 flex-wrap">
-                <span>✓ {completed.size}/{lessons.length} leçons</span>
-                <span>🧠 {vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
-                {assignments.length > 0 && <span>📝 {Object.keys(subScores).length}/{assignments.length} devoirs</span>}
+                <span>{completed.size}/{lessons.length} leçons</span>
+                <span>{vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
+                {assignments.length > 0 && <span>{Object.keys(subScores).length}/{assignments.length} devoirs</span>}
               </div>
             </div>
           </div>
@@ -344,7 +346,7 @@ export default function MyCourseClient({
           <div className="flex gap-2 flex-wrap mt-4 pt-4 border-t border-gray-100">
             {skillAvgs.map(s => (
               <span key={s.skill} className="text-xs px-2.5 py-1 rounded-lg bg-gray-50 border border-gray-200 text-gray-600">
-                {SKILL_EMOJI[s.skill]} {SKILL_LABELS[s.skill]} : <strong className={s.avg == null ? 'text-gray-400' : s.avg >= 70 ? 'text-green-700' : 'text-amber-700'}>{s.avg == null ? '—' : `${s.avg}%`}</strong>
+                <span className="inline-flex items-center gap-1 align-middle"><SkillIcon skill={s.skill as Skill} size={13} /> {SKILL_LABELS[s.skill]}</span> : <strong className={s.avg == null ? 'text-gray-400' : s.avg >= 70 ? 'text-green-700' : 'text-amber-700'}>{s.avg == null ? '—' : `${s.avg}%`}</strong>
                 <span className="text-gray-300"> ({s.done}/{s.assigned})</span>
               </span>
             ))}
@@ -374,7 +376,7 @@ export default function MyCourseClient({
                     <span className="text-sm font-bold text-gray-800 truncate">
                       Devoir {g.order}{g.title ? <span className="font-normal text-gray-400"> · {g.title}</span> : null}
                       {paced && g.order >= weekLo && g.order <= weekHi && (
-                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">📅 Cette semaine</span>
+                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">Cette semaine</span>
                       )}
                     </span>
                     <span className="text-xs shrink-0">
@@ -393,7 +395,7 @@ export default function MyCourseClient({
                           onClick={() => setOpenAssignment(a)}
                           className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-green-50/40 transition-colors text-left"
                         >
-                          <span className="text-lg shrink-0">{SKILL_EMOJI[a.skill]}</span>
+                          <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-green-50 text-green-700"><SkillIcon skill={a.skill as Skill} size={16} /></span>
                           <span className="flex-1 text-sm text-gray-700">{SKILL_LABELS[a.skill]}</span>
                           {done ? (
                             <span className={`text-xs font-bold px-2 py-0.5 rounded shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
@@ -421,7 +423,7 @@ export default function MyCourseClient({
                     onClick={() => setOpenAssignment(a)}
                     className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-green-300 transition-colors text-left"
                   >
-                    <span className="text-xl shrink-0">{SKILL_EMOJI[a.skill]}</span>
+                    <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-green-50 text-green-700"><SkillIcon skill={a.skill as Skill} size={16} /></span>
                     <span className="flex-1 min-w-0">
                       <span className="block text-sm font-medium text-gray-800 truncate" dir="ltr">{a.title}</span>
                       <span className="block text-xs text-gray-400">{SKILL_LABELS[a.skill]}</span>
@@ -459,7 +461,7 @@ export default function MyCourseClient({
               <span className="flex-1 text-sm font-medium text-gray-800 truncate">{lesson.title}</span>
               {thisWeek && (
                 <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5 shrink-0">
-                  📅 Cette semaine
+                  Cette semaine
                 </span>
               )}
               {sc ? (

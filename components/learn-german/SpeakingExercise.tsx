@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 import AudioButton from './AudioButton'
+import Icon from '@/components/ui/Icon'
 
 interface Props {
   target: string
@@ -145,7 +146,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
       </div>
 
       {hint && (
-        <p className="text-xs text-gray-400 text-right">💡 {hint}</p>
+        <p className="text-xs text-gray-400 text-right">{hint}</p>
       )}
 
       <div className="flex flex-col items-center gap-3">
@@ -171,7 +172,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
 
         {state === 'success' && (
           <div className="text-center">
-            <div className="text-4xl mb-2">🎉</div>
+            <div className="mb-2 flex justify-center text-green-600"><Icon name="check" size={32} /></div>
             <p className="text-green-700 font-semibold">{t('success')}</p>
             {transcript && <p className="text-xs text-gray-400 mt-1" dir="ltr">{transcript}</p>}
             <button onClick={reset} className="mt-3 text-sm text-blue-600 hover:underline">{t('tryAgain')}</button>

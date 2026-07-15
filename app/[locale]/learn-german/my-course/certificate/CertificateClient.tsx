@@ -1,6 +1,7 @@
 'use client'
 
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 import { getLevel } from '@/lib/german-data'
 import { useProgress } from '@/lib/useProgress'
 
@@ -45,7 +46,7 @@ export default function CertificateClient({
     return (
       <div className="max-w-md mx-auto px-4 py-16 text-center">
         <div className="bg-white rounded-2xl border border-gray-200 p-8">
-          <div className="text-4xl mb-3">🎓</div>
+          <div className="mb-4 flex justify-center text-green-700"><Icon name="trophy" size={36} /></div>
           <h1 className="text-xl font-bold text-gray-900">Encore un effort !</h1>
           <p className="text-sm text-gray-600 mt-2">
             Le certificat {level.id} se débloque quand toutes les leçons sont validées (score ≥ 70%).
@@ -85,9 +86,9 @@ export default function CertificateClient({
         </Link>
         <button
           onClick={() => window.print()}
-          className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5"
+          className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5"
         >
-          🖨️ Imprimer / Enregistrer en PDF
+          <Icon name="download" size={15} /> Imprimer / Enregistrer en PDF
         </button>
       </div>
 

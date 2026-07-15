@@ -7,10 +7,11 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import { createClient } from '@/lib/supabase-browser'
 import { SKILL_LABELS, type Skill } from '@/lib/learn-german/assignmentAI'
 import { VOCAB_LEARNED_THRESHOLD } from '@/lib/learn-german/vocab'
+import Icon from '@/components/ui/Icon'
+import SkillIcon from '@/components/learn-german/SkillIcon'
 
 export type LevelSummary = {
   id: string
-  emoji: string
   color: string
   total: number
   orders: Record<string, number>
@@ -27,7 +28,6 @@ type SubRow = {
   assignments: { skill: Skill; level_id: string; title: string; content: { lessonOrder?: number; lessonTitle?: string } | null } | null
 }
 
-const SKILL_EMOJI: Record<Skill, string> = { grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧' }
 const SKILLS_ORDER: Skill[] = ['lesen', 'hoeren', 'schreiben', 'grammar']
 
 // Same thresholds as the paid course dashboard: German school notes.
@@ -59,15 +59,17 @@ function Donut({ value, size = 96 }: { value: number | null; size?: number }) {
   )
 }
 
-function SkillBar({ emoji, label, value, count, countLabel }: {
-  emoji: string; label: string; value: number | null; count: number; countLabel: string
+function SkillBar({ icon, label, value, count, countLabel }: {
+  icon: React.ReactNode; label: string; value: number | null; count: number; countLabel: string
 }) {
   const v = value == null ? 0 : Math.round(value)
   const bar = v >= 70 ? 'bg-green-500' : v >= 50 ? 'bg-amber-500' : v > 0 ? 'bg-red-400' : 'bg-gray-200'
   return (
     <div>
       <div className="flex items-center justify-between text-sm mb-1">
-        <span className="font-semibold text-gray-800">{emoji} {label}</span>
+        <span className="font-semibold text-gray-800 inline-flex items-center gap-2">
+          <span className="text-gray-400">{icon}</span> {label}
+        </span>
         <span className="text-gray-500">
           {value == null ? '—' : `${v}/100`} <span className="text-gray-300">·</span> <span className="text-xs">{countLabel.replace('{n}', String(count))}</span>
         </span>
@@ -166,14 +168,21 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
     const recent = [
       ...attempted.filter(r => r.updated_at).map(r => ({
         when: r.updated_at as string,
-        emoji: '✏️',
+        icon: <Icon name="check-square" size={16} />,
         label: t('lessonLabel', { level: r.level_id, n: levels.find(l => l.id === r.level_id)?.orders[r.lesson_id] ?? '?' }),
         score: r.best_score ?? 0,
       })),
       ...subRows.filter(r => r.submitted_at && r.assignments).map(r => ({
         when: r.submitted_at as string,
-        emoji: SKILL_EMOJI[r.assignments!.skill],
-        label: `${SKILL_LABELS[r.assignments!.skill]} · ${r.assignments!.content?.lessonTitle ?? r.assignments!.title}`,
+        icon: <SkillIcon skill={r.assignments!.skill} size={16} />,
+        // Lesson devoirs: reference the lesson by number — the stored
+        // lessonTitle is the base (Arabic) theme and shouldn't leak into
+        // other locales. Custom teacher assignments keep their title.
+        label: `${SKILL_LABELS[r.assignments!.skill]} · ${
+          r.assignments!.content?.lessonOrder != null
+            ? t('lessonLabel', { level: r.assignments!.level_id, n: r.assignments!.content.lessonOrder })
+            : r.assignments!.title
+        }`,
         score: effScore(r),
       })),
     ].sort((a, b) => b.when.localeCompare(a.when)).slice(0, 8)
@@ -193,7 +202,7 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
 
         <div className="mb-8">
           <Link href="/learn-german" className="text-sm text-gray-500 hover:text-green-700">← {t('backToCourse')}</Link>
-          <h1 className="text-2xl font-black text-gray-900 mt-2">📊 {t('title')}</h1>
+          <h1 className="text-2xl font-black text-gray-900 mt-2">{t('title')}</h1>
           <p className="text-sm text-gray-500 mt-1">{t('subtitle')}</p>
         </div>
 
@@ -204,7 +213,7 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
         {/* Signed out: results live behind a free account. */}
         {loaded && !isAuthed && (
           <div className="bg-white rounded-2xl border-2 border-green-200 p-8 text-center">
-            <div className="text-5xl mb-3">🔓</div>
+            <div className="mb-4 flex justify-center text-green-700"><Icon name="lock" size={36} /></div>
             <h2 className="text-lg font-bold text-gray-900">{t('signinTitle')}</h2>
             <p className="text-sm text-gray-500 mt-2 max-w-md mx-auto">{t('signinBody')}</p>
             <Link
@@ -218,7 +227,7 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
 
         {loaded && isAuthed && !hasAnything && (
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center">
-            <div className="text-5xl mb-3">🌱</div>
+            <div className="mb-4 flex justify-center text-green-700"><Icon name="sprout" size={36} /></div>
             <h2 className="text-lg font-bold text-gray-900">{t('emptyTitle')}</h2>
             <p className="text-sm text-gray-500 mt-2">{t('emptyBody')}</p>
             <Link
@@ -278,21 +287,22 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
               <h2 className="font-bold text-gray-900 mb-4">{t('skillsHeading')}</h2>
               <div className="flex flex-col gap-4">
                 <SkillBar
-                  emoji="✏️" label={t('skillLessons')}
+                  icon={<Icon name="check-square" size={16} />} label={t('skillLessons')}
                   value={stats.lessonQuality == null ? null : Math.round(stats.lessonQuality)}
                   count={stats.attemptedCount} countLabel={t('countItems')}
                 />
                 {stats.skills.map(s => (
                   <SkillBar
                     key={s.skill}
-                    emoji={SKILL_EMOJI[s.skill]} label={SKILL_LABELS[s.skill]}
+                    icon={<SkillIcon skill={s.skill} size={16} />} label={SKILL_LABELS[s.skill]}
                     value={s.avg} count={s.count} countLabel={t('countItems')}
                   />
                 ))}
               </div>
               {stats.weakest && (
-                <p className="mt-4 text-sm bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-amber-900">
-                  💡 {t('weakTip', { skill: SKILL_LABELS[stats.weakest.skill] })}
+                <p className="mt-4 text-sm bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-amber-900 flex items-start gap-2">
+                  <Icon name="lightbulb" size={16} className="shrink-0 mt-0.5" />
+                  <span>{t('weakTip', { skill: SKILL_LABELS[stats.weakest.skill] })}</span>
                 </p>
               )}
             </div>
@@ -313,7 +323,10 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
                     >
                       <div className="flex items-center justify-between">
                         <span className="flex items-center gap-2 font-black text-gray-900">
-                          <span className="text-xl">{lvl.emoji}</span> {lvl.id}
+                          <span className={`inline-flex items-center justify-center w-8 h-8 rounded-lg text-white text-xs font-black ${lvl.color}`}>
+                            {lvl.id}
+                          </span>
+                          {lvl.id}
                         </span>
                         {avg != null && (
                           <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${avg >= 70 ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-600'}`}>
@@ -341,7 +354,7 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
                 <ul className="flex flex-col divide-y divide-gray-100">
                   {stats.recent.map((r, i) => (
                     <li key={i} className="flex items-center gap-3 py-2.5">
-                      <span className="text-lg shrink-0">{r.emoji}</span>
+                      <span className="text-gray-400 shrink-0">{r.icon}</span>
                       <span className="text-sm text-gray-700 flex-1 min-w-0 truncate" dir="auto">{r.label}</span>
                       <span className="text-xs text-gray-400 shrink-0">{new Date(r.when).toLocaleDateString(locale)}</span>
                       <span className={`text-xs font-bold px-2 py-0.5 rounded-full shrink-0 ${r.score >= 70 ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-600'}`}>

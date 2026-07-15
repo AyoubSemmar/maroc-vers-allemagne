@@ -109,7 +109,7 @@ export default function LevelsGrid() {
 
       {!isAuthed && (
         <div className="lg-levels-tip">
-          <span className="lg-levels-tip-icon" aria-hidden>💡</span>
+          <span className="lg-levels-tip-icon" aria-hidden><Icon name="lightbulb" size={20} /></span>
           <p>{t('tipNotAuthed') ?? 'All German lessons are free. Sign in to save your progress across devices and continue from where you left off.'}</p>
         </div>
       )}

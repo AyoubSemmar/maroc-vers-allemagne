@@ -94,7 +94,7 @@ export default function VocabQuiz({
   if (!round) {
     return (
       <div className="bg-white rounded-2xl border border-gray-200 p-6 text-center">
-        <h3 className="text-lg font-bold text-gray-900">📚 {level.id} — Vocabulaire</h3>
+        <h3 className="text-lg font-bold text-gray-900">{level.id} — Vocabulaire</h3>
         <div className="my-4">
           <div className="text-3xl font-black text-green-700">
             {loaded ? learnedCount : '…'} <span className="text-gray-300">/</span> {total}
@@ -127,7 +127,7 @@ export default function VocabQuiz({
     <div className="bg-white rounded-2xl border border-gray-200 p-6">
       <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
         <span>{idx + 1} / {round.length}</span>
-        <span>✅ {correctCount}</span>
+        <span>✓ {correctCount}</span>
       </div>
 
       <div className="text-center mb-5">
@@ -158,8 +158,8 @@ export default function VocabQuiz({
               className={`w-full border-2 rounded-xl px-4 py-3 text-sm transition-all text-center ${cls}`}
               dir={optionDir}
             >
-              {picked && isAns && <span className="mr-1">✅</span>}
-              {picked && isPicked && !isAns && <span className="mr-1">❌</span>}
+              {picked && isAns && <span className="mr-1">✓</span>}
+              {picked && isPicked && !isAns && <span className="mr-1">✗</span>}
               {opt}
             </button>
           )

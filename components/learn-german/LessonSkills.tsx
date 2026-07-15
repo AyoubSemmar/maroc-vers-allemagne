@@ -5,11 +5,9 @@ import { useTranslations } from 'next-intl'
 import { Link, usePathname } from '@/i18n/navigation'
 import { createClient } from '@/lib/supabase-browser'
 import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
-import { SKILL_LABELS, type Skill } from '@/lib/learn-german/assignmentAI'
+import SkillIcon from '@/components/learn-german/SkillIcon'
+import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
 
-const SKILL_EMOJI: Record<Skill, string> = {
-  grammar: '🧩', lesen: '📖', schreiben: '✍️', hoeren: '🎧',
-}
 const SKILL_RANK: Record<string, number> = { lesen: 0, hoeren: 1, schreiben: 2, grammar: 3 }
 
 /**
@@ -108,7 +106,9 @@ export default function LessonSkills({
               className="bg-white rounded-2xl border-2 border-gray-200 hover:border-green-400 p-4 text-left transition-all group"
             >
               <div className="flex items-center justify-between gap-2">
-                <span className="text-2xl">{SKILL_EMOJI[d.skill]}</span>
+                <span className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-green-50 text-green-700">
+                  <SkillIcon skill={d.skill} size={20} />
+                </span>
                 {hasScore ? (
                   <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${score >= 70 ? 'bg-green-100 text-green-700' : 'bg-orange-100 text-orange-600'}`}>
                     {score}/100
@@ -119,8 +119,11 @@ export default function LessonSkills({
                   </span>
                 )}
               </div>
+              {/* Localized skill name instead of the stored assignment title —
+                  the generated titles carry the lesson's base (Arabic) theme,
+                  which would show for every locale. */}
               <p className="font-bold text-gray-900 text-sm mt-2">{SKILL_LABELS[d.skill]}</p>
-              <p className="text-xs text-gray-500 mt-0.5 line-clamp-2" dir="ltr">{d.title}</p>
+              <p className="text-xs text-gray-500 mt-0.5">{t(`skillDesc.${d.skill}`)}</p>
               {hasScore && (
                 <p className="text-xs text-green-700 font-semibold mt-2">↻ {t('redo')}</p>
               )}

@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { createClient } from '@/lib/supabase-browser'
+import Icon from '@/components/ui/Icon'
 import {
   LEVEL_SPECS,
   pickTodaysTheme,
@@ -146,7 +147,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
       {/* Auth gate */}
       {authed === false && (
         <div className="we-locked">
-          <span className="we-locked-icon" aria-hidden>🔒</span>
+          <span className="we-locked-icon" aria-hidden><Icon name="lock" size={26} /></span>
           <h4>{t('signInTitle')}</h4>
           <p>{t('signInBody')}</p>
           <Link
@@ -161,7 +162,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
       {/* Daily-done state — both attempts used and result already cleared */}
       {authed && lockedOut && !result && (
         <div className="we-done" key={tick}>
-          <span className="we-done-icon" aria-hidden>✅</span>
+          <span className="we-done-icon" aria-hidden>✓</span>
           <h4>{t('doneTitle')}</h4>
           <p>{t('doneBody', { hours: hoursUntil(nextResetUtcMs()) })}</p>
         </div>
@@ -172,7 +173,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
         <>
           <div className="we-prompt">
             <div className="we-prompt-meta">
-              <span className="we-pill we-pill--brand">📝 {t('themeBadge')}</span>
+              <span className="we-pill we-pill--brand">{t('themeBadge')}</span>
               <span className="we-pill">{themeTitle}</span>
               <span className="we-pill">{spec.minWords}–{spec.maxWords} {t('wordsShort')}</span>
             </div>
@@ -180,7 +181,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
             {locale !== 'de' && (
               <p className="we-prompt-ui">{themeInstructionUi}</p>
             )}
-            {themeHint && <p className="we-prompt-hint">💡 {themeHint}</p>}
+            {themeHint && <p className="we-prompt-hint">{themeHint}</p>}
           </div>
 
           {!result && (
@@ -208,7 +209,7 @@ export default function WritingExercise({ level }: { level: WritingLevel }) {
                   {submitting ? t('submitting') : t('submit')}
                 </button>
               </div>
-              {error && <p className="we-error">⚠️ {error}</p>}
+              {error && <p className="we-error">{error}</p>}
             </>
           )}
 
@@ -285,7 +286,7 @@ function ResultView({
       )}
 
       <div className="we-section">
-        <h4 className="we-section-title">✨ {t('correctedTitle')}</h4>
+        <h4 className="we-section-title">{t('correctedTitle')}</h4>
         <p className="we-section-sub">{t('correctedSub')}</p>
         <div className="we-corrected" lang="de" dir="ltr">
           {result.corrected}
@@ -293,7 +294,7 @@ function ResultView({
       </div>
 
       <div className="we-tip">
-        <span className="we-tip-icon" aria-hidden>💡</span>
+        <span className="we-tip-icon" aria-hidden>→</span>
         <p>{result.tip}</p>
       </div>
 

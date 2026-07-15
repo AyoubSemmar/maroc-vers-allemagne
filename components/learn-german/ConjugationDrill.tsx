@@ -13,6 +13,7 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { useLocale, useTranslations } from 'next-intl'
+import Icon from '@/components/ui/Icon'
 import {
   verbsForLevel, PERSON_LABELS_FR, PERSON_LABELS_AR,
   type Verb, type VerbLevel,
@@ -142,7 +143,7 @@ export default function ConjugationDrill() {
           <p className="cd-sub">{t('intro')}</p>
           {streak > 0 && (
             <p className="cd-streak">
-              🔥 {t('streak', { n: streak })}
+              <Icon name="flame" size={14} style={{ display: 'inline', verticalAlign: '-2px' }} /> {t('streak', { n: streak })}
             </p>
           )}
         </header>
@@ -182,7 +183,7 @@ export default function ConjugationDrill() {
         <div className="cd-card cd-card--done">
           <div className="cd-score">{score} / {items.length}</div>
           <div className="cd-grade">{grade}</div>
-          <p className="cd-streak-big">🔥 {t('streak', { n: streak })}</p>
+          <p className="cd-streak-big"><Icon name="flame" size={18} style={{ display: 'inline', verticalAlign: '-3px' }} /> {t('streak', { n: streak })}</p>
           <button type="button" onClick={startDrill} className="cd-cta">
             {t('againCta')}
           </button>
@@ -198,7 +199,7 @@ export default function ConjugationDrill() {
     <div dir={dir} className="cd-root">
       <div className="cd-progress">
         <span>{idx + 1} / {items.length}</span>
-        <span>🔥 {streak}</span>
+        <span><Icon name="flame" size={13} style={{ display: 'inline', verticalAlign: '-2px' }} /> {streak}</span>
       </div>
       <div className="cd-card">
         <div className="cd-prompt-row">

@@ -1,5 +1,6 @@
 import { redirect } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
+import Icon from '@/components/ui/Icon'
 import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
@@ -39,7 +40,7 @@ export default async function MyCoursePage({
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4" dir={dirFor(locale)}>
         <div className="max-w-md w-full bg-white rounded-2xl border border-gray-200 p-8 text-center">
-          <div className="text-4xl mb-3">{expired ? '🔒' : '⏳'}</div>
+          <div className="mb-4 flex justify-center text-gray-500"><Icon name={expired ? 'lock' : 'calendar'} size={36} /></div>
           <h1 className="text-xl font-bold text-gray-900">
             {expired ? 'Accès expiré' : 'Place réservée'}
           </h1>
