@@ -150,16 +150,13 @@ export function useProgress(levelId: LevelId) {
   }
 
   /**
-   * All lessons are free. Lesson 1 is open to anyone (no account needed
-   * to taste the experience). Lesson 2+ requires the user to be signed
-   * in — not because the content is paid, but so we can save their
-   * progress and sync across devices. Once authed, ALL lessons in the
-   * level are accessible (no sequential blocking).
+   * Every level and every lesson is open to everyone — signed in or not,
+   * in any order. An account is only needed to SAVE progress and scores
+   * (signed-out learners still get localStorage persistence on this
+   * device; the nudge in LessonsList sells the account for cloud sync).
    */
-  function isLessonUnlocked(_lessonId: string, lessonOrder: number): boolean {
-    if (isAdmin) return true
-    if (lessonOrder === 1) return true
-    return isAuthed
+  function isLessonUnlocked(_lessonId: string, _lessonOrder: number): boolean {
+    return true
   }
 
   function isLessonCompleted(lessonId: string): boolean {

@@ -3097,14 +3097,16 @@
         "sub": "Una playlist de vídeos adaptada a este nivel. Mira un vídeo después de cada sesión de estudio para acostumbrar tu oído al alemán hablado.",
         "play": "Reproducir la playlist",
         "openPlaylist": "Abrir la playlist completa en YouTube"
-      }
+      },
+      "resultsCta": "Mis resultados"
     },
     "lesson": {
       "breadcrumbAria": "migas de pan",
       "tabs": {
         "grammar": "Gramática",
         "vocab": "Vocabulario",
-        "exercise": "Ejercicios"
+        "exercise": "Ejercicios",
+        "skills": "Práctica"
       },
       "meta": "Lección {n} · {vocab} palabras · {q} ejercicios",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "Siguiente lección: {title} →",
         "levelDone": "🎉 ¡Nivel completado! Volver →",
         "tryAgain": "Intentar de nuevo",
-        "reviewAnswers": "Revisar respuestas"
+        "reviewAnswers": "Revisar respuestas",
+        "trySkills": "Probar los ejercicios tipo examen",
+        "myResults": "Mis resultados"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "El programa sigue los niveles oficiales del MCER, así que todo lo que aprendes corresponde directamente a los exámenes Goethe, telc y ÖSD. La web incluye además una sección específica de preparación de exámenes con ejercicios modelo por nivel."
         }
       ]
+    },
+    "devoirs": {
+      "heading": "Ejercicios tipo examen",
+      "sub": "Lectura, escucha y escritura de esta lección — corregidos al instante, como en un examen de alemán real.",
+      "start": "Empezar",
+      "redo": "Repetir",
+      "notSaved": "Tus resultados no se están guardando. Crea una cuenta gratuita para conservar tus notas y seguir tu progreso.",
+      "loginTitle": "La corrección con IA requiere una cuenta gratuita",
+      "loginBody": "Los ejercicios de escritura los corrige la IA, error por error. Inicia sesión con una cuenta gratuita para recibir tu corrección y guardar tus resultados.",
+      "loginCta": "Crear una cuenta gratuita",
+      "listenHint": "Escucha el audio y luego responde. Puedes repetirlo cuantas veces quieras.",
+      "textLabel": "Texto",
+      "words": "{n} palabras",
+      "goal": "objetivo {min}–{max}",
+      "submit": "Enviar para corrección",
+      "grading": "Corrigiendo…",
+      "corrected": "Versión corregida",
+      "close": "Cerrar",
+      "correctCount": "{n}/{total} correctas",
+      "errGeneric": "Algo salió mal. Inténtalo de nuevo.",
+      "errNetwork": "Error de red. Inténtalo de nuevo."
+    },
+    "results": {
+      "metaTitle": "Mis resultados de alemán — GoGermany",
+      "title": "Mis resultados",
+      "subtitle": "Tus notas y tu progreso en el curso de alemán gratuito.",
+      "backToCourse": "Curso de alemán",
+      "openCta": "Abrir",
+      "signinTitle": "Crea una cuenta gratuita para seguir tus resultados",
+      "signinBody": "Tus notas de lecciones, ejercicios tipo examen y vocabulario aprendido se guardan en tu cuenta y se sincronizan entre dispositivos — gratis, para siempre.",
+      "signinCta": "Iniciar sesión / crear cuenta",
+      "emptyTitle": "Aún no hay resultados",
+      "emptyBody": "Completa una lección o un ejercicio y tus notas aparecerán aquí.",
+      "emptyCta": "Empezar con A1",
+      "gradeHeading": "Nota global",
+      "gradeSub": "Nota escolar alemana, calculada sobre el trabajo que realmente has hecho.",
+      "noGrade": "Sin nota todavía — termina un ejercicio de lección para obtener tu primera nota.",
+      "lessonsDone": "Lecciones completadas",
+      "devoirsDone": "Ejercicios enviados",
+      "wordsLearned": "Palabras aprendidas",
+      "skillsHeading": "Destrezas",
+      "skillLessons": "Lecciones",
+      "countItems": "{n} hechos",
+      "weakTip": "Tu destreza más débil ahora mismo es {skill} — abre una lección y practícala en la pestaña 🎯.",
+      "levelsHeading": "Niveles",
+      "levelProgress": "{done}/{total} lecciones",
+      "levelAvg": "media {n}",
+      "continue": "Continuar",
+      "recentHeading": "Actividad reciente",
+      "lessonLabel": "{level} · Lección {n}"
     }
   },
   "admin": {

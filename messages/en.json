@@ -3097,14 +3097,16 @@
         "sub": "A video playlist matched to this level. Watch one video after each study session to train your ear with real spoken German.",
         "play": "Play the playlist",
         "openPlaylist": "Open the full playlist on YouTube"
-      }
+      },
+      "resultsCta": "My results"
     },
     "lesson": {
       "breadcrumbAria": "breadcrumb",
       "tabs": {
         "grammar": "Grammar",
         "vocab": "Vocabulary",
-        "exercise": "Exercises"
+        "exercise": "Exercises",
+        "skills": "Practice"
       },
       "meta": "Lesson {n} · {vocab} words · {q} exercises",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "Next lesson: {title} →",
         "levelDone": "🎉 Level complete! Back →",
         "tryAgain": "Try again",
-        "reviewAnswers": "Review answers"
+        "reviewAnswers": "Review answers",
+        "trySkills": "Try the exam exercises",
+        "myResults": "My results"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "The curriculum mirrors the official CEFR levels, so everything you learn maps directly to the Goethe, telc and ÖSD exams. The site also includes a dedicated exam preparation section with model exercises for each level."
         }
       ]
+    },
+    "devoirs": {
+      "heading": "Exam-style exercises",
+      "sub": "Reading, listening and writing for this lesson — graded instantly, like in a real German exam.",
+      "start": "Start",
+      "redo": "Do it again",
+      "notSaved": "Your results are not being saved. Create a free account to keep your scores and track your progress.",
+      "loginTitle": "AI correction needs a free account",
+      "loginBody": "Writing exercises are corrected by AI, mistake by mistake. Sign in with a free account to get your correction and save your results.",
+      "loginCta": "Create a free account",
+      "listenHint": "Listen to the audio, then answer. You can replay it as often as you like.",
+      "textLabel": "Text",
+      "words": "{n} words",
+      "goal": "target {min}–{max}",
+      "submit": "Submit for correction",
+      "grading": "Grading…",
+      "corrected": "Corrected version",
+      "close": "Close",
+      "correctCount": "{n}/{total} correct",
+      "errGeneric": "Something went wrong. Please try again.",
+      "errNetwork": "Network error. Please try again."
+    },
+    "results": {
+      "metaTitle": "My German results — GoGermany",
+      "title": "My results",
+      "subtitle": "Your grades and progress across the free German course.",
+      "backToCourse": "German course",
+      "openCta": "Open",
+      "signinTitle": "Create a free account to track your results",
+      "signinBody": "Your lesson scores, exam-style exercises and learned vocabulary are saved to your account and synced across devices — free, forever.",
+      "signinCta": "Sign in / create account",
+      "emptyTitle": "No results yet",
+      "emptyBody": "Complete a lesson or an exercise and your grades will show up here.",
+      "emptyCta": "Start with A1",
+      "gradeHeading": "Overall grade",
+      "gradeSub": "German school grade, computed on the work you have actually done.",
+      "noGrade": "Not graded yet — finish a lesson exercise to get your first grade.",
+      "lessonsDone": "Lessons completed",
+      "devoirsDone": "Exercises submitted",
+      "wordsLearned": "Words learned",
+      "skillsHeading": "Skills",
+      "skillLessons": "Lessons",
+      "countItems": "{n} done",
+      "weakTip": "Your weakest skill right now is {skill} — open a lesson and practice it in the 🎯 tab.",
+      "levelsHeading": "Levels",
+      "levelProgress": "{done}/{total} lessons",
+      "levelAvg": "avg {n}",
+      "continue": "Continue",
+      "recentHeading": "Recent activity",
+      "lessonLabel": "{level} · Lesson {n}"
     }
   },
   "admin": {

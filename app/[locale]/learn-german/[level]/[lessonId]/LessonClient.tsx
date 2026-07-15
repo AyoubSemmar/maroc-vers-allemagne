@@ -10,9 +10,10 @@ import AudioButton from '@/components/learn-german/AudioButton'
 import DragDropExercise from '@/components/learn-german/DragDropExercise'
 import MatchingExercise from '@/components/learn-german/MatchingExercise'
 import SpeakingExercise from '@/components/learn-german/SpeakingExercise'
+import LessonSkills, { useLessonDevoirs } from '@/components/learn-german/LessonSkills'
 import LiveClassesCta from '@/components/classes/LiveClassesCta'
 
-type Tab = 'grammar' | 'vocab' | 'exercise'
+type Tab = 'grammar' | 'vocab' | 'exercise' | 'skills'
 
 function BidiText({ text, className }: { text: string; className?: string }) {
   const regex = /"[^"]+"|„[^"]+(?:"|")|«[^»]+»|'[^']+'|[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß0-9 ,.\-!?':;()]*[A-Za-zÄÖÜäöüß.!?]/g
@@ -190,7 +191,10 @@ export default function LessonClient({
   const [matchingResults, setMatchingResults] = useState<Record<string, boolean>>({})
   const [submitted, setSubmitted] = useState(false)
   const [vocabSearch, setVocabSearch] = useState('')
-  const { completeLesson, saveLessonScore, isAdmin } = useProgress(level.id)
+  const { completeLesson, saveLessonScore, isAdmin, isAuthed } = useProgress(level.id)
+  // Exam-style Lesen/Hören/Schreiben devoirs attached to this lesson (A1–B1
+  // have them; the tab hides itself on lessons without any).
+  const devoirsState = useLessonDevoirs(level.id, lesson.id)
 
   function typeLabel(key: string): string {
     try { return t(`types.${key}` as any) } catch { return key }
@@ -200,6 +204,9 @@ export default function LessonClient({
     { id: 'grammar', labelKey: 'grammar', emoji: '📖' },
     { id: 'vocab', labelKey: 'vocab', emoji: '📝' },
     { id: 'exercise', labelKey: 'exercise', emoji: '✏️' },
+    ...(devoirsState.devoirs.length > 0
+      ? [{ id: 'skills' as Tab, labelKey: 'skills', emoji: '🎯' }]
+      : []),
   ]
 
   const questions = lesson.exercise.questions
@@ -306,6 +313,7 @@ export default function LessonClient({
                 <span>{tb.emoji}</span> {t(`tabs.${tb.labelKey}` as any)}
                 {tb.id === 'vocab' && <span className="text-xs opacity-70">({lesson.vocabulary.length})</span>}
                 {tb.id === 'exercise' && <span className="text-xs opacity-70">({questions.length})</span>}
+                {tb.id === 'skills' && <span className="text-xs opacity-70">({devoirsState.devoirs.length})</span>}
               </button>
             ))}
           </div>
@@ -639,6 +647,22 @@ export default function LessonClient({
                 </p>
 
                 <div className="flex flex-wrap gap-3 justify-center mt-5">
+                  {devoirsState.devoirs.length > 0 && (
+                    <button
+                      onClick={() => { setTab('skills'); window.scrollTo({ top: 0 }) }}
+                      className="bg-white border-2 border-green-600 text-green-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-50"
+                    >
+                      🎯 {t('exerciseCard.trySkills')}
+                    </button>
+                  )}
+                  {isAuthed && (
+                    <Link
+                      href="/learn-german/results"
+                      className="bg-white border-2 border-gray-200 text-gray-700 px-6 py-2.5 rounded-full text-sm font-semibold hover:border-green-400"
+                    >
+                      📊 {t('exerciseCard.myResults')}
+                    </Link>
+                  )}
                   {nextLesson && score! >= 70 && (
                     <Link
                       href={`/learn-german/${level.id.toLowerCase()}/${nextLesson.id}`}
@@ -668,6 +692,17 @@ export default function LessonClient({
               </div>
             )}
           </div>
+        )}
+
+        {/* ══════════════════ SKILLS TAB (Lesen · Hören · Schreiben) ══════════════════ */}
+        {tab === 'skills' && (
+          <LessonSkills
+            devoirs={devoirsState.devoirs}
+            subScores={devoirsState.subScores}
+            onGraded={devoirsState.setScore}
+            isAuthed={devoirsState.isAuthed}
+            locale={locale}
+          />
         )}
 
         {/* Live-classes CTA — the lessons are the site's top-of-funnel, so

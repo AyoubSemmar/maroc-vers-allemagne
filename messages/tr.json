@@ -3097,14 +3097,16 @@
         "sub": "Bu seviyeye uygun bir video oynatma listesi. Kulağını gerçek konuşulan Almancaya alıştırmak için her çalışmadan sonra bir video izle.",
         "play": "Oynatma listesini başlat",
         "openPlaylist": "Tüm oynatma listesini YouTube'da aç"
-      }
+      },
+      "resultsCta": "Sonuçlarım"
     },
     "lesson": {
       "breadcrumbAria": "breadcrumb",
       "tabs": {
         "grammar": "Gramer",
         "vocab": "Kelime Hazinesi",
-        "exercise": "Alıştırmalar"
+        "exercise": "Alıştırmalar",
+        "skills": "Pratik"
       },
       "meta": "Ders {n} · {vocab} kelime · {q} alıştırma",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "Sonraki ders: {title} →",
         "levelDone": "🎉 Seviye tamamlandı! Geri →",
         "tryAgain": "Tekrar dene",
-        "reviewAnswers": "Cevapları gözden geçir"
+        "reviewAnswers": "Cevapları gözden geçir",
+        "trySkills": "Sınav alıştırmalarını dene",
+        "myResults": "Sonuçlarım"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "Müfredat resmi CEFR seviyelerini izler; öğrendiğiniz her şey Goethe, telc ve ÖSD sınavlarıyla doğrudan örtüşür. Sitede ayrıca her seviye için örnek alıştırmalar içeren özel bir sınav hazırlık bölümü vardır."
         }
       ]
+    },
+    "devoirs": {
+      "heading": "Sınav formatında alıştırmalar",
+      "sub": "Bu ders için okuma, dinleme ve yazma — gerçek bir Almanca sınavındaki gibi anında değerlendirilir.",
+      "start": "Başla",
+      "redo": "Tekrar yap",
+      "notSaved": "Sonuçların kaydedilmiyor. Notlarını saklamak ve ilerlemeni takip etmek için ücretsiz bir hesap oluştur.",
+      "loginTitle": "Yapay zekâ düzeltmesi ücretsiz hesap gerektirir",
+      "loginBody": "Yazma alıştırmaları yapay zekâ tarafından hata hata düzeltilir. Düzeltmeni almak ve sonuçlarını kaydetmek için ücretsiz hesapla giriş yap.",
+      "loginCta": "Ücretsiz hesap oluştur",
+      "listenHint": "Sesi dinle, sonra cevapla. İstediğin kadar tekrar dinleyebilirsin.",
+      "textLabel": "Metin",
+      "words": "{n} kelime",
+      "goal": "hedef {min}–{max}",
+      "submit": "Düzeltme için gönder",
+      "grading": "Değerlendiriliyor…",
+      "corrected": "Düzeltilmiş sürüm",
+      "close": "Kapat",
+      "correctCount": "{n}/{total} doğru",
+      "errGeneric": "Bir şeyler ters gitti. Lütfen tekrar dene.",
+      "errNetwork": "Ağ hatası. Lütfen tekrar dene."
+    },
+    "results": {
+      "metaTitle": "Almanca sonuçlarım — GoGermany",
+      "title": "Sonuçlarım",
+      "subtitle": "Ücretsiz Almanca kursundaki notların ve ilerlemen.",
+      "backToCourse": "Almanca kursu",
+      "openCta": "Aç",
+      "signinTitle": "Sonuçlarını takip etmek için ücretsiz bir hesap oluştur",
+      "signinBody": "Ders notların, sınav formatındaki alıştırmaların ve öğrendiğin kelimeler hesabına kaydedilir ve cihazlar arasında senkronize edilir — ücretsiz, sonsuza dek.",
+      "signinCta": "Giriş yap / hesap oluştur",
+      "emptyTitle": "Henüz sonuç yok",
+      "emptyBody": "Bir dersi veya alıştırmayı tamamla, notların burada görünecek.",
+      "emptyCta": "A1 ile başla",
+      "gradeHeading": "Genel not",
+      "gradeSub": "Alman okul notu, gerçekten yaptığın çalışmalar üzerinden hesaplanır.",
+      "noGrade": "Henüz not yok — ilk notunu almak için bir ders alıştırmasını bitir.",
+      "lessonsDone": "Tamamlanan dersler",
+      "devoirsDone": "Gönderilen alıştırmalar",
+      "wordsLearned": "Öğrenilen kelimeler",
+      "skillsHeading": "Beceriler",
+      "skillLessons": "Dersler",
+      "countItems": "{n} yapıldı",
+      "weakTip": "Şu an en zayıf becerin {skill} — bir ders aç ve 🎯 sekmesinde pratik yap.",
+      "levelsHeading": "Seviyeler",
+      "levelProgress": "{done}/{total} ders",
+      "levelAvg": "ort. {n}",
+      "continue": "Devam et",
+      "recentHeading": "Son etkinlik",
+      "lessonLabel": "{level} · Ders {n}"
     }
   },
   "admin": {

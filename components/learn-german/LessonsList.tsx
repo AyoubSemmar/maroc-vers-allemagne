@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { Link, useRouter } from '@/i18n/navigation'
+import { Link } from '@/i18n/navigation'
 import { useProgress } from '@/lib/useProgress'
 import type { Level } from '@/lib/german-data/types'
 import WritingExercise from './WritingExercise'
@@ -13,8 +13,7 @@ import type { ReadingLevel } from '@/lib/readingExerciseData'
 export default function LessonsList({ level }: { level: Level }) {
   const t = useTranslations('learnGerman.level')
   const tData = useTranslations('learnGerman.data')
-  const router = useRouter()
-  const { isLessonUnlocked, isLessonCompleted, completedCount, loaded, isAuthed } = useProgress(level.id)
+  const { isLessonCompleted, completedCount, loaded, isAuthed } = useProgress(level.id)
 
   const lessonTitle = (id: string, fallback: string) => {
     try { return tData(`lessons.${id}` as any) } catch { return fallback }
@@ -25,12 +24,6 @@ export default function LessonsList({ level }: { level: Level }) {
   const resumeLesson = level.lessons.find((l) => !isLessonCompleted(l.id))
 
   if (!loaded) return null
-
-  function handleLockedClick(e: React.MouseEvent) {
-    e.preventDefault()
-    const here = window.location.pathname
-    router.push(`/login?next=${encodeURIComponent(here)}`)
-  }
 
   return (
     <div className="lg-lessons">
@@ -52,6 +45,12 @@ export default function LessonsList({ level }: { level: Level }) {
             ▶ {t('resumeHere', { title: lessonTitle(resumeLesson.id, resumeLesson.title) })}
           </Link>
         )}
+
+        {isAuthed && (
+          <Link href="/learn-german/results" className="lg-results-link">
+            📊 {t('resultsCta')}
+          </Link>
+        )}
       </div>
 
       {/* Auth nudge — only for unauthed users */}
@@ -68,21 +67,17 @@ export default function LessonsList({ level }: { level: Level }) {
         </div>
       )}
 
-      {/* Lessons */}
+      {/* Lessons — every lesson is open, in any order. */}
       <ul className="lg-lessons-list" data-level={level.id}>
         {level.lessons.map((lesson) => {
-          const unlocked = isLessonUnlocked(lesson.id, lesson.order)
           const completed = isLessonCompleted(lesson.id)
           const isCurrent = resumeLesson?.id === lesson.id && completedCount > 0
-
-          const href = unlocked ? `/learn-german/${level.id.toLowerCase()}/${lesson.id}` : '#'
 
           return (
             <li key={lesson.id}>
               <Link
-                href={href}
-                onClick={!unlocked ? handleLockedClick : undefined}
-                className={`lg-lesson-row${unlocked ? '' : ' is-locked'}${isCurrent ? ' is-current' : ''}${completed ? ' is-completed' : ''}`}
+                href={`/learn-german/${level.id.toLowerCase()}/${lesson.id}`}
+                className={`lg-lesson-row${isCurrent ? ' is-current' : ''}${completed ? ' is-completed' : ''}`}
               >
                 <div className="lg-lesson-num">
                   {completed ? '✓' : lesson.order}
@@ -96,7 +91,7 @@ export default function LessonsList({ level }: { level: Level }) {
                   </div>
                 </div>
                 <span className="lg-lesson-arrow">
-                  {completed ? '✓' : unlocked ? '→' : '🔒'}
+                  {completed ? '✓' : '→'}
                 </span>
               </Link>
             </li>

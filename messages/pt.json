@@ -3097,14 +3097,16 @@
         "sub": "Uma playlist de vídeos adequada a este nível. Assista a um vídeo após cada sessão de estudo para acostumar o ouvido ao alemão falado.",
         "play": "Reproduzir a playlist",
         "openPlaylist": "Abrir a playlist completa no YouTube"
-      }
+      },
+      "resultsCta": "Os meus resultados"
     },
     "lesson": {
       "breadcrumbAria": "breadcrumb",
       "tabs": {
         "grammar": "Gramática",
         "vocab": "Vocabulário",
-        "exercise": "Exercícios"
+        "exercise": "Exercícios",
+        "skills": "Prática"
       },
       "meta": "Aula {n} · {vocab} palavras · {q} exercícios",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "Próxima aula: {title} →",
         "levelDone": "🎉 Nível concluído! Voltar →",
         "tryAgain": "Tente novamente",
-        "reviewAnswers": "Revisar respostas"
+        "reviewAnswers": "Revisar respostas",
+        "trySkills": "Experimentar os exercícios tipo exame",
+        "myResults": "Os meus resultados"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "O currículo segue os níveis oficiais do QECR, então tudo o que você aprende corresponde diretamente aos exames Goethe, telc e ÖSD. O site também tem uma seção dedicada de preparação para exames com exercícios-modelo por nível."
         }
       ]
+    },
+    "devoirs": {
+      "heading": "Exercícios tipo exame",
+      "sub": "Leitura, audição e escrita desta lição — corrigidos na hora, como num exame de alemão real.",
+      "start": "Começar",
+      "redo": "Refazer",
+      "notSaved": "Os teus resultados não estão a ser guardados. Cria uma conta gratuita para manter as tuas notas e acompanhar o teu progresso.",
+      "loginTitle": "A correção por IA precisa de uma conta gratuita",
+      "loginBody": "Os exercícios de escrita são corrigidos por IA, erro a erro. Inicia sessão com uma conta gratuita para receber a correção e guardar os teus resultados.",
+      "loginCta": "Criar conta gratuita",
+      "listenHint": "Ouve o áudio e depois responde. Podes repeti-lo quantas vezes quiseres.",
+      "textLabel": "Texto",
+      "words": "{n} palavras",
+      "goal": "objetivo {min}–{max}",
+      "submit": "Enviar para correção",
+      "grading": "A corrigir…",
+      "corrected": "Versão corrigida",
+      "close": "Fechar",
+      "correctCount": "{n}/{total} corretas",
+      "errGeneric": "Algo correu mal. Tenta novamente.",
+      "errNetwork": "Erro de rede. Tenta novamente."
+    },
+    "results": {
+      "metaTitle": "Os meus resultados de alemão — GoGermany",
+      "title": "Os meus resultados",
+      "subtitle": "As tuas notas e o teu progresso no curso de alemão gratuito.",
+      "backToCourse": "Curso de alemão",
+      "openCta": "Abrir",
+      "signinTitle": "Cria uma conta gratuita para acompanhar os teus resultados",
+      "signinBody": "As tuas notas de lições, exercícios tipo exame e vocabulário aprendido ficam guardados na tua conta e sincronizados entre dispositivos — grátis, para sempre.",
+      "signinCta": "Iniciar sessão / criar conta",
+      "emptyTitle": "Ainda sem resultados",
+      "emptyBody": "Completa uma lição ou um exercício e as tuas notas aparecem aqui.",
+      "emptyCta": "Começar pelo A1",
+      "gradeHeading": "Nota global",
+      "gradeSub": "Nota escolar alemã, calculada sobre o trabalho que realmente fizeste.",
+      "noGrade": "Ainda sem nota — termina um exercício de lição para teres a tua primeira nota.",
+      "lessonsDone": "Lições concluídas",
+      "devoirsDone": "Exercícios enviados",
+      "wordsLearned": "Palavras aprendidas",
+      "skillsHeading": "Competências",
+      "skillLessons": "Lições",
+      "countItems": "{n} feitos",
+      "weakTip": "A tua competência mais fraca neste momento é {skill} — abre uma lição e pratica-a no separador 🎯.",
+      "levelsHeading": "Níveis",
+      "levelProgress": "{done}/{total} lições",
+      "levelAvg": "média {n}",
+      "continue": "Continuar",
+      "recentHeading": "Atividade recente",
+      "lessonLabel": "{level} · Lição {n}"
     }
   },
   "admin": {

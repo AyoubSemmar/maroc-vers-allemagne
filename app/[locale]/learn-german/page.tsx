@@ -146,6 +146,17 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
           <span className="lg-drill-card-cta">{t('drill.startCta')} →</span>
         </Link>
 
+        {/* Personal results dashboard — overall grade, per-skill averages,
+            level progress. Free account required to have anything saved. */}
+        <Link href="/learn-german/results" className="lg-drill-card">
+          <div className="lg-drill-card-icon">📊</div>
+          <div className="lg-drill-card-text">
+            <strong>{t('results.title')}</strong>
+            <span>{t('results.subtitle')}</span>
+          </div>
+          <span className="lg-drill-card-cta">{t('results.openCta')} →</span>
+        </Link>
+
         <ExamPrepCTA />
       </div>
 

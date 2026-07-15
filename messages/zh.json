@@ -3097,14 +3097,16 @@
         "sub": "与本级别匹配的视频播放列表。每次学习后看一个视频，让耳朵习惯真实的德语口语。",
         "play": "播放列表",
         "openPlaylist": "在 YouTube 上打开完整播放列表"
-      }
+      },
+      "resultsCta": "我的成绩"
     },
     "lesson": {
       "breadcrumbAria": "面包屑导航",
       "tabs": {
         "grammar": "语法",
         "vocab": "词汇",
-        "exercise": "练习"
+        "exercise": "练习",
+        "skills": "实战练习"
       },
       "meta": "第 {n} 课 · {vocab} 个单词 · {q} 道练习",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "下一课：{title} →",
         "levelDone": "🎉 本级别完成！返回 →",
         "tryAgain": "再试一次",
-        "reviewAnswers": "查看答案"
+        "reviewAnswers": "查看答案",
+        "trySkills": "试试考试练习",
+        "myResults": "我的成绩"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "课程体系完全对应官方 CEFR 等级，所学内容直接对应歌德、telc 和 ÖSD 考试。网站还设有专门的备考板块，为每个等级提供样题练习。"
         }
       ]
+    },
+    "devoirs": {
+      "heading": "考试风格练习",
+      "sub": "本课的阅读、听力和写作练习 — 即时评分，就像真正的德语考试。",
+      "start": "开始",
+      "redo": "再做一次",
+      "notSaved": "你的成绩目前不会被保存。创建免费账户即可保留分数并跟踪学习进度。",
+      "loginTitle": "AI 批改需要免费账户",
+      "loginBody": "写作练习由 AI 逐条批改错误。使用免费账户登录即可获得批改并保存成绩。",
+      "loginCta": "创建免费账户",
+      "listenHint": "先听音频，然后作答。可以反复播放。",
+      "textLabel": "课文",
+      "words": "{n} 个词",
+      "goal": "目标 {min}–{max}",
+      "submit": "提交批改",
+      "grading": "批改中…",
+      "corrected": "修改后的版本",
+      "close": "关闭",
+      "correctCount": "答对 {n}/{total}",
+      "errGeneric": "出了点问题，请重试。",
+      "errNetwork": "网络错误，请重试。"
+    },
+    "results": {
+      "metaTitle": "我的德语成绩 — GoGermany",
+      "title": "我的成绩",
+      "subtitle": "你在免费德语课程中的分数与进度。",
+      "backToCourse": "德语课程",
+      "openCta": "打开",
+      "signinTitle": "创建免费账户以跟踪你的成绩",
+      "signinBody": "你的课程分数、考试练习和已掌握的词汇会保存到账户中，并在设备间同步 — 永久免费。",
+      "signinCta": "登录 / 创建账户",
+      "emptyTitle": "还没有成绩",
+      "emptyBody": "完成一节课或一个练习，你的分数就会显示在这里。",
+      "emptyCta": "从 A1 开始",
+      "gradeHeading": "总评分",
+      "gradeSub": "德国学校评分制，仅基于你实际完成的学习内容计算。",
+      "noGrade": "还没有评分 — 完成一节课的练习即可获得第一个评分。",
+      "lessonsDone": "已完成课程",
+      "devoirsDone": "已提交练习",
+      "wordsLearned": "已掌握单词",
+      "skillsHeading": "技能",
+      "skillLessons": "课程",
+      "countItems": "已完成 {n}",
+      "weakTip": "你目前最薄弱的技能是 {skill} — 打开一节课，在 🎯 标签页中练习它。",
+      "levelsHeading": "级别",
+      "levelProgress": "{done}/{total} 节课",
+      "levelAvg": "平均 {n}",
+      "continue": "继续",
+      "recentHeading": "最近活动",
+      "lessonLabel": "{level} · 第 {n} 课"
     }
   },
   "admin": {

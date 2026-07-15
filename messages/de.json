@@ -3097,14 +3097,16 @@
         "sub": "Eine Video-Playlist passend zu diesem Niveau. Schau nach jeder Lerneinheit ein Video, um dein Ohr an echtes gesprochenes Deutsch zu gewöhnen.",
         "play": "Playlist abspielen",
         "openPlaylist": "Ganze Playlist auf YouTube öffnen"
-      }
+      },
+      "resultsCta": "Meine Ergebnisse"
     },
     "lesson": {
       "breadcrumbAria": "Brotkrümel",
       "tabs": {
         "grammar": "Grammatik",
         "vocab": "Vokabeln",
-        "exercise": "Übungen"
+        "exercise": "Übungen",
+        "skills": "Training"
       },
       "meta": "Lektion {n} · {vocab} Wörter · {q} Übungen",
       "grammarCard": {
@@ -3158,7 +3160,9 @@
         "nextLesson": "Nächste Lektion: {title} →",
         "levelDone": "🎉 Niveau abgeschlossen! Zurück →",
         "tryAgain": "Nochmal versuchen",
-        "reviewAnswers": "Antworten ansehen"
+        "reviewAnswers": "Antworten ansehen",
+        "trySkills": "Prüfungsübungen ausprobieren",
+        "myResults": "Meine Ergebnisse"
       }
     },
     "dragDrop": {
@@ -3319,6 +3323,56 @@
           "a": "Der Lehrplan folgt den offiziellen GER-Stufen — alles Gelernte entspricht direkt den Prüfungen von Goethe, telc und ÖSD. Die Seite enthält außerdem einen eigenen Prüfungsvorbereitungsbereich mit Modellübungen für jede Stufe."
         }
       ]
+    },
+    "devoirs": {
+      "heading": "Übungen im Prüfungsformat",
+      "sub": "Lesen, Hören und Schreiben zu dieser Lektion — sofort bewertet, wie in einer echten Deutschprüfung.",
+      "start": "Starten",
+      "redo": "Nochmal machen",
+      "notSaved": "Deine Ergebnisse werden nicht gespeichert. Erstelle ein kostenloses Konto, um deine Noten zu behalten und deinen Fortschritt zu verfolgen.",
+      "loginTitle": "KI-Korrektur braucht ein kostenloses Konto",
+      "loginBody": "Schreibübungen werden von KI Fehler für Fehler korrigiert. Melde dich mit einem kostenlosen Konto an, um deine Korrektur zu erhalten und deine Ergebnisse zu speichern.",
+      "loginCta": "Kostenloses Konto erstellen",
+      "listenHint": "Hör dir die Audio an und antworte dann. Du kannst sie beliebig oft abspielen.",
+      "textLabel": "Text",
+      "words": "{n} Wörter",
+      "goal": "Ziel {min}–{max}",
+      "submit": "Zur Korrektur einreichen",
+      "grading": "Korrektur…",
+      "corrected": "Korrigierte Version",
+      "close": "Schließen",
+      "correctCount": "{n}/{total} richtig",
+      "errGeneric": "Etwas ist schiefgelaufen. Bitte versuch es erneut.",
+      "errNetwork": "Netzwerkfehler. Bitte versuch es erneut."
+    },
+    "results": {
+      "metaTitle": "Meine Deutsch-Ergebnisse — GoGermany",
+      "title": "Meine Ergebnisse",
+      "subtitle": "Deine Noten und dein Fortschritt im kostenlosen Deutschkurs.",
+      "backToCourse": "Deutschkurs",
+      "openCta": "Öffnen",
+      "signinTitle": "Erstelle ein kostenloses Konto, um deine Ergebnisse zu verfolgen",
+      "signinBody": "Deine Lektionsnoten, Prüfungsübungen und gelernten Vokabeln werden in deinem Konto gespeichert und zwischen Geräten synchronisiert — kostenlos, für immer.",
+      "signinCta": "Anmelden / Konto erstellen",
+      "emptyTitle": "Noch keine Ergebnisse",
+      "emptyBody": "Schließe eine Lektion oder Übung ab und deine Noten erscheinen hier.",
+      "emptyCta": "Mit A1 anfangen",
+      "gradeHeading": "Gesamtnote",
+      "gradeSub": "Deutsche Schulnote, berechnet auf der Arbeit, die du tatsächlich gemacht hast.",
+      "noGrade": "Noch keine Note — schließe eine Lektionsübung ab, um deine erste Note zu bekommen.",
+      "lessonsDone": "Lektionen abgeschlossen",
+      "devoirsDone": "Übungen eingereicht",
+      "wordsLearned": "Wörter gelernt",
+      "skillsHeading": "Fertigkeiten",
+      "skillLessons": "Lektionen",
+      "countItems": "{n} gemacht",
+      "weakTip": "Deine schwächste Fertigkeit ist gerade {skill} — öffne eine Lektion und übe sie im 🎯-Tab.",
+      "levelsHeading": "Niveaus",
+      "levelProgress": "{done}/{total} Lektionen",
+      "levelAvg": "Ø {n}",
+      "continue": "Weiter",
+      "recentHeading": "Letzte Aktivität",
+      "lessonLabel": "{level} · Lektion {n}"
     }
   },
   "admin": {

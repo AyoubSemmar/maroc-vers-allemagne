@@ -58,7 +58,6 @@ export async function POST(req: NextRequest) {
   try {
     const sb = await createServerSupabase()
     const { data: { user } } = await sb.auth.getUser()
-    if (!user) return NextResponse.json({ error: 'Not authenticated' }, { status: 401 })
 
     const body = await req.json().catch(() => ({}))
     const assignmentId = String(body.assignmentId || '')
@@ -70,6 +69,13 @@ export async function POST(req: NextRequest) {
       .eq('id', assignmentId)
       .maybeSingle()
     if (!a || !a.is_published) return NextResponse.json({ error: 'Assignment not found.' }, { status: 404 })
+
+    // MCQ skills are graded for everyone (an answer-key comparison costs
+    // nothing) — the result just isn't persisted without an account.
+    // Schreiben spends an AI call per correction, so it stays behind auth.
+    if (!user && a.skill === 'schreiben') {
+      return NextResponse.json({ error: 'Not authenticated', code: 'auth_required' }, { status: 401 })
+    }
 
     let auto_score: number | null = null
     let ai_score: number | null = null
@@ -129,6 +135,14 @@ export async function POST(req: NextRequest) {
     }
 
     const finalScore = a.skill === 'schreiben' ? ai_score : auto_score
+
+    // Anonymous MCQ attempt: grade and reveal, but there is no account to
+    // attach the result to — the client shows a "create an account to save
+    // your results" nudge off this flag.
+    if (!user) {
+      return NextResponse.json({ score: finalScore, saved: false, ...reveal })
+    }
+
     const { error: upErr } = await sbAdmin.from('assignment_submissions').upsert({
       assignment_id: assignmentId,
       user_id: user.id,
@@ -145,7 +159,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Could not save your submission.' }, { status: 500 })
     }
 
-    return NextResponse.json({ score: finalScore, ...reveal })
+    return NextResponse.json({ score: finalScore, saved: true, ...reveal })
   } catch (err: any) {
     console.error('[learn-german/submit]', err?.message || err)
     return NextResponse.json({ error: 'Grading service is temporarily unavailable.' }, { status: 500 })
