@@ -32,9 +32,9 @@ const nextConfig: NextConfig = {
           // Force HTTPS for the next 2 years on this host + subdomains.
           { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' },
           // Allow camera/mic/screen-share for our own pages and the embedded
-          // Jitsi classroom (meet.jit.si); block geolocation + payment, which
-          // we never use.
-          { key: 'Permissions-Policy', value: 'camera=(self "https://meet.jit.si"), microphone=(self "https://meet.jit.si"), display-capture=(self "https://meet.jit.si"), geolocation=(), payment=()' },
+          // JaaS classroom (8x8.vc); meet.jit.si kept for the legacy full-page
+          // room redirect. Block geolocation + payment, which we never use.
+          { key: 'Permissions-Policy', value: 'camera=(self "https://8x8.vc" "https://meet.jit.si"), microphone=(self "https://8x8.vc" "https://meet.jit.si"), display-capture=(self "https://8x8.vc" "https://meet.jit.si"), geolocation=(), payment=()' },
         ],
       },
     ]

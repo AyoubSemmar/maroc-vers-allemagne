@@ -238,16 +238,14 @@ export default function MyCourseClient({
         </div>
         {callUrl && (
           callOpen ? (
-            <a
-              href={callUrl}
-              target="_blank"
-              rel="noreferrer"
+            <Link
+              href="/learn-german/classroom"
               // Fire-and-forget attendance log — must never delay joining.
               onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
               className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
             >
-              <Icon name="play" size={15} /> Rejoindre l’appel vidéo ↗
-            </a>
+              <Icon name="play" size={15} /> Rejoindre la classe en direct
+            </Link>
           ) : (
             <span
               className="inline-flex items-center gap-2 rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold px-4 py-2 cursor-not-allowed select-none"
