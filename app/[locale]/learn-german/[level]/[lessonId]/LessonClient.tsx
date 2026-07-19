@@ -16,27 +16,54 @@ import Icon, { type IconName } from '@/components/ui/Icon'
 
 type Tab = 'grammar' | 'vocab' | 'exercise' | 'skills'
 
-function BidiText({ text, className }: { text: string; className?: string }) {
-  const regex = /"[^"]+"|„[^"]+(?:"|")|«[^»]+»|'[^']+'|[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß0-9 ,.\-!?':;()]*[A-Za-zÄÖÜäöüß.!?]/g
+// Auto-detects Latin-script runs (German words/phrases) inside Arabic prose
+// and isolates their direction so punctuation doesn't scramble; ** markers
+// (the data's inline-emphasis convention, e.g. "arbeit**e**st") are parsed
+// into real <strong> — the data was never passed through a markdown
+// renderer, so without this every "**" showed up as literal asterisks.
+const LATIN_RUN = /"[^"]+"|„[^"]+(?:"|")|«[^»]+»|'[^']+'|[A-Za-zÄÖÜäöüß][A-Za-zÄÖÜäöüß0-9 ,.\-!?':;()]*[A-Za-zÄÖÜäöüß.!?]/g
+const BOLD_SPAN = /\*\*(.+?)\*\*/g
+
+function wrapLatinRuns(segment: string, keyPrefix: string): ReactNode[] {
   const parts: ReactNode[] = []
   let lastIndex = 0
   let match
   let key = 0
-  while ((match = regex.exec(text)) !== null) {
+  LATIN_RUN.lastIndex = 0
+  while ((match = LATIN_RUN.exec(segment)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(<span key={key++}>{text.slice(lastIndex, match.index)}</span>)
+      parts.push(<span key={`${keyPrefix}-t${key++}`}>{segment.slice(lastIndex, match.index)}</span>)
     }
     parts.push(
-      <bdi key={key++} dir="ltr" style={{ unicodeBidi: 'isolate' }}>
+      <bdi key={`${keyPrefix}-b${key++}`} dir="ltr" style={{ unicodeBidi: 'isolate' }}>
         {match[0]}
       </bdi>
     )
-    lastIndex = regex.lastIndex
+    lastIndex = LATIN_RUN.lastIndex
+  }
+  if (lastIndex < segment.length) {
+    parts.push(<span key={`${keyPrefix}-t${key++}`}>{segment.slice(lastIndex)}</span>)
+  }
+  return parts
+}
+
+function BidiText({ text, className }: { text: string; className?: string }) {
+  const out: ReactNode[] = []
+  let lastIndex = 0
+  let match
+  let key = 0
+  BOLD_SPAN.lastIndex = 0
+  while ((match = BOLD_SPAN.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      out.push(...wrapLatinRuns(text.slice(lastIndex, match.index), `p${key++}`))
+    }
+    out.push(<strong key={`s${key}`}>{wrapLatinRuns(match[1], `s${key++}`)}</strong>)
+    lastIndex = BOLD_SPAN.lastIndex
   }
   if (lastIndex < text.length) {
-    parts.push(<span key={key++}>{text.slice(lastIndex)}</span>)
+    out.push(...wrapLatinRuns(text.slice(lastIndex), `p${key++}`))
   }
-  return <span className={className}>{parts}</span>
+  return <span className={className}>{out}</span>
 }
 
 const GENDER_STYLES: Record<Gender, { bg: string; text: string; label: string }> = {
@@ -69,7 +96,7 @@ function GrammarTableRenderer({ table }: { table: GrammarTable }) {
   return (
     <div className="my-4">
       {table.title && (
-        <p className="text-sm font-semibold text-gray-600 mb-2">{table.title}</p>
+        <p className="text-sm font-semibold text-gray-600 mb-2"><BidiText text={table.title} /></p>
       )}
       <div className="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
         <table className="w-full text-sm border-collapse" dir="ltr">
@@ -99,7 +126,7 @@ function GrammarTableRenderer({ table }: { table: GrammarTable }) {
                       ${ci === 0 ? 'font-semibold text-gray-600 bg-gray-50' : ''}
                       ${row.highlight ? 'text-gray-900' : ''}`}
                   >
-                    {cell}
+                    <BidiText text={cell} />
                   </td>
                 ))}
               </tr>
@@ -108,7 +135,7 @@ function GrammarTableRenderer({ table }: { table: GrammarTable }) {
         </table>
       </div>
       {table.note && (
-        <p className="text-xs text-gray-500 mt-1.5 mr-1">📌 {table.note}</p>
+        <p className="text-xs text-gray-500 mt-1.5 mr-1">📌 <BidiText text={table.note} /></p>
       )}
     </div>
   )
@@ -371,7 +398,7 @@ export default function LessonClient({
                     </p>
                     <div className="flex items-center gap-2 flex-wrap">
                       <span className="bg-white border border-orange-200 text-orange-800 text-sm px-3 py-1 rounded-lg font-medium" dir="ltr">
-                        {rule.example}
+                        <BidiText text={rule.example} />
                       </span>
                       <AudioButton text={rule.example} size="sm" />
                       <span className="text-gray-500 text-sm">← <BidiText text={rule.translation} /></span>
@@ -404,7 +431,7 @@ export default function LessonClient({
                     <span className="w-6 h-6 bg-green-700 text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">
                       {i + 1}
                     </span>
-                    <p className="text-gray-800 text-sm flex-1" dir="ltr">{ex}</p>
+                    <p className="text-gray-800 text-sm flex-1" dir="ltr"><BidiText text={ex} /></p>
                     <AudioButton text={ex} size="sm" />
                   </div>
                 ))}
