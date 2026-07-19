@@ -1,0 +1,3172 @@
+[
+ {
+  "id": "b2-01",
+  "order": 1,
+  "source": "b2.ts",
+  "title": "Nominalisierung — تحويل الأفعال إلى أسماء",
+  "grammarTitle": "Nominalstil vs. Verbalstil",
+  "content": "الأسلوب الاسمي (Nominalstil) هو طريقة في الألمانية لصياغة الجملة بحيث يتحول الفعل الذي كان سيُستعمل في جملة فرعية إلى اسم مشتق منه، فتتقلص الجملة الفرعية بأكملها إلى تركيب اسمي واحد مسبوق بحرف جر. فبدل أن نقول Wenn man die Regeln nicht beachtet, gibt es Probleme (إذا لم يُراعِ المرء القواعد، تحدث مشاكل)، يمكن أن نقول Bei Nichtbeachtung der Regeln gibt es Probleme، حيث اختفت الجملة الفرعية بأكملها وحلّ محلها اسم واحد هو Nichtbeachtung.\n\nهذا الأسلوب هو عماد الكتابة الرسمية والصحفية والعلمية والقانونية في الألمانية؛ فهو يمنح الجملة إيجازاً وموضوعية، لأنه يحذف الفاعل الشخصي man ويركّز على الفعل نفسه بوصفه حدثاً مجرداً، تماماً كما تفعل العربية حين تستعمل المصدر بدل الفعل المصرَّف، كأن نقول عند مراعاة القواعد بدل عندما يراعي المرء القواعد. هذا التشابه مفيد جداً: مفهوم المصدر ليس غريباً عنك، لكن الألمانية تُلزمك بقواعد صرفية أدق لتكوينه.\n\nآلية التحويل تسير في ثلاثة اتجاهات رئيسية. الأول هو تحويل صيغة المصدر Infinitiv مباشرة إلى اسم محايد الجنس das بإضافة أداة التعريف فقط دون أي تغيير في شكل الفعل، مثل lesen التي تصبح das Lesen (القراءة). الثاني هو اشتقاق اسم مؤنث بإضافة اللاحقة -ung إلى جذع الفعل، وهي أكثر اللواحق إنتاجية في الألمانية، مثل prüfen التي تصبح die Prüfung. أما الثالث فهو اشتقاق اسم الفاعل بإضافة -er للمذكر der Lehrer أو -erin للمؤنث. توجد أيضاً لواحق أخرى أقل انتظاماً مثل -nis (Verständnis) و-tum و-heit، يجب حفظها فعلاً بفعل.\n\nبعد تكوين الاسم، يُربط بالجملة الرئيسية عادة بحرف جر يوضّح العلاقة الزمنية أو السببية: bei وnach وvor وdurch وwegen هي الأكثر شيوعاً، وكل واحد منها يفرض حالة إعرابية معينة، الداتيف غالباً مع bei/nach/vor، والجينيتيف أو الداتيف مع wegen/durch حسب السياق.\n\nالخطأ الأكثر شيوعاً عند المتعلمين هو الإبقاء على تركيب الجملة الفرعية الكامل بأداة الربط والفعل المصرَّف ثم إضافة اسم زائد، بدل حذف الفعل المصرَّف بالكامل وتعويضه باسم واحد يحمل الوظيفة نفسها، فتصبح الجملة مزدوجة وغير طبيعية. الخطأ الثاني هو نسيان جنس الاسم المشتق عند إضافة حرف الجر وأداة التعريف، لأن جنس الاسم المشتق بـ -ung ليس بالضرورة نفس جنس das + Infinitiv.",
+  "rules": [
+   {
+    "rule": "das + Infinitiv = اسم محايد",
+    "example": "Das Lesen macht Spaß.",
+    "translation": "القراءة ممتعة."
+   },
+   {
+    "rule": "-ung lowers الفعل → اسم مؤنث",
+    "example": "die Prüfung",
+    "translation": "الامتحان"
+   },
+   {
+    "rule": "Nominalstil في اللغة الرسمية",
+    "example": "bei Nichterscheinen",
+    "translation": "في حالة عدم الحضور"
+   }
+  ],
+  "tip": "لفهم الأخبار الألمانية والقوانين، أتقن Nominalstil — فقرة واحدة قد تحتوي 5-10 أسماء من أفعال.",
+  "examples": [
+   "Das Lernen einer neuen Sprache braucht Zeit. — تعلّم لغة جديدة يحتاج وقتاً.",
+   "Vor der Abreise muss ich packen. — قبل السفر يجب أن أحزم.",
+   "Bei Regen findet die Veranstaltung nicht statt. — في حالة المطر، الفعالية لن تُقام.",
+   "Die Entwicklung der Technologie ist rasant. — تطور التكنولوجيا سريع.",
+   "Nach dem Abschluss suche ich Arbeit. — بعد التخرج أبحث عن عمل.",
+   "Das Rauchen ist hier verboten. — التدخين ممنوع هنا.",
+   "Durch intensives Üben habe ich Fortschritte gemacht. — عبر التدرب المكثف حققت تقدماً.",
+   "Wegen der Verspätung kam ich zu spät. — بسبب التأخير وصلت متأخراً."
+  ],
+  "tables": [
+   {
+    "title": "تحويل الأفعال إلى أسماء",
+    "headers": [
+     "الفعل",
+     "الاسم",
+     "الجنس"
+    ],
+    "rows": [
+     [
+      "lesen",
+      "das Lesen / die Lektüre",
+      "das / die"
+     ],
+     [
+      "schreiben",
+      "das Schreiben / die Schrift",
+      "das / die"
+     ],
+     [
+      "prüfen",
+      "die Prüfung",
+      "die"
+     ],
+     [
+      "entwickeln",
+      "die Entwicklung",
+      "die"
+     ],
+     [
+      "verstehen",
+      "das Verständnis",
+      "das"
+     ],
+     [
+      "besuchen",
+      "der Besuch",
+      "der"
+     ],
+     [
+      "fragen",
+      "die Frage",
+      "die"
+     ]
+    ]
+   },
+   {
+    "title": "حروف الجر الشائعة مع Nominalstil",
+    "headers": [
+     "Präposition",
+     "الاستعمال",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "bei",
+      "عند/في حالة",
+      "bei der Prüfung"
+     ],
+     [
+      "nach",
+      "بعد",
+      "nach dem Essen"
+     ],
+     [
+      "vor",
+      "قبل",
+      "vor der Reise"
+     ],
+     [
+      "durch",
+      "بسبب/من خلال",
+      "durch das Lernen"
+     ],
+     [
+      "wegen",
+      "بسبب",
+      "wegen der Verspätung"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Entwicklung",
+    "ar": "التطور"
+   },
+   {
+    "de": "die Erklärung",
+    "ar": "الشرح"
+   },
+   {
+    "de": "die Beschreibung",
+    "ar": "الوصف"
+   },
+   {
+    "de": "die Veränderung",
+    "ar": "التغيير"
+   },
+   {
+    "de": "die Verwendung",
+    "ar": "الاستعمال"
+   },
+   {
+    "de": "die Untersuchung",
+    "ar": "الفحص/الدراسة"
+   },
+   {
+    "de": "die Darstellung",
+    "ar": "العرض/التقديم"
+   },
+   {
+    "de": "die Herstellung",
+    "ar": "التصنيع"
+   },
+   {
+    "de": "die Behauptung",
+    "ar": "الادعاء"
+   },
+   {
+    "de": "die Begründung",
+    "ar": "التبرير"
+   },
+   {
+    "de": "das Verständnis",
+    "ar": "الفهم"
+   },
+   {
+    "de": "das Ergebnis",
+    "ar": "النتيجة"
+   }
+  ]
+ },
+ {
+  "id": "b2-02",
+  "order": 2,
+  "source": "b2.ts",
+  "title": "Partizip I & II als Attribute — صفات مصدرية",
+  "grammarTitle": "der lesende Mann / das gelesene Buch",
+  "content": "في الألمانية، يمكن اختصار جملة صفة كاملة، مثل الرجل الذي يقرأ، إلى صفة واحدة توضع قبل الاسم مباشرة، وذلك باستعمال صيغتين مشتقتين من الفعل: Partizip I وPartizip II. هذا التركيب يشبه تماماً ما تعرفه في العربية من اسم الفاعل واسم المفعول، فـ Partizip I يقابل وظيفياً اسم الفاعل (القارئ، النائم، الباكي)، بينما Partizip II يقابل اسم المفعول (المقروء، المفتوح، المطبوخ). هذا التقارب يجعل الفكرة الأساسية مألوفة لديك، لكن الألمانية تصوغها بقواعد صرفية مختلفة تماماً ويجب إتقانها من الصفر.\n\nPartizip I يُكوَّن بإضافة اللاحقة -end إلى جذع الفعل في صورته الأصلية Infinitiv، دون أي تغيير آخر: lesen تصبح lesend، schlafen تصبح schlafend. معناه دائماً فعل جارٍ أو مستمر ونشِط، أي أن الاسم الذي يصفه هو من يقوم بالفعل فعلياً وقت الحدث: der lesende Mann هو الرجل الذي يقرأ الآن، وليس رجلاً قرأ أو سيقرأ.\n\nPartizip II هو نفسه التصريف الثالث الذي تعرفه من زمن الـ Perfekt (gelesen، geöffnet، gekocht)، وحين يُستعمل كصفة فهو يدل غالباً على فعل مكتمل أو منتهٍ، وفي أغلب الأفعال المتعدية التي تأخذ مفعولاً به يحمل معنى المبني للمجهول: das gelesene Buch هو الكتاب الذي قُرئ (تم قراءته)، وليس الكتاب الذي يقرأ. أما مع الأفعال اللازمة الدالة على حركة أو تغيّر حالة وتُصرَّف بـ sein في الـ Perfekt، مثل fallen وankommen وaufwachen، فإن Partizip II لا يحمل معنى المبني للمجهول بل معنى الفاعل المكتمل الفعل: der gefallene Baum هو الشجرة التي سقطت، وليس شجرة أسقطها أحد.\n\nمن الناحية الصرفية، كلا النوعين يُعامَل تماماً كأي صفة عادية توضع قبل الاسم، أي أنه يأخذ نهاية تصريف الصفات Adjektivdeklination بحسب جنس الاسم وعدده وحالته الإعرابية، وبحسب ما إذا كان مسبوقاً بأداة تعريف أو أداة تنكير أو بلا أداة على الإطلاق، تماماً كما تتصرف klein أو groß.\n\nالخطأ الأكثر شيوعاً هو افتراض أن Partizip II يعني دائماً المبني للمجهول، فيحاول المتعلم صياغة der gefallene Mann بمعنى الرجل الذي أُسقط بدل الرجل الذي سقط، متجاهلاً أن الأفعال اللازمة لا تُبنى للمجهول أصلاً. خطأ آخر شائع هو نسيان نهاية تصريف الصفة بعد Partizip، فيُقال مثلاً mit dem lesend Mann بدل mit dem lesenden Mann.",
+  "rules": [
+   {
+    "rule": "Partizip I = فاعل نشط",
+    "example": "die singende Frau",
+    "translation": "المرأة المغنية (التي تغني)"
+   },
+   {
+    "rule": "Partizip II = مفعول/منتهٍ",
+    "example": "das gekochte Essen",
+    "translation": "الطعام المطبوخ"
+   },
+   {
+    "rule": "يتبع قواعد الصفات",
+    "example": "mit dem laufenden Kind",
+    "translation": "مع الطفل الراكض"
+   }
+  ],
+  "tip": "Partizip I نادر في الكلام اليومي لكنه شائع في النصوص الأدبية والرسمية. Partizip II شائع في كل مكان.",
+  "examples": [
+   "Der schreiende Mann stört alle. — الرجل الصارخ يزعج الجميع.",
+   "Das weinende Kind braucht Hilfe. — الطفل الباكي يحتاج مساعدة.",
+   "Die geöffneten Fenster lassen Luft herein. — النوافذ المفتوحة تسمح بدخول الهواء.",
+   "Ein lachendes Gesicht ist schön. — وجه ضاحك جميل.",
+   "Das gebackene Brot duftet. — الخبز المخبوز له رائحة طيبة.",
+   "Die gut informierte Bevölkerung wählt klug. — الشعب المطلع يصوّت بحكمة.",
+   "Ein schlafender Hund wurde aufgeweckt. — أُيقظ كلب نائم.",
+   "Der verlorene Schlüssel wurde gefunden. — وُجد المفتاح المفقود."
+  ],
+  "tables": [
+   {
+    "title": "Partizip I vs Partizip II",
+    "headers": [
+     "النوع",
+     "التكوين",
+     "المعنى",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "Partizip I",
+      "فعل + end",
+      "فعل جارٍ (فاعل)",
+      "der singende Mann"
+     ],
+     [
+      "Partizip II",
+      "التصريف الثالث",
+      "فعل مكتمل/passiv",
+      "das gebackene Brot"
+     ]
+    ]
+   },
+   {
+    "title": "أمثلة مع Adjektivdeklination",
+    "headers": [
+     "الحالة",
+     "Partizip I",
+     "Partizip II"
+    ],
+    "rows": [
+     [
+      "Nominativ",
+      "der lesende Mann",
+      "das geschriebene Buch"
+     ],
+     [
+      "Akkusativ",
+      "den lesenden Mann",
+      "das geschriebene Buch"
+     ],
+     [
+      "Dativ",
+      "dem lesenden Mann",
+      "dem geschriebenen Buch"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "singen",
+    "ar": "يغني"
+   },
+   {
+    "de": "laufen",
+    "ar": "يجري"
+   },
+   {
+    "de": "schreien",
+    "ar": "يصرخ"
+   },
+   {
+    "de": "weinen",
+    "ar": "يبكي"
+   },
+   {
+    "de": "lachen",
+    "ar": "يضحك"
+   },
+   {
+    "de": "schlafen",
+    "ar": "ينام"
+   },
+   {
+    "de": "wachen",
+    "ar": "يستيقظ/يحرس"
+   },
+   {
+    "de": "wachsen",
+    "ar": "ينمو"
+   },
+   {
+    "de": "fließen",
+    "ar": "يتدفق"
+   },
+   {
+    "de": "brennen",
+    "ar": "يحترق"
+   },
+   {
+    "de": "verlieren",
+    "ar": "يفقد"
+   },
+   {
+    "de": "finden",
+    "ar": "يجد"
+   }
+  ]
+ },
+ {
+  "id": "b2-03",
+  "order": 3,
+  "source": "b2.ts",
+  "title": "Finalsätze — جمل الهدف (um...zu / damit)",
+  "grammarTitle": "التعبير عن الهدف",
+  "content": "للتعبير عن الهدف أو الغاية من فعل ما، أي الإجابة عن سؤال لماذا بمعنى من أجل ماذا وليس بسبب ماذا، تستعمل الألمانية تركيبين مختلفين تماماً عن بعضهما، والاختيار بينهما ليس أسلوبياً بل إلزامي ويعتمد على قاعدة نحوية دقيقة: هل فاعل الجملة الرئيسية هو نفسه من سيحقق الهدف، أم أن الهدف يعود على شخص آخر؟\n\nإذا كان الفاعل واحداً في الجملتين، تُستعمل صيغة um ... zu + Infinitiv، وهي تركيب لا يحتوي على فاعل ولا فعل مصرَّف في جزئه الثاني، بل ينتهي بالمصدر مسبوقاً بـ zu: Ich lerne Deutsch, um in Deutschland zu arbeiten (أتعلم الألمانية لكي أعمل في ألمانيا) — أنا الذي أتعلم وأنا الذي سأعمل.\n\nأما إذا اختلف الفاعل، فيجب استعمال damit متبوعة بجملة فرعية كاملة تحتوي فاعلاً وفعلاً مصرَّفاً يُدفع إلى نهاية الجملة كما في كل الجمل الفرعية الألمانية: Ich spreche langsam, damit du mich verstehst (أتكلم ببطء لكي تفهمني) — أنا الذي أتكلم، لكن الفهم يعود على أنت.\n\nهذا التمييز الصارم بين البنيتين غير موجود في العربية، حيث نستعمل لكي أو حتى أو من أجل أن مع المضارع المنصوب بغض النظر عن هوية الفاعل في الجملتين: أتكلم ببطء لكي تفهمني وأذهب لأشتري تصلحان بالتركيب نفسه في العربية، بينما الألمانية تفرض عليك تغيير البنية النحوية كلياً بحسب الفاعل. لهذا السبب بالذات يخطئ متعلمو الألمانية الناطقون بالعربية كثيراً في هذه النقطة.\n\nيجب أيضاً التفريق بين هدف الفعل وسببه: weil وdenn تُجيبان عن لماذا حدث الشيء، وهو السبب الذي دفع إليه، بينما um...zu وdamit تُجيبان عن الغاية التي يسعى إليها الفاعل، وهي النتيجة المرجوة مستقبلاً. فالجملة Ich lerne, weil ich muss تعني أتعلم لأنني مضطر (سبب)، بينما Ich lerne, um zu bestehen تعني أتعلم لكي أنجح (هدف).\n\nالخطأ الأكثر شيوعاً هو استعمال um...zu رغم اختلاف الفاعلين، فيحاول المتعلم أن يقول شيئاً مثل Ich lerne, um meine Eltern stolz zu sein، وهي جملة خاطئة لأن الفخر يعود على الوالدين لا على المتعلم، والصواب هو damit meine Eltern stolz sind. خطأ آخر شائع هو نسيان zu قبل المصدر في نهاية um-Satz، أو وضع الفعل في مكان خاطئ داخل جملة damit بدل دفعه إلى النهاية.",
+  "rules": [
+   {
+    "rule": "um + zu + Infinitiv (نفس الفاعل)",
+    "example": "Ich gehe zum Arzt, um gesund zu werden.",
+    "translation": "أذهب للطبيب لأُشفى."
+   },
+   {
+    "rule": "damit + Nebensatz (فاعل مختلف)",
+    "example": "Ich lerne, damit meine Eltern stolz sind.",
+    "translation": "أتعلم لكي يفخر والداي."
+   },
+   {
+    "rule": "الفعل في الآخر مع كليهما",
+    "example": "damit du kommst",
+    "translation": "لكي تأتي"
+   }
+  ],
+  "tip": "اختبار سريع: إذا استطعت قول \"um zu\" (نفس الفاعل)، استعمله. وإلا استعمل \"damit\".",
+  "examples": [
+   "Ich arbeite, um Geld zu verdienen. — أعمل لكسب المال.",
+   "Er spart, um ein Auto zu kaufen. — يوفّر لشراء سيارة.",
+   "Wir lernen, um die Prüfung zu bestehen. — ندرس للنجاح في الامتحان.",
+   "Ich spreche laut, damit alle mich hören. — أتكلم بصوت عالٍ لكي يسمعني الجميع.",
+   "Sie kauft ein Geschenk, damit ihre Mutter sich freut. — تشتري هدية لكي تسعد أمها.",
+   "Ich stehe früh auf, um pünktlich zu sein. — أستيقظ مبكراً لأكون في الموعد.",
+   "Er erklärt langsam, damit wir verstehen. — يشرح ببطء لكي نفهم.",
+   "Um fit zu bleiben, treibe ich Sport. — لأبقى لائقاً، أمارس الرياضة."
+  ],
+  "tables": [
+   {
+    "title": "um...zu vs damit",
+    "headers": [
+     "الأداة",
+     "الشرط",
+     "الفعل"
+    ],
+    "rows": [
+     [
+      "um ... zu",
+      "نفس الفاعل",
+      "Infinitiv في الآخر"
+     ],
+     [
+      "damit",
+      "فاعل مختلف",
+      "مُصرّف في الآخر"
+     ]
+    ]
+   },
+   {
+    "title": "مقارنة: Hedef (Finalsatz) vs Sabab (Kausalsatz)",
+    "headers": [
+     "النوع",
+     "الأداة",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "هدف (Final)",
+      "um...zu / damit",
+      "Ich lerne, um zu bestehen."
+     ],
+     [
+      "سبب (Kausal)",
+      "weil / denn",
+      "Ich lerne, weil ich muss."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "das Ziel",
+    "ar": "الهدف"
+   },
+   {
+    "de": "der Zweck",
+    "ar": "الغرض"
+   },
+   {
+    "de": "die Absicht",
+    "ar": "النية"
+   },
+   {
+    "de": "der Plan",
+    "ar": "الخطة"
+   },
+   {
+    "de": "die Motivation",
+    "ar": "الحافز"
+   },
+   {
+    "de": "erreichen",
+    "ar": "يحقق"
+   },
+   {
+    "de": "verfolgen",
+    "ar": "يتابع"
+   },
+   {
+    "de": "planen",
+    "ar": "يخطط"
+   },
+   {
+    "de": "beabsichtigen",
+    "ar": "ينوي"
+   },
+   {
+    "de": "anstreben",
+    "ar": "يطمح"
+   },
+   {
+    "de": "sparen",
+    "ar": "يوفّر"
+   },
+   {
+    "de": "verdienen",
+    "ar": "يكسب"
+   }
+  ]
+ },
+ {
+  "id": "b2-04",
+  "order": 4,
+  "source": "b2.ts",
+  "title": "Modalverben subjektiv — الدلالة الافتراضية",
+  "grammarTitle": "Modalverben للتخمين والاحتمال",
+  "content": "تعرف من قبل الأفعال الشرطية Modalverben مثل müssen وkönnen وsollen بمعناها الموضوعي أو الأصلي: müssen للإلزام (يجب)، können للقدرة (يستطيع)، sollen للتوصية أو التكليف (ينبغي). في B2 تتعلم أن هذه الأفعال نفسها، دون أي تغيير في شكلها، يمكن أن تحمل معنى مختلفاً تماماً هو المعنى الذاتي أو الافتراضي subjektiv، الذي لا يصف واقعاً موضوعياً بل يعبّر عن درجة يقين المتكلم أو موقفه تجاه صحة معلومة ما. والسياق وحده هو ما يحدد أي المعنيين مقصود.\n\nفحين تقول Er muss zu Hause sein، لا تقصد أنه ملزَم بالبقاء في البيت، بل تقصد أنك شبه متيقن من كونه في البيت بناءً على قرائن لديك، أي ما يقابل في العربية لا بد أنه في البيت. هذا الاستعمال الذاتي يشكّل سلّماً كاملاً من درجات اليقين، لكل درجة منه فعل خاص بها: müssen يعبّر عن يقين شبه تام مبني على استنتاج منطقي قوي؛ dürfte، وهي صيغة Konjunktiv II من dürfen، تعبّر عن احتمال مرتفع جداً لكنه أقل حسماً من müssen؛ könnte وmag تعبّران عن احتمال بسيط أو تخمين مفتوح.\n\nأما sollen فتحمل معنى خاصاً مختلفاً عن درجات اليقين: أنها تنقل ادعاءً أو إشاعة سمعها المتكلم من طرف ثالث دون أن يتبناها، أي ما يقابل يُقال إن أو حسبما سمعت. وعلى النقيض، wollen في استعمالها الذاتي تنقل ادعاءً يطلقه الفاعل نفسه عن نفسه، وغالباً ما يحمل هذا الادعاء ظلاً من الشك أو عدم التصديق من طرف المتكلم، فتقابل تقريباً يزعم أنه.\n\nللتعبير عن هذا المعنى الذاتي في الزمن الماضي، لا نُصرّف الفعل الشرطي نفسه في الماضي، بل نُبقيه في المضارع ونضيف بعده ما يسمى Infinitiv II، وهو Partizip II للفعل الرئيسي متبوعاً بـ haben أو sein: Er muss es vergessen haben (لا بد أنه نسي ذلك) — لاحظ أن muss بقيت في المضارع بينما انتقل الزمن الماضي إلى vergessen haben.\n\nهذا الاستعمال المزدوج لنفس الفعل بمعنيين مختلفين كلياً غير مألوف في العربية، التي تستعمل عبارات مستقلة لكل درجة يقين، مثل لا بد أن ومن المحتمل أن ويُقال إن ويزعم أن، لا علاقة صرفية بينها. لذلك يقع المتعلمون كثيراً في خطأ فهم muss الذاتية على أنها إلزام، أي يجب أن يكون في البيت بدل لا بد أنه في البيت، أو في خطأ صياغة الماضي الذاتي بتصريف الفعل الشرطي نفسه في الماضي، مثل musste vergessen بدل muss vergessen haben، بدل استعمال Infinitiv II الصحيح.",
+  "rules": [
+   {
+    "rule": "muss = يقين 99%",
+    "example": "Er muss krank sein.",
+    "translation": "لا بد أنه مريض."
+   },
+   {
+    "rule": "soll = ادعاء الآخرين",
+    "example": "Sie soll reich sein.",
+    "translation": "يُقال إنها غنية."
+   },
+   {
+    "rule": "Infinitiv II للماضي",
+    "example": "Er muss es vergessen haben.",
+    "translation": "لا بد أنه نسي."
+   }
+  ],
+  "tip": "في الأخبار الألمانية، **soll** شائع جداً (للإشاعات). في نقاش العلماء **dürfte** (احتمال علمي).",
+  "examples": [
+   "Er muss sehr müde sein. — لا بد أنه متعب جداً.",
+   "Das könnte stimmen. — قد يكون صحيحاً.",
+   "Sie dürfte bald kommen. — من المحتمل أنها ستأتي قريباً.",
+   "Er soll ein guter Arzt sein. — يُقال إنه طبيب ماهر.",
+   "Sie will alles gewusst haben. — تدّعي أنها عرفت كل شيء.",
+   "Das mag wahr sein. — قد يكون صحيحاً.",
+   "Er muss es vergessen haben. — لا بد أنه نسي.",
+   "Das kann nicht wahr sein. — هذا لا يمكن أن يكون صحيحاً."
+  ],
+  "tables": [
+   {
+    "title": "Modalverben subjektiv",
+    "headers": [
+     "Modalverb",
+     "المعنى الذاتي",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "müssen",
+      "يقين قوي",
+      "Er muss zu Hause sein."
+     ],
+     [
+      "dürfen (Konj II)",
+      "احتمال قوي",
+      "Es dürfte regnen."
+     ],
+     [
+      "können (Konj II)",
+      "احتمال",
+      "Er könnte kommen."
+     ],
+     [
+      "mögen",
+      "تقدير",
+      "Er mag etwa 30 sein."
+     ],
+     [
+      "sollen",
+      "يُقال / إشاعة",
+      "Er soll reich sein."
+     ],
+     [
+      "wollen",
+      "ادعاء ذاتي",
+      "Er will es gesehen haben."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Vermutung",
+    "ar": "الافتراض"
+   },
+   {
+    "de": "die Wahrscheinlichkeit",
+    "ar": "الاحتمال"
+   },
+   {
+    "de": "der Zweifel",
+    "ar": "الشك"
+   },
+   {
+    "de": "die Sicherheit",
+    "ar": "اليقين"
+   },
+   {
+    "de": "die Gerüchteküche",
+    "ar": "مصدر الإشاعات"
+   },
+   {
+    "de": "das Gerücht",
+    "ar": "الإشاعة"
+   },
+   {
+    "de": "die Behauptung",
+    "ar": "الادعاء"
+   },
+   {
+    "de": "offensichtlich",
+    "ar": "واضح"
+   },
+   {
+    "de": "wahrscheinlich",
+    "ar": "محتمل"
+   },
+   {
+    "de": "vermutlich",
+    "ar": "افتراضاً"
+   },
+   {
+    "de": "angeblich",
+    "ar": "زعماً"
+   },
+   {
+    "de": "sicher",
+    "ar": "مؤكد"
+   }
+  ]
+ },
+ {
+  "id": "b2-05",
+  "order": 5,
+  "source": "b2.ts",
+  "title": "Passiv mit Modalverben",
+  "grammarTitle": "Passiv + können/müssen/sollen",
+  "content": "تعرف مسبقاً كيف تُبنى صيغة المبني للمجهول Passiv بمساعدة الفعل werden، وكيف تعمل الأفعال الشرطية Modalverben. في B2 تتعلم كيف تُدمَج هاتان البنيتان معاً في تركيب واحد يعبّر عن الإلزام أو الإمكانية أو الجواز في جملة لا فاعل شخصياً فيها، وهو التركيب المهيمن في اللغة الألمانية الرسمية: القوانين والتعليمات والاستمارات والإعلانات الإدارية جميعها مكتوبة بهذا الأسلوب لأنه يحذف من الجملة الفاعل man ويضع التركيز كله على الشيء الذي يجب فعله به.\n\nمن الناحية الصرفية، يبقى الفعل الشرطي هو الفعل المُصرَّف حسب الفاعل والزمن وموقعه في الترتيب الثاني في الجملة الرئيسية Position 2، تماماً كما اعتدت. لكن بدل أن يتبعه مصدر الفعل الرئيسي مباشرة كما في الأسلوب النشط، يُضاف بعده تركيب مكوَّن من جزأين يُدفعان معاً إلى آخر الجملة: Partizip II للفعل الرئيسي، ثم werden في صورة المصدر وليس مصرَّفاً. فالجملة النشطة Man muss das Formular ausfüllen تتحول إلى Das Formular muss ausgefüllt werden، حيث انتقل الفاعل man إلى مفعول موضوعي das Formular صار الآن فاعلاً نحوياً للجملة، بينما اجتمع ausgefüllt وwerden في نهاية الجملة معاً.\n\nفي الأزمنة الأخرى، يتغير فقط تصريف الفعل الشرطي: في الـ Präteritum مثلاً Das Formular musste ausgefüllt werden، بينما يبقى الجزء الأخير ausgefüllt werden ثابتاً بلا تغيير في كل الأزمنة تقريباً، لأن الزمن كله يُحمَل على الفعل الشرطي وحده.\n\nتوجد أيضاً ثلاثة بدائل مختصرة تؤدي المعنى نفسه دون استعمال Passiv الصريح، وكلها شائعة جداً في النصوص الرسمية: أولها sein + zu + Infinitiv، حيث Das Formular ist auszufüllen تعني تماماً muss ausgefüllt werden؛ وثانيها sich lassen + Infinitiv الذي يعبّر عن الإمكانية، فـ Das lässt sich machen بمعنى kann gemacht werden؛ وثالثها صفات مشتقة بلاحقة -bar تحمل معنى القابلية للفعل، مثل lesbar بمعنى قابل للقراءة أي يمكن أن يُقرأ.\n\nهذا الدمج بين الإلزام والمبني للمجهول موجود مفهومياً في العربية أيضاً، كما في يجب أن تُملأ الاستمارة، لكن العربية تستعمل فعلين منفصلين مصرَّفين كل على حدة، يجب ثم تُملأ في صيغة المبني للمجهول، بينما تُجمِّع الألمانية الفعلين الشرطي والمساعد werden في تركيب واحد متلاصق في آخر الجملة. الخطأ الأكثر شيوعاً هو استعمال sein بدل werden في هذا التركيب، خلطاً مع Zustandspassiv الذي يصف حالة نتيجة لا حدثاً، أو نسيان دفع Partizip II وwerden معاً إلى نهاية الجملة وتركهما في مكان الفعل النشط العادي.",
+  "rules": [
+   {
+    "rule": "Modalverb + PII + werden",
+    "example": "Das muss erledigt werden.",
+    "translation": "يجب إنجاز ذلك."
+   },
+   {
+    "rule": "sein + zu + Inf = Passiv + müssen/können",
+    "example": "Das ist zu beachten.",
+    "translation": "يجب مراعاة ذلك."
+   },
+   {
+    "rule": "-bar = kann + werden (passiv)",
+    "example": "essbar = kann gegessen werden",
+    "translation": "صالح للأكل"
+   }
+  ],
+  "tip": "في القوانين والتعليمات الألمانية، Passiv + Modalverben هو النمط الأكثر شيوعاً — أتقنه لفهم الأوراق الرسمية.",
+  "examples": [
+   "Das Formular muss sofort ausgefüllt werden. — يجب ملء الاستمارة فوراً.",
+   "Die Tür kann nicht geöffnet werden. — لا يمكن فتح الباب.",
+   "Das Problem soll gelöst werden. — يجب حل المشكلة.",
+   "Hier darf nicht geraucht werden. — لا يُسمح بالتدخين هنا.",
+   "Die Regeln sind zu befolgen. — يجب اتباع القواعد.",
+   "Das lässt sich nicht ändern. — لا يمكن تغيير ذلك.",
+   "Dieses Wort ist leicht lesbar. — هذه الكلمة سهلة القراءة.",
+   "Der Text musste bis morgen geschrieben werden. — كان يجب كتابة النص حتى الغد."
+  ],
+  "tables": [
+   {
+    "title": "Passiv mit Modalverben",
+    "headers": [
+     "Modalverb",
+     "Aktiv",
+     "Passiv"
+    ],
+    "rows": [
+     [
+      "müssen",
+      "Man muss es machen",
+      "Es muss gemacht werden"
+     ],
+     [
+      "können",
+      "Man kann es sehen",
+      "Es kann gesehen werden"
+     ],
+     [
+      "sollen",
+      "Man soll es lesen",
+      "Es soll gelesen werden"
+     ],
+     [
+      "dürfen",
+      "Man darf es nicht",
+      "Es darf nicht gemacht werden"
+     ]
+    ]
+   },
+   {
+    "title": "بدائل Passiv",
+    "headers": [
+     "الصيغة",
+     "المعنى",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "sein + zu + Inf",
+      "muss/kann + werden",
+      "Das ist zu lesen."
+     ],
+     [
+      "sich lassen + Inf",
+      "kann + werden",
+      "Das lässt sich machen."
+     ],
+     [
+      "-bar (صفة)",
+      "kann + werden",
+      "Das ist lesbar."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "erledigen",
+    "ar": "ينجز"
+   },
+   {
+    "de": "ausfüllen",
+    "ar": "يملأ"
+   },
+   {
+    "de": "befolgen",
+    "ar": "يتّبع"
+   },
+   {
+    "de": "beachten",
+    "ar": "يلتزم/يلاحظ"
+   },
+   {
+    "de": "einhalten",
+    "ar": "يلتزم بـ"
+   },
+   {
+    "de": "lösen",
+    "ar": "يحل"
+   },
+   {
+    "de": "ändern",
+    "ar": "يغيّر"
+   },
+   {
+    "de": "verbieten",
+    "ar": "يمنع"
+   },
+   {
+    "de": "erlauben",
+    "ar": "يسمح"
+   },
+   {
+    "de": "das Formular",
+    "ar": "الاستمارة"
+   },
+   {
+    "de": "die Regel",
+    "ar": "القاعدة"
+   },
+   {
+    "de": "die Vorschrift",
+    "ar": "اللائحة"
+   }
+  ]
+ },
+ {
+  "id": "b2-06",
+  "order": 6,
+  "source": "b2.ts",
+  "title": "Verben mit Präpositionen — الأفعال مع حروف الجر",
+  "grammarTitle": "warten auf, denken an, sprechen über",
+  "content": "في اللغة الألمانية، هناك عدد كبير من الأفعال لا تكتمل دلالتها بمفعول مباشر وحسب، بل تحتاج إلى حرف جر ثابت يلتصق بها التصاقاً تاماً، بحيث يصبح الفعل وحرف الجر وحدة معجمية واحدة لا يجوز فصل أجزائها أو استبدال الحرف بحرف آخر قريب في المعنى. هذا ما يُسمى Verben mit Präpositionen أو الأفعال ذات حروف الجر الثابتة، ويقابلها في وظيفتها النحوية ما يُعرف بـ Präpositionalobjekt، أي المفعول المجرور الذي يكمل معنى الفعل.\n\nالفكرة الأساسية أن اختيار حرف الجر هنا ليس منطقياً أو قابلاً للتخمين انطلاقاً من المعنى العام، بل هو خاصية عشوائية لكل فعل يجب حفظها كما تُحفظ الكلمة نفسها. فالفعل warten (ينتظر) يستدعي auf، بينما الفعل denken (يفكر) يستدعي an، رغم أن الفعلين قريبان من حيث الوظيفة الذهنية. الأخطر أن حرف الجر يفرض أيضاً حالة إعرابية محددة، أكاديمية أو دائرية، مثل warten auf + Akkusativ أو teilnehmen an + Dativ، وهذه الحالة لا علاقة لها بقواعد Wechselpräpositionen المعتادة التي تفرّق بين السكون والحركة، بل هي ثابتة مرتبطة بالفعل وحده بصرف النظر عن السياق.\n\nحين يكون المفعول المجرور شخصاً، تُستعمل ضمائر عادية بعد حرف الجر، مثل warten auf ihn. أما حين يكون المفعول شيئاً أو فكرة أو جملة كاملة، فإن الألمانية تتجنب قول auf es وتلجأ بدلاً من ذلك إلى تركيب da- + حرف الجر، فيصبح darauf أو daran أو darüber، وهو ما يُعرف بـ da-Komposita. وللسؤال عن هذا المفعول غير البشري تُستعمل تركيبة wo- بالطريقة نفسها، مثل Woran denkst du.\n\nقد يظن متحدث العربية أن ترجمة الفعل حرفياً كافية لاختيار حرف الجر الصحيح، لأن العربية أيضاً تربط أفعالاً بحروف جر ثابتة مثل يفكر في أو يتحدث عن، لكن هذا التطابق مصادفة جزئية لا قاعدة عامة، والاعتماد عليه يقود إلى أخطاء متكررة كقول denken über بدلاً من denken an. الخطأ الأكثر شيوعاً عند متعلمي الألمانية هو نسيان استعمال da-/wo- مع الأشياء والاكتفاء بالضمير es بعد حرف الجر، وهو تركيب غير مقبول في الألمانية المعيارية ويجب تجنبه بشكل قاطع.",
+  "rules": [
+   {
+    "rule": "احفظ الفعل + حرف الجر + الحالة",
+    "example": "warten auf + Akk",
+    "translation": "ينتظر"
+   },
+   {
+    "rule": "da- للأشياء",
+    "example": "Ich denke daran.",
+    "translation": "أفكر فيه (شيء)."
+   },
+   {
+    "rule": "auf + ihn للأشخاص",
+    "example": "Ich warte auf ihn.",
+    "translation": "أنتظره."
+   }
+  ],
+  "tip": "اصنع دفتراً للأفعال مع حروف الجر — احفظ 5 جديدة كل أسبوع حتى تصل 100.",
+  "examples": [
+   "Ich warte auf den Bus. — أنتظر الحافلة.",
+   "Sie denkt an ihre Familie. — تفكر في عائلتها.",
+   "Wir sprechen über das Wetter. — نتحدث عن الطقس.",
+   "Er interessiert sich für Politik. — يهتم بالسياسة.",
+   "Sie freut sich auf das Wochenende. — تتطلع إلى نهاية الأسبوع.",
+   "Ich habe Angst vor Spinnen. — أخاف من العناكب.",
+   "Woran denkst du? — فيم تفكر؟",
+   "Ich träume davon, nach Japan zu reisen. — أحلم بالسفر إلى اليابان."
+  ],
+  "tables": [
+   {
+    "title": "أهم الأفعال مع حروف الجر",
+    "headers": [
+     "الفعل",
+     "Präposition",
+     "Kasus",
+     "المعنى"
+    ],
+    "rows": [
+     [
+      "warten",
+      "auf",
+      "Akk",
+      "ينتظر"
+     ],
+     [
+      "denken",
+      "an",
+      "Akk",
+      "يفكر في"
+     ],
+     [
+      "sich erinnern",
+      "an",
+      "Akk",
+      "يتذكر"
+     ],
+     [
+      "sprechen",
+      "über/von",
+      "Akk/Dat",
+      "يتحدث عن"
+     ],
+     [
+      "sich freuen",
+      "auf/über",
+      "Akk",
+      "يتطلع إلى / يُسرّ بـ"
+     ],
+     [
+      "sich interessieren",
+      "für",
+      "Akk",
+      "يهتم بـ"
+     ],
+     [
+      "teilnehmen",
+      "an",
+      "Dat",
+      "يشارك في"
+     ],
+     [
+      "Angst haben",
+      "vor",
+      "Dat",
+      "يخاف من"
+     ],
+     [
+      "träumen",
+      "von",
+      "Dat",
+      "يحلم بـ"
+     ]
+    ]
+   },
+   {
+    "title": "wo-/da-Komposita",
+    "headers": [
+     "Präposition",
+     "للشيء (da-)",
+     "للسؤال (wo-)"
+    ],
+    "rows": [
+     [
+      "auf",
+      "darauf",
+      "worauf"
+     ],
+     [
+      "an",
+      "daran",
+      "woran"
+     ],
+     [
+      "über",
+      "darüber",
+      "worüber"
+     ],
+     [
+      "für",
+      "dafür",
+      "wofür"
+     ],
+     [
+      "von",
+      "davon",
+      "wovon"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "warten auf",
+    "ar": "ينتظر"
+   },
+   {
+    "de": "denken an",
+    "ar": "يفكر في"
+   },
+   {
+    "de": "sich erinnern an",
+    "ar": "يتذكر"
+   },
+   {
+    "de": "sich freuen auf",
+    "ar": "يتطلع إلى"
+   },
+   {
+    "de": "sich freuen über",
+    "ar": "يُسَرّ بـ"
+   },
+   {
+    "de": "sich interessieren für",
+    "ar": "يهتم بـ"
+   },
+   {
+    "de": "sich ärgern über",
+    "ar": "ينزعج من"
+   },
+   {
+    "de": "sich kümmern um",
+    "ar": "يعتني بـ"
+   },
+   {
+    "de": "sich entschuldigen für",
+    "ar": "يعتذر عن"
+   },
+   {
+    "de": "sich bewerben um",
+    "ar": "يتقدم لـ"
+   },
+   {
+    "de": "teilnehmen an",
+    "ar": "يشارك في"
+   },
+   {
+    "de": "arbeiten an",
+    "ar": "يعمل على"
+   }
+  ]
+ },
+ {
+  "id": "b2-07",
+  "order": 7,
+  "source": "b2.ts",
+  "title": "Adjektive mit Präpositionen",
+  "grammarTitle": "stolz auf, verliebt in, zufrieden mit",
+  "content": "كما هو الحال مع الأفعال، تحمل مجموعة كبيرة من الصفات الألمانية حرف جر ثابتاً يرتبط بها ارتباطاً بنيوياً لا يتغير، ولا يُختار بناءً على المنطق أو الترجمة، بل يُحفظ مع الصفة كوحدة واحدة. هذه الظاهرة تُسمى Adjektive mit Präpositionen، وتظهر غالباً في تراكيب من نوع sein + Adjektiv + Präposition، حيث تصف الصفة حالة نفسية أو موقفاً تجاه شيء أو شخص محدد يُذكر بعدها عبر حرف الجر.\n\nمثلاً stolz auf (فخور بـ) تستدعي auf مع حالة Akkusativ، بينما zufrieden mit (راضٍ بـ) تستدعي mit مع حالة Dativ، وverliebt in (واقع في حب) تستدعي in مع Akkusativ. لا توجد قاعدة صوتية أو دلالية تفسر لماذا اختارت اللغة هذا الحرف بعينه لهذه الصفة دون غيره؛ الأمر أشبه بما يحدث في العربية حين نقول فخور بـ وراضٍ عن دون أن يكون هناك مبرر منطقي صارم لاختلاف الحرفين رغم تقارب المعنى.\n\nمن الناحية العملية، تُستعمل هذه الصفات غالباً بعد الفعل sein، ويأتي حرف الجر مباشرة بعد الصفة ثم الاسم أو الضمير في الحالة المطلوبة: Ich bin stolz auf dich. وحين يكون ما يلي حرف الجر جملة كاملة بدلاً من اسم، تُستعمل نفس تراكيب da-/wo- التي تعلمناها مع الأفعال، فيمكن أن نقول Ich bin stolz darauf, dass ich es geschafft habe، أي أنا فخور بأنني نجحت في ذلك، بدلاً من محاولة وضع جملة كاملة مباشرة بعد حرف الجر.\n\nهناك أيضاً تجمعات دلالية مفيدة للحفظ: حروف الجر auf وüber ترتبط غالباً بمشاعر مثل الفخر والغضب والحزن والفرح، بينما mit وvon ترتبطان أكثر بعلاقات الاعتماد والرضا، وan وfür ترتبطان بالاهتمام والقدرة. لكن هذه ليست قاعدة صارمة بل أداة تنظيمية تسهّل الحفظ لا أكثر.\n\nالخطأ الأكثر شيوعاً بين متعلمي الألمانية هو نقل حرف الجر من اللغة الأم أو من الإنجليزية مباشرة، فيقال مثلاً stolz von بدلاً من stolz auf تأثراً بتركيب مشابه في لغة أخرى، أو يُنسى تغيير حالة الاسم بعد حرف الجر بحسب ما يفرضه، فيُستعمل Akkusativ حيث يجب Dativ والعكس. الحل الوحيد الفعّال هو حفظ كل صفة مع حرف جرها وحالتها كوحدة واحدة متماسكة، تماماً كما نحفظ المفردة نفسها.",
+  "rules": [
+   {
+    "rule": "sein + Adjektiv + Präp + Kasus",
+    "example": "Ich bin stolz auf dich.",
+    "translation": "أنا فخور بك."
+   },
+   {
+    "rule": "auf + Akk شائع للعواطف",
+    "example": "böse auf ihn",
+    "translation": "غاضب منه"
+   },
+   {
+    "rule": "mit + Dat للرضا والاتفاق",
+    "example": "zufrieden mit dem Ergebnis",
+    "translation": "راضٍ بالنتيجة"
+   }
+  ],
+  "tip": "Kapitel-Trick: احفظ الصفة + حرف الجر كوحدة واحدة: \"stolz-auf\", \"zufrieden-mit\".",
+  "examples": [
+   "Ich bin stolz auf meine Eltern. — أنا فخور بوالديّ.",
+   "Er ist zufrieden mit seiner Arbeit. — هو راضٍ بعمله.",
+   "Sie ist verliebt in ihn. — هي واقعة في حبه.",
+   "Bist du böse auf mich? — هل أنت غاضب مني؟",
+   "Ich bin bereit zum Abflug. — أنا مستعد للإقلاع.",
+   "Marokko ist reich an Kultur. — المغرب غني بالثقافة.",
+   "Er ist verantwortlich für das Projekt. — هو مسؤول عن المشروع.",
+   "Wir sind alle abhängig vom Internet. — كلنا نعتمد على الإنترنت."
+  ],
+  "tables": [
+   {
+    "title": "أهم الصفات مع حروف الجر",
+    "headers": [
+     "Adjektiv",
+     "Präp.",
+     "Kasus",
+     "المعنى"
+    ],
+    "rows": [
+     [
+      "stolz",
+      "auf",
+      "Akk",
+      "فخور بـ"
+     ],
+     [
+      "zufrieden",
+      "mit",
+      "Dat",
+      "راضٍ بـ"
+     ],
+     [
+      "verliebt",
+      "in",
+      "Akk",
+      "واقع في حب"
+     ],
+     [
+      "eifersüchtig",
+      "auf",
+      "Akk",
+      "غيور من"
+     ],
+     [
+      "böse",
+      "auf",
+      "Akk",
+      "غاضب من"
+     ],
+     [
+      "interessiert",
+      "an",
+      "Dat",
+      "مهتم بـ"
+     ],
+     [
+      "abhängig",
+      "von",
+      "Dat",
+      "يعتمد على"
+     ],
+     [
+      "verantwortlich",
+      "für",
+      "Akk",
+      "مسؤول عن"
+     ],
+     [
+      "traurig",
+      "über",
+      "Akk",
+      "حزين على"
+     ],
+     [
+      "fähig",
+      "zu",
+      "Dat",
+      "قادر على"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "stolz",
+    "ar": "فخور"
+   },
+   {
+    "de": "zufrieden",
+    "ar": "راضٍ"
+   },
+   {
+    "de": "unzufrieden",
+    "ar": "غير راضٍ"
+   },
+   {
+    "de": "verliebt",
+    "ar": "واقع في حب"
+   },
+   {
+    "de": "eifersüchtig",
+    "ar": "غيور"
+   },
+   {
+    "de": "böse",
+    "ar": "غاضب/شرير"
+   },
+   {
+    "de": "freundlich",
+    "ar": "ودود"
+   },
+   {
+    "de": "nett",
+    "ar": "لطيف"
+   },
+   {
+    "de": "bereit",
+    "ar": "مستعد"
+   },
+   {
+    "de": "fähig",
+    "ar": "قادر"
+   },
+   {
+    "de": "unfähig",
+    "ar": "عاجز"
+   },
+   {
+    "de": "verantwortlich",
+    "ar": "مسؤول"
+   }
+  ]
+ },
+ {
+  "id": "b2-19",
+  "order": 7.5,
+  "source": "extra-lessons.json",
+  "title": "حروف الجر مع حالة الجينيتيف — Präpositionen mit Genitiv",
+  "grammarTitle": "حروف الجر التي تأخذ حالة الملكية Genitiv — trotz، während، wegen، aufgrund، (an)statt، innerhalb، außerhalb",
+  "content": "بعد أن تعرّفت في مستويات سابقة على حروف الجر التي تتطلب حالة Akkusativ أو Dativ، يقدّم لك B2 مجموعة أخرى من حروف الجر تتطلب حالة إعرابية جديدة تماماً هي Genitiv، أي حالة الملكية أو الإضافة. هذه الحالة تختلف عن الأخريين في أنها لا تصف موقعاً أو حركة، بل علاقة انتماء أو ارتباط غير مباشر بين شيئين، ويظهر أثرها بوضوح في تغيّر أداة التعريف ونهاية الاسم المذكر والمحايد.\n\nأبرز هذه الحروف: trotz (رغم) التي تفيد التناقض أو عدم تأثر النتيجة بالسبب المذكور، während (خلال، أثناء) التي تحدد إطاراً زمنياً متزامناً، wegen وaufgrund وكلاهما يفيدان السببية لكن aufgrund أكثر رسمية وتُستعمل في التقارير والنصوص الإدارية، (an)statt التي تفيد الاستبدال أو التفضيل البديل، وأخيراً innerhalb وaußerhalb اللتان تحددان حدوداً مكانية أو زمنية داخلية وخارجية.\n\nمن الناحية الصرفية، القاعدة المركزية هي: مع الأسماء المذكرة والمحايدة، تتحول أداة التعريف der أو das إلى des، وتُضاف للاسم نفسه لاحقة -s أو -es (خاصة إذا كان الاسم مقطعاً واحداً)، كما في des Mannes أو des Kindes. أما مع الأسماء المؤنثة وصيغ الجمع، فتتحول أداة التعريف فقط إلى der، دون أي تغيير على الاسم نفسه، كما في der Frau أو der Kinder. هذا التغيير في نهاية الاسم هو ما يميز Genitiv جوهرياً عن Dativ وAkkusativ اللتين تكتفيان غالباً بتغيير الأداة وحدها.\n\nمن المهم أن تدرك أن هذه الحالة تنتمي إلى السجل الكتابي والرسمي أكثر من كونها ظاهرة في اللغة المحكية اليومية؛ فالألمان في الحديث العفوي كثيراً ما يستبدلون Genitiv بـ Dativ بعد wegen أو trotz، فيقولون wegen dem Regen بدلاً من wegen des Regens، لكن هذا الاستعمال يُعتبر غير فصيح ومرفوض في الامتحانات والكتابة الأكاديمية والإدارية، وهو بالضبط ما يُطلب منك إتقانه في هذا المستوى.\n\nالخطأ الأكثر شيوعاً عند متعلمي الألمانية، وخصوصاً الناطقين بالعربية الذين لا توجد في لغتهم حالة إعرابية مماثلة تغيّر شكل الاسم والأداة معاً، هو نسيان إضافة -s أو -es إلى الاسم المذكر أو المحايد بعد des، فيُكتفى بتغيير الأداة فقط ويُقال خطأً des Mann بدلاً من des Mannes. تذكّر دائماً أن Genitiv يفرض تغييرين متزامنين: الأداة والاسم معاً في حالة المذكر والمحايد.",
+  "rules": [
+   {
+    "rule": "حروف الجر trotz وwegen وwährend و(an)statt وaufgrund وinnerhalb وaußerhalb تتطلب دائماً حالة Genitiv في الكتابة الرسمية والامتحانات.",
+    "example": "Trotz des schlechten Wetters gingen wir spazieren.",
+    "translation": "على الرغم من الطقس السيئ، ذهبنا للتنزه."
+   },
+   {
+    "rule": "في Genitiv المفرد، تتحول أداة التعريف: der/das → des (مع إضافة -s أو -es للاسم)، وdie → der (بدون تغيير في الاسم المؤنث).",
+    "example": "wegen des Staus / wegen der Verspätung",
+    "translation": "بسبب الازدحام المروري / بسبب التأخير"
+   },
+   {
+    "rule": "في Genitiv الجمع، تتحول أداة التعريف die → der، والاسم لا يتغير في الغالب.",
+    "example": "innerhalb der nächsten Wochen",
+    "translation": "في غضون الأسابيع القادمة"
+   },
+   {
+    "rule": "حرف الجر aufgrund يُستخدم في السياقات الرسمية والكتابية بدلاً من wegen، وكلاهما يعني 'بسبب'.",
+    "example": "Aufgrund des starken Windes wurde der Flug gestrichen.",
+    "translation": "بسبب الرياح الشديدة، تم إلغاء الرحلة."
+   }
+  ],
+  "tip": "💡 تذكّر قاعدة ذهبية: عندما ترى أحد هذه الحروف (trotz، wegen، während، aufgrund، statt، innerhalb، außerhalb)، تحقق من جنس الاسم الذي يليه — إذا كان مذكراً أو محايداً فأضف **-(e)s** للاسم وحوّل الأداة إلى **des**، وإذا كان مؤنثاً أو جمعاً فحوّل الأداة فقط إلى **der** دون تغيير الاسم. هذه القاعدة البسيطة تكفيك في 90% من الحالات!",
+  "examples": [
+   "Trotz des starken Regens fuhr er mit dem Fahrrad zur Arbeit. — على الرغم من المطر الغزير، ذهب إلى العمل بالدراجة.",
+   "Während des Gesprächs machte sie sich Notizen. — أثناء المحادثة، كانت تدوّن ملاحظات.",
+   "Wegen des Unfalls gab es lange Staus auf der Autobahn. — بسبب الحادث، كانت هناك اختناقات مرورية طويلة على الطريق السريع.",
+   "Aufgrund der neuen Regelungen müssen alle Mitarbeiter eine Schulung absolvieren. — بناءً على اللوائح الجديدة، يجب على جميع الموظفين إتمام دورة تدريبية.",
+   "Anstatt des Busses nahm sie ein Taxi zum Flughafen. — بدلاً من الحافلة، أخذت سيارة أجرة إلى المطار.",
+   "Innerhalb des Gebäudes ist das Rauchen verboten. — داخل المبنى، يُحظر التدخين.",
+   "Außerhalb der Geschäftszeiten ist das Büro nicht erreichbar. — خارج ساعات العمل، لا يمكن الوصول إلى المكتب.",
+   "Trotz ihrer Müdigkeit beendete sie den Bericht noch am selben Abend. — على الرغم من تعبها، أنهت التقرير في نفس المساء."
+  ],
+  "tables": [
+   {
+    "title": "تصريف أداة التعريف في حالة Genitiv",
+    "headers": [
+     "الجنس",
+     "Nominativ",
+     "Genitiv",
+     "مثال (Genitiv)"
+    ],
+    "rows": [
+     [
+      "مذكر (Maskulinum)",
+      "der",
+      "des",
+      "des Mannes"
+     ],
+     [
+      "محايد (Neutrum)",
+      "das",
+      "des",
+      "des Kindes"
+     ],
+     [
+      "مؤنث (Femininum)",
+      "die",
+      "der",
+      "der Frau"
+     ],
+     [
+      "جمع (Plural)",
+      "die",
+      "der",
+      "der Kinder"
+     ]
+    ]
+   },
+   {
+    "title": "حروف الجر مع Genitiv — المعنى والاستخدام",
+    "headers": [
+     "حرف الجر",
+     "المعنى بالعربية",
+     "مثال",
+     "الترجمة"
+    ],
+    "rows": [
+     [
+      "trotz",
+      "رغم / على الرغم من",
+      "trotz des Regens",
+      "رغم المطر"
+     ],
+     [
+      "während",
+      "خلال / أثناء",
+      "während des Unterrichts",
+      "أثناء الدرس"
+     ],
+     [
+      "wegen",
+      "بسبب",
+      "wegen des Unfalls",
+      "بسبب الحادث"
+     ],
+     [
+      "aufgrund",
+      "بناءً على / نتيجةً لـ",
+      "aufgrund der Ergebnisse",
+      "بناءً على النتائج"
+     ],
+     [
+      "(an)statt",
+      "بدلاً من",
+      "statt des Kaffees",
+      "بدلاً من القهوة"
+     ],
+     [
+      "innerhalb",
+      "داخل / في غضون",
+      "innerhalb der Stadt",
+      "داخل المدينة"
+     ],
+     [
+      "außerhalb",
+      "خارج",
+      "außerhalb des Büros",
+      "خارج المكتب"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "Regen",
+    "ar": "المطر"
+   },
+   {
+    "de": "Unfall",
+    "ar": "الحادث"
+   },
+   {
+    "de": "Verspätung",
+    "ar": "التأخير"
+   },
+   {
+    "de": "Regelung",
+    "ar": "اللائحة / القاعدة التنظيمية"
+   },
+   {
+    "de": "Stau",
+    "ar": "الازدحام المروري"
+   },
+   {
+    "de": "Unterricht",
+    "ar": "الدرس / الحصة الدراسية"
+   },
+   {
+    "de": "Gebäude",
+    "ar": "المبنى"
+   },
+   {
+    "de": "Geschäftszeiten",
+    "ar": "ساعات العمل / الدوام"
+   },
+   {
+    "de": "Ergebnis",
+    "ar": "النتيجة"
+   },
+   {
+    "de": "trotz",
+    "ar": "رغم / على الرغم من"
+   },
+   {
+    "de": "während",
+    "ar": "خلال / أثناء"
+   },
+   {
+    "de": "wegen",
+    "ar": "بسبب"
+   }
+  ]
+ },
+ {
+  "id": "b2-08",
+  "order": 8,
+  "source": "b2.ts",
+  "title": "Konnektoren B2 — sodass, je...desto, anstatt",
+  "grammarTitle": "أدوات ربط متقدمة",
+  "content": "بعد أن أتقنت أدوات الربط الأساسية مثل weil وaber وdass، يقدّم لك B2 مجموعة من أدوات الربط الأكثر دقة، والتي تسمح بالتعبير عن علاقات منطقية معقدة كالنتيجة المتناسبة والاستبدال والمقارنة الافتراضية، وهي علاقات لا يمكن التعبير عنها بأدوات الربط البسيطة، وتُعتبر من أبرز سمات الأسلوب الراقي في الكتابة والحديث الرسمي بالألمانية.\n\nsodass، وصيغتها الموسّعة so...dass، تُستعمل للتعبير عن نتيجة مباشرة نابعة من سبب مذكور في الجملة الأولى؛ الفرق بينهما أن sodass تربط بين جملتين كاملتين كأداة ربط تابعة تدفع الفعل إلى نهاية الجملة، بينما so...dass تتوزع بين صفة أو ظرف في الجملة الأولى وأداة dass في الجملة الثانية، مما يمنح تأكيداً أقوى على شدة السبب نفسه، كما في Es ist so kalt, dass ich friere.\n\nتركيبة je...desto أو je...umso فريدة من نوعها لأنها تصف تناسباً طردياً بين متغيرين، أي أن تغيّر الأول يستتبع تغيّراً موازياً في الثاني. من الناحية النحوية، يجب أن يُتبع كل من je وdesto مباشرة بصيغة المقارنة Komparativ للصفة أو الظرف، ويأتي الفعل في نهاية الجملة الأولى بعد je لأنها أداة ربط تابعة، بينما يتقدم الفعل مباشرة بعد desto في الجملة الثانية لأنها تسلك سلوك الجملة الرئيسية، كما في Je mehr du lernst, desto besser wirst du.\n\nanstatt...zu وstatt...zu تعبّران عن بديل مرفوض لصالح فعل آخر يُختار فعلاً، وتُستعملان مع مصدر مسبوق بـ zu حين يكون فاعل الفعلين واحداً، بينما ohne...zu تعبّر عن غياب فعل متوقع كان ينبغي أن يرافق الفعل الرئيسي. أما als ob وals wenn فتُدخلان مقارنة افتراضية غير حقيقية، ولهذا يُلزمان دائماً باستعمال Konjunktiv II بعدهما، مثل Er tut, als ob er krank wäre، أي أنه يتصرف كأنه مريض مع أنه ليس كذلك فعلاً؛ وهذا الشرط الإلزامي لصيغة Konjunktiv II هو ما يميز als ob عن بقية أدوات الربط في هذا الدرس.\n\nالخطأ الأكثر شيوعاً هو الخلط بين ترتيب الفعل بعد je وبعد desto، إذ يميل المتعلمون إلى معاملة الجزأين بالطريقة النحوية نفسها فيضعون الفعل في آخر الجملتين معاً، بينما القاعدة تفرض معاملتين مختلفتين: تابعة بعد je ورئيسية بعد desto.",
+  "rules": [
+   {
+    "rule": "sodass = نتيجة",
+    "example": "Er ist müde, sodass er schläft.",
+    "translation": "هو متعب لذلك ينام."
+   },
+   {
+    "rule": "je + Komp, desto + Komp",
+    "example": "Je schneller, desto besser.",
+    "translation": "كلما أسرع، كلما أفضل."
+   },
+   {
+    "rule": "als ob + Konjunktiv II",
+    "example": "Er tut, als ob er reich wäre.",
+    "translation": "يتصرف كما لو كان غنياً."
+   }
+  ],
+  "tip": "للكتابة في B2، استعمل Konnektoren متنوعة — ليس كل شيء \"weil\" و\"aber\". اصنع قائمة 15 Konnektor وطبّقها.",
+  "examples": [
+   "Es regnet stark, sodass wir zu Hause bleiben. — تمطر بقوة، لذلك نبقى في البيت.",
+   "Je mehr du übst, desto besser wirst du. — كلما تمرّنت أكثر، كلما تحسّنت.",
+   "Anstatt zu lernen, spielt er am Handy. — بدلاً من الدراسة، يلعب بالهاتف.",
+   "Er ging, ohne ein Wort zu sagen. — ذهب دون أن يقول كلمة.",
+   "Sie tut, als ob sie alles wüsste. — تتصرف كما لو كانت تعرف كل شيء.",
+   "Ich lerne Deutsch, indem ich jeden Tag lese. — أتعلم الألمانية بالقراءة اليومية.",
+   "Je älter er wird, desto ruhiger ist er. — كلما كبر في السن، أصبح أهدأ.",
+   "Es ist so kalt, dass ich friere. — الجو بارد جداً لدرجة أنني أتجمد."
+  ],
+  "tables": [
+   {
+    "title": "Konnektoren B2",
+    "headers": [
+     "Konnektor",
+     "المعنى",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "sodass",
+      "لدرجة أن",
+      "Es regnet, sodass wir bleiben."
+     ],
+     [
+      "je...desto",
+      "كلما...كلما",
+      "Je mehr, desto besser."
+     ],
+     [
+      "anstatt...zu",
+      "بدلاً من",
+      "Anstatt zu essen, schläft er."
+     ],
+     [
+      "ohne...zu",
+      "دون أن",
+      "Er geht, ohne zu sprechen."
+     ],
+     [
+      "als ob",
+      "كما لو",
+      "Er tut, als ob er krank wäre."
+     ],
+     [
+      "indem",
+      "عن طريق",
+      "Ich lerne, indem ich lese."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "sodass",
+    "ar": "لدرجة أن"
+   },
+   {
+    "de": "je ... desto",
+    "ar": "كلما ... كلما"
+   },
+   {
+    "de": "je ... umso",
+    "ar": "كلما ... كلما"
+   },
+   {
+    "de": "anstatt",
+    "ar": "بدلاً من"
+   },
+   {
+    "de": "ohne",
+    "ar": "بدون"
+   },
+   {
+    "de": "als ob",
+    "ar": "كما لو"
+   },
+   {
+    "de": "als wenn",
+    "ar": "كما لو"
+   },
+   {
+    "de": "indem",
+    "ar": "عن طريق"
+   },
+   {
+    "de": "nachdem",
+    "ar": "بعد أن"
+   },
+   {
+    "de": "sobald",
+    "ar": "بمجرد أن"
+   },
+   {
+    "de": "solange",
+    "ar": "ما دام"
+   },
+   {
+    "de": "während",
+    "ar": "بينما"
+   }
+  ]
+ },
+ {
+  "id": "b2-20",
+  "order": 8.5,
+  "source": "extra-lessons.json",
+  "title": "أدوات الربط الثنائية في اللغة الألمانية — Zweiteilige Konnektoren",
+  "grammarTitle": "أدوات الربط الثنائية — Zweiteilige Konnektoren",
+  "content": "أدوات الربط الثنائية، أو Zweiteilige Konnektoren، هي أدوات لا تظهر أبداً بمفردها، بل تتوزع في الجملة على جزأين متلازمين لا ينفصلان، بحيث يُمهّد الجزء الأول لظهور الجزء الثاني، ولا يجوز حذف أحدهما أو استبداله بأداة أخرى. وظيفتها الأساسية هي الربط بين عنصرين متوازيين نحوياً، سواء كانا جملتين كاملتين أو كلمتين أو عبارتين داخل الجملة نفسها، وهي تمنح الأسلوب دقة ووضوحاً منطقياً يصعب تحقيقه بأدوات الربط البسيطة.\n\nsowohl...als auch تفيد الجمع الإيجابي بين عنصرين، أي أن الاثنين معاً صحيحان أو متحققان، وتقابل في العربية كلاً من...و. أما weder...noch فهي نقيضها تماماً، إذ تنفي العنصرين معاً في آن واحد، وتحمل في داخلها معنى النفي، ولهذا لا تحتاج أبداً إلى إضافة nicht أو kein في الجملة نفسها لأن ذلك يُنتج نفياً مزدوجاً غير مقبول نحوياً. entweder...oder تعبّر عن اختيار حصري بين بديلين لا ثالث لهما، وتتميز بأنها إذا افتتحت الجملة فعلاً، أي بدأت الجملة بكلمة entweder نفسها، فإنها تفرض ما يُعرف بـ Inversion، أي تقديم الفعل المصرَّف على الفاعل مباشرة، كما في Entweder kommst du mit, oder ich gehe allein.\n\nnicht nur...sondern auch تُستعمل حين يريد المتحدث أن يضيف معلومة تتجاوز التوقع المعتاد، فتُبرز أن الأمر لا يقتصر على العنصر الأول بل يمتد إلى عنصر ثانٍ مفاجئ أو مهم، وغالباً ما تحمل نبرة تأكيد وتعجب خفيف. أما zwar...aber فتخدم غرضاً مختلفاً تماماً، إذ يُقرّ المتحدث في الجزء الأول بحقيقة أو ميزة معينة، ثم يُقابلها في الجزء الثاني بتحفظ أو تناقض جزئي، وهو تركيب أساسي في الكتابة الجدلية والمقالات الرأي لأنه يُظهر توازناً في الطرح قبل تقديم رأي نهائي.\n\nمن الناحية النحوية، تحافظ معظم هذه الأدوات على ترتيب الجملة الطبيعي دون قلب، باستثناء weder وentweder حين تفتتحان الجملة، حيث يُصبح الترتيب Feld أول يليه الفعل مباشرة ثم الفاعل. وعلى عكس أدوات الربط التابعة مثل weil أو dass، فإن هذه الأدوات الثنائية لا تدفع الفعل إلى نهاية الجملة الثانية، لأنها من حيث الأصل تربط بين وحدتين متكافئتين لا بين جملة رئيسية وأخرى تابعة.\n\nالخطأ الأكثر شيوعاً بين متعلمي الألمانية، وخاصة الناطقين بالعربية الذين تسمح لغتهم بتكرار أدوات النفي للتأكيد، هو إضافة nicht أو kein داخل جملة تحتوي أصلاً على weder...noch، فيُقال خطأً Er hat weder kein Geld noch keine Zeit بدلاً من الصيغة الصحيحة Er hat weder Geld noch Zeit، لأن weder...noch تحمل معنى النفي الكامل بذاتها ولا تحتاج إلى أي أداة نفي إضافية.",
+  "rules": [
+   {
+    "rule": "sowohl … als auch: تربط عنصرين إيجابيين. إذا كان الفاعلان مفردَين، يأتي الفعل في صيغة الجمع غالبًا.",
+    "example": "Sowohl mein Bruder als auch meine Schwester studieren Medizin.",
+    "translation": "كلٌّ من أخي وأختي يدرسان الطب."
+   },
+   {
+    "rule": "weder … noch: تنفي كلا العنصرين. لا تحتاج إلى نفي إضافي بـ nicht أو kein.",
+    "example": "Sie hat weder Zeit noch Lust, ins Kino zu gehen.",
+    "translation": "ليس لديها لا وقت ولا رغبة في الذهاب إلى السينما."
+   },
+   {
+    "rule": "entweder … oder: تعبّر عن اختيار حصري. عند بدء الجملة بـ entweder يحدث Inversion (الفعل قبل الفاعل).",
+    "example": "Entweder lernst du jetzt, oder du fällst durch die Prüfung.",
+    "translation": "إما أن تذاكر الآن، أو ستسقط في الامتحان."
+   },
+   {
+    "rule": "nicht nur … sondern auch و zwar … aber: الأولى تُضيف وتُؤكد، والثانية تُقرّ بحقيقة ثم تُعارضها. كلتاهما لا تُغيّر ترتيب الجملة الأساسي.",
+    "example": "Das Restaurant ist zwar teuer, aber das Essen ist ausgezeichnet.",
+    "translation": "صحيح أن المطعم غالٍ، لكن الطعام ممتاز."
+   }
+  ],
+  "tip": "💡 تذكّر: **weder…noch** تنفي بنفسها، لذا لا تضف **nicht** أو **kein** في نفس الجملة — فهذا خطأ شائع! قل: *Er hat weder Geld noch Zeit.* وليس: *Er hat weder kein Geld noch keine Zeit.*",
+  "examples": [
+   "Sowohl die Lehrerin als auch die Schüler freuen sich auf die Ferien. — كلٌّ من المعلمة والطلاب يتطلعون إلى العطلة.",
+   "Er kann weder kochen noch backen. — هو لا يستطيع لا الطبخ ولا الخبز.",
+   "Entweder rufst du mich an, oder ich komme einfach vorbei. — إما أن تتصل بي، أو سأمر عليك مباشرةً.",
+   "Sie spricht nicht nur Arabisch, sondern auch Deutsch und Französisch. — هي لا تتكلم العربية فحسب، بل أيضًا الألمانية والفرنسية.",
+   "Das Projekt ist zwar schwierig, aber sehr lehrreich. — صحيح أن المشروع صعب، لكنه مفيد جدًا.",
+   "Weder der Chef noch die Mitarbeiter wussten von dem Problem. — لا المدير ولا الموظفون كانوا يعلمون بالمشكلة.",
+   "Nicht nur das Wetter, sondern auch die Unterkunft war enttäuschend. — لم يكن الطقس فحسب، بل أيضًا مكان الإقامة مخيِّبًا للآمال.",
+   "Entweder wir finden eine Lösung, oder wir müssen das Treffen absagen. — إما أن نجد حلًّا، أو يجب علينا إلغاء الاجتماع."
+  ],
+  "tables": [
+   {
+    "title": "جدول أدوات الربط الثنائية — Zweiteilige Konnektoren",
+    "headers": [
+     "الأداة",
+     "المعنى",
+     "الوظيفة",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "sowohl … als auch",
+      "كلٌّ من … و…",
+      "جمع إيجابي (Addition)",
+      "Sowohl Tee als auch Kaffee schmecken gut."
+     ],
+     [
+      "weder … noch",
+      "لا … ولا…",
+      "نفي مزدوج (Negation)",
+      "Er trinkt weder Tee noch Kaffee."
+     ],
+     [
+      "entweder … oder",
+      "إما … أو…",
+      "اختيار بين بديلين (Alternative)",
+      "Entweder bleibst du, oder du gehst."
+     ],
+     [
+      "nicht nur … sondern auch",
+      "ليس فقط … بل أيضًا…",
+      "إضافة مع تأكيد (Emphase)",
+      "Sie singt nicht nur, sondern spielt auch Klavier."
+     ],
+     [
+      "zwar … aber",
+      "صحيح أن … لكن…",
+      "تناقض جزئي (Einschränkung)",
+      "Das Wetter ist zwar kalt, aber sonnig."
+     ]
+    ]
+   },
+   {
+    "title": "ترتيب الكلمات (Wortstellung) مع الأدوات الثنائية",
+    "headers": [
+     "الأداة",
+     "موضع الجزء الأول",
+     "أثر على الترتيب؟",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "sowohl … als auch",
+      "في منتصف الجملة أو أولها",
+      "لا — الترتيب طبيعي",
+      "Sowohl er als auch sie sind müde."
+     ],
+     [
+      "weder … noch",
+      "أول الجملة أو منتصفها",
+      "نعم — Inversion إذا بدأت الجملة بـ weder",
+      "Weder hat er angerufen, noch hat er geschrieben."
+     ],
+     [
+      "entweder … oder",
+      "أول الجملة أو منتصفها",
+      "نعم — Inversion إذا بدأت الجملة بـ entweder",
+      "Entweder kommt er, oder wir gehen ohne ihn."
+     ],
+     [
+      "nicht nur … sondern auch",
+      "منتصف الجملة",
+      "لا — الترتيب طبيعي",
+      "Er ist nicht nur müde, sondern auch krank."
+     ],
+     [
+      "zwar … aber",
+      "منتصف الجملة",
+      "لا — الترتيب طبيعي",
+      "Das ist zwar richtig, aber nicht vollständig."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "Vorteil",
+    "ar": "ميزة / فائدة"
+   },
+   {
+    "de": "Nachteil",
+    "ar": "عيب / سلبية"
+   },
+   {
+    "de": "Möglichkeit",
+    "ar": "إمكانية / خيار"
+   },
+   {
+    "de": "Lösung",
+    "ar": "حل"
+   },
+   {
+    "de": "Entscheidung",
+    "ar": "قرار"
+   },
+   {
+    "de": "Kenntnisse",
+    "ar": "معارف / مهارات"
+   },
+   {
+    "de": "Erfahrung",
+    "ar": "خبرة / تجربة"
+   },
+   {
+    "de": "enttäuschen",
+    "ar": "يُخيِّب الآمال"
+   },
+   {
+    "de": "überzeugen",
+    "ar": "يُقنع"
+   },
+   {
+    "de": "entscheiden",
+    "ar": "يقرر / يختار"
+   },
+   {
+    "de": "lehrreich",
+    "ar": "مفيد / تعليمي"
+   },
+   {
+    "de": "fleißig",
+    "ar": "مجتهد / مثابر"
+   }
+  ]
+ },
+ {
+  "id": "b2-09",
+  "order": 9,
+  "source": "b2.ts",
+  "title": "Arbeitswelt und Karriere",
+  "grammarTitle": "لغة عالم العمل المتقدمة",
+  "content": "هذا الدرس لا يقدّم قاعدة نحوية واحدة بقدر ما يفتح لك باباً على سجل لغوي جديد بالكامل: لغة عالم العمل الرسمية في ألمانيا. حتى مع إتقانك لأساسيات الألمانية حتى B1، ستكتشف أن بيئة العمل (الاجتماعات، التقارير، التفاوض على الراتب، رسائل البريد الرسمية) لا تُدار بنفس الجمل التي تستعملها في السوق أو مع الأصدقاء. الألمان يفصلون بوضوح شديد بين Alltagssprache (لغة الحياة اليومية) و Berufssprache (لغة العمل)، وهذا الفصل أشدّ حدة بكثير مما اعتدت عليه، لأن الدارجة المغربية تنتقل بمرونة بين السجلين، بينما الألمانية الرسمية تستعمل بنى نحوية مختلفة تماماً وليس فقط مفردات أرقى.\n\nلماذا هذا مهم في B2 تحديداً؟ لأن هذا هو المستوى الذي يُفترض فيه أن تكون قادراً على العمل والتفاعل المهني في ألمانيا، وامتحان Goethe B2 يختبر بالفعل قدرتك على كتابة إيميل رسمي وفهم نقاش في اجتماع عمل. اللغة الرسمية هنا تعتمد على ثلاثة أعمدة: أولاً الـ Nominalstil، أي تحويل الأفعال إلى أسماء لجعل الجملة أكثر كثافة ورسمية (بدل \"wir arbeiten zusammen\" نقول \"die Zusammenarbeit\")؛ ثانياً الـ Passiv، الذي يُستعمل في التقارير لإبعاد الفاعل الشخصي والتركيز على الحدث نفسه (\"das Projekt wird geleitet\" بدل ذكر من يقوده)؛ وثالثاً Konjunktiv II للتلطيف والأدب عند الطلب أو الاقتراح (\"Ich würde vorschlagen...\" بدل الأمر المباشر).\n\nنقطة تقنية مهمة يجب حفظها جيداً: كثير من أفعال وصفات عالم العمل ترتبط بحرف جر ثابت وحالة إعرابية محددة، ولا يمكن تخمينها من المعنى وحده، بل يجب حفظها كوحدة واحدة، مثل verantwortlich für (وليس von)، أو sich bewerben um (وليس an)، أو leiten التي تأخذ Akkusativ مباشرة دون حرف جر أصلاً.\n\nالخطأ الشائع عند الناطقين بالعربية هو نقل مباشر لدرجة الرسمية من الفرنسية أو العامية، فيستعملون \"Ich will\" (أريد بشكل حاد) في سياق يتطلب \"Ich möchte\" أو \"Ich würde gerne\"، أو ينسون حرف الجر الصحيح المرافق للفعل فيقولون \"verantwortlich von die Kunden\" بدل \"verantwortlich für die Kunden\"، وهو خطأ يبدو بسيطاً لكنه يكشف فوراً في أذن الألماني أن المتكلم لم يتعلم الفعل كوحدة كاملة مع حرف جره.",
+  "rules": [
+   {
+    "rule": "leiten + Akk",
+    "example": "Er leitet das Projekt.",
+    "translation": "يدير المشروع."
+   },
+   {
+    "rule": "verantwortlich für + Akk",
+    "example": "Ich bin verantwortlich für die Kunden.",
+    "translation": "أنا مسؤول عن العملاء."
+   },
+   {
+    "rule": "sich bewerben um + Akk",
+    "example": "Sie bewirbt sich um eine Beförderung.",
+    "translation": "تتقدم للترقية."
+   }
+  ],
+  "tip": "في Goethe B2 الكتابي، ستكتب إيميلاً رسمياً — احفظ 10 عبارات رسمية جاهزة للاستعمال.",
+  "examples": [
+   "Unser Team arbeitet an einem wichtigen Projekt. — فريقنا يعمل على مشروع مهم.",
+   "Die Besprechung findet um 10 Uhr statt. — الاجتماع الساعة 10.",
+   "Ich möchte eine Gehaltserhöhung besprechen. — أريد مناقشة زيادة الراتب.",
+   "Der Chef hat ihn befördert. — رقّاه المدير.",
+   "Wir müssen die Deadline einhalten. — يجب الالتزام بالموعد النهائي.",
+   "Teamarbeit ist sehr wichtig. — العمل الجماعي مهم جداً.",
+   "Er hat gekündigt und ist zu einer anderen Firma gegangen. — استقال وذهب لشركة أخرى.",
+   "Die Work-Life-Balance ist schwer zu erreichen. — التوازن بين العمل والحياة صعب التحقيق."
+  ],
+  "tables": [
+   {
+    "title": "مفردات الإدارة والعمل",
+    "headers": [
+     "بالعربية",
+     "بالألمانية"
+    ],
+    "rows": [
+     [
+      "المدير التنفيذي",
+      "der Geschäftsführer"
+     ],
+     [
+      "رئيس القسم",
+      "der Abteilungsleiter"
+     ],
+     [
+      "الاجتماع",
+      "die Besprechung / das Meeting"
+     ],
+     [
+      "المشروع",
+      "das Projekt"
+     ],
+     [
+      "الموعد النهائي",
+      "die Deadline / der Termin"
+     ],
+     [
+      "التقرير",
+      "der Bericht"
+     ],
+     [
+      "الزيادة",
+      "die Gehaltserhöhung"
+     ],
+     [
+      "الترقية",
+      "die Beförderung"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "der Geschäftsführer",
+    "ar": "المدير العام"
+   },
+   {
+    "de": "die Abteilung",
+    "ar": "القسم"
+   },
+   {
+    "de": "die Besprechung",
+    "ar": "الاجتماع"
+   },
+   {
+    "de": "das Projekt",
+    "ar": "المشروع"
+   },
+   {
+    "de": "der Termin",
+    "ar": "الموعد"
+   },
+   {
+    "de": "die Deadline",
+    "ar": "الموعد النهائي"
+   },
+   {
+    "de": "die Gehaltserhöhung",
+    "ar": "زيادة الراتب"
+   },
+   {
+    "de": "die Beförderung",
+    "ar": "الترقية"
+   },
+   {
+    "de": "die Kündigung",
+    "ar": "الاستقالة"
+   },
+   {
+    "de": "die Einstellung",
+    "ar": "التوظيف"
+   },
+   {
+    "de": "die Teamarbeit",
+    "ar": "العمل الجماعي"
+   },
+   {
+    "de": "die Zusammenarbeit",
+    "ar": "التعاون"
+   }
+  ]
+ },
+ {
+  "id": "b2-10",
+  "order": 10,
+  "source": "b2.ts",
+  "title": "Bildung und Studium — التعليم والجامعة",
+  "grammarTitle": "الدراسة الجامعية في ألمانيا",
+  "content": "قبل الانتقال إلى القواعد، من المهم أن تفهم النظام الجامعي الألماني نفسه، لأن مفرداته لا تقابل دائماً ما تعرفه من النظام المغربي أو الفرنكوفوني، والخلط بينها يسبب سوء فهم حقيقياً عند التسجيل أو الحديث عن مسارك الدراسي. الجامعة الألمانية تتدرج في ثلاث مراحل رئيسية: Bachelor وهي المرحلة الأولى (عادة ثلاث سنوات أو ستة فصول)، ثم Master (عادة سنتان)، ثم Promotion أو Doktorarbeit للدكتوراه. هذا التدرج مستورد من نظام بولونيا الأوروبي، وهو يشبه من حيث البنية نظام LMD في المغرب لكن بمصطلحات ألمانية خاصة يجب حفظها كما هي.\n\nهناك أيضاً فرق دقيق بين Universität و Hochschule: الأولى جامعة بحثية تقليدية تمنح شهادات أكاديمية ونظرية، والثانية غالباً معهد عالٍ (Fachhochschule) أقرب إلى التطبيق العملي والتخصصات التقنية. اختيار الكلمة الصحيحة عند الحديث عن مسارك يعطي انطباعاً دقيقاً عن نوع تكوينك.\n\nأما داخل قاعة الدرس، فالمصطلحات تتوزع بحسب طبيعة الحصة: die Vorlesung محاضرة كبيرة يستمع فيها الطلاب دون تفاعل كبير، أما das Seminar فحصة أصغر تتطلب مشاركة ونقاشاً وأحياناً عرضاً (Referat)، بينما die Übung حصة تطبيقية لحل تمارين على ما قُدّم في المحاضرة. ولكل مرحلة دراسية بحثها الختامي الخاص: Hausarbeit ورقة بحثية أثناء الفصل، وBachelorarbeit أو Masterarbeit أطروحة التخرج النهائية.\n\nنحوياً، لاحظ أن الأفعال الجامعية الأساسية تفرض تراكيب ثابتة يجب حفظها بدقة: studieren يأخذ التخصص مباشرة في حالة Akkusativ دون حرف جر (Ich studiere Informatik وليس in Informatik)، بينما sich einschreiben an يتطلب حرف الجر an مع حالة Dativ لأنه يشير إلى مكان التسجيل (الجامعة). هذا الفرق بين فعل يأخذ مفعولاً مباشراً وفعل يحتاج حرف جر هو نقطة يخطئ فيها كثير من الناطقين بالعربية، إذ يميلون لإضافة \"in\" بعد studieren تأثراً بالفرنسية (étudier en) أو الإنجليزية (study in)، بينما الألمانية لا تحتاج أي حرف جر هنا على الإطلاق.",
+  "rules": [
+   {
+    "rule": "studieren + Akk (تخصص)",
+    "example": "Ich studiere Informatik.",
+    "translation": "أدرس علوم الحاسوب."
+   },
+   {
+    "rule": "sich einschreiben an + Dat",
+    "example": "Ich schreibe mich an der Uni ein.",
+    "translation": "أسجل في الجامعة."
+   },
+   {
+    "rule": "eine Prüfung ablegen",
+    "example": "Ich lege eine Prüfung ab.",
+    "translation": "أؤدي امتحاناً."
+   }
+  ],
+  "tip": "كطالب أجنبي، ابحث عن **DAAD-Stipendium** — منحة دراسية ألمانية مشهورة.",
+  "examples": [
+   "Ich studiere Medizin an der Universität München. — أدرس الطب في جامعة ميونخ.",
+   "Die Vorlesung beginnt um 8 Uhr. — تبدأ المحاضرة الساعة 8.",
+   "Ich schreibe meine Bachelorarbeit über KI. — أكتب رسالة البكالوريوس عن الذكاء الاصطناعي.",
+   "Er hat die Klausur bestanden. — نجح في الامتحان.",
+   "Sie ist durchgefallen. — رسبت.",
+   "Nach dem Bachelor mache ich einen Master. — بعد البكالوريوس سأدرس ماستر.",
+   "Die Zulassung zum Studium ist schwierig. — القبول بالدراسة صعب.",
+   "Ich bewerbe mich für ein Stipendium. — أتقدم لمنحة دراسية."
+  ],
+  "tables": [
+   {
+    "title": "نظام الدراسة الألماني",
+    "headers": [
+     "المرحلة",
+     "المدة",
+     "المؤهل"
+    ],
+    "rows": [
+     [
+      "Abitur",
+      "نهاية الثانوية",
+      "شهادة البكالوريا"
+     ],
+     [
+      "Bachelor",
+      "3 سنوات",
+      "B.A. / B.Sc."
+     ],
+     [
+      "Master",
+      "2 سنوات",
+      "M.A. / M.Sc."
+     ],
+     [
+      "Promotion",
+      "3-5 سنوات",
+      "Dr."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Universität",
+    "ar": "الجامعة"
+   },
+   {
+    "de": "die Hochschule",
+    "ar": "المعهد العالي"
+   },
+   {
+    "de": "die Fakultät",
+    "ar": "الكلية"
+   },
+   {
+    "de": "das Studium",
+    "ar": "الدراسة"
+   },
+   {
+    "de": "das Fach",
+    "ar": "التخصص"
+   },
+   {
+    "de": "das Semester",
+    "ar": "الفصل الدراسي"
+   },
+   {
+    "de": "die Vorlesung",
+    "ar": "المحاضرة"
+   },
+   {
+    "de": "das Seminar",
+    "ar": "الدرس التطبيقي"
+   },
+   {
+    "de": "die Übung",
+    "ar": "التمرين"
+   },
+   {
+    "de": "die Klausur",
+    "ar": "الامتحان الكتابي"
+   },
+   {
+    "de": "die Hausarbeit",
+    "ar": "الواجب/البحث"
+   },
+   {
+    "de": "die Bachelorarbeit",
+    "ar": "رسالة البكالوريوس"
+   }
+  ]
+ },
+ {
+  "id": "b2-11",
+  "order": 11,
+  "source": "b2.ts",
+  "title": "Meinung und Argumentation — الحجاج والرأي",
+  "grammarTitle": "بناء حجة متكاملة",
+  "content": "الكتابة الحجاجية في B2 ليست مجرد التعبير عن رأي، بل بناء موقف مدعوم بمنطق واضح يمكن لقارئ ألماني أن يتتبعه خطوة بخطوة دون التباس. هذا هو جوهر ما يقيسه Goethe-Zertifikat B2 في جزء Schreiben عندما يطلب منك كتابة Kommentar من حوالي 150 كلمة: ليس المطلوب فقط أن يكون لديك رأي، بل أن تنظّمه في هيكل صارم يتوقعه القارئ الألماني.\n\nالبنية القياسية خمس خطوات: مقدمة (Einleitung) تعرض الموضوع بحياد، أطروحة (These) تعلن موقفك الرئيسي بوضوح، حجج (Argumente) تدعم هذا الموقف بأمثلة ملموسة وليس فقط تأكيدات مجردة، حجة مضادة (Gegenargument) تعترف فيها بوجهة نظر مخالفة ثم تفندها، وأخيراً خاتمة (Schluss) تلخص وتفتح أفقاً للتفكير. هذا الترتيب الخطي يعكس منطقاً ثقافياً ألمانياً يقدّر الوضوح والتسلسل المباشر من الفكرة إلى النتيجة، بينما الخطابة العربية التقليدية غالباً ما تسمح بتكرار الفكرة بصياغات مختلفة أو الاستطراد الجانبي كوسيلة للإقناع العاطفي، وهو أسلوب قد يُقرأ في الألمانية على أنه تشتت أو غياب تنظيم، حتى لو كان المحتوى نفسه سليماً.\n\nالأداة اللغوية الأهم هنا هي الروابط (Konnektoren) التي تُشير بوضوح لدور كل جملة في البنية: Erstens/zweitens للترقيم، Außerdem/Darüber hinaus لإضافة حجة، Allerdings/Dennoch لتقديم تحفظ أو حجة مضادة، Daher/Folglich للنتيجة المنطقية، Zusammenfassend للخاتمة. كل رابط من هذه يخبر القارئ الألماني مسبقاً بنوع العلاقة المنطقية القادمة، فتصبح الجملة متوقعة وسهلة المتابعة.\n\nالخطأ الأكثر شيوعاً عند متعلمي B2 هو الخلط بين \"Meiner Meinung nach\" التي تُستعمل لتقديم رأي شخصي عام و\"Ich bin der Meinung, dass\" التي تتطلب جملة كاملة بعدها بترتيب الفعل في الآخر (Verbendstellung)؛ كثيرون يكتبون \"Ich bin der Meinung, dass ist es wichtig\" بترتيب خاطئ متأثرين ببنية الجملة العادية، بينما الصواب هو دفع الفعل ist إلى نهاية الجملة الفرعية: dass es wichtig ist.",
+  "rules": [
+   {
+    "rule": "Ich bin der Meinung, dass + آخر الجملة",
+    "example": "Ich bin der Meinung, dass das wichtig ist.",
+    "translation": "أرى أن هذا مهم."
+   },
+   {
+    "rule": "Einerseits ... andererseits",
+    "example": "Einerseits gut, andererseits teuer.",
+    "translation": "من ناحية جيد، من ناحية أخرى غالٍ."
+   },
+   {
+    "rule": "Aus meiner Sicht",
+    "example": "Aus meiner Sicht ist es falsch.",
+    "translation": "من وجهة نظري، هذا خطأ."
+   }
+  ],
+  "tip": "احفظ 20 عبارة جاهزة للحجاج — استعملها في كل كتابة B2/C1.",
+  "examples": [
+   "Meiner Meinung nach ist Bildung am wichtigsten. — في رأيي، التعليم هو الأهم.",
+   "Ich bin der festen Überzeugung, dass Umweltschutz Priorität hat. — أنا مقتنع تماماً أن حماية البيئة أولوية.",
+   "Einerseits ist das Internet nützlich, andererseits gefährlich. — من ناحية الإنترنت مفيد، من ناحية أخرى خطير.",
+   "Ein Argument dafür ist, dass... — حجة لصالح ذلك هي...",
+   "Dagegen spricht, dass... — ما يعارض ذلك هو...",
+   "Zusammenfassend kann man sagen, dass wir handeln müssen. — باختصار، يمكن القول إن علينا التحرك.",
+   "Ich bin davon überzeugt, dass... — أنا مقتنع بأن...",
+   "Das führt zu der Schlussfolgerung, dass... — هذا يؤدي إلى الاستنتاج بأن..."
+  ],
+  "tables": [
+   {
+    "title": "عبارات الحجاج",
+    "headers": [
+     "الوظيفة",
+     "العبارة"
+    ],
+    "rows": [
+     [
+      "تقديم رأي",
+      "Ich bin der Meinung, dass..."
+     ],
+     [
+      "إضافة حجة",
+      "Außerdem / Darüber hinaus"
+     ],
+     [
+      "حجة مضادة",
+      "Allerdings / Dennoch"
+     ],
+     [
+      "مثال",
+      "Zum Beispiel / Beispielsweise"
+     ],
+     [
+      "نتيجة",
+      "Daher / Folglich / Somit"
+     ],
+     [
+      "خاتمة",
+      "Abschließend / Zusammenfassend"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Meinung",
+    "ar": "الرأي"
+   },
+   {
+    "de": "die Überzeugung",
+    "ar": "القناعة"
+   },
+   {
+    "de": "das Argument",
+    "ar": "الحجة"
+   },
+   {
+    "de": "der Standpunkt",
+    "ar": "وجهة النظر"
+   },
+   {
+    "de": "die These",
+    "ar": "الأطروحة"
+   },
+   {
+    "de": "die Diskussion",
+    "ar": "النقاش"
+   },
+   {
+    "de": "die Debatte",
+    "ar": "المناظرة"
+   },
+   {
+    "de": "der Kommentar",
+    "ar": "التعليق"
+   },
+   {
+    "de": "die Kritik",
+    "ar": "النقد"
+   },
+   {
+    "de": "die Schlussfolgerung",
+    "ar": "الاستنتاج"
+   },
+   {
+    "de": "kritisieren",
+    "ar": "ينتقد"
+   },
+   {
+    "de": "verteidigen",
+    "ar": "يدافع"
+   }
+  ]
+ },
+ {
+  "id": "b2-12",
+  "order": 12,
+  "source": "b2.ts",
+  "title": "Wiederholung B2 — مراجعة شاملة",
+  "grammarTitle": "خلاصة B2 والاستعداد لـ Goethe-Zertifikat B2",
+  "content": "هذا الدرس مختلف عن باقي دروس B2: إنه ليس قاعدة جديدة بل محطة مراجعة شاملة قبل خوض امتحان Goethe-Zertifikat B2. الهدف منه هو أن تنظر إلى كل ما تراكم لديك خلال هذا المستوى كمنظومة واحدة مترابطة، لا كقواعد منفصلة، لأن الامتحان الحقيقي لا يسألك عن قاعدة بمعزل عن غيرها، بل يطلب منك توظيف عدة قواعد معاً في نص واحد متماسك.\n\nلاحظ كيف ترتبط القواعد التي درستها ببعضها لخدمة هدف واحد هو الكتابة الرسمية المتقدمة: الـ Nominalstil يكثّف الجملة (das Lernen بدل lernen)، الـ Partizipialattribute تختصر جملاً فرعية كاملة في صفة واحدة قبل الاسم (der lesende Mann بدل der Mann, der liest)، والـ Passiv مع الأفعال الشرطية ينقل تعليمات رسمية دون فاعل محدد (das muss gemacht werden)، بينما Konnektoren من نوع je...desto أو als ob تضيف دقة منطقية أو افتراضية لا تملكها الجملة البسيطة. كل هذه الأدوات تخدم غاية واحدة: جعل الألمانية المكتوبة أكثر رسمية وتركيزاً وأقل اعتماداً على جمل قصيرة متتالية كما في الكلام اليومي.\n\nبنية امتحان B2 نفسها تستحق فهماً استراتيجياً: Lesen (65 دقيقة، خمسة نصوص متفاوتة الصعوبة تتطلب سرعة قراءة وفهم إجمالي أكثر من فهم كل كلمة)، Hören (40 دقيقة تشمل حوارات ونشرات إخبارية تحاكي الواقع)، Schreiben (75 دقيقة لكتابة منشور منتدى وإيميل رسمي، وهنا بالضبط تُستثمر قواعد Nominalstil وPassiv وKonnektoren التي راجعناها)، وأخيراً Sprechen (15 دقيقة تشمل عرضاً قصيراً ثم نقاشاً تفاعلياً).\n\nأهم نصيحة عملية في هذه المرحلة ليست قاعدة نحوية بل عادة يومية: التعرض المستمر للغة الأصلية الحقيقية، سواء بقراءة عشر دقائق من صحيفة مثل Die Zeit أو الاستماع لنشرة Tagesschau، لأن هذا يدرّب أذنك وعينك على وتيرة الجملة الألمانية الرسمية بشكل لا يستطيع أي تمرين مدرسي أن يعوّضه. وتذكّر أن B2 هو الحد الأدنى المقبول عملياً للعمل والدراسة الجامعية في ألمانيا، بينما C1 يبقى ضرورياً للمهن الأكاديمية والطبية والتخصصات التي تتطلب دقة لغوية أعلى.",
+  "rules": [
+   {
+    "rule": "تنويع الجمل يُحسّن الكتابة",
+    "example": "Er ist müde. Trotzdem arbeitet er.",
+    "translation": "هو متعب. رغم ذلك يعمل."
+   },
+   {
+    "rule": "Konnektoren تربط الأفكار",
+    "example": "Einerseits ... andererseits",
+    "translation": "من ناحية ... من ناحية أخرى"
+   },
+   {
+    "rule": "Passiv في الرسميات",
+    "example": "Das muss getan werden.",
+    "translation": "يجب فعل ذلك."
+   }
+  ],
+  "tip": "بعد B2، تستطيع العمل والدراسة الجامعية في ألمانيا. C1 هو المستوى المطلوب للوظائف الأكاديمية والطبية.",
+  "examples": [
+   "Das Lernen einer Fremdsprache erfordert Geduld. — تعلم لغة أجنبية يتطلب صبراً.",
+   "Je mehr man übt, desto besser wird man. — كلما تمرّن المرء، تحسّن.",
+   "Er tut, als ob er alles wüsste. — يتصرف كما لو كان يعرف كل شيء.",
+   "Das Formular muss sofort ausgefüllt werden. — يجب ملء الاستمارة فوراً.",
+   "Ich interessiere mich sehr für Politik. — أهتم كثيراً بالسياسة.",
+   "Anstatt zu lernen, schaut er fern. — بدلاً من الدراسة، يشاهد التلفاز.",
+   "Sie ist stolz auf ihre Leistung. — هي فخورة بإنجازها.",
+   "Meiner Meinung nach ist Bildung der Schlüssel. — في رأيي، التعليم هو المفتاح."
+  ],
+  "tables": [
+   {
+    "title": "ملخص أهم القواعد",
+    "headers": [
+     "القاعدة",
+     "المثال"
+    ],
+    "rows": [
+     [
+      "Nominalstil",
+      "das Lernen einer Sprache"
+     ],
+     [
+      "Partizipialattribut",
+      "der arbeitende Mann"
+     ],
+     [
+      "Finalsatz",
+      "Ich lerne, um zu bestehen."
+     ],
+     [
+      "Passiv + Modal",
+      "Es muss gemacht werden."
+     ],
+     [
+      "je...desto",
+      "Je mehr, desto besser."
+     ],
+     [
+      "als ob + Konj II",
+      "Er tut, als ob er krank wäre."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Prüfung",
+    "ar": "الامتحان"
+   },
+   {
+    "de": "die Vorbereitung",
+    "ar": "التحضير"
+   },
+   {
+    "de": "das Zertifikat",
+    "ar": "الشهادة"
+   },
+   {
+    "de": "der Fortschritt",
+    "ar": "التقدم"
+   },
+   {
+    "de": "die Herausforderung",
+    "ar": "التحدي"
+   },
+   {
+    "de": "das Ziel",
+    "ar": "الهدف"
+   },
+   {
+    "de": "die Leistung",
+    "ar": "الإنجاز/الأداء"
+   },
+   {
+    "de": "der Schlüssel",
+    "ar": "المفتاح"
+   },
+   {
+    "de": "die Grundlage",
+    "ar": "الأساس"
+   },
+   {
+    "de": "das Niveau",
+    "ar": "المستوى"
+   },
+   {
+    "de": "vertiefen",
+    "ar": "يعمّق"
+   },
+   {
+    "de": "beherrschen",
+    "ar": "يتقن"
+   }
+  ]
+ },
+ {
+  "id": "b2-13",
+  "order": 13,
+  "source": "b2.ts",
+  "title": "الكلام غير المباشر الرسمي — Konjunktiv I",
+  "grammarTitle": "Konjunktiv I لنقل أقوال الآخرين بحياد + متى نلجأ لـ Konjunktiv II",
+  "content": "Konjunktiv I صيغة فعل خاصة لا وجود لمقابل مباشر لها في العربية، ووظيفتها الأساسية هي نقل كلام شخص آخر دون أن يتحمّل الناقل مسؤولية صحته أو كذبه. حين تقول بالعربية \"الوزير قال إنه لا وقت لديه\"، فإن أداة \"إنّ\" وحدها لا تميّز بين نقلك المحايد لكلامه وتبنّيك الشخصي له. الألمانية الرسمية، خصوصاً لغة الصحافة والتقارير والأخبار، تحل هذا الغموض عبر صيغة فعل مختلفة تماماً عن indikativ، فتقول Er sagt, er habe keine Zeit بدل er hat، وبذلك يعرف القارئ فوراً أن هذا كلام منقول حرفياً عن الوزير، وأن الصحيفة لا تؤكده ولا تنفيه، بل تنقله فقط. هذا الحياد هو بالضبط ما يميز الأسلوب الصحفي الألماني عن الأسلوب الإخباري الذي قد نعرفه، ولهذا فإن Konjunktiv I شبه غائب عن الكلام اليومي، لكنه حاضر بقوة في كل نشرة أخبار وكل تقرير رسمي.\n\nمن الناحية الميكانيكية، يُبنى Konjunktiv I من جذع الفعل مضافاً إليه نهايات ثابتة عبر جميع الأفعال تقريباً: -e لـ ich وer/sie/es، -est لـ du، -en لـ wir وsie/Sie، -et لـ ihr، وهذا ما يجعله منتظماً بشكل يفوق حتى الفعل sein نفسه، إذ نجد ich sei، du seist، er sei، وهي أشكال خاصة يجب حفظها. أما في الأزمنة الأخرى، فإن الحاضر يُصرَّف كما ذُكر، والماضي يُبنى بمساعد habe أو sei زائد التصريف الثالث (sie habe das gesagt)، والمستقبل يُبنى بـ werde زائد المصدر (er werde kommen)، تماماً كما تُبنى هذه الأزمنة في Indikativ لكن بمساعد في صيغة Konjunktiv I.\n\nهنا تكمن أدق نقطة في الدرس كله: حين يتطابق تصريف Konjunktiv I صدفة مع Indikativ العادي، كما يحدث كثيراً مع ich وwir وsie/Sie (مثل sie sagen التي تبقى sie sagen في كلا الصيغتين)، يصبح الشكل عديم الفائدة لأنه لا يميز شيئاً، فيلجأ الألمان حينها إلى Konjunktiv II كبديل، إما بصيغته البسيطة إن وُجدت (sagten) أو بصيغة würde + مصدر (sie würden sagen). هذا التبديل ليس اختيارياً بل إلزامياً كلما حدث التطابق، وهو تحديداً ما يجعل الأفعال بصيغة ich وwir تظهر غالباً بـ Konjunktiv II (hätte بدل habe) بدل Konjunktiv I في الاستعمال الفعلي.\n\nالخطأ الأشيع عند الناطقين بالعربية هو محاولة استعمال dass مع Konjunktiv I معاً، فيكتبون Er sagt, dass er habe keine Zeit، بينما القاعدة الرسمية تقتضي حذف dass تماماً عند استعمال Konjunktiv I والإبقاء على ترتيب الجملة الرئيسية العادي (الفعل في المرتبة الثانية): Er sagt, er habe keine Zeit. وإذا أراد المتكلم الإبقاء على dass لأي سبب، فعليه العودة إلى ترتيب الجملة الفرعية بدفع الفعل إلى النهاية: Er sagt, dass er keine Zeit habe.",
+  "rules": [
+   {
+    "rule": "في الكلام غير المباشر الرسمي، استعمل Konj. I دون \"dass\"؛ ترتيب الكلمات يبقى كالجملة العادية.",
+    "example": "Er sagt, er habe Zeit. (وليس Er sagt, dass er habe Zeit.)",
+    "translation": "يقول إنه لديه وقت."
+   },
+   {
+    "rule": "إذا تطابقت Konj. I مع Indikativ، استبدلها بـ Konj. II (würde + Inf أو forme einfach).",
+    "example": "sie sagen → sie würden sagen / sie sagten",
+    "translation": "يقولون."
+   },
+   {
+    "rule": "اقتصر استعمال Konj. I على الصحافة، التقارير، الكتابة الأكاديمية، والامتحانات الرسمية.",
+    "example": "In den Nachrichten: \"Der Präsident habe das nicht gewusst.\"",
+    "translation": "في الأخبار: الرئيس قال إنه لم يكن يعلم."
+   },
+   {
+    "rule": "صيغة sei/seien في Konj. I تُستعمل أيضاً في تعليمات وصفات الطعام: \"Man nehme...\"",
+    "example": "Man nehme drei Eier.",
+    "translation": "يؤخذ ثلاث بيضات. (وصفة)"
+   }
+  ],
+  "tip": "اختبار B2 يختبر بالأخص نقل الأخبار من المباشر إلى Konj. I. تدرّب 10 جمل يومياً من الجرائد الألمانية: حوّل \"ich sage\" إلى \"er sagt, er sage\". خلال أسبوعين تتقن البنية.",
+  "examples": [
+   "Der Politiker sagt, er sei unschuldig. — السياسي يقول إنه بريء.",
+   "Sie behauptet, sie habe nichts davon gewusst. — تدّعي أنها لم تكن تعلم.",
+   "Laut der Studie nehme die Inflation zu. — وفقاً للدراسة، التضخم يتزايد.",
+   "Der Arzt erklärt, der Patient brauche mehr Ruhe. — الطبيب يوضّح أن المريض يحتاج راحة أكثر.",
+   "Er fragt, ob sie kommen werde. — يسأل ما إذا كانت ستأتي.",
+   "Die Zeitung berichtet, der Minister habe das Land verlassen. — الصحيفة تذكر أن الوزير غادر البلد.",
+   "Man sage, das Wetter werde besser. — يُقال إن الطقس سيتحسّن."
+  ],
+  "tables": [
+   {
+    "title": "Konjunktiv I — تصريف الأفعال الشائعة",
+    "headers": [
+     "Pronomen",
+     "sein",
+     "haben",
+     "sagen",
+     "kommen"
+    ],
+    "rows": [
+     [
+      "ich",
+      "sei",
+      "habe",
+      "sage",
+      "komme"
+     ],
+     [
+      "du",
+      "sei(e)st",
+      "habest",
+      "sagest",
+      "kommest"
+     ],
+     [
+      "er/sie/es",
+      "sei",
+      "habe",
+      "sage",
+      "komme"
+     ],
+     [
+      "wir",
+      "seien",
+      "haben",
+      "sagen",
+      "kommen"
+     ],
+     [
+      "ihr",
+      "seiet",
+      "habet",
+      "saget",
+      "kommet"
+     ],
+     [
+      "sie/Sie",
+      "seien",
+      "haben",
+      "sagen",
+      "kommen"
+     ]
+    ]
+   },
+   {
+    "title": "متى نلجأ لـ Konjunktiv II",
+    "headers": [
+     "الحالة",
+     "مثال",
+     "السبب"
+    ],
+    "rows": [
+     [
+      "Konj.I = Indikativ",
+      "sie sagen → sie sagen",
+      "لا فرق — استبدله بـ würde + Inf"
+     ],
+     [
+      "البديل",
+      "sie würden sagen",
+      "يحلّ الالتباس"
+     ],
+     [
+      "ich/wir غالباً",
+      "ich habe → ich hätte",
+      "لتجنّب اللبس مع Indikativ"
+     ]
+    ]
+   },
+   {
+    "title": "صيغ Konjunktiv I في الأزمنة",
+    "headers": [
+     "الزمن",
+     "البنية",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "Präsens (Konj.I)",
+      "فعل + -e/-est/-e/-en/-et/-en",
+      "Er sage, dass..."
+     ],
+     [
+      "Vergangenheit (Konj.I)",
+      "habe/sei + Partizip II",
+      "Sie habe das gesagt."
+     ],
+     [
+      "Zukunft (Konj.I)",
+      "werde + Infinitiv",
+      "Er werde kommen."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "sagen",
+    "ar": "يقول"
+   },
+   {
+    "de": "behaupten",
+    "ar": "يدّعي"
+   },
+   {
+    "de": "erklären",
+    "ar": "يوضّح"
+   },
+   {
+    "de": "berichten",
+    "ar": "يذكر / يبلّغ"
+   },
+   {
+    "de": "meinen",
+    "ar": "يعتقد / يقصد"
+   },
+   {
+    "de": "erzählen",
+    "ar": "يحكي"
+   },
+   {
+    "de": "mitteilen",
+    "ar": "يُبلّغ"
+   },
+   {
+    "de": "fragen",
+    "ar": "يسأل"
+   },
+   {
+    "de": "antworten",
+    "ar": "يجيب"
+   },
+   {
+    "de": "die Aussage",
+    "ar": "التصريح"
+   },
+   {
+    "de": "das Zitat",
+    "ar": "الاقتباس"
+   },
+   {
+    "de": "die Quelle",
+    "ar": "المصدر"
+   }
+  ]
+ },
+ {
+  "id": "b2-14",
+  "order": 14,
+  "source": "b2.ts",
+  "title": "حروف الإضافة المُلوِّنة — Modalpartikeln",
+  "grammarTitle": "doch, halt, eben, ja, mal, denn, wohl — كيف تجعل كلامك ألمانياً حقيقياً",
+  "content": "توجد في اللغة الألمانية طبقة كاملة من الكلام لا تُدرَّس عادة بشكل صريح في الكتب المدرسية: كلمات قصيرة جداً، لا تُصرَّف ولا تتغيّر شكلاً، ولا تحمل معنى معجمياً ثابتاً يمكن ترجمته بكلمة واحدة، لكنها تحمل قدراً كبيراً من المعنى العاطفي والتواصلي. هذه الكلمات تسمى Modalpartikeln (أو Abtönungspartikeln)، ومنها doch وhalt وeben وja وmal وdenn وwohl. وظيفتها ليست نقل معلومة جديدة، بل تلوين الجملة بموقف المتكلم منها: هل هو متفاجئ، متسامح مع الأمر الواقع، متلطف في طلبه، فضولي، متأكد، أم مجرد متخمّن.\n\nهذا هو بالضبط الفارق بين متعلّم يتقن القواعد وينتج جملاً صحيحة لكنها تبدو مترجمة حرفياً، وبين متحدث يبدو طبيعياً. فجملة Komm her صحيحة نحوياً لكنها أمر جاف يكاد يكون فظاً، أما Komm mal her فهي نفس الأمر لكن بنبرة ودّية غير رسمية، لأن mal هنا يخفّف من حدّة الأمر ويجعله أقرب إلى اقتراح لطيف.\n\nمن حيث الآلية، تُوضَع هذه الأدوات عادة بعد الفعل المصرَّف مباشرة أو بعد الضمير الفاعل إن وُجد، ولا تُنطَق بنبرة قوية، ولا تُترجم كلمة بكلمة إلى العربية غالباً، بل يُعبَّر عن أثرها بنبرة الصوت أو بعبارة مساعدة مثل يا ترى أو بصراحة أو على كل حال. فـ denn في السؤال Was machst du denn hier لا تضيف معلومة، بل تحوّل السؤال من استجواب بارد إلى استفسار فضولي ودود. وdoch في Das ist doch klar تفيد التذكير بشيء يُفترض أنه معروف مسبقاً، أي أشبه بقولنا ألا تعلم أن هذا واضح.\n\nفي العربية لا يوجد مقابل بنيوي لهذه الفئة الصرفية، وأقرب ما نملكه هو أدوات وتعابير متفرقة مثل بل، يا ترى، فعلاً، على أي حال، أو نبرة الصوت وحدها، ولهذا يميل متعلّمو الألمانية من متحدثي العربية إما إلى إغفال هذه الكلمات كلياً فتبدو جملهم رسمية جافة، وإما إلى استعمال doch في كل موضع لأنها الأشهر بينهم، بينما لكل أداة سياقها الخاص الذي لا يقبل التبادل. والخطأ الأكثر شيوعاً هو حشو أكثر من Modalpartikel واحدة في نفس الجملة القصيرة ظناً أن ذلك يزيدها طبيعية، بينما النتيجة جملة مثقلة تبدو مصطنعة؛ الأفضل عند البداية هو إتقان أداة واحدة في سياق واحد بدقة تامة قبل الانتقال إلى غيرها.",
+  "rules": [
+   {
+    "rule": "احفظ كل Modalpartikel مع موقف واحد فقط في البداية. doch = استغراب، mal = تلطيف، denn = فضول.",
+    "example": "Komm mal! / Das geht doch nicht!",
+    "translation": "تعالَ! / لكن هذا لا يصح!"
+   },
+   {
+    "rule": "في السؤال، استعمل denn — يجعله أقل تحقيقاً، أكثر فضولاً.",
+    "example": "Wie heißt du denn? (وليس Wie heißt du?)",
+    "translation": "ما اسمك يا ترى؟"
+   },
+   {
+    "rule": "mal ينعّم الأوامر — استعمله دائماً عند الطلبات.",
+    "example": "Schau mal! / Hör mal zu!",
+    "translation": "انظر! / استمع!"
+   },
+   {
+    "rule": "doch تجيب بـ \"بل\" على سؤال نفي: \"Du kommst nicht?\" — \"Doch, ich komme.\"",
+    "example": "Hast du keine Zeit? — Doch, ich habe Zeit!",
+    "translation": "ألا لديك وقت؟ — بل لدي وقت!"
+   }
+  ],
+  "tip": "لا تحاول استعمال كلها دفعة واحدة. اختر 3 (مثلاً mal/denn/doch) واستعملها أسبوعاً كاملاً في كل جملة. ثم أضِف 3 أخرى. خلال شهر تتكلّم مثل ناطق.",
+  "examples": [
+   "Das ist doch unmöglich! — لكن هذا مستحيل!",
+   "Komm mal kurz hierher. — تعالَ لحظة من فضلك.",
+   "Was machst du denn da? — ماذا تفعل هناك يا ترى؟",
+   "Du weißt ja, dass ich Marokkaner bin. — كما تعلم، أنا مغربي.",
+   "Das ist eben so im Leben. — هكذا هي الحياة بكل بساطة.",
+   "Es regnet halt im Februar. — في فبراير المطر طبيعي.",
+   "Er wird wohl zu Hause sein. — هو على الأرجح بالبيت.",
+   "Hör mal, ich muss dir was sagen. — اسمع، لازم أقولك شيء.",
+   "Was hast du nur getan? — ماذا فعلت بالضبط؟"
+  ],
+  "tables": [
+   {
+    "title": "الـ Modalpartikeln الأساسية + استعمالها",
+    "headers": [
+     "الكلمة",
+     "الاستعمال الرئيسي",
+     "مثال",
+     "الترجمة"
+    ],
+    "rows": [
+     [
+      "doch",
+      "استغراب / إصرار",
+      "Das ist doch klar!",
+      "لكن هذا واضح!"
+     ],
+     [
+      "halt",
+      "تسليم بالأمر",
+      "Das ist halt so.",
+      "هكذا هي الأمور."
+     ],
+     [
+      "eben",
+      "تأكيد بديهي",
+      "Das ist eben das Problem.",
+      "هذه بالضبط المشكلة."
+     ],
+     [
+      "ja",
+      "تأكيد معلوم",
+      "Du weißt ja, dass...",
+      "كما تعلم..."
+     ],
+     [
+      "mal",
+      "تلطيف الأمر",
+      "Komm mal her!",
+      "تعالَ من فضلك."
+     ],
+     [
+      "denn",
+      "فضول في السؤال",
+      "Wo bist du denn?",
+      "أين أنت يا ترى؟"
+     ],
+     [
+      "wohl",
+      "تخمين",
+      "Er ist wohl zu Hause.",
+      "هو على الأرجح بالبيت."
+     ],
+     [
+      "nur / bloß",
+      "تشديد في السؤال",
+      "Was hast du nur gemacht?",
+      "ماذا فعلت بالضبط؟"
+     ]
+    ]
+   },
+   {
+    "title": "مقارنة: نفس الجملة بـ Modalpartikel وبدونها",
+    "headers": [
+     "بدون",
+     "مع Modalpartikel",
+     "الفرق"
+    ],
+    "rows": [
+     [
+      "Komm her.",
+      "Komm mal her.",
+      "الثانية ألطف، أقل أمراً."
+     ],
+     [
+      "Wo bist du?",
+      "Wo bist du denn?",
+      "الثانية تُظهر الفضول والقلق."
+     ],
+     [
+      "Das ist klar.",
+      "Das ist doch klar!",
+      "الثانية تأكيد قوي."
+     ],
+     [
+      "Er ist krank.",
+      "Er ist halt krank.",
+      "الثانية تسليم لا تذمّر."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "doch",
+    "ar": "لكن / بل"
+   },
+   {
+    "de": "halt",
+    "ar": "هكذا (تسليم)"
+   },
+   {
+    "de": "eben",
+    "ar": "بالضبط"
+   },
+   {
+    "de": "ja",
+    "ar": "كما تعلم"
+   },
+   {
+    "de": "mal",
+    "ar": "(تلطيف)"
+   },
+   {
+    "de": "denn",
+    "ar": "(في السؤال للفضول)"
+   },
+   {
+    "de": "wohl",
+    "ar": "على الأرجح"
+   },
+   {
+    "de": "nur",
+    "ar": "بالضبط (تشديد)"
+   },
+   {
+    "de": "bloß",
+    "ar": "بالضبط (تشديد)"
+   },
+   {
+    "de": "eigentlich",
+    "ar": "في الواقع"
+   },
+   {
+    "de": "überhaupt",
+    "ar": "أصلاً"
+   },
+   {
+    "de": "sowieso",
+    "ar": "على أي حال"
+   }
+  ]
+ },
+ {
+  "id": "b2-15",
+  "order": 15,
+  "source": "b2.ts",
+  "title": "تكوين الكلمات — Wortbildung",
+  "grammarTitle": "الكلمات المركّبة (Komposita) + اللواحق -keit/-heit/-ung + البادئات ver-/ent-/be-/zer-",
+  "content": "تشتهر اللغة الألمانية بقدرتها على توليد كلمات جديدة عملياً بلا حدود، دون اللجوء غالباً إلى الاستعارة من لغات أخرى، وذلك عبر آليتين رئيسيتين: التركيب (Komposition) الذي يلصق كلمتين مستقلتين أو أكثر لتكوين كلمة واحدة جديدة، والاشتقاق (Derivation) عبر إضافة لواحق (Suffixe) أو بادئات (Präfixe) إلى جذر موجود. إتقان هاتين الآليتين يفتح الباب لفهم آلاف الكلمات المركّبة أو المشتقّة دون الحاجة إلى حفظها فرداً فرداً، لأن معناها ينبني من مكوّناتها بمنطق يمكن تفكيكه بسهولة.\n\nفي التركيب، القاعدة الحاسمة هي أن الكلمة الأخيرة في السلسلة هي التي تحدّد الجنس النحوي والمعنى الأساسي للكلمة المركّبة بأكملها، بينما الكلمات التي قبلها تلعب دور الصفة أو التخصيص. فـ der Schlüssel (المفتاح) حين يُلصَق بـ die Tür (الباب) لا يعطينا باب المفتاح بل der Türschlüssel، أي مفتاح خاص بالباب، ويأخذ جنس Schlüssel المذكر لأنه الكلمة الأخيرة. هذا يعني أن أفضل استراتيجية لفهم كلمة ألمانية طويلة غير مألوفة هي قراءتها من اليمين إلى اليسار: تُحدَّد أولاً الكلمة الأساسية في آخر السلسلة، ثم تُضاف إليها المعاني التخصيصية للكلمات التي تسبقها تدريجياً، حتى الكلمات المهيبة الطول مثل Lebensversicherungsgesellschaft تتفكك بسهولة إلى Gesellschaft بمعنى شركة، تُخصَّص بـ Versicherung بمعنى تأمين، تُخصَّص بدورها بـ Leben بمعنى حياة، أي شركة تأمين على الحياة.\n\nأما الاشتقاق فيعمل بمنطق مختلف: لواحق مثل ung- وheit- وkeit- وschaft- وtion- تحوّل الأفعال أو الصفات إلى أسماء، وجميع الأسماء الناتجة عنها مؤنثة بلا استثناء تقريباً، وهذه قاعدة يمكن الاعتماد عليها بثقة عالية دون الحاجة لحفظ الجنس فرداً فرداً. أما البادئات مثل ver- وent- وbe- وzer- وer- فتُضاف إلى الأفعال لتغيّر معناها جذرياً أحياناً: kaufen بمعنى يشتري تصبح verkaufen بمعنى يبيع، وbrechen بمعنى يكسر تصبح zerbrechen بمعنى يتحطّم كلياً. وميزة عملية مهمة هي أن هذه البادئات، خلافاً للبادئات الانفصالية مثل auf- أو mit-، لا تنفصل عن الفعل ولا تأخذ ge- في صيغة Partizip II، فنقول verkauft وليس geverkauft، وهذا فرق يخلط فيه كثير من المتعلمين بين البادئات القابلة للفصل وغير القابلة له.\n\nالخطأ الشائع الآخر هو محاولة حفظ كل كلمة مركّبة كوحدة مستقلة بدل تدريب العين على تفكيكها إلى مكوناتها المألوفة، وهي مهارة تُختصر بها ساعات طويلة من حفظ المفردات، وتجعل الكلمات الطويلة مصدر ثقة بدل رهبة.",
+  "rules": [
+   {
+    "rule": "كل الأسماء التي تنتهي بـ -ung/-heit/-keit/-schaft/-tion/-ität **مؤنثة** (die).",
+    "example": "die Lösung, die Schönheit, die Möglichkeit, die Universität",
+    "translation": "الحل، الجمال، الإمكانية، الجامعة."
+   },
+   {
+    "rule": "البادئات ver/ent/be/zer/er/miss غير قابلة للفصل ولا تحمل ge- في Partizip II.",
+    "example": "verkaufen → verkauft (وليس geverkauft)",
+    "translation": "باع."
+   },
+   {
+    "rule": "في Komposita، اللواحق الرابطة (-s-/-n-/-en-) تظهر أحياناً: Tageszeitung, Schweinefleisch.",
+    "example": "der Tag + die Zeitung → die Tageszeitung",
+    "translation": "الجريدة اليومية."
+   },
+   {
+    "rule": "لا تخف من الكلمات الطويلة — قسّمها من اليمين لليسار: Lebensversicherungsgesellschaft = Gesellschaft (شركة) ← Versicherung (تأمين) ← Leben (حياة).",
+    "example": "der Donaudampfschifffahrtskapitän",
+    "translation": "قبطان شركة الشحن البخاري على نهر الدانوب."
+   }
+  ],
+  "tip": "تعلّم 5 لواحق و 5 بادئات. حين تواجه كلمة جديدة طويلة، فكّكها: ver- + kauf + -en. هكذا تفهم 50% من المفردات الجديدة دون قاموس.",
+  "examples": [
+   "der Bahnhof = die Bahn + der Hof — محطة القطار.",
+   "die Möglichkeit = möglich + -keit — الإمكانية.",
+   "die Schönheit = schön + -heit — الجمال.",
+   "die Lehrerin = der Lehrer + -in — المعلّمة.",
+   "Er hat das Buch verkauft. — باع الكتاب.",
+   "Das Glas ist zerbrochen. — انكسر الكأس.",
+   "Ich erreiche mein Ziel. — أحقّق هدفي.",
+   "Er hat mich missverstanden. — لقد أساء فهمي."
+  ],
+  "tables": [
+   {
+    "title": "اللواحق المُكوِّنة للأسماء",
+    "headers": [
+     "اللاحقة",
+     "الأصل",
+     "مثال",
+     "المعنى"
+    ],
+    "rows": [
+     [
+      "-ung",
+      "فعل",
+      "lernen → die Lernung (التعلّم)",
+      "فعلٌ كاسم"
+     ],
+     [
+      "-heit",
+      "صفة",
+      "frei → die Freiheit (الحرية)",
+      "صفة كحالة"
+     ],
+     [
+      "-keit",
+      "صفة (تنتهي بـ -ig/-lich)",
+      "möglich → die Möglichkeit",
+      "صفة كحالة"
+     ],
+     [
+      "-er",
+      "فعل",
+      "lehren → der Lehrer (المعلم)",
+      "الفاعل الذكر"
+     ],
+     [
+      "-in",
+      "اسم ذكر",
+      "der Lehrer → die Lehrerin",
+      "الأنثى المقابلة"
+     ],
+     [
+      "-schaft",
+      "اسم/صفة",
+      "die Freundschaft (الصداقة)",
+      "مجموعة أو حالة"
+     ],
+     [
+      "-tum",
+      "اسم",
+      "das Eigentum (الملكية)",
+      "حالة أو ملكية"
+     ]
+    ]
+   },
+   {
+    "title": "البادئات المُغيِّرة لمعنى الفعل",
+    "headers": [
+     "البادئة",
+     "المعنى",
+     "مثال",
+     "تأثيرها"
+    ],
+    "rows": [
+     [
+      "ver-",
+      "تغيير حالة / إنجاز",
+      "kaufen → verkaufen",
+      "يبيع (vs يشتري)"
+     ],
+     [
+      "ent-",
+      "إزالة / ابتعاد",
+      "fliehen → entfliehen",
+      "يهرب من"
+     ],
+     [
+      "be-",
+      "تأثير على شيء",
+      "arbeiten → bearbeiten",
+      "يعالج/يُحرِّر"
+     ],
+     [
+      "zer-",
+      "تكسير / إتلاف",
+      "brechen → zerbrechen",
+      "يكسر تماماً"
+     ],
+     [
+      "er-",
+      "إنجاز / تحقيق",
+      "reichen → erreichen",
+      "يصل إلى"
+     ],
+     [
+      "miss-",
+      "سلبي / خطأ",
+      "verstehen → missverstehen",
+      "يسوء فهمه"
+     ]
+    ]
+   },
+   {
+    "title": "Komposita — الكلمة الأخيرة تحدّد الجنس",
+    "headers": [
+     "التركيبة",
+     "الجنس",
+     "الترجمة"
+    ],
+    "rows": [
+     [
+      "der Bahn + der Hof = der Bahnhof",
+      "der",
+      "محطة القطار"
+     ],
+     [
+      "die Hand + die Tasche = die Handtasche",
+      "die",
+      "حقيبة اليد"
+     ],
+     [
+      "das Haus + die Tür = die Haustür",
+      "die",
+      "باب البيت"
+     ],
+     [
+      "der Geburts + der Tag = der Geburtstag",
+      "der",
+      "يوم الميلاد"
+     ],
+     [
+      "die Sprache + die Schule = die Sprachschule",
+      "die",
+      "مدرسة اللغات"
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "die Möglichkeit",
+    "ar": "الإمكانية"
+   },
+   {
+    "de": "die Schwierigkeit",
+    "ar": "الصعوبة"
+   },
+   {
+    "de": "die Wirklichkeit",
+    "ar": "الواقع"
+   },
+   {
+    "de": "die Freiheit",
+    "ar": "الحرية"
+   },
+   {
+    "de": "die Gesundheit",
+    "ar": "الصحة"
+   },
+   {
+    "de": "die Schönheit",
+    "ar": "الجمال"
+   },
+   {
+    "de": "die Lösung",
+    "ar": "الحل"
+   },
+   {
+    "de": "die Bewegung",
+    "ar": "الحركة"
+   },
+   {
+    "de": "die Entscheidung",
+    "ar": "القرار"
+   },
+   {
+    "de": "die Erfahrung",
+    "ar": "التجربة"
+   },
+   {
+    "de": "die Gesellschaft",
+    "ar": "المجتمع / الشركة"
+   },
+   {
+    "de": "die Freundschaft",
+    "ar": "الصداقة"
+   }
+  ]
+ },
+ {
+  "id": "b2-16",
+  "order": 16,
+  "source": "b2.ts",
+  "title": "الجمل الشرطية — Konditionalsätze",
+  "grammarTitle": "wenn (شرطي) + شرط واقعي vs غير واقعي + Konjunktiv II للأماني",
+  "content": "الجملة الشرطية تربط بين حدث افتراضي هو الشرط ونتيجته، وهي بنية موجودة في كل اللغات، لكن الألمانية تفرض تمييزاً صارماً بين ثلاث درجات من الواقعية لا يقابلها في العربية الفصحى نظام صرفي بنفس الدقة، إذ نعتمد غالباً على السياق أو على أداة لو مقابل إذا للتفريق بين الممكن والمستحيل. فهم هذا التمييز الثلاثي هو جوهر هذا الدرس.\n\nالدرجة الأولى هي الشرط الواقعي (reale Bedingung): حدث ممكن الوقوع فعلاً في الحاضر أو المستقبل، ويُصاغ بصيغة Indikativ العادية في الجملتين معاً، مثل Wenn es regnet, bleibe ich zu Hause، أي أن المطر احتمال حقيقي وارد. الدرجة الثانية هي الشرط غير الواقعي في الحاضر: افتراض يخالف الواقع الحالي أو أمنية بعيدة التحقق، ويستلزم Konjunktiv II في الجملة الشرطية وغالباً würde مع مصدر الفعل في جملة النتيجة، مثل Wenn ich reich wäre, würde ich helfen، وهو تماماً ما تؤديه لو في العربية بخلاف إذا التي تفيد إمكان الوقوع. الدرجة الثالثة هي الشرط غير الواقعي في الماضي: ندم أو تخيّل لما كان يمكن أن يحدث ولم يحدث، ويُبنى بـ hätte أو wäre مع Partizip II في الشقّين معاً، مثل Wenn ich Zeit gehabt hätte, wäre ich gekommen، أي لو كنت قد امتلكت وقتاً لكنت قد جئت، وهو افتراض يخصّ حدثاً فات أوانه نهائياً ولا سبيل لتغييره.\n\nمن الناحية البنيوية، حين تبدأ الجملة بـ wenn تكون هذه الجملة الفرعية فيها الفعل في آخرها، وتُتبع مباشرة بفاصلة ثم بالجملة الرئيسية التي يبدأ فيها الفعل المصرَّف فوراً دون ذكر الفاعل أولاً، لأن مكان الفاعل تشغله الجملة الشرطية نفسها كوحدة نحوية واحدة. ويمكن أيضاً حذف wenn كلياً والاستعاضة عنها بقلب ترتيب الفعل والفاعل في الجملة الشرطية نفسها، كما في Wäre ich du, würde ich es tun، وهذا أسلوب أكثر أدبية يُستعمل كثيراً في الكتابة الراقية والصحافة.\n\nالخطأ الأكثر شيوعاً بين متعلمي الألمانية هو خلط الدرجة الثانية بالدرجة الثالثة، أي استعمال würde مع مصدر الفعل للحديث عن حدث ماضٍ فات أوانه، بينما يجب حصراً استعمال hätte أو wäre مع Partizip II في هذه الحالة. وخطأ شائع آخر هو نسيان أن الفعلين sein وhaben في الشرط غير الواقعي يُفضَّل فيهما استعمال Konjunktiv II الأصلي أي wäre وhätte بدل würde sein أو würde haben التي تبدو ركيكة وغير طبيعية رغم شيوع würde مع بقية الأفعال.",
+  "rules": [
+   {
+    "rule": "في الواقعي، الفعل في wenn-Satz ثاني، وفي الجملة الرئيسية أول (بعد wenn-Satz).",
+    "example": "Wenn es regnet, bleibe ich zu Hause.",
+    "translation": "إذا أمطرت، أبقى في البيت."
+   },
+   {
+    "rule": "غير الواقعي الحاضر = Konj. II (هو ما يقابل \"لو\" في العربية).",
+    "example": "Wenn ich reich wäre, würde ich helfen.",
+    "translation": "لو كنت غنياً، لساعدت."
+   },
+   {
+    "rule": "الماضي غير الواقعي = hätte/wäre + Partizip — \"لو كنت قد...\"",
+    "example": "Wenn du gekommen wärst, hätten wir gespielt.",
+    "translation": "لو كنت قد جئت، لكنا قد لعبنا."
+   },
+   {
+    "rule": "بدون wenn = الفعل في البداية: \"Hätte ich Zeit, würde ich...\"",
+    "example": "Wäre ich du, würde ich es tun.",
+    "translation": "لو كنت مكانك، لفعلتها."
+   }
+  ],
+  "tip": "تدرّب على: \"Wenn ich + Konj. II, würde ich + Inf\". هذه البنية تكفي لـ 80% من الجمل الشرطية في B2. أضِف الماضي غير الواقعي (hätte gehabt) لاحقاً.",
+  "examples": [
+   "Wenn ich Zeit habe, lerne ich Deutsch. — حين أملك وقتاً، أتعلّم الألمانية.",
+   "Falls es regnet, bleiben wir zu Hause. — في حال أمطرت، نبقى في البيت.",
+   "Wenn ich reich wäre, würde ich nach Japan reisen. — لو كنت غنياً لسافرت إلى اليابان.",
+   "Wenn ich du wäre, würde ich das machen. — لو كنت مكانك، لفعلت ذلك.",
+   "Hätten wir mehr Zeit, könnten wir mehr lernen. — لو كان لدينا مزيد من الوقت، لتعلّمنا أكثر.",
+   "Wenn du gekommen wärst, hätten wir gefeiert. — لو كنت قد جئت، لاحتفلنا.",
+   "Sofern du einverstanden bist, fangen wir an. — بقدر ما توافق، نبدأ.",
+   "Ich würde dir helfen, wenn ich könnte. — كنت سأساعدك لو استطعت."
+  ],
+  "tables": [
+   {
+    "title": "الأنواع الثلاثة للجمل الشرطية",
+    "headers": [
+     "النوع",
+     "الشرط",
+     "النتيجة",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "واقعي (حاضر/مستقبل)",
+      "Indikativ",
+      "Indikativ",
+      "Wenn es regnet, bleibe ich zu Hause."
+     ],
+     [
+      "غير واقعي (حاضر/مستقبل)",
+      "Konj. II",
+      "würde + Inf",
+      "Wenn ich reich wäre, würde ich reisen."
+     ],
+     [
+      "غير واقعي (ماضي)",
+      "hätte/wäre + Partizip",
+      "hätte/wäre + Partizip",
+      "Wenn ich Zeit gehabt hätte, wäre ich gekommen."
+     ]
+    ]
+   },
+   {
+    "title": "البدائل عن wenn",
+    "headers": [
+     "الكلمة",
+     "المعنى",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "falls",
+      "في حال",
+      "Falls es regnet, nehmen wir Schirme."
+     ],
+     [
+      "sofern",
+      "بقدر ما",
+      "Sofern du Zeit hast, komm vorbei."
+     ],
+     [
+      "unter der Bedingung, dass",
+      "بشرط أن",
+      "Ich helfe dir unter der Bedingung, dass du auch hilfst."
+     ],
+     [
+      "ohne wenn (انعكاس الفعل)",
+      "حذف wenn",
+      "Hätte ich Zeit, würde ich kommen."
+     ]
+    ]
+   },
+   {
+    "title": "Konjunktiv II — أمثلة لأفعال شائعة",
+    "headers": [
+     "Infinitiv",
+     "Konj. II",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "sein",
+      "wäre",
+      "Wenn ich du wäre..."
+     ],
+     [
+      "haben",
+      "hätte",
+      "Wenn ich Zeit hätte..."
+     ],
+     [
+      "werden",
+      "würde",
+      "Ich würde reisen."
+     ],
+     [
+      "können",
+      "könnte",
+      "Ich könnte helfen."
+     ],
+     [
+      "wissen",
+      "wüsste",
+      "Wenn ich es wüsste..."
+     ],
+     [
+      "gehen",
+      "ginge / würde gehen",
+      "Ich würde gehen."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "wenn",
+    "ar": "إذا / لو"
+   },
+   {
+    "de": "falls",
+    "ar": "في حال"
+   },
+   {
+    "de": "sofern",
+    "ar": "بقدر ما"
+   },
+   {
+    "de": "unter der Bedingung",
+    "ar": "بشرط"
+   },
+   {
+    "de": "wäre",
+    "ar": "لو كان (Konj. II من sein)"
+   },
+   {
+    "de": "hätte",
+    "ar": "لو كان لدي"
+   },
+   {
+    "de": "würde",
+    "ar": "لـ + فعل"
+   },
+   {
+    "de": "könnte",
+    "ar": "كان بإمكاني"
+   },
+   {
+    "de": "müsste",
+    "ar": "كان عليّ"
+   },
+   {
+    "de": "sollte",
+    "ar": "ينبغي"
+   },
+   {
+    "de": "wüsste",
+    "ar": "لو كنت أعلم"
+   },
+   {
+    "de": "die Bedingung",
+    "ar": "الشرط"
+   }
+  ]
+ },
+ {
+  "id": "b2-18",
+  "order": 16.5,
+  "source": "extra-lessons.json",
+  "title": "الجمل المقارنة غير الواقعية: als ob / als wenn — Vergleichssätze: als ob / als wenn",
+  "grammarTitle": "الجمل المقارنة غير الواقعية — als ob / als wenn + Konjunktiv II",
+  "content": "توجد في العربية عبارة كأنّ أو كما لو أنّ للتعبير عن مقارنة وهمية، أي أن شيئاً يبدو أو يتصرف صاحبه وكأن أمراً معيناً صحيح، رغم أن هذا الأمر في الواقع غير صحيح إطلاقاً. هذا بالضبط ما تؤديه als ob وals wenn في الألمانية، وهما أداتان مترادفتان تماماً في المعنى والاستعمال، مع كون als ob أكثر شيوعاً في الكتابة والحديث الرسمي. الفكرة الجوهرية التي يجب استيعابها أولاً هي أن هذه الجمل تصف دائماً انطباعاً أو مظهراً خارجياً، بينما الحقيقة الكامنة وراءه مختلفة أو معاكسة تماماً؛ فحين نقول Er tut, als ob er krank wäre فإننا نعني أنه يتظاهر بالمرض بينما هو في الواقع ليس مريضاً على الإطلاق.\n\nالآلية النحوية لهذه البنية تقوم على أمرين مترابطين. أولاً، بما أن als ob وals wenn أداتا ربط تُدخِلان جملة فرعية، فإن الفعل المصرَّف يُدفَع إلى نهاية هذه الجملة الفرعية، تماماً كما يحدث مع weil أو dass. وثانياً، وهذا هو الأهم، يجب استعمال صيغة Konjunktiv II حصراً في الفعل وليس الصيغة الإخبارية العادية، لأن هذه الصيغة هي التي تحمل إشارة أن الأمر افتراض غير حقيقي، ولا يمكن الاستغناء عنها دون أن تفقد الجملة معناها الأساسي وهو التمييز بين المظهر والحقيقة. فحين يكون الحدث في الحاضر تُستعمل Konjunktiv II Präsens مثل wäre أو hätte أو أفعال مساعدة أخرى، وحين يكون الانطباع عن حدث سابق، أي أننا نصف شيئاً يبدو وكأنه وقع في الماضي، تُستعمل Konjunktiv II Perfekt وهي hätte أو wäre مضافاً إليها Partizip II، كما في Sie spricht, als ob sie ihn nie gekannt hätte.\n\nتوجد أيضاً صيغة مختصرة شائعة جداً في الاستعمال اليومي: يمكن حذف ob أو wenn والاكتفاء بـ als وحدها، لكن هذا الحذف يفرض تغييراً في ترتيب الكلمات، إذ يعود الفعل المصرَّف مباشرة بعد als في الموضع الثاني من الجملة، كما لو كانت جملة رئيسية عادية، مثل Er tut, als wäre er krank بدل Er tut, als ob er krank wäre. المعنى مطابق تماماً، والفرق أسلوبي محض بين صيغة أطول أكثر رسمية وصيغة أقصر أكثر شيوعاً في الحديث.\n\nالخطأ الأكثر تكراراً لدى المتعلمين هو استعمال Indikativ العادي بعد als ob ظناً أن الأمر مجرد جملة وصف عادية، وهو خطأ يُفقِد الجملة معناها المقصود تماماً، إذ بدون Konjunktiv II لا يبقى هناك ما يميّز هذه البنية عن مقارنة حقيقية فعلاً. وخطأ آخر شائع هو نسيان قلب ترتيب الفعل عند استعمال als المختصرة وحدها، فيكتب المتعلم Er tut, als er krank wäre بدل الصيغة الصحيحة Er tut, als wäre er krank.",
+  "rules": [
+   {
+    "rule": "بعد als ob / als wenn، يأتي الفعل في نهاية الجملة الفرعية وفي صيغة Konjunktiv II دائماً.",
+    "example": "Er tut, als ob er müde wäre.",
+    "translation": "يتصرف كأنه متعب."
+   },
+   {
+    "rule": "يمكن استخدام als مباشرةً بدون ob أو wenn، لكن عندها يأتي الفعل في المرتبة الثانية مباشرةً بعد als (Inversion).",
+    "example": "Er tut, als wäre er müde.",
+    "translation": "يتصرف كأنه متعب. (نفس المعنى بصيغة مختصرة)"
+   },
+   {
+    "rule": "للتعبير عن مقارنة غير حقيقية في الماضي، استخدم Konjunktiv II Perfekt: hätte/wäre + Partizip II.",
+    "example": "Sie spricht, als ob sie ihn nie gekannt hätte.",
+    "translation": "تتكلم كأنها لم تعرفه قط."
+   },
+   {
+    "rule": "الجملة مع als ob / als wenn تصف دائماً انطباعاً أو مظهراً غير حقيقي — الواقع هو عكس ما تقوله الجملة.",
+    "example": "Er gibt Geld aus, als ob er reich wäre. (aber er ist nicht reich)",
+    "translation": "ينفق المال كأنه غني. (لكنه في الواقع ليس غنياً)"
+   }
+  ],
+  "tip": "💡 تذكّر القاعدة الذهبية: **als ob / als wenn = نهاية الجملة** (Verbendstellung)، أما **als وحدها = الفعل في المرتبة الثانية** (Inversion). وفي كلتا الحالتين، الفعل يكون في صيغة **Konjunktiv II** لأن الأمر غير حقيقي!",
+  "examples": [
+   "Er tut, als ob er krank wäre. — يتصرف كأنه مريض.",
+   "Sie sieht aus, als ob sie die ganze Nacht nicht geschlafen hätte. — تبدو كأنها لم تنم طوال الليل.",
+   "Er spricht, als wenn er alles wüsste. — يتكلم كأنه يعرف كل شيء.",
+   "Das Kind weint, als ob die Welt unterginge. — يبكي الطفل كأن العالم ينتهي.",
+   "Sie benimmt sich, als wäre sie die Chefin. — تتصرف كأنها المديرة.",
+   "Er gibt Geld aus, als ob er Millionär wäre. — ينفق المال كأنه مليونير.",
+   "Es klingt, als wenn jemand an die Tür klopfte. — يبدو كأن أحداً يطرق الباب.",
+   "Sie redet, als hätte sie ihn nie getroffen. — تتكلم كأنها لم تقابله قط."
+  ],
+  "tables": [
+   {
+    "title": "بنية الجملة مع als ob / als wenn",
+    "headers": [
+     "الجملة الرئيسية",
+     "أداة الربط",
+     "الفاعل",
+     "المكملات",
+     "الفعل (Konjunktiv II)"
+    ],
+    "rows": [
+     [
+      "Er tut,",
+      "als ob",
+      "er",
+      "krank",
+      "wäre"
+     ],
+     [
+      "Sie sieht aus,",
+      "als ob",
+      "sie",
+      "geweint",
+      "hätte"
+     ],
+     [
+      "Er spricht,",
+      "als wenn",
+      "er",
+      "alles",
+      "wüsste"
+     ],
+     [
+      "Es klingt,",
+      "als ob",
+      "es",
+      "draußen",
+      "regnete"
+     ],
+     [
+      "Sie benimmt sich,",
+      "als wenn",
+      "sie",
+      "die Chefin",
+      "wäre"
+     ]
+    ]
+   },
+   {
+    "title": "الصيغة المختصرة: als + Konjunktiv II (بدون ob/wenn)",
+    "headers": [
+     "الجملة الرئيسية",
+     "als",
+     "الفعل (Konjunktiv II)",
+     "بقية الجملة"
+    ],
+    "rows": [
+     [
+      "Er tut,",
+      "als",
+      "wäre",
+      "er krank."
+     ],
+     [
+      "Sie sieht aus,",
+      "als",
+      "hätte",
+      "sie geweint."
+     ],
+     [
+      "Er spricht,",
+      "als",
+      "wüsste",
+      "er alles."
+     ],
+     [
+      "Es klingt,",
+      "als",
+      "regnete",
+      "es draußen."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "aussehen",
+    "ar": "يبدو / يظهر"
+   },
+   {
+    "de": "sich benehmen",
+    "ar": "يتصرف / يسلك"
+   },
+   {
+    "de": "klingen",
+    "ar": "يبدو (صوتياً) / يُسمع"
+   },
+   {
+    "de": "wirken",
+    "ar": "يبدو / يُحدث انطباعاً"
+   },
+   {
+    "de": "tun",
+    "ar": "يتظاهر / يفعل"
+   },
+   {
+    "de": "vorgeben",
+    "ar": "يدّعي / يتظاهر"
+   },
+   {
+    "de": "Eindruck",
+    "ar": "انطباع"
+   },
+   {
+    "de": "Vergleich",
+    "ar": "مقارنة"
+   },
+   {
+    "de": "Wirklichkeit",
+    "ar": "الواقع / الحقيقة"
+   },
+   {
+    "de": "nervös",
+    "ar": "متوتر / عصبي"
+   },
+   {
+    "de": "erschöpft",
+    "ar": "منهك / مرهق"
+   },
+   {
+    "de": "überrascht",
+    "ar": "مندهش / متفاجئ"
+   }
+  ]
+ },
+ {
+  "id": "b2-17",
+  "order": 17,
+  "source": "b2.ts",
+  "title": "الروابط المتقدمة — Konnektoren erweitert",
+  "grammarTitle": "indem, ohne dass, anstatt zu, dadurch, sodass — كيف تربط الأفكار بدقة",
+  "content": "عند مستوى B2 لم يعد كافياً ربط الجمل بأدوات بسيطة مثل und أو aber أو weil، لأن الكتابة والحديث الراقيين يتطلبان التعبير بدقة عن نوع العلاقة المنطقية بين الأفكار: هل هي علاقة وسيلة وغاية، تناقض، نتيجة مترتبة، أم بديل مرفوض؟ لكل نوع من هذه العلاقات أدوات ربط (Konnektoren) خاصة بها، ولكل أداة قاعدة نحوية صارمة في ترتيب الفعل يجب إتقانها، لأن الخطأ فيها يُنتج جملة مفهومة لكنها ركيكة أو غير دقيقة المعنى.\n\nمن أهم أدوات ربط الوسيلة indem، التي تصف كيفية تحقيق فعل ما، أي بأن مع فعل في العربية، وتُدخِل جملة فرعية يذهب فيها الفعل إلى النهاية، كما في Sie verbessert ihr Deutsch, indem sie täglich liest، بمعنى أنها تحسّن ألمانيتها عبر وسيلة محددة هي القراءة اليومية. وقريب منها dadurch, dass التي تفيد السبب أو الوسيلة أيضاً لكن بصياغة أثقل قليلاً. أما ohne zu وanstatt zu فتُستعملان حين يكون فاعل الجملتين واحداً، متبوعتين مباشرة بمصدر الفعل دون حاجة لفاعل مكرر، مثل Er ging, ohne zu sprechen، بينما إذا اختلف الفاعل بين الجملتين وجب استعمال الصيغة الكاملة ohne dass أو anstatt dass مع جملة فرعية كاملة تحتوي فاعلها الخاص وفعلها في النهاية، مثل Er ging, ohne dass ich es wusste. هذا التمييز بين الصيغة المختصرة بـ zu ومصدر الفعل والصيغة الكاملة بـ dass وجملة فرعية، تبعاً لتطابق الفاعل من عدمه، هو أحد أدق فروق النحو الألماني في هذا المستوى.\n\nفي باب النتيجة، sodass تصف نتيجة مترتبة منطقياً على ما سبقها، ويأتي الفعل في نهاية الجملة الفرعية التي تليها مباشرة بعد فاصلة، مثل Er ist krank, sodass er nicht kommen kann. وتوجد بنية مرتبطة بها هي so مع صفة ثم dass، تُستعمل لتضخيم شدة صفة معينة وربطها بنتيجتها، كما في Es ist so kalt, dass wir frieren، أي أن البرودة بلغت درجة تسبّبت في التجمّد. أما في باب المقارنة المتلازمة، فإن je...desto تُترجم بكلما...كلما، وتفرض بنية خاصة: كل شطر من الجملتين يبدأ بصيغة مقارنة مباشرة بعد je أو desto، كما في Je mehr du übst, desto besser wirst du، مع ملاحظة أن الفعل يأتي في نهاية الشطر الأول بعد je بينما يأتي في المرتبة الثانية مباشرة بعد desto في الشطر الثاني، وهو استثناء يستحق انتباهاً خاصاً لأنه يخالف نمط أدوات الربط الأخرى.\n\nالخطأ الأكثر شيوعاً هو الخلط بين ohne zu وanstatt zu من جهة وohne dass وanstatt dass من جهة أخرى، أي استعمال المصدر رغم اختلاف الفاعلين، مما ينتج جملة غامضة أو خاطئة نحوياً؛ فقبل استعمال zu مع مصدر الفعل يجب دائماً التأكد أولاً من أن فاعل الجملتين واحد لا اثنان.",
+  "rules": [
+   {
+    "rule": "indem يصف الوسيلة — الفعل في النهاية: \"Ich lerne, indem ich Filme schaue.\"",
+    "example": "Sie verbessert ihr Deutsch, indem sie täglich liest.",
+    "translation": "تحسّن ألمانيتها بأن تقرأ يومياً."
+   },
+   {
+    "rule": "ohne zu/anstatt zu للفاعل واحد. ohne dass/anstatt dass لفاعلين مختلفين.",
+    "example": "Er ging, ohne zu sprechen. (نفس الفاعل) / Er ging, ohne dass ich es wusste. (فاعل مختلف)",
+    "translation": "ذهب دون أن يتحدّث / دون أن أعلم."
+   },
+   {
+    "rule": "sodass تأتي بعد فاصلة وفعلها في النهاية. so + adj + dass تستعمل لتشديد سبب.",
+    "example": "Er ist krank, sodass er nicht kommen kann. / Es ist so kalt, dass wir frieren.",
+    "translation": "هو مريض بحيث لا يستطيع المجيء."
+   },
+   {
+    "rule": "je...desto يبدأ بفاصلة كل جملة، ويستعمل صيغة المقارنة.",
+    "example": "Je mehr du übst, desto besser wirst du.",
+    "translation": "كلما تدرّبت أكثر، كلما تحسّنت."
+   }
+  ],
+  "tip": "احفظ 5 روابط جديدة كل أسبوع وكوّن جملة لكل واحد. خلال شهرين، ستكتب جملاً معقّدة بسهولة. اختبار B2 يقدّر الـ Konnektoren — كلما زادت تنوّعت كتابتك.",
+  "examples": [
+   "Ich lerne Deutsch, indem ich Filme schaue. — أتعلّم الألمانية بمشاهدة الأفلام.",
+   "Sie verbessert sich, dadurch dass sie täglich übt. — تتحسّن بالتدريب اليومي.",
+   "Er ging, ohne zu fragen. — ذهب دون أن يسأل.",
+   "Anstatt zu lernen, schaut er fern. — بدلاً من التعلّم، يشاهد التلفاز.",
+   "Es ist so kalt, dass wir frieren. — الجو بارد لدرجة أننا نتجمّد.",
+   "Je mehr ich lerne, desto besser werde ich. — كلما تعلّمت أكثر، كلما تحسّنت.",
+   "Trotzdem ist er gekommen. — مع ذلك أتى.",
+   "Ich komme, zumal ich Zeit habe. — سآتي خصوصاً وأن لدي وقتاً."
+  ],
+  "tables": [
+   {
+    "title": "روابط الطريقة والوسيلة",
+    "headers": [
+     "الرابط",
+     "المعنى",
+     "مثال"
+    ],
+    "rows": [
+     [
+      "indem",
+      "بأن (وسيلة)",
+      "Ich lerne, indem ich viel lese."
+     ],
+     [
+      "dadurch, dass",
+      "بذلك (سبب)",
+      "Dadurch, dass ich übe, werde ich besser."
+     ],
+     [
+      "ohne zu",
+      "دون أن",
+      "Er ging weg, ohne zu sprechen."
+     ],
+     [
+      "ohne dass",
+      "دون أن (مع فاعل مختلف)",
+      "Er ging, ohne dass ich es merkte."
+     ],
+     [
+      "anstatt zu",
+      "بدلاً من أن",
+      "Anstatt zu lernen, schaut er fern."
+     ],
+     [
+      "anstatt dass",
+      "بدلاً من أن (مع فاعل مختلف)",
+      "Anstatt dass er kam, blieb er zu Hause."
+     ]
+    ]
+   },
+   {
+    "title": "روابط النتيجة والتناقض",
+    "headers": [
+     "الرابط",
+     "المعنى",
+     "ترتيب الفعل"
+    ],
+    "rows": [
+     [
+      "sodass / so dass",
+      "بحيث (نتيجة)",
+      "Hauptsatz, sodass + verb am Ende"
+     ],
+     [
+      "so..., dass",
+      "كذا، بحيث",
+      "Es ist so kalt, dass wir frieren."
+     ],
+     [
+      "deshalb",
+      "لذلك",
+      "Es regnet. Deshalb bleiben wir."
+     ],
+     [
+      "trotzdem",
+      "مع ذلك",
+      "Es regnet. Trotzdem gehen wir."
+     ],
+     [
+      "je...desto",
+      "كلما...كلما",
+      "Je mehr, desto besser."
+     ],
+     [
+      "zumal",
+      "خصوصاً وأن",
+      "Ich komme, zumal ich Zeit habe."
+     ]
+    ]
+   }
+  ],
+  "vocabSample": [
+   {
+    "de": "indem",
+    "ar": "بأن"
+   },
+   {
+    "de": "dadurch dass",
+    "ar": "بذلك أن"
+   },
+   {
+    "de": "ohne zu",
+    "ar": "دون أن"
+   },
+   {
+    "de": "ohne dass",
+    "ar": "دون أن (فاعل مختلف)"
+   },
+   {
+    "de": "anstatt zu",
+    "ar": "بدلاً من أن"
+   },
+   {
+    "de": "anstatt dass",
+    "ar": "بدلاً من أن (مختلف)"
+   },
+   {
+    "de": "sodass",
+    "ar": "بحيث"
+   },
+   {
+    "de": "so...dass",
+    "ar": "كذا...بحيث"
+   },
+   {
+    "de": "trotzdem",
+    "ar": "مع ذلك"
+   },
+   {
+    "de": "dennoch",
+    "ar": "ومع ذلك"
+   },
+   {
+    "de": "jedoch",
+    "ar": "إلا أن"
+   },
+   {
+    "de": "allerdings",
+    "ar": "مع ذلك"
+   }
+  ]
+ }
+]
