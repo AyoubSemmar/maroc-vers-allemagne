@@ -117,6 +117,7 @@ export default function ClassroomClient({
         userInfo: { displayName: data.displayName },
         configOverwrite: {
           prejoinPageEnabled: false,
+          prejoinConfig: { enabled: false },
           startWithAudioMuted: !data.moderator,
           startWithVideoMuted: !data.moderator,
           disableDeepLinking: true,
