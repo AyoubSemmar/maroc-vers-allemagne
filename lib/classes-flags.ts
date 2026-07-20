@@ -3,4 +3,4 @@
 // the /learn-german/classes booking page and the booking API are admin-only —
 // so we can keep building it. Admins (the owner/teacher) always bypass.
 // Flip to true to launch publicly.
-export const CLASSES_LAUNCHED = false
+export const CLASSES_LAUNCHED = true
