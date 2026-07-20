@@ -237,7 +237,7 @@ export default function MyCourseClient({
           })()}
         </div>
         {callUrl && (
-          callOpen ? (
+          (callOpen || isTeacher) ? (
             <Link
               href="/learn-german/classroom"
               // Fire-and-forget attendance log — must never delay joining.
