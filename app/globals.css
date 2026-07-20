@@ -247,6 +247,51 @@ html[data-theme="dark"] .border-green-200 { border-color: color-mix(in oklch, va
 html[data-theme="dark"] .text-green-700  { color: oklch(0.78 0.15 150) !important; }
 html[data-theme="dark"] .text-green-800  { color: oklch(0.82 0.15 150) !important; }
 
+/* Orange/yellow/amber/red/blue accent surfaces — used site-wide for callouts,
+   tip boxes, grade badges, and error/warning states (learn-german course UI
+   especially). Same problem as green above: without an override these keep
+   their light-mode pale bg + dark text, which reads as reddish/muddy text on
+   the dark page background. Only pale bg/border + dark text shades need
+   retinting — solid mid-tone badges (e.g. bg-orange-500) already work in
+   both themes and are left alone. */
+html[data-theme="dark"] .bg-orange-50     { background-color: color-mix(in oklch, oklch(0.70 0.17 50) 16%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .bg-orange-100    { background-color: color-mix(in oklch, oklch(0.70 0.17 50) 24%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .border-orange-100 { border-color: color-mix(in oklch, oklch(0.70 0.17 50) 30%, transparent) !important; }
+html[data-theme="dark"] .border-orange-200 { border-color: color-mix(in oklch, oklch(0.70 0.17 50) 42%, transparent) !important; }
+html[data-theme="dark"] .text-orange-600  { color: oklch(0.75 0.16 50) !important; }
+html[data-theme="dark"] .text-orange-700  { color: oklch(0.78 0.16 50) !important; }
+html[data-theme="dark"] .text-orange-800  { color: oklch(0.80 0.15 50) !important; }
+html[data-theme="dark"] .text-orange-900  { color: oklch(0.85 0.13 50) !important; }
+
+html[data-theme="dark"] .bg-yellow-50     { background-color: color-mix(in oklch, oklch(0.84 0.16 95) 16%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .border-yellow-200 { border-color: color-mix(in oklch, oklch(0.84 0.16 95) 42%, transparent) !important; }
+html[data-theme="dark"] .text-yellow-600  { color: oklch(0.80 0.15 95) !important; }
+html[data-theme="dark"] .text-yellow-800  { color: oklch(0.85 0.13 95) !important; }
+html[data-theme="dark"] .text-yellow-900  { color: oklch(0.88 0.11 95) !important; }
+
+html[data-theme="dark"] .bg-amber-50      { background-color: color-mix(in oklch, oklch(0.79 0.16 70) 16%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .bg-amber-100     { background-color: color-mix(in oklch, oklch(0.79 0.16 70) 24%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .border-amber-200 { border-color: color-mix(in oklch, oklch(0.79 0.16 70) 42%, transparent) !important; }
+html[data-theme="dark"] .text-amber-600   { color: oklch(0.78 0.15 70) !important; }
+html[data-theme="dark"] .text-amber-700   { color: oklch(0.80 0.15 70) !important; }
+html[data-theme="dark"] .text-amber-800   { color: oklch(0.83 0.14 70) !important; }
+html[data-theme="dark"] .text-amber-900   { color: oklch(0.86 0.12 70) !important; }
+
+html[data-theme="dark"] .bg-red-50        { background-color: color-mix(in oklch, oklch(0.63 0.20 25) 16%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .bg-red-100       { background-color: color-mix(in oklch, oklch(0.63 0.20 25) 24%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .border-red-300   { border-color: color-mix(in oklch, oklch(0.63 0.20 25) 36%, transparent) !important; }
+html[data-theme="dark"] .border-red-400   { border-color: color-mix(in oklch, oklch(0.63 0.20 25) 48%, transparent) !important; }
+html[data-theme="dark"] .text-red-500     { color: oklch(0.72 0.18 25) !important; }
+html[data-theme="dark"] .text-red-600     { color: oklch(0.75 0.17 25) !important; }
+html[data-theme="dark"] .text-red-700     { color: oklch(0.78 0.16 25) !important; }
+
+html[data-theme="dark"] .bg-blue-50       { background-color: color-mix(in oklch, oklch(0.62 0.17 250) 16%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .bg-blue-100      { background-color: color-mix(in oklch, oklch(0.62 0.17 250) 24%, oklch(0.22 0.014 260)) !important; }
+html[data-theme="dark"] .border-blue-100  { border-color: color-mix(in oklch, oklch(0.62 0.17 250) 30%, transparent) !important; }
+html[data-theme="dark"] .text-blue-600    { color: oklch(0.75 0.15 250) !important; }
+html[data-theme="dark"] .text-blue-700    { color: oklch(0.78 0.15 250) !important; }
+html[data-theme="dark"] .text-blue-900    { color: oklch(0.85 0.11 250) !important; }
+
 /* Placeholder colors so inputs remain readable */
 html[data-theme="dark"] input::placeholder,
 html[data-theme="dark"] textarea::placeholder { color: oklch(0.58 0.012 85) !important; }

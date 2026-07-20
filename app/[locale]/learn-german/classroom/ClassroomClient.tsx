@@ -68,6 +68,11 @@ export default function ClassroomClient({
   useEffect(() => () => endCall(), [endCall])
 
   async function joinCall() {
+    // Guard against overlapping calls: the token fetch + Jitsi script load can
+    // take a few seconds, and an impatient extra click while one is already
+    // in flight used to race two API instances into the same container,
+    // stacking video panels that never got disposed.
+    if (phase === 'connecting' || phase === 'live') return
     if (!groupId) { setError(t('errNoGroup')); setPhase('error'); return }
     setPhase('connecting'); setError(null)
     try {
