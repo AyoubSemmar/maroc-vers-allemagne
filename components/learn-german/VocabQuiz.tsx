@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 import type { Level } from '@/lib/german-data/types'
-import { collectLevelVocab, type VocabEntry } from '@/lib/learn-german/vocab'
+import { collectLevelVocab, VOCAB_LEARNED_THRESHOLD, type VocabEntry } from '@/lib/learn-german/vocab'
 import type { useVocabProgress } from '@/lib/useVocabProgress'
 import AudioButton from '@/components/learn-german/AudioButton'
 
@@ -49,11 +49,27 @@ export default function VocabQuiz({
   const [correctCount, setCorrectCount] = useState(0)
 
   function buildRound(): Q[] {
-    // Weakest-first: lowest mastery (unseen = 0), then random within a tier.
-    const ranked = shuffle(allEntries).sort(
-      (a, b) => (byKey[a.key]?.mastery ?? 0) - (byKey[b.key]?.mastery ?? 0),
-    )
-    const picks = ranked.slice(0, Math.min(ROUND, ranked.length))
+    // Alternate between words due for review (attempted before, not yet at
+    // the mastery threshold — weakest first) and brand-new words. A pure
+    // "lowest mastery first" sort buries every attempted word behind the
+    // entire unseen pool (620 words = 62 rounds before any repeat), so a
+    // word answered correctly once would never resurface for a real chance
+    // to climb to "learned" — from the student's view, progress looked like
+    // it wasn't saving even though every answer is persisted.
+    const due = shuffle(allEntries.filter(e => {
+      const m = byKey[e.key]?.mastery
+      return m != null && m < VOCAB_LEARNED_THRESHOLD
+    })).sort((a, b) => (byKey[a.key]?.mastery ?? 0) - (byKey[b.key]?.mastery ?? 0))
+    const fresh = shuffle(allEntries.filter(e => byKey[e.key] == null))
+
+    const target = Math.min(ROUND, allEntries.length)
+    const picks: VocabEntry[] = []
+    let di = 0, fi = 0
+    while (picks.length < target && (di < due.length || fi < fresh.length)) {
+      if (di < due.length && (picks.length % 2 === 0 || fi >= fresh.length)) picks.push(due[di++])
+      else if (fi < fresh.length) picks.push(fresh[fi++])
+      else picks.push(due[di++])
+    }
     return picks.map(entry => {
       const direction: Direction = Math.random() < 0.5 ? 'de2ar' : 'ar2de'
       const answer = direction === 'de2ar' ? entry.item.arabic : entry.item.german
