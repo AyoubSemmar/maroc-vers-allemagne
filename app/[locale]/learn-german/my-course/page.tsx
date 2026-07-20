@@ -1,11 +1,11 @@
 import { redirect } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildCallUrl } from '@/lib/jitsi'
-import { parseClassWindow, type ClassWindow } from '@/lib/classSchedule'
 import { isAccessActive, formatAccessDate } from '@/lib/courseAccess'
 import MyCourseClient from './MyCourseClient'
 
@@ -32,6 +32,7 @@ export default async function MyCoursePage({
   if (!booking && !isTeacher) redirect(`/${locale}/learn-german/classes`)
 
   const accessUntil = (booking?.access_until as string | null) ?? null
+  const t = await getTranslations({ locale, namespace: 'learnGerman.myCourse' })
 
   // No active access → the course is locked. Distinguish a lapsed subscription
   // (renew) from a never-paid reservation (first payment). Admins bypass.
@@ -42,18 +43,18 @@ export default async function MyCoursePage({
         <div className="max-w-md w-full bg-white rounded-2xl border border-gray-200 p-8 text-center">
           <div className="mb-4 flex justify-center text-gray-500"><Icon name={expired ? 'lock' : 'calendar'} size={36} /></div>
           <h1 className="text-xl font-bold text-gray-900">
-            {expired ? 'Accès expiré' : 'Place réservée'}
+            {expired ? t('locked.expiredTitle') : t('locked.reservedTitle')}
           </h1>
           <p className="text-sm text-gray-600 mt-2">
             {expired
-              ? `Votre accès a expiré le ${formatAccessDate(accessUntil!)}. Renouvelez votre abonnement (450 DH/mois) par WhatsApp pour reprendre le cours.`
-              : 'Vous recevrez les instructions de paiement (450 DH/mois) par WhatsApp. Dès la confirmation du paiement, votre cours sera débloqué ici.'}
+              ? t('locked.expiredBody', { date: formatAccessDate(accessUntil!) })
+              : t('locked.reservedBody')}
           </p>
           <Link
             href="/learn-german/classes"
             className="inline-block mt-5 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5"
           >
-            {expired ? '↻ Renouveler mon accès' : '← Retour aux cours'}
+            {expired ? t('locked.renewCta') : t('locked.backCta')}
           </Link>
         </div>
       </div>
@@ -63,13 +64,12 @@ export default async function MyCoursePage({
   const displayName =
     (user.user_metadata?.full_name as string) ||
     user.email?.split('@')[0] ||
-    'Student'
+    t('defaultDisplayName')
 
   let level = 'a1'
   let groupId: string | null = null
   let groupLabel: string | null = null
   let callUrl: string | null = null
-  let classWindow: ClassWindow | null = null
   let groupStartDate: string | null = null
   if (booking?.group_id) {
     groupId = booking.group_id
@@ -86,7 +86,6 @@ export default async function MyCoursePage({
       groupStartDate = ((g as any).start_date as string | null) ?? null
       if (g.room_slug) {
         callUrl = buildCallUrl(g.room_slug, displayName, isTeacher)
-        classWindow = parseClassWindow(g.schedule as string, booking.group_id)
       }
     }
   }
@@ -101,7 +100,6 @@ export default async function MyCoursePage({
         displayName={displayName}
         isTeacher={isTeacher}
         callUrl={callUrl}
-        classWindow={classWindow}
         accessUntil={accessUntil}
         groupStartDate={groupStartDate}
       />

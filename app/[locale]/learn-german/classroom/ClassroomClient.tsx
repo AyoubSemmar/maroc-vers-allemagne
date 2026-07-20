@@ -1,12 +1,12 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { jaasScriptUrl } from '@/lib/jaas'
-import { callWindowState, type ClassWindow } from '@/lib/classSchedule'
 
-type Phase = 'idle' | 'connecting' | 'live' | 'closed' | 'error' | 'not_configured' | 'window_closed'
+type Phase = 'idle' | 'connecting' | 'live' | 'closed' | 'error' | 'not_configured'
 
 // Load 8x8's external_api.js once (per AppID) and resolve when the global
 // constructor is available.
@@ -26,9 +26,9 @@ function loadJitsiScript(appId: string): Promise<void> {
 }
 
 const LESSON_TABS = [
-  { key: 'level', label: 'Ma leçon', icon: 'book' as const },
-  { key: 'all', label: 'Toutes les leçons', icon: 'list' as const },
-  { key: 'results', label: 'Mes résultats', icon: 'bar-chart' as const },
+  { key: 'level', labelKey: 'tabLesson', icon: 'book' as const },
+  { key: 'all', labelKey: 'tabAll', icon: 'list' as const },
+  { key: 'results', labelKey: 'tabResults', icon: 'bar-chart' as const },
 ]
 
 export default function ClassroomClient({
@@ -36,23 +36,19 @@ export default function ClassroomClient({
   level,
   groupId,
   groupLabel,
-  isTeacher,
-  classWindow,
   videoConfigured,
 }: {
   locale: string
   level: string
   groupId: string | null
   groupLabel: string | null
-  isTeacher: boolean
-  classWindow: ClassWindow | null
   videoConfigured: boolean
 }) {
+  const t = useTranslations('learnGerman.classroom')
   const jitsiRef = useRef<HTMLDivElement>(null)
   const apiRef = useRef<any>(null)
   const [phase, setPhase] = useState<Phase>('idle')
   const [error, setError] = useState<string | null>(null)
-  const [opensAt, setOpensAt] = useState<string | null>(null)
   const [videoOpen, setVideoOpen] = useState(true)
 
   // Which lesson surface the left iframe shows.
@@ -64,21 +60,6 @@ export default function ClassroomClient({
   }
   const [lessonTab, setLessonTab] = useState('level')
 
-  // Live window state (students only; teachers may open anytime).
-  const [windowOpen, setWindowOpen] = useState(isTeacher)
-  const [windowLabel, setWindowLabel] = useState<string | null>(null)
-  useEffect(() => {
-    if (isTeacher || !classWindow) { setWindowOpen(isTeacher); return }
-    const tick = () => {
-      const s = callWindowState(classWindow)
-      setWindowOpen(s.open)
-      setWindowLabel(s.opensAtLabel)
-    }
-    tick()
-    const id = setInterval(tick, 30_000)
-    return () => clearInterval(id)
-  }, [classWindow, isTeacher])
-
   const endCall = useCallback(() => {
     try { apiRef.current?.dispose() } catch {}
     apiRef.current = null
@@ -87,7 +68,7 @@ export default function ClassroomClient({
   useEffect(() => () => endCall(), [endCall])
 
   async function joinCall() {
-    if (!groupId) { setError('Aucun groupe associé à votre compte.'); setPhase('error'); return }
+    if (!groupId) { setError(t('errNoGroup')); setPhase('error'); return }
     setPhase('connecting'); setError(null)
     try {
       const res = await fetch('/api/classes/jaas-token', {
@@ -98,13 +79,12 @@ export default function ClassroomClient({
       const data = await res.json()
       if (!res.ok) {
         if (data.code === 'not_configured') { setPhase('not_configured'); return }
-        if (data.code === 'window_closed') { setOpensAt(data.opensAtLabel ?? null); setPhase('window_closed'); return }
-        setError(data.error || 'Impossible de démarrer l’appel.'); setPhase('error'); return
+        setError(data.error || t('errStart')); setPhase('error'); return
       }
 
       await loadJitsiScript(data.appId)
       const JitsiMeetExternalAPI = (window as any).JitsiMeetExternalAPI
-      if (!JitsiMeetExternalAPI || !jitsiRef.current) { setError('Le module vidéo n’a pas pu se charger.'); setPhase('error'); return }
+      if (!JitsiMeetExternalAPI || !jitsiRef.current) { setError(t('errVideoLoad')); setPhase('error'); return }
 
       endCall()
       jitsiRef.current.innerHTML = ''
@@ -129,7 +109,7 @@ export default function ClassroomClient({
       api.addEventListener('readyToClose', () => { endCall(); setPhase('closed') })
       api.addEventListener('videoConferenceLeft', () => { endCall(); setPhase('closed') })
     } catch (e: any) {
-      setError('Erreur réseau. Réessayez.'); setPhase('error')
+      setError(t('errNetwork')); setPhase('error')
     }
   }
 
@@ -138,17 +118,17 @@ export default function ClassroomClient({
       {/* Slim top bar */}
       <header className="flex items-center justify-between gap-3 px-3 sm:px-4 h-12 bg-gray-950 text-white shrink-0">
         <Link href="/learn-german/my-course" className="flex items-center gap-1.5 text-sm text-gray-300 hover:text-white">
-          <Icon name="arrow-left" size={16} /> <span className="hidden sm:inline">Mon cours</span>
+          <Icon name="arrow-left" size={16} /> <span className="hidden sm:inline">{t('myCourseLink')}</span>
         </Link>
         <span className="text-sm font-semibold truncate">
-          Classe en direct{groupLabel ? ` · ${groupLabel}` : ''}
+          {t('liveClass')}{groupLabel ? ` · ${groupLabel}` : ''}
         </span>
         <button
           onClick={() => setVideoOpen(v => !v)}
           className="flex items-center gap-1.5 text-xs font-semibold rounded-lg bg-white/10 hover:bg-white/20 px-3 py-1.5"
         >
           <Icon name={videoOpen ? 'x' : 'play'} size={14} />
-          {videoOpen ? 'Masquer la vidéo' : 'Afficher la vidéo'}
+          {videoOpen ? t('hideVideo') : t('showVideo')}
         </button>
       </header>
 
@@ -157,22 +137,22 @@ export default function ClassroomClient({
         {/* Lessons / exercises */}
         <section className="flex-1 min-h-0 flex flex-col bg-white order-2 md:order-1">
           <div className="flex items-center gap-1 px-2 h-11 border-b border-gray-200 bg-gray-50 shrink-0 overflow-x-auto">
-            {LESSON_TABS.map(t => (
+            {LESSON_TABS.map(tab => (
               <button
-                key={t.key}
-                onClick={() => setLessonTab(t.key)}
+                key={tab.key}
+                onClick={() => setLessonTab(tab.key)}
                 className={`flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-1.5 whitespace-nowrap transition-colors ${
-                  lessonTab === t.key ? 'bg-green-600 text-white' : 'text-gray-600 hover:bg-gray-200'
+                  lessonTab === tab.key ? 'bg-green-600 text-white' : 'text-gray-600 hover:bg-gray-200'
                 }`}
               >
-                <Icon name={t.icon} size={14} /> {t.label}
+                <Icon name={tab.icon} size={14} /> {t(tab.labelKey as any)}
               </button>
             ))}
           </div>
           <iframe
             key={lessonTab}
             src={lessonSrc(lessonTab)}
-            title="Leçons"
+            title={t('lessonsIframeTitle')}
             className="flex-1 w-full border-0"
           />
         </section>
@@ -189,46 +169,36 @@ export default function ClassroomClient({
                   {!videoConfigured || phase === 'not_configured' ? (
                     <>
                       <Icon name="play" size={34} className="text-gray-500 mb-3" />
-                      <p className="text-sm font-semibold text-white">Vidéo bientôt disponible</p>
-                      <p className="text-xs text-gray-400 mt-1 max-w-[15rem]">La visioconférence sera activée très prochainement.</p>
-                    </>
-                  ) : phase === 'window_closed' ? (
-                    <>
-                      <Icon name="calendar" size={34} className="text-gray-500 mb-3" />
-                      <p className="text-sm font-semibold text-white">La classe n’est pas encore ouverte</p>
-                      <p className="text-xs text-gray-400 mt-1">{opensAt ? `Ouverture à ${opensAt}.` : 'Revenez à l’heure du cours.'}</p>
+                      <p className="text-sm font-semibold text-white">{t('videoSoonTitle')}</p>
+                      <p className="text-xs text-gray-400 mt-1 max-w-[15rem]">{t('videoSoonBody')}</p>
                     </>
                   ) : phase === 'closed' ? (
                     <>
                       <Icon name="check" size={34} className="text-green-500 mb-3" />
-                      <p className="text-sm font-semibold text-white">Appel terminé</p>
-                      <button onClick={joinCall} className="mt-4 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5">Rejoindre à nouveau</button>
+                      <p className="text-sm font-semibold text-white">{t('callEnded')}</p>
+                      <button onClick={joinCall} className="mt-4 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5">{t('rejoin')}</button>
                     </>
                   ) : phase === 'error' ? (
                     <>
                       <Icon name="x" size={34} className="text-red-400 mb-3" />
                       <p className="text-sm font-semibold text-white">{error}</p>
-                      <button onClick={joinCall} className="mt-4 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-5 py-2.5">Réessayer</button>
+                      <button onClick={joinCall} className="mt-4 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm font-semibold px-5 py-2.5">{t('retry')}</button>
                     </>
                   ) : (
                     // idle
                     <>
                       <Icon name="play" size={34} className="text-gray-500 mb-3" />
-                      <p className="text-sm font-semibold text-white">Classe en direct</p>
-                      {isTeacher || windowOpen ? (
-                        <button onClick={joinCall} className="mt-4 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-6 py-2.5">
-                          Rejoindre l’appel
-                        </button>
-                      ) : (
-                        <p className="text-xs text-gray-400 mt-1">{windowLabel ? `Ouverture à ${windowLabel}.` : 'Revenez à l’heure du cours.'}</p>
-                      )}
+                      <p className="text-sm font-semibold text-white">{t('liveClass')}</p>
+                      <button onClick={joinCall} className="mt-4 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-6 py-2.5">
+                        {t('joinCallBtn')}
+                      </button>
                     </>
                   )}
                 </div>
               )}
 
               {phase === 'connecting' && (
-                <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80 text-gray-200 text-sm">Connexion…</div>
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80 text-gray-200 text-sm">{t('connecting')}</div>
               )}
             </div>
           </section>

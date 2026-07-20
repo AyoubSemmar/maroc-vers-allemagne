@@ -1,12 +1,14 @@
 'use client'
 
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { createClient } from '@/lib/supabase-browser'
 import { getLevel } from '@/lib/german-data'
+import { localizeLevel } from '@/lib/german-data/localize'
+import type { AppLocale } from '@/i18n/routing'
 import { collectLevelVocab } from '@/lib/learn-german/vocab'
 import { SKILL_LABELS } from '@/lib/learn-german/assignmentAI'
-import { callWindowState, type ClassWindow } from '@/lib/classSchedule'
 import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
 import { courseWeek, weekLessonRange } from '@/lib/coursePacing'
 import { useProgress } from '@/lib/useProgress'
@@ -19,15 +21,16 @@ import type { Skill } from '@/lib/learn-german/assignmentAI'
 
 const SKILLS_ORDER = ['grammar', 'lesen', 'schreiben', 'hoeren'] as const
 
-// Qualitative label + German school note (1 best … 6) for a 0-100 grade.
-function gradeInfo(g: number): { note: string; text: string; color: string; bar: string } {
-  if (g >= 90) return { note: '1', text: 'Ausgezeichnet', color: 'text-green-700', bar: 'bg-green-500' }
-  if (g >= 80) return { note: '2', text: 'Sehr gut', color: 'text-green-700', bar: 'bg-green-500' }
-  if (g >= 70) return { note: '3', text: 'Gut', color: 'text-green-600', bar: 'bg-green-500' }
-  if (g >= 60) return { note: '3', text: 'Befriedigend', color: 'text-amber-600', bar: 'bg-amber-500' }
-  if (g >= 50) return { note: '4', text: 'Ausreichend', color: 'text-amber-600', bar: 'bg-amber-500' }
-  if (g > 0)   return { note: '5', text: 'À améliorer', color: 'text-red-500', bar: 'bg-red-400' }
-  return { note: '—', text: 'Pas encore commencé', color: 'text-gray-400', bar: 'bg-gray-300' }
+// Qualitative label key + German school note (1 best … 6) for a 0-100 grade.
+// `key` maps into learnGerman.myCourse.gradeLevels for the displayed text.
+function gradeInfo(g: number): { note: string; key: string; color: string; bar: string } {
+  if (g >= 90) return { note: '1', key: 'excellent', color: 'text-green-700', bar: 'bg-green-500' }
+  if (g >= 80) return { note: '2', key: 'veryGood', color: 'text-green-700', bar: 'bg-green-500' }
+  if (g >= 70) return { note: '3', key: 'good', color: 'text-green-600', bar: 'bg-green-500' }
+  if (g >= 60) return { note: '3', key: 'satisfactory', color: 'text-amber-600', bar: 'bg-amber-500' }
+  if (g >= 50) return { note: '4', key: 'sufficient', color: 'text-amber-600', bar: 'bg-amber-500' }
+  if (g > 0)   return { note: '5', key: 'toImprove', color: 'text-red-500', bar: 'bg-red-400' }
+  return { note: '—', key: 'notStarted', color: 'text-gray-400', bar: 'bg-gray-300' }
 }
 
 function Bar({ label, value, sub, icon }: { label: string; value: number | null; sub?: string; icon: React.ReactNode }) {
@@ -53,7 +56,6 @@ export default function MyCourseClient({
   displayName,
   isTeacher,
   callUrl,
-  classWindow,
   accessUntil,
   groupStartDate,
 }: {
@@ -64,11 +66,12 @@ export default function MyCourseClient({
   displayName: string
   isTeacher: boolean
   callUrl: string | null
-  classWindow: ClassWindow | null
   accessUntil: string | null
   groupStartDate: string | null
 }) {
-  const level = getLevel(levelId)
+  const t = useTranslations('learnGerman.myCourse')
+  const rawLevel = getLevel(levelId)
+  const level = rawLevel ? localizeLevel(rawLevel, locale as AppLocale) : rawLevel
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
   const vocab = useVocabProgress((level?.id ?? 'A1') as any)
 
@@ -78,22 +81,6 @@ export default function MyCourseClient({
   const [assignments, setAssignments] = useState<ClientAssignment[]>([])
   const [subScores, setSubScores] = useState<Record<string, number>>({})
   const [openAssignment, setOpenAssignment] = useState<ClientAssignment | null>(null)
-
-  // Live join-window state (15 min before → 30 min after start, Morocco time).
-  // Re-checked every 30s so the button flips on/off without a refresh.
-  const [callOpen, setCallOpen] = useState(false)
-  const [windowLabel, setWindowLabel] = useState<{ opensAtLabel: string; closesAtLabel: string } | null>(null)
-  useEffect(() => {
-    if (!classWindow) return
-    const tick = () => {
-      const s = callWindowState(classWindow)
-      setCallOpen(s.open)
-      setWindowLabel({ opensAtLabel: s.opensAtLabel, closesAtLabel: s.closesAtLabel })
-    }
-    tick()
-    const id = setInterval(tick, 30_000)
-    return () => clearInterval(id)
-  }, [classWindow])
 
   useEffect(() => {
     if (!level) return
@@ -133,7 +120,7 @@ export default function MyCourseClient({
   }, [level?.id, groupId, isTeacher])
 
   if (!level) {
-    return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">Niveau introuvable.</div>
+    return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">{t('notFound')}</div>
   }
 
   const lessons = [...level.lessons].sort((a, b) => a.order - b.order)
@@ -216,14 +203,14 @@ export default function MyCourseClient({
       {/* Header */}
       <div className="flex items-start justify-between gap-3 flex-wrap mb-6">
         <div>
-          <p className="text-xs text-gray-400">Mon cours</p>
+          <p className="text-xs text-gray-400">{t('label')}</p>
           <h1 className="text-2xl font-bold text-gray-900">
             {displayName} · <span className="text-green-700">{level.id}</span>
           </h1>
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
           {week != null && (
             <p className="text-xs text-gray-500 mt-0.5">
-              {week === 0 ? `Début le ${formatAccessDate(groupStartDate!)}` : `Semaine ${week}`}
+              {week === 0 ? t('startedOn', { date: formatAccessDate(groupStartDate!) }) : t('week', { n: week })}
             </p>
           )}
           {accessUntil && !isTeacher && (() => {
@@ -231,29 +218,20 @@ export default function MyCourseClient({
             const soon = d != null && d <= 7
             return (
               <p className={`text-xs mt-1 ${soon ? 'text-amber-600 font-medium' : 'text-gray-400'}`}>
-                Accès jusqu&rsquo;au {formatAccessDate(accessUntil)}{soon && d != null ? ` · ${d} j restants` : ''}
+                {t('accessUntil', { date: formatAccessDate(accessUntil) })}{soon && d != null ? ` · ${t('daysLeft', { d })}` : ''}
               </p>
             )
           })()}
         </div>
         {callUrl && (
-          (callOpen || isTeacher) ? (
-            <Link
-              href="/learn-german/classroom"
-              // Fire-and-forget attendance log — must never delay joining.
-              onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
-              className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
-            >
-              <Icon name="play" size={15} /> Rejoindre la classe en direct
-            </Link>
-          ) : (
-            <span
-              className="inline-flex items-center gap-2 rounded-lg bg-gray-200 text-gray-500 text-sm font-semibold px-4 py-2 cursor-not-allowed select-none"
-              title={windowLabel ? `Ouvert de ${windowLabel.opensAtLabel} à ${windowLabel.closesAtLabel}` : undefined}
-            >
-              <Icon name="play" size={15} /> Appel vidéo{windowLabel ? ` — dès ${windowLabel.opensAtLabel}` : ''}
-            </span>
-          )
+          <Link
+            href="/learn-german/classroom"
+            // Fire-and-forget attendance log — must never delay joining.
+            onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
+            className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
+          >
+            <Icon name="play" size={15} /> {t('joinCall')}
+          </Link>
         )}
       </div>
 
@@ -266,15 +244,15 @@ export default function MyCourseClient({
         return (
           <div className="bg-green-700 rounded-2xl p-4 mb-6 flex items-center justify-between gap-3 flex-wrap">
             <div className="text-white min-w-0">
-              <p className="text-[11px] uppercase tracking-wide text-green-200 font-semibold">Reprendre</p>
+              <p className="text-[11px] uppercase tracking-wide text-green-200 font-semibold">{t('resume')}</p>
               {nextUp ? (
-                <p className="font-bold truncate">Leçon {nextUp.order} · {nextUp.title}</p>
+                <p className="font-bold truncate">{t('lessonLabel', { n: nextUp.order, title: nextUp.title })}</p>
               ) : (
-                <p className="font-bold">Toutes les leçons sont validées</p>
+                <p className="font-bold">{t('allLessonsDone')}</p>
               )}
               {devoirsTodo > 0 && (
                 <a href="#devoirs" className="text-xs text-green-100 underline underline-offset-2">
-                  {devoirsTodo} devoir{devoirsTodo > 1 ? 's' : ''} à faire
+                  {t('devoirsTodo', { n: devoirsTodo })}
                 </a>
               )}
             </div>
@@ -283,14 +261,14 @@ export default function MyCourseClient({
                 href={`/learn-german/${level.id.toLowerCase()}/${nextUp.id}`}
                 className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
               >
-                Continuer →
+                {t('continue')}
               </Link>
             ) : allDone ? (
               <Link
                 href="/learn-german/my-course/certificate"
                 className="inline-flex items-center gap-2 shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
               >
-                <Icon name="trophy" size={15} /> Mon certificat
+                <Icon name="trophy" size={15} /> {t('myCertificate')}
               </Link>
             ) : null}
           </div>
@@ -311,29 +289,29 @@ export default function MyCourseClient({
               <span className={`absolute inset-0 flex items-center justify-center text-2xl font-black ${info.color}`}>{grade == null ? '—' : grade}</span>
             </div>
             <div>
-              <p className="text-xs text-gray-400">Note</p>
-              <p className={`font-bold ${info.color}`}>{info.text}</p>
-              {grade != null && <p className="text-[11px] text-gray-400">Note allemande : {info.note}</p>}
+              <p className="text-xs text-gray-400">{t('grade')}</p>
+              <p className={`font-bold ${info.color}`}>{t(`gradeLevels.${info.key}` as any)}</p>
+              {grade != null && <p className="text-[11px] text-gray-400">{t('germanNote', { note: info.note })}</p>}
             </div>
           </div>
 
           {/* Quality breakdown + progression */}
           <div className="flex-1 flex flex-col gap-3 justify-center">
-            <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Qualité · sur le travail rendu</p>
-            <Bar icon={<Icon name="book" size={13} />} label="Leçons" value={lessonQuality} sub={`${attemptedLessons.length}/${lessons.length} faites`} />
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">{t('qualityHeading')}</p>
+            <Bar icon={<Icon name="book" size={13} />} label={t('lessonsBar')} value={lessonQuality} sub={t('lessonsBarSub', { done: attemptedLessons.length, total: lessons.length })} />
             {assignments.length > 0 && (
-              <Bar icon={<Icon name="pen" size={13} />} label="Devoirs" value={devoirQuality} sub={`${doneDevoirs.length}/${assignments.length} rendus`} />
+              <Bar icon={<Icon name="pen" size={13} />} label={t('devoirsBar')} value={devoirQuality} sub={t('devoirsBarSub', { done: doneDevoirs.length, total: assignments.length })} />
             )}
             {grade == null && (
-              <p className="text-xs text-gray-400">Termine une leçon pour débloquer ta note.</p>
+              <p className="text-xs text-gray-400">{t('gradeLocked')}</p>
             )}
 
             <div className="pt-3 mt-1 border-t border-gray-100">
-              <Bar icon={<Icon name="bar-chart" size={13} />} label="Progression" value={progression} sub="parcours du niveau" />
+              <Bar icon={<Icon name="bar-chart" size={13} />} label={t('progressionBar')} value={progression} sub={t('progressionBarSub')} />
               <div className="flex gap-4 text-xs text-gray-400 pt-2 flex-wrap">
-                <span>{completed.size}/{lessons.length} leçons</span>
-                <span>{vocab.loaded ? vocab.learnedCount : '…'}/{vocabTotal} mots</span>
-                {assignments.length > 0 && <span>{Object.keys(subScores).length}/{assignments.length} devoirs</span>}
+                <span>{t('lessonsCount', { done: completed.size, total: lessons.length })}</span>
+                <span>{t('wordsCount', { done: vocab.loaded ? vocab.learnedCount : '…', total: vocabTotal })}</span>
+                {assignments.length > 0 && <span>{t('devoirsCount', { done: Object.keys(subScores).length, total: assignments.length })}</span>}
               </div>
             </div>
           </div>
@@ -354,14 +332,14 @@ export default function MyCourseClient({
 
       {/* Vocabulary trainer */}
       <div className="mb-8">
-        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Vocabulaire</h2>
+        <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">{t('vocabHeading')}</h2>
         <VocabQuiz level={level} vocab={vocab} />
       </div>
 
       {/* Devoirs — grouped per lesson (Lesen + Hören + Schreiben) */}
       {assignments.length > 0 && (
         <div className="mb-8" id="devoirs">
-          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Devoirs</h2>
+          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">{t('devoirsHeading')}</h2>
 
           <div className="flex flex-col gap-3">
             {devoirGroups.map(g => {
@@ -372,15 +350,15 @@ export default function MyCourseClient({
                 <div key={g.order} className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
                   <div className="flex items-center justify-between gap-2 px-4 py-2.5 bg-gray-50 border-b border-gray-100">
                     <span className="text-sm font-bold text-gray-800 truncate">
-                      Devoir {g.order}{g.title ? <span className="font-normal text-gray-400"> · {g.title}</span> : null}
+                      {t('devoirTitle', { n: g.order })}{g.title ? <span className="font-normal text-gray-400"> · {g.title}</span> : null}
                       {paced && g.order >= weekLo && g.order <= weekHi && (
-                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">Cette semaine</span>
+                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">{t('thisWeek')}</span>
                       )}
                     </span>
                     <span className="text-xs shrink-0">
                       {avg != null
                         ? <span className={`font-bold px-2 py-0.5 rounded ${avg >= 70 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>{avg}%</span>
-                        : <span className="text-gray-400">{doneCount}/{g.tasks.length} fait</span>}
+                        : <span className="text-gray-400">{t('doneCount', { done: doneCount, total: g.tasks.length })}</span>}
                     </span>
                   </div>
                   <div className="divide-y divide-gray-100">
@@ -398,7 +376,7 @@ export default function MyCourseClient({
                           {done ? (
                             <span className={`text-xs font-bold px-2 py-0.5 rounded shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
                           ) : (
-                            <span className="text-xs font-semibold px-2 py-0.5 rounded shrink-0 bg-blue-50 text-blue-600">À faire</span>
+                            <span className="text-xs font-semibold px-2 py-0.5 rounded shrink-0 bg-blue-50 text-blue-600">{t('todo')}</span>
                           )}
                         </button>
                       )
@@ -428,7 +406,7 @@ export default function MyCourseClient({
                     </span>
                     {done
                       ? <span className={`text-xs font-bold px-2 py-1 rounded-md shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
-                      : <span className="text-xs font-semibold px-2 py-1 rounded-md shrink-0 bg-blue-50 text-blue-600">À faire</span>}
+                      : <span className="text-xs font-semibold px-2 py-1 rounded-md shrink-0 bg-blue-50 text-blue-600">{t('todo')}</span>}
                   </button>
                 )
               })}
@@ -438,7 +416,7 @@ export default function MyCourseClient({
       )}
 
       {/* Syllabus */}
-      <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">Programme · {level.id}</h2>
+      <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">{t('syllabusHeading', { level: level.id })}</h2>
       <div className="flex flex-col gap-2">
         {lessons.map(lesson => {
           const sc = scores[lesson.id]
@@ -459,7 +437,7 @@ export default function MyCourseClient({
               <span className="flex-1 text-sm font-medium text-gray-800 truncate">{lesson.title}</span>
               {thisWeek && (
                 <span className="text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5 shrink-0">
-                  Cette semaine
+                  {t('thisWeek')}
                 </span>
               )}
               {sc ? (
@@ -477,7 +455,7 @@ export default function MyCourseClient({
 
       {isTeacher && (
         <Link href="/console-x7k9/classes" className="block text-xs text-green-700 hover:underline mt-8 text-center">
-          👋 Vue enseignant — ouvrir le carnet de notes →
+          {t('teacherLink')}
         </Link>
       )}
 

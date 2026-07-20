@@ -1,18 +1,19 @@
 'use client'
 
+import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { getLevel } from '@/lib/german-data'
 import { useProgress } from '@/lib/useProgress'
 
-// Qualitative label + German school note for the final average, mirroring the
-// dashboard's gradeInfo so the certificate never disagrees with the course.
-function noteInfo(g: number): { note: string; text: string } {
-  if (g >= 90) return { note: '1', text: 'Ausgezeichnet' }
-  if (g >= 80) return { note: '2', text: 'Sehr gut' }
-  if (g >= 70) return { note: '3', text: 'Gut' }
-  if (g >= 60) return { note: '3', text: 'Befriedigend' }
-  return { note: '4', text: 'Ausreichend' }
+// Qualitative label key + German school note for the final average, mirroring
+// the dashboard's gradeInfo so the certificate never disagrees with the course.
+function noteInfo(g: number): { note: string; key: string } {
+  if (g >= 90) return { note: '1', key: 'excellent' }
+  if (g >= 80) return { note: '2', key: 'veryGood' }
+  if (g >= 70) return { note: '3', key: 'good' }
+  if (g >= 60) return { note: '3', key: 'satisfactory' }
+  return { note: '4', key: 'sufficient' }
 }
 
 /**
@@ -30,11 +31,14 @@ export default function CertificateClient({
   displayName: string
   groupLabel: string | null
 }) {
+  const t = useTranslations('learnGerman.certificate')
+  const tGrade = useTranslations('learnGerman.myCourse.gradeLevels')
+  const locale = useLocale()
   const level = getLevel(levelId)
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
 
   if (!level) {
-    return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">Niveau introuvable.</div>
+    return <div className="max-w-3xl mx-auto px-4 py-12 text-gray-500">{t('notFound')}</div>
   }
 
   const lessons = [...level.lessons].sort((a, b) => a.order - b.order)
@@ -47,16 +51,20 @@ export default function CertificateClient({
       <div className="max-w-md mx-auto px-4 py-16 text-center">
         <div className="bg-white rounded-2xl border border-gray-200 p-8">
           <div className="mb-4 flex justify-center text-green-700"><Icon name="trophy" size={36} /></div>
-          <h1 className="text-xl font-bold text-gray-900">Encore un effort !</h1>
+          <h1 className="text-xl font-bold text-gray-900">{t('notYetTitle')}</h1>
           <p className="text-sm text-gray-600 mt-2">
-            Le certificat {level.id} se débloque quand toutes les leçons sont validées (score ≥ 70%).
-            Vous en êtes à <strong>{doneCount}/{lessons.length}</strong>.
+            {t.rich('notYetBody', {
+              level: level.id,
+              strong: (chunks) => <strong>{chunks}</strong>,
+              done: doneCount,
+              total: lessons.length,
+            })}
           </p>
           <Link
             href="/learn-german/my-course"
             className="inline-block mt-5 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5"
           >
-            ← Retour au cours
+            {t('backToCourse')}
           </Link>
         </div>
       </div>
@@ -67,7 +75,7 @@ export default function CertificateClient({
     lessons.reduce((s, l) => s + (scores[l.id]?.best ?? 0), 0) / lessons.length,
   )
   const info = noteInfo(finalGrade)
-  const dateStr = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })
+  const dateStr = new Date().toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-10">
@@ -82,13 +90,13 @@ export default function CertificateClient({
 
       <div className="flex items-center justify-between gap-3 flex-wrap mb-6 print:hidden">
         <Link href="/learn-german/my-course" className="text-sm text-green-700 hover:underline">
-          ← Retour au cours
+          {t('backToCourse')}
         </Link>
         <button
           onClick={() => window.print()}
           className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-5 py-2.5"
         >
-          <Icon name="download" size={15} /> Imprimer / Enregistrer en PDF
+          <Icon name="download" size={15} /> {t('printCta')}
         </button>
       </div>
 
@@ -101,54 +109,58 @@ export default function CertificateClient({
         <p className="text-[11px] uppercase tracking-[0.3em] text-gray-400 mt-1">www.gogermany.ma</p>
 
         <h1 className="text-3xl sm:text-4xl font-black text-gray-900 mt-8 uppercase tracking-wide">
-          Certificat de réussite
+          {t('certificateTitle')}
         </h1>
         <div className="w-24 h-1 bg-green-600 mx-auto mt-4" />
 
-        <p className="text-sm text-gray-500 mt-8">Ce certificat est décerné à</p>
+        <p className="text-sm text-gray-500 mt-8">{t('awardedTo')}</p>
         <p className="text-3xl font-bold text-gray-900 mt-2" style={{ fontFamily: 'Georgia, serif' }}>
           {displayName}
         </p>
 
         <p className="text-sm text-gray-600 mt-6 max-w-lg mx-auto leading-relaxed">
-          pour avoir suivi et validé avec succès l&rsquo;intégralité du niveau{' '}
-          <strong className="text-green-700">{level.id}</strong> du cours d&rsquo;allemand en direct
-          {groupLabel ? <> (groupe {groupLabel})</> : null} — {lessons.length} leçons, exercices et devoirs inclus.
+          {t.rich('body', {
+            level: level.id,
+            strong: (chunks) => <strong className="text-green-700">{chunks}</strong>,
+            hasGroup: groupLabel ? 'yes' : 'no',
+            group: groupLabel ?? '',
+            n: lessons.length,
+          })}
         </p>
 
         <div className="flex items-center justify-center gap-10 mt-8">
           <div>
             <p className="text-3xl font-black text-green-700">{finalGrade}<span className="text-lg">/100</span></p>
-            <p className="text-xs text-gray-400 mt-1">Note finale</p>
+            <p className="text-xs text-gray-400 mt-1">{t('finalGrade')}</p>
           </div>
           <div className="w-px h-12 bg-gray-200" />
           <div>
             <p className="text-3xl font-black text-green-700">{info.note}</p>
-            <p className="text-xs text-gray-400 mt-1">{info.text}</p>
+            <p className="text-xs text-gray-400 mt-1">{tGrade(info.key as any)}</p>
           </div>
           <div className="w-px h-12 bg-gray-200" />
           <div>
             <p className="text-3xl font-black text-green-700">{level.id}</p>
-            <p className="text-xs text-gray-400 mt-1">Niveau CECR</p>
+            <p className="text-xs text-gray-400 mt-1">{t('cefrLevel')}</p>
           </div>
         </div>
 
         <div className="flex items-end justify-between mt-12 pt-8 border-t border-gray-100 text-left">
           <div>
-            <p className="text-xs text-gray-400">Fait le</p>
+            <p className="text-xs text-gray-400">{t('madeOn')}</p>
             <p className="text-sm font-semibold text-gray-700">{dateStr}</p>
           </div>
           <div className="text-right">
             <p className="text-sm font-semibold text-gray-700" style={{ fontFamily: 'Georgia, serif' }}>
-              L&rsquo;équipe pédagogique
+              {t('teachingTeam')}
             </p>
-            <p className="text-xs text-gray-400">GoGermany — Cours d&rsquo;allemand en direct</p>
+            <p className="text-xs text-gray-400">{t('footerTagline')}</p>
           </div>
         </div>
       </div>
 
       <p className="text-xs text-gray-400 text-center mt-4 print:hidden">
-        Astuce : dans la boîte d&rsquo;impression, choisissez « Enregistrer au format PDF » et l&rsquo;orientation paysage.
+        {t('printTip')}
       </p>
     </div>
   )

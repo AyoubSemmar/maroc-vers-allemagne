@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
+import { getTranslations } from 'next-intl/server'
 import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
@@ -8,9 +9,12 @@ import CertificateClient from './CertificateClient'
 
 export const dynamic = 'force-dynamic'
 
-export const metadata: Metadata = {
-  title: 'Certificat — GoGermany',
-  robots: { index: false, follow: false },
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learnGerman.certificate' })
+  return { title: `${t('metaTitle')} — GoGermany`, robots: { index: false, follow: false } }
 }
 
 /** Same gate as the course dashboard: signed-in student with active access
@@ -47,10 +51,11 @@ export default async function CertificatePage({
     }
   }
 
+  const t = await getTranslations({ locale, namespace: 'learnGerman.myCourse' })
   const displayName =
     (user.user_metadata?.full_name as string) ||
     user.email?.split('@')[0] ||
-    'Étudiant(e)'
+    t('defaultDisplayName')
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
