@@ -3,10 +3,12 @@
 import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
+import { classesStrings } from '@/components/classes/strings'
 
 // 12-question ladder (4×A1, 4×A2, 4×B1). A block is "validated" with ≥3
-// correct; the recommended level is the first non-validated block. French UI —
-// the quiz exists to route Moroccan students into the right live-class cohort.
+// correct; the recommended level is the first non-validated block. The
+// questions themselves stay German (that's what's being tested); the
+// surrounding UI chrome follows components/classes/strings.ts (ar/fr/en/de).
 type Q = { level: 'a1' | 'a2' | 'b1'; q: string; options: string[]; correct: number }
 
 const QUESTIONS: Q[] = [
@@ -24,8 +26,6 @@ const QUESTIONS: Q[] = [
   { level: 'b1', q: 'Das ist der Mann, ___ Auto gestohlen wurde.', options: ['deren', 'dem', 'den', 'dessen'], correct: 3 },
 ]
 
-const LEVEL_LABEL: Record<string, string> = { a1: 'A1 — Débutant', a2: 'A2 — Élémentaire', b1: 'B1 — Intermédiaire' }
-
 function recommend(answers: number[]): 'a1' | 'a2' | 'b1' {
   const score = (lvl: Q['level']) =>
     QUESTIONS.reduce((s, q, i) => s + (q.level === lvl && answers[i] === q.correct ? 1 : 0), 0)
@@ -34,7 +34,8 @@ function recommend(answers: number[]): 'a1' | 'a2' | 'b1' {
   return 'b1'
 }
 
-export default function PlacementQuiz() {
+export default function PlacementQuiz({ locale }: { locale: string }) {
+  const t = classesStrings(locale).placement
   const [answers, setAnswers] = useState<number[]>(Array(QUESTIONS.length).fill(-1))
   const [done, setDone] = useState(false)
 
@@ -45,31 +46,30 @@ export default function PlacementQuiz() {
     return (
       <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center">
         <div className="mb-4 flex justify-center text-green-700"><Icon name="target" size={40} /></div>
-        <p className="text-sm text-gray-500">Niveau recommandé</p>
-        <p className="text-3xl font-black text-green-700 mt-1">{LEVEL_LABEL[level]}</p>
+        <p className="text-sm text-gray-500">{t.recommendedLevel}</p>
+        <p className="text-3xl font-black text-green-700 mt-1">{t.levelLabels[level]}</p>
         <p className="text-sm text-gray-600 mt-3 max-w-md mx-auto">
-          D&rsquo;après vos réponses, le groupe <strong>{level.toUpperCase()}</strong> est le bon point de départ.
-          Choisissez un horaire et réservez votre place — ou commencez par les leçons gratuites.
+          {t.resultBody.replace('{level}', level.toUpperCase())}
         </p>
         <div className="flex gap-3 justify-center flex-wrap mt-6">
           <Link
             href="/learn-german/classes"
             className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-6 py-3"
           >
-            <Icon name="play" size={15} /> Voir les groupes {level.toUpperCase()}
+            <Icon name="play" size={15} /> {t.viewGroups.replace('{level}', level.toUpperCase())}
           </Link>
           <Link
             href={`/learn-german/${level}`}
             className="inline-flex items-center gap-2 rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-semibold px-6 py-3"
           >
-            <Icon name="book" size={15} /> Leçons gratuites {level.toUpperCase()}
+            <Icon name="book" size={15} /> {t.freeLessons.replace('{level}', level.toUpperCase())}
           </Link>
         </div>
         <button
           onClick={() => { setAnswers(Array(QUESTIONS.length).fill(-1)); setDone(false) }}
           className="block mx-auto mt-5 text-xs text-gray-400 hover:text-gray-600"
         >
-          ↻ Refaire le test
+          {t.retakeTest}
         </button>
       </div>
     )
@@ -79,7 +79,7 @@ export default function PlacementQuiz() {
     <div className="flex flex-col gap-4">
       <div className="bg-white rounded-2xl border border-gray-200 p-4">
         <div className="flex items-center justify-between text-sm mb-2">
-          <span className="font-semibold text-gray-700">Progression</span>
+          <span className="font-semibold text-gray-700">{t.progression}</span>
           <span className="text-gray-400">{answered} / {QUESTIONS.length}</span>
         </div>
         <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -120,7 +120,7 @@ export default function PlacementQuiz() {
         disabled={answered < QUESTIONS.length}
         className="w-full bg-green-700 text-white rounded-2xl py-4 font-semibold hover:bg-green-800 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
       >
-        Voir mon niveau ({answered}/{QUESTIONS.length})
+        {t.seeMyLevel.replace('{answered}', String(answered)).replace('{total}', String(QUESTIONS.length))}
       </button>
     </div>
   )

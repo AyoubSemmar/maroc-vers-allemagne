@@ -57,6 +57,21 @@ const EN = {
   waitingPayment: 'Awaiting payment',
   payMsgTemplate: 'Hello, I reserved a seat ({group}) for the online German classes. I’d like to pay the 450 MAD/month.',
   adminPreviewBadge: 'ADMIN PREVIEW',
+  placement: {
+    metaTitle: 'German level test',
+    metaDescription: 'Test your German level in 5 minutes (A1–B1) and find the right group for GoGermany live classes.',
+    backLink: '← Live classes',
+    heading: 'Level test',
+    subheading: '12 questions, ~5 minutes. At the end, we recommend the group (A1, A2, or B1) that fits your level.',
+    levelLabels: { a1: 'A1 — Beginner', a2: 'A2 — Elementary', b1: 'B1 — Intermediate' } as Record<'a1' | 'a2' | 'b1', string>,
+    recommendedLevel: 'Recommended level',
+    resultBody: 'Based on your answers, the {level} group is the right starting point. Pick a schedule and reserve your seat — or start with the free lessons.',
+    viewGroups: 'See {level} groups',
+    freeLessons: 'Free {level} lessons',
+    retakeTest: '↻ Retake the test',
+    progression: 'Progress',
+    seeMyLevel: 'See my level ({answered}/{total})',
+  },
 }
 
 const FR: ClassesStrings = {
@@ -113,6 +128,21 @@ const FR: ClassesStrings = {
   waitingPayment: 'En attente de paiement',
   payMsgTemplate: "Bonjour, j'ai réservé une place ({group}) pour les cours d'allemand en ligne. Je souhaite régler les 450 DH/mois.",
   adminPreviewBadge: 'APERÇU ADMIN',
+  placement: {
+    metaTitle: 'Test de niveau allemand',
+    metaDescription: 'Testez votre niveau d’allemand en 5 minutes (A1–B1) et trouvez le bon groupe pour les cours en direct GoGermany.',
+    backLink: '← Cours en direct',
+    heading: 'Test de niveau',
+    subheading: '12 questions, ~5 minutes. À la fin, on vous recommande le groupe (A1, A2 ou B1) adapté à votre niveau.',
+    levelLabels: { a1: 'A1 — Débutant', a2: 'A2 — Élémentaire', b1: 'B1 — Intermédiaire' },
+    recommendedLevel: 'Niveau recommandé',
+    resultBody: 'D’après vos réponses, le groupe {level} est le bon point de départ. Choisissez un horaire et réservez votre place — ou commencez par les leçons gratuites.',
+    viewGroups: 'Voir les groupes {level}',
+    freeLessons: 'Leçons gratuites {level}',
+    retakeTest: '↻ Refaire le test',
+    progression: 'Progression',
+    seeMyLevel: 'Voir mon niveau ({answered}/{total})',
+  },
 }
 
 const AR: ClassesStrings = {
@@ -169,6 +199,21 @@ const AR: ClassesStrings = {
   waitingPayment: 'في انتظار الدفع',
   payMsgTemplate: 'مرحبًا، لقد حجزت مقعدًا ({group}) في دروس الألمانية عبر الإنترنت. أرغب في تسديد 450 درهم/شهر.',
   adminPreviewBadge: 'معاينة المسؤول',
+  placement: {
+    metaTitle: 'اختبار مستوى اللغة الألمانية',
+    metaDescription: 'اختبر مستواك في اللغة الألمانية خلال 5 دقائق (A1–B1) وجد المجموعة المناسبة لدروس GoGermany المباشرة.',
+    backLink: '← الدروس المباشرة',
+    heading: 'اختبار المستوى',
+    subheading: '12 سؤالاً، حوالي 5 دقائق. في النهاية، نقترح عليك المجموعة (A1 أو A2 أو B1) المناسبة لمستواك.',
+    levelLabels: { a1: 'A1 — مبتدئ', a2: 'A2 — أساسي', b1: 'B1 — متوسط' },
+    recommendedLevel: 'المستوى الموصى به',
+    resultBody: 'بناءً على إجاباتك، مجموعة {level} هي نقطة الانطلاق المناسبة. اختر توقيتًا واحجز مقعدك — أو ابدأ بالدروس المجانية.',
+    viewGroups: 'مشاهدة مجموعات {level}',
+    freeLessons: 'دروس {level} مجانية',
+    retakeTest: '↻ إعادة الاختبار',
+    progression: 'التقدّم',
+    seeMyLevel: 'مشاهدة مستواي ({answered}/{total})',
+  },
 }
 
 const DE: ClassesStrings = {
@@ -225,6 +270,21 @@ const DE: ClassesStrings = {
   waitingPayment: 'Zahlung ausstehend',
   payMsgTemplate: 'Hallo, ich habe einen Platz ({group}) für den Online-Deutschkurs reserviert. Ich möchte die 450 MAD/Monat bezahlen.',
   adminPreviewBadge: 'ADMIN-VORSCHAU',
+  placement: {
+    metaTitle: 'Deutsch-Einstufungstest',
+    metaDescription: 'Teste dein Deutschniveau in 5 Minuten (A1–B1) und finde die richtige Gruppe für die GoGermany-Live-Kurse.',
+    backLink: '← Live-Unterricht',
+    heading: 'Einstufungstest',
+    subheading: '12 Fragen, ca. 5 Minuten. Am Ende empfehlen wir dir die passende Gruppe (A1, A2 oder B1).',
+    levelLabels: { a1: 'A1 — Anfänger', a2: 'A2 — Grundlegend', b1: 'B1 — Mittelstufe' },
+    recommendedLevel: 'Empfohlenes Niveau',
+    resultBody: 'Laut deinen Antworten ist die Gruppe {level} der richtige Ausgangspunkt. Wähle einen Zeitplan und reserviere deinen Platz — oder beginne mit den kostenlosen Lektionen.',
+    viewGroups: '{level}-Gruppen ansehen',
+    freeLessons: 'Kostenlose {level}-Lektionen',
+    retakeTest: '↻ Test wiederholen',
+    progression: 'Fortschritt',
+    seeMyLevel: 'Mein Niveau ansehen ({answered}/{total})',
+  },
 }
 
 const MAP: Record<string, ClassesStrings> = { en: EN, fr: FR, ar: AR, de: DE }
