@@ -62,7 +62,16 @@ export default function VideoCallPanel({
   const [error, setError] = useState<string | null>(null)
 
   const endCall = useCallback(() => {
-    try { apiRef.current?.dispose() } catch {}
+    // dispose() alone tears down our embed (iframe + listeners) but doesn't
+    // reliably signal Jitsi to actually leave the conference — the camera/
+    // mic can stay active and the room can still see you as connected.
+    // Send the hangup command first so it properly leaves and releases the
+    // devices, then dispose shortly after to remove the embed.
+    const api = apiRef.current
+    if (api) {
+      try { api.executeCommand('hangup') } catch {}
+      setTimeout(() => { try { api.dispose() } catch {} }, 200)
+    }
     apiRef.current = null
     if (activeCallOwner === ownerId) activeCallOwner = null
   }, [ownerId])
