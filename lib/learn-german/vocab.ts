@@ -1,7 +1,12 @@
 import type { Level, VocabItem } from '@/lib/german-data/types'
 
-/** mastery (Leitner box) at or above this counts as "learned" for the meter. */
-export const VOCAB_LEARNED_THRESHOLD = 3
+/** mastery (Leitner box) at or above this counts as "learned" for the meter.
+ *  Was 3, but combined with round-building only reviewing ~half of each
+ *  round, a word needed several rounds before ever showing up as "learned" —
+ *  from the student's view the counter looked stuck at 0 even though every
+ *  answer was saving correctly. 2 correct answers is still a real signal
+ *  (not a single lucky guess) while making progress visible much sooner. */
+export const VOCAB_LEARNED_THRESHOLD = 2
 
 /** Stable id for a vocab item, e.g. "A1:der Tisch". German is unique enough
  *  within a level; the level prefix keeps keys distinct across levels. */
