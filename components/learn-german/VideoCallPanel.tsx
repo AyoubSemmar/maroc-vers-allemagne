@@ -43,10 +43,16 @@ export default function VideoCallPanel({
   groupId,
   videoConfigured,
   autoJoin = false,
+  onClose,
 }: {
   groupId: string | null
   videoConfigured: boolean
   autoJoin?: boolean
+  /** Called after ending any active call, when the caller wants the whole
+   *  panel dismissed (not just the call), e.g. collapsing the classroom's
+   *  video section entirely rather than leaving an idle "join again" card
+   *  sitting in its place. Falls back to just ending the call if omitted. */
+  onClose?: () => void
 }) {
   const t = useTranslations('learnGerman.classroom')
   const jitsiRef = useRef<HTMLDivElement>(null)
@@ -127,9 +133,13 @@ export default function VideoCallPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  function leaveCall() {
+  // The "permanent" close: end whatever call is active AND tell the parent
+  // to dismiss the panel entirely, instead of leaving an idle/closed card
+  // sitting in its place waiting to be reopened.
+  function closePanel() {
     endCall()
-    setPhase('closed')
+    if (onClose) onClose()
+    else setPhase('closed')
   }
 
   return (
@@ -137,19 +147,17 @@ export default function VideoCallPanel({
       {/* The Jitsi iframe mounts here when live */}
       <div ref={jitsiRef} className={`absolute inset-0 ${phase === 'live' || phase === 'connecting' ? '' : 'hidden'}`} />
 
-      {/* Explicit close affordance — Jitsi's own hangup button ends the
-          conference, but this covers the "connecting" state too and gives an
-          unambiguous way to close the panel from any live/connecting state. */}
-      {(phase === 'live' || phase === 'connecting') && (
-        <button
-          onClick={leaveCall}
-          aria-label={t('leaveCall')}
-          title={t('leaveCall')}
-          className="absolute top-2 end-2 z-10 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-black/40 hover:bg-black/60 text-white"
-        >
-          <Icon name="x" size={16} />
-        </button>
-      )}
+      {/* Always-available close affordance, in every phase — not just while
+          live/connecting — so there's one obvious, permanent way to dismiss
+          the panel regardless of state. */}
+      <button
+        onClick={closePanel}
+        aria-label={t('leaveCall')}
+        title={t('leaveCall')}
+        className="absolute top-2 end-2 z-10 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-black/40 hover:bg-black/60 text-white"
+      >
+        <Icon name="x" size={16} />
+      </button>
 
       {phase !== 'live' && phase !== 'connecting' && (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 text-gray-300">
