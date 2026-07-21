@@ -42,7 +42,7 @@ export default function ClassesClient({
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
   const myGroupLabel = groups.find((g) => g.id === myGroupId)?.label ?? ''
-  const payMsg = `Bonjour, j'ai réservé une place (${myGroupLabel}) pour les cours d'allemand en ligne. Je souhaite régler les 450 DH/mois.`
+  const payMsg = t.payMsgTemplate.replace('{group}', myGroupLabel)
   const [msg, setMsg] = useState<string | null>(null)
 
   async function book(groupId: string) {
@@ -102,10 +102,10 @@ export default function ClassesClient({
           <span className="font-medium">
             {myAccessGranted
               ? (myAccessUntil
-                  ? `Accès actif jusqu'au ${formatAccessDate(myAccessUntil)}${renewSoon ? ` · à renouveler (${daysLeft} j)` : ''}`
-                  : 'Votre accès au cours est activé.')
+                  ? t.accessActiveUntil.replace('{date}', formatAccessDate(myAccessUntil)) + (renewSoon ? t.renewSoonSuffix.replace('{d}', String(daysLeft)) : '')
+                  : t.accessActiveNoDate)
               : expired
-                ? `Votre accès a expiré${myAccessUntil ? ` le ${formatAccessDate(myAccessUntil)}` : ''}. Renouvelez pour continuer (450 DH/mois).`
+                ? (myAccessUntil ? t.accessExpiredWithDate.replace('{date}', formatAccessDate(myAccessUntil)) : t.accessExpiredNoDate)
                 : t.enrolledNote}
           </span>
           <div className="flex items-center gap-2 shrink-0">
@@ -114,7 +114,7 @@ export default function ClassesClient({
                 href="/learn-german/my-course"
                 className="inline-flex items-center gap-1.5 rounded-lg bg-white text-green-800 hover:bg-green-50 text-xs font-bold px-4 py-2"
               >
-                <Icon name="bar-chart" size={13} /> Mon cours
+                <Icon name="bar-chart" size={13} /> {t.myCourseLink}
               </Link>
             ) : WHATSAPP ? (
               <a
@@ -122,7 +122,7 @@ export default function ClassesClient({
                 target="_blank" rel="noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-lg bg-white/90 text-amber-800 hover:bg-white text-xs font-semibold px-4 py-2"
               >
-                <Icon name="message" size={13} /> {expired ? 'Renouveler' : t.payWhatsapp}
+                <Icon name="message" size={13} /> {expired ? t.renew : t.payWhatsapp}
               </a>
             ) : null}
           </div>
@@ -185,11 +185,11 @@ export default function ClassesClient({
                       href="/learn-german/my-course"
                       className="inline-flex items-center justify-center gap-1.5 text-center rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
                     >
-                      <Icon name="bar-chart" size={14} /> Mon cours
+                      <Icon name="bar-chart" size={14} /> {t.myCourseLink}
                     </Link>
                   ) : (
                     <span className="text-center rounded-lg bg-amber-50 text-amber-700 border border-amber-200 text-xs font-medium px-3 py-2">
-                      En attente de paiement
+                      {t.waitingPayment}
                     </span>
                   )}
                   <button

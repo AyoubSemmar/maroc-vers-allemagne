@@ -69,26 +69,11 @@ export default async function ClassesPage({
     myAccessGranted = isAccessActive(myAccessUntil)
   }
 
-  // Sales content is French-first — the course is Morocco-gated and every
-  // in-course surface (dashboard, devoirs, console) is already French.
-  const FEATURES: { icon: IconName; title: string; desc: string }[] = [
-    { icon: 'play', title: 'Cours en direct chaque semaine', desc: 'Classique : 3 séances de 1h30 (lun/mer/ven) — ou Intensif : 2 séances de 3h (mar/jeu ou sam/dim). Petit groupe (10 max), avec un prof.' },
-    { icon: 'bar-chart', title: 'Tableau de bord noté', desc: 'Note en continu, progression par leçon et vocabulaire maîtrisé — vous savez toujours où vous en êtes.' },
-    { icon: 'pen', title: 'Devoirs corrigés', desc: 'Lesen, Hören, Schreiben et grammaire — corrigés automatiquement, avec retour détaillé sur vos rédactions.' },
-    { icon: 'flag', title: 'Objectif Allemagne', desc: 'Un programme pensé pour l’Ausbildung, les études et le visa — par la plateforme n°1 du parcours Maroc → Allemagne.' },
-  ]
-  const STEPS = [
-    { n: '1', title: 'Réservez votre place', desc: 'Choisissez le niveau et l’horaire qui vous conviennent ci-dessous.' },
-    { n: '2', title: 'Confirmez par WhatsApp', desc: 'Vous recevez les instructions de paiement (450 DH/mois, sans engagement).' },
-    { n: '3', title: 'Commencez à apprendre', desc: 'Accès immédiat au cours, au tableau de bord et aux séances en direct de votre groupe.' },
-  ]
-  const FAQ = [
-    { q: 'Je ne connais pas mon niveau — comment choisir ?', a: 'Faites notre test de niveau gratuit (12 questions, 5 minutes) : il vous recommande directement le bon groupe A1, A2 ou B1.' },
-    { q: 'Comment se passe le paiement ?', a: 'Après la réservation, vous recevez les instructions par WhatsApp. L’abonnement est mensuel (450 DH), sans engagement — vous arrêtez quand vous voulez.' },
-    { q: 'Et si je rate un cours ?', a: 'Le programme, le vocabulaire et les devoirs de chaque leçon restent disponibles 24h/24 sur votre tableau de bord — vous rattrapez à votre rythme.' },
-    { q: 'De quoi ai-je besoin ?', a: 'Un téléphone ou un ordinateur avec un navigateur et un micro. L’appel vidéo s’ouvre en un clic, sans installation.' },
-    { q: 'Les cours préparent-ils au Goethe-Zertifikat ?', a: 'Oui — le programme suit les niveaux CECR (A1→B1) et la plateforme inclut la préparation aux épreuves Lesen, Hören et Schreiben.' },
-  ]
+  // Sales content — ar/fr/en/de (components/classes/strings.ts), matching
+  // the Morocco-gated audience this page actually reaches.
+  const FEATURES = t.features as { icon: IconName; title: string; desc: string }[]
+  const STEPS = t.steps.map((s, i) => ({ n: String(i + 1), ...s }))
+  const FAQ = t.faq
 
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
@@ -115,8 +100,8 @@ export default async function ClassesPage({
           href="/learn-german/placement"
           className="mt-4 flex items-center justify-between gap-3 rounded-xl border border-green-300 bg-green-50 hover:bg-green-100 transition-colors px-4 py-3"
         >
-          <span className="text-sm text-green-900 font-medium">Pas sûr de votre niveau ? Faites le test gratuit (5 min)</span>
-          <span className="text-sm font-bold text-green-700 shrink-0">Tester →</span>
+          <span className="text-sm text-green-900 font-medium">{t.placementCta}</span>
+          <span className="text-sm font-bold text-green-700 shrink-0">{t.placementCtaBtn}</span>
         </Link>
 
         {/* How it works */}
@@ -130,7 +115,7 @@ export default async function ClassesPage({
           ))}
         </div>
 
-        <h2 className="text-lg font-bold text-gray-900 mt-10 mb-4">Choisissez votre groupe</h2>
+        <h2 className="text-lg font-bold text-gray-900 mt-10 mb-4">{t.chooseGroupHeading}</h2>
         <ClassesClient
           locale={locale}
           groups={(groups ?? []) as ClassGroup[]}
@@ -141,7 +126,7 @@ export default async function ClassesPage({
         />
 
         {/* FAQ */}
-        <h2 className="text-lg font-bold text-gray-900 mt-12 mb-4">Questions fréquentes</h2>
+        <h2 className="text-lg font-bold text-gray-900 mt-12 mb-4">{t.faqHeading}</h2>
         <div className="flex flex-col gap-2">
           {FAQ.map((f) => (
             <details key={f.q} className="bg-white rounded-xl border border-gray-200 px-4 py-3 group">
