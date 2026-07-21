@@ -56,6 +56,7 @@ const EN = {
   renew: 'Renew',
   waitingPayment: 'Awaiting payment',
   payMsgTemplate: 'Hello, I reserved a seat ({group}) for the online German classes. I’d like to pay the 450 MAD/month.',
+  adminPreviewBadge: 'ADMIN PREVIEW',
 }
 
 const FR: ClassesStrings = {
@@ -111,6 +112,7 @@ const FR: ClassesStrings = {
   renew: 'Renouveler',
   waitingPayment: 'En attente de paiement',
   payMsgTemplate: "Bonjour, j'ai réservé une place ({group}) pour les cours d'allemand en ligne. Je souhaite régler les 450 DH/mois.",
+  adminPreviewBadge: 'APERÇU ADMIN',
 }
 
 const AR: ClassesStrings = {
@@ -166,6 +168,7 @@ const AR: ClassesStrings = {
   renew: 'تجديد',
   waitingPayment: 'في انتظار الدفع',
   payMsgTemplate: 'مرحبًا، لقد حجزت مقعدًا ({group}) في دروس الألمانية عبر الإنترنت. أرغب في تسديد 450 درهم/شهر.',
+  adminPreviewBadge: 'معاينة المسؤول',
 }
 
 const DE: ClassesStrings = {
@@ -221,6 +224,7 @@ const DE: ClassesStrings = {
   renew: 'Verlängern',
   waitingPayment: 'Zahlung ausstehend',
   payMsgTemplate: 'Hallo, ich habe einen Platz ({group}) für den Online-Deutschkurs reserviert. Ich möchte die 450 MAD/Monat bezahlen.',
+  adminPreviewBadge: 'ADMIN-VORSCHAU',
 }
 
 const MAP: Record<string, ClassesStrings> = { en: EN, fr: FR, ar: AR, de: DE }

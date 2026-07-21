@@ -48,7 +48,7 @@ export default function LiveClassesCta({ locale }: { locale: string }) {
         🎥 {ct.title}
         {adminPreview && (
           <span style={{ fontSize: 11, fontWeight: 800, background: '#1a1a1a', color: '#F4C842', padding: '3px 9px', borderRadius: 999, letterSpacing: '.03em' }}>
-            APERÇU ADMIN
+            {ct.adminPreviewBadge}
           </span>
         )}
       </span>

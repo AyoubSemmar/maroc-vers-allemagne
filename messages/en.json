@@ -557,6 +557,9 @@
   "profile": {
     "title": "My profile",
     "errorPrefix": "Error: ",
+    "myCourseTitle": "My course",
+    "myCourseSubtitle": "Your grade, your syllabus, your homework, and the video call.",
+    "myCourseOpen": "Open →",
     "avatar": {
       "uploading": "Uploading...",
       "change": "Change photo"
@@ -3366,6 +3369,7 @@
       "emptyCta": "Start with A1",
       "gradeHeading": "Overall grade",
       "gradeSub": "German school grade, computed on the work you have actually done.",
+      "noteLabel": "Grade {n} · {text}",
       "noGrade": "Not graded yet — finish a lesson exercise to get your first grade.",
       "lessonsDone": "Lessons completed",
       "devoirsDone": "Exercises submitted",
@@ -3383,6 +3387,8 @@
     },
     "myCourse": {
       "label": "My course",
+      "entrySubtitle": "Your grade, your syllabus, your homework, and your vocabulary — all in one place.",
+      "entryOpen": "Open →",
       "notFound": "Level not found.",
       "defaultDisplayName": "Student",
       "startedOn": "Started on {date}",

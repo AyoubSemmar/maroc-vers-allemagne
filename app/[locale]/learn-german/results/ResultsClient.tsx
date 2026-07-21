@@ -31,13 +31,16 @@ type SubRow = {
 const SKILLS_ORDER: Skill[] = ['lesen', 'hoeren', 'schreiben', 'grammar']
 
 // Same thresholds as the paid course dashboard: German school notes.
-function gradeNote(g: number): { note: string; text: string; color: string } {
-  if (g >= 90) return { note: '1', text: 'Ausgezeichnet', color: 'text-green-700' }
-  if (g >= 80) return { note: '2', text: 'Sehr gut', color: 'text-green-700' }
-  if (g >= 70) return { note: '3', text: 'Gut', color: 'text-green-600' }
-  if (g >= 60) return { note: '3', text: 'Befriedigend', color: 'text-amber-600' }
-  if (g >= 50) return { note: '4', text: 'Ausreichend', color: 'text-amber-600' }
-  return { note: '5', text: 'Weiter üben!', color: 'text-red-500' }
+// `key` maps into learnGerman.myCourse.gradeLevels for the displayed text —
+// same wording as the my-course dashboard, and it was hardcoded German prose
+// here regardless of site locale before.
+function gradeNote(g: number): { note: string; key: string; color: string } {
+  if (g >= 90) return { note: '1', key: 'excellent', color: 'text-green-700' }
+  if (g >= 80) return { note: '2', key: 'veryGood', color: 'text-green-700' }
+  if (g >= 70) return { note: '3', key: 'good', color: 'text-green-600' }
+  if (g >= 60) return { note: '3', key: 'satisfactory', color: 'text-amber-600' }
+  if (g >= 50) return { note: '4', key: 'sufficient', color: 'text-amber-600' }
+  return { note: '5', key: 'toImprove', color: 'text-red-500' }
 }
 
 function effScore(s: SubRow): number {
@@ -83,6 +86,7 @@ function SkillBar({ icon, label, value, count, countLabel }: {
 
 export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
   const t = useTranslations('learnGerman.results')
+  const tGrade = useTranslations('learnGerman.myCourse.gradeLevels')
   const locale = useLocale() as AppLocale
   const pathname = usePathname()
 
@@ -257,7 +261,7 @@ export default function ResultsClient({ levels }: { levels: LevelSummary[] }) {
                   {stats.grade != null ? (
                     <>
                       <p className={`text-xl font-black ${gradeNote(stats.grade).color}`}>
-                        Note {gradeNote(stats.grade).note} · {gradeNote(stats.grade).text}
+                        {t('noteLabel', { n: gradeNote(stats.grade).note, text: tGrade(gradeNote(stats.grade).key as any) })}
                       </p>
                       <p className="text-xs text-gray-400 mt-1">{t('gradeSub')}</p>
                     </>

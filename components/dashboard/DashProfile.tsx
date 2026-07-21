@@ -309,10 +309,10 @@ export default function DashProfile() {
         >
           <span style={{ fontSize: 28 }}>📋</span>
           <span style={{ flex: 1, minWidth: 0 }}>
-            <strong style={{ display: 'block', color: '#14532d' }}>Mon cours</strong>
-            <span style={{ fontSize: 13, color: '#16a34a' }}>Ta note, ton programme, tes devoirs et l’appel vidéo.</span>
+            <strong style={{ display: 'block', color: '#14532d' }}>{tProf('myCourseTitle')}</strong>
+            <span style={{ fontSize: 13, color: '#16a34a' }}>{tProf('myCourseSubtitle')}</span>
           </span>
-          <span style={{ background: '#16a34a', color: 'white', fontSize: 13, fontWeight: 600, borderRadius: 8, padding: '6px 14px' }}>Ouvrir →</span>
+          <span style={{ background: '#16a34a', color: 'white', fontSize: 13, fontWeight: 600, borderRadius: 8, padding: '6px 14px' }}>{tProf('myCourseOpen')}</span>
         </Link>
       )}
 

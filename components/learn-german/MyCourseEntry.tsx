@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { useCourseAccess } from '@/lib/useCourseAccess'
@@ -10,6 +11,7 @@ import { useCourseAccess } from '@/lib/useCourseAccess'
  * learn-german landing page stays static.
  */
 export default function MyCourseEntry() {
+  const t = useTranslations('learnGerman.myCourse')
   const { hasAccess } = useCourseAccess()
 
   if (!hasAccess) return null
@@ -21,10 +23,10 @@ export default function MyCourseEntry() {
     >
       <span className="shrink-0 inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-100 text-green-700"><Icon name="bar-chart" size={22} /></span>
       <span className="flex-1 min-w-0">
-        <span className="block font-bold text-green-900">Mon cours</span>
-        <span className="block text-sm text-green-700">Ta note, ton programme, tes devoirs et ton vocabulaire — au même endroit.</span>
+        <span className="block font-bold text-green-900">{t('label')}</span>
+        <span className="block text-sm text-green-700">{t('entrySubtitle')}</span>
       </span>
-      <span className="shrink-0 rounded-lg bg-green-600 text-white text-sm font-semibold px-4 py-2">Ouvrir →</span>
+      <span className="shrink-0 rounded-lg bg-green-600 text-white text-sm font-semibold px-4 py-2">{t('entryOpen')}</span>
     </Link>
   )
 }
