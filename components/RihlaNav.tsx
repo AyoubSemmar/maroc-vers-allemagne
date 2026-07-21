@@ -291,7 +291,7 @@ export default function RihlaNav() {
 
           {/* Paid live-class students get a direct link to their course. */}
           {mounted && hasCourseAccess && (
-            <Link href="/learn-german/my-course" style={{ fontWeight: 600, color: '#16a34a' }}>📋 Mon cours</Link>
+            <Link href="/learn-german/my-course" style={{ fontWeight: 600, color: '#16a34a' }}>📋 {tNav('myCourse')}</Link>
           )}
         </div>
 
