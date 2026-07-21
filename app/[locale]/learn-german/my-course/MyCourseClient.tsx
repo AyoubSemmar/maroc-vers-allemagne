@@ -16,7 +16,6 @@ import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
 import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
 import SkillIcon from '@/components/learn-german/SkillIcon'
-import VideoCallPanel from '@/components/learn-german/VideoCallPanel'
 import Icon from '@/components/ui/Icon'
 import type { Skill } from '@/lib/learn-german/assignmentAI'
 
@@ -57,7 +56,6 @@ export default function MyCourseClient({
   displayName,
   isTeacher,
   callUrl,
-  videoConfigured,
   accessUntil,
   groupStartDate,
 }: {
@@ -68,17 +66,22 @@ export default function MyCourseClient({
   displayName: string
   isTeacher: boolean
   callUrl: string | null
-  videoConfigured: boolean
   accessUntil: string | null
   groupStartDate: string | null
 }) {
   const t = useTranslations('learnGerman.myCourse')
-  const tClassroom = useTranslations('learnGerman.classroom')
-  const [callOpen, setCallOpen] = useState(false)
   const rawLevel = getLevel(levelId)
   const level = rawLevel ? localizeLevel(rawLevel, locale as AppLocale) : rawLevel
   const { scores, progress } = useProgress((level?.id ?? 'A1') as any)
   const vocab = useVocabProgress((level?.id ?? 'A1') as any)
+
+  // The classroom page embeds this exact page in its "Mon cours" tab — hide
+  // the join button there so a click can't nest the classroom inside its own
+  // iframe. window.top is only readable same-origin, which classroom is.
+  const [embedded, setEmbedded] = useState(false)
+  useEffect(() => {
+    try { setEmbedded(window.self !== window.top) } catch { setEmbedded(true) }
+  }, [])
 
   const vocabTotal = useMemo(() => (level ? collectLevelVocab(level).length : 0), [level])
 
@@ -228,18 +231,15 @@ export default function MyCourseClient({
             )
           })()}
         </div>
-        {callUrl && (
-          <button
-            type="button"
+        {callUrl && !embedded && (
+          <Link
+            href="/learn-german/classroom"
             // Fire-and-forget attendance log — must never delay joining.
-            onClick={() => {
-              try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {}
-              setCallOpen(true)
-            }}
+            onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
             className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
           >
             <Icon name="play" size={15} /> {t('joinCall')}
-          </button>
+          </Link>
         )}
       </div>
 
@@ -474,24 +474,6 @@ export default function MyCourseClient({
           onClose={() => setOpenAssignment(null)}
           onGraded={(id, score) => setSubScores(prev => ({ ...prev, [id]: score }))}
         />
-      )}
-
-      {/* Video call overlay — joins in place instead of navigating to the
-          classroom page. Unmounting on close disposes the Jitsi instance
-          (VideoCallPanel's own cleanup effect). */}
-      {callOpen && (
-        <div className="fixed inset-0 z-50 bg-black/70 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-2xl aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl">
-            <button
-              onClick={() => setCallOpen(false)}
-              className="absolute top-3 end-3 z-10 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 hover:bg-white/20 text-white"
-              aria-label={tClassroom('hideVideo')}
-            >
-              <Icon name="x" size={16} />
-            </button>
-            <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} autoJoin />
-          </div>
-        </div>
       )}
     </div>
   )

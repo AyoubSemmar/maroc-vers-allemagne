@@ -7,8 +7,8 @@ import Icon from '@/components/ui/Icon'
 import VideoCallPanel from '@/components/learn-german/VideoCallPanel'
 
 const LESSON_TABS = [
+  { key: 'mycourse', labelKey: 'tabMyCourse', icon: 'graduation' as const },
   { key: 'level', labelKey: 'tabLesson', icon: 'book' as const },
-  { key: 'all', labelKey: 'tabAll', icon: 'list' as const },
   { key: 'results', labelKey: 'tabResults', icon: 'bar-chart' as const },
 ]
 
@@ -28,14 +28,17 @@ export default function ClassroomClient({
   const t = useTranslations('learnGerman.classroom')
   const [videoOpen, setVideoOpen] = useState(true)
 
-  // Which lesson surface the left iframe shows.
+  // Which lesson surface the left iframe shows. Defaults to "Mon cours" (the
+  // personal dashboard: progress, vocab quiz, and devoirs/exercises) rather
+  // than the public level page, so a student joining the call can actually
+  // do exercises alongside it, not just read a bare lesson list.
   const lessonSrc = (key: string) => {
     const base = `/${locale}/learn-german`
-    if (key === 'all') return base
+    if (key === 'level') return `${base}/${level.toLowerCase()}`
     if (key === 'results') return `${base}/results`
-    return `${base}/${level.toLowerCase()}`
+    return `${base}/my-course`
   }
-  const [lessonTab, setLessonTab] = useState('level')
+  const [lessonTab, setLessonTab] = useState('mycourse')
 
   return (
     <div className="flex flex-col h-[100dvh] bg-gray-900">

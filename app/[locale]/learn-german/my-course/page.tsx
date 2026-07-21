@@ -6,7 +6,6 @@ import { supabase } from '@/lib/supabase'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildCallUrl } from '@/lib/jitsi'
-import { isJaasConfigured } from '@/lib/jaas'
 import { isAccessActive, formatAccessDate } from '@/lib/courseAccess'
 import MyCourseClient from './MyCourseClient'
 
@@ -101,7 +100,6 @@ export default async function MyCoursePage({
         displayName={displayName}
         isTeacher={isTeacher}
         callUrl={callUrl}
-        videoConfigured={isJaasConfigured()}
         accessUntil={accessUntil}
         groupStartDate={groupStartDate}
       />
