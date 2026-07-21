@@ -7,6 +7,14 @@ import { jaasScriptUrl } from '@/lib/jaas'
 
 type Phase = 'idle' | 'connecting' | 'live' | 'closed' | 'error' | 'not_configured'
 
+// Module-level singleton: only one live/connecting call across the whole
+// app at a time, even if more than one VideoCallPanel ends up mounted (the
+// classroom page and the my-course overlay both present, or a stray
+// instance left over from something like a hot-reload). A second instance's
+// join attempt is simply ignored instead of racing a second Jitsi API
+// connection into existence.
+let activeCallOwner: symbol | null = null
+
 // Load 8x8's external_api.js once (per AppID) and resolve when the global
 // constructor is available.
 let scriptPromise: Promise<void> | null = null
@@ -43,13 +51,15 @@ export default function VideoCallPanel({
   const t = useTranslations('learnGerman.classroom')
   const jitsiRef = useRef<HTMLDivElement>(null)
   const apiRef = useRef<any>(null)
+  const ownerId = useRef(Symbol('videoCallOwner')).current
   const [phase, setPhase] = useState<Phase>('idle')
   const [error, setError] = useState<string | null>(null)
 
   const endCall = useCallback(() => {
     try { apiRef.current?.dispose() } catch {}
     apiRef.current = null
-  }, [])
+    if (activeCallOwner === ownerId) activeCallOwner = null
+  }, [ownerId])
 
   useEffect(() => () => endCall(), [endCall])
 
@@ -59,6 +69,9 @@ export default function VideoCallPanel({
     // in flight used to race two API instances into the same container,
     // stacking video panels that never got disposed.
     if (phase === 'connecting' || phase === 'live') return
+    // Another VideoCallPanel instance already owns the live call — refuse
+    // rather than opening a second one.
+    if (activeCallOwner && activeCallOwner !== ownerId) return
     if (!groupId) { setError(t('errNoGroup')); setPhase('error'); return }
     setPhase('connecting'); setError(null)
     try {
@@ -78,6 +91,7 @@ export default function VideoCallPanel({
       if (!JitsiMeetExternalAPI || !jitsiRef.current) { setError(t('errVideoLoad')); setPhase('error'); return }
 
       endCall()
+      activeCallOwner = ownerId
       jitsiRef.current.innerHTML = ''
       const api = new JitsiMeetExternalAPI('8x8.vc', {
         roomName: data.roomName,
@@ -103,7 +117,7 @@ export default function VideoCallPanel({
       setError(t('errNetwork')); setPhase('error')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, groupId, endCall])
+  }, [phase, groupId, endCall, ownerId])
 
   // Auto-join once on mount for contexts where the user already clicked an
   // explicit "join" action before this panel ever appeared (the my-course
@@ -113,10 +127,29 @@ export default function VideoCallPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  function leaveCall() {
+    endCall()
+    setPhase('closed')
+  }
+
   return (
     <div className="relative w-full h-full min-h-[280px]">
       {/* The Jitsi iframe mounts here when live */}
       <div ref={jitsiRef} className={`absolute inset-0 ${phase === 'live' || phase === 'connecting' ? '' : 'hidden'}`} />
+
+      {/* Explicit close affordance — Jitsi's own hangup button ends the
+          conference, but this covers the "connecting" state too and gives an
+          unambiguous way to close the panel from any live/connecting state. */}
+      {(phase === 'live' || phase === 'connecting') && (
+        <button
+          onClick={leaveCall}
+          aria-label={t('leaveCall')}
+          title={t('leaveCall')}
+          className="absolute top-2 end-2 z-10 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-black/40 hover:bg-black/60 text-white"
+        >
+          <Icon name="x" size={16} />
+        </button>
+      )}
 
       {phase !== 'live' && phase !== 'connecting' && (
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5 text-gray-300">
