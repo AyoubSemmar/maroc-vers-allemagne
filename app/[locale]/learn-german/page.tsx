@@ -137,16 +137,6 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />
 
-        {/* Daily conjugation drill — 5 min/day, level-aware, builds streak */}
-        <Link href="/learn-german/drill" className="lg-drill-card">
-          <div className="lg-drill-card-icon"><Icon name="zap" size={24} /></div>
-          <div className="lg-drill-card-text">
-            <strong>{t('drill.title')}</strong>
-            <span>{t('drill.intro')}</span>
-          </div>
-          <span className="lg-drill-card-cta">{t('drill.startCta')} →</span>
-        </Link>
-
         {/* Personal results dashboard — overall grade, per-skill averages,
             level progress. Free account required to have anything saved. */}
         <Link href="/learn-german/results" className="lg-drill-card">
