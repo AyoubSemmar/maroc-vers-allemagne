@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { useTranslations } from 'next-intl'
 import type { Level } from '@/lib/german-data/types'
 import { collectLevelVocab, VOCAB_LEARNED_THRESHOLD, type VocabEntry } from '@/lib/learn-german/vocab'
 import type { useVocabProgress } from '@/lib/useVocabProgress'
@@ -40,6 +41,7 @@ export default function VocabQuiz({
   level: Level
   vocab: ReturnType<typeof useVocabProgress>
 }) {
+  const t = useTranslations('learnGerman.vocabQuiz')
   const { byKey, learnedCount, recordAnswer, loaded } = vocab
   const allEntries = useMemo(() => collectLevelVocab(level), [level])
 
@@ -110,12 +112,12 @@ export default function VocabQuiz({
   if (!round) {
     return (
       <div className="bg-white rounded-2xl border border-gray-200 p-6 text-center">
-        <h3 className="text-lg font-bold text-gray-900">{level.id} — Vocabulaire</h3>
+        <h3 className="text-lg font-bold text-gray-900">{t('title', { level: level.id })}</h3>
         <div className="my-4">
-          <div className="text-3xl font-black text-green-700">
+          <div className="text-3xl font-black text-green-700" dir="ltr">
             {loaded ? learnedCount : '…'} <span className="text-gray-300">/</span> {total}
           </div>
-          <p className="text-xs text-gray-400 mt-1">mots mémorisés</p>
+          <p className="text-xs text-gray-400 mt-1">{t('learnedLabel')}</p>
           <div className="w-full bg-gray-100 rounded-full h-2.5 mt-3">
             <div
               className="bg-green-500 h-2.5 rounded-full transition-all duration-500"
@@ -128,7 +130,7 @@ export default function VocabQuiz({
           disabled={total < 4}
           className="w-full bg-green-700 text-white rounded-xl py-3 font-semibold hover:bg-green-800 transition-colors disabled:opacity-40"
         >
-          {learnedCount > 0 ? 'Continuer l’entraînement' : 'Commencer'}
+          {learnedCount > 0 ? t('continueTraining') : t('start')}
         </button>
       </div>
     )
@@ -142,13 +144,13 @@ export default function VocabQuiz({
   return (
     <div className="bg-white rounded-2xl border border-gray-200 p-6">
       <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-        <span>{idx + 1} / {round.length}</span>
+        <span dir="ltr">{idx + 1} / {round.length}</span>
         <span>✓ {correctCount}</span>
       </div>
 
       <div className="text-center mb-5">
         <p className="text-xs text-gray-400 mb-1">
-          {q.direction === 'de2ar' ? 'Que signifie ce mot ?' : 'Comment dit-on en allemand ?'}
+          {q.direction === 'de2ar' ? t('promptDe2Ar') : t('promptAr2De')}
         </p>
         <div className="flex items-center justify-center gap-2">
           <span className="text-2xl font-bold text-gray-900" dir={promptDir}>{prompt}</span>
@@ -187,7 +189,7 @@ export default function VocabQuiz({
           onClick={next}
           className="w-full mt-5 bg-green-700 text-white rounded-xl py-3 font-semibold hover:bg-green-800 transition-colors"
         >
-          {idx + 1 >= round.length ? 'Terminer' : 'Suivant →'}
+          {idx + 1 >= round.length ? t('finish') : t('next')}
         </button>
       )}
     </div>
