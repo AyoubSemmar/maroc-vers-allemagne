@@ -45,7 +45,7 @@ function GroupSeats({ groupId, capacity, seedReserved, bookedCount }: { groupId:
     }
   }
 
-  const inp: React.CSSProperties = { width: 44, fontSize: 12, border: '1px solid #e2e5ea', borderRadius: 6, padding: '2px 4px', color: '#444', textAlign: 'center' }
+  const inp: React.CSSProperties = { width: 44, fontSize: 12, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '2px 4px', color: '#1a1a1a', background: '#fff', textAlign: 'center' }
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#7d8398' }} title="Places réservées affichées (vraies réservations hors-ligne) et capacité. Le nombre réservé compte comme des sièges occupés.">
       🎟️
@@ -99,7 +99,7 @@ function GroupStartDate({ groupId, value }: { groupId: string; value: string | n
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
-        style={{ fontSize: 12, border: '1px solid #e2e5ea', borderRadius: 6, padding: '2px 6px', color: '#444' }}
+        style={{ fontSize: 12, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '2px 6px', color: '#1a1a1a', background: '#fff' }}
       />
       {dirty && (
         <button
@@ -198,7 +198,7 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
                       ) : s.accessUntil ? (
                         <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#b91c1c', background: '#fee2e2', borderRadius: 6, padding: '1px 6px' }}>⚠ expiré {formatAccessDate(s.accessUntil)}</span>
                       ) : (
-                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#9aa0b0', background: '#f1f2f5', borderRadius: 6, padding: '1px 6px' }}>non payé</span>
+                        <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#4b5563', background: '#e5e7eb', borderRadius: 6, padding: '1px 6px' }}>non payé</span>
                       )}
                     </td>
                     <td style={{ padding: '6px 4px', width: 170 }}>

@@ -1,17 +1,16 @@
-// Admin: author AI exercises (Grammatik/Lesen/Schreiben/Hören), publish them
-// to a level or a specific cohort, and read the gradebook — each student's
-// running grade + words learned (the "pressure" view). All reads use the
-// service role (bypass RLS + the answer_key column lock).
+// Admin: student progress by group. Pick a group → see its students, each with
+// a quick count of lessons done / vocab learned / exercises done + an overall
+// grade. Open a student to read the note they got on every exercise they did.
+// All reads use the service role (bypass RLS + the answer_key column lock).
 import { createClient } from '@supabase/supabase-js'
 import type { AppLocale } from '@/i18n/routing'
 import { getLevel } from '@/lib/german-data'
 import { collectLevelVocab, VOCAB_LEARNED_THRESHOLD } from '@/lib/learn-german/vocab'
+import { SKILL_LABELS, type Skill } from '@/lib/learn-german/assignmentAI'
 import AdminAssignmentsClient, {
-  type AdminAssignment,
-  type RosterRow,
-  type GroupOpt,
-  type SubmissionDetail,
-  type Kpis,
+  type GroupBlock,
+  type StudentRow,
+  type ExerciseResult,
 } from './AdminAssignmentsClient'
 
 export const dynamic = 'force-dynamic'
@@ -36,9 +35,9 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
   const [{ data: groups }, { data: assignments }, { data: submissions }, { data: bookings }, usersRes, { data: lessonScores }, { data: vocab }] =
     await Promise.all([
       sbAdmin.from('class_groups').select('id,label,level').order('sort_order'),
-      sbAdmin.from('assignments').select('id,skill,level_id,group_id,title,is_published,due_at,created_at').order('created_at', { ascending: false }),
-      sbAdmin.from('assignment_submissions').select('assignment_id,user_id,auto_score,ai_score,teacher_score,answers,ai_feedback,submitted_at'),
-      sbAdmin.from('class_bookings').select('user_id,group_id').eq('status', 'reserved'),
+      sbAdmin.from('assignments').select('id,skill,level_id,group_id,title,is_published').order('created_at', { ascending: false }),
+      sbAdmin.from('assignment_submissions').select('assignment_id,user_id,auto_score,ai_score,teacher_score,submitted_at'),
+      sbAdmin.from('class_bookings').select('user_id,group_id,created_at').eq('status', 'reserved'),
       sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
       sbAdmin.from('lesson_scores').select('user_id,level_id,best_score'),
       sbAdmin.from('vocab_progress').select('user_id,level_id,mastery'),
@@ -46,60 +45,24 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
 
   const emailById = new Map<string, string>()
   for (const u of usersRes.data?.users ?? []) emailById.set(u.id, u.email ?? '—')
-  const groupById = new Map((groups ?? []).map(g => [g.id, g]))
 
-  // Final score per (assignment,user).
-  const finalByAU = new Map<string, number>()
+  // Final score + submission time per (assignment,user).
+  const subByAU = new Map<string, { score: number; at: string | null }>()
   for (const s of submissions ?? []) {
-    finalByAU.set(`${s.assignment_id}|${s.user_id}`, s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0)
-  }
-
-  // Detailed submissions per assignment (for the teacher drill-down).
-  const skillByAssignment = new Map((assignments ?? []).map(a => [a.id, a.skill]))
-  const submissionsByAssignment: Record<string, SubmissionDetail[]> = {}
-  for (const s of submissions ?? []) {
-    ;(submissionsByAssignment[s.assignment_id] ||= []).push({
-      userId: s.user_id,
-      email: emailById.get(s.user_id) ?? s.user_id,
-      skill: skillByAssignment.get(s.assignment_id) ?? 'grammar',
-      autoScore: s.auto_score ?? null,
-      aiScore: s.ai_score ?? null,
-      teacherScore: s.teacher_score ?? null,
-      finalScore: s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0,
-      answers: s.answers ?? null,
-      aiFeedback: s.ai_feedback ?? null,
-      submittedAt: (s.submitted_at as string)?.slice(0, 16).replace('T', ' ') ?? null,
+    subByAU.set(`${s.assignment_id}|${s.user_id}`, {
+      score: s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0,
+      at: (s.submitted_at as string)?.slice(0, 16).replace('T', ' ') ?? null,
     })
   }
 
-  // Assignment list with avg + count.
-  const adminAssignments: AdminAssignment[] = (assignments ?? []).map(a => {
-    const subs = (submissions ?? []).filter(s => s.assignment_id === a.id)
-    const avg = subs.length
-      ? Math.round(subs.reduce((sum, s) => sum + (s.teacher_score ?? s.ai_score ?? s.auto_score ?? 0), 0) / subs.length)
-      : null
-    return {
-      id: a.id,
-      skill: a.skill,
-      level_id: a.level_id,
-      group_id: a.group_id,
-      groupLabel: a.group_id ? (groupById.get(a.group_id)?.label ?? a.group_id) : null,
-      title: a.title,
-      is_published: a.is_published,
-      due_at: a.due_at,
-      submissionCount: subs.length,
-      avgScore: avg,
-    }
-  })
-
-  // ── Roster: one row per reserved student ──
-  const lessonBest = new Map<string, number[]>()        // userId|level -> best scores
+  // Lessons completed (a saved best score = the lesson was attempted) and vocab
+  // mastered, both keyed by userId|LEVEL.
+  const lessonBest = new Map<string, number[]>()
   for (const ls of lessonScores ?? []) {
     const k = `${ls.user_id}|${(ls.level_id || '').toUpperCase()}`
-    if (!lessonBest.has(k)) lessonBest.set(k, [])
-    lessonBest.get(k)!.push(ls.best_score ?? 0)
+    ;(lessonBest.get(k) ?? lessonBest.set(k, []).get(k)!).push(ls.best_score ?? 0)
   }
-  const learnedCount = new Map<string, number>()        // userId|level -> #mastered
+  const learnedCount = new Map<string, number>()
   for (const v of vocab ?? []) {
     if ((v.mastery ?? 0) >= VOCAB_LEARNED_THRESHOLD) {
       const k = `${v.user_id}|${(v.level_id || '').toUpperCase()}`
@@ -107,71 +70,87 @@ export default async function AdminAssignmentsPage({ params }: { params: Promise
     }
   }
 
-  const roster: RosterRow[] = (bookings ?? []).map(b => {
-    const g = groupById.get(b.group_id)
-    const level = (g?.level || 'a1').toUpperCase()
+  function buildStudent(userId: string, groupId: string, level: string, bookedAt: string | null): StudentRow {
     const totals = levelTotals(level)
-    const k = `${b.user_id}|${level}`
-
+    const k = `${userId}|${level}`
     const bests = lessonBest.get(k) ?? []
-    const lessonComponent = totals.lessons ? bests.reduce((s, n) => s + n, 0) / totals.lessons : 0
     const words = learnedCount.get(k) ?? 0
-    const vocabComponent = totals.vocab ? (words / totals.vocab) * 100 : 0
 
-    // Assignments in this student's scope (level + their group or whole-level).
+    // Assignments in this student's scope: same level, and either whole-level
+    // (no group) or pinned to their group.
     const scoped = (assignments ?? []).filter(a =>
-      a.is_published && (a.level_id || '').toUpperCase() === level && (!a.group_id || a.group_id === b.group_id))
-    const assignmentComponent = scoped.length
-      ? scoped.reduce((s, a) => s + (finalByAU.get(`${a.id}|${b.user_id}`) ?? 0), 0) / scoped.length
-      : 0
-    const assignmentsDone = scoped.filter(a => finalByAU.has(`${a.id}|${b.user_id}`)).length
+      a.is_published && (a.level_id || '').toUpperCase() === level && (!a.group_id || a.group_id === groupId))
 
+    const exercises: ExerciseResult[] = scoped
+      .map(a => {
+        const sub = subByAU.get(`${a.id}|${userId}`)
+        return {
+          assignmentId: a.id,
+          title: a.title,
+          skill: (SKILL_LABELS[a.skill as Skill] ?? a.skill) as string,
+          done: !!sub,
+          score: sub ? sub.score : null,
+          submittedAt: sub?.at ?? null,
+        }
+      })
+      // Done first (most recent on top), then the not-yet-done ones.
+      .sort((x, y) => {
+        if (x.done !== y.done) return x.done ? -1 : 1
+        return (y.submittedAt ?? '').localeCompare(x.submittedAt ?? '')
+      })
+
+    const exercisesDone = exercises.filter(e => e.done).length
+
+    // Overall grade: lessons (avg best score over all level lessons), vocab
+    // (% mastered), exercises (avg note). Same weighting as the student's own
+    // report card so the two views agree.
+    const lessonComponent = totals.lessons ? bests.reduce((s, n) => s + n, 0) / totals.lessons : 0
+    const vocabComponent = totals.vocab ? (words / totals.vocab) * 100 : 0
+    const exerciseComponent = scoped.length
+      ? scoped.reduce((s, a) => s + (subByAU.get(`${a.id}|${userId}`)?.score ?? 0), 0) / scoped.length
+      : 0
     const grade = scoped.length
-      ? Math.round(0.4 * lessonComponent + 0.3 * vocabComponent + 0.3 * assignmentComponent)
+      ? Math.round(0.4 * lessonComponent + 0.3 * vocabComponent + 0.3 * exerciseComponent)
       : Math.round(0.6 * lessonComponent + 0.4 * vocabComponent)
 
     return {
-      email: emailById.get(b.user_id) ?? b.user_id,
-      groupLabel: g?.label ?? b.group_id,
-      level,
-      lessonsAttempted: bests.length,
+      userId,
+      email: emailById.get(userId) ?? userId,
+      bookedAt: bookedAt?.slice(0, 10) ?? null,
+      lessonsDone: bests.length,
       lessonsTotal: totals.lessons,
       wordsLearned: words,
       wordsTotal: totals.vocab,
-      assignmentsDone,
-      assignmentsTotal: scoped.length,
+      exercisesDone,
+      exercisesTotal: scoped.length,
       grade,
+      exercises,
     }
-  }).sort((a, b) => a.grade - b.grade)  // weakest first — who needs pressure
-
-  const groupOpts: GroupOpt[] = (groups ?? []).map(g => ({
-    id: g.id, label: g.label, level: (g.level || 'a1').toUpperCase(),
-  }))
-
-  const publishedCount = (assignments ?? []).filter(a => a.is_published).length
-  const kpis: Kpis = {
-    students: roster.length,
-    avgGrade: roster.length ? Math.round(roster.reduce((s, r) => s + r.grade, 0) / roster.length) : 0,
-    atRisk: roster.filter(r => r.grade < 50).length,
-    published: publishedCount,
-    submissions: (submissions ?? []).length,
   }
+
+  const blocks: GroupBlock[] = (groups ?? []).map(g => {
+    const level = (g.level || 'a1').toUpperCase()
+    const students = (bookings ?? [])
+      .filter(b => b.group_id === g.id)
+      .map(b => buildStudent(b.user_id, g.id, level, (b.created_at as string) ?? null))
+      .sort((a, b) => a.grade - b.grade)  // weakest first — who needs a nudge
+    return { id: g.id, label: g.label, level, students }
+  })
+
+  const totalStudents = blocks.reduce((s, b) => s + b.students.length, 0)
 
   return (
     <>
       <header className="adm-page-head">
         <div>
           <h1 className="adm-page-title">Devoirs &amp; notes</h1>
-          <p className="adm-page-sub">Crée des exercices corrigés par l&rsquo;IA (Grammatik, Lesen, Schreiben, Hören), publie-les à un niveau ou à un groupe, et suis la note de chaque élève.</p>
+          <p className="adm-page-sub">
+            Choisis un groupe pour voir ses élèves — leçons, vocabulaire et exercices faits, plus la note globale.
+            Ouvre un élève pour lire la note obtenue à chaque exercice.
+          </p>
         </div>
       </header>
-      <AdminAssignmentsClient
-        assignments={adminAssignments}
-        roster={roster}
-        groups={groupOpts}
-        kpis={kpis}
-        submissionsByAssignment={submissionsByAssignment}
-      />
+      <AdminAssignmentsClient groups={blocks} totalStudents={totalStudents} />
     </>
   )
 }

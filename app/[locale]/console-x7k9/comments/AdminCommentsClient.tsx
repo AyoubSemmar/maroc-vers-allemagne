@@ -54,7 +54,7 @@ export default function AdminCommentsClient({ comments, locale }: { comments: Ad
                   {c.isReply && <span className="adm-pill" style={{ fontSize: 10 }}>reply</span>}
                   <span style={{ color: '#9aa0b0', fontSize: 11 }}>· {c.createdAt} · score {c.score}</span>
                 </div>
-                <div style={{ color: '#3a3f4c', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>{c.body}</div>
+                <div style={{ color: 'var(--adm-ink-soft)', whiteSpace: 'pre-wrap', wordBreak: 'break-word' }}>{c.body}</div>
                 <a href={`/${locale}/articles/${c.articleId}`} target="_blank" rel="noreferrer" style={{ fontSize: 11, color: '#F08A2E' }}>
                   on “{c.articleTitle}” →
                 </a>
