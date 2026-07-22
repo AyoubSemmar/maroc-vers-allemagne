@@ -8,6 +8,8 @@ export type AdminGroup = {
   id: string
   label: string
   schedule: string
+  level: string
+  price_mad: number
   capacity: number
   booked_count: number
   seed_reserved: number
@@ -220,9 +222,101 @@ function PendingRequests({ requests }: { requests: ReservationRequest[] }) {
   )
 }
 
+const LEVEL_OPTS = ['a1', 'a2', 'b1', 'b2', 'c1']
+
+/** Edit a group's label / schedule / level / price, or delete it. */
+function GroupEditor({ group, onDone }: { group: AdminGroup; onDone: () => void }) {
+  const router = useRouter()
+  const [label, setLabel] = useState(group.label)
+  const [schedule, setSchedule] = useState(group.schedule)
+  const [level, setLevel] = useState(group.level)
+  const [price, setPrice] = useState(String(group.price_mad))
+  const [saving, setSaving] = useState(false)
+  const dirty =
+    label !== group.label || schedule !== group.schedule ||
+    level !== group.level || price !== String(group.price_mad)
+
+  async function save() {
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/classes/group-update', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ groupId: group.id, label, schedule, level, priceMad: Number(price) }),
+      })
+      if (!res.ok) { const { error } = await res.json().catch(() => ({ error: 'Failed' })); alert(error || 'Échec'); return }
+      onDone(); router.refresh()
+    } finally { setSaving(false) }
+  }
+
+  async function del() {
+    const n = group.students.length
+    const msg = n > 0
+      ? `Supprimer « ${group.label} » ? ${n} élève(s) inscrit(s) — leur place et leur accès seront supprimés. Cette action est irréversible.`
+      : `Supprimer le groupe « ${group.label} » ?`
+    if (!confirm(msg)) return
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/classes/group-delete', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ groupId: group.id, force: n > 0 }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) { alert(data.error === 'has_students' ? `Ce groupe a ${data.students} élève(s). Réessayez.` : (data.error || 'Échec')); return }
+      onDone(); router.refresh()
+    } finally { setSaving(false) }
+  }
+
+  const field: React.CSSProperties = { fontSize: 13, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '6px 8px', color: '#1a1a1a', background: '#fff', width: '100%' }
+  const lbl: React.CSSProperties = { fontSize: 11, fontWeight: 700, color: 'var(--adm-ink-mute)', display: 'block', marginBottom: 3 }
+
+  return (
+    <div style={{ marginTop: 12, padding: 14, borderRadius: 10, background: 'var(--adm-bg-elev)', border: '1px solid var(--adm-line)' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: 10 }}>
+        <div><span style={lbl}>Nom du groupe</span><input value={label} onChange={(e) => setLabel(e.target.value)} style={field} /></div>
+        <div><span style={lbl}>Horaire</span><input value={schedule} onChange={(e) => setSchedule(e.target.value)} style={field} /></div>
+        <div>
+          <span style={lbl}>Niveau</span>
+          <select value={level} onChange={(e) => setLevel(e.target.value)} style={field}>
+            {LEVEL_OPTS.map((l) => <option key={l} value={l}>{l.toUpperCase()}</option>)}
+          </select>
+        </div>
+        <div><span style={lbl}>Prix (MAD/mois)</span><input type="number" min={0} value={price} onChange={(e) => setPrice(e.target.value)} style={field} /></div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10, marginTop: 12, flexWrap: 'wrap' }}>
+        <button
+          onClick={del}
+          disabled={saving}
+          style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '6px 14px', color: '#d9534f', background: 'none', border: '1px solid #f0c2c2', opacity: saving ? 0.5 : 1 }}
+        >
+          🗑 Supprimer le groupe
+        </button>
+        <div style={{ display: 'flex', gap: 8 }}>
+          <button
+            onClick={onDone}
+            disabled={saving}
+            style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '6px 14px', color: 'var(--adm-ink-soft)', background: 'none', border: '1px solid var(--adm-line-strong)' }}
+          >
+            Annuler
+          </button>
+          <button
+            onClick={save}
+            disabled={saving || !dirty}
+            style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '6px 16px', color: 'white', background: '#16a34a', border: '1px solid #16a34a', opacity: saving || !dirty ? 0.5 : 1 }}
+          >
+            Enregistrer
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function AdminClassesClient({ groups, requests, locale }: { groups: AdminGroup[]; requests: ReservationRequest[]; locale: string }) {
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
+  const [editingGroup, setEditingGroup] = useState<string | null>(null)
 
   async function setAccess(bookingId: string, action: 'grant' | 'revoke') {
     setBusy(bookingId)
@@ -272,19 +366,32 @@ export default function AdminClassesClient({ groups, requests, locale }: { group
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flexWrap: 'wrap' }}>
               <strong>{g.label}</strong>
               <span style={{ fontSize: 13, color: g.booked_count + g.seed_reserved >= g.capacity ? '#d9534f' : '#7d8398' }}>
-                {g.booked_count + g.seed_reserved}/{g.capacity} · {g.schedule}
+                {g.booked_count + g.seed_reserved}/{g.capacity} · {g.price_mad} MAD · {g.schedule}
               </span>
               <GroupSeats groupId={g.id} capacity={g.capacity} seedReserved={g.seed_reserved} bookedCount={g.booked_count} />
               <GroupStartDate groupId={g.id} value={g.start_date} />
             </div>
-            <a
-              href={`/${locale}/learn-german/classes/${g.id}/room`}
-              target="_blank" rel="noreferrer"
-              style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 8, padding: '5px 12px', textDecoration: 'none', whiteSpace: 'nowrap' }}
-            >
-              🎥 Join room
-            </a>
+            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+              <button
+                onClick={() => setEditingGroup((id) => (id === g.id ? null : g.id))}
+                title="Modifier / supprimer le groupe"
+                style={{ fontSize: 12, fontWeight: 700, background: editingGroup === g.id ? 'var(--adm-bg-elev)' : 'none', color: 'var(--adm-ink-soft)', border: '1px solid var(--adm-line-strong)', borderRadius: 8, padding: '5px 12px', cursor: 'pointer', whiteSpace: 'nowrap' }}
+              >
+                ⚙ Modifier
+              </button>
+              <a
+                href={`/${locale}/learn-german/classes/${g.id}/room`}
+                target="_blank" rel="noreferrer"
+                style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 8, padding: '5px 12px', textDecoration: 'none', whiteSpace: 'nowrap' }}
+              >
+                🎥 Join room
+              </a>
+            </div>
           </div>
+
+          {editingGroup === g.id && (
+            <GroupEditor group={g} onDone={() => setEditingGroup(null)} />
+          )}
           {g.students.length === 0 ? (
             <p style={{ fontSize: 13, color: '#9aa0b0', margin: 0 }}>No bookings yet.</p>
           ) : (

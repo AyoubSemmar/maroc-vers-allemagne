@@ -66,6 +66,8 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
     id: g.id,
     label: g.label,
     schedule: g.schedule,
+    level: (g.level || 'a1') as string,
+    price_mad: g.price_mad as number,
     capacity: g.capacity,
     booked_count: g.booked_count,
     seed_reserved: ((g as any).seed_reserved as number | null) ?? 0,
