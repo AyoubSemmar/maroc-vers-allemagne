@@ -58,25 +58,48 @@ export default function VideoCallPanel({
   const jitsiRef = useRef<HTMLDivElement>(null)
   const apiRef = useRef<any>(null)
   const ownerId = useRef(Symbol('videoCallOwner')).current
+  const explicitCloseRef = useRef(false)
   const [phase, setPhase] = useState<Phase>('idle')
   const [error, setError] = useState<string | null>(null)
 
-  const endCall = useCallback(() => {
-    // dispose() alone tears down our embed (iframe + listeners) but doesn't
-    // reliably signal Jitsi to actually leave the conference — the camera/
-    // mic can stay active and the room can still see you as connected.
-    // Send the hangup command first so it properly leaves and releases the
-    // devices, then dispose shortly after to remove the embed.
+  // Plain teardown once Jitsi has already confirmed the conference was left
+  // (via the videoConferenceLeft/readyToClose event) — no hangup needed here,
+  // it already happened.
+  const disposeApi = useCallback(() => {
+    try { apiRef.current?.dispose() } catch {}
+    apiRef.current = null
+    if (activeCallOwner === ownerId) activeCallOwner = null
+  }, [ownerId])
+
+  // Fire-and-forget teardown for cases where we can't wait around for a
+  // confirmation (component unmounting, or superseding a stale instance
+  // before joining a fresh call) — best-effort hangup, then dispose right
+  // away since there's no lifetime left to wait in.
+  const forceEndCall = useCallback(() => {
     const api = apiRef.current
     if (api) {
       try { api.executeCommand('hangup') } catch {}
-      setTimeout(() => { try { api.dispose() } catch {} }, 200)
+      try { api.dispose() } catch {}
     }
     apiRef.current = null
     if (activeCallOwner === ownerId) activeCallOwner = null
   }, [ownerId])
 
-  useEffect(() => () => endCall(), [endCall])
+  useEffect(() => () => forceEndCall(), [forceEndCall])
+
+  // Fires once Jitsi actually confirms the conference was left — either from
+  // clicking our close button (hangup below) or from Jitsi's own in-call
+  // hangup control. Only collapses the whole panel (onClose) when the user
+  // explicitly asked to close it; leaving via Jitsi's own UI still shows the
+  // "call ended, rejoin?" card as before.
+  const handleLeft = useCallback(() => {
+    disposeApi()
+    setPhase('closed')
+    if (explicitCloseRef.current) {
+      explicitCloseRef.current = false
+      onClose?.()
+    }
+  }, [disposeApi, onClose])
 
   const joinCall = useCallback(async () => {
     // Guard against overlapping calls: the token fetch + Jitsi script load can
@@ -105,7 +128,7 @@ export default function VideoCallPanel({
       const JitsiMeetExternalAPI = (window as any).JitsiMeetExternalAPI
       if (!JitsiMeetExternalAPI || !jitsiRef.current) { setError(t('errVideoLoad')); setPhase('error'); return }
 
-      endCall()
+      forceEndCall()
       activeCallOwner = ownerId
       jitsiRef.current.innerHTML = ''
       const api = new JitsiMeetExternalAPI('8x8.vc', {
@@ -126,13 +149,13 @@ export default function VideoCallPanel({
       })
       apiRef.current = api
       api.addEventListener('videoConferenceJoined', () => setPhase('live'))
-      api.addEventListener('readyToClose', () => { endCall(); setPhase('closed') })
-      api.addEventListener('videoConferenceLeft', () => { endCall(); setPhase('closed') })
+      api.addEventListener('readyToClose', handleLeft)
+      api.addEventListener('videoConferenceLeft', handleLeft)
     } catch (e: any) {
       setError(t('errNetwork')); setPhase('error')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [phase, groupId, endCall, ownerId])
+  }, [phase, groupId, forceEndCall, handleLeft, ownerId])
 
   // Auto-join once on mount for contexts where the user already clicked an
   // explicit "join" action before this panel ever appeared (the my-course
@@ -142,13 +165,26 @@ export default function VideoCallPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // The "permanent" close: end whatever call is active AND tell the parent
-  // to dismiss the panel entirely, instead of leaving an idle/closed card
-  // sitting in its place waiting to be reopened.
+  // The "permanent" close: actually leave whatever call is active (not just
+  // hide it) AND tell the parent to dismiss the panel entirely. Sends the
+  // hangup command and WAITS for Jitsi's own videoConferenceLeft/readyToClose
+  // event before tearing anything down — hangup goes over postMessage to the
+  // iframe, so ripping the iframe out immediately (the previous approach)
+  // could kill it before the message was ever delivered, closing only the UI
+  // while the call itself stayed connected. A short fallback timeout covers
+  // the case where Jitsi never confirms (e.g. it was still connecting).
   function closePanel() {
-    endCall()
-    if (onClose) onClose()
-    else setPhase('closed')
+    if (apiRef.current) {
+      const api = apiRef.current
+      explicitCloseRef.current = true
+      try { api.executeCommand('hangup') } catch {}
+      setTimeout(() => { if (apiRef.current === api) handleLeft() }, 1500)
+    } else {
+      // Nothing active to hang up (idle/error/not_configured/already closed)
+      // — collapse immediately.
+      setPhase('closed')
+      onClose?.()
+    }
   }
 
   return (
