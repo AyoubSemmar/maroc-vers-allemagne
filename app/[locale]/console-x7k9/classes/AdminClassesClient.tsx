@@ -13,7 +13,8 @@ export type AdminGroup = {
   capacity: number
   booked_count: number
   seed_reserved: number
-  start_date: string | null
+  lessons_done: number
+  lessons_total: number
   students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean; attendance30: number }[]
 }
 
@@ -67,51 +68,38 @@ function GroupSeats({ groupId, capacity, seedReserved, bookedCount }: { groupId:
   )
 }
 
-/** Cohort start-date picker — anchors the weekly pacing on the student
- *  dashboard ("Semaine N" + this-week highlights). */
-function GroupStartDate({ groupId, value }: { groupId: string; value: string | null }) {
+/** Per-group lesson tracker — the teacher bumps +1 each time the live class
+ *  finishes a lesson, capped at the level's total lesson count. */
+function LessonTracker({ groupId, done, total }: { groupId: string; done: number; total: number }) {
   const router = useRouter()
-  const [date, setDate] = useState(value ?? '')
+  const [val, setVal] = useState(done)
   const [saving, setSaving] = useState(false)
-  const dirty = date !== (value ?? '')
 
-  async function save() {
+  async function set(n: number) {
+    const clamped = Math.max(0, Math.min(total, n))
+    if (clamped === val) return
+    setVal(clamped)
     setSaving(true)
     try {
-      const res = await fetch('/api/admin/classes/group-start', {
+      const res = await fetch('/api/admin/classes/group-lessons', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ groupId, startDate: date || null }),
+        body: JSON.stringify({ groupId, lessonsDone: clamped }),
       })
-      if (!res.ok) {
-        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
-        alert(error || 'Failed to save start date')
-      } else {
-        router.refresh()
-      }
-    } finally {
-      setSaving(false)
-    }
+      if (!res.ok) { const { error } = await res.json().catch(() => ({ error: 'Failed' })); alert(error || 'Échec'); setVal(done); return }
+      router.refresh()
+    } finally { setSaving(false) }
   }
 
+  const pct = total ? Math.round((val / total) * 100) : 0
+  const btn: React.CSSProperties = { width: 24, height: 24, borderRadius: 6, border: '1px solid var(--adm-line-strong)', background: 'var(--adm-bg-elev)', color: 'var(--adm-ink)', cursor: 'pointer', fontWeight: 800, lineHeight: 1, display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }
   return (
-    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#7d8398' }} title="Date de début de la cohorte — pilote le rythme hebdomadaire côté étudiant">
-      📅
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        style={{ fontSize: 12, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '2px 6px', color: '#1a1a1a', background: '#fff' }}
-      />
-      {dirty && (
-        <button
-          onClick={save}
-          disabled={saving}
-          style={{ fontSize: 11, fontWeight: 700, background: '#16a34a', color: 'white', border: 'none', borderRadius: 6, padding: '3px 8px', cursor: 'pointer', opacity: saving ? 0.5 : 1 }}
-        >
-          OK
-        </button>
-      )}
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: 'var(--adm-ink-soft)' }} title="Leçons terminées en classe — +1 par leçon, jusqu'à la fin du niveau">
+      📚
+      <button onClick={() => set(val - 1)} disabled={saving || val <= 0} style={{ ...btn, opacity: val <= 0 ? 0.4 : 1 }}>−</button>
+      <span style={{ fontWeight: 800, color: val >= total && total > 0 ? 'var(--adm-green)' : 'var(--adm-ink)', minWidth: 46, textAlign: 'center' }}>{val}/{total}</span>
+      <button onClick={() => set(val + 1)} disabled={saving || val >= total} style={{ ...btn, opacity: val >= total ? 0.4 : 1 }}>+</button>
+      <span style={{ color: 'var(--adm-ink-mute)', minWidth: 32 }}>{pct}%</span>
     </span>
   )
 }
@@ -313,93 +301,153 @@ function GroupEditor({ group, onDone }: { group: AdminGroup; onDone: () => void 
   )
 }
 
-export default function AdminClassesClient({ groups, requests, locale }: { groups: AdminGroup[]; requests: ReservationRequest[]; locale: string }) {
+/** Create a new class group (id + video room are generated server-side). */
+function AddGroupForm() {
   const router = useRouter()
+  const [open, setOpen] = useState(false)
+  const [label, setLabel] = useState('')
+  const [schedule, setSchedule] = useState('')
+  const [level, setLevel] = useState('a1')
+  const [price, setPrice] = useState('450')
+  const [capacity, setCapacity] = useState('15')
+  const [saving, setSaving] = useState(false)
+
+  async function create() {
+    if (label.trim().length < 1) { alert('Nom du groupe requis'); return }
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/classes/group-create', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ label, schedule, level, priceMad: Number(price), capacity: Number(capacity) }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) { alert(data.error || 'Échec'); return }
+      setOpen(false); setLabel(''); setSchedule(''); setLevel('a1'); setPrice('450'); setCapacity('15')
+      router.refresh()
+    } finally { setSaving(false) }
+  }
+
+  const field: React.CSSProperties = { fontSize: 13, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '6px 8px', color: '#1a1a1a', background: '#fff', width: '100%' }
+  const lbl: React.CSSProperties = { fontSize: 11, fontWeight: 700, color: 'var(--adm-ink-mute)', display: 'block', marginBottom: 3 }
+
+  if (!open) {
+    return (
+      <button onClick={() => setOpen(true)} className="adm-btn" style={{ alignSelf: 'flex-start' }}>
+        ＋ Ajouter un groupe
+      </button>
+    )
+  }
+  return (
+    <div className="adm-card" style={{ padding: 16, borderInlineStart: '4px solid var(--adm-green)' }}>
+      <strong style={{ display: 'block', marginBottom: 12 }}>Nouveau groupe</strong>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: 10 }}>
+        <div><span style={lbl}>Nom du groupe</span><input value={label} onChange={(e) => setLabel(e.target.value)} placeholder="A1 — 18h-19h" style={field} /></div>
+        <div><span style={lbl}>Horaire</span><input value={schedule} onChange={(e) => setSchedule(e.target.value)} placeholder="Lun-Ven 18:00-19:00" style={field} /></div>
+        <div>
+          <span style={lbl}>Niveau</span>
+          <select value={level} onChange={(e) => setLevel(e.target.value)} style={field}>
+            {LEVEL_OPTS.map((l) => <option key={l} value={l}>{l.toUpperCase()}</option>)}
+          </select>
+        </div>
+        <div><span style={lbl}>Prix (MAD/mois)</span><input type="number" min={0} value={price} onChange={(e) => setPrice(e.target.value)} style={field} /></div>
+        <div><span style={lbl}>Capacité</span><input type="number" min={1} value={capacity} onChange={(e) => setCapacity(e.target.value)} style={field} /></div>
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', gap: 8, marginTop: 12 }}>
+        <button onClick={() => setOpen(false)} disabled={saving} style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '6px 14px', color: 'var(--adm-ink-soft)', background: 'none', border: '1px solid var(--adm-line-strong)' }}>Annuler</button>
+        <button onClick={create} disabled={saving} style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '6px 16px', color: 'white', background: '#16a34a', border: '1px solid #16a34a', opacity: saving ? 0.5 : 1 }}>Créer le groupe</button>
+      </div>
+    </div>
+  )
+}
+
+/** One group: a collapsible header (click to reveal the student list) plus the
+ *  group's controls (seats, lesson tracker, edit/delete, join room). */
+function GroupCard({ group: g, locale }: { group: AdminGroup; locale: string }) {
+  const router = useRouter()
+  const [open, setOpen] = useState(false)
+  const [editing, setEditing] = useState(false)
   const [busy, setBusy] = useState<string | null>(null)
-  const [editingGroup, setEditingGroup] = useState<string | null>(null)
 
   async function setAccess(bookingId: string, action: 'grant' | 'revoke') {
     setBusy(bookingId)
     try {
       const res = await fetch('/api/admin/classes/grant', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ bookingId, action }),
       })
-      if (!res.ok) {
-        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
-        alert(error || 'Failed to update access')
-      } else {
-        router.refresh()
-      }
-    } finally {
-      setBusy(null)
-    }
+      if (!res.ok) { const { error } = await res.json().catch(() => ({ error: 'Failed' })); alert(error || 'Failed') }
+      else router.refresh()
+    } finally { setBusy(null) }
   }
 
   async function remove(bookingId: string, email: string) {
-    if (!confirm(`Remove ${email} and free their seat?`)) return
+    if (!confirm(`Retirer ${email} et libérer sa place ?`)) return
     setBusy(bookingId)
     try {
       const res = await fetch('/api/admin/classes/remove', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        method: 'POST', headers: { 'content-type': 'application/json' },
         body: JSON.stringify({ bookingId }),
       })
-      if (!res.ok) {
-        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
-        alert(error || 'Failed to remove')
-      } else {
-        router.refresh()
-      }
-    } finally {
-      setBusy(null)
-    }
+      if (!res.ok) { const { error } = await res.json().catch(() => ({ error: 'Failed' })); alert(error || 'Failed') }
+      else router.refresh()
+    } finally { setBusy(null) }
   }
 
-  return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-      <PendingRequests requests={requests} />
-      {groups.map((g) => (
-        <div key={g.id} className="adm-card" style={{ padding: 16 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, gap: 10, flexWrap: 'wrap' }}>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flexWrap: 'wrap' }}>
-              <strong>{g.label}</strong>
-              <span style={{ fontSize: 13, color: g.booked_count + g.seed_reserved >= g.capacity ? '#d9534f' : '#7d8398' }}>
-                {g.booked_count + g.seed_reserved}/{g.capacity} · {g.price_mad} MAD · {g.schedule}
-              </span>
-              <GroupSeats groupId={g.id} capacity={g.capacity} seedReserved={g.seed_reserved} bookedCount={g.booked_count} />
-              <GroupStartDate groupId={g.id} value={g.start_date} />
-            </div>
-            <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-              <button
-                onClick={() => setEditingGroup((id) => (id === g.id ? null : g.id))}
-                title="Modifier / supprimer le groupe"
-                style={{ fontSize: 12, fontWeight: 700, background: editingGroup === g.id ? 'var(--adm-bg-elev)' : 'none', color: 'var(--adm-ink-soft)', border: '1px solid var(--adm-line-strong)', borderRadius: 8, padding: '5px 12px', cursor: 'pointer', whiteSpace: 'nowrap' }}
-              >
-                ⚙ Modifier
-              </button>
-              <a
-                href={`/${locale}/learn-german/classes/${g.id}/room`}
-                target="_blank" rel="noreferrer"
-                style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 8, padding: '5px 12px', textDecoration: 'none', whiteSpace: 'nowrap' }}
-              >
-                🎥 Join room
-              </a>
-            </div>
-          </div>
+  const reserved = g.booked_count + g.seed_reserved
+  const n = g.students.length
 
-          {editingGroup === g.id && (
-            <GroupEditor group={g} onDone={() => setEditingGroup(null)} />
-          )}
-          {g.students.length === 0 ? (
-            <p style={{ fontSize: 13, color: '#9aa0b0', margin: 0 }}>No bookings yet.</p>
+  return (
+    <div className="adm-card" style={{ padding: 0, overflow: 'hidden' }}>
+      <div style={{ padding: 16 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, flexWrap: 'wrap' }}>
+          <button
+            onClick={() => setOpen((o) => !o)}
+            style={{ display: 'flex', alignItems: 'center', gap: 10, minWidth: 0, flexWrap: 'wrap', background: 'none', border: 0, cursor: 'pointer', textAlign: 'left', color: 'var(--adm-ink)', font: 'inherit', flex: 1 }}
+          >
+            <span style={{ color: 'var(--adm-ink-mute)', transition: 'transform .15s', transform: open ? 'rotate(90deg)' : 'none', flex: 'none' }}>▸</span>
+            <strong>{g.label}</strong>
+            <span style={{ fontSize: 13, color: reserved >= g.capacity ? '#e25f5f' : 'var(--adm-ink-mute)' }}>
+              {reserved}/{g.capacity} · {g.price_mad} MAD · {g.schedule}
+            </span>
+            <span style={{ fontSize: 12, color: 'var(--adm-ink-soft)' }}>· {n} élève{n !== 1 ? 's' : ''}</span>
+          </button>
+          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+            <button
+              onClick={() => setEditing((v) => !v)}
+              title="Modifier / supprimer le groupe"
+              style={{ fontSize: 12, fontWeight: 700, background: editing ? 'var(--adm-bg-elev)' : 'none', color: 'var(--adm-ink-soft)', border: '1px solid var(--adm-line-strong)', borderRadius: 8, padding: '5px 12px', cursor: 'pointer', whiteSpace: 'nowrap' }}
+            >
+              ⚙ Modifier
+            </button>
+            <a
+              href={`/${locale}/learn-german/classes/${g.id}/room`}
+              target="_blank" rel="noreferrer"
+              style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 8, padding: '5px 12px', textDecoration: 'none', whiteSpace: 'nowrap' }}
+            >
+              🎥 Join room
+            </a>
+          </div>
+        </div>
+
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center', flexWrap: 'wrap', marginTop: 12 }}>
+          <GroupSeats groupId={g.id} capacity={g.capacity} seedReserved={g.seed_reserved} bookedCount={g.booked_count} />
+          <LessonTracker groupId={g.id} done={g.lessons_done} total={g.lessons_total} />
+        </div>
+
+        {editing && <GroupEditor group={g} onDone={() => setEditing(false)} />}
+      </div>
+
+      {open && (
+        <div style={{ borderTop: '1px solid var(--adm-line)', padding: '8px 16px 14px' }}>
+          {n === 0 ? (
+            <p style={{ fontSize: 13, color: 'var(--adm-ink-mute)', margin: '6px 0 0' }}>Aucun élève inscrit.</p>
           ) : (
             <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
               <tbody>
                 {g.students.map((s) => (
-                  <tr key={s.bookingId} style={{ borderTop: '1px solid #eef0f4' }}>
-                    <td style={{ padding: '6px 4px' }}>
+                  <tr key={s.bookingId} style={{ borderTop: '1px solid var(--adm-line)' }}>
+                    <td style={{ padding: '8px 4px', color: 'var(--adm-ink)' }}>
                       {s.email}
                       {s.accessActive ? (
                         <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#16a34a', background: '#dcfce7', borderRadius: 6, padding: '1px 6px' }}>✓ jusqu&rsquo;au {formatAccessDate(s.accessUntil!)}</span>
@@ -409,31 +457,22 @@ export default function AdminClassesClient({ groups, requests, locale }: { group
                         <span style={{ marginLeft: 6, fontSize: 11, fontWeight: 700, color: '#4b5563', background: '#e5e7eb', borderRadius: 6, padding: '1px 6px' }}>non payé</span>
                       )}
                     </td>
-                    <td style={{ padding: '6px 4px', width: 170 }}>
+                    <td style={{ padding: '8px 4px', width: 170 }}>
                       {s.whatsapp ? (
-                        <a href={waLink(s.whatsapp, g.label)} target="_blank" rel="noreferrer"
-                          style={{ color: '#16a34a', fontWeight: 600, textDecoration: 'none' }}>
-                          💬 {s.whatsapp}
-                        </a>
-                      ) : <span style={{ color: '#c0c4ce' }}>no WhatsApp</span>}
+                        <a href={waLink(s.whatsapp, g.label)} target="_blank" rel="noreferrer" style={{ color: '#16a34a', fontWeight: 600, textDecoration: 'none' }}>💬 {s.whatsapp}</a>
+                      ) : <span style={{ color: 'var(--adm-ink-mute)' }}>no WhatsApp</span>}
                     </td>
-                    <td style={{ padding: '6px 4px', color: '#9aa0b0', width: 80 }}>{s.bookedAt}</td>
-                    <td style={{ padding: '6px 4px', width: 78, whiteSpace: 'nowrap' }} title="Présences aux appels vidéo sur 30 jours">
-                      <span style={{ fontSize: 12, fontWeight: 700, color: s.attendance30 === 0 ? '#c0c4ce' : s.attendance30 >= 12 ? '#16a34a' : '#b45309' }}>
-                        🎥 {s.attendance30}/30j
-                      </span>
+                    <td style={{ padding: '8px 4px', color: 'var(--adm-ink-mute)', width: 80 }}>{s.bookedAt}</td>
+                    <td style={{ padding: '8px 4px', width: 78, whiteSpace: 'nowrap' }} title="Présences aux appels vidéo sur 30 jours">
+                      <span style={{ fontSize: 12, fontWeight: 700, color: s.attendance30 === 0 ? 'var(--adm-ink-mute)' : s.attendance30 >= 12 ? '#16a34a' : '#b45309' }}>🎥 {s.attendance30}/30j</span>
                     </td>
-                    <td style={{ padding: '6px 4px', width: 150 }}>
+                    <td style={{ padding: '8px 4px', width: 150 }}>
                       <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
                         <button
                           onClick={() => setAccess(s.bookingId, 'grant')}
                           disabled={busy === s.bookingId}
                           title="Prolonger l'accès d'un mois"
-                          style={{
-                            fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
-                            color: 'white', background: '#16a34a', border: '1px solid #16a34a',
-                            opacity: busy === s.bookingId ? 0.5 : 1,
-                          }}
+                          style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px', color: 'white', background: '#16a34a', border: '1px solid #16a34a', opacity: busy === s.bookingId ? 0.5 : 1 }}
                         >
                           {s.accessUntil ? '↻ +1 mois' : '✓ Donner accès'}
                         </button>
@@ -441,28 +480,20 @@ export default function AdminClassesClient({ groups, requests, locale }: { group
                           <button
                             onClick={() => setAccess(s.bookingId, 'revoke')}
                             disabled={busy === s.bookingId}
-                            style={{
-                              fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px',
-                              color: '#7d8398', background: 'none', border: '1px solid #e2e5ea',
-                              opacity: busy === s.bookingId ? 0.5 : 1,
-                            }}
+                            style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px', color: 'var(--adm-ink-soft)', background: 'none', border: '1px solid var(--adm-line-strong)', opacity: busy === s.bookingId ? 0.5 : 1 }}
                           >
                             Révoquer
                           </button>
                         )}
                       </div>
                     </td>
-                    <td style={{ padding: '6px 4px', width: 80, textAlign: 'right' }}>
+                    <td style={{ padding: '8px 4px', width: 80, textAlign: 'right' }}>
                       <button
                         onClick={() => remove(s.bookingId, s.email)}
                         disabled={busy === s.bookingId}
-                        style={{
-                          fontSize: 12, color: '#d9534f', background: 'none',
-                          border: '1px solid #f0c2c2', borderRadius: 6, padding: '3px 8px',
-                          cursor: 'pointer', opacity: busy === s.bookingId ? 0.5 : 1,
-                        }}
+                        style={{ fontSize: 12, color: '#d9534f', background: 'none', border: '1px solid #f0c2c2', borderRadius: 6, padding: '3px 8px', cursor: 'pointer', opacity: busy === s.bookingId ? 0.5 : 1 }}
                       >
-                        Remove
+                        Retirer
                       </button>
                     </td>
                   </tr>
@@ -471,7 +502,17 @@ export default function AdminClassesClient({ groups, requests, locale }: { group
             </table>
           )}
         </div>
-      ))}
+      )}
+    </div>
+  )
+}
+
+export default function AdminClassesClient({ groups, requests, locale }: { groups: AdminGroup[]; requests: ReservationRequest[]; locale: string }) {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <PendingRequests requests={requests} />
+      <AddGroupForm />
+      {groups.map((g) => <GroupCard key={g.id} group={g} locale={locale} />)}
     </div>
   )
 }

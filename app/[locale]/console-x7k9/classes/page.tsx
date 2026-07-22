@@ -5,6 +5,7 @@
 import { createClient } from '@supabase/supabase-js'
 import type { AppLocale } from '@/i18n/routing'
 import { isAccessActive, accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
+import { getLevel } from '@/lib/german-data'
 import AdminClassesClient, { type AdminGroup } from './AdminClassesClient'
 
 export const dynamic = 'force-dynamic'
@@ -71,7 +72,8 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
     capacity: g.capacity,
     booked_count: g.booked_count,
     seed_reserved: ((g as any).seed_reserved as number | null) ?? 0,
-    start_date: ((g as any).start_date as string | null) ?? null,
+    lessons_done: ((g as any).lessons_done as number | null) ?? 0,
+    lessons_total: getLevel((g.level as string) || 'a1')?.lessons.length ?? 0,
     students: (bookings ?? [])
       .filter((b) => b.group_id === g.id)
       .map((b) => ({
