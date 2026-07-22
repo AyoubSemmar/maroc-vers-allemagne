@@ -15,6 +15,9 @@ export type ClassGroup = {
   price_mad: number
   capacity: number
   booked_count: number
+  // Admin-set offline reservations, shown as occupied seats on top of the live
+  // booked_count (also counted toward capacity server-side in book_class).
+  seed_reserved: number
 }
 
 const LEVELS = ['a1', 'a2', 'b1'] as const
@@ -142,9 +145,13 @@ export default function ClassesClient({
           </h2>
           {lvlGroups.map((g) => {
         const isMine = myGroupId === g.id
-        const isFull = g.booked_count >= g.capacity
+        // seed_reserved (admin-set offline reservations) count as occupied
+        // seats — same as the book_class RPC — so the display and the real
+        // booking limit stay in lockstep.
+        const reserved = g.booked_count + (g.seed_reserved ?? 0)
+        const isFull = reserved >= g.capacity
         const bookedElsewhere = !!myGroupId && !isMine
-        const left = Math.max(0, g.capacity - g.booked_count)
+        const left = Math.max(0, g.capacity - reserved)
 
         return (
           <div
@@ -169,7 +176,7 @@ export default function ClassesClient({
             {/* Capacity */}
             <div className="text-center sm:w-28">
               <div className={`text-lg font-bold ${isFull ? 'text-gray-400' : 'text-gray-900'}`}>
-                {g.booked_count}/{g.capacity}
+                {reserved}/{g.capacity}
               </div>
               <div className="text-[11px] text-gray-400">
                 {isFull ? t.full : `${left} ${t.seatsLeft}`}

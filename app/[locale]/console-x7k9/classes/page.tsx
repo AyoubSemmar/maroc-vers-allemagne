@@ -52,6 +52,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
     schedule: g.schedule,
     capacity: g.capacity,
     booked_count: g.booked_count,
+    seed_reserved: ((g as any).seed_reserved as number | null) ?? 0,
     start_date: ((g as any).start_date as string | null) ?? null,
     students: (bookings ?? [])
       .filter((b) => b.group_id === g.id)

@@ -49,11 +49,28 @@ export default async function ClassesPage({
 
   const t = classesStrings(locale)
 
-  const { data: groups } = await supabase
-    .from('class_groups')
-    .select('id,label,schedule,level,price_mad,capacity,booked_count')
-    .eq('is_active', true)
-    .order('sort_order', { ascending: true })
+  // seed_reserved may not exist yet (pre-migration) — fall back to the base
+  // columns so the page never breaks, defaulting the seed to 0 below.
+  const baseCols = 'id,label,schedule,level,price_mad,capacity,booked_count'
+  let groupsRaw: any[] | null =
+    (await supabase.from('class_groups').select(`${baseCols},seed_reserved`)
+      .eq('is_active', true).order('sort_order', { ascending: true })).data
+  if (groupsRaw == null) {
+    groupsRaw = (await supabase.from('class_groups').select(baseCols)
+      .eq('is_active', true).order('sort_order', { ascending: true })).data
+  }
+  // Map explicitly (never spread raw rows to the client — room_slug etc. must
+  // stay server-side) and default the seed to 0.
+  const groups: ClassGroup[] = (groupsRaw ?? []).map((g: any) => ({
+    id: g.id,
+    label: g.label,
+    schedule: g.schedule,
+    level: g.level,
+    price_mad: g.price_mad,
+    capacity: g.capacity,
+    booked_count: g.booked_count,
+    seed_reserved: g.seed_reserved ?? 0,
+  }))
 
   // Which group (if any) the signed-in student already holds a seat in, and
   // whether the admin has granted them access (paid) yet.
@@ -118,7 +135,7 @@ export default async function ClassesPage({
         <h2 className="text-lg font-bold text-gray-900 mt-10 mb-4">{t.chooseGroupHeading}</h2>
         <ClassesClient
           locale={locale}
-          groups={(groups ?? []) as ClassGroup[]}
+          groups={groups}
           myGroupId={myGroupId}
           myAccessGranted={myAccessGranted}
           myAccessUntil={myAccessUntil}

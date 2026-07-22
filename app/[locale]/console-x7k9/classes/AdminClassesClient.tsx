@@ -10,8 +10,59 @@ export type AdminGroup = {
   schedule: string
   capacity: number
   booked_count: number
+  seed_reserved: number
   start_date: string | null
   students: { bookingId: string; email: string; whatsapp: string; bookedAt: string; accessUntil: string | null; accessActive: boolean; attendance30: number }[]
+}
+
+/** Editable capacity + "seed" reserved seats (real offline/WhatsApp
+ *  reservations shown as occupied to visitors). Seed counts toward capacity
+ *  everywhere, so keep it honest — it should reflect people who actually
+ *  reserved, not invented numbers. */
+function GroupSeats({ groupId, capacity, seedReserved, bookedCount }: { groupId: string; capacity: number; seedReserved: number; bookedCount: number }) {
+  const router = useRouter()
+  const [cap, setCap] = useState(String(capacity))
+  const [seed, setSeed] = useState(String(seedReserved))
+  const [saving, setSaving] = useState(false)
+  const dirty = cap !== String(capacity) || seed !== String(seedReserved)
+
+  async function save() {
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/classes/group-seats', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ groupId, capacity: Number(cap), seedReserved: Number(seed) }),
+      })
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({ error: 'Failed' }))
+        alert(error || 'Failed to save seats')
+      } else {
+        router.refresh()
+      }
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  const inp: React.CSSProperties = { width: 44, fontSize: 12, border: '1px solid #e2e5ea', borderRadius: 6, padding: '2px 4px', color: '#444', textAlign: 'center' }
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, color: '#7d8398' }} title="Places réservées affichées (vraies réservations hors-ligne) et capacité. Le nombre réservé compte comme des sièges occupés.">
+      🎟️
+      <input type="number" min={0} value={seed} onChange={(e) => setSeed(e.target.value)} style={inp} title="Réservées (hors-ligne) affichées aux visiteurs" />
+      <span style={{ color: '#c0c4ce' }}>+{bookedCount} = résa / cap</span>
+      <input type="number" min={1} value={cap} onChange={(e) => setCap(e.target.value)} style={inp} title="Capacité (places totales)" />
+      {dirty && (
+        <button
+          onClick={save}
+          disabled={saving}
+          style={{ fontSize: 11, fontWeight: 700, background: '#16a34a', color: 'white', border: 'none', borderRadius: 6, padding: '3px 8px', cursor: 'pointer', opacity: saving ? 0.5 : 1 }}
+        >
+          OK
+        </button>
+      )}
+    </span>
+  )
 }
 
 /** Cohort start-date picker — anchors the weekly pacing on the student
@@ -119,9 +170,10 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, gap: 10, flexWrap: 'wrap' }}>
             <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, minWidth: 0, flexWrap: 'wrap' }}>
               <strong>{g.label}</strong>
-              <span style={{ fontSize: 13, color: g.booked_count >= g.capacity ? '#d9534f' : '#7d8398' }}>
-                {g.booked_count}/{g.capacity} · {g.schedule}
+              <span style={{ fontSize: 13, color: g.booked_count + g.seed_reserved >= g.capacity ? '#d9534f' : '#7d8398' }}>
+                {g.booked_count + g.seed_reserved}/{g.capacity} · {g.schedule}
               </span>
+              <GroupSeats groupId={g.id} capacity={g.capacity} seedReserved={g.seed_reserved} bookedCount={g.booked_count} />
               <GroupStartDate groupId={g.id} value={g.start_date} />
             </div>
             <a
