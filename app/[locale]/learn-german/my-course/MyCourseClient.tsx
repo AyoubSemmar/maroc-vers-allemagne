@@ -14,7 +14,7 @@ import { courseWeek, weekLessonRange } from '@/lib/coursePacing'
 import { useProgress } from '@/lib/useProgress'
 import { useVocabProgress } from '@/lib/useVocabProgress'
 import VocabQuiz from '@/components/learn-german/VocabQuiz'
-import AssignmentRunner, { type ClientAssignment } from '@/components/learn-german/AssignmentRunner'
+import type { ClientAssignment } from '@/components/learn-german/AssignmentRunner'
 import SkillIcon from '@/components/learn-german/SkillIcon'
 import Icon from '@/components/ui/Icon'
 import type { Skill } from '@/lib/learn-german/assignmentAI'
@@ -88,7 +88,6 @@ export default function MyCourseClient({
   // ── Assignments + this student's grades on them ──
   const [assignments, setAssignments] = useState<ClientAssignment[]>([])
   const [subScores, setSubScores] = useState<Record<string, number>>({})
-  const [openAssignment, setOpenAssignment] = useState<ClientAssignment | null>(null)
 
   useEffect(() => {
     if (!level) return
@@ -188,24 +187,6 @@ export default function MyCourseClient({
     return { skill: sk, avg, assigned: items.length, done: graded.length }
   }).filter(s => s.assigned > 0)
 
-  // Group pre-generated devoirs by lesson (Lesen + Hören + Schreiben = 1 devoir).
-  // Ad-hoc teacher assignments (no lessonOrder) fall into a flat "loose" list.
-  const SKILL_RANK: Record<string, number> = { lesen: 0, hoeren: 1, schreiben: 2, grammar: 3 }
-  const { devoirGroups, looseDevoirs } = (() => {
-    const map = new Map<number, { order: number; title: string; tasks: ClientAssignment[] }>()
-    const loose: ClientAssignment[] = []
-    for (const a of assignments) {
-      const lo = a.content?.lessonOrder
-      if (typeof lo === 'number') {
-        if (!map.has(lo)) map.set(lo, { order: lo, title: a.content?.lessonTitle || '', tasks: [] })
-        map.get(lo)!.tasks.push(a)
-      } else loose.push(a)
-    }
-    const groups = [...map.values()].sort((x, y) => x.order - y.order)
-    for (const g of groups) g.tasks.sort((x, y) => (SKILL_RANK[x.skill] ?? 9) - (SKILL_RANK[y.skill] ?? 9))
-    return { devoirGroups: groups, looseDevoirs: loose }
-  })()
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
       {/* Header */}
@@ -257,11 +238,6 @@ export default function MyCourseClient({
                 <p className="font-bold truncate">{t('lessonLabel', { n: nextUp.order, title: nextUp.title })}</p>
               ) : (
                 <p className="font-bold">{t('allLessonsDone')}</p>
-              )}
-              {devoirsTodo > 0 && (
-                <a href="#devoirs" className="text-xs text-green-100 underline underline-offset-2">
-                  {t('devoirsTodo', { n: devoirsTodo })}
-                </a>
               )}
             </div>
             {nextUp ? (
@@ -344,85 +320,6 @@ export default function MyCourseClient({
         <VocabQuiz level={level} vocab={vocab} />
       </div>
 
-      {/* Devoirs — grouped per lesson (Lesen + Hören + Schreiben) */}
-      {assignments.length > 0 && (
-        <div className="mb-8" id="devoirs">
-          <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">{t('devoirsHeading')}</h2>
-
-          <div className="flex flex-col gap-3">
-            {devoirGroups.map(g => {
-              const doneCount = g.tasks.filter(t => subScores[t.id] != null).length
-              const scored = g.tasks.map(t => subScores[t.id]).filter((s): s is number => s != null)
-              const avg = scored.length ? Math.round(scored.reduce((a, b) => a + b, 0) / scored.length) : null
-              return (
-                <div key={g.order} className="bg-white rounded-2xl border border-gray-200 overflow-hidden">
-                  <div className="flex items-center justify-between gap-2 px-4 py-2.5 bg-gray-50 border-b border-gray-100">
-                    <span className="text-sm font-bold text-gray-800 truncate">
-                      {t('devoirTitle', { n: g.order })}{g.title ? <span className="font-normal text-gray-400"> · {g.title}</span> : null}
-                      {paced && g.order >= weekLo && g.order <= weekHi && (
-                        <span className="ml-2 text-[10px] font-bold text-green-700 bg-green-50 border border-green-200 rounded-full px-2 py-0.5">{t('thisWeek')}</span>
-                      )}
-                    </span>
-                    <span className="text-xs shrink-0">
-                      {avg != null
-                        ? <span className={`font-bold px-2 py-0.5 rounded ${avg >= 70 ? 'bg-green-100 text-green-700' : 'bg-amber-100 text-amber-700'}`}>{avg}%</span>
-                        : <span className="text-gray-400">{t('doneCount', { done: doneCount, total: g.tasks.length })}</span>}
-                    </span>
-                  </div>
-                  <div className="divide-y divide-gray-100">
-                    {g.tasks.map(a => {
-                      const score = subScores[a.id]
-                      const done = score != null
-                      return (
-                        <button
-                          key={a.id}
-                          onClick={() => setOpenAssignment(a)}
-                          className="w-full flex items-center gap-3 px-4 py-2.5 hover:bg-green-50/40 transition-colors text-left"
-                        >
-                          <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-green-50 text-green-700"><SkillIcon skill={a.skill as Skill} size={16} /></span>
-                          <span className="flex-1 text-sm text-gray-700">{SKILL_LABELS[a.skill]}</span>
-                          {done ? (
-                            <span className={`text-xs font-bold px-2 py-0.5 rounded shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
-                          ) : (
-                            <span className="text-xs font-semibold px-2 py-0.5 rounded shrink-0 bg-blue-50 text-blue-600">{t('todo')}</span>
-                          )}
-                        </button>
-                      )
-                    })}
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-
-          {/* Ad-hoc teacher assignments without a lesson group */}
-          {looseDevoirs.length > 0 && (
-            <div className="flex flex-col gap-2 mt-3">
-              {looseDevoirs.map(a => {
-                const score = subScores[a.id]
-                const done = score != null
-                return (
-                  <button
-                    key={a.id}
-                    onClick={() => setOpenAssignment(a)}
-                    className="flex items-center gap-3 bg-white rounded-xl border border-gray-200 px-4 py-3 hover:border-green-300 transition-colors text-left"
-                  >
-                    <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-green-50 text-green-700"><SkillIcon skill={a.skill as Skill} size={16} /></span>
-                    <span className="flex-1 min-w-0">
-                      <span className="block text-sm font-medium text-gray-800 truncate" dir="ltr">{a.title}</span>
-                      <span className="block text-xs text-gray-400">{SKILL_LABELS[a.skill]}</span>
-                    </span>
-                    {done
-                      ? <span className={`text-xs font-bold px-2 py-1 rounded-md shrink-0 ${score >= 70 ? 'bg-green-50 text-green-700' : 'bg-amber-50 text-amber-700'}`}>{score}%</span>
-                      : <span className="text-xs font-semibold px-2 py-1 rounded-md shrink-0 bg-blue-50 text-blue-600">{t('todo')}</span>}
-                  </button>
-                )
-              })}
-            </div>
-          )}
-        </div>
-      )}
-
       {/* Syllabus */}
       <h2 className="text-sm font-bold text-gray-500 uppercase tracking-wide mb-3">{t('syllabusHeading', { level: level.id })}</h2>
       <div className="flex flex-col gap-2">
@@ -465,15 +362,6 @@ export default function MyCourseClient({
         <Link href="/console-x7k9/classes" className="block text-xs text-green-700 hover:underline mt-8 text-center">
           {t('teacherLink')}
         </Link>
-      )}
-
-      {openAssignment && (
-        <AssignmentRunner
-          assignment={openAssignment}
-          locale={locale}
-          onClose={() => setOpenAssignment(null)}
-          onGraded={(id, score) => setSubScores(prev => ({ ...prev, [id]: score }))}
-        />
       )}
     </div>
   )
