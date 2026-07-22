@@ -26,7 +26,7 @@ function LoginForm() {
     e.preventDefault()
     setLoading(true)
     setError('')
-    const { error } = await supabase.auth.signInWithPassword({ email, password })
+    const { data, error } = await supabase.auth.signInWithPassword({ email, password })
     if (error) {
       setError(t('invalidCredentials'))
     } else {
@@ -38,6 +38,13 @@ function LoginForm() {
       // through window.location so the path is honoured verbatim — this
       // also fully refreshes auth state, which we want post-login.
       const next = safeRedirect(searchParams.get('next'), `/${locale}`)
+      // Admin-provisioned student accounts start on a shared password and must
+      // set their own before continuing. Route them through /set-password,
+      // preserving where they were headed.
+      if (data.user?.user_metadata?.must_change_password) {
+        window.location.assign(`/${locale}/set-password?next=${encodeURIComponent(next)}`)
+        return
+      }
       window.location.assign(next)
       return
     }

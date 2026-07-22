@@ -18,19 +18,35 @@ const sbAdmin = createClient(
 export default async function AdminClassesPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
 
-  const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }] = await Promise.all([
+  const [{ data: groups }, { data: bookings }, usersRes, { data: profiles }, reqRes] = await Promise.all([
     // select('*') keeps this fail-soft while the start_date (pacing) migration
     // may not have been run yet.
     sbAdmin.from('class_groups').select('*').order('sort_order'),
     sbAdmin.from('class_bookings').select('id,group_id,user_id,created_at,access_until').eq('status', 'reserved').order('created_at'),
     sbAdmin.auth.admin.listUsers({ perPage: 1000 }),
     sbAdmin.from('profiles').select('user_id,whatsapp'),
+    // Pending reservation requests. Wrapped so a missing table (pre-migration)
+    // doesn't blank the whole page.
+    sbAdmin.from('class_reservation_requests')
+      .select('id,full_name,whatsapp,email,group_id,created_at')
+      .eq('status', 'pending').order('created_at', { ascending: true }),
   ])
 
   const emailById = new Map<string, string>()
   for (const u of usersRes.data?.users ?? []) emailById.set(u.id, u.email ?? '—')
   const waById = new Map<string, string>()
   for (const p of profiles ?? []) if (p.whatsapp) waById.set(p.user_id, p.whatsapp)
+
+  const groupLabelById = new Map((groups ?? []).map((g) => [g.id, g.label]))
+  const requests = (reqRes.data ?? []).map((r) => ({
+    id: r.id as string,
+    fullName: r.full_name as string,
+    whatsapp: r.whatsapp as string,
+    email: r.email as string,
+    groupId: (r.group_id as string | null) ?? null,
+    groupLabel: r.group_id ? (groupLabelById.get(r.group_id) ?? r.group_id) : '—',
+    requestedAt: (r.created_at as string)?.slice(0, 10) ?? '',
+  }))
 
   // Attendance over the last 30 days (call-join clicks). Best-effort: before
   // the class_attendance migration exists this select just errors and every
@@ -158,7 +174,7 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
         </div>
       )}
 
-      <AdminClassesClient groups={model} locale={locale} />
+      <AdminClassesClient groups={model} requests={requests} locale={locale} />
     </>
   )
 }

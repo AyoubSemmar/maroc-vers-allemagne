@@ -120,7 +120,107 @@ function waLink(num: string, label: string): string {
   return `https://wa.me/${digits}?text=${msg}`
 }
 
-export default function AdminClassesClient({ groups, locale }: { groups: AdminGroup[]; locale: string }) {
+export type ReservationRequest = {
+  id: string
+  fullName: string
+  whatsapp: string
+  email: string
+  groupId: string | null
+  groupLabel: string
+  requestedAt: string
+}
+
+/** Pending seat requests from the public form. Confirm provisions the student
+ *  (account + seat + 1 month access); the starter password is shown once so it
+ *  can be relayed on WhatsApp. */
+function PendingRequests({ requests }: { requests: ReservationRequest[] }) {
+  const router = useRouter()
+  const [busy, setBusy] = useState<string | null>(null)
+  const [creds, setCreds] = useState<Record<string, string>>({})
+
+  async function resolve(id: string, action: 'confirm' | 'reject', name: string) {
+    if (action === 'reject' && !confirm(`Rejeter la demande de ${name} ?`)) return
+    setBusy(id)
+    try {
+      const res = await fetch('/api/admin/classes/resolve-request', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ requestId: id, action }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (!res.ok) { alert(data.error || 'Échec'); return }
+      if (action === 'confirm') {
+        setCreds((c) => ({
+          ...c,
+          [id]: data.existingAccount
+            ? `Compte déjà existant — l'élève se connecte avec son mot de passe habituel (${data.email}).`
+            : `✅ ${data.email} · mot de passe : ${data.password} (à changer à la 1ʳᵉ connexion)`,
+        }))
+        // Keep the confirmation note visible; refresh the rest after a beat.
+        setTimeout(() => router.refresh(), 2500)
+      } else {
+        router.refresh()
+      }
+    } finally {
+      setBusy(null)
+    }
+  }
+
+  if (requests.length === 0) return null
+
+  return (
+    <div className="adm-card" style={{ padding: 16, marginBottom: 16, borderInlineStart: '4px solid var(--adm-gold)' }}>
+      <strong style={{ display: 'block', marginBottom: 10 }}>
+        📝 Demandes de réservation — {requests.length} en attente
+      </strong>
+      <table style={{ width: '100%', fontSize: 13, borderCollapse: 'collapse' }}>
+        <tbody>
+          {requests.map((r) => (
+            <tr key={r.id} style={{ borderTop: '1px solid var(--adm-line)' }}>
+              <td style={{ padding: '8px 4px', verticalAlign: 'top' }}>
+                <div style={{ fontWeight: 700, color: 'var(--adm-ink)' }}>{r.fullName}</div>
+                <div style={{ color: 'var(--adm-ink-soft)', fontSize: 12 }}>{r.email}</div>
+                {creds[r.id] && (
+                  <div style={{ marginTop: 4, fontSize: 12, fontWeight: 600, color: 'var(--adm-green)' }}>{creds[r.id]}</div>
+                )}
+              </td>
+              <td style={{ padding: '8px 4px', width: 160, verticalAlign: 'top' }}>
+                <a href={waLink(r.whatsapp, r.groupLabel)} target="_blank" rel="noreferrer"
+                  style={{ color: 'var(--adm-green)', fontWeight: 600, textDecoration: 'none' }}>
+                  💬 {r.whatsapp}
+                </a>
+                <div style={{ color: 'var(--adm-ink-mute)', fontSize: 12, marginTop: 2 }}>{r.groupLabel}</div>
+              </td>
+              <td style={{ padding: '8px 4px', color: 'var(--adm-ink-mute)', width: 82, verticalAlign: 'top' }}>{r.requestedAt}</td>
+              <td style={{ padding: '8px 4px', width: 180, verticalAlign: 'top', textAlign: 'right' }}>
+                {!creds[r.id] && (
+                  <div style={{ display: 'flex', gap: 6, justifyContent: 'flex-end', flexWrap: 'wrap' }}>
+                    <button
+                      onClick={() => resolve(r.id, 'confirm', r.fullName)}
+                      disabled={busy === r.id}
+                      style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '4px 12px', color: 'white', background: '#16a34a', border: '1px solid #16a34a', opacity: busy === r.id ? 0.5 : 1 }}
+                    >
+                      ✓ Confirmer
+                    </button>
+                    <button
+                      onClick={() => resolve(r.id, 'reject', r.fullName)}
+                      disabled={busy === r.id}
+                      style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '4px 10px', color: 'var(--adm-ink-mute)', background: 'none', border: '1px solid var(--adm-line-strong)', opacity: busy === r.id ? 0.5 : 1 }}
+                    >
+                      Rejeter
+                    </button>
+                  </div>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+export default function AdminClassesClient({ groups, requests, locale }: { groups: AdminGroup[]; requests: ReservationRequest[]; locale: string }) {
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
 
@@ -165,6 +265,7 @@ export default function AdminClassesClient({ groups, locale }: { groups: AdminGr
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+      <PendingRequests requests={requests} />
       {groups.map((g) => (
         <div key={g.id} className="adm-card" style={{ padding: 16 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, gap: 10, flexWrap: 'wrap' }}>

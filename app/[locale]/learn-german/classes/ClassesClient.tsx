@@ -47,28 +47,8 @@ export default function ClassesClient({
   const myGroupLabel = groups.find((g) => g.id === myGroupId)?.label ?? ''
   const payMsg = t.payMsgTemplate.replace('{group}', myGroupLabel)
   const [msg, setMsg] = useState<string | null>(null)
-
-  async function book(groupId: string) {
-    setBusy(groupId)
-    setMsg(null)
-    try {
-      const res = await fetch('/api/classes/book', {
-        method: 'POST',
-        headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ groupId }),
-      })
-      const { status } = await res.json()
-      if (status === 'ok') { router.refresh(); return }
-      if (status === 'already') setMsg(t.alreadyMsg)
-      else if (status === 'full') { setMsg(t.fullMsg); router.refresh() }
-      else if (status === 'auth') { router.push(`/${locale}/login?next=${encodeURIComponent(`/${locale}/learn-german/classes`)}`); return }
-      else setMsg(t.errMsg)
-    } catch {
-      setMsg(t.errMsg)
-    } finally {
-      setBusy(null)
-    }
-  }
+  // Which group's reservation form (name/WhatsApp/email sheet) is open.
+  const [reserveGroup, setReserveGroup] = useState<ClassGroup | null>(null)
 
   async function cancel() {
     setBusy('cancel')
@@ -150,7 +130,6 @@ export default function ClassesClient({
         // booking limit stay in lockstep.
         const reserved = g.booked_count + (g.seed_reserved ?? 0)
         const isFull = reserved >= g.capacity
-        const bookedElsewhere = !!myGroupId && !isMine
         const left = Math.max(0, g.capacity - reserved)
 
         return (
@@ -214,21 +193,14 @@ export default function ClassesClient({
                 >
                   {t.full}
                 </button>
-              ) : !isAuthed ? (
-                <Link
-                  href={`/login?next=${encodeURIComponent(`/${locale}/learn-german/classes`)}`}
-                  className="text-center rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-medium px-4 py-2"
-                >
-                  {t.loginToBook}
-                </Link>
               ) : (
+                // Reservation is form-based now: collect name/WhatsApp/email,
+                // the admin confirms and provisions the login. No self-signup.
                 <button
-                  onClick={() => book(g.id)}
-                  disabled={busy === g.id || bookedElsewhere}
-                  title={bookedElsewhere ? t.alreadyMsg : undefined}
-                  className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  onClick={() => setReserveGroup(g)}
+                  className="rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-medium px-4 py-2"
                 >
-                  {busy === g.id ? t.booking : t.book}
+                  {t.book}
                 </button>
               )}
             </div>
@@ -238,6 +210,115 @@ export default function ClassesClient({
         </div>
         )
       })}
+
+      {reserveGroup && (
+        <ReserveModal
+          locale={locale}
+          group={reserveGroup}
+          onClose={() => setReserveGroup(null)}
+        />
+      )}
+    </div>
+  )
+}
+
+function ReserveModal({ locale, group, onClose }: { locale: string; group: ClassGroup; onClose: () => void }) {
+  const t = classesStrings(locale)
+  const r = t.reserve
+  const [fullName, setFullName] = useState('')
+  const [whatsapp, setWhatsapp] = useState('')
+  const [email, setEmail] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [done, setDone] = useState(false)
+
+  const valid =
+    fullName.trim().length >= 2 &&
+    whatsapp.replace(/\D/g, '').length >= 6 &&
+    /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
+
+  async function submit() {
+    if (!valid) { setError(r.invalid); return }
+    setBusy(true); setError(null)
+    try {
+      const res = await fetch('/api/classes/request', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ fullName, whatsapp, email, groupId: group.id }),
+      })
+      const data = await res.json().catch(() => ({}))
+      if (res.ok && data.status === 'ok') { setDone(true); return }
+      setError(data.status === 'invalid' ? r.invalid : r.error)
+    } catch {
+      setError(r.error)
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="bg-white rounded-2xl w-full max-w-md shadow-xl" onClick={(e) => e.stopPropagation()}>
+        <div className="flex items-center justify-between gap-3 px-6 py-4 border-b border-gray-100">
+          <div className="min-w-0">
+            <h3 className="font-bold text-gray-900">{r.title}</h3>
+            <p className="text-xs text-gray-500 mt-0.5 truncate">{group.label}</p>
+          </div>
+          <button onClick={onClose} aria-label={r.close} className="text-gray-400 hover:text-gray-700 text-xl shrink-0">✕</button>
+        </div>
+
+        {done ? (
+          <div className="px-6 py-8 text-center">
+            <div className="text-3xl mb-2">🎉</div>
+            <p className="font-bold text-gray-900">{r.doneTitle}</p>
+            <p className="text-sm text-gray-600 mt-2">{r.doneBody}</p>
+            <button onClick={onClose} className="mt-6 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-6 py-2.5">
+              {r.close}
+            </button>
+          </div>
+        ) : (
+          <div className="px-6 py-5 flex flex-col gap-3">
+            <p className="text-sm text-gray-600">{r.intro}</p>
+            <label className="text-xs font-semibold text-gray-500">
+              {r.fullName}
+              <input
+                value={fullName}
+                onChange={(e) => setFullName(e.target.value)}
+                className="mt-1 w-full border-2 border-gray-200 rounded-xl px-3 py-2 text-sm text-gray-900 focus:outline-none focus:border-green-500"
+              />
+            </label>
+            <label className="text-xs font-semibold text-gray-500">
+              {r.whatsapp}
+              <input
+                value={whatsapp}
+                onChange={(e) => setWhatsapp(e.target.value)}
+                inputMode="tel"
+                dir="ltr"
+                placeholder="+212…"
+                className="mt-1 w-full border-2 border-gray-200 rounded-xl px-3 py-2 text-sm text-gray-900 focus:outline-none focus:border-green-500"
+              />
+            </label>
+            <label className="text-xs font-semibold text-gray-500">
+              {r.email}
+              <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                dir="ltr"
+                className="mt-1 w-full border-2 border-gray-200 rounded-xl px-3 py-2 text-sm text-gray-900 focus:outline-none focus:border-green-500"
+              />
+            </label>
+            {error && <p className="text-sm text-red-600">{error}</p>}
+            <button
+              onClick={submit}
+              disabled={busy || !valid}
+              className="mt-1 w-full bg-green-700 text-white rounded-xl py-3 font-semibold hover:bg-green-800 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+              {busy ? r.sending : r.submit}
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   )
 }
