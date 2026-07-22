@@ -64,23 +64,30 @@ export default function VideoCallPanel({
 
   // Plain teardown once Jitsi has already confirmed the conference was left
   // (via the videoConferenceLeft/readyToClose event) — no hangup needed here,
-  // it already happened.
+  // it already happened. Also force-removes the iframe node directly instead
+  // of trusting api.dispose() alone: dispose() can fail silently (swallowed
+  // by the try/catch) and leave the iframe — with its camera/mic still
+  // live — sitting in the DOM, merely hidden by CSS (display:none does NOT
+  // stop an iframe's active media). Clearing innerHTML is a hard browser
+  // guarantee that any media inside is torn down immediately.
   const disposeApi = useCallback(() => {
     try { apiRef.current?.dispose() } catch {}
+    if (jitsiRef.current) jitsiRef.current.innerHTML = ''
     apiRef.current = null
     if (activeCallOwner === ownerId) activeCallOwner = null
   }, [ownerId])
 
   // Fire-and-forget teardown for cases where we can't wait around for a
   // confirmation (component unmounting, or superseding a stale instance
-  // before joining a fresh call) — best-effort hangup, then dispose right
-  // away since there's no lifetime left to wait in.
+  // before joining a fresh call) — best-effort hangup, then force the iframe
+  // out of the DOM right away since there's no lifetime left to wait in.
   const forceEndCall = useCallback(() => {
     const api = apiRef.current
     if (api) {
       try { api.executeCommand('hangup') } catch {}
       try { api.dispose() } catch {}
     }
+    if (jitsiRef.current) jitsiRef.current.innerHTML = ''
     apiRef.current = null
     if (activeCallOwner === ownerId) activeCallOwner = null
   }, [ownerId])
@@ -166,25 +173,30 @@ export default function VideoCallPanel({
   }, [])
 
   // The "permanent" close: actually leave whatever call is active (not just
-  // hide it) AND tell the parent to dismiss the panel entirely. Sends the
-  // hangup command and WAITS for Jitsi's own videoConferenceLeft/readyToClose
-  // event before tearing anything down — hangup goes over postMessage to the
-  // iframe, so ripping the iframe out immediately (the previous approach)
-  // could kill it before the message was ever delivered, closing only the UI
-  // while the call itself stayed connected. A short fallback timeout covers
-  // the case where Jitsi never confirms (e.g. it was still connecting).
+  // hide it) AND tell the parent to dismiss the panel entirely.
+  //
+  // This used to send the hangup command and WAIT for Jitsi's own
+  // videoConferenceLeft/readyToClose event (with a 1.5s fallback) before
+  // tearing anything down, on the theory that ripping the iframe out
+  // immediately could kill it before the hangup postMessage was delivered.
+  // In practice that made teardown depend on Jitsi's event firing correctly
+  // (or api.dispose() succeeding inside its try/catch) — and when either
+  // silently failed, the iframe stayed alive in the DOM (camera/mic still
+  // running) merely hidden by CSS, which is exactly the "just hides it"
+  // bug. Removing an iframe from the DOM is a hard browser guarantee that
+  // stops any media inside it, independent of Jitsi's own JS — so now we
+  // fire hangup as a best-effort courtesy to the room, then immediately and
+  // unconditionally force the iframe out via forceEndCall(). No waiting,
+  // no race, nothing to silently fail.
   function closePanel() {
+    explicitCloseRef.current = true
     if (apiRef.current) {
-      const api = apiRef.current
-      explicitCloseRef.current = true
-      try { api.executeCommand('hangup') } catch {}
-      setTimeout(() => { if (apiRef.current === api) handleLeft() }, 1500)
-    } else {
-      // Nothing active to hang up (idle/error/not_configured/already closed)
-      // — collapse immediately.
-      setPhase('closed')
-      onClose?.()
+      try { apiRef.current.executeCommand('hangup') } catch {}
     }
+    forceEndCall()
+    setPhase('closed')
+    explicitCloseRef.current = false
+    onClose?.()
   }
 
   return (
