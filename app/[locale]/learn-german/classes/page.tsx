@@ -4,7 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { supabase } from '@/lib/supabase'
 import { isMorocco } from '@/lib/geo'
 import { isAdmin } from '@/lib/entitlements'
-import { CLASSES_LAUNCHED } from '@/lib/classes-flags'
+import { CLASSES_LAUNCHED, CLASSES_MOROCCO_ONLY } from '@/lib/classes-flags'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -44,7 +44,7 @@ export default async function ClassesPage({
   // it. After launch, it's Morocco-only (non-MA visitors go back to the hub).
   if (!admin) {
     if (!CLASSES_LAUNCHED) redirect(`/${locale}/learn-german`)
-    if (!(await isMorocco())) redirect(`/${locale}/learn-german`)
+    if (CLASSES_MOROCCO_ONLY && !(await isMorocco())) redirect(`/${locale}/learn-german`)
   }
 
   const t = classesStrings(locale)

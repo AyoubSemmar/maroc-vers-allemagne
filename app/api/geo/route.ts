@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { isAdmin } from '@/lib/entitlements'
+import { CLASSES_MOROCCO_ONLY } from '@/lib/classes-flags'
 
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
@@ -21,6 +22,8 @@ export async function GET(req: NextRequest) {
     if (user) admin = await isAdmin(user.id)
   } catch {}
 
-  const allow = country === 'MA' || admin
+  // When the Morocco gate is off, the classes CTA shows everywhere (testing);
+  // otherwise it's MA-only, with admins bypassing from any country.
+  const allow = !CLASSES_MOROCCO_ONLY || country === 'MA' || admin
   return NextResponse.json({ country, allow }, { headers: { 'Cache-Control': 'no-store' } })
 }
