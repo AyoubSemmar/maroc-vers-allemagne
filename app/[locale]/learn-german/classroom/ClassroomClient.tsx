@@ -88,7 +88,7 @@ export default function ClassroomClient({
         {videoOpen && (
           <section className="order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] h-[38dvh] md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col">
             <div className="relative flex-1 min-h-0">
-              <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} onClose={() => setVideoOpen(false)} />
+              <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} />
             </div>
           </section>
         )}

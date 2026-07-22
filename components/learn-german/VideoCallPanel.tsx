@@ -43,22 +43,15 @@ export default function VideoCallPanel({
   groupId,
   videoConfigured,
   autoJoin = false,
-  onClose,
 }: {
   groupId: string | null
   videoConfigured: boolean
   autoJoin?: boolean
-  /** Called after ending any active call, when the caller wants the whole
-   *  panel dismissed (not just the call), e.g. collapsing the classroom's
-   *  video section entirely rather than leaving an idle "join again" card
-   *  sitting in its place. Falls back to just ending the call if omitted. */
-  onClose?: () => void
 }) {
   const t = useTranslations('learnGerman.classroom')
   const jitsiRef = useRef<HTMLDivElement>(null)
   const apiRef = useRef<any>(null)
   const ownerId = useRef(Symbol('videoCallOwner')).current
-  const explicitCloseRef = useRef(false)
   const [phase, setPhase] = useState<Phase>('idle')
   const [error, setError] = useState<string | null>(null)
 
@@ -95,18 +88,13 @@ export default function VideoCallPanel({
   useEffect(() => () => forceEndCall(), [forceEndCall])
 
   // Fires once Jitsi actually confirms the conference was left — either from
-  // clicking our close button (hangup below) or from Jitsi's own in-call
-  // hangup control. Only collapses the whole panel (onClose) when the user
-  // explicitly asked to close it; leaving via Jitsi's own UI still shows the
-  // "call ended, rejoin?" card as before.
+  // clicking our close button or from Jitsi's own in-call hangup control.
+  // Both land on the same "call ended, rejoin?" card; this component never
+  // asks its parent to unmount/hide it (see closePanel below for why).
   const handleLeft = useCallback(() => {
     disposeApi()
     setPhase('closed')
-    if (explicitCloseRef.current) {
-      explicitCloseRef.current = false
-      onClose?.()
-    }
-  }, [disposeApi, onClose])
+  }, [disposeApi])
 
   const joinCall = useCallback(async () => {
     // Guard against overlapping calls: the token fetch + Jitsi script load can
@@ -172,31 +160,24 @@ export default function VideoCallPanel({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // The "permanent" close: actually leave whatever call is active (not just
-  // hide it) AND tell the parent to dismiss the panel entirely.
-  //
-  // This used to send the hangup command and WAIT for Jitsi's own
-  // videoConferenceLeft/readyToClose event (with a 1.5s fallback) before
-  // tearing anything down, on the theory that ripping the iframe out
-  // immediately could kill it before the hangup postMessage was delivered.
-  // In practice that made teardown depend on Jitsi's event firing correctly
-  // (or api.dispose() succeeding inside its try/catch) — and when either
-  // silently failed, the iframe stayed alive in the DOM (camera/mic still
-  // running) merely hidden by CSS, which is exactly the "just hides it"
-  // bug. Removing an iframe from the DOM is a hard browser guarantee that
-  // stops any media inside it, independent of Jitsi's own JS — so now we
-  // fire hangup as a best-effort courtesy to the room, then immediately and
-  // unconditionally force the iframe out via forceEndCall(). No waiting,
-  // no race, nothing to silently fail.
+  // Actually leave whatever call is active — not just hide it. Fires hangup
+  // as a best-effort courtesy to the room, then immediately and
+  // unconditionally force-removes the iframe via forceEndCall() (see its
+  // comment: removing an iframe from the DOM is a hard browser guarantee
+  // that kills any media inside it, independent of whether Jitsi's own
+  // dispose()/event confirmation ever arrives). Does NOT ask the parent to
+  // unmount this component — it stays mounted, showing the "closed,
+  // rejoin?" card in place, so starting a new call is just clicking
+  // "Rejoindre" on the same instance instead of round-tripping through a
+  // parent unmount/remount cycle (the classroom page's own top-bar toggle
+  // already covers "hide the video area entirely" — this button doesn't
+  // need to duplicate that).
   function closePanel() {
-    explicitCloseRef.current = true
     if (apiRef.current) {
       try { apiRef.current.executeCommand('hangup') } catch {}
     }
     forceEndCall()
     setPhase('closed')
-    explicitCloseRef.current = false
-    onClose?.()
   }
 
   return (
