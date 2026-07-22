@@ -7,6 +7,7 @@ import { createClient } from '@/lib/supabase-browser'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import { safeRedirect } from '@/lib/safe-redirect'
+import { trackMeta } from '@/lib/metaPixel'
 
 // Small inline strings — this page is only reached by admin-provisioned live-
 // class students (a Morocco-targeted feature), so ar/fr/en/de mirror the
@@ -86,6 +87,8 @@ function SetPasswordForm() {
       setLoading(false)
       return
     }
+    // Meta conversion: student finished onboarding (set their own password).
+    trackMeta('CompleteRegistration', { content_name: 'student_onboarding' })
     const next = safeRedirect(searchParams.get('next'), `/${locale}`)
     window.location.assign(next)
   }

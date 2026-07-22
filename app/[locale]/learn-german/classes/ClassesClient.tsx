@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { classesStrings } from '@/components/classes/strings'
 import { accessDaysLeft, formatAccessDate } from '@/lib/courseAccess'
+import { trackMeta } from '@/lib/metaPixel'
 
 export type ClassGroup = {
   id: string
@@ -247,7 +248,12 @@ function ReserveModal({ locale, group, onClose }: { locale: string; group: Class
         body: JSON.stringify({ fullName, whatsapp, email, groupId: group.id }),
       })
       const data = await res.json().catch(() => ({}))
-      if (res.ok && data.status === 'ok') { setDone(true); return }
+      if (res.ok && data.status === 'ok') {
+        // Meta conversion: a seat reservation request is a Lead.
+        trackMeta('Lead', { content_name: 'class_reservation', content_category: group.level })
+        setDone(true)
+        return
+      }
       setError(data.status === 'invalid' ? r.invalid : r.error)
     } catch {
       setError(r.error)

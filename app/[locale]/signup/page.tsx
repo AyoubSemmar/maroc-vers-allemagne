@@ -8,6 +8,7 @@ import { dirFor, type AppLocale } from '@/i18n/routing'
 import PasswordInput from '@/components/PasswordInput'
 import GoogleSignInButton from '@/components/GoogleSignInButton'
 import { trackSignup } from '@/lib/analytics'
+import { trackMeta } from '@/lib/metaPixel'
 
 type Msg = { kind: 'error' | 'success'; text: string } | null
 
@@ -40,6 +41,8 @@ export default function SignupPage() {
       // your inbox'. method:'email' distinguishes this from Google OAuth
       // sign-ups, which fire their own event from the OAuth callback.
       trackSignup('email')
+      // Meta conversion: account created (email signup, pending confirmation).
+      trackMeta('CompleteRegistration', { content_name: 'signup', status: 'email' })
       setMessage({ kind: 'success', text: t('checkInbox') })
     }
     setLoading(false)
