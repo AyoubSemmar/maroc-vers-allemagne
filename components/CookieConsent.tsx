@@ -52,6 +52,9 @@ export default function CookieConsent() {
   function choose(all: boolean) {
     try { localStorage.setItem(STORAGE_KEY, all ? 'all' : 'essential') } catch {}
     updateConsent(all)
+    // Let consent-gated trackers that don't use Google Consent Mode (e.g. the
+    // Meta Pixel) react to the choice without a page reload.
+    try { window.dispatchEvent(new CustomEvent('gg-consent-updated', { detail: all })) } catch {}
     setVisible(false)
   }
 

@@ -15,6 +15,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
 import JsonLd from "@/components/seo/JsonLd";
 import AnalyticsBeacon from "@/components/analytics/AnalyticsBeacon";
+import MetaPixel from "@/components/analytics/MetaPixel";
 import { omitNamespaces, HEAVY_NAMESPACES } from "@/lib/i18n-heavy";
 
 // Public AdSense publisher id (permanent, safe to commit — it's in the page
@@ -202,6 +203,9 @@ export default async function LocaleLayout({
           {!isTrackerHost && <CookieConsent />}
           <Analytics />
           {!isTrackerHost && <AnalyticsBeacon />}
+          {/* Meta Pixel — self-gates on cookie consent; skipped on the tracker
+              host and outside production. */}
+          {process.env.NODE_ENV === "production" && !isTrackerHost && <MetaPixel />}
         </NextIntlClientProvider>
       </body>
       {/* Skip gogermany's Google Analytics on the tracker host — the
