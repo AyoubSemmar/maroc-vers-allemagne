@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 // Consent Mode posture — the pixel sets advertising cookies, so it must not
 // fire before consent. The cookie banner dispatches 'gg-consent-updated' when
 // the choice changes, so accepting later loads the pixel without a reload.
-const PIXEL_ID = '4094727187325755'
+const PIXEL_ID = '3154079218316304'
 
 function loadPixel() {
   const w = window as any
