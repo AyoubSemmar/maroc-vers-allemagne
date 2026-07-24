@@ -16,9 +16,12 @@ export default function LessonsList({ level }: { level: Level }) {
   const tData = useTranslations('learnGerman.data')
   const { isLessonCompleted, completedCount, loaded, isAuthed } = useProgress(level.id)
 
-  const lessonTitle = (id: string, fallback: string) => {
-    try { return tData(`lessons.${id}` as any) } catch { return fallback }
-  }
+  // next-intl returns the raw key (not a throw) when a title is missing, so a
+  // try/catch never triggers the fallback — check existence explicitly and
+  // fall back to the lesson's own title from the data, so a not-yet-translated
+  // lesson never shows a raw "learnGerman.data.lessons.x" key.
+  const lessonTitle = (id: string, fallback: string) =>
+    tData.has(`lessons.${id}` as any) ? tData(`lessons.${id}` as any) : fallback
 
   const total = level.lessons.length
   const pct = total > 0 ? Math.round((completedCount / total) * 100) : 0
