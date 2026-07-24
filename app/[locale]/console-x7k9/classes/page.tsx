@@ -110,9 +110,13 @@ export default async function AdminClassesPage({ params }: { params: Promise<{ l
   const reserved = model.reduce((s, g) => s + g.booked_count, 0)
   const seats = model.reduce((s, g) => s + g.capacity, 0)
   // Real monthly revenue counts only students with active (paid, unexpired)
-  // access — not every reserved-but-unpaid seat.
+  // access — not every reserved-but-unpaid seat — and each at their own
+  // group's price (groups can be priced differently).
   const activeCount = model.reduce((s, g) => s + g.students.filter((st) => st.accessActive).length, 0)
-  const revenue = activeCount * 450
+  const revenue = model.reduce(
+    (s, g) => s + g.students.filter((st) => st.accessActive).length * g.price_mad,
+    0,
+  )
   const fullGroups = model.filter((g) => g.booked_count >= g.capacity).length
 
   return (
