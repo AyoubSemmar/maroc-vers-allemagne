@@ -363,11 +363,26 @@ function AddGroupForm() {
 
 /** One group: a collapsible header (click to reveal the student list) plus the
  *  group's controls (seats, lesson tracker, edit/delete, join room). */
-function GroupCard({ group: g, locale }: { group: AdminGroup; locale: string }) {
+function GroupCard({ group: g, locale, allGroups }: { group: AdminGroup; locale: string; allGroups: { id: string; label: string; level: string }[] }) {
   const router = useRouter()
   const [open, setOpen] = useState(false)
   const [editing, setEditing] = useState(false)
   const [busy, setBusy] = useState<string | null>(null)
+
+  async function move(bookingId: string, targetGroupId: string, email: string) {
+    const target = allGroups.find((x) => x.id === targetGroupId)
+    if (!target) return
+    if (!confirm(`Déplacer ${email} vers « ${target.label} » (${target.level.toUpperCase()}) ?`)) return
+    setBusy(bookingId)
+    try {
+      const res = await fetch('/api/admin/classes/move-student', {
+        method: 'POST', headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ bookingId, targetGroupId }),
+      })
+      if (!res.ok) { const { error } = await res.json().catch(() => ({ error: 'Failed' })); alert(error || 'Failed') }
+      else router.refresh()
+    } finally { setBusy(null) }
+  }
 
   async function setAccess(bookingId: string, action: 'grant' | 'revoke') {
     setBusy(bookingId)
@@ -487,6 +502,20 @@ function GroupCard({ group: g, locale }: { group: AdminGroup; locale: string }) 
                         )}
                       </div>
                     </td>
+                    <td style={{ padding: '8px 4px', width: 150 }}>
+                      <select
+                        value=""
+                        disabled={busy === s.bookingId}
+                        onChange={(e) => { if (e.target.value) move(s.bookingId, e.target.value, s.email) }}
+                        title="Déplacer vers un autre groupe (tous niveaux)"
+                        style={{ fontSize: 12, border: '1px solid var(--adm-line-strong)', borderRadius: 6, padding: '3px 6px', color: '#1a1a1a', background: '#fff', maxWidth: 140, opacity: busy === s.bookingId ? 0.5 : 1 }}
+                      >
+                        <option value="">⇄ Déplacer…</option>
+                        {allGroups.filter((g2) => g2.id !== g.id).map((g2) => (
+                          <option key={g2.id} value={g2.id}>{g2.level.toUpperCase()} · {g2.label}</option>
+                        ))}
+                      </select>
+                    </td>
                     <td style={{ padding: '8px 4px', width: 80, textAlign: 'right' }}>
                       <button
                         onClick={() => remove(s.bookingId, s.email)}
@@ -508,11 +537,12 @@ function GroupCard({ group: g, locale }: { group: AdminGroup; locale: string }) 
 }
 
 export default function AdminClassesClient({ groups, requests, locale }: { groups: AdminGroup[]; requests: ReservationRequest[]; locale: string }) {
+  const allGroups = groups.map((g) => ({ id: g.id, label: g.label, level: g.level }))
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
       <PendingRequests requests={requests} />
       <AddGroupForm />
-      {groups.map((g) => <GroupCard key={g.id} group={g} locale={locale} />)}
+      {groups.map((g) => <GroupCard key={g.id} group={g} locale={locale} allGroups={allGroups} />)}
     </div>
   )
 }
