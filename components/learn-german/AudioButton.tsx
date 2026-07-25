@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslations } from 'next-intl'
 
 interface AudioButtonProps {
@@ -13,6 +13,18 @@ interface AudioButtonProps {
 export default function AudioButton({ text, lang = 'de-DE', size = 'md', className = '' }: AudioButtonProps) {
   const t = useTranslations('learnGerman.audio')
   const [playing, setPlaying] = useState(false)
+
+  // Stop this button's speech when it unmounts (exercise modal closed, page
+  // navigated away, etc.) — otherwise SpeechSynthesis keeps reading aloud after
+  // the UI is gone. Only cancel if THIS button was the one playing, so an
+  // unrelated button unmounting doesn't cut off active audio.
+  const playingRef = useRef(false)
+  useEffect(() => { playingRef.current = playing }, [playing])
+  useEffect(() => () => {
+    if (playingRef.current && typeof window !== 'undefined' && 'speechSynthesis' in window) {
+      window.speechSynthesis.cancel()
+    }
+  }, [])
 
   // Lesson strings often mix German and a translation separated by an em-dash
   // (either order, e.g. "Ich bin Ahmed. — I am Ahmed." or

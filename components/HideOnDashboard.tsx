@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 
 // The dashboard provides its own shell (sidebar + topbar) and hides the
@@ -18,7 +19,19 @@ const IS_CLASSROOM  = /^\/[^/]+\/learn-german\/classroom(\/|$)/
 
 export default function HideOnDashboard({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
+  // The classroom shows lesson pages (my-course / level / results) inside an
+  // iframe. Those are normal pages, so without this they'd render the full
+  // site chrome — announcement banner + navbar + footer — inside the narrow
+  // classroom panel, eating vertical space and overlapping the content. Any
+  // page embedded in an iframe drops its chrome. Checked after mount so the
+  // first (server-matching) render still includes chrome — no hydration split.
+  const [embedded, setEmbedded] = useState(false)
+  useEffect(() => {
+    try { setEmbedded(window.self !== window.top) } catch { setEmbedded(true) }
+  }, [])
+
   if (!pathname) return <>{children}</>
+  if (embedded) return null
   if (IS_DASHBOARD.test(pathname) || IS_STUDYBUDDY.test(pathname) || IS_CONSOLE.test(pathname) || IS_CLASSROOM.test(pathname)) return null
   return <>{children}</>
 }
