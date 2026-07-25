@@ -15,6 +15,7 @@ type State =
   | 'idle'
   | 'listening'
   | 'success'
+  | 'done'            // user manually marked it done (speaking is never mandatory)
   | 'retry'
   | 'unsupported'
   | 'insecure'        // browser blocks SpeechRecognition outside HTTPS / localhost
@@ -137,6 +138,27 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
     setState('idle')
   }
 
+  // Speaking is never mandatory — the learner can always mark it done (mic may
+  // be unsupported/blocked, or they just prefer to move on) and continue.
+  function markDone() {
+    try { recogRef.current?.stop() } catch {}
+    setState('done')
+    onResult?.(true)
+  }
+
+  const markDoneBtn = (
+    <button onClick={markDone} className="text-sm text-gray-500 hover:text-green-700 underline underline-offset-2">
+      {safeT(t, 'markDone', '✓ Mark as done')}
+    </button>
+  )
+  // Prominent variant for states where the mic can never work — marking done is
+  // then the main way forward.
+  const markDonePrimary = (
+    <button onClick={markDone} className="mt-3 inline-flex items-center gap-2 mx-auto bg-green-600 text-white px-5 py-2 rounded-full text-sm font-medium hover:bg-green-700">
+      <Icon name="check" size={15} /> {safeT(t, 'markDone', 'Mark as done')}
+    </button>
+  )
+
   // ── Render ────────────────────────────────────────────────────
   return (
     <div className="flex flex-col gap-3">
@@ -151,13 +173,24 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
 
       <div className="flex flex-col items-center gap-3">
         {state === 'idle' && (
-          <button
-            onClick={startListening}
-            className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-all shadow-md"
-          >
-            <MicIcon className="w-5 h-5" />
-            {t('press')}
-          </button>
+          <>
+            <button
+              onClick={startListening}
+              className="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full font-medium hover:bg-blue-700 transition-all shadow-md"
+            >
+              <MicIcon className="w-5 h-5" />
+              {t('press')}
+            </button>
+            {markDoneBtn}
+          </>
+        )}
+
+        {state === 'done' && (
+          <div className="text-center">
+            <div className="mb-2 flex justify-center text-green-600"><Icon name="check" size={32} /></div>
+            <p className="text-green-700 font-semibold">{safeT(t, 'markedDone', 'Marked as done')}</p>
+            <button onClick={reset} className="mt-3 text-sm text-blue-600 hover:underline">{t('tryAgain')}</button>
+          </div>
         )}
 
         {state === 'listening' && (
@@ -192,6 +225,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
               <MicIcon className="w-4 h-4" />
               {t('retryBtn')}
             </button>
+            <div className="mt-2">{markDoneBtn}</div>
           </div>
         )}
 
@@ -203,6 +237,7 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
               <MicIcon className="w-4 h-4" />
               {t('retryBtn')}
             </button>
+            <div className="mt-2">{markDoneBtn}</div>
           </div>
         )}
 
@@ -218,27 +253,34 @@ export default function SpeakingExercise({ target, hint, onResult }: Props) {
               )}
             </p>
             <button onClick={reset} className="mt-3 text-sm text-blue-600 hover:underline">{t('tryAgain')}</button>
+            <div>{markDonePrimary}</div>
           </div>
         )}
 
         {state === 'unsupported' && (
-          <p className="text-sm text-gray-500 text-center bg-gray-100 rounded-xl px-4 py-3 max-w-md">
-            {safeT(
-              t,
-              'unsupported',
-              "Speech recognition isn't available in this browser. Try the latest Chrome, Edge, or Safari.",
-            )}
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="text-sm text-gray-500 text-center bg-gray-100 rounded-xl px-4 py-3 max-w-md">
+              {safeT(
+                t,
+                'unsupported',
+                "Speech recognition isn't available in this browser. Try the latest Chrome, Edge, or Safari.",
+              )}
+            </p>
+            {markDonePrimary}
+          </div>
         )}
 
         {state === 'insecure' && (
-          <p className="text-sm text-gray-500 text-center bg-gray-100 rounded-xl px-4 py-3 max-w-md">
-            {safeT(
-              t,
-              'insecure',
-              'Speaking exercises require HTTPS. Open the site via https://www.gogermany.ma to use the microphone.',
-            )}
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="text-sm text-gray-500 text-center bg-gray-100 rounded-xl px-4 py-3 max-w-md">
+              {safeT(
+                t,
+                'insecure',
+                'Speaking exercises require HTTPS. Open the site via https://www.gogermany.ma to use the microphone.',
+              )}
+            </p>
+            {markDonePrimary}
+          </div>
         )}
 
         {errorDetail && (state === 'retry' || state === 'no-mic') && (
