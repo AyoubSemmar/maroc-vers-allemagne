@@ -222,7 +222,7 @@ export default function LessonClient({
   const { completeLesson, saveLessonScore, isAdmin, isAuthed } = useProgress(level.id)
   // Exam-style Lesen/Hören/Schreiben devoirs attached to this lesson (A1–B1
   // have them; the tab hides itself on lessons without any).
-  const devoirsState = useLessonDevoirs(level.id, lesson.id)
+  const devoirsState = useLessonDevoirs(level.id, lesson.id, locale)
 
   function typeLabel(key: string): string {
     try { return t(`types.${key}` as any) } catch { return key }

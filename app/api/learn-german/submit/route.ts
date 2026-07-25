@@ -2,7 +2,7 @@ import Anthropic from '@anthropic-ai/sdk'
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@supabase/supabase-js'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
-import { LEVEL_SPECS, normalizeLevel, feedbackLocale, parseJsonLoose } from '@/lib/learn-german/assignmentAI'
+import { LEVEL_SPECS, normalizeLevel, feedbackLocale, localeName, parseJsonLoose } from '@/lib/learn-german/assignmentAI'
 
 export const runtime = 'nodejs'
 export const maxDuration = 45
@@ -63,11 +63,11 @@ export async function POST(req: NextRequest) {
     const assignmentId = String(body.assignmentId || '')
     if (!assignmentId) return NextResponse.json({ error: 'Missing assignment.' }, { status: 400 })
 
-    const { data: a } = await sbAdmin
-      .from('assignments')
-      .select('id, skill, level_id, instructions, content, answer_key, is_published')
-      .eq('id', assignmentId)
-      .maybeSingle()
+    // Try to also read the per-locale answer_key_i18n; if the column doesn't
+    // exist yet (pre-migration) the query errors, so fall back without it.
+    const baseCols = 'id, skill, level_id, instructions, content, answer_key, is_published'
+    let a: any = (await sbAdmin.from('assignments').select(`${baseCols}, answer_key_i18n`).eq('id', assignmentId).maybeSingle()).data
+    if (a == null) a = (await sbAdmin.from('assignments').select(baseCols).eq('id', assignmentId).maybeSingle()).data
     if (!a || !a.is_published) return NextResponse.json({ error: 'Assignment not found.' }, { status: 404 })
 
     // MCQ skills are graded for everyone (an answer-key comparison costs
@@ -93,13 +93,13 @@ export async function POST(req: NextRequest) {
       if (!apiKey) return NextResponse.json({ error: 'AI service not configured.' }, { status: 500 })
 
       const uiLocale = feedbackLocale(body.locale)
-      const localeName = { en: 'English', fr: 'French', ar: 'Arabic', de: 'German' }[uiLocale]
+      const localeNameStr = localeName(uiLocale)
       const client = new Anthropic({ apiKey })
       const resp = await client.messages.create({
         model: 'claude-haiku-4-5',
         max_tokens: 2000,
         temperature: 0.2,
-        messages: [{ role: 'user', content: buildSchreibenPrompt(a.level_id, localeName, uiLocale, a.instructions || '', text) }],
+        messages: [{ role: 'user', content: buildSchreibenPrompt(a.level_id, localeNameStr, uiLocale, a.instructions || '', text) }],
       })
       const rawText = resp.content.map(c => (c.type === 'text' ? c.text : '')).join('')
       let parsed: any
@@ -119,7 +119,11 @@ export async function POST(req: NextRequest) {
       // ── Auto-graded MCQ (grammar / lesen / hoeren) ──
       const choices: number[] = Array.isArray(body.choices) ? body.choices.map((n: any) => Number(n)) : []
       const key: number[] = Array.isArray(a.answer_key?.correct) ? a.answer_key.correct : []
-      const explanations: string[] = Array.isArray(a.answer_key?.explanations) ? a.answer_key.explanations : []
+      // Prefer the visitor's-language explanations; fall back to the French base.
+      const locExps = a.answer_key_i18n?.[String(body.locale ?? '')]?.explanations
+      const explanations: string[] = Array.isArray(locExps)
+        ? locExps
+        : Array.isArray(a.answer_key?.explanations) ? a.answer_key.explanations : []
       const total = key.length
       if (total === 0) return NextResponse.json({ error: 'Assignment has no answer key.' }, { status: 500 })
 

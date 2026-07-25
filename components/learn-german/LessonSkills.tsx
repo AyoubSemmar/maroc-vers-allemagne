@@ -16,7 +16,22 @@ const SKILL_RANK: Record<string, number> = { lesen: 0, hoeren: 1, schreiben: 2, 
  * signed-in user's saved scores for them. Anonymous visitors get the
  * exercises too — their MCQ attempts are graded but not persisted.
  */
-export function useLessonDevoirs(levelId: string, lessonId: string) {
+// Apply the per-locale overlay (content_i18n) onto a raw assignment row: the
+// instruction and each MCQ question text swap to the visitor's language while
+// the German passage/options stay. Falls back to the French base for any field
+// the overlay doesn't cover (or when no overlay exists yet).
+function localizeDevoir(a: any, locale: string): ClientAssignment {
+  const { content_i18n, ...rest } = a
+  const ov = content_i18n?.[locale]
+  if (!ov) return rest as ClientAssignment
+  const base = a.content ?? {}
+  const questions = Array.isArray(base.questions)
+    ? base.questions.map((q: any, i: number) => ({ ...q, q: ov.questions?.[i]?.q ?? q.q }))
+    : base.questions
+  return { ...rest, instructions: ov.instructions ?? a.instructions, content: { ...base, questions } }
+}
+
+export function useLessonDevoirs(levelId: string, lessonId: string, locale: string = 'fr') {
   const [devoirs, setDevoirs] = useState<ClientAssignment[]>([])
   const [subScores, setSubScores] = useState<Record<string, number>>({})
   const [isAuthed, setIsAuthed] = useState(false)
@@ -27,16 +42,17 @@ export function useLessonDevoirs(levelId: string, lessonId: string) {
     const supabase = createClient()
     async function load() {
       // Whole-level devoirs only (group_id null): cohort-specific teacher
-      // assignments stay inside the paid course dashboard.
-      const { data: rows } = await supabase
-        .from('assignments')
-        .select('id, skill, level_id, title, instructions, content, due_at')
-        .eq('level_id', levelId)
-        .eq('is_published', true)
-        .is('group_id', null)
-        .eq('content->>lessonId', lessonId)
+      // assignments stay inside the paid course dashboard. Try to pull the
+      // per-locale overlay too; if the column doesn't exist yet (pre-migration)
+      // the query errors, so fall back to the base columns (French).
+      const cols = 'id, skill, level_id, title, instructions, content, due_at'
+      const query = (sel: string) => supabase.from('assignments').select(sel)
+        .eq('level_id', levelId).eq('is_published', true).is('group_id', null).eq('content->>lessonId', lessonId)
+      let rows = (await query(`${cols}, content_i18n`)).data
+      if (rows == null) rows = (await query(cols)).data
       if (!active) return
-      const sorted = ((rows ?? []) as ClientAssignment[])
+      const sorted = ((rows ?? []) as any[])
+        .map(a => localizeDevoir(a, locale))
         .sort((a, b) => (SKILL_RANK[a.skill] ?? 9) - (SKILL_RANK[b.skill] ?? 9))
       setDevoirs(sorted)
 
@@ -60,7 +76,7 @@ export function useLessonDevoirs(levelId: string, lessonId: string) {
     }
     load()
     return () => { active = false }
-  }, [levelId, lessonId])
+  }, [levelId, lessonId, locale])
 
   function setScore(assignmentId: string, score: number) {
     setSubScores(prev => ({ ...prev, [assignmentId]: score }))

@@ -199,7 +199,7 @@ export default function AssignmentRunner({
                 onChange={e => setText(e.target.value)}
                 rows={8}
                 dir="ltr"
-                placeholder="Schreiben Sie hier auf Deutsch…"
+                placeholder={t('writeHint')}
                 className="w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-green-500"
               />
               <p className="text-xs text-gray-400 mt-1">

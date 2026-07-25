@@ -19,7 +19,13 @@ export const QUESTION_COUNT: Record<Exclude<Skill, 'schreiben'>, number> = {
 }
 
 const LOCALE_NAMES: Record<string, string> = {
-  en: 'English', fr: 'French', ar: 'Arabic', de: 'German',
+  ar: 'Arabic', de: 'German', en: 'English', es: 'Spanish', fa: 'Persian (Farsi)',
+  fr: 'French', hi: 'Hindi', pt: 'Portuguese', ru: 'Russian', tr: 'Turkish',
+  ur: 'Urdu', zh: 'Simplified Chinese',
+}
+/** English name of a locale for prompting the model (defaults to French). */
+export function localeName(loc: string): string {
+  return LOCALE_NAMES[loc] || 'French'
 }
 
 export function normalizeLevel(raw: string): WritingLevel {
@@ -27,8 +33,10 @@ export function normalizeLevel(raw: string): WritingLevel {
   return (['A1', 'A2', 'B1', 'B2', 'C1'].includes(up) ? up : 'A1') as WritingLevel
 }
 
-export function feedbackLocale(raw?: string): 'en' | 'fr' | 'ar' | 'de' {
-  return (['en', 'fr', 'ar', 'de'] as const).includes(raw as any) ? (raw as any) : 'fr'
+const FEEDBACK_LOCALES = ['ar', 'de', 'en', 'es', 'fa', 'fr', 'hi', 'pt', 'ru', 'tr', 'ur', 'zh'] as const
+export type FeedbackLocale = (typeof FEEDBACK_LOCALES)[number]
+export function feedbackLocale(raw?: string): FeedbackLocale {
+  return (FEEDBACK_LOCALES as readonly string[]).includes(raw ?? '') ? (raw as FeedbackLocale) : 'fr'
 }
 
 /** Tolerant JSON extraction from a model reply (strips ``` fences). */
