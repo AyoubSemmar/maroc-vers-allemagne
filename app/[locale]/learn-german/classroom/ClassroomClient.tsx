@@ -39,6 +39,12 @@ export default function ClassroomClient({
     return `${base}/my-course`
   }
   const [lessonTab, setLessonTab] = useState('mycourse')
+  // Bumped on every tab click so the iframe reloads to that tab's page even if
+  // it's already the "active" tab — the iframe can navigate internally (open a
+  // lesson, follow its breadcrumb), and without this a student who drilled into
+  // a lesson from "Mon cours" had no way back: clicking the still-highlighted
+  // "Mon cours" tab did nothing because the tab state hadn't changed.
+  const [reloadKey, setReloadKey] = useState(0)
 
   return (
     <div className="flex flex-col h-[100dvh] bg-gray-900">
@@ -67,7 +73,7 @@ export default function ClassroomClient({
             {LESSON_TABS.map(tab => (
               <button
                 key={tab.key}
-                onClick={() => setLessonTab(tab.key)}
+                onClick={() => { setLessonTab(tab.key); setReloadKey(k => k + 1) }}
                 className={`flex items-center gap-1.5 text-xs font-semibold rounded-lg px-3 py-1.5 whitespace-nowrap transition-colors ${
                   lessonTab === tab.key ? 'bg-green-600 text-white' : 'text-gray-600 hover:bg-gray-200'
                 }`}
@@ -77,7 +83,7 @@ export default function ClassroomClient({
             ))}
           </div>
           <iframe
-            key={lessonTab}
+            key={`${lessonTab}-${reloadKey}`}
             src={lessonSrc(lessonTab)}
             title={t('lessonsIframeTitle')}
             className="flex-1 w-full border-0"
