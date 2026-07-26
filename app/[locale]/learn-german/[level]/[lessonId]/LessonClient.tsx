@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type ReactNode } from 'react'
+import { useState, useEffect, type ReactNode } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
@@ -224,6 +224,35 @@ export default function LessonClient({
   // have them; the tab hides itself on lessons without any).
   const devoirsState = useLessonDevoirs(level.id, lesson.id, locale)
 
+  // The header (breadcrumb + title + tab bar) is tall and pinned; on a phone it
+  // ate a big chunk of the reading area. Hide it while scrolling DOWN and slide
+  // it back on the first upward scroll (or near the top), so the tabs stay one
+  // small swipe away without permanently occupying space.
+  const [headerHidden, setHeaderHidden] = useState(false)
+  useEffect(() => {
+    let lastY = window.scrollY
+    let ticking = false
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        const y = window.scrollY
+        const delta = y - lastY
+        if (y < 80) setHeaderHidden(false)          // always visible near the top
+        else if (delta > 6) setHeaderHidden(true)   // scrolling down → hide
+        else if (delta < -6) setHeaderHidden(false) // scrolling up → reveal
+        lastY = y
+        ticking = false
+      })
+    }
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  // Switching tabs jumps you to a fresh section — bring the header back so the
+  // tab bar (and the new section's top) are visible.
+  useEffect(() => { setHeaderHidden(false) }, [tab])
+
   function typeLabel(key: string): string {
     try { return t(`types.${key}` as any) } catch { return key }
   }
@@ -297,8 +326,8 @@ export default function LessonClient({
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
 
-      {/* ── Header ── */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm">
+      {/* ── Header ── slides up out of view on scroll-down, back on scroll-up */}
+      <div className={`bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm transition-transform duration-300 ease-out ${headerHidden ? '-translate-y-full' : 'translate-y-0'}`}>
         <div className="max-w-3xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-3">
             <Link
