@@ -528,6 +528,16 @@ html[data-theme="dark"] .shadow-lg { box-shadow: 0 8px 24px -12px rgba(0,0,0,0.6
     flex-shrink: 0;
     font-weight: 600;
   }
+  /* An enrolled student's course is the most important link — pin it to the
+     front of the mobile scroll strip (order:-1) and give it a pill so it's
+     obvious and reachable without scrolling the nav sideways. */
+  .rihla-nav-links .rihla-mycourse-link {
+    order: -1;
+    padding: 3px 12px;
+    border-radius: 999px;
+    background: rgba(22, 163, 74, .12);
+    border: 1px solid rgba(22, 163, 74, .35);
+  }
   .rihla-nav-cta { gap: 6px; }
   .rihla-icon-btn, .rihla-theme-btn { width: 32px; height: 32px; }
   .rihla-avatar { width: 32px; height: 32px; }

@@ -96,7 +96,7 @@ export default function ClassroomClient({
 
         {/* Video panel */}
         {videoOpen && (
-          <section className={`order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] ${videoBig ? 'h-[72dvh]' : 'h-[38dvh]'} md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col transition-[height] duration-200`}>
+          <section className={`order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] ${videoBig ? 'h-[70dvh]' : 'h-[33dvh]'} md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col transition-[height] duration-200`}>
             <div className="relative flex-1 min-h-0">
               <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} />
               {/* Mobile-only video resize (desktop is a fixed side column). */}

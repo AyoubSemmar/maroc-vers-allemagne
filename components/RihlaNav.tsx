@@ -289,9 +289,12 @@ export default function RihlaNav() {
             <Link href="/dashboard">{tNav('dashboard')}</Link>
           )}
 
-          {/* Paid live-class students get a direct link to their course. */}
+          {/* Paid live-class students get a direct link to their course.
+              On mobile the nav links become a horizontal scroll strip; the
+              `rihla-mycourse-link` class pins this one to the front so it's
+              visible without scrolling the strip sideways (see globals.css). */}
           {mounted && hasCourseAccess && (
-            <Link href="/learn-german/my-course" style={{ fontWeight: 600, color: '#16a34a' }}>📋 {tNav('myCourse')}</Link>
+            <Link href="/learn-german/my-course" className="rihla-mycourse-link" style={{ fontWeight: 600, color: '#16a34a' }}>📋 {tNav('myCourse')}</Link>
           )}
         </div>
 
