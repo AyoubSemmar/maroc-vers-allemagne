@@ -220,6 +220,23 @@ export default function LessonClient({
   const [submitted, setSubmitted] = useState(false)
   const [vocabSearch, setVocabSearch] = useState('')
   const { completeLesson, saveLessonScore, isAdmin, isAuthed } = useProgress(level.id)
+
+  // When the learner opened this lesson from their personal course
+  // (/my-course passes ?from=course), the top-left "back" button and the
+  // in-lesson next/finish links should return them to their course — not to
+  // the generic public level page. Carry the marker forward on next-lesson
+  // navigation so the whole in-course lesson flow stays inside the course.
+  // Read the query flag after mount (via window.location, not useSearchParams)
+  // so the page keeps full server-rendered content — no Suspense/SSG bailout —
+  // and it resolves well before the user reaches for the back button.
+  const tc = useTranslations('learnGerman.classroom')
+  const [fromCourse, setFromCourse] = useState(false)
+  useEffect(() => {
+    try { setFromCourse(new URLSearchParams(window.location.search).get('from') === 'course') } catch { /* noop */ }
+  }, [])
+  const levelHome = `/learn-german/${level.id.toLowerCase()}`
+  const backHref = fromCourse ? '/learn-german/my-course' : levelHome
+  const lessonHref = (id: string) => `${levelHome}/${id}${fromCourse ? '?from=course' : ''}`
   // Exam-style Lesen/Hören/Schreiben devoirs attached to this lesson (A1–B1
   // have them; the tab hides itself on lessons without any).
   const devoirsState = useLessonDevoirs(level.id, lesson.id, locale)
@@ -331,11 +348,11 @@ export default function LessonClient({
         <div className="max-w-3xl mx-auto px-4 py-4">
           <div className="flex items-center gap-3 mb-3">
             <Link
-              href={`/learn-german/${level.id.toLowerCase()}`}
+              href={backHref}
               className="flex items-center gap-1 text-sm text-gray-500 hover:text-green-700 transition-colors"
             >
               <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4"><path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"/></svg>
-              {level.id}
+              {fromCourse ? tc('myCourseLink') : level.id}
             </Link>
             <span className="text-gray-300">/</span>
             <span className={`text-xs font-bold text-white px-2.5 py-1 rounded-lg ${level.color}`}>
@@ -720,7 +737,7 @@ export default function LessonClient({
                   )}
                   {nextLesson && score! >= 70 && (
                     <Link
-                      href={`/learn-german/${level.id.toLowerCase()}/${nextLesson.id}`}
+                      href={lessonHref(nextLesson.id)}
                       className="bg-green-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-800"
                     >
                       {t('exerciseCard.nextLesson', { title: nextLessonTitle })}
@@ -728,7 +745,7 @@ export default function LessonClient({
                   )}
                   {!nextLesson && score! >= 70 && (
                     <Link
-                      href={`/learn-german/${level.id.toLowerCase()}`}
+                      href={backHref}
                       className="bg-green-700 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-green-800"
                     >
                       {t('exerciseCard.levelDone')}

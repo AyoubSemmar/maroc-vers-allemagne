@@ -242,7 +242,7 @@ export default function MyCourseClient({
             </div>
             {nextUp ? (
               <Link
-                href={`/learn-german/${level.id.toLowerCase()}/${nextUp.id}`}
+                href={`/learn-german/${level.id.toLowerCase()}/${nextUp.id}?from=course`}
                 className="shrink-0 rounded-lg bg-white text-green-800 hover:bg-green-50 text-sm font-bold px-5 py-2.5"
               >
                 {t('continue')}
@@ -331,7 +331,7 @@ export default function MyCourseClient({
           return (
             <Link
               key={lesson.id}
-              href={`/learn-german/${level.id.toLowerCase()}/${lesson.id}`}
+              href={`/learn-german/${level.id.toLowerCase()}/${lesson.id}?from=course`}
               className={`flex items-center gap-3 bg-white rounded-xl border px-4 py-3 hover:border-green-300 transition-colors
                 ${thisWeek ? 'border-green-300 ring-1 ring-green-100' : 'border-gray-200'} ${future ? 'opacity-60' : ''}`}
             >
