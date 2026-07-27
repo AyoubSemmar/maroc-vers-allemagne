@@ -270,6 +270,15 @@ export default function LessonClient({
   // tab bar (and the new section's top) are visible.
   useEffect(() => { setHeaderHidden(false) }, [tab])
 
+  // Inside the live-classroom iframe (video call on a phone), the lesson panel
+  // is tiny. The full breadcrumb + title banner wastes that space and the
+  // scroll-hide animation misbehaves in the short iframe. When embedded, drop
+  // the banner entirely and keep only a slim, always-visible tab bar.
+  const [embedded, setEmbedded] = useState(false)
+  useEffect(() => {
+    try { setEmbedded(window.self !== window.top) } catch { setEmbedded(true) }
+  }, [])
+
   function typeLabel(key: string): string {
     try { return t(`types.${key}` as any) } catch { return key }
   }
@@ -343,9 +352,12 @@ export default function LessonClient({
   return (
     <div className="min-h-screen bg-gray-50" dir={dirFor(locale)}>
 
-      {/* ── Header ── slides up out of view on scroll-down, back on scroll-up */}
-      <div className={`bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm transition-transform duration-300 ease-out ${headerHidden ? '-translate-y-full' : 'translate-y-0'}`}>
-        <div className="max-w-3xl mx-auto px-4 py-4">
+      {/* ── Header ── slides up out of view on scroll-down, back on scroll-up.
+          Inside the classroom iframe (`embedded`) it collapses to just a slim,
+          always-visible tab bar — no breadcrumb/title banner, no scroll-hide. */}
+      <div className={`bg-white border-b border-gray-200 sticky top-0 z-20 shadow-sm ${embedded ? '' : `transition-transform duration-300 ease-out ${headerHidden ? '-translate-y-full' : 'translate-y-0'}`}`}>
+        <div className={`max-w-3xl mx-auto px-4 ${embedded ? 'py-2' : 'py-4'}`}>
+          {!embedded && (
           <div className="flex items-center gap-3 mb-3">
             <Link
               href={backHref}
@@ -359,7 +371,9 @@ export default function LessonClient({
               {level.id}
             </span>
           </div>
+          )}
 
+          {!embedded && (
           <div className="flex items-start justify-between gap-3">
             <div>
               <h1 className="text-lg font-bold text-gray-900 leading-snug">{lessonTitle}</h1>
@@ -369,11 +383,12 @@ export default function LessonClient({
             </div>
             <AudioButton text={lessonTitle} size="sm" className="mt-1 shrink-0" />
           </div>
+          )}
 
           {/* Tab bar — wraps on narrow screens so all tabs stay visible
               and tappable on mobile (a nowrap row clipped tabs off-screen
               at 375px). */}
-          <div className="flex flex-wrap gap-2 mt-4">
+          <div className={`flex flex-wrap gap-2 ${embedded ? 'mt-0' : 'mt-4'}`}>
             {tabs.map((tb) => (
               <button
                 key={tb.id}
