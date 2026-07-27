@@ -266,9 +266,13 @@ export default function LessonClient({
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Switching tabs jumps you to a fresh section — bring the header back so the
-  // tab bar (and the new section's top) are visible.
-  useEffect(() => { setHeaderHidden(false) }, [tab])
+  // Switching tabs swaps in a fresh section — bring the header back AND jump to
+  // the top, otherwise the scroll position carried over from the previous tab
+  // left you stranded partway down (often at the very bottom) of the new one.
+  useEffect(() => {
+    setHeaderHidden(false)
+    try { window.scrollTo({ top: 0 }) } catch { /* noop */ }
+  }, [tab])
 
   // Inside the live-classroom iframe (video call on a phone), the lesson panel
   // is tiny. The full breadcrumb + title banner wastes that space and the
