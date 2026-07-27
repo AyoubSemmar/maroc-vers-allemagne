@@ -27,6 +27,10 @@ export default function ClassroomClient({
 }) {
   const t = useTranslations('learnGerman.classroom')
   const [videoOpen, setVideoOpen] = useState(true)
+  // Mobile only: lets the student enlarge the stacked video (to watch the
+  // teacher) or shrink it (to work in the lesson below). Desktop is a fixed
+  // side column, so this has no effect there.
+  const [videoBig, setVideoBig] = useState(false)
 
   // Which lesson surface the left iframe shows. Defaults to "Mon cours" (the
   // personal dashboard: progress, vocab quiz, and devoirs/exercises) rather
@@ -92,9 +96,18 @@ export default function ClassroomClient({
 
         {/* Video panel */}
         {videoOpen && (
-          <section className="order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] h-[38dvh] md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col">
+          <section className={`order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] ${videoBig ? 'h-[72dvh]' : 'h-[38dvh]'} md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col transition-[height] duration-200`}>
             <div className="relative flex-1 min-h-0">
               <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} />
+              {/* Mobile-only video resize (desktop is a fixed side column). */}
+              <button
+                onClick={() => setVideoBig(v => !v)}
+                aria-label={videoBig ? t('shrinkVideo') : t('expandVideo')}
+                title={videoBig ? t('shrinkVideo') : t('expandVideo')}
+                className="md:hidden absolute bottom-2 start-2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-black/50 hover:bg-black/70 active:bg-black/80 text-white"
+              >
+                <Icon name={videoBig ? 'minus' : 'plus'} size={18} />
+              </button>
             </div>
           </section>
         )}

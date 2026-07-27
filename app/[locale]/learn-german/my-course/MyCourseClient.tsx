@@ -188,12 +188,12 @@ export default function MyCourseClient({
   }).filter(s => s.assigned > 0)
 
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
+    <div className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
       {/* Header */}
       <div className="flex items-start justify-between gap-3 flex-wrap mb-6">
-        <div>
+        <div className="min-w-0">
           <p className="text-xs text-gray-400">{t('label')}</p>
-          <h1 className="text-2xl font-bold text-gray-900">
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 break-words">
             {displayName} · <span className="text-green-700">{level.id}</span>
           </h1>
           {groupLabel && <p className="text-sm text-gray-500 mt-0.5">{groupLabel}</p>}
@@ -217,7 +217,7 @@ export default function MyCourseClient({
             href="/learn-german/classroom"
             // Fire-and-forget attendance log — must never delay joining.
             onClick={() => { try { fetch('/api/classes/attend', { method: 'POST' }).catch(() => {}) } catch {} }}
-            className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2"
+            className="w-full sm:w-auto justify-center inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-semibold px-4 py-2.5"
           >
             <Icon name="play" size={15} /> {t('joinCall')}
           </Link>

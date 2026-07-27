@@ -181,7 +181,7 @@ export default function VideoCallPanel({
   }
 
   return (
-    <div className="relative w-full h-full min-h-[280px]">
+    <div className="relative w-full h-full min-h-[200px]">
       {/* The Jitsi iframe mounts here when live */}
       <div ref={jitsiRef} className={`absolute inset-0 ${phase === 'live' || phase === 'connecting' ? '' : 'hidden'}`} />
 
@@ -192,9 +192,9 @@ export default function VideoCallPanel({
         onClick={closePanel}
         aria-label={t('leaveCall')}
         title={t('leaveCall')}
-        className="absolute top-2 end-2 z-10 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-black/40 hover:bg-black/60 text-white"
+        className="absolute top-2 end-2 z-10 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-black/50 hover:bg-black/70 active:bg-black/80 text-white"
       >
-        <Icon name="x" size={16} />
+        <Icon name="x" size={18} />
       </button>
 
       {phase !== 'live' && phase !== 'connecting' && (
