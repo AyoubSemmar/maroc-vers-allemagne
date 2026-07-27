@@ -27,10 +27,10 @@ export default function ClassroomClient({
 }) {
   const t = useTranslations('learnGerman.classroom')
   const [videoOpen, setVideoOpen] = useState(true)
-  // Mobile only: lets the student enlarge the stacked video (to watch the
-  // teacher) or shrink it (to work in the lesson below). Desktop is a fixed
-  // side column, so this has no effect there.
-  const [videoBig, setVideoBig] = useState(false)
+  // Minimize the live call to a small floating corner thumbnail (and back)
+  // without ending it — the lesson then gets the whole screen while the class
+  // keeps running in the corner.
+  const [videoMin, setVideoMin] = useState(false)
 
   // Which lesson surface the left iframe shows. Defaults to "Mon cours" (the
   // personal dashboard: progress, vocab quiz, and devoirs/exercises) rather
@@ -94,19 +94,34 @@ export default function ClassroomClient({
           />
         </section>
 
-        {/* Video panel */}
+        {/* Video panel — normally in the stacked/side layout; when minimized it
+            docks to a small fixed corner thumbnail (kept mounted so the call
+            never drops), freeing the whole screen for the lesson. */}
         {videoOpen && (
-          <section className={`order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] ${videoBig ? 'h-[70dvh]' : 'h-[33dvh]'} md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col transition-[height] duration-200`}>
+          <section className={
+            videoMin
+              ? 'fixed z-40 bottom-3 end-3 w-40 h-28 sm:w-56 sm:h-36 rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/20 border border-gray-700 bg-gray-900 flex flex-col'
+              : 'order-1 md:order-2 shrink-0 md:w-[380px] lg:w-[440px] h-[33dvh] md:h-auto bg-gray-900 border-b md:border-b-0 md:border-l border-gray-800 flex flex-col'
+          }>
             <div className="relative flex-1 min-h-0">
               <VideoCallPanel groupId={groupId} videoConfigured={videoConfigured} />
-              {/* Mobile-only video resize (desktop is a fixed side column). */}
+              {/* Minimize to corner / expand back. Top-start so it never
+                  overlaps the panel's own close (✕) at top-end. */}
               <button
-                onClick={() => setVideoBig(v => !v)}
-                aria-label={videoBig ? t('shrinkVideo') : t('expandVideo')}
-                title={videoBig ? t('shrinkVideo') : t('expandVideo')}
-                className="md:hidden absolute bottom-2 start-2 z-20 inline-flex items-center justify-center w-10 h-10 rounded-lg bg-black/50 hover:bg-black/70 active:bg-black/80 text-white"
+                onClick={() => setVideoMin(m => !m)}
+                aria-label={videoMin ? t('expandVideo') : t('minimizeVideo')}
+                title={videoMin ? t('expandVideo') : t('minimizeVideo')}
+                className="absolute top-2 start-2 z-20 inline-flex items-center justify-center w-9 h-9 rounded-lg bg-black/50 hover:bg-black/70 active:bg-black/80 text-white"
               >
-                <Icon name={videoBig ? 'minus' : 'plus'} size={18} />
+                {videoMin ? (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <polyline points="15 3 21 3 21 9" /><polyline points="9 21 3 21 3 15" /><line x1="21" y1="3" x2="14" y2="10" /><line x1="3" y1="21" x2="10" y2="14" />
+                  </svg>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <polyline points="4 14 10 14 10 20" /><polyline points="20 10 14 10 14 4" /><line x1="14" y1="10" x2="21" y2="3" /><line x1="3" y1="21" x2="10" y2="14" />
+                  </svg>
+                )}
               </button>
             </div>
           </section>
