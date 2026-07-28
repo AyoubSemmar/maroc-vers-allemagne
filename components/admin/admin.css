@@ -1,22 +1,27 @@
 /* ─── Admin Console ─────────────────────────────────── */
-.adm-shell {
-  --adm-bg: #0b0d12;
-  --adm-bg-soft: #11141b;
-  --adm-bg-card: #161a23;
-  --adm-bg-elev: #1c2230;
-  --adm-line: rgba(255,255,255,0.08);
-  --adm-line-strong: rgba(255,255,255,0.16);
-  --adm-ink: #f5f6fa;
-  --adm-ink-soft: #b3b8c5;
-  --adm-ink-mute: #7d8398;
-  --adm-brand: #E27940;
+/* Light-theme palette — scoped to both the shell and the (out-of-shell)
+   login view so the whole admin area is light regardless of the site theme. */
+.adm-shell, .adm-login-wrap {
+  --adm-bg: #f5f6f8;
+  --adm-bg-soft: #ffffff;
+  --adm-bg-card: #ffffff;
+  --adm-bg-elev: #f2f4f7;
+  --adm-surface: #f2f4f7;
+  --adm-line: rgba(15,23,42,0.10);
+  --adm-line-strong: rgba(15,23,42,0.18);
+  --adm-ink: #10131a;
+  --adm-ink-soft: #47505f;
+  --adm-ink-mute: #79808f;
+  --adm-brand: #d96a2f;
   --adm-brand-warm: #F08A2E;
-  --adm-gold: #F4C842;
-  --adm-green: #4ec27e;
-  --adm-red: #e25f5f;
-  --adm-blue: #5b8def;
-  --adm-violet: #a06bff;
-
+  --adm-gold: #F4C842;      /* bright — logo & accent fills only */
+  --adm-gold-ink: #a16207;  /* readable amber for text on light */
+  --adm-green: #16a34a;
+  --adm-red: #dc2626;
+  --adm-blue: #2563eb;
+  --adm-violet: #7c3aed;
+}
+.adm-shell {
   background: var(--adm-bg);
   color: var(--adm-ink);
   min-height: 100vh;
@@ -125,7 +130,7 @@
   position: sticky; top: 0;
   z-index: 30;
   display: flex; align-items: center; gap: 14px;
-  background: rgba(11,13,18,0.85);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--adm-line);
   padding: 14px 28px;
@@ -162,12 +167,26 @@
   z-index: 40;
 }
 @media (max-width: 960px) {
-  .adm-sidebar { transform: translateX(-100%); transition: transform 0.2s; }
-  .adm-shell.is-mobile-open .adm-sidebar { transform: translateX(0); }
+  .adm-sidebar { transform: translateX(-100%); transition: transform 0.2s; width: min(280px, 84vw); }
+  .adm-shell.is-mobile-open .adm-sidebar { transform: translateX(0); box-shadow: 0 20px 60px -20px rgba(15,23,42,0.35); }
   .adm-shell.is-mobile-open .adm-backdrop { display: block; }
   .adm-main { margin-inline-start: 0; }
   .adm-menu-btn { display: inline-flex; align-items: center; }
   .adm-content { padding: 20px 16px; }
+  .adm-topbar { padding: 12px 16px; }
+}
+
+/* Phone tuning: stack side-by-side grids, tighten cards, and let any wide data
+   table scroll horizontally inside its card instead of overflowing the page. */
+@media (max-width: 700px) {
+  .adm-content { padding: 16px 12px; }
+  .adm-card { padding: 16px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .adm-grid-2 { grid-template-columns: 1fr; }
+  .adm-kpi-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .adm-kpi-value { font-size: 24px; }
+  .adm-page-head { gap: 10px; margin-bottom: 16px; }
+  .adm-table { min-width: 560px; }        /* stays legible, scrolls in its card */
+  .adm-row-item { flex-wrap: wrap; }
 }
 
 /* ── Page primitives (reusable across admin pages) ─── */
@@ -341,12 +360,13 @@
 }
 .adm-login-card {
   background: var(--adm-bg-card);
+  color: var(--adm-ink);
   border: 1px solid var(--adm-line);
   border-radius: 16px;
   padding: 32px;
   width: 100%;
   max-width: 420px;
-  box-shadow: 0 30px 80px -30px rgba(0,0,0,0.6);
+  box-shadow: 0 24px 60px -30px rgba(15,23,42,0.22);
 }
 .adm-login-card h1 { font-size: 22px; font-weight: 900; margin: 8px 0 4px; letter-spacing: -0.02em; }
 .adm-login-card p { font-size: 13.5px; color: var(--adm-ink-soft); margin: 0 0 22px; line-height: 1.5; }
@@ -363,7 +383,7 @@
   margin-bottom: 16px;
 }
 .adm-banner--good { border-color: color-mix(in srgb, var(--adm-green) 35%, var(--adm-line)); background: color-mix(in srgb, var(--adm-green) 8%, var(--adm-bg-card)); color: var(--adm-green); }
-.adm-banner--warn { border-color: color-mix(in srgb, var(--adm-gold) 35%, var(--adm-line)); background: color-mix(in srgb, var(--adm-gold) 8%, var(--adm-bg-card)); color: var(--adm-gold); }
+.adm-banner--warn { border-color: color-mix(in srgb, var(--adm-gold) 45%, var(--adm-line)); background: color-mix(in srgb, var(--adm-gold) 14%, var(--adm-bg-card)); color: var(--adm-gold-ink); }
 .adm-banner--info { border-color: color-mix(in srgb, var(--adm-blue) 35%, var(--adm-line)); background: color-mix(in srgb, var(--adm-blue) 8%, var(--adm-bg-card)); color: var(--adm-blue); }
 
 /* Sectional list rows (articles, listings) */
