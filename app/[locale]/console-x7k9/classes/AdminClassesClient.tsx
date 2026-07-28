@@ -120,13 +120,73 @@ export type ReservationRequest = {
   requestedAt: string
 }
 
+// Ready-to-send bilingual (FR + AR) waitlist confirmation, personalised with
+// the applicant's name, login email and the group they signed up for. Admin
+// copies it and sends over WhatsApp/e-mail. The password is the shared starter
+// password every provisioned account gets (changed on first login).
+function waitlistMessage(name: string, email: string, group: string): string {
+  const pw = 'gogermanystudent'
+  return `Bonjour ${name},
+
+Vous êtes bien inscrit sur la liste d'attente pour le groupe d'étude ${group}.
+
+Dès que le groupe atteindra 15 participants, nous vous communiquerons la date de la première séance.
+
+En attendant, vous pouvez dès maintenant vous connecter à votre espace d'étude et le découvrir :
+
+E-mail : ${email}
+Mot de passe : ${pw} (à changer lors de votre première connexion).
+
+N'hésitez pas à explorer les différents contenus disponibles en attendant le début des cours.
+
+Si vous avez la moindre question, n'hésitez pas à nous contacter.
+
+À bientôt !
+
+L'équipe Gogermany.ma
+
+
+مرحبًا ${name}،
+
+لقد تم تسجيلك بنجاح في قائمة الانتظار لمجموعة دراسة المستوى ${group}.
+
+بمجرد أن يصل عدد المشاركين في المجموعة إلى 15 مشاركًا، سنبلغك بتاريخ أول حصة دراسية.
+
+في هذه الأثناء، يمكنك من الآن تسجيل الدخول إلى مساحة الدراسة الخاصة بك واستكشافها:
+
+البريد الإلكتروني: ${email}
+كلمة المرور: ${pw} (يرجى تغييرها عند أول تسجيل دخول).
+
+لا تتردد في استكشاف مختلف المحتويات المتاحة إلى حين انطلاق الدروس.
+
+إذا كانت لديك أي أسئلة، فلا تتردد في التواصل معنا.
+
+إلى اللقاء قريبًا!
+
+فريق Gogermany.ma`
+}
+
 /** Pending seat requests from the public form. Confirm provisions the student
  *  (account + seat + 1 month access); the starter password is shown once so it
  *  can be relayed on WhatsApp. */
-function PendingRequests({ requests }: { requests: ReservationRequest[] }) {
+function PendingRequests({ requests, groups }: { requests: ReservationRequest[]; groups: AdminGroup[] }) {
   const router = useRouter()
   const [busy, setBusy] = useState<string | null>(null)
   const [creds, setCreds] = useState<Record<string, string>>({})
+  const [copied, setCopied] = useState<string | null>(null)
+  const groupById = new Map(groups.map((g) => [g.id, g]))
+
+  // "A1 (mardi-jeudi 17:00-20:00)" — level + the group's schedule text.
+  function groupText(r: ReservationRequest): string {
+    const g = r.groupId ? groupById.get(r.groupId) : null
+    return g ? `${g.level.toUpperCase()} (${g.schedule})` : r.groupLabel
+  }
+  async function copyMsg(r: ReservationRequest) {
+    const text = waitlistMessage(r.fullName, r.email, groupText(r))
+    try { await navigator.clipboard.writeText(text) } catch { /* clipboard blocked */ }
+    setCopied(r.id)
+    setTimeout(() => setCopied((c) => (c === r.id ? null : c)), 2000)
+  }
 
   async function resolve(id: string, action: 'confirm' | 'reject', name: string) {
     if (action === 'reject' && !confirm(`Rejeter la demande de ${name} ?`)) return
@@ -173,6 +233,20 @@ function PendingRequests({ requests }: { requests: ReservationRequest[] }) {
                 {creds[r.id] && (
                   <div style={{ marginTop: 4, fontSize: 12, fontWeight: 600, color: 'var(--adm-green)' }}>{creds[r.id]}</div>
                 )}
+                {/* Ready-to-send FR+AR waitlist message, prefilled with this
+                    applicant's name, e-mail and group. */}
+                <div style={{ marginTop: 6, display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                  <button
+                    onClick={() => copyMsg(r)}
+                    style={{ fontSize: 12, fontWeight: 700, cursor: 'pointer', borderRadius: 6, padding: '3px 10px', color: copied === r.id ? 'white' : 'var(--adm-ink)', background: copied === r.id ? '#16a34a' : 'var(--adm-surface, transparent)', border: '1px solid var(--adm-line-strong)' }}
+                  >
+                    {copied === r.id ? '✓ Copié' : '📋 Copier le message d’attente'}
+                  </button>
+                  <details>
+                    <summary style={{ cursor: 'pointer', fontSize: 11, color: 'var(--adm-ink-mute)' }}>aperçu</summary>
+                    <pre style={{ whiteSpace: 'pre-wrap', fontSize: 11, lineHeight: 1.4, marginTop: 6, padding: 8, borderRadius: 6, border: '1px solid var(--adm-line)', color: 'var(--adm-ink-soft)', maxWidth: 380 }}>{waitlistMessage(r.fullName, r.email, groupText(r))}</pre>
+                  </details>
+                </div>
               </td>
               <td style={{ padding: '8px 4px', width: 160, verticalAlign: 'top' }}>
                 <a href={waLink(r.whatsapp, r.groupLabel)} target="_blank" rel="noreferrer"
@@ -540,7 +614,7 @@ export default function AdminClassesClient({ groups, requests, locale }: { group
   const allGroups = groups.map((g) => ({ id: g.id, label: g.label, level: g.level }))
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-      <PendingRequests requests={requests} />
+      <PendingRequests requests={requests} groups={groups} />
       <AddGroupForm />
       {groups.map((g) => <GroupCard key={g.id} group={g} locale={locale} allGroups={allGroups} />)}
     </div>
