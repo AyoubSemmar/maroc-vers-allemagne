@@ -6,7 +6,7 @@ import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
-const META: Record<AppLocale, { title: string; desc: string }> = {
+const META: Partial<Record<AppLocale, { title: string; desc: string }>> = {
   ar: {
     title: 'روابط مفيدة — مواقع رسمية للهجرة إلى ألمانيا',
     desc: 'قائمة بالمواقع الرسمية الألمانية الأساسية للهجرة إلى ألمانيا: الجامعات، الـ Ausbildung، التأشيرة، السكن، البنوك، تعلّم اللغة.',
@@ -59,7 +59,7 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const m = META[locale] ?? META.fr
+  const m = META[locale] ?? META.fr!
   return buildLocaleMetadata({ locale, path: '/useful-links', title: m.title, description: m.desc })
 }
 

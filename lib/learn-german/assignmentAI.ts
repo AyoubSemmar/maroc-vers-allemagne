@@ -21,7 +21,7 @@ export const QUESTION_COUNT: Record<Exclude<Skill, 'schreiben'>, number> = {
 const LOCALE_NAMES: Record<string, string> = {
   ar: 'Arabic', de: 'German', en: 'English', es: 'Spanish', fa: 'Persian (Farsi)',
   fr: 'French', hi: 'Hindi', pt: 'Portuguese', ru: 'Russian', tr: 'Turkish',
-  ur: 'Urdu', zh: 'Simplified Chinese',
+  ur: 'Urdu', zh: 'Simplified Chinese', uk: 'Ukrainian', sq: 'Albanian', id: 'Indonesian',
 }
 /** English name of a locale for prompting the model (defaults to French). */
 export function localeName(loc: string): string {
@@ -33,7 +33,7 @@ export function normalizeLevel(raw: string): WritingLevel {
   return (['A1', 'A2', 'B1', 'B2', 'C1'].includes(up) ? up : 'A1') as WritingLevel
 }
 
-const FEEDBACK_LOCALES = ['ar', 'de', 'en', 'es', 'fa', 'fr', 'hi', 'pt', 'ru', 'tr', 'ur', 'zh'] as const
+const FEEDBACK_LOCALES = ['ar', 'de', 'en', 'es', 'fa', 'fr', 'hi', 'pt', 'ru', 'tr', 'ur', 'zh', 'uk', 'sq', 'id'] as const
 export type FeedbackLocale = (typeof FEEDBACK_LOCALES)[number]
 export function feedbackLocale(raw?: string): FeedbackLocale {
   return (FEEDBACK_LOCALES as readonly string[]).includes(raw ?? '') ? (raw as FeedbackLocale) : 'fr'

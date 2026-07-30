@@ -12,7 +12,7 @@ import ToolSeoSection from '@/components/seo/ToolSeoSection'
 import Icon from '@/components/ui/Icon'
 import './learn-german.css'
 
-const META: Record<AppLocale, { title: string; desc: string }> = {
+const META: Partial<Record<AppLocale, { title: string; desc: string }>> = {
   ar: {
     title: 'تعلّم الألمانية مجاناً — A1 إلى C1 | GoGermany',
     desc: 'دروس ألمانية تفاعلية مجانية من المستوى A1 إلى C1، مصمّمة للمتعلمين الدوليين المتجهين إلى ألمانيا. تمارين القراءة والكتابة بالذكاء الاصطناعي.',
@@ -65,14 +65,14 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
   const { locale } = await params
-  const m = META[locale] ?? META.fr
+  const m = META[locale] ?? META.fr!
   return buildLocaleMetadata({ locale, path: '/learn-german', title: m.title, description: m.desc })
 }
 
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'learnGerman' })
-  const m = META[locale] ?? META.fr
+  const m = META[locale] ?? META.fr!
 
   return (
     <div className="lg-root" dir={dirFor(locale)}>

@@ -28,7 +28,7 @@ const FAMILIES: FamilyKey[] = ['single', 'married', 'married_kids']
 
 const PATH_ICON: Record<PathKey, string> = { ausbildung: '🛠', studium: '🎓', tourist: '✈️', family_reunification: '👨‍👩‍👧' }
 
-const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU', hi: 'hi-IN', ur: 'ur-PK', zh: 'zh-CN' }
+const INTL: Record<AppLocale, string> = { ar: 'ar-MA', fr: 'fr-FR', en: 'en-GB', de: 'de-DE', es: 'es-ES', tr: 'tr-TR', fa: 'fa-IR', pt: 'pt-BR', ru: 'ru-RU', hi: 'hi-IN', ur: 'ur-PK', zh: 'zh-CN', uk: 'uk-UA', sq: 'sq-AL', id: 'id-ID' }
 
 const STORAGE_KEY = 'gogermany.documentChecklist.checked.v1'
 const COUNTRY_KEY = 'gogermany.documentChecklist.country.v1'

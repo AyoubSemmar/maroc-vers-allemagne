@@ -9,7 +9,7 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 // Per-locale meta — kept inline (rather than i18n keys) because launch-
 // blocking SEO copy is short and rarely changes; a single edit here
 // covers all 4 locales without touching 4 message files.
-const META: Record<AppLocale, { title: string; desc: string }> = {
+const META: Partial<Record<AppLocale, { title: string; desc: string }>> = {
   ar: {
     title: 'حول GoGermany — طريقك إلى ألمانيا',
     desc: 'تعرّف على فريق GoGermany ومهمتنا: مساعدة الناس من كل العالم على الانتقال إلى ألمانيا للدراسة، التكوين المهني (Ausbildung) والعمل.',
@@ -62,7 +62,7 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const m = META[locale] ?? META.fr
+  const m = META[locale] ?? META.fr!
   return buildLocaleMetadata({ locale, path: '/about', title: m.title, description: m.desc })
 }
 

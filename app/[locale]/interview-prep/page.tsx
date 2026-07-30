@@ -23,7 +23,7 @@ type Props = { params: Promise<{ locale: AppLocale }> }
 // as crawlable text, plus the seoSection FAQ — then it funnels visitors
 // into the dashboard tool.
 
-const CTA: Record<AppLocale, { start: string; free: string }> = {
+const CTA: Partial<Record<AppLocale, { start: string; free: string }>> = {
   en: { start: 'Practise with model answers', free: '100% free — a free account unlocks every answer' },
   fr: { start: 'S’entraîner avec les réponses-types', free: '100% gratuit — un compte gratuit débloque toutes les réponses' },
   ar: { start: 'تدرّب مع الأجوبة النموذجية', free: 'مجاني 100% — حساب مجاني يفتح كل الأجوبة' },
@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function InterviewPrepLanding({ params }: Props) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'interviewPrep' })
-  const cta = CTA[locale] ?? CTA.en
+  const cta = CTA[locale] ?? CTA.en!
 
   const byCategory = CATEGORY_ORDER.map((cat) => ({
     cat,

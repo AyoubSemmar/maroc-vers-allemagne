@@ -7,7 +7,7 @@ import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 
-const META: Record<AppLocale, { title: string; desc: string }> = {
+const META: Partial<Record<AppLocale, { title: string; desc: string }>> = {
   ar: {
     title: 'السكن في ألمانيا — دليل البحث عن شقة',
     desc: 'كيف تجد سكناً في ألمانيا: مواقع البحث، الأوراق المطلوبة، WG vs استوديو، الإيجارات الشهرية الواقعية لكل مدينة، والأخطاء الشائعة.',
@@ -60,7 +60,7 @@ const META: Record<AppLocale, { title: string; desc: string }> = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params
-  const m = META[locale] ?? META.fr
+  const m = META[locale] ?? META.fr!
   return buildLocaleMetadata({ locale, path: '/housing', title: m.title, description: m.desc })
 }
 
