@@ -1,13 +1,20 @@
 import { headers } from 'next/headers'
+import { CLASSES_ALLOWED_COUNTRIES } from '@/lib/classes-flags'
 
-// True when the visitor is in Morocco (Vercel's x-vercel-ip-country header).
-// The live German classes are a Morocco-only, offline-paid offer, so they're
-// gated to MA. Dev has no edge header → treated as MA so local testing works.
-export async function isMorocco(): Promise<boolean> {
-  if (process.env.NODE_ENV !== 'production') return true
+// The visitor's country (Vercel's x-vercel-ip-country header), or null when
+// unknown. Dev has no edge header → treated as MA so local testing works.
+export async function visitorCountry(): Promise<string | null> {
+  if (process.env.NODE_ENV !== 'production') return 'MA'
   try {
-    return (await headers()).get('x-vercel-ip-country') === 'MA'
+    return (await headers()).get('x-vercel-ip-country')
   } catch {
-    return false
+    return null
   }
+}
+
+// True when the visitor is in a country where the live German classes are
+// offered (CLASSES_ALLOWED_COUNTRIES: Morocco, France, Germany).
+export async function isClassesCountry(): Promise<boolean> {
+  const country = await visitorCountry()
+  return country != null && (CLASSES_ALLOWED_COUNTRIES as readonly string[]).includes(country)
 }

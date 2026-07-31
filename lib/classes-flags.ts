@@ -5,10 +5,15 @@
 // Flip to true to launch publicly.
 export const CLASSES_LAUNCHED = true
 
-// Geo-gate switch. When true, the booking page + hub CTA are Morocco-only (the
-// live classes are a MA-targeted, offline-paid offer). Set to false to open the
-// booking flow to every country — handy for testing the whole signup→book
-// funnel from outside Morocco as a normal (non-admin) visitor. Flip back to
-// true to restore the MA-only production posture. Read by both geo gates:
+// Countries where the live classes are offered, as Vercel x-vercel-ip-country
+// (ISO-3166 alpha-2) codes: Morocco, France, Germany. Add/remove codes here to
+// change where the offer is visible.
+export const CLASSES_ALLOWED_COUNTRIES = ['MA', 'FR', 'DE'] as const
+
+// Geo-gate switch. When true, the booking page + hub CTA are limited to
+// CLASSES_ALLOWED_COUNTRIES (the live classes are an offline-paid offer targeted
+// at those markets). Set to false to open the booking flow to every country —
+// handy for testing the whole signup→book funnel from anywhere as a normal
+// (non-admin) visitor. Admins always bypass. Read by both geo gates:
 // lib/geo.ts (server page redirect) and app/api/geo/route.ts (client hub CTA).
-export const CLASSES_MOROCCO_ONLY = false
+export const CLASSES_GEO_GATED = true

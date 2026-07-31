@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { Link } from '@/i18n/navigation'
 import { supabase } from '@/lib/supabase'
-import { isMorocco } from '@/lib/geo'
+import { isClassesCountry } from '@/lib/geo'
 import { isAdmin } from '@/lib/entitlements'
-import { CLASSES_LAUNCHED, CLASSES_MOROCCO_ONLY } from '@/lib/classes-flags'
+import { CLASSES_LAUNCHED, CLASSES_GEO_GATED } from '@/lib/classes-flags'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -36,15 +36,16 @@ export default async function ClassesPage({
   const sb = await createServerSupabase()
   const { data: { user } } = await sb.auth.getUser()
 
-  // Live classes are Morocco-only — non-MA visitors are sent back to the Learn
-  // German hub. Signed-in admins (the owner/teacher) bypass the gate so they
-  // can see and manage it from anywhere.
+  // Live classes are geo-gated to the served countries (MA/FR/DE) — visitors
+  // elsewhere are sent back to the Learn German hub. Signed-in admins (the
+  // owner/teacher) bypass the gate so they can see and manage it from anywhere.
   const admin = user ? await isAdmin(user.id) : false
   // Pre-launch: the whole course is hidden from the public — only admins reach
-  // it. After launch, it's Morocco-only (non-MA visitors go back to the hub).
+  // it. After launch, it's limited to the served countries (others go back to
+  // the hub).
   if (!admin) {
     if (!CLASSES_LAUNCHED) redirect(`/${locale}/learn-german`)
-    if (CLASSES_MOROCCO_ONLY && !(await isMorocco())) redirect(`/${locale}/learn-german`)
+    if (CLASSES_GEO_GATED && !(await isClassesCountry())) redirect(`/${locale}/learn-german`)
   }
 
   const t = classesStrings(locale)
