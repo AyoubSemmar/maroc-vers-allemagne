@@ -10,7 +10,7 @@
  */
 import fs from 'fs'; import path from 'path'
 import { createClient } from '@supabase/supabase-js'
-import { makePexelsImage } from './pexels-image.mjs'
+import { makePexelsImage, pexelsIdFromUrl } from './pexels-image.mjs'
 
 for (const l of fs.readFileSync(path.resolve('.env.local'), 'utf8').split('\n')) {
   const m = l.replace(/\r$/, '').match(/^([^#=]+)=(.*)$/)
@@ -37,17 +37,25 @@ function readArticle(slug, loc) {
   } catch { return null }
 }
 
+// Pexels photo ids already used across the whole table — so we never repeat a
+// hero another article already has. Seeded from the DB below.
+const usedImageIds = new Set()
+
 // Hero image: a real Pexels stock photo searched by the topic's category/title,
-// uploaded into our article-images bucket. `i` varies the pick across siblings.
+// uploaded into our article-images bucket. `i` varies the pick across siblings;
+// usedImageIds guarantees non-repetition across every article.
 async function makeImage(topic, i) {
-  return makePexelsImage(topic, sb, i)
+  return makePexelsImage(topic, sb, { usedIds: usedImageIds, variantIndex: i })
 }
 
-// existing slugs (idempotency)
+// existing slugs (idempotency) + used Pexels ids (no-repeat guard)
 const existing = new Set()
 for (let from = 0; ; from += 1000) {
-  const { data } = await sb.from('articles').select('slug:translations->_meta->>slug').range(from, from + 999)
-  if (!data?.length) break; data.forEach(r => r.slug && existing.add(r.slug)); if (data.length < 1000) break
+  const { data } = await sb.from('articles')
+    .select('image_url, slug:translations->_meta->>slug').range(from, from + 999)
+  if (!data?.length) break
+  data.forEach(r => { if (r.slug) existing.add(r.slug); const id = pexelsIdFromUrl(r.image_url); if (id) usedImageIds.add(id) })
+  if (data.length < 1000) break
 }
 
 let created = 0, skipped = 0, incomplete = 0, failed = 0

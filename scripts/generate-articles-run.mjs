@@ -18,7 +18,7 @@ import fs from 'fs'
 import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import Anthropic from '@anthropic-ai/sdk'
-import { makePexelsImage } from './pexels-image.mjs'
+import { makePexelsImage, pexelsIdFromUrl } from './pexels-image.mjs'
 
 const envPath = path.resolve('.env.local')
 if (fs.existsSync(envPath)) {
@@ -158,10 +158,24 @@ async function translate(enArticle, locale) {
   }
 }
 
+// Pexels photo ids already used across the whole articles table — seeded once at
+// startup so a new run never reuses a hero another article already has.
+const usedImageIds = new Set()
+async function seedUsedImageIds() {
+  for (let from = 0; ; from += 1000) {
+    const { data, error } = await supabase.from('articles').select('image_url').range(from, from + 999)
+    if (error) break
+    if (!data?.length) break
+    for (const r of data) { const id = pexelsIdFromUrl(r.image_url); if (id) usedImageIds.add(id) }
+    if (data.length < 1000) break
+  }
+}
+
 // Hero image: a real Pexels stock photo (searched by category/title), uploaded
 // into our article-images bucket. Replaces the earlier AI-generated heroes.
+// The shared usedImageIds set guarantees no two articles get the same photo.
 async function makeImage(topic) {
-  return makePexelsImage(topic, supabase)
+  return makePexelsImage(topic, supabase, { usedIds: usedImageIds })
 }
 
 function readTime(content) { return Math.max(3, Math.round((content || '').split(/\s+/).length / 200)) }
@@ -272,6 +286,7 @@ async function main() {
     console.log(`Processing ${slice.length} topics (offset ${OFFSET}, limit ${LIMIT}, concurrency ${CONCURRENCY})${NO_IMAGE ? ' [no image]' : ''}`)
   }
   if (slice.length === 0) { console.log('Nothing to do — all planned topics already generated.'); return }
+  if (!NO_IMAGE) { await seedUsedImageIds(); console.log(`Seeded ${usedImageIds.size} used Pexels photo ids (no-repeat guard).`) }
   const { done, failed } = await pool(slice, CONCURRENCY, processTopic)
   console.log(`\nDone: ${done} created, ${failed} failed.`)
 }

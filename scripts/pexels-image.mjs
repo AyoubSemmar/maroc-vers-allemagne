@@ -4,6 +4,12 @@
 // `article-images` bucket (so hero URLs stay on our own domain), and return the
 // public URL. Pexels' license allows free use without attribution.
 //
+// NON-REPETITION: the chosen Pexels photo id is encoded into the uploaded
+// filename (pexels-<photoId>-<rand>.jpg). Callers seed a `usedIds` Set from the
+// ids already present in the DB (see pexelsIdFromUrl) and pass it in; the helper
+// then pages through results and skips any photo already used, so no two
+// articles ever share the same hero.
+//
 // Requires PEXELS_API_KEY (or ARTICLE_GEN_PEXELS_KEY). Get a free key at
 // https://www.pexels.com/api/ (generous free tier: 200 req/hour, 20k/month).
 
@@ -44,6 +50,22 @@ const CATEGORY_QUERY = {
   legal: 'signing legal documents',
 }
 
+// Extra query variety per audience so heroes for country-specific articles feel
+// distinct even when they share a category (also widens the photo pool, helping
+// non-repetition across a large backfill).
+const AUDIENCE_HINT = {
+  global: 'people diverse city',
+  india: 'indian professional',
+  pakistan: 'south asian professional',
+  'north-africa': 'young professional office',
+  turkey: 'young professional city',
+  'iran-afghanistan': 'young professional',
+  'spain-latam': 'latino professional',
+  'portugal-brazil': 'brazilian professional',
+  'east-europe': 'european professional',
+  china: 'asian professional',
+}
+
 // Common English stopwords + domain filler so title-derived queries keep only
 // the meaningful nouns.
 const STOP = new Set([
@@ -63,28 +85,38 @@ function titleQuery(title) {
     .trim()
 }
 
-// Ordered list of search queries to try until one returns photos.
+// Ordered list of search queries to try (each is paged through) until we find an
+// unused photo. Ordered most-specific → most-generic.
 function queriesFor(topic) {
   const out = []
   const cat = (topic.category || '').toLowerCase()
-  if (CATEGORY_QUERY[cat]) out.push(CATEGORY_QUERY[cat])
   const t = titleQuery(topic.title)
   if (t) out.push(t)
-  out.push('germany city') // generic, always returns results
+  if (CATEGORY_QUERY[cat]) out.push(CATEGORY_QUERY[cat])
+  const hint = AUDIENCE_HINT[topic.audience]
+  if (hint) out.push(hint)
+  out.push('germany city', 'germany people', 'europe office') // generic fallbacks
   return [...new Set(out)]
 }
 
-// Stable hash so each article deterministically picks a different photo from the
-// result page (avoids the same hero repeating across many articles).
+// Stable hash so each article deterministically starts from a different offset
+// within the result page (spreads picks out even before de-dup kicks in).
 function hashInt(s) {
   let h = 0
   for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0
   return h
 }
 
-async function searchPexels(query) {
+// Pull the Pexels photo id we encode into uploaded filenames back out of an
+// image URL, so callers can seed the used-set from existing article images.
+export function pexelsIdFromUrl(url) {
+  const m = /pexels-(\d+)-/.exec(url || '')
+  return m ? m[1] : null
+}
+
+async function searchPexels(query, page = 1, perPage = 80) {
   const res = await fetch(
-    `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=20&orientation=landscape`,
+    `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=${perPage}&page=${page}&orientation=landscape`,
     { headers: { Authorization: PEXELS_KEY } },
   )
   if (!res.ok) throw new Error(`pexels ${res.status}`)
@@ -93,32 +125,50 @@ async function searchPexels(query) {
 }
 
 /**
- * Find a relevant Pexels photo for `topic`, upload it to the `article-images`
- * bucket via the given Supabase client, and return the public URL.
+ * Find a relevant, NOT-yet-used Pexels photo for `topic`, upload it to the
+ * `article-images` bucket via the given Supabase client, and return the public
+ * URL.
  *   topic: { slug, title, category, audience }
  *   sb: a Supabase client with storage access (service role)
- *   variantIndex: optional offset so sibling articles vary their pick
+ *   opts.usedIds: Set<string> of Pexels photo ids already used (mutated: the
+ *                 chosen id is added). Pass the same Set across a run + seed it
+ *                 from the DB to guarantee no repeats.
+ *   opts.variantIndex: optional offset so sibling articles vary their pick.
  */
-export async function makePexelsImage(topic, sb, variantIndex = 0) {
+export async function makePexelsImage(topic, sb, opts = {}) {
   if (!PEXELS_KEY) throw new Error('PEXELS_API_KEY not set')
+  const usedIds = opts.usedIds instanceof Set ? opts.usedIds : new Set()
+  const variantIndex = opts.variantIndex || 0
+  const seed = hashInt(topic.slug || topic.title || 'x') + variantIndex
 
-  let photos = []
+  // Scan queries × pages for the first photo whose id isn't already used.
+  let chosen = null
+  let firstSeen = null // deterministic fallback if the whole space is exhausted
   for (const q of queriesFor(topic)) {
-    try {
-      photos = await searchPexels(q)
-      if (photos.length) break
-    } catch { /* try next query */ }
+    for (let page = 1; page <= 4 && !chosen; page++) {
+      let photos = []
+      try { photos = await searchPexels(q, page) } catch { break }
+      if (!photos.length) break
+      const start = seed % photos.length
+      for (let k = 0; k < photos.length; k++) {
+        const p = photos[(start + k) % photos.length]
+        if (!p?.id) continue
+        if (!firstSeen) firstSeen = p
+        if (!usedIds.has(String(p.id))) { chosen = p; break }
+      }
+    }
+    if (chosen) break
   }
-  if (!photos.length) throw new Error('no pexels results')
+  chosen = chosen || firstSeen
+  if (!chosen) throw new Error('no pexels results')
 
-  const idx = (hashInt(topic.slug || topic.title || 'x') + variantIndex) % photos.length
-  const photo = photos[idx]
+  usedIds.add(String(chosen.id))
   const src =
-    photo?.src?.large2x || photo?.src?.landscape || photo?.src?.large || photo?.src?.original
+    chosen.src?.large2x || chosen.src?.landscape || chosen.src?.large || chosen.src?.original
   if (!src) throw new Error('no pexels src')
 
   const buf = Buffer.from(await (await fetch(src)).arrayBuffer())
-  const filename = `pexels-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`
+  const filename = `pexels-${chosen.id}-${Math.random().toString(36).slice(2, 8)}.jpg`
   const { data: up, error } = await sb.storage
     .from('article-images')
     .upload(filename, buf, { contentType: 'image/jpeg' })
