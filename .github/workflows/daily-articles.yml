@@ -1,9 +1,9 @@
 name: Daily article generation
 
 # Generates 3 new articles per day from scripts/out/article-plan.json:
-# Opus 4.8 source → all-locale translations (per locale policy) → FLUX hero
-# image → insert into Supabase. Idempotent via translations._meta.slug, so a
-# re-run never duplicates. Runs on GitHub's servers — no local machine needed.
+# Opus 4.8 source → all-locale translations (per locale policy) → Pexels stock
+# hero image → insert into Supabase. Idempotent via translations._meta.slug, so
+# a re-run never duplicates. Runs on GitHub's servers — no local machine needed.
 
 on:
   schedule:
@@ -32,14 +32,14 @@ jobs:
           cache: 'npm'
 
       # npm install (not ci) so a package-lock drift between npm versions
-      # doesn't break this utility job. Only needs the supabase/anthropic/
-      # replicate clients, which are in package.json.
+      # doesn't break this utility job. Only needs the supabase/anthropic
+      # clients, which are in package.json.
       - run: npm install --no-audit --no-fund
 
       - name: Generate articles
         env:
           ARTICLE_GEN_ANTHROPIC_KEY: ${{ secrets.ARTICLE_GEN_ANTHROPIC_KEY }}
-          REPLICATE_API_TOKEN: ${{ secrets.REPLICATE_API_TOKEN }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: node scripts/generate-articles-run.mjs --daily=${{ github.event.inputs.count || '5' }}

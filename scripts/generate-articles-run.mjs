@@ -3,7 +3,7 @@
  *   1. Sonnet 4.6 writes the English source (SEO spec, tag format).
  *      Override the draft model with DRAFT_MODEL (e.g. claude-opus-4-8).
  *   2. Haiku translates into the topic's policy locales.
- *   3. Replicate FLUX hero image → article-images Supabase bucket.
+ *   3. Pexels stock-photo hero → article-images Supabase bucket.
  *   4. Insert into Supabase with translations._meta.{audience,locales}.
  *
  * Base columns hold Arabic when 'ar' is a target locale, otherwise the
@@ -18,7 +18,7 @@ import fs from 'fs'
 import path from 'path'
 import { createClient } from '@supabase/supabase-js'
 import Anthropic from '@anthropic-ai/sdk'
-import Replicate from 'replicate'
+import { makePexelsImage } from './pexels-image.mjs'
 
 const envPath = path.resolve('.env.local')
 if (fs.existsSync(envPath)) {
@@ -38,12 +38,12 @@ const CONCURRENCY = parseInt(args.find(a => a.startsWith('--concurrency='))?.spl
 // instead of a cryptic SDK error 12s into the CI run.
 {
   const anthropicKey = process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY
-  const replicateKey = process.env.ARTICLE_GEN_REPLICATE_TOKEN || process.env.REPLICATE_API_TOKEN
+  const pexelsKey = process.env.PEXELS_API_KEY || process.env.ARTICLE_GEN_PEXELS_KEY
   const missing = []
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL) missing.push('NEXT_PUBLIC_SUPABASE_URL')
   if (!process.env.SUPABASE_SERVICE_ROLE_KEY) missing.push('SUPABASE_SERVICE_ROLE_KEY')
   if (!anthropicKey) missing.push('ARTICLE_GEN_ANTHROPIC_KEY (or ANTHROPIC_API_KEY)')
-  if (!replicateKey && !NO_IMAGE) missing.push('REPLICATE_API_TOKEN (or ARTICLE_GEN_REPLICATE_TOKEN)')
+  if (!pexelsKey && !NO_IMAGE) missing.push('PEXELS_API_KEY (or ARTICLE_GEN_PEXELS_KEY)')
   if (missing.length) {
     console.error('Missing required environment variable(s): ' + missing.join(', '))
     console.error('Set these as GitHub repo secrets (Settings → Secrets and variables → Actions).')
@@ -59,7 +59,6 @@ const supabase = createClient(
 // Prefer a dedicated key so article-generation spend is isolated/capped
 // separately from the rest of the app. Falls back to the main key.
 const anthropic = new Anthropic({ apiKey: process.env.ARTICLE_GEN_ANTHROPIC_KEY || process.env.ANTHROPIC_API_KEY })
-const replicate = new Replicate({ auth: process.env.ARTICLE_GEN_REPLICATE_TOKEN || process.env.REPLICATE_API_TOKEN })
 
 // Model that writes the English source article. Sonnet 4.6 is the sweet spot
 // for templated SEO writing — ~40% cheaper than Opus with near-identical
@@ -159,69 +158,10 @@ async function translate(enArticle, locale) {
   }
 }
 
-const IMAGE_MODEL = process.env.IMAGE_MODEL || 'black-forest-labs/flux-1.1-pro'
-const IMAGE_STYLE = 'professional editorial photography, photorealistic, cinematic soft natural lighting, shallow depth of field, muted warm color palette, candid documentary feel, no text, no words, no logos, no charts, no watermarks'
-// People descriptor per audience so heroes match (or, for global, vary).
-const PEOPLE = {
-  global: 'people of varied ethnicities and genders', india: 'Indian people', pakistan: 'Pakistani people',
-  'north-africa': 'North African (Moroccan/Algerian) people', turkey: 'Turkish people',
-  'iran-afghanistan': 'Iranian or Afghan people', 'spain-latam': 'Latin American or Spanish people',
-  'portugal-brazil': 'Brazilian or Portuguese people', 'east-europe': 'Eastern European people',
-  china: 'Chinese people',
-}
-
-async function scenePromptFor(topic) {
-  const who = PEOPLE[topic.audience] || PEOPLE.global
-  const resp = await anthropic.messages.create({
-    model: 'claude-haiku-4-5', max_tokens: 220, temperature: 0.9,
-    messages: [{ role: 'user', content: `Invent ONE concrete, realistic photographic hero-image scene for an article about moving to Germany. Category: "${topic.category}". Title: "${topic.title}".
-
-Rules:
-- Choose a SETTING and ACTION that specifically fit THIS topic and category — make it visually distinct from a generic "person with documents" shot. Use the real-world place where this topic actually happens.
-- Vary the composition naturally: sometimes a single person mid-action, sometimes two interacting, sometimes a location or objects with no people. Avoid posed groups and laptop-at-a-table clichés unless truly the best fit.
-- When people appear, make them ${who}, candid and natural.
-- No text, UI, charts, maps, icons, or symbolic objects.
-- 1–2 sentences, vivid and specific.
-
-Return ONLY the scene description.` }],
-  })
-  return resp.content.map(c => c.type === 'text' ? c.text : '').join('').trim().replace(/^["']|["']$/g, '')
-}
-
-async function createPredictionWithRetry(input, tries = 8) {
-  for (let i = 0; i < tries; i++) {
-    try {
-      return await replicate.predictions.create({ model: IMAGE_MODEL, input })
-    } catch (e) {
-      const is429 = e?.response?.status === 429 || /429|throttled/i.test(e?.message || '')
-      if (!is429 || i === tries - 1) throw e
-      const wait = (e?.response?.headers?.get?.('retry-after') ? parseInt(e.response.headers.get('retry-after'), 10) : 0) || 8
-      await new Promise(r => setTimeout(r, (wait + 1) * 1000))
-    }
-  }
-}
-
+// Hero image: a real Pexels stock photo (searched by category/title), uploaded
+// into our article-images bucket. Replaces the earlier AI-generated heroes.
 async function makeImage(topic) {
-  const scene = await scenePromptFor(topic)
-  const prompt = `${scene} ${IMAGE_STYLE}`
-  let pred = await createPredictionWithRetry({ prompt, aspect_ratio: '16:9', output_format: 'jpg', output_quality: 95, safety_tolerance: 2, prompt_upsampling: true })
-  const terminal = new Set(['succeeded', 'failed', 'canceled'])
-  const start = Date.now()
-  while (!terminal.has(pred.status)) {
-    if (Date.now() - start > 90_000) throw new Error('image timeout')
-    await new Promise(r => setTimeout(r, 1500))
-    pred = await replicate.predictions.get(pred.id)
-  }
-  if (pred.status !== 'succeeded') throw new Error(`replicate ${pred.status}`)
-  const out = pred.output
-  const first = Array.isArray(out) ? out[0] : out
-  const url = typeof first === 'string' ? first : (typeof first?.url === 'function' ? first.url() : null)
-  if (!url) throw new Error('no image url')
-  const buf = Buffer.from(await (await fetch(url)).arrayBuffer())
-  const filename = `ai-${Date.now()}-${Math.random().toString(36).slice(2, 8)}.jpg`
-  const { data: up, error } = await supabase.storage.from('article-images').upload(filename, buf, { contentType: 'image/jpeg' })
-  if (error) throw new Error(`upload: ${error.message}`)
-  return supabase.storage.from('article-images').getPublicUrl(up.path).data.publicUrl
+  return makePexelsImage(topic, supabase)
 }
 
 function readTime(content) { return Math.max(3, Math.round((content || '').split(/\s+/).length / 200)) }
