@@ -107,10 +107,14 @@ function hashInt(s) {
   return h
 }
 
-// Pull the Pexels photo id we encode into uploaded filenames back out of an
-// image URL, so callers can seed the used-set from existing article images.
+// Pull the Pexels photo id back out of an article image URL, so callers can
+// seed the used-set from existing images. Handles BOTH formats:
+//   • our uploaded bucket files:  .../pexels-<id>-<rand>.jpg
+//   • Pexels' own hosted URLs used by early articles:
+//     https://images.pexels.com/photos/<id>/...
 export function pexelsIdFromUrl(url) {
-  const m = /pexels-(\d+)-/.exec(url || '')
+  const u = url || ''
+  const m = /pexels-(\d+)-/.exec(u) || /images\.pexels\.com\/photos\/(\d+)\b/.exec(u)
   return m ? m[1] : null
 }
 

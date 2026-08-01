@@ -57,7 +57,9 @@ for (let from = 0; ; from += 1000) {
 const usedIds = new Set()
 for (const r of rows) { const id = pexelsIdFromUrl(r.image_url); if (id) usedIds.add(id) }
 
-const isPexels = (u) => /pexels-\d+-/.test(u || '')
+// Already on Pexels — either our uploaded bucket file (pexels-<id>-) or an early
+// article's hosted Pexels URL (images.pexels.com/photos/<id>/).
+const isPexels = (u) => /pexels-\d+-/.test(u || '') || /images\.pexels\.com\/photos\//.test(u || '')
 const isAi = (u) => /\/ai-/.test(u || '') || /ai-\d+-/.test(u || '')
 
 const targets = rows.filter(r => {
