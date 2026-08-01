@@ -13,8 +13,13 @@
  *   small delay to stay well under Pexels' 200 req/hour limit.
  *
  * Run: node scripts/backfill-pexels-images.mjs            (only AI/empty heroes)
- *      node scripts/backfill-pexels-images.mjs --all      (every article)
+ *      node scripts/backfill-pexels-images.mjs --all      (every non-Pexels)
+ *      node scripts/backfill-pexels-images.mjs --dedup    (re-image duplicate Pexels heroes)
  *      node scripts/backfill-pexels-images.mjs --limit=50 (cap this run)
+ *
+ * --dedup: when two+ articles share the same Pexels photo (e.g. from an early
+ * run whose used-set was lost), keep the first and re-image the rest with unique
+ * photos, so no hero repeats anywhere.
  */
 import fs from 'fs'
 import path from 'path'
@@ -33,6 +38,7 @@ if (!pexelsConfigured()) {
 
 const args = process.argv.slice(2)
 const ALL = args.includes('--all')
+const DEDUP = args.includes('--dedup')
 const LIMIT = parseInt(args.find(a => a.startsWith('--limit='))?.split('=')[1] || '0', 10) || Infinity
 
 const sb = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, {
@@ -62,13 +68,27 @@ for (const r of rows) { const id = pexelsIdFromUrl(r.image_url); if (id) usedIds
 const isPexels = (u) => /pexels-\d+-/.test(u || '') || /images\.pexels\.com\/photos\//.test(u || '')
 const isAi = (u) => /\/ai-/.test(u || '') || /ai-\d+-/.test(u || '')
 
-const targets = rows.filter(r => {
-  if (isPexels(r.image_url)) return false           // already done
-  if (ALL) return true
-  return isAi(r.image_url) || !r.image_url           // AI or missing
-})
+let targets
+if (DEDUP) {
+  // Keep the first article for each photo id; re-image every later one that
+  // reuses an id already claimed by an earlier article.
+  const seenId = new Set()
+  targets = []
+  for (const r of rows) {
+    const id = pexelsIdFromUrl(r.image_url)
+    if (!id) continue
+    if (seenId.has(id)) targets.push(r)
+    else seenId.add(id)
+  }
+} else {
+  targets = rows.filter(r => {
+    if (isPexels(r.image_url)) return false          // already done
+    if (ALL) return true
+    return isAi(r.image_url) || !r.image_url          // AI or missing
+  })
+}
 
-console.log(`${rows.length} articles total · ${usedIds.size} already on Pexels · ${targets.length} to backfill${ALL ? ' (--all)' : ''}`)
+console.log(`${rows.length} articles total · ${usedIds.size} unique Pexels photos in use · ${targets.length} to ${DEDUP ? 're-image (dedup)' : 'backfill'}${ALL ? ' (--all)' : ''}`)
 
 let done = 0, failed = 0
 for (const r of targets) {
