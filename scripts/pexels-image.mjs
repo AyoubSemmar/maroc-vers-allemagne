@@ -13,10 +13,15 @@
 // Requires PEXELS_API_KEY (or ARTICLE_GEN_PEXELS_KEY). Get a free key at
 // https://www.pexels.com/api/ (generous free tier: 200 req/hour, 20k/month).
 
-const PEXELS_KEY = process.env.PEXELS_API_KEY || process.env.ARTICLE_GEN_PEXELS_KEY
+// Read the key lazily at call time — scripts load .env.local AFTER importing
+// this module (ESM imports are hoisted), so capturing it at module top would
+// always see undefined.
+function pexelsKey() {
+  return process.env.PEXELS_API_KEY || process.env.ARTICLE_GEN_PEXELS_KEY
+}
 
 export function pexelsConfigured() {
-  return !!PEXELS_KEY
+  return !!pexelsKey()
 }
 
 // A curated, real-world stock-photo query per article category — a scene that
@@ -121,7 +126,7 @@ export function pexelsIdFromUrl(url) {
 async function searchPexels(query, page = 1, perPage = 80) {
   const res = await fetch(
     `https://api.pexels.com/v1/search?query=${encodeURIComponent(query)}&per_page=${perPage}&page=${page}&orientation=landscape`,
-    { headers: { Authorization: PEXELS_KEY } },
+    { headers: { Authorization: pexelsKey() } },
   )
   if (!res.ok) throw new Error(`pexels ${res.status}`)
   const data = await res.json()
@@ -140,7 +145,7 @@ async function searchPexels(query, page = 1, perPage = 80) {
  *   opts.variantIndex: optional offset so sibling articles vary their pick.
  */
 export async function makePexelsImage(topic, sb, opts = {}) {
-  if (!PEXELS_KEY) throw new Error('PEXELS_API_KEY not set')
+  if (!pexelsKey()) throw new Error('PEXELS_API_KEY not set')
   const usedIds = opts.usedIds instanceof Set ? opts.usedIds : new Set()
   const variantIndex = opts.variantIndex || 0
   const seed = hashInt(topic.slug || topic.title || 'x') + variantIndex
