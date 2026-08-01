@@ -510,7 +510,7 @@ function GroupCard({ group: g, locale, allGroups }: { group: AdminGroup; locale:
               ⚙ Modifier
             </button>
             <a
-              href={`/${locale}/learn-german/classes/${g.id}/room`}
+              href={`/${locale}/learn-german/classroom?group=${g.id}`}
               target="_blank" rel="noreferrer"
               style={{ fontSize: 12, fontWeight: 700, background: '#16a34a', color: 'white', borderRadius: 8, padding: '5px 12px', textDecoration: 'none', whiteSpace: 'nowrap' }}
             >

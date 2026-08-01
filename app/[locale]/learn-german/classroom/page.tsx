@@ -13,8 +13,13 @@ export const metadata = { robots: { index: false, follow: false } }
 
 export default async function ClassroomPage({
   params,
-}: { params: Promise<{ locale: AppLocale }> }) {
+  searchParams,
+}: {
+  params: Promise<{ locale: AppLocale }>
+  searchParams: Promise<{ group?: string }>
+}) {
   const { locale } = await params
+  const { group: groupParam } = await searchParams
 
   const sb = await createServerSupabase()
   const { data: { user } } = await sb.auth.getUser()
@@ -34,12 +39,19 @@ export default async function ClassroomPage({
     redirect(`/${locale}/learn-german/my-course`)
   }
 
+  // Which group's room to open. Students always get their own booked group.
+  // A teacher/admin may target any group via ?group=<id> (so the owner can drop
+  // into any class's live call without being enrolled as a student); otherwise
+  // they fall back to their own booking if they happen to have one.
+  const groupId: string | null = isTeacher
+    ? (groupParam || booking?.group_id || null)
+    : (booking?.group_id ?? null)
+
   let level = 'a1'
-  let groupId: string | null = booking?.group_id ?? null
   let groupLabel: string | null = null
-  if (booking?.group_id) {
+  if (groupId) {
     const { data: g } = await supabase
-      .from('class_groups').select('*').eq('id', booking.group_id).maybeSingle()
+      .from('class_groups').select('*').eq('id', groupId).maybeSingle()
     if (g) {
       level = (g.level as string) || 'a1'
       groupLabel = (g.label as string) ?? null
