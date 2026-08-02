@@ -75,6 +75,7 @@ const DRAFT_EFFORT = process.env.DRAFT_EFFORT || 'medium'
 const LANG_NAME = {
   ar: 'Arabic', fr: 'French', de: 'German', es: 'Spanish', tr: 'Turkish',
   fa: 'Persian/Farsi', pt: 'Portuguese', ru: 'Russian', hi: 'Hindi', ur: 'Urdu', zh: 'Simplified Chinese',
+  uk: 'Ukrainian', sq: 'Albanian', id: 'Indonesian',
 }
 const DENSE = new Set(['ar', 'fa', 'hi', 'ur'])
 
