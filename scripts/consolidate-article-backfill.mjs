@@ -17,11 +17,24 @@ const get = (id) => { const k = String(id); if (!rec.has(k)) rec.set(k, {}); ret
 
 for (const f of fs.readdirSync(OUT).filter(f => /\.json$/.test(f))) {
   let data; try { data = JSON.parse(fs.readFileSync(`${OUT}/${f}`, 'utf8')) } catch { console.log(`skip (parse) ${f}`); continue }
+  // Clean per-locale files: tmp-<loc>-<id>.json (one locale each).
   const m = f.match(/^tmp-(uk|sq|id)-(.+)\.json$/)
   if (m) {
     const loc = m[1]
     const obj = Array.isArray(data) ? data[0] : data
     if (obj && obj.id != null && nonEmpty(obj)) get(obj.id)[loc] = pick(obj)
+    continue
+  }
+  // Legacy straggler files: frag-<id>.json = {id, uk, sq, id} — the duplicate
+  // "id" key means JSON.parse keeps the LAST (Indonesian) under `.id`; the
+  // article id is taken from the filename. Salvage uk/sq/id if all are objects.
+  const mf = f.match(/^frag-(.+)\.json$/)
+  if (mf) {
+    const articleId = mf[1]
+    const o = Array.isArray(data) ? data[0] : data
+    if (o && nonEmpty(o.uk) && nonEmpty(o.sq) && nonEmpty(o.id)) {
+      const r = get(articleId); r.uk = pick(o.uk); r.sq = pick(o.sq); r.id = pick(o.id)
+    }
   }
 }
 
