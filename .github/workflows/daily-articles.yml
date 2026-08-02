@@ -6,8 +6,10 @@ name: Daily article generation
 # a re-run never duplicates. Runs on GitHub's servers — no local machine needed.
 
 on:
-  schedule:
-    - cron: '0 6 * * *'   # 06:00 UTC daily
+  # Daily auto-generation is PAUSED (disabled 2026-08-03 by request). To resume,
+  # uncomment the schedule block below. Manual runs still work via the Actions tab.
+  # schedule:
+  #   - cron: '0 6 * * *'   # 06:00 UTC daily
   workflow_dispatch:        # allow manual runs from the Actions tab
     inputs:
       count:
