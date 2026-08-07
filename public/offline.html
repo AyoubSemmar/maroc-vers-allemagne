@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Offline — GoGermany</title>
+  <style>
+    :root { --brand: #E85F2C; --brand2: #FF8B6B; --bg: #ffffff; --fg: #1a1a1a; --muted: #6b7280; --card: #f7f7f8; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f0f10; --fg: #f2f2f2; --muted: #9aa0a6; --card: #1a1a1c; } }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      background: var(--bg); color: var(--fg);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px; text-align: center;
+      padding-top: max(24px, env(safe-area-inset-top));
+      padding-bottom: max(24px, env(safe-area-inset-bottom));
+    }
+    .wrap { max-width: 340px; }
+    .tile {
+      width: 76px; height: 76px; border-radius: 18px; margin: 0 auto 20px;
+      background: linear-gradient(180deg, var(--brand2), var(--brand));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 900; font-size: 44px; line-height: 1;
+      box-shadow: 0 8px 24px rgba(232, 95, 44, .35);
+    }
+    h1 { font-size: 20px; margin: 0 0 8px; }
+    p { color: var(--muted); font-size: 15px; line-height: 1.5; margin: 0 0 24px; }
+    button {
+      appearance: none; border: 0; cursor: pointer;
+      background: var(--brand); color: #fff; font-weight: 600; font-size: 15px;
+      padding: 12px 22px; border-radius: 999px;
+    }
+    button:active { transform: translateY(1px); }
+    .hint { margin-top: 18px; font-size: 13px; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="tile">G</div>
+    <h1>You're offline</h1>
+    <p>This page isn't available without a connection. Lessons you've already opened still work — reconnect to load new ones.</p>
+    <button onclick="location.reload()">Try again</button>
+    <div class="hint">GoGermany · Learn German</div>
+  </div>
+</body>
+</html>

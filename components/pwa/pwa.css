@@ -1,0 +1,50 @@
+/* App-mode styling — only active when the course is launched as an installed
+   PWA (PwaController stamps <html class="pwa-standalone">). Ordinary browser
+   visits are completely unaffected. */
+
+.gg-appnav { display: none; }
+
+.pwa-standalone .gg-appnav {
+  display: flex;
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 50;
+  align-items: stretch;
+  justify-content: space-around;
+  gap: 4px;
+  padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+  background: var(--gg-appnav-bg, #ffffff);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .pwa-standalone .gg-appnav {
+    --gg-appnav-bg: #121213;
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
+
+.gg-appnav-item {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 4px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #9aa0a6;
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.gg-appnav-item[data-active="true"] { color: #E85F2C; }
+.gg-appnav-item span { line-height: 1; }
+
+/* Keep page content clear of the fixed bar + the top marketing chrome that we
+   hide in app mode. */
+.pwa-standalone main { padding-bottom: calc(64px + env(safe-area-inset-bottom)); }
+.pwa-standalone { --gg-app-safe-top: env(safe-area-inset-top); }
