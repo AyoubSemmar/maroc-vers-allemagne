@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next'
 import { routing } from '@/i18n/routing'
 import { supabase } from '@/lib/supabase'
 import { COUNTRIES, COUNTRY_ORDER, type CountryKey } from '@/lib/documentChecklistData'
+import { grammarTopics } from '@/lib/german-data/grammar-topics'
 
 const VISA_SLUGS = ['ausbildung', 'studium', 'tourist', 'family-reunification'] as const
 
@@ -52,6 +53,7 @@ const STATIC_PATHS = [
   '/learn-german/b1',
   '/learn-german/b2',
   '/learn-german/c1',
+  '/learn-german/grammar',
   '/jobs',
   '/housing',
   '/banking',
@@ -171,5 +173,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   )
 
-  return [...staticEntries, ...tools3Entries, ...checklistEntries, ...articleEntries]
+  // Grammar reference: one indexable page per grammar topic, in every locale
+  // (genuinely translated deep content — see grammar-topics.ts). hreflang groups
+  // the 15 locale variants of each topic as translations of one another.
+  const grammarEntries: MetadataRoute.Sitemap = grammarTopics.flatMap((topic) =>
+    routing.locales.map((loc) => ({
+      url: `${SITE}/${loc}/learn-german/grammar/${topic.slug}`,
+      lastModified: yesterday,
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+      alternates: langAlternates(routing.locales, (l) => `${SITE}/${l}/learn-german/grammar/${topic.slug}`),
+    })),
+  )
+
+  return [...staticEntries, ...tools3Entries, ...checklistEntries, ...articleEntries, ...grammarEntries]
 }

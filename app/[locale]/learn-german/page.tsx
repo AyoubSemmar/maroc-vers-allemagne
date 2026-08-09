@@ -72,6 +72,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: A
 export default async function LearnGermanPage({ params }: { params: Promise<{ locale: AppLocale }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'learnGerman' })
+  const tg = await getTranslations({ locale, namespace: 'grammarSeo' })
   const m = META[locale] ?? META.fr!
 
   return (
@@ -136,6 +137,17 @@ export default async function LearnGermanPage({ params }: { params: Promise<{ lo
 
         <h2 className="lg-section-title">{t('chooseLevel')}</h2>
         <LevelsGrid />
+
+        {/* Grammar reference hub — deep, server-rendered grammar explanations
+            per topic (SEO surface + free reference for learners). */}
+        <Link href="/learn-german/grammar" className="lg-drill-card">
+          <div className="lg-drill-card-icon"><Icon name="book" size={24} /></div>
+          <div className="lg-drill-card-text">
+            <strong>{tg('hubTitle')}</strong>
+            <span>{tg('hubIntro')}</span>
+          </div>
+          <span className="lg-drill-card-cta">{tg('allTopics')} →</span>
+        </Link>
 
         {/* Personal results dashboard — overall grade, per-skill averages,
             level progress. Free account required to have anything saved. */}

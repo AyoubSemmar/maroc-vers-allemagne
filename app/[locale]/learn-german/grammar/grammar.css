@@ -1,0 +1,93 @@
+/* Grammar reference (SEO) pages — hub + per-topic. Light, readable, theme-aware.
+   Reuses the .lg-root / .lg-hero shell from learn-german.css. */
+
+.gs-wrap { max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; }
+
+/* Breadcrumbs */
+.gs-crumbs { font-size: 13px; color: #6b7280; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 16px; }
+.gs-crumbs a { color: #E85F2C; text-decoration: none; }
+.gs-crumbs a:hover { text-decoration: underline; }
+.gs-crumb-sep { color: #cbd5e1; }
+.gs-crumb-current { color: #9aa0a6; }
+
+.gs-level-badge {
+  display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .03em;
+  color: #fff; background: linear-gradient(180deg, #FF8B6B, #E85F2C);
+  padding: 3px 10px; border-radius: 999px;
+}
+
+.gs-title { font-size: 30px; line-height: 1.2; font-weight: 800; margin: 12px 0 16px; color: #111827; }
+
+.gs-practice {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #E85F2C; color: #fff; font-weight: 600; font-size: 14px;
+  padding: 10px 18px; border-radius: 999px; text-decoration: none; margin-bottom: 28px;
+}
+.gs-practice:hover { background: #d24e1f; }
+
+/* Main explanation — ArticleContent brings its own typography; just spacing. */
+.gs-content { margin-bottom: 8px; }
+
+.gs-section { margin: 28px 0; }
+.gs-h2 { font-size: 20px; font-weight: 700; color: #111827; margin: 0 0 14px; }
+.gs-h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 0 0 10px; }
+
+/* Tables */
+.gs-table-block { margin-bottom: 20px; }
+.gs-table-scroll { overflow-x: auto; border: 1px solid #e5e7eb; border-radius: 12px; }
+.gs-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.gs-table th { background: #374151; color: #fff; padding: 10px 14px; text-align: start; font-weight: 600; white-space: nowrap; }
+.gs-table td { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; color: #374151; }
+.gs-table .gs-row-hi { background: #fff4ef; font-weight: 600; }
+.gs-note { font-size: 13px; color: #6b7280; margin: 8px 2px 0; }
+
+/* Rule cards */
+.gs-rules { display: grid; gap: 12px; }
+.gs-rule { border: 1px solid #e5e7eb; border-radius: 12px; padding: 14px 16px; background: #fafafa; }
+.gs-rule-text { font-weight: 600; color: #111827; margin: 0 0 6px; }
+.gs-rule-ex { color: #E85F2C; font-weight: 600; margin: 0 0 2px; }
+.gs-rule-tr { color: #6b7280; font-size: 14px; margin: 0; }
+
+/* Examples */
+.gs-examples { display: grid; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.gs-examples li { padding: 10px 14px; background: #f7f7f8; border-radius: 10px; color: #1f2937; }
+
+/* Tip */
+.gs-tip { margin: 28px 0; padding: 16px 18px; border-radius: 14px; background: #fff8f4; border: 1px solid #ffd9c7; }
+.gs-tip-label { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: #E85F2C; font-size: 14px; margin-bottom: 6px; }
+.gs-tip p { margin: 0; color: #7c3a1d; line-height: 1.6; }
+
+/* Prev/next + all-topics */
+.gs-nav { display: flex; justify-content: space-between; gap: 12px; margin: 36px 0 16px; }
+.gs-nav-link { color: #E85F2C; text-decoration: none; font-weight: 600; font-size: 14px; max-width: 48%; }
+.gs-nav-link:hover { text-decoration: underline; }
+.gs-nav-next { text-align: end; margin-inline-start: auto; }
+.gs-all { display: inline-block; color: #6b7280; text-decoration: none; font-size: 14px; }
+.gs-all:hover { color: #E85F2C; }
+
+/* Hub: level groups + topic lists */
+.gs-level-group { margin-bottom: 32px; }
+.gs-level-heading { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 800; color: #111827; margin: 0 0 14px; }
+.gs-topic-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.gs-topic-link {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+  padding: 12px 16px; border: 1px solid #e5e7eb; border-radius: 12px;
+  color: #1f2937; font-weight: 500; transition: border-color .15s, background .15s;
+}
+.gs-topic-link:hover { border-color: #E85F2C; background: #fff8f4; }
+.gs-topic-link > span:first-of-type { flex: 1; }
+.gs-topic-arrow { color: #cbd5e1; font-size: 18px; }
+
+@media (prefers-color-scheme: dark) {
+  .gs-title, .gs-h2, .gs-h3, .gs-level-heading { color: #f3f4f6; }
+  .gs-crumb-current { color: #6b7280; }
+  .gs-table td { color: #d1d5db; border-bottom-color: #27272a; }
+  .gs-table .gs-row-hi { background: #3a2317; }
+  .gs-rule { background: #18181b; border-color: #27272a; }
+  .gs-rule-text { color: #f3f4f6; }
+  .gs-examples li { background: #18181b; color: #e5e7eb; }
+  .gs-tip { background: #2a1a12; border-color: #4a2a1a; }
+  .gs-tip p { color: #f0c9b5; }
+  .gs-topic-link { background: #131314; border-color: #27272a; color: #e5e7eb; }
+  .gs-topic-link:hover { background: #1f1712; border-color: #E85F2C; }
+}
