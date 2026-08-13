@@ -129,6 +129,11 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
     )
   }
 
+  // Internal linking is a key SEO lever on a low-authority site: more relevant
+  // cross-links = more crawl paths + equity spread + engagement, and fewer
+  // orphaned older articles. Pull a wider related set (up to 8), and mix newest
+  // with a deterministic-by-id spread so older articles in a big category also
+  // get linked, not just the most recent few.
   const { data: rawRelated } = await applyLocaleAvailability(
     supabase
       .from('articles')
@@ -136,10 +141,25 @@ export default async function ArticlePage({ params }: { params: Promise<{ id: st
       .eq('category', article.category)
       .neq('id', id)
       .order('date', { ascending: false })
-      .limit(3),
+      .limit(60),
     locale,
   )
-  const related = localizeRows(rehydrateTranslationsList(rawRelated as any, locale), locale)
+  const relatedRows = rehydrateTranslationsList(rawRelated as any, locale) as any[]
+  // Rotate the pick by this article's id so different articles surface
+  // different neighbours (spreading internal links across the whole category),
+  // while staying stable per-article for ISR caching.
+  const RELATED_COUNT = 8
+  let relatedPick = relatedRows
+  if (relatedRows.length > RELATED_COUNT) {
+    const seed = Number(id) || 0
+    const start = seed % relatedRows.length
+    const rotated = [...relatedRows.slice(start), ...relatedRows.slice(0, start)]
+    // Keep the 3 newest (most relevant/fresh) + a spread of others.
+    const newest = relatedRows.slice(0, 3)
+    const rest = rotated.filter((r) => !newest.some((n) => n.id === r.id))
+    relatedPick = [...newest, ...rest].slice(0, RELATED_COUNT)
+  }
+  const related = localizeRows(relatedPick, locale)
 
   function catLabel(cat: string): string {
     return catLabelFrom(t as any, cat)
