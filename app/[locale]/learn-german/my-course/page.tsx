@@ -7,10 +7,14 @@ import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildCallUrl } from '@/lib/jitsi'
 import { isAccessActive, formatAccessDate } from '@/lib/courseAccess'
+import type { Metadata } from 'next'
 import MyCourseClient from './MyCourseClient'
 
 // Personal course dashboard — always reflect the latest grades.
 export const dynamic = 'force-dynamic'
+
+// Live-classes dashboard is unlisted — never index it.
+export const metadata: Metadata = { robots: { index: false, follow: false } }
 
 export default async function MyCoursePage({
   params,

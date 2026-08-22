@@ -4,7 +4,7 @@ import { Link } from '@/i18n/navigation'
 import { supabase } from '@/lib/supabase'
 import { isClassesCountry } from '@/lib/geo'
 import { isAdmin } from '@/lib/entitlements'
-import { CLASSES_LAUNCHED, CLASSES_GEO_GATED } from '@/lib/classes-flags'
+import { CLASSES_LAUNCHED, CLASSES_GEO_GATED, CLASSES_ENABLED } from '@/lib/classes-flags'
 import { createClient as createServerSupabase } from '@/lib/supabase-server'
 import { dirFor, type AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
@@ -21,12 +21,15 @@ export async function generateMetadata({
 }: { params: Promise<{ locale: AppLocale }> }): Promise<Metadata> {
   const { locale } = await params
   const t = classesStrings(locale)
-  return buildLocaleMetadata({
+  const meta = buildLocaleMetadata({
     locale,
     path: '/learn-german/classes',
     title: `${t.title} — GoGermany`,
     description: t.subtitle,
   })
+  // Live classes are unlisted — keep the route but tell Google to drop it.
+  if (!CLASSES_ENABLED) meta.robots = { index: false, follow: true }
+  return meta
 }
 
 export default async function ClassesPage({
@@ -40,10 +43,11 @@ export default async function ClassesPage({
   // elsewhere are sent back to the Learn German hub. Signed-in admins (the
   // owner/teacher) bypass the gate so they can see and manage it from anywhere.
   const admin = user ? await isAdmin(user.id) : false
-  // Pre-launch: the whole course is hidden from the public — only admins reach
-  // it. After launch, it's limited to the served countries (others go back to
-  // the hub).
+  // Live classes removed/unlisted: only admins (to manage/preview) reach the
+  // booking page — everyone else is sent back to the free course. Pre-launch and
+  // geo gates still apply on top for when it's re-enabled.
   if (!admin) {
+    if (!CLASSES_ENABLED) redirect(`/${locale}/learn-german`)
     if (!CLASSES_LAUNCHED) redirect(`/${locale}/learn-german`)
     if (CLASSES_GEO_GATED && !(await isClassesCountry())) redirect(`/${locale}/learn-german`)
   }

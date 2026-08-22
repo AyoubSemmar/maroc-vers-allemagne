@@ -8,6 +8,7 @@ import { Link, useRouter } from '@/i18n/navigation'
 import LanguageSwitcher from './LanguageSwitcher'
 import OpportunitiesPicker from './OpportunitiesPicker'
 import { useCourseAccess } from '@/lib/useCourseAccess'
+import { CLASSES_ENABLED } from '@/lib/classes-flags'
 
 type Theme = 'light' | 'dark'
 
@@ -293,7 +294,7 @@ export default function RihlaNav() {
               On mobile the nav links become a horizontal scroll strip; the
               `rihla-mycourse-link` class pins this one to the front so it's
               visible without scrolling the strip sideways (see globals.css). */}
-          {mounted && hasCourseAccess && (
+          {mounted && CLASSES_ENABLED && hasCourseAccess && (
             <Link href="/learn-german/my-course" className="rihla-mycourse-link" style={{ fontWeight: 600, color: '#16a34a' }}>📋 {tNav('myCourse')}</Link>
           )}
         </div>

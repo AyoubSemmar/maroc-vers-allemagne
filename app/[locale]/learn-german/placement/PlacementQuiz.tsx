@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { classesStrings } from '@/components/classes/strings'
+import { CLASSES_ENABLED } from '@/lib/classes-flags'
 
 // 12-question ladder (4×A1, 4×A2, 4×B1). A block is "validated" with ≥3
 // correct; the recommended level is the first non-validated block. The
@@ -52,12 +53,14 @@ export default function PlacementQuiz({ locale }: { locale: string }) {
           {t.resultBody.replace('{level}', level.toUpperCase())}
         </p>
         <div className="flex gap-3 justify-center flex-wrap mt-6">
-          <Link
-            href="/learn-german/classes"
-            className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-6 py-3"
-          >
-            <Icon name="play" size={15} /> {t.viewGroups.replace('{level}', level.toUpperCase())}
-          </Link>
+          {CLASSES_ENABLED && (
+            <Link
+              href="/learn-german/classes"
+              className="inline-flex items-center gap-2 rounded-lg bg-green-600 hover:bg-green-700 text-white text-sm font-bold px-6 py-3"
+            >
+              <Icon name="play" size={15} /> {t.viewGroups.replace('{level}', level.toUpperCase())}
+            </Link>
+          )}
           <Link
             href={`/learn-german/${level}`}
             className="inline-flex items-center gap-2 rounded-lg border border-green-600 text-green-700 hover:bg-green-50 text-sm font-semibold px-6 py-3"

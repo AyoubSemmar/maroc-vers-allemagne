@@ -80,8 +80,9 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
       { src: '/icons/maskable-192.png', sizes: '192x192', type: 'image/png', purpose: 'maskable' },
       { src: '/icons/maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
     ],
+    // "My course" (live-classes dashboard) shortcut was removed with the live
+    // classes. Keep the Results shortcut for the free course.
     shortcuts: [
-      { name: sc.course, url: `${base}/my-course?utm_source=pwa_shortcut`, icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
       { name: sc.results, url: `${base}/results?utm_source=pwa_shortcut`, icons: [{ src: '/icons/icon-192.png', sizes: '192x192' }] },
     ],
   }

@@ -18,6 +18,7 @@ import {
 } from '@/lib/documents'
 import { STORAGE_KEY } from '@/components/cv-builder/utils'
 import { useCourseAccess } from '@/lib/useCourseAccess'
+import { CLASSES_ENABLED } from '@/lib/classes-flags'
 import { useShell } from './DashShell'
 
 const DATE_MARKER = '>>DATE>>'
@@ -298,8 +299,9 @@ export default function DashProfile() {
         </div>
       )}
 
-      {/* Live-class students: quick link to their graded course. */}
-      {hasCourseAccess && (
+      {/* Live-class students: quick link to their graded course. Hidden while
+          the live classes are unlisted (CLASSES_ENABLED=false). */}
+      {CLASSES_ENABLED && hasCourseAccess && (
         <Link
           href="/learn-german/my-course"
           style={{

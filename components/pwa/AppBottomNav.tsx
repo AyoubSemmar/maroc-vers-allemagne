@@ -11,9 +11,10 @@ import './pwa.css'
 // set. Hidden on the full-bleed classroom and whenever the course is embedded
 // in an iframe (the live-class panel), which have their own chrome.
 
-const TABS: { href: string; icon: IconName; key: 'navHome' | 'navCourse' | 'navResults' }[] = [
+// The live-course "My course" tab was removed with the live classes. The app
+// bottom-nav now covers the free course: Home (levels) and Results.
+const TABS: { href: string; icon: IconName; key: 'navHome' | 'navResults' }[] = [
   { href: '/learn-german', icon: 'home', key: 'navHome' },
-  { href: '/learn-german/my-course', icon: 'book', key: 'navCourse' },
   { href: '/learn-german/results', icon: 'bar-chart', key: 'navResults' },
 ]
 

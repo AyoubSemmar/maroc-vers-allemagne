@@ -4,6 +4,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import Icon from '@/components/ui/Icon'
 import { useCourseAccess } from '@/lib/useCourseAccess'
+import { CLASSES_ENABLED } from '@/lib/classes-flags'
 
 /**
  * Prominent entry to the personal course dashboard. Renders only once the
@@ -14,6 +15,8 @@ export default function MyCourseEntry() {
   const t = useTranslations('learnGerman.myCourse')
   const { hasAccess } = useCourseAccess()
 
+  // Live classes removed/unlisted — no course dashboard entry.
+  if (!CLASSES_ENABLED) return null
   if (!hasAccess) return null
 
   return (

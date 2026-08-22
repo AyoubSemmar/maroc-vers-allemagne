@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { Link } from '@/i18n/navigation'
 import { classesStrings } from '@/components/classes/strings'
 import { useCourseAccess } from '@/lib/useCourseAccess'
-import { CLASSES_LAUNCHED } from '@/lib/classes-flags'
+import { CLASSES_LAUNCHED, CLASSES_ENABLED } from '@/lib/classes-flags'
 
 // The live classes are Morocco-only. This renders the CTA only after confirming
 // (client-side, via /api/geo) the visitor is in MA — so the Learn German page
@@ -26,6 +26,9 @@ export default function LiveClassesCta({ locale }: { locale: string }) {
       .catch(() => {})
     return () => { alive = false }
   }, [])
+
+  // Live classes are removed/unlisted — hide the hub CTA for everyone.
+  if (!CLASSES_ENABLED) return null
 
   const adminPreview = hasAccess && !CLASSES_LAUNCHED
   const show = hasAccess || (CLASSES_LAUNCHED && geoAllow)
