@@ -19,6 +19,15 @@ for (const loc of routing.locales) {
 // Bare /console-x7k9 (no locale prefix) — defence in depth.
 disallow.push('/console-x7k9/')
 
+// Low-value crawlers we block outright: they hammer the site (each hit is an
+// uncached function invocation = real cost) but send ~no relevant traffic for a
+// Morocco→Germany audience. Amazonbot (Alexa/Amazon), PetalBot (Huawei search),
+// and a few aggressive SEO scrapers. Search bots we KEEP: Googlebot, Bingbot,
+// and OAI-SearchBot/ChatGPT-User (feeds the ChatGPT citations the site gets).
+// NB: deliberately NOT blocking AhrefsBot/SemrushBot — the owner uses those SEO
+// tools to audit this very site, and blocking them would break their own crawls.
+const BLOCKED_BOTS = ['Amazonbot', 'PetalBot', 'DataForSeoBot', 'Bytespider', 'ImagesiftBot', 'Barkrowler', 'MJ12bot']
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
@@ -27,6 +36,9 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow,
       },
+      // These bots respect robots.txt (Amazonbot/PetalBot are verified) — block
+      // the whole site for them to cut wasted crawl cost.
+      { userAgent: BLOCKED_BOTS, disallow: '/' },
     ],
     sitemap: 'https://www.gogermany.ma/sitemap.xml',
     host: 'https://www.gogermany.ma',

@@ -19,6 +19,9 @@ export default function LiveClassesCta({ locale }: { locale: string }) {
   const { hasAccess } = useCourseAccess()
 
   useEffect(() => {
+    // Live classes are removed — don't spend an /api/geo function call per
+    // Learn German page view when the CTA can never show.
+    if (!CLASSES_ENABLED) return
     let alive = true
     fetch('/api/geo')
       .then((r) => r.json())
