@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import { headers } from "next/headers";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -10,6 +9,7 @@ import RihlaFooter from "@/components/RihlaFooter";
 import CookieConsent from "@/components/CookieConsent";
 import AnnouncementBanner from "@/components/AnnouncementBanner";
 import HideOnDashboard from "@/components/HideOnDashboard";
+import NonTrackerHost from "@/components/NonTrackerHost";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/next";
 import { routing, dirFor, type AppLocale } from "@/i18n/routing";
@@ -23,12 +23,6 @@ import { omitNamespaces, HEAVY_NAMESPACES } from "@/lib/i18n-heavy";
 // and review-ready; actual ad units only render once their slot ids are set
 // (see AdSlot). Overridable via env if the account ever changes.
 const ADSENSE_CLIENT = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || "ca-pub-4265650830157827";
-
-// Hosts that should serve ONLY the StudyBuddy tracker — mirrors the
-// allow-list in proxy.ts. Keep these in sync.
-const STUDYBUDDY_HOSTS = new Set<string>([
-  'studybuddy-sprinttracker.vercel.app',
-]);
 
 const geist = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -115,14 +109,13 @@ export default async function LocaleLayout({
   const messages = omitNamespaces(await getMessages(), HEAVY_NAMESPACES);
   const dir = dirFor(typedLocale);
 
-  // Detect the StudyBuddy host server-side. The middleware in proxy.ts
-  // REWRITES traffic from studybuddy-sprinttracker.vercel.app to
-  // /ar/studybuddy internally, but usePathname() in client components
-  // still sees the original URL ('/'), so HideOnDashboard alone can't
-  // tell us we're on the tracker host. Reading the Host header here
-  // and gating the chrome on it is the reliable signal.
-  const hostHeader = (await headers()).get('host') ?? '';
-  const isTrackerHost = STUDYBUDDY_HOSTS.has(hostHeader.toLowerCase().split(':')[0]);
+  // NOTE: this layout is intentionally STATIC (no headers()/cookies()) so the
+  // whole site can be CDN/ISR-cached. The StudyBuddy-tracker exclusion that used
+  // to read the Host header here now lives in <NonTrackerHost> (client-side host
+  // check) — see that component for why. The head scripts below (consent /
+  // AdSense loader / brand JSON-LD) render on every host; that's harmless on the
+  // internal tracker (not indexed, no ad slots) and keeps AdSense verification
+  // working on the real domain.
 
   return (
     <html
@@ -133,12 +126,13 @@ export default async function LocaleLayout({
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        {!isTrackerHost && <script dangerouslySetInnerHTML={{ __html: consentInitScript }} />}
+        <script dangerouslySetInnerHTML={{ __html: consentInitScript }} />
         {/* AdSense loader — emitted as a literal <script> in <head> (React 19
             hoists it) so AdSense's verifier finds the exact snippet. next/script
             only renders a preload + JS injector, which the crawler doesn't
-            recognise. Skipped on the StudyBuddy host. */}
-        {ADSENSE_CLIENT && !isTrackerHost && (
+            recognise. Rendered on every host (harmless on the internal tracker:
+            it's not indexed and has no ad slots). */}
+        {ADSENSE_CLIENT && (
           // eslint-disable-next-line @next/next/no-sync-scripts
           <script
             async
@@ -146,11 +140,11 @@ export default async function LocaleLayout({
             crossOrigin="anonymous"
           />
         )}
-        {/* Site-wide Organization + WebSite schema. Skipped entirely on the
-            StudyBuddy host so the internal tool doesn't carry brand
-            schema for gogermany.ma. The WebSite node's SearchAction makes
-            the site eligible for a Google sitelinks search box. */}
-        {!isTrackerHost && (
+        {/* Site-wide Organization + WebSite schema. The WebSite node's
+            SearchAction makes the site eligible for a Google sitelinks search
+            box. Rendered on every host — harmless on the internal tracker, which
+            is not indexed. */}
+        {(
           <JsonLd
             data={[
               {
@@ -190,29 +184,33 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <NextIntlClientProvider locale={typedLocale} messages={messages}>
-          {!isTrackerHost && (
-            <>
-              <HideOnDashboard><AnnouncementBanner /></HideOnDashboard>
-              <HideOnDashboard><RihlaNav /></HideOnDashboard>
-            </>
-          )}
+          {/* Marketing chrome — rendered on the real site, hidden on the
+              StudyBuddy tracker host (NonTrackerHost) and on dashboard/embedded
+              views (HideOnDashboard). */}
+          <NonTrackerHost>
+            <HideOnDashboard><AnnouncementBanner /></HideOnDashboard>
+            <HideOnDashboard><RihlaNav /></HideOnDashboard>
+          </NonTrackerHost>
           <main className="flex-1">{children}</main>
-          {!isTrackerHost && (
+          <NonTrackerHost>
             <HideOnDashboard><RihlaFooter /></HideOnDashboard>
-          )}
-          {!isTrackerHost && <CookieConsent />}
+          </NonTrackerHost>
+          {/* Tracking — `deferred` so it never fires on the tracker host. */}
+          <NonTrackerHost deferred><CookieConsent /></NonTrackerHost>
           <Analytics />
-          {!isTrackerHost && <AnalyticsBeacon />}
-          {/* Meta Pixel — self-gates on cookie consent; skipped on the tracker
-              host and outside production. */}
-          {process.env.NODE_ENV === "production" && !isTrackerHost && <MetaPixel />}
+          <NonTrackerHost deferred><AnalyticsBeacon /></NonTrackerHost>
+          {/* Meta Pixel — self-gates on cookie consent; off on the tracker host
+              and outside production. */}
+          {process.env.NODE_ENV === "production" && (
+            <NonTrackerHost deferred><MetaPixel /></NonTrackerHost>
+          )}
+          {/* Google Analytics — off on the tracker host (not part of the
+              marketing funnel) and outside production. */}
+          {process.env.NODE_ENV === "production" && (
+            <NonTrackerHost deferred><GoogleAnalytics gaId="G-4E4HLM5JHJ" /></NonTrackerHost>
+          )}
         </NextIntlClientProvider>
       </body>
-      {/* Skip gogermany's Google Analytics on the tracker host — the
-          internal tool isn't part of the marketing funnel. */}
-      {process.env.NODE_ENV === "production" && !isTrackerHost && (
-        <GoogleAnalytics gaId="G-4E4HLM5JHJ" />
-      )}
     </html>
   );
 }
