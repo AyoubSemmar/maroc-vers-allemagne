@@ -11,6 +11,14 @@ import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 export const revalidate = 600
 
+// Enable ISR for this dynamic [name] segment: without a generateStaticParams
+// export it renders fully dynamic (uncached) on every request. Empty array =
+// prebuild none, cache each category page on first visit for `revalidate`s.
+export const dynamicParams = true
+export function generateStaticParams(): { name: string }[] {
+  return []
+}
+
 export async function generateMetadata({
   params,
 }: {

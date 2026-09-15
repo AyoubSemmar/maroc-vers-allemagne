@@ -1,34 +1,32 @@
-import { getTranslations } from 'next-intl/server'
+'use client'
+
+import { useLocale, useTranslations } from 'next-intl'
 import { Link } from '@/i18n/navigation'
 import { dirFor, type AppLocale } from '@/i18n/routing'
-import { headers } from 'next/headers'
 
 // `not-found.tsx` inside [locale] handles both:
 //   - hard 404s (typo URLs that don't match any route)
 //   - calls to notFound() from any server component
 // Wrapped in the locale shell so it inherits translations + RTL.
+//
+// IMPORTANT: this is a CLIENT component on purpose. A server not-found that
+// reads headers()/params opts the ENTIRE [locale] subtree into dynamic
+// rendering (not-found is part of every route's prerendered shell), which
+// killed CDN caching site-wide. useLocale() reads the locale from the
+// NextIntlClientProvider in the layout — no request API, so the shell stays
+// static and every route can be CDN-cached.
 
-export default async function LocaleNotFound() {
-  // headers() is async in Next 16 — used to detect locale from the URL
-  // since notFound doesn't receive params.
-  const h = await headers()
-  const path = h.get('x-pathname') || h.get('referer') || ''
-  const seg = path.split('/').filter(Boolean)[0]
-  const locale: AppLocale =
-    seg === 'fr' || seg === 'en' || seg === 'de' || seg === 'ar' ? seg : 'ar'
+export default function LocaleNotFound() {
+  const locale = useLocale() as AppLocale
+  const t = useTranslations('notFound')
+  // The notFound namespace may be empty in some locales — fall back to inline
+  // copy (the 4 launch locales) or English for the rest.
+  const tr = (k: string, fb: string) => (t.has(k) ? t(k) : fb)
 
-  let t: (k: string) => string
-  try {
-    const tr = await getTranslations({ locale, namespace: 'notFound' })
-    t = (k) => { try { return tr(k as any) } catch { return '' } }
-  } catch {
-    t = () => ''
-  }
-
-  const title       = t('title')       || (locale === 'fr' ? 'Page introuvable' : locale === 'ar' ? 'الصفحة غير موجودة' : locale === 'de' ? 'Seite nicht gefunden' : 'Page not found')
-  const subtitle    = t('subtitle')    || (locale === 'fr' ? "Cette page n'existe pas ou a été déplacée." : locale === 'ar' ? 'هذه الصفحة غير موجودة أو تم نقلها.' : locale === 'de' ? 'Diese Seite existiert nicht oder wurde verschoben.' : "This page doesn't exist or has been moved.")
-  const homeCta     = t('home')        || (locale === 'fr' ? "Retour à l'accueil" : locale === 'ar' ? 'العودة إلى الرئيسية' : locale === 'de' ? 'Zur Startseite' : 'Back to home')
-  const browseCta   = t('browse')      || (locale === 'fr' ? 'Parcourir le site' : locale === 'ar' ? 'تصفح الموقع' : locale === 'de' ? 'Site durchstöbern' : 'Browse the site')
+  const title    = tr('title',    locale === 'fr' ? 'Page introuvable' : locale === 'ar' ? 'الصفحة غير موجودة' : locale === 'de' ? 'Seite nicht gefunden' : 'Page not found')
+  const subtitle = tr('subtitle', locale === 'fr' ? "Cette page n'existe pas ou a été déplacée." : locale === 'ar' ? 'هذه الصفحة غير موجودة أو تم نقلها.' : locale === 'de' ? 'Diese Seite existiert nicht oder wurde verschoben.' : "This page doesn't exist or has been moved.")
+  const homeCta  = tr('home',     locale === 'fr' ? "Retour à l'accueil" : locale === 'ar' ? 'العودة إلى الرئيسية' : locale === 'de' ? 'Zur Startseite' : 'Back to home')
+  const browseCta= tr('browse',   locale === 'fr' ? 'Parcourir le site' : locale === 'ar' ? 'تصفح الموقع' : locale === 'de' ? 'Site durchstöbern' : 'Browse the site')
 
   return (
     <div

@@ -9,6 +9,15 @@ import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
 type Props = { params: Promise<{ locale: AppLocale; slug: string }> }
 
+// 1-hour ISR + on-demand generation. Without revalidate + generateStaticParams
+// this dynamic [slug] segment renders fully dynamic (uncached) on every hit;
+// these are stable SEO pages, so cache each on first visit.
+export const revalidate = 3600
+export const dynamicParams = true
+export function generateStaticParams(): { slug: string }[] {
+  return []
+}
+
 const TYPE_LABEL_KEYS: Record<string, string> = {
   university: 'typeUniversity',
   applied_sciences: 'typeAppliedSciences',

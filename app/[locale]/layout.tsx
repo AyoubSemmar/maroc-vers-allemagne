@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { getMessages, getTranslations } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import "../globals.css";
 import RihlaNav from "@/components/RihlaNav";
 import RihlaFooter from "@/components/RihlaFooter";
@@ -103,10 +103,21 @@ export default async function LocaleLayout({
     notFound();
   }
   const typedLocale = locale as AppLocale;
+  // Opt this locale into STATIC rendering. Without this, next-intl's
+  // getMessages()/getTranslations() below read the request locale via
+  // headers(), which forces the whole subtree (i.e. the entire site) into
+  // dynamic rendering — 0% CDN cache. setRequestLocale seeds the locale from
+  // the [locale] route param (see generateStaticParams) so those calls stay
+  // static. Must run before any next-intl server API call in this layout.
+  setRequestLocale(typedLocale);
   // Big page-specific namespaces are stripped from the global client bundle
   // and re-provided on their own route (see lib/i18n-heavy). This keeps every
   // page from shipping ~300 KB of JSON it never uses.
-  const messages = omitNamespaces(await getMessages(), HEAVY_NAMESPACES);
+  // Pass the locale EXPLICITLY. Bare getMessages() resolves the locale via
+  // getRequestLocale() → headers(), which opts the whole tree into dynamic
+  // rendering (0% CDN cache). getMessages({locale}) feeds the locale straight
+  // to getConfig, so no request header is read and the layout prerenders.
+  const messages = omitNamespaces(await getMessages({ locale: typedLocale }), HEAVY_NAMESPACES);
   const dir = dirFor(typedLocale);
 
   // NOTE: this layout is intentionally STATIC (no headers()/cookies()) so the

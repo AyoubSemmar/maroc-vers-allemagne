@@ -21,6 +21,18 @@ import ShareButtons from '@/components/ShareButtons'
 // Supabase egress on the most-deep-linked routes.
 export const revalidate = 3600
 
+// A dynamic [id] segment with NO generateStaticParams renders fully dynamic
+// (Cache-Control: no-store) on EVERY request — that was the bulk of the
+// site's edge-request cost, since articles are the most-visited pages.
+// Exporting generateStaticParams (even empty) with dynamicParams=true turns
+// the route into ISR: each article is server-rendered once on first visit,
+// then CDN-cached for `revalidate` seconds. We prebuild none at build time to
+// keep builds fast — all ~5,700 article×locale pages cache lazily on demand.
+export const dynamicParams = true
+export function generateStaticParams(): { id: string }[] {
+  return []
+}
+
 const SITE_URL = 'https://www.gogermany.ma'
 
 /** Per-article metadata pulls the localised title/summary/image straight
