@@ -150,7 +150,7 @@ const SPRINT_META: Record<string, Omit<Sprint, 'num' | 'tasks'>> = {
     dod: 'Komplette Lernsession Frage → Antwort → Bewertung → Rückfrage → Abschluss · Fortschritt gespeichert',
   },
   '05': {
-    month: 'September 2026',
+    month: 'September 2026 · Rest bis 31.10.',
     title: 'Nutzerkonten & Personalisierung',
     subtitle: 'Persönliche Plattform mit Lernverlauf & Mobile',
     dod: 'Registrierung & Login funktionieren · Lernverlauf bleibt nach Logout erhalten · UI vollständig Mobile-tauglich',
@@ -169,23 +169,79 @@ const SPRINT_META: Record<string, Omit<Sprint, 'num' | 'tasks'>> = {
   },
   '08': {
     month: 'Dezember 2026',
-    title: 'Finalisierung & Dokumentation',
-    subtitle: 'Feinschliff, Benutzerhandbuch, Abschluss-Präsentation',
-    dod: 'README & Doku vollständig · Benutzerhandbuch als PDF · Präsentationsfolien fertig',
-  },
-  '09': {
-    month: 'Januar 2027',
-    title: 'Deployment & Abschlusspräsentation',
-    subtitle: 'Go-Live, Abgabe & Live-Demo',
-    dod: 'Produktiv-URL live · Repo eingefroren · Präsentation gehalten · Note steht',
+    title: 'Finalisierung, Abgabe & Abschlusspräsentation',
+    subtitle: 'Doku, Feinschliff, Abgabe beim Dozenten & Live-Demo',
+    dod: 'README & Doku vollständig · Benutzerhandbuch als PDF · Produktiv-URL geprüft · Abgabe beim Dozenten · Präsentation gehalten',
   },
 }
+
+// Restructure of 10.10.2026: the project ends in December instead of
+// January, so there are 8 sprints instead of 9. Sprint 9 is dissolved —
+// its essential tasks move into Sprint 8, the rest (standby slots, a
+// second kickoff, per-person lessons-learned, duplicates of Sprint 8)
+// are dropped. Sprint 8 in turn loses the tasks the moved ones replace.
+//
+// Moved tasks keep their original id so statuses already stored in
+// Supabase stay attached. They get fresh taskNums (38+) because
+// prereqs are resolved by taskNum within a sprint, and their prereqs
+// are rewired to the matching Sprint 8 tasks.
+const DROPPED_TASK_IDS = new Set<string>([
+  's8-11', // Probedurchlauf 1 — two rehearsals (s8-16, s8-31) remain
+  's8-26', // Sprint-8-Review + Demo-Skript — replaced by the final presentation
+  's8-28', // Letzte visuelle QA mit Sara — duplicate of s8-23 / s8-34
+  's8-33', // Sprint-8-Review + Retro — replaced by the project retro
+  's8-35', // Production-Hardening-Check — already done in s7-24
+])
+
+const MOVED_INTO_SPRINT_8: Record<string, { taskNum: string; welle: number; prereqs: string[] }> = {
+  's9-03': { taskNum: '38', welle: 2, prereqs: [] },           // KI-Connect-Key-Limit
+  's9-10': { taskNum: '39', welle: 6, prereqs: [] },           // Finaler DSGVO-Sign-off
+  's9-05': { taskNum: '40', welle: 7, prereqs: ['24'] },       // Regression gegen Production, nach Code-Freeze
+  's9-07': { taskNum: '41', welle: 7, prereqs: ['24'] },       // Smoke-Test der AI-Flows
+  's9-15': { taskNum: '42', welle: 7, prereqs: ['23'] },       // Cross-Browser-Check, nach UI-Freeze
+  's9-18': { taskNum: '43', welle: 7, prereqs: ['27'] },       // Vollständigkeit gegen Anforderungen
+  's9-13': { taskNum: '44', welle: 8, prereqs: ['29', '32'] }, // Abgabe an Dozent
+  's9-24': { taskNum: '45', welle: 8, prereqs: ['31'] },       // Finale Präsentation
+  's9-29': { taskNum: '46', welle: 8, prereqs: ['45'] },       // Projekt-Retrospektive
+  's9-34': { taskNum: '47', welle: 8, prereqs: ['24'] },       // Archivierung auf GitLab
+}
+
+// Prereqs inside Sprint 8 that pointed at a dropped task.
+const PREREQ_REWIRES: Record<string, string[]> = {
+  's8-16': ['06'], // was "11" (Probedurchlauf 1, dropped)
+}
+
+const TEXT_FIXES: Array<[RegExp, string]> = [
+  [/9 Monate/g, 'Projektlaufzeit (Mai–Dezember 2026)'],
+  [/\(9 Sprints\)/g, '(8 Sprints)'],
+]
+
+function fixText(text: string): string {
+  return TEXT_FIXES.reduce((acc, [re, to]) => acc.replace(re, to), text)
+}
+
+function restructure(t: Task): Task | null {
+  if (DROPPED_TASK_IDS.has(t.id)) return null
+  const moved = MOVED_INTO_SPRINT_8[t.id]
+  if (t.sprintNum === '09' && !moved) return null
+  const base: Task = {
+    ...t,
+    title: fixText(t.title),
+    prompt: fixText(t.prompt),
+    prereqs: PREREQ_REWIRES[t.id] ?? t.prereqs,
+  }
+  return moved ? { ...base, sprintNum: '08', ...moved } : base
+}
+
+const TASKS: Task[] = (RAW as unknown as Task[])
+  .map(restructure)
+  .filter((t): t is Task => t !== null)
 
 // Build the public SPRINTS array from the parsed PDF data + the
 // per-sprint metadata above. Tasks are pre-sorted by Welle then by
 // taskNum so we render them in dependency order out of the box.
 export const SPRINTS: Sprint[] = Object.entries(SPRINT_META).map(([num, meta]) => {
-  const tasks = (RAW as unknown as Task[])
+  const tasks = TASKS
     .filter(t => t.sprintNum === num)
     .slice()
     .sort((a, b) => a.welle - b.welle || a.taskNum.localeCompare(b.taskNum))
