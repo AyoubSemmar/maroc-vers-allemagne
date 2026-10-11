@@ -158,8 +158,8 @@ const SPRINT_META: Record<string, Omit<Sprint, 'num' | 'tasks'>> = {
   '06': {
     month: 'Oktober 2026',
     title: 'UI/UX & Erweiterte Features',
-    subtitle: 'Redesign, Dark Mode, Quiz-Modus & erstes User-Testing',
-    dod: 'Designsystem dokumentiert · Dark Mode toggelbar · Quiz-Modus nutzbar · Testbericht aus User-Testing liegt vor',
+    subtitle: 'Redesign, Dark Mode, Deutsch/Englisch, Quiz-Modus & erstes User-Testing',
+    dod: 'Designsystem dokumentiert · Dark Mode toggelbar · App auf Deutsch und Englisch nutzbar · Quiz-Modus nutzbar · Testbericht aus User-Testing liegt vor',
   },
   '07': {
     month: 'November 2026',
@@ -220,14 +220,88 @@ function fixText(text: string): string {
   return TEXT_FIXES.reduce((acc, [re, to]) => acc.replace(re, to), text)
 }
 
+// Added 11.10.2026: German/English. The language choice has existed in the
+// settings page since Sprint 5 (stored in profiles.settings.language) but did
+// nothing — these tasks make it real. Not in the PDF, so defined here.
+const TAIL = '\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.'
+
+const ADDED_TASKS: Task[] = [
+  {
+    id: 's6-38', sprintNum: '06', taskNum: '38', welle: 1, who: 'Leon', role: 'PM',
+    blocker: true, priorityInfo: 'Blockiert die Sprach-Aufgaben #39–#43',
+    title: 'Mehrsprachigkeit: Umfang festlegen (Deutsch/Englisch)',
+    prereqs: [],
+    bullets: ['Sprach-Auswahl aus Sprint 5 (Einstellungen)', 'Meinung des Teams'],
+    erfolg: 'Umfang entschieden und in backlog/sprint-6.md dokumentiert.',
+    prompt: 'Ich bin Leon im StudyBuddy-Team. Heute lege ich fest, was „Englisch“ in StudyBuddy bedeutet.\nBitte führe mich Schritt für Schritt durch:\n1. Nur die Oberfläche übersetzen oder auch die KI-Ausgaben (Fragen, Feedback, Empfehlungen)?\n2. Ein deutsches Skript, Sprache Englisch gewählt: In welcher Sprache kommen die Fragen?\n3. Gäste ohne Konto: Browsersprache oder immer Deutsch?\n4. Entscheidung in backlog/sprint-6.md festhalten.\n5. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's6-39', sprintNum: '06', taskNum: '39', welle: 2, who: 'Ayoub', role: 'FE',
+    blocker: true, priorityInfo: 'Blockiert #40, #41',
+    title: 'i18n-Grundgerüst: UI-Texte in Sprachdateien auslagern',
+    prereqs: ['38'],
+    bullets: ['Entscheidung #38', 'siteConfig + bestehende Komponenten'],
+    erfolg: 'Alle UI-Texte kommen aus src/i18n/de.ts; die Sprache ist umschaltbar.',
+    prompt: 'Ich bin Ayoub im StudyBuddy-Team. Heute baue ich das Grundgerüst für Deutsch/Englisch.\nBitte führe mich Schritt für Schritt durch:\n1. Entscheidung: kleine eigene Lösung (Wörterbuch + Hook useT, typisierte Schlüssel, damit eine fehlende Übersetzung ein TypeScript-Fehler ist) oder next-intl (neue Abhängigkeit — laut CLAUDE.md vorher im Team besprechen).\n2. src/i18n/de.ts als Quelle aller Texte, en.ts mit denselben Schlüsseln.\n3. Zuerst Layout, Header, Footer und die Anmelde-Formulare umstellen.\n4. Git-Befehle für feature/i18n-grundgeruest.' + TAIL,
+  },
+  {
+    id: 's6-40', sprintNum: '06', taskNum: '40', welle: 3, who: 'Sara', role: 'FE',
+    blocker: false, priorityInfo: 'Nein — parallel zu #41',
+    title: 'Englische Übersetzung aller UI-Texte',
+    prereqs: ['39'],
+    bullets: ['src/i18n/de.ts aus #39'],
+    erfolg: 'en.ts vollständig und von einer zweiten Person gegengelesen.',
+    prompt: 'Ich bin Sara im StudyBuddy-Team. Heute übersetze ich alle Texte der Oberfläche ins Englische.\nBitte führe mich Schritt für Schritt durch:\n1. Alle Schlüssel aus src/i18n/de.ts in en.ts übertragen.\n2. Einheitliche Begriffe festlegen (z. B. Thema = topic, Skript = lecture notes).\n3. Restliche Komponenten auf useT umstellen.\n4. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's6-41', sprintNum: '06', taskNum: '41', welle: 3, who: 'Abder', role: 'BE',
+    blocker: false, priorityInfo: 'Nein — parallel zu #40',
+    title: 'Sprachwahl serverseitig anwenden (Konten und Gäste)',
+    prereqs: ['39'],
+    bullets: ['profiles.settings.language (seit Sprint 5)', 'Middleware / Server-Components'],
+    erfolg: 'Die gewählte Sprache gilt auf allen Seiten — nach dem Neuladen und auch für Gäste.',
+    prompt: 'Ich bin Abderrahmane im StudyBuddy-Team. Heute sorge ich dafür, dass die gewählte Sprache überall greift.\nBitte führe mich Schritt für Schritt durch:\n1. Sprache für Konten aus profiles.settings.language lesen (wird seit Sprint 5 gespeichert, keine Migration nötig).\n2. Für Gäste: Cookie oder Browsersprache, je nach Entscheidung #38.\n3. Server-Components und Fehlermeldungen der API in der gewählten Sprache.\n4. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's6-42', sprintNum: '06', taskNum: '42', welle: 4, who: 'Taycir', role: 'KI',
+    blocker: false, priorityInfo: 'Nein',
+    title: 'KI-Ausgaben in der gewählten Sprache',
+    prereqs: ['38'],
+    bullets: ['Prompts aus Sprint 3–5', 'Eval-Set'],
+    erfolg: 'Fragen, Feedback, Rückfragen und Empfehlungen erscheinen in der gewählten Sprache.',
+    prompt: 'Ich bin Taycir im StudyBuddy-Team. Heute bringe ich den KI-Ausgaben Englisch bei.\nBitte führe mich Schritt für Schritt durch:\n1. Sprach-Parameter für generate-questions, analyze-answer, followup-question und recommend-topic; Deutsch bleibt der Standard.\n2. Prompt-Versionen erhöhen (z. B. generate-questions@2), damit alte und neue Fragen unterscheidbar bleiben.\n3. Kleiner Eval-Durchlauf mit einem deutschen Skript und Sprache Englisch.\n4. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's6-43', sprintNum: '06', taskNum: '43', welle: 5, who: 'Sara', role: 'QA',
+    blocker: false, priorityInfo: 'Nein',
+    title: 'Tests für beide Sprachen',
+    prereqs: ['40', '41'],
+    bullets: ['de.ts + en.ts', 'Playwright aus Sprint 5'],
+    erfolg: 'Eine fehlende Übersetzung lässt einen Test scheitern; der E2E-Test zum Sprachwechsel ist grün.',
+    prompt: 'Ich bin Sara im StudyBuddy-Team. Heute sichere ich die Übersetzung mit Tests ab.\nBitte führe mich Schritt für Schritt durch:\n1. Unit-Test: de.ts und en.ts haben genau dieselben Schlüssel.\n2. Snapshot-Tests für wichtige Komponenten auf Englisch.\n3. Playwright: Sprache in den Einstellungen umstellen, neu laden — die Seite ist auf Englisch.\n4. Git-Befehle.' + TAIL,
+  },
+]
+
+// s6-18 predates Sprint 5: the theme is already stored in profiles.settings,
+// so the original "add a profiles.theme column" step would duplicate it.
+const PROMPT_OVERRIDES: Record<string, Pick<Task, 'title' | 'erfolg' | 'prompt'>> = {
+  's6-18': {
+    title: 'Gespeicherte Theme-Wahl anwenden',
+    erfolg: 'Die in den Einstellungen gewählte Darstellung gilt sofort und bleibt nach Logout erhalten.',
+    prompt: 'Ich bin Sara im StudyBuddy-Team. Heute sorge ich dafür, dass die gespeicherte Theme-Wahl wirkt.\nBitte führe mich Schritt für Schritt durch:\n1. Die Wahl liegt seit Sprint 5 in profiles.settings.theme — keine Migration nötig.\n2. Beim Laden der Seite das Theme setzen (ohne kurzes Aufblitzen des hellen Designs).\n3. Für Gäste: Wahl lokal merken.\n4. Git-Befehle.' + TAIL,
+  },
+}
+
 function restructure(t: Task): Task | null {
   if (DROPPED_TASK_IDS.has(t.id)) return null
   const moved = MOVED_INTO_SPRINT_8[t.id]
   if (t.sprintNum === '09' && !moved) return null
+  const override = PROMPT_OVERRIDES[t.id]
   const base: Task = {
     ...t,
-    title: fixText(t.title),
-    prompt: fixText(t.prompt),
+    title: override?.title ?? fixText(t.title),
+    erfolg: override?.erfolg ?? t.erfolg,
+    prompt: override?.prompt ?? fixText(t.prompt),
     prereqs: PREREQ_REWIRES[t.id] ?? t.prereqs,
   }
   return moved ? { ...base, sprintNum: '08', ...moved } : base
@@ -236,6 +310,7 @@ function restructure(t: Task): Task | null {
 const TASKS: Task[] = (RAW as unknown as Task[])
   .map(restructure)
   .filter((t): t is Task => t !== null)
+  .concat(ADDED_TASKS)
 
 // Build the public SPRINTS array from the parsed PDF data + the
 // per-sprint metadata above. Tasks are pre-sorted by Welle then by
