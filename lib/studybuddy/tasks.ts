@@ -155,7 +155,7 @@ const SPRINT_META: Record<string, Omit<Sprint, 'num' | 'tasks'>> = {
     month: 'September – Oktober 2026',
     title: 'Nutzerkonten & Personalisierung',
     subtitle: 'Persönliche Plattform mit Lernverlauf & Mobile',
-    dod: 'Registrierung & Login funktionieren · Lernverlauf bleibt nach Logout erhalten · UI vollständig Mobile-tauglich',
+    dod: 'Registrierung & Login funktionieren · Lernverlauf bleibt nach Logout erhalten · UI vollständig Mobile-tauglich · Jede Lernsitzung stellt andere Fragen',
   },
   '06': {
     month: 'November 2026',
@@ -229,6 +229,35 @@ function fixText(text: string): string {
 const TAIL = '\nWo Code/SQL/Doku entsteht: gib mir alles als Code-Block, ich kopiere selbst. Erkläre auf Deutsch.'
 
 const ADDED_TASKS: Task[] = [
+  // Added 13.10.2026: varied learning dialogue. Testing showed that the same
+  // document always produced the same questions in the same order.
+  {
+    id: 's5-38', sprintNum: '05', taskNum: '38', welle: 6, who: 'Abder', role: 'BE',
+    blocker: false, priorityInfo: 'Nein — baut auf der Lernhistorie (#21) auf',
+    title: 'Lerndialog: Fragen pro Sitzung wechseln',
+    prereqs: ['21'],
+    bullets: ['Lernhistorie über Sessions (#21)', 'sessions.state'],
+    erfolg: 'Zwei Sitzungen zum selben Thema stellen unterschiedliche Fragen.',
+    prompt: 'Ich bin Abderrahmane im StudyBuddy-Team. Heute sorge ich dafür, dass jede Lernsitzung andere Fragen stellt.\nBitte führe mich Schritt für Schritt durch:\n1. Pro Sitzung 5 Fragen auswählen: zuerst noch nie gestellte, darunter Fragen zu früher verpassten Konzepten, sonst zufällig.\n2. Auswahl und verpasste Konzepte in sessions.state speichern (keine Migration nötig).\n3. Sind fast alle Fragen gestellt: automatisch einen neuen Fragensatz erzeugen.\n4. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's5-39', sprintNum: '05', taskNum: '39', welle: 6, who: 'Taycir', role: 'KI',
+    blocker: false, priorityInfo: 'Nein — parallel zu #38',
+    title: 'Lerndialog: natürlichere Rückfragen',
+    prereqs: [],
+    bullets: ['Prompts analyze-answer + followup-question', 'Prompt-Idee aus dem Team'],
+    erfolg: 'Rückfragen variieren im Ansatz; das Urteil richtig/teilweise/falsch bleibt erhalten.',
+    prompt: 'Ich bin Taycir im StudyBuddy-Team. Heute mache ich die Rückfragen im Lerndialog natürlicher.\nBitte führe mich Schritt für Schritt durch:\n1. Vorgehen per Code wählen: teilweise richtig -> tiefer nachfragen, falsch -> anderer Zugang, zweite Rückfrage -> konkretes Beispiel.\n2. Feedback beginnt mit dem, was gut war; kein „Falsch!“ oder „Richtig!“.\n3. Prompt-Versionen erhöhen (followup-question@2, analyze-answer@2).\n4. Git-Befehle.' + TAIL,
+  },
+  {
+    id: 's5-40', sprintNum: '05', taskNum: '40', welle: 7, who: 'Sara', role: 'QA',
+    blocker: false, priorityInfo: 'Nein',
+    title: 'Tests: wechselnde Fragen und Rückfragen',
+    prereqs: ['38', '39'],
+    bullets: ['#38 und #39'],
+    erfolg: 'Tests belegen: keine Wiederholung, solange ungestellte Fragen übrig sind; Rückfragen-Vorgehen stimmt.',
+    prompt: 'Ich bin Sara im StudyBuddy-Team. Heute teste ich den abwechslungsreichen Lerndialog.\nBitte führe mich Schritt für Schritt durch:\n1. Unit-Tests: keine Wiederholung, solange ungestellte Fragen übrig sind; verpasste Konzepte zuerst.\n2. Live: zweimal dieselbe Sitzung starten und die Fragen vergleichen.\n3. Testbericht ergänzen.\n4. Git-Befehle.' + TAIL,
+  },
   {
     id: 's6-38', sprintNum: '06', taskNum: '38', welle: 1, who: 'Leon', role: 'PM',
     blocker: true, priorityInfo: 'Blockiert die Sprach-Aufgaben #39–#43',
