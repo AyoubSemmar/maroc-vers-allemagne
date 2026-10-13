@@ -50,6 +50,8 @@ export type Task = {
 
 export type Sprint = {
   num: string
+  /** Tab label override; defaults to "Sprint {num}". */
+  label?: string
   month: string
   title: string
   subtitle: string
@@ -150,28 +152,29 @@ const SPRINT_META: Record<string, Omit<Sprint, 'num' | 'tasks'>> = {
     dod: 'Komplette Lernsession Frage → Antwort → Bewertung → Rückfrage → Abschluss · Fortschritt gespeichert',
   },
   '05': {
-    month: 'September 2026 · Rest bis 31.10.',
+    month: 'September – Oktober 2026',
     title: 'Nutzerkonten & Personalisierung',
     subtitle: 'Persönliche Plattform mit Lernverlauf & Mobile',
     dod: 'Registrierung & Login funktionieren · Lernverlauf bleibt nach Logout erhalten · UI vollständig Mobile-tauglich',
   },
   '06': {
-    month: 'Oktober 2026',
-    title: 'UI/UX & Erweiterte Features',
-    subtitle: 'Redesign, Dark Mode, Deutsch/Englisch, Quiz-Modus & erstes User-Testing',
-    dod: 'Designsystem dokumentiert · Dark Mode toggelbar · App auf Deutsch und Englisch nutzbar · Quiz-Modus nutzbar · Testbericht aus User-Testing liegt vor',
+    month: 'November 2026',
+    title: 'Funktionen, Design & Sicherheit',
+    subtitle: 'Dark Mode, Deutsch/Englisch, Quiz, Statistik, User-Testing und die wichtigsten Sicherheitsthemen',
+    dod: 'Dark Mode und Deutsch/Englisch nutzbar · Quiz-Modus und Statistik nutzbar · User-Testing-Bericht liegt vor · Prompt-Injection-Schutz, Rate-Limiting und Verschlüsselung der Dateien aktiv',
   },
   '07': {
-    month: 'November 2026',
-    title: 'Qualitätssicherung & Sicherheit',
-    subtitle: 'Tests, Performance, Security & DSGVO-Konformität',
-    dod: 'Testabdeckung > 60 % · 0 kritische Bugs · DSGVO-Checkliste vollständig · Lighthouse > 90',
-  },
-  '08': {
     month: 'Dezember 2026',
-    title: 'Finalisierung, Abgabe & Abschlusspräsentation',
-    subtitle: 'Doku, Feinschliff, Abgabe beim Dozenten & Live-Demo',
-    dod: 'README & Doku vollständig · Benutzerhandbuch als PDF · Produktiv-URL geprüft · Abgabe beim Dozenten · Präsentation gehalten',
+    title: 'Qualität, Abschluss & Abgabe',
+    subtitle: 'Testabdeckung, Lighthouse, Dokumentation, Code-Freeze, Abgabe und Abschlusspräsentation',
+    dod: 'Testabdeckung > 60 % · 0 kritische Bugs · Lighthouse > 90 · Benutzerhandbuch und Doku fertig · Abgabe beim Dozenten · Präsentation gehalten',
+  },
+  'Opt': {
+    label: 'Optional',
+    month: 'nur bei freier Zeit',
+    title: 'Optional — nur wenn Zeit bleibt',
+    subtitle: 'Aus den alten Sprints 6–8 zurückgestellt, als das Projekt auf 7 Sprints verkürzt wurde',
+    dod: 'Keine Pflicht. Aufgaben von hier in Sprint 6 oder 7 übernehmen, wenn dort Luft ist.',
   },
 }
 
@@ -213,7 +216,7 @@ const PREREQ_REWIRES: Record<string, string[]> = {
 
 const TEXT_FIXES: Array<[RegExp, string]> = [
   [/9 Monate/g, 'Projektlaufzeit (Mai–Dezember 2026)'],
-  [/\(9 Sprints\)/g, '(8 Sprints)'],
+  [/\(9 Sprints\)/g, '(7 Sprints)'],
 ]
 
 function fixText(text: string): string {
@@ -312,11 +315,109 @@ const TASKS: Task[] = (RAW as unknown as Task[])
   .filter((t): t is Task => t !== null)
   .concat(ADDED_TASKS)
 
+// Replan of 13.10.2026: Sprint 5 runs until 31.10., then only two sprints are
+// left — Sprint 6 = November, Sprint 7 = December. The work of the former
+// Sprints 6, 7 and 8 (incl. what Sprint 8 took over from 9) is split across
+// them; everything else moves to an "Optional" tab instead of being deleted.
+//
+// Each slot is [task id, Welle]. Ids are kept, so statuses stored in Supabase
+// stay attached. taskNums are renumbered per sprint and prereqs re-resolved,
+// because prereqs refer to taskNums inside one sprint.
+type Slot = [id: string, welle: number]
+
+const PLAN_SPRINT_6: Slot[] = [
+  ['s6-01', 1], ['s6-02', 1], ['s6-03', 1], ['s6-38', 1], ['s7-02', 1],
+  ['s6-04', 2], ['s6-05', 2], ['s6-06', 2], ['s6-07', 2], ['s6-39', 2], ['s7-03', 2], ['s7-04', 2],
+  ['s6-08', 3], ['s6-09', 3], ['s6-10', 3], ['s6-11', 3], ['s6-40', 3], ['s6-41', 3], ['s7-10', 3],
+  ['s6-12', 4], ['s6-13', 4], ['s6-14', 4], ['s6-15', 4], ['s6-42', 4], ['s7-15', 4],
+  ['s6-17', 5], ['s6-18', 5], ['s6-20', 5], ['s6-22', 5], ['s6-37', 5], ['s6-43', 5],
+  ['s6-24', 6], ['s6-25', 6], ['s6-31', 6],
+  ['s6-28', 7], ['s6-29', 7], ['s6-36', 7],
+  ['s6-33', 8], ['s6-34', 8],
+]
+
+const PLAN_SPRINT_7: Slot[] = [
+  ['s8-01', 1], ['s7-06', 1], ['s7-05', 1], ['s8-03', 1], ['s8-05', 1],
+  ['s7-08', 2], ['s7-18', 2], ['s7-16', 2], ['s7-19', 2], ['s8-06', 2], ['s9-03', 2],
+  ['s8-02', 3], ['s8-04', 3], ['s7-12', 3], ['s7-17', 3], ['s8-09', 3], ['s8-20', 3],
+  ['s7-22', 4], ['s7-23', 4], ['s7-25', 4], ['s8-07', 4], ['s7-30', 4],
+  ['s8-18', 5], ['s8-21', 5], ['s7-28', 5], ['s8-25', 5], ['s7-37', 5],
+  ['s8-23', 6], ['s8-24', 6], ['s9-10', 6], ['s8-22', 6],
+  ['s8-27', 7], ['s8-29', 7], ['s8-31', 7], ['s9-05', 7], ['s9-07', 7], ['s9-15', 7], ['s9-18', 7],
+  ['s9-13', 8], ['s9-24', 8], ['s9-29', 8], ['s9-34', 8],
+]
+
+const REPLANNED_SPRINTS = new Set(['06', '07', '08'])
+
+// Titles that name a sprint number that no longer fits.
+const REPLAN_TITLES: Record<string, string> = {
+  's6-25': 'Backlog für Sprint 7 (Qualität + Abschluss)',
+  's7-19': 'Bugfixes aus dem QA-Backlog',
+  's8-01': 'Sprint-7-Kickoff + Doku-Plan',
+}
+
+function pad(n: number): string {
+  return String(n).padStart(2, '0')
+}
+
+function replan(tasks: Task[]): Task[] {
+  const byId = new Map(tasks.map(t => [t.id, t]))
+  // Prereqs as ids, resolved inside the sprint the task currently sits in.
+  const prereqIds = new Map(tasks.map(t => [
+    t.id,
+    t.prereqs
+      .map(n => tasks.find(x => x.sprintNum === t.sprintNum && x.taskNum === n)?.id)
+      .filter((id): id is string => Boolean(id)),
+  ]))
+
+  const out = tasks.filter(t => !REPLANNED_SPRINTS.has(t.sprintNum))
+  const planned = new Set<string>()
+
+  const place = (plan: Slot[], sprintNum: string) => {
+    const slots = plan
+      .map(([id, welle], order) => {
+        const t = byId.get(id)
+        if (!t) throw new Error(`Replan: unknown task ${id}`)
+        return { t, welle, order }
+      })
+      .sort((a, b) => a.welle - b.welle || a.order - b.order)
+    const numOf = new Map(slots.map((x, i) => [x.t.id, pad(i + 1)]))
+    for (const { t, welle } of slots) {
+      planned.add(t.id)
+      out.push({
+        ...t,
+        sprintNum,
+        welle,
+        taskNum: numOf.get(t.id)!,
+        title: REPLAN_TITLES[t.id] ?? t.title,
+        prereqs: prereqIds.get(t.id)!.filter(id => numOf.has(id)).map(id => numOf.get(id)!),
+      })
+    }
+  }
+  place(PLAN_SPRINT_6, '06')
+  place(PLAN_SPRINT_7, '07')
+
+  tasks
+    .filter(t => REPLANNED_SPRINTS.has(t.sprintNum) && !planned.has(t.id))
+    .forEach((t, i) => out.push({
+      ...t,
+      sprintNum: 'Opt',
+      welle: 1,
+      taskNum: pad(i + 1),
+      prereqs: [],
+      blocker: false,
+      priorityInfo: `Optional — ursprünglich ${t.id} (Sprint ${Number(t.id.slice(1, t.id.indexOf('-')))})`,
+    }))
+  return out
+}
+
+const PLANNED_TASKS: Task[] = replan(TASKS)
+
 // Build the public SPRINTS array from the parsed PDF data + the
 // per-sprint metadata above. Tasks are pre-sorted by Welle then by
 // taskNum so we render them in dependency order out of the box.
 export const SPRINTS: Sprint[] = Object.entries(SPRINT_META).map(([num, meta]) => {
-  const tasks = TASKS
+  const tasks = PLANNED_TASKS
     .filter(t => t.sprintNum === num)
     .slice()
     .sort((a, b) => a.welle - b.welle || a.taskNum.localeCompare(b.taskNum))

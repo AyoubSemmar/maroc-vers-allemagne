@@ -249,7 +249,7 @@ export default function StudybuddyTracker() {
               className={`sb-sprint-tab ${i === sprintIndex ? 'is-active' : ''}`}
               onClick={() => selectSprintIndex(i)}
             >
-              <span className="sb-sprint-num">Sprint {s.num}</span>
+              <span className="sb-sprint-num">{s.label ?? `Sprint ${s.num}`}</span>
               <span className="sb-sprint-month">{s.month}</span>
             </button>
           ))}
@@ -291,7 +291,7 @@ export default function StudybuddyTracker() {
       <section className="sb-sprint-head">
         <div className="sb-sprint-head-inner">
           <div className="sb-sprint-meta">
-            <span className="sb-sprint-tag">Sprint {sprint.num} · {sprint.month}</span>
+            <span className="sb-sprint-tag">{sprint.label ?? `Sprint ${sprint.num}`} · {sprint.month}</span>
             <h1 className="sb-sprint-title">{sprint.title}</h1>
             <p className="sb-sprint-subtitle">{sprint.subtitle}</p>
           </div>
