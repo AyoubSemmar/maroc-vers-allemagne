@@ -8,7 +8,9 @@ import Icon from '@/components/ui/Icon'
 import type { AppLocale } from '@/i18n/routing'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
-export const revalidate = 600
+// 1 day (was 10 min, 2026-10-31): new and edited articles refresh these
+// lists on demand (revalidateArticleLists), so the timer is only a backstop.
+export const revalidate = 86400
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 

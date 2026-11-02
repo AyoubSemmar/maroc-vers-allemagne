@@ -3,6 +3,7 @@
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
 import { revalidatePath } from 'next/cache'
+import { revalidateLocalized, revalidateArticleLists } from '@/lib/revalidateLocalized'
 import { createClient } from '@supabase/supabase-js'
 import { adminSignedToken, requireAdminOrRedirect } from '@/lib/admin-gate'
 
@@ -115,6 +116,7 @@ export async function addArticle(formData) {
     console.error('createArticle failed:', insertErr)
     throw new Error(`فشل إنشاء المقال: ${insertErr.message}`)
   }
+  revalidateArticleLists()
   redirect('/console-x7k9')
 }
 
@@ -141,8 +143,8 @@ export async function updateArticle(formData) {
     console.error('updateArticle failed:', error)
     throw new Error(`فشل تحديث المقال: ${error.message}`)
   }
-  revalidatePath(`/articles/${id}`)
-  revalidatePath(`/articles`)
+  revalidateLocalized(`/articles/${id}`)
+  revalidateArticleLists()
   revalidatePath('/console-x7k9')
   redirect('/console-x7k9')
 }
@@ -155,6 +157,8 @@ export async function deleteArticle(formData) {
     console.error('deleteArticle failed:', error)
     throw new Error(`فشل حذف المقال: ${error.message}`)
   }
+  revalidateLocalized(`/articles/${id}`)
+  revalidateArticleLists()
   redirect('/console-x7k9')
 }
 
@@ -355,8 +359,7 @@ export async function addUniversity(formData) {
     throw new Error(`فشل إضافة الجامعة: ${error.message}`)
   }
   revalidatePath('/console-x7k9/unis')
-  revalidatePath('/universities')
-  revalidatePath('/dashboard/universities')
+  revalidateLocalized('/universities', '/dashboard/universities')
   redirect('/console-x7k9/unis')
 }
 
@@ -376,9 +379,8 @@ export async function updateUniversity(formData) {
     throw new Error(`فشل تحديث الجامعة: ${error.message}`)
   }
   revalidatePath('/console-x7k9/unis')
-  revalidatePath(`/universities/${id}`)
-  revalidatePath('/universities')
-  revalidatePath('/dashboard/universities')
+  revalidateLocalized(`/universities/${id}`)
+  revalidateLocalized('/universities', '/dashboard/universities')
   redirect('/console-x7k9/unis')
 }
 
@@ -392,8 +394,7 @@ export async function deleteUniversity(formData) {
     throw new Error(`فشل حذف الجامعة: ${error.message}`)
   }
   revalidatePath('/console-x7k9/unis')
-  revalidatePath('/universities')
-  revalidatePath('/dashboard/universities')
+  revalidateLocalized(`/universities/${id}`, '/universities', '/dashboard/universities')
   redirect('/console-x7k9/unis')
 }
 

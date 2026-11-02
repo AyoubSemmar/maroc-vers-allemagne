@@ -9,6 +9,7 @@
  */
 import { NextRequest, NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
+import { revalidateLocalized, revalidateArticleLists } from '@/lib/revalidateLocalized'
 import { createClient } from '@supabase/supabase-js'
 import { requireAdmin } from '@/lib/admin-gate'
 
@@ -104,12 +105,8 @@ export async function POST(req: NextRequest) {
     // back to listing every locale explicitly. Belt and braces: also
     // call the bare paths in case future Next versions match them.
     revalidatePath('/console-x7k9/content')
-    revalidatePath('/articles')
-    revalidatePath(`/articles/${data.id}`)
-    for (const l of ['ar', 'fr', 'en', 'de', 'es', 'tr', 'fa', 'pt', 'ru']) {
-      revalidatePath(`/${l}/articles`)
-      revalidatePath(`/${l}/articles/${data.id}`)
-    }
+    revalidateLocalized(`/articles/${data.id}`)
+    revalidateArticleLists()
 
     // Echo back the row's identifying fields so the admin can verify
     // straight from the network response that the insert really

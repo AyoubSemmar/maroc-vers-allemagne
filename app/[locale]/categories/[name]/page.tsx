@@ -9,7 +9,9 @@ import Breadcrumbs from '@/components/seo/Breadcrumbs'
 import type { Metadata } from 'next'
 import { buildLocaleMetadata } from '@/lib/seo/buildLocaleMetadata'
 
-export const revalidate = 600
+// 1 day (was 10 min, 2026-10-31): new and edited articles refresh these
+// lists on demand (revalidateArticleLists), so the timer is only a backstop.
+export const revalidate = 86400
 
 // Enable ISR for this dynamic [name] segment: without a generateStaticParams
 // export it renders fully dynamic (uncached) on every request. Empty array =

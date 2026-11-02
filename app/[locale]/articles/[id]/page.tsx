@@ -17,9 +17,11 @@ import HelpfulButton from '@/components/HelpfulButton'
 import FAQAccordion from '@/components/FAQAccordion'
 import ShareButtons from '@/components/ShareButtons'
 
-// 1-hour ISR for individual articles. They change rarely; this slashes
-// Supabase egress on the most-deep-linked routes.
-export const revalidate = 3600
+// 7-day ISR for individual articles (was 1 hour until 2026-10-31). ~3,400
+// article×locale pages of ~380 KB each: at 1 hour, every crawler pass rewrote
+// them — 2.3M ISR write units in October, the largest line of this project's
+// Vercel bill. Edits refresh their pages on demand (lib/revalidateLocalized).
+export const revalidate = 604800
 
 // A dynamic [id] segment with NO generateStaticParams renders fully dynamic
 // (Cache-Control: no-store) on EVERY request — that was the bulk of the

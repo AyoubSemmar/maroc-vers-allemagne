@@ -8,7 +8,9 @@ import ArticlesClient from './ArticlesClient'
 
 // 10-min ISR: list pages don't need to reflect a new article instantly,
 // and the cache layer cuts Supabase egress by 1-2 orders of magnitude.
-export const revalidate = 600
+// 1 day (was 10 min, 2026-10-31): new and edited articles refresh these
+// lists on demand (revalidateArticleLists), so the timer is only a backstop.
+export const revalidate = 86400
 
 type Props = { params: Promise<{ locale: AppLocale }> }
 

@@ -12,7 +12,8 @@ type Props = { params: Promise<{ locale: AppLocale; slug: string }> }
 // 1-hour ISR + on-demand generation. Without revalidate + generateStaticParams
 // this dynamic [slug] segment renders fully dynamic (uncached) on every hit;
 // these are stable SEO pages, so cache each on first visit.
-export const revalidate = 3600
+// 7 days (was 1 hour): admin edits refresh on demand (revalidateLocalized).
+export const revalidate = 604800
 export const dynamicParams = true
 export function generateStaticParams(): { slug: string }[] {
   return []
